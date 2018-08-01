@@ -1,5 +1,5 @@
 ---
-title: Convenzioni di chiamata obsolete | Documenti Microsoft
+title: Convenzioni di chiamata obsolete | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d2a6188cf9d8c8283a6c03a2ca6c701e28baf0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419846"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403420"
 ---
 # <a name="obsolete-calling-conventions"></a>Convenzioni di chiamata obsolete
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  Il **Pascal**, **FORTRAN**, e **syscall** convenzioni di chiamata non sono più supportate. È possibile emulare le relative funzionalità utilizzando una delle convenzioni di chiamata supportate e le opzioni di collegamento adatte.  
   
- \<Windows. h > ora supporta il **WINAPI** (macro), che effettua la conversione la convenzione di chiamata appropriata per la destinazione. Utilizzare **WINAPI** in cui è stato utilizzato in precedenza **PASCAL** o **far \__pascal**.  
+ \<Windows. h > ora supporta la macro WINAPI, ovvero la convenzione di chiamata appropriata per la destinazione. Usare WINAPI in cui è usato in precedenza la convenzione PASCAL o **far \__pascal**.  
   
 **Fine sezione specifica Microsoft**  
   

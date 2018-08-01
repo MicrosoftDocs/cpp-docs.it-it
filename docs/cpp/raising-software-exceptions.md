@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943774"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405188"
 ---
 # <a name="raising-software-exceptions"></a>Generazione di eccezioni software
 Alcuni degli errori di programma più comuni non sono contrassegnati come eccezioni dal sistema. Ad esempio, se si tenta di allocare un blocco di memoria ma non vi è memoria sufficiente, il runtime o la funzione API non genera un'eccezione ma restituisce un codice di errore.  
@@ -60,7 +60,7 @@ Alcuni degli errori di programma più comuni non sono contrassegnati come eccezi
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- Dopo aver definito un codice di eccezione, è possibile utilizzarlo per generare un'eccezione. Ad esempio, il codice seguente genera l'eccezione STATUS_INSUFFICIENT_MEM in risposta a un problema di allocazione della memoria:  
+ Dopo aver definito un codice di eccezione, è possibile utilizzarlo per generare un'eccezione. Ad esempio, il codice seguente genera il `STATUS_INSUFFICIENT_MEM` eccezione in risposta a un problema di allocazione della memoria:  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  

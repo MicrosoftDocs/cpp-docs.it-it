@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63e2da6286e6a8e10ecf29a37ec9d74e9f1dfc0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943225"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408190"
 ---
 # <a name="const-and-volatile-pointers"></a>Puntatori const e volatile
 Il [const](../cpp/const-cpp.md) e [volatile](../cpp/volatile-cpp.md) modificare parole chiave come vengono trattati i puntatori. Il **const** parola chiave specifica che il puntatore non può essere modificato dopo l'inizializzazione, il puntatore è protetta dalle modifiche successivamente.  
@@ -70,7 +70,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error  
 ```  
   
- La dichiarazione di `pch2` definisce un puntatore tramite cui un oggetto costante potrebbe essere modificato e pertanto non è consentita. La dichiarazione di `pch3` specifica che il **puntatore** è costante, non l'oggetto; la dichiarazione non è consentita per lo stesso motivo la `pch2` dichiarazione non è consentita.  
+ La dichiarazione di `pch2` definisce un puntatore tramite cui un oggetto costante potrebbe essere modificato e pertanto non è consentita. La dichiarazione di `pch3` specifica che il puntatore è costante, non l'oggetto; la dichiarazione non è consentita per lo stesso motivo la `pch2` dichiarazione non è consentita.  
   
  Le otto assegnazioni seguenti mostrano l'assegnazione mediante il puntatore e la modifica del relativo valore per le dichiarazioni precedenti. Si supponga per il momento che l'inizializzazione sia corretta per `pch1` tramite `pch8`.  
   
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  L'istruzione precedente viene dichiarata una funzione, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), in cui due dei tre argomenti sono di tipo pointer a **char**. Poiché gli argomenti vengono passati per riferimento e non per valore, la funzione sarebbe libera di modificare entrambe `strDestination` e `strSource` se `strSource` non è stato dichiarato come **const**. La dichiarazione di `strSource` come **const** garantisce al chiamante che `strSource` non può essere modificato dalla funzione chiamata.  
   
 > [!NOTE]
->  Perché viene eseguita una conversione standard dalla *nomeTipo* **\*** alla **const** *typename* **\***, è consentito passare un argomento di tipo **char \***  al [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Tuttavia, non è vero; il contrario non esiste alcuna conversione implicita per rimuovere il **const** attributo da un oggetto o puntatore.  
+>  Perché viene eseguita una conversione standard dalla *nomeTipo* **\*** alla **const** *typename* **\***, è consentito passare un argomento di tipo `char *` al [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Tuttavia, non è vero; il contrario non esiste alcuna conversione implicita per rimuovere il **const** attributo da un oggetto o puntatore.  
   
  Oggetto **const** puntatore di un determinato tipo può essere assegnato a un puntatore dello stesso tipo. Tuttavia, un puntatore che non sia **const** non è possibile assegnare a un **const** puntatore. Nel codice seguente vengono mostrate le assegnazioni corrette e quelle non corrette:  
   

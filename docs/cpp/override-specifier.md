@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940654"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408151"
 ---
 # <a name="override-specifier"></a>Identificatore override
 È possibile usare la **eseguire l'override** (parola chiave) per indicare che le funzioni che eseguono l'override di una funzione virtuale in una classe di base.  
@@ -27,7 +27,6 @@ ms.locfileid: "37940654"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  Quando si usa **eseguire l'override**, il compilatore genera errori invece in modo invisibile creare nuove funzioni membro.  
@@ -86,7 +83,6 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  Per specificare che non è possibile eseguire l'override di funzioni e che le classi non possono essere ereditate, usare il [finale](../cpp/final-specifier.md) (parola chiave).  
@@ -94,4 +90,3 @@ class DerivedClass: public BaseClass
 ## <a name="see-also"></a>Vedere anche  
  [Identificatore final](../cpp/final-specifier.md)   
  [Parole chiave](../cpp/keywords-cpp.md)   
- 

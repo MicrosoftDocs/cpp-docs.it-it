@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208562"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404938"
 ---
 # <a name="overview-of-declarators"></a>Cenni preliminari sui dichiaratori
 I dichiaratori sono componenti di una dichiarazione che specifica i nomi di oggetti o funzioni. I dichiaratori specificano anche se l'oggetto denominato è un oggetto, un puntatore, un riferimento o una matrice o meno.  Mentre i dichiaratori non specificano il tipo di base, modificano tuttavia le informazioni sul tipo nel tipo di base per specificare i tipi derivati come puntatori, riferimenti e matrici.  Applicato alle funzioni, il dichiaratore funziona con l'identificatore di tipo per specificare completamente il tipo restituito di una funzione come oggetto, puntatore o riferimento. (Gli identificatori, descritti [dichiarazioni e definizioni](declarations-and-definitions-cpp.md), trasferiscono proprietà come tipo e classe di archiviazione. I modificatori, descritti in questa sezione e nella [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md), modificano i dichiaratori.) Nella figura seguente viene illustrata una dichiarazione completa di `MyFunction` e vengono indicati i componenti della dichiarazione.  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - dichiaratore di puntatore-operatore   
   - (dichiaratore)  
 
-  
 - e *operatore puntatore* è uno di:  
   
   - \* [elementi cv-Qualifier]  
   - & [elementi cv-Qualifier]:: identificatore di nome annidati \* [elementi cv-Qualifier]  
 
-  
  Poiché un dichiaratore può contenere altri dichiaratori, è possibile costruire i tipi derivati più complessi come matrici di puntatori e funzioni che restituiscono matrici di puntatori a funzione, usando le regole precedenti.  Per ogni passaggio della costruzione, iniziare con l'identificatore che rappresenta il tipo di dati di base e applicare la regola di sintassi precedente con l'espressione precedente come `declarator`.  L'ordine in cui si applicano le regole di sintassi deve essere l'opposto della modalità con cui l'espressione viene dichiarata in inglese.  Se applica il *operatore puntatore* regola di sintassi in un'espressione di matrice o una funzione, utilizzare le parentesi, se si desidera che un puntatore alla matrice o funzione, come l'ultima riga nella tabella seguente.  
   
  Nell'esempio seguente viene illustrata la costruzione di "puntatore a una matrice di 10 puntatori a int".  

@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c269951eacfc2f7a5d40c8fad1e4fb67cc1d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82390f7afe45b48539fb5c33130900ef75cf1967
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392091"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403303"
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 
@@ -66,27 +66,27 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>Parametri
 
-*path*<br/>
+*path*  
 Percorso di file o directory.
 
-*mode*<br/>
+*mode*  
 Impostazione di autorizzazione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione restituisce un codice di errore se il file specificato non esiste o non è accessibile nella modalità specificata. In questo caso, la funzione restituisce un codice di errore dal set come indicato di seguito e imposta inoltre **errno** sullo stesso valore.
+Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione restituisce un codice di errore se il file specificato non esiste o non è accessibile nella modalità specificata. In questo caso, la funzione restituisce un codice di errore dal set come indicato di seguito e inoltre imposta `errno` sullo stesso valore.
 
 |Valore errno|Condizione|
 |-|-|
-**EACCES**|Accesso negato. L'impostazione di autorizzazione del file non consente l'accesso specificato.
-**ENOENT**|Nome file o percorso non trovato.
-**EINVAL**|Parametro non valido.
+`EACCES`|Accesso negato. L'impostazione di autorizzazione del file non consente l'accesso specificato.
+`ENOENT`|Nome file o percorso non trovato.
+`EINVAL`|Parametro non valido.
 
 Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Se usato con i file, il **access_s** funzione determina se il file specificato esiste ed è possibile accedervi come specificato dal valore di *modalità*. Se usato con le directory **access_s** determina solo se è presente nella directory specificata. In Windows 2000 e sistemi operativi successivi, tutte le directory di aver letto e accesso in scrittura.
+Se usato con i file, il **access_s** funzione determina se il file specificato esiste ed è accessibile come specificato dal valore di *modalità*. Se usato con le directory **access_s** determina solo se la directory specificata esiste. In Windows 2000 e sistemi operativi successivi, tutte le directory sono letti e accesso in scrittura.
 
 |valore di mode|Controllo nel file|
 |----------------|---------------------|
@@ -97,15 +97,15 @@ Se usato con i file, il **access_s** funzione determina se il file specificato e
 
 L'autorizzazione per la lettura o la scrittura del file non è sufficiente per garantire la possibilità di aprire un file. Ad esempio, se un file è bloccato da un altro processo, potrebbe non essere accessibile anche se **access_s** restituisce 0.
 
-**waccess_s** è una versione a caratteri "wide" **access_s**, dove il *percorso* argomento **waccess_s** è una stringa di caratteri "wide". In caso contrario, **waccess_s** e **access_s** si comportano in modo identico.
+**waccess_s** è una versione a caratteri wide di **access_s**, dove il *path* argomento **waccess_s** è una stringa di caratteri "wide". In caso contrario, **waccess_s** e **access_s** si comportano in modo identico.
 
-Queste funzioni convalidano i relativi parametri. Se *percorso* viene **NULL** oppure *modalità* non specifica una modalità valida, viene richiamato il gestore di parametri non validi, come descritto in [convalidadeiparametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se *tracciato* è NULL oppure *modalità* non specifica una modalità valida, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono `EINVAL`.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**taccess_s**|**_access_s**|**_access_s**|**_waccess_s**|
+|`_taccess_s`|**_access_s**|**_access_s**|**_waccess_s**|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -116,7 +116,7 @@ Queste funzioni convalidano i relativi parametri. Se *percorso* viene **NULL** o
 
 ## <a name="example"></a>Esempio
 
-Questo esempio viene utilizzato **access_s** per controllare il file denominato crt_access_s.c per vedere se il file esista e che la scrittura è consentita.
+Questo esempio viene usato **access_s** per controllare il file denominato crt_access_s per vedere se esiste e se la scrittura è consentita.
 
 ```C
 // crt_access_s.c
@@ -160,9 +160,9 @@ File crt_access_s.c does not have write permission.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
-[_access, _waccess](access-waccess.md)<br/>
-[_chmod, _wchmod](chmod-wchmod.md)<br/>
-[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open, _wopen](open-wopen.md)<br/>
-[Funzioni _stat, _wstat](stat-functions.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)  
+[_access, _waccess](access-waccess.md)  
+[_chmod, _wchmod](chmod-wchmod.md)  
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open, _wopen](open-wopen.md)  
+[Funzioni _stat, _wstat](stat-functions.md)  

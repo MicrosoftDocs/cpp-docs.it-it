@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32558413dd0dc6f7288493067d7373a14e520e29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1cefb6ba2fe076714b420024ec09464fd928b63d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943849"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406386"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Eccezioni e rimozione dallo stack in C++
 Nel meccanismo di eccezioni di C++, il controllo si sposta dall'istruzione throw alla prima istruzione catch che può gestire il tipo generato. Quando l'istruzione catch viene raggiunta, tutte le variabili automatiche nell'ambito definito tra l'istruzione throw e catch istruzioni vengono eliminati definitivamente in un processo noto come *rimozione dello stack*. Nella rimozione dello stack, l'esecuzione procede come segue:  
@@ -114,5 +114,4 @@ int main()
     Exiting main.  
   
 */  
-  
 ```  

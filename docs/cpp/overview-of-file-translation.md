@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd4643c21ebb8626252230b90880af9f9499c0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943198"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406845"
 ---
 # <a name="overview-of-file-translation"></a>Cenni preliminari sulla conversione di file
 I programmi C++, come i programmi C, sono composti da uno o più file. Ognuno di questi file viene convertito nel seguente ordine concettuale (l'ordine effettivo segue la regola "as if" (come se): ossia la conversione deve essere eseguita come se fossero stati completati questi passaggi):  

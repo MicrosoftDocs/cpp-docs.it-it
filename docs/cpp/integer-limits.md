@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174025fc1a44ce0db96a5a7038502dfabe90bfd6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940134"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406019"
 ---
 # <a name="integer-limits"></a>Limiti per tipi Integer
 
@@ -59,5 +59,4 @@ Se un valore è superiore al massimo valore rappresentabile con il tipo Integer,
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
-
-[Limiti sulle costanti a virgola mobile](../cpp/floating-limits.md)  
+ [Limiti sulle costanti a virgola mobile](../cpp/floating-limits.md)  

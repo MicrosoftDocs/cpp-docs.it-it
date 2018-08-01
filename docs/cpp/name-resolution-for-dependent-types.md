@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei nomi per tipi dipendenti | Documenti Microsoft
+title: Risoluzione dei nomi per tipi dipendenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419911"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402686"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Risoluzione dei nomi per tipi dipendenti
-Utilizzare **typename** per i nomi completi nelle definizioni di modello per indicare al compilatore che il nome completo specificato identifica un tipo. Per ulteriori informazioni, vedere [typename](../cpp/typename.md).  
+Uso **typename** per i nomi completi nelle definizioni di modello per indicare al compilatore che il nome completo specificato identifica un tipo. Per altre informazioni, vedere [typename](../cpp/typename.md).  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -49,7 +49,7 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- Ricerca del nome per i nomi dipendenti esamina i nomi sia dal contesto della definizione del modello, nell'esempio seguente, in questo contesto cercherebbe `myFunction(char)`e il contesto dell'istanza del modello. Nell'esempio seguente, il modello viene creata un'istanza; Pertanto, il `MyNamespace::myFunction` è visibile dal punto di creazione dell'istanza e viene selezionato come corrispondenza ottimale. Se `MyNamespace::myFunction` è stato rinominato, in alternativa viene chiamato `myFunction(char)`.  
+ Ricerca del nome per i nomi dipendenti esamina i nomi sia dal contesto della definizione del modello, nell'esempio seguente, in questo contesto cercherebbe `myFunction(char)`e il contesto dell'istanza del modello. Nell'esempio seguente, il modello viene creata un'istanza; Pertanto, il `MyNamespace::myFunction` è visibile dal momento della creazione dell'istanza e viene selezionato come corrispondenza ottimale. Se `MyNamespace::myFunction` è stato rinominato, in alternativa viene chiamato `myFunction(char)`.  
   
  Tutti i nomi vengono risolti come se fossero nomi dipendenti. Tuttavia, è consigliabile utilizzare nomi completi se è possibile che si verifichi un conflitto.  
   
@@ -93,12 +93,12 @@ int main()
   
 ### <a name="output"></a>Output  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   
 ### <a name="template-disambiguation"></a>Risoluzione dell'ambiguità del modello  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] applica le regole standard C++98/03/11 per la risoluzione dell'ambiguità con la parola chiave "template". Nell'esempio seguente, Visual C++ 2010 accetta le righe non sia le righe conformi.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] accetta solo le righe conformi.  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] applica le regole standard C++98/03/11 per la risoluzione dell'ambiguità con la parola chiave "template". Nell'esempio seguente, Visual C++ 2010 accetterebbero sia le righe non conformi e le righe conformi.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] accetta solo le righe conformi.  
   
 ```cpp  
 #include <iostream>  

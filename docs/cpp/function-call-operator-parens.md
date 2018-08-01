@@ -1,5 +1,5 @@
 ---
-title: 'Operatore di chiamata di funzione: () | Documenti Microsoft'
+title: 'Operatore di chiamata di funzione: () | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1cdd4ec5dc556f0427914ca8ec746ad3ad2ccc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b0c4cde0c50064c5a88469e8f9061a0321902e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408996"
 ---
 # <a name="function-call-operator-"></a>Operatore di chiamata di funzione: ()
 Un'espressione di suffisso seguita dall'operatore di chiamata di funzione, **()**, specifica una chiamata di funzione.  
@@ -39,31 +40,31 @@ postfix-expression
 ## <a name="remarks"></a>Note  
  Gli argomenti nell'operatore di chiamata di funzione sono uguali a zero o a più espressioni separate da virgole, ossia sono gli argomenti effettivi della funzione.  
   
- Il *postfix-expression* deve restituire un indirizzo della funzione (ad esempio, un identificatore di funzione o il valore di un puntatore a funzione), e *argument-expression-list* è un elenco di espressioni (separate dal punto e virgola) i cui valori (argomenti) vengono passati alla funzione. L'argomento *argument-expression-list* può essere vuoto.  
+ Il *postfix-expression* devono restituire un indirizzo della funzione (ad esempio, un identificatore di funzione o il valore di un puntatore a funzione), e *argument-expression-list* è riportato un elenco di espressioni (separate dal punto e virgola) i cui valori (argomenti) vengono passati alla funzione. L'argomento *argument-expression-list* può essere vuoto.  
   
  Il *postfix-expression* deve essere uno dei seguenti tipi:  
   
 -   Funzione che restituisce il tipo `T`. Una dichiarazione di esempio è  
   
-    ```  
+    ```cpp 
     T func( int i )  
     ```  
   
 -   Puntatore a una funzione che restituisce il tipo `T`. Una dichiarazione di esempio è  
   
-    ```  
+    ```cpp 
     T (*func)( int i )  
     ```  
   
 -   Riferimento a una funzione che restituisce il tipo `T`. Una dichiarazione di esempio è  
   
-    ```  
+    ```cpp 
     T (&func)(int i)  
     ```  
   
 -   Deferenziazione della funzione puntatore a membro che restituisce il tipo `T`. Le chiamate di funzione di esempio sono  
   
-    ```  
+    ```cpp 
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
@@ -71,7 +72,7 @@ postfix-expression
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene chiamata la funzione della libreria standard `strcat_s` con tre argomenti:  
   
-```  
+```cpp 
 // expre_Function_Call_Operator.cpp  
 // compile with: /EHsc  
   
@@ -104,7 +105,7 @@ Welcome to C++
 ## <a name="function-call-results"></a>Risultati della chiamata di funzione  
  Una chiamata di funzione restituisce un r-value, a meno che la funzione non sia dichiarata come tipo di riferimento. Le funzioni con tipo restituito di riferimento restituiscono l-value e possono essere usate a sinistra di un'istruzione di assegnazione, come indicato di seguito:  
   
-```  
+```cpp 
 // expre_Function_Call_Results.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -134,11 +135,11 @@ int main()
 }  
 ```  
   
- Il codice precedente viene definita una classe denominata `Point`, che contengono dati privati, gli oggetti che rappresentano *x* e *y* coordinate. È necessario modificare tali oggetti e recuperare i relativi valori. Questo programma rappresenta una delle diverse progettazioni possibili per tale classe. Un'altra progettazione valida consiste nell'utilizzo delle funzioni `GetX` e `SetX` o `GetY` e `SetY`.  
+ Il codice precedente definisce una classe denominata `Point`, che contiene i dati privati, gli oggetti che rappresentano *x* e *y* coordinate. È necessario modificare tali oggetti e recuperare i relativi valori. Questo programma rappresenta una delle diverse progettazioni possibili per tale classe. Un'altra progettazione valida consiste nell'utilizzo delle funzioni `GetX` e `SetX` o `GetY` e `SetY`.  
   
  Le funzioni che restituiscono tipi di classe, i puntatori ai tipi di classe o i riferimenti ai tipi di classe possono essere usati come operando a sinistra degli operatori di selezione dei membri. Pertanto, il codice seguente è valido:  
   
-```  
+```cpp 
 // expre_Function_Results2.cpp  
 class A {  
 public:  
@@ -179,9 +180,9 @@ int main() {
 }  
 ```  
   
- Le funzioni possono essere chiamate in modo ricorsivo. Per ulteriori informazioni sulle dichiarazioni di funzione, vedere [funzioni](functions-cpp.md). Materiale correlato è in [programma e collegamento](../cpp/program-and-linkage-cpp.md).  
+ Le funzioni possono essere chiamate in modo ricorsivo. Per altre informazioni sulle dichiarazioni di funzione, vedere [funzioni](functions-cpp.md). Altro materiale correlato [programma e collegamento](../cpp/program-and-linkage-cpp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di suffisso](../cpp/postfix-expressions.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Chiamata di funzione](../c-language/function-call-c.md)   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7dc931e643235bc6edb4a1121628ac5185b76cc7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939819"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402549"
 ---
 # <a name="compiler-com-support-classes"></a>Classi di supporto COM del compilatore
 **Sezione specifica Microsoft**  

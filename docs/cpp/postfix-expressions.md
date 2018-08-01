@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943934"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403141"
 ---
 # <a name="postfix-expressions"></a>Espressioni in forma suffissa
 Le espressioni di suffisso sono costituite da espressioni primarie o da espressioni in cui gli operatori di suffisso seguono un'espressione primaria. Nella tabella riportata di seguito vengono elencati gli operatori di suffisso.  
@@ -34,13 +34,12 @@ Le espressioni di suffisso sono costituite da espressioni primarie o da espressi
 |[Operatore di chiamata di funzione](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Operatore di conversione esplicita di tipi](../cpp/explicit-type-conversion-operator-parens.md)|*nome del tipo* **)**|  
 |[Operatore di accesso al membro](../cpp/member-access-operators-dot-and.md)|**.** o **->**|  
-|[Operatore di incremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[Operatore di incremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[Operatore di decremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  Nella sintassi seguente vengono descritte le possibili espressioni di suffisso:  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- Nell'espressione sopra riportata, func è un'espressione primaria, func (1) è un'espressione di suffisso di funzione, (1) ->GetData è un'espressione di suffisso che specifica un membro della classe, func (1) ->GetData () è un'altra espressione di suffisso di funzione e l'intera espressione è un'espressione di suffisso che incrementa il valore restituito di GetData.  Il significato dell'intera espressione è "chiamare func passando 1 come argomento e ottenere un puntatore a una classe come valore restituito.  Chiamare GetValue() su tale classe, quindi incrementare il valore restituito.  
+ Nell'espressione precedente, `func` è un'espressione primaria `func(1)` è un'espressione di suffisso di funzione, `func(1)->GetData` è un'espressione di suffisso che specifica un membro della classe, `func(1)->GetData()` è un'altra espressione di suffisso di funzione e l'intero espressione è un'espressione di suffisso incrementa il valore restituito di GetData.  Il significato dell'intera espressione è "chiamare func passando 1 come argomento e ottenere un puntatore a una classe come valore restituito.  Chiamare quindi `GetValue()` su tale classe, quindi incrementare il valore restituito.  
   
  Le espressioni sopra elencate sono espressioni di assegnazione, pertanto il loro risultato deve essere un r-value.  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- Nel programma precedente viene dichiarata una funzione, `print`, che accetta due argomenti. Tuttavia, il secondo argomento, `terminator`, ha un valore predefinito, `"\n"`. Nelle `main`, le prime due chiamate a `print` consentono al secondo argomento predefinito fornire una nuova riga per terminare la stringa stampata. La terza chiamata specifica un valore esplicito per il secondo argomento. L'output del programma è  
+ Nel programma precedente viene dichiarata una funzione, `print`, che accetta due argomenti. Tuttavia, il secondo argomento, *carattere di terminazione*, ha un valore predefinito, `"\n"`. Nelle `main`, le prime due chiamate a `print` consentono al secondo argomento predefinito fornire una nuova riga per terminare la stringa stampata. La terza chiamata specifica un valore esplicito per il secondo argomento. L'output del programma è  
   
 ```Output 
 hello,  

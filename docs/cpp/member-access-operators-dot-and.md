@@ -1,5 +1,5 @@
 ---
-title: Gli operatori di accesso di membro:. e -&gt; | Documenti Microsoft
+title: Operatori di accesso ai membri:. e -&gt; | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,13 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408786"
 ---
-# <a name="member-access-operators--and--gt"></a>Gli operatori di accesso di membro:. e -&gt;
+# <a name="member-access-operators--and--gt"></a>Operatori di accesso ai membri:. e -&gt;
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -43,14 +44,14 @@ postfix-expression -> name
   
  Sono disponibili due forme delle espressioni di accesso ai membri:  
   
-1.  Nel primo formato, *postfix-expression* rappresenta un valore di struct, classe o tipo di unione e *nome* i nomi di membro di struttura, unione o classe specificata. Il valore dell'operazione è quello di *nome* ed è un l-value se *postfix-expression* è un l-value.  
+1.  Nel primo formato, *postfix-expression* rappresenta un valore di uno struct, classe o tipo di unione, e *nome* denomina un membro di struttura, unione o specificata classe. Il valore dell'operazione è quello di *name* ed è un l-value se *postfix-expression* è un l-value.  
   
-2.  Nel secondo formato, *postfix-expression* rappresenta un puntatore a una struttura, unione o classe e *nome* i nomi di membro di struttura, unione o classe specificata. Il valore è quello di *nome* ed è un l-value. Il **->** operatore Dereferenzia il puntatore. Pertanto, le espressioni * e ***->** `member` e **(\****espulsione***)**.`member` (dove *e* rappresenta un puntatore) risultati identici (tranne quando gli operatori **->** o **\*** sono sottoposti a overload).  
+2.  Nel secondo formato, *postfix-expression* rappresenta un puntatore a una struttura, unione o classe, e *nome* denomina un membro di struttura, unione o specificata classe. Il valore è quello di *nome* ed è un l-value. Il **->** operatore Dereferenzia il puntatore del mouse. Di conseguenza, le espressioni * e ***->** `member` e **(\****elettronica***)**.`member` (in cui *elettronica* rappresenta un puntatore) producono risultati identici (eccetto quando gli operatori **->** oppure **\*** sono sottoposti a overload).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono illustrati entrambi i formati dell'operatore di accesso ai membri.  
   
-```  
+```cpp 
 // expre_Selection_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -84,6 +85,6 @@ int main() {
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di suffisso](../cpp/postfix-expressions.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Classi e struct](../cpp/classes-and-structs-cpp.md)   
  [Membri di struttura e di unione](../c-language/structure-and-union-members.md)

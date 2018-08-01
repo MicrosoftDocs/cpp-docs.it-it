@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8f2853189d6b31b2f3b4e371f3583d3abb6f165
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 988d46b3f4b2e20ff14227fda70a6f39ac95756c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939429"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402897"
 ---
 # <a name="iteration-statements-c"></a>Istruzioni di iterazione (C++)
 Le istruzioni di iterazione determinano l'esecuzione di istruzioni (o istruzioni composte) nessuna o più volte, soggette ad alcuni criteri di ciclo-chiusura. Quando queste istruzioni sono istruzioni composte, vengono eseguite in ordine, tranne quando entrambi i [break](../cpp/break-statement-cpp.md) istruzione o il [continuare](../cpp/continue-statement-cpp.md) viene rilevata l'istruzione.  

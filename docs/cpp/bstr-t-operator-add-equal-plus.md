@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aad73939b8fd011fd6e1c9bf16f8dfe6eb303ff3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943266"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405743"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Sezione specifica Microsoft**  
@@ -33,7 +33,6 @@ ms.locfileid: "37943266"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 _bstr_t& operator+=( const _bstr_t& s1 );  
 _bstr_t operator+( const _bstr_t& s1 );  
 friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
@@ -53,9 +52,9 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 ## <a name="remarks"></a>Note  
  Questi operatori eseguono la concatenazione di stringhe:  
   
--   **operator + = (***s1***)** aggiunge i caratteri in incapsulato `BSTR` del *s1* alla fine di incapsulato questooggetto`BSTR`.      
+-   **operator + = (***s1***)** aggiunge i caratteri in incapsulato `BSTR` del *s1* alla fine di incapsulato questooggetto`BSTR`.  
   
--   **Operatore operator + (***s1***)** restituisce il nuovo `_bstr_t` che è costituito dalla concatenazione dell'oggetto `BSTR` con quello del *s1*.      
+-   **Operatore operator + (***s1***)** restituisce il nuovo `_bstr_t` che è costituito dalla concatenazione dell'oggetto `BSTR` con quello del *s1*.  
   
 -   **Operatore operator + (***s2***&#124;***s1***)** restituisce un nuovo `_bstr_t` che viene creato concatenando una stringa multibyte *s2*, convertito in Unicode, con la `BSTR` racchiusa *s1*.          
   

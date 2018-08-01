@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f28ae7b7cb8bdcf335757c58d5e744974f4c7cad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943166"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405957"
 ---
 # <a name="final-specifier"></a>Identificatore final
 È possibile usare la **finale** parola chiave per definire le funzioni virtuali che non possono essere sottoposto a override in una classe derivata. È inoltre possibile utilizzare tale parola chiave per definire classi che non possono essere ereditate.  
@@ -29,7 +29,6 @@ ms.locfileid: "37943166"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 function-declaration final;  
 class class-name final base-classes  
 ```  

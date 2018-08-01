@@ -1,5 +1,5 @@
 ---
-title: Pimpl per incapsulamento in fase di compilazione (C++ moderno) | Documenti Microsoft
+title: Pimpl per incapsulamento in fase di compilazione (C++ moderno) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e80c4bd86cd4c7400e3937fcb8d164fe6b14106
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420155"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404655"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl per incapsulamento in fase di compilazione (C++ moderno)
-Il *pimpl linguaggio* è una tecnica di C++ moderna per nascondere l'implementazione, per ridurre al minimo accoppiamento e per separare le interfacce. Pimpl è l'abbreviazione di "puntatore all'implementazione." Si potrebbero già avere familiarità con il concetto insaputa da altri nomi come scomparire o Firewall del compilatore di linguaggio.  
+Il *idioma pimpl* è una tecnica di C++ moderna per nascondere l'implementazione, per ridurre al minimo accoppiamento e separare le interfacce. Pimpl è l'acronimo di "puntatore all'implementazione". È già possibile acquisire familiarità con il concetto ma noto anche con altri nomi, ad esempio idioma scomparire o un Firewall del compilatore.  
   
-## <a name="why-use-pimpl"></a>Perché utilizzare pimpl?  
- Ecco come il linguaggio pimpl può migliorare il ciclo di vita di sviluppo di software:  
+## <a name="why-use-pimpl"></a>Perché usare pimpl?  
+ Ecco come l'idioma pimpl possa migliorare il ciclo di vita di sviluppo software:  
   
 -   Riduzione delle dipendenze di compilazione.  
   
@@ -31,7 +31,7 @@ Il *pimpl linguaggio* è una tecnica di C++ moderna per nascondere l'implementaz
   
 -   Portabilità.  
   
-## <a name="pimpl-header"></a>Intestazione Pimpl  
+## <a name="pimpl-header"></a>Pimpl intestazione  
   
 ```cpp  
 // my_class.h  
@@ -40,13 +40,12 @@ class my_class {
 private:  
    class impl; unique_ptr<impl> pimpl; // opaque type here  
 };  
-  
 ```  
   
- Il linguaggio pimpl evita la catena di ricompilazione e layout oggetto fragile. È particolarmente utile per i tipi comuni (in modo transitivo).  
+ Consente di evitare l'idioma pimpl ricompilazione unarie a catena e i layout oggetto fragili. È particolarmente utile per i tipi comuni (in modo transitivo).  
   
-## <a name="pimpl-implementation"></a>Implementazione di Pimpl  
- Definire la `impl` classe nel file con estensione cpp.  
+## <a name="pimpl-implementation"></a>Pimpl implementazione  
+ Definire il `impl` classe nel file con estensione cpp.  
   
 ```cpp  
 // my_class.cpp  
@@ -64,6 +63,6 @@ my_class::my_class(): pimpl( new impl )
  Considerare la possibilità di aggiungere il supporto per la specializzazione di scambio non generanti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Bentornato a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   
  [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

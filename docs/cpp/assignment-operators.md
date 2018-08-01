@@ -1,5 +1,5 @@
 ---
-title: Operatori di assegnazione | Documenti Microsoft
+title: Gli operatori di assegnazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408986"
 ---
 # <a name="assignment-operators"></a>Operatori di assegnazione
 ## <a name="syntax"></a>Sintassi  
@@ -59,13 +60,13 @@ assignment-operator : one of
 ```  
   
 ## <a name="remarks"></a>Note  
- Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto definito dall'operando sinistro. Esistono tre tipi di operazioni di assegnamento: 
+ Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto definito dall'operando sinistro. Esistono tre tipi di operazioni di assegnazione: 
 
-1. assegnazione semplice, in cui il valore del secondo operando viene archiviato nell'oggetto specificato dal primo operando. 1. assegnazione composta, in cui un'operazione aritmetica, MAIUSC o operazione bit per bit viene eseguita prima di archiviare il risultato.
-1. in quali risorse vengono trasferite senza copiare, spostare assegnazione (per i tipi di classe).
+1. assegnazione semplice, in cui il valore del secondo operando viene archiviato nell'oggetto specificato dal primo operando. 1. assegnazione composta, in cui un aritmetica, spostamento o operazione bit per bit viene eseguita prima di archiviare il risultato.
+1. spostare le risorse che vengono trasferite senza copiare assegnazione (per i tipi di classe).
 
 
-Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne la = e & & = gli operatori sono operatori di assegnazione composta.  
+Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne il = e & & = gli operatori sono operatori di assegnamento composti.  
   
 ### <a name="assignment-operators"></a>Operatori di assegnazione  
   
@@ -82,7 +83,7 @@ Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne la
 |**&=**|Ottiene l'AND bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |**^=**|Ottiene l'OR esclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |**\|=**|Ottiene l'OR inclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
-|**&&=**| Operatore di assegnazione di spostamento (classe solo per i tipi). Se il secondo operando è un rvalue, spostare le risorse per il primo operando (senza copiarli). Vedere [spostare i costruttori e operatori di assegnazione di spostamento](move-constructors-and-move-assignment-operators-cpp.md) per altre informazioni.|
+|**&&=**| Operatore di assegnazione di spostamento (classe solo per i tipi). Se il secondo operando è un rvalue, spostare le risorse per il primo operando (senza copiarli). Visualizzare [i costruttori di spostamento e operatori di assegnazione di spostamento](move-constructors-and-move-assignment-operators-cpp.md) per altre informazioni.|
   
  **Parole chiave per gli operatori**  
   
@@ -94,11 +95,11 @@ Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne la
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- Esistono due modi per accedere a queste parole chiave per operatori nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
+ Esistono due modi per accedere a queste parole chiave per operatori nei programmi: includere il file di intestazione `iso646.h`, o eseguire la compilazione con il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -125,11 +126,11 @@ int main() {
   
  Gli oggetti dei tipi const e volatile possono essere assegnati ai valori l dei tipi unicamente volatili o che non sono né const né volatili.  
   
- L'assegnazione a oggetti di tipo di classe (tipi di struct, unione e classe) viene eseguita da una funzione denominata operator=. Il comportamento predefinito di questa funzione di operatore è di eseguire una copia bit per bit; tuttavia, questo comportamento può essere modificato mediante gli operatori di overload. (Vedere [operatori di overload](../cpp/operator-overloading.md) per ulteriori informazioni.)  
+ L'assegnazione a oggetti di tipo di classe (tipi di struct, unione e classe) viene eseguita da una funzione denominata operator=. Il comportamento predefinito di questa funzione di operatore è di eseguire una copia bit per bit; tuttavia, questo comportamento può essere modificato mediante gli operatori di overload. (Vedere [operatori di overload](../cpp/operator-overloading.md) per altre informazioni.)  
   
  Un oggetto senza alcuna ambiguità di classe derivata da una classe base specificata può essere assegnato a un oggetto della classe base. Il contrario non è consentito perché è presente una conversione implicita da classe derivata a classe base ma non da classe base a classe derivata. Ad esempio:  
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  Per gli oggetti di tipo classe, l'assegnazione è diversa dall'inizializzazione. Per illustrare come possono essere diverse l'assegnazione e l'inizializzazione, si consideri il codice  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  Il codice precedente mostra un inizializzatore; chiama il costruttore per `UserType2` che accetta un argomento di tipo `UserType1`. Dato il codice  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  l'istruzione di assegnazione  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,7 +190,7 @@ B = A;
 -   Chiamare un costruttore `UserType2::UserType2`, se tale costruttore esiste, che accetta un argomento `UserType1` e copia il risultato.  
   
 ## <a name="compound-assignment"></a>Assegnazione composta  
- Gli operatori di assegnazione composta, illustrati nella tabella [operatori di assegnazione](../cpp/assignment-operators.md), vengono specificati nel formato *e1* `op` =  *e2*, dove *e1* è un l-value modificabile non è di tipo const e *e2* è uno dei seguenti:  
+ Operatori di assegnamento composti, illustrati nella tabella [gli operatori di assegnazione](../cpp/assignment-operators.md), vengono specificati nel formato *e1* `op` =  *e2*, dove *e1* è un l-value modificabile non è di tipo const e *e2* è uno dei seguenti:  
   
 -   Un tipo aritmetico  
   
@@ -206,5 +207,5 @@ B = A;
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori di assegnazione C](../c-language/c-assignment-operators.md)

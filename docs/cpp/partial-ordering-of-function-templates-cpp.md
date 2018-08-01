@@ -1,5 +1,5 @@
 ---
-title: Ordinamento parziale dei modelli di funzione (C++) | Documenti Microsoft
+title: Ordinamento parziale dei modelli di funzione (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75689c07718bf066105920b566087c08a220a7de
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408806"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordinamento parziale di modelli di funzione (C++)
 
 Possono essere disponibili più modelli di funzioni corrispondente all'elenco di argomenti di una chiamata di funzione. In C++ viene definito un ordinamento parziale dei modelli di funzione per specificare la funzione che deve essere chiamata. L'ordinamento è parziale perché possono essere presenti alcuni modelli considerati ugualmente specializzati.
 
-Il compilatore sceglie la funzione del modello più specializzato disponibile tra le possibili corrispondenze. Ad esempio, se un modello di funzione accetta un tipo __T__e un altro modello di funzione richiede __T\*__  è disponibile, il __T\*__  versione viene definita per essere più specializzata ed è preferibile generica __T__ versione ogni volta che l'argomento è un tipo di puntatore, anche se entrambe sarebbero corrispondenze consentite.
+Il compilatore sceglie la funzione del modello più specializzato disponibile tra le possibili corrispondenze. Se, ad esempio, un modello di funzione accetta un tipo __T__e un altro modello di funzione richiede __T\*__  è disponibile, il __T\*__  è detto versione per essere più specializzata ed è preferibile il tipo generico __T__ versione ogni volta che l'argomento è un tipo di puntatore, anche se entrambe sarebbero corrispondenze consentite.
 
 Utilizzare la procedura seguente per determinare se un candidato di modello di funzione è più specializzato:
 
@@ -36,15 +37,15 @@ Utilizzare la procedura seguente per determinare se un candidato di modello di f
 
 4. Ripetere la stessa procedura con T1 e T2 all'inverso.
 
-5. Se un modello è un elenco di argomenti di modello valido per l'altro modello, ma non è vero il contrario, tale modello è considerato meno specializzato dell'altro. Se entrambi i modelli utilizzando i precedente passaggio modulo argomenti validi per l'altro, verranno considerati ugualmente specializzati e risultati di una chiamata ambigua quando si tenta di usarli.
+5. Se un modello è un elenco di argomenti di modello valido per l'altro modello, ma non è vero il contrario, tale modello è considerato meno specializzato dell'altro. Se entrambi i modelli tramite il precedente passaggio form gli argomenti validi per l'altro, verranno considerati ugualmente specializzati e risultati di una chiamata ambigua quando si tenta di usarli.
 
 6. Utilizzare le regole seguenti:
 
      1. Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento tipo generico.
 
-     2. Un modello richiede solo __T\*__  è più specializzato di prendere una __T__, perché il tipo di un ipotetico __X\*__  è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\*__  argomento di modello.
+     2. Un modello richiede solo __T\*__  è più specializzato richiede un solo __T__, perché il tipo di un ipotetico __X\*__  è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\*__  argomento di modello.
 
-     3. __const T__ è più specializzata __T__, in quanto __const X__ è un argomento valido per un __T__ argomento di modello, ma __X__ è argomento non valido per un __const T__ argomento di modello.
+     3. __const T__ è più specializzato __T__, in quanto __const X__ è un argomento valido per un __T__ argomento di modello, ma __X__ è argomento non valido per un __const T__ argomento di modello.
 
      4. __const T\*__  è più specializzato __T\*__, in quanto __const X\*__  è un argomento valido per un __T\*__  argomento di modello, ma __X\*__  non è un argomento valido per un __const T\*__  argomento di modello.
 
@@ -85,12 +86,11 @@ int main() {
   
 ### <a name="output"></a>Output  
   
-```  
+```Output  
 Less specialized function called  
 More specialized function called  
 Even more specialized function for const T*  
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-
-[Modelli di funzioni](../cpp/function-templates.md)
+ [Modelli di funzioni](../cpp/function-templates.md)

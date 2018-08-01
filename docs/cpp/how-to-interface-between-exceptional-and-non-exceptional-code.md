@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940118"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407972"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procedura: interfaccia tra codice eccezionale e non eccezionale
 In questo articolo viene descritto come implementare una gestione delle eccezioni coerente in un modulo C++ e viene illustrato come convertire tali eccezioni da e verso i codici di errore ai limiti della eccezione.  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Chiamata a un codice con eccezioni da un codice senza eccezioni  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  Quando si convertono le eccezioni in codici di errore, un possibile problema è che i codici di errore spesso non contengono la ricchezza di informazioni che un'eccezione può archiviare. Per risolvere questo problema, è possibile specificare una **catch** blocco per ogni tipo di eccezione specifico che potrebbe essere generata ed esegue la registrazione per registrare i dettagli dell'eccezione prima che venga convertito in un codice di errore. Questo approccio può creare ripetizioni nel codice se più funzioni utilizzano tutte lo stesso set di **catch** blocchi. Un buon metodo per evitare la ripetizione del codice è il refactoring di tali blocchi in un'unica funzione di utilità privata che implementa il **provare** e **catch** blocca e accetta un oggetto funzione che viene richiamato nel **provare** blocco. In ciascuna funzione pubblica passare il codice alla funzione di utilità come un'espressione lambda.  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  Di seguito viene illustrato come scrivere un'espressione lambda che definisce il funtore. Quando un funtore è definito "inline" utilizzando un'espressione lambda, spesso è più facile da leggere rispetto a quanto sarebbe se fosse scritto come un oggetto funzione denominato.  
@@ -237,7 +234,6 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../cpp/lambda-expressions-in-cpp.md).  

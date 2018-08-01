@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943881"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402920"
 ---
 # <a name="mutable-data-members-c"></a>Membri dati modificabili (C++)
 Questa parola chiave può essere applicata solo a membri dati non dichiarati come static e const di una classe. Se un membro dati viene dichiarato **modificabile**, è consentito assegnare un valore per questo membro dati da un **const** funzione membro.  
@@ -29,7 +29,6 @@ Questa parola chiave può essere applicata solo a membri dati non dichiarati com
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 mutable member-variable-declaration;  
 ```  
   

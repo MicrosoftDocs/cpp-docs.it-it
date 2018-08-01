@@ -1,5 +1,5 @@
 ---
-title: 'Un&#39;s operatore di complemento a uno: ~ | Documenti Microsoft'
+title: 'Un&#39;s operatore di complemento a uno: ~ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10c8f3df2a1f2f27ee33450a52132e8184d4232
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79d34a4057ccbe5c10a6d22a14eed4317e62c464
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409156"
 ---
 # <a name="one39s-complement-operator-"></a>Un&#39;s operatore di complemento a uno: ~
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 ~ cast-expression  
 ```  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 05/03/2018
  L'operatore di complemento a uno (`~`), talvolta denominato l'operatore di "complemento bit per bit", produce un complemento a uno bit per bit del suo operando. Ovvero ogni bit con 1 nell'operando è 0 nel risultato. Viceversa, ogni bit con 0 nell'operando è 1 nel risultato. L'operando dell'operatore di complemento a uno deve essere un tipo integrale.  
   
 ## <a name="operator-keyword-for-"></a>Parola chiave operator per ~  
- L'operatore `compl` è il testo equivalente di `~`. Esistono due modi per accedere il `compl` operatore nei programmi: includere il file di intestazione `iso646.h`, o eseguire la compilazione con [/Za](../build/reference/za-ze-disable-language-extensions.md).  
+ Il **compl** operatore è l'equivalente testuale di `~`. Esistono due modi per accedere la **compl** operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare [/Za](../build/reference/za-ze-disable-language-extensions.md).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // expre_One_Complement_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -59,9 +59,9 @@ int main () {
   
  In questo esempio, il nuovo valore assegnato a `y` è il complemento a uno del valore non firmato 0xFFFF o a 0x0000.  
   
- La promozione a intero viene eseguita su operandi integrali e il tipo risultante è il tipo a cui l'operando viene promosso. Vedere [conversioni Standard](standard-conversions.md) per ulteriori informazioni su come eseguire l'innalzamento di livello.  
+ La promozione a intero viene eseguita su operandi integrali e il tipo risultante è il tipo a cui l'operando viene promosso. Visualizzare [conversioni Standard](standard-conversions.md) per altre informazioni sul modo in cui viene eseguita la promozione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori aritmetici unari](../c-language/unary-arithmetic-operators.md)

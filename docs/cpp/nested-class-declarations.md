@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2f6359cb50146dac6e502cf68469c877c776617b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943323"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407715"
 ---
 # <a name="nested-class-declarations"></a>Dichiarazioni di classi annidate
 La classe può essere dichiarata all'interno dell'ambito di un'altra classe. Tale classe viene denominata "una classe annidata". Le classi annidate sono considerate all'interno dell'ambito della classe contenitore e possono essere usate all'interno di tale ambito. Per fare riferimento a una classe annidata da un ambito diverso dal relativo ambito contenitore immediato, è necessario usare un nome completo.  

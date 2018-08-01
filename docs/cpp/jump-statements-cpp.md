@@ -1,5 +1,5 @@
 ---
-title: Istruzioni (C++) di spostamento | Documenti Microsoft
+title: Istruzioni di spostamento (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 111db8502355638558796ecb54672ea6e8d4fa03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2b152be150e284462bddf0940df5656744925da5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419030"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405496"
 ---
 # <a name="jump-statements-c"></a>Istruzioni di spostamento (C++)
 L'istruzione di salto C++ esegue un immediato trasferimento di controllo locale.  

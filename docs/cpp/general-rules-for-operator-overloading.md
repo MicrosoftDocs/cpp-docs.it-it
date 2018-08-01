@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943296"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403456"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regole generali per overload di operatori
 Le regole seguenti vincolano l'implementazione degli operatori di overload. Tuttavia, non si applicano al [nuove](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori, analizzati separatamente.  
@@ -59,7 +59,7 @@ Le regole seguenti vincolano l'implementazione degli operatori di overload. Tutt
   
 -   Operatori di overload non possono avere argomenti predefiniti.  
   
--   Tutti gli operatori di overload ad eccezione degli operatori di assegnazione (`operator=`) vengono ereditati dalle classi derivate.  
+-   Tutti sottoposti a overload gli operatori ad eccezione di assegnazione (**operatore =**) vengono ereditati dalle classi derivate.  
   
 -   Il primo argomento per gli operatori di overload della funzione membro è sempre del tipo classe dell'oggetto per cui l'operatore viene richiamato (la classe in cui l'operatore viene dichiarato o una classe derivata da quella classe). Nessuna conversione viene fornita per il primo argomento.  
   
@@ -72,7 +72,7 @@ var++;
 ++var;  
 ```  
   
- Questa identità non può essere ritenuta attendibile per tipi di classe che sottopongono a overload gli operatori. Inoltre, alcuni dei requisiti impliciti nell'utilizzo di questi operatori per i tipi di base sono flessibili per gli operatori di overload. Ad esempio, l'operatore di assegnazione/di addizione, `+=`, richiede che l'operando di sinistra sia un l-value quando applicato a tipi di base; non vi è tale requisito quando l'operatore viene sottoposto a overload.  
+ Questa identità non può essere ritenuta attendibile per tipi di classe che sottopongono a overload gli operatori. Inoltre, alcuni dei requisiti impliciti nell'utilizzo di questi operatori per i tipi di base sono flessibili per gli operatori di overload. Ad esempio, l'operatore di addizione/assegnazione, **+=**, richiede l'operando a sinistra sia un l-value quando applicato a tipi di base; non è tale requisito quando è sottoposto a overload l'operatore.  
   
 > [!NOTE]
 > Per coerenza, è spesso consigliabile seguire il modello di tipi incorporati quando vengono definiti gli operatori di overload. Se la semantica di un operatore di overload differisce notevolmente dal relativo significato in altri contesti, può essere più ambiguo che utile.  

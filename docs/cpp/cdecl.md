@@ -1,5 +1,5 @@
 ---
-title: cdecl | Documenti Microsoft
+title: cdecl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d07c34c11037132b9f9695ec889bb681c7f43951
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c0a9e4db3e1fcbd24358d6dedd2d4ada80672c2a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414493"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406546"
 ---
 # <a name="cdecl"></a>__cdecl
 **Sezione specifica Microsoft**  
   
- `__cdecl` è la convenzione di chiamata predefinita per i programmi C++ e C. Poiché lo stack viene svuotato dal chiamante, può eseguire **vararg** funzioni. Il `__cdecl` la convenzione di chiamata crea eseguibili di dimensioni maggiori rispetto a [stdcall](../cpp/stdcall.md), perché richiede che ogni chiamata di funzione includa codice di pulizia dello stack. Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di chiamata.  
+ **cdecl** è l'impostazione predefinita la convenzione di chiamata per programmi C e C++. Poiché lo stack viene svuotato dal chiamante, l'attività possa eseguire `vararg` funzioni. Il **cdecl** convenzione di chiamata crea eseguibili di dimensioni maggiori rispetto [stdcall](../cpp/stdcall.md), perché richiede che ogni chiamata di funzione per includere il codice di pulizia dello stack. Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di chiamata.  
   
 |Elemento|Implementazione|  
 |-------------|--------------------|  
 |Ordine in cui gli argomenti vengono passati|Da destra a sinistra.|  
 |Responsabilità di manutenzione dello stack|La chiamata della funzione determina l'estrazione degli argomenti dallo stack.|  
-|Convenzione della decorazione dei nomi|Il carattere di sottolineatura (_) è anteposto ai nomi, tranne quando \_cdecl che utilizzano il collegamento C vengono esportate.|  
+|Convenzione della decorazione dei nomi|Carattere di sottolineatura (_) è anteposto ai nomi, tranne quando \_cdecl che utilizzano il collegamento C vengono esportate.|  
 |Convenzione della conversione maiuscolo/minuscolo e viceversa|Non viene effettuata alcuna conversione maiuscole/minuscole.|  
   
 > [!NOTE]
 >  Per informazioni correlate, vedere [nomi decorati](../build/reference/decorated-names.md).  
   
- Posizionare il modificatore `__cdecl` prima del nome di una variabile o di una funzione. Poiché la denominazione e convenzioni di chiamata di C è l'impostazione predefinita, l'unica volta è necessario utilizzare `__cdecl` nel codice x86 è quando è stata specificata la **/Gv** (vectorcall), **/Gz** (stdcall) o  **/GR** l'opzione del compilatore (fastcall). Il [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) opzione del compilatore impone il `__cdecl` convenzione di chiamata.  
+ Sul posto di **cdecl** modificatore prima di una variabile o un nome di funzione. Poiché la denominazione e convenzioni di chiamata di C sono l'impostazione predefinita, l'unica volta è necessario utilizzare **cdecl** nel codice x86 è quando è stata specificata la `/Gv` (vectorcall), `/Gz` (stdcall) o `/Gr` (fastcall) opzione del compilatore. Il [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) compilatore opzione forza il **cdecl** convenzione di chiamata.  
   
- Nei processori ARM e x64 `__cdecl` è accettato, ma in genere viene ignorato dal compilatore. Per convenzione su ARM e x64, gli argomenti vengono passati nei registri quando possibile e gli argomenti successivi vengono passati nello stack. In x64 il codice, utilizzare `__cdecl` per eseguire l'override di **/Gv** opzione del compilatore e utilizzare la convenzione di chiamata predefinita di x64.  
+ In ARM e x64, processori **cdecl** è accettato, ma in genere viene ignorato dal compilatore. Per convenzione su ARM e x64, gli argomenti vengono passati nei registri quando possibile e gli argomenti successivi vengono passati nello stack. In x64 del codice, usare **cdecl** per eseguire l'override di **/Gv** opzione del compilatore e usare la convenzione di chiamata x64 predefinita.  
   
  Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline. Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione. Data la definizione di classe seguente  
   

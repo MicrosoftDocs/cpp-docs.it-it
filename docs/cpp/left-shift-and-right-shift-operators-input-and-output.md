@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50a177468795ae0e288910fa51192d9cc9a24502
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939730"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403154"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;)
 Gli operatori di spostamento bit per bit sono l'operatore di spostamento a destra (>>), che sposta i bit del *shift-expression* a destra e l'operatore di spostamento a sinistra (<<), che sposta i bit di *shift-expression* a sinistra. <sup>1</sup>  
@@ -66,7 +66,6 @@ int main() {
     bitset<16> bitset3{short3};  
     cout << bitset3 << endl;  // 0000000000010000  
 }  
-  
 ```  
   
  Se si sposta a sinistra un numero con segno coinvolgendo il bit di segno, il risultato sarà indefinito. Nell'esempio seguente viene illustrato ciò che accade in Visual C++ quando un bit viene spostato a sinistra nella posizione del bit di segno.  

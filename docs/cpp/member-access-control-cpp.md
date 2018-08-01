@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957386"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407387"
 ---
 # <a name="member-access-control-c"></a>Controllo di accesso dei membri [C++]
 I controlli di accesso consentono di separare la [pubblico](../cpp/public-cpp.md) interfaccia di una classe dal [privato](../cpp/private-cpp.md) i dettagli di implementazione e la [protetti](../cpp/protected-cpp.md) usano membri che sono solo per classi derivate. L'identificatore di accesso si applica a tutti i membri dichiarati dopo l'identificatore stesso, fino a quando non viene rilevato l'identificatore di accesso successivo.  
@@ -42,7 +42,6 @@ private:                 // Declare private state variables.
 protected:      // Declare protected function for derived classes only.  
     Point ToWindowCoords();  
 };  
-  
 ``` 
   
  L'accesso predefinito è **privati** in una classe, e **pubblico** in una struct o unione. Gli specificatori di accesso in una classe possono essere usati per un numero qualsiasi di volte in qualunque ordine. L'allocazione di memoria per oggetti di tipo classe è indipendente dall'implementazione, ma ai membri vengono assegnati gli indirizzi di memoria successivamente superiori tra gli identificatori di accesso.  

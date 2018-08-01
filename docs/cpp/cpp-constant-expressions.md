@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026702"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408112"
 ---
 # <a name="c-constant-expressions"></a>Espressioni costanti C++
 Oggetto *costante* valore corrisponde a uno che non cambiano. C++ fornisce due parole chiave per permettere di indicare che un oggetto non deve essere modificato e per applicare tale intento.  
@@ -53,7 +53,7 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-Le conversioni esplicite in tipi integrali sono valide nelle espressioni costanti. Tutti gli altri tipi e i tipi derivati non sono validi tranne quando sono usati come operandi per l'operatore `sizeof`.  
+Le conversioni esplicite in tipi integrali sono valide nelle espressioni costanti; tutti gli altri tipi e i tipi derivati non sono validi tranne quando usati come operandi per il **sizeof** operatore.  
   
 L'operatore virgola e gli operatori di assegnazione non possono essere usati nelle espressioni costanti.  
   

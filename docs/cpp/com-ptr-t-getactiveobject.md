@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccff761cb9b738de9e2f0debc470746d1482ab56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 392460cde35096bc1c61db4d7e6bd2143932838d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940368"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403995"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Sezione specifica Microsoft**  
@@ -31,8 +31,7 @@ ms.locfileid: "37940368"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      HRESULT GetActiveObject(  
+HRESULT GetActiveObject(  
    const CLSID& rclsid   
 ) throw( );  
 HRESULT GetActiveObject(  
@@ -54,13 +53,13 @@ HRESULT GetActiveObject(
  Una stringa multibyte che utilizza la tabella codici ANSI, che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.  
   
 ## <a name="remarks"></a>Note  
- Tali funzioni membro chiamano `GetActiveObject` per recuperare un puntatore a un oggetto in esecuzione registrato con OLE e quindi per eseguire una query per il tipo di interfaccia del puntatore intelligente. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza. Questa routine restituisce il valore HRESULT per indicare esito positivo o negativo.  
+ Queste funzioni membro chiamano **GetActiveObject** per recuperare un puntatore a un oggetto in esecuzione che è stato registrato con OLE e quindi le query per questo puntatore intelligente del tipo di interfaccia. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza. Questa routine restituisce il valore HRESULT per indicare esito positivo o negativo.  
   
--   **GetActiveObject (**`rclsid`**)** Collega a un'istanza esistente di un oggetto dato un `CLSID`.      
+-   **GetActiveObject (**`rclsid`**)** Collega a un'istanza esistente di un oggetto dato un `CLSID`.  
   
--   **GetActiveObject (**`clsidString`**)** Collega a un'istanza esistente di un oggetto data una stringa Unicode che contiene una `CLSID` (a partire da "**{**") o un `ProgID`.      
+-   **GetActiveObject (**`clsidString`**)** Collega a un'istanza esistente di un oggetto data una stringa Unicode che contiene una `CLSID` (a partire da "**{**") o un `ProgID`.  
   
--   **GetActiveObject (**`clsidStringA`**)** Collega a un'istanza esistente di un oggetto data una stringa di caratteri multibyte che contiene una `CLSID` (a partire da "**{**") o un oggetto `ProgID`.     Le chiamate [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), che presuppone che la stringa sia la tabella codici ANSI anziché una tabella codici OEM.  
+-   **GetActiveObject (**`clsidStringA`**)** Collega a un'istanza esistente di un oggetto data una stringa di caratteri multibyte che contiene una `CLSID` (a partire da "**{**") o un oggetto `ProgID`. Le chiamate [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), che presuppone che la stringa sia la tabella codici ANSI anziché una tabella codici OEM.  
   
  **Fine sezione specifica Microsoft**  
   

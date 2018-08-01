@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b01a7f2ca1af2ef114347d7355fbd1be973b8af
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ae977f1f5388bd4a88c377ee8629f10130854108
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943982"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402991"
 ---
 # <a name="new-operator-c"></a>Operatore new (C++)
 Alloca memoria per un oggetto o una matrice di oggetti di *-nome del tipo* dall'archiviazione disponibile e restituisce un puntatore opportunamente tipizzato, diverso da zero per l'oggetto.  

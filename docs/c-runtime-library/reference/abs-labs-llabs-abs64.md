@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391753"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408128"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
@@ -76,7 +76,7 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*n*<br/>
+*n*  
 Valore numerico.
 
 ## <a name="return-value"></a>Valore restituito
@@ -85,9 +85,9 @@ Il **abs**, **labs**, **llabs** e **_abs64** funzioni restituiscono il valore as
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **abs** che accettano e restituiscono **long**, **lungo** **lungo**,  **float**, **doppie**, e **lungo** **doppie** valori. Questi overload sono definiti nell'intestazione \<cmath>. In un programma C **abs** sempre accetta e restituisce un int.
+Dato che C++ consente l'overload, è possibile chiamare overload di **abs** che accettano e restituiscono **long**, **long** **lungo**,  **float**, **doppie**, e **long** **double** valori. Questi overload sono definiti nell'intestazione \<cmath>. In un programma C **abs** accetta e restituisce sempre un **int**.
 
-**Sezione specifica Microsoft**: poiché l'intervallo di numeri interi negativi che può essere rappresentato utilizzando qualsiasi tipo integrale è maggiore dell'intervallo di numeri interi positivi che possono essere rappresentati mediante quel tipo, è possibile fornire un argomento a queste funzioni che non possono essere convertite. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, il **abs** funzioni restituiscono il valore dell'argomento invariato. In particolare, `abs(INT_MIN)` restituisce **INT_MIN**, `labs(LONG_MIN)` restituisce **LONG_MIN**, `llabs(LLONG_MIN)` restituisce **LLONG_MIN**, e `_abs64(_I64_MIN)` Restituisce **_I64_MIN**. Ciò significa che il **abs** funzioni non possono essere utilizzate per garantire un valore positivo.
+**Sezione specifica Microsoft**: poiché l'intervallo degli integer negativi che possono essere rappresentati usando qualsiasi tipo integrale è maggiore dell'intervallo di numeri interi positivi che possono essere rappresentati usando quel tipo, è possibile fornire un argomento a questi funzioni che non possono essere convertite. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, il **abs** funzioni restituiscono il valore dell'argomento non modificato. In particolare, `abs(INT_MIN)` restituisce `INT_MIN`, `labs(LONG_MIN)` restituisce `LONG_MIN`, `llabs(LLONG_MIN)` restituisce `LLONG_MIN` e `_abs64(_I64_MIN)` restituisce `_I64_MIN`. Ciò significa che il **abs** funzioni non possono essere utilizzate per garantire un valore positivo.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -96,7 +96,7 @@ Dato che C++ consente l'overload, è possibile chiamare overload di **abs** che 
 |**Abs**, **labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> o \<stdlib.h>|
 
-Per usare le versioni di overload **abs** in C++, è necessario includere il \<cmath > intestazione.
+Per usare le versioni di overload **abs** in C++, è necessario includere il \<cmath > dell'intestazione.
 
 ## <a name="example"></a>Esempio
 
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[Conversione dei dati](../../c-runtime-library/data-conversion.md)  
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

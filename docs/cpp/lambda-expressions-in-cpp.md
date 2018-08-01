@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941967"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402965"
 ---
 # <a name="lambda-expressions-in-c"></a>Espressioni lambda in C++
 In c++11 e versioni successive, un'espressione lambda, spesso definito un *lambda*, ovvero è un modo pratico di definizione di un oggetto funzione anonima (un *chiusura*) a destra in corrispondenza della posizione in cui viene richiamato o passato come argomento per una funzione. In genere le lambda vengono usate per incapsulare alcune righe di codice passate agli algoritmi o ai metodi asincroni. In questo articolo vengono definite le espressioni lambda confrontandole con altre tecniche di programmazione, vengono illustrati i vantaggi che offrono e viene fornito un esempio di base.  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  Questa figura illustra le parti della lambda:  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- Per usare espressioni lambda nel corpo di un metodo della classe, passare il puntatore `this` alla clausola di acquisizione per fornire l'accesso ai metodi e ai membri dati della classe che li contengono. 
+ Per usare le espressioni lambda nel corpo di un metodo della classe, passare il **ciò** puntatore alla clausola di acquisizione per fornire l'accesso ai membri dati e i metodi della classe contenitrice. 
  
 **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): il **ciò** puntatore può essere acquisito per valore specificando `*this` nella clausola di acquisizione. Acquisizione per valore significa che l'intera *chiusura*, che è l'oggetto funzione anonima che encapulates l'espressione lambda, viene copiato in ogni sito di chiamata in cui l'espressione lambda viene richiamata. Acquisizione per valore è utile quando l'espressione lambda verrà eseguita in operazioni parallele o asincrone, in particolare su alcune architetture hardware, ad esempio NUMA. 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  Nelle **C++ 14**, se il tipo di parametro è generico, è possibile usare la parola chiave auto come identificatore del tipo. Ciò indica al compilatore di creare l'operatore di chiamata della funzione come modello. Ogni istanza di auto in un elenco di parametri equivale a un parametro di tipo distinto.  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 Un'espressione lambda è implicitamente `constexpr` se il relativo risultato soddisfa i requisiti di un `constexpr` funzione:
 ```cpp

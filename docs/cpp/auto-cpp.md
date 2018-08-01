@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e33faac0bf222a94b21878eb287e696ae8c7de47
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4564606cd1a4cf6c12c224f6a3725d9f6aca2224
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939865"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402776"
 ---
 # <a name="auto-c"></a>auto (C++)
 Deduce il tipo di una variabile dichiarata dall'espressione di inizializzazione.  

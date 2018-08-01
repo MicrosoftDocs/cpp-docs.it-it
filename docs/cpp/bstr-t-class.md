@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027248"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404925"
 ---
 # <a name="bstrt-class"></a>_bstr_t Class
 **Sezione specifica Microsoft**  
   
- Oggetto `_bstr_t` incapsulato dall'oggetto di [tipo di dati BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). La classe gestisce l'allocazione delle risorse e la deallocazione tramite chiamate di funzione a `SysAllocString` e `SysFreeString` e altri `BSTR` API quando appropriato. La classe `_bstr_t` utilizza il conteggio dei riferimenti per evitare un sovraccarico eccessivo.  
+ Oggetto `_bstr_t` incapsulato dall'oggetto di [tipo di dati BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). La classe gestisce l'allocazione delle risorse e la deallocazione tramite chiamate di funzione a `SysAllocString` e `SysFreeString` e altri `BSTR` API quando appropriato. Il **bstr_t** classe viene utilizzata per evitare un sovraccarico eccessivo di conteggio dei riferimenti.  
   
 ### <a name="construction"></a>Costruzione  
   

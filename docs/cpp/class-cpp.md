@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bf975a9d64508368ac5d61c82fecc07edda28b5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a3c3defdfb882db69f7789c97feba11d346e540
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943214"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405587"
 ---
 # <a name="class-c"></a>class (C++)
 Il **classe** parola chiave dichiara un tipo di classe o definisce un oggetto di un tipo di classe.  
@@ -30,7 +30,6 @@ Il **classe** parola chiave dichiara un tipo di classe o definisce un oggetto di
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [template-spec]  
 class [ms-decl-spec] [tag [: base-list ]]  
 {  

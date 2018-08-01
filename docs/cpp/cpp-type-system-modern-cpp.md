@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027274"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407861"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
 Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è necessario che a ogni variabile, argomento di funzione e valore restituito di una funzione siano associati tipi. A ogni espressione (compresi i valori letterali) viene inoltre assegnato un tipo in modo implicito prima della restituzione di un risultato. Alcuni esempi di tipi **int** per archiviare i valori integrali, **double** per archiviare valori a virgola mobile (noto anche come *scalare* i tipi di dati), o la classe della libreria Standard [std:: basic_string](../standard-library/basic-string-class.md) per archiviare testo. È possibile creare un tipo personalizzato definendo un **classe** oppure **struct**. Il tipo specifica la quantità di memoria che verrà allocata per la variabile (o risultato dell'espressione), i tipi di valori che è possibile archiviare in tale variabile, la modalità di interpretazione di questi valori (come schemi di bit) e le operazioni che è possibile eseguire su di essi. In questo articolo viene offerta una panoramica informale delle principali funzionalità del sistema di tipi C++.  
@@ -41,7 +41,6 @@ Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è 
  Nell'esempio seguente vengono illustrate alcune dichiarazioni di variabile semplici con alcune descrizioni per ognuna. Nell'esempio viene inoltre illustrato il modo in cui il compilatore utilizza le informazioni sul tipo per consentire o meno operazioni successive sulla variabile.  
   
 ```cpp  
-  
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
                              // point value.  
@@ -56,7 +55,6 @@ string result = "zero";      // error. Can’t redefine a variable with
                              // new type.  
 int maxValue;                // Not recommended! maxValue contains   
                              // garbage bits until it is initialized.  
-  
 ```  
   
 ## <a name="fundamental-built-in-types"></a>Tipi fondamentali (predefiniti)  
@@ -96,10 +94,10 @@ PI = .75 //Error. Cannot modify const variable.
   
  Il **const** qualificatore viene ampiamente usato nelle dichiarazioni di funzione e la variabile e "correttezza di const" è un concetto importante in C++; fondamentalmente di utilizzare **const** assicurazione in fase di compilazione che è possibile che i valori non vengano modificati accidentalmente. Per altre informazioni, vedere [const](../cpp/const-cpp.md).  
   
- Oggetto **const** tipo è diverso dalla relativa versione non const; ad esempio `const int` è un tipo diverso da **int**. È possibile usare C++ **const_cast** operatore in quei rari casi in cui è necessario rimuovere *constness* da una variabile. Per altre informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
+ Oggetto **const** tipo è diverso dalla relativa versione non const; ad esempio **const int** è un tipo diverso da **int**. È possibile usare C++ **const_cast** operatore in quei rari casi in cui è necessario rimuovere *constness* da una variabile. Per altre informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
   
 ## <a name="string-types"></a>Tipi di stringa  
- In teoria, il linguaggio C++ non dispone di alcun tipo di stringa predefinite; **char** e `wchar_t` archiviano caratteri singoli, è necessario dichiarare una matrice di questi tipi per avvicinarsi a una stringa, aggiungendo un valore null finale (ad esempio ASCII `'\0'`) per l'elemento matrice dopo l'ultimo valido carattere (detto anche un *stringa in formato C*). Le stringhe di tipo C richiedono la scrittura di una quantità maggiore di codice o l'utilizzo delle funzioni della libreria dell'utilità di stringa esterna. Ma nel linguaggio C++ moderno, sono disponibili i tipi della libreria Standard `std::string` (8 bit **char**-digitare le stringhe di caratteri) oppure `std::wstring` (per 16 bit `wchar_t`-digitare le stringhe di caratteri). Questi contenitori della libreria Standard C++ possono essere considerati come tipi di stringa nativi perché fanno parte delle librerie standard incluse in qualsiasi ambiente di compilazione conforme a C++. È sufficiente utilizzare la direttiva `#include <string>` per rendere questi tipi disponibili nel programma. (Se si utilizza MFC o ATL, è disponibile anche la classe CString, anche se non fa parte dello standard C++). L'utilizzo di matrici di caratteri con terminazione Null (le stringhe in stile C citate in precedenza) è fortemente sconsigliato nel linguaggio C++ moderno.  
+ In teoria, il linguaggio C++ non dispone di alcun tipo di stringa predefinite; **char** e **wchar_t** archiviano caratteri singoli, è necessario dichiarare una matrice di questi tipi per avvicinarsi a una stringa, aggiungendo un valore null finale (ad esempio ASCII `'\0'`) all'elemento della matrice Dopo l'ultimo carattere valido (detto anche un *stringa in formato C*). Le stringhe di tipo C richiedono la scrittura di una quantità maggiore di codice o l'utilizzo delle funzioni della libreria dell'utilità di stringa esterna. Ma nel linguaggio C++ moderno, sono disponibili i tipi della libreria Standard `std::string` (8 bit **char**-digitare le stringhe di caratteri) oppure `std::wstring` (per 16 bit **wchar_t**-digitare le stringhe di caratteri). Questi contenitori della libreria Standard C++ possono essere considerati come tipi di stringa nativi perché fanno parte delle librerie standard incluse in qualsiasi ambiente di compilazione conforme a C++. È sufficiente utilizzare la direttiva `#include <string>` per rendere questi tipi disponibili nel programma. (Se si utilizza MFC o ATL, è disponibile anche la classe CString, anche se non fa parte dello standard C++). L'utilizzo di matrici di caratteri con terminazione Null (le stringhe in stile C citate in precedenza) è fortemente sconsigliato nel linguaggio C++ moderno.  
   
 ## <a name="user-defined-types"></a>Tipi definiti dall'utente  
  Quando si definisce una **classe**, **struct**, **union**, oppure **enum**, quel costrutto viene utilizzato nel resto del codice come se fosse un tipo fondamentale . Ha una dimensione nota in memoria e alcune regole sull'utilizzo si applicano a esso per la verifica in fase di compilazione e, al runtime, per la durata del programma. Di seguito sono elencate le differenze principali tra i tipi fondamentali predefiniti e i tipi definiti dall'utente:  
@@ -116,19 +114,16 @@ PI = .75 //Error. Cannot modify const variable.
  La prima cosa da sapere è che dichiarare una variabile di puntatore non elaborato comporta l'allocazione della sola memoria necessaria per archiviare un indirizzo di posizione in memoria a cui farà riferimento il puntatore quando verrà dereferenziato. Allocazione della memoria per il valore dati stesso (chiamato anche *archivio di backup*) non è ancora allocato. In altre parole, dichiarando una variabile di puntatore non elaborato si crea una variabile di indirizzo di memoria, non una variabile dati effettivi. Dereferenziare una variabile di puntatore senza verificare che contenga un indirizzo valido a un archivio di backup causa un comportamento non definito (in genere un errore irreversibile) nel programma. Nell'esempio seguente viene illustrato questo tipo di errore:  
   
 ```cpp  
-  
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
                     // a serious error. We are dereferencing an  
                     // uninitialized pointer variable with no  
                     // allocated memory to point to.  
-  
 ```  
   
  Nell'esempio viene dereferenziato un tipo di puntatore senza avere allocato memoria per archiviare i dati di tipo integer effettivi o aver assegnato a esso un indirizzo di memoria valido. Nel codice seguente vengono corretti questi errori:  
   
 ```cpp  
-  
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
     int* pNumber = &number;   // Declare and initialize a local integer  
@@ -140,7 +135,6 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // pNumber, the integer variable called  
                               // "number". Note "number" was changed, not  
                               // "pNumber".  
-  
 ```  
   
  Nell'esempio di codice corretto viene utilizzata la memoria dello stack locale per creare l'archivio di backup a cui punta `pNumber`. Per semplicità viene utilizzato un tipo fondamentale. In pratica, l'archivio di backup per i puntatori sono la maggior parte dei tipi spesso definiti dall'utente che vengono allocate in modo dinamico in un'area di memoria denominata il *heap* (o *archivio libero*) usando un **nuova** espressione di parola chiave (nella programmazione di tipo C meno recente `malloc()` funzione della libreria runtime C è stato usato). Una volta allocata, queste variabili in genere vengono definite come oggetti, soprattutto se sono basate su una definizione di classe. Memoria allocata con **nuove** deve essere eliminato una corrispondente **eliminare** istruzione (o, se è stato usato il `malloc()` funzione di allocazione, la funzione di runtime C `free()`).  
@@ -148,14 +142,12 @@ int* pNumber;       // Declare a pointer-to-int variable.
  Tuttavia, è facile dimenticare di eliminare un allocata dinamicamente oggetto, specialmente in codice complesso, che fa sì che un bug di risorse denominato una *perdita di memoria*. Per questo motivo, l'utilizzo dei puntatori non elaborati è fortemente sconsigliato nel linguaggio C++ moderno. È quasi sempre consigliabile eseguire il wrapping di un puntatore non elaborato in un [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md), quale la memoria venga rilasciata automaticamente quando viene richiamato il relativo distruttore (quando il codice esce dall'ambito del puntatore intelligente); utilizzando i puntatori intelligenti è praticamente Elimina un'intera classe di bug nei programmi C++. Nell'esempio seguente si supponga che `MyClass` sia un tipo definito dall'utente avente un metodo pubblico `DoSomeWork();`  
   
 ```cpp  
-  
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
     pMc->DoSomeWork();  
 }  
   // No memory leak. Out-of-scope automatically calls the destructor  
   // for the unique_ptr, freeing the resource.  
-  
 ```  
   
  Per altre informazioni sui puntatori intelligenti, vedere [puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md).  

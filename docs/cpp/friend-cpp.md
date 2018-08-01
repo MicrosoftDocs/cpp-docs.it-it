@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942081"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407017"
 ---
 # <a name="friend-c"></a>friend (C++)
 In alcuni casi, è più pratico concedere l'accesso a livello di membro alle funzioni che non sono membri di una classe o a tutti i membri in una classe separata. Solo l'implementatore della classe può dichiarare i rispettivi elementi friend. Una funzione o una classe non può dichiarare se stessa come elemento friend di una classe. In una definizione di classe, usare il **friend** (parola chiave) e il nome di una funzione non membro o un'altra classe per concedere l'accesso ai membri privati e protetti della classe. In una definizione di modello, un parametro di tipo possa essere dichiarato come friend.  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- Il primo modulo introduce una nuova classe F se delle classi esistenti con lo stesso nome è stata trovata nello spazio dei nomi di colonne più interno.  **C++11**: il secondo form non introduce una nuova classe; può essere utilizzato quando la classe è già stata dichiarata e deve essere usato quando si dichiara un parametro di tipo di modello o un typedef come friend.  
+ Il primo modulo introduce una nuova classe F se delle classi esistenti con lo stesso nome è stata trovata nello spazio dei nomi di colonne più interno. **C++11**: il secondo form non introduce una nuova classe; può essere utilizzato quando la classe è già stata dichiarata e deve essere usato quando si dichiara un parametro di tipo di modello o un typedef come friend.  
   
  Usare `class friend F` quando il tipo di riferimento non è ancora stato dichiarato:  
   

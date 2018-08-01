@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a743398b60bc51118045b00e8caf4effde2c68da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b45db3a1226a9069c03ff928227a8719c83eb65
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943260"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406520"
 ---
 # <a name="false-c"></a>false (C++)
 La parola chiave è uno dei due valori per una variabile di tipo [bool](../cpp/bool-cpp.md) o un'espressione condizionale (un'espressione condizionale è ora una **true** espressione booleana). Ad esempio, se `i` è una variabile di tipo **bool**, il `i = false;` istruzione assegna **false** a `i`.  

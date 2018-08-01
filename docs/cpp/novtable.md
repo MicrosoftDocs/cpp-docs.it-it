@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5deee0209866580afd038fbce068a9275f5b5874
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943611"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406968"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
@@ -30,7 +30,7 @@ ms.locfileid: "37943611"
   
  Questa forma di **declspec** possono essere applicati a qualsiasi dichiarazione di classe, ma deve essere applicato solo a classi di interfaccia pure, ovvero le classi che non verranno mai avviata l'istanza in modo indipendente. Il **declspec** interrompe il compilatore di generare codice per inizializzare vfptr nel costruttori e nel distruttore della classe il costruttore di o. In molti casi, in tal modo vengono rimossi gli unici riferimenti a vtable associati alla classe e, pertanto, il linker la rimuoverà. Utilizzo del formato del **declspec** può comportare una riduzione significativa delle dimensioni del codice.  
   
- Se si tenta di creare un'istanza di una classe contrassegnata con `novtable` e quindi accedere a un membro di classe, si riceverà una violazione di accesso (AV).  
+ Se si prova a creare un'istanza di una classe contrassegnata con **novtable** e quindi accedere a un membro di classe, si riceverà una violazione di accesso (AV).  
   
 ## <a name="example"></a>Esempio  
   

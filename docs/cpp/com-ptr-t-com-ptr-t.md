@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939071"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403826"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Sezione specifica Microsoft**  
   
- Costruisce un oggetto `_com_ptr_t`.  
+ Costruisce un **com_ptr_t** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  Se TRUE, `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.  
   
  *CP*  
- Oggetto `_com_ptr_t`.  
+ Oggetto **com_ptr_t** oggetto.  
   
  *p*  
- Puntatore a interfaccia raw con tipo relativo diverso dal tipo di puntatore intelligente dell'oggetto `_com_ptr_t`.  
+ Un puntatore a interfaccia raw, tipo relativo diverso dal tipo di puntatore intelligente di questo **com_ptr_t** oggetto.  
   
  *varSrc*  
  Oggetto `_variant_t`.  

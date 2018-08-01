@@ -1,5 +1,5 @@
 ---
-title: Esegue il cast | Documenti Microsoft
+title: Esegue il cast | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c7dfe18c65fcde7cbfa0ea2121234f2896a2723
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411728"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405019"
 ---
 # <a name="casting"></a>Cast
 Nel linguaggio C++ se una classe è derivata da una classe base che contiene funzioni virtuali, un puntatore a quel tipo della classe base può essere utilizzato per chiamare le implementazioni delle funzioni virtuali che si trovano nell'oggetto classe derivata. La classe che contiene le funzioni virtuali è talvolta detta "classe polimorfica".  
@@ -37,14 +37,14 @@ Gerarchia di classi
   
  Un oggetto di tipo `C` potrebbe essere visualizzato come illustrato di seguito.  
   
- ![Classe C con sub&#45;gli oggetti A e B](../cpp/media/vc38zz2.gif "vc38ZZ2")  
+ ![La classe C con sub&#45;gli oggetti B e A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
 La classe C con oggetto secondario B e oggetto secondario A  
   
  Data un'istanza della classe `C`, esiste un oggetto secondario `B` e un oggetto secondario `A`. L'istanza di `C`, inclusi gli oggetti secondari `A` e `B`, è "l'oggetto completo".  
   
- Utilizzando le informazioni del tipo di runtime, è possibile verificare se un puntatore punti effettivamente a un oggetto completo e possa essere eseguito il cast in modo sicuro a un altro oggetto nella relativa gerarchia. Il [dynamic_cast](../cpp/dynamic-cast-operator.md) operatore può essere utilizzato per eseguire questi tipi di cast. Esegue inoltre la verifica del runtime necessaria per rendere l'operazione sicura.  
+ Utilizzando le informazioni del tipo di runtime, è possibile verificare se un puntatore punti effettivamente a un oggetto completo e possa essere eseguito il cast in modo sicuro a un altro oggetto nella relativa gerarchia. Il [dynamic_cast](../cpp/dynamic-cast-operator.md) operatore può essere usato per rendere questi tipi di cast. Esegue inoltre la verifica del runtime necessaria per rendere l'operazione sicura.  
   
- Per la conversione dei tipi non polimorfici, è possibile utilizzare il [static_cast](../cpp/static-cast-operator.md) (operatore) (questo argomento illustra le differenze tra le conversioni di cast statiche e dinamiche e quando è consigliabile utilizzarle).  
+ Per la conversione dei tipi non polimorfici, è possibile usare la [static_cast](../cpp/static-cast-operator.md) operatore (in questo argomento illustra la differenza tra le conversioni di cast statiche e dinamiche e quando è appropriato usare ciascuna).  
   
  In questa sezione vengono trattati i seguenti argomenti:  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c48da9a0ff3b9cadf0b7e228f3108277154e8417
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943793"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402884"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Sezione specifica Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37943793"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 void Attach( Interface* pInterface ) throw( );  
 void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
@@ -46,7 +45,7 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
   
 ## <a name="remarks"></a>Note  
   
--   **Collega (***pInterface***)** `AddRef` non viene chiamato.     La proprietà dell'interfaccia viene passata a questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.  
+-   **Collega (***pInterface***)** `AddRef` non viene chiamato. La proprietà dell'interfaccia viene passata a questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.  
   
 -   **Collega (***pInterface* **,***fAddRef***)** se *fAddRef* è TRUE, `AddRef`viene chiamato per incrementare il conteggio dei riferimenti per il puntatore a interfaccia incapsulato.       Se *fAddRef* è FALSE, questa `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.  
   

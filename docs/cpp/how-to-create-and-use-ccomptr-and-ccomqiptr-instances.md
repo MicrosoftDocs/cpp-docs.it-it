@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80efab13dfe28c7ecec2da1d3d932ed90d46f0f8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b22bbcfd2055a362a3ee9b3fcfd4498cdb089586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026909"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407956"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procedura: creare e utilizzare istanze CComPtr e CComQIPtr
 Nella programmazione Windows classica le librerie sono spesso implementate come oggetti COM (o, più precisamente, come server COM). Molti componenti del sistema operativo Windows sono implementati come server COM e molti autori forniscono librerie in questa forma. Per informazioni sui fondamenti di COM, vedere [modello COM (Component Object)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  

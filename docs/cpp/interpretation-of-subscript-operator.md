@@ -1,5 +1,5 @@
 ---
-title: Interpretazione dell'operatore di indice | Documenti Microsoft
+title: Interpretazione dell'operatore di indice | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bba312c6969acf95be8899f58f65e31c75386c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75659730198e09a172625c54bfcbdd54b7a9f857
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420473"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404788"
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretazione dell'operatore di indice
 Come altri operatori, l'operatore di pedice (**[]**) può essere ridefinito dall'utente. Il comportamento predefinito dell'operatore di indice, se non sottoposto a overload, è di combinare il nome della matrice e l'indice utilizzando il seguente metodo:  
   
  \*((*-nome della matrice*) + (*pedice*))  
   
- Come in qualsiasi aggiunta che include i tipi puntatore, il ridimensionamento viene eseguito automaticamente per regolare le dimensioni del tipo. Pertanto, il valore risultante non è *pedice* byte dall'origine del *nome matrice*; piuttosto, è il *pedice*elemento della matrice. (Per ulteriori informazioni su questa conversione, vedere [operatori additivi](../cpp/additive-operators-plus-and.md).)  
+ Come in qualsiasi aggiunta che include i tipi puntatore, il ridimensionamento viene eseguito automaticamente per regolare le dimensioni del tipo. Pertanto, il valore risultante non è *pedice* byte dall'origine del *array-name*; piuttosto, è la *pedice*ennesimo elemento della matrice. (Per altre informazioni su questa conversione, vedere [operatori additivi](../cpp/additive-operators-plus-and.md).)  
   
  Analogamente, per le matrici multidimensionali, l'indirizzo viene derivato utilizzando il seguente metodo:  
   
  **((**   
- ***nome di matrice* ) + (**   
- ***pedice* 1***max*2  *\* max*3*Outlook file max*n) **+** *pedice*2  *\* max*3*Outlook file max*n).   . . *+* *pedice*n))  
+ ***nome matrice* ) + (**   
+ ***pedice* 1***max*2  *\* max*3 *.. file max*n) **+** *pedice*2  *\* max*3 *.. file max*n).   . . *+* *pedice*n))  
   
 ## <a name="see-also"></a>Vedere anche  
  [Array](../cpp/arrays-cpp.md)

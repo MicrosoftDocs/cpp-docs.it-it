@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c871ae13e333d8d3f7fa1bf0cce29bc1309d0c62
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941067"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403365"
 ---
 # <a name="function-templates"></a>Modelli di funzioni
 I modelli di classe definiscono un gruppo di classi correlate, basate sugli argomenti tipo passati alla classe mediante la creazione di istanze. I modelli di funzione sono simili ai modelli di classe ma definiscono un gruppo di funzioni. Con i modelli di funzione è possibile specificare un set di funzioni basate sullo stesso codice, ma che agiscono su tipi o classi differenti. Il modello di funzione seguente scambia due elementi:  

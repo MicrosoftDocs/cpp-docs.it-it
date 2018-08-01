@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939864"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408164"
 ---
 # <a name="initializers"></a>Inizializzatori
 Un inizializzatore specifica il valore iniziale di una variabile. È possibile inizializzare le variabili nei contesti seguenti:  
@@ -46,7 +46,6 @@ Un inizializzatore specifica il valore iniziale di una variabile. È possibile i
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  Gli inizializzatori possono assumere le forme seguenti:  
@@ -93,7 +92,7 @@ Un inizializzatore specifica il valore iniziale di una variabile. È possibile i
   
 -   Le variabili char vengono inizializzate su `'\0'`.  
   
--   I puntatori vengono inizializzati su `nullptr`.  
+-   I puntatori vengono inizializzati **nullptr**.  
   
 -   Matrici [POD](../standard-library/is-pod-class.md) classi, struct e unioni dispongano i relativi membri inizializzati sul valore zero.  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>Inizializzazione per copia  
@@ -533,4 +531,3 @@ Grafico decisionale per l'inizializzazione dei tipi di riferimento
   
 ### <a name="initialization-of-external-variables"></a>Inizializzazione di variabili esterne  
  Le dichiarazioni delle variabili automatiche, statiche ed esterne possono contenere inizializzatori. Tuttavia, le dichiarazioni di variabili esterne possono contenere inizializzatori solo se le variabili non vengono dichiarate come **extern**.
-  

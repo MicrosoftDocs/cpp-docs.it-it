@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943942"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402750"
 ---
 # <a name="additive-operators--and--"></a>Operatori di addizione: + e -
 ## <a name="syntax"></a>Sintassi  
@@ -115,7 +115,7 @@ for( int i = 0; i < 10; ++i )
 >  Il codice del form `pIntArray = pIntArray + 1` si trova raramente nei programmi C++; per eseguire un incremento, sono preferibili i seguenti form: `pIntArray++` o `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Sottrazione di puntatori  
- Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione viene fornito un risultato integrale con segno typu **ptrdiff_t** (definite nel file di inclusione standard \<STDDEF. h >).  
+ Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione viene fornito un risultato integrale con segno typu `ptrdiff_t` (definito nel file di inclusione standard \<STDDEF. h >).  
   
  Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore ai (*n* - *ho*) elemento della matrice th, dove *n* è l'elemento a cui punta il puntatore originale e il *ho* è il valore integrale del secondo operando.  
   

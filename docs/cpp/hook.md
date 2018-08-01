@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7721e617541b962994b115344f33e1ec59e4acaf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: af8470d0ae45d1075fa8b35585225ee0c48db80b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943953"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406507"
 ---
 # <a name="hook"></a>__hook
 Associa un metodo del gestore a un evento.  
@@ -30,7 +30,6 @@ Associa un metodo del gestore a un evento.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 long __hook(  
    &SourceClass::EventMethod,  
    source,  

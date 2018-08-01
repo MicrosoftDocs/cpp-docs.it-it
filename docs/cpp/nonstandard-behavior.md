@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941798"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405379"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento non standard
 Negli sezioni seguenti sono elencate alcune parti in cui l'implementazione Visual C++ di C++ non si conforma allo standard C++. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).  
@@ -67,7 +67,6 @@ int main() {
     g('c');  
 }  
 // Output: f(char)  
-  
 ```  
   
 ## <a name="function-exception-specifiers"></a>Identificatori di eccezioni di funzione.  
@@ -81,7 +80,7 @@ void g() throw();    // parsed and used
  Per altre informazioni sulle specifiche di eccezione, vedere [specifiche di eccezione](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- Gli stati standard C++ che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non deve corrispondere a un valore valido `char_type` valore. Il compilatore Visual C++ applica questo vincolo al tipo **char**, ma non per tipo `wchar_t`. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.  
+ Gli stati standard C++ che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non deve corrispondere a un valore valido `char_type` valore. Il compilatore Visual C++ applica questo vincolo al tipo **char**, ma non per tipo **wchar_t**. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.  
   
 ```cpp  
 #include <iostream>  

@@ -1,5 +1,5 @@
 ---
-title: Modelli di classe | Documenti Microsoft
+title: Modelli di classe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9ed1669d3157327f161643320f20ec5787e17d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7818836406677aa1613c757a1d688cc93ca33045
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415686"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405094"
 ---
 # <a name="class-templates"></a>Modelli di classe
 Questo argomento descrive le regole specifiche per i modelli di classe C++.  
@@ -81,11 +81,10 @@ void X<T>::mf(const U &u)
 int main()  
 {  
 }  
-  
 ```  
   
 ## <a name="nested-class-templates"></a>Modelli di classe annidati  
- I modelli possono essere definiti all'interno di classi o modelli di classe, nel qual caso vengono definiti modelli di membro. I modelli di membro, che sono classi, sono definiti modelli di classe annidati. Vengono descritti i modelli di membro sono funzioni in [modelli di funzioni membro](../cpp/member-function-templates.md).  
+ I modelli possono essere definiti all'interno di classi o modelli di classe, nel qual caso vengono definiti modelli di membro. I modelli di membro, che sono classi, sono definiti modelli di classe annidati. Modelli di membro sono funzioni sono illustrati nella [modelli di funzioni membro](../cpp/member-function-templates.md).  
   
  I modelli di classe annidati vengono dichiarati come modelli di classe nell'ambito della classe esterna. Possono essere definiti all'interno o all'esterno della classe contenitore.  
   

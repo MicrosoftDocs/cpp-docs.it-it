@@ -1,5 +1,5 @@
 ---
-title: Riferimento indiretto sui tipi di matrice | Documenti Microsoft
+title: Riferimento indiretto sui tipi di matrice | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ae5f97d0136ecf86506d03a63b9bb92aa28daa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3593e218418d946cee471c501db5d5746fbe9a43
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418839"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406159"
 ---
 # <a name="indirection-on-array-types"></a>Riferimento indiretto sui tipi di matrice
-Utilizzo dell'operatore di riferimento indiretto (**\***) in un *n*-tipo di matrice unidimensionale produce un *n*matrice dimensionale di-1. Se *n* è 1, viene restituito un valore scalare (o elemento della matrice).  
+Utilizza l'operatore di riferimento indiretto (**\***) su un' *n*-tipo di matrice dimensionale produce un *n*matrice bidimensionale di-1. Se *n* è 1, viene restituito un valore scalare (o un elemento della matrice).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Array](../cpp/arrays-cpp.md)

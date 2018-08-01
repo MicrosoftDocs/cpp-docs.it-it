@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943926"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406253"
 ---
 # <a name="enumerations-c"></a>Enumerazioni (C++)
 Un'enumerazione è un tipo definito dall'utente costituito da un set di costanti integrali note come enumeratori.  
@@ -98,12 +98,11 @@ namespace CardGame_NonScoped
   
 ```cpp  
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };  
-  
 ```  
   
  All'enumeratore `Diamonds` viene assegnato al valore `1`. Gli enumeratori successivi, se viene loro assegnato un valore esplicito, ricevono il valore dell'enumeratore precedente più uno. Nell'esempio precedente `Hearts` avrebbe il valore 2, `Clubs` avrebbe il valore 3 e così via.  
   
- Ogni enumeratore viene considerato come costante e deve avere un nome univoco all'interno dell'ambito in cui viene definito `enum` (per le enumerazioni senza ambito) o all'interno dell'enumerazione stessa (per le enumerazioni con ambito). I valori assegnati ai nomi non devono essere univoci. Ad esempio, se la dichiarazione di un'enumerazione senza ambito `Suit` è la seguente:  
+ Ogni enumeratore viene considerato come una costante e deve avere un nome univoco all'interno dell'ambito in cui il **enum** definita (per le enumerazioni senza ambito) o all'interno di **enum** stesso (per le enumerazioni con ambito). I valori assegnati ai nomi non devono essere univoci. Ad esempio, se la dichiarazione di un'enumerazione senza ambito `Suit` è la seguente:  
   
 ```cpp  
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };  
@@ -119,7 +118,6 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 int account_num = 135692;  
 Suit hand;  
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'  
-  
 ```  
   
  È necessario un cast per convertire un **int** per un enumeratore con ambito o senza ambito. È tuttavia possibile alzare di livello un enumeratore senza ambito in un Integer senza un cast.  
@@ -147,7 +145,6 @@ namespace ScopedEnumConversions
         account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'  
         account_num = static_cast<int>(Suit::Hearts); // OK  
 }  
-  
 ```  
   
  Notare che la riga `hand = account_num;` causa ancora l'errore che si verifica con le enumerazioni senza ambito, come illustrato in precedenza. È consentita con un cast esplicito. Tuttavia, con le enumerazioni con ambito, la conversione tentata nell'istruzione successiva, `account_num = Suit::Hearts;`, non è più consentita senza un cast esplicito. 

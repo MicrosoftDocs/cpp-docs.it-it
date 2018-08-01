@@ -1,5 +1,5 @@
 ---
-title: Analisi degli argomenti della riga di comando C++ | Documenti Microsoft
+title: Analisi di argomenti della riga di comando C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409206"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analisi di argomenti della riga di comando C++
 **Sezione specifica Microsoft**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   L'accento circonflesso (^) non viene riconosciuto come carattere di escape o delimitatore. Il carattere viene completamente gestito dal parser della riga di comando nel sistema operativo prima di essere passato alla matrice `argv` nel programma.  
   
--   Una stringa racchiusa tra virgolette doppie ("*stringa*") viene interpretato come un argomento singolo, indipendentemente dalla presenza di spazi all'interno. Una stringa tra virgolette può essere incorporata in un argomento.  
+-   Una stringa racchiusa tra virgolette doppie ("*stringa*") viene interpretato come un argomento singolo, indipendentemente dalla presenza di spazi al suo interno. Una stringa tra virgolette può essere incorporata in un argomento.  
   
 -   Le virgolette doppie precedute da una barra rovesciata (\\") vengono interpretate come carattere letterale virgolette doppie (").  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>Esempio  
  Nel programma seguente viene illustrato come vengono passati gli argomenti della riga di comando:  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  

@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4356e15d1b74508b7fc2606b45b5fb2bc9a435eb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a178510c02cd7ae0238686c6ff6634466715ddf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966944"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408346"
 ---
 # <a name="primary-expressions"></a>Espressioni primarie
 Le espressioni primarie sono i blocchi predefiniti di espressioni più complesse. Sono valori letterali, nomi e nomi qualificati dall'operatore di risoluzione dell'ambito (`::`).  Un'espressione primaria può avere uno dei seguenti formati:  
   
 ```  
-  
 literal  
 this
 name  

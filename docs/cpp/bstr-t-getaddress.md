@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eaa3921d0f1f89df11cf5e3809c9e90e4a03dd3b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941197"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408466"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Sezione specifica Microsoft**  
@@ -31,19 +31,17 @@ ms.locfileid: "37941197"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 BSTR* GetAddress( );  
-  
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
  Puntatore all'oggetto `BSTR` sottoposto a wrapping da `_bstr_t`.  
   
 ## <a name="remarks"></a>Note  
- `GetAddress` ha effetto su tutti gli oggetti `_bstr_t` che condividono un oggetto `BSTR`. Più di un `_bstr_t` possono condividere una `BSTR` tramite il costruttore di copia ed e **operatore =**.  
+ **GetAddress** influisce su tutte `_bstr_t` gli oggetti che condividono un `BSTR`. Più di un `_bstr_t` possono condividere una `BSTR` tramite il costruttore di copia ed e **operatore =**.  
   
 ## <a name="example"></a>Esempio  
- Visualizzare [_bstr_t::Assign](../cpp/bstr-t-assign.md) per un esempio di utilizzo `GetAddress`.  
+ Visualizzare [_bstr_t::Assign](../cpp/bstr-t-assign.md) per un esempio di utilizzo **GetAddress**.  
   
  **Fine sezione specifica Microsoft**  
   

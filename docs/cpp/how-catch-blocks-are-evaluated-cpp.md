@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0190b62491dbb9d15ee4f01a1cbc4c2741f74dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f073f82114c2d58b6d4d94bfeb35048b9e676c45
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943854"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405535"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Modalità di valutazione dei blocchi catch (C++)
 C++ consente di generare eccezioni di qualsiasi tipo, sebbene in genere sia consigliabile generare i tipi derivati da std::exception. Un'eccezione C++ può essere rilevata da un **catch** gestore che specifica lo stesso tipo dell'eccezione generata o da un gestore in grado di rilevare qualsiasi tipo di eccezione.  

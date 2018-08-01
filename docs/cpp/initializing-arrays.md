@@ -1,5 +1,5 @@
 ---
-title: Inizializzazione di matrici | Documenti Microsoft
+title: Inizializzazione di matrici | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacd447d27f3dd8bd2d2d88e6d975cdb29a82026
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1ecb15cfc34ec518f46474497a3577a51b00c4e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408956"
 ---
 # <a name="initializing-arrays"></a>Inizializzazione di matrici
 Se una classe dispone di un costruttore, le matrici di tale classe vengono inizializzate da un costruttore. Se vi sono meno elementi nell'elenco di inizializzatori rispetto agli elementi nella matrice, il costruttore predefinito viene usato per gli elementi rimanenti. Se nessun costruttore predefinito è definito per la classe, l'elenco di inizializzatori deve essere completo, ovvero deve esserci un inizializzatore per ogni elemento della matrice.  
   
  Si consideri la classe `Point` che definisce due costruttori:  
   
-```  
+```cpp 
 // initializing_arrays1.cpp  
 class Point  
 {  
@@ -51,9 +52,9 @@ int main()
   
  Il primo elemento `aPoint` viene costruito usando il costruttore `Point( int, int )`; i due elementi rimanenti vengono costruiti usando il costruttore predefinito.  
   
- Matrici membro statico (se **const** o non) possono essere inizializzati nelle relative definizioni (all'esterno della dichiarazione di classe). Ad esempio:  
+ Matrici statiche del membro (se **const** o No) possono essere inizializzate nelle relative definizioni (all'esterno della dichiarazione di classe). Ad esempio:  
   
-```  
+```cpp 
 // initializing_arrays2.cpp  
 class WindowColors  
 {  
@@ -68,4 +69,3 @@ int main()
 {  
 }  
 ```  
-  

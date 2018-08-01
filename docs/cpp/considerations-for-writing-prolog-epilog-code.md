@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68eff54ff2465706f5a7459b7c6c21d87c7a1b7f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942107"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402315"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerazioni per la scrittura di codice di prologo e di epilogo
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Prima di scrivere le proprie sequenze di codice di prologo ed epilogo, è importante comprendere il layout dello stack frame. È anche utile sapere come usare il simbolo di LOCAL_SIZE.  
+ Prima di scrivere le proprie sequenze di codice di prologo ed epilogo, è importante comprendere il layout dello stack frame. È anche utile sapere come usare il `__LOCAL_SIZE` simbolo.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Layout dello stack Frame  
  In questo esempio viene illustrato il codice standard di prologo che potrebbe essere visualizzato in una funzione a 32 bit:  
@@ -51,16 +51,16 @@ ret                       ; Return from function
  Lo stack va sempre verso il basso (dal livello alto a quello basso degli indirizzi di memoria). Il puntatore di base (`ebp`) punta al valore inserito di `ebp`. L'area delle variabili locali inizia da `ebp-4`. Per accedere alle variabili locali, calcolare un offset da `ebp` sottraendo il valore appropriato da `ebp`.  
   
 ##  <a name="_pluslang___local_size"></a> LOCAL_SIZE  
- Il compilatore fornisce un simbolo, LOCAL_SIZE, per l'uso nel blocco dell'assembler inline del codice di prologo di funzione. Questo simbolo viene utilizzato per allocare spazio per le variabili locali sullo stack frame nel codice di prologo personalizzato.  
+ Il compilatore fornisce un simbolo, `__LOCAL_SIZE`, per l'uso nel blocco dell'assembler inline del codice di prologo di funzione. Questo simbolo viene utilizzato per allocare spazio per le variabili locali sullo stack frame nel codice di prologo personalizzato.  
   
- Il compilatore determina il valore di LOCAL_SIZE. Il relativo valore è il numero totale di byte di tutte le variabili locali definite dall'utente e le variabili temporanee generate dal compilatore. LOCAL_SIZE può essere utilizzato solo come operando immediato; non può essere utilizzato in un'espressione. Non è necessario modificare o ridefinire il valore di questo simbolo. Ad esempio:  
+ Il compilatore determina il valore di `__LOCAL_SIZE`. Il relativo valore è il numero totale di byte di tutte le variabili locali definite dall'utente e le variabili temporanee generate dal compilatore. `__LOCAL_SIZE` può essere utilizzato solo come operando immediato; non può essere utilizzato in un'espressione. Non è necessario modificare o ridefinire il valore di questo simbolo. Ad esempio:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- L'esempio seguente di una funzione naked che contiene le sequenze di epilogo e prologo personalizzato utilizza il simbolo di LOCAL_SIZE in sequenza del prologo:  
+ L'esempio seguente di una funzione naked che contiene di prologo ed epilogo personalizzate sequenze viene utilizzata la `__LOCAL_SIZE` simbolo nella sequenza del prologo:  
   
 ```  
 // the__local_size_symbol.cpp  

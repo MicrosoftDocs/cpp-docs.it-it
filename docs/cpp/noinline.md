@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37098e904402a42f6ff28e594db265fc07b4d458
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: de433a1eccab3b58858aaf5fd3aa9ddb04d0cc1c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943590"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406077"
 ---
 # <a name="noinline"></a>noinline
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

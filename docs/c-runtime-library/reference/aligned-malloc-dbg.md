@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451706"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402978"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,29 +56,29 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>Parametri
 
-*size*<br/>
+*size*  
 Dimensione dell'allocazione della memoria necessaria.
 
-*Allineamento*<br/>
+*Allineamento*  
 Valore di allineamento, che deve essere una potenza intera di 2.
 
-*filename*<br/>
-Puntatore al nome del file di origine che ha richiesto l'operazione di allocazione o **NULL**.
+*filename*  
+Puntatore al nome del file di origine che ha richiesto l'operazione di allocazione o NULL.
 
-*linenumber*<br/>
-Numero di riga nel file di origine in cui è stata richiesta l'operazione di allocazione o **NULL**.
+*linenumber*  
+Numero di riga nel file di origine in cui è stata richiesta l'operazione di allocazione o NULL.
 
 ## <a name="return-value"></a>Valore restituito
 
-Un puntatore al blocco di memoria allocato o **NULL** se l'operazione non riuscita.
+Puntatore al blocco di memoria allocato o NULL se l'operazione non riuscita.
 
 ## <a name="remarks"></a>Note
 
-**aligned_malloc_dbg** è una versione di debug di [aligned_malloc](aligned-malloc.md) (funzione). Quando si [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_malloc_dbg** viene ridotta a una chiamata a **aligned_malloc**. Entrambi **aligned_malloc** e **aligned_malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **aligned_malloc_dbg** offre diverse funzionalità di debug: buffer in entrambi i lati della porzione utente del blocco in cui verificare la presenza di perdite, e *filename*/*linenumber* informazioni per determinare l'origine delle richieste di allocazione.
+**aligned_malloc_dbg** è una versione di debug di [aligned_malloc](aligned-malloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_malloc_dbg** viene ridotta a una chiamata a `_aligned_malloc`. Entrambe `_aligned_malloc` e **aligned_malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **aligned_malloc_dbg** offre diverse funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, e *nomefile*/*linenumber* informazioni per determinare l'origine delle richieste di allocazione.
 
-**aligned_malloc_dbg** alloca il blocco di memoria con una quantità di spazio a quella richiesta *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
+**aligned_malloc_dbg** alloca il blocco di memoria con quantità di spazio leggermente superiore al valore richiesto *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
 
-**aligned_malloc_dbg** imposta **errno** a **ENOMEM** se fallisce un'allocazione di memoria o se la quantità di memoria richiesta (incluso l'overhead menzionato precedentemente) supera **_ HEAP_MAXREQ**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Inoltre, **aligned_malloc_dbg** convalida i propri parametri. Se *allineamento* non è una potenza di 2 o *dimensioni* è uguale a zero, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **NULL** e imposta **errno** al **EINVAL**.
+**aligned_malloc_dbg** imposta `errno` al `ENOMEM` se si verifica un errore di allocazione di memoria o se la quantità di memoria richiesta (incluso l'overhead menzionato precedentemente) supera `_HEAP_MAXREQ`. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). È inoltre **aligned_malloc_dbg** convalida i propri parametri. Se *allineamento* non è una potenza di 2 o *size* è uguale a zero, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce NULL e imposta `errno` a `EINVAL`.
 
 Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -96,4 +96,4 @@ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-libra
 
 ## <a name="see-also"></a>Vedere anche
 
-[Routine di debug](../../c-runtime-library/debug-routines.md)<br/>
+[Routine di debug](../../c-runtime-library/debug-routines.md)  

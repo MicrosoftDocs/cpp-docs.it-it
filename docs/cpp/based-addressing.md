@@ -1,5 +1,5 @@
 ---
-title: Indirizzamento di base | Documenti Microsoft
+title: Indirizzamento di base | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b0fecf99e62932ca363dffc23ac594c37916f84
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ad6f120c3b271cf5b12af06258f133cb0518d64
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408006"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407793"
 ---
 # <a name="based-addressing"></a>Indirizzamento di base
 Questa sezione presenta i seguenti argomenti:  

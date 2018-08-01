@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941551"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406042"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Durata degli oggetti e gestione delle risorse (C++ moderno)
 A differenza dei linguaggi gestiti, C++ non dispone di operazione di garbage collection (GC), che rilascia automaticamente le risorse di memoria non più utilizzati di come viene eseguito un programma. In C++, la gestione delle risorse è direttamente correlata alla durata dell'oggetto. Questo documento descrive i fattori che influiscono sulla durata dell'oggetto in C++ e come gestirli.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  Uso `unique_ptr` per la proprietà univoca, ad esempio, nelle *pimpl* idioma. (Vedere [Pimpl per incapsulamento in fase di compilazione](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Creare un `unique_ptr` destinazione primaria di tutti di tipo esplicito **nuovi** espressioni.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  Quando è necessario ottimizzare le prestazioni, potrebbe essere necessario usare *ben incapsulato* proprietario puntatori e le chiamate esplicite da eliminare. Un esempio è quando si implementa la propria struttura di dati a basso livello.  

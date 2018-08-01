@@ -1,5 +1,5 @@
 ---
-title: Limiti numerici (C++) | Documenti Microsoft
+title: Limiti numerici (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7a5c61e0eda0269e42d69d25b64b7c12bab0c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1806b71208dccedee4b93429510e297bfbc3f348
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419672"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408177"
 ---
 # <a name="numerical-limits-c"></a>Limiti numerici (C++)
-Lo standard di due file di inclusione, \<Limits. h > e \<float. h >, definire i limiti numerici o valori minimo e massimo che può contenere una variabile di un determinato tipo. Questi valori minimi e massimi sono garantiti come a qualsiasi compilatore C++ che utilizza la stessa rappresentazione di dati di ANSI C. Il \<Limits. h > includono file definisce il [limiti numerici per i tipi integrali](../cpp/integer-limits.md), e \<float. h > definisce il [limiti numerici per i tipi mobile](../cpp/floating-limits.md).  
+Lo standard di due file, di inclusione \<Limits. h > e \<float. h >, definire i limiti numerici o valori minimo e massimo che può contenere una variabile di un determinato tipo. Questi valori minimi e massimi sono garantiti portabili in qualsiasi compilatore C++ che usa la stessa rappresentazione di data standard ANSI c. Il \<Limits > includono file definisce il [limiti numerici per i tipi integrali](../cpp/integer-limits.md), e \<float. h > definisce il [limiti numerici per tipo a virgola mobile](../cpp/floating-limits.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti di base](../cpp/basic-concepts-cpp.md)

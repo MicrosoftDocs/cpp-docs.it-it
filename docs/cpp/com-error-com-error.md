@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec16faa9881fc1c69dca5f8f39b8797cf0fcff0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c1389635c3ef026e8b3a7dfe13976cca58a15a82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943509"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406718"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Sezione specifica Microsoft**  
   
- Costruisce un oggetto `_com_error`.  
+ Costruisce un **com_error** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 _com_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = NULL,  
@@ -48,23 +47,23 @@ _com_error( const _com_error& that ) throw( );
  Oggetto `IErrorInfo`.  
   
  `bool fAddRef=false`  
- Fa sì che il costruttore di chiamare AddRef su non null `IErrorInfo` interfaccia. Ciò consente un conteggio corretto dei riferimenti nel caso comune in cui la proprietà dell'interfaccia venga passata all'oggetto `_com_error`, ad esempio:  
+ Fa sì che il costruttore di chiamare AddRef su non null `IErrorInfo` interfaccia. In questo modo corretto nel conteggio dei riferimenti nel caso comune in cui la proprietà dell'interfaccia viene passata il **com_error** dell'oggetto, ad esempio:  
   
 ```cpp 
 throw _com_error(hr, perrinfo);  
 ```  
   
- Se non si desidera il codice per trasferire la proprietà per il `_com_error` oggetto e il `AddRef` è necessario per compensare la `Release` nel `_com_error` distruttore, costruire l'oggetto come indicato di seguito:  
+ Se non si desidera il codice per trasferire la proprietà per il **com_error** oggetto e il `AddRef` è necessario per compensare la `Release` nel **com_error** distruttore, costruire l'oggetto come di seguito:  
   
 ```cpp 
 _com_error err(hr, perrinfo, true);  
 ```  
   
  *che*  
- Oggetto `_com_error` esistente.  
+ Un oggetto esistente **com_error** oggetto.  
   
 ## <a name="remarks"></a>Note  
- Il primo costruttore crea un nuovo oggetto dato un oggetto HRESULT e facoltative `IErrorInfo` oggetto. Il secondo crea una copia di un oggetto `_com_error` esistente.  
+ Il primo costruttore crea un nuovo oggetto dato un oggetto HRESULT e facoltative `IErrorInfo` oggetto. Il secondo crea una copia di un oggetto esistente **com_error** oggetto.  
   
  **Fine sezione specifica Microsoft**  
   

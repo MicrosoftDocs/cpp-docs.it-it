@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943557"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404623"
 ---
 # <a name="exception-handling-differences"></a>Differenze nella gestione eccezioni
 La differenza principale tra gestione strutturata delle eccezioni e gestione delle eccezioni C++ è che il modello gestisce i tipi di gestione delle eccezioni C++, mentre C del modello di gestione strutturata delle eccezioni gestisce le eccezioni di un tipo, in particolare,  **int senza segno**. In altre parole, le eccezioni C sono identificate da un intero senza segno, mentre le eccezioni C++ sono identificate dal tipo di dati. Quando viene generata un'eccezione in C, ogni possibile gestore esegue un filtro che esamina il contesto di eccezione C e determina se accettare l'eccezione, passarla a un altro gestore o ignorarla. Quando viene generata un'eccezione in C++, può essere di qualsiasi tipo.  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  Per utilizzare questa classe, si installa una funzione di conversione di eccezione C personalizzata definita dal meccanismo interno di gestione delle eccezioni ogni volta che viene generata un'eccezione. All'interno della funzione di conversione, è possibile generare qualsiasi eccezione tipizzata (probabilmente un `SE_Exception` , tipo o un tipo di classe derivato `SE_Exception`) che può essere rilevata da un C++ corrispondente appropriata **catch** gestore. La funzione di conversione può eseguire semplicemente una restituzione che indica che l'eccezione non è stata gestita. Se la funzione di conversione se stesso genera un'eccezione C, [terminare](../c-runtime-library/reference/terminate-crt.md) viene chiamato.  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 673bceb5042a91361ece00360c4d9c5b140e4d00
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034816"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402699"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Procedura: creare e utilizzare istanze weak_ptr
 In alcuni casi un oggetto deve memorizzare un modo per accedere all'oggetto sottostante di un `shared_ptr` senza causare il conteggio dei riferimenti deve essere aumentato. In genere, questa situazione si verifica quando si dispone di riferimenti ciclici tra `shared_ptr` istanze.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ff47c9a1b5aed197381a0d3ab0f24456fe75bad4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943902"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405149"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Dichiaratore di riferimento lvalue: &amp;
 Contiene l'indirizzo di un oggetto, ma sintatticamente si comporta come un oggetto.  
@@ -30,7 +30,6 @@ Contiene l'indirizzo di un oggetto, ma sintatticamente si comporta come un ogget
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 type-id & cast-expression  
 ```  
   

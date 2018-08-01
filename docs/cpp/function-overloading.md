@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943314"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406571"
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Questi sono denominati *sottoposti a overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e numero di argomenti. 
@@ -163,7 +163,7 @@ F1 = Add( F2, 23 );
   
  Con l'istruzione precedente vengono compilati due set:  
   
-|Set 1: Funzioni candidate con il primo argomento della frazione di tipo|Set 2: Funzioni candidate il cui secondo argomento può essere convertito nel tipo int|  
+|Set 1: Funzioni candidate con il primo argomento della frazione di tipo|Set 2: Candidato funzioni la cui secondo argomento può essere convertito in tipo **int**|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |Variante 1|Variante 1 (**int** può essere convertito in **lungo** mediante una conversione standard)|  
 |Variante 3||  
@@ -178,7 +178,7 @@ F1 = Add( 3, 6 );
   
  Con la chiamata di funzione precedente vengono compilati i seguenti set:  
   
-|Set 1: Funzioni candidate con il primo argomento di tipo int|Set 2: Funzioni candidate con il secondo argomento di tipo int|  
+|Set 1: Funzioni Candidate sono primo argomento di tipo **int**|Set 2: Funzioni Candidate sono secondo argomento di tipo **int**|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Variante 2 (**int** può essere convertito in **lungo** mediante una conversione standard)|Variante 1 (**int** può essere convertito in **lungo** mediante una conversione standard)|  
   
@@ -282,7 +282,7 @@ volatile Over&
   
 3.  Corrispondenza che usa le conversioni standard. Qualsiasi sequenza non classificata come una corrispondenza esatta o una corrispondenza che usa promozioni solo con conversioni standard e semplici viene classificata come corrispondenza che usa le conversioni standard. All'interno di questa categoria, sono necessarie le seguenti regole:  
   
-    -   Conversione da un puntatore a una classe derivata, a un puntatore a una classe base diretta o indiretta è preferibile eseguire la conversione **void \***  oppure **const void \*** .  
+    -   Conversione da un puntatore a una classe derivata, a un puntatore a una classe base diretta o indiretta è preferibile eseguire la conversione `void *` o `const void *`.  
   
     -   La conversione da un puntatore a una classe derivata, a un puntatore a una classe base produce una corrispondenza migliore quanto più la classe base è vicina a una classe base diretta. Si supponga che la gerarchia di classi sia come illustrata di seguito.  
   
@@ -439,7 +439,6 @@ int main()
     auto v2 = C().get_data(); // get the original. prints "rvalue"
     return 0;
 }
-
 ```
   
 ## <a name="restrictions-on-overloading"></a>Restrizioni all'overload degli operatori  
@@ -466,7 +465,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo di tipo **char \*** . Nell'ambito del membro, questo codice genera un errore.  
+     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo del tipo `char *`. Nell'ambito del membro, questo codice genera un errore.  
   
 -   I tipi enumerati sono tipi distinti e possono essere usati per distinguere le funzioni in overload.  
   
@@ -573,8 +572,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```
 
-
-
-  
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni (C++)](../cpp/functions-cpp.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6e632faddb3b4f59733710a915ed121a12f4e0c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942042"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404863"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Combinazione di eccezioni C (strutturate) e C++
 Se si desidera scrivere codice più portabile, non è consigliabile utilizzare la gestione delle eccezioni strutturata nei programmi C++. Tuttavia, talvolta si potrebbero eseguire la compilazione con **/EHa** e combinare le eccezioni strutturate e codice sorgente C++ e necessarie alcune funzionalità per gestire entrambi i tipi di eccezioni. Poiché un gestore di eccezioni strutturate non prevede il concetto di oggetti o eccezioni tipizzate, non può gestire le eccezioni generate da codice C++; Tuttavia, C++ **catch** gestori possono gestire le eccezioni strutturate. Come tale, la sintassi di gestione delle eccezioni C++ (**provare**, **throw**, **catch**) non viene accettata dal compilatore C, ma la sintassi di gestione delle eccezioni strutturata (**try** , **except**, **finally**) è supportato dal compilatore C++.  

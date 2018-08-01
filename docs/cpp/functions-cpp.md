@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940324"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404610"
 ---
 # <a name="functions-c"></a>Funzioni (C++)
 
@@ -82,7 +82,7 @@ Le parti obbligatorie della dichiarazione di una funzione sono le seguenti:
 
 Le parti facoltative della dichiarazione di una funzione sono le seguenti:
 
-1. **constexpr**, che indica che il valore restituito della funzione è un valore costante può essere calcolato in fase di compilazione.
+1. `constexpr`, che indica che il valore restituito della funzione è un valore costante e può essere calcolato in fase di compilazione.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ Le parti facoltative della dichiarazione di una funzione sono le seguenti:
 
      Per altre informazioni, vedere [funzioni Inline](../cpp/inline-functions-cpp.md).
 
-1. Oggetto **noexcept** espressione che specifica se la funzione può generare un'eccezione. Nell'esempio seguente, la funzione non genera un'eccezione se il `is_pod` espressione viene valutata **true**.
+1. Oggetto `noexcept` espressione che specifica se la funzione può generare un'eccezione. Nell'esempio seguente, la funzione non genera un'eccezione se il `is_pod` espressione viene valutata **true**.
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ Le parti facoltative della dichiarazione di una funzione sono le seguenti:
 
 1. (Solo funzioni membro) Qualificatori cv, che specifica se la funzione **const** oppure **volatile**.
 
-1. (Solo funzioni membro) **virtuale**, **override**, o **finale**. **virtuale** specifica che una funzione può essere sottoposto a override in una classe derivata. **eseguire l'override** significa che una funzione in una classe derivata è una funzione virtual in override. **finale** significa che una funzione non può essere sottoposto a override in qualsiasi ulteriore classe derivata. Per altre informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).
+1. (Solo funzioni membro) **virtuale**, `override`, o `final`. **virtuale** specifica che una funzione può essere sottoposto a override in una classe derivata. `override` significa che una funzione in una classe derivata esegue l'override di una funzione virtuale. `final` significa che non è possibile eseguire l'override di una funzione in altre classi derivate. Per altre informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).
 
 1. (solo funzioni membro) **statici** applicato a un membro di funzione significa che la funzione non è associata a tutte le istanze di oggetto della classe.
 
@@ -170,7 +170,7 @@ Le variabili dichiarate all'interno del corpo sono definite variabili locali o l
 
 È possibile dichiarare una funzione membro come **const** per specificare che la funzione non è autorizzata a modificare i valori di tutti i membri dati della classe. Dichiarando come una funzione membro **const**, è aiutare il compilatore potrà imporre *la correttezza di const*. Se un utente erroneamente tenta di modificare l'oggetto con una funzione dichiarata come **const**, viene generato un errore del compilatore. Per altre informazioni, vedere [const](const-cpp.md).
 
-Dichiarare una funzione come **constexpr** quando il valore produce probabilmente può essere determinato in fase di compilazione. Una funzione constexpr esegue in genere più veloce rispetto a una normale funzione. Per altre informazioni, vedere [constexpr](constexpr-cpp.md).
+Dichiarare una funzione come `constexpr` quando il valore produce probabilmente può essere determinato in fase di compilazione. Una funzione constexpr esegue in genere più veloce rispetto a una normale funzione. Per altre informazioni, vedere [constexpr](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Modelli di funzioni
 
@@ -269,11 +269,11 @@ Quando **automatica** viene usato in combinazione con un tipo restituito finale,
 
 Una variabile dichiarata all'interno di un corpo della funzione è definita un' *variabile locale* o semplicemente *locale*. Le locali non statiche sono visibili solo all'interno del corpo della funzione e, se sono dichiarate nello stack, escono dall'ambito al termine della funzione. Quando si crea una variabile locale e la si restituisce per valore, il compilatore può in genere eseguire l'ottimizzazione del valore restituito per evitare operazioni di copia non necessarie. Se si restituisce una variabile locale per riferimento, il compilatore emetterà un avviso, poiché qualsiasi tentativo da parte del chiamante di usare tale riferimento si verificherà dopo l'eliminazione definitiva della locale.
 
-In C++ una variabile locale può essere dichiarata come statica. La variabile è visibile solo all'interno del corpo della funzione, ma esiste una singola copia della variabile per tutte le istanze della funzione. Gli oggetti statici locali vengono eliminati definitivamente durante la chiusura specificata da **atexit**. Se un oggetto statico non è stato costruito perché il flusso di controllo del programma ne ha ignorato la dichiarazione, non viene eseguito alcun tentativo di eliminare definitivamente tale oggetto.
+In C++ una variabile locale può essere dichiarata come statica. La variabile è visibile solo all'interno del corpo della funzione, ma esiste una singola copia della variabile per tutte le istanze della funzione. Gli oggetti statici locali vengono eliminati durante la chiusura specificata da `atexit`. Se un oggetto statico non è stato costruito perché il flusso di controllo del programma ne ha ignorato la dichiarazione, non viene eseguito alcun tentativo di eliminare definitivamente tale oggetto.
 
 ##  <a name="type_deduction"></a> Deduzione dei tipi nei tipi restituiti (c++14)
 
-In c++14 è possibile usare **automatica** per indicare al compilatore di dedurre il tipo restituito dal corpo della funzione senza dover fornire un tipo restituito finale. Si noti che **automatica** deduce sempre a un restituzione per valore. Uso **automatica & &** per indicare al compilatore di dedurre un riferimento.
+In c++14 è possibile usare **automatica** per indicare al compilatore di dedurre il tipo restituito dal corpo della funzione senza dover fornire un tipo restituito finale. Si noti che **automatica** deduce sempre a un restituzione per valore. Usare `auto&&` per indicare al compilatore di dedurre un riferimento.
 
 In questo esempio **automatica** verrà dedotto come una copia di valore non const della somma di lhs e rhs.
 
@@ -435,10 +435,9 @@ int (*myFunction(char* s))(int);
 La dichiarazione precedente equivale alla dichiarazione effettuata mediante l'elemento typedef precedente.
 
 ## <a name="see-also"></a>Vedere anche
-
-- [Overload di funzioni](../cpp/function-overloading.md)
-- [Funzioni con elenchi di argomenti variabili](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [Funzioni impostate come predefinite ed eliminate in modo esplicito](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [Ricerca del nome dipendente dall'argomento nelle funzioni (Koenig)](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [Argomenti predefiniti](../cpp/default-arguments.md)
-- [Funzioni inline](../cpp/inline-functions-cpp.md)
+ [Overload di funzioni](../cpp/function-overloading.md)  
+ [Funzioni con elenchi di argomenti variabili](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [Funzioni impostate come predefinite ed eliminate in modo esplicito](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [Ricerca del nome dipendente dall'argomento nelle funzioni (Koenig)](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [Argomenti predefiniti](../cpp/default-arguments.md)  
+ [Funzioni inline](../cpp/inline-functions-cpp.md)

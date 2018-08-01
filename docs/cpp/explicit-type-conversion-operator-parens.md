@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3f6f0017bcc4e26802093f449742f9a2cfb137b8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966934"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406783"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operatore di conversione esplicita di tipi: ()
 Il linguaggio C++ consente la conversione esplicita del tipo mediante una sintassi simile a quella della chiamata di funzione.  
@@ -108,15 +108,12 @@ d = float( i );
  Le conversioni esplicite dei tipi possono essere specificate utilizzando la sintassi di "cast". L'esempio precedente, riscritto utilizzando la sintassi di cast, è:  
   
 ```cpp
-
 d = (float)i;  
-
 ```  
   
  Sia le conversioni eseguite con il cast che con la funzione danno gli stessi risultati quando si esegue la conversione di valori singoli. Tuttavia, nella sintassi stile-funzione è possibile specificare più argomenti per la conversione. Questa differenza è importante per i tipi definiti dall'utente. Si consideri una classe `Point` e le relative conversioni:  
   
 ```cpp
-
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -125,7 +122,6 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-
 ```
   
  Nell'esempio precedente, che utilizza la conversione stile-funzione, viene illustrato come convertire due valori (uno per *x* e uno per *y*) per il tipo definito dall'utente `Point`.  

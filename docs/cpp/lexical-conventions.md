@@ -1,5 +1,5 @@
 ---
-title: Convenzioni lessicali | Documenti Microsoft
+title: Convenzioni lessicali | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419128"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405909"
 ---
 # <a name="lexical-conventions"></a>Convenzioni lessicali
 In questa sezione vengono descritti gli elementi fondamentali di un programma C++. Usare questi elementi, denominati elementi lessicali o token per creare istruzioni, definizioni, dichiarazioni e così via, che consentono di creare programmi completi. I seguenti elementi lessicali sono discussi in questa sezione:
@@ -45,5 +45,5 @@ In questa sezione vengono descritti gli elementi fondamentali di un programma C+
 - [Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>Vedere anche
-- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
-- [Programma e collegamento](program-and-linkage-cpp.md)
+ [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)  
+ [Programma e collegamento](program-and-linkage-cpp.md)

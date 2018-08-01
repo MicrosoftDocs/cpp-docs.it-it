@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943969"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407588"
 ---
 # <a name="argument-definitions"></a>Definizioni di argomenti
 Gli argomenti nel prototipo  
   
 ```cpp 
-  
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
 ```  
@@ -45,16 +44,16 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  Il primo argomento della riga di comando è sempre `argv` **[1]** ed è il penultimo `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e se si usa sia il primo e secondo argomento (`lpApplicationName` e `lpCommandLine`), `argv` **[0]** potrebbe non essere la nome eseguibile; usare [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome dell'eseguibile e il relativo percorso completo.  
+>  Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e se si usa sia il primo e secondo argomento (*lpApplicationName* e *lpCommandLine*), `argv` **[0]** potrebbe non essere il file eseguibile nome; usare [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome dell'eseguibile e il relativo percorso completo.  
   
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  *envp*  
- Il *envp* matrice, che è un'estensione comune in molti sistemi UNIX, viene usata in Microsoft C++. È una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da una voce NULL. Può essere dichiarata come matrice di puntatori a **char (char** \*envp []**)** o come puntatore a puntatori al **char (char** \* \* envp **)**. Se il programma utilizza **wmain** invece di **principale**, usare il **wchar_t** del tipo di dati anziché **char**. Il blocco di ambiente passato a **principale** e **wmain** è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a **putenv** oppure `_wputenv`, l'ambiente corrente (come restituito da `getenv` / `_wgetenv` e il `_environ` /  `_wenviron` variabile) cambia, ma il blocco che fa riferimento a envp verrà non cambia. Visualizzare [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni sull'eliminazione dell'elaborazione di ambiente. Questo argomento è compatibile con ANSI in C, ma non in C++.  
+ Il *envp* matrice, che è un'estensione comune in molti sistemi UNIX, viene usata in Microsoft C++. È una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da una voce NULL. Può essere dichiarata come matrice di puntatori a **char (char** \*envp []**)** o come puntatore a puntatori al **char (char** \* \* envp **)**. Se il programma utilizza `wmain` invece di `main`, utilizzare il `wchar_t` del tipo di dati anziché **char**. Il blocco di ambiente passato a `main` e `wmain` è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a `putenv` oppure `_wputenv`, l'ambiente corrente (come restituito da `getenv` / `_wgetenv` e la `_environ` /  `_wenviron` variabile) verrà modifica, ma il blocco che fa riferimento a envp non verrà modificato. Visualizzare [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni sull'eliminazione dell'elaborazione di ambiente. Questo argomento è compatibile con ANSI in C, ma non in C++.  
   
 **Fine sezione specifica Microsoft**  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il *argc*, *argv*, e *envp* argomenti **principale**:  
+ Nell'esempio seguente viene illustrato come utilizzare il *argc*, *argv*, e *envp* argomenti `main`:  
   
 ```cpp 
 // argument_definitions.cpp  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4bf56e87b8b7949048b1e6006d3aa32f00af1462
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940992"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404259"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Sezione specifica Microsoft**  
@@ -31,13 +31,11 @@ ms.locfileid: "37940992"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 void AddRef( );  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Le chiamate `IUnknown::AddRef` sul puntatore a interfaccia incapsulato, restituendo un errore E_POINTER se il puntatore è NULL.  
+ Le chiamate `IUnknown::AddRef` sul puntatore a interfaccia incapsulato, che genera un `E_POINTER` errore se il puntatore è NULL.  
   
  **Fine sezione specifica Microsoft**  
   

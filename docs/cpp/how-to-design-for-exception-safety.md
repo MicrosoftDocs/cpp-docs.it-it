@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a9eaee55c806ea2efc82300cad47cc744c0a491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940322"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403693"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procedura: progettare la sicurezza dell'eccezione
 Uno dei vantaggi del meccanismo di eccezione è che l'esecuzione, insieme ai dati sull'eccezione, passa direttamente dall'istruzione che genera l'eccezione alla prima istruzione catch che gestisce. Il gestore può essere un numero qualsiasi di livelli nello stack di chiamate. Le funzioni chiamate tra l'istruzione try e l'istruzione throw non sono necessarie per ottenere informazioni sull'eccezione gestita.  Tuttavia, devono essere progettate in modo tale da poter uscire dall'ambito "in modo imprevisto" in qualsiasi punto in cui un'eccezione può propagarsi dal basso, ed essere eseguite senza lasciarsi dietro oggetti parzialmente creati, memoria persa o strutture di dati in stati non utilizzabili.  
@@ -86,7 +86,6 @@ private:
 public:  
     SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
-  
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Utilizzare il linguaggio del modello RAII per gestire le risorse  

@@ -1,5 +1,5 @@
 ---
-title: Gestione degli eventi in C++ nativo | Documenti Microsoft
+title: Gestione degli eventi in C++ nativo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b233c8329119753e5753e19fd641c6bea5d8e42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414181"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405782"
 ---
 # <a name="event-handling-in-native-c"></a>Gestione di eventi in C++ nativo
 
-In gestione eventi C++ nativa, viene impostato un ricevitore di origine e di evento di eventi utilizzando il [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) rispettivamente gli attributi, specificare `type` = `native`. Questi attributi consentono alle classi, a cui sono applicati, di generare eventi e gestire eventi in un contesto nativo, non COM.
+Nella gestione degli eventi C++ nativi, configuri un ricevitore di origine e di eventi eventi usando il [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) rispettivamente gli attributi, specificare `type` = `native`. Questi attributi consentono alle classi, a cui sono applicati, di generare eventi e gestire eventi in un contesto nativo, non COM.
 
 ## <a name="declaring-events"></a>Dichiarazione di eventi
 
-In una classe di origine evento, utilizzare il [event](../cpp/event.md) parola chiave in una dichiarazione di metodo per dichiarare il metodo come un evento. Assicurarsi di dichiarare il metodo, ma non di definirlo; così facendo verrà generato un errore del compilatore, poiché il compilatore definisce il metodo in modo implicito quando viene trasformato in un evento. Gli eventi nativi possono essere metodi con zero o più parametri. Il tipo restituito può essere void o qualsiasi tipo integrale.  
+In una classe di origine eventi, usare il [event](../cpp/event.md) parola chiave in una dichiarazione di metodo per dichiarare il metodo come un evento. Assicurarsi di dichiarare il metodo, ma non di definirlo; così facendo verrà generato un errore del compilatore, poiché il compilatore definisce il metodo in modo implicito quando viene trasformato in un evento. Gli eventi nativi possono essere metodi con zero o più parametri. Il tipo restituito può essere void o qualsiasi tipo integrale.  
   
 ## <a name="defining-event-handlers"></a>Definizione di gestori degli eventi
 
@@ -35,7 +35,7 @@ In una classe del ricevitore di eventi, è possibile definire i gestori eventi, 
   
 ## <a name="hooking-event-handlers-to-events"></a>Hook dei gestori eventi agli eventi  
 
-Anche in una classe del ricevitore di eventi, utilizzare la funzione intrinseca [hook](../cpp/hook.md) per associare gli eventi con i gestori eventi e [unhook](../cpp/unhook.md) dissociare eventi dai gestori eventi. È possibile eseguire l'hook di più eventi a un singolo gestore eventi o di diversi gestori eventi a un singolo evento.  
+Anche in una classe del ricevitore di eventi è usare la funzione intrinseca [hook](../cpp/hook.md) per associare gli eventi a gestori eventi e [unhook](../cpp/unhook.md) per annullare l'associazione di eventi. È possibile eseguire l'hook di più eventi a un singolo gestore eventi o di diversi gestori eventi a un singolo evento.  
   
 ## <a name="firing-events"></a>Generazione di eventi  
 
@@ -99,6 +99,4 @@ MyHandler1 was called with value 123.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-
-[Gestione di eventi](../cpp/event-handling.md)  
-
+ [Gestione di eventi](../cpp/event-handling.md)  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 887ab1e29cf2a0eab656cc6d1b4587252871d328
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943545"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402822"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funzioni impostate come predefinite ed eliminate in modo esplicito
 In C++11 le funzioni impostate come predefinite e le funzioni eliminate offrono il controllo esplicito sulla eventuale generazione automatica delle funzioni membro speciali. Le funzioni eliminate forniscono inoltre un semplice linguaggio per impedire il verificarsi di promozioni di tipo problematiche in argomenti di funzioni di tutti i tipi, ad esempio funzioni membro di tipo speciale, funzioni membro normali e funzioni non membro, che causerebbero una chiamata di funzione non desiderata.  
@@ -145,5 +145,4 @@ template < typename T >
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   
 void call_with_true_double_only(double param) { return; } // also define for const double, double&, etc. as needed.  
-  
 ```

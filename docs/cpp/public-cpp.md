@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa6d4abf9423df29d59f375b825a815404a3c76c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c011674192ee6cc595aaf05f9c48bb453d5d71f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943694"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404330"
 ---
 # <a name="public-c"></a>public (C++)
 ## <a name="syntax"></a>Sintassi  

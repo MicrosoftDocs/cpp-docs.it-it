@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9415073630505e3cc879f53de14ed469c7e0e2ba
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e847cff10c7e17185f76b5e790beda3745732312
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939052"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406689"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizzazione dell'elaborazione dalla riga di comando C++
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

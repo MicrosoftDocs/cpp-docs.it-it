@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943554"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407825"
 ---
 # <a name="event"></a>__event
 Dichiara un evento.  
@@ -31,7 +31,6 @@ Dichiara un evento.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  Visualizzare [gestione degli eventi in C++ nativo](../cpp/event-handling-in-native-cpp.md) per codice di esempio.  
   
 ## <a name="com-events"></a>Eventi COM  
- Gli eventi COM sono interfacce. I parametri di un metodo in un'interfaccia di origine evento devono essere `in` parametri (ma questo non è applicato rigorosamente), poiché un `out` parametro non è utile quando il multicasting. Verrà generato un avviso di livello 1 se si usa un `out` parametro.  
+ Gli eventi COM sono interfacce. I parametri di un metodo in un'interfaccia di origine evento devono essere *nelle* parametri (ma questo non è applicato rigorosamente), perché un' *out* parametro non è utile quando il multicasting. Verrà generato un avviso di livello 1 se si usa un' *out* parametro.  
   
  Il tipo restituito è in genere HRESULT o **void**, ma può essere qualsiasi tipo integrale, incluso **enum**. Quando un evento utilizza un tipo restituito integrale e un gestore eventi restituisce un valore diverso da zero, si tratta di una condizione di errore nel qual caso l'evento generato interromperà le chiamate agli altri delegati. Si noti che il compilatore contrassegnerà automaticamente un'interfaccia di origine evento come un [origine](../windows/source-cpp.md) in IDL generato.  
   

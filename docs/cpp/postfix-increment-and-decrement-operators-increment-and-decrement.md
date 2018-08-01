@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943551"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404054"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma suffissa: ++ e --
 ## <a name="syntax"></a>Sintassi  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- Quando si applica l'operatore di decremento suffisso (`++`), il valore dell'operando viene incrementato di un'unità del tipo appropriato. Analogamente, l'effetto dell'applicazione dell'operatore di decremento in forma suffissa (**--**) è che il valore dell'operando viene diminuito di un'unità del tipo appropriato.  
+ L'effetto dell'applicazione dell'operatore di incremento in forma suffissa (**++**) è che il valore dell'operando viene incrementato di un'unità del tipo appropriato. Analogamente, l'effetto dell'applicazione dell'operatore di decremento in forma suffissa (**--**) è che il valore dell'operando viene diminuito di un'unità del tipo appropriato.  
   
  È importante notare che una forma suffissa incremento o decremento in forma espressione restituisce il valore dell'espressione *precedenti a* dell'applicazione del rispettivo operatore. L'operazione di incremento o decremento avviene *dopo* l'operando viene valutato. Questo problema si verifica solo quando l'operazione di decremento o di decremento in forma suffissa viene eseguita nel contesto di un'espressione più estesa.  
   

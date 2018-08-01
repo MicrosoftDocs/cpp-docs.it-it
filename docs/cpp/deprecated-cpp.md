@@ -1,5 +1,5 @@
 ---
-title: obsoleto (C++) | Documenti Microsoft
+title: deprecate (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -17,29 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ec2506b406166ac5316de4724db27a6cd7ffcc1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409086"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-Questo argomento vengono illustrate le specifiche di Microsoft declspec dichiarazione deprecata. Per informazioni su C++ 14 `[[deprecated]]` attributo e indicazioni su quando usare tale attributo e il declspec specifiche di Microsoft o il pragma, vedere [gli attributi Standard di C++](attributes.md).
+Questo argomento vengono illustrate le specifiche di Microsoft declspec dichiarazione deprecata. Per informazioni su C++ 14 `[[deprecated]]` attributo e indicazioni su quando usare l'attributo e le specifiche di Microsoft declspec o pragma, vedere [attributi Standard di C++](attributes.md).
 
- Con le eccezioni riportate di seguito, il **deprecato** dichiarazione offre le stesse funzionalità come il [deprecato](../preprocessor/deprecated-c-cpp.md) pragma:  
+ Con le eccezioni riportate di seguito, il **deprecato** dichiarazione offre la stessa funzionalità il [deprecata](../preprocessor/deprecated-c-cpp.md) pragma:  
   
--   Il **deprecato** dichiarazione consente di specificare formati specifici degli overload di funzione come deprecati, mentre il formato del pragma si applica a tutti gli overload di un nome di funzione.  
+-   Il **deprecato** dichiarazione consente di specificare formati specifici degli overload di funzione come deprecati, mentre il formato del pragma viene applicato a tutti gli overload di un nome di funzione.  
   
 -   Il **deprecato** dichiarazione consente di specificare un messaggio che verrà visualizzato in fase di compilazione. Il testo del messaggio può provenire da una macro.  
   
 -   Le macro possono essere contrassegnate solo come deprecate con il **deprecato** pragma.  
   
- Se il compilatore rileva l'utilizzo di standard o un identificatore deprecato [ `[[deprecated]]` ](attributes.md) attributo, un [l'avviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) viene generato l'avviso.  
+ Se il compilatore rileva l'uso di standard o un identificatore deprecato [ `[[deprecated]]` ](attributes.md) attributo, una [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) viene generato l'avviso.  
   
 ## <a name="example"></a>Esempio  
  Nel seguente codice di esempio viene illustrato come contrassegnare funzioni come deprecate e come specificare un messaggio che verrà visualizzato in fase di compilazione, quando viene utilizzata la funzione deprecata.  
   
-```  
+```cpp 
 // deprecated.cpp  
 // compile with: /W3  
 #define MY_TEXT "function is deprecated"  
@@ -59,7 +60,7 @@ int main() {
 ## <a name="example"></a>Esempio  
  Nel seguente codice di esempio viene illustrato come contrassegnare classi come deprecate e come specificare un messaggio che verrà visualizzato in fase di compilazione, quando viene utilizzata la classe deprecata.  
   
-```  
+```cpp 
 // deprecate_class.cpp  
 // compile with: /W3  
 struct __declspec(deprecated) X {  

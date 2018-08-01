@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 45dc0dfe85e7693cdea9c6e469ff347d75c13d57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941005"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402946"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellissi e modelli variadic
 Questo articolo illustra come usare i puntini di sospensione (`...`) con i modelli variadic di C++. I puntini di sospensione è stato usato in diversi modi in C e C++. Ad esempio elenchi di argomenti variabili per le funzioni. Il `printf()` funzione dalla libreria di Runtime C è uno degli esempi più noti.  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  Si noti che in questo articolo viene utilizzata la convenzione illustrata nel primo esempio (i puntini di sospensione sono associati a `typename`).  
   
- Nell'esempio precedente `Arguments` è un pacchetto di parametri. La classe `classname` può accettare un numero variabile di argomenti, come in questi esempi:  
+ Negli esempi precedenti, *argomenti* è un pacchetto di parametri. La classe `classname` può accettare un numero variabile di argomenti, come in questi esempi:  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -56,14 +56,12 @@ vtclass< > vtinstance1;
 vtclass<int> vtinstance2;  
 vtclass<float, bool> vtinstance3;  
 vtclass<long, std::vector<int>, std::string> vtinstance4;  
-  
 ```  
   
  Usando una definizione di classe modello variadic, è anche possibile richiedere almeno un parametro:  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
-  
 ```  
   
  Ecco un esempio di base *funzione di modello variadic* sintassi:  
@@ -72,7 +70,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- Il `Arguments` pacchetto di parametri viene quindi espanso per l'uso, come illustrato nella sezione successiva **comprensione dei modelli di variadic**.  
+ Il *argomenti* pacchetto di parametri viene quindi espanso per l'uso, come illustrato nella sezione successiva **informazioni sui modelli di variadic**.  
   
  Sono possibili altre forme di sintassi della funzione modello variadic, tra cui, senza limitazioni, questi esempi:  
   
@@ -86,14 +84,12 @@ template <typename... Arguments> returntype functionname(Arguments*... args);
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
-  
 ```  
   
  Come le definizioni di classi modello variadic, è possibile creare funzioni che richiedono almeno un parametro:  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
-  
 ```  
   
  I modelli Variadic utilizzano le `sizeof...()` operatore (non correlato al meno recente `sizeof()` operator):  
@@ -108,7 +104,6 @@ void tfunc(const Arguments&... args)
   
     helper_func(xobj, args...);  
 }  
-  
 ```  
   
 ## <a name="more-about-ellipsis-placement"></a>Ulteriori informazioni sulla posizione dei puntini di sospensione  
@@ -160,13 +155,11 @@ int main()
     print(100, 200, 300);  
     print("first", 2, "third", 3.14159);  
 }  
-  
 ```  
   
 ## <a name="output"></a>Output  
   
-```  
-  
+```Output  
 1  
 10, 20  
 100, 200, 300  
@@ -175,4 +168,3 @@ first, 2, third, 3.14159
   
 > [!NOTE]
 >  La maggior parte delle implementazioni che includono funzioni variadic del modello usano la ricorsione di qualche tipo, ma è leggermente diversa dalla ricorsione tradizionale.  La ricorsione tradizionale include una funzione chiamata al metodo di stesso usando la stessa firma. (Potrebbe essere in overload o basata su modelli, ma ogni volta viene scelta la stessa firma). La ricorsione Variadic prevede la chiamata a un modello di funzione variadic utilizzando numeri (quasi sempre decrescenti) diversi di argomenti e quindi scegliendo una firma diversa ogni volta. Un "case di base" è ancora necessaria, ma la natura della ricorsione è differente.  
-  

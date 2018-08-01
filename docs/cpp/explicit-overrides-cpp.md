@@ -1,5 +1,5 @@
 ---
-title: Override espliciti (C++) | Documenti Microsoft
+title: Override espliciti (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409446"
 ---
 # <a name="explicit-overrides-c"></a>Override espliciti (C++)
 **Sezione specifica Microsoft**  
   
  Se la stessa funzione virtuale viene dichiarata in due o più [interfacce](../cpp/interface.md) e se una classe è derivata da queste interfacce, è possibile ignorare in modo esplicito ogni funzione virtuale.  
   
- Per informazioni sugli override espliciti nel codice gestito utilizzando la nuova sintassi gestita, vedere [override espliciti](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Per informazioni sugli override espliciti nel codice gestito utilizzando la nuova sintassi gestita, vedere [esegue l'override esplicito](../windows/explicit-overrides-cpp-component-extensions.md).  
   
  **Fine sezione specifica Microsoft**  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice riportato di seguito viene illustrato come utilizzare gli override espliciti:  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  

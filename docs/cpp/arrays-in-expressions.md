@@ -1,5 +1,5 @@
 ---
-title: Matrici nelle espressioni | Documenti Microsoft
+title: Matrici nelle espressioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3e57a97d9be3ef6245c09c6112caf72318fe784
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b792bc02cf620cbd961830a99e35ae0c61898fed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409346"
 ---
 # <a name="arrays-in-expressions"></a>Matrici nelle espressioni
-Quando un identificatore di un tipo di matrice viene visualizzata in un'espressione diversa da `sizeof`, AddressOf (**&**), o l'inizializzazione di un riferimento, viene convertito in un puntatore al primo elemento della matrice. Ad esempio:  
+Quando un identificatore di tipo matrice viene visualizzata in un'espressione diversa `sizeof`, indirizzo-of (**&**), o l'inizializzazione di un riferimento, viene convertito in un puntatore al primo elemento della matrice. Ad esempio:  
   
-```  
+```cpp 
 char szError1[] = "Error: Disk drive not ready.";  
 char *psz = szError1;  
 ```  
   
  Il puntatore `psz` fa riferimento al primo elemento della matrice `szError1`. Tenere presente che, a differenza dei puntatori, le matrici non sono l-value modificabili. Pertanto, la seguente assegnazione non è valida:  
   
-```  
+```cpp 
 szError1 = psz;  
 ```  
   

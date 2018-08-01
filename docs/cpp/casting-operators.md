@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b2aa683f539e643127f8f71ff536d4c2ca2c9c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941625"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407526"
 ---
 # <a name="casting-operators"></a>Operatori di cast
 Nel linguaggio C++ sono disponibili numerosi operatori di cast specifici. Tali operatori consentono di rimuovere parte dell'ambiguità e alcuni problemi relativi agli operatori cast obsoleti del linguaggio C. Gli operatori sono i seguenti:  
@@ -35,7 +35,7 @@ Nel linguaggio C++ sono disponibili numerosi operatori di cast specifici. Tali o
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) utilizzati per produrre codice MSIL verificabile.  
   
- Utilizzare `const_cast` e `reinterpret_cast` come ultima soluzione, poiché questi operatori possono provocare gli stessi problemi degli operatori cast obsoleti. Tali operatori sono tuttavia ancora necessari per sostituire completamente gli operatori cast obsoleti.  
+ Uso **const_cast** e **reinterpret_cast** come ultima risorsa, poiché questi operatori provocare gli stessi cast obsoleti. Tali operatori sono tuttavia ancora necessari per sostituire completamente gli operatori cast obsoleti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cast](../cpp/casting.md)

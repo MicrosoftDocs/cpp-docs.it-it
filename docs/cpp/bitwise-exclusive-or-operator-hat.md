@@ -1,5 +1,5 @@
 ---
-title: 'Operatore OR bit per bit esclusivo: ^ | Documenti Microsoft'
+title: 'Operatore OR bit per bit esclusivo: ^ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe2f64c20c0d741608dfb2631c2e36026a31e8bb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409852"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406676"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operatore OR bit per bit esclusivo: ^
 ## <a name="syntax"></a>Sintassi  
@@ -40,7 +40,7 @@ L'operatore OR esclusivo bit per bit (**^**) confronta ogni bit del primo operan
 Entrambi gli operandi all'operatore OR bit per bit esclusivo devono essere di tipi integrali. Le conversioni aritmetiche consuete analizzate [conversioni Standard](standard-conversions.md) vengono applicate agli operandi.  
   
 ## <a name="operator-keyword-for-"></a>Parola chiave operator per ^  
-Il **xor** operatore è il testo equivalente di **^**. Esistono due modi per accedere il **xor** operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
+Il **xor** operatore è l'equivalente testuale di **^**. Esistono due modi per accedere la **xor** operatore nei programmi: includere il file di intestazione `iso646.h`, o eseguire la compilazione con il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
 ## <a name="example"></a>Esempio  
   
@@ -60,5 +60,3 @@ int main() {
   
 ## <a name="see-also"></a>Vedere anche  
  [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
-

@@ -1,5 +1,5 @@
 ---
-title: operatori bstr_t | Documenti Microsoft
+title: operatori bstr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d9776579aef7ef4cd32a2fe61fd1f1758e0640
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5db61b6106d34725e2edba8b5681391c6a7147a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407990"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405681"
 ---
 # <a name="bstrt-operators"></a>Operatori _bstr_t
-Per informazioni di `_bstr_t` operatori, vedere [bstr_t Class](../cpp/bstr-t-class.md).  
+Per informazioni sul `_bstr_t` gli operatori, vedere [classe bstr_t](../cpp/bstr-t-class.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe _bstr_t](../cpp/bstr-t-class.md)

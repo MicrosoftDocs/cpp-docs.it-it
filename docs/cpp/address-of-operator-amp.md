@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8acd615cb2f05e62019f5076a423ae0f8218815a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958585"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406006"
 ---
 # <a name="address-of-operator-amp"></a>Operatore address-of: &amp;
 ## <a name="syntax"></a>Sintassi  
@@ -37,7 +37,7 @@ ms.locfileid: "38958585"
   
  L'operatore address-of può essere applicato solo a variabili di tipo fondamentale, struttura, classe o di unione dichiarate a livello di file oppure a riferimenti a matrice con indice. In queste espressioni, un'espressione costante che non include l'operatore address-of può essere aggiunta o sottratta dall'espressione address-of.  
   
- Se applicato a funzioni oppure a valori l-value, il risultato dell'espressione è un tipo puntatore (valore r-value) derivato dal tipo dell'operando. Ad esempio, se l'operando è di tipo **char**, il risultato dell'espressione è di tipo pointer a **char**. L'operatore address-of, applicato a **const** oppure **volatile** gli oggetti, restituisce **tipo const \***  o **tipo volatile \*** , dove **tipo** è il tipo dell'oggetto originale.  
+ Se applicato a funzioni oppure a valori l-value, il risultato dell'espressione è un tipo puntatore (valore r-value) derivato dal tipo dell'operando. Ad esempio, se l'operando è di tipo **char**, il risultato dell'espressione è di tipo pointer a **char**. L'operatore address-of, applicato a **const** oppure **volatile** gli oggetti, restituisce `const type *` oppure `volatile type *`, dove **tipo** è il tipo dell'originale oggetto.  
   
  Quando l'operatore address-of viene applicato a un nome completo, il risultato dipende dal fatto che il *qualified-name* specifichi un membro statico. Se il membro è statico, il risultato è un puntatore al tipo specificato nella dichiarazione del membro. Se il membro non statico, il risultato è un puntatore al membro *name* della classe indicata da *qualified-class-name*. (Vedere [espressioni primarie](../cpp/primary-expressions.md) per altre informazioni sui *qualified-class-name*.) Nel frammento di codice seguente viene illustrato come il risultato sia diverso a seconda che il membro sia statico o meno:  
   
@@ -82,7 +82,7 @@ int main() {
   
 ## <a name="output"></a>Output  
   
-```  
+```Output  
 &d equals &rd  
 ```  
   
@@ -109,7 +109,7 @@ int main() {
   
 ## <a name="output"></a>Output  
   
-```  
+```Output  
 25  
 ```  
   

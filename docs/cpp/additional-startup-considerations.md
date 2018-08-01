@@ -1,5 +1,5 @@
 ---
-title: Considerazioni di avvio aggiuntive | Documenti Microsoft
+title: Considerazioni di avvio aggiuntive | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c05ce0fa1a80de8f5ab8b9335bbab22628f3f158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c23f18a04010ba62d3651344464ff1668b2127d9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409722"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405071"
 ---
 # <a name="additional-startup-considerations"></a>Considerazioni di avvio aggiuntive
-In C++ la costruzione e la distruzione di un oggetto possono richiedere l'esecuzione di codice utente. Pertanto, è importante comprendere le inizializzazioni eseguite prima della voce **principale** e i distruttori richiamati dopo l'uscita da **principale**. (Per informazioni dettagliate sulla costruzione e distruzione di oggetti, vedere [costruttori](../cpp/constructors-cpp.md) e [distruttori](../cpp/destructors-cpp.md).)  
+In C++ la costruzione e la distruzione di un oggetto possono richiedere l'esecuzione di codice utente. Pertanto, è importante comprendere le inizializzazioni eseguite prima della voce `main` e i distruttori richiamati dopo l'uscita da `main`. (Per informazioni dettagliate sulla costruzione e distruzione di oggetti, vedere [costruttori](../cpp/constructors-cpp.md) e [distruttori](../cpp/destructors-cpp.md).)  
   
- Le inizializzazioni seguenti vengono eseguite prima della voce **principale**:  
+ Le inizializzazioni seguenti vengono eseguite prima della voce da `main`:  
   
 -   Inizializzazione predefinita dei dati statici a zero. Tutti i dati statici senza inizializzatori espliciti vengono impostati su zero prima dell'esecuzione di qualsiasi altro codice, inclusa l'inizializzazione di runtime. I membri dati statici devono ancora essere definiti in modo esplicito.  
   
--   Inizializzazione di oggetti statici globali in un'unità di conversione. Questo problema può verificarsi uno prima della voce **principale** o prima del primo utilizzo di qualsiasi oggetto in unità di conversione dell'oggetto o funzione.  
+-   Inizializzazione di oggetti statici globali in un'unità di conversione. Questo problema può verificarsi prima della voce `main` o è precedente al primo utilizzo di qualsiasi oggetto in unità di conversione dell'oggetto o funzione.  
   
  **Sezione specifica Microsoft**  
   
- In Microsoft C++, gli oggetti statici globali vengono inizializzati prima della voce **principale**.  
+ In Microsoft C++ gli oggetti statici globali vengono inizializzati prima della voce `main`.  
   
  **Fine sezione specifica Microsoft**  
   

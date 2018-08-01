@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943284"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406867"
 ---
 # <a name="event-handling-in-com"></a>Gestione di eventi in COM
 Nella gestione degli eventi COM, si configura un ricevitore di origine e di eventi eventi usando il [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) rispettivamente gli attributi, specificare `type` = `com`. Questi attributi inseriscono il codice appropriato per le interfacce personalizzate, dispatch e duali al fine di consentire alle classi a cui vengono applicati di generare eventi e gestirli dai punti di connessione COM.  
   
 ## <a name="declaring-events"></a>Dichiarazione di eventi  
- In una classe di origine eventi, usare il [event](../cpp/event.md) parola chiave in una dichiarazione di interfaccia per dichiarare i metodi dell'interfaccia come eventi. Gli eventi di tale interfaccia vengono generati quando vengono chiamati come metodi di interfaccia. I metodi nelle interfacce eventi possono contenere zero o più parametri (che devono essere tutti `in` parametri). Il tipo restituito può essere void o qualsiasi tipo integrale.  
+ In una classe di origine eventi, usare il [event](../cpp/event.md) parola chiave in una dichiarazione di interfaccia per dichiarare i metodi dell'interfaccia come eventi. Gli eventi di tale interfaccia vengono generati quando vengono chiamati come metodi di interfaccia. I metodi nelle interfacce eventi possono contenere zero o più parametri (che devono essere tutti *in* parametri). Il tipo restituito può essere void o qualsiasi tipo integrale.  
   
 ## <a name="defining-event-handlers"></a>Definizione di gestori degli eventi  
  In una classe del ricevitore di eventi, è possibile definire i gestori eventi, ovvero i metodi con firme (tipi restituiti, convenzioni di chiamata e argomenti) che corrispondono all'evento che gestiranno. Per eventi COM, le convenzioni di chiamata non sono necessario corrispondenti tra loro. visualizzare [eventi COM dipendenti del Layout](#vcconeventhandlingincomanchorlayoutdependentcomevents) seguito per informazioni dettagliate.  

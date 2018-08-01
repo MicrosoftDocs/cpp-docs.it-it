@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25370d7b7e5ddf460ace1ce349c9fc501feb2343
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414783"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407075"
 ---
 # <a name="character-sets"></a>Set di caratteri
 Il testo di un programma C++ viene archiviato in file di origine che usano una particolare codifica dei caratteri. Lo standard C++ specifica un set di caratteri di origine base per i file di origine e un set di caratteri di esecuzione di base per i file compilati. Visual C++ consente un set aggiuntivo di caratteri specifici delle impostazioni locali da usare nei file di origine e nei file compilati.  
@@ -57,7 +57,6 @@ Il testo di un programma C++ viene archiviato in file di origine che usano una p
 ```cpp  
 auto \u30AD = 42; // \u30AD is 'キ'  
 if (キ == 42) return true; // \u30AD and キ are the same to the compiler  
-  
 ```  
   
  Il formato dei caratteri estesi negli Appunti di Windows è specifico delle impostazioni locali dell'applicazione. Tagliare e incollare tali caratteri nel codice da un'altra applicazione può introdurre codifiche di caratteri impreviste. Ciò può comportare errori di analisi senza alcuna causa visibile nel codice. È consigliabile impostare la codifica del file di origine su una tabella codici Unicode prima di incollare i caratteri estesi. È anche consigliabile usare un app IME o Mappa caratteri per generare caratteri estesi.  
@@ -65,4 +64,4 @@ if (キ == 42) return true; // \u30AD and キ are the same to the compiler
  **Fine sezione specifica Microsoft**  
   
 ### <a name="basic-execution-character-set"></a>set di caratteri di esecuzione di base  
- Il *set di caratteri di esecuzione di base* e il *set di caratteri wide di esecuzione di base* sono costituiti da tutti i caratteri inclusi nel set di caratteri di origine di base e dai caratteri di controllo che rappresentano avviso, backspace, ritorno a capo e il carattere Null.   Il *set di caratteri di esecuzione* e il *set di caratteri wide di esecuzione* sono superset dei set di base. Includono i caratteri di origine definiti dall'implementazione all'esterno del set di caratteri di origine di base. Il set di caratteri di esecuzione ha una rappresentazione specifica delle impostazioni locali.
+ Il *set di caratteri di esecuzione di base* e il *set di caratteri wide di esecuzione di base* sono costituiti da tutti i caratteri inclusi nel set di caratteri di origine di base e dai caratteri di controllo che rappresentano avviso, backspace, ritorno a capo e il carattere Null. Il *set di caratteri di esecuzione* e il *set di caratteri wide di esecuzione* sono superset dei set di base. Includono i caratteri di origine definiti dall'implementazione all'esterno del set di caratteri di origine di base. Il set di caratteri di esecuzione ha una rappresentazione specifica delle impostazioni locali.

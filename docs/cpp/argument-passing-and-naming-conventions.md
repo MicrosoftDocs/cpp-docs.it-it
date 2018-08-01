@@ -1,5 +1,5 @@
 ---
-title: Passaggio di argomenti e convenzioni di denominazione | Documenti Microsoft
+title: Passaggio di argomenti e convenzioni di denominazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413486"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404041"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passaggio di argomenti e convenzioni di denominazione
 **Sezione specifica Microsoft**  
@@ -42,9 +42,9 @@ ms.locfileid: "32413486"
 > [!NOTE]
 >  Quando uno struct, un'unione o una classe vengono restituiti da una funzione per valore, tutte le definizioni del tipo devono essere uguali, altrimenti il programma può avere esito negativo in fase di esecuzione.  
   
- Per informazioni su come definire il proprio codice di prologo ed epilogo della funzione, vedere [chiamate di funzione Naked](../cpp/naked-function-calls.md).  
+ Per informazioni su come definire il proprio codice di prologo ed epilogo di funzione, vedere [chiamate alle funzioni Naked](../cpp/naked-function-calls.md).  
   
- Per informazioni sull'impostazione predefinita le convenzioni di chiamata nel codice che le piattaforme x64 destinazioni, vedere [Panoramica x64 convenzioni di chiamata](../build/overview-of-x64-calling-conventions.md). Per informazioni sui problemi di convenzione di chiamata nel codice destinato a piattaforme ARM, vedere [problemi comuni di migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md).  
+ Per informazioni sull'impostazione predefinita le convenzioni di chiamata nel codice destinato alle piattaforme x64, vedere [Panoramica di x64 convenzioni di chiamata](../build/overview-of-x64-calling-conventions.md). Per informazioni sui problemi relativi alle convenzioni di chiamata nel codice destinato a piattaforme ARM, vedere [problemi comuni di migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md).  
   
  Le seguenti convenzioni di chiamata sono supportate dal compilatore Visual C/C++.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32413486"
 |[__clrcall](../cpp/clrcall.md)|N/D|Carica in ordine i parametri nello stack dell'espressione CLR (da sinistra a destra).|  
 |[__stdcall](../cpp/stdcall.md)|Chiamato|Inserisce i parametri nello stack in ordine inverso (da destra a sinistra)|  
 |[__fastcall](../cpp/fastcall.md)|Chiamato|Archiviati nei registri, quindi inseriti nello stack|  
-|[__thiscall](../cpp/thiscall.md)|Chiamato|Inserito nello stack. **questo** puntatore archiviato in ECX|  
+|[__thiscall](../cpp/thiscall.md)|Chiamato|Inserito nello stack; **ciò** puntatore archiviato in ECX|  
 |[__vectorcall](../cpp/vectorcall.md)|Chiamato|Archiviato nei registri, quindi sottoposto a push nello stack in ordine inverso (da destra a sinistra)|  
   
  Per informazioni correlate, vedere [convenzioni di chiamata Obsolete](../cpp/obsolete-calling-conventions.md).  

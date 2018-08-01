@@ -1,5 +1,5 @@
 ---
-title: Ordine delle matrici C++ | Documenti Microsoft
+title: Ordine delle matrici C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cba08aeee123c8b4ed237f2ad5a8397e0f354d10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b85f1a97dd38be3e82b2d7e8a10ca8149788e6f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419966"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404688"
 ---
 # <a name="ordering-of-c-arrays"></a>Ordine delle matrici C++
 Le matrici C++ sono archiviate per lunghezza di riga. L'ordine per lunghezza di riga significa che l'ultimo indice varia più velocemente.  

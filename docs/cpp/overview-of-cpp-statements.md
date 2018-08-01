@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sulle istruzioni C++ | Documenti Microsoft
+title: Cenni preliminari sulle istruzioni C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2858807816178115dd34c05d6c88c3dd6fecdee3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 426709857447d972365aa034059bcd34305d6d40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421747"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402510"
 ---
 # <a name="overview-of-c-statements"></a>Cenni preliminari sulle istruzioni C++
 Le istruzioni di C++ vengono eseguite in sequenza, tranne quando un'istruzione di espressione, un'istruzione di selezione, un'istruzione di iterazione o un'istruzione di salto modifica in modo specifico tale sequenza.  
@@ -27,7 +27,6 @@ Le istruzioni di C++ vengono eseguite in sequenza, tranne quando un'istruzione d
  Le istruzioni possono essere dei seguenti tipi:  
   
 ```  
-  
 labeled-statement  
 expression-statement  
 compound-statement  
@@ -36,10 +35,9 @@ iteration-statement
 jump-statement  
 declaration-statement  
 try-throw-catch  
-  
 ```  
   
- Nella maggior parte dei casi, la sintassi dell'istruzione C++ è identica a quella di ANSI C. La differenza principale tra i due è che in C, le dichiarazioni sono consentite solo all'inizio di un blocco. C++ consente di aggiungere il *istruzione di dichiarazione*, che rimuove in modo efficace questa restrizione. Ciò consente di immettere variabili in un punto del programma in cui un valore di inizializzazione precalcolato può essere calcolato.  
+ Nella maggior parte dei casi, la sintassi dell'istruzione C++ è identica a quella ANSI C. La differenza principale tra i due è che in C, le dichiarazioni sono consentite solo all'inizio di un blocco; C++ consente di aggiungere il *istruzione di dichiarazione*, che rimuove in modo efficace questa restrizione. Ciò consente di immettere variabili in un punto del programma in cui un valore di inizializzazione precalcolato può essere calcolato.  
   
  La dichiarazione di variabili all'interno di blocchi consente inoltre di esercitare controllo preciso sull'ambito e la durata di tali variabili.  
   

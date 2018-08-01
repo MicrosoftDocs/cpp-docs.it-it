@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f0b114089567de06a71f15b69c556e08d1e4e9c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939390"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404080"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 Contrassegna la funzione come significativa in Common Language Runtime a 64 bit. Viene utilizzato in alcune funzioni in librerie fornite da Microsoft.  
@@ -35,7 +35,7 @@ __declspec(jitintrinsic)
 ```  
   
 ## <a name="remarks"></a>Note  
- `jitintrinsic` aggiungi un oggetto MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) a una firma di funzione.  
+ **jitintrinsic** un oggetto modopt (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) per una firma della funzione.  
   
  Si consiglia di non utilizzo questo **declspec** modificatore, come risultati imprevisti può verificarsi.  
   

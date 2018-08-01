@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392783"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404752"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,21 +66,21 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*x*  
 Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **acosh** le funzioni restituiscono il coseno iperbolico inverso (coseno iperbolico arco) di *x*. Queste funzioni sono valide nel dominio *x* ≥ 1. Se *x* è minore di 1 **errno** è impostato su **EDOM** e il risultato è un NaN non interattivo. Se *x* è una costante NaN non interattiva, un valore indefinito o infinito, viene restituito lo stesso valore.
+Il **acosh** le funzioni restituiscono il coseno iperbolico inverso (coseno iperbolico arco) di *x*. Queste funzioni sono valide nel dominio *x* ≥ 1. Se *x* è minore di 1, `errno` è impostata su `EDOM` e il risultato è un NaN non interattivo. Se *x* è un NaN non interattivo, un valore indefinito o infinito, viene restituito lo stesso valore.
 
-|Input|Eccezione SEH|**matherr** (eccezione)|
+|Input|Eccezione SEH|Eccezione`_matherr` |
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|none|none|
 |*x* < 1|none|none|
 
 ## <a name="remarks"></a>Note
 
-Quando si usa C++, è possibile chiamare overload di **acosh** che accettano e restituiscono **float** oppure **lungo** **doppie** valori. In un programma C **acosh** accetta e restituisce sempre **doppie**.
+Quando si usa C++, è possibile chiamare overload di **acosh** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **acosh** accetta e restituisce sempre **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)  
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
+[cosh, coshf, coshl](cosh-coshf-coshl.md)  
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  

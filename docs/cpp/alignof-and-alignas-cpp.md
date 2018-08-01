@@ -1,5 +1,5 @@
 ---
-title: alignof e alignas (C++) | Documenti Microsoft
+title: alignof e alignas (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407986"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402416"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof e alignas (C++)
-L'identificatore di tipo `alignas` è la soluzione standard portabile di C++ per specificare l'allineamento personalizzato di variabili e tipi definiti dall'utente. Analogamente, l'operatore `alignof` è una soluzione standard portabile per ottenere l'allineamento di un tipo o di una variabile specificata.  
+Il **alignas** identificatore di tipo è un modo standard di C++ portabile, per specificare l'allineamento personalizzato di variabili e tipi definiti dall'utente. Il **alignof** operatore in modo analogo è un modo standard, portabile per ottenere l'allineamento di una variabile o un tipo specificato.  
   
 ## <a name="example"></a>Esempio  
- È possibile usare `alignas` su una classe, uno struct o un'unione oppure su singoli membri. Se vengono rilevato più identificatori `alignas`, il compilatore sceglierà quello più rigoroso, ovvero quello con il valore maggiore.  
+ È possibile usare **alignas** su una classe, uno struct o unione, oppure su singoli membri. Quando più **alignas** identificatori vengono rilevati, il compilatore sceglierà quello più rigoroso, (quello con il valore più grande).  
   
 ```cpp  
 // alignas_alignof.cpp

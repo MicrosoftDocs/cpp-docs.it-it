@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940186"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403923"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Elementi lvalue e rvalue (C++)
 
@@ -79,5 +79,6 @@ int main()
 I termini *lvalue* e *rvalue* vengono spesso usate quando si fa riferimento a riferimenti a oggetti. Per altre informazioni sui riferimenti, vedere [dichiaratore di riferimento Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) e [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vedere anche
-
- [Concetti di base](../cpp/basic-concepts-cpp.md) [dichiaratore di riferimento Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+ [Concetti di base](../cpp/basic-concepts-cpp.md)  
+ [Dichiaratore di riferimento lvalue: &](../cpp/lvalue-reference-declarator-amp.md)  
+ [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

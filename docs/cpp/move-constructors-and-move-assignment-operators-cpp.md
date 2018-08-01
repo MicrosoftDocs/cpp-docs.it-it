@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028151"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405571"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Costruttori di spostamento e operatori di assegnazione di spostamento (C++)
 In questo argomento viene descritto come scrivere un *costruttore di spostamento* e un operatore di assegnazione di spostamento per una classe C++. Un costruttore di spostamento consente le risorse appartenenti a un oggetto rvalue da spostare in un elemento lvalue senza copiare. Per altre informazioni sulla semantica di spostamento, vedere [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -250,7 +250,7 @@ int main()
   
  Questo esempio produce il seguente output:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.  
 In ~MemoryBlock(). length = 0.  
@@ -273,7 +273,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Prima di Visual Studio 2010, in questo esempio viene prodotto l'output seguente:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.  
 In ~MemoryBlock(). length = 25. Deleting resource.  
@@ -304,7 +304,6 @@ In ~MemoryBlock(). length = 75. Deleting resource.
  Se si assegna sia un costruttore di spostamento che un operatore di assegnazione di spostamento per la classe, è possibile eliminare il codice ridondante scrivendo il costruttore di spostamento in modo che esegua una chiamata all'operatore di assegnazione di spostamento. Nell'esempio seguente viene illustrata una versione modificata del costruttore di spostamento che chiama l'operatore di assegnazione di spostamento:  
   
 ```cpp
-  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  

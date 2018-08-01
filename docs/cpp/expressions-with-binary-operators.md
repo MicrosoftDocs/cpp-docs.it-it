@@ -1,5 +1,5 @@
 ---
-title: Espressioni con operatori binari | Documenti Microsoft
+title: Espressioni con operatori binari | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414676"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406819"
 ---
 # <a name="expressions-with-binary-operators"></a>Espressioni con operatori binari
 Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori binari sono:  
@@ -34,7 +34,7 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
   
     -   Modulo (%)  
   
--   [Operatori di addizione](../cpp/additive-operators-plus-and.md)  
+-   [Operatori additivi](../cpp/additive-operators-plus-and.md)  
   
     -   Addizione (+)  
   
@@ -64,13 +64,13 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
   
     -   [AND bit per bit (&)](../cpp/bitwise-and-operator-amp.md)  
   
-    -   [Bit per bit esclusivo (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
+    -   [OR bit per bit esclusivo (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [Bit per bit Inclusivo (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [OR bit per bit Inclusivo (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   Operatori logici  
   
-    -   [AND logico (& &)](../cpp/logical-and-operator-amp-amp.md)  
+    -   [Operatore logico AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
     -   [OR logico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
@@ -96,7 +96,7 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
   
     -   Assegnazione dell'operatore OR esclusivo bit per bit (^=)  
   
-    -   Bit per bit assegnazione OR inclusivo (&#124;=)  
+    -   OR bit per bit assegnazione OR inclusivo (&#124;=)  
   
 -   [Operatore virgola](../cpp/comma-operator.md) (,)  
   

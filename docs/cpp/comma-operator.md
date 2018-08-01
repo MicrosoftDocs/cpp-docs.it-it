@@ -1,5 +1,5 @@
 ---
-title: Operatore virgola:, | Documenti Microsoft
+title: Operatore virgola:, | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409186"
 ---
 # <a name="comma-operator-"></a>Operatore virgola: ,
 Consente di raggruppare due istruzioni dove previsto.  
@@ -28,7 +29,6 @@ Consente di raggruppare due istruzioni dove previsto.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 expression , expression  
 ```  
   
@@ -41,11 +41,11 @@ expression , expression
   
  *E1* , *e2*  
   
- Il tipo e il valore dell'espressione sono il tipo e il valore di *e2*; il risultato della valutazione *e1* viene eliminato. Il risultato è un l-value se l'operando destro è un l-value.  
+ Il tipo e il valore dell'espressione sono il tipo e il valore della *e2*; il risultato della valutazione *e1* viene eliminato. Il risultato è un l-value se l'operando destro è un l-value.  
   
  Quando la virgola viene normalmente utilizzata come separatore (ad esempio negli argomenti effettivi alle funzioni o agli inizializzatori di aggregazione), l'operatore virgola e i relativi operandi devono essere racchiusi tra parentesi. Ad esempio:  
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
@@ -54,7 +54,7 @@ func_two( (x--, y + 2), z );
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  
@@ -74,5 +74,5 @@ int main () {
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatore di valutazione sequenziale](../c-language/sequential-evaluation-operator.md)

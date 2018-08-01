@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943841"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407780"
 ---
 # <a name="pointers-to-members"></a>Puntatori a membri
 Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del puntatore.  Le funzioni vengono dichiarate tramite la seguente sequenza:  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- Nell'esempio precedente, `pwCaption` è un puntatore a un membro della classe `Window` che è di tipo **char\***. Il tipo di `pwCaption` è `char * Window::* `. Il frammento di codice seguente dichiara i puntatori alle funzioni membro `SetCaption` e `GetCaption`.  
+ Nell'esempio precedente, `pwCaption` è un puntatore a un membro della classe `Window` che ha tipo `char*`. Il tipo di `pwCaption` è `char * Window::* `. Il frammento di codice seguente dichiara i puntatori alle funzioni membro `SetCaption` e `GetCaption`.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  La differenza tra il **.\***  e **-> \*** operatori (gli operatori puntatore a membro) è che la **.\***  operatore consente di selezionare i membri dato un oggetto o un riferimento all'oggetto, mentre la **-> \*** operatore consente di selezionare i membri tramite un puntatore. (Per altre informazioni su questi operatori, vedere [espressioni con operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Il risultato degli operatori puntatore a membro è il tipo del membro, ovvero in questo caso **char \*** .  
+ Il risultato degli operatori puntatore a membro è il tipo del membro, ovvero in questo caso, `char *`.  
   
  Il frammento di codice seguente richiama le funzioni membro `GetCaption` e `SetCaption` tramite puntatori a membri:  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>Vedere anche  
- 

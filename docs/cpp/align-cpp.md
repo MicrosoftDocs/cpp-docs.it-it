@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940728"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405870"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -50,7 +50,7 @@ Il compilatore non garantisce né tenta di mantenere l'attributo di allineamento
 
 Non è possibile specificare l'allineamento per i parametri di funzione. Quando i dati con un attributo di allineamento vengono passati dal valore nello stack, l'allineamento viene controllato dalla convenzione di chiamata. Se l'allineamento dei dati è importante nella funzione chiamata, copiare il parametro nella memoria correttamente allineata prima dell'uso.
 
-Senza `__declspec(align(#))`, il compilatore in genere Allinea i dati basati su processore di destinazione e le dimensioni dei dati, fino a limiti di 4 byte sui processori a 32 bit, i limiti naturali e limiti di 8 byte sui processori a 64 bit. I dati presenti nelle classi o strutture sono allineati nella classe o struttura come minimo dell'allineamento naturale e l'impostazione di compressione corrente (da #pragma **pack** o nella **/Zp** opzione del compilatore).
+Senza `__declspec(align(#))`, il compilatore in genere Allinea i dati basati su processore di destinazione e le dimensioni dei dati, fino a limiti di 4 byte sui processori a 32 bit, i limiti naturali e limiti di 8 byte sui processori a 64 bit. I dati presenti nelle classi o nelle strutture vengono allineati nella stessa classe o struttura in base al valore minimo dell'allineamento naturale e all'impostazione di compressione corrente (da #pragma `pack` o dall'opzione del compilatore `/Zp`).
 
 L'esempio seguente illustra l'uso di `__declspec(align(#))`:
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-Se la memoria viene allocata nell'heap, l'allineamento dipende dalla funzione di allocazione che viene chiamata.  Ad esempio, se si usa **malloc**, il risultato dipende dalla dimensione dell'operando. Se *arg* > = 8, la memoria restituita verrà allineata a 8 byte. Se *arg* < 8, l'allineamento della memoria restituita sarà la prima potenza di 2 minore di *arg*. Ad esempio, se si usa malloc(7), l'allineamento sarà a 4 byte.
+Se la memoria viene allocata nell'heap, l'allineamento dipende dalla funzione di allocazione che viene chiamata.  Ad esempio, se si usa `malloc`, il risultato dipende dalla dimensione dell'operando. Se *arg* > = 8, la memoria restituita verrà allineata a 8 byte. Se *arg* < 8, l'allineamento della memoria restituita sarà la prima potenza di 2 minore di *arg*. Ad esempio, se si usa malloc(7), l'allineamento sarà a 4 byte.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Definizione di nuovi tipi con __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Funzionamento con compressione dei dati dell'allineamento
 
-Il **/Zp** l'opzione del compilatore e il **pack** pragma hanno l'effetto di comprimere i dati per i membri di struttura e unione. Questo esempio viene illustrato come **/Zp** e `__declspec(align(#))` funzionano insieme:
+Il `/Zp` l'opzione del compilatore e `pack` pragma hanno l'effetto di comprimere i dati per i membri di struttura e unione. Questo esempio viene illustrato come `/Zp` e `__declspec(align(#))` funzionano insieme:
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-La tabella seguente elenca l'offset di ogni membro in svariati **/Zp** (o #pragma **pack**) i valori, che mostra l'interagiscono tra i due.
+Nella tabella seguente è indicato l'offset di ciascun membro in corrispondenza di una varietà di valori `/Zp` (o #pragma `pack`), per illustrare le modalità di interazione tra i due.
 
 |Variabile|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,7 +251,6 @@ L'offset di un oggetto è basato sull'offset tra l'oggetto precedente e l'impost
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
-
 [__declspec](../cpp/declspec.md)  
 [Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)  
 [Panoramica delle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939312"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407403"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -61,6 +61,5 @@ Il prefisso o suffisso **--** operatore non può essere applicato a una variabil
  Il **bool** tipo contribuisce alle promozioni integrali. Un r-value di tipo **bool** può essere convertito in un r-value di tipo **int**, zero con diventando FALSE e TRUE che diventa uno. Come un tipo distinto, **bool** partecipa alla risoluzione dell'overload.  
   
 ## <a name="see-also"></a>Vedere anche
-
-[Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Tipi fondamentali](../cpp/fundamental-types-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)  
+[Tipi fondamentali](../cpp/fundamental-types-cpp.md)  

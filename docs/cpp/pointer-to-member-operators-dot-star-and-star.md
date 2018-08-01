@@ -1,5 +1,5 @@
 ---
-title: Gli operatori puntatore a membro:. * e -&gt;* | Documenti Microsoft
+title: Operatori puntatore a membro:. * e -&gt;* | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b266d167b34c1c773d79ea92813a310eb18441
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408966"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Operatori puntatore a membro:. * e -&gt;*
 ## <a name="syntax"></a>Sintassi  
@@ -38,7 +39,7 @@ expression ->* expression
 ## <a name="remarks"></a>Note  
  Gli operatori puntatore a membro,. * e ->\*, restituire il valore di un membro di classe specifico per l'oggetto specificato sul lato sinistro dell'espressione.  Nella parte destra deve essere specificato un membro della classe.  Nell'esempio seguente viene illustrato come utilizzare tali operatori.  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -78,7 +79,7 @@ int main() {
   
 ## <a name="output"></a>Output  
   
-```  
+```Output  
 m_func1  
 m_func1  
 1  
@@ -89,16 +90,16 @@ m_func1
   
  L'operatore binario .* associa il proprio primo operando, che deve essere un oggetto di tipo classe, con il secondo operando, che deve essere di tipo puntatore a membro.  
   
- L'operatore binario -> * Combina il primo operando, che deve essere un puntatore a un oggetto di tipo classe, con il secondo operando, che deve essere un tipo di puntatore a membro.  
+ L'operatore binario -> * Associa il proprio primo operando, che deve essere un puntatore a un oggetto di tipo classe, con il secondo operando, che deve essere un tipo di puntatore a membro.  
   
  In un'espressione che contiene l'operatore .* il primo operando deve essere del tipo di classe del puntatore a membro specificato nel secondo operando (e deve essere accessibile da tale puntatore) o di un tipo accessibile senza ambiguità derivato da e accessibile da tale classe.  
   
- In un'espressione contenente il-> * (operatore), il primo operando deve essere di tipo "puntatore al tipo di classe" del tipo specificato nel secondo operando o deve essere di un tipo derivato senza ambiguità da tale classe.  
+ In un'espressione contenente il-> * (operatore), il primo operando deve essere del tipo "puntatore al tipo di classe" del tipo specificato nel secondo operando o deve essere di un tipo senza ambiguità derivato da tale classe.  
   
 ## <a name="example"></a>Esempio  
  Considerare le classi e il frammento di programma seguenti:  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators2.cpp  
 // C2440 expected  
 class BaseClass {  
@@ -134,11 +135,10 @@ int main() {
 }  
 ```  
   
- Il risultato del. * o ->\* operatori puntatore a membro è un oggetto o una funzione del tipo specificato nella dichiarazione di puntatore a membro. Nell'esempio precedente il risultato dell'espressione `ADerived.*pmfnFunc1()` è un puntatore a una funzione che restituisce un valore nullo. Questo risultato è un valore l-value se il secondo operando è un valore di questo tipo.  
+ Il risultato della. * o ->\* gli operatori puntatore a membro è un oggetto o una funzione del tipo specificato nella dichiarazione di puntatore a membro. Nell'esempio precedente il risultato dell'espressione `ADerived.*pmfnFunc1()` è un puntatore a una funzione che restituisce un valore nullo. Questo risultato è un valore l-value se il secondo operando è un valore di questo tipo.  
   
 > [!NOTE]
 >  Se il risultato di uno degli operatori puntatore a membro è una funzione, il risultato può essere utilizzato solo come operando dell'operatore di chiamata di funzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

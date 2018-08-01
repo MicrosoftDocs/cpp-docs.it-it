@@ -16,18 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce914f47f62a742b24830d848fd9d82b91796f31
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943548"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408050"
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 Una matrice è una raccolta di oggetti simili. Il caso più semplice di una matrice è un vettore che può essere dichiarato dalla seguente sequenza:  
   
 ```  
-  
 decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
@@ -174,7 +173,4 @@ The minimum cost to Market 3 is: 17.29
 ```  
   
 ## <a name="comments"></a>Commenti  
- La funzione `FindMinToMkt` viene scritta in modo che l'aggiunta di nuove ditte non richieda alcuna modifica al codice, ma solo la ricompilazione.  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+ La funzione `FindMinToMkt` viene scritta in modo che l'aggiunta di nuove ditte non richieda alcuna modifica al codice, ma solo la ricompilazione. 

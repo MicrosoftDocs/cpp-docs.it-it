@@ -1,5 +1,5 @@
 ---
-title: Punto di dichiarazione in C++ | Documenti Microsoft
+title: Punto di dichiarazione in C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42f43e6187e19df6e9c1111c0e92aa4b9929199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89f94cdee6be18436b3f39f840fb7880e5860adb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409376"
 ---
 # <a name="point-of-declaration-in-c"></a>Punto di dichiarazione in C++
-Un nome viene considerato dichiarato immediatamente dopo il proprio dichiaratore e prima del proprio inizializzatore (quest'ultimo è facoltativo). (Per ulteriori informazioni sui dichiaratori, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).)  
+Un nome viene considerato dichiarato immediatamente dopo il proprio dichiaratore e prima del proprio inizializzatore (quest'ultimo è facoltativo). (Per altre informazioni sui dichiaratori, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).)  
   
  Si consideri l'esempio seguente:  
   
-```  
+```cpp 
 // point_of_declaration1.cpp  
 // compile with: /W1   
 double dVar = 7.0;  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- Se il punto di dichiarazione fosse *dopo* l'inizializzazione, quindi locale `dVar` verrebbe inizializzata su 7.0, il valore della variabile globale `dVar`. Tuttavia, poiché non è questo il caso, `dVar` viene inizializzata su un valore non definito.  
+ Se la posizione della dichiarazione fosse *dopo aver* l'inizializzazione, quindi locale `dVar` verrebbe inizializzata su 7.0, il valore della variabile globale `dVar`. Tuttavia, poiché non è questo il caso, `dVar` viene inizializzata su un valore non definito.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ambito](../cpp/scope-visual-cpp.md)

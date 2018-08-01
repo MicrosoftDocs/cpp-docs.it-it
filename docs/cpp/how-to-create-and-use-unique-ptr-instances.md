@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare e utilizzare istanze unique_ptr | Documenti Microsoft'
+title: 'Procedura: creare e utilizzare istanze unique_ptr | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
-ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
+ms.openlocfilehash: eed34b3c356b36c824e22739697b7967575792f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34755771"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402650"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Procedura: creare e utilizzare istanze unique_ptr
-Oggetto [unique_ptr](../standard-library/unique-ptr-class.md) non condivide il puntatore. Non può essere copiato in un altro `unique_ptr`, passato per valore a una funzione o utilizzato in qualsiasi algoritmo della libreria Standard C++ che richiede di copie da eseguire. È possibile solo spostare un oggetto `unique_ptr`. Ciò significa che la proprietà della risorsa di memoria viene trasferita a un altro `unique_ptr` e l'oggetto `unique_ptr` originale non è più proprietario della risorsa. Si consiglia di limitare un oggetto a un solo proprietario, poiché la proprietà multipla rende più complessa la logica del programma. Pertanto, quando è necessario un puntatore intelligente per un oggetto C++ normale, usare `unique_ptr`, e quando si costruisce un `unique_ptr`, utilizzare il [make_unique](../standard-library/memory-functions.md#make_unique) funzione di supporto.  
+Oggetto [unique_ptr](../standard-library/unique-ptr-class.md) condivide il puntatore. Non può essere copiato in un altro `unique_ptr`, passato per valore a una funzione o utilizzato in qualsiasi algoritmo della libreria Standard C++ che richiede di copie. È possibile solo spostare un oggetto `unique_ptr`. Ciò significa che la proprietà della risorsa di memoria viene trasferita a un altro `unique_ptr` e l'oggetto `unique_ptr` originale non è più proprietario della risorsa. Si consiglia di limitare un oggetto a un solo proprietario, poiché la proprietà multipla rende più complessa la logica del programma. Pertanto, quando è necessario un puntatore intelligente per un oggetto C++ normale, utilizzare `unique_ptr`, e quando si costruisce una `unique_ptr`, utilizzare il [make_unique](../standard-library/memory-functions.md#make_unique) funzione di supporto.  
   
  Nel diagramma seguente è illustrato il passaggio di proprietà tra due istanze di `unique_ptr`.  
   
- ![Trasferimento della proprietà di un&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
+ ![Trasferimento della proprietà di un valore univoco&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` è definito nel `<memory>` intestazione della libreria Standard C++. È esattamente efficiente quanto un puntatore non elaborato e può essere utilizzato nei contenitori della libreria Standard C++. L'aggiunta di `unique_ptr` istanze ai contenitori della libreria Standard C++ è efficiente poiché il costruttore di spostamento del `unique_ptr` Elimina la necessità di un'operazione di copia.  
+ `unique_ptr` è definito nel `<memory>` intestazione della libreria Standard C++. È esattamente efficiente quanto un puntatore non elaborato e può essere usato nei contenitori della libreria Standard C++. L'aggiunta di `unique_ptr` istanze di contenitori della libreria Standard C++ è efficiente poiché il costruttore di spostamento del `unique_ptr` Elimina la necessità di un'operazione di copia.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come creare istanze di `unique_ptr` e passarle tra funzioni.  
@@ -48,11 +48,11 @@ Oggetto [unique_ptr](../standard-library/unique-ptr-class.md) non condivide il p
  [!code-cpp[stl_smart_pointers#212](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_3.cpp)]  
   
 ## <a name="example"></a>Esempio  
- È possibile utilizzare [make_unique](../standard-library/memory-functions.md#make_unique) per creare un `unique_ptr` in una matrice, ma non è possibile utilizzare `make_unique` per inizializzare gli elementi della matrice.  
+ È possibile usare [make_unique](../standard-library/memory-functions.md#make_unique) per creare un `unique_ptr` in una matrice, ma non è possibile usare `make_unique` per inizializzare gli elementi della matrice.  
   
  [!code-cpp[stl_smart_pointers#213](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]  
   
- Per ulteriori esempi, vedere [make_unique](../standard-library/memory-functions.md#make_unique).  
+ Per altri esempi, vedere [make_unique](../standard-library/memory-functions.md#make_unique).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md)   

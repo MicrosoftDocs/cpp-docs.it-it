@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943257"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404597"
 ---
 # <a name="comptrt-class"></a>Classe _com_ptr_t
 **Sezione specifica Microsoft**  
   
- Un oggetto `_com_ptr_t` incapsula un puntatore all'interfaccia COM e viene chiamato un puntatore "intelligente". Questa classe modello gestisce l'allocazione delle risorse e la deallocazione tramite le chiamate di funzione per il `IUnknown` funzioni membro: `QueryInterface`, `AddRef`, e `Release`.  
+ Oggetto **com_ptr_t** oggetto incapsula un puntatore a interfaccia COM e viene chiamato un puntatore "intelligente". Questa classe modello gestisce l'allocazione delle risorse e la deallocazione tramite le chiamate di funzione per il `IUnknown` funzioni membro: `QueryInterface`, `AddRef`, e `Release`.  
   
- Un puntatore intelligente è in genere fa riferimento alla definizione typedef fornita dalla macro COM_SMARTPTR_TYPEDEF. Questa macro accetta un nome dell'interfaccia e l'IID e dichiara una specializzazione di `_com_ptr_t` con il nome dell'interfaccia più un suffisso di `Ptr`. Ad esempio:  
+ Un puntatore intelligente è in genere fa riferimento alla definizione typedef fornita dalla macro COM_SMARTPTR_TYPEDEF. Questa macro accetta un nome di interfaccia e l'IID e dichiara una specializzazione dello **com_ptr_t** con il nome dell'interfaccia più un suffisso di `Ptr`. Ad esempio:  
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- Consente di dichiarare la `_com_ptr_t` specializzazione `IMyInterfacePtr`.  
+ Consente di dichiarare la **com_ptr_t** specializzazione `IMyInterfacePtr`.  
   
  Un set di [modelli di funzione](../cpp/relational-function-templates.md), non i membri di questo modello di classe, supporta confronti con un puntatore intelligente a destra dell'operatore di confronto.  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Costruisce un oggetto `_com_ptr_t`.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Costruisce un **com_ptr_t** oggetto.|  
   
 ### <a name="low-level-operations"></a>Operazioni di basso livello  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-ptr-t-operator-equal.md)|Assegna un nuovo valore a un oggetto `_com_ptr_t` esistente.|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|Assegna un nuovo valore a un oggetto esistente **com_ptr_t** oggetto.|  
 |[gli operatori = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Confrontare l'oggetto del puntatore intelligente a un altro puntatore intelligente, puntatore a interfaccia raw o NULL.|  
 |[Estrattori](../cpp/com-ptr-t-extractors.md)|Estrae il puntatore a interfaccia COM incapsulato.|  
   

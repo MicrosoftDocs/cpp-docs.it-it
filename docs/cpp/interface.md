@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 24558b99cf5291a83cfef77a76dd631622b657b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943536"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404200"
 ---
 # <a name="interface"></a>__interface
 **Sezione specifica Microsoft**  
@@ -43,7 +43,6 @@ ms.locfileid: "37943536"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 modifier __interface interface-name {interface-definition};  
 ```  
   

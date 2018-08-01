@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 73e030ede8305db4ea05826f0ce7704420ac0400
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943629"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403401"
 ---
 # <a name="const-c"></a>const (C++)
 Quando si modifica una dichiarazione di dati, il **const** parola chiave specifica che l'oggetto o una variabile non è modificabile.  
@@ -29,7 +29,6 @@ Quando si modifica una dichiarazione di dati, il **const** parola chiave specifi
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 const declaration ;  
 member-function const ;  
 ```  

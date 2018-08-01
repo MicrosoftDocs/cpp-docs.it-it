@@ -1,5 +1,5 @@
 ---
-title: Istruzioni composte (blocchi) | Documenti Microsoft
+title: Istruzioni composte (blocchi) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8823935ee2f871cdc033aec23f05fc108244e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c85de0f147d0cfed873a091d17c46e56bf5758a9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408796"
 ---
 # <a name="compound-statements-blocks"></a>Istruzioni composte (blocchi)
 Un'istruzione composta è costituita da zero o più istruzioni racchiuse tra parentesi graffe (**{}**). Un'istruzione composta può essere utilizzata ovunque sia prevista un'istruzione. Le istruzioni composte vengono in genere definite blocchi.  
@@ -30,14 +31,13 @@ Un'istruzione composta è costituita da zero o più istruzioni racchiuse tra par
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 { [ statement-list ] }  
 ```  
   
 ## <a name="remarks"></a>Note  
- Nell'esempio seguente viene utilizzata un'istruzione composta come il *istruzione* in parte il **se** istruzione (vedere [if istruzione](../cpp/if-else-statement-cpp.md) per informazioni dettagliate sulla sintassi):  
+ L'esempio seguente usa un'istruzione composta come il *istruzione* in parte il **se** istruzione (vedere [if istruzione](../cpp/if-else-statement-cpp.md) per informazioni dettagliate sulla sintassi):  
   
-```  
+```cpp 
 if( Amount > 100 )  
 {  
     cout << "Amount was too large to handle\n";  
@@ -50,7 +50,7 @@ else
 ```  
   
 > [!NOTE]
->  Poiché una dichiarazione di un'istruzione, può essere una delle istruzioni in una dichiarazione di *elenco di istruzioni*. Di conseguenza, i nomi dichiarati in un'istruzione composta, ma non esplicitamente dichiarati come statici, hanno ambito e, per gli oggetti, durata locale. Vedere [ambito](../cpp/scope-visual-cpp.md) per informazioni dettagliate sul trattamento dei nomi con ambito locale.  
+>  Poiché una dichiarazione è un'istruzione, può essere una delle istruzioni in una dichiarazione di *elenco di istruzioni*. Di conseguenza, i nomi dichiarati in un'istruzione composta, ma non esplicitamente dichiarati come statici, hanno ambito e, per gli oggetti, durata locale. Visualizzare [ambito](../cpp/scope-visual-cpp.md) per informazioni dettagliate sul trattamento dei nomi con ambito locale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica delle istruzioni C++](../cpp/overview-of-cpp-statements.md)

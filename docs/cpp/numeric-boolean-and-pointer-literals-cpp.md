@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943584"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405519"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numerici, booleani e valori letterali di puntatore (C++)
 Un valore letterale è un elemento del programma che rappresenta direttamente un valore. Questo articolo illustra i valori letterali di tipo Integer, a virgola mobile, booleano e puntatore. Per informazioni sui valori letterali stringa e carattere, vedere [stringa e valori letterali carattere (C++)](../cpp/string-and-character-literals-cpp.md). È anche possibile definire valori letterali personalizzati basati su uno qualsiasi di queste categorie. per altre informazioni vedere [valori letterali definiti dall'utente (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  In alcuni casi è importante indicare al compilatore come interpretare un valore letterale o il tipo specifico da assegnare a tale valore. Per ottenere questo risultato, aggiungere prefissi o suffissi al valore letterale. Ad esempio, il prefisso 0x indica al compilatore di interpretare il numero che lo segue come valore esadecimale, ad esempio 0x35. Il suffisso ULL indica al compilatore di considerare il valore un **long long senza segno** tipo, 5894345ull. Per un elenco completo di prefissi e suffissi per ogni tipo di valore letterale, vedere le sezioni seguenti.  
@@ -129,7 +128,6 @@ void func( long double );
  È possibile specificare un valore letterale binario mediante il prefisso `0B` o `0b`, seguito da una sequenza di 1 e 0:  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,7 +138,6 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  Nell'esempio precedente potrebbe essere meglio usare una costante denominata che fornisce un significato chiaro, ad esempio "MAXIMUM_ERROR_THRESHOLD". Se il valore restituito "Success" viene visualizzato dagli utenti finali, potrebbe essere consigliabile usare una costante di stringa denominata, che può essere archiviata in un'unica posizione in un file, da cui può essere localizzata in altre lingue. L'uso delle costanti denominate aiuta gli altri utenti e lo sviluppatore a comprendere l'intento del codice.  

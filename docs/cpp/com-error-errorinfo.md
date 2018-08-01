@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52935c81849ded072cb20d6c835b3a71b66c2871
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f3f4d105efb7269c0c1344d6a9399ebbe4fa9fd2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941314"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404294"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Sezione specifica Microsoft**  
@@ -31,9 +31,7 @@ ms.locfileid: "37941314"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 IErrorInfo * ErrorInfo( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>Valore restituito  

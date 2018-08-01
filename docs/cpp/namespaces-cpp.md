@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5a68a0a67748e79fe4379cb5f820cca0c845f392
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941185"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405483"
 ---
 # <a name="namespaces-c"></a>Spazi dei nomi (C++)
 Uno spazio dei nomi è un'area dichiarativa che fornisce un ambito per gli identificatori (nomi di tipi, funzioni, variabili e così via) al suo interno. Gli spazi dei nomi vengono usati per organizzare il codice in gruppi logici e per evitare conflitti tra nomi, che si possono verificare in particolare quando la codebase include più librerie. Tutti gli identificatori nell'ambito dello spazio dei nomi sono visibili tra loro senza qualifica. Gli identificatori all'esterno dello spazio dei nomi possono accedere ai membri usando il nome completo di ogni identificatore, ad esempio `std::vector<std::string> vec;`, oppure tramite un [dichiarazioneusing](../cpp/using-declaration.md) per un singolo identificatore (`using std::string`), o un [direttiva using](../cpp/namespaces-cpp.md#using_directives) per tutti gli identificatori dello spazio dei nomi (`using namespace std;`). È consigliabile che il codice nel file di intestazione usi sempre il nome completo dello spazio dei nomi.  
@@ -59,7 +59,6 @@ ContosoData::Func(mgr);
 using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
-  
 ```  
   
  Mediante una direttiva using per portare nell'ambito qualsiasi elemento dello spazio dei nomi:  
@@ -70,7 +69,6 @@ using namespace ContosoData;
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
-  
 ```  
   
 ## <a id="using_directives"></a> direttive using  
@@ -91,11 +89,10 @@ namespace ContosoDataServer
 {  
     void Foo();  
     int Bar();  
-  
 }  
 ```  
   
- Le implementazioni delle funzioni in contosodata. cpp devono usare il nome completo, anche se si inserisce un `using` direttiva all'inizio del file:  
+ Le implementazioni delle funzioni in contosodata. cpp devono usare il nome completo, anche se si inserisce un **usando** direttiva all'inizio del file:  
   
 ```cpp  
 #include "contosodata.h"  
@@ -154,7 +151,6 @@ namespace ContosoDataServer
   
     int Bar(){...};  
     int Baz(int i) { return Details::CountImpl; }      
-  
 }  
 ```  
   
@@ -211,7 +207,6 @@ namespace Parent
      template<>  
      class C<int> {};  
 }  
-  
 ```  
   
  È possibile usare gli spazi dei nomi inline come meccanismo di controllo delle versioni per gestire le modifiche all'interfaccia pubblica di una libreria. Ad esempio, è possibile creare un singolo spazio dei nomi padre e incapsulare ogni versione dell'interfaccia nel proprio spazio dei nomi annidato nel padre. Lo spazio dei nomi che include la versione più recente o preferita viene qualificato come inline e viene quindi esposto come se fosse un membro diretto dello spazio dei nomi padre. Il codice client che richiama Parent::Class verrà associato automaticamente al nuovo codice. I client che preferiscono usare la versione meno recente potranno comunque accedere a tale versione usando il percorso completo per lo spazio dei nomi annidato che include il codice corrispondente.  
@@ -252,7 +247,6 @@ namespace Contoso
       };  
     }  
 }  
-  
 ```  
   
 ## <a id="namespace_aliases"></a> Alias Namespace  
@@ -262,7 +256,6 @@ namespace Contoso
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
-  
 ```  
   
 ## <a name="anonymous-or-unnamed-namespaces"></a>Spazi dei nomi anonimi o senza nome  

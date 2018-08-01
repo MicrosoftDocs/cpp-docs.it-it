@@ -1,5 +1,5 @@
 ---
-title: Abort (funzione) | Documenti Microsoft
+title: Funzione Abort | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
 ms.technology:
@@ -14,17 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acfbb5a0790dec6f7b5770832cc6b09f69a28d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e5679ce718c564ee40fb07b676756ef79344a99
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408032"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403622"
 ---
 # <a name="abort-function"></a>Funzione abort
 
-Il **abort** funzione, dichiarata anche nel file di inclusione standard \<STDLIB. h >, termina un programma C++. La differenza tra **uscire** e **abort** che **uscire** consente l'elaborazione di terminazione di runtime C++ (oggetto globale distruttori verranno chiamati), eseguire mentre **abort** termina immediatamente il programma. Per ulteriori informazioni, vedere [abort](../c-runtime-library/reference/abort.md) nel *riferimenti alla libreria di Run-Time*.
+Il **abort** funzione, dichiarata anche nel file di inclusione standard \<STDLIB. h >, termina un programma C++. La differenza tra `exit` e **abort** è che `exit` consentirà l'elaborazione di terminazione di runtime di C++ per l'implementazione (oggetto globale distruttori verranno chiamati), mentre **abort** Termina il programma immediatamente. Per altre informazioni, vedere [abort](../c-runtime-library/reference/abort.md) nel *Run-Time Library Reference*.
 
 ## <a name="see-also"></a>Vedere anche
-
 [Chiusura del programma](../cpp/program-termination.md)

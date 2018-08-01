@@ -1,5 +1,5 @@
 ---
-title: Modelli di funzioni membro | Documenti Microsoft
+title: Modelli di funzioni membro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7eeed732f8d9e69dd2571b69cf1c7247a38991
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7767b833fb80926e425e14a209c3d97a778e72b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419979"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404226"
 ---
 # <a name="member-function-templates"></a>Modelli di funzioni membro
 
@@ -95,7 +95,7 @@ int main()
   
  Le funzioni modello di membro non possono essere funzioni virtuali e non possono eseguire l'override delle funzioni virtuali da una classe base quando vengono dichiarate con lo stesso nome di una funzione virtuale di una classe base.  
   
-Nell'esempio seguente viene illustrata una conversione definita dall'utente basati su modelli:  
+Nell'esempio seguente viene illustrata una conversione definita dall'utente basate su modelli:  
   
 ```cpp
 // templated_user_defined_conversions.cpp  
@@ -116,5 +116,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-
  [Modelli di funzioni](../cpp/function-templates.md)
