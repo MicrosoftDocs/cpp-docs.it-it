@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f8b845fd147f51e3546f7a11afa0bae6deb5d527
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939845"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461465"
 ---
 # <a name="stdcall"></a>__stdcall
 **Sezione specifica Microsoft**  
   
- Il **stdcall** convenzione di chiamata viene usato per chiamare funzioni API Win32. Il chiamato pulisce lo stack, in modo che il compilatore rende **vararg** funzioni **cdecl**. Le funzioni che utilizzano questa convenzione di chiamata richiedono un prototipo di funzione.  
+ Il **stdcall** convenzione di chiamata viene usato per chiamare funzioni API Win32. Il chiamato pulisce lo stack, in modo che il compilatore rende `vararg` funzioni **cdecl**. Le funzioni che utilizzano questa convenzione di chiamata richiedono un prototipo di funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
@@ -73,7 +72,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, usare _**stdcall** comporta che tutti `WINAPI` tipi di funzione come una chiamata standard:  
+ Nell'esempio seguente, usare **stdcall** comporta che tutti `WINAPI` tipi di funzione come una chiamata standard:  
   
 ```cpp  
 // Example of the __stdcall keyword  

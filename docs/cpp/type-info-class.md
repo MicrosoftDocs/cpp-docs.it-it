@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 00939b514c243f673baf7f0997f1ca3860251626
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941041"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462651"
 ---
 # <a name="typeinfo-class"></a>Classe type_info
-Il `type_info` classe descrive le informazioni sul tipo generate all'interno del programma dal compilatore. Gli oggetti di questa classe consentono di archiviare un puntatore a un nome per il tipo. Il `type_info` classe consente archivia anche un valore codificato adatto per il confronto di due tipi per verificarne l'uguaglianza o l'ordinamento. Le regole di codifica e la sequenza di ordinamento per i tipi non sono specificate e possono variare in base al programma.  
+Il **type_info** classe descrive le informazioni sul tipo generate all'interno del programma dal compilatore. Gli oggetti di questa classe consentono di archiviare un puntatore a un nome per il tipo. Il **type_info** classe consente archivia anche un valore codificato adatto per il confronto di due tipi per verificarne l'uguaglianza o l'ordinamento. Le regole di codifica e la sequenza di ordinamento per i tipi non sono specificate e possono variare in base al programma.  
   
- Il `<typeinfo>` file di intestazione deve essere incluso per poter utilizzare il `type_info` classe. L'interfaccia per il `type_info` classe è:  
+ Il `<typeinfo>` file di intestazione deve essere incluso per poter usare il **type_info** classe. L'interfaccia per il **type_info** classe è:  
   
 ```cpp
 class type_info {  
@@ -42,11 +42,11 @@ public:
 };  
 ```  
   
- È possibile creare istanze di oggetti di `type_info` classe direttamente, poiché la classe ha solo un costruttore di copia. L'unico modo per costruire un elemento (temporaneo) `type_info` oggetto consiste nell'usare il [typeid](../cpp/typeid-operator.md) operatore. Poiché anche l'operatore di assegnazione è privato, non è possibile copiare o assegnare gli oggetti della classe `type_info`.  
+ È possibile creare istanze di oggetti di **type_info** classe direttamente, poiché la classe ha solo un costruttore di copia. L'unico modo per costruire un elemento (temporaneo) **type_info** oggetto consiste nell'utilizzare il [typeid](../cpp/typeid-operator.md) operatore. Poiché anche l'operatore di assegnazione è privato, non è possibile copiare o assegnare gli oggetti della classe **type_info**.  
   
- `type_info::hash_code` definisce una funzione hash per il mapping di valori di tipo `typeinfo` per una distribuzione di valori di indice.  
+ `type_info::hash_code` definisce una funzione hash per il mapping di valori di tipo **typeinfo** per una distribuzione di valori di indice.  
   
- Gli operatori `==` e `!=` può essere utilizzato per confrontare l'uguaglianza e disuguaglianza con altri `type_info` oggetti, rispettivamente.  
+ Gli operatori `==` e `!=` può essere utilizzato per confrontare l'uguaglianza e disuguaglianza con altre **type_info** oggetti, rispettivamente.  
   
  Non esiste alcun collegamento tra l'ordinamento dei tipi e le relazioni di ereditarietà. Usare il `type_info::before` funzione membro per determinare la sequenza di ordinamento dei tipi. Non c'è garanzia che `type_info::before` genererà lo stesso risultato in programmi differenti o addirittura nelle diverse esecuzioni dello stesso programma. In questo modo `type_info::before` è simile a address-of `(&)` operatore.  
   

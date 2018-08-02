@@ -1,5 +1,5 @@
 ---
-title: controllo | Documenti Microsoft
+title: controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870832"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466487"
 ---
 # <a name="control"></a>controllo
 Specifica che il tipo definito dall'utente è un controllo.  
@@ -30,17 +30,15 @@ Specifica che il tipo definito dall'utente è un controllo.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **controllo** attributo implica il [coclasse](../windows/coclass.md) attributo. Il **controllo** attributo C++ ha la stessa funzionalità come il [controllo](http://msdn.microsoft.com/library/windows/desktop/aa366764) attributo MIDL.  
+ Il **controllo** attributo implica la [coclasse](../windows/coclass.md) attributo. Il **controllo** attributi di C++ ha la stessa funzionalità come la [controllo](http://msdn.microsoft.com/library/windows/desktop/aa366764) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -61,14 +59,14 @@ class CTest : public ICustom {};
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

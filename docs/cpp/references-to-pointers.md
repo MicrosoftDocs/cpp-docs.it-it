@@ -1,5 +1,5 @@
 ---
-title: Riferimenti a puntatori | Documenti Microsoft
+title: Riferimenti a puntatori | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467829"
 ---
 # <a name="references-to-pointers"></a>Riferimenti a puntatori
 I riferimenti ai puntatori possono essere dichiarati nello stesso modo dei riferimenti agli oggetti. Dichiarare un riferimento a un puntatore restituisce un valore modificabile usato come un puntatore normale.  
@@ -28,7 +29,7 @@ I riferimenti ai puntatori possono essere dichiarati nello stesso modo dei rifer
   
  Le funzioni `Add1` e `Add2` sono equivalenti a livello funzionale (sebbene non siano chiamate nello stesso modo). La differenza è che `Add1` usa il doppio riferimento indiretto mentre `Add2` usa la praticità di un riferimento a un puntatore.  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   

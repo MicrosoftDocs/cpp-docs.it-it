@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: ~ CriticalSection distruttore | Documenti Microsoft'
+title: 'CriticalSection:: ~ CriticalSection distruttore | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d33f8a3feb772ffe00221aeaf80892a535c2e271
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94f3937006f1cc13d9eefd7a9a8f338df2a13aa1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881614"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465981"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>Distruttore CriticalSection::~CriticalSection
-Deinizializza ed elimina l'oggetto CriticalSection corrente.  
+Deinizializza ed elimina l'oggetto corrente **CriticalSection** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   

@@ -1,5 +1,5 @@
 ---
-title: associabile | Documenti Microsoft
+title: associabile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861805"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467144"
 ---
 # <a name="bindable"></a>bindable
-Indica che la proprietà supporta l'associazione dati.  
+Indica che la proprietà supporta il data binding.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **associabili** attributo C++ ha la stessa funzionalità come il [associabili](http://msdn.microsoft.com/library/windows/desktop/aa366738) attributo MIDL. È possibile utilizzarlo alle proprietà definite con la [propget](../windows/propget.md), [propput](../windows/propput.md), o [propputref](../windows/propputref.md) gli attributi, oppure è possibile definire manualmente un metodo associabile.  
+ Il **associabile** attributi di C++ ha la stessa funzionalità come la [associabile](http://msdn.microsoft.com/library/windows/desktop/aa366738) attributo MIDL. È possibile usarlo nelle proprietà definite con la [propget](../windows/propget.md), [propput](../windows/propput.md), o [propputref](../windows/propputref.md) attributi, oppure è possibile definire manualmente un metodo associabile.  
   
- Gli esempi MFC seguenti mostrano l'uso di **associabili**:  
+ L'uso di mostrato nei seguenti esempi MFC **associabile**:  
   
--   [Esempi di controlli: Controlli ActiveX MFC-Based](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Esempi di controlli: I controlli ActiveX, basata su MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [Esempio CIRC: Controllo ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [Esempio CIRC: Controllo ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [Esempio TESTHELP: Controllo ActiveX con le descrizioni comandi e la Guida](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [Esempio: TESTHELP controllo ActiveX con le descrizioni comandi e la Guida](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>Esempio  
- Nel codice seguente viene illustrato come utilizzare **associabili** su una proprietà:  
+ Il codice seguente illustra come usare **associabile** su una proprietà:  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,7 +77,7 @@ __interface IPropDemo : IDispatch {
 |**Si applica a**|Metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

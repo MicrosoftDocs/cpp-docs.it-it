@@ -1,5 +1,5 @@
 ---
-title: cpp_quote | Documenti Microsoft
+title: cpp_quote | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871162"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463827"
 ---
 # <a name="cppquote"></a>cpp_quote
-Genera la stringa specificata, senza virgolette, nel file IDL generato.  
+Genera la stringa specificata, senza i caratteri virgoletta, nel file con estensione IDL generato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ cpp_quote(  
+[ cpp_quote(  
    "statement"  
 ) ];  
 ```  
@@ -41,14 +40,14 @@ Genera la stringa specificata, senza virgolette, nel file IDL generato.
  Un'istruzione di C.  
   
 ## <a name="remarks"></a>Note  
- Il **cpp_quote** attributo C++ è utile se si desidera inserire una direttiva del preprocessore in un file IDL.  
+ Il **cpp_quote** C++ attributo è utile se si desidera inserire una direttiva del preprocessore in un file con estensione idl.  
   
- È inoltre possibile utilizzare **cpp_quote** e generare un file con estensione h come parte della compilazione MIDL. Ad esempio, se si dispone di un file di intestazione C++ che utilizza attributi IDL C++ ma non è possibile utilizzare questo file per alcune attività, quindi è possibile compilare in modo da creare un file generati da MIDL. h, che dovrebbe essere possibile utilizzare.  
+ È anche possibile usare **cpp_quote** e generare un file con estensione h come parte della compilazione MIDL. Ad esempio, se si dispone di un file di intestazione C++ che utilizza attributi IDL C++, ma non è possibile usare questo file per alcune attività, quindi è possibile compilarlo per creare un file generati da MIDL. h, che dovrebbe essere possibile usare.  
   
- Il **cpp_quote** presenta la stessa funzionalità come il [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) attributo MIDL.  
+ Il **cpp_quote** attributo ha la stessa funzionalità come la [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [dual](../windows/dual.md) per un esempio di uso come utilizzare **cpp_quote**.  
+ Vedere l'esempio relativo [duale](../windows/dual.md) per un esempio di come usare usare **cpp_quote**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -59,7 +58,7 @@ Genera la stringa specificata, senza virgolette, nel file IDL generato.
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

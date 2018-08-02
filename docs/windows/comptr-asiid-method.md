@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025903"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465994"
 ---
 # <a name="comptrasiid-method"></a>Metodo ComPtr::AsIID
-Restituisce un oggetto ComPtr che rappresenta l'interfaccia identificata dall'ID dell'interfaccia specificato.  
+Restituisce un **ComPtr** oggetto che rappresenta l'interfaccia identificata dall'ID dell'interfaccia specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,11 +37,11 @@ WRL_NOTHROW HRESULT AsIID(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `riid`  
+ *riid*  
  ID di interfaccia.  
   
- `p`  
- Se l'oggetto presenta un'interfaccia il cui ID corrisponde `riid`, un puntatore indiretto doppio per l'interfaccia specificata dal `riid` parametro; in caso contrario, un puntatore a IUnknown.  
+ *p*  
+ Se l'oggetto presenta un'interfaccia il cui ID corrisponde *riid*, un puntatore indiretto doppio a un'interfaccia specificata per il *riid* parametro; in caso contrario, un puntatore a `IUnknown`.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  

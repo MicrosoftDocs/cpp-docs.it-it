@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d7f5c7c244d242c3d1dd7af7d2c2af017bcc78
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 32f9a45fcfaaff02cfb7cf765857957f20c41ba1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943494"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463041"
 ---
 # <a name="variantt-relational-operators"></a>Operatori relazionali _variant_t
 **Sezione specifica Microsoft**  
@@ -40,7 +40,6 @@ ms.locfileid: "37943494"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 bool operator==(  
    const VARIANT& varSrc) const;  
 bool operator==(  

@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di gestori eventi per i controlli di finestra di dialogo | Documenti Microsoft
+title: Aggiunta di gestori eventi per i controlli di finestra di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb39e502ccc40531e72f761a414e4088de8b147d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121122"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463756"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Aggiunta di gestori eventi per i controlli della finestra di dialogo
 
@@ -31,28 +31,28 @@ Per le finestre di dialogo progetto che sono già associate a una classe, è pos
 
 ## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Per creare un gestore per l'evento di notifica di controllo predefinito
 
-1. Fare doppio clic sul controllo. Verrà aperto l'editor di testo.
+1. Fare doppio clic sul controllo. Si apre l'editor di testo.
 
-2. Aggiungere codice del gestore di controllo notifica nell'editor di testo.
+2. Aggiungere il codice del gestore di controllo notifica nell'editor di testo.
 
 ## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Per creare un gestore per qualsiasi messaggio di Windows
 
 1. Fare clic sul controllo per il quale si desidera gestire l'evento di notifica.
 
-2. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), fare clic sui **eventi** pulsante per visualizzare l'elenco di eventi comuni di Windows associato al controllo. Ad esempio, lo standard **OK** pulsante della barra di **sui** finestra di dialogo sono elencati gli eventi di notifica seguente:
+2. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), fare clic sui **eventi di controllo** pulsante per visualizzare l'elenco di eventi Windows comuni associati al controllo. Ad esempio, lo standard **OK** pulsante il **sulle** nella finestra di dialogo vengono elencati gli eventi di notifica seguente:
 
-   - **BN_CLICKED**
+   - BN_CLICKED
 
-   - **BN_DOUBLECLICKED**
+   - BN_DOUBLECLICKED
 
-   - **BN_KILLFOCUS**
+   - BN_KILLFOCUS
 
-   - **BN_SETFOCUS**
+   - BN_SETFOCUS
 
     > [!NOTE]
-    > In alternativa, selezionare la finestra di dialogo e scegliere il **eventi** pulsante per visualizzare l'elenco di eventi comuni di Windows per tutti i controlli nella finestra di dialogo.
+    > In alternativa, selezionare la finestra di dialogo e scegliere il **eventi di controllo** pulsante per visualizzare l'elenco di eventi Windows comuni per tutti i controlli nella finestra di dialogo.
 
-3. Nel **delle proprietà** finestra, fare clic sulla colonna a destra accanto all'evento da gestire e quindi selezionare il nome di evento di notifica suggerito (ad esempio, **OnBnClickedOK** handle **BN_CLICKED** ).
+3. Nel **proprietà** finestra, selezionare la colonna destra accanto all'evento da gestire e quindi selezionare il nome di evento di notifica suggerite (ad esempio, **OnBnClickedOK** handle **BN_CLICKED** ).
 
     > [!NOTE]
     > In alternativa, è possibile fornire un nome del gestore eventi di propria scelta, anziché selezionare il nome del gestore eventi predefinito.
@@ -66,9 +66,9 @@ Per le finestre di dialogo progetto che sono già associate a una classe, è pos
     }
     ```
 
-Se si desidera aggiungere il gestore dell'evento a una classe diversa da quella che implementa la finestra di dialogo, usare il [Creazione guidata gestore eventi](../ide/event-handler-wizard.md). Per altre informazioni, vedere [aggiungendo un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).
+Se si desidera aggiungere il gestore dell'evento a una classe diverso da quello che implementa la finestra di dialogo, usare il [Creazione guidata gestore eventi](../ide/event-handler-wizard.md). Per altre informazioni, vedere [aggiunta di un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ### <a name="requirements"></a>Requisiti
 

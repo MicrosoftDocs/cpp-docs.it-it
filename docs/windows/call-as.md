@@ -1,5 +1,5 @@
 ---
-title: call_as | Documenti Microsoft
+title: call_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860866"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465870"
 ---
 # <a name="callas"></a>call_as
-Consente un [locale](../windows/local-cpp.md) funzione può essere mappata a una funzione remota in modo che quando viene chiamata la funzione remota, la funzione locale viene richiamata.  
+Consente a un [locale](../windows/local-cpp.md) funzione viene mappata a una funzione remota in modo che quando viene chiamata la funzione remota, viene richiamata la funzione locale.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametri  
  *function*  
- La funzione locale che si desidera essere chiamato quando viene richiamata una funzione remota.  
+ La funzione locale che si desidera siano chiamati quando viene richiamata una funzione remota.  
   
 ## <a name="remarks"></a>Note  
- Il **call_as** attributo C++ ha la stessa funzionalità come il [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) attributo MIDL.  
+ Il **call_as** attributi di C++ ha la stessa funzionalità come la [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Nel codice seguente viene illustrato come utilizzare **call_as** per eseguire il mapping di una funzione nonremotable (**f1**) a una funzione utilizzabile in remoto (**Remf1**):  
+ Il codice seguente illustra come usare **call_as** eseguire il mapping di una funzione non utilizzabili in remoto (**f1**) a una funzione utilizzabile in remoto (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -67,7 +66,7 @@ __interface IMInterface {
 |**Si applica a**|Metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

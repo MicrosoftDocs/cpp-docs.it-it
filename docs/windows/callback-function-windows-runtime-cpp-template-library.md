@@ -1,5 +1,5 @@
 ---
-title: Funzione di callback (libreria modelli C++ di Windows Runtime) | Documenti Microsoft
+title: Funzione di callback (libreria modelli C++ per Windows Runtime) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860853"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461492"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Funzione di callback (Libreria modelli C++ per Windows Runtime)
 Crea un oggetto la cui funzione membro è un metodo di callback.  
@@ -199,56 +199,56 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Parametro di modello che specifica l'interfaccia del delegato da chiamare quando si verifica un evento.  
   
- `TCallback`  
+ *TCallback*  
  Parametro di modello che specifica il tipo di oggetto che rappresenta un oggetto e la relativa funzione membro di callback.  
   
- `TCallbackObject`  
+ *TCallbackObject*  
  Parametro di modello che specifica l'oggetto di cui la funzione membro è il metodo da chiamare quando si verifica un evento.  
   
- `TArg1`  
+ *TArg1*  
  Parametro di modello che specifica il tipo del primo argomento del metodo di callback.  
   
- `TArg2`  
+ *TArg2*  
  Parametro di modello che specifica il tipo del secondo argomento del metodo di callback.  
   
- `TArg3`  
+ *TArg3*  
  Parametro di modello che specifica il tipo del terzo argomento del metodo di callback.  
   
- `TArg4`  
+ *TArg4*  
  Parametro di modello che specifica il tipo del quarto argomento del metodo di callback.  
   
- `TArg5`  
+ *TArg5*  
  Parametro di modello che specifica il tipo del quinto argomento del metodo di callback.  
   
- `TArg6`  
+ *TArg6*  
  Parametro di modello che specifica il tipo del sesto argomento del metodo di callback.  
   
- `TArg7`  
+ *TArg7*  
  Parametro di modello che specifica il tipo del settimo argomento del metodo di callback.  
   
- `TArg8`  
+ *TArg8*  
  Parametro di modello che specifica il tipo dell'ottavo argomento del metodo di callback.  
   
- `TArg9`  
+ *TArg9*  
  Parametro di modello che specifica il tipo del nono argomento del metodo di callback.  
   
- `callback`  
+ *callback*  
  Oggetto che rappresenta l'oggetto di callback e la relativa funzione membro.  
   
- `object`  
+ *object*  
  L'oggetto di cui la funzione membro viene chiamata quando si verifica un evento.  
   
- `method`  
+ *(Metodo)*  
  La funzione membro da chiamare quando si verifica un evento.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto la cui funzione membro è il metodo di callback specificato.  
   
 ## <a name="remarks"></a>Note  
- La base di un oggetto delegato deve essere IUnknown, non IInspectable.  
+ La base di un oggetto delegato deve essere `IUnknown`, non `IInspectable`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Event. h  

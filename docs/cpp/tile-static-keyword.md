@@ -1,5 +1,5 @@
 ---
-title: parola chiave tile_static | Documenti Microsoft
+title: parola chiave tile_static | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f905904668aaba0e16aa20b646085e8e1a973d4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422163"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461875"
 ---
 # <a name="tilestatic-keyword"></a>Parola chiave tile_static
-La parola chiave `tile_static` viene utilizzata per dichiarare una variabile a cui è possibile accedere da tutti i thread in una sezione dei thread. La durata della variabile inizia quando l'esecuzione raggiunge il punto di dichiarazione e termina quando la funzione kernel restituisce. Per ulteriori informazioni sull'utilizzo di riquadri, vedere [utilizzando riquadri](../parallel/amp/using-tiles.md).  
+Il **tile_static** parola chiave viene usata per dichiarare una variabile che sono accessibili da tutti i thread in una sezione del thread. La durata della variabile inizia quando l'esecuzione raggiunge il punto di dichiarazione e termina quando la funzione kernel restituisce. Per altre informazioni sull'utilizzo delle sezioni, vedere [usando i riquadri](../parallel/amp/using-tiles.md).  
   
- La parola chiave `tile_static` presenta le limitazioni riportate di seguito.  
+ Il **tile_static** (parola chiave) presenta le limitazioni seguenti:  
   
 -   Può essere utilizzata solo in variabili che si trovano in una funzione con il modificatore `restrict(amp)`.  
   
 -   Non è possibile utilizzarla in variabili che sono puntatore o tipi di riferimento.  
   
--   Una variabile `tile_static` non può disporre di un inizializzatore. I costruttori e i distruttori predefiniti non vengono invocati automaticamente.  
+-   Oggetto **tile_static** variabile non può contenere un inizializzatore. I costruttori e i distruttori predefiniti non vengono invocati automaticamente.  
   
--   Il valore di una variabile non inizializzata `tile_static` non è definito.  
+-   Il valore di oggetto non inizializzato **tile_static** variabile non è definita.  
   
--   Se una variabile `tile_static` viene dichiarata in un grafico delle chiamate che contiene una radice da una chiamata non affiancata a `parallel_for_each`, viene generato un avviso e il comportamento della variabile non è definito.  
+-   Se un **tile_static** la variabile è dichiarata in un grafico delle chiamate che è una radice da una chiamata non affiancata a `parallel_for_each`, viene generato un avviso e il comportamento della variabile è definito.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come una variabile `tile_static` può essere utilizzata per accumulare i dati tra diversi thread in una sezione.  
+ L'esempio seguente mostra come un **tile_static** variabile può essere utilizzata per accumulare i dati tra diversi thread in un riquadro.  
   
 ```cpp  
 // Sample data:  
@@ -150,7 +150,6 @@ for (int i = 0; i < 4; i++) {
 // 3 3 8 8 3 3  
 // 5 5 2 2 4 4  
 // 5 5 2 2 4 4  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208549"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466943"
 ---
 # <a name="string-and-character-literals--c"></a>Stringa e valori letterali carattere (C++)
 C++ supporta diversi tipi di stringa e di carattere e permette di esprimere i valori letterali di ogni tipo. Nel codice sorgente, si esprime il contenuto dei valori letterali carattere e stringa usando un set di caratteri. I nomi di caratteri universali e i caratteri di escape consentono di esprimere qualsiasi stringa usando solo il set di caratteri di origine di base. Un valore letterale stringa non elaborata permette di evitare l'uso di caratteri di escape e può essere usato per esprimere tutti i tipi di valori letterali stringa. È anche possibile creare valori letterali std::string senza dover eseguire ulteriori passaggi di costruzione o conversione.  
@@ -146,7 +146,7 @@ int main() {
   
  **Sezione specifica Microsoft**  
   
- Per creare un valore da un valore letterale carattere ordinario (quelli senza un prefisso), il compilatore converte il carattere o sequenza di caratteri tra virgolette singole in valori a 8 bit all'interno di un intero a 32 bit. Più caratteri nel valore letterale carattere riempiono i byte corrispondenti secondo le necessità, dal più significativo al meno significativo. Per creare un **char** valore, il compilatore prende il byte meno significativi. Per creare un valore `wchar_t` o `char16_t` , il compilatore prende la parola meno significativa. Il compilatore avvisa che il risultato sarà troncato se si assegnano bit al di sopra del byte o della parola assegnati.  
+ Per creare un valore da un valore letterale carattere ordinario (quelli senza un prefisso), il compilatore converte il carattere o sequenza di caratteri tra virgolette singole in valori a 8 bit all'interno di un intero a 32 bit. Più caratteri nel valore letterale carattere riempiono i byte corrispondenti secondo le necessità, dal più significativo al meno significativo. Per creare un **char** valore, il compilatore prende il byte meno significativi. Per creare un **wchar_t** o `char16_t` valore, il compilatore prende la parola meno significativa. Il compilatore avvisa che il risultato sarà troncato se si assegnano bit al di sopra del byte o della parola assegnati.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>Valori letterali stringa a caratteri wide  
- Un valore letterale stringa a caratteri wide è una matrice con terminazione null della costante `wchar_t` che è preceduto da '`L`' e contiene qualsiasi carattere grafico eccetto le virgolette doppie ("), barra rovesciata (\\), o un carattere di nuova riga. Un valore letterale stringa a caratteri wide può contenere le sequenze di escape sopra elencate e qualsiasi nome di carattere universale.  
+ Un valore letterale stringa a caratteri wide è una matrice con terminazione null della costante **wchar_t** che è preceduto dal prefisso '`L`' e contiene qualsiasi carattere grafico eccetto le virgolette doppie ("), barra rovesciata (\\), o un carattere di nuova riga. Un valore letterale stringa a caratteri wide può contenere le sequenze di escape sopra elencate e qualsiasi nome di carattere universale.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Sezione specifica Microsoft**  
   
- In Visual C++ è possibile usare un valore letterale stringa per inizializzare un puntatore a non-const **char** o `wchar_t`. Questa operazione è consentita nel codice C99, ma è deprecata in C++98 e rimossa in C++11. Il tentativo di modificare la stringa genera una violazione di accesso, come nel seguente esempio:  
+ In Visual C++ è possibile usare un valore letterale stringa per inizializzare un puntatore a non-const **char** oppure **wchar_t**. Questa operazione è consentita nel codice C99, ma è deprecata in C++98 e rimossa in C++11. Il tentativo di modificare la stringa genera una violazione di accesso, come nel seguente esempio:  
   
 ```cpp  
 wchar_t* str = L"hello";  

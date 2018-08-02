@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: operator! = (operatore) | Documenti Microsoft'
+title: 'Comptr:: operator! = (operatore) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2450b5d473d1caadae171516cf337479bfd5d603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a4c15946862a66c0d4d830f590230763ce3e6f9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881881"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461822"
 ---
 # <a name="comptroperator-operator"></a>Operatore ComPtr::operator!=
-Indica se due oggetti ComPtr sono diversi.  
+Indica se due **ComPtr** oggetti non sono uguali.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,20 +42,19 @@ bool operator!=(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `a`  
- Un riferimento a un oggetto ComPtr.  
+ *a*  
+ Un riferimento a un **ComPtr** oggetto.  
   
- `b`  
- Un riferimento a un altro oggetto ComPtr.  
+ *b*  
+ Un riferimento a un'altra **ComPtr** oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce l'operatore prima `true` se oggetto `a` non è uguale all'oggetto `b`; in caso contrario, `false`.  
+ Primo operatore rese **true** se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, **false**.  
   
- Il secondo e terzo operatore yield `true` se oggetto `a` non è uguale a `nullptr`; in caso contrario, `false`.  
+ Il secondo e terzo operatore yield **true** se oggetti *una* non è uguale a **nullptr**; in caso contrario, **false**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

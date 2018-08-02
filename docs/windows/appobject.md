@@ -1,5 +1,5 @@
 ---
-title: appobject | Documenti Microsoft
+title: appobject | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856973"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466371"
 ---
 # <a name="appobject"></a>appobject
-Identifica la coclasse come un oggetto applicazione, che viene associata a un'applicazione completa .exe e indica che le funzioni e le proprietà della coclasse sono disponibili a livello globale in questo [libreria](../mfc/automation-clients-using-type-libraries.md).  
+Identifica la coclasse come un oggetto applicazione che è associato a un'applicazione completa .exe e indica che le funzioni e le proprietà della coclasse disponibili a livello globale in questo [libreria dei tipi](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **appobject** attributo C++ ha la stessa funzionalità come il [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) attributo MIDL.  
+ Il **appobject** attributi di C++ ha la stessa funzionalità come la [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrata una definizione di classe semplice preceduta da un blocco di attributi che include **appobject**:  
+ Il codice seguente viene illustrata una definizione di classi semplice preceduta da un blocco di attributi che include **appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -62,14 +60,14 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**coclass**|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|`coclass`|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

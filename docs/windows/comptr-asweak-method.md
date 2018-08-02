@@ -1,5 +1,5 @@
 ---
-title: 'Metodo comptr:: Asweak | Documenti Microsoft'
+title: 'Metodo comptr:: Asweak | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f262191304471a171e9c3370046dbdac71869cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870077"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465226"
 ---
 # <a name="comptrasweak-method"></a>Metodo ComPtr::AsWeak
 Restituisce un riferimento debole all'oggetto corrente.  
@@ -36,7 +36,7 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `pWeakRef`  
+ *pWeakRef*  
  Quando questa operazione viene completata, un puntatore a un oggetto di riferimento debole.  
   
 ## <a name="return-value"></a>Valore restituito  

@@ -1,5 +1,5 @@
 ---
-title: Funzione CreateClassFactory | Documenti Microsoft
+title: Funzione CreateClassFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870473"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461325"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory (funzione)
 Crea una factory che produce istanze della classe specificata.  
@@ -37,30 +37,29 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `flags`  
+ *flags*  
  Una combinazione di uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valori di enumerazione.  
   
- `entry`  
- Puntatore a un [CreatorMap](../windows/creatormap-structure.md) che contiene informazioni di inizializzazione e la registrazione sul parametro `riid`.  
+ *entry*  
+ Puntatore a un [CreatorMap](../windows/creatormap-structure.md) che contiene informazioni di inizializzazione e la registrazione sul parametro *riid*.  
   
- `riid`  
+ *riid*  
  Riferimento all'ID di interfaccia.  
   
- `ppFactory`  
+ *ppFactory*  
  Se questa operazione viene completata correttamente, un puntatore a una class factory.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  
   
 ## <a name="remarks"></a>Note  
- Viene generato un errore di asserzione se il parametro di modello `Factory` non deriva dall'interfaccia IClassFactory.  
+ Viene generato un errore di asserzione se il parametro di modello *Factory* non deriva dall'interfaccia `IClassFactory`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

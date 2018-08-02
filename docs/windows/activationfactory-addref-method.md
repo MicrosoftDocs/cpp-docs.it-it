@@ -1,5 +1,5 @@
 ---
-title: 'Metodo activationfactory:: AddRef | Documenti Microsoft'
+title: 'Metodo activationfactory:: AddRef | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4800f8d6e4c361cf44918bc790c0d8edb7591f08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 785a89b1a5a174fc5ce453a6d2f87a18c508edf6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854041"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462349"
 ---
 # <a name="activationfactoryaddref-method"></a>Metodo ActivationFactory::AddRef
-Incrementa il conteggio dei riferimenti dell'oggetto ActivationFactory corrente.  
+Incrementa il conteggio dei riferimenti dell'oggetto corrente **ActivationFactory** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ STDMETHOD_(
  S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

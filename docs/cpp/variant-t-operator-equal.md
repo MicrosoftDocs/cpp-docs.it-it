@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d757c645ae131b88ffb99e571d1e08214eda8129
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943742"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462865"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Sezione specifica Microsoft**  
@@ -31,7 +31,6 @@ ms.locfileid: "37943742"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 _variant_t& operator=(  
    const VARIANT& varSrc   
 );  
@@ -128,37 +127,37 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Note  
  L'operatore consente di assegnare un nuovo valore all'oggetto `_variant_t`:  
   
--   **operatore = (***varSrc***)** assegna un oggetto esistente `VARIANT` da un `_variant_t` oggetto.      
+-   **operatore = (***varSrc***)** assegna un oggetto esistente `VARIANT` da un `_variant_t` oggetto.  
   
--   **operatore = (***pVarSrc***)** assegna un oggetto esistente `VARIANT` da un `_variant_t` oggetto.      
+-   **operatore = (***pVarSrc***)** assegna un oggetto esistente `VARIANT` da un `_variant_t` oggetto.  
   
 -   **operatore = (***var_t_Src***)** assegna un oggetto esistente `_variant_t` dell'oggetto a un `_variant_t` oggetto.      
   
--   **operatore = (***sSrc***)** assegna un **breve** valore intero da un `_variant_t` oggetto.      
+-   **operatore = (***sSrc***)** assegna un **breve** valore intero da un `_variant_t` oggetto.  
   
--   **operatore = (**`lSrc`**)** assegna un **long** valore intero da un `_variant_t` oggetto.      
+-   **operatore = (**`lSrc`**)** assegna un **long** valore intero da un `_variant_t` oggetto.  
   
--   **operatore = (***fltSrc***)** assegna un **float** il valore numerico per un `_variant_t` oggetto.      
+-   **operatore = (***fltSrc***)** assegna un **float** il valore numerico per un `_variant_t` oggetto.  
   
--   **operatore = (***dblSrc***)** assegna un **double** il valore numerico per un `_variant_t` oggetto.      
+-   **operatore = (***dblSrc***)** assegna un **double** il valore numerico per un `_variant_t` oggetto.  
   
--   **operatore = (***cySrc***)** assegna un `CY` dell'oggetto a un `_variant_t` oggetto.      
+-   **operatore = (***cySrc***)** assegna un `CY` dell'oggetto a un `_variant_t` oggetto.  
   
--   **operatore = (***bstrSrc***)** assegna un `BSTR` dell'oggetto a un `_variant_t` oggetto.      
+-   **operatore = (***bstrSrc***)** assegna un `BSTR` dell'oggetto a un `_variant_t` oggetto.  
   
--   **operatore = (***wstrSrc***)** assegna una stringa Unicode a un `_variant_t` oggetto.      
+-   **operatore = (***wstrSrc***)** assegna una stringa Unicode a un `_variant_t` oggetto.  
   
--   **operatore = (**`strSrc`**)** assegna una stringa multibyte a un `_variant_t` oggetto.      
+-   **operatore = (**`strSrc`**)** assegna una stringa multibyte a un `_variant_t` oggetto.  
   
--   **operatore = (** `bSrc` **)** assegna un **bool** valore un `_variant_t` oggetto.    
+-   **operatore = (** `bSrc` **)** assegna un **bool** valore un `_variant_t` oggetto.  
   
--   **operatore = (***pDispSrc***)** assegna un `VT_DISPATCH` dell'oggetto a un `_variant_t` oggetto.      
+-   **operatore = (***pDispSrc***)** assegna un `VT_DISPATCH` dell'oggetto a un `_variant_t` oggetto.  
   
--   **operatore = (***pIUnknownSrc***)** assegna un `VT_UNKNOWN` dell'oggetto a un `_variant_t` oggetto.      
+-   **operatore = (***pIUnknownSrc***)** assegna un `VT_UNKNOWN` dell'oggetto a un `_variant_t` oggetto.  
   
--   **operatore = (***decSrc***)** assegna un `DECIMAL` valore un `_variant_t` oggetto.      
+-   **operatore = (***decSrc***)** assegna un `DECIMAL` valore un `_variant_t` oggetto.  
   
--   **operatore = (** `bSrc` **)** assegna un `BYTE` valore un `_variant_t` oggetto.    
+-   **operatore = (** `bSrc` **)** assegna un `BYTE` valore un `_variant_t` oggetto.  
   
  **Fine sezione specifica Microsoft**  
   

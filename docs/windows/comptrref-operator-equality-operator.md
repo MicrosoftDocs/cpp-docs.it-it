@@ -1,5 +1,5 @@
 ---
-title: 'Operatore comptrref:: Operator = = | Documenti Microsoft'
+title: 'Operatore comptrref:: Operator = = | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880777"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463954"
 ---
 # <a name="comptrrefoperator-operator"></a>Operatore ComPtrRef::operator==
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,18 +55,18 @@ bool operator==(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `a`  
+ *a*  
  Un riferimento a un oggetto ComPtrRef.  
   
- `b`  
- Un riferimento a un altro oggetto ComPtrRef o un puntatore a un tipo anonimo (`void*`).  
+ *b*  
+ Un riferimento a un altro oggetto ComPtrRef, o un puntatore a un tipo anonimo (`void*`).  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce l'operatore prima `true` se oggetto `a` è uguale all'oggetto `b`; in caso contrario, `false`.  
+ Primo operatore rese **true** se oggetti *una* è uguale all'oggetto *b*; in caso contrario, **false**.  
   
- Il secondo e terzo operatore yield `true` se oggetto `a` è uguale a `nullptr`; in caso contrario, `false`.  
+ Il secondo e terzo operatore yield **true** se oggetti *una* è uguale a **nullptr**; in caso contrario, **false**.  
   
- Gli operatori quarto e quinto yield `true` se oggetto `a` è uguale all'oggetto `b`; in caso contrario, `false`.  
+ Gli operatori quarto e quinto yield **true** se oggetti *una* è uguale all'oggetto *b*; in caso contrario, **false**.  
   
 ## <a name="remarks"></a>Note  
  Indica se due oggetti ComPtrRef sono uguali.  
@@ -77,5 +77,5 @@ bool operator==(
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
+ [Microsoft::WRL::Details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [Classe ComPtrRef](../windows/comptrref-class.md)

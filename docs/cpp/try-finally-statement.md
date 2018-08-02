@@ -28,17 +28,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea792bde6e50f0e4149f802a5c852192def0fefa
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943320"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464860"
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
 **Sezione specifica Microsoft**  
   
- Nella sintassi riportata di seguito viene descritta l'istruzione `try-finally`.  
+ La sintassi seguente vengono descritte le **try-finally** istruzione:  
   
 ```cpp 
 __try {  
@@ -55,7 +55,7 @@ __finally {
   
  **finally** *compound-statement*  
   
- L'istruzione `try-finally` è un'estensione Microsoft dei linguaggi C e C++ che consente alle applicazioni di destinazione di garantire l'esecuzione del codice di pulizia quando l'esecuzione di un blocco di codice viene interrotta. La pulizia è costituita da attività quali la deallocazione della memoria, la chiusura dei file e il rilascio di handle di file. L'istruzione `try-finally` è particolarmente utile per le routine che presentano vari punti in cui viene eseguito un controllo per verificare la presenza di un errore che potrebbe causare la restituzione prematura dalla routine.  
+ Il **try-finally** istruzione è un'estensione Microsoft ai linguaggi C e C++ che consente alle applicazioni di destinazione di garantire l'esecuzione del codice di pulizia quando l'esecuzione di un blocco di codice viene interrotta. La pulizia è costituita da attività quali la deallocazione della memoria, la chiusura dei file e il rilascio di handle di file. Il **try-finally** istruzione è particolarmente utile per restituiscono le routine che presentano vari punti in cui viene eseguito un controllo per un errore che potrebbe causare prematuro dalla routine.  
   
  Per informazioni correlate e un esempio di codice, vedere [try-except Statement](../cpp/try-except-statement.md). Per altre informazioni sull'eccezione strutturata in generale, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per altre informazioni sulla gestione delle eccezioni nelle applicazioni gestite, vedere [gestione delle eccezioni in /clr](../windows/exception-handling-cpp-component-extensions.md).  
   
@@ -83,16 +83,16 @@ Ordine di terminazione esecuzione del gestore
 >  Il comportamento di try-finally è diverso da alcuni altri linguaggi che supportano l'utilizzo di **infine**, ad esempio c#.  Un unico **try** potrebbe essere, ma non entrambi, dei **finally** e **except**.  Se entrambi devono essere utilizzati insieme, un'istruzione try-except deve racchiudere l'istruzione try-finally interna.  Sono diverse anche le regole che specificano quando viene eseguito ciascun blocco.  
   
 ## <a name="the-leave-keyword"></a>La parola chiave __leave  
- Il **Leave** parola chiave è valida solo all'interno della sezione protetta di un `try-finally` istruzione e relativo effetto è il passaggio alla fine della sezione protetta. L'esecuzione continua con la prima istruzione nel gestore di terminazione.  
+ Il **Leave** parola chiave è valida solo all'interno della sezione protetta di un **try-finally** istruzione e relativo effetto è il passaggio alla fine della sezione protetta. L'esecuzione continua con la prima istruzione nel gestore di terminazione.  
   
  Oggetto **goto** istruzione può inoltre uscire dalla sezione protetta, ma comporta una riduzione delle prestazioni perché richiama la rimozione dello stack. Il **Leave** istruzione risulta più efficiente perché non comporta la rimozione dello stack.  
   
 ## <a name="abnormal-termination"></a>Terminazione anomala  
- Uscita da un `try-finally` istruzione tramite il [longjmp](../c-runtime-library/reference/longjmp.md) funzione di runtime viene considerata una terminazione anomala. Non è consentito passare a un **try** istruzione, ma uno uscire. Tutti i **finally** istruzioni attive tra il punto di partenza (terminazione normale delle **try** blocco) e la destinazione (il **except** di blocco gestisce l'eccezione) deve essere eseguito. Si tratta di una rimozione locale.  
+ Uscita da un **try-finally** istruzione tramite il [longjmp](../c-runtime-library/reference/longjmp.md) funzione di runtime viene considerata una terminazione anomala. Non è consentito passare a un **try** istruzione, ma uno uscire. Tutti i **finally** istruzioni attive tra il punto di partenza (terminazione normale delle **try** blocco) e la destinazione (il **except** di blocco gestisce l'eccezione) deve essere eseguito. Si tratta di una rimozione locale.  
   
  Se un **provare** blocco viene terminato in anticipo per qualsiasi motivo, includendo un salto dal blocco, il sistema esegue associato **infine** blocco come parte del processo di rimozione dello stack. In questi casi, il [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) funzione restituisce **true** se chiamato dall'interno la **infine** bloccare; in caso contrario, restituisce **false**.  
   
- Il gestore di terminazione non viene chiamato se un processo viene terminato nel corso dell'esecuzione di un'istruzione `try-finally`.  
+ Il gestore terminazioni non viene chiamato se un processo viene terminato nel corso dell'esecuzione di un **try-finally** istruzione.  
   
  **Fine sezione specifica Microsoft**  
   

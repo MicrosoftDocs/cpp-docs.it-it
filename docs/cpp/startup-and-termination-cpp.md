@@ -1,5 +1,5 @@
 ---
-title: Avvio e terminazione (C++) | Documenti Microsoft
+title: Avvio e terminazione (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7bf206280d234e630fabaed3f05daa41dde86fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e71541c20831180a0097780e9ee6b2fd9dfb2c43
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420837"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463181"
 ---
 # <a name="startup-and-termination-c"></a>Avvio e terminazione (C++)
-Avvio del programma e chiusura sono facilitati utilizzando due funzioni: [principale](../cpp/main-program-startup.md) e [uscire](../cpp/program-termination.md). È possibile eseguire altro codice di avvio e di chiusura.  
+Chiusura e avvio del programma sono facilitati utilizzando due funzioni: [principale](../cpp/main-program-startup.md) e [uscire](../cpp/program-termination.md). È possibile eseguire altro codice di avvio e di chiusura.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti di base](../cpp/basic-concepts-cpp.md)

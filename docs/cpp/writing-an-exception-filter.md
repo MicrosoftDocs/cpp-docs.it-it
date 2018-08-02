@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943287"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462118"
 ---
 # <a name="writing-an-exception-filter"></a>Scrittura di un filtro eccezioni
 È possibile gestire un'eccezione passando al livello del gestore eccezioni o continuando l'esecuzione. Invece di usare il codice del gestore eccezioni per gestire e passare l'eccezione, è possibile usare *filtro* per risolvere il problema e quindi, tramite la restituzione di -1, ripristinare il flusso normale senza cancellare lo stack.  

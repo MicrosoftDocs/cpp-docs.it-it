@@ -1,5 +1,5 @@
 ---
-title: Metodo CompareStringOrdinal | Documenti Microsoft
+title: Metodo CompareStringOrdinal | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3abf87340671d1ac4851b055a57896e340d0c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860811"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464051"
 ---
 # <a name="comparestringordinal-method"></a>Metodo CompareStringOrdinal
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,22 +34,22 @@ inline INT32 CompareStringOrdinal(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `lhs`  
+ *sul lato sinistro*  
  Il primo HSTRING da confrontare.  
   
- `rhs`  
+ *rhs*  
  Il secondo HSTRING da confrontare.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |Valore|Condizione|  
 |-----------|---------------|  
-|-1|`lhs` è minore di `rhs`.|  
-|0|`lhs` è uguale a `rhs`.|  
-|1|`lhs` è maggiore di `rhs`.|  
+|-1|*LHS* è minore di *rhs*.|  
+|0|*LHS* è uguale a *rhs*.|  
+|1|*LHS* è maggiore di quella *rhs*.|  
   
 ## <a name="remarks"></a>Note  
- Confronta due oggetti HSTRING specificati e restituisce un intero che indica la posizione relativa di un ordinamento.  
+ Confronta due oggetti HSTRING specificati e restituisce un intero che indica la posizione relativa di una sequenza di ordinamento.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

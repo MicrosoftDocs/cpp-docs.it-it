@@ -1,5 +1,5 @@
 ---
-title: Classe AsyncBase | Documenti Microsoft
+title: AsyncBase (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9dbd5d7296edaed9e850e6453f1b1b593ddba9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863388"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466202"
 ---
 # <a name="asyncbase-class"></a>AsyncBase (classe)
 Implementa la macchina a stati asincrona di Windows Runtime.  
@@ -30,7 +30,6 @@ Implementa la macchina a stati asincrona di Windows Runtime.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -46,14 +45,14 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `TComplete`  
+ *TComplete*  
  Un gestore eventi che viene chiamato quando viene completata un'operazione asincrona.  
   
- `TProgress`  
+ *TProgress*  
  Un gestore eventi che viene chiamato quando l'esecuzione dell'operazione asincrona segnala lo stato corrente dell'operazione.  
   
- `resultType`  
- Uno del [AsyncResultType](../windows/asyncresulttype-enumeration.md) valori di enumerazione. Per impostazione predefinita, SingleResult.  
+ *resultType*  
+ Uno dei [AsyncResultType](../windows/asyncresulttype-enumeration.md) valori di enumerazione. Per impostazione predefinita, valore SingleResult.  
   
 ## <a name="members"></a>Membri  
   
@@ -61,7 +60,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore AsyncBase::AsyncBase](../windows/asyncbase-asyncbase-constructor.md)|Inizializza un'istanza della classe AsyncBase.|  
+|[Costruttore AsyncBase::AsyncBase](../windows/asyncbase-asyncbase-constructor.md)|Inizializza un'istanza di **AsyncBase** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -69,7 +68,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 |----------|-----------------|  
 |[Metodo AsyncBase::Cancel](../windows/asyncbase-cancel-method.md)|Annulla un'operazione asincrona.|  
 |[Metodo AsyncBase::Close](../windows/asyncbase-close-method.md)|Termina l'operazione asincrona.|  
-|[Metodo AsyncBase::FireCompletion](../windows/asyncbase-firecompletion-method.md)|Richiama il gestore di evento di completamento o Reimposta il delegato di stato interno.|  
+|[Metodo AsyncBase::FireCompletion](../windows/asyncbase-firecompletion-method.md)|Richiama il gestore di evento di completamento, o Reimposta il delegato di stato interno.|  
 |[Metodo AsyncBase::FireProgress](../windows/asyncbase-fireprogress-method.md)|Richiama il gestore di evento di stato di avanzamento corrente.|  
 |[Metodo AsyncBase::get_ErrorCode](../windows/asyncbase-get-errorcode-method.md)|Recupera il codice di errore per l'operazione asincrona corrente.|  
 |[Metodo AsyncBase::get_Id](../windows/asyncbase-get-id-method.md)|Recupera l'handle dell'operazione asincrona.|  
@@ -77,21 +76,21 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 |[Metodo AsyncBase::GetOnComplete](../windows/asyncbase-getoncomplete-method.md)|Copia l'indirizzo del gestore dell'evento di completamento corrente per la variabile specificata.|  
 |[Metodo AsyncBase::GetOnProgress](../windows/asyncbase-getonprogress-method.md)|Copia l'indirizzo del gestore dell'evento di stato di avanzamento corrente per la variabile specificata.|  
 |[Metodo AsyncBase::put_Id](../windows/asyncbase-put-id-method.md)|Imposta l'handle dell'operazione asincrona.|  
-|[Metodo AsyncBase::PutOnComplete](../windows/asyncbase-putoncomplete-method.md)|Imposta l'indirizzo del gestore dell'evento di completamento sul valore specificato.|  
-|[Metodo AsyncBase::PutOnProgress](../windows/asyncbase-putonprogress-method.md)|Imposta l'indirizzo del gestore dell'evento di stato di avanzamento al valore specificato.|  
+|[Metodo AsyncBase::PutOnComplete](../windows/asyncbase-putoncomplete-method.md)|Imposta l'indirizzo del gestore dell'evento di completamento al valore specificato.|  
+|[Metodo AsyncBase::PutOnProgress](../windows/asyncbase-putonprogress-method.md)|Imposta l'indirizzo del gestore dell'evento di stato di avanzamento sul valore specificato.|  
 |[Metodo AsyncBase::Start](../windows/asyncbase-start-method.md)|Avvia l'operazione asincrona.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo AsyncBase::CheckValidStateForDelegateCall](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Verifica se è possono modificare le proprietà di delegato nello stato asincrono corrente.|  
+|[Metodo AsyncBase::CheckValidStateForDelegateCall](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Verifica se le proprietà di delegato possono essere modificate nello stato asincrono corrente.|  
 |[Metodo AsyncBase::CheckValidStateForResultsCall](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Verifica se i risultati di un'operazione asincrona possono essere raccolti nello stato asincrono corrente.|  
-|[Metodo AsyncBase::ContinueAsyncOperation](../windows/asyncbase-continueasyncoperation-method.md)|Determina se l'operazione asincrona deve continuare l'elaborazione o l'interruzione.|  
+|[Metodo AsyncBase::ContinueAsyncOperation](../windows/asyncbase-continueasyncoperation-method.md)|Determina se l'operazione asincrona deve continuare l'elaborazione o deve interrompersi.|  
 |[Metodo AsyncBase::CurrentStatus](../windows/asyncbase-currentstatus-method.md)|Recupera lo stato dell'operazione asincrona corrente.|  
 |[Metodo AsyncBase::ErrorCode](../windows/asyncbase-errorcode-method.md)|Recupera il codice di errore per l'operazione asincrona corrente.|  
 |[Metodo AsyncBase::OnCancel](../windows/asyncbase-oncancel-method.md)|Quando sottoposto a override in una classe derivata, Annulla un'operazione asincrona.|  
-|[Metodo AsyncBase::OnClose](../windows/asyncbase-onclose-method.md)|Quando sottoposto a override in una classe derivata, chiude un'operazione asincrona.|  
+|[Metodo AsyncBase::OnClose](../windows/asyncbase-onclose-method.md)|Quando sottoposto a override in una classe derivata, termina un'operazione asincrona.|  
 |[Metodo AsyncBase::OnStart](../windows/asyncbase-onstart-method.md)|Quando sottoposto a override in una classe derivata, avvia un'operazione asincrona.|  
 |[Metodo AsyncBase::TryTransitionToCompleted](../windows/asyncbase-trytransitiontocompleted-method.md)|Indica se l'operazione asincrona corrente è stata completata.|  
 |[Metodo AsyncBase::TryTransitionToError](../windows/asyncbase-trytransitiontoerror-method.md)|Indica se il codice di errore può modificare lo stato di errore interno.|  

@@ -1,5 +1,5 @@
 ---
-title: Funzione AsWeak | Documenti Microsoft
+title: Funzione AsWeak | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854824"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462625"
 ---
 # <a name="asweak-function"></a>AsWeak (funzione)
 Recupera un riferimento debole a un'istanza specificata.  
@@ -38,17 +38,17 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Un puntatore al tipo di parametro `p`.  
+ *T*  
+ Un puntatore al tipo del parametro *p*.  
   
- `p`  
+ *p*  
  Un'istanza di un tipo.  
   
- `pWeak`  
- Al termine di questa operazione, un puntatore a un riferimento debole a parametro `p`.  
+ *pWeak*  
+ Al termine di questa operazione, un puntatore a un riferimento debole al parametro *p*.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK, se l'operazione ha esito positivo. in caso contrario, un errore HRESULT che indica la causa dell'errore.  
+ S_OK, se questa operazione ha esito positivo; in caso contrario, un errore HRESULT che indica la causa dell'errore.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

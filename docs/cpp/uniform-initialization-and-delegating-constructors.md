@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939832"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465968"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inizializzazione uniforme e costruttori deleganti
 Nel linguaggio C++ moderno, è possibile usare *inizializzazione con parentesi graffe* per qualsiasi tipo, senza il segno di uguale. Inoltre, è possibile utilizzare la delega dei costruttori per semplificare il codice quando si dispone di più costruttori che eseguono operazioni simili.  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  Se la classe dispone di costruttori non predefiniti, l'ordine in cui i membri della classe vengono visualizzati nell'inizializzatore con parentesi graffe è l'ordine in cui appaiono i parametri corrispondenti nel costruttore, non l'ordine in cui i membri vengono dichiarati (come nel caso di `class_a` nell'esempio precedente). Altrimenti, se il tipo non dispone di alcun costruttore dichiarato, l'ordine in cui i membri vengono visualizzati nell'inizializzatore con parentesi graffe corrisponde all'ordine in cui essi sono dichiarati; in questo caso, è possibile inizializzare un numero a piacere di membri pubblici, ma non è possibile ignorare alcun membro. Nell'esempio seguente viene illustrato l'ordine utilizzato nell'inizializzazione con parentesi graffe quando non vi è alcun costruttore dichiarato:  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>Costruttori di initializer_list  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  Le classi di contenitori di libreria standard e `string`, `wstring` e `regex`, dispongono di costruttori `initializer_list`. Negli esempi seguenti viene illustrato come effettuare l'inizializzazione con parentesi graffe con questi costruttori:  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  Nell'esaminare l'esempio precedente, notare che il costruttore `class_c(int, int, int)` chiama prima il costruttore `class_c(int, int)`, che a sua volta chiama `class_c(int)`. Ciascuno dei costruttori esegue solo il lavoro che non viene eseguito dagli altri costruttori.  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  Nell'esempio seguente viene illustrato l'utilizzo degli inizializzatori dei membri dati non statici. Notare che se un costruttore inizializza anche un membro dati specifico, l'inizializzatore del membro viene ignorato:  

@@ -1,5 +1,5 @@
 ---
-title: personalizzata (C++) | Documenti Microsoft
+title: personalizzati (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871627"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460932"
 ---
 # <a name="custom-c"></a>custom (C++)
-Definisce i metadati per un oggetto della libreria dei tipi.  
+Definisce i metadati per un oggetto nella libreria dei tipi.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ custom(  
+[ custom(  
    uuid,   
    value  
 ) ];  
@@ -42,12 +41,12 @@ Definisce i metadati per un oggetto della libreria dei tipi.
  ID univoco.  
   
  *valore*  
- Un valore che può essere impostato in una variabile variant.  
+ Un valore che può essere impostato in una variante.  
   
 ## <a name="remarks"></a>Note  
- Il **personalizzato** C++ attributo farà in modo informazioni da inserire nella libreria dei tipi. È necessario uno strumento che legge il valore personalizzato dalla libreria dei tipi.  
+ Il **personalizzato** C++ attributo farà in modo da inserire in libreria dei tipi di informazioni. È necessario uno strumento che legge il valore personalizzato da libreria dei tipi.  
   
- Il **personalizzato** presenta la stessa funzionalità come il [personalizzato](http://msdn.microsoft.com/library/windows/desktop/aa366766) attributo MIDL.  
+ Il **personalizzati** attributo ha la stessa funzionalità di [personalizzato](http://msdn.microsoft.com/library/windows/desktop/aa366766) attributo MIDL.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -55,18 +54,18 @@ Definisce i metadati per un oggetto della libreria dei tipi.
   
 |||  
 |-|-|  
-|**Si applica a**|COM non `interface`, **classe**, `enum`s, `idl_module` metodi, i membri di interfaccia, i parametri di interfaccia, `typedef`s, **unione**s, `struct`s|  
+|**Si applica a**|Non COM **interface**, **classe**, **enum**s, `idl_module` metodi, i membri di interfaccia, i parametri dell'interfaccia **typedef**s, **unione**s **struct**s|  
 |**Ripetibile**|Yes|  
-|**Attributi obbligatori**|**Coclasse** (quando utilizzato nella classe)|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|**Coclasse** (se usato nella classe)|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi autonomi](../windows/stand-alone-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Attributi dei parametri](../windows/parameter-attributes.md)   
  [Attributi del metodo](../windows/method-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Attributi di interfaccia](../windows/interface-attributes.md)   

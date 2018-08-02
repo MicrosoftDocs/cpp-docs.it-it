@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943958"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465932"
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversioni di tipi definite dall'utente (C++)
 Oggetto *conversione* produce un nuovo valore di tipo da un valore di un tipo diverso. *Conversioni standard* vengono compilate nel linguaggio C++ e supporto tecnico relativi tipi incorporati ed è possibile creare *conversioni definite dall'utente* per eseguire le conversioni a, da o tra tipi definiti dall'utente.  
@@ -79,7 +79,7 @@ Oggetto *conversione* produce un nuovo valore di tipo da un valore di un tipo di
   
  Il **esplicita** parola chiave può essere applicato ai costruttori di conversione fin da c++98 e alle funzioni di conversione fin da c++11. Le sezioni seguenti contengono altre informazioni su come usare il **esplicita** (parola chiave).  
   
-##  <a name="ConvCTOR"></a> Costruttori di conversione  
+## <a name="ConvCTOR"></a> Costruttori di conversione  
  I costruttori di conversione definiscono le conversioni da tipi definiti dall'utente o incorporati in un tipo definito dall'utente. L'esempio seguente illustra un costruttore di conversione che esegue la conversione dal tipo incorporato **doppie** a un tipo definito dall'utente `Money`.  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  Si noti che la variabile membro `amount` viene impostata come privata e che la funzione di una conversione pubblica nel tipo **doppie** viene introdotta solo per restituire il valore di `amount`. Nella funzione `display_balance`, si ha una conversione implicita quando il valore `balance` viene trasmesso all'output standard usando l'operatore di inserimento del flusso `<<`. Perché non è definito alcun operatore di inserimento del flusso per il tipo definito dall'utente `Money`, ma è presente una per il tipo incorporato **doppie**, il compilatore può usare la funzione di conversione da `Money` a **doppia** per soddisfare l'operatore di inserimento del flusso.  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  Qui la funzione di conversione **operatore double** è stata resa esplicita e un cast esplicito al tipo **double** è stato introdotto nella funzione `display_balance` per eseguire la conversione. Se il cast fosse stato omesso, il compilatore non avrebbe potuto individuare un operatore di inserimento del flusso `<<` adeguato per il tipo `Money` e si sarebbe verificato un errore.  
-  

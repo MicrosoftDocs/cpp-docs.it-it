@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943560"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462388"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento rvalue: &amp;&amp;
 Contiene un riferimento a un'espressione rvalue.  
@@ -29,7 +29,6 @@ Contiene un riferimento a un'espressione rvalue.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>Semantica di spostamento  
  I riferimenti rvalue supportano l'implementazione di *semantica di spostamento*, che può migliorare significativamente le prestazioni delle applicazioni. La semantica di spostamento consente di scrivere codice per il trasferimento delle risorse (ad esempio memoria allocata in modo dinamico) da un oggetto a un altro. La semantica di spostamento funziona in quanto consente il trasferimento delle risorse da oggetti temporanei a cui non è possibile fare riferimento in un altro punto del programma.  
   
- Per implementare la semantica di spostamento, si forniscono in genere un *costruttore di spostamento* e facoltativamente un operatore di assegnazione di spostamento (`operator=`), alla classe. Nelle operazioni di copia e assegnazione le cui origini sono valori rvalue viene automaticamente utilizzata la semantica di spostamento. A differenza di un costruttore di copia predefinito, il compilatore non fornisce un costruttore di spostamento predefinito. Per altre informazioni su come scrivere un costruttore di spostamento e su come usarla nell'applicazione, vedere [costruttori di spostamento e operatori di assegnazione di spostamento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+ Per implementare la semantica di spostamento, si forniscono in genere un *costruttore di spostamento* e facoltativamente un operatore di assegnazione di spostamento (**operatore =**), alla classe. Nelle operazioni di copia e assegnazione le cui origini sono valori rvalue viene automaticamente utilizzata la semantica di spostamento. A differenza di un costruttore di copia predefinito, il compilatore non fornisce un costruttore di spostamento predefinito. Per altre informazioni su come scrivere un costruttore di spostamento e su come usarla nell'applicazione, vedere [costruttori di spostamento e operatori di assegnazione di spostamento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
  È inoltre possibile sottoporre a overload funzioni e operatori comuni per sfruttare la semantica di spostamento. Visual C++ 2010 viene introdotta la semantica di spostamento nella libreria Standard C++. Ad esempio, la classe `string` implementa le operazioni che eseguono la semantica di spostamento. Si consideri l'esempio seguente in cui vengono concatenate diverse stringhe e viene visualizzato il risultato:  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- Prima di Visual C++ 2010, con ogni chiamata a `operator+` alloca e restituisce un nuovo elemento temporaneo `string` oggetto (rvalue). `operator+` non può aggiungere una stringa all'altra in quanto non è a conoscenza se le stringhe di origine sono lvalue o rvalue. Se le stringhe di origine sono entrambe lvalue, è possibile che a esse venga fatto riferimento in un altro punto del programma e pertanto non devono essere modificate. Utilizzando i riferimenti rvalue, `operator+` può essere modificato per accettare i valori rvalue, a cui non è possibile fare riferimento in un altro punto del programma. Pertanto, `operator+` può ora aggiungere una stringa a un'altra. Ciò può ridurre notevolmente il numero delle allocazioni di memoria dinamica che devono essere eseguite dalla classe `string`. Per altre informazioni sul `string` classe, vedere [classe basic_string](../standard-library/basic-string-class.md).  
+ Prima di Visual C++ 2010, con ogni chiamata a **operatore +** alloca e restituisce un nuovo elemento temporaneo `string` oggetto (rvalue). **operatore +** non è possibile aggiungere una stringa a altra perché non conoscere se le stringhe di origine sono lvalue o rvalue. Se le stringhe di origine sono entrambe lvalue, è possibile che a esse venga fatto riferimento in un altro punto del programma e pertanto non devono essere modificate. Utilizzando i riferimenti rvalue **operatore +** possono essere modificate per accettare i valori rvalue, non è possibile farvi riferimento in un punto del programma. Pertanto **operatore +** possono ora aggiungere una stringa a un altro. Ciò può ridurre notevolmente il numero delle allocazioni di memoria dinamica che devono essere eseguite dalla classe `string`. Per altre informazioni sul `string` classe, vedere [classe basic_string](../standard-library/basic-string-class.md).  
   
  La semantica di spostamento è utile anche quando il compilatore non può utilizzare l'ottimizzazione del valore restituito (RVO) o l'ottimizzazione del valore restituito denominato (NRVO). In questi casi, il compilatore chiama il costruttore di spostamento se è definito dal tipo. Per altre informazioni sull'ottimizzazione valore restituito denominato, vedere [ottimizzazione del valore restituito denominato in Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   

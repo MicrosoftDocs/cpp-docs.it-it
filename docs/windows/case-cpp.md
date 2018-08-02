@@ -1,5 +1,5 @@
 ---
-title: case (C++) | Documenti Microsoft
+title: case (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30d665861688054a4f6b7491f449014afe646c71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6567650d719b56bb320f1b40eae285322bcab364
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860957"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464311"
 ---
 # <a name="case-c"></a>case (C++)
-Utilizzato con il [switch_type](../windows/switch-type.md) attributo un **unione**.  
+Utilizzato con il [switch_type](../windows/switch-type.md) dell'attributo un **union**.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ case(  
+[ case(  
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametri  
  *valore*  
- Un possibile valore per il quale si desidera fornire l'elaborazione di input. Il tipo di **valore** può essere uno dei tipi seguenti:  
+ Un possibile valore per il quale si desidera fornire l'elaborazione di input. Il tipo della **valore** può essere uno dei tipi seguenti:  
   
 -   `int`  
   
@@ -51,12 +50,12 @@ Utilizzato con il [switch_type](../windows/switch-type.md) attributo un **unione
  o un identificatore di tale tipo.  
   
 ## <a name="remarks"></a>Note  
- Il **case** attributo C++ ha la stessa funzionalità come il **case** attributo MIDL. Questo attributo viene utilizzato solo con il [switch_type](../windows/switch-type.md) attributo.  
+ Il **case** attributi di C++ ha la stessa funzionalità come la **case** attributo MIDL. Questo attributo viene utilizzato solo con il [switch_type](../windows/switch-type.md) attributo.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato un utilizzo del **case** attributo:  
+ Il codice seguente illustra un uso le **caso** attributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_case.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,14 +78,14 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**Si applica a**|Membro di un **classe** o `struct`|  
+|**Si applica a**|Membro di un **classe** o **struct**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Attributi di classe](../windows/class-attributes.md)   

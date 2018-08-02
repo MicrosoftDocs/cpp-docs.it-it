@@ -1,5 +1,5 @@
 ---
-title: 'Costante argtraitshelper:: args | Documenti Microsoft'
+title: 'Costante argtraitshelper:: args | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff6ef465206ce1fac50b63dad0bed60a9c57b700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09480168f842adbcbd9e1c50056a9d16278bccc4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855055"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465831"
 ---
 # <a name="argtraitshelperargs-constant"></a>Costante ArgTraitsHelper::args
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +34,7 @@ static const int args = Traits::args;
 ```  
   
 ## <a name="remarks"></a>Note  
- Consente di [argtraitshelper:: args](../windows/argtraitshelper-args-constant.md) mantenere il numero di parametri al metodo Invoke di un'interfaccia del delegato.  
+ Aiuta [argtraitshelper:: args](../windows/argtraitshelper-args-constant.md) Mantieni il numero di parametri sul `Invoke` metodo di un'interfaccia di delegato.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Event. h  

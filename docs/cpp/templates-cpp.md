@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eadf3651d15f480ee2cff9ef3f7319dee4d84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c5a9aa15839169de846439c73af1df92d7342358
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943587"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463928"
 ---
 # <a name="templates-c"></a>Modelli (C++)
 I modelli costituiscono la base per la programmazione generica in C++. Come un linguaggio fortemente tipizzato, C++ richiede che tutte le variabili per presentare un tipo specifico, in modo esplicito dichiarata dal programmatore o dedotto dal compilatore. Tuttavia, molti algoritmi e strutture di dati hanno lo stesso aspetto indipendentemente dal tipo operino su. I modelli permettono di definire le operazioni di una classe o funzione e consentire all'utente di specificare quali concreto i tipi di tali operazioni dovrebbero funzionare in.  
@@ -38,7 +38,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Il codice riportato sopra descrive un modello per una funzione generica con un solo parametro di tipo `T`, il cui valore restituito e parametri (lhs e rhs) chiamata sono tutti questi tipi. È possibile denominare un parametro di tipo tutto ciò che è simile, ma con lettere maiuscolo singolo convenzione utilizzati più frequentemente. `T` è un parametro di modello. il **typename** parola chiave indica che questo parametro è un segnaposto per un tipo. Quando viene chiamata la funzione, il compilatore sostituisce tutte le istanze di `T` con l'argomento di tipo concreto specificato dall'utente o dedotto dal compilatore. Il processo in cui il compilatore genera una classe o funzione da un modello è detta *istanza del modello*;   `minimum<int>` è un'istanza del modello `minimum<T>`.  
+ Il codice riportato sopra descrive un modello per una funzione con un solo parametro di tipo generico *T*, il cui valore restituito e parametri (lhs e rhs) chiamata sono tutti questi tipi. È possibile denominare un parametro di tipo tutto ciò che è simile, ma con lettere maiuscolo singolo convenzione utilizzati più frequentemente. *T* è un parametro di modello; gli **typename** parola chiave indica che questo parametro è un segnaposto per un tipo. Quando viene chiamata la funzione, il compilatore sostituisce tutte le istanze di `T` con l'argomento di tipo concreto specificato dall'utente o dedotto dal compilatore. Il processo in cui il compilatore genera una classe o funzione da un modello è detta *istanza del modello*; `minimum<int>` è un'istanza del modello `minimum<T>`.  
   
  In un' posizione, un utente può dichiarare un'istanza del modello che è specializzato per int. Si supponga che get_a() e get_b() sono funzioni che restituiscono un valore int:  
   
@@ -48,7 +48,7 @@ int b = get_b();
 int i = minimum<int>(a, b);  
 ```  
   
- Tuttavia, poiché si tratta di un modello di funzione e il compilatore può dedurre il tipo della `T` dagli argomenti `a` e `b`, è possibile chiamarlo come una funzione comune:  
+ Tuttavia, poiché si tratta di un modello di funzione e il compilatore può dedurre il tipo della `T` dagli argomenti *una* e *b*, è possibile chiamarlo come una funzione comune:  
   
 ```cpp  
 int i = minimum(a, b);  
@@ -56,9 +56,8 @@ int i = minimum(a, b);
   
  Quando il compilatore rileva tale istruzione ultimo, genera una nuova funzione nella quale ogni occorrenza di *T* nel modello viene sostituito con **int**:  
   
-```cpp 
-  
-      int minimum(const int& lhs, const int& rhs)  
+```cpp   
+int minimum(const int& lhs, const int& rhs)  
 {  
     return lhs < rhs ? lhs : rhs;  
 }  
@@ -67,13 +66,12 @@ int i = minimum(a, b);
  Le regole per la modalità con cui il compilatore esegue la deduzione del tipo nei modelli di funzione sono basate su regole per le funzioni ordinarie. Per altre informazioni, vedere [Overload Resolution di modello le chiamate di funzione](../cpp/overload-resolution-of-function-template-calls.md).  
   
 ## <a id="type_parameters"></a> Parametri di tipo  
- Nel `minimum` modello precedente, si noti che il parametro di tipo `T` non sono qualificati in alcun modo fino a quando non viene usato nei parametri di chiamata di funzione, in cui vengono aggiunti i qualificatori di riferimento const.  
+ Nel `minimum` modello precedente, si noti che il parametro di tipo *T* non sono qualificati in alcun modo fino a quando non viene usato nei parametri di chiamata di funzione, in cui vengono aggiunti i qualificatori di riferimento const.  
   
  Non sono previsti limiti pratici sul numero di parametri di tipo. Separare più parametri con virgole:  
   
 ```cpp  
 template <typename T, typename U, typename V> class Foo{};  
-  
 ```  
   
  La parola chiave **classe** equivale a **nomeTipo** in questo contesto. È possibile esprimere l'esempio precedente come:  
@@ -108,7 +106,6 @@ int main()
     MyClass mc2 {2, L"goodbye"};  
     auto result = minimum(mc1, mc2); // Error! C2678  
 }  
-  
 ```  
   
  Verrà generato un errore del compilatore perché MyClass non fornisce un overload per il < operatore.  
@@ -138,7 +135,6 @@ class MyArray
 public:  
     MyArray() { ... }  
 };  
-  
 ```  
   
  Si noti la sintassi della dichiarazione di modello. Il valore size_t viene passato come argomento di modello in fase di compilazione e deve essere costante o un'espressione constexpr. Usarlo nel modo seguente:  
@@ -150,7 +146,7 @@ MyArray<MyClass*, 10> arr;
  Altri tipi di valori inclusi puntatori e riferimenti possono essere passati come parametri non di tipo. Ad esempio, è possibile passare un puntatore a una funzione o un oggetto funzione per personalizzare alcune operazioni all'interno di codice del modello.  
   
 ## <a id="template_parameters"></a> Modelli come parametri di modello  
- Un modello può essere un parametro di modello. In questo esempio MyClass2 presenta due parametri di modello: un parametro typename `T` e un parametro di modello `Arr`:  
+ Un modello può essere un parametro di modello. In questo esempio MyClass2 presenta due parametri di modello: un parametro typename *T* e un parametro di modello *Arr*:  
   
 ```cpp  
 template<typename T, template<typename U, int I> class Arr>  
@@ -162,7 +158,7 @@ class MyClass2
 };  
 ```  
   
- Poiché il `Arr` parametro stesso non ha un corpo, non sono necessari i nomi di parametro. In effetti, è possibile fare riferimento a `Arr`di nomi di parametro di typename o una classe dall'interno del corpo della `MyClass2`. Per questo motivo, `Arr`di nomi di parametro di tipo possono essere omesso, come illustrato in questo esempio:  
+ Poiché il *Arr* parametro stesso non ha un corpo, non sono necessari i nomi di parametro. In effetti, è possibile fare riferimento a *Arr*di nomi di parametro di typename o una classe dall'interno del corpo della `MyClass2`. Per questo motivo *Arr*di nomi di parametro di tipo possono essere omesso, come illustrato in questo esempio:  
   
 ```cpp  
 template<typename T, template<typename, int> class Arr>  
@@ -207,7 +203,6 @@ int main()
 {  
     Bar<> bar; // use all default type arguments  
 }  
-  
 ```  
   
 ## <a name="template-specialization"></a>Specializzazione modello  
@@ -223,9 +218,8 @@ class MyMap<string, V> {/*...*/};
 ...  
 MyMap<int, MyClass> classes; // uses original template  
 MyMap<string, MyClass> classes2; // uses the partial specialization  
-  
 ```  
   
- Un modello può avere un numero qualsiasi di specializzazioni, purché sia univoca ogni parametro di tipo specializzato.   Solo i modelli di classe possono essere parzialmente specializzati. Tutte le specializzazioni parziali e completate di un modello devono essere dichiarate nello spazio dei nomi stesso come il modello originale.  
+ Un modello può avere un numero qualsiasi di specializzazioni, purché sia univoca ogni parametro di tipo specializzato. Solo i modelli di classe possono essere parzialmente specializzati. Tutte le specializzazioni parziali e completate di un modello devono essere dichiarate nello spazio dei nomi stesso come il modello originale.  
   
  Per altre informazioni, vedere [specializzazione modello](../cpp/template-specialization-cpp.md).

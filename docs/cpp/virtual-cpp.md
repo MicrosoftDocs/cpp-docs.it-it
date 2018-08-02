@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 84035f2007f3c45c33c1dfa342caf5c788580205
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939120"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460919"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 Il **virtuale** parola chiave dichiara una funzione virtuale o una classe base virtuale.  

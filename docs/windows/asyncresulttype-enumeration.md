@@ -1,5 +1,5 @@
 ---
-title: Enumerazione AsyncResultType | Documenti Microsoft
+title: AsyncResultType (enumerazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4a8465dd61e52425a0335e171cf516591ae589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863309"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465285"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType (enumerazione)
-Specifica il tipo di risultato restituito dal metodo GetResults().  
+Specifica il tipo di risultato restituito dal `GetResults()` (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,8 +39,8 @@ enum AsyncResultType;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`MultipleResults`|Un set di risultati più, che vengono presentati progressivamente tra allo stato di avvio e prima di chiamare Close ().|  
-|`SingleResult`|Un singolo risultato, che viene visualizzato quando si verifica l'evento di completamento.|  
+|`MultipleResults`|Un set di risultati più, che vengono presentati progressivamente between `Start` lo stato e prima `Close()` viene chiamato.|  
+|`SingleResult`|Un singolo risultato, che viene visualizzato dopo che si verifica l'evento di completamento.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

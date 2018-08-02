@@ -1,5 +1,5 @@
 ---
-title: 'Membro dati creatormap:: ActivationID | Documenti Microsoft'
+title: 'Membro dati creatormap:: ActivationID | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881796"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467131"
 ---
 # <a name="creatormapactivationid-data-member"></a>Membro dati CreatorMap::activationId
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +37,17 @@ union {
 ```  
   
 ## <a name="parameters"></a>Parametri  
- `clsid`  
+ *clsid*  
  ID di interfaccia.  
   
- `getRuntimeName`  
- Una funzione che recupera il nome di runtime di Windows di un oggetto.  
+ *getRuntimeName*  
+ Una funzione che recupera il nome del runtime di Windows di un oggetto.  
   
 ## <a name="remarks"></a>Note  
- Rappresenta un ID di oggetto che è identificato da un ID di classe COM classico o un nome di runtime di Windows.  
+ Rappresenta un ID di oggetto identificato da un ID di classe COM classico o un nome del runtime di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   

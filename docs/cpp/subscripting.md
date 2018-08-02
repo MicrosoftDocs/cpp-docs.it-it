@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943539"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461520"
 ---
 # <a name="subscripting"></a>Indice
 L'operatore di pedice (**[]**), ad esempio l'operatore di chiamata di funzione, viene considerato un operatore binario. L'operatore di pedice deve essere una funzione membro non statica che accetta un solo argomento. In questo argomento può essere di qualsiasi tipo e definisce il pedice di matrice desiderato.  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Commenti  
- Quando `i` raggiunge 10 nel programma precedente, `operator[]` rileva che un indice fuori limite viene utilizzato e genera un messaggio di errore.  
+ Quando `i` raggiunge 10 nel programma precedente **operator []** rileva che un indice fuori limite è in uso e genera un messaggio di errore.  
   
- Si noti che la funzione `operator[]` restituisce un tipo di riferimento. In questo modo esso risulterà un l-value, consentendo di utilizzare le espressioni di indice su entrambi i lati degli operatori di assegnazione.  
+ Si noti che la funzione **operator []** restituisce un tipo riferimento. In questo modo esso risulterà un l-value, consentendo di utilizzare le espressioni di indice su entrambi i lati degli operatori di assegnazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Overload degli operatori](../cpp/operator-overloading.md)

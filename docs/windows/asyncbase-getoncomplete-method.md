@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Getoncomplete | Documenti Microsoft'
+title: 'Metodo asyncbase:: Getoncomplete | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa1bf81c8b377da44fb4b81cdb2b0142e90032e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865110"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466572"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>Metodo AsyncBase::GetOnComplete
 Copia l'indirizzo del gestore dell'evento di completamento corrente per la variabile specificata.  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `completeHandler`  
- La posizione in cui memorizzare l'indirizzo del gestore dell'evento di completamento corrente.  
+ *completeHandler*  
+ Il percorso in cui è archiviato l'indirizzo del gestore dell'evento di completamento corrente.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
+ S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

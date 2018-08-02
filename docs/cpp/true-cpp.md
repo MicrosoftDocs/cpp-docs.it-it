@@ -16,18 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a469b47d54cef9084ba686538219d62a2d5ec50
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eb810f880ac86651059d71a59040e34810c7e167
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943275"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464772"
 ---
 # <a name="true-c"></a>true (C++)
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 bool-identifier = true ;  
 bool-expression logical-operator true ;  
 ```  

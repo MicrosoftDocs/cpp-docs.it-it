@@ -1,5 +1,5 @@
 ---
-title: 'Metodo chaininterfaces:: Casttounknown | Documenti Microsoft'
+title: 'Metodo chaininterfaces:: Casttounknown | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 696d632037f2a1fdc68e298b247e46720b81a343
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9479180134e8a873e1d79f91deb3d29700d40a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855094"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467170"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>Metodo ChainInterfaces::CastToUnknown
-Esegue il cast del tipo definito per il puntatore di interfaccia di `I0` parametro di modello in un puntatore a IUnknown.  
+Viene eseguito il cast del tipo definito per il puntatore di interfaccia di *I0* parametro di modello in un puntatore a IUnknown.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +37,7 @@ __forceinline IUnknown* CastToUnknown();
  Puntatore a IUnknown.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939209"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460879"
 ---
 # <a name="unions"></a>Unioni
 Oggetto **unione** è un tipo definito dall'utente in cui tutti i membri condividono la stessa posizione di memoria. Ciò significa che in qualsiasi momento un'unione può includere al massimo un oggetto dal rispettivo elenco di membri. Significa anche che, indipendentemente dal numero di membri, un'unione usa sempre solo la quantità di memoria necessaria per archiviare il membro più grande.  
@@ -35,7 +35,7 @@ Oggetto **unione** è un tipo definito dall'utente in cui tutti i membri condivi
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *name*  
  Nome del tipo assegnato all'unione.  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  Si noti che nell'esempio precedente l'unione nello struct Input non ha nome. Si tratta di un'unione anonima ed è possibile accedere ai rispettivi membri come se fossero membri diretti dello struct. Per altre informazioni sulle unioni anonime, vedere la sezione seguente.  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  Le unioni non possono archiviare riferimenti. Le unioni non supportano l'ereditarietà, quindi un'unione stessa non può essere usata come classe base o ereditare da un'altra classe oppure includere funzioni virtuali.  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  L'unione `NumericType` viene gestita in memoria (concettualmente) come illustrato nella figura seguente.  
@@ -654,7 +651,7 @@ Oltre alle restrizioni per le unioni denominate, le unioni anonime sono soggette
   
 -   Devono inoltre essere dichiarate come **statici** se dichiarate nell'ambito file o spazio dei nomi.  
   
--   Possono avere solo membri pubblici; i membri privati e protetti nelle unioni anonime generano errori.  
+-   Possono avere solo **pubblica** i membri. **privati** e **protetto** membri nelle unioni anonime generano errori.  
   
 -   Non possono avere funzioni membro.  
   

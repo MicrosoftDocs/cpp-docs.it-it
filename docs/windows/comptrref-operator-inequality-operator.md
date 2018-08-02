@@ -1,5 +1,5 @@
 ---
-title: Operatore comptrref::! = (operatore) | Documenti Microsoft
+title: Operatore comptrref::! = (operatore) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883554"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462924"
 ---
 # <a name="comptrrefoperator-operator"></a>Operatore ComPtrRef::operator!=
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,21 +55,21 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `a`  
- Un riferimento a un oggetto ComPtrRef.  
+ *a*  
+ Un riferimento a un **ComPtrRef** oggetto.  
   
- `b`  
- Un riferimento a un altro oggetto ComPtrRef o un puntatore a un oggetto anonimo (`void*`).  
+ *b*  
+ Un riferimento a un'altra **ComPtrRef** oggetto o un puntatore a un oggetto anonimo (`void*`).  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce l'operatore prima `true` se oggetto `a` non è uguale all'oggetto `b`; in caso contrario, `false`.  
+ Primo operatore rese **true** se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, **false**.  
   
- Il secondo e terzo operatore yield `true` se oggetto `a` non è uguale a `nullptr`; in caso contrario, `false`.  
+ Il secondo e terzo operatore yield **true** se oggetti *una* non è uguale a **nullptr**; in caso contrario, **false**.  
   
- Gli operatori quarto e quinto yield `true` se oggetto `a` non è uguale all'oggetto `b`; in caso contrario, `false`.  
+ Gli operatori quarto e quinto yield **true** se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, **false**.  
   
 ## <a name="remarks"></a>Note  
- Indica se due oggetti ComPtrRef non sono uguali.  
+ Indica se due **ComPtrRef** oggetti non sono uguali.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  
@@ -77,5 +77,5 @@ bool operator!=(
  **Spazio dei nomi:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
+ [Microsoft::WRL::Details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [Classe ComPtrRef](../windows/comptrref-class.md)

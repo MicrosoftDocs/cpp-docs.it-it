@@ -1,5 +1,5 @@
 ---
-title: Token (C++) | Documenti Microsoft
+title: Token (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2e1a6cc36e4e5f2f785c1e5dff03c6fb5e392d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 217061557acb0c8b311a91651eea2f57a8198872
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467959"
 ---
 # <a name="tokens-c"></a>Token (C++)
 Un token è il più piccolo elemento di un programma C++ significativo per il compilatore. Il parser C++ riconosce questi tipi di token: identificatori, parole chiave, valori letterali, operatori, segni di punteggiatura e altri separatori. Un flusso di questi token costituisce un'unità di conversione.  
@@ -44,13 +45,13 @@ Un token è il più piccolo elemento di un programma C++ significativo per il co
   
  Il parser separa i token dal flusso di input creando il token più lungo possibile usando caratteri di input in una scansione da sinistra a destra. Si consideri il seguente frammento di codice:  
   
-```  
+```cpp 
 a = i+++j;  
 ```  
   
  Il programmatore che ha scritto il codice potrebbe aver inteso una delle due istruzioni:  
   
-```  
+```cpp 
 a = i + (++j)  
   
 a = (i++) + j  

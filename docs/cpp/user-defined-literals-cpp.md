@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835f56498d3bc19f0b31ea9047f2e76d955183f4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 38c3f60f7460a3d03f16141b5629bfc2d6183cae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943278"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462375"
 ---
 # <a name="user-defined-literals--c"></a>Valori letterali definiti dall'utente (C++)
 Esistono sei categorie principali di valori letterali: Integer, carattere, a virgola mobile, stringa, booleano e puntatore.  A partire da C++ 11, è possibile definire valori letterali personalizzati basati su queste categorie per fornire collegamenti sintattici per idiomi comuni e aumentare l'indipendenza dai tipi. Ad esempio, si supponga che sia disponibile una classe Distance. È possibile definire un valore letterale per i chilometri e uno per le miglia e incoraggiare l'utente a esprimere esplicitamente le unità di misura, scrivendo semplicemente: auto d = 42.0_km o auto d = 42.0_mi. I valori letterali definiti dall'utente non presentano vantaggi o svantaggi a livello di prestazioni. Vengono usati solo per comodità o per deduzioni dei tipi in fase di compilazione. La libreria Standard include valori letterali definiti dall'utente per std: String, per std:: Complex e per le unità nelle operazioni di tempo e durata nel \<chrono > intestazione:  
@@ -31,7 +31,7 @@ Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
 ```  
   
 ## <a name="user-defined-literal-operator-signatures"></a>Firme di operatori di valori letterali definiti dall'utente  
- Per implementare un valore letterale definito dall'utente, definire un `operator""` nell'ambito dello spazio dei nomi con uno dei formati seguenti:  
+ Si implementa un valore letterale definito dall'utente mediante la definizione di un **operatore ""** nell'ambito dello spazio dei nomi con uno dei formati seguenti:  
   
 ```cpp 
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
@@ -51,7 +51,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
  I nomi di operatore nell'esempio precedente sono segnaposti per il nome specificato dall'utente. Il carattere di sottolineatura iniziale è tuttavia obbligatorio. La definizione di valori letterali senza carattere di sottolineatura è consentita solo nella libreria standard. Il tipo restituito permette di personalizzare la conversione o altre operazioni eseguite dal valore letterale. È anche possibile eseguire questi operatori come `constexpr`.  
   
 ## <a name="cooked-literals"></a>Valori letterali cooked  
- Qualsiasi valore letterale nel codice sorgente, definito o non definito dall'utente, è essenzialmente una sequenza di caratteri alfanumerici, ad esempio `101`, `54.7`, `"hello"` oppure `true`. Il compilatore interpreta la sequenza come un valore integer, float, const char\* stringa e così via. Un valore letterale definito dall'utente che accetta come input qualsiasi tipo di compilatore assegnato al valore letterale viene informalmente definito come un *letterale cooked*. Tutti gli operatori indicati, ad eccezione di `_r` e `_t`, sono valori letterali cooked. Ad esempio, un valore letterale `42.0_km` verrà associato a un operatore denominato _km con una firma analoga a _b e il valore letterale `42_km` verrà associato a un operatore con firma analoga ad _a.  
+ Nel codice sorgente qualsiasi valore letterale definito dall'utente o non è essenzialmente una sequenza di caratteri alfanumerici, ad esempio `101`, oppure `54.7`, o `"hello"` oppure **true**. Il compilatore interpreta la sequenza come un valore integer, float, const char\* stringa e così via. Un valore letterale definito dall'utente che accetta come input qualsiasi tipo di compilatore assegnato al valore letterale viene informalmente definito come un *letterale cooked*. Tutti gli operatori indicati, ad eccezione di `_r` e `_t`, sono valori letterali cooked. Ad esempio, un valore letterale `42.0_km` verrà associato a un operatore denominato _km con una firma analoga a _b e il valore letterale `42_km` verrà associato a un operatore con firma analoga ad _a.  
   
  L'esempio seguente illustra il modo in cui i valori letterali definiti dall'utente possono incoraggiare i chiamanti a esprimere in modo esplicito il rispettivo input. Per costruire un valore `Distance`, l'utente deve specificare in modo esplicito chilometri o miglia usando il valore letterale definito dall'utente appropriato. È ovviamente possibile ottenere lo stesso risultato in altri modi, ma i valori letterali definiti dall'utente sono meno dettagliati rispetto alle alternative.  
   
@@ -184,5 +184,4 @@ operator "" _dump_raw(const char*)        : ===>42<===
 operator "" _dump_raw(const char*)        : ===>3.1415926<===  
 operator "" _dump_raw(const char*)        : ===>3.14e+25<===   
 *****/  
-  
 ```

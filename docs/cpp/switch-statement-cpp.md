@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943602"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462186"
 ---
 # <a name="switch-statement-c"></a>Istruzione switch (C++)
 Consente la selezione tra più sezioni di codice, in base al valore di un'espressione integrale.  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  Oggetto **commutatore** istruzione può essere nidificata. In questi casi **case** o **predefinito** associare etichette a quello più vicino **passare** istruzione che li racchiude.  
 
- 
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  Microsoft C non limita il numero di valori di case in una **commutatore** istruzione. Tale numero è limitato solo dalla memoria disponibile. ANSI C richiede almeno 257 etichette case essere consentito in una **commutatore** istruzione.  
   
@@ -175,4 +174,3 @@ int main(int argc, char *argv[])
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni di selezione](../cpp/selection-statements-cpp.md)   
  [Parole chiave](../cpp/keywords-cpp.md)   
- 

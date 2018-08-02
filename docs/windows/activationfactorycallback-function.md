@@ -1,5 +1,5 @@
 ---
-title: Funzione ActivationFactoryCallback | Documenti Microsoft
+title: ActivationFactoryCallback (funzione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857324"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461393"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (funzione)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,11 +37,11 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `activationId`  
+ *activationId*  
  Handle per una stringa che specifica il nome di una classe di runtime.  
   
- `ppFactory`  
- Quando questa operazione viene completata, una factory di attivazione corrispondente al parametro `activationId`.  
+ *ppFactory*  
+ Quando questa operazione viene completata, una factory di attivazione corrispondente al parametro *activationId*.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT che descrive l'errore. HRESULT di errore probabilmente sono CLASS_E_CLASSNOTAVAILABLE ed E_INVALIDARG.  
@@ -49,10 +49,10 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ## <a name="remarks"></a>Note  
  Ottiene la factory di attivazione per l'ID di attivazione specificato.  
   
- Windows Runtime chiama questa funzione di callback per richiedere un oggetto specificato dal nome della classe di runtime.  
+ Il Runtime Windows chiama questa funzione di richiamata per richiedere un oggetto specificato dal nome della classe di runtime.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   

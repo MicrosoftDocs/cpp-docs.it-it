@@ -1,5 +1,5 @@
 ---
-title: abstract (estensioni del componente C++) | Documenti Microsoft
+title: abstract (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcaef98df96b54025cd44a52a2e27a7bc5a83545
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857555"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463242"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (Estensioni del componente C++)
-La parola chiave `abstract` dichiara:  
+Il **astratta** parola chiave dichiara:  
   
 -   Che un tipo può essere usato come tipo di base, ma non è possibile creare un'istanza del tipo stesso.  
   
@@ -36,28 +36,26 @@ La parola chiave `abstract` dichiara:
  **Sintassi**  
   
 ```  
-  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
-  
 ```  
   
  **Note**  
   
- La sintassi del primo esempio dichiara una classe astratta. Il *dichiarazione di classe* componente può essere una dichiarazione C++ nativa (`class` o `struct`), o una dichiarazione di estensione C++ (`ref class` o `ref struct`) se il **/ZW** o **/clr** è specificata l'opzione del compilatore.  
+ La sintassi del primo esempio dichiara una classe astratta. Il *dichiarazione di classe* componente può essere una dichiarazione C++ nativa (**classe** oppure **struct**), o una dichiarazione di estensione C++ (**classediriferimento** oppure **struct ref**) se il `/ZW` o `/clr` è specificata l'opzione del compilatore.  
   
  La sintassi del secondo esempio dichiara una funzione membro virtuale astratta. Dichiarare che una funzione astratta equivale a dichiararla come funzione virtuale pura. Dichiarare una funzione membro astratta comporta che la classe contenitore venga dichiarata astratta.  
   
- Il `abstract` (parola chiave) è supportato in codice nativo e specifico della piattaforma; ovvero, può essere compilato con o senza il **/ZW** o **/clr** l'opzione del compilatore.  
+ Il **astratto** parola chiave è supportata in codice nativo e specifico della piattaforma; vale a dire, può essere compilato con o senza il `/ZW` o `/clr` opzione del compilatore.  
   
- È possibile rilevare in fase di compilazione se un tipo è astratto con il `__is_abstract(type)` tratto di tipo. Per ulteriori informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ È possibile rilevare in fase di compilazione se un tipo è astratto con il `__is_abstract(type)` tratto di tipo. Per altre informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- La parola chiave `abstract` è un identificatore di override sensibile al contesto. Per ulteriori informazioni sulle parole chiave sensibili al contesto, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md). Per ulteriori informazioni sugli identificatori di override, vedere [procedura: dichiarare gli identificatori di Override nelle compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Il **astratta** (parola chiave) è un identificatore di override sensibile al contesto. Per altre informazioni sulle parole chiave sensibili al contesto, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md). Per altre informazioni sugli identificatori di override, vedere [procedura: dichiarare gli identificatori di Override nelle compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Per ulteriori informazioni, vedere [le classi e struct](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Per altre informazioni, vedere [le classi e struct](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Requisiti  
  Opzione del compilatore: **/ZW**  
@@ -72,7 +70,7 @@ virtualreturn-typemember-function-identifier() abstract ;
   
  L'esempio di codice seguente genera un errore perché la classe `X` è contrassegnata come `abstract`.  
   
-```  
+```cpp  
 // abstract_keyword.cpp  
 // compile with: /clr  
 ref class X abstract {  
@@ -87,9 +85,9 @@ int main() {
   
  **Esempio**  
   
- L'esempio di codice seguente genera un errore perché crea un'istanza di una classe nativa contrassegnata come `abstract`. Questo errore si verifica con o senza il **/clr** l'opzione del compilatore.  
+ L'esempio di codice seguente genera un errore perché crea un'istanza di una classe nativa contrassegnata come `abstract`. Questo errore si verifica con o senza l'opzione del compilatore `/clr`.  
   
-```  
+```cpp  
 // abstract_keyword_2.cpp  
 class X abstract {  
 public:  
@@ -99,14 +97,13 @@ public:
 int main() {  
    X * MyX = new X; // C3622: 'X': a class declared as 'abstract'  
                     // cannot be instantiated. See declaration of 'X'}  
-  
 ```  
   
  **Esempio**  
   
  L'esempio di codice seguente genera un errore perché la funzione `f` include una definizione, ma è contrassegnata come `abstract`. L'istruzione finale nell'esempio illustra che dichiarare una funzione virtuale astratta equivale a dichiarare una funzione virtuale pura.  
   
-```  
+```cpp  
 // abstract_keyword_3.cpp  
 // compile with: /clr  
 ref class X {  

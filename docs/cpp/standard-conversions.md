@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028359"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462310"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per altre informazioni sui tipi, tipi standard e i tipi derivati, vedere [tipi](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  Gli oggetti di tipi integrali con segno possono essere convertiti nei corrispondenti tipi senza segno. Quando si verificano queste conversioni, lo schema di bit effettivo non cambia; cambia, tuttavia, l'interpretazione dei dati. Si consideri il codice seguente:  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  Nell'esempio precedente, una **short con segno**, `i`, viene definito e inizializzato con un numero negativo. L'espressione `(u = i)` provoca `i` da convertire in un **short senza segno** prima dell'assegnazione a `u`.  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  Il codice seguente illustra le regole di conversione descritte nella tabella:  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  Il puntatore `pA` è di tipo `A *`, che può essere interpretato con il significato di "puntatore a un oggetto di tipo `A`". I membri del `bObject` `(`, ad esempio `BComponent` e `BMemberFunc`) sono univoci `B` e sono pertanto inaccessibili mediante `pA`. Il puntatore `pA` consente l'accesso solo a quelle caratteristiche (funzioni membro e dati) dell'oggetto definite nella classe `A`.  
   
 ### <a name="pointer-to-function"></a>Puntatore a funzione  
- Un puntatore a una funzione può essere convertito nel tipo **void \*** , se tipo **void \***  è sufficientemente grande da contenere tale puntatore.  
+ Un puntatore a una funzione può essere convertito nel tipo `void *`, se tipo `void *` è sufficientemente grande da contenere tale puntatore.  
   
 ### <a name="pointer-to-void"></a>Puntatore a void  
  Puntatori al tipo **void** convertibili in puntatori a qualsiasi altro tipo, ma solo con un cast di tipo esplicito (diversamente da c). (Vedere [espressioni con conversioni esplicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per altre informazioni sui cast di tipo.) Un puntatore a qualsiasi tipo può essere convertito in modo implicito in un puntatore al tipo **void**. Un puntatore a un oggetto incompleto di un tipo può essere convertito in un puntatore a **void** (implicitamente) e viceversa (esplicitamente). Il risultato di tale conversione è uguale al valore del puntatore originale. Un oggetto è considerato incompleto se viene dichiarato ma le informazioni disponibili sono insufficienti per determinarne la dimensione o la classe base.  
   
- Un puntatore a qualsiasi oggetto che non sia **const** oppure **volatile** può essere convertito in modo implicito in un puntatore di tipo **void \*** .  
+ Un puntatore a qualsiasi oggetto che non sia **const** oppure **volatile** può essere convertito in modo implicito in un puntatore di tipo `void *`.  
   
 ### <a name="const-and-volatile-pointers"></a>Puntatori const e volatile  
  C++ non fornisce una conversione standard da un **const** oppure **volatile** tipo a un tipo che non è **const** oppure **volatile**. Tuttavia, qualsiasi tipo di conversione può essere specificato usando i cast di tipo espliciti (comprese le conversioni non sicure).  

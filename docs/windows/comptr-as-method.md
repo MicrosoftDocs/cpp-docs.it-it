@@ -1,5 +1,5 @@
 ---
-title: 'Metodo comptr:: As | Documenti Microsoft'
+title: 'Metodo comptr:: As | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb9fd0ff09f6775a95ff881d9f8cbaa3edc61065
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857272"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461010"
 ---
 # <a name="comptras-method"></a>Metodo ComPtr::As
-Restituisce un oggetto ComPtr che rappresenta l'interfaccia identificata dal parametro del modello specificato.  
+Restituisce un **ComPtr** oggetto che rappresenta l'interfaccia identificata dal parametro di modello specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -40,15 +39,14 @@ template<typename U>
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> p  
 ) const;  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `U`  
- L'interfaccia per essere rappresentato dal parametro `p`.  
+ *U*  
+ L'interfaccia per essere rappresentato dal parametro *p*.  
   
- `p`  
- Un oggetto ComPtr che rappresenta l'interfaccia specificata dal parametro `U`. Parametro `p` non deve fare riferimento all'oggetto ComPtr corrente.  
+ *p*  
+ Oggetto **ComPtr** che rappresenta l'interfaccia specificata dal parametro *U*. Parametro *p* non deve fare riferimento all'oggetto corrente **ComPtr** oggetto.  
   
 ## <a name="remarks"></a>Note  
  Il primo modello è il form da usare nel codice. Il secondo modello è una specializzazione helper interna che supporta le funzionalità del linguaggio C++, ad esempio la parola chiave di deduzione del tipo [auto](../cpp/auto-cpp.md) .  

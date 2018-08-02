@@ -1,5 +1,5 @@
 ---
-title: Scrittura di un gestore di eccezioni | Documenti Microsoft
+title: La scrittura di un gestore di eccezioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d16d95cc246ad7ef0fe9f03c20e2652fe81aad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb06c23e17f16bdf33fe469327351105d6a4571c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421822"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461049"
 ---
 # <a name="writing-an-exception-handler"></a>Scrittura di un gestore di eccezioni
 I gestori di eccezioni vengono in genere utilizzati per risolvere errori specifici. È possibile utilizzare la sintassi relativa alla gestione delle eccezioni per filtrare le eccezioni diverse da quelle che si è in grado di gestire. Le altre eccezioni devono essere passate ad altri gestori (possibilmente nella libreria di runtime o nel sistema operativo) progettati in modo da cercare tali eccezioni specifiche.  
@@ -31,7 +31,7 @@ I gestori di eccezioni vengono in genere utilizzati per risolvere errori specifi
   
 -   [Try-except istruzione](../cpp/try-except-statement.md)  
   
--   [Scrittura di un filtro eccezioni](../cpp/writing-an-exception-filter.md)  
+-   [La scrittura di un filtro eccezioni](../cpp/writing-an-exception-filter.md)  
   
 -   [Generazione di eccezioni software](../cpp/raising-software-exceptions.md)  
   

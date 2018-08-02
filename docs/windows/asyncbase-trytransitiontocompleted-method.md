@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Trytransitiontocompleted | Documenti Microsoft'
+title: 'Metodo asyncbase:: Trytransitiontocompleted | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f628acd1424af11cab5040b2c65d528f1774dff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f2185b83a393860904903f4b82b3c3b42a2c3b33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861259"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460742"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>Metodo AsyncBase::TryTransitionToCompleted
 Indica se l'operazione asincrona corrente è stata completata.  
@@ -36,7 +36,7 @@ bool TryTransitionToCompleted(
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se l'operazione asincrona è stata completata; in caso contrario, `false`.  
+ **true** se l'operazione asincrona è stata completata; in caso contrario, **false**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

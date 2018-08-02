@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940150"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462092"
 ---
 # <a name="thread"></a>thread
 
 **Sezione specifica Microsoft**
 
-Il **thread** modificatore di classe di archiviazione estesi viene usato per dichiarare una variabile thread-local. Per il formato portabile equivalente in c++11 e versioni successivo, usare il [thread_local](../cpp/storage-classes-cpp.md#thread_local) identificatore classe di archiviazione per codice portabile. In Windows `thread_local` viene implementata con `__declspec(thread)`.
+Il **thread** modificatore di classe di archiviazione estesi viene usato per dichiarare una variabile thread-local. Per il formato portabile equivalente in c++11 e versioni successivo, usare il [thread_local](../cpp/storage-classes-cpp.md#thread_local) identificatore classe di archiviazione per codice portabile. In Windows `thread_local` viene implementata con **declspec**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -96,7 +96,6 @@ Inoltre, è necessario rispettare queste linee guida quando si dichiarano variab
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
-
-[__declspec](../cpp/declspec.md)  
-[Parole chiave](../cpp/keywords-cpp.md)  
-[Archiviazione thread-local (TLS)](../parallel/thread-local-storage-tls.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Parole chiave](../cpp/keywords-cpp.md)  
+ [Archiviazione thread-local (TLS)](../parallel/thread-local-storage-tls.md)  

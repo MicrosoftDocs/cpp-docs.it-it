@@ -1,5 +1,5 @@
 ---
-title: 'Metodo activationfactory:: QueryInterface | Documenti Microsoft'
+title: 'Metodo activationfactory:: QueryInterface | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d93a2f61e92172c94fef2406fc6caa2de71ab8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c825e7e67844fc094e4cf9ce775152d334664d5a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854509"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465246"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>Metodo ActivationFactory::QueryInterface
-Recupera un puntatore a interfaccia specificato.  
+Recupera un puntatore all'interfaccia specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,17 +36,17 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `riid`  
+ *riid*  
  ID di interfaccia.  
   
- `ppvObject`  
- Quando questa operazione è completa, un puntatore a interfaccia specificato dal parametro `riid`.  
+ *ppvObject*  
+ Quando questa operazione viene completata, un puntatore all'interfaccia specificata dal parametro *riid*.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Putonprogress | Documenti Microsoft'
+title: 'Metodo asyncbase:: Putonprogress | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c12709bdcac615937c938468bcf0e2daca437675
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a9460664ed58cf39f7b295e1406649ad1d66ca9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859787"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467417"
 ---
 # <a name="asyncbaseputonprogress-method"></a>Metodo AsyncBase::PutOnProgress
-Imposta l'indirizzo del gestore dell'evento di stato di avanzamento al valore specificato.  
+Imposta l'indirizzo del gestore dell'evento di stato di avanzamento sul valore specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `progressHandler`  
+ *progressHandler*  
  L'indirizzo a cui è impostato il gestore dell'evento di stato di avanzamento.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
+ S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

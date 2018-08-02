@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Start | Documenti Microsoft'
+title: 'Metodo asyncbase:: Start | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab47405f81cf6fb92af215f1868d8ad7c42bffa7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860918"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463730"
 ---
 # <a name="asyncbasestart-method"></a>Metodo AsyncBase::Start
 Avvia l'operazione asincrona.  
@@ -39,7 +39,7 @@ STDMETHOD(
  S_OK se l'operazione viene avviata o è già stato avviato. in caso contrario, E_ILLEGAL_STATE_CHANGE.  
   
 ## <a name="remarks"></a>Note  
- Start () è un'implementazione predefinita di IAsyncInfo::Start e non funziona effettivo. Per avviare un'operazione asincrona, eseguire l'override del metodo virtuale puro metodo OnStart ().  
+ **Start ()** è un'implementazione predefinita di `IAsyncInfo::Start`, e non esegue alcuna operazione effettiva. Per iniziare effettivamente a un'operazione asincrona, eseguire l'override di `OnStart()` metodo virtuale puro.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

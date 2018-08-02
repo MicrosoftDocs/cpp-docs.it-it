@@ -1,5 +1,5 @@
 ---
-title: Modifica della proprietà Caption di più stringhe | Documenti Microsoft
+title: Modifica della proprietà Caption di più stringhe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d97cc278841f8b25636622bcb5fdc9a03a42751
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d2c53825cab6b14234bd030ae9167b20c30bd5b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860281"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467225"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>Modifica della proprietà Caption di più stringhe
 La procedura seguente viene illustrato come modificare la proprietà caption di più stringhe.  
   
 ### <a name="to-change-the-caption-property-of-multiple-strings"></a>Per modificare la proprietà caption di più stringhe  
   
-1.  Aprire la tabella di stringhe facendo doppio clic sull'icona in [visualizzazione risorse](../windows/resource-view-window.md).  
+1.  Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).  
   
      **Note** Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Selezionare le stringhe che si desidera modificare tenendo premuto il **CTRL** mentre si fa clic su ciascuno di essi.  
+2.  Selezionare le stringhe che si desidera modificare, tenere premuti i **CTRL** mentre si fa clic su ognuno di essi.  
   
-3.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window), digitare un nuovo valore per la proprietà che si desidera modificare.  
+3.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window), digitare un nuovo valore della proprietà da modificare.  
   
 4.  Premere **INVIO**.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* . Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) e[Procedura dettagliata: utilizzo delle risorse per la localizzazione con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisiti**  
   

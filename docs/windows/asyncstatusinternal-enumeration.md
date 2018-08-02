@@ -1,5 +1,5 @@
 ---
-title: Enumerazione AsyncStatusInternal | Documenti Microsoft
+title: AsyncStatusInternal (enumerazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 150169442aa68395b4dc8a4f4c74951e877f18f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863725"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464876"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal (enumerazione)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,23 +34,23 @@ enum AsyncStatusInternal;
 ```  
   
 ## <a name="remarks"></a>Note  
- Specifica un mapping tra enumerazioni interne per lo stato di operazioni asincrone e **Windows::Foundation::AsyncStatus** enumerazione.  
+ Specifica un mapping tra enumerazioni interne per lo stato delle operazioni asincrone e `Windows::Foundation::AsyncStatus` enumerazione.  
   
 ## <a name="members"></a>Membri  
- `_Created`  
- Equivale a:: Windows::Foundation::AsyncStatus:: Create  
+ *_Created*  
+ Equivalente a:: Windows::Foundation::AsyncStatus:: Create  
   
- `_Started`  
- Equivale a:: Windows::Foundation::AsyncStatus:: avviato  
+ *_Started*  
+ Equivalente a:: Windows::Foundation::AsyncStatus:: avviato  
   
- `_Completed`  
- Equivale a:: Windows::Foundation::AsyncStatus:: completata  
+ *_Completed*  
+ Equivalente a:: Windows::Foundation::AsyncStatus:: completata  
   
- `_Cancelled`  
- Equivale a:: Windows::Foundation::AsyncStatus:: annullata  
+ *_Cancelled*  
+ Equivalente a:: Windows::Foundation::AsyncStatus:: annullato  
   
- `_Error`  
- Equivale a:: Windows::Foundation::AsyncStatus::Error  
+ *Errore*  
+ Equivalente a:: Windows::Foundation::AsyncStatus::Error  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: operator = (operatore) | Documenti Microsoft'
+title: 'Operatore comptr:: Operator = | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4066db37de8a993802970784f09141352fef028
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac3a845ea7c512f5a7ccffdabdf67ce26029ff8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871201"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466163"
 ---
 # <a name="comptroperator-operator"></a>Operatore ComPtr::operator=
-Assegna un valore al ComPtr corrente.  
+Assegna un valore all'oggetto corrente **ComPtr**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,29 +57,29 @@ WRL_NOTHROW ComPtr& operator=(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `U`  
+ *U*  
  Una classe.  
   
- `other`  
- Un riferimento rvalue, puntatore o riferimento a un tipo o un altro ComPtr.  
+ *other*  
+ Un puntatore, riferimento o riferimento rvalue a un tipo o un altro **ComPtr**.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un riferimento al ComPtr corrente.  
+ Un riferimento all'oggetto corrente **ComPtr**.  
   
 ## <a name="remarks"></a>Note  
- La prima versione di questo operatore assegna un valore vuoto al ComPtr corrente.  
+ La prima versione di questo operatore assegna un valore vuoto all'oggetto corrente **ComPtr**.  
   
- Nella seconda versione, se il puntatore di interfaccia di assegnazione non è uguale al puntatore di interfaccia ComPtr corrente, il secondo puntatore a interfaccia viene assegnato al ComPtr corrente.  
+ Nella seconda versione, se il puntatore di interfaccia di assegnazione non è quello utilizzato per l'oggetto corrente **ComPtr** puntatore a interfaccia, il secondo puntatore a interfaccia viene assegnato all'oggetto corrente **ComPtr**.  
   
- Nella terza versione, il puntatore a interfaccia l'assegnazione viene assegnato al ComPtr corrente.  
+ Nella terza versione, il puntatore a interfaccia assegnazione viene assegnato all'oggetto corrente **ComPtr**.  
   
- Nella quarta versione, se il puntatore di interfaccia del valore di assegnazione non è uguale al puntatore di interfaccia ComPtr corrente, il secondo puntatore a interfaccia viene assegnato al ComPtr corrente.  
+ Nella quarta versione, se il puntatore di interfaccia del valore di assegnazione non è quello utilizzato per l'oggetto corrente **ComPtr** puntatore a interfaccia, il secondo puntatore a interfaccia viene assegnato all'oggetto corrente **ComPtr**.  
   
- La versione del quinto è un operatore di copia; un riferimento a un ComPtr viene assegnato al ComPtr corrente.  
+ La quinta versione è un operatore di copia. un riferimento a un **ComPtr** viene assegnato all'oggetto corrente **ComPtr**.  
   
- La versione del sesto è un operatore di copia che utilizza la semantica; di spostamento un riferimento rvalue a un ComPtr se qualsiasi tipo è statico, eseguire il cast e quindi assegnato al ComPtr corrente.  
+ La sesta versione è un operatore di copia che usa la semantica; di spostamento un riferimento rvalue a un **ComPtr** se è statico qualsiasi tipo di cast e quindi assegnata all'attuale **ComPtr**.  
   
- La versione del settima è un operatore di copia che utilizza la semantica; di spostamento un riferimento rvalue a un ComPtr di tipo `U` è static cast quindi e assegnato al ComPtr corrente.  
+ La versione del settima è un operatore di copia che usa la semantica; di spostamento un riferimento rvalue a un **ComPtr** typu *U* è static cast quindi e assegnato all'oggetto corrente **ComPtr**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

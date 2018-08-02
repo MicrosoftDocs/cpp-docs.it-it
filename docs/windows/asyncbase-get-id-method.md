@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Get_id | Documenti Microsoft'
+title: 'Metodo asyncbase:: Get_id | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6720348692e92e05922bde1100e42c24a866933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea5efa31a3ebff3c86800a023e3525589952c2fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859800"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464714"
 ---
 # <a name="asyncbasegetid-method"></a>Metodo AsyncBase::get_Id
 Recupera l'handle dell'operazione asincrona.  
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `id`  
- Il percorso in cui l'handle è da archiviare.  
+ *ID*  
+ Il percorso in cui viene archiviato l'handle.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
+ S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo implementa IAsyncInfo::get_Id.  
+ Questo metodo implementa `IAsyncInfo::get_Id`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

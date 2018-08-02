@@ -1,5 +1,5 @@
 ---
-title: 'Costante chaininterfaces:: Iidcount | Documenti Microsoft'
+title: 'Costante chaininterfaces:: Iidcount | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860002"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463941"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>Costante ChainInterfaces::IidCount
-Il numero totale di ID contenuti nelle interfacce specificate dai parametri di modello di interfaccia `I0` tramite `I9`.  
+Il numero totale di interfaccia ID contenuti nelle interfacce specificate dai parametri modello *I0* attraverso *I9*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
  Il numero totale di ID di interfaccia.  
   
 ## <a name="remarks"></a>Note  
- Parametri di modello `I0` e `I1` sono necessari e i parametri `I2` tramite `I9` sono facoltativi. Il conteggio IID di ogni interfaccia in genere è 1.  
+ I parametri del modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *I9* sono facoltativi. Il conteggio IID di ogni interfaccia in genere è 1.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

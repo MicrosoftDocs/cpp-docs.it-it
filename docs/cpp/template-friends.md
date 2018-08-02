@@ -1,5 +1,5 @@
 ---
-title: Elementi Friend di modelli | Documenti Microsoft
+title: Elementi Friend di modelli | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97447189419bad8d3ad6f2026a7ee5f701ebca04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422124"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466956"
 ---
 # <a name="template-friends"></a>Elementi friend di modelli
 
 Modelli di classe possono avere [amici](friend-cpp.md). Una classe o un modello di classe oppure una funzione o un modello di funzione può rappresentare un elemento friend per una classe modello. Gli elementi friend possono anche essere specializzazioni di un modello di classe o di funzione, ma non specializzazioni parziali.  
   
-**C++ 11**: un parametro di tipo può essere dichiarato come friend utilizzando il modulo `friend T;`.  
+**C++ 11**: un parametro di tipo può essere dichiarato come friend usando il modulo `friend T;`.  
   
 ```cpp
 template <typename T>  
@@ -261,5 +261,4 @@ a
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-
-[Argomenti predefiniti](../cpp/default-arguments.md)
+ [Argomenti predefiniti](../cpp/default-arguments.md)

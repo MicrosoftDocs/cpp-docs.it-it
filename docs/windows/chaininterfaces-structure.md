@@ -1,5 +1,5 @@
 ---
-title: Struttura ChainInterfaces | Documenti Microsoft
+title: ChainInterfaces (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18814a4ad87cefa39201d369926c0778931d4d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861136"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461533"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (struttura)
 Specifica le funzioni di verifica e inizializzazione che possono essere applicate a un set di ID di interfaccia.  
@@ -61,44 +61,44 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `I0`  
+ *I0*  
  (Obbligatorio) Interfaccia ID 0.  
   
- `I1`  
+ *I1*  
  (Obbligatorio) Interfaccia ID 1.  
   
- `I2`  
- (Facoltativo) Interfaccia con ID 2.  
+ *I2*  
+ (Facoltativo) ID di interfaccia 2.  
   
- `I3`  
+ *I3*  
  (Facoltativo) ID di interfaccia 3.  
   
- `I4`  
+ *I4*  
  (Facoltativo) ID di interfaccia 4.  
   
- `I5`  
+ *I5*  
  (Facoltativo) ID di interfaccia 5.  
   
- `I6`  
+ *I6*  
  (Facoltativo) ID di interfaccia 6.  
   
- `I7`  
- (Facoltativo) Interfaccia ID 7.  
+ *I7*  
+ (Facoltativo) ID di interfaccia 7.  
   
- `I8`  
+ *I8*  
  (Facoltativo) ID di interfaccia 8.  
   
- `I9`  
+ *I9*  
  (Facoltativo) ID di interfaccia 9.  
   
- `DerivedType`  
+ *DerivedType*  
  Un tipo derivato.  
   
- `BaseType`  
+ *BaseType*  
  Il tipo di base di un tipo derivato.  
   
- `hasImplements`  
- Valore booleano che, se `true`, significa che non è possibile utilizzare un [MixIn](../windows/mixin-structure.md) struttura con una classe che deriva dal [implementa](../windows/implements-structure.md) visuale.  
+ *hasImplements*  
+ Valore booleano che, se **true**, significa che non è possibile utilizzare un [MixIn](../windows/mixin-structure.md) struttura con una classe che deriva dal [implementa](../windows/implements-structure.md) struttura.  
   
 ## <a name="members"></a>Membri  
   
@@ -107,15 +107,15 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dai parametri di modello ChainInterface.|  
-|[Metodo ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Esegue il cast del tipo definito per il puntatore di interfaccia di `I0` parametro di modello in un puntatore a IUnknown.|  
-|[Metodo ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Archivia l'ID di interfaccia definita per il `I0` parametro di modello in una posizione specificata in una matrice specificata di ID di interfaccia.|  
-|[Metodo ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Verifica che ogni interfaccia definita dai parametri di modello `I0` tramite `I9` eredita da IUnknown e/o IInspectable e che `I0` eredita da `I1` tramite `I9`.|  
+|[Metodo ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Viene eseguito il cast del tipo definito per il puntatore di interfaccia di *I0* parametro di modello in un puntatore a IUnknown.|  
+|[Metodo ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Archivia l'ID di interfaccia definito per il *I0* parametro di modello in una posizione specificata in una matrice specificata di ID di interfaccia.|  
+|[Metodo ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Verifica che ogni interfaccia definita dai parametri modello *I0* attraverso *I9* eredita `IUnknown` e/o `IInspectable`e che *I0* eredita da *I1* attraverso *I9*.|  
   
 ### <a name="protected-constants"></a>Costanti protette  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[Costante ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Il numero totale di ID contenuti nelle interfacce specificate dai parametri di modello di interfaccia `I0` tramite `I9`.|  
+|[Costante ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Il numero totale di interfaccia ID contenuti nelle interfacce specificate dai parametri modello *I0* attraverso *I9*.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  
@@ -123,7 +123,7 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
  `ChainInterfaces`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Metodo chaininterfaces:: Verify | Documenti Microsoft'
+title: 'Metodo chaininterfaces:: Verify | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860694"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466839"
 ---
 # <a name="chaininterfacesverify-method"></a>Metodo ChainInterfaces::Verify
-Verifica che ogni interfaccia definita dai parametri di modello `I0` tramite `I9` eredita da IUnknown e/o IInspectable e che `I0` eredita da `I1` tramite `I9`.  
+Verifica che ogni interfaccia definita dai parametri modello *I0* attraverso *I9* eredita da IUnknown e/o IInspectable e che *I0* eredita da *I1* attraverso *I9*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ WRL_NOTHROW __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>Note  
- Se l'operazione di verifica non riesce, un `static_assert` genera un messaggio di errore che descrive l'errore.  
+ Se l'operazione di verifica non riesce, un **static_assert** genera un messaggio di errore che descrive l'errore.  
   
 ## <a name="remarks"></a>Note  
- Parametri di modello `I0` e `I1` sono necessari e i parametri `I2` tramite `I9` sono facoltativi.  
+ I parametri del modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *I9* sono facoltativi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

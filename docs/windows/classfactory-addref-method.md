@@ -1,5 +1,5 @@
 ---
-title: 'Metodo ClassFactory:: AddRef | Documenti Microsoft'
+title: 'Metodo ClassFactory:: AddRef | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ab84f54c8fa5c4784cbdf564805bcfea29b6a93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e01ceee3b889a1755fe272366ab66b32a79ae6f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856147"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462693"
 ---
 # <a name="classfactoryaddref-method"></a>Metodo ClassFactory::AddRef
-Incrementa il conteggio dei riferimenti per l'oggetto ClassFactory corrente.  
+Incrementa il conteggio dei riferimenti per l'oggetto corrente **ClassFactory** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ STDMETHOD_(
  S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

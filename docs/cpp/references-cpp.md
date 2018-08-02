@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956593"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463148"
 ---
 # <a name="references-c"></a>Riferimenti (C++)
 Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto che si trova in un'altra posizione in memoria. A differenza di un puntatore, dopo l'inizializzazione non è possibile impostare un riferimento in modo che indichi un oggetto diverso o che sia impostato su Null. Esistono due tipi di riferimenti: i riferimenti lvalue che fanno riferimento a un nome variabile e i riferimenti rvalue che fanno riferimento a un [oggetto temporaneo](../cpp/temporary-objects.md). L'operatore & indica un riferimento lvalue e l'operatore && indica un riferimento rvalue o un riferimento universale (rvalue o lvalue) in base al contesto.  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>Commento  
- Argomenti contenuti in questa sezione:  
-  
--   [Argomenti della funzione tipo-riferimento](../cpp/reference-type-function-arguments.md)  
-  
--   [Elementi restituiti dalla funzione tipo-riferimento](../cpp/reference-type-function-returns.md)  
-  
--   [Riferimenti a puntatori](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>Vedere anche
+ [Argomenti della funzione tipo-riferimento](../cpp/reference-type-function-arguments.md)  
+ [Elementi restituiti dalla funzione tipo-riferimento](../cpp/reference-type-function-returns.md)  
+ [Riferimenti a puntatori](../cpp/references-to-pointers.md)  
   

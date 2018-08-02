@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dbb46302c2ae8834ab9a2a626a3bfb77c41996a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943542"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461478"
 ---
 # <a name="void-c"></a>void (C++)
 Quando usato come tipo restituito dalla funzione, il **void** parola chiave specifica che la funzione non restituisce un valore. Quando usato per l'elenco di parametri di una funzione, void specifica che la funzione non accetta parametri. Quando usato nella dichiarazione di un puntatore, void specifica che il puntatore è universale.  
   
- Se è di tipo di puntatore **void \*** , il puntatore può indicare una variabile che non è dichiarato con il **const** oppure **volatile** (parola chiave). Un puntatore void non può essere dereferenziato a meno che su di esso non venga eseguito il cast su un altro tipo. Un puntatore void può essere convertito in qualsiasi altro tipo di puntatore ai dati.  
+ Se è di tipo di puntatore `void *`, il puntatore può indicare una variabile che non è dichiarato con il **const** oppure **volatile** (parola chiave). Un puntatore void non può essere dereferenziato a meno che su di esso non venga eseguito il cast su un altro tipo. Un puntatore void può essere convertito in qualsiasi altro tipo di puntatore ai dati.  
   
  Un puntatore void può puntare a una funzione, ma non a un membro di classe in C++.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore criticalsection:: Criticalsection | Documenti Microsoft'
+title: 'Costruttore criticalsection:: Criticalsection | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d86c80d169cb6d9794f163290c30bf1b2563588b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 866159a4b3cbacae8b7ad09154fb93707fe4baac
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870897"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467352"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>Costruttore CriticalSection::CriticalSection
 Inizializza un oggetto di sincronizzazione che è simile a un oggetto mutex, ma può essere utilizzato da solo i thread di un singolo processo.  
@@ -36,11 +36,11 @@ explicit CriticalSection(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `spincount`  
+ *spinCount*  
  Il conteggio di selezione per l'oggetto sezione critica. Il valore predefinito è 0.  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni sulle sezioni critiche e spincounts, vedere il **InitializeCriticalSectionAndSpinCount** funzione nell'area di sincronizzazione della documentazione di Windows API.  
+ Per altre informazioni sulle sezioni critiche e spincounts, vedere la `InitializeCriticalSectionAndSpinCount` funzionare nel **sincronizzazione** sezione della documentazione di Windows API.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

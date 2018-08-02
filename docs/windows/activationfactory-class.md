@@ -1,5 +1,5 @@
 ---
-title: Classe ActivationFactory | Documenti Microsoft
+title: ActivationFactory (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6775e9466ed337a070b6a234a4d65bb949a009e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857955"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461505"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory (classe)
 Abilita l'attivazione di una o più classi da Windows Runtime.  
@@ -39,23 +39,23 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `I0`  
+ *I0*  
  L'interfaccia di zero.  
   
- `I1`  
+ *I1*  
  La prima interfaccia.  
   
- `I2`  
+ *I2*  
  La seconda interfaccia.  
   
 ## <a name="remarks"></a>Note  
- ActivationFactory fornisce i metodi di registrazione e le funzionalità di base per l'interfaccia IActivationFactory. ActivationFactory consente inoltre di fornire un'implementazione della factory personalizzata.  
+ **ActivationFactory** fornisce i metodi di registrazione e la funzionalità di base per il `IActivationFactory` interfaccia. **ActivationFactory** consente inoltre di fornire un'implementazione della factory personalizzata.  
   
  Simbolicamente, il frammento di codice seguente viene illustrato come utilizzare ActivationFactory.  
   
  [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
   
- Frammento di codice seguente viene illustrato come utilizzare il [implementa](../windows/implements-structure.md) struttura per specificare più di tre ID di interfaccia.  
+ Il frammento di codice seguente viene illustrato come utilizzare il [implementa](../windows/implements-structure.md) struttura per specificare più di tre ID di interfaccia.  
   
  `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
   
@@ -65,18 +65,18 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Inizializza la classe ActivationFactory.|  
+|[Costruttore ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Inizializza la **ActivationFactory** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Incrementa il conteggio dei riferimenti dell'oggetto ActivationFactory corrente.|  
-|[Metodo ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Recupera una matrice di ID di interfaccia implementato.|  
-|[Metodo ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Ottiene il nome di classe di runtime dell'oggetto che crea un'istanza di ActivationFactory corrente.|  
+|[Metodo ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Incrementa il conteggio dei riferimenti dell'oggetto corrente **ActivationFactory** oggetto.|  
+|[Metodo ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Recupera una matrice di ID di interfaccia implementata.|  
+|[Metodo ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Ottiene il nome della classe di runtime dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.|  
 |[Metodo ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Ottiene il livello di attendibilità dell'oggetto che crea un'istanza di ActivationFactory corrente.|  
-|[Metodo ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Recupera un puntatore a interfaccia specificato.|  
-|[Metodo ActivationFactory::Release](../windows/activationfactory-release-method.md)|Decrementa il conteggio dei riferimenti dell'oggetto ActivationFactory corrente.|  
+|[Metodo ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Recupera un puntatore all'interfaccia specificata.|  
+|[Metodo ActivationFactory::Release](../windows/activationfactory-release-method.md)|Decrementa il conteggio dei riferimenti dell'oggetto corrente **ActivationFactory** oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  
@@ -100,7 +100,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
  `ActivationFactory`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

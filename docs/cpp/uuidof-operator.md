@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 440d985a522edbb6e30136ec841f934584823204
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943515"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463054"
 ---
 # <a name="uuidof-operator"></a>Operatore __uuidof
 **Sezione specifica Microsoft**  
@@ -33,7 +33,6 @@ ms.locfileid: "37943515"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 __uuidof (expression)  
 ```  
   

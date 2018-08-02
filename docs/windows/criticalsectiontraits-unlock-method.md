@@ -1,5 +1,5 @@
 ---
-title: 'Metodo criticalsectiontraits:: Unlock | Documenti Microsoft'
+title: 'Metodo criticalsectiontraits:: Unlock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35a632a6c88ed29ef5e30e942c1341246de75e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883498"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466010"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>Metodo CriticalSectionTraits::Unlock
-Un modello CriticalSection è specializzato in modo che supporti il rilascio del proprietario dell'oggetto specificato sezione critica.  
+Un modello CriticalSection è specializzata in modo che supporti il rilascio del proprietario dell'oggetto specificato sezione critica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,13 +36,13 @@ inline static void Unlock(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `cs`  
- Puntatore a un oggetto sezione critica.  
+ *cs*  
+ Un puntatore a un oggetto sezione critica.  
   
 ## <a name="remarks"></a>Note  
- Il *tipo* modificatore è definito come `typedef CRITICAL_SECTION* Type;`.  
+ Il *tipo* modificatore viene definito come `typedef CRITICAL_SECTION* Type;`.  
   
- Per ulteriori informazioni, vedere "Funzione LeaveCriticalSection" nella sezione "Funzioni di sincronizzazione" della documentazione dell'API di Windows.  
+ Per altre informazioni, vedere "Function LeaveCriticalSection" nella sezione "Funzioni di sincronizzazione" della documentazione dell'API di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

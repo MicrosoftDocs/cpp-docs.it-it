@@ -1,5 +1,5 @@
 ---
-title: safebuffers | Documenti Microsoft
+title: safebuffers | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbfc9317b5ed7c63e9c70b081c3f241b86a65e5f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467839"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Sezione specifica Microsoft**  
@@ -35,26 +36,26 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **/GS** opzione del compilatore, il compilatore testare i sovraccarichi del buffer inserendo i controlli di sicurezza nello stack. I tipi di strutture di dati che sono idonei per i controlli di sicurezza sono descritti [/GS (controllo sicurezza Buffer)](../build/reference/gs-buffer-security-check.md). Per ulteriori informazioni sul rilevamento di sovraccarichi del buffer, vedere [del compilatore controlli di sicurezza In profondità](http://go.microsoft.com/fwlink/p/?linkid=7260) nel sito Web MSDN.  
+ Il **/GS** opzione del compilatore indica al compilatore di test per i sovraccarichi del buffer inserendo i controlli di sicurezza nello stack. I tipi di strutture di dati che sono idonei per i controlli di sicurezza sono descritti [/GS (controllo sicurezza Buffer)](../build/reference/gs-buffer-security-check.md). Per altre informazioni sul rilevamento di sovraccarichi del buffer, vedere [del compilatore controlli di sicurezza In dettaglio](http://go.microsoft.com/fwlink/p/?linkid=7260) sul sito Web MSDN.  
   
- Una revisione del codice manuale esperta o un'analisi esterna potrebbe determinare che una funzione è protetta da un sovraccarico del buffer. In tal caso, è possibile eliminare i controlli di sicurezza per una funzione applicando la `__declspec(safebuffers)` parola chiave per la dichiarazione di funzione.  
+ Una revisione del codice manuale esperta o un'analisi esterna potrebbe determinare che una funzione è protetta da un sovraccarico del buffer. In tal caso, è possibile eliminare i controlli di sicurezza per una funzione applicando la **__declspec(safebuffers)** una parola chiave per la dichiarazione di funzione.  
   
 > [!CAUTION]
 >  I controlli di sicurezza del buffer sono importanti per la protezione e hanno effetto trascurabile sulle prestazioni. Di conseguenza, è consigliabile non eliminarli, tranne nel raro caso in cui le prestazioni di una funzione siano un problema critico e la sicurezza della funzione sia nota.  
   
 ## <a name="inline-functions"></a>Funzioni inline  
- A *funzione primaria* possibile utilizzare un [inline](inline-functions-cpp.md) (parola chiave) per inserire una copia di un *funzione secondaria*. Se il `__declspec(safebuffers)` (parola chiave) viene applicato a una funzione, il rilevamento di sovraccarichi del buffer viene eliminato per tale funzione. Tuttavia, l'incorporamento influisce il `__declspec(safebuffers)` (parola chiave) nei modi seguenti.  
+ Oggetto *funzione principale* può usare un [inlining](inline-functions-cpp.md) (parola chiave) per inserire una copia di un *funzione secondaria*. Se il **__declspec(safebuffers)** (parola chiave) viene applicato a una funzione, viene eliminato il rilevamento di sovraccarichi del buffer per tale funzione. Tuttavia, l'incorporamento influisce il **__declspec(safebuffers)** parola chiave nei modi seguenti.  
   
- Si supponga che il **/GS** è specificata l'opzione del compilatore per entrambe le funzioni, ma specifica la funzione principale di `__declspec(safebuffers)` (parola chiave). Le strutture dei dati nella funzione secondaria la rendono idonea per i controlli di sicurezza e la funzione non elimina tali controlli. In questo caso:  
+ Si supponga che il **/GS** è specificato l'opzione del compilatore per entrambe le funzioni, ma la funzione principale specifica le **__declspec(safebuffers)** (parola chiave). Le strutture dei dati nella funzione secondaria la rendono idonea per i controlli di sicurezza e la funzione non elimina tali controlli. In questo caso:  
   
 -   Specificare il [forceinline](inline-functions-cpp.md) (parola chiave) sulla funzione secondaria per imporre al compilatore di rendere inline tale funzione indipendentemente dalle ottimizzazioni del compilatore.  
   
--   Poiché la funzione secondaria è idonea per i controlli di sicurezza, controlli di sicurezza vengono applicati anche alla funzione principale anche se specifica il `__declspec(safebuffers)` (parola chiave).  
+-   Poiché la funzione secondaria è idonea per i controlli di sicurezza, controlli di sicurezza vengono applicati anche alla funzione principale anche se specifica la **__declspec(safebuffers)** (parola chiave).  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato come utilizzare il `__declspec(safebuffers)` (parola chiave).  
+ Il codice seguente viene illustrato come utilizzare il **__declspec(safebuffers)** (parola chiave).  
   
-```  
+```cpp 
 // compile with: /c /GS  
 typedef struct {  
     int x[20];  

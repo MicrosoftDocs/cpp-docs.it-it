@@ -1,5 +1,5 @@
 ---
-title: CriticalSectionTraits (struttura) | Documenti Microsoft
+title: CriticalSectionTraits (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870551"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466683"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits (struttura)
-Un oggetto CriticalSection per supportare una sezione critica non valida o una funzione per rilasciare una sezione critica è specializzato.  
+Specializza un oggetto CriticalSection per supportare una sezione critica non è valida o una funzione per rilasciare una sezione critica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,14 +39,14 @@ struct CriticalSectionTraits;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`Type`|Oggetto `typedef` che definisce un puntatore a una sezione critica. `Type` viene definito come `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Oggetto **typedef** che definisce un puntatore a una sezione critica. `Type` viene definito come `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo CriticalSectionTraits::GetInvalidValue](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Un modello CriticalSection è specializzato in modo che il modello è sempre valido.|  
-|[Metodo CriticalSectionTraits::Unlock](../windows/criticalsectiontraits-unlock-method.md)|Un modello CriticalSection è specializzato in modo che supporti il rilascio del proprietario dell'oggetto specificato sezione critica.|  
+|[Metodo CriticalSectionTraits::GetInvalidValue](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Specializza un `CriticalSection` modello in modo che il modello è sempre valido.|  
+|[Metodo CriticalSectionTraits::Unlock](../windows/criticalsectiontraits-unlock-method.md)|Specializza un `CriticalSection` modello in modo che non supporta il rilascio del proprietario dell'oggetto specificato sezione critica.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CriticalSectionTraits`  

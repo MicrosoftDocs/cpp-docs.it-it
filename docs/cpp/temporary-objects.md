@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943209"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466855"
 ---
 # <a name="temporary-objects"></a>Oggetti temporanei
 In alcuni casi, è necessario che il compilatore crei oggetti temporanei. Questi oggetti temporanei possono essere creati per i seguenti motivi:  
@@ -54,4 +54,3 @@ In alcuni casi, è necessario che il compilatore crei oggetti temporanei. Questi
 |------------------------------|-----------------------|  
 |Risultato della valutazione dell'espressione|Tutti i temporanei creati come risultato di valutazione dell'espressione vengono eliminati definitivamente alla fine dell'istruzione di espressione (vale a dire, il punto e virgola), o alla fine delle espressioni di controllo per **per**, **se**, **Sebbene**, **scopo**, e **passare** istruzioni.|  
 |L'inizializzazione **const** riferimenti|Se un inizializzatore non è un l-value dello stesso tipo del riferimento di cui si sta eseguendo l'inizializzazione, un temporaneo del tipo di oggetto sottostante viene creato e inizializzato con l'espressione di inizializzazione. Questo oggetto temporaneo viene eliminato definitivamente subito dopo che l'oggetto di riferimento a cui è associato viene eliminato definitivamente.|  
-  

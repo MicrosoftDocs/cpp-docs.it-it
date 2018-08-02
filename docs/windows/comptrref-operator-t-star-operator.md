@@ -1,5 +1,5 @@
 ---
-title: 'Operatore comptrref:: T * (operatore) | Documenti Microsoft'
+title: 'Operatore comptrref:: T * operatore | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25569c1c8f9e5ab733c50c7be0768f64ec51f8b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f03dfeb75d11ffabe7ab9e29c29474b392dc8bda
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881923"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466800"
 ---
 # <a name="comptrrefoperator-t-operator"></a>Operatore ComPtrRef::operator T*
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +34,7 @@ operator T*();
 ```  
   
 ## <a name="remarks"></a>Note  
- Restituisce il valore della [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro dati dell'oggetto ComPtrRef corrente.  
+ Restituisce il valore della [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro dei dati dell'oggetto corrente **ComPtrRef** oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  
@@ -42,5 +42,5 @@ operator T*();
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comptrref (classe)](../windows/comptrref-class.md)   
+ [ComPtrRef (classe)](../windows/comptrref-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

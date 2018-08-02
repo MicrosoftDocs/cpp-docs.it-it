@@ -1,5 +1,5 @@
 ---
-title: Istruzioni di selezione (C++) | Documenti Microsoft
+title: Istruzioni di selezione (C++) | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f72e3c8145b2909495e53645af8ba500a102ebc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421273"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464428"
 ---
 # <a name="selection-statements-c"></a>Istruzioni di selezione (C++)
-Le istruzioni di selezione C++, [se](../cpp/if-else-statement-cpp.md) e [passare](../cpp/switch-statement-cpp.md), consentono di eseguire in modo condizionale le sezioni di codice.  
+Le istruzioni di selezione C++ [se](../cpp/if-else-statement-cpp.md) e [passare](../cpp/switch-statement-cpp.md), fornire un mezzo per eseguire in modo condizionale le sezioni di codice.  
   
  Il [if_exists](../cpp/if-exists-statement.md) e [if_not_exists](../cpp/if-not-exists-statement.md) istruzioni consentono di includere in modo condizionale il codice in base all'esistenza di un simbolo.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Metodo activationfactory:: Gettrustlevel | Documenti Microsoft'
+title: 'Metodo activationfactory:: Gettrustlevel | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e4dfbfbc146663722eba1302b27e96812d684f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854389"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466722"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>Metodo ActivationFactory::GetTrustLevel
-Ottiene il livello di attendibilità dell'oggetto che crea un'istanza di ActivationFactory corrente.  
+Ottiene il livello di attendibilità dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `trustLvl`  
- Quando questa operazione viene completata, il livello di attendibilità della classe di runtime che crea un'istanza di ActivationFactory.  
+ *trustLvl*  
+ Quando questa operazione viene completata, il livello di attendibilità del runtime di classe che il **ActivationFactory** crea un'istanza.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, viene generato un errore di asserzione e `trustLvl` è impostato su FullTrust.  
+ S_OK se l'esito positivo. in caso contrario, viene generato un errore di asserzione e *trustLvl* è impostato su FullTrust.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

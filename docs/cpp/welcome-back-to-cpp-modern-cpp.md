@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939377"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462362"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ (C++ moderno)
 C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I programmi in C++ ben scritti sono veloci ed efficienti. Il linguaggio è più flessibile di altri linguaggi, in quanto è possibile utilizzarlo per creare un'ampia gamma di applicazioni: da giochi divertenti ed emozionanti, a software scientifico a elevate prestazioni, fino a driver di dispositivo, programmi incorporati e applicazioni client Windows. Per più di 20 anni C++ è stato utilizzato per risolvere problemi come questi e molti altri. Molti non sanno che un numero sempre maggiore di programmatori in C++ ha abbandonato la vecchia programmazione di tipo C per ripiegare sul moderno C++.  
@@ -49,7 +49,6 @@ C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I
  Lo stesso linguaggio C++ si è evoluto. Confrontare i due frammenti di codice seguenti. Qui viene illustrato il funzionamento in C++:  
   
 ```cpp  
-
 #include <vector>
 
 void f()
@@ -81,7 +80,6 @@ void f()
  Di seguito viene illustrato il modo in cui viene eseguita la stessa operazione nel linguaggio C++ moderno:  
   
 ```cpp
-
 #include <memory>  
 #include <vector>  
 
@@ -99,7 +97,6 @@ void f()
         }
     }
 }
-
 ```
 
  In C++ moderno non è necessario utilizzare la gestione delle eccezioni esplicita o new/delete, poiché è possibile usare puntatori intelligenti. Quando si usa la **automatica** deduzione del tipo e [funzione lambda](../cpp/lambda-expressions-in-cpp.md), è possibile scrivere codice più veloce, renderlo più conciso e comprensibile. E una basata su intervallo **per** ciclo è più chiara, più facile da usare e meno soggetto a errori non intenzionali rispetto a un tipo C **per** ciclo. Per scrivere l'applicazione, è possibile usare i boilerplate insieme alle righe minime di codice. È inoltre possibile rendere tale codice indipendente dalle eccezioni e dalla memoria, senza allocazione/deallocazione o codici di errore da gestire.  

@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: operator -&gt; operatore | Documenti Microsoft'
+title: 'Operatore comptr:: -&gt; operatore | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb3571207f328ad044ffd3f2f9b83bcebc7677e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ff18dee2b8d951ab9233e92478eb967e4a02eb9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870185"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464298"
 ---
-# <a name="comptroperator-gt-operator"></a>Comptr:: operator -&gt; (operatore)
+# <a name="comptroperator-gt-operator"></a>Operatore comptr:: -&gt; operatore
 Recupera un puntatore al tipo specificato dal parametro di modello corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,7 +37,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
  Puntatore al tipo specificato dal nome del tipo di modello corrente.  
   
 ## <a name="remarks"></a>Note  
- Questa funzione di supporto rimuove inutile causati dall'utilizzo di STDMETHOD (macro). Grazie a questa funzione IUnknown tipi privati anziché virtuale.  
+ Questa funzione di supporto rimuove un sovraccarico non necessario quando si utilizza lo STDMETHOD (macro). Questa funzione rende `IUnknown` tipi **privati** anziché **virtuale**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

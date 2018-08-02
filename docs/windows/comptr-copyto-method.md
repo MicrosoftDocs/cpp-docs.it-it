@@ -1,5 +1,5 @@
 ---
-title: 'Metodo comptr:: CopyTo | Documenti Microsoft'
+title: 'Metodo comptr:: CopyTo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 680c1278ca2b17c7ea35e72946fb5d5030c5e7c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870871"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464441"
 ---
 # <a name="comptrcopyto-method"></a>Metodo ComPtr::CopyTo
-Copia l'interfaccia corrente o specificata associato a questo ComPtr al puntatore specificato.  
+Copia l'interfaccia corrente o specificata associato a questo **ComPtr** all'indicatore di misura specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,24 +46,24 @@ HRESULT CopyTo(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `U`  
+ *U*  
  Un nome di tipo.  
   
- `ptr`  
+ *ptr*  
  Quando questa operazione viene completata, un puntatore all'interfaccia richiesta.  
   
- `riid`  
+ *riid*  
  ID di interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, HRESULT che indica perché l'operazione QueryInterface implicita non è riuscita.  
+ S_OK se l'esito positivo. in caso contrario, HRESULT che indica il motivo implicito `QueryInterface` operazione non riuscita.  
   
 ## <a name="remarks"></a>Note  
- La prima funzione restituisce una copia di un puntatore all'interfaccia associata a questo ComPtr. Questa funzione restituisce sempre S_OK.  
+ La prima funzione restituisce una copia di un puntatore all'interfaccia associato a questo **ComPtr**. Questa funzione restituisce sempre S_OK.  
   
- La seconda funzione esegue un'operazione QueryInterface sull'interfaccia associata a questo ComPtr per l'interfaccia specificata per il `riid` parametro.  
+ La seconda funzione viene eseguita una `QueryInterface` operazione sull'interfaccia associato a questo **ComPtr** per l'interfaccia specificata dal *riid* parametro.  
   
- La terza funzione esegue un'operazione QueryInterface sull'interfaccia associata a questo ComPtr per l'interfaccia sottostante del parametro `U`.  
+ La terza funzione esegue una `QueryInterface` operazione sull'interfaccia associato a questo **ComPtr** per l'interfaccia sottostante del *U* parametro.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

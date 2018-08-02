@@ -1,5 +1,5 @@
 ---
-title: Riferimento di attributi di C++ | Documenti Microsoft
+title: Riferimento sugli attributi di C++ | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307f2e8e99e469face090acd19e7c5f28c5d9140
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 29c3aacf63396e96b4520fc849e082c6781e5d64
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870845"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460906"
 ---
 # <a name="c-attributes-reference"></a>Riferimenti relativi agli attributi di C++
-Microsoft definisce un set di attributi che semplificano la programmazione COM e lo sviluppo in .NET Framework common language runtime. Quando si includono attributi nei file di origine, il compilatore funziona con provider DLL per inserire o modificare il codice nel file oggetto generati.  
+Microsoft definisce un set di attributi che semplificano la programmazione COM e lo sviluppo di .NET Framework common language runtime. Quando si includono attributi nei file di origine, il compilatore funziona con il provider delle DLL da inserire o modificare il codice nei file di oggetti generato.  
   
  **Nota:** se si sta cercando gli attributi standard di C++, vedere [attributi](../cpp/attributes.md).  
   
@@ -32,10 +32,10 @@ Microsoft definisce un set di attributi che semplificano la programmazione COM e
  Descrive i vari concetti correlati agli attributi.  
   
  [Attributi per gruppo](../windows/attributes-by-group.md)  
- Fornisce i collegamenti agli argomenti di riferimento, raggruppati per funzione dell'attributo.  
+ Vengono forniti collegamenti agli argomenti di riferimento, raggruppati per funzione dell'attributo.  
   
  [Attributi per utilizzo](../windows/attributes-by-usage.md)  
- Fornisce i collegamenti agli argomenti di riferimento, raggruppati in base all'utilizzo dell'attributo.  
+ Vengono forniti collegamenti agli argomenti di riferimento, raggruppati in base all'utilizzo dell'attributo.  
   
  [Riferimento alfabetico agli attributi](../windows/attributes-alphabetical-reference.md)  
  Vengono forniti collegamenti a tutti gli argomenti di riferimento di attributo.  
@@ -44,7 +44,7 @@ Microsoft definisce un set di attributi che semplificano la programmazione COM e
  [Programmazione con attributi](../windows/attributed-programming-concepts.md)  
  Fornisce una panoramica concettuale di attributi.  
   
- [Riferimento](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ [Riferimento](http://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
  Contiene collegamenti ad argomenti in cui sono descritti i riferimenti ai linguaggi C e C++, le librerie fornite con Visual C++, il modello a oggetti estensibilità di Visual C++ e Microsoft Macro Assembler (MASM).  
   
  [Esempi di Visual C++](../visual-cpp-samples.md)  

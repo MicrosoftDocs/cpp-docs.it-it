@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Fireprogress | Documenti Microsoft'
+title: 'Metodo asyncbase:: Fireprogress | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c2c5aab609b597c3a9ff464b868ba831889deed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: faa2e1af556f0184fa88055bcbf154eb783e24e5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863582"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463597"
 ---
 # <a name="asyncbasefireprogress-method"></a>Metodo AsyncBase::FireProgress
 Richiama il gestore di evento di stato di avanzamento corrente.  
@@ -36,11 +36,11 @@ void FireProgress(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `arg`  
- Metodo del gestore eventi da richiamare.  
+ *arg*  
+ Il metodo del gestore eventi da richiamare.  
   
 ## <a name="remarks"></a>Note  
- `ProgressTraits` derivato da [ArgTraitsHelper (struttura)](../windows/argtraitshelper-structure.md).  
+ `ProgressTraits` è derivato da [ArgTraitsHelper (struttura)](../windows/argtraitshelper-structure.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940553"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462264"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversioni di tipi e indipendenza dai tipi (C++ moderno)
 In questo documento vengono identificati i problemi comuni di conversione dei tipi e viene descritto come evitarli quando si scrive codice C++.  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  Notare che i valori vengono interpretati nuovamente in entrambe le direzioni. Se il programma produce risultati bizzarri in cui il segno del valore risulta invertito rispetto al previsto, cercare le conversioni implicite tra i tipi integrali signed e unsigned. Nell'esempio seguente, il risultato dell'espressione (0 - 1) viene convertito implicitamente da **int** al **unsigned int** quando viene archiviato `num`. Lo schema di bit viene così reinterpretato.  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  Il compilatore non emette avvisi sulle conversioni implicite tra i tipi integrali signed e unsigned. Di conseguenza, è consigliabile evitare le conversioni da signed ad unsigned in generale. Se non è possibile evitarle, aggiungere al codice un controllo in fase di esecuzione per rilevare se il valore da convertire è maggiore o uguale a zero e minore o uguale al valore massimo del tipo signed. I valori in questo intervallo verranno modificati da signed a unsigned o viceversa senza che vengano reinterpretati.  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>Conversioni esplicite (cast)  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  L'operatore di cast di tipo C è identico all'operatore di chiamata () e quindi è poco visibile nel codice e facile da ignorare. Entrambi sono errati in quanto sono difficili da riconoscere immediatamente o cercare e sono sufficientemente diversi da richiamare qualsiasi combinazione delle **statici**, **const**, e **reinterpret_cast**. Comprendere che cosa fa un cast di vecchio tipo può essere difficile e può creare errori. Per tutti questi motivi, quando è richiesto un cast, si consiglia di utilizzare uno dei seguenti operatori di cast di C++, che in alcuni casi sono più indipendenti dai tipi e che esprimono lo scopo di programmazione in modo più esplicito:  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      Per altre informazioni, vedere [static_cast](../cpp/static-cast-operator.md).  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      Per altre informazioni, vedere [dynamic_cast](../cpp/dynamic-cast-operator.md).  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      Per altre informazioni, vedere [const_cast](../cpp/const-cast-operator.md).  
@@ -181,7 +174,6 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      Per altre informazioni, vedere [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).  

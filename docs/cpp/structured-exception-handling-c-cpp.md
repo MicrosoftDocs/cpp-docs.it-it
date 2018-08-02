@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940495"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461702"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Anche se Windows e Visual C++ supportano la gestione delle eccezioni strutturata (SEH, Structured Exception Handling), è consigliabile usare la gestione delle eccezioni C++ conforme allo standard ISO, poiché rende il codice più portabile e flessibile. Tuttavia, nel codice esistente per tipi specifici di programmi, potrebbe essere necessario usare la gestione delle eccezioni strutturata.  
@@ -72,7 +72,7 @@ Anche se Windows e Visual C++ supportano la gestione delle eccezioni strutturata
 -   [Uso della gestione strutturata delle eccezioni con C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Esempio  
- Come indicato in precedenza, i distruttori per gli oggetti locali vengono chiamati se si Usa gestione delle eccezioni Strutturata in un programma C++ e compilarlo con i **/EH** opzione con determinati modificatori, ad esempio, **/EHsc** e **/EHa**. È tuttavia possibile che il comportamento durante l'esecuzione non corrisponda a quanto previsto se si usano anche eccezioni C++. L'esempio seguente illustra queste differenze di comportamento.  
+ Come indicato in precedenza, i distruttori per gli oggetti locali vengono chiamati se si usa la gestione delle eccezioni strutturata in un programma C++ e lo si compila usando l'opzione `/EH` con determinati modificatori, ad esempio `/EHsc` e `/EHa`. È tuttavia possibile che il comportamento durante l'esecuzione non corrisponda a quanto previsto se si usano anche eccezioni C++. L'esempio seguente illustra queste differenze di comportamento.  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  Se si usa **/EHsc** per compilare questo codice, ma il controllo di test locale `CPPEX` è non definito, vi è alcuna esecuzione del `TestClass` distruttore e l'output sarà simile al seguente:  

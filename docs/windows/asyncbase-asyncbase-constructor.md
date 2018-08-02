@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore asyncbase:: Asyncbase | Documenti Microsoft'
+title: 'Costruttore asyncbase:: Asyncbase | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf794e3cbd9b566dafcdd1d5928ab9598bb1f08b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6b9b2b1abd9e42461f3bcfc57fcad1840382053
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854772"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466254"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>Costruttore AsyncBase::AsyncBase
-Inizializza un'istanza della classe AsyncBase.  
+Inizializza un'istanza di **AsyncBase** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   

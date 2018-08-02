@@ -1,5 +1,5 @@
 ---
-title: Stringa e I-O formattazione (C++ moderno) | Documenti Microsoft
+title: Formattazione di stringhe e I / O (C++ moderno) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49ece9fef9122d5e2811eeb70a0ea1cba81b2e33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422384"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464097"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formattazione di stringhe e I/O (C++ moderno)
-C++ [iostream](../standard-library/iostream.md) sono in grado dei / o di stringa formattata. Ad esempio, il codice seguente viene illustrato come impostare cout per formattare un numero intero per l'output in formato esadecimale, innanzitutto salvataggio disattivare lo stato corrente e nuovamente l'impostazione in seguito, poiché la formattazione di stato viene passata a cout, rimane in questo modo finché non vengono modificate, non solo per una riga del codice.  
+C++ [iostream](../standard-library/iostream.md) sono in grado dei / o di stringa formattata. Ad esempio, il codice seguente viene illustrato come impostare il cout per formattare un integer da restituire in formato esadecimale, primo salvando lo stato corrente e reimpostandolo in seguito, perché dopo la formattazione di stato viene passata a cout, resta uguale fino alla modifica, non solo per una riga del codice.  
   
 ```cpp  
 #include <iostream>  
@@ -44,22 +44,21 @@ int main()
         << endl;  
     cout.copyfmt(state); // restore previous formatting  
 }  
-  
 ```  
   
- Può essere interamente troppo complesso in molti casi. In alternativa, è possibile utilizzare Boost.Format dalle librerie di C++ Boost, anche se è conforme allo standard. È possibile scaricare qualsiasi libreria Boost dal [Boost](http://www.boost.org/) sito Web.  
+ Ciò può essere interamente troppo complessa in molti casi. In alternativa, è possibile utilizzare Boost dalle librerie Boost di C++, anche se è conforme allo standard. È possibile scaricare qualsiasi libreria Boost dal [Boost](http://www.boost.org/) sito Web.  
   
- Alcuni vantaggi di Boost.Format sono:  
+ Alcuni vantaggi di Boost. Format sono:  
   
--   Safe: Type-safe e genera un'eccezione per gli errori, ad esempio, la specifica di troppo pochi o troppi elementi.  
+-   Sicurezza: Indipendente dai tipi e genera un'eccezione per gli errori, ad esempio, la specifica di troppo pochi o troppi elementi.  
   
--   Extensible: Funziona per qualsiasi tipo che può essere trasmesso.  
+-   Estensibile: Funziona per qualsiasi tipo che può essere trasmesso.  
   
--   Pratica: Posix Standard e stringhe di formato simili.  
+-   Utile: Posix Standard e stringhe di formato simili.  
   
- Sebbene Boost.Format si basa su C++ [iostream](../standard-library/iostream-programming.md), che sono sicuri ed estendibile, non sono le prestazioni ottimizzate. Quando si richiede l'ottimizzazione delle prestazioni, prendere in considerazione C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) e [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), che sono veloci e facili da utilizzare. Tuttavia, non sono estendibili o provvisoria da vulnerabilità. (Esistono versioni sicure, ma comportano una riduzione delle lieve miglioramento delle prestazioni. Per ulteriori informazioni, vedere [printf_s, printf_s_l, wprintf_s, wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) e [sprintf_s sprintf_s_l, swprintf_s, swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
+ Sebbene Boost si basa su C++ [iostream](../standard-library/iostream-programming.md), che sono sicuri ed estensibili, non sono ottimizzate per le prestazioni. Quando è necessario ottimizzare le prestazioni, prendere in considerazione C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) e [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), che sono veloci e facile da usare. Tuttavia, non sono estendibili o senza vulnerabilità. (Le versioni sicure esistono, ma comportano una riduzione delle prestazioni leggero. Per altre informazioni, vedere [printf_s, printf_s_l, wprintf_s, wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) e [sprintf_s, sprintf_s_l, swprintf_s, swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
   
- Il codice seguente vengono illustrate alcune delle funzionalità di formattazione l'aumento di priorità.  
+ Il codice seguente vengono illustrate alcune delle funzionalità di formattazione Boost.  
   
 ```cpp  
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );  
@@ -69,11 +68,10 @@ int main()
         cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];  
     // Georges Benjamin Clemenceau             +33 (0) 123 456 789  
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Bentornato a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   
  [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)   
  [\<iostream >](../standard-library/iostream.md)   

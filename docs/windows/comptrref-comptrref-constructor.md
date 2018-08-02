@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore comptrref:: Comptrref | Documenti Microsoft'
+title: 'Costruttore comptrref:: Comptrref | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870659"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463632"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>Costruttore ComPtrRef::ComPtrRef
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,11 +36,11 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `ptr`  
- Il valore sottostante di un altro oggetto ComPtrRef.  
+ *ptr*  
+ Il valore sottostante di un'altra **ComPtrRef** oggetto.  
   
 ## <a name="remarks"></a>Note  
- Inizializza una nuova istanza della classe ComPtrRef dal puntatore specificato a un altro oggetto ComPtrRef.  
+ Inizializza una nuova istanza di **ComPtrRef** classe dal puntatore specificato a un altro **ComPtrRef** oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  
@@ -48,5 +48,5 @@ ComPtrRef(
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comptrref (classe)](../windows/comptrref-class.md)   
+ [ComPtrRef (classe)](../windows/comptrref-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

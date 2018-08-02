@@ -1,5 +1,5 @@
 ---
-title: Semantica delle espressioni | Documenti Microsoft
+title: Semantica delle espressioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424128"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462742"
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
-Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei relativi operatori ([Precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md) in [convenzioni lessicali](../cpp/lexical-conventions.md), Mostra le relazioni di C++ gli operatori impongono sulle espressioni.)  
+Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei relativi operatori ([Precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md) nelle [convenzioni lessicali](../cpp/lexical-conventions.md), vengono illustrate le relazioni di C++ operatori impongono sulle espressioni.)  
   
 ## <a name="order-of-evaluation"></a>Ordine di valutazione  
  Si consideri l'esempio seguente:  
@@ -70,16 +70,16 @@ Ordine di valutazione dell'espressione con parentesi
  Le espressioni come quelle nella figura riportata sopra vengono valutate esclusivamente per i relativi effetti collaterali (in questo caso, per trasferire le informazioni del dispositivo di uscita di output standard).  
   
 ## <a name="notation-in-expressions"></a>Annotazioni nelle espressioni  
- Il linguaggio C++ specifica determinate compatibilità quando specifica gli operandi. Nella tabella seguente sono illustrati i tipi di operandi accettabili dagli operatori che richiedono gli operandi di tipo *tipo*.  
+ Il linguaggio C++ specifica determinate compatibilità quando specifica gli operandi. Nella tabella seguente mostra i tipi di operandi accettabili dagli operatori che richiedono gli operandi di tipo *tipo*.  
   
 ### <a name="operand-types-acceptable-to-operators"></a>Tipi di operando accettabili dagli operatori  
   
 |Tipo previsto|Tipi consentiti|  
 |-------------------|-------------------|  
-|*type*|`const` *tipo*<br /> `volatile` *tipo*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *tipo*<br /> `volatile const` *type*&|  
+|*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *Tipo*<br /> `volatile const` *type*&|  
 |*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
-|`const` *tipo*|*type*<br /> `const` *tipo*<br />`const` *type*&|  
-|`volatile` *tipo*|*type*<br /> `volatile` *tipo*<br /> `volatile` *type*&|  
+|`const` *Tipo*|*type*<br /> `const` *Tipo*<br />`const` *type*&|  
+|`volatile` *Tipo*|*type*<br /> `volatile` *Tipo*<br /> `volatile` *type*&|  
   
  Poiché le regole precedenti possono essere sempre usate in combinazione, qualora sia previsto un puntatore, è possibile fornire un puntatore di tipo const a un oggetto di tipo volatile.  
   

@@ -1,5 +1,5 @@
 ---
-title: Modelli e risoluzione dei nomi | Documenti Microsoft
+title: Modelli e risoluzione dei nomi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b27f6f7f56604976bb1004594fc7c0ac6fdc923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be1a94215bb13d02970462ee2e8dcb19df1ff05f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422813"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464220"
 ---
 # <a name="templates-and-name-resolution"></a>Modelli e risoluzione di nomi
 
@@ -84,5 +84,4 @@ Nelle definizioni di modello esistono tre tipi di nomi.
  Le espressioni dei dipendenti di tipo e dei dipendenti di valore sono espressioni che includono variabili che sono dipendente di tipo o dipendente di valore. Queste espressioni possono avere semantiche differenti a seconda dei parametri utilizzati per il modello.  
   
 ## <a name="see-also"></a>Vedere anche
-
  [Modelli](../cpp/templates-cpp.md)

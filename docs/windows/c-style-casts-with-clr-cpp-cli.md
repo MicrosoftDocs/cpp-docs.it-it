@@ -1,5 +1,5 @@
 ---
-title: -CLR esegue il cast di tipo C (C + + CLI) | Documenti Microsoft
+title: Esegue il cast di tipo C con - clr (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860398"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464584"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Cast di tipo C con /clr (C++/CLI)
 L'argomento seguente si applica solo a Common Language Runtime.  
   
- Se utilizzato con tipi CLR, il compilatore tenta di eseguire il mapping tra i cast elencati di seguito, nell'ordine seguente cast di tipo C:  
+ Se usato con i tipi CLR, il compilatore prova a eseguire il mapping di tipo C eseguire il cast a uno dei cast elencati di seguito, nell'ordine seguente:  
   
 1.  const_cast  
   
 2.  safe_cast  
   
-3.  safe_cast più const_cast  
+3.  safe_cast plus const_cast  
   
 4.  static_cast  
   
-5.  static_cast più const_cast  
+5.  static_cast plus const_cast  
   
- Se nessuno dei cast elencate in precedenza è valido e se il tipo dell'espressione e il tipo di destinazione siano tipi riferimento CLR, cast di tipo C esegue il mapping a un controllo di runtime (istruzione MSIL castclass). In caso contrario, un cast di tipo C è considerato non valido e il compilatore genera un errore.  
+ Se nessuno dei cast elencati in precedenza è valido e se il tipo dell'espressione e il tipo di destinazione sono tipi riferimento CLR, cast di tipo C esegue il mapping a un controllo di runtime (istruzione MSIL castclass). In caso contrario, un cast di tipo C viene considerato non valido e il compilatore genera un errore.  
   
 ## <a name="remarks"></a>Note  
- Un cast di tipo C non è consigliato. Durante la compilazione con [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), utilizzare [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
+ Non è consigliato un cast di tipo C. Durante la compilazione con [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), usare [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `const_cast`.  
+ L'esempio seguente illustra un cast di tipo C che esegue il mapping a un **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `safe_cast`.  
+ L'esempio seguente illustra un cast di tipo C che esegue il mapping a un **safe_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `safe_cast` più `const_cast`.  
+ L'esempio seguente illustra un cast di tipo C che esegue il mapping a un **safe_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `static_cast`.  
+ L'esempio seguente illustra un cast di tipo C che esegue il mapping a un **static_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `static_cast` più `const_cast`.  
+ L'esempio seguente illustra un cast di tipo C che esegue il mapping a un **static_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,9 +131,9 @@ int main() {
 }  
 ```  
   
- L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un controllo in fase di esecuzione.  
+ L'esempio seguente mostra un cast di tipo C che esegue il mapping a un controllo in fase di esecuzione.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- L'esempio seguente viene illustrato un valido cast di tipo C, che indica al compilatore per l'emissione di un errore.  
+ L'esempio seguente mostra un valido cast di tipo C, in modo che il compilatore per l'emissione di un errore.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

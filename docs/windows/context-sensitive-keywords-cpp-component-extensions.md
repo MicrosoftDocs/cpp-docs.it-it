@@ -1,5 +1,5 @@
 ---
-title: Parole chiave sensibili al contesto (estensioni del componente C++) | Documenti Microsoft
+title: Parole chiave sensibili al contesto (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871523"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466124"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Parole chiave sensibili al contesto (Estensioni del componente C++)
 *Parole chiave sensibili al contesto* sono elementi del linguaggio riconosciuti solo in contesti specifici. All'esterno del contesto specifico, una parola chiave sensibile al contesto può essere un simbolo definito dall'utente.  
@@ -46,7 +46,7 @@ ms.locfileid: "33871523"
   
 -   `internal`   
   
--   [Valore letterale](../windows/literal-cpp-component-extensions.md)  
+-   [valore letterale](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -54,9 +54,9 @@ ms.locfileid: "33871523"
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` (parte [Generics](../windows/generics-cpp-component-extensions.md))  
+-   `where` (in parte [Generics](../windows/generics-cpp-component-extensions.md))  
   
- Per motivi di leggibilità, si desidera limitare l'utilizzo delle parole chiave sensibili al contesto come simboli definiti dall'utente.  
+ Per scopi di leggibilità, è possibile limitare l'utilizzo delle parole chiave sensibili al contesto come simboli definiti dall'utente.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
  **Note**  
@@ -77,9 +77,9 @@ ms.locfileid: "33871523"
 ### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Nell'esempio seguente viene illustrato che nel contesto appropriato, la parola chiave sensibile al contesto `property` può essere utilizzata per definire una proprietà e una variabile.  
+ Esempio di codice seguente viene illustrato che nel contesto appropriato, il **proprietà** parola chiave sensibile al contesto può essere utilizzato per definire una proprietà e una variabile.  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

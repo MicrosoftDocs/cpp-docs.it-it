@@ -1,5 +1,5 @@
 ---
-title: Funzione ActivateInstance | Documenti Microsoft
+title: ActivateInstance (funzione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855575"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461971"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance (funzione)
 Registra e recupera un'istanza di un tipo specificato definito in un ID di classe specificata.  
@@ -39,17 +39,17 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Tipo da attivare.  
+ *T*  
+ Un tipo da attivare.  
   
- `activatableClassId`  
- Il nome dell'ID di classe che definisce parametro `T`.  
+ *activatableClassId*  
+ Il nome dell'ID di classe che definisce i parametri *T*.  
   
- `instance`  
- Al termine di questa operazione, un riferimento a un'istanza di `T`.  
+ *Istanza*  
+ Al termine di questa operazione, un riferimento a un'istanza di *T*.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, un errore HRESULT che indica la causa dell'errore.  
+ S_OK se l'esito positivo. in caso contrario, un errore HRESULT che indica la causa dell'errore.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

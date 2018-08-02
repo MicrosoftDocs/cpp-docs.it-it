@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Putoncomplete | Documenti Microsoft'
+title: 'Metodo asyncbase:: Putoncomplete | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 490484a6988851565b478ef41ad16f0c722eb804
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856072"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465603"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>Metodo AsyncBase::PutOnComplete
-Imposta l'indirizzo del gestore dell'evento di completamento sul valore specificato.  
+Imposta l'indirizzo del gestore dell'evento di completamento al valore specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `completeHandler`  
+ *completeHandler*  
  L'indirizzo a cui è impostato il gestore di evento di completamento.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
+ S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

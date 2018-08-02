@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Getonprogress | Documenti Microsoft'
+title: 'Metodo asyncbase:: Getonprogress | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83af39180da819349e95051c57dc137835db87bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e88509a77c58266c56290b84adfd1e7c143da2ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859540"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465087"
 ---
 # <a name="asyncbasegetonprogress-method"></a>Metodo AsyncBase::GetOnProgress
 Copia l'indirizzo del gestore dell'evento di stato di avanzamento corrente per la variabile specificata.  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `progressHandler`  
- La posizione in cui memorizzare l'indirizzo del gestore dell'evento di stato di avanzamento corrente.  
+ *progressHandler*  
+ Il percorso in cui è archiviato l'indirizzo del gestore dell'evento di stato di avanzamento corrente.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
+ S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

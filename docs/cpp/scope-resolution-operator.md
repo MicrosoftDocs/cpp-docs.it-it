@@ -1,5 +1,5 @@
 ---
-title: "Operatore di risoluzione dell'ambito::: | Documenti Microsoft"
+title: 'Operatore di risoluzione ambito::: | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf3678d204042bdea5e892a6e89d041b5091f38
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420941"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467079"
 ---
 # <a name="scope-resolution-operator-"></a>Operatore di risoluzione dell'ambito: ::
-L'operatore di risoluzione dell'ambito `::` viene usato per identificare e risolvere l'ambiguità degli identificatori usati in diversi ambiti. Per ulteriori informazioni sull'ambito, vedere [ambito](../cpp/scope-visual-cpp.md).  
+L'operatore di risoluzione dell'ambito **::** viene usato per identificare e risolvere l'ambiguità degli identificatori usati in diversi ambiti. Per altre informazioni sull'ambito, vedere [ambito](../cpp/scope-visual-cpp.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,9 +62,7 @@ int main() {
     // A class name used to disambiguate  
     NamespaceA::ClassA a1;  
     a1.x = 2;  
-  
 }  
-  
 ```  
   
  Un operatore di risoluzione dell'ambito senza un qualificatore dell'ambito fa riferimento allo spazio dei nomi globale.  
@@ -101,7 +99,6 @@ namespace NamespaceB {
   
 namespace NamespaceC{  
     using namespace B;  
-  
 }  
 int main() {  
     NamespaceB::ClassB c_b;  
@@ -110,7 +107,6 @@ int main() {
     c_b.x = 3;  
     c_c.x = 4;  
 }  
-  
 ```  
   
  È possibile usare catene di operatori di risoluzione dell'ambito. Nell'esempio seguente, `NamespaceD::NamespaceD1` identifica lo spazio dei nomi annidato `NamespaceD1` e `NamespaceE::ClassE::ClassE1` identifica la classe annidata `ClassE1`.  
@@ -123,7 +119,6 @@ namespace NamespaceD{
 }  
   
 namespace NamespaceE{  
-  
     class ClassE{  
     public:  
         class ClassE1{  
@@ -138,7 +133,6 @@ int main() {
     NamespaceE::ClassE::ClassE1 e1;  
     e1.x = 7  ;  
 }  
-  
 ```  
   
 ## <a name="with-static-members"></a>Con membri statici  
@@ -158,11 +152,10 @@ int main() {
     int gx1 = ClassG::x;  
     int gx2 = ClassG::get_x();   
 }  
-  
 ```  
   
 ## <a name="with-scoped-enumerations"></a>Con enumerazioni con ambito  
- L'operatore di risoluzione dell'ambito viene inoltre utilizzato con i valori di un'enumerazione con ambito [dichiarazioni di enumerazioni](../cpp/enumerations-cpp.md), come nell'esempio seguente:  
+ L'operatore di risoluzione dell'ambito viene usato anche con i valori di un'enumerazione con ambito [dichiarazioni di enumerazioni](../cpp/enumerations-cpp.md), come illustrato nell'esempio seguente:  
   
 ```cpp  
 enum class EnumA{  
@@ -172,12 +165,10 @@ enum class EnumA{
 };  
   
 int main() {  
-  
     EnumA enum_value = EnumA::First;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Spazi dei nomi](../cpp/namespaces-cpp.md)   

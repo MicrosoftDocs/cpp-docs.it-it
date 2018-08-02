@@ -1,5 +1,5 @@
 ---
-title: 'Metodo activationfactory:: Getruntimeclassname | Documenti Microsoft'
+title: 'Metodo activationfactory:: Getruntimeclassname | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db270c88b4335be48016ff2b8bdcf2b5e3951cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db26591bc4d0f1912c968c331266200baeea9917
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854876"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463668"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>Metodo ActivationFactory::GetRuntimeClassName
-Ottiene il nome di classe di runtime dell'oggetto che crea un'istanza di ActivationFactory corrente.  
+Ottiene il nome della classe di runtime dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `runtimeName`  
- Al termine dell'operazione, un handle a una stringa che contiene il nome di classe di runtime dell'oggetto che crea un'istanza di ActivationFactory corrente.  
+ *runtimeName*  
+ Al termine di questa operazione, un handle a una stringa che contiene il nome della classe di runtime dell'oggetto che l'oggetto corrente **ActivationFactory** crea un'istanza.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

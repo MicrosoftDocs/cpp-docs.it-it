@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943145"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461113"
 ---
 # <a name="return-statement-in-program-termination-c"></a>Istruzione return in chiusura del programma (C++)
-Emissione di un `return` istruzione dal **principale** è funzionalmente equivalente alla chiamata il **uscire** (funzione). Si consideri l'esempio seguente:  
+Emissione di un **restituire** istruzione dal `main` è funzionalmente equivalente alla chiamata di `exit` (funzione). Si consideri l'esempio seguente:  
   
 ```cpp 
 // return_statement.cpp  
@@ -36,7 +36,7 @@ int main()
 }  
 ```  
   
- Il **uscire** e **restituire** le istruzioni nell'esempio precedente sono funzionalmente identiche. Tuttavia, il linguaggio C++ richiede che le funzioni che hanno tipi restituiranno diversi da **void** restituiscono un valore. Il **restituire** istruzione consente di restituire un valore da `main`.  
+ Il `exit` e **restituire** le istruzioni nell'esempio precedente sono funzionalmente identiche. Tuttavia, il linguaggio C++ richiede che le funzioni che hanno tipi restituiranno diversi da **void** restituiscono un valore. Il **restituire** istruzione consente di restituire un valore da `main`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Chiusura del programma](../cpp/program-termination.md)

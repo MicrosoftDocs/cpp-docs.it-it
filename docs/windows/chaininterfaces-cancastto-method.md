@@ -1,5 +1,5 @@
 ---
-title: 'Metodo chaininterfaces:: Cancastto | Documenti Microsoft'
+title: 'Metodo chaininterfaces:: Cancastto | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860294"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461210"
 ---
 # <a name="chaininterfacescancastto-method"></a>Metodo ChainInterfaces::CanCastTo
-Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dai parametri di modello non predefinito.  
+Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dai parametri di modello diverso.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +37,17 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `riid`  
+ *riid*  
  ID di interfaccia.  
   
- `ppv`  
- Un puntatore per l'ultimo ID di interfaccia che è stato eseguito il cast correttamente.  
+ *ppv*  
+ Un puntatore all'ID di interfaccia ultimo che è stato eseguito il cast correttamente.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se tutte le operazioni di cast ha esito positivo. in caso contrario, `false`.  
+ **true** se tutte le operazioni di cast ha esito positivo; in caso contrario, **false**.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

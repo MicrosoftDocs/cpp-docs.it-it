@@ -1,5 +1,5 @@
 ---
-title: Supporto del compilatore per tratti di tipo (estensioni del componente C++) | Documenti Microsoft
+title: Supporto del compilatore per tratti di tipo (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -71,31 +71,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862416"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463616"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Supporto del compilatore per tratti di tipo (Estensioni del componente C++)
-Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di un tipo in fase di compilazione.  
+Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di un tipo in fase di compilazione.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
  **Note**  
   
  Tratti di tipo sono particolarmente utili per i programmatori che scrivono librerie.  
   
- Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti i tratti di tipo restituiscono `false` se non viene soddisfatta la condizione specificata dal nome del tratto di tipo.  
+ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti i tratti di tipo restituiscono **false** se non viene soddisfatta la condizione specificata dal nome del tratto di tipo.  
   
- (Nell'elenco seguente, esempi di codice vengono scritti solo in C + + CLI. Ma il tratto di tipo corrispondente è supportato anche in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)], se non diversamente specificato. Il termine "tipo di piattaforma" si riferisce a tipi di Windows Runtime o tipi common language runtime.)  
+ (Nell'elenco seguente, gli esempi di codice sono scritti solo in C + + / CLI. Ma il tratto di tipo corrispondente è supportato anche in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)], se non diversamente specificato. Il termine "tipo di piattaforma" fa riferimento a tipi Windows Runtime o tipi common language runtime.)  
   
 -   `__has_assign(` `type` `)`  
   
      Restituisce true se la piattaforma o il tipo nativo ha un operatore di assegnazione di copia.  
   
     ```  
-  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -103,7 +102,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     int main() {  
     System::Console::WriteLine(__has_assign(R));  
     }  
-  
     ```  
   
 -   `__has_copy(` `type` `)`  
@@ -111,7 +109,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se la piattaforma o il tipo nativo ha un costruttore di copia.  
   
     ```  
-  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -119,15 +116,13 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     int main() {  
     System::Console::WriteLine(__has_copy(R));  
     }  
-  
     ```  
   
 -   `__has_finalizer(` `type` `)`  
   
-     (Non supportato in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Restituisce true se il tipo CLR ha un finalizzatore. Vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per ulteriori informazioni.  
+     (Non supportato in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Restituisce true se il tipo CLR ha un finalizzatore. Vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per altre informazioni.  
   
     ```  
-  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -138,7 +133,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     int main() {  
     Console::WriteLine(__has_finalizer(R));  
     }  
-  
     ```  
   
 -   `__has_nothrow_assign(` `type` `)`  
@@ -146,7 +140,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se un operatore di assegnazione di copia ha una specifica di eccezione vuota.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -156,7 +149,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __has_nothrow_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_constructor(` `type` `)`  
@@ -164,7 +156,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se il costruttore predefinito ha una specifica di eccezione vuota.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -174,7 +165,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __has_nothrow_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_copy(` `type` `)`  
@@ -182,7 +172,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se il costruttore di copia ha una specifica di eccezione vuota.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -192,7 +181,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __has_nothrow_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_assign(` `type` `)`  
@@ -200,7 +188,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se il tipo ha un operatore di assegnazione semplice, generato dal compilatore.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -208,7 +195,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __has_trivial_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_constructor(` `type` `)`  
@@ -216,7 +202,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se il tipo ha un costruttore semplice, generato dal compilatore.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -224,7 +209,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __has_trivial_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_copy(` `type` `)`  
@@ -232,7 +216,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se il tipo ha un costruttore di copia semplice, generato dal compilatore.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -240,15 +223,13 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __has_trivial_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_destructor(` `type` `)`  
   
      Restituisce true se il tipo ha un distruttore semplice, generato dal compilatore.  
   
-    ```  
-  
+    ``` cpp 
     // has_trivial_destructor.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -257,15 +238,13 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __has_trivial_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_user_destructor(` `type` `)`  
   
      Restituisce true se la piattaforma o il tipo nativo ha un distruttore dichiarato dall'utente.  
   
-    ```  
-  
+    ```cpp
     // has_user_destructor.cpp  
   
     using namespace System;  
@@ -276,7 +255,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     int main() {  
     Console::WriteLine(__has_user_destructor(R));  
     }  
-  
     ```  
   
 -   `__has_virtual_destructor(` `type` `)`  
@@ -285,8 +263,7 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
   
      `__has_virtual_destructor` funziona anche su tipi di piattaforma e gli eventuali distruttori definiti dall'utente in un tipo di piattaforma sono distruttori virtuali.  
   
-    ```  
-  
+    ```cpp  
     // has_virtual_destructor.cpp  
     #include <stdio.h>  
     struct S {  
@@ -297,17 +274,15 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __has_virtual_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_abstract(` `type` `)`  
   
-     Restituisce true se il tipo è un tipo astratto. Per ulteriori informazioni sui tipi astratti nativi, vedere [astratta](../windows/abstract-cpp-component-extensions.md).  
+     Restituisce true se il tipo è un tipo astratto. Per altre informazioni sui tipi astratti nativi, vedere [astratta](../windows/abstract-cpp-component-extensions.md).  
   
-     `__is_abstract` funziona anche per i tipi di piattaforma. Un'interfaccia con almeno un membro è un tipo astratto perché è un tipo riferimento con almeno un membro astratto. Per ulteriori informazioni sui tipi di piattaforma astratta, vedere [classi astratte](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` funziona anche per i tipi di piattaforma. Un'interfaccia con almeno un membro è un tipo astratto perché è un tipo riferimento con almeno un membro astratto. Per altre informazioni sui tipi di piattaforma astratta, vedere [classi astratte](../cpp/abstract-classes-cpp.md)  
   
-    ```  
-  
+    ```cpp  
     // is_abstract.cpp  
     #include <stdio.h>  
     struct S {  
@@ -318,17 +293,15 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_abstract(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
      Restituisce true se il primo tipo è una classe di base del secondo tipo o se entrambi i tipi sono uguali.  
   
-     `__is_base_of` funziona anche sui tipi di piattaforma. Ad esempio, verrà restituito true se il primo tipo è un [classe interfaccia](../windows/interface-class-cpp-component-extensions.md) e il secondo tipo implementa l'interfaccia.  
+     `__is_base_of` funziona anche sui tipi di piattaforma. Ad esempio, verrà restituito true se il primo tipo è un' [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md) e il secondo tipo implementa l'interfaccia.  
   
-    ```  
-  
+    ```cpp
     // is_base_of.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -341,15 +314,13 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_base_of(S, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_class(` `type` `)`  
   
      Restituisce true se il tipo è una classe nativa o uno struct.  
   
-    ```  
-  
+    ```
     #include <stdio.h>  
     struct S {};  
   
@@ -357,7 +328,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_class(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
@@ -365,7 +335,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se il primo tipo può essere convertito nel secondo tipo.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -377,20 +346,17 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_convertible_to(T, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_delegate(` `type` `)`  
   
-     Restituisce true se `type` è un delegato. Per ulteriori informazioni, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).  
+     Restituisce true se `type` è un delegato. Per altre informazioni, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).  
   
     ```  
-  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
     }  
-  
     ```  
   
 -   `__is_empty(` `type` `)`  
@@ -398,7 +364,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se il tipo non dispone di alcun membro dati di istanza.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -408,15 +373,13 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_empty(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_enum(` `type` `)`  
   
      Restituisce true se il tipo è un'enumerazione nativa.  
   
-    ```  
-  
+    ```cpp
     // is_enum.cpp  
     #include <stdio.h>  
     enum E { a, b };  
@@ -432,15 +395,13 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_enum(S::E2) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_interface_class(` `type` `)`  
   
-     Restituisce true se viene passata un'interfaccia di piattaforma. Per ulteriori informazioni, vedere [classe interfaccia](../windows/interface-class-cpp-component-extensions.md).  
+     Restituisce true se viene passata un'interfaccia di piattaforma. Per altre informazioni, vedere [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md).  
   
-    ```  
-  
+    ```cpp
     // is_interface_class.cpp  
   
     using namespace System;  
@@ -448,7 +409,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     int main() {  
     Console::WriteLine(__is_interface_class(I));  
     }  
-  
     ```  
   
 -   `__is_pod(` `type` `)`  
@@ -458,7 +418,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      `__is_pod` restituisce false per i  tipi fondamentali.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -466,7 +425,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_pod(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_polymorphic(` `type` `)`  
@@ -474,7 +432,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se un tipo nativo ha funzioni virtuali.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -484,57 +441,49 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_polymorphic(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_ref_array(` `type` `)`  
   
-     Restituisce true se viene passata una matrice di piattaforma. Per ulteriori informazioni, vedere [matrici](../windows/arrays-cpp-component-extensions.md).  
+     Restituisce true se viene passata una matrice di piattaforma. Per altre informazioni, vedere [matrici](../windows/arrays-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
     Console::WriteLine(__is_ref_array(array<int>));  
     }  
-  
     ```  
   
 -   `__is_ref_class(` `type` `)`  
   
-     Restituisce true se viene passata una classe di riferimento. Per ulteriori informazioni sui tipi di riferimento definita dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Restituisce true se viene passata una classe di riferimento. Per altre informazioni sui tipi riferimento definiti dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     int main() {  
     Console::WriteLine(__is_ref_class(Buffer));  
     Console::WriteLine(__is_ref_class(R));  
     }  
-  
     ```  
   
 -   `__is_sealed(` `type` `)`  
   
-     Restituisce true se vengono passati una piattaforma o un tipo nativo contrassegnati come sealed. Per ulteriori informazioni, vedere [sealed](../windows/sealed-cpp-component-extensions.md).  
+     Restituisce true se vengono passati una piattaforma o un tipo nativo contrassegnati come sealed. Per altre informazioni, vedere [sealed](../windows/sealed-cpp-component-extensions.md).  
   
     ```  
-  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
     }  
-  
     ```  
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     Restituisce true se viene passato un tipo valore che non contiene riferimenti all'heap sottoposto a Garbage Collection. Per ulteriori informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Restituisce true se viene passato un tipo valore che non contiene riferimenti all'heap sottoposto a Garbage Collection. Per altre informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -546,7 +495,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     Console::WriteLine(__is_simple_value_class(V));  
     Console::WriteLine(__is_simple_value_class(V2));  
     }  
-  
     ```  
   
 -   `__is_union(` `type` `)`  
@@ -554,7 +502,6 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
      Restituisce true se un tipo è un'unione.  
   
     ```  
-  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -565,21 +512,18 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
     __is_union(A) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_value_class(` `type` `)`  
   
-     Restituisce true se viene passato un tipo valore. Per ulteriori informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Restituisce true se viene passato un tipo valore. Per altre informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     value struct V {};  
   
     int main() {  
     System::Console::WriteLine(__is_value_class(V));  
     }  
-  
     ```  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
@@ -601,9 +545,9 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
 ### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Esempio di codice riportato di seguito viene illustrato come utilizzare un modello di classe per esporre un tratto di tipo del compilatore per un **/clr** compilazione. Per ulteriori informazioni, vedere [Windows Runtime e modelli gestiti](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ Esempio di codice seguente viene illustrato come utilizzare un modello di classe per esporre un tratto di tipo del compilatore per un **/clr** compilazione. Per altre informazioni, vedere [Windows Runtime e modelli gestiti](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-```  
+```cpp  
 // compiler_type_traits.cpp  
 // compile with: /clr  
 using namespace System;  

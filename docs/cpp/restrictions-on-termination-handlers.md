@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3ae16363956afc7cca853307ef2888846a02864d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941340"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461770"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Limitazioni ai gestori di terminazione
 Non è possibile usare una **goto** istruzione di passare in un **try** blocco di istruzioni o un **finally** blocco di istruzioni. È tuttavia necessario inserire il blocco di istruzioni attraverso il normale flusso di controllo. (È possibile, tuttavia, passare direttamente su un **try** blocco di istruzioni.) Inoltre, è possibile annidare un gestore di eccezioni o un gestore di terminazione all'interno di un **finally** blocco.  

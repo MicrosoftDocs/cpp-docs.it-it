@@ -1,5 +1,5 @@
 ---
-title: 'Metodo criticalsection:: lock | Documenti Microsoft'
+title: 'Metodo criticalsection:: lock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871325"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464548"
 ---
 # <a name="criticalsectionlock-method"></a>Metodo CriticalSection::Lock
-Attende che la proprietà dell'oggetto specificato sezione critica. La funzione restituisce quando il thread chiamante viene concessa la proprietà.  
+Attende che la proprietà dell'oggetto specificato sezione critica. La funzione restituisce quando il thread chiamante è concessa la proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,14 +38,14 @@ SyncLock Lock();
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `cs`  
+ *cs*  
  Un oggetto specificato dall'utente sezione critica.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di blocco che può essere usato per sbloccare la sezione critica corrente.  
+ Un oggetto di blocco che può essere utilizzato per sbloccare la sezione critica corrente.  
   
 ## <a name="remarks"></a>Note  
- Il primo **blocco** function viene applicata l'oggetto corrente di sezione critica. Il secondo **blocco** function viene applicata a una sezione critica specificato dall'utente.  
+ Il primo **blocco** function viene applicata l'oggetto corrente di sezione critica. La seconda **blocco** function viene applicata a una sezione critica specificato dall'utente.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

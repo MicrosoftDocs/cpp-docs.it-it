@@ -1,5 +1,5 @@
 ---
-title: 'Metodo activationfactory:: Getiids | Documenti Microsoft'
+title: 'Metodo activationfactory:: Getiids | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f411f3b2f9e777a4e458b64176ace77a8d13e86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855510"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463524"
 ---
 # <a name="activationfactorygetiids-method"></a>Metodo ActivationFactory::GetIids
-Recupera una matrice di ID di interfaccia implementato.  
+Recupera una matrice di ID di interfaccia implementata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,17 +36,17 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `iidCount`  
- Al termine di questa operazione, il numero di ID di interfaccia nel `iids` matrice.  
+ *iidCount*  
+ Al termine di questa operazione, il numero di ID di interfaccia nel *IID* matrice.  
   
- `iids`  
- Al termine dell'operazione, una matrice di implementato gli ID di interfaccia.  
+ *IID*  
+ Quando questa operazione viene completata, una matrice di implementato gli ID di interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT che descrive l'errore. E_OUTOFMEMORY è un HRESULT di errore possibili.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

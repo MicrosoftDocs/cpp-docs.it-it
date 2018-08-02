@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943497"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462219"
 ---
 # <a name="this-pointer"></a>Puntatore this
 Il **ciò** puntatore è un puntatore accessibile solo all'interno di funzioni membro non statico di una **classe**, **struct**, o **unione** tipo. Viene puntato l'oggetto per il quale è chiamata la funzione membro. Le funzioni membro statiche non hanno una **ciò** puntatore.  
@@ -31,7 +31,6 @@ Il **ciò** puntatore è un puntatore accessibile solo all'interno di funzioni m
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -201,4 +200,3 @@ int main()
   
 ## <a name="see-also"></a>Vedere anche  
  [Parole chiave](../cpp/keywords-cpp.md)   
- 

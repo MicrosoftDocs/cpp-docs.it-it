@@ -1,5 +1,5 @@
 ---
-title: Le eccezioni C++ non gestite | Documenti Microsoft
+title: Le eccezioni C++ non gestite | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db763ce602531b15e840013a6dd235b3fba4007e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e2162034b3e9ff93ebccca0f7eb53299b19c648
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467979"
 ---
 # <a name="unhandled-c-exceptions"></a>Eccezioni C++ non gestite
-Se un gestore corrispondente (o i puntini di sospensione **catch** gestore) non è disponibile per l'eccezione corrente, predefinito `terminate` viene chiamata la funzione di runtime. È inoltre possibile chiamare in modo esplicito `terminate` in uno qualsiasi dei gestori. L'azione predefinita `terminate` consiste nel chiamare `abort`. Se si desidera chiamare `terminate` un'altra funzione nel programma prima di uscire dall'applicazione, chiamare la funzione `set_terminate` con il nome della funzione da chiamare come unico argomento. È possibile chiamare `set_terminate` in qualsiasi punto del programma. Il `terminate` routine chiama sempre l'ultima funzione fornita come argomento di `set_terminate`.  
+Se un gestore corrispondente (o i puntini di sospensione **intercettare** gestore) non è stata trovata per l'eccezione corrente, predefinita `terminate` viene chiamata la funzione di runtime. È inoltre possibile chiamare in modo esplicito `terminate` in uno qualsiasi dei gestori. L'azione predefinita `terminate` consiste nel chiamare `abort`. Se si desidera chiamare `terminate` un'altra funzione nel programma prima di uscire dall'applicazione, chiamare la funzione `set_terminate` con il nome della funzione da chiamare come unico argomento. È possibile chiamare `set_terminate` in qualsiasi punto del programma. Il `terminate` routine chiama sempre l'ultima funzione fornita come argomento a `set_terminate`.  
   
 ## <a name="example"></a>Esempio  
  Il codice di esempio seguente genere un'eccezione `char *`, ma non contiene un gestore definito per rilevare eccezioni di tipo `char *`. La chiamata a `set_terminate` indica a `terminate` di chiamare `term_func`.  
   
-```  
+```cpp 
 // exceptions_Unhandled_Exceptions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -55,7 +56,7 @@ int main() {
   
 ## <a name="output"></a>Output  
   
-```  
+```Output  
 term_func was called by terminate.  
 ```  
   
