@@ -1,5 +1,5 @@
 ---
-title: Argomenti predefiniti | Documenti Microsoft
+title: Gli argomenti predefiniti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ddcd094ae828272744060cea5604865d17562890
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409196"
 ---
 # <a name="default-arguments"></a>Argomenti predefiniti
-In molti casi, le funzioni presentano argomenti che vengono usati talmente raramente che un valore predefinito basterebbe. Per risolvere questo problema, la funzionalità argomento predefinito consente di specificare solo quegli argomenti di una funzione che sono significativi in una chiamata specificata. Per illustrare questo concetto, si consideri l'esempio presentato [overload di funzioni](../cpp/function-overloading.md).  
+In molti casi, le funzioni presentano argomenti che vengono usati talmente raramente che un valore predefinito basterebbe. Per risolvere questo problema, la funzionalità argomento predefinito consente di specificare solo quegli argomenti di una funzione che sono significativi in una chiamata specificata. Per illustrare questo concetto, si consideri l'esempio illustrato in [overload di funzioni](../cpp/function-overloading.md).  
   
-```  
+```cpp 
 // Prototype three print functions.  
 int print( char *s );                  // Print a string.  
 int print( double dvalue );            // Print a double.  
@@ -39,16 +40,16 @@ int print( double dvalue, int prec );  // Print a double with a
   
  In molte applicazioni, un'impostazione predefinita ragionevole può essere fornita per `prec`, eliminando la necessità di due funzioni:  
   
-```  
+```cpp 
 // Prototype two print functions.  
 int print( char *s );                    // Print a string.  
 int print( double dvalue, int prec=2 );  // Print a double with a  
 //  given precision.  
 ```  
   
- L'implementazione del `print` funzione viene modificata leggermente per riflettere il fatto che solo una funzione di questo tipo esiste per tipo **doppie**:  
+ L'implementazione del `print` funzione viene modificata leggermente per riflettere il fatto che esista solo una di queste funzioni per il tipo **double**:  
   
-```  
+```cpp 
 // default_arguments.cpp  
 // compile with: /EHsc /c  
   
@@ -81,7 +82,7 @@ int print( double dvalue, int prec ) {
   
  Per richiamare la nuova funzione `print`, usare il codice come quello seguente:  
   
-```  
+```cpp 
 print( d );    // Precision of 2 supplied by default argument.  
 print( d, 0 ); // Override default argument to achieve other  
 //  results.  
@@ -91,13 +92,13 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Gli argomenti predefiniti vengono usati solo nelle chiamate di funzione in cui gli argomenti finali vengono omessi: devono essere gli ultimi argomenti. Pertanto, il codice seguente non è consentito:  
   
-    ```  
+    ```cpp 
     int print( double dvalue = 0.0, int prec );  
     ```  
   
 -   Un argomento predefinito non può essere ridefinito nelle dichiarazioni successive anche se la ridefinizione è identica all'originale. Il codice seguente, quindi, provoca un errore:  
   
-    ```  
+    ```cpp 
     // Prototype for print function.  
     int print( double dvalue, int prec = 2 );  
   
@@ -116,9 +117,6 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Gli argomenti predefiniti possono essere forniti per puntatori a funzioni. Ad esempio:  
   
-    ```  
+    ```cpp 
     int (*pShowIntVal)( int i = 0 );  
     ```  
-  
-## <a name="see-also"></a>Vedere anche  
- 

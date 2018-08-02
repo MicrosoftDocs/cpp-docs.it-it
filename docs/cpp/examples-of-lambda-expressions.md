@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eae00467e2866ba8c0ff9aeb275224d1249ae361
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943308"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404961"
 ---
 # <a name="examples-of-lambda-expressions"></a>Esempi di espressioni lambda
 In questo articolo viene illustrato come utilizzare le espressioni lambda nei programmi. Per una panoramica delle espressioni lambda, vedere [espressioni Lambda](../cpp/lambda-expressions-in-cpp.md). Per altre informazioni sulla struttura di un'espressione lambda, vedere [sintassi delle espressioni Lambda](../cpp/lambda-expression-syntax.md).  
@@ -204,7 +204,6 @@ int main()
     // Print the result.  
     cout << timestwoplusthree << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Output  
@@ -256,7 +255,6 @@ int main()
     // Print the result, which is (7+8)*2.  
     cout << answer << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Output  
@@ -276,7 +274,6 @@ int main()
  È possibile usare la **ciò** puntatore in modo esplicito in una funzione, come illustrato di seguito:  
   
 ```cpp  
-
 // capture "this" by reference
 void ApplyScale(const vector<int>& v) const  
 {  
@@ -290,7 +287,6 @@ void ApplyScale2(const vector<int>& v) const
    for_each(v.begin(), v.end(),   
       [*this](int n) { cout << n * _scale << endl; });  
 }  
-
 ```  
   
  È anche possibile acquisire il **ciò** puntatore in modo implicito:  
@@ -344,7 +340,6 @@ int main()
     Scale s(3);  
     s.ApplyScale(values);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Output  
@@ -354,7 +349,6 @@ int main()
 6  
 9  
 12  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -365,7 +359,7 @@ int main()
 ##  <a name="templateLambdaExpressions"></a> Utilizzo di espressioni Lambda con modelli  
   
 ### <a name="example"></a>Esempio  
- Poiché le espressioni lambda sono tipizzate, è possibile utilizzarle con i modelli C++. Nell'esempio seguente vengono illustrate le funzioni `negate_all` e `print_all`. La funzione `negate_all` applica l'`operator-` unario a ogni elemento dell'oggetto `vector`. La funzione `print_all` visualizza ogni elemento nell'oggetto `vector` nella console.  
+ Poiché le espressioni lambda sono tipizzate, è possibile utilizzarle con i modelli C++. Nell'esempio seguente vengono illustrate le funzioni `negate_all` e `print_all`. Il `negate_all` funzione si applica l'operatore unario **operatore -** a ogni elemento nel `vector` oggetto. La funzione `print_all` visualizza ogni elemento nell'oggetto `vector` nella console.  
   
 ### <a name="code"></a>Codice  
   
@@ -405,7 +399,6 @@ int main()
     cout << "After negate_all():" << endl;  
     print_all(v);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Output  
@@ -418,7 +411,6 @@ After negate_all():
 -34  
 43  
 -56  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -502,7 +494,6 @@ int main()
         Console::WriteLine(s + Convert::ToChar(ch));   
     }("Hello");  
 }  
-  
 ```  
   
 ### <a name="output"></a>Output  
