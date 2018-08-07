@@ -1,5 +1,5 @@
 ---
-title: Delegati generici (Visual C++) | Documenti Microsoft
+title: I delegati generici (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875598"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571311"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegati generici (Visual C++)
-È possibile utilizzare parametri di tipo generico con i delegati. Per ulteriori informazioni sui delegati, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).  
+È possibile utilizzare parametri di tipo generico con i delegati. Per altre informazioni sui delegati, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +37,17 @@ generic < [class | typename] type-parameter-identifiers>
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `attributes` (Facoltativo)  
+ *gli attributi* (facoltativo)  
  Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.  
   
  *type-parameter-identifier(s)*  
  Elenco delimitato da virgole degli identificatori per i parametri di tipo.  
   
- `type-parameter-constraints-clauses`  
- Assume il formato specificato in [vincoli sui parametri di tipo generico (C + c++ /CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *parametro di tipo-clausole di vincoli*  
+ Assume il formato specificato [vincoli su parametri di tipo generico (C + + / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *i modificatori di accessibilità* (facoltativo)  
- I modificatori di accessibilità (ad esempio **pubblica**, `private`).  
+ I modificatori di accessibilità (ad esempio **pubbliche**, **privati**).  
   
  *result-type*  
  Tipo restituito del delegato.  
@@ -55,13 +55,13 @@ generic < [class | typename] type-parameter-identifiers>
  *identifier*  
  Il nome del delegato.  
   
- *i parametri formali* (facoltativo)  
+ *parametri formali di* (facoltativo)  
  Elenco di parametri del delegato.  
   
 ## <a name="example"></a>Esempio  
  I parametri di tipo delegato sono specificati nel punto in cui viene creato un oggetto delegato. Sia il delegato sia il metodo associato a esso devono avere la stessa firma. Di seguito è riportato un esempio di una dichiarazione di delegato generico.  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
@@ -77,7 +77,7 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
   
 -   Quando un metodo generico viene chiamato senza specificare gli argomenti tipo, tramite il compilatore viene eseguito il tentativo di dedurre gli argomenti tipo per la chiamata.  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -114,7 +114,7 @@ int main() {
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene dichiarato un delegato generico `GenDelegate<ItemType>` di cui, successivamente, viene creata un'istanza associandolo al metodo `MyMethod` in cui viene utilizzato il parametro di tipo `ItemType`. Vengono create e richiamate due istanze del delegato (Integer e double).  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

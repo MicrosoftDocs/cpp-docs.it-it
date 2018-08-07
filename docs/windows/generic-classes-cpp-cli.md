@@ -1,5 +1,5 @@
 ---
-title: Classi generiche (C + + CLI) | Documenti Microsoft
+title: Le classi generiche (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881400"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570672"
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 Una classe generica viene dichiarata utilizzando il formato seguente:  
@@ -43,46 +43,46 @@ class-body
 ```  
   
 ## <a name="remarks"></a>Note  
- Nella sintassi precedente, vengono utilizzati i termini seguenti:  
+ Nella sintassi riportata sopra, vengono usati i termini seguenti:  
   
  `attributes` (facoltativo)  
  Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.  
   
- *classe di chiave*  
- Sia `class` o `typename`  
+ *chiave di classi*  
+ Entrambi **classe** o **typename**  
   
  *tipo-parametro-identificatore/i*,  
  Elenco delimitato da virgole di identificatori che specifica i nomi dei parametri di tipo.  
   
- *clausole di vincoli*  
- Un elenco (non virgole) di **dove** clausole che specifica i vincoli per i parametri di tipo. Assume il formato:  
+ *clausole di vincolo*  
+ Un elenco (non virgole) di **in cui** clausole che specifica i vincoli per i parametri di tipo. Assume il formato:  
   
- `where`  *Identificatore di parametro di tipo*`:`*elenco di vincoli*   `...`  
+ `where`  *il parametro-Type-identifier*`:`*-elenco di vincoli*   `...`  
   
  *elenco di vincoli*  
- *classe o interfaccia*[`,` *...* ]  
+ *o-interfaccia della classe*[`,` *...* ]  
   
  *modificatori di accessibilità*  
- Modificatori di accessibilità per la classe generica. Per Windows Runtime, l'unico modificatore consentito è `private`. Per common language runtime, sono consentiti i modificatori `private` e `public`.  
+ Modificatori di accessibilità per la classe generica. Per il Runtime di Windows, è il modificatore consentito solo **privato**. Per il common language runtime, sono consentiti i modificatori **privati** e **pubblico**.  
   
  *identifier*  
  Il nome della classe generica, qualsiasi identificatore C++ valido.  
   
  *modificatori* (facoltativo)  
- È consentito includono modificatori `sealed` e **astratta**.  
+ È consentito includono modificatori **sealed** e **astratta**.  
   
  *base-list*  
- Un elenco che contiene la classe base e le interfacce implementate, tutti separate da virgole.  
+ Un elenco che contiene la classe base ed eventuali interfacce implementate, tutti separate da virgole.  
   
- *corpo della classe*  
+ *corpo-classe*  
  Il corpo della classe, che contiene i campi, le funzioni membro e così via.  
   
- *Dichiaratori*  
- Dichiarazioni di variabili di questo tipo. Ad esempio: `^` *identificatore*[`,` ...]  
+ *dichiaratori*  
+ Dichiarazioni di tutte le variabili di questo tipo. Ad esempio: `^` *identificatore*[`,` ...]  
   
- È possibile dichiarare le classi generiche, ad esempio questi (si noti che la parola chiave **classe** può essere utilizzato al posto del **typename**). In questo esempio, `ItemType`, `KeyType` e `ValueType` sono tipi sconosciuti specificati nel punto in cui il tipo. `HashTable<int, int>` è un tipo costruito un tipo generico `HashTable<KeyType, ValueType>`. Un numero di tipi costruiti diversi può essere costruito da un solo tipo generico. Tipi costruiti costruiti da classi generiche vengono considerati come qualsiasi altro tipo di classe di riferimento.  
+ È possibile dichiarare classi generiche, ad esempio queste (si noti che la parola chiave **classe** possono essere utilizzati al posto di **nomeTipo**). In questo esempio `ItemType`, `KeyType` e `ValueType` sono tipi sconosciuti specificati nel punto in cui il tipo. `HashTable<int, int>` è un tipo del tipo generico costruito `HashTable<KeyType, ValueType>`. Un numero di tipi costruiti diversi può essere costruito da un solo tipo generico. Tipi costruiti costruiti da classi generiche vengono considerati come qualsiasi altro tipo di classe di riferimento.  
   
-```  
+```cpp  
 // generic_classes_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -104,11 +104,11 @@ int main() {
 }  
 ```  
   
- Entrambi i tipi di valore (tipi di entrambi incorporati, ad esempio `int` o `double`, o tipi di valore definito dall'utente) e i tipi di riferimento possono essere usati come argomento di tipo generico. La sintassi all'interno della definizione generica è lo stesso indipendentemente. La sintassi di tipo sconosciuto viene considerato come se fosse un tipo di riferimento. Tuttavia, il runtime è in grado di determinare se il tipo effettivamente utilizzato è un tipo di valore e sostituire il codice generato appropriato per l'accesso diretto ai membri. Tipi di valore utilizzati come argomenti di tipo generico non sono di tipo boxed e pertanto non subiscono la riduzione delle prestazioni associata a conversione boxing. La sintassi utilizzata all'interno del corpo del tipo generico deve essere **T ^** e '**->**'anziché'**.**'. Qualsiasi uso di [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) per il tipo di parametro verrà correttamente interpretato dal runtime come la semplice creazione di un tipo di valore se l'argomento di tipo è un tipo di valore.  
+ Entrambi i tipi di valore (uno predefinito, ad esempio i tipi **int** oppure **doppie**, o tipi di valore definito dall'utente) e i tipi di riferimento possono essere usati come argomento di tipo generico. La sintassi all'interno della definizione generica è lo stesso indipendentemente dal fatto che. Punto di vista sintattico il tipo sconosciuto viene trattato come se fosse un tipo di riferimento. Tuttavia, il runtime è in grado di determinare che se il tipo effettivamente usato è un tipo di valore e sostituire il codice generato appropriato per l'accesso diretto ai membri. I tipi di valore usati come argomenti tipo generico non sono di tipo boxed e pertanto non comportano la riduzione delle prestazioni associata a conversione boxing. La sintassi utilizzata all'interno del corpo del tipo generico deve essere `T^` e `->` invece di `.`. Qualsiasi utilizzo delle [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) per il tipo di parametro verrà correttamente interpretato dal runtime come la semplice creazione di un tipo di valore se l'argomento tipo è un tipo di valore.  
   
- È anche possibile dichiarare una classe generica con [vincoli sui parametri di tipo generico (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) per i tipi che possono essere utilizzati per il parametro di tipo. Nell'esempio seguente qualsiasi tipo utilizzato per `ItemType` deve implementare il `IItem` interfaccia. Tentativo di utilizzare `int`, ad esempio, che non implementa `IItem`, produce un errore in fase di compilazione perché l'argomento di tipo non soddisfa il vincolo.  
+ È anche possibile dichiarare una classe generica con [vincoli su parametri di tipo generico (C + + / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) sui tipi che possono essere utilizzati per il parametro di tipo. Nell'esempio seguente qualsiasi tipo usato per `ItemType` deve implementare il `IItem` interfaccia. Tentativo di utilizzare **int**, ad esempio, che non implementa `IItem`, produrrà un errore in fase di compilazione perché l'argomento di tipo non soddisfa il vincolo.  
   
-```  
+```cpp  
 // generic_classes_2.cpp  
 // compile with: /clr /c  
 interface class IItem {};  
@@ -117,9 +117,9 @@ where ItemType : IItem
 ref class Stack {};  
 ```  
   
- Impossibile eseguire l'overload di classi generiche nello spazio dei nomi stesso modificando solo il numero o i tipi di parametri di tipo. Tuttavia, se ogni classe si trova in uno spazio dei nomi diversi, è possibile eseguire l'overload. Ad esempio, considerare le seguenti due classi, `MyClass` e `MyClass<ItemType>`, gli spazi dei nomi `A` e `B`. Le due classi possono quindi essere sottoposti a overload in uno spazio dei nomi terzo c:  
+ Impossibile eseguire l'overload di classi generiche nello spazio dei nomi stesso modificando solo il numero o i tipi di parametri di tipo. Tuttavia, se ogni classe si trova in uno spazio dei nomi diversi, è possibile eseguire l'overload. Ad esempio, prendere in considerazione le seguenti due classi `MyClass` e `MyClass<ItemType>`, gli spazi dei nomi `A` e `B`. Le due classi possono quindi essere sottoposti a overload in uno spazio dei nomi terza c:  
   
-```  
+```cpp  
 // generic_classes_3.cpp  
 // compile with: /clr /c  
 namespace A {  
@@ -144,9 +144,9 @@ namespace C {
 }  
 ```  
   
- La classe base e interfacce di base non possono essere parametri di tipo. Tuttavia, la classe di base può richiedere il parametro di tipo come argomento, come nel caso seguente:  
+ La classe di base e interfacce di base non possono essere parametri di tipo. Tuttavia, la classe di base può comportare il parametro di tipo come argomento, come nel caso seguente:  
   
-```  
+```cpp  
 // generic_classes_4.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -156,18 +156,18 @@ generic <typename ItemType>
 ref class MyClass : IInterface<ItemType> {};  
 ```  
   
- Costruttori e distruttori vengono eseguiti una volta per ogni istanza degli oggetti (come di consueto); costruttori statici vengono eseguiti una volta per ogni tipo costruito.  
+ Costruttori e distruttori vengono eseguiti una sola volta per ogni istanza dell'oggetto (come di consueto); i costruttori statici vengono eseguiti una sola volta per ogni tipo costruito.  
   
 ## <a name="fields-in-generic-classes"></a>Campi in classi generiche  
- In questa sezione viene illustrato l'utilizzo dell'istanza e i campi statici in classi generiche.  
+ In questa sezione viene illustrato l'utilizzo dell'istanza e campi statici in classi generiche.  
   
 ### <a name="instance-variables"></a>Variabili di istanza  
  Le variabili di istanza di una classe generica possono avere tipi e gli inizializzatori di variabili che includono parametri di tipo dalla classe contenitore.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, tre istanze diverse della classe generica, MyClass\<ItemType >, vengono creati utilizzando gli argomenti di tipo appropriato (`int`, **doppie**, e **stringa**).  
+ Nell'esempio seguente, tre istanze diverse della classe generica, MyClass\<ItemType >, vengono creati utilizzando gli argomenti di tipo appropriato (**int**, **double**e **stringa**).  
   
-```  
+```cpp  
 // generics_instance_fields1.cpp  
 // compile with: /clr  
 // Instance fields on generic classes  
@@ -206,14 +206,14 @@ String field = ABC
 ```  
   
 ## <a name="static-variables"></a>Variabili statiche  
- Durante la creazione di un nuovo tipo generico, vengono create nuove istanze di tutte le variabili statiche e viene eseguito alcun costruttore statico per quel tipo.  
+ Per la creazione di un nuovo tipo generico, vengono create nuove istanze di tutte le variabili statiche e viene eseguito alcun costruttore statico per quel tipo.  
   
- Variabili statiche è possono utilizzare parametri di tipo dalla classe contenitore.  
+ Le variabili statiche possono utilizzare eventuali parametri di tipo dalla classe contenitore.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato l'utilizzo di campi statici e un costruttore statico all'interno di una classe generica.  
+ Nell'esempio seguente illustra l'uso di campi statici e un costruttore statico all'interno di una classe generica.  
   
-```  
+```cpp  
 // generics_static2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -267,27 +267,27 @@ Test1
 ```  
   
 ## <a name="methods-in-generic-classes"></a>Metodi nelle classi generiche  
- Metodi nelle classi generiche possono essere generici. metodi generici non verranno è possibile parametrizzare in modo implicito per il parametro di tipo classe.  
+ I metodi nelle classi generiche possono essere generici. i metodi generici non verranno parametrizzati in modo implicito dal parametro di tipo classe.  
   
  Le regole speciali seguenti si applicano ai metodi all'interno di classi generiche:  
   
--   Metodi nelle classi generiche possono utilizzare i parametri di tipo come variabili locali, i tipi restituiti o parametri.  
+-   I metodi nelle classi generiche è possono usare i parametri di tipo come parametri, tipi restituiti o variabili locali.  
   
--   Metodi nelle classi generiche possono utilizzare i tipi costruiti aperti o chiusi come variabili locali, i tipi restituiti o parametri.  
+-   I metodi nelle classi generiche è possono usare tipi costruiti chiusi o aperti come le variabili locali, i tipi restituiti o parametri.  
   
-### <a name="non-generic-methods-in-generic-classes"></a>Non generico metodi nelle classi generiche  
- Metodi nelle classi generiche che non dispongono di alcun parametro di tipo aggiuntivi sono in genere definiti non generica anche se essi vengono parametrizzate in modo implicito dalla classe generica che lo contiene.  
+### <a name="non-generic-methods-in-generic-classes"></a>Metodi non generici in classi generiche  
+ I metodi nelle classi generiche che non dispongono di alcun parametro di tipo aggiuntive sono dette in genere non generici anche se essi vengono parametrizzate in modo implicito dalla classe generica che lo contiene.  
   
  La firma di un metodo generico non può includere uno o più parametri di tipo della classe contenitore, direttamente o in un tipo costruito aperto. Ad esempio:  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
- Il corpo di questi metodi è inoltre possibile utilizzare questi parametri di tipo.  
+ Il corpo di tali metodi possa anche usare questi parametri di tipo.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente dichiara un metodo non generico, `ProtectData`, all'interno di una classe generica, `MyClass<ItemType>`. Il metodo utilizza il parametro di tipo classe `ItemType` nella sua firma in un tipo costruito aperto.  
+ L'esempio seguente dichiara un metodo, non generiche `ProtectData`, all'interno di una classe generica, `MyClass<ItemType>`. Il metodo Usa il parametro di tipo classe `ItemType` nella sua firma in un tipo costruito aperto.  
   
-```  
+```cpp  
 // generics_non_generic_methods1.cpp  
 // compile with: /clr  
 // Non-generic methods within a generic class.  
@@ -341,11 +341,11 @@ Amount: $123.00**
 ```  
   
 ## <a name="generic-methods-in-generic-classes"></a>Metodi generici in classi generiche  
- È possibile dichiarare i metodi generici nelle classi sia di tipo generiche e non generici. Ad esempio:  
+ È possibile dichiarare i metodi generici in classi sia generiche e non generici. Ad esempio:  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // generics_method2.cpp  
 // compile with: /clr /c  
 generic <typename Type1>  
@@ -365,14 +365,14 @@ public:
 };  
 ```  
   
- Il metodo non generico è ancora generico nel senso che contiene i parametri di parametro di tipo della classe, ma non ha parametri di tipo aggiuntivo.  
+ Il metodo non generico è ancora generico nel senso che contiene i parametri di parametro di tipo della classe, ma non ha parametri di tipo aggiuntivi.  
   
  Tutti i tipi di metodi nelle classi generiche possono essere generico, tra cui statico, istanza e metodi virtuali.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come dichiarare e utilizzare i metodi generici all'interno di classi generiche:  
+ Nell'esempio riportato di seguito viene illustrato come dichiarare e utilizzare i metodi generici in classi generiche:  
   
-```  
+```cpp  
 // generics_generic_method2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -418,9 +418,9 @@ MyMethod returned: Hello World!
 ```  
   
 ## <a name="using-nested-types-in-generic-classes"></a>Utilizzo di tipi annidati in classi generiche  
- Proprio come con le classi normali, è possibile dichiarare gli altri tipi all'interno di una classe generica. La dichiarazione di classe annidata in modo implicito con i parametri di parametri di tipo della dichiarazione di classe esterna. In questo modo, viene definita una classe di nidificata distinta per ogni tipo di outer costruito. Ad esempio, nella dichiarazione,  
+ Proprio come con le classi normali, è possibile dichiarare gli altri tipi all'interno di una classe generica. La dichiarazione di classe annidati verrà impostati in modo implicito parametri dai parametri di tipo della dichiarazione di classe esterna. In questo modo, viene definita una classe annidata distinta per ogni tipo di outer costruito. Ad esempio, nella dichiarazione,  
   
-```  
+```cpp  
 // generic_classes_5.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -431,9 +431,9 @@ ref struct Outer {
   
  Il tipo Outer\<int >:: interna non è uguale al tipo Outer\<double >:: interna.  
   
- Come con i metodi generici in classi generiche, è possono specificare ulteriori parametri di tipo per il tipo annidato. Se si utilizzano gli stessi nomi di parametro di tipo nella classe interna ed esterna, il parametro di tipo interno verrà nascondere il parametro di tipo esterno.  
+ Come con i metodi generici in classi generiche, è possono impostare i parametri di tipo aggiuntivi per il tipo annidato. Se si usano gli stessi nomi di parametro di tipo nella classe interna ed esterna, il parametro di tipo interno nasconde il parametro di tipo esterno.  
   
-```  
+```cpp  
 // generic_classes_6.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -447,15 +447,15 @@ ref class Outer {
 };  
 ```  
   
- Poiché non è possibile fare riferimento al parametro di tipo esterno, il compilatore genererà un avviso in questa situazione.  
+ Poiché non esiste alcun modo per fare riferimento al parametro di tipo esterno, il compilatore genera un avviso in questa situazione.  
   
- Quando sono denominati costruiti tipi generici annidati, il parametro di tipo per il tipo esterno non è incluso nell'elenco di parametri di tipo per il tipo interno, anche se il tipo interno in modo implicito con i parametri di parametro di tipo del tipo esterno. In questo caso, un nome di un tipo costruito sarebbe Outer\<int >:: interna\<stringa >.  
+ Se sono costruiti i tipi generici annidati, il parametro di tipo per il tipo esterno non è incluso nell'elenco di parametri di tipo per il tipo interno, anche se il tipo interno in modo implicito con i parametri di parametro di tipo del tipo esterno. In questo caso, un nome di un tipo costruito sarebbe Outer\<int >:: interna\<stringa >.  
   
- L'esempio seguente illustra la creazione e la lettura di un elenco collegato, l'utilizzo di tipi annidati in classi generiche.  
+ L'esempio seguente illustra la creazione e la lettura di un elenco collegato usando i tipi annidati in classi generiche.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // generics_linked_list.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -546,18 +546,18 @@ Reading nodes:
   
 ## <a name="properties-events-indexers-and-operators-in-generic-classes"></a>Proprietà, eventi, indicizzatori e gli operatori in classi generiche  
   
--   Proprietà, eventi, indicizzatori e operatori possono utilizzare i parametri di tipo della classe generica che lo contiene come valori restituiti, parametri o variabili locali, ad esempio quando `ItemType` è un parametro di tipo di una classe:  
+-   Proprietà, eventi, indicizzatori e gli operatori possono usare i parametri di tipo della classe generica che lo contiene come valori restituiti, parametri o variabili locali, ad esempio quando `ItemType` è un parametro di tipo di una classe:  
   
     ```  
     public ItemType MyProperty {}  
     ```  
   
--   Proprietà, eventi, indicizzatori e gli operatori non stessi essere con parametri.  
+-   Proprietà, eventi, indicizzatori e gli operatori non possono stessi includere parametri.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio mostra le dichiarazioni di una proprietà dell'istanza all'interno di una classe generica.  
+ Questo esempio illustra le dichiarazioni di una proprietà dell'istanza all'interno di una classe generica.  
   
-```  
+```cpp  
 // generics_generic_properties1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -594,9 +594,9 @@ John, 234
 ```  
   
 ## <a name="example"></a>Esempio  
- L'esempio successivo mostra una classe generica con un evento.  
+ L'esempio seguente mostra una classe generica con un evento.  
   
-```  
+```cpp  
 // generics_generic_with_event.cpp  
 // compile with: /clr  
 // Declare a generic class with an event and  
@@ -655,13 +655,13 @@ int main() {
 }  
 ```  
   
-## <a name="generic-structs"></a>Strutture generiche  
- Le regole per la dichiarazione e utilizzo di struct generico sono identici a quelli per le classi generiche, ad eccezione delle differenze indicate nel riferimento del linguaggio Visual C++.  
+## <a name="generic-structs"></a>Struct generici  
+ Le regole per la dichiarazione e utilizzo di struct generico sono identici a quelli per le classi generiche, ad eccezione delle differenze indicato nel riferimento del linguaggio Visual C++.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene dichiarata una struttura generica, `MyGenStruct`, con un campo, `myField`e assegna i valori di tipi diversi (`int`, **doppie**, **String ^**) per questo campo.  
+ L'esempio seguente dichiara uno struct generico `MyGenStruct`, con un campo, `myField`e assegna i valori di tipi diversi (**int**, **double**, `String^`) a questo campo.  
   
-```  
+```cpp  
 // generics_generic_struct1.cpp  
 // compile with: /clr  
 using namespace System;  

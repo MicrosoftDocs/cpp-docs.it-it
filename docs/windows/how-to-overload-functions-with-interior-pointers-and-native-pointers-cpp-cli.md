@@ -1,5 +1,5 @@
 ---
-title: "Procedura: eseguire l'Overload di funzioni con puntatori interni e puntatori nativi (C + + CLI) | Documenti Microsoft"
+title: "Procedura: eseguire l'Overload di funzioni con puntatori interni e puntatori nativi (C + + / CLI) | Microsoft Docs"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e3bc7e5fca6a34f9847c913e92e523b2898068f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2fb1025238dc5cf5b186830d0bea3b896b7391ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874863"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569960"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Procedura: eseguire l'overload di funzioni con puntatori interni e puntatori nativi (C++/CLI)
-Le funzioni possono essere sottoposti a overload a seconda se il tipo di parametro è un puntatore interno o un puntatore nativo.  
+Le funzioni possono essere sottoposti a overload a seconda del fatto che il tipo di parametro è un puntatore interno o un puntatore nativo.  
   
 > [!IMPORTANT]
->  Questa funzionalità del linguaggio è supportata per il **/clr** l'opzione del compilatore, ma non dal **/ZW** l'opzione del compilatore.  
+>  Questa funzionalità del linguaggio è supportata dall'opzione del compilatore `/clr`, ma non dall'opzione del compilatore `/ZW`.  
   
 ## <a name="example"></a>Esempio  
   
 ### <a name="code"></a>Codice  
   
-```  
+```cpp  
 // interior_ptr_overload.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -69,7 +69,7 @@ int main() {
   
 ### <a name="output"></a>Output  
   
-```  
+```Output 
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  

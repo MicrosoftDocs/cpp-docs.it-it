@@ -1,5 +1,5 @@
 ---
-title: 'Metodo handlet:: IsValid | Documenti Microsoft'
+title: 'Metodo handlet:: IsValid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42aca81b3c2a0ad3db652bf9f77c648e503098e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0970fbdfd3b7c1885c6291b3a98f8f59775fa59
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873134"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569605"
 ---
 # <a name="handletisvalid-method"></a>Metodo HandleT::IsValid
-Indica se l'oggetto HandleT corrente rappresenta un handle.  
+Indica se l'oggetto corrente **HandleT** oggetto rappresenta un handle.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +34,7 @@ bool IsValid() const;
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se il HandleT rappresenta un handle. in caso contrario, `false`.  
+ **true** se il **HandleT** rappresenta un handle; in caso contrario, **false**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

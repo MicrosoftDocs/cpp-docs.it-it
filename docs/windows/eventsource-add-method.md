@@ -1,5 +1,5 @@
 ---
-title: 'Metodo EventSource:: Add | Documenti Microsoft'
+title: 'Metodo EventSource:: Add | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873238"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570387"
 ---
 # <a name="eventsourceadd-method"></a>Metodo EventSource::Add
-Aggiunge il gestore dell'evento rappresentato dall'interfaccia del delegato specificato all'insieme di gestori eventi per l'oggetto EventSource corrente.  
+Aggiunge il gestore dell'evento rappresentato dall'interfaccia del delegato specificato all'insieme di gestori di eventi per l'oggetto corrente **EventSource** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,12 +36,12 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `delegateInterface`  
+### <a name="parameters"></a>Parametri  
+ *delegateInterface*  
  L'interfaccia per un oggetto delegato, che rappresenta un gestore eventi.  
   
- `token`  
- Al termine di questa operazione, un handle che rappresenta l'evento. Usare questo token come parametro per il [Remove ()](../windows/eventsource-remove-method.md) metodo rimuovere il gestore dell'evento.  
+ *token*  
+ Quando questa operazione viene completata, un handle che rappresenta l'evento. Usare questo token come parametro per il [Remove ()](../windows/eventsource-remove-method.md) metodo rimuovere il gestore dell'evento.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  

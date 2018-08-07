@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: completare operazioni asincrone mediante WRL | Documenti Microsoft'
+title: 'Procedura: completare operazioni asincrone mediante WRL | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,34 +13,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fff0a6e98dd6fdd28b1fbc2e9146d5b68975e0f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30e408d127e73b111e6ff464ea7530ba01beece3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881525"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570743"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Procedura: completare operazioni asincrone mediante WRL
-In questo documento viene illustrato come utilizzare la libreria di modelli C++ (WRL) di Windows Runtime per avviare le operazioni asincrone ed eseguirle quando le operazioni vengono completate.  
+Questo documento illustra come usare la libreria di modelli C++ (WRL) di Windows Runtime per avviare le operazioni asincrone ed eseguirle quando le operazioni completate.  
   
- Questo documento sono illustrati due esempi. Nel primo esempio viene avviato un timer asincrono e attende lo scadenza del timer. In questo esempio, specificare l'azione asincrona quando si crea l'oggetto timer. Nel secondo esempio viene eseguito un thread di lavoro in background. Questo esempio viene illustrato come utilizzare un metodo di Windows Runtime che restituisce un `IAsyncInfo` interfaccia. Il [Callback](../windows/callback-function-windows-runtime-cpp-template-library.md) funzione è una parte importante di entrambi gli esempi poiché consente di specificare un gestore eventi per elaborare i risultati delle operazioni asincrone.  
+ Questo documento illustra due esempi. Nel primo esempio viene avviato un timer asincrono e attende che scada il timer. In questo esempio si specifica l'azione asincrona quando si crea l'oggetto timer. Nel secondo esempio viene eseguito un thread di lavoro in background. Questo esempio illustra come usare un metodo di Windows Runtime che restituisce un `IAsyncInfo` interfaccia. Il [Callback](../windows/callback-function-windows-runtime-cpp-template-library.md) funzione è una parte importante di entrambi gli esempi in quanto consente di specificare un gestore eventi per elaborare i risultati delle operazioni asincrone.  
   
- Per un esempio di base che crea un'istanza di un componente e recupera un valore della proprietà, vedere [procedura: attivare e utilizzare un componente Windows Runtime](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
+ Per un esempio più semplice che crea un'istanza di un componente e recupera un valore della proprietà, vedere [procedura: attivare e utilizzare un componente di Runtime Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
   
 > [!TIP]
->  Questi esempi utilizzano espressioni lambda per definire i metodi di callback. È inoltre possibile utilizzare gli oggetti funzione (funtori), i puntatori a funzione, o [std:: Function](../standard-library/function-class.md) oggetti. Per ulteriori informazioni sulle espressioni lambda C++, vedere [espressioni Lambda](../cpp/lambda-expressions-in-cpp.md).  
+>  Questi esempi utilizzano le espressioni lambda per definire i metodi di callback. È anche possibile usare gli oggetti funzione (funtori), i puntatori a funzione, o [std:: Function](../standard-library/function-class.md) oggetti. Per altre informazioni sulle espressioni lambda C++, vedere [espressioni Lambda](../cpp/lambda-expressions-in-cpp.md).  
   
 ## <a name="example-working-with-a-timer"></a>Esempio: Utilizzo di un Timer  
- La procedura seguente avvia un timer asincrono e attesa lo scadenza del timer. Segue un esempio completo.  
+ La procedura seguente avvia un timer asincrono e attesa che scada il timer. Segue un esempio completo.  
   
 > [!WARNING]
->  Sebbene in genere, si utilizza la libreria di modelli C++ di Windows Runtime in un'app di Windows della piattaforma UWP (Universal), in questo esempio Usa un'applicazione console a scopo illustrativo. Le funzioni come `wprintf_s` non sono disponibili da un'app UWP. Per ulteriori informazioni sui tipi e funzioni che è possibile utilizzare in un'app UWP, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) e [Win32 e COM per App UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
+>  Sebbene in genere si usa la libreria di modelli C++ di Windows Runtime in un'app Universal Windows Platform (UWP), questo esempio Usa un'app console a scopo illustrativo. Le funzioni come `wprintf_s` non sono disponibili in un'app UWP. Per altre informazioni sui tipi e funzioni che è possibile usare in un'app UWP, vedere [funzioni CRT non supportate nelle App della piattaforma Windows Universal](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) e [Win32 e COM per App UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
-1.  Includere (`#include`) le richieste di Windows Runtime, libreria di modelli di Windows Runtime C++ o delle intestazioni della libreria Standard C++.  
+1.  Includere (`#include`) le richieste di Windows Runtime, libreria modelli C++ per Windows Runtime o delle intestazioni della libreria Standard C++.  
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h dichiara i tipi necessari per utilizzare un timer asincrono.  
+     Windows.System.Threading.h dichiara i tipi necessari per usare un timer asincrono.  
   
      Si consiglia di utilizzare la direttiva `using namespace` nel file con estensione cpp per rendere il codice più leggibile.  
   
@@ -52,45 +52,45 @@ In questo documento viene illustrato come utilizzare la libreria di modelli C++ 
   
      [!code-cpp[wrl-consume-async#4](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_3.cpp)]  
   
-     Il Runtime di Windows utilizza nomi completi per identificare i tipi. Il `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` parametro è una stringa che viene fornita da Windows Runtime e contiene il nome di classe di runtime richiesto.  
+     Il Runtime di Windows utilizza nomi completi per identificare i tipi. Il `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` parametro è una stringa che viene fornita dal Runtime di Windows e che contiene il nome di classe di runtime necessari.  
   
-4.  Creare un [evento](../windows/event-class-windows-runtime-cpp-template-library.md) oggetto che consente di sincronizzare il callback del timer per l'app principale.  
+4.  Creare un [evento](../windows/event-class-windows-runtime-cpp-template-library.md) oggetto che consente di sincronizzare il callback di timer per l'app principale.  
   
      [!code-cpp[wrl-consume-async#5](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_4.cpp)]  
   
     > [!NOTE]
-    >  Questo evento è per una dimostrazione solo come parte di un'applicazione console. In questo esempio viene utilizzato l'evento per garantire che un'operazione asincrona viene completata prima l'app si chiude. Nella maggior parte delle App, in genere non attendere completamento delle operazioni asincrone.  
+    >  Questo evento è a scopo dimostrativo solo come parte di un'app console. Questo esempio Usa l'evento per garantire che un'operazione asincrona venga completata prima l'app si chiude. Nella maggior parte delle App, in genere non rischiare che completamento delle operazioni asincrone.  
   
-5.  Creare un `IThreadPoolTimer` che scade dopo due secondi. Utilizzare il `Callback` funzione per creare il gestore dell'evento (un `ABI::Windows::System::Threading::ITimerElapsedHandler` oggetto).  
+5.  Creare un `IThreadPoolTimer` che scade dopo due secondi. Usare la `Callback` funzione per creare il gestore dell'evento (un `ABI::Windows::System::Threading::ITimerElapsedHandler` oggetto).  
   
      [!code-cpp[wrl-consume-async#6](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_5.cpp)]  
   
-6.  Stampa un messaggio nella console e attendere che il callback del timer per il completamento. Tutti gli oggetti `ComPtr` e RAII lasciano l'ambito e vengono rilasciati automaticamente.  
+6.  Stampa un messaggio nella console e attende il callback di timer per il completamento. Tutti gli oggetti `ComPtr` e RAII lasciano l'ambito e vengono rilasciati automaticamente.  
   
      [!code-cpp[wrl-consume-async#7](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_6.cpp)]  
   
- Di seguito è riportato un esempio completo:  
+ Ecco un esempio completo:  
   
  [!code-cpp[wrl-consume-async#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_7.cpp)]  
   
 ### <a name="compiling-the-code"></a>Compilazione del codice  
- Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `wrl-consume-async.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+ Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `wrl-consume-async.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.  
   
- **CL.exe async.cpp utilizzare wrl runtimeobject**  
+ `cl.exe wrl-consume-async.cpp runtimeobject.lib` 
   
 ## <a name="example-working-with-a-background-thread"></a>Esempio: Utilizzo di un Thread in Background  
  La procedura seguente avvia un thread di lavoro e definisce l'azione eseguita da tale thread. Segue un esempio completo.  
   
 > [!TIP]
->  Questo esempio viene illustrato come utilizzare il `ABI::Windows::Foundation::IAsyncAction` interfaccia. È possibile applicare questo modello per qualsiasi interfaccia implementata da `IAsyncInfo`: `IAsyncAction`, `IAsyncActionWithProgress`, `IAsyncOperation`, e `IAsyncOperationWithProgress`.  
+>  In questo esempio viene illustrato come lavorare con i `ABI::Windows::Foundation::IAsyncAction` interfaccia. È possibile applicare questo modello a qualsiasi interfaccia che implementa `IAsyncInfo`: `IAsyncAction`, `IAsyncActionWithProgress`, `IAsyncOperation`, e `IAsyncOperationWithProgress`.  
   
-1.  Includere (`#include`) le richieste di Windows Runtime, libreria di modelli di Windows Runtime C++ o delle intestazioni della libreria Standard C++.  
+1.  Includere (`#include`) le richieste di Windows Runtime, libreria modelli C++ per Windows Runtime o delle intestazioni della libreria Standard C++.  
   
      [!code-cpp[wrl-consume-asyncOp#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_8.cpp)]  
   
-     Windows.System.Threading.h dichiara i tipi necessari per utilizzare un thread di lavoro.  
+     Windows.System.Threading.h dichiara i tipi necessari per usare un thread di lavoro.  
   
-     È consigliabile utilizzare il `using namespace` direttiva nel file con estensione cpp per rendere il codice più leggibile.  
+     È consigliabile usare il `using namespace` direttiva nel file con estensione cpp per rendere il codice più leggibile.  
   
 2.  Inizializzare il Runtime di Windows.  
   
@@ -105,26 +105,26 @@ In questo documento viene illustrato come utilizzare la libreria di modelli C++ 
      [!code-cpp[wrl-consume-asyncOp#5](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_11.cpp)]  
   
     > [!NOTE]
-    >  Questo evento è per una dimostrazione solo come parte di un'applicazione console. In questo esempio viene utilizzato l'evento per garantire che un'operazione asincrona viene completata prima l'app si chiude. Nella maggior parte delle App, in genere non attendere completamento delle operazioni asincrone.  
+    >  Questo evento è a scopo dimostrativo solo come parte di un'app console. Questo esempio Usa l'evento per garantire che un'operazione asincrona venga completata prima l'app si chiude. Nella maggior parte delle App, in genere non rischiare che completamento delle operazioni asincrone.  
   
-5.  Chiamare il `IThreadPoolStatics::RunAsync` metodo per creare un thread di lavoro. Utilizzare il `Callback` (funzione) per definire l'azione.  
+5.  Chiamare il `IThreadPoolStatics::RunAsync` metodo per creare un thread di lavoro. Usare il `Callback` (funzione) per definire l'azione.  
   
      [!code-cpp[wrl-consume-asyncOp#6](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_12.cpp)]  
   
      Il `IsPrime` funzione è definita nell'esempio completo che segue.  
   
-6.  Stampa un messaggio nella console e attendere il completamento del thread. Tutti gli oggetti `ComPtr` e RAII lasciano l'ambito e vengono rilasciati automaticamente.  
+6.  Stampa un messaggio nella console e attendere che il thread per il completamento. Tutti gli oggetti `ComPtr` e RAII lasciano l'ambito e vengono rilasciati automaticamente.  
   
      [!code-cpp[wrl-consume-asyncOp#7](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_13.cpp)]  
   
- Di seguito è riportato un esempio completo:  
+ Ecco un esempio completo:  
   
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
 ### <a name="compiling-the-code"></a>Compilazione del codice  
- Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `wrl-consume-asyncOp.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+ Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `wrl-consume-asyncOp.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.  
   
- **CL.exe asyncOp.cpp utilizzare wrl runtimeobject**  
+ `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`  
   
 ## <a name="see-also"></a>Vedere anche  
  [Libreria di modelli di Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

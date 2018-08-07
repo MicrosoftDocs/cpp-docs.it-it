@@ -1,5 +1,5 @@
 ---
-title: Classe DontUseNewUseMake | Documenti Microsoft
+title: DontUseNewUseMake (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f343d0b47d50cd375d186c29ff55b91898aa9c61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 351b38a002c470dcd3f53e8336e393f845fdb3cf
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872328"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569569"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake (classe)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +34,7 @@ class DontUseNewUseMake;
 ```  
   
 ## <a name="remarks"></a>Note  
- Impedisce l'utilizzo di operatore `new` in RuntimeClass. Di conseguenza, è necessario utilizzare il [funzione](../windows/make-function.md) invece.  
+ Impedisce usando l'operatore **nuovo** in RuntimeClass. Di conseguenza, è necessario usare il [rendere funzione](../windows/make-function.md) invece.  
   
 ## <a name="members"></a>Membri  
   
@@ -42,16 +42,16 @@ class DontUseNewUseMake;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore DontUseNewUseMake::operator new](../windows/dontusenewusemake-operator-new-operator.md)|Esegue l'overload di operatore `new` e impedisce venga utilizzato in RuntimeClass.|  
+|[Operatore DontUseNewUseMake::operator new](../windows/dontusenewusemake-operator-new-operator.md)|Operatore di overload **nuovo** e impedisce l'utilizzo di RuntimeClass.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `DontUseNewUseMake`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
+ [Microsoft::WRL::Details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [Funzione Make](../windows/make-function.md)

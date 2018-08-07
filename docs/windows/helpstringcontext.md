@@ -1,5 +1,5 @@
 ---
-title: helpstringcontext | Documenti Microsoft
+title: helpstringcontext | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874577"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569999"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
-Specifica l'ID di un argomento della Guida in un file hlp o chm.  
+Specifica l'ID di un argomento della Guida in un file con estensione chm o. hlp.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ helpstringcontext(  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `contextID`  
- Un identificatore di contesto della Guida a 32 bit del file della Guida.  
+### <a name="parameters"></a>Parametri  
+ *contextID*  
+ Un identificatore di contesto della Guida in linea a 32 bit nel file della Guida.  
   
 ## <a name="remarks"></a>Note  
- Il **helpstringcontext** attributo C++ ha la stessa funzionalità come il [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL (attributo).  
+ Il **helpstringcontext** attributi di C++ ha la stessa funzionalità come la [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL (attributo).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -68,16 +67,16 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**Si applica a**|**classe**, `interface`, metodo di interfaccia|  
+|**Si applica a**|**classe**, **interfaccia**, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi di interfaccia](../windows/interface-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Attributi del metodo](../windows/method-attributes.md)   
- [Modulo](../windows/module-cpp.md)   
+ [modulo](../windows/module-cpp.md)   

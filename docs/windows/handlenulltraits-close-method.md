@@ -1,5 +1,5 @@
 ---
-title: 'Metodo handlenulltraits:: Close | Documenti Microsoft'
+title: 'Metodo handlenulltraits:: Close | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1319b6a75f92e057975d0f8d2c7e2753df47141
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3bc6e7adfa99e2ce25c9913309b5c5bd486bee0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873170"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569401"
 ---
 # <a name="handlenulltraitsclose-method"></a>Metodo HANDLENullTraits::Close
 Chiude l'handle specificato.  
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `h`  
- Chiudere l'handle.  
+### <a name="parameters"></a>Parametri  
+ *h*  
+ Handle da chiudere.  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se gestire `h` chiusa correttamente; in caso contrario, **false**.  
+ **true** se gestiscono *h* chiuso correttamente; in caso contrario, **false**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

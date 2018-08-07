@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: dichiarare i puntatori di blocco e i tipi di valore | Documenti Microsoft'
+title: 'Procedura: dichiarare i puntatori di blocco e i tipi di valore | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880384"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569755"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Procedura: dichiarare i puntatori di blocco e i tipi di valore
-Un tipo di valore può essere sottoposto a boxing in modo implicito. È possibile dichiarare un puntatore di blocco per l'oggetto di tipo di valore stesso e utilizzare un **pin_ptr** al tipo di valore boxed.  
+Un tipo di valore può essere sottoposto a boxing in modo implicito. È quindi possibile dichiarare un puntatore di blocco per l'oggetto di tipo valore stesso e utilizzare un **pin_ptr** al tipo di valore boxed.  
   
 ## <a name="example"></a>Esempio  
   
 ### <a name="code"></a>Codice  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -50,7 +50,7 @@ int main() {
   
 ### <a name="output"></a>Output  
   
-```  
+```Output  
 8  
 7  
 7  

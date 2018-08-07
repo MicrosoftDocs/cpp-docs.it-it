@@ -1,5 +1,5 @@
 ---
-title: 'Metodo EventSource:: Remove | Documenti Microsoft'
+title: 'Metodo EventSource:: Remove | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf0480252fca342b8a690e93f92ae14ca5e84c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569495"
 ---
 # <a name="eventsourceremove-method"></a>Metodo EventSource::Remove
-Elimina il gestore dell'evento rappresentato dal token di registrazione di eventi specificato dall'insieme di gestori di eventi associato all'oggetto EventSource corrente.  
+Elimina il gestore dell'evento rappresentato dal token di registrazione di eventi specificato dall'insieme di gestori di eventi associato all'oggetto corrente **EventSource** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ HRESULT Remove(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `token`  
- Handle che rappresenta un gestore eventi. Questo token è stato restituito quando il gestore dell'evento è stato registrato per il [Add](../windows/eventsource-add-method.md) metodo.  
+### <a name="parameters"></a>Parametri  
+ *token*  
+ Un handle che rappresenta un gestore eventi. Questo token è stato restituito quando il gestore dell'evento è stato registrato per il [Add ()](../windows/eventsource-add-method.md) (metodo).  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni sulla struttura EventRegistrationToken, vedere l'argomento Windows::Foundation::EventRegistrationToken struttura nella documentazione di riferimento di Windows Runtime.  
+ Per altre informazioni sulla struttura EventRegistrationToken, vedere il `Windows::Foundation::EventRegistrationToken` argomento struttura nella documentazione di riferimento di Windows Runtime.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Event. h  

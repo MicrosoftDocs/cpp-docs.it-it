@@ -1,5 +1,5 @@
 ---
-title: Modifica le proprietà del controllo | Documenti Microsoft
+title: Modifica delle proprietà di controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7976f74e9454b023c4da51168fa780ccaea2342
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa1283f90560390f8fc14ee13d1ab022bbeeff11
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873485"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568862"
 ---
 # <a name="editing-control-properties"></a>Modifica delle proprietà dei controlli
-### <a name="to-edit-the-properties-of-a-control-or-controls"></a>Per modificare le proprietà di una o più controlli  
+### <a name="to-edit-the-properties-of-a-control-or-controls"></a>Per modificare le proprietà di uno o più controlli  
   
 1.  Nella finestra di dialogo, selezionare il controllo che si desidera modificare.  
   
     > [!NOTE]
-    >  Se si selezionano più controlli, è possano modificare solo le proprietà comuni a tutti i controlli.  
+    >  Se si selezionano più controlli, solo le proprietà comuni a tutti i controlli possono essere modificate.  
   
 2.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window), modificare le proprietà del controllo.  
   
     > [!NOTE]
-    >  Quando si imposta la **Bitmap** proprietà di un pulsante, un pulsante di opzione o un controllo casella di controllo uguale a **True**, lo stile BS_BITMAP viene implementato per il controllo. Per ulteriori informazioni, vedere [stili dei pulsanti](../mfc/reference/styles-used-by-mfc.md#button-styles). Per un esempio di associazione di una bitmap con un controllo, vedere [CButton:: SetBitmap](../mfc/reference/cbutton-class.md#setbitmap). Bitmap non verranno visualizzata sul controllo mentre si è nell'editor di risorse finestra di dialogo.  
+    >  Quando si impostano i **Bitmap** proprietà per un pulsante, un pulsante di opzione o un controllo casella di controllo uguale a **True**, lo stile BS_BITMAP viene implementata per il controllo. Per altre informazioni, vedere [stili dei pulsanti](../mfc/reference/styles-used-by-mfc.md#button-styles). Per un esempio di associazione di una bitmap con un controllo, vedere [CButton:: SetBitmap](../mfc/reference/cbutton-class.md#setbitmap). Bitmap non verranno visualizzata sul controllo mentre si è nell'editor di risorse finestra di dialogo.  
   
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>Per annullare le modifiche alle proprietà di un controllo  
   
-1.  Verificare che il controllo ha lo stato attivo nell'editor finestre.  
+1.  Assicurarsi che il controllo ha lo stato attivo nell'editor finestre.  
   
-2.  Scegliere **Annulla** dal **modifica** menu (se non è attivo il controllo, il **Annulla** comando non sarà disponibile).  
+2.  Scegliere **annullare** dalle **modificare** menu (se non è attivo il controllo, il **annullare** comando non sarà disponibile).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* . Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) e[Procedura dettagliata: utilizzo delle risorse per la localizzazione con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
-

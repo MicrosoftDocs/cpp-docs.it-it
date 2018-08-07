@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore eventtargetarray:: Eventtargetarray | Documenti Microsoft'
+title: 'Costruttore eventtargetarray:: Eventtargetarray | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872715"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569788"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>Costruttore EventTargetArray::EventTargetArray
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,26 +36,26 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `hr`  
- Dopo le operazioni di questo costruttore, parametro `hr` indica se l'allocazione della matrice ha avuto esito positivo o negativo. Nella tabella seguente sono elencati i valori possibili per `hr`.  
+### <a name="parameters"></a>Parametri  
+ *risorse umane*  
+ Dopo le operazioni di questo costruttore, parametro *hr* indica se l'allocazione della matrice ha avuto esito positivo o negativo. La tabella seguente elenca i possibili valori per *hr*.  
   
  S_OK  
  Operazione completata.  
   
  E_OUTOFMEMORY  
- Impossibile allocare memoria per la matrice.  
+ Non è stato possibile allocare memoria per la matrice.  
   
  S_FALSE  
- Parametro `items` è minore o uguale a zero.  
+ Parametro *elementi* è minore o uguale a zero.  
   
- `items`  
+ *elementi*  
  Il numero di elementi della matrice da allocare.  
   
 ## <a name="remarks"></a>Note  
- Inizializza una nuova istanza della classe EventTargetArray.  
+ Inizializza una nuova istanza di **EventTargetArray** classe.  
   
- EventTargetArray viene utilizzato per mantenere una matrice dei gestori eventi in un oggetto di EventSource.  
+ **EventTargetArray** viene usato per mantenere una matrice dei gestori eventi in un `EventSource` oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Event. h  
@@ -63,5 +63,5 @@ EventTargetArray(
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [EventTargetArray (classe)](../windows/eventtargetarray-class.md)   
+ [Classe EventTargetArray](../windows/eventtargetarray-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

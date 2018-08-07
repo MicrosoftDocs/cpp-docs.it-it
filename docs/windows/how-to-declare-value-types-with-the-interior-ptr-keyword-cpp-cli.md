@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: dichiarare i tipi di valore con la parola chiave interior_ptr (C + + CLI) | Documenti Microsoft'
+title: 'Procedura: dichiarare i tipi di valore con la parola chiave interior_ptr (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879477"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571188"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Procedura: dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)
-Un oggetto `interior_ptr` può essere utilizzato con un tipo di valore.  
+Un' **interior_ptr** può essere usato con un tipo di valore.  
   
 > [!IMPORTANT]
->  Questa funzionalità del linguaggio è supportata per il **/clr** l'opzione del compilatore, ma non dal **/ZW** l'opzione del compilatore.  
+>  Questa funzionalità del linguaggio è supportata dall'opzione del compilatore `/clr`, ma non dall'opzione del compilatore `/ZW`.  
   
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- L'esempio C + + CLI esempio viene illustrato come utilizzare un `interior_ptr` con un tipo di valore.  
+ L'esempio C + c++ /CLI CLI esempio viene illustrato come usare un **interior_ptr** con un tipo valore.  
   
 ### <a name="code"></a>Codice  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -66,7 +66,7 @@ int main() {
   
 ### <a name="output"></a>Output  
   
-```  
+```Output  
 1  
 2  
 2  
@@ -78,13 +78,13 @@ int main() {
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- In un tipo di valore, tramite il puntatore `this` viene restituito un oggetto interior_ptr.  
+ In un tipo valore, il **ciò** puntatore restituisce un oggetto interior_ptr.  
   
- Nel corpo di una funzione membro non statica di un tipo di valore `V`, `this` è un'espressione di tipo `interior_ptr<V>` il cui valore è l'indirizzo dell'oggetto per cui la funzione viene chiamata.  
+ Nel corpo di una funzione membro non statico di un tipo valore `V`, **ciò** è un'espressione di tipo `interior_ptr<V>` il cui valore è l'indirizzo dell'oggetto per cui la funzione viene chiamata.  
   
 ### <a name="code"></a>Codice  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -105,7 +105,7 @@ value struct V {
   
 ### <a name="code"></a>Codice  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,7 +131,7 @@ int main() {
   
 ### <a name="output"></a>Output  
   
-```  
+```Output 
 22  
 23  
 hello  

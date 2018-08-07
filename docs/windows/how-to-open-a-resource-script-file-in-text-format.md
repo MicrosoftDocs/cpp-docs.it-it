@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aprire un File di Script di risorsa in formato testo | Documenti Microsoft'
+title: 'Procedura: aprire un File di Script di risorsa in formato testo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14af857d7727ee8df13a9eb6c438342007252950
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 170d688988576d3cbc9c454eb84603f9660120a8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880050"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571220"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Procedura: aprire un file di script di risorsa in formato testo
 Talvolta può essere utile visualizzare il contenuto del file di script di risorsa (RC) del progetto senza aprire una risorsa, quale una finestra di dialogo, all'interno dell'editor di risorse specifico. È ad esempio possibile che si desideri cercare una stringa in tutte le finestre di dialogo del file di risorse senza che sia necessario aprire separatamente ogni finestra.  
@@ -32,36 +32,34 @@ Talvolta può essere utile visualizzare il contenuto del file di script di risor
 > [!NOTE]
 >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
- È possibile aprire facilmente il file di risorse in formato testo per visualizzare tutte le risorse contenute ed eseguire le operazioni globali supportate per il [editor di testo](http://msdn.microsoft.com/en-us/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).  
+ È possibile aprire facilmente il file di risorse in formato testo per visualizzare tutte le risorse in esso contenute ed eseguire le operazioni globali supportate per il [editor di testo](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).  
   
 > [!NOTE]
->  Gli editor di risorse non leggono direttamente i file RC o resource.h. Questi file vengono compilati dal compilatore di risorse in file APS, che vengono usati dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici. Come con un normale processo di compilazione, le informazioni che non sono simboliche (ad esempio, i commenti) vengono eliminate durante il processo di compilazione. Ogni volta che il file APS non risulta sincronizzato con il file RC, il file RC viene rigenerato (ad esempio, quando si salva, l'editor di risorse sovrascrive il file RC e il file resource.h). Eventuali modifiche alle risorse resteranno incorporate nel file RC, ma i commenti andranno sempre persi quando il file RC viene sovrascritto. Per informazioni su come mantenere i commenti, vedere [inclusione di risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).  
+>  Gli editor di risorse non leggono direttamente i file RC o resource.h. Questi file vengono compilati dal compilatore di risorse in file APS, che vengono usati dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici. Come con un normale processo di compilazione, le informazioni che non sono simboliche (ad esempio, i commenti) vengono eliminate durante il processo di compilazione. Ogni volta che il file APS non risulta sincronizzato con il file RC, il file RC viene rigenerato (ad esempio, quando si salva, l'editor di risorse sovrascrive il file RC e il file resource.h). Eventuali modifiche alle risorse resteranno incorporate nel file RC, ma i commenti andranno sempre persi quando il file RC viene sovrascritto. Per informazioni su come mantenere i commenti, vedere [tra cui le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).  
   
 ### <a name="to-open-a-resource-script-file-as-text"></a>Per aprire un file script di risorsa in formato testo  
   
-1.  Dal **File** dal menu **Apri**, quindi fare clic su **File.**  
+1.  Dal **File** dal menu **Open**, quindi fare clic su **File.**  
   
-2.  Nel **Apri** finestra di dialogo casella, passare al file di script di risorsa che si desidera visualizzare in formato testo.  
+2.  Nel **Apri File** finestra di dialogo passare al file di script di risorse che si desidera visualizzare in formato testo.  
   
-3.  Selezionare il file, quindi fare clic sulla freccia a discesa di **aprire** pulsante (che si trova a destra del pulsante).  
+3.  Evidenziare il file, quindi fare clic sulla freccia giù sul **aperto** pulsante (che si trova a destra del pulsante).  
   
-4.  Scegliere **Apri con** dal menu a discesa.  
+4.  Scegli **aperta con** dal menu di riepilogo a discesa.  
   
-5.  Nel **Apri con** la finestra di dialogo, fare clic su **Editor di codice sorgente (testo)**.  
+5.  Nel **Apri con** finestra di dialogo, fare clic su **Editor di codice sorgente (testo)**.  
   
-6.  Dal **Apri come** elenco a discesa, seleziona **testo**.  
+6.  Dal **aperto come** elenco a discesa, seleziona **testo**.  
   
      La risorsa verrà aperta nell'editor del codice sorgente.  
   
  \- oppure -  
   
-1.  In **Esplora**, fare doppio clic sul file RC.  
+1.  Nelle **Esplora soluzioni**, fare clic sul file RC.  
   
-2.  Nel menu di scelta rapida, scegliere **Apri con...** , quindi selezionare **Editor di codice sorgente (testo)**.  
+2.  Dal menu di scelta rapida, scegliere **Apri con...** , quindi selezionare **Editor di codice sorgente (testo)**.  
   
-
-  
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
  Win32  
   

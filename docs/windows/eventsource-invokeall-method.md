@@ -1,5 +1,5 @@
 ---
-title: 'Metodo EventSource:: Invokeall | Documenti Microsoft'
+title: 'Metodo EventSource:: Invokeall | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882615"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570652"
 ---
 # <a name="eventsourceinvokeall-method"></a>Metodo EventSource::InvokeAll
-Chiama ogni gestore dell'evento associato all'oggetto corrente [EventSource](../windows/eventsource-class.md) utilizzando gli argomenti e i tipi di argomenti specificati.  
+Chiama ciascun gestore eventi associato all'oggetto corrente [EventSource](../windows/eventsource-class.md) utilizzando i tipi di argomento specificati e gli argomenti dell'oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -183,65 +183,65 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T0`  
- Il tipo dell'argomento del gestore dell'evento di zero.  
+### <a name="parameters"></a>Parametri  
+ *T0*  
+ Tipo di argomento del gestore dell'evento iniziale.  
   
- `T1`  
- Il tipo del primo argomento del gestore dell'evento.  
+ *T1*  
+ Il tipo del primo argomento del gestore eventi.  
   
- `T2`  
- Il tipo del secondo argomento del gestore dell'evento.  
+ *T2*  
+ Il tipo del secondo argomento del gestore eventi.  
   
- `T3`  
- Il tipo del terzo argomento del gestore dell'evento.  
+ *T3*  
+ Il tipo del terzo argomento gestore dell'evento.  
   
- `T4`  
- Il tipo del quarto argomento del gestore dell'evento.  
+ *T4*  
+ Il tipo del quarto argomento gestore dell'evento.  
   
- `T5`  
- Il tipo del quinto argomento del gestore dell'evento.  
+ *T5*  
+ Il tipo del quinto argomento del gestore eventi.  
   
- `T6`  
- Il tipo del sesto argomento del gestore dell'evento.  
+ *T6*  
+ Il tipo del sesto argomento del gestore eventi.  
   
- `T7`  
- Il tipo del settimo argomento del gestore dell'evento.  
+ *T7*  
+ Il tipo del settimo argomento del gestore eventi.  
   
- `T8`  
- Il tipo dell'ottavo argomento del gestore dell'evento.  
+ *T8*  
+ Il tipo dell'ottavo argomento gestore eventi.  
   
- `T9`  
- Il tipo del nono argomento del gestore dell'evento.  
+ *T9*  
+ Il tipo del nono argomento del gestore eventi.  
   
- `arg0`  
- L'argomento del gestore dell'evento zero.  
+ *arg0*  
+ L'argomento del gestore dell'evento iniziale.  
   
- `arg1`  
- Il primo argomento di gestore di evento.  
+ *arg1*  
+ Il primo argomento di gestore dell'evento.  
   
- `arg2`  
- Il secondo argomento di gestore di evento.  
+ *Arg2*  
+ Il secondo argomento di gestore dell'evento.  
   
- `arg3`  
- Il terzo argomento di gestore di evento.  
+ *arg3*  
+ Il terzo argomento di gestore dell'evento.  
   
- `arg4`  
+ *Arg4*  
  Il quarto argomento gestore dell'evento.  
   
- `arg5`  
- Il quinto argomento gestore dell'evento.  
+ *Arg5*  
+ Il quinto argomento del gestore dell'evento.  
   
- `arg6`  
+ *Arg6*  
  Il sesto argomento del gestore dell'evento.  
   
- `arg7`  
+ *Arg7*  
  Il settimo argomento del gestore dell'evento.  
   
- `arg8`  
- L'argomento del gestore dell'evento ottavo.  
+ *arg8*  
+ Argomento ottavo gestore dell'evento.  
   
- `arg9`  
+ *arg9*  
  Il nono argomento del gestore dell'evento.  
   
 ## <a name="requirements"></a>Requisiti  

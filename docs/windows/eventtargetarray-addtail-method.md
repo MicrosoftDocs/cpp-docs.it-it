@@ -1,5 +1,5 @@
 ---
-title: 'Metodo eventtargetarray:: AddTail | Documenti Microsoft'
+title: 'Metodo eventtargetarray:: AddTail | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872283"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570174"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>Metodo EventTargetArray::AddTail
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,14 +35,14 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `element`  
- Puntatore al gestore dell'evento da aggiungere.  
+### <a name="parameters"></a>Parametri  
+ *Elemento*  
+ Puntatore al gestore dell'evento da accodare.  
   
 ## <a name="remarks"></a>Note  
- Aggiunge il gestore dell'evento specificato alla fine della matrice interna di gestori eventi.  
+ Aggiunge il gestore eventi specificato alla fine della matrice interna di gestori eventi.  
   
- AddTail() deve essere utilizzato internamente solo la classe EventSource.  
+ **AddTail()** dovrà essere utilizzato internamente da solo il `EventSource` classe.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Event. h  
@@ -50,5 +50,5 @@ void AddTail(
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [EventTargetArray (classe)](../windows/eventtargetarray-class.md)   
+ [Classe EventTargetArray](../windows/eventtargetarray-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

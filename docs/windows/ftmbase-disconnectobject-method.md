@@ -1,5 +1,5 @@
 ---
-title: 'Metodo ftmbase:: DisconnectObject | Documenti Microsoft'
+title: 'Metodo ftmbase:: DisconnectObject | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2501413196e1fd6b8b7a1a4f9985304863e02549
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f80c7e758b282c0a1976d490483c397eca43b5f5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873001"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568628"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>Metodo FtmBase::DisconnectObject
-Forzatamente rilascia tutte le connessioni esterne a un oggetto. Server l'oggetto chiama l'implementazione dell'oggetto di questo metodo prima di arrestare.  
+Rilascia forzatamente tutte le connessioni esterne a un oggetto. Server dell'oggetto chiama l'implementazione dell'oggetto di questo metodo prima dell'arresto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ STDMETHODIMP DisconnectObject(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `dwReserved`  
+### <a name="parameters"></a>Parametri  
+ *dwReserved*  
  Riservato per utilizzi futuri; deve essere zero.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** . h  
+ **Intestazione:** ftm.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

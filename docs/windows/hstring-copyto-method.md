@@ -1,5 +1,5 @@
 ---
-title: 'Metodo hstring:: CopyTo | Documenti Microsoft'
+title: 'Metodo hstring:: CopyTo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,27 +13,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b44974faf5fc1f068d28d7febe3ed2a266f4869e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65d8e259b74bcdffbf11c6c96172d918f9db1b50
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874772"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570873"
 ---
 # <a name="hstringcopyto-method"></a>Metodo HString::CopyTo
-Copie di HString corrente dell'oggetto a un oggetto HSTRING.  
+Copia l'oggetto corrente **HString** oggetto in un oggetto HSTRING.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 HRESULT CopyTo(  
    _Out_ HSTRING *str  
    ) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `str`  
+ *str*  
  HSTRING che riceve la copia.  
   
 ## <a name="remarks"></a>Note  

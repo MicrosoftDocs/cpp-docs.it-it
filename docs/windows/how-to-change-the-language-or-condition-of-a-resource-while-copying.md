@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: modificare la lingua o condizione di una risorsa durante la copia | Documenti Microsoft'
+title: 'Procedura: modificare la lingua o condizione di una risorsa durante la copia | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880137"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570496"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Procedura: modificare la lingua o la condizione di una risorsa durante la copia
 Durante la copia in una risorsa, è possibile modificarne la proprietà relativa alla lingua o alla condizione oppure entrambe.  
   
--   La lingua della risorsa identifica semplicemente la lingua relativa alla risorsa, Viene utilizzato da [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) per identificare la risorsa per cui si sta cercando. Le risorse tuttavia possono presentare per ciascuna lingua differenze non riguardanti il testo, come nel caso di tasti di scelta rapida funzionanti solo su una tastiera giapponese, di una bitmap appropriata solo per compilazioni in lingua cinese e così via.  
+-   La lingua della risorsa identifica semplicemente la lingua relativa alla risorsa, Viene utilizzato da [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) per consentire di identificare la risorsa per cui si sta cercando. Le risorse tuttavia possono presentare per ciascuna lingua differenze non riguardanti il testo, come nel caso di tasti di scelta rapida funzionanti solo su una tastiera giapponese, di una bitmap appropriata solo per compilazioni in lingua cinese e così via.  
   
 -   La condizione di una risorsa è un simbolo definito che identifica una condizione in cui è necessario usare questa particolare copia della risorsa.  
   
@@ -40,19 +40,17 @@ IDD_AboutBox (Finnish - XX33)
   
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Per copiare una risorsa esistente e modificarne la lingua e la condizione  
   
-1.  Nel file RC o nella [visualizzazione risorse](../windows/resource-view-window.md) finestra, la risorsa a cui si desidera copiare destro.  
+1.  Nel file RC o nella [visualizzazione risorse](../windows/resource-view-window.md) finestra, fare doppio clic la risorsa a cui si desidera copiare.  
   
-2.  Scegliere **Inserisci copia** dal menu di scelta rapida.  
+2.  Scegli **Inserisci copia** dal menu di scelta rapida.  
   
-3.  Nel **Inserisci copia risorsa** la finestra di dialogo:  
+3.  Nel **Inserisci copia risorsa** nella finestra di dialogo:  
   
-    -   Per il **Language** nella casella di riepilogo, selezionare la lingua.  
+    -   Per il **linguaggio** elenco a discesa, selezionare la lingua.  
   
     -   Nel **condizione** , digitare la condizione.  
   
-
-  
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
  Win32  
   

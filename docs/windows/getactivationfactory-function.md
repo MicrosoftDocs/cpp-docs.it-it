@@ -1,5 +1,5 @@
 ---
-title: Funzione GetActivationFactory | Documenti Microsoft
+title: GetActivationFactory (funzione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881338"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570311"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory (funzione)
 Recupera una factory di attivazione per il tipo specificato dal parametro di modello.  
@@ -39,18 +39,18 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
- Un parametro di modello che specifica il tipo di factory di attivazione.  
+### <a name="parameters"></a>Parametri  
+ *T*  
+ Un parametro di modello che specifica il tipo della factory dell'attivazione.  
   
- `activatableClassId`  
- Il nome della classe in grado di produrre la factory di attivazione.  
+ *activatableClassId*  
+ Il nome della classe che la factory di attivazione può produrre.  
   
- `factory`  
- Al termine di questa operazione, un riferimento per la factory di attivazione per il tipo `T`.  
+ *factory*  
+ Al termine di questa operazione, un riferimento alla factory di attivazione per il tipo *T*.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, un errore HRESULT che indica perché questa operazione non è riuscita.  
+ S_OK se l'esito positivo. in caso contrario, un errore HRESULT che indica il motivo per cui questa operazione non è riuscita.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

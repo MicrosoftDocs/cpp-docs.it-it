@@ -1,5 +1,5 @@
 ---
-title: 'Event:: operator = (operatore) | Documenti Microsoft'
+title: 'Event:: operator = (operatore) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871123"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571298"
 ---
 # <a name="eventoperator-operator"></a>Operatore Event::operator=
-Assegna il riferimento Event specifico all'istanza Event corrente.  
+Assegna l'oggetto specificato **evento** riferimento all'oggetto corrente **evento** istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,11 +36,11 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `h`  
- Un riferimento rvalue a un'istanza dell'evento.  
+ *h*  
+ Un riferimento rvalue a un **evento** istanza.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un puntatore all'istanza Event corrente.  
+ Un puntatore all'oggetto corrente **evento** istanza.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

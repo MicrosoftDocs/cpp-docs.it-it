@@ -1,5 +1,5 @@
 ---
-title: 'Metodo hstring:: Detach | Documenti Microsoft'
+title: 'Metodo hstring:: Detach | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 621476f092b3dbaad994e63a329f1a8c567f55b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bfd4390cdc786836b08e77b4ee699e44cc42618
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33885454"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569726"
 ---
 # <a name="hstringdetach-method"></a>Metodo HString::Detach
-Rimuove l'associazione oggetto HString specificato dal relativo valore sottostante.  
+Rimuove l'associazione specificata **HString** oggetto dal relativo valore sottostante.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ HSTRING Detach() throw()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Il valore di HString sottostante prima di avviare l'operazione di scollegamento.  
+ Sottostante **HString** valore prima dell'operazione di scollegamento avviato.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

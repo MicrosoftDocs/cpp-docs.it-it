@@ -1,5 +1,5 @@
 ---
-title: eventi (estensioni del componente C++) | Documenti Microsoft
+title: evento (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881211"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570402"
 ---
 # <a name="event--c-component-extensions"></a>evento (Estensioni del componente C++)
-Il `event` parola chiave dichiara un *evento*, ovvero una notifica agli utenti registrati (*gestori eventi*) che si è verificato qualcosa di interesse.  
+Il **evento** parola chiave dichiara un' *evento*, che è una notifica agli utenti registrati (*gestori eventi*) che si è verificato qualcosa di interesse.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- C + + CX supporta la dichiarazione di un *membro evento* o *blocco eventi*. Un membro evento è una forma abbreviata per la dichiarazione di un blocco eventi. Per impostazione predefinita, un membro evento dichiara le funzioni `add()`, `remove()` e `raise()` che sono dichiarate in modo esplicito in un blocco eventi. Per personalizzare le funzioni in un membro  evento, dichiarare un blocco eventi e quindi eseguire l'override delle funzioni richieste.  
+ C + c++ /CX supporta la dichiarazione di un *membro dell'evento* o un' *blocco eventi*. Un membro evento è una forma abbreviata per la dichiarazione di un blocco eventi. Per impostazione predefinita, un membro evento dichiara le funzioni `add()`, `remove()` e `raise()` che sono dichiarate in modo esplicito in un blocco eventi. Per personalizzare le funzioni in un membro  evento, dichiarare un blocco eventi e quindi eseguire l'override delle funzioni richieste.  
   
  **Sintassi**  
   
 ```  
-  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -50,19 +49,19 @@ modifiereventdelegate^ event_name
  **Parametri**  
   
  *Modificatore*  
- Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono `static` e `virtual`.  
+ Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono **statici** e **virtuale**.  
   
  *delegate*  
- Il [delegato](../windows/delegate-cpp-component-extensions.md), la cui firma deve corrispondere il gestore dell'evento.  
+ Il [delegare](../windows/delegate-cpp-component-extensions.md), la cui firma deve corrispondere il gestore dell'evento.  
   
  *event_name*  
  Nome dell'evento.  
   
  *return_value*  
- Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, il tipo restituito deve essere `void`.  
+ Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, deve essere il tipo restituito **void**.  
   
  *Parametri*  
- (facoltativo) Parametri per il `raise` che corrisponde alla firma del metodo di *delegato* parametro.  
+ (facoltativo) I parametri per il `raise` metodo, che corrispondono alla firma del *delegare* parametro.  
   
  **Note**  
   
@@ -76,14 +75,14 @@ modifiereventdelegate^ event_name
  *blocco eventi*  
  Un blocco eventi consente di dichiarare in modo esplicito e personalizzare il comportamento dei metodi `add()`, `remove()` e `raise()`.  
   
- È possibile usare `operators+=` e `operator-=` per aggiungere e rimuovere un gestore eventi o chiamare i metodi `add()` e `remove()` in modo esplicito.  
+ È possibile usare **gli operatori + =** e **operatore-=** per aggiungere e rimuovere un evento gestore oppure chiamare il `add()` e `remove()` metodi in modo esplicito.  
   
- `event` è una parola chiave sensibile al contesto. vedere [le parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per altre informazioni.  
+ **evento** è una parola chiave sensibile al contesto, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per altre informazioni.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [eventi (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).  
+ Per altre informazioni, vedere [eventi (C + c++ /CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).  
   
  Se si desidera aggiungere e rimuovere un gestore eventi, è necessario salvare la struttura EventRegistrationToken restituita dall'operazione di aggiunta. Quindi, nell'operazione di rimozione è necessario usare la struttura EventRegistrationToken salvata per identificare il gestore eventi da rimuovere.  
   
@@ -91,12 +90,11 @@ modifiereventdelegate^ event_name
  Opzione del compilatore: **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- La parola chiave `event` consente di dichiarare un evento. Un evento consente a una classe di inviare notifiche quando succede qualcosa di interesse.  
+ Il **evento** (parola chiave) consente di dichiarare un evento. Un evento consente a una classe di inviare notifiche quando succede qualcosa di interesse.  
   
  **Sintassi**  
   
 ```  
-  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -112,19 +110,19 @@ modifiereventdelegate^ event_name
  **Parametri**  
   
  *Modificatore*  
- Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono `static` e `virtual`.  
+ Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono **statici** e **virtuale**.  
   
  *delegate*  
- Il [delegato](../windows/delegate-cpp-component-extensions.md), la cui firma deve corrispondere il gestore dell'evento.  
+ Il [delegare](../windows/delegate-cpp-component-extensions.md), la cui firma deve corrispondere il gestore dell'evento.  
   
  *event_name*  
  Nome dell'evento.  
   
  *return_value*  
- Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, il tipo restituito deve essere `void`.  
+ Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, deve essere il tipo restituito **void**.  
   
  *Parametri*  
- (facoltativo) Parametri per il `raise` che corrisponde alla firma del metodo di *delegato* parametro.  
+ (facoltativo) I parametri per il `raise` metodo, che corrispondono alla firma del *delegare* parametro.  
   
  **Note**  
   
@@ -134,7 +132,7 @@ modifiereventdelegate^ event_name
   
  Esistono due tipi di dichiarazioni eventi:  
   
- *membri dati dell'evento*  
+ *membri dati evento*  
  L'archiviazione per l'evento, sotto forma di un membro del tipo delegato, viene creata dal compilatore per gli eventi del membro dati.  Un membro dati evento deve essere dichiarato all'interno di una classe. È anche noto come un evento semplice (vedere l'esempio di codice riportato di seguito).  
   
  *blocchi evento*  
@@ -148,13 +146,13 @@ modifiereventdelegate^ event_name
   
  Per creare e usare gli eventi in Visual C++, è necessario eseguire i passaggi seguenti:  
   
-1.  Creare o identificare un delegato. Se si definisce un evento personalizzato, è inoltre necessario verificare che vi sia un delegato da usare con la parola chiave `event`. Se l'evento è predefinito, in .NET Framework ad esempio, i consumer dell'evento devono conoscere solo il nome del delegato.  
+1.  Creare o identificare un delegato. Se si definisce un evento personalizzato, è inoltre necessario verificare che vi sia un delegato da usare con il **evento** (parola chiave). Se l'evento è predefinito, in .NET Framework ad esempio, i consumer dell'evento devono conoscere solo il nome del delegato.  
   
 2.  Creare una classe che contenga:  
   
     -   Un evento creato dal delegato.  
   
-    -   (facoltativo) Un metodo che verifichi che sia presente un'istanza del delegato dichiarata con la parola chiave `event`. In caso contrario, questa logica deve essere inserita nel codice che genera l'evento.  
+    -   (facoltativo) Un metodo che verifica che un'istanza del delegato dichiarata con la **evento** parola chiave è presente. In caso contrario, questa logica deve essere inserita nel codice che genera l'evento.  
   
     -   Metodi che chiamano l'evento. Questi metodi possono essere override di alcune funzionalità della classe di base.  
   
@@ -168,7 +166,7 @@ modifiereventdelegate^ event_name
   
     -   Creare un oggetto della classe che contiene la definizione dell'evento.  
   
- Per ulteriori informazioni su C + + eventi CLI, vedere  
+ Per altre informazioni su C + + / eventi CLI, vedere  
   
 -   [Eventi in un'interfaccia](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
@@ -180,7 +178,7 @@ modifiereventdelegate^ event_name
   
  Nell'esempio di codice seguente viene illustrato come dichiarare coppie di delegati, eventi e gestori eventi; come sottoscrivere (aggiungere) i gestori eventi; come richiamare i gestori eventi; e quindi annullare (rimuovere) i gestori eventi.  
   
-```  
+```cpp  
 // mcppv2_events.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -241,9 +239,9 @@ OnDblClick: Hello
   
  **Esempio**  
   
- Nell'esempio di codice seguente viene illustrata la logica usata per generare il metodo `raise` di un evento semplice: se l'evento ha uno o più sottoscrittori, quando si chiama il metodo `raise` in modo implicito o esplicito, viene chiamato il delegato. Se il tipo restituito del delegato non è `void` e se non sono presenti sottoscrittori dell'evento, il metodo `raise` restituisce il valore predefinito per il tipo delegato. Se non sono presenti sottoscrittori dell'evento, la chiamata del metodo `raise` restituisce il controllo e non viene generata alcuna eccezione. Se il tipo restituito del delegato non è `void`, viene restituito il tipo delegato.  
+ Nell'esempio di codice seguente viene illustrata la logica usata per generare il metodo `raise` di un evento semplice: se l'evento ha uno o più sottoscrittori, quando si chiama il metodo `raise` in modo implicito o esplicito, viene chiamato il delegato. Se il delegato restituito del tipo non è **void** e se sono presenti sottoscrittori dell'evento, il `raise` metodo restituisce il valore predefinito per il tipo delegato. Se non sono presenti sottoscrittori dell'evento, la chiamata del metodo `raise` restituisce il controllo e non viene generata alcuna eccezione. Se il delegato restituito del tipo non è **void**, viene restituito il tipo di delegato.  
   
-```  
+```cpp  
 // trivial_events.cpp  
 // compile with: /clr /c  
 using namespace System;  

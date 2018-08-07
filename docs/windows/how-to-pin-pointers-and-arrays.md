@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: bloccare puntatori e matrici | Documenti Microsoft'
+title: 'Procedura: bloccare puntatori e matrici | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1cea9b1c7c6738c33f00e984aa8212d611b4aec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873589"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569375"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Procedura: bloccare puntatori e matrici
 Il blocco di un oggetto secondario definito in un oggetto gestito comporta il blocco di tutto l'oggetto.  Ad esempio, se un qualsiasi elemento di una matrice è bloccato, sarà bloccata tutta la matrice. Non esistono estensioni del linguaggio per dichiarare una matrice bloccata. Per bloccare una matrice, dichiarare un puntatore di blocco al relativo tipo di elemento e bloccarne uno degli elementi.  
@@ -30,7 +30,7 @@ Il blocco di un oggetto secondario definito in un oggetto gestito comporta il bl
   
 ### <a name="code"></a>Codice  
   
-```  
+```cpp  
 // pin_ptr_array.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -52,7 +52,7 @@ int main() {
   
 ### <a name="output"></a>Output  
   
-```  
+```Output  
 ++  
 ```  
   

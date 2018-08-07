@@ -1,5 +1,5 @@
 ---
-title: Classe FtmBase | Documenti Microsoft
+title: FtmBase (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: ed3e9b9e66f673a3d86ded7b3d576e1203db9595
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814352"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570561"
 ---
 # <a name="ftmbase-class"></a>FtmBase (classe)
 Rappresenta un oggetto gestore del marshalling a thread libero.  
@@ -30,14 +30,13 @@ Rappresenta un oggetto gestore del marshalling a thread libero.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 class FtmBase : public Microsoft::WRL::Implements<  
    Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,   
    Microsoft::WRL::CloakedIid<IMarshal> >;  
 ```  
   
 ## <a name="remarks"></a>Note  
- Per altre informazioni, vedere [classe RuntimeClass](runtimeclass-class.md).  
+ Per altre informazioni, vedere [classe di RuntimeClass](runtimeclass-class.md).  
   
 ## <a name="members"></a>Membri  
   
@@ -45,19 +44,19 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore FtmBase::FtmBase](../windows/ftmbase-ftmbase-constructor.md)|Inizializza una nuova istanza della classe FtmBase.|  
+|[Costruttore FtmBase::FtmBase](../windows/ftmbase-ftmbase-constructor.md)|Inizializza una nuova istanza di **FtmBase** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo FtmBase::CreateGlobalInterfaceTable](../windows/ftmbase-createglobalinterfacetable-method.md)|Crea una tabella di interfaccia globale (GIT).|  
-|[Metodo FtmBase::DisconnectObject](../windows/ftmbase-disconnectobject-method.md)|Forzatamente rilascia tutte le connessioni esterne a un oggetto. Server l'oggetto chiama l'implementazione dell'oggetto di questo metodo prima di arrestare.|  
-|[Metodo FtmBase::GetMarshalSizeMax](../windows/ftmbase-getmarshalsizemax-method.md)|Ottenere il limite superiore al numero di byte necessari per effettuare il marshalling di puntatore a interfaccia specificato per l'oggetto specificato.|  
-|[Metodo FtmBase::GetUnmarshalClass](../windows/ftmbase-getunmarshalclass-method.md)|Ottiene il CLSID COM viene utilizzato per individuare la DLL contenente il codice per il proxy corrispondente. COM viene caricato la DLL per creare un'istanza del proxy non inizializzata.|  
+|[Metodo FtmBase::DisconnectObject](../windows/ftmbase-disconnectobject-method.md)|Rilascia forzatamente tutte le connessioni esterne a un oggetto. Server dell'oggetto chiama l'implementazione dell'oggetto di questo metodo prima dell'arresto.|  
+|[Metodo FtmBase::GetMarshalSizeMax](../windows/ftmbase-getmarshalsizemax-method.md)|Ottenere il limite superiore al numero di byte necessari per effettuare il marshalling il puntatore di interfaccia specificata sull'oggetto specificato.|  
+|[Metodo FtmBase::GetUnmarshalClass](../windows/ftmbase-getunmarshalclass-method.md)|Ottiene il CLSID utilizzato da COM per individuare la DLL contenente il codice per il proxy corrispondente. COM carica la DLL per creare un'istanza del proxy non inizializzata.|  
 |[Metodo FtmBase::MarshalInterface](../windows/ftmbase-marshalinterface-method.md)|Scrive in un flusso di dati necessari per inizializzare un oggetto proxy in un processo client.|  
-|[Metodo FtmBase::ReleaseMarshalData](../windows/ftmbase-releasemarshaldata-method.md)|Elimina un pacchetto di dati sottoposti a marshalling.|  
-|[Metodo FtmBase::UnmarshalInterface](../windows/ftmbase-unmarshalinterface-method.md)|Inizializza un nuovo proxy e restituisce un puntatore a interfaccia a tale proxy.|  
+|[Metodo FtmBase::ReleaseMarshalData](../windows/ftmbase-releasemarshaldata-method.md)|Elimina un pacchetto viene eseguito il marshalling dei dati.|  
+|[Metodo FtmBase::UnmarshalInterface](../windows/ftmbase-unmarshalinterface-method.md)|Inizializza un proxy appena creato e restituisce un puntatore a interfaccia a tale proxy.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
@@ -69,7 +68,7 @@ class FtmBase : public Microsoft::WRL::Implements<
  `FtmBase`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** . h  
+ **Intestazione:** ftm.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

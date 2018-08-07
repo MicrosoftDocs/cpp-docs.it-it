@@ -1,5 +1,5 @@
 ---
-title: db_table | Documenti Microsoft
+title: db_table | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f482e93f124d73d48d1de66f3feb1779146025d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91eea8bd751e4e8e843fb2d052f2b4a71f9bdc38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874343"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570337"
 ---
 # <a name="dbtable"></a>db_table
-Verrà visualizzata una tabella OLE DB.  
+Apre una tabella di OLE DB.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ db_table(   
+[ db_table(   
    db_table,   
    name,   
    source_name,   
@@ -44,23 +43,23 @@ Verrà visualizzata una tabella OLE DB.
  Stringa che specifica il nome di una tabella di database (ad esempio, "prodotti").  
   
  *name* (facoltativo)  
- Il nome dell'handle consentono di lavorare con la tabella. È necessario specificare questo parametro se si desidera restituire più righe di risultati. **db_table** genera una variabile con il parametro *nome* che può essere usato per scorrere il set di righe o eseguire più query di azione.  
+ Il nome dell'handle usato con la tabella. È necessario specificare questo parametro se si desidera restituire più righe di risultati. **db_table** genera una variabile con il parametro specificato *nome* che può essere utilizzato per attraversare il set di righe o eseguire più query.  
   
  *source_name* (facoltativo)  
  La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo `db_source` con cui viene eseguito il comando. Vedere [db_source](../windows/db-source.md).  
   
- `hresult` (facoltativo)  
- Identifica la variabile che riceverà il `HRESULT` di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.  
+ *HRESULT* (facoltativo)  
+ Identifica la variabile che riceverà il valore HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.  
   
 ## <a name="remarks"></a>Note  
- **db_table** crea un [CTable](../data/oledb/ctable-class.md) oggetto, che viene utilizzato da un consumer OLE DB per aprire una tabella. È possibile utilizzare questo attributo solo a livello di classe; non può essere utilizzato in linea. Utilizzare **db_column** per associare le colonne della tabella a variabili; utilizzare **db_param** per delimitare (impostato il tipo di parametro, quindi sulla) dei parametri.  
+ **db_table** crea un' [CTable](../data/oledb/ctable-class.md) oggetto, che viene usato da un consumer OLE DB per aprire una tabella. È possibile usare questo attributo solo a livello di classe; è possibile usarlo inline. Usare `db_column` per associare le colonne della tabella alle variabili; usare `db_param` per delimitare (impostare il tipo di parametro e pertanto su) di parametri.  
   
- Quando il provider di attributi del consumer si applica questo attributo a una classe, il compilatore Rinomina la classe per \_ *NomeClasse*funzione di accesso, in cui *NomeClasse* è il nome assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.  
+ Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore Rinomina la classe \_ *NomeClasse*della funzione di accesso, dove *NomeClasse* è il nome è stato assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene visualizzata la tabella di prodotti per l'utilizzo da `CProducts`.  
+ Nell'esempio seguente consente di aprire la tabella di prodotti per l'uso da `CProducts`.  
   
-```  
+```cpp  
 // db_table.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -73,7 +72,7 @@ class CProducts {
 };  
 ```  
   
- Per un esempio di questo attributo in un'applicazione, vedere gli esempi [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) e [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Per un esempio di questo attributo usato in un'applicazione, vedere gli esempi [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) e [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -81,10 +80,10 @@ class CProducts {
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

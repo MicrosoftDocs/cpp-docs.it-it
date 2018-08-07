@@ -1,5 +1,5 @@
 ---
-title: doppia | Documenti Microsoft
+title: doppia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872380"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571018"
 ---
 # <a name="dual"></a>dual
-Inserisce un'interfaccia nel file IDL come un'interfaccia duale.  
+Inserisce un'interfaccia nel file con estensione idl come interfaccia duale.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Quando il **dual** attributo C++ precede un'interfaccia, fa sì che l'interfaccia per essere inserito all'interno del blocco di libreria nel file IDL generato.  
+ Quando la **duale** attributi di C++ precede un'interfaccia, fa sì che l'interfaccia da inserire all'interno del blocco di libreria nel file con estensione IDL generato.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente è un blocco di attributi che utilizza **dual** prima di una definizione di interfaccia:  
+ Il codice seguente è un blocco di attributi che utilizza **duale** prima di una definizione di interfaccia:  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,7 +77,7 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`|  
+|**Si applica a**|**interface**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
 |**Attributi non validi**|**dispinterface**|  
@@ -88,8 +86,8 @@ __interface IStatic : IDispatch
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi dall'utilizzo](../windows/attributes-by-usage.md)   
- [Personalizzato](../windows/custom-cpp.md)   
+ [Attributi per utilizzo](../windows/attributes-by-usage.md)   
+ [Personalizzati](../windows/custom-cpp.md)   
  [Interfaccia dispatch](../windows/dispinterface.md)   
  [object](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

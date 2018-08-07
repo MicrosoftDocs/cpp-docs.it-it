@@ -1,5 +1,5 @@
 ---
-title: 'Metodo ftmbase:: MarshalInterface | Documenti Microsoft'
+title: 'Metodo ftmbase:: MarshalInterface | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874616"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570057"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>Metodo FtmBase::MarshalInterface
 Scrive in un flusso di dati necessari per inizializzare un oggetto proxy in un processo client.  
@@ -40,35 +40,35 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `pStm`  
+### <a name="parameters"></a>Parametri  
+ *pStm*  
  Puntatore al flusso da utilizzare durante il marshalling.  
   
- `riid`  
- Riferimento all'identificatore dell'interfaccia da cui effettuare il marshalling. Questa interfaccia deve essere derivata dall'interfaccia IUnknown.  
+ *riid*  
+ Riferimento all'identificatore dell'interfaccia da sottoporre a marshalling. Questa interfaccia deve derivare dal `IUnknown` interfaccia.  
   
- `pv`  
- Puntatore al puntatore a interfaccia deve essere sottoposto a marshalling; può essere NULL se il chiamante non dispone di un puntatore a interfaccia desiderato.  
+ *PV*  
+ Puntatore al puntatore all'interfaccia da sottoporre a marshalling; può essere NULL se il chiamante non ha un puntatore all'interfaccia desiderata.  
   
- `dwDestContext`  
- Contesto di destinazione in cui l'interfaccia specificata è essere sottoposta a unmarshalling.  
+ *dwDestContext*  
+ Contesto di destinazione in cui l'interfaccia specificata deve essere sottoposta a unmarshalling.  
   
  Specificare uno o più valori di enumerazione MSHCTX.  
   
- Unmarshalling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nel processo corrente (MSHCTX_LOCAL) nello stesso computer.  
+ L'unmarshaling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nello stesso computer come processo corrente (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Riservato per utilizzi futuri; deve essere zero.  
   
- `mshlflags`  
- Specifica se i dati di cui effettuare il marshalling deve essere trasmesso al processo client, ovvero il caso tipico, o scrivere in una tabella globale, in cui può essere recuperato da più client.  
+ *mshlflags*  
+ Specifica se i dati da sottoporre a marshalling deve essere trasmesso al processo client, ovvero il caso tipico, o scritti in una tabella globale, in cui può essere recuperato da più client.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
- Il puntatore di interfaccia è stato eseguito il marshalling correttamente.  
+ Il puntatore di interfaccia è stato effettuato il marshalling correttamente.  
   
  E_NOINTERFACE  
- L'interfaccia specificata non è supportata.  
+ L'interfaccia specificata non è supportato.  
   
  STG_E_MEDIUMFULL  
  Il flusso è completo.  
@@ -77,7 +77,7 @@ STDMETHODIMP MarshalInterface(
  Operazione non riuscita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** . h  
+ **Intestazione:** ftm.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

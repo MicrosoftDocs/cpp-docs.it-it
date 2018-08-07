@@ -1,5 +1,5 @@
 ---
-title: DerefHelper (struttura) | Documenti Microsoft
+title: DerefHelper (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7af9f507a29531b14ff75aa97e0aee327db380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871367"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571342"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,13 +42,13 @@ struct DerefHelper<T*>;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  Un parametro di modello.  
   
 ## <a name="remarks"></a>Note  
  Rappresenta un puntatore dereferenziato al `T*` parametro di modello.  
   
- DerefHelper viene utilizzato in un'espressione, ad esempio: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
+ DerefHelper viene usata in un'espressione, ad esempio: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
   
 ## <a name="members"></a>Membri  
   
@@ -56,7 +56,7 @@ struct DerefHelper<T*>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`DerefType`|Identificatore del parametro di modello dereferenziato `T*`.|  
+|`DerefType`|Identificatore per il parametro di modello dereferenziato `T*`.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `DerefHelper`  

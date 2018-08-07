@@ -1,5 +1,5 @@
 ---
-title: first_is | Documenti Microsoft
+title: first_is | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875006"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569263"
 ---
 # <a name="firstis"></a>first_is
 Specifica l'indice del primo elemento della matrice deve essere trasmesso.  
@@ -30,23 +30,22 @@ Specifica l'indice del primo elemento della matrice deve essere trasmesso.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- *espressione*  
- Una o più espressioni del linguaggio C. Sono consentiti gli slot di argomenti vuoto.  
+### <a name="parameters"></a>Parametri  
+ *Espressione*  
+ Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.  
   
 ## <a name="remarks"></a>Note  
- Il **first_is** attributo C++ ha la stessa funzionalità come il [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) attributo MIDL.  
+ Il **first_is** attributi di C++ ha la stessa funzionalità come la [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente illustra vari modi per specificare una sezione in una matrice:  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -72,16 +71,16 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 |||  
 |-|-|  
-|**Si applica a**|Campo `struct` o **unione**, parametro di interfaccia, metodo di interfaccia|  
+|**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Attributi dei parametri](../windows/parameter-attributes.md)   
  [last_is](../windows/last-is.md)   
  [max_is](../windows/max-is.md)   

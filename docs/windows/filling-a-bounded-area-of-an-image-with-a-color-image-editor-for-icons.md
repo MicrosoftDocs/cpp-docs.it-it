@@ -1,5 +1,5 @@
 ---
-title: La compilazione di un'Area delimitata di un'immagine con un colore (Editor di immagini per le icone) | Documenti Microsoft
+title: La compilazione di un'Area delimitata di un'immagine con un colore (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f70decbfd0de1a31024482806594ca3c2b12aa8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ae915dbcd9e2190f33e29e236170951fcec3d01
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880569"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569872"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Riempimento di un'area delimitata di un'immagine con un colore (Editor di immagini per le icone)
-Editor di immagini consente di **riempimento** strumento per la compilazione di qualsiasi racchiusi area dell'immagine con il colore di disegno o il colore di sfondo corrente.  
+L'editor di immagini fornisce il **riempire** dello strumento per la compilazione di uno qualsiasi di racchiuso tra area dell'immagine con il colore di disegno o il colore di sfondo corrente.  
   
 > [!TIP]
->  Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consente di identificare la funzione di ogni pulsante.  
+>  Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consentono di identificare la funzione di ogni pulsante.  
   
-### <a name="to-use-the-fill-tool"></a>Per utilizzare lo strumento di riempimento  
+### <a name="to-use-the-fill-tool"></a>Usare lo strumento riempimento  
   
-1.  Nel **Editor di immagini** barra degli strumenti (o **immagine** dal menu **strumenti** comando), fare clic su di **riempimento** strumento.  
+1.  Nel **Editor di immagini** sulla barra degli strumenti (o il **immagine** dal menu **strumenti** comando), fare clic sul **riempire** dello strumento.  
   
-2.  Se necessario, scegliere i colori di disegno: nel [tavolozza dei colori](../windows/colors-window-image-editor-for-icons.md), scegliere il pulsante sinistro del mouse per selezionare un colore di primo piano o il pulsante destro del mouse per selezionare un colore di sfondo.  
+2.  Se necessario, scegliere i colori di disegno: nel [tavolozza di colori](../windows/colors-window-image-editor-for-icons.md), fare clic sul pulsante sinistro del mouse per selezionare un colore di primo piano o il pulsante destro del mouse per selezionare un colore di sfondo.  
   
 3.  Spostare il **riempimento** strumento per l'area da riempire.  
   
-4.  Fare clic sul pulsante sinistro o destro del mouse da riempire con il colore di primo piano o il colore di sfondo, rispettivamente.  
+4.  Fare clic sul pulsante sinistro o destro del mouse da riempire con il colore primo piano o il colore di sfondo, rispettivamente.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

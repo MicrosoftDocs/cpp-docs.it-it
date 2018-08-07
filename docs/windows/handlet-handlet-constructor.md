@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore handlet:: Handlet | Documenti Microsoft'
+title: 'Costruttore handlet:: Handlet | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881897"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569511"
 ---
 # <a name="handlethandlet-constructor"></a>Costruttore HandleT::HandleT
-Inizializza una nuova istanza della classe HandleT.  
+Inizializza una nuova istanza di **HandleT** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,12 +40,12 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `h`  
+### <a name="parameters"></a>Parametri  
+ *h*  
  Un handle.  
   
 ## <a name="remarks"></a>Note  
- Il primo costruttore inizializza un oggetto HandleT che non è un handle valido per un oggetto. Il secondo costruttore crea un nuovo oggetto HandleT dal parametro `h`.  
+ Il primo costruttore inizializza un **HandleT** oggetto che non è un handle valido a un oggetto. Il secondo costruttore crea un nuovo **HandleT** oggetto dal parametro *h*.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

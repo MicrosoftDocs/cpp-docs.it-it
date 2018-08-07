@@ -1,5 +1,5 @@
 ---
-title: Ricerca di dati binari | Documenti Microsoft
+title: Ricerca di dati binari | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,32 +21,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 815975ac693885842d2e4b2287e14957abe8375f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873563"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568686"
 ---
 # <a name="finding-binary-data"></a>Ricerca di dati binari
-È possibile cercare stringhe ASCII o byte esadecimali. Ad esempio, per trovare "Hello", è possibile cercare una la stringa "Hello" oppure "48 65 6C 6C 6F" (l'equivalente esadecimale).  
+È possibile cercare le stringhe ASCII o byte esadecimali. Ad esempio, per trovare "Hello", è possibile cercare una stringa "Hello" o per "48 65 6C 6C 6F" (l'equivalente esadecimale).  
   
 ### <a name="to-find-binary-data"></a>Per trovare i dati binari  
   
-1.  Dal **modifica** menu, fare clic su [trovare](/visualstudio/ide/reference/find-command).  
+1.  Dal **Edit** menu, fare clic su [trovare](/visualstudio/ide/reference/find-command).  
   
-2.  Nel **trova** casella, selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare i dati che si desidera trovare.  
+2.  Nel **Find What** casella, selezionare una stringa di ricerca precedente dall'elenco a discesa scegliere o immettere i dati da trovare.  
   
-3.  Selezionare una qualsiasi del **trovare** opzioni.  
+3.  Selezionare una qualsiasi delle **trovare** opzioni.  
   
 4.  Fare clic su **Trova successivo**.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Binary Editor](binary-editor.md)
-

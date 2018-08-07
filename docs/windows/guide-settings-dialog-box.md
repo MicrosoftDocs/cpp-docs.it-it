@@ -1,5 +1,5 @@
 ---
-title: Guida alla finestra di dialogo Impostazioni | Documenti Microsoft
+title: Guida alla finestra di dialogo Impostazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d89a4a7bf0e3a8c9452c5f9d87832b8b31deb6e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875877"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568891"
 ---
 # <a name="guide-settings-dialog-box"></a>Finestra di dialogo Impostazioni guide
 ## <a name="layout-guides"></a>Guide  
@@ -40,24 +40,24 @@ ms.locfileid: "33875877"
   
  **Righelli e guide**  
   
- Quando abilitata, aggiunge i righelli per strumenti di layout. le guide possono trovarsi i righelli. Le guide predefinite sono i margini, che possono essere spostati mediante il trascinamento. Fare clic sui righelli per inserire una Guida. "Snap" guide quando i controlli vengono spostati sopra o accanto ai controlli. Controlli vengono spostati anche con una guida sono associati a esso. Quando un controllo è associato a una Guida su ogni lato, e una Guida viene spostata, il controllo viene ridimensionato.  
+ Quando abilitato, aggiunge i righelli per strumenti di layout. le guide possono essere posizionate nei righelli. Le guide all'impostazione predefinita sono i margini, che possono essere spostati mediante il trascinamento. Fare clic sui righelli per posizionare una Guida. Controlli "Guide" guide alle procedure quando i controlli vengono spostati sopra o accanto a essi. Controlli vengono spostati anche con una guida sono associati a esso. Quando un controllo associato a una Guida su ciascun lato e una Guida viene spostata, il controllo viene ridimensionato.  
   
  **Griglia**  
   
- Crea una griglia di layout. Nuovi controlli verranno automaticamente allineamento alla griglia.  
+ Crea una griglia di layout. Nuovi controlli vengono automaticamente allineati alla griglia.  
   
 ## <a name="grid-spacing"></a>spaziatura di griglia  
- Visualizza le impostazioni per la spaziatura della griglia in unità della finestra di dialogo (DLU-Dialog Unit).  
+ Consente di visualizzare le impostazioni per la spaziatura della griglia in unità di finestra di dialogo (DLU-Dialog Unit).  
   
- **Larghezza: DLU-Dialog Unit**  
+ **Width: DLU-Dialog Unit**  
   
- Imposta la larghezza della griglia di layout in DLU. Una DLU orizzontale corrisponde alla larghezza media del tipo di carattere casella finestra divisa per quattro.  
+ Imposta la larghezza della griglia di layout in DLU-Dialog Unit. Una DLU orizzontale sia la larghezza media del tipo di carattere finestra dialogo diviso per quattro.  
   
- **Altezza: DLU-Dialog Unit**  
+ **Height: DLU-Dialog Unit**  
   
- Imposta l'altezza della griglia di layout in DLU. Una DLU verticale corrisponde all'altezza media del carattere nella finestra di dialogo diviso per 8.  
+ Imposta l'altezza della griglia di layout in DLU-Dialog Unit. Una DLU verticale è l'altezza di average del tipo di carattere nella finestra di dialogo diviso per 8.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  
@@ -65,4 +65,3 @@ ms.locfileid: "33875877"
 ## <a name="see-also"></a>Vedere anche  
  [Modifica della griglia di Layout](../windows/modifying-the-layout-grid.md)   
  [Stati dell'editor finestre (guide e griglie)](../windows/dialog-editor-states-guides-and-grids.md)
-

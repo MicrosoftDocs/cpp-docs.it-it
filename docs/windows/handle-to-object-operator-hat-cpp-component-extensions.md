@@ -1,5 +1,5 @@
 ---
-title: Operatore handle a oggetto (^) (estensioni del componente C++) | Documenti Microsoft
+title: Operatore handle a oggetto (^) (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881169"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569804"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operatore handle a oggetto (^) (Estensioni del componente C++)
-Il *gestire dichiaratore* (`^`, si pronuncia "hat"), viene modificato il tipo [identificatore](../cpp/overview-of-declarators.md) per indicare che l'oggetto dichiarato deve essere eliminato automaticamente quando il sistema determina che l'oggetto è non è più accessibile.  
+Il *dichiaratore di handle* (`^`, si pronuncia "hat"), viene modificato il tipo [identificatore](../cpp/overview-of-declarators.md) per indicare che l'oggetto dichiarato deve essere eliminato automaticamente quando il sistema determina che l'oggetto è non saranno più accessibili.  
   
 ## <a name="accessing-the-declared-object"></a>Accesso all'oggetto dichiarato  
  Una variabile dichiarata con il dichiaratore di handle si comporta come un puntatore all'oggetto. Tuttavia, la variabile punta all'intero oggetto, non può puntare a un membro dell'oggetto e non supporta l'aritmetica dei puntatori. Utilizzare l'operatore di riferimento indiretto (`*`) per accedere all'oggetto e l'operatore freccia di accesso ai membri (`->`) per accedere a un membro dell'oggetto.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Il compilatore utilizza il modello COM *il conteggio dei riferimenti* meccanismo per determinare se l'oggetto non è più utilizzato e può essere eliminato. Ciò è possibile perché un oggetto derivato da un'interfaccia di Windows Runtime è in realtà un oggetto COM. Il conteggio dei riferimenti viene incrementato quando l'oggetto viene creato o copiato e diminuisce quando l'oggetto è impostato su null o diventa esterno all'ambito. Se il conteggio dei riferimenti arriva a zero, l'oggetto viene eliminato automaticamente e immediatamente.  
+ Il compilatore Usa il modello COM *conteggio dei riferimenti* meccanismo per determinare se l'oggetto non è più in uso e può essere eliminato. Ciò è possibile perché un oggetto derivato da un'interfaccia di Windows Runtime è in realtà un oggetto COM. Il conteggio dei riferimenti viene incrementato quando l'oggetto viene creato o copiato e diminuisce quando l'oggetto è impostato su null o diventa esterno all'ambito. Se il conteggio dei riferimenti arriva a zero, l'oggetto viene eliminato automaticamente e immediatamente.  
   
  Il vantaggio del dichiaratore di handle sta nel fatto che in COM è necessario gestire in modo esplicito il conteggio dei riferimenti per un oggetto, un processo noioso e a rischio di errori. Per incrementare o decrementare il conteggio dei riferimenti è quindi necessario chiamare i metodi AddRef() e Release() dell'oggetto. Tuttavia, se si dichiara un oggetto con il dichiaratore di handle, il compilatore di Visual C++ genera il codice che regola automaticamente il conteggio dei riferimenti.  
   
@@ -39,20 +39,20 @@ Il *gestire dichiaratore* (`^`, si pronuncia "hat"), viene modificato il tipo [i
  Opzione del compilatore: **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- Il sistema utilizza CLR *garbage collector* meccanismo per determinare se l'oggetto non è più utilizzato e può essere eliminato. Common Language Runtime gestisce un heap in cui alloca gli oggetti e utilizza i riferimenti gestiti (variabili) nel programma per indicare la posizione degli oggetti nell'heap. Quando un oggetto non è più utilizzato, la memoria che occupava nell'heap viene liberata. Periodicamente, il Garbage Collector comprime l'heap per migliorare l'utilizzo della memoria liberata. La compressione dell'heap può comportare lo spostamento degli oggetti nell'heap invalidando le posizioni indicate dai riferimenti gestiti. Tuttavia, il Garbage Collector conosce la posizione di tutti i riferimenti gestiti e li aggiorna automaticamente per indicare la posizione corrente degli oggetti nell'heap.  
+ Il sistema utilizza CLR *garbage collector* meccanismo per determinare se l'oggetto non è più in uso e può essere eliminato. Common Language Runtime gestisce un heap in cui alloca gli oggetti e utilizza i riferimenti gestiti (variabili) nel programma per indicare la posizione degli oggetti nell'heap. Quando un oggetto non è più utilizzato, la memoria che occupava nell'heap viene liberata. Periodicamente, il Garbage Collector comprime l'heap per migliorare l'utilizzo della memoria liberata. La compressione dell'heap può comportare lo spostamento degli oggetti nell'heap invalidando le posizioni indicate dai riferimenti gestiti. Tuttavia, il Garbage Collector conosce la posizione di tutti i riferimenti gestiti e li aggiorna automaticamente per indicare la posizione corrente degli oggetti nell'heap.  
   
  Dal momento che i puntatori nativi C++ (`*`) e i riferimenti (`&`) non sono riferimenti gestiti, il Garbage Collector non può aggiornare automaticamente gli indirizzi a cui puntano. Per risolvere questo problema, utilizzare il dichiaratore di handle per specificare una variabile che il Garbage Collector riconosce e che consente l'aggiornamento automatico.  
   
  In Visual C++ 2002 e Visual C++ 2003, si utilizzava `__gc *` per dichiarare un oggetto nell'heap gestito.  `^` sostituisce `__gc *` nella nuova sintassi.  
   
- Per ulteriori informazioni, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).  
+ Per altre informazioni, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).  
   
 ### <a name="examples"></a>Esempi  
  **Esempio**  
   
- In questo esempio viene illustrato come creare un'istanza di un tipo di riferimento nell'heap gestito.  Viene inoltre spiegato che è possibile inizializzare un handle con un altro, ottenendo due riferimenti allo stesso oggetto dell'heap gestito e sottoposto a Garbage Collection. Si noti che l'assegnazione [nullptr](../windows/nullptr-cpp-component-extensions.md) per un handle non contrassegna l'oggetto per l'operazione di garbage collection.  
+ In questo esempio viene illustrato come creare un'istanza di un tipo di riferimento nell'heap gestito.  Viene inoltre spiegato che è possibile inizializzare un handle con un altro, ottenendo due riferimenti allo stesso oggetto dell'heap gestito e sottoposto a Garbage Collection. Si noti che l'assegnazione [nullptr](../windows/nullptr-cpp-component-extensions.md) a un handle non contrassegna l'oggetto per garbage collection.  
   
-```  
+```cpp  
 // mcppv2_handle.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -88,7 +88,7 @@ int main() {
   
  Nel seguente esempio viene illustrato come dichiarare un handle a un oggetto nell'heap gestito in cui il tipo di oggetto è un tipo di valore boxed. Nell'esempio viene inoltre spiegato come ottenere il tipo di valore dall'oggetto boxed.  
   
-```  
+```cpp  
 // mcppv2_handle_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -122,7 +122,7 @@ Not a boxed int
   
  In questo esempio viene mostrato che il linguaggio comune C++ dell'utilizzo di un puntatore void* per puntare a un oggetto arbitrario viene sostituito da Object^ che può contenere un handle a una classe di riferimento. Viene inoltre mostrato che tutti i tipi, ad esempio matrici e delegati, possono essere convertiti in un handle di oggetto.  
   
-```  
+```cpp  
 // mcppv2_handle_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -171,7 +171,7 @@ Type is MyDel
   
  In questo esempio viene mostrato che un handle può essere dereferenziato e che un membro è accessibile tramite un handle dereferenziato.  
   
-```  
+```cpp  
 // mcppv2_handle_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -221,7 +221,7 @@ Cannot access array element 11, size is 10
   
  In questo esempio viene mostrato che un riferimento nativo (`&`) non può essere associato a un membro `int` di un tipo gestito poiché `int` potrebbe essere archiviato nell'heap sottoposto a Garbage Collection e i riferimenti nativi non tengono traccia dello spostamento di un oggetto nell'heap gestito. Per correggere è necessario utilizzare una variabile locale o modificare `&` in `%`, rendendolo un riferimento di traccia.  
   
-```  
+```cpp  
 // mcppv2_handle_5.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -242,7 +242,7 @@ int main() {
 ```  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md)   

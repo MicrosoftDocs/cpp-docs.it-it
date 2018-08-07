@@ -1,5 +1,5 @@
 ---
-title: nascosto | Documenti Microsoft
+title: nascosto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879685"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568670"
 ---
 # <a name="hidden"></a>hidden
-Indica che l'elemento esiste ma non deve essere visualizzato in un visualizzatore per utente.  
+Indica che l'elemento esiste ma non deve essere visualizzato in un browser orientate all'utente.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [hidden]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **nascosto** attributo C++ ha la stessa funzionalità come il [nascosto](http://msdn.microsoft.com/library/windows/desktop/aa366861) attributo MIDL.  
+ Il **nascosto** attributi di C++ ha la stessa funzionalità come il [nascosto](http://msdn.microsoft.com/library/windows/desktop/aa366861) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio di come utilizzare **nascosto**.  
+ Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio di come usare **nascosto**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -47,15 +45,15 @@ Indica che l'elemento esiste ma non deve essere visualizzato in un visualizzator
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`, **classe**, `struct`, metodo, proprietà|  
+|**Si applica a**|**interfaccia**, **classe**, **struct**, metodo, proprietà|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**coclass** (quando applicato a **class** o `struct`)|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|**Coclasse** (quando applicato a **classe** oppure **struct**)|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi di interfaccia](../windows/interface-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Attributi di metodo](../windows/method-attributes.md)   

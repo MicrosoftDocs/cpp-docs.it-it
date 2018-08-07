@@ -1,5 +1,5 @@
 ---
-title: 'Metodo ftmbase:: ReleaseMarshalData | Documenti Microsoft'
+title: 'Metodo ftmbase:: ReleaseMarshalData | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d56bc92e11d458a1872975f5a81a19c96566d59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c536d3708141250c6e0ab19cacb22fe989dc236
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873651"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568758"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>Metodo FtmBase::ReleaseMarshalData
-Elimina un pacchetto di dati sottoposti a marshalling.  
+Elimina un pacchetto viene eseguito il marshalling dei dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,14 +36,14 @@ STDMETHODIMP ReleaseMarshalData(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `pStm`  
- Puntatore a un flusso che contiene il pacchetto di dati per l'eliminazione.  
+ *pStm*  
+ Puntatore a un flusso che contiene il pacchetto di dati da distruggere.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** . h  
+ **Intestazione:** ftm.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

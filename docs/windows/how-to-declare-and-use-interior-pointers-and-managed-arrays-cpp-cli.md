@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: dichiarare e utilizzare i puntatori interni e le matrici gestite (C + + CLI) | Documenti Microsoft'
+title: 'Procedura: dichiarare e usare i puntatori interni e le matrici gestite (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875305"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569843"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Procedura: dichiarare e utilizzare i puntatori interni e le matrici gestite (C++/CLI)
-L'esempio C + + CLI illustra come dichiarare e utilizzare un puntatore interno a una matrice.  
+L'esempio C + + / CLI esempio viene illustrato come dichiarare e usare un puntatore interno a una matrice.  
   
 > [!IMPORTANT]
->  Questa funzionalità del linguaggio è supportata per il **/clr** l'opzione del compilatore, ma non dal **/ZW** l'opzione del compilatore.  
+>  Questa funzionalità del linguaggio è supportata dall'opzione del compilatore `/clr`, ma non dall'opzione del compilatore `/ZW`.  
   
 ## <a name="example"></a>Esempio  
   
 ### <a name="code"></a>Codice  
   
-```  
+```cpp  
 // interior_ptr_arrays.cpp  
 // compile with: /clr  
 #define SIZE 10  
@@ -59,7 +59,7 @@ int main() {
   
 ### <a name="output"></a>Output  
   
-```  
+```Output  
 1st element in arr holds: 1  
 ipi points to memory address whose value is: 1  
 after incrementing ipi, it points to memory address whose value is: 2  

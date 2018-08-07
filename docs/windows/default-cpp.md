@@ -1,5 +1,5 @@
 ---
-title: predefinito (C++) | Documenti Microsoft
+title: predefinito (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872965"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570857"
 ---
 # <a name="default-c"></a>default (C++)
 Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rappresenta l'interfaccia di programmabilità predefinita.  
@@ -32,8 +32,7 @@ Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rapp
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -54,9 +53,9 @@ Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rapp
  L'attributo C++ **default** ha la stessa funzione dell'attributo MIDL [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) . L'attributo **default** viene usato anche con l'attributo [case](../windows/case-cpp.md) .  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente mostra come viene usato **default** sulla definizione di una coclasse per specificare **ICustomDispatch** come interfaccia di programmabilità predefinita:  
+ Il codice seguente illustra la modalità **predefinite** viene utilizzato sulla definizione di una coclasse per specificare `ICustomDispatch` come interfaccia di programmabilità predefinita:  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -113,14 +112,14 @@ int main() {
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`, membro dati|  
+|**Si applica a**|**classe**, **struct**, membro dati|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**coclass** (quando applicato a **class** o `struct`)|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|**Coclasse** (quando applicato a **classe** oppure **struct**)|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   

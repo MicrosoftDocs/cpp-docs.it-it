@@ -1,5 +1,5 @@
 ---
-title: HelpContext | Documenti Microsoft
+title: HelpContext | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 317e204c7292c4a7cccb1f81f6bc9d2a2fbfd407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877215"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571360"
 ---
 # <a name="helpcontext"></a>helpcontext
-Specifica un ID di contesto che consente di visualizzare informazioni su questo elemento nel file della Guida.  
+Specifica un ID di contesto che consente all'utente di visualizzare informazioni sull'elemento corrente nel file della Guida.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ helpcontext(  
+[ helpcontext(  
    id  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `id`  
- L'ID del contesto dell'argomento della Guida. Vedere [della Guida HTML: Guida sensibile al contesto per i programmi](../mfc/html-help-context-sensitive-help-for-your-programs.md) per ulteriori informazioni sull'ID di contesto.  
+### <a name="parameters"></a>Parametri  
+ *ID*  
+ L'ID del contesto dell'argomento della Guida. Visualizzare [della Guida HTML: Guida sensibile al contesto per i programmi](../mfc/html-help-context-sensitive-help-for-your-programs.md) per altre informazioni sul contesto ID.  
   
 ## <a name="remarks"></a>Note  
- Il **helpcontext** attributo C++ ha la stessa funzionalità come il [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) attributo MIDL.  
+ Il **helpcontext** attributi di C++ ha la stessa funzionalità come la [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [defaultvalue](../windows/defaultvalue.md) per un esempio di come utilizzare **helpcontext**.  
+ Vedere l'esempio relativo [defaultvalue](../windows/defaultvalue.md) per un esempio di come usare **helpcontext**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -52,18 +51,18 @@ Specifica un ID di contesto che consente di visualizzare informazioni su questo 
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`, `typedef`, **classe**, metodo, proprietà|  
+|**Si applica a**|**interfaccia**, **typedef**, **classe**, metodo, proprietà|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi di interfaccia](../windows/interface-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Attributi del metodo](../windows/method-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [HelpFile](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   

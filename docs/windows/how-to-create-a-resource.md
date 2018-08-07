@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una risorsa | Documenti Microsoft'
+title: 'Procedura: creare una risorsa | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878645"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571470"
 ---
 # <a name="how-to-create-a-resource"></a>Procedura: creare una risorsa
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33878645"
   
 ### <a name="to-create-a-new-resource-in-class-view"></a>Per creare una nuova risorsa in Visualizzazione classi  
   
-1.  In [Visualizzazione classi](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)fare clic con il pulsante destro del mouse sulla classe e scegliere **Aggiungi**, quindi **Aggiungi risorsa** dal menu di scelta rapida.  
+1.  Nelle [Visualizzazione classi](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), fare doppio clic su classe e scegliere **Add**, quindi fare clic su **Aggiungi risorsa** dal menu di scelta rapida.  
   
 2.  Nella [finestra di dialogo Aggiungi risorsa](../windows/add-resource-dialog-box.md)scegliere il tipo di risorsa che si vuole aggiungere al progetto.  
   
@@ -58,11 +58,12 @@ ms.locfileid: "33878645"
   
  È possibile creare una risorsa come nuova risorsa predefinita, indipendente da un modello, oppure come risorsa basata su un [modello](../windows/how-to-use-resource-templates.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework.*
+
+
+## <a name="requirements"></a>Requisiti  
   
- **Requisiti**  
-  
- Win32  
+Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di risorse](../windows/resource-files-visual-studio.md)   

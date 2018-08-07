@@ -1,5 +1,5 @@
 ---
-title: 'Metodo handlet:: Attach | Documenti Microsoft'
+title: 'Metodo handlet:: Attach | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f7e70ec50ca76f1a7a525416b33d5eac46c08a4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5db96e9b8fd2090d9c58d9458bd53c66f6162477
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872521"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569172"
 ---
 # <a name="handletattach-method"></a>Metodo HandleT::Attach
-Associa l'handle specificato con l'oggetto HandleT corrente.  
+Associa l'handle specificato con l'attuale **HandleT** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ void Attach(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `h`  
+ *h*  
  Un handle.  
   
 ## <a name="requirements"></a>Requisiti  

@@ -1,5 +1,5 @@
 ---
-title: defaultvtable | Documenti Microsoft
+title: defaultvtable | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882537"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569670"
 ---
 # <a name="defaultvtable"></a>defaultvtable
-Definisce un'interfaccia come interfaccia vtable predefinita per un oggetto COM.  
+Definisce un'interfaccia come interfaccia predefinita vtable per un oggetto COM.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `interface`  
- L'interfaccia designata che si desidera disporre vtable predefinito per l'oggetto COM.  
+ *interface*  
+ L'interfaccia designato che si desidera avere la vtable predefinito per l'oggetto COM.  
   
 ## <a name="remarks"></a>Note  
- Il **defaultvtable** attributo C++ ha la stessa funzionalità come il [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) attributo MIDL.  
+ Il **defaultvtable** attributi di C++ ha la stessa funzionalità come la [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente illustra gli attributi in una classe che utilizzano **defaultvtable** per specificare un'interfaccia predefinita:  
+ Il codice seguente illustra gli attributi in una classe che usano **defaultvtable** per specificare un'interfaccia predefinita:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -78,10 +77,10 @@ class CMyC3 : public IMyI3 {};
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|**coclass**|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

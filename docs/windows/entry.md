@@ -1,5 +1,5 @@
 ---
-title: voce | Documenti Microsoft
+title: voce | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872315"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569638"
 ---
 # <a name="entry"></a>entry
 Specifica una costante o alla funzione esportata in un modulo identificando il punto di ingresso nella DLL.  
@@ -30,21 +30,20 @@ Specifica una costante o alla funzione esportata in un modulo identificando il p
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `id`  
+ *ID*  
  L'ID del punto di ingresso.  
   
 ## <a name="remarks"></a>Note  
- Il **voce** attributo C++ ha la stessa funzionalità come il [voce](http://msdn.microsoft.com/library/windows/desktop/aa366815) attributo MIDL.  
+ Il **voce** attributi di C++ ha la stessa funzionalità come la [voce](http://msdn.microsoft.com/library/windows/desktop/aa366815) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [idl_module](../windows/idl-module.md) per ad esempio **voce**.  
+ Vedere l'esempio relativo [idl_module](../windows/idl-module.md) per un esempio di uso dei **voce**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -55,7 +54,7 @@ Specifica una costante o alla funzione esportata in un modulo identificando il p
 |**Si applica a**|Attributo `idl_module`|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

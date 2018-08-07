@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: importare ed esportare risorse | Documenti Microsoft'
+title: 'Procedura: importare ed esportare risorse | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879178"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570480"
 ---
 # <a name="how-to-import-and-export-resources"></a>Procedura: importare ed esportare risorse
 È possibile importare risorse grafiche (bitmap, icone, cursori e barre degli strumenti), file HTML e risorse personalizzate da usare in Visual C++. È inoltre possibile esportare gli stessi tipi di file da un progetto Visual C++ in file separati utilizzabili all'esterno dell'ambiente di sviluppo.  
@@ -42,30 +42,28 @@ ms.locfileid: "33879178"
   
 ### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>Per importare una singola risorsa nel file di risorse corrente  
   
-1.  In [visualizzazione risorse](../windows/resource-view-window.md), fare doppio clic sul nodo per lo script di risorsa (* RC) file a cui si desidera aggiungere una risorsa.  
+1.  Nelle [visualizzazione risorse](../windows/resource-view-window.md), pulsante destro del mouse il nodo per lo script di risorsa (* RC) file in cui si desidera aggiungere una risorsa.  
   
-2.  Fare clic su **importazione** nel menu di scelta rapida.  
+2.  Fare clic su **importazione** menu di scelta rapida.  
   
 3.  Individuare e selezionare il nome di file della bitmap (BMP), dell'icona (ICO), del cursore (CUR), del file HTML (HTM) o di un file di altro tipo da importare.  
   
-4.  Fare clic su **OK** per aggiungere la risorsa del file selezionato in **risorse** visualizzazione.  
+4.  Fare clic su **OK** per aggiungere la risorsa per il file selezionato in **risorsa** visualizzazione.  
   
     > [!NOTE]
     >  Il processo di importazione viene eseguito nello stesso modo indipendentemente dal tipo di risorsa specifico selezionato. La risorsa importata viene aggiunta automaticamente al nodo appropriato per tale tipo di risorsa.  
   
 ### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Per esportare una bitmap, un'icona o un cursore come file separato, utilizzabile all'esterno di Visual C++  
   
-1.  In **risorse** visualizzare pulsante destro del mouse la risorsa che si desidera esportare.  
+1.  Nelle **risorsa** visualizzare, fare doppio clic la risorsa da esportare.  
   
-2.  Fare clic su **esportare** nel menu di scelta rapida.  
+2.  Fare clic su **esportare** menu di scelta rapida.  
   
-3.  Nel **Esporta risorsa** finestra di dialogo casella, accettare il nome del file corrente o digitarne uno nuovo.  
+3.  Nel **Esporta risorsa** dialogo casella, accettare il nome del file corrente o digitarne uno nuovo.  
   
 4.  Passare alla cartella in cui si desidera salvare il file e fare clic su **esportare**.  
   
-
-  
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
  Win32  
   

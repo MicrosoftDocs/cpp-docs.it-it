@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: dichiarare i puntatori interni con la parola chiave const (C + + CLI) | Documenti Microsoft'
+title: 'Procedura: dichiarare i puntatori interni con la parola chiave const (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a71de1ab8d0ae081274616d4c22a4d7f39c0bbbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fdab21e0e8b9ad0b6fb1d58ba7d1bcd7020ffd10
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875045"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568615"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Procedura: dichiarare i puntatori interni con la parola chiave const (C++/CLI)
-L'esempio seguente viene illustrato come utilizzare `const` nella dichiarazione di un puntatore interno.  
+L'esempio seguente viene illustrato come utilizzare **const** nella dichiarazione di un puntatore interno.  
   
 > [!IMPORTANT]
->  Questa funzionalità del linguaggio è supportata per il **/clr** l'opzione del compilatore, ma non dal **/ZW** l'opzione del compilatore.  
+>  Questa funzionalità del linguaggio è supportata dall'opzione del compilatore `/clr`, ma non dall'opzione del compilatore `/ZW`.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // interior_ptr_const.cpp  
 // compile with: /clr  
 using namespace System;  

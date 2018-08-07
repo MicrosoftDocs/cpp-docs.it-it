@@ -1,5 +1,5 @@
 ---
-title: helpstringdll | Documenti Microsoft
+title: helpstringdll | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877345"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570080"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-Specifica il nome della DLL da utilizzare per eseguire la ricerca della stringa di documento (localizzazione).  
+Specifica il nome della DLL da usare per eseguire la ricerca della stringa di documento (localizzazione).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `string`  
- La DLL da utilizzare per eseguire una ricerca della stringa di documento.  
+### <a name="parameters"></a>Parametri  
+ *string*  
+ La DLL da utilizzare per eseguire una ricerca di stringhe di documento.  
   
 ## <a name="remarks"></a>Note  
- Il **helpstringdll** attributo C++ ha la stessa funzionalità come il [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) attributo MIDL.  
+ Il **helpstringdll** attributi di C++ ha la stessa funzionalità come la [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,15 +63,15 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**Si applica a**|**classe**, `interface`, metodo di interfaccia|  
+|**Si applica a**|**classe**, **interfaccia**, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi di interfaccia](../windows/interface-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Attributi di metodo](../windows/method-attributes.md)   

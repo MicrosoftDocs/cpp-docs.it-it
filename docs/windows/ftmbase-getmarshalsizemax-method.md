@@ -1,5 +1,5 @@
 ---
-title: 'Metodo ftmbase:: GetMarshalSizeMax | Documenti Microsoft'
+title: 'Metodo ftmbase:: GetMarshalSizeMax | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c39c313f06bb4dd1f4dbc095df159a38625e9db8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873794"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570214"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>Metodo FtmBase::GetMarshalSizeMax
-Ottenere il limite superiore al numero di byte necessari per effettuare il marshalling di puntatore a interfaccia specificato per l'oggetto specificato.  
+Ottenere il limite superiore al numero di byte necessari per effettuare il marshalling il puntatore di interfaccia specificata sull'oggetto specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,34 +40,34 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `riid`  
- Riferimento all'identificatore dell'interfaccia da cui effettuare il marshalling.  
+### <a name="parameters"></a>Parametri  
+ *riid*  
+ Riferimento all'identificatore dell'interfaccia da sottoporre a marshalling.  
   
- `pv`  
- Puntatore a interfaccia deve essere sottoposto a marshalling; può essere NULL.  
+ *PV*  
+ Puntatore a interfaccia da sottoporre a marshalling; può essere NULL.  
   
- `dwDestContext`  
- Contesto di destinazione in cui l'interfaccia specificata è essere sottoposta a unmarshalling.  
+ *dwDestContext*  
+ Contesto di destinazione in cui l'interfaccia specificata deve essere sottoposta a unmarshalling.  
   
  Specificare uno o più valori di enumerazione MSHCTX.  
   
- Attualmente, l'unmarshalling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nel processo corrente (MSHCTX_LOCAL) nello stesso computer.  
+ Attualmente, l'unmarshalling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nello stesso computer come processo corrente (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Riservato per utilizzi futuri; deve essere NULL.  
   
- `mshlflags`  
- Flag che indica se i dati di cui effettuare il marshalling deve essere trasmesso al processo client, ovvero il caso tipico, o scrivere in una tabella globale, in cui può essere recuperato da più client. Specificare uno o più valori di enumerazione MSHLFLAGS.  
+ *mshlflags*  
+ Flag che indica se i dati da sottoporre a marshalling deve essere trasmesso al processo client, ovvero il caso tipico, o scritti in una tabella globale, in cui può essere recuperato da più client. Specificare uno o più valori di enumerazione MSHLFLAGS.  
   
- `pSize`  
- Quando questa operazione viene completata, puntatore per il limite superiore per la quantità di dati da scrivere nel flusso di marshalling.  
+ *pSize*  
+ Quando questa operazione viene completata, puntatore al limite massimo sulla quantità di dati da scrivere nel flusso di marshalling.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, E_FAIL o E_NOINTERFACE.  
+ S_OK se l'esito positivo. in caso contrario, E_FAIL o E_NOINTERFACE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** . h  
+ **Intestazione:** ftm.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

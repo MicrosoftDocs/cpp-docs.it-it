@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare modelli di risorse | Documenti Microsoft'
+title: 'Procedura: usare i modelli di risorse | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,37 +21,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882732"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569456"
 ---
 # <a name="how-to-use-resource-templates"></a>Procedura: utilizzare modelli di risorse
 Un modello di risorsa è una risorsa personalizzata salvata come un file con estensione RCT. È quindi possibile usare un modello di risorsa come punto iniziale per la creazione di altre risorse. I modelli di risorsa garantiscono un risparmio di tempo nello sviluppo di risorse o gruppi di risorse aggiuntivi che condividono alcune funzionalità, quali controlli standard e altri elementi ripetuti. Se, ad esempio, si vuole includere un pulsante ? e un'icona di un logo aziendale in più finestre di dialogo, è possibile creare un nuovo modello di finestra di dialogo e personalizzarlo con il logo e il pulsante ?.  
   
- Dopo avere personalizzato il modello di risorsa, è necessario salvare le modifiche apportate nella cartella dei modelli (o in qualsiasi posizione specificata nel percorso di inclusione) in modo che il nuovo modello di risorsa verrà visualizzato nel relativo tipo di risorsa nel [la finestra di dialogo Aggiungi risorsa](../windows/add-resource-dialog-box.md). Sarà quindi possibile usare il nuovo modello di risorsa quando necessario.  
+ Dopo avere personalizzato il modello di risorsa, è necessario salvare le modifiche nella cartella del modello (o in qualsiasi posizione specificata nel percorso di inclusione) in modo che il nuovo modello di risorsa verrà visualizzato nel relativo tipo di risorsa nel [finestra di dialogo Aggiungi risorsa](../windows/add-resource-dialog-box.md). Sarà quindi possibile usare il nuovo modello di risorsa quando necessario.  
   
 > [!NOTE]
->  È possibile inserire i file di modello specifici di una lingua in sottodirectory della directory principale dei modelli. Ad esempio, è possibile inserire il file di modello solo in inglese in \\< directory dei modelli di risorsa\>\1033.  
+>  È possibile inserire i file di modello specifici di una lingua in sottodirectory della directory principale dei modelli. Ad esempio, è possibile inserire i file di modello solo in inglese nel \\< directory dei modelli di resource\>\1033.  
   
 ### <a name="to-create-a-template-for-resources"></a>Per creare un modello per le risorse  
   
-1.  In **Esplora**, fare doppio clic su progetto.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic su progetto.  
   
-2.  Nel menu di scelta rapida, scegliere **Aggiungi**, quindi fare clic su **Aggiungi nuovo elemento**.  
+2.  Dal menu di scelta rapida, scegliere **Add**, quindi fare clic su **Aggiungi nuovo elemento**.  
   
-3.  Nel **Aggiungi nuovo elemento** della finestra di dialogo di **modelli:** riquadro scegliere **File modello di risorse (RCT)**.  
+3.  Nel **Aggiungi nuovo elemento** nella finestra di dialogo il **modelli:** riquadro, scegliere **File di modello di risorse (RCT)**.  
   
-4.  Specificare un nome e il percorso per il nuovo file RCT, quindi scegliere **aprire**.  
+4.  Specificare un nome e percorso per il nuovo file RCT, quindi scegliere **aperto**.  
   
-5.  Il nuovo file RCT verrà aggiunto al progetto e viene visualizzato in Esplora soluzioni nel **risorse** cartella.  
+5.  Il nuovo file RCT viene aggiunto al progetto e viene visualizzato in Esplora soluzioni con il **risorse** cartella.  
   
-     È ora possibile fare doppio clic sul file RCT per aprirlo in una finestra del documento, quindi aggiungere le risorse (il file in una finestra del documento e scegliere **Aggiungi risorsa** dal menu di scelta rapida). Sarà quindi possibile personalizzare tali risorse e salvare il file RCT.  
+     È ora possibile fare doppio clic sul file RCT per aprirlo in una finestra del documento e quindi aggiungervi le risorse (il pulsante destro nella finestra del documento e scegliere **Aggiungi risorsa** dal menu di scelta rapida). Sarà quindi possibile personalizzare tali risorse e salvare il file RCT.  
   
     > [!NOTE]
-    >  Quando si crea un nuovo file RCT, Visual Studio cerca tale file in \Programmi\Microsoft Visual Studio 9.0\VC\VCResourceTemplates, in \Programmi\Microsoft Visual Studio 9.0\VC\VCResourceTemplates\\*LCID* ( ad esempio 1033 per inglese), *o* in qualsiasi punto di [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Se si preferisce archiviare i file RCT in un'altra cartella di file, ad esempio in \Documenti, è sufficiente aggiungere questa cartella al percorso di inclusione. Visual Studio sarà così in grado di trovare il file RCT creato.  
+    >  Quando si crea un nuovo file RCT, Visual Studio cerca tale file in \Programmi\Microsoft Visual Studio 9.0\VC\VCResourceTemplates, in \Programmi\Microsoft Visual Studio 9.0\VC\VCResourceTemplates\\*LCID* ( ad esempio 1033 per inglese), *oppure* ovunque si trovino con la [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Se si preferisce archiviare i file RCT in un'altra cartella di file, ad esempio in \Documenti, è sufficiente aggiungere questa cartella al percorso di inclusione. Visual Studio sarà così in grado di trovare il file RCT creato.  
   
 ### <a name="to-convert-an-existing-rc-file-to-an-rct-file"></a>Per convertire un file RC esistente in un file RCT  
   
@@ -63,19 +63,19 @@ Un modello di risorsa è una risorsa personalizzata salvata come un file con est
   
 ### <a name="to-create-a-new-resource-from-a-template"></a>Per creare una nuova risorsa da un modello  
   
-1.  Nel [visualizzazione risorse](../windows/resource-view-window.md) riquadro, fare clic con il pulsante destro sul file RC e scegliere **Aggiungi risorsa** dal menu di scelta rapida.  
+1.  Nel [visualizzazione di risorse](../windows/resource-view-window.md) riquadro, fare clic con il pulsante destro del file RC e scegliere **Aggiungi risorsa** dal menu di scelta rapida.  
   
-2.  Nel **Aggiungi risorsa** finestra di dialogo fare clic sul segno più (**+**) accanto alla risorsa per espandere il nodo di risorsa e visualizzare tutti i modelli disponibili per tale risorsa.  
+2.  Nel **Aggiungi risorsa** finestra di dialogo fare clic sul segno più (**+**) accanto a una risorsa per espandere il nodo di risorsa e visualizzano tutti i modelli disponibili per tale risorsa.  
   
 3.  Fare doppio clic sul modello che si desidera usare.  
   
 4.  Modificare le risorse aggiunte in base alle specifiche esigenze nel relativo editor di risorse.  
   
-     L'editor di risorse fornisce automaticamente un ID della risorsa univoco. È possibile modificare il [le proprietà delle risorse](../windows/changing-the-properties-of-a-resource.md) in base alle esigenze.  
+     L'editor di risorse fornisce automaticamente un ID della risorsa univoco. È possibile rivedere le [le proprietà delle risorse](../windows/changing-the-properties-of-a-resource.md) in base alle esigenze.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
   
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
  Win32  
   

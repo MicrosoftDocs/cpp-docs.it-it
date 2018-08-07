@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: includere risorse in fase di compilazione | Documenti Microsoft'
+title: 'Procedura: includere risorse in fase di compilazione | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880151"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571340"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Procedura: includere risorse in fase di compilazione
-In genere è facile e comodo usare la disposizione predefinita di tutte le risorse in un file di script (RC) delle risorse. Tuttavia, è possibile aggiungere risorse in altri file al progetto corrente in fase di compilazione elencandoli nella **direttive in fase di compilazione** casella il [finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md).  
+In genere è facile e comodo usare la disposizione predefinita di tutte le risorse in un file di script (RC) delle risorse. Tuttavia, è possibile aggiungere le risorse in altri file al progetto corrente in fase di compilazione elencandoli nella **direttive in fase di compilazione** nella casella il [finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md).  
   
  Vi sono vari motivi per inserire le risorse in un file diverso dal file RC principale:  
   
@@ -45,21 +45,19 @@ In genere è facile e comodo usare la disposizione predefinita di tutte le risor
   
 -   Per includere risorse (ad esempio, risorse RCDATA) che sono in un formato personalizzato. Le risorse RCDATA possono avere requisiti speciali. Ad esempio, è possibile usare un'espressione come valore per il campo nameID. Per altre informazioni, vedere la documentazione di [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- Se si dispone di sezioni nel file RC esistenti che soddisfano una di queste condizioni, è necessario inserire le sezioni in uno o più file RC separati e includerli nel progetto usando il [finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md). Il *Projectname*file RC2 creato nella sottodirectory \res di un nuovo progetto viene utilizzato per questo scopo.  
+ Se si dispone di sezioni nel file RC esistenti che soddisfano una di queste condizioni, è necessario inserire le sezioni in uno o più file RC separati e includerli nel progetto usando il [finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md). Il *Projectname*file RC2 creato nella sottodirectory \res di un nuovo progetto viene usato per questo scopo.  
   
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>Per includere risorse nel progetto in fase di compilazione  
   
-1.  Inserire le risorse in un file script di risorsa con un nome file univoco. Non utilizzare *projectname*. rc, poiché si tratta del nome di file utilizzato per il file di script di risorse principale.  
+1.  Inserire le risorse in un file script di risorsa con un nome file univoco. Non utilizzare *projectname*. rc, poiché si tratta del nome file utilizzato per il file di script di risorse principale.  
   
-2.  Fare doppio clic sul file RC (in [visualizzazione risorse](../windows/resource-view-window.md)) e scegliere **Inclusioni risorsa** dal menu di scelta rapida.  
+2.  Fare clic sul file RC (in [visualizzazione di risorse](../windows/resource-view-window.md)) e scegliere **Inclusioni risorsa** dal menu di scelta rapida.  
   
-3.  Nel **direttive in fase di compilazione** , aggiungere il [#include](../preprocessor/hash-include-directive-c-cpp.md) direttiva del compilatore per includere il nuovo file di risorse nel file di risorse principale nell'ambiente di sviluppo.  
+3.  Nel **direttive in fase di compilazione** , aggiungere il [#include](../preprocessor/hash-include-directive-c-cpp.md) direttiva del compilatore di includere il nuovo file di risorse nel file di risorse principale nell'ambiente di sviluppo.  
   
      Le risorse nei file incluse in questo modo diventano parte del file eseguibile in fase di compilazione. Non sono direttamente disponibili per la modifica quando si lavora sul file RC principale del progetto. È necessario aprire i file RC inclusi separatamente. Eventuali file inclusi, ma che non hanno estensione RC non saranno modificabili da parte degli editor di risorse.  
   
-
-  
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
  Win32  
   

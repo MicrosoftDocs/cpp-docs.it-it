@@ -1,5 +1,5 @@
 ---
-title: interfaccia dispatch | Documenti Microsoft
+title: interfaccia dispatch | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874288"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569214"
 ---
 # <a name="dispinterface"></a>dispinterface
 Inserisce un'interfaccia nel file con estensione idl come interfaccia di dispatch.  
@@ -30,9 +30,7 @@ Inserisce un'interfaccia nel file con estensione idl come interfaccia di dispatc
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [dispinterface]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
@@ -58,7 +56,7 @@ dispinterface helloPro
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`|  
+|**Si applica a**|**interface**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
 |**Attributi non validi**|**dual**, **object**, **oleautomation**, `local`, **ms_union**|  
@@ -67,9 +65,9 @@ dispinterface helloPro
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi dall'utilizzo](../windows/attributes-by-usage.md)   
+ [Attributi per utilizzo](../windows/attributes-by-usage.md)   
  [UUID](../windows/uuid-cpp-attributes.md)   
- [Doppio](../windows/dual.md)   
- [Personalizzato](../windows/custom-cpp.md)   
+ [Dual](../windows/dual.md)   
+ [Personalizzati](../windows/custom-cpp.md)   
  [object](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

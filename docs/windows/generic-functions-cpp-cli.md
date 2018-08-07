@@ -1,5 +1,5 @@
 ---
-title: Funzioni generiche (C + + CLI) | Documenti Microsoft
+title: Funzioni generiche (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878834"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568878"
 ---
 # <a name="generic-functions-ccli"></a>Funzioni generiche (C++/CLI)
-Una funzione generica è una funzione dichiarata con parametri di tipo. Quando viene chiamato, vengono utilizzati i tipi effettivi anziché i parametri di tipo.  
+Una funzione generica è una funzione dichiarata con i parametri di tipo. Quando viene chiamato, anziché i parametri di tipo vengono usati tipi effettivi.  
   
 ## <a name="all-platforms"></a>Tutte le piattaforme  
  **Note**  
@@ -40,12 +40,12 @@ Una funzione generica è una funzione dichiarata con parametri di tipo. Quando v
  Questa funzionalità non è supportata in Windows Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- Una funzione generica è una funzione dichiarata con parametri di tipo. Quando viene chiamato, vengono utilizzati i tipi effettivi anziché i parametri di tipo.  
+ Una funzione generica è una funzione dichiarata con i parametri di tipo. Quando viene chiamato, anziché i parametri di tipo vengono usati tipi effettivi.  
   
- **Sintassi**  
+### <a name="syntax"></a>Sintassi  
   
 ```  
 [attributes] [modifiers]  
@@ -56,49 +56,49 @@ return-type identifier<type-parameter identifier(s)>
 {function-body}  
 ```  
   
- **Parametri**  
+### <a name="parameters"></a>Parametri 
   
- *attributi* (facoltativo)  
- Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e classi di attributi, vedere attributi.  
+ *gli attributi* (facoltativo)  
+ Informazioni dichiarative aggiuntive. Per altre informazioni sugli attributi e classi di attributi, vedere attributi.  
   
  *modificatori* (facoltativo)  
- Un modificatore per la funzione, ad esempio statico.  `virtual` non è consentita perché i metodi virtuali non possono essere generici.  
+ Modificatore di funzione, ad esempio statico.  **virtuale** non è consentita perché i metodi virtuali non possono essere generici.  
   
- *Tipo restituito*  
+ *tipo restituito*  
  Tipo restituito dal metodo. Se il tipo restituito è void, nessun valore restituito è obbligatorio.  
   
  *identifier*  
  Nome della funzione.  
   
  *parametro di tipo identificatore/i*  
- Elenco delimitato da virgole di identificatori.  
+ Elenco di identificatori delimitati da virgole.  
   
- *i parametri formali* (facoltativo)  
+ *parametri formali di* (facoltativo)  
  Elenco di parametri.  
   
  *parametro di tipo-clausole di vincoli*  
- Questo consente di specificare le restrizioni per i tipi che possono essere utilizzati come argomenti di tipo e assume il formato specificato in [vincoli sui parametri di tipo generico (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ Questo specifica le restrizioni sui tipi che possono essere utilizzati come argomenti tipo e assume il formato specificato nella [vincoli su parametri di tipo generico (C + + / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
  *corpo della funzione*  
- Il corpo del metodo, che può fare riferimento agli identificatori di parametro di tipo.  
+ Il corpo del metodo, che può fare riferimento agli identificatori dei parametri di tipo.  
   
- **Note**  
+### <a name="remarks"></a>Note  
   
- Funzioni generiche sono le funzioni dichiarate con un parametro di tipo generico. Possono essere metodi nelle funzioni di classe o struct o autonomo. Una singola dichiarazione generica dichiara in modo implicito una famiglia di funzioni che differiscono solo per la sostituzione di un tipo effettivo diverso per il parametro di tipo generico.  
+ Funzioni generiche sono funzioni dichiarate con un parametro di tipo generico. Possono essere metodi in una classe o struct o autonomo funzioni. Una singola dichiarazione generica dichiara in modo implicito una famiglia di funzioni che differiscono solo per la sostituzione di un tipo effettivo diverso per il parametro di tipo generico.  
   
- In Visual C++, costruttori di classe o struct non possono essere dichiarati con parametri di tipo generico.  
+ In Visual C++, i costruttori di classe o struct non possono essere dichiarati con parametri di tipo generico.  
   
- Quando viene chiamato, il parametro di tipo generico viene sostituito da un tipo effettivo. Il tipo effettivo può essere specificato in modo esplicito in parentesi angolari utilizzando una sintassi simile a una chiamata di funzione di modello. Se chiamata senza parametri di tipo, il compilatore tenterà di dedurre il tipo effettivo dai parametri specificati nella chiamata di funzione. Se l'argomento tipo designato non può essere dedotto dai parametri usati, il compilatore segnalerà un errore.  
+ Quando viene chiamato, il parametro di tipo generico viene sostituito da un tipo effettivo. Il tipo effettivo può essere specificato in modo esplicito in parentesi angolari usando una sintassi simile a una chiamata di funzione di modello. Se chiamata senza parametri di tipo, il compilatore proverà a dedurre il tipo effettivo rispetto ai parametri specificati nella chiamata di funzione. Se l'argomento tipo designato non può essere dedotto dai parametri utilizzati, il compilatore segnalerà un errore.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Esempio di codice riportato di seguito viene illustrato come una funzione generica.  
+ Esempio di codice seguente illustra una funzione generica.  
   
-```  
+```cpp  
 // generics_generic_function_1.cpp  
 // compile with: /clr  
 generic <typename ItemType>  
@@ -131,9 +131,9 @@ int main() {
   
  **Esempio**  
   
- Funzioni generiche possono essere sottoposti a overload in base a una firma o grado, il numero di parametri di tipo in una funzione. Funzioni generiche, inoltre, possono risultare sovraccarico con le funzioni non generica con lo stesso nome, purché le funzioni differiscono per alcuni parametri di tipo. Ad esempio, le funzioni seguenti possono essere sottoposti a overload:  
+ Funzioni generiche possono essere sottoposti a overload basato su firma o arietà, il numero di parametri di tipo in una funzione. Funzioni generiche, inoltre, possono risultare sovraccarico con le funzioni non generica con lo stesso nome, purché le funzioni differiscono alcuni parametri di tipo. Ad esempio, le funzioni seguenti possono essere sottoposti a overload:  
   
-```  
+```cpp  
 // generics_generic_function_2.cpp  
 // compile with: /clr /c  
 ref struct MyClass {  
@@ -149,9 +149,9 @@ ref struct MyClass {
   
  **Esempio**  
   
- L'esempio seguente usa una funzione generica per individuare il primo elemento in una matrice. Dichiara `MyClass`, che eredita dalla classe di base `MyBaseClass`. `MyClass` contiene una funzione generica `MyFunction`, che chiama un'altra funzione generica, `MyBaseClassFunction`, all'interno della classe basa. In **principale**, la funzione generica, `MyFunction`, viene chiamato utilizzando argomenti di tipo diverso.  
+ L'esempio seguente usa una funzione generica per individuare il primo elemento nella matrice. Dichiara `MyClass`, che eredita dalla classe di base `MyBaseClass`. `MyClass` contiene una funzione generica `MyFunction`, che chiama un'altra funzione generica, `MyBaseClassFunction`, all'interno della classe base. Nelle `main`, la funzione generica, `MyFunction`, viene chiamato utilizzando argomenti di tipo diverso.  
   
-```  
+```cpp  
 // generics_generic_function_3.cpp  
 // compile with: /clr  
 using namespace System;  

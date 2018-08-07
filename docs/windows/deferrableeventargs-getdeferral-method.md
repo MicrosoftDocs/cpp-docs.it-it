@@ -1,5 +1,5 @@
 ---
-title: 'Metodo deferrableeventargs:: Getdeferral | Documenti Microsoft'
+title: 'Metodo deferrableeventargs:: Getdeferral | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2442894c5f7bd85eb94262e776294c1e52a19e01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13cd6b361fccc49de6142a0640ff96dbab3cb92c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883541"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571204"
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>Metodo DeferrableEventArgs::GetDeferral
-Ottiene un riferimento di [rinvio](http://go.microsoft.com/fwlink/p/?linkid=526520) oggetto che rappresenta un evento posticipato.  
+Ottiene un riferimento per la [differimento](http://go.microsoft.com/fwlink/p/?linkid=526520) oggetto che rappresenta un evento posticipato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,8 +30,8 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `result`  
- Un puntatore che fa riferimento il [rinvio](http://go.microsoft.com/fwlink/p/?linkid=526520) al termine della chiamata dell'oggetto.  
+ *Risultato*  
+ Un puntatore che farà riferimento il [differimento](http://go.microsoft.com/fwlink/p/?linkid=526520) al completamento della chiamata dell'oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  

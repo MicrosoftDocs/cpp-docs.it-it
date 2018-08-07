@@ -1,5 +1,5 @@
 ---
-title: defaultcollelem | Documenti Microsoft
+title: defaultcollelem | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870910"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569885"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
-Utilizzato per ottimizzare il codice Visual Basic.  
+Utilizzato per l'ottimizzazione del codice Visual Basic.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [defaultcollelem]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **defaultcollelem** attributo C++ ha la stessa funzionalità come il [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) attributo MIDL.  
+ Il **defaultcollelem** attributi di C++ ha la stessa funzionalità come la [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato un metodo di interfaccia utilizzando il **defaultcollelem** attributo:  
+ Il codice seguente illustra un metodo di interfaccia usando il **defaultcollelem** attributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -65,7 +63,7 @@ __interface IMyForm
 |**Si applica a**|Metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

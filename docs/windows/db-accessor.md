@@ -1,5 +1,5 @@
 ---
-title: db_accessor | Documenti Microsoft
+title: db_accessor | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b81e55500a8ff44c887bed592c9472c5a8d3ea1d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68c7d70c6d1192e1b80253cf1fb3cfc3040d8fce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874525"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570653"
 ---
 # <a name="dbaccessor"></a>db_accessor
-Gruppi **db_column** gli attributi che fanno parte di `IAccessor`-associazione di base.  
+I gruppi `db_column` gli attributi che fanno parte di `IAccessor`-associazione basata su.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ db_accessor(   
+[ db_accessor(   
    num,   
    auto   
 ) ]  
@@ -39,24 +38,24 @@ Gruppi **db_column** gli attributi che fanno parte di `IAccessor`-associazione d
   
 #### <a name="parameters"></a>Parametri  
  *num*  
- Specifica il numero delle funzioni di accesso (un indice intero in base zero). È necessario specificare numeri di funzione di accesso in ordine crescente d'ordine, usando interi o valori definiti.  
+ Specifica il numero di funzioni di accesso (un indice integer in base zero). È necessario specificare numeri di funzione di accesso in ordine crescente d'ordine, usando interi o valori definiti.  
   
  *auto*  
- Un valore booleano che specifica se la funzione di accesso viene recuperato automaticamente (**TRUE**) o non recuperati (**FALSE**).  
+ Valore booleano che specifica se la funzione di accesso viene recuperata automaticamente (TRUE) o non recuperato (FALSE).  
   
 ## <a name="remarks"></a>Note  
- **db_accessor** definisce la funzione di accesso OLE DB sottostanti per successivi **db_column** e **db_param** attributi all'interno della stessa classe o funzione. **db_accessor** è possibile utilizzare a livello di membro e viene utilizzata al gruppo **db_column** attributi che fanno parte di OLE DB `IAccessor`-associazione di base. Viene utilizzato in combinazione con il **db_table** o **db_command** attributi. La chiamata di questo attributo è simile alla chiamata di [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) e [END_ACCESSOR](../data/oledb/end-accessor.md) macro.  
+ **db_accessor** definisce la funzione di accesso OLE DB sottostante per successive `db_column` e `db_param` attributi all'interno della stessa classe o funzione. **db_accessor** è possibile utilizzare a livello di membro e viene usato al gruppo `db_column` attributi che fanno parte di OLE DB `IAccessor`-associazione basata su. Viene usato in combinazione con il `db_table` o `db_command` attributi. La chiamata a questo attributo è simile alla chiamata di [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) e [END_ACCESSOR](../data/oledb/end-accessor.md) macro.  
   
- **db_accessor** genera un set di righe e li associa ai mapping di funzione di accesso corrispondente. Se non si chiama **db_accessor**, funzione di accesso 0 verrà automaticamente generato e tutte le associazioni di colonna verranno mappate a questo blocco di funzione di accesso.  
+ **db_accessor** genera un set di righe e lo associa ai mapping di funzione di accesso corrispondente. Se non si chiama **db_accessor**, verrà generato automaticamente 0 della funzione di accesso e tutte le associazioni di colonna verranno mappate a questo blocco della funzione di accesso.  
   
- **db_accessor** gruppi di associazioni di colonna all'interno di uno o più funzioni di accesso del database. Per una descrizione degli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [utilizzo di più funzioni di accesso per un Rowset](../data/oledb/using-multiple-accessors-on-a-rowset.md). Vedere anche "Utente Record supporto per più funzioni di accesso" in [record utente](../data/oledb/user-records.md).  
+ **db_accessor** i gruppi di associazioni di colonna all'interno di uno o più funzioni di accesso del database. Per una descrizione degli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [uso di più funzioni di accesso su un set di righe](../data/oledb/using-multiple-accessors-on-a-rowset.md). Vedere anche "Utente Record supporto per più funzioni di accesso" nella [record utente](../data/oledb/user-records.md).  
   
- Quando il provider di attributi del consumer si applica questo attributo a una classe, il compilatore Rinomina la classe per \_ *NomeClasse*funzione di accesso, in cui *NomeClasse* è il nome assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.  
+ Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore Rinomina la classe \_ *NomeClasse*della funzione di accesso, dove *NomeClasse* è il nome è stato assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa **db_accessor** per raggruppare le colonne nella tabella Orders del database Northwind in due funzioni di accesso. Funzione di accesso 0 è automatica, e non 1 della funzione di accesso.  
+ L'esempio seguente usa **db_accessor** per raggruppare le colonne nella tabella Orders del database Northwind in due funzioni di accesso. Funzione di accesso 0 è automatica, e non funzione di accesso 1.  
   
-```  
+```cpp  
 // cpp_attr_ref_db_accessor.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  
@@ -85,7 +84,7 @@ public:
 |**Si applica a**|Blocchi di attributi|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

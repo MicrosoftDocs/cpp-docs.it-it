@@ -1,5 +1,5 @@
 ---
-title: Eccezioni (estensioni del componente C++) | Documenti Microsoft
+title: Eccezioni (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b6dcf8e844fbb2e8e133dc5dc6f0b98a3166ac6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877735"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568654"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Gestione delle eccezioni (Estensioni del componente C++)
-Le applicazioni compilate con il **/ZW** l'opzione del compilatore o **/clr** entrambi utilizzano l'opzione del compilatore *eccezioni* per gestire gli errori imprevisti durante l'esecuzione del programma. Negli argomenti seguenti viene illustrata la gestione delle eccezioni nelle applicazioni C++/CLI o C++/CX.  
+Nelle applicazioni compilate con la `/ZW` l'opzione del compilatore oppure `/clr` entrambi usano l'opzione del compilatore *eccezioni* per gestire gli errori imprevisti durante l'esecuzione del programma. Negli argomenti seguenti viene illustrata la gestione delle eccezioni nelle applicazioni C++/CLI o C++/CX.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Concetti di base per l'uso delle eccezioni gestite](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- Descrive la generazione di eccezioni e l'utilizzo `try` / `catch` blocchi.  
+ Descrive la generazione di eccezioni e l'utilizzo **provare**/**catch** blocchi.  
   
- [Differenze nel comportamento in /CLR di gestione delle eccezioni](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+ [Differenze di comportamento in /CLR di gestione delle eccezioni](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
  Vengono illustrate le differenze rispetto al comportamento standard di gestione delle eccezioni C++.  
   
  [finally](../dotnet/finally.md)  

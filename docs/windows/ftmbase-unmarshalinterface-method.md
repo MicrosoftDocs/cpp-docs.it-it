@@ -1,5 +1,5 @@
 ---
-title: 'Metodo ftmbase:: UnmarshalInterface | Documenti Microsoft'
+title: 'Metodo ftmbase:: UnmarshalInterface | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877719"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570028"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>Metodo FtmBase::UnmarshalInterface
-Inizializza un nuovo proxy e restituisce un puntatore a interfaccia a tale proxy.  
+Inizializza un proxy appena creato e restituisce un puntatore a interfaccia a tale proxy.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,20 +38,20 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `pStm`  
- Puntatore al flusso dal quale il puntatore di interfaccia si desidera effettuare l'unmarshalling.  
+ *pStm*  
+ Puntatore al flusso da cui il puntatore di interfaccia deve essere sottoposta a unmarshalling.  
   
- `riid`  
- Riferimento all'identificatore dell'interfaccia per effettuare l'unmarshalling.  
+ *riid*  
+ Riferimento all'identificatore dell'interfaccia di essere sottoposta a unmarshalling.  
   
- `ppv`  
- Al termine di questa operazione, l'indirizzo di una variabile puntatore che riceve il puntatore di interfaccia richiesto `riid`. Se questa operazione ha esito positivo, *`ppv` contiene il puntatore dell'interfaccia richiesta dell'interfaccia per effettuare l'unmarshalling.  
+ *ppv*  
+ Al termine di questa operazione, l'indirizzo di una variabile puntatore che riceve il puntatore a interfaccia richiesto *riid*. Se questa operazione ha esito positivo, **ppv* contiene il puntatore all'interfaccia richiesta dell'interfaccia di essere sottoposta a unmarshalling.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, E_NOINTERFACE o E_FAIL.  
+ S_OK se l'esito positivo. in caso contrario, E_NOINTERFACE o E_FAIL.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** . h  
+ **Intestazione:** ftm.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

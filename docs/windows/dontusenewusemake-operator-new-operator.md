@@ -1,5 +1,5 @@
 ---
-title: 'Nuovo operatore dontusenewusemake:: operator | Documenti Microsoft'
+title: 'Nuovo operatore dontusenewusemake:: operator | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873680"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571425"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>Operatore DontUseNewUseMake::operator new
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +37,20 @@ void* operator new(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `__unnamed0`  
- Un parametro senza nome che specifica il numero di byte di memoria da allocare.  
+ *__unnamed0*  
+ Un parametro non denominato che specifica il numero di byte di memoria da allocare.  
   
- `placement`  
- Il tipo deve essere allocata.  
+ *selezione host*  
+ Il tipo da allocare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Fornisce un modo per passare argomenti aggiuntivi se si esegue l'overload di operatore `new`.  
+ Fornisce un modo per passare argomenti aggiuntivi se si esegue l'overload di operatore **nuovo**.  
   
 ## <a name="remarks"></a>Note  
- Esegue l'overload di operatore `new` e impedisce venga utilizzato in RuntimeClass.  
+ Operatore di overload **nuove** e impedisce l'utilizzo `RuntimeClass`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
