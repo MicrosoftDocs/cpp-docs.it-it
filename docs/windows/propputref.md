@@ -1,5 +1,5 @@
 ---
-title: propputref | Documenti Microsoft
+title: propputref | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac9784e450746a4474879aae346a4242bbe2fd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc11561401ff34b629fecdc31a00ffb845d6a2d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878190"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606800"
 ---
 # <a name="propputref"></a>propputref
 Specifica una funzione di impostazione di proprietà che utilizza un riferimento anziché un valore.  
@@ -30,16 +30,14 @@ Specifica una funzione di impostazione di proprietà che utilizza un riferimento
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [propputref]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **propputref** attributo C++ ha la stessa funzionalità come il [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) attributo MIDL.  
+ Il **propputref** attributi di C++ ha la stessa funzionalità come la [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio dell'uso di **propputref**.  
+ Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio dell'uso dei **propputref**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -50,7 +48,7 @@ Specifica una funzione di impostazione di proprietà che utilizza un riferimento
 |**Si applica a**|Metodo|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|**propget**, **propput**|  
+|**Attributi non validi**|`propget`, `propput`|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

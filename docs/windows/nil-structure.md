@@ -1,5 +1,5 @@
 ---
-title: Struttura nil | Documenti Microsoft
+title: Struttura nil | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb260114a8010d441f0556cf2a21734c0ac23cca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12346ffa30b3e309dcb845117f311cd4a63b9ad9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881426"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603617"
 ---
 # <a name="nil-structure"></a>Struttura Nil
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,15 +32,15 @@ struct Nil;
 ```  
   
 ## <a name="remarks"></a>Note  
- Utilizzato per indicare un parametro di modello non specificato, che è facoltativo.  
+ Utilizzato per indicare un parametro di modello non specificato, facoltativo.  
   
- Nil è una struttura vuota.  
+ **NIl** è una struttura vuota.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `Nil`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -1,5 +1,5 @@
 ---
-title: sealed (estensioni del componente C++) | Documenti Microsoft
+title: sealed (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890863"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604551"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (Estensioni del componente C++)
-`sealed` è una parola chiave sensibile al contesto per le classi di riferimento che indica che un membro virtuale non può essere sottoposto a override o che un tipo non può essere usato come tipo di base.  
+**sealed** è una parola chiave sensibile al contesto per le classi di riferimento che indica che un membro virtuale non può essere sottoposto a override o che un tipo non può essere utilizzato come tipo di base.  
   
 > [!NOTE]
->  ISO C++ 11 Standard lingua ha il [finale](../cpp/final-specifier.md) (parola chiave), che è supportato in Visual Studio. È possibile usare `final` sulle classi standard e `sealed` sulle classi di riferimento.  
+>  ISO C++ 11 linguaggio Standard ha il [finale](../cpp/final-specifier.md) parola chiave, che è supportato in Visual Studio. Uso **finale** sulle classi standard e **sealed** sulle classi di riferimento.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
   
@@ -45,33 +45,33 @@ virtual return-type identifier() sealed {...};
  *identifier*  
  Nome della funzione o della classe.  
   
- *Tipo restituito*  
+ *tipo restituito*  
  Tipo restituito da una funzione.  
   
 ## <a name="remarks"></a>Note  
   
  Nel primo esempio di sintassi, la classe è sealed. Nel secondo esempio una funzione virtuale è sealed.  
   
- Il `sealed` parola chiave è valida per le piattaforme native e anche per Windows Runtime e common language runtime (CLR). Per ulteriori informazioni, vedere [gli identificatori di Override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Il **sealed** parola chiave è valida per le piattaforme native, nonché per il Runtime di Windows e common language runtime (CLR). Per altre informazioni, vedere [identificatori di Override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- È possibile rilevare in fase di compilazione se un tipo è sealed usando il `__is_sealed(type)` tratto di tipo. Per ulteriori informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ È possibile rilevare in fase di compilazione se un tipo è sealed usando il `__is_sealed(type)` tratto di tipo. Per altre informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- `sealed` è una parola chiave sensibile al contesto.  Per ulteriori informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **sealed** è una parola chiave sensibile al contesto.  Per altre informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Vedere [le classi e struct](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Visualizzare [le classi e struct](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Common Language Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- L'esempio di codice seguente illustra l'effetto di `sealed` su un membro virtuale.  
+ Questo esempio di codice seguente illustra l'effetto della **sealed** su un membro virtuale.  
   
 ```cpp  
 // sealed_keyword.cpp  

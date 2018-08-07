@@ -1,5 +1,5 @@
 ---
-title: ID | Documenti Microsoft
+title: ID | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882447"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605708"
 ---
 # <a name="id"></a>ID
-Specifica un `dispid` parametro per una funzione membro (una proprietà o un metodo, in un'interfaccia o interfaccia dispatch).  
+Specifica un *dispid* parametro per una funzione membro (una proprietà o un metodo, in un'interfaccia o interfaccia dispatch).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `dispid`  
- ID di invio per il metodo di interfaccia.  
+### <a name="parameters"></a>Parametri  
+ *DISPID*  
+ L'ID di invio per il metodo di interfaccia.  
   
 ## <a name="remarks"></a>Note  
- Il **id** attributo C++ ha la stessa funzionalità come il [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) attributo MIDL.  
+ Il **id** attributi di C++ ha la stessa funzionalità come la [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio di come utilizzare **id**.  
+ Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio di come usare **id**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -55,7 +54,7 @@ Specifica un `dispid` parametro per una funzione membro (una proprietà o un met
 |**Si applica a**|Metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Metodo Implements:: casttounknown | Documenti Microsoft'
+title: 'Metodo Implements:: casttounknown | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857d13736a92bbbc2c6f1228b3444081ffc18de5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a490e3b8dc620cb3f0f440b2e28cce1f2e69c76d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874486"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607248"
 ---
 # <a name="implementscasttounknown-method"></a>Metodo Implements::CastToUnknown
-Ottiene un puntatore a interfaccia IUnknown sottostante.  
+Ottiene un puntatore sottostante `IUnknown` interfaccia.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ __forceinline IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Questa operazione ha esito positivo e restituisce sempre il puntatore IUnknown.  
+ Questa operazione ha esito positivo e restituisce sempre il `IUnknown` puntatore.  
   
 ## <a name="remarks"></a>Note  
  Funzione di supporto interno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

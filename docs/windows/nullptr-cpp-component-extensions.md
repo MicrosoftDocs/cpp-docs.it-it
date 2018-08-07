@@ -1,5 +1,5 @@
 ---
-title: nullptr (estensioni del componente C++) | Documenti Microsoft
+title: nullptr (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33a276c383618531103a76b1f20c6ad478d57c10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccfb2b234550f5b7fc03e717d92e74b1fd5d5f74
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880698"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604447"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (Estensioni del componente C++)
-Il `nullptr` (parola chiave) rappresenta un *il valore di puntatore null*. Utilizzare un valore di puntatore null per indicare che un handle di oggetto, un puntatore interno o un tipo di puntatore nativo non punta a un oggetto.  
+Il **nullptr** parola chiave rappresenta un *valore puntatore null*. Usare un valore del puntatore null per indicare che un handle di oggetto, puntatore interno o al tipo di puntatore nativo non punta a un oggetto.  
   
- Utilizzare `nullptr` con codice gestito o nativo. Il compilatore genera le istruzioni appropriate ma diversi per i valori di puntatore null nativo e gestito. Per informazioni sull'uso la versione di C++ standard ISO di questa parola chiave, vedere [nullptr](../cpp/nullptr.md).  
+ Uso **nullptr** con codice gestito o nativo. Il compilatore genera le istruzioni appropriate, ma diverse per i valori di puntatore null gestito e nativo. Per informazioni sull'utilizzo la versione di C++ standard ISO di questa parola chiave, vedere [nullptr](../cpp/nullptr.md).  
   
- Il `__nullptr` (parola chiave) è una parola chiave specifiche di Microsoft che ha lo stesso significato di `nullptr`, ma si applica al solo codice nativo. Se si utilizza `nullptr` con C/C++ nativo del codice e quindi eseguire la compilazione con il [/clr](../build/reference/clr-common-language-runtime-compilation.md) l'opzione del compilatore, il compilatore non è possibile determinare se `nullptr` indica un valore di puntatore null nativo o gestito. Per rendere l'intenzione deselezionarla per il compilatore, utilizzare `nullptr` per specificare un valore gestito o `__nullptr` per specificare un valore nativo.  
+ Il **nullptr** parola chiave è una parola chiave specifiche di Microsoft che ha lo stesso significato come **nullptr**, ma si applica al solo codice nativo. Se si usa **nullptr** con codice C/C++ nativo del codice e quindi eseguire la compilazione con il [/clr](../build/reference/clr-common-language-runtime-compilation.md) l'opzione del compilatore, il compilatore non è possibile determinare se **nullptr** indica nativo o gestire il valore di puntatore null. Per rendere l'intenzione chiara per il compilatore, usare **nullptr** per specificare un valore gestito o **nullptr** per specificare un valore nativo.  
   
- Il `nullptr` la parola chiave è equivalente a `Nothing` in Visual Basic e `null` in c#.  
+ Il **nullptr** equivale alla parola chiave **Nothing** in Visual Basic e **null** nel linguaggio c#.  
   
 ## <a name="usage"></a>Utilizzo  
- Il `nullptr` parola chiave può essere utilizzata ovunque è possibile utilizzare un handle, un puntatore nativo o un argomento della funzione.  
+ Il **nullptr** parola chiave può essere utilizzato ovunque un handle, un puntatore nativo o un argomento della funzione può essere utilizzato.  
   
- Il `nullptr` (parola chiave) non è un tipo e non è supportato per l'utilizzo con:  
+ Il **nullptr** parola chiave non è un tipo e non è supportato per l'utilizzo con:  
   
 -   [sizeof](../cpp/sizeof-operator.md)  
   
@@ -43,26 +43,26 @@ Il `nullptr` (parola chiave) rappresenta un *il valore di puntatore null*. Utili
   
 -   `throw nullptr` (anche se `throw (Object^)nullptr;` funzionerà)  
   
- Il `nullptr` (parola chiave), è possibile utilizzare l'inizializzazione dei seguenti tipi di puntatore:  
+ Il **nullptr** parola chiave può essere usato nell'inizializzazione dei seguenti tipi di puntatore:  
   
 -   Puntatore nativo  
   
 -   Handle di Windows Runtime  
   
--   Handle gestito  
+-   Handle di gestito  
   
 -   Puntatore interno gestito  
   
- Il `nullptr` parola chiave può essere utilizzato per verificare se un puntatore o handle di riferimento è null prima che venga utilizzato il riferimento.  
+ Il **nullptr** parola chiave può essere usato per verificare se un riferimento di puntatore o handle è null prima che venga utilizzato il riferimento.  
   
- Chiamate di funzione tra le lingue che utilizzano valori di puntatore null per il controllo degli errori devono essere interpretate correttamente.  
+ Le chiamate di funzione tra le lingue che utilizzano valori di puntatore null per il controllo degli errori devono essere interpretate correttamente.  
   
- Non è possibile inizializzare un handle a zero. solo `nullptr` può essere utilizzato. Assegnazione di costante 0 per un handle di oggetto produce un tipo boxed `Int32` e un cast a `Object^`.  
+ Non è possibile inizializzare un handle a zero. solo **nullptr** può essere utilizzato. Assegnazione di costante 0 per un handle di oggetto produce boxed `Int32` e un cast a `Object^`.  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente viene dimostrato che la `nullptr` parola chiave può essere utilizzato ogni volta che un handle, puntatore nativo, o argomento di funzione può essere utilizzato. E l'esempio dimostra che il `nullptr` parola chiave può essere utilizzato per controllare un riferimento prima di utilizzarlo.  
+ Esempio di codice seguente viene dimostrato che la **nullptr** parola chiave può essere usato ogni volta che un handle, puntatore nativo, o un argomento di funzione è utilizzabile. E l'esempio dimostra che il **nullptr** parola chiave può essere usato per verificare un riferimento prima di utilizzarlo.  
   
-```  
+```cpp  
 // mcpp_nullptr.cpp  
 // compile with: /clr  
 value class V {};  
@@ -88,11 +88,10 @@ int main() {
 ```  
   
 ## <a name="example"></a>Esempio  
- **Esempio**  
   
- Esempio di codice seguente viene illustrato che `nullptr` e zero può essere utilizzato in modo intercambiabile sui puntatori nativi.  
+ Esempio di codice seguente mostra che **nullptr** e zero può essere usato in modo intercambiabile sui puntatori nativi.  
   
-```  
+```cpp  
 // mcpp_nullptr_1.cpp  
 // compile with: /clr  
 class MyClass {  
@@ -130,11 +129,10 @@ pMyClass == 0
 ```  
   
 ## <a name="example"></a>Esempio  
- **Esempio**  
   
- Esempio di codice seguente viene illustrato che `nullptr` viene interpretato come un handle a qualsiasi tipo o un puntatore a qualsiasi tipo nativo. In caso di overload di funzioni con handle a tipi diversi, verrà generato un errore di ambiguità. Il `nullptr` sarebbe necessario eseguire il cast esplicito a un tipo.  
+ Esempio di codice seguente mostra che **nullptr** viene interpretato come un handle a qualsiasi tipo o un puntatore nativo per qualsiasi tipo. In caso di overload di funzioni con handle a tipi diversi, verrà generato un errore di ambiguità. Il **nullptr** sarebbe necessario eseguire il cast esplicito a un tipo.  
   
-```  
+```cpp  
 // mcpp_nullptr_2.cpp  
 // compile with: /clr /LD  
 void f(int *){}  
@@ -149,11 +147,10 @@ void f_null() {
 ```  
   
 ## <a name="example"></a>Esempio  
- **Esempio**  
   
- Esempio di codice seguente viene illustrato il cast `nullptr` è consentita e restituisce un puntatore o handle per il tipo di cast che contiene il `nullptr` valore.  
+ Esempio di codice seguente mostra che il cast **nullptr** è consentito e restituisce un puntatore o handle al tipo di cast che contiene il **nullptr** valore.  
   
-```  
+```cpp  
 // mcpp_nullptr_3.cpp  
 // compile with: /clr /LD  
 using namespace System;  
@@ -171,11 +168,10 @@ int main() {
 ```  
   
 ## <a name="example"></a>Esempio  
- **Esempio**  
   
- Esempio di codice seguente viene illustrato che `nullptr` può essere utilizzato come un parametro di funzione.  
+ Esempio di codice seguente mostra che **nullptr** può essere utilizzato come parametro di funzione.  
   
-```  
+```cpp  
 // mcpp_nullptr_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -195,11 +191,10 @@ test
 ```  
   
 ## <a name="example"></a>Esempio  
- **Esempio**  
   
- Esempio di codice seguente mostra che quando gli handle vengono dichiarati e inizializzati in modo non esplicito, sono inizializzati da per impostazione predefinita `nullptr`.  
+ Esempio di codice seguente mostra che quando gli handle vengono dichiarati e inizializzati in modo non esplicito, sono inizializzati da per impostazione predefinita **nullptr**.  
   
-```  
+```cpp  
 // mcpp_nullptr_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -225,11 +220,10 @@ NULL
 ```  
   
 ## <a name="example"></a>Esempio  
- **Esempio**  
   
- Esempio di codice seguente viene illustrato che `nullptr` può essere assegnato a un puntatore nativo durante la compilazione con **/clr**.  
+ Esempio di codice seguente mostra che **nullptr** può essere assegnato a un puntatore nativo durante la compilazione con `/clr`.  
   
-```  
+```cpp  
 // mcpp_nullptr_6.cpp  
 // compile with: /clr  
 int main() {  
@@ -239,7 +233,7 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- Opzione del compilatore: (non necessarie; supportato da tutte le opzioni di generazione di codice, incluse **/ZW** e **/clr**)  
+ L'opzione del compilatore: (non obbligatorio, supportato da tutte le opzioni di generazione di codice, tra cui `/ZW` e `/clr`)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md)   

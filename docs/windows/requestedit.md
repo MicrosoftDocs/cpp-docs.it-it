@@ -1,5 +1,5 @@
 ---
-title: requestedit | Documenti Microsoft
+title: requestedit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878255"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606475"
 ---
 # <a name="requestedit"></a>requestedit
-Indica che la proprietà supporta il **OnRequestEdit** notifica.  
+Indica che la proprietà supporta il `OnRequestEdit` notifica.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **requestedit** attributo C++ ha la stessa funzionalità come il [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) attributo MIDL.  
+ Il **requestedit** attributi di C++ ha la stessa funzionalità come la [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio dell'uso di **requestedit**.  
+ Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio dell'uso dei **requestedit**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -50,7 +48,7 @@ Indica che la proprietà supporta il **OnRequestEdit** notifica.
 |**Si applica a**|Metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

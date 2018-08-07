@@ -1,5 +1,5 @@
 ---
-title: ModuleBase (classe) | Documenti Microsoft
+title: Classe ModuleBase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878736"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605058"
 ---
 # <a name="modulebase-class"></a>Classe ModuleBase
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,21 +42,21 @@ class ModuleBase;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore ModuleBase::ModuleBase](../windows/modulebase-modulebase-constructor.md)|Inizializza un'istanza della classe del modulo.|  
-|[Distruttore ModuleBase::~ModuleBase](../windows/modulebase-tilde-modulebase-destructor.md)|Deinizializza l'istanza corrente della classe del modulo.|  
+|[Costruttore ModuleBase::ModuleBase](../windows/modulebase-modulebase-constructor.md)|Inizializza un'istanza della classe `Module`.|  
+|[Distruttore ModuleBase::~ModuleBase](../windows/modulebase-tilde-modulebase-destructor.md)|Deinizializza l'istanza corrente del `Module` classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md)|Quando viene implementato, riduce il numero di oggetti rilevate dal modulo.|  
-|[Metodo ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md)|Quando viene implementato, incrementa il numero di oggetti registrati dal modulo.|  
+|[Metodo ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md)|Quando viene implementato, decrementa il numero di oggetti registrati dal modulo.|  
+|[Metodo ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md)|Quando implementato, incrementa il numero di oggetti registrati dal modulo.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `ModuleBase`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

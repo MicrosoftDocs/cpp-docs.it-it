@@ -1,5 +1,5 @@
 ---
-title: 'Metodo hstring:: set | Documenti Microsoft'
+title: 'Metodo hstring:: set | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c227e19cdadae80f32c25515a10dd0810f5726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aecdafe81dcebc7867d30c46be1fee271e60154c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882417"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606397"
 ---
 # <a name="hstringset-method"></a>Metodo HString::Set
-Imposta il valore dell'oggetto HString corrente per la stringa specificata di caratteri "wide" o il parametro HString.  
+Imposta il valore dell'oggetto corrente **HString** oggetto per la stringa di caratteri wide specificata oppure **HString** parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 HRESULT Set(  
           const wchar_t* str) throw();  
 HRESULT Set(   
@@ -40,15 +39,15 @@ HRESULT Set(
            ) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `str`  
- Una stringa di caratteri wide.  
+### <a name="parameters"></a>Parametri  
+ *str*  
+ Una stringa di caratteri "wide".  
   
- `len`  
- La lunghezza massima del `str` parametro assegnato all'oggetto HString corrente.  
+ *Len*  
+ La lunghezza massima del *str* parametro assegnato all'oggetto corrente **HString** oggetto.  
   
- `hstr`  
- Oggetto HString esistente.  
+ *HSTR*  
+ Un oggetto esistente **HString** oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

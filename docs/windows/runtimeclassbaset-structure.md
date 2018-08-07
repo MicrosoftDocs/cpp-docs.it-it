@@ -1,5 +1,5 @@
 ---
-title: Struttura RuntimeClassBaseT | Documenti Microsoft
+title: Struttura RuntimeClassBaseT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888993"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604993"
 ---
 # <a name="runtimeclassbaset-structure"></a>Struttura RuntimeClassBaseT
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,8 +34,8 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `RuntimeClassTypeT`  
+### <a name="parameters"></a>Parametri  
+ *RuntimeClassTypeT*  
  Un campo di flag che specifica uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeratori.  
   
 ## <a name="remarks"></a>Note  
@@ -47,10 +47,10 @@ friend struct Details::RuntimeClassBaseT;
  `RuntimeClassBaseT`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento (libreria Windows Runtime)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Riferimento (libreria Windows Runtime)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

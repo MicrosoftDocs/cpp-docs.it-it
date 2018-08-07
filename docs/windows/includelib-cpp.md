@@ -1,5 +1,5 @@
 ---
-title: includelib (C++) | Documenti Microsoft
+title: includelib (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 252a5d953dd05edc494daf8c4a45322d5511f979
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10ab341dc4c90a26315ea5e30f03bc71e628b64
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878892"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603381"
 ---
 # <a name="includelib-c"></a>includelib (C++)
-Fa sì che un file IDL o h da includere nel file IDL generato.  
+Fa sì che un file con estensione idl o con estensione h da includere nel file IDL generato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ includelib(  
+[ includelib(  
    name.idl  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *Name.idl*  
- Il nome del file IDL che si desidera includere come parte del file IDL generato.  
+ Il nome del file con estensione idl da inclusi come parte del file IDL generato.  
   
 ## <a name="remarks"></a>Note  
- Il `includelib` attributo C++ fa sì che un file IDL o h da includere nel file IDL generato dopo il `importlib` istruzione.  
+ Il **includelib** attributo C++ fa sì che un file con estensione idl o h da includere nel file con estensione IDL generato dopo il `importlib` istruzione.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene visualizzato in un file. cpp:  
+ Il codice seguente è illustrato in un file con estensione cpp:  
   
-```  
+```cpp  
 // cpp_attr_ref_includelib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -62,7 +61,7 @@ Fa sì che un file IDL o h da includere nel file IDL generato.
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|Yes|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
@@ -71,5 +70,5 @@ Fa sì che un file IDL o h da includere nel file IDL generato.
  [Attributi autonomi](../windows/stand-alone-attributes.md)   
  [Importazione](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [Includere](../windows/include-cpp.md)   
+ [includere](../windows/include-cpp.md)   
  [importlib](../windows/importlib.md)   

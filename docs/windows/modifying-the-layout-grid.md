@@ -1,5 +1,5 @@
 ---
-title: Modifica della griglia di Layout | Documenti Microsoft
+title: Modifica della griglia di Layout | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f73b1b2e2982d02fae1de67d4e5e2947f728f02
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9817c1f24490d333f1596292f3b9ea1aa3ba40ae
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880319"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606936"
 ---
 # <a name="modifying-the-layout-grid"></a>Modifica della griglia di layout
-Quando si posizionano o disposizione dei controlli in una finestra di dialogo, è possibile utilizzare la griglia di layout per il posizionamento più preciso. Quando è attivata la griglia, i controlli vengono visualizzati "blocco" le linee punteggiate della griglia come se magnetizzato. È possibile attivare e disattivare questa funzionalità "Blocca sulla griglia" e modificare le dimensioni delle celle della griglia di layout.  
+Durante l'inserimento o la disposizione dei controlli in una finestra di dialogo, è possibile usare la griglia del layout per il posizionamento più preciso. Quando la griglia è attivata, i controlli vengono visualizzati per "Blocca" le linee punteggiate della griglia come se magnetizzato. È possibile attivare e disattivare questa funzionalità "Blocca sulla griglia" e modificare le dimensioni delle celle della griglia di layout.  
   
 ### <a name="to-turn-the-layout-grid-on-or-off"></a>Per attivare o disattivare la griglia di layout  
   
 1.  Dal **formato** menu, scegliere **impostazioni Guide**.  
   
-2.  Nel [finestra di dialogo Impostazioni Guide](../windows/guide-settings-dialog-box.md)selezionare o deselezionare il **griglia** pulsante.  
+2.  Nel [finestra di dialogo Impostazioni Guide](../windows/guide-settings-dialog-box.md), selezionare o deselezionare le **griglia** pulsante.  
   
-     È comunque possibile controllare la griglia in singole finestre dell'editor finestre utilizzando il **Attiva/Disattiva griglia** pulsante il [barra degli strumenti finestra di dialogo Editor](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
+     È comunque possibile controllare la griglia in singole finestre dell'editor finestre mediante il **Attiva/Disattiva griglia** pulsante il [sulla barra degli strumenti dell'Editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
 ### <a name="to-change-the-size-of-the-layout-grid"></a>Per modificare le dimensioni della griglia di layout  
   
 1.  Dal **formato** menu, scegliere **impostazioni Guide**.  
   
-2.  Nel [finestra di dialogo Impostazioni Guide](../windows/guide-settings-dialog-box.md), digitare l'altezza e la larghezza in DLU per le celle nella griglia. Larghezza o all'altezza minima è di 4 DLU. Per ulteriori informazioni sulle DLU, vedere [disposizione dei controlli nelle finestre di dialogo](../windows/arrangement-of-controls-on-dialog-boxes.md).  
+2.  Nel [finestra di dialogo Impostazioni Guide](../windows/guide-settings-dialog-box.md), digitare l'altezza e larghezza DLU per le celle della griglia. Larghezza o all'altezza minima è di 4 DLU. Per altre informazioni su DLU-Dialog Unit, vedere [disposizione dei controlli nelle finestre di dialogo](../windows/arrangement-of-controls-on-dialog-boxes.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stati dell'Editor finestre (guide e griglie)](../windows/dialog-editor-states-guides-and-grids.md)   
  [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
-

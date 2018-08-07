@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore InvokeHelper:: InvokeHelper | Documenti Microsoft'
+title: 'Costruttore InvokeHelper:: InvokeHelper | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7678f9e3092bdc6e9d5839085044708b0d400533
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6618d5fc219e5f4e6533eb4d31cf7cd14fc4b1d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874850"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602549"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>Costruttore InvokeHelper::InvokeHelper
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,12 +35,12 @@ explicit InvokeHelper(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `callback`  
+### <a name="parameters"></a>Parametri  
+ *callback*  
  Un gestore eventi.  
   
 ## <a name="remarks"></a>Note  
- Inizializza una nuova istanza della classe InvokeHelper.  
+ Inizializza una nuova istanza di **InvokeHelper** classe.  
   
  Il `TCallback` modello parametro specifica il tipo del gestore dell'evento.  
   

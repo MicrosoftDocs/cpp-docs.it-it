@@ -1,5 +1,5 @@
 ---
-title: valore letterale (estensioni del componente C++) | Documenti Microsoft
+title: valore letterale (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 78dda3c52192b0d2755bdc8f8944eb0e1443e7af
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879357"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604174"
 ---
 # <a name="literal-c-component-extensions"></a>valore letterale (Estensioni del componente C++)
-Una variabile (membro dati) contrassegnata come `literal` in un **/clr** compilazione è l'equivalente nativo di un `static const` variabile.  
+Una variabile (membro dati) contrassegnata come **letterale** in un **/clr** compilazione è l'equivalente nativo di un **const statico** variabile.  
   
 ## <a name="all-platforms"></a>Tutte le piattaforme  
- **Note**  
+### <a name="remarks"></a>Note 
   
  Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- **Note**  
+### <a name="remarks"></a>Note 
   
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
   
 ## <a name="remarks"></a>Note  
- Un membro dati contrassegnato come `literal` devono essere inizializzati durante la dichiarazione e il valore deve essere una costante integrale, enum o tipo di stringa. Per la conversione dal tipo dell'espressione di inizializzazione al tipo del membro dati const statico non deve essere richiesta una conversione definita dall'utente.  
+ Un membro dati contrassegnato come **letterale** deve essere inizializzato quando dichiarato e il valore deve essere una costante integrale, enumerazione o tipo stringa. Per la conversione dal tipo dell'espressione di inizializzazione al tipo del membro dati const statico non deve essere richiesta una conversione definita dall'utente.  
   
  In fase di esecuzione non viene allocata nessuna memoria per il campo letterale; tramite il compilatore viene inserito solo il relativo valore nei metadati per la classe.  
   
- Una variabile contrassegnata `static const` non sarà disponibile nei metadati di altri compilatori.  
+ Una variabile contrassegnata **const statico** non sarà disponibile nei metadati di altri compilatori.  
   
- Per ulteriori informazioni, vedere [statico](../cpp/storage-classes-cpp.md) e [const](../cpp/const-cpp.md).  
+ Per altre informazioni, vedere [statici](../cpp/storage-classes-cpp.md) e [const](../cpp/const-cpp.md).  
   
- `literal` è una parola chiave sensibile al contesto. Vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per ulteriori informazioni.  
+ **valore letterale** è una parola chiave sensibile al contesto. Visualizzare [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per altre informazioni.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene mostrato che una variabile `literal` implica `static`.  
+ In questo esempio mostra che un **letterale** variabile implica **statico**.  
   
-```  
+```cpp  
 // mcppv2_literal.cpp  
 // compile with: /clr  
 ref struct X {  
@@ -72,7 +72,7 @@ int main() {
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato l'effetto di literal nei metadati:  
   
-```  
+```cpp  
 // mcppv2_literal2.cpp  
 // compile with: /clr /LD  
 public ref struct A {  
@@ -92,9 +92,9 @@ public ref struct A {
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, creato in C#, viene fatto riferimento ai metadati creati nell'esempio precedente e viene illustrato l'effetto di variabili `literal` e `static const`:  
+ Nell'esempio seguente, creato in c#, fa riferimento a metadati creati nell'esempio precedente e viene illustrato l'effetto della **letterale** e **static const** variabili:  
   
-```  
+```cs  
 // mcppv2_literal3.cs  
 // compile with: /reference:mcppv2_literal2.dll  
 // A C# program  
@@ -124,7 +124,7 @@ class B {
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

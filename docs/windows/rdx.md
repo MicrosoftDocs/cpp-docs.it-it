@@ -1,5 +1,5 @@
 ---
-title: RDX | Documenti Microsoft
+title: RDX | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7647ca56e3159564826efa9caf438456b9ae3568
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3908a8f06d25416999fbf2c95dd258fbc19d456d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878957"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603120"
 ---
 # <a name="rdx"></a>rdx
 Crea una chiave del Registro di sistema o modifica una chiave del Registro di sistema esistente.  
@@ -30,28 +30,27 @@ Crea una chiave del Registro di sistema o modifica una chiave del Registro di si
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ rdx(   
+[ rdx(   
    key,   
    valuename=NULL,   
    regtype   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `key`  
- Il nome della chiave da creare o aprire.  
+### <a name="parameters"></a>Parametri  
+ *key*  
+ Il nome della chiave può essere creato o aperto.  
   
- `valuename`(facoltativo)  
- Specifica il campo del valore da impostare. Se un campo del valore con questo nome esiste già nella chiave, viene aggiunto.  
+ *VALUENAME* (facoltativo)  
+ Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.  
   
  *regtype*  
- Il tipo di chiave del Registro di sistema da aggiungere. Può essere uno dei seguenti: **testo**, **dword**, **binario**, o `CString`.  
+ Il tipo di chiave del Registro di sistema da aggiungere. Può essere uno dei seguenti: `text`, `dword`, `binary`, o `CString`.  
   
 ## <a name="remarks"></a>Note  
- Il **rdx** attributo C++ crea o modifica una chiave del Registro di sistema esistente per un componente COM. L'attributo aggiunge una macro BEGIN_RDX_MAP all'oggetto che implementa il membro di destinazione. `RegistryDataExchange`, una funzione inserita come risultato la macro BEGIN_RDX_MAP, può essere utilizzata per trasferire dati tra il Registro di sistema e i membri dati  
+ Il **rdx** attributo C++ crea o modifica una chiave del Registro di sistema esistente per un componente COM. L'attributo aggiunge una macro BEGIN_RDX_MAP all'oggetto che implementa il membro di destinazione. `RegistryDataExchange`, una funzione inserita come risultato la macro BEGIN_RDX_MAP, può essere usata per trasferire dati tra il Registro di sistema e i membri dati  
   
- Questo attributo può essere utilizzato in combinazione con il [coclasse](../windows/coclass.md), [progid](../windows/progid.md), o [vi_progid](../windows/vi-progid.md) attributi o gli altri attributi, che implica uno di questi.  
+ Questo attributo può essere utilizzato in combinazione con il [coclasse](../windows/coclass.md), [progid](../windows/progid.md), o [vi_progid](../windows/vi-progid.md) attributi o altri attributi che implica uno di questi.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -59,17 +58,17 @@ Crea una chiave del Registro di sistema o modifica una chiave del Registro di si
   
 |||  
 |-|-|  
-|**Si applica a**|**classe** o `struct` membro|  
+|**Si applica a**|**classe** oppure **struct** membro|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente aggiunge una chiave del Registro di sistema denominata MyValue per il sistema che descrive il componente COM CMyClass.  
   
-```  
+```cpp  
 // cpp_attr_ref_rdx.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  

@@ -1,5 +1,5 @@
 ---
-title: Selezione dei colori di sfondo (Editor di immagini per le icone) e in primo piano | Documenti Microsoft
+title: Selezione di colori di sfondo (Editor di immagini per le icone) o in primo piano | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd86e9a1d48465df4656b4b0cb8247712f4e12d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888646"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605548"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Selezione dei colori di primo piano e di sfondo (Editor di immagini per le icone)
-Ad eccezione del **gomma**, strumenti di **Editor di immagini** barra degli strumenti di disegno con il colore di primo piano o di sfondo corrente quando si preme il pulsante sinistro o destro del mouse, rispettivamente.  
+Fatta eccezione per il **gomma**, gli strumenti disponibili sul **Editor di immagini** disegno sulla barra degli strumenti con il colore di primo piano o in background corrente quando si preme il pulsante sinistro o destro del mouse, rispettivamente.  
   
 ### <a name="to-select-a-foreground-color"></a>Per selezionare un colore primo piano  
   
-1.  Con il pulsante sinistro del mouse, fare clic sul colore desiderato di [tavolozza dei colori](../windows/colors-window-image-editor-for-icons.md).  
+1.  Con il pulsante sinistro del mouse, fare clic sul colore desiderato nella [tavolozza di colori](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-select-a-background-color"></a>Per selezionare un colore di sfondo  
   
-1.  Con il pulsante destro del mouse, fare clic sul colore desiderato di **colori** tavolozza.  
+1.  Con il pulsante destro del mouse, fare clic sul colore desiderato nella **colori** tavolozza.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
   
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

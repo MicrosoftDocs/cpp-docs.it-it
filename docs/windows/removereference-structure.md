@@ -1,5 +1,5 @@
 ---
-title: RemoveReference (struttura) | Documenti Microsoft
+title: RemoveReference (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881263"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602711"
 ---
 # <a name="removereference-structure"></a>RemoveReference (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,12 +38,12 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  Una classe.  
   
 ## <a name="remarks"></a>Note  
- Rimuove il tratto di tipo riferimento o di riferimento rvalue del parametro di modello di classe specificata.  
+ Rimuove il riferimento o un riferimento rvalue tratto dal parametro di modello della classe specificata.  
   
 ## <a name="members"></a>Membri  
   
@@ -57,7 +57,7 @@ struct RemoveReference<T&&>;
  `RemoveReference`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   

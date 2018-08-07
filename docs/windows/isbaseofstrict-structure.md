@@ -1,5 +1,5 @@
 ---
-title: IsBaseOfStrict (struttura) | Documenti Microsoft
+title: IsBaseOfStrict (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876891"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604503"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,17 +42,17 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `Base`  
+### <a name="parameters"></a>Parametri  
+ *base*  
  Tipo di base.  
   
- `Derived`  
+ *Derivati*  
  Il tipo derivato.  
   
 ## <a name="remarks"></a>Note  
  Verifica se un tipo è la base di un altro tipo.  
   
- Il primo modello verifica se un tipo è derivato da un tipo di base, che potrebbe restituire **true** o **false**. Il secondo modello verifica se un tipo derivato da se stessa, che restituisce sempre **false**.  
+ Il primo modello di verifica se un tipo è derivato da un tipo di base, che potrebbe produrre **true** oppure **false**. Il secondo modello di verifica se un tipo è derivato da se stessa, che restituisce sempre **false**.  
   
 ## <a name="members"></a>Membri  
   
@@ -60,13 +60,13 @@ struct IsBaseOfStrict<Base, Base>;
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[Costante IsBaseOfStrict::value](../windows/isbaseofstrict-value-constant.md)|Indica se un tipo di base di un altro.|  
+|[Costante IsBaseOfStrict::value](../windows/isbaseofstrict-value-constant.md)|Indica se un tipo è la base di un altro.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `IsBaseOfStrict`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -1,5 +1,5 @@
 ---
-title: Membro dati Module::GenericReleaseNotifier::callback_ | Documenti Microsoft
+title: Membro dati Module::GenericReleaseNotifier::callback_ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ad301ba081ad063ff58ebf7a749b0d32371d05b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880697"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605032"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Membro dati Module::GenericReleaseNotifier::callback_
-Contiene l'espressione lambda, un funtore o un puntatore a funzione gestore associato all'oggetto genericreleasenotifier corrente.  
+Contiene l'espressione lambda, funtore o il gestore eventi puntatore a funzione associato all'oggetto corrente `Module::GenericReleaseNotifier` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +34,7 @@ T callback_;
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

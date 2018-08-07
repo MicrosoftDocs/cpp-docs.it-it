@@ -1,5 +1,5 @@
 ---
-title: Funzione MakeAndInitialize | Documenti Microsoft
+title: Funzione MakeAndInitialize | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bebe74ae855cf303f09dd8798fcceec0df455b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbdb6a312d6658fc880aa43ffc1205378d3935e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877592"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607650"
 ---
 # <a name="makeandinitialize-function"></a>Funzione MakeAndInitialize
-Inizializza la classe di Windows Runtime specificata. Utilizzare questa funzione per creare un'istanza di un componente definito nello stesso modulo.  
+Inizializza la classe di Runtime di Windows specificata. Utilizzare questa funzione per creare un'istanza di un componente definito nello stesso modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,72 +40,72 @@ typename TArg8,
 typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  Classe definita dall'utente che eredita da `WRL::RuntimeClass`.  
   
- `TArg1`  
+ *TArg1*  
  Tipo di argomento 1 che viene passato alla classe di runtime specificato.  
   
- `TArg2`  
+ *TArg2*  
  Tipo di argomento 2 che viene passato alla classe di runtime specificato.  
   
- `TArg3`  
+ *TArg3*  
  Tipo di argomento 3 che viene passato alla classe di runtime specificato.  
   
- `TArg4`  
+ *TArg4*  
  Tipo di argomento 4 che viene passato alla classe di runtime specificato.  
   
- `TArg5`  
+ *TArg5*  
  Tipo di argomento 5 che viene passato alla classe di runtime specificato.  
   
- `TArg6`  
- Tipo di argomento 6 viene passato alla classe di runtime specificato.  
+ *TArg6*  
+ Tipo di argomento 6 che viene passato alla classe di runtime specificato.  
   
- `TArg7`  
+ *TArg7*  
  Tipo di argomento 7 che viene passato alla classe di runtime specificato.  
   
- `TArg8`  
+ *TArg8*  
  Tipo di argomento 8 che viene passato alla classe di runtime specificato.  
   
- `TArg9`  
+ *TArg9*  
  Tipo di argomento 9 che viene passato alla classe di runtime specificato.  
   
- `arg1`  
+ *arg1*  
  Argomento 1 che viene passato alla classe di runtime specificato.  
   
- `arg2`  
+ *Arg2*  
  Argomento 2 che viene passato alla classe di runtime specificato.  
   
- `arg3`  
+ *arg3*  
  Argomento 3 che viene passato alla classe di runtime specificato.  
   
- `arg4`  
+ *Arg4*  
  Argomento 4 che viene passato alla classe di runtime specificato.  
   
- `arg5`  
+ *Arg5*  
  Argomento 5 che viene passato alla classe di runtime specificato.  
   
- `arg6`  
- Argomento 6 passato alla classe di runtime specificato.  
+ *Arg6*  
+ Argomento 6 che viene passato alla classe di runtime specificato.  
   
- `arg7`  
+ *Arg7*  
  Argomento 7 che viene passato alla classe di runtime specificato.  
   
- `arg8`  
+ *arg8*  
  Argomento 8 che viene passato alla classe di runtime specificato.  
   
- `arg9`  
+ *arg9*  
  Argomento 9 che viene passato alla classe di runtime specificato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Valore `HRESULT`.  
+ Valore HRESULT.  
   
 ## <a name="remarks"></a>Note  
- Vedere [procedura: creare un'istanza direttamente i componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md) per imparare le differenze tra questa funzione e [Microsoft::WRL::Make](../windows/make-function.md)e per un esempio.  
+ Visualizzare [procedura: creare un'istanza direttamente i componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md) per informazioni sulle differenze tra questa funzione e [makeandinitialize](../windows/make-function.md)e per un esempio.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -1,5 +1,5 @@
 ---
-title: Move (funzione) | Documenti Microsoft
+title: Move (funzione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876771"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607303"
 ---
 # <a name="move-function"></a>Move (funzione)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +36,23 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  Il tipo di argomento.  
   
- `arg`  
- Un argomento a cui spostarsi.  
+ *arg*  
+ Un argomento da spostare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Parametro `arg` dopo tratti di riferimento o di riferimento rvalue, se presenti, sono state rimosse.  
+ Parametro *arg* dopo traits riferimento o un riferimento rvalue, se presenti, sono state rimosse.  
   
 ## <a name="remarks"></a>Note  
  Sposta l'argomento specificato da una posizione a altra.  
   
- Per ulteriori informazioni, vedere il **la semantica di spostamento** sezione [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Per altre informazioni, vedere la **semantica di spostamento** sezione [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   

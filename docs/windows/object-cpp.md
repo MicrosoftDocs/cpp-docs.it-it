@@ -1,5 +1,5 @@
 ---
-title: oggetto (C++) | Documenti Microsoft
+title: oggetto (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879708"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607910"
 ---
 # <a name="object-c"></a>object (C++)
 Identifica un'interfaccia personalizzata.  
@@ -30,18 +30,16 @@ Identifica un'interfaccia personalizzata.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Quando precede una definizione di interfaccia, il **oggetto** attributo C++ fa sì che l'interfaccia da inserire nel file IDL come un'interfaccia personalizzata.  
+ Quando precede una definizione di interfaccia, il **oggetto** C++ attributo causa l'interfaccia da inserire nel file con estensione idl come un'interfaccia personalizzata.  
   
- Qualsiasi interfaccia contrassegnata con l'oggetto deve ereditare da **IUnknown**. Questa condizione viene soddisfatta se una delle interfacce di base ereditare **IUnknown**. Se nessuna interfaccia di base eredita da **IUnknown**, il compilatore genererà l'interfaccia contrassegnata con **oggetto** da cui derivare **IUnknown**.  
+ Qualsiasi interfaccia contrassegnata con l'oggetto deve ereditare da `IUnknown`. Questa condizione viene soddisfatta se una delle interfacce di base ereditare `IUnknown`. Se nessuna interfaccia di base non eredita da `IUnknown`, il compilatore genererà l'interfaccia contrassegnata con **oggetto** da cui derivare `IUnknown`.  
   
 ## <a name="example"></a>Esempio  
- Vedere [nonbrowsable](../windows/nonbrowsable.md) per un esempio di come utilizzare **oggetto**.  
+ Visualizzare [nonbrowsable](../windows/nonbrowsable.md) per un esempio di come usare **oggetto**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -49,17 +47,17 @@ Identifica un'interfaccia personalizzata.
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`|  
+|**Si applica a**|**interface**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi di interfaccia](../windows/interface-attributes.md)   
- [Doppio](../windows/dual.md)   
+ [Dual](../windows/dual.md)   
  [Interfaccia dispatch](../windows/dispinterface.md)   
- [Personalizzato](../windows/custom-cpp.md)   
+ [Personalizzati](../windows/custom-cpp.md)   
  [__interface](../cpp/interface.md)   

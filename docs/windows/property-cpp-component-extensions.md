@@ -1,5 +1,5 @@
 ---
-title: proprietà (estensioni del componente C++) | Documenti Microsoft
+title: proprietà (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b763131fe91e2df2385f2c06bcba8bc759d695a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5fbf0b3c9db19e839d6832415cfd8ed6eb9b93a2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882706"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604118"
 ---
 # <a name="property--c-component-extensions"></a>proprietà (Estensioni del componente C++)
-Dichiara un *proprietà*, che è una funzione membro che si comporta ed è possibile accedere come un membro dati o un elemento di matrice.  
+Dichiara un *proprietà*, che è una funzione membro che si comporta e si accede, ad esempio un membro dati o un elemento della matrice.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
  È possibile dichiarare uno dei seguenti tipi di proprietà.  
   
  *proprietà semplice*  
- Per impostazione predefinita, crea un *funzione di accesso set* che assegna il valore della proprietà, un *funzione di accesso get* che recupera il valore della proprietà e un membro dati privato generato dal compilatore che contiene il valore della proprietà.  
+ Per impostazione predefinita, crea una *funzione di accesso set* che assegna il valore della proprietà, un *funzione di accesso get* che recupera il valore della proprietà e un membro dati privato generato dal compilatore che contiene il valore della proprietà.  
   
  *blocco di proprietà*  
  Consente di creare funzioni di accesso get e/o set definite dall'utente. La proprietà è di lettura/scrittura se entrambe le funzioni di accesso get e set sono definite. È di sola lettura se viene definita solo la funzione di accesso get ed è di sola scrittura se viene definita solo la funzione di accesso set.  
   
  È necessario dichiarare in modo esplicito un membro dati per contenere il valore della proprietà.  
   
- *proprietà indicizzate*  
+ *proprietà indicizzata*  
  Un blocco di proprietà che è possibile usare per ottenere e impostare un valore della proprietà specificato da uno o più indici.  
   
- È possibile creare una proprietà indicizzata che ha un nome di proprietà definite dall'utente o un *predefinito* nome della proprietà. Il nome di una proprietà indicizzata predefinito è il nome della classe in cui la proprietà è definita. Per dichiarare una proprietà predefinita, specificare la parola chiave `default` anziché un nome di proprietà.  
+ È possibile creare una proprietà indicizzata con un nome di proprietà definito dall'utente o un *predefinito* nome della proprietà. Il nome di una proprietà indicizzata predefinito è il nome della classe in cui la proprietà è definita. Per dichiarare una proprietà predefinita, specificare il **predefinito** parola chiave anziché un nome di proprietà.  
   
  È necessario dichiarare in modo esplicito un membro dati per contenere il valore della proprietà. Per una proprietà indicizzata, il membro dati è in genere una matrice o una raccolta.  
   
@@ -68,37 +68,37 @@ property type default[index_list] {
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `type`  
+ *type*  
  Il tipo di dati del valore della proprietà e di conseguenza la proprietà stessa.  
   
- `property_name`  
+ *property_name*  
  Nome della proprietà.  
   
- `access-modifier`  
- Un qualificatore di accesso. I qualificatori validi sono `static` e `virtual`.  
+ *modificatore di accesso*  
+ Un qualificatore di accesso. I qualificatori validi sono **statici** e **virtuale**.  
   
- Le funzioni di accesso get o set non devono concordare il qualificatore `virtual`, ma devono concordare il qualificatore `static`.  
+ Get o set di funzioni di accesso non devono concordare il **virtuale** devono concordare il qualificatore, ma il **statico** qualificatore.  
   
- `inheritance-modifier`  
- Un qualificatore di ereditarietà. I qualificatori validi sono `abstract` e `sealed`.  
+ *modificatore di ereditarietà*  
+ Un qualificatore di ereditarietà. I qualificatori validi sono **astratto** e **sealed**.  
   
- `index_list`  
+ *index_list*  
  Un elenco delimitato da virgole di uno o più indici. Ogni indice è costituito da un tipo di indice e un identificatore facoltativo che può essere usato nel corpo del metodo di proprietà.  
   
- `value`  
+ *valore*  
  Il valore da assegnare alla proprietà in un'operazione set o da recuperare in un'operazione set.  
   
- `property_body`  
- Il corpo del metodo di proprietà della funzione di accesso set o get. `property_body` può usare `index_list` per accedere al membro dati della proprietà sottostante o come parametri nell'elaborazione definita dall'utente.  
+ *property_body*  
+ Il corpo del metodo di proprietà della funzione di accesso set o get. Il *property_body* possono utilizzare il *index_list* per accedere al membro dati della proprietà sottostante, o come parametri nell'elaborazione definita dall'utente.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Per ulteriori informazioni, vedere [proprietà (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh755807.aspx).  
+ Per altre informazioni, vedere [delle proprietà (C + c++ /CX)](http://msdn.microsoft.com/library/windows/apps/hh755807.aspx).  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Sintassi**  
+### <a name="syntax"></a>Sintassi  
   
 ```cpp  
 modifier property type property_name;
@@ -115,10 +115,10 @@ modifier property type default[index];
 }  
 ```  
   
- **Parametri**  
+### <a name="parameters"></a>Parametri  
   
  *Modificatore*  
- Un modificatore che può essere usato in una dichiarazione di proprietà o in un metodo della funzione di accesso get e set. I valori possibili sono `static` e `virtual`.  
+ Un modificatore che può essere usato in una dichiarazione di proprietà o in un metodo della funzione di accesso get e set. I valori possibili sono **statici** e **virtuale**.  
   
  *type*  
  Il tipo di valore rappresentato dalla proprietà.  
@@ -129,29 +129,29 @@ modifier property type default[index];
  *index_list*  
  Un elenco delimitato da virgole di uno o più indici, specificati tra parentesi quadrate (l'operatore di indice, ([])). Per ogni indice, specificare un tipo e, facoltativamente, un identificatore che può essere usato nel corpo del metodo di proprietà.  
   
- **Note**  
+### <a name="remarks"></a>Note  
   
- Nel primo esempio di sintassi un *proprietà semplice*, che dichiara in modo implicito i un `set` e `get` metodo. Il compilatore crea automaticamente un campo privato per archiviare il valore della proprietà.  
+ Nel primo esempio di sintassi viene illustrata una *proprietà semplice*, che dichiara in modo implicito i una `set` e `get` (metodo). Il compilatore crea automaticamente un campo privato per archiviare il valore della proprietà.  
   
- Nel secondo esempio di sintassi un *blocco property*, che dichiara in modo esplicito i un `set` e `get` metodo.  
+ Nel secondo esempio di sintassi viene illustrata una *blocco property*, che dichiara in modo esplicito i una `set` e `get` (metodo).  
   
- Il terzo esempio di sintassi viene definita dal cliente *proprietà index*. Una proprietà indicizzata accetta parametri oltre al valore da impostare o recuperare. È necessario specificare un nome per la proprietà. A differenza di una proprietà semplice, i metodi `set` e/o `get` di una proprietà indicizzata devono essere definiti in modo esplicito ed è necessario specificare un nome per la proprietà.  
+ Nel terzo esempio di sintassi viene definito dal cliente *proprietà index*. Una proprietà indicizzata accetta parametri oltre al valore da impostare o recuperare. È necessario specificare un nome per la proprietà. A differenza di una proprietà semplice, i metodi `set` e/o `get` di una proprietà indicizzata devono essere definiti in modo esplicito ed è necessario specificare un nome per la proprietà.  
   
- Nel quarto esempio di sintassi un *predefinito* proprietà che fornisce accesso di tipo matrice a un'istanza del tipo. La parola chiave `default` serve solo per specificare una proprietà predefinita. Il nome di una proprietà predefinita è il nome del tipo in cui la proprietà è definita.  
+ Nel quarto esempio di sintassi viene illustrata una *predefinito* proprietà che fornisce l'accesso di tipo matrice a un'istanza del tipo. La parola chiave **predefinito**, serve solo per specificare una proprietà predefinita. Il nome di una proprietà predefinita è il nome del tipo in cui la proprietà è definita.  
   
- La parola chiave `property` può essere visualizzata in una classe, in un'interfaccia o in un tipo valore. Una proprietà può essere associata una funzione get (sola lettura), a una funzione set (sola scrittura) o a entrambe (lettura e scrittura).  
+ Il **proprietà** (parola chiave) possono essere visualizzati in una classe, interfaccia o tipo di valore. Una proprietà può essere associata una funzione get (sola lettura), a una funzione set (sola scrittura) o a entrambe (lettura e scrittura).  
   
  Un nome di proprietà non può corrispondere al nome della classe gestita che lo contiene. Il tipo restituito dalla funzione Get deve corrispondere al tipo dell'ultimo parametro di una funzione Set corrispondente.  
   
  Per il codice client una proprietà ha l'aspetto di un membro dati normale e può essere scritta o letta usando la stessa sintassi di un membro dati.  
   
- I metodi get e set non devono concordare il modificatore `virtual`.  
+ Get e set di metodi non devono concordare il **virtuale** modificatore.  
   
  L'accessibilità dei metodi get e set può variare.  
   
  La definizione di un metodo di proprietà può essere visualizzata all'esterno del corpo della classe, come un metodo comune.  
   
- Get e il metodo set per una proprietà devono concordare il **statico** modificatore.  
+ Get e metodo set per una proprietà devono concordare il **statici** modificatore.  
   
  Una proprietà è scalare se i relativi metodi get e set si adattano alla descrizione seguente:  
   
@@ -163,18 +163,18 @@ modifier property type default[index];
   
  Quando un membro dati di proprietà viene dichiarato, il compilatore inserisce nella classe un membro dati, noto a volte come "archivio di backup". Tuttavia, il nome del membro dati è in un formato tale che non è possibile fare riferimento al membro nell'origine come se fosse un membro dati effettivo della classe contenitore. ildasm.exe consente di visualizzare i metadati per il tipo e il nome generato dal compilatore per l'archivio di backup della proprietà.  
   
- È consentita un'accessibilità diversa per i metodi della funzione di accesso in un blocco di proprietà.  Ovvero, il metodo set può essere pubblico e il metodo get può essere privato.  Tuttavia, a un metodo di accesso non è consentito avere un'accessibilità meno restrittiva rispetto a quella nella dichiarazione della proprietà stessa.  
+ È consentita un'accessibilità diversa per i metodi della funzione di accesso in un blocco di proprietà.  Ovvero, il metodo set può essere pubblico e il metodo get può essere privato.  Tuttavia, a un metodo di una funzione di accesso non è consentito avere un'accessibilità meno restrittiva rispetto a quella nella dichiarazione della proprietà stessa.  
   
- `property` è una parola chiave sensibile al contesto.  Per ulteriori informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **proprietà** è una parola chiave sensibile al contesto.  Per altre informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono illustrati la dichiarazione e l'uso di un membro dati di proprietà e di un blocco di proprietà.  Viene inoltre illustrato che è possibile definire una funzione di accesso alla proprietà fuori dalla classe.  
   
-```  
+```cpp  
 // mcppv2_property.cpp  
 // compile with: /clr  
 using namespace System;  

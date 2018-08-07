@@ -1,5 +1,5 @@
 ---
-title: eseguire l'override (estensioni del componente C++) | Documenti Microsoft
+title: eseguire l'override (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6818256aafc64702e5423a5560c251e6d46750fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855f2c18423fd6c1ca708034214e6f5c7048d6d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878879"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605561"
 ---
 # <a name="override--c-component-extensions"></a>override (Estensioni del componente C++)
-Tramite la parola chiave sensibile al contesto `override` viene indicato che mediante un membro di un tipo viene eseguito l'override di una classe base o di un membro di un'interfaccia base.  
+Il **eseguire l'override** parola chiave sensibile al contesto indica che un membro di un tipo di override in una classe di base o un membro di interfaccia di base.  
   
 ## <a name="remarks"></a>Note  
- Il `override` (parola chiave) è valido durante la compilazione per destinazioni native (opzione del compilatore predefinita), le destinazioni Windows Runtime (**/ZW** l'opzione del compilatore), o le destinazioni di common language runtime (**/clr** compilatore opzione).  
+ Il **eseguire l'override** parola chiave è valido durante la compilazione per le piattaforme native (opzione del compilatore predefinita), le destinazioni di Windows Runtime (`/ZW` l'opzione del compilatore), o le destinazioni di common language runtime (`/clr` opzione del compilatore).  
   
- Per ulteriori informazioni sugli identificatori di override, vedere [identificatore di override](../cpp/override-specifier.md) e [gli identificatori di Override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Per altre informazioni sugli identificatori di override, vedere [identificatore di override](../cpp/override-specifier.md) e [gli identificatori di Override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- Per ulteriori informazioni sulle parole chiave sensibili al contesto, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ Per altre informazioni sulle parole chiave sensibili al contesto, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
 ## <a name="examples"></a>Esempi  
- **Esempio**  
   
- Esempio di codice seguente viene illustrato che `override` può essere utilizzato anche nelle compilazioni native.  
+ Esempio di codice seguente mostra che **eseguire l'override** utilizzabili nelle compilazioni native.  
   
-```cpp#  
+```cpp  
 // override_keyword_1.cpp  
 // compile with: /c  
 struct I1 {  
@@ -50,11 +49,11 @@ struct X : public I1 {
 };  
 ```  
   
- **Esempio**  
+### <a name="example"></a>Esempio
+
+ Esempio di codice seguente mostra che **eseguire l'override** può essere usato nelle compilazioni di Windows Runtime.  
   
- Esempio di codice seguente viene illustrato che `override` può essere utilizzato nelle compilazioni di Windows Runtime.  
-  
-```cpp#  
+```cpp 
 // override_keyword_2.cpp  
 // compile with: /ZW /c  
 ref struct I1 {  
@@ -66,15 +65,15 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Requisiti**  
+#### <a name="requirements"></a>Requisiti  
   
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
+    
+### <a name="example"></a>Esempio
+
+ Esempio di codice seguente mostra che **eseguire l'override** può essere usato nelle compilazioni a common language runtime.  
   
- **Esempio**  
-  
- Esempio di codice seguente viene illustrato che `override` può essere usato nelle compilazioni di common language runtime.  
-  
-```cpp#  
+```cpp  
 // override_keyword_3.cpp  
 // compile with: /clr /c  
 ref struct I1 {  
@@ -86,9 +85,9 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Requisiti**  
+#### <a name="requirements"></a>Requisiti  
   
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ## <a name="see-also"></a>Vedere anche  
  [Identificatore di override](../cpp/override-specifier.md)   

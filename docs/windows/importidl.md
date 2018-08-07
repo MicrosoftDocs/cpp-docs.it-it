@@ -1,5 +1,5 @@
 ---
-title: importidl | Documenti Microsoft
+title: importidl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877475"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607183"
 ---
 # <a name="importidl"></a>importidl
-Inserisce il file IDL specificato nel file IDL generato.  
+Inserisce il file con estensione idl specificato nel file con estensione IDL generato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `idl_file`  
- Identifica il nome del file IDL che si desidera unire con il file IDL che verrà generato per l'applicazione.  
+### <a name="parameters"></a>Parametri  
+ *idl_file*  
+ Identifica il nome del file con estensione idl che si desidera eseguire il merge con il file con estensione idl che verrà generato per l'applicazione.  
   
 ## <a name="remarks"></a>Note  
- Il **importidl** attributo C++ posiziona la sezione all'esterno del blocco di libreria (in `idl_file`) nel file IDL generato del programma e la sezione relativa alla libreria (in `idl_file`) nella sezione della libreria del programma file IDL generato.  
+ Il **importidl** attributo C++ inserisce la sezione all'esterno del blocco di libreria (in *idl_file*) nel file IDL generato del programma e la sezione della libreria (in *idl_file*) nella libreria sezione del programma generati file con estensione idl.  
   
- Si consiglia di utilizzare **importidl**, ad esempio, se si desidera utilizzare un file IDL codificati manualmente con il file IDL generato.  
+ È possibile usare **importidl**, ad esempio, se si desidera utilizzare un file con estensione idl codificato manualmente con il file con estensione IDL generato.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -63,7 +62,7 @@ Inserisce il file IDL specificato nel file IDL generato.
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
@@ -72,5 +71,5 @@ Inserisce il file IDL specificato nel file IDL generato.
  [Attributi autonomi](../windows/stand-alone-attributes.md)   
  [Importazione](../windows/import.md)   
  [importlib](../windows/importlib.md)   
- [Includere](../windows/include-cpp.md)   
+ [includere](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

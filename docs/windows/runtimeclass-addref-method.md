@@ -1,5 +1,5 @@
 ---
-title: 'Metodo runtimeclass:: AddRef | Documenti Microsoft'
+title: 'Metodo runtimeclass:: AddRef | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c570209ff612fb4fcedd77dbae92f72b2744a52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7bd721d8f1edeedacc04515eef917899ed0c667
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892260"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608482"
 ---
 # <a name="runtimeclassaddref-method"></a>Metodo RuntimeClass::AddRef
-Incrementa il conteggio dei riferimenti per l'oggetto RuntimeClass corrente.  
+Incrementa il conteggio dei riferimenti per l'oggetto corrente **RuntimeClass** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ STDMETHOD_(
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

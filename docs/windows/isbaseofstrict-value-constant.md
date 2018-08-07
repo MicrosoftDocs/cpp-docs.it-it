@@ -1,5 +1,5 @@
 ---
-title: 'Costante isbaseofstrict:: value | Documenti Microsoft'
+title: 'Costante isbaseofstrict:: value | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eaaf0b410861f28cd5b339f75a73c594b1bcba45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d8e5cbbcbbdf3cefe5211eb4f2274ce3b2b79db
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875806"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608800"
 ---
 # <a name="isbaseofstrictvalue-constant"></a>Costante IsBaseOfStrict::value
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,12 +34,12 @@ static const bool value = __is_base_of(Base, Derived);
 ```  
   
 ## <a name="remarks"></a>Note  
- Indica se un tipo di base di un altro.  
+ Indica se un tipo è la base di un altro.  
   
- `value` viene `true` se tipo `Base` è una classe di base del tipo `Derived`, in caso contrario è `false`.  
+ `value` viene **true** se tipo `Base` è una classe di base del tipo `Derived`, in caso contrario è **false**.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   

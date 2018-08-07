@@ -1,5 +1,5 @@
 ---
-title: ReadOnly (C++) | Documenti Microsoft
+title: ReadOnly (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87933b214dfe91f1c9f7db88127ef83da5b7201c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b4f4e6d7c3941b1e90e0c49d113afe02dfcd491
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876566"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604424"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 Non consente l'assegnazione a un membro dati.  
@@ -30,9 +30,7 @@ Non consente l'assegnazione a un membro dati.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [readonly]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
@@ -43,7 +41,7 @@ Non consente l'assegnazione a un membro dati.
 ## <a name="example"></a>Esempio  
  Il codice seguente mostra un utilizzo dell'attributo **readonly** :  
   
-```  
+```cpp  
 // cpp_attr_ref_readonly.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -66,7 +64,7 @@ __interface IFireTabCtrl
 |**Si applica a**|Metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

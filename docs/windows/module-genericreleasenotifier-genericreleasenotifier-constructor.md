@@ -1,5 +1,5 @@
 ---
-title: Costruttore Module::GenericReleaseNotifier::GenericReleaseNotifier | Documenti Microsoft
+title: Costruttore Module::GenericReleaseNotifier::GenericReleaseNotifier | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0683220710a62c8583fa95fbfe3221ae93307eb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875058"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603937"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Costruttore Module::GenericReleaseNotifier::GenericReleaseNotifier
-Inizializza una nuova istanza della classe genericreleasenotifier.  
+Inizializza una nuova istanza di **Module:: genericreleasenotifier** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      GenericReleaseNotifier(  
+GenericReleaseNotifier(  
    T callback,   
    bool release  
 ) throw() : ReleaseNotifier(release), callback_(callback);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `callback`  
- Espressione lambda, funtore un gestore dell'evento di puntatore a funzione che può essere richiamato con l'operatore della funzione tra parentesi (`()`).  
+### <a name="parameters"></a>Parametri  
+ *callback*  
+ Un'espressione lambda, funtore o gestore eventi puntatore a funzione che può essere richiamato con l'operatore della funzione delle parentesi (`()`).  
   
- `release`  
- Specificare `true` per consentire la chiamata sottostante [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metodo; in caso contrario, specificare `false`.  
+ *release*  
+ Specificare **true** per abilitare la chiamata sottostante [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metodo; in caso contrario, specificare **false**.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

@@ -1,5 +1,5 @@
 ---
-title: InvokeHelper (struttura) | Documenti Microsoft
+title: InvokeHelper (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2975cd066dd15f9179b2e1f0f3fc72084c9c573b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880407"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604268"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,16 +88,16 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `TDelegateInterface`  
- `TCallback`  
- Il tipo di funzione del gestore eventi.  
+### <a name="parameters"></a>Parametri  
+ *TDelegateInterface*  
+ *TCallback*  
+ Tipo di funzione del gestore eventi.  
   
- `argCount`  
- Il numero di argomenti in una specializzazione InvokeHelper.  
+ *argCount*  
+ Il numero di argomenti in un' **InvokeHelper** specializzazione.  
   
 ## <a name="remarks"></a>Note  
- Fornisce un'implementazione del metodo Invoke () in base al numero specificato e il tipo di argomenti.  
+ Fornisce un'implementazione del `Invoke()` metodo basato sul numero specificato e il tipo di argomenti.  
   
 ## <a name="members"></a>Membri  
   
@@ -105,13 +105,13 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`Traits`|Un sinonimo per la classe che definisce il tipo di argomento ogni gestore dell'evento.|  
+|`Traits`|Un sinonimo della classe che definisce il tipo di ogni argomento di gestore dell'evento.|  
   
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Inizializza una nuova istanza della classe InvokeHelper.|  
+|[Costruttore InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Inizializza una nuova istanza di **InvokeHelper** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   

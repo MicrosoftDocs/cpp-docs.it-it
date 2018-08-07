@@ -1,5 +1,5 @@
 ---
-title: 'Metodo Module:: GetClassObject | Documenti Microsoft'
+title: 'Metodo Module:: GetClassObject | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878538"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602653"
 ---
 # <a name="modulegetclassobject-method"></a>Metodo Module::GetClassObject
 Recupera una cache di class factory.  
@@ -38,26 +38,26 @@ Recupera una cache di class factory.
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `clsid`  
- ID di classe.  
+### <a name="parameters"></a>Parametri  
+ *clsid*  
+ ID della classe.  
   
- `riid`  
+ *riid*  
  ID di interfaccia richiesto.  
   
- `ppv`  
+ *ppv*  
  Puntatore all'oggetto restituito.  
   
- `serverName`  
- Il nome del server specificato in uno di `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, o `ActivatableClass` macro; o `nullptr` per ottenere il nome del server predefinito.  
+ *ServerName*  
+ Il nome del server specificato in entrambi i `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, o `ActivatableClass` macro; o **nullptr** per ottenere il nome del server predefinito.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 ## <a name="remarks"></a>Note  
- Utilizzare questo metodo solo per COM, non il Runtime di Windows. Questo metodo espone solo IClassFactory metodi.  
+ Usare questo metodo solo per COM, non il Runtime di Windows. Questo metodo espone solo `IClassFactory` metodi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL
  

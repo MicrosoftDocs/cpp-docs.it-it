@@ -1,5 +1,5 @@
 ---
-title: 'Metodo interfacetraits:: Cancastto | Documenti Microsoft'
+title: 'Metodo interfacetraits:: Cancastto | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,49 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2a0a37f4ef9fa8f2aa92405b4b2c01d99386555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df603fe8d4c063c014118caf89a74a40e73cbe5b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879581"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607829"
 ---
 # <a name="interfacetraitscancastto-method"></a>Metodo InterfaceTraits::CanCastTo
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 template<typename T>  
 static __forceinline bool CanCastTo(  
    _In_ T* ptr,  
    REFIID riid,  
    _Deref_out_ void **ppv  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `ptr`  
+### <a name="parameters"></a>Parametri  
+ *ptr*  
  Il nome di un puntatore a un tipo.  
   
- `riid`  
- L'ID di interfaccia di `Base`.  
+ *riid*  
+ ID dell'interfaccia `Base`.  
   
- `ppv`  
- Se questa operazione ha esito positivo, `ppv` punta all'interfaccia specificata da `Base`. In caso contrario, `ppv` è impostato su `nullptr`.  
+ *ppv*  
+ Se questa operazione ha esito positivo, *ppv* punta a un'interfaccia specificata da `Base`. In caso contrario, *ppv* è impostata su **nullptr**.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se questa operazione ha esito positivo e `ptr` viene eseguito il cast a un puntatore a `Base`; in caso contrario, `false` .  
+ **true** se questa operazione ha esito positivo e *ptr* viene eseguito il cast a un puntatore al `Base`; in caso contrario, **false** .  
   
 ## <a name="remarks"></a>Note  
  Indica se il puntatore specificato può essere convertito in un puntatore a `Base`.  
   
- Per ulteriori informazioni su `Base`, vedere la sezione typedef pubblici in [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).  
+ Per altre informazioni sulle `Base`, vedere la **typedef pubblici** sezione [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

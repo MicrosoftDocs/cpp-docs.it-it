@@ -1,5 +1,5 @@
 ---
-title: 'Metodo Module:: registerobjects | Documenti Microsoft'
+title: 'Metodo Module:: registerobjects | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdaa1b23bbefb64071e5f1f330c8708f9f9516ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875344"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605266"
 ---
 # <a name="moduleregisterobjects-method"></a>Metodo Module::RegisterObjects
-Registra gli oggetti COM o Windows Runtime in modo da altre applicazioni di connettersi ad essi.  
+Registra gli oggetti COM o Windows Runtime in modo che altre applicazioni possono connettersi a essi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT RegisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `module`  
+### <a name="parameters"></a>Parametri  
+ *modulo*  
  Una matrice di oggetti COM o Windows Runtime.  
   
- `serverName`  
+ *ServerName*  
  Nome del server che ha creato gli oggetti.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, HRESULT che indica il motivo per l'operazione non riuscita.  
+ S_OK se l'esito positivo. in caso contrario, HRESULT che indica il motivo per l'operazione non riuscita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL
  

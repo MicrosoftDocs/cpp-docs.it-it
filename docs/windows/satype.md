@@ -1,5 +1,5 @@
 ---
-title: satype | Documenti Microsoft
+title: satype | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888682"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603394"
 ---
 # <a name="satype"></a>satype
-Specifica il tipo di dati di **SAFEARRAY** struttura.  
+Specifica il tipo di dati di `SAFEARRAY` struttura.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *data_type*  
- Il tipo di dati per il **SAFEARRAY** struttura dei dati che viene passato come parametro a un metodo di interfaccia.  
+ Tipo di dati per il `SAFEARRAY` struttura dei dati che viene passato come parametro a un metodo di interfaccia.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -49,17 +48,17 @@ Specifica il tipo di dati di **SAFEARRAY** struttura.
 |**Si applica a**|Parametro di interfaccia, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
 ## <a name="remarks"></a>Note  
- Il **satype** attributo C++ specifica il tipo di dati di **SAFEARRAY**.  
+ Il **satype** C++ attributo specifica il tipo di dati di `SAFEARRAY`.  
   
 > [!NOTE]
->  Un livello di riferimento indiretto viene eliminato dal **SAFEARRAY** puntatore nel file IDL generato da come viene dichiarato nel file con estensione cpp.  
+>  Un livello di riferimento indiretto viene eliminato dal `SAFEARRAY` puntatore nel file con estensione IDL generato dal modo in cui viene dichiarata nel file con estensione cpp.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

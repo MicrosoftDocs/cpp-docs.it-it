@@ -1,5 +1,5 @@
 ---
-title: idl_module | Documenti Microsoft
+title: idl_module | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11547a3fb1bd46a1e2edb8ce9dd0a6547464f796
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfda47ced14d7c112d27d0036b4d636e32c91907
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882524"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607560"
 ---
 # <a name="idlmodule"></a>idl_module
 Specifica un punto di ingresso in un file con estensione dll.  
@@ -30,8 +30,7 @@ Specifica un punto di ingresso in un file con estensione dll.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ idl_module (   
+[ idl_module (   
    name=module_name,   
    dllname=dll,   
    uuid="uuid",   
@@ -44,47 +43,47 @@ Specifica un punto di ingresso in un file con estensione dll.
 function declaration  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- **name**  
+### <a name="parameters"></a>Parametri  
+ *name*  
  Un nome definito dall'utente per il blocco di codice che verrà visualizzato nel file IDL.  
   
- **NomeDLL** (facoltativo)  
- Il file DLL che contiene l'esportazione.  
+ *dllname* (facoltativo)  
+ Il file con estensione dll che contiene l'esportazione.  
   
- `uuid` (facoltativo)  
+ *UUID* (facoltativo)  
  ID univoco.  
   
- **HelpString** (facoltativo)  
+ *HelpString* (facoltativo)  
  Una stringa di caratteri utilizzata per descrivere la libreria dei tipi.  
   
- **helpstringcontext** (facoltativo)  
- L'ID di un argomento della Guida in un file hlp o chm.  
+ *helpstringcontext* (facoltativo)  
+ L'ID di un argomento della Guida in un file con estensione chm o. hlp.  
   
- **helpcontext** (facoltativo)  
+ *HelpContext* (facoltativo)  
  L'ID Guida per questa libreria dei tipi.  
   
- **hidden** (facoltativo)  
- Un parametro che impedisce la libreria di visualizzazione. Per altre informazioni, vedere l'attributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
+ *nascosto* (facoltativo)  
+ Un parametro che impedisce la visualizzazione libreria. Per altre informazioni, vedere l'attributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
   
- ***con restrizioni*** (facoltativo)  
- I membri della raccolta possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
+ *con restrizioni* (facoltativo)  
+ I membri della raccolta non possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
   
  *dichiarazione di funzione*  
  La funzione che verrà definita.  
   
 ## <a name="remarks"></a>Note  
- Il `idl_module` attributo C++ consente di specificare il punto di ingresso in un file con estensione dll, che consente di importare da un file con estensione dll.  
+ Il **idl_module** attributo C++ consente di specificare il punto di ingresso in un file con estensione dll, che consente di importare da un file con estensione dll.  
   
- Il **idl_module** presenta funzionalità simili a quelle di [modulo](http://msdn.microsoft.com/library/windows/desktop/aa367099) attributo MIDL.  
+ Il **idl_module** attributo ha funzionalità simili a quelle di [modulo](http://msdn.microsoft.com/library/windows/desktop/aa367099) attributo MIDL.  
   
- È possibile esportare qualsiasi elemento da un oggetto COM che è possibile esportare da un file DLL inserendo un punto di ingresso DLL nel blocco di libreria di un file IDL.  
+ È possibile esportare alcuna operazione da un oggetto COM che è possibile esportare da un file con estensione dll inserendo un punto di ingresso DLL nel blocco di libreria di un file con estensione idl.  
   
- Il deve utilizzare `idl_module` in due passaggi. In primo luogo, è necessario definire una coppia nome/DLL. Quindi, quando si utilizza `idl_module` per specificare un punto di ingresso, specificare il nome e gli altri attributi.  
+ Le utilizzino **idl_module** in due passaggi. In primo luogo, è necessario definire una coppia nome/DLL. Quindi, quando si usa **idl_module** per specificare un punto di ingresso, specificare il nome e gli attributi aggiuntivi.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato come utilizzare il `idl_module` attributo:  
+ Il codice seguente viene illustrato come utilizzare il **idl_module** attributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_module.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -102,7 +101,7 @@ void FuncName(int i);
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

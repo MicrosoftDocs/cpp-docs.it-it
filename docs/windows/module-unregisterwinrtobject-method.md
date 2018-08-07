@@ -1,5 +1,5 @@
 ---
-title: 'Metodo Module:: unregisterwinrtobject | Documenti Microsoft'
+title: 'Metodo Module:: unregisterwinrtobject | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab0ec29dbda428a1173d57e2671f1e4b609e085
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bf681acc485b08448fcb4e936ca1096a8137384
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882602"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607472"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Metodo Module::UnregisterWinRTObject
-Annulla la registrazione di uno o più oggetti di Windows Runtime in modo che altre applicazioni non è possibile connettersi a essi.  
+Annulla la registrazione di uno o più oggetti di Windows Runtime in modo che altre applicazioni non è possibile connettersi a esse.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,17 +34,16 @@ virtual HRESULT UnregisterWinRTObject(
    unsigned int,  
    _Inout_ WINRT_REGISTRATION_COOKIE* cookie  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `cookie`  
- Puntatore a un valore che identifica l'oggetto della classe la cui registrazione è da revocare.  
+ *Cookie*  
+ Puntatore a un valore che identifica l'oggetto di classe il cui registrazione viene revocato.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL
  

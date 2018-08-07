@@ -1,5 +1,5 @@
 ---
-title: 'Metodo runtimeclass:: Internaladdref | Documenti Microsoft'
+title: 'Metodo runtimeclass:: Internaladdref | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2998e46201be2137f11f0b91438fb68e326e46c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52a594b0731ec8b22076a422fec4cb52c3503235
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888524"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603081"
 ---
 # <a name="runtimeclassinternaladdref-method"></a>Metodo RuntimeClass::InternalAddRef
-Incrementa il conteggio dei riferimenti all'oggetto RuntimeClass corrente.  
+Incrementa il conteggio dei riferimenti all'oggetto corrente **RuntimeClass** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +37,7 @@ ULONG InternalAddRef();
  Il conteggio dei riferimenti risultante.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

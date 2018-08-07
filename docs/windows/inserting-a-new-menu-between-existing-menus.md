@@ -1,5 +1,5 @@
 ---
-title: Inserimento di un nuovo Menu tra menu esistenti | Documenti Microsoft
+title: Inserimento di un nuovo Menu tra menu esistenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876332"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607108"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>Inserimento di un nuovo menu tra menu esistenti
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>Per inserire un nuovo menu tra menu esistenti  
   
-1.  Selezionare un nome di menu e premere esistenti di **inserire** chiave. Il **nuovo elemento** casella viene inserita prima dell'elemento selezionato.  
+1.  Selezionare un nome di menu di scelta e premere esistente di **Inserisci** chiave. Il **nuovo elemento** casella viene inserita prima dell'elemento selezionato.  
   
      \- oppure -  
   
-2.  Fare doppio clic sulla barra dei menu e scegliere **Inserisci nuovo** dal menu di scelta rapida.  
+2.  Fare clic sulla barra dei menu e scegliere **Inserisci nuovo** dal menu di scelta rapida.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
   
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
  Win32  
   

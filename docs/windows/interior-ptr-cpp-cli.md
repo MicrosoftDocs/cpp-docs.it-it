@@ -1,5 +1,5 @@
 ---
-title: interior_ptr (C + + CLI) | Documenti Microsoft
+title: interior_ptr (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a83182151ccb85b920a37713b70df53b383b8919
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2960a95195e3f77194faf9df5ac626e09658e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879107"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605123"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
-Un *puntatore interno* dichiara un puntatore all'interno di un tipo riferimento, ma non all'oggetto stesso. Un puntatore interno può puntare a un handle di riferimento, un tipo di valore, un handle di tipo boxed, un membro di un tipo gestito o un elemento di una matrice gestita.  
+Un' *puntatore interno* dichiara un puntatore all'interno di un tipo riferimento, ma non all'oggetto stesso. Un puntatore interno può puntare a un handle di riferimento, un tipo di valore, un handle di tipo boxed, un membro di un tipo gestito o un elemento di una matrice gestita.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.  
@@ -36,7 +36,7 @@ Un *puntatore interno* dichiara un puntatore all'interno di un tipo riferimento,
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Nell'esempio di sintassi seguente viene illustrato un puntatore interno.  
@@ -49,13 +49,13 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
 ### <a name="parameters"></a>Parametri  
  *cv_qualifier*  
- **const** o `volatile` qualificatori.  
+ **const** oppure **volatile** qualificatori.  
   
  *type*  
- Il tipo di *inizializzatore*.  
+ Il tipo della *inizializzatore*.  
   
  *var*  
- Nome della variabile `interior_ptr`.  
+ Il nome del **interior_ptr** variabile.  
   
  *initializer*  
  Membro di un tipo di riferimento, elemento di una matrice gestita o qualsiasi altro oggetto che è possibile assegnare a un puntatore nativo.  
@@ -63,17 +63,17 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="remarks"></a>Note  
  Tramite un puntatore nativo non è possibile tenere traccia di un elemento mentre la relativa posizione cambia nell'heap gestito a causa dello spostamento di istanze di un oggetto da parte del Garbage Collector. Affinché il riferimento di un puntatore all'istanza sia corretto, il puntatore deve essere aggiornato dal runtime in base all'oggetto appena posizionato.  
   
- Un oggetto `interior_ptr` rappresenta un superset della funzionalità di un puntatore nativo.  Pertanto, qualsiasi elemento che può essere assegnato a un puntatore nativo può anche essere assegnato a un oggetto `interior_ptr`.  In un puntatore interno può essere eseguito lo stesso set di operazioni dei puntatori nativi, inclusi il confronto e l'aritmetica dei puntatori.  
+ Un' **interior_ptr** rappresenta un superset della funzionalità di un puntatore nativo.  Pertanto, qualsiasi elemento che può essere assegnato a un puntatore nativo può anche essere assegnato a un **interior_ptr**.  In un puntatore interno può essere eseguito lo stesso set di operazioni dei puntatori nativi, inclusi il confronto e l'aritmetica dei puntatori.  
   
  Un puntatore interno può essere dichiarato solo nello stack  e non come membro di una classe.  
   
  Poiché i puntatori interni sono disponibili solo nello stack, se si accetta l'indirizzo di un puntatore interno viene generato un puntatore non gestito.  
   
- L'oggetto `interior_ptr` dispone di una conversione implicita a `bool` che consente di utilizzarlo nelle istruzioni condizionali.  
+ **interior_ptr** dispone di una conversione implicita a **bool**, che consente di utilizzarlo nelle istruzioni condizionali.  
   
  Per informazioni su come dichiarare un puntatore interno che punta a un oggetto che non può essere spostato nell'heap sottoposto a garbage collection, vedere [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   
- `interior_ptr` è nello spazio dei nomi cli.  Vedere [Platform, default e cli spazi dei nomi](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) per ulteriori informazioni.  
+ **interior_ptr** è nello spazio dei nomi cli.  Visualizzare [Platform, default e cli gli spazi dei nomi](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) per altre informazioni.  
   
  Per ulteriori informazioni sui puntatori interni, vedere  
   
@@ -86,10 +86,9 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 -   [Procedura: Dichiarare i puntatori interni con la parola chiave const (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
  Nell'esempio riportato di seguito viene mostrato come dichiarare e utilizzare un puntatore interno in un tipo di riferimento.  
   

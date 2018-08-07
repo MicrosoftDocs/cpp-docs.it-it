@@ -1,5 +1,5 @@
 ---
-title: con restrizioni | Documenti Microsoft
+title: con restrizioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892878"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602772"
 ---
 # <a name="restricted"></a>restricted
 Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non può essere chiamato in modo arbitrario.  
@@ -30,23 +30,22 @@ Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non pu�
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `interfaces`  
- Una o più interfacce che non è possibile chiamare in modo arbitrario in un oggetto COM. Questo parametro è valido solo quando viene applicato a una classe.  
+### <a name="parameters"></a>Parametri  
+ *Interfacce*  
+ Una o più interfacce che non possono essere chiamate in modo arbitrario su un oggetto COM. Questo parametro è valido solo quando viene applicato a una classe.  
   
 ## <a name="remarks"></a>Note  
- Il **limitato** attributo C++ ha la stessa funzionalità come il [limitato](http://msdn.microsoft.com/library/windows/desktop/aa367157) attributo MIDL.  
+ Il **con restrizioni** attributi di C++ ha la stessa funzionalità come il [limitato](http://msdn.microsoft.com/library/windows/desktop/aa367157) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente viene illustrato come utilizzare il **limitato** attributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -75,10 +74,10 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**Si applica a**|Metodo, dell'interfaccia `interface`, **classe**, `struct`|  
+|**Si applica a**|Metodo, dell'interfaccia **interface**, **classe**, **struct**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**coclass** (quando applicato a **class** o `struct`)|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|**Coclasse** (quando applicato a **classe** oppure **struct**)|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

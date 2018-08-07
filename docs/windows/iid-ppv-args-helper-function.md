@@ -1,5 +1,5 @@
 ---
-title: Funzione IID_PPV_ARGS_Helper | Documenti Microsoft
+title: IID_PPV_ARGS_Helper (funzione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882342"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608378"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper (funzione)
-Verifica che il tipo dell'argomento specificato deriva il `IUnknown` interfaccia.  
+Verifica che il tipo dell'argomento specificato deriva dal `IUnknown` interfaccia.  
   
 > [!IMPORTANT]
->  Questa specializzazione di modello supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice. Utilizzare [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) invece.  
+>  Questa specializzazione di modello supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice. Uso [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di argomento `pp`.  
+ *T*  
+ Il tipo dell'argomento *pp*.  
   
- `pp`  
+ *profilo di porta*  
  Puntatore indiretto doppio.  
   
 ## <a name="return-value"></a>Valore restituito  
- Argomento `pp` cast a un puntatore-a-a-puntatore per `void`.  
+ Argomento *pp* eseguire il cast a un puntatore-a-a-puntatore al **void**.  
   
 ## <a name="remarks"></a>Note  
- Viene generato un errore di compilazione se il parametro di modello `T` non deriva da `IUnknown`.  
+ Viene generato un errore in fase di compilazione se il parametro di modello *T* non deriva da `IUnknown`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento (libreria Windows Runtime)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [Riferimento (libreria Windows Runtime)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

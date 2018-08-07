@@ -1,5 +1,5 @@
 ---
-title: 'Metodo Module:: registerwinrtobject | Documenti Microsoft'
+title: 'Metodo Module:: registerwinrtobject | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874954"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603757"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Metodo Module::RegisterWinRTObject
-Registra uno o più oggetti di Windows Runtime in modo da altre applicazioni di connettersi ad essi.  
+Registra uno o più oggetti di Windows Runtime in modo che altre applicazioni possono connettersi a essi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,24 +36,24 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `serverName`  
- Un nome che specifica un subset di oggetti interessati dall'operazione.  
+### <a name="parameters"></a>Parametri  
+ *ServerName*  
+ Un nome che specifichi un sottoinsieme degli oggetti interessati da questa operazione.  
   
- `activatableClassIds`  
- Matrice di CLSID attivabile da registrare.  
+ *activatableClassIds*  
+ Matrice di attivabile CLSID da registrare.  
   
- `cookie`  
+ *Cookie*  
  Un valore che identifica gli oggetti della classe che sono stati registrati. Questo valore viene utilizzato in un secondo momento per revocare la registrazione.  
   
- `count`  
+ *count*  
  Il numero di oggetti da registrare.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, un errore HRESULT, ad esempio CO_E_OBJISREG che indica il motivo per l'operazione non riuscita.  
+ S_OK se l'esito positivo. in caso contrario, un errore HRESULT, ad esempio CO_E_OBJISREG che indica il motivo per l'operazione non riuscita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL
  

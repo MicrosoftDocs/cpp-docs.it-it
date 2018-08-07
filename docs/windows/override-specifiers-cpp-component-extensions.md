@@ -1,5 +1,5 @@
 ---
-title: Identificatori di override (estensioni di componente C++) | Documenti Microsoft
+title: Eseguire l'override di identificatori (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882762"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603914"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Identificatori di override (Estensioni del componente C++)
 *Identificatori di override* modificare tipi come ereditati e i membri di tipi ereditati si comportano nei tipi derivati.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- **Note**  
+### <a name="remarks"></a>Note  
   
  Per ulteriori informazioni sugli identificatori di override, vedere:  
   
@@ -41,21 +41,21 @@ ms.locfileid: "33882762"
   
 -   [Gli identificatori di override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
- `abstract` e `sealed` sono validi anche per le dichiarazioni di tipo, dove non vengono utilizzati come identificatori di override.  
+ **astratto** e **sealed** sono validi anche in dichiarazioni di tipo, in cui non vengono utilizzati come identificatori di override.  
   
- Per informazioni sull'override esplicito delle funzioni della classe base, vedere [override espliciti](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Per informazioni sull'override esplicito delle funzioni della classe base, vedere [esegue l'override esplicito](../windows/explicit-overrides-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Common Language Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

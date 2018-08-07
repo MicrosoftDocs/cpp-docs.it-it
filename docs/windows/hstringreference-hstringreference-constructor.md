@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore hstringreference:: Hstringreference | Documenti Microsoft'
+title: 'Costruttore hstringreference:: Hstringreference | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dce8c6fca14ad26665bf4868681234374c20f85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876007"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608144"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>Costruttore HStringReference::HStringReference
-Inizializza una nuova istanza della classe HStringReference.  
+Inizializza una nuova istanza di **HStringReference** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,25 +38,25 @@ HStringReference(wchar_t const (&str)[ sizeDest],
 HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `sizeDest`  
- Un parametro di modello che specifica la dimensione del buffer di HStringReference di destinazione.  
+### <a name="parameters"></a>Parametri  
+ *sizeDest*  
+ Un parametro di modello che specifica la dimensione della matrice di destinazione **HStringReference** buffer.  
   
- `str`  
+ *str*  
  Un riferimento a una stringa di caratteri "wide".  
   
- `len`  
- La lunghezza massima del `str` buffer del parametro da utilizzare in questa operazione. Se il `len` parametro non è specificato, l'intero `str` parametro viene utilizzato. Se `len` è maggiore di `sizeDest`, `len` è impostato su `sizeDest`-1.  
+ *Len*  
+ La lunghezza massima del *str* buffer del parametro da utilizzare in questa operazione. Se il *len* parametro non è specificato, l'intera *str* parametro viene utilizzato. Se *len* è maggiore di quella *sizeDest*, *len* è impostata su *sizeDest*-1.  
   
- `other`  
- Un altro oggetto HStringReference.  
+ *other*  
+ Un'altra **HStringReference** oggetto.  
   
 ## <a name="remarks"></a>Note  
- Il primo costruttore inizializza un nuovo oggetto HStringReference che le stesse dimensioni come parametro `str`.  
+ Il primo costruttore inizializza un nuovo **HStringReference** oggetto come parametro con le stesse dimensioni *str*.  
   
- Il secondo costruttore inizializza un nuovo HStringReference oggetto specifeid le dimensioni dal parametro `len`.  
+ Il secondo costruttore inizializza un nuovo **HStringReference** dell'oggetto che la dimensione specifeid dal parametro *len*.  
   
- Il terzo costruttore inizializza un nuovo oggetto HStringReference al valore del `other` parametro, quindi Elimina il `other` parametro.  
+ Il terzo costruttore inizializza un nuovo **HStringReference** oggetto per il valore del *altri* parametro e quindi distrugge il *altri* parametro.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

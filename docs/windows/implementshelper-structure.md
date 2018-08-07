@@ -1,5 +1,5 @@
 ---
-title: ImplementsHelper (struttura) | Documenti Microsoft
+title: ImplementsHelper (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58f27e418946987633f771bc8d2c3224bc2cd7fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875939"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605617"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,20 +38,20 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `RuntimeClassFlagsT`  
+### <a name="parameters"></a>Parametri  
+ *RuntimeClassFlagsT*  
  Un campo di flag che specifica uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeratori.  
   
- `ILst`  
- Un elenco di ID di interfaccia.  
+ *ILst*  
+ Un elenco ID di interfaccia.  
   
- `IsDelegateToClass`  
- Specificare `true` se l'istanza corrente di implementa è una classe di base del primo ID di interfaccia in `ILst`; in caso contrario, `false`.  
+ *IsDelegateToClass*  
+ Specificare **true** se l'istanza corrente di `Implements` è una classe di base del primo ID di interfaccia in *ILst*; in caso contrario, **false**.  
   
 ## <a name="remarks"></a>Note  
  Consente di implementare il [implementa](../windows/implements-structure.md) struttura.  
   
- Questo modello consente di scorrere un elenco di interfacce e li aggiunge come classi base e di informazioni necessarie per abilitare QueryInterface.  
+ Questo modello consente di scorrere un elenco di interfacce e li aggiunge come classi di base e le informazioni necessarie per abilitare QueryInterface.  
   
 ## <a name="members"></a>Membri  
   
@@ -59,10 +59,10 @@ friend struct Details::ImplementsHelper;
  `ImplementsHelper`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento (libreria Windows Runtime)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Riferimento (libreria Windows Runtime)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

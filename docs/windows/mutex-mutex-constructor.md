@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore mutex:: mutex | Documenti Microsoft'
+title: 'Costruttore mutex:: mutex | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876456"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605194"
 ---
 # <a name="mutexmutex-constructor"></a>Costruttore Mutex::Mutex
-Inizializza una nuova istanza della classe Mutex.  
+Inizializza una nuova istanza di **Mutex** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,12 +39,12 @@ Mutex(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `h`  
- Un handle o un riferimento rvalue a un handle, a un oggetto Mutex.  
+### <a name="parameters"></a>Parametri  
+ *h*  
+ Un handle o un riferimento rvalue a un handle a un **Mutex** oggetto.  
   
 ## <a name="remarks"></a>Note  
- Il primo costruttore inizializza un oggetto Mutex dall'handle specificato. Il secondo costruttore inizializza un oggetto Mutex dall'handle specificato e viene spostato l'oggetto Mutex corrente la proprietà del mutex.  
+ Il primo costruttore inizializza un **Mutex** oggetto dall'handle specificato. Il secondo costruttore inizializza un **Mutex** oggetto dall'handle specificato, quindi passa la proprietà del mutex all'attuale **Mutex** oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  
@@ -52,4 +52,4 @@ Mutex(
  **Namespace:** Microsoft::WRL::Wrappers
  
  ## <a name="see-also"></a>Vedere anche
- [Mutex (classe)](../windows/mutex-class1.md)
+ [Classe Mutex](../windows/mutex-class1.md)

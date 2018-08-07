@@ -1,5 +1,5 @@
 ---
-title: 'Metodo runtimeclassbaset:: Asiid | Documenti Microsoft'
+title: 'Metodo runtimeclassbaset:: Asiid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892130"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607427"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>Metodo RuntimeClassBaseT::AsIID
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,27 +38,27 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
- Un tipo che implementa l'ID di interfaccia specificato dal parametro `riid`.  
+### <a name="parameters"></a>Parametri  
+ *T*  
+ Un tipo che implementa l'ID di interfaccia specificato dal parametro *riid*.  
   
- `implements`  
- Una variabile del tipo specificato dal parametro di modello `T`.  
+ *Implementa*  
+ Una variabile del tipo specificato dal parametro di modello *T*.  
   
- `riid`  
- Per recuperare l'ID di interfaccia.  
+ *riid*  
+ L'ID di interfaccia da recuperare.  
   
- `ppvObject`  
- Se questa operazione ha esito positivo, un puntatore-a-a-puntatore all'interfaccia specificata dal parametro `riid`.  
+ *ppvObject*  
+ Se questa operazione ha esito positivo, un puntatore-a-a-puntatore all'interfaccia specificata dal parametro *riid*.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, HRESULT che descrive l'errore.  
+ S_OK se l'esito positivo. in caso contrario, HRESULT che descrive l'errore.  
   
 ## <a name="remarks"></a>Note  
  Recupera un puntatore all'ID di interfaccia specificato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

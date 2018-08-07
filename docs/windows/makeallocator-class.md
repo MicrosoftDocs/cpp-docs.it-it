@@ -1,5 +1,5 @@
 ---
-title: MakeAllocator (classe) | Documenti Microsoft
+title: MakeAllocator (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878060"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605919"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator (classe)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  Un nome di tipo.  
   
- `hasWeakReferenceSupport`  
- `true` allocare memoria per un oggetto che supporta riferimenti deboli; `false` ad allocare memoria per un oggetto che non supporta riferimenti deboli.  
+ *hasWeakReferenceSupport*  
+ **true** ad allocare memoria per un oggetto che supporta riferimenti deboli; **false** ad allocare memoria per un oggetto che non supporta riferimenti deboli.  
   
 ## <a name="remarks"></a>Note  
- Alloca memoria per una classe attivabile, con o senza il supporto di riferimento debole.  
+ Alloca memoria per una classe attivabile, con o senza supporto dei riferimenti deboli.  
   
- Eseguire l'override della classe MakeAllocator per implementare un modello di allocazione di memoria definito dall'utente.  
+ Eseguire l'override di **MakeAllocator** classe per implementare un modello di allocazione di memoria definito dall'utente.  
   
- MakeAllocator viene in genere utilizzato per evitare perdite di memoria se un oggetto genera un'eccezione durante la costruzione.  
+ **MakeAllocator** viene generalmente utilizzato per evitare perdite di memoria se un oggetto genera un'eccezione durante la costruzione.  
   
 ## <a name="members"></a>Membri  
   
@@ -64,21 +63,21 @@ class MakeAllocator<T, true>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Inizializza una nuova istanza della classe MakeAllocator.|  
-|[Distruttore MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinizializza l'istanza corrente della classe MakeAllocator.|  
+|[Costruttore MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Inizializza una nuova istanza di **MakeAllocator** classe.|  
+|[Distruttore MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinizializza l'istanza corrente del **MakeAllocator** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Alloca memoria e lo associa all'oggetto MakeAllocator corrente.|  
-|[Metodo MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Rimuove l'associazione di memoria allocata per il [allocare](../windows/makeallocator-allocate-method.md) metodo dall'oggetto MakeAllocator corrente.|  
+|[Metodo MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Alloca la memoria e lo associa all'oggetto corrente **MakeAllocator** oggetto.|  
+|[Metodo MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Rimuove l'associazione di memoria allocata tramite il [Allocate](../windows/makeallocator-allocate-method.md) metodo dall'insieme corrente **MakeAllocator** oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `MakeAllocator`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

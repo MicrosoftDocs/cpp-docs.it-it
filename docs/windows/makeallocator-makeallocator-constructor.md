@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore makeallocator:: Makeallocator | Documenti Microsoft'
+title: 'Costruttore makeallocator:: Makeallocator | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b9095daa4ff1dca77c78c11ac41d8747d889d32
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06e12754594fe2f155be9502c2059fb6ba5f84e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874941"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608209"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>Costruttore MakeAllocator::MakeAllocator
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ MakeAllocator();
 ```  
   
 ## <a name="remarks"></a>Note  
- Inizializza una nuova istanza della classe MakeAllocator.  
+ Inizializza una nuova istanza di **MakeAllocator** classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

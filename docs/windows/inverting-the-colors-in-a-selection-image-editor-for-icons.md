@@ -1,5 +1,5 @@
 ---
-title: Inversione dei colori in una selezione (Editor di immagini per le icone) | Documenti Microsoft
+title: Inversione dei colori in una selezione (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874080"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608917"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Inversione dei colori in una selezione (Editor di immagini per le icone)
 L'editor di immagini fornisce un modo pratico per invertire i colori nella parte selezionata dell'immagine di cui è possibile indicare la modalità di visualizzazione di un'immagine con colori invertiti.  
@@ -34,11 +34,9 @@ L'editor di immagini fornisce un modo pratico per invertire i colori nella parte
   
 1.  Nel **immagine** menu, fare clic su **Inverti colori**.  
   
-
+## <a name="requirements"></a>Requisiti  
   
- Requisiti  
-  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

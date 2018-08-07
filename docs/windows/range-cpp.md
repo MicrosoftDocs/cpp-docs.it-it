@@ -1,5 +1,5 @@
 ---
-title: intervallo (C++) | Documenti Microsoft
+title: intervallo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877930"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603442"
 ---
 # <a name="range-c"></a>range (C++)
-Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori sono impostati in fase di esecuzione.  
+Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -45,11 +44,11 @@ Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui v
  Il valore massimo dell'intervallo.  
   
 ## <a name="remarks"></a>Note  
- Il **intervallo** attributo C++ ha la stessa funzionalità come il [intervallo](http://msdn.microsoft.com/library/windows/desktop/aa367151) attributo MIDL.  
+ Il **intervallo** attributi di C++ ha la stessa funzionalità come la [intervallo](http://msdn.microsoft.com/library/windows/desktop/aa367151) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -69,10 +68,10 @@ __interface ICustom {
   
 |||  
 |-|-|  
-|**Si applica a**|Metodo di interfaccia, il parametro di interfaccia|  
+|**Si applica a**|Metodo di interfaccia, parametro di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

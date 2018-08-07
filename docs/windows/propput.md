@@ -1,5 +1,5 @@
 ---
-title: propput | Documenti Microsoft
+title: propput | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0605220b9eecce3ba042ddd0b46abd63a06c9dea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 679b019c15d72586b5ca186e0b54c9a9172db53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882953"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608456"
 ---
 # <a name="propput"></a>propput
 Specifica un funzione di impostazione delle proprietà.  
@@ -30,16 +30,14 @@ Specifica un funzione di impostazione delle proprietà.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [propput]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **propput** attributo C++ ha la stessa funzionalità come il [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) attributo MIDL.  
+ Il **propput** attributi di C++ ha la stessa funzionalità come la [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio dell'uso di **propput**.  
+ Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio dell'uso dei **propput**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -50,7 +48,7 @@ Specifica un funzione di impostazione delle proprietà.
 |**Si applica a**|Metodo|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|**propget**, **propputref**|  
+|**Attributi non validi**|`propget`, `propputref`|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: concesso in licenza | Documenti Microsoft
+title: concesso in licenza | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875747"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603802"
 ---
 # <a name="licensed"></a>licensed
-Indica che l'oggetto COM a cui si riferisce è concesso in licenza e deve essere implementato con **IClassFactory2**.  
+Indica che l'oggetto COM a cui viene applicato è concesso in licenza e deve essere implementato con `IClassFactory2`.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **concesso in licenza** attributo C++ ha la stessa funzionalità come il [concesso in licenza](http://msdn.microsoft.com/library/windows/desktop/aa367070) attributo MIDL.  
+ Il **concesso in licenza** attributi di C++ ha la stessa funzionalità come il [concessi in licenza](http://msdn.microsoft.com/library/windows/desktop/aa367070) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,10 +63,10 @@ public:
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**coclass**|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|`coclass`|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

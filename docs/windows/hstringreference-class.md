@@ -1,5 +1,5 @@
 ---
-title: Classe HStringReference | Documenti Microsoft
+title: Classe HStringReference | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90e94471fe114eafec91a19ddad5d47ce39a8de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14ad6e511baa4c7b61a2205311bfb9ea4322a5b1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879555"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605100"
 ---
 # <a name="hstringreference-class"></a>Classe HStringReference
 Rappresenta un HSTRING creato da una stringa esistente.  
@@ -32,7 +32,7 @@ class HStringReference;
 ```  
   
 ## <a name="remarks"></a>Note  
- La durata del buffer di backup in HSTRING di nuovo non è gestita da Windows Runtime. Il chiamante alloca una stringa di origine nel frame dello stack per evitare un'allocazione di heap e per eliminare il rischio di perdita di memoria. Inoltre, il chiamante deve assicurare che la stringa di origine rimane invariata durante la durata di HSTRING l'allegato. Per ulteriori informazioni, vedere [WindowsCreateStringReference funzione](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac).  
+ La durata del buffer nel nuovo HSTRING non è gestita dal Runtime di Windows. Il chiamante assegna una stringa di origine nello stack frame per evitare un'allocazione heap e per eliminare il rischio di perdita di memoria. Inoltre, il chiamante deve garantire che la stringa di origine rimanga invariata durante il ciclo di vita di HSTRING associato. Per altre informazioni, vedere [WindowsCreateStringReference funzione](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).  
   
 ## <a name="members"></a>Membri  
   
@@ -40,20 +40,20 @@ class HStringReference;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore HStringReference::HStringReference](../windows/hstringreference-hstringreference-constructor.md)|Inizializza una nuova istanza della classe HStringReference.|  
+|[Costruttore HStringReference::HStringReference](../windows/hstringreference-hstringreference-constructor.md)|Inizializza una nuova istanza di **HStringReference** classe.|  
   
 ### <a name="members"></a>Membri  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|[Metodo HStringReference::CopyTo](../windows/hstringreference-copyto-method.md)|Copie di HStringReference corrente dell'oggetto a un oggetto HSTRING.|  
-|[Metodo HStringReference::Get](../windows/hstringreference-get-method.md)|Recupera il valore dell'handle HSTRING sottostante.|  
+|[Metodo HStringReference::CopyTo](../windows/hstringreference-copyto-method.md)|Copia l'oggetto corrente **HStringReference** oggetto in un oggetto HSTRING.|  
+|[Metodo HStringReference::Get](../windows/hstringreference-get-method.md)|Recupera il valore di handle sottostante di HSTRING.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore HStringReference::Operator=](../windows/hstringreference-operator-assign-operator.md)|Sposta il valore di un altro oggetto HStringReference all'oggetto HStringReference corrente.|  
+|[Operatore HStringReference::Operator=](../windows/hstringreference-operator-assign-operator.md)|Sposta il valore di un'altra **HStringReference** oggetto all'oggetto corrente **HStringReference** oggetto.|  
 |[Operatore HStringReference::Operator==](../windows/hstringreference-operator-equality-operator.md)|Indica se i due parametri sono uguali.|  
 |[Operatore HStringReference::Operator!=](../windows/hstringreference-operator-inequality-operator.md)|Indica se i due parametri non sono uguali.|  
   

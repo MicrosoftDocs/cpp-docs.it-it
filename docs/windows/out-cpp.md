@@ -1,5 +1,5 @@
 ---
-title: out (C++) | Documenti Microsoft
+title: out (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876813"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606124"
 ---
 # <a name="out-c"></a>out (C++)
 Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).  
@@ -30,9 +30,7 @@ Identifica i parametri dei puntatori restituiti dalla routine chiamata alla rout
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [out]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
@@ -50,7 +48,7 @@ Identifica i parametri dei puntatori restituiti dalla routine chiamata alla rout
 |**Si applica a**|Parametro interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

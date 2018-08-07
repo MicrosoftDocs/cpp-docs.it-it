@@ -1,5 +1,5 @@
 ---
-title: Operatore RoInitializeWrapper::HRESULT() | Documenti Microsoft
+title: Operatore RoInitializeWrapper::HRESULT() | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cb15f4011b202a00d691d48fffa487f2bf30e61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94c27262e63ba1c428596dbac836e165c24d8538
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891935"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605685"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>Operatore RoInitializeWrapper::HRESULT()
-Recupera il valore di HRESULT prodotto dall'ultimo costruttore di RoInitializeWrapper.  
+Recupera il valore HRESULT prodotto dall'ultima **RoInitializeWrapper** costruttore.  
   
 ## <a name="syntax"></a>Sintassi  
   

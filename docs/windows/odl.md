@@ -1,5 +1,5 @@
 ---
-title: ODL | Documenti Microsoft
+title: ODL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877696"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608186"
 ---
 # <a name="odl"></a>odl
-Identifica un'interfaccia come interfaccia oggetto descrizione Language ODL (). Il compilatore MIDL non richiede il **odl** attributo; solo per compatibilità con versioni precedenti. ODL venga riconosciuto.  
+Identifica un'interfaccia come interfaccia oggetto Description Language (ODL). Il compilatore MIDL non richiede la **odl** ; dell'attributo viene riconosciuto solo per compatibilità con i file. ODL meno recenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **odl** attributo C++ ha la stessa funzionalità come il [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) attributo MIDL.  
+ Il **odl** attributi di C++ ha la stessa funzionalità come la [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,10 +64,10 @@ public:
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`|  
+|**Si applica a**|**interface**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

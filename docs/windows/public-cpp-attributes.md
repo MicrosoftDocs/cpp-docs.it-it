@@ -1,5 +1,5 @@
 ---
-title: Public (attributi C++) | Documenti Microsoft
+title: Public (attributi C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 071aed04c73702bdb63f19154353794bae34f8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881731"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603605"
 ---
 # <a name="public-c-attributes"></a>public (attributi C++)
-Garantisce che un typedef entra in una libreria dei tipi anche se non vi fa riferimento all'interno del file IDL.  
+Assicura che un typedef entra in libreria dei tipi anche se non è presente all'interno del file con estensione idl.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [public]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **pubblica** attributo C++ ha la stessa funzionalità come il [pubblica](http://msdn.microsoft.com/library/windows/desktop/aa367150) attributo MIDL.  
+ Il **pubblico** attributi di C++ ha la stessa funzionalità come il [pubblico](http://msdn.microsoft.com/library/windows/desktop/aa367150) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente viene illustrato come utilizzare il **pubblica** attributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_public.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,10 +59,10 @@ __interface IFireTabCtrl : IDispatch
   
 |||  
 |-|-|  
-|**Si applica a**|`typedef`|  
+|**Si applica a**|**typedef**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

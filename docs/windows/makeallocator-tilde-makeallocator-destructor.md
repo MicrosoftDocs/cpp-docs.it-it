@@ -1,5 +1,5 @@
 ---
-title: 'MakeAllocator:: ~ MakeAllocator distruttore | Documenti Microsoft'
+title: 'MakeAllocator:: ~ MakeAllocator distruttore | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877099"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606309"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>Distruttore MakeAllocator::~MakeAllocator
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,12 +34,12 @@ Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codi
 ```  
   
 ## <a name="remarks"></a>Note  
- Deinizializza l'istanza corrente della classe MakeAllocator.  
+ Deinizializza l'istanza corrente del **MakeAllocator** classe.  
   
  Questo distruttore elimina anche la memoria allocata sottostante, se necessario.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

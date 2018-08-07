@@ -1,5 +1,5 @@
 ---
-title: 'Metodo Module:: incrementobjectcount | Documenti Microsoft'
+title: 'Metodo Module:: incrementobjectcount | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c662d4f8752014ca785b63020fc0ef7c97b5306f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f52e81a57909cfb9fa0c52b8e376d33f63fded0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878242"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605006"
 ---
 # <a name="moduleincrementobjectcount-method"></a>Metodo Module::IncrementObjectCount
 Incrementa il numero di oggetti registrati dal modulo.  
@@ -37,9 +37,9 @@ virtual long IncrementObjectCount();
  Il conteggio prima dell'operazione di incremento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL
  
- ## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
  [Classe Module](../windows/module-class.md)

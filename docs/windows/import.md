@@ -1,5 +1,5 @@
 ---
-title: importare | Documenti Microsoft
+title: importare | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877267"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604707"
 ---
 # <a name="import"></a>importazione
-Specifica un altro file di intestazione, ODL o IDL contenente le definizioni che si desidera fare riferimento dal principale IDL.  
+Specifica un altro file con estensione idl o ODL intestazione che contiene le definizioni di che voler fare riferimento a di IDL principale.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ import(  
+[ import(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `idl_file`  
- Il nome di un file IDL che si desidera importare nella libreria dei tipi del progetto corrente.  
+### <a name="parameters"></a>Parametri  
+ *idl_file*  
+ Il nome di un file con estensione idl che si desidera importare nella libreria dei tipi del progetto corrente.  
   
 ## <a name="remarks"></a>Note  
- Il **importare** attributo C++ causa un `#import` istruzione inserita sotto la `import "docobj.idl"` istruzione nel file IDL generato. Il **importare** presenta la stessa funzionalità come il [importare](http://msdn.microsoft.com/library/windows/desktop/aa367047) attributo MIDL.  
+ Il **importare** C++ attributo causa una `#import` istruzione inserita sotto il `import "docobj.idl"` istruzione nel file IDL generato. Il **importare** attributo ha la stessa funzionalità come la [importare](http://msdn.microsoft.com/library/windows/desktop/aa367047) attributo MIDL.  
   
- Il **importare** attributo colloca solo il file specificato nel file IDL che verrà generato dal progetto; il **importare** attributo non è possibile chiamare costrutti nel file specificato dal codice sorgente nel progetto.  Per chiamare costrutti nel file specificato dal codice sorgente nel progetto, utilizzare [#import](../preprocessor/hash-import-directive-cpp.md) e `embedded_idl` attributo oppure è possibile includere il file h di `idl_file`, se esiste un file con estensione h.  
+ Il **importare** attributo inserisce solo il file specificato nel file con estensione idl che verrà generato dal progetto; le **importare** attributo non è possibile chiamare costrutti nel file specificato dal codice sorgente nel progetto.  Per chiamare costrutti nel file specificato dal codice sorgente nel progetto, usare [#import](../preprocessor/hash-import-directive-cpp.md) e il `embedded_idl` attributo oppure è possibile includere il file con estensione h per il *idl_file*, se esiste un file con estensione h.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente:  
   
-```  
+```cpp  
 // cpp_attr_ref_import.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
 [import(import.idl)];  
 ```  
   
- Genera il seguente codice nel file IDL generato:  
+ Genera il codice seguente nel file IDL generato:  
   
 ```  
 import "docobj.idl";  
@@ -77,7 +76,7 @@ library MyLib {
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
@@ -86,5 +85,5 @@ library MyLib {
  [Attributi autonomi](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
  [importlib](../windows/importlib.md)   
- [Includere](../windows/include-cpp.md)   
+ [includere](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

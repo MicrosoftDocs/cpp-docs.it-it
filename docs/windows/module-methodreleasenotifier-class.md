@@ -1,5 +1,5 @@
 ---
-title: 'Classe Module:: methodreleasenotifier | Documenti Microsoft'
+title: 'Classe Module:: methodreleasenotifier | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 217e58f73130922d45f0d303e1e91858e8c2272f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4009be162423d9fe558dba04d7e88a7f539c4eaa
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880827"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602987"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Classe Module::MethodReleaseNotifier
-Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto del modulo corrente. Il gestore dell'evento è specificato da un oggetto e il relativo membro puntatore al metodo.  
+Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore eventi viene specificato da un oggetto e il relativo membro puntatore al metodo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,9 +34,9 @@ template<typename T>
 class MethodReleaseNotifier : public ReleaseNotifier;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo dell'oggetto la cui funzione membro è il gestore dell'evento.  
+### <a name="parameters"></a>Parametri  
+ *T*  
+ Il tipo dell'oggetto la cui funzione membro è il gestore eventi.  
   
 ## <a name="members"></a>Membri  
   
@@ -44,20 +44,20 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore Module::MethodReleaseNotifier::MethodReleaseNotifier](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inizializza una nuova istanza della classe methodreleasenotifier.|  
+|[Costruttore Module::MethodReleaseNotifier::MethodReleaseNotifier](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inizializza una nuova istanza di **Module:: methodreleasenotifier** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo Module::MethodReleaseNotifier::Invoke](../windows/module-methodreleasenotifier-invoke-method.md)|Chiama il gestore dell'evento associato all'oggetto methodreleasenotifier corrente.|  
+|[Metodo Module::MethodReleaseNotifier::Invoke](../windows/module-methodreleasenotifier-invoke-method.md)|Chiama il gestore dell'evento associato all'oggetto corrente **Module:: methodreleasenotifier** oggetto.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Contiene un puntatore al gestore dell'evento per l'oggetto methodreleasenotifier corrente.|  
-|[Membro dati Module::MethodReleaseNotifier::object_](../windows/module-methodreleasenotifier-object-data-member.md)|Contiene un puntatore all'oggetto la cui funzione membro è il gestore eventi per l'oggetto methodreleasenotifier corrente.|  
+|[Membro dati Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Contiene un puntatore al gestore eventi per l'oggetto corrente **Module:: methodreleasenotifier** oggetto.|  
+|[Membro dati Module::MethodReleaseNotifier::object_](../windows/module-methodreleasenotifier-object-data-member.md)|Contiene un puntatore all'oggetto la cui funzione membro è il gestore eventi per l'oggetto corrente **Module:: methodreleasenotifier** oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `ReleaseNotifier`  
@@ -65,7 +65,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
  `MethodReleaseNotifier`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL
  

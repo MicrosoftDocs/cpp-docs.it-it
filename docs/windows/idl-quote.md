@@ -1,5 +1,5 @@
 ---
-title: idl_quote | Documenti Microsoft
+title: idl_quote | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878512"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606514"
 ---
 # <a name="idlquote"></a>idl_quote
-Consente di utilizzare costrutti IDL che non sono supportati nella versione corrente di Visual C++ e farli pass-through per il file IDL generato.  
+Consente di usare costrutti IDL che non sono supportati nella versione corrente di Visual C++ e chiedere di pass-through per il file con estensione IDL generato.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametri  
  *testo*  
- Nome dell'attributo che si intende il compilatore Visual C++, passare al file IDL generato senza restituire un errore del compilatore.  
+ Il nome dell'attributo che si intende il compilatore Visual C++, passare al file IDL generato senza restituire un errore del compilatore.  
   
 ## <a name="remarks"></a>Note  
- Se il **idl_quote** attributo C++ viene utilizzato come attributo autonomo (con un punto e virgola dopo la parentesi di chiusura), quindi *testo* viene inserito nel file IDL sottoposto a merge come è. Se **idl_quote** viene utilizzata su un simbolo, *testo* viene inserito all'interno del blocco di attributi per tale simbolo.  
+ Se il **idl_quote** C++ viene usato come attributo autonomo (con un punto e virgola dopo la parentesi di chiusura), quindi *testo* viene inserito nel file unito. idl, come è. Se **idl_quote** viene usato un simbolo *testo* viene inserito nel blocco di attributi per tale simbolo.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato come è possibile specificare un attributo non supportato (utilizzando **in**, che è supportato) e come definire e utilizzare un costrutto di IDL non definito:  
+ Il codice seguente illustra come è possibile specificare un attributo non supportato (tramite **in**, che è supportato) e su come definire e usare un costrutto non definito. idl:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Questo codice causa MYFLOT e MYDUB e *testo* voce posizionati nel file IDL generato. Il *nome* parametro forza *testo* per essere inserita prima di tutto ciò che fa riferimento a *nome* nel file IDL generato. Il *dipendenze* parametro impone le definizioni di elenco di dipendenze da inserire prima *testo* nel file IDL generato.  
+ Questo codice causa MYFLOT e MYDUB e il *testo* movimento da inserire nel file con estensione IDL generato. Il *name* parametro forza *testo* da inserire prima di tutto ciò che fa riferimento *nome* nel file con estensione IDL generato. Il *dipendenze* parametro impone le definizioni di elenco delle dipendenze da inserire prima *testo* nel file con estensione IDL generato.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -90,7 +89,7 @@ __interface IStatic{
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

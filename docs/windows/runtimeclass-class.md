@@ -1,5 +1,5 @@
 ---
-title: Classe RuntimeClass | Documenti Microsoft
+title: Classe RuntimeClass | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d777dd15e484ae296139bbe2bdc9b0cddcab2d59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889007"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606332"
 ---
 # <a name="runtimeclass-class"></a>Classe RuntimeClass
-Rappresenta una classe COM o WinRT che eredita le interfacce specificate e fornisce il Runtime di Windows specificato, COM classico e supporto di riferimento debole.  
+Rappresenta una classe COM o WinRT che eredita le interfacce specificate e fornisce il Runtime di Windows specificato, COM classico e supporto dei riferimenti deboli.  
   
-Questa classe fornisce l'implementazione standard di classi WinRT e COM, che fornisce l'implementazione di `QueryInterface`, `AddRef`, `Release` e così via, gestisce il conteggio dei riferimenti del modulo e dispone del supporto per fornire la class factory per oggetti attivabili.
+Questa classe fornisce l'implementazione di boilerplate di classi WinRT e COM, che fornisce l'implementazione di `QueryInterface`, `AddRef`, `Release` e così via, gestisce il conteggio dei riferimenti del modulo e include il supporto per fornire la class factory per oggetti attivabili.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,30 +36,30 @@ template <typename ...TInterfaces> class RuntimeClass
 template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ```
   
-#### <a name="parameters"></a>Parametri  
- `classFlags`  
-Parametro facoltativo. Una combinazione di uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valori di enumerazione. Il `__WRL_CONFIGURATION_LEGACY__` macro può essere definita per modificare il valore predefinito di classFlags per tutte le classi di runtime nel progetto. Se definito, le istanze di RuntimeClass non sono agile per impostazione predefinita. Se non è definito, le istanze di RuntimeClass sono agile per impostazione predefinita. Per evitare ambiguità, specificare sempre il Microsoft::WRL::FtmBase in `TInterfaces` o RuntimeClassType::InhibitFtmBase. Si noti che, se InhibitFtmBase e FtmBase vengono che entrambi utilizzati l'oggetto sarà agili.
+### <a name="parameters"></a>Parametri  
+ *classFlags*  
+Parametro facoltativo. Una combinazione di uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valori di enumerazione. Il `__WRL_CONFIGURATION_LEGACY__` macro può essere definita per modificare il valore predefinito di classFlags per tutte le classi di runtime nel progetto. Se definito, RuntimeClass istanze non sono agile per impostazione predefinita. Quando non è definito, le istanze RuntimeClass sono agile per impostazione predefinita. Per evitare ambiguità, specificare sempre il `Microsoft::WRL::FtmBase` nelle `TInterfaces` o `RuntimeClassType::InhibitFtmBase`. Si noti che, se InhibitFtmBase e FtmBase vengono che entrambe usate l'oggetto sarà agili.
  
- `TInterfaces`  
-L'elenco delle interfacce l'oggetto implementa oltre IUnknown, IInspectable o altre interfacce controllate da [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Può elencare inoltre alle altre classi di essere derivata da, in particolare Microsoft::WRL::FtmBase per rendere l'oggetto agile in modo che venga implementare IMarshal.
+ *TInterfaces*  
+L'elenco delle interfacce dell'oggetto implementi oltre `IUnknown`, `IInspectable` o altre interfacce controllate da [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Anche possibile elencare ad altre classi di derivare da, in particolare `Microsoft::WRL::FtmBase` per rendere l'oggetto agile e ne implementa `IMarshal`.
   
 ## <a name="members"></a>Membri  
-`RuntimeClassInitialize` Una funzione che inizializza l'oggetto se la funzione di modello MakeAndInitialize viene utilizzata per costruire l'oggetto. Se l'inizializzazione non riuscita, viene restituito S_OK se l'oggetto è stato inizializzato correttamente oppure un codice di errore COM. Il codice di errore COM viene propagato come il valore restituito di MakeAndInitialize. Si noti che se la funzione di modello di creazione viene utilizzata per costruire l'oggetto non viene chiamato il metodo RuntimeClassInitialize.
+`RuntimeClassInitialize` Una funzione che inizializza l'oggetto se il `MakeAndInitialize` funzione del modello viene utilizzata per costruire l'oggetto. Restituisce S_OK se l'oggetto è stato inizializzato correttamente o un codice di errore COM se l'inizializzazione non riuscita. Il codice di errore COM viene propagato come valore restituito di `MakeAndInitialize`. Si noti che il `RuntimeClassInitialize` metodo non viene chiamato se il `Make` funzione del modello viene utilizzata per costruire l'oggetto.
 
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore RuntimeClass::RuntimeClass](../windows/runtimeclass-runtimeclass-constructor.md)|Inizializza l'istanza corrente della classe RuntimeClass.|  
-|[Distruttore RuntimeClass::~RuntimeClass](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Deinizializza l'istanza corrente della classe RuntimeClass.|  
+|[Costruttore RuntimeClass::RuntimeClass](../windows/runtimeclass-runtimeclass-constructor.md)|Inizializza l'istanza corrente della classe di RuntimeClass.|  
+|[Distruttore RuntimeClass::~RuntimeClass](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Deinizializza l'istanza corrente della classe di RuntimeClass.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
 Questo è un dettaglio di implementazione.
   
 ## <a name="requirements"></a>Requisiti  
-**Intestazione:** FTM.  
+**Intestazione:** Implements. h  
   
 **Spazio dei nomi:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Vedere anche  
-[Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+ [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

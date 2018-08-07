@@ -1,5 +1,5 @@
 ---
-title: Libreria SafeInt | Documenti Microsoft
+title: Libreria SafeInt | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25090eefe4f07181490f650ea4d14add9fc6ac75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16ec0ad37202acbae8b33f270cef15547edd77b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892052"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604187"
 ---
 # <a name="safeint-library"></a>Libreria SafeInt
-Libreria SafeInt consente di evitare gli overflow di interi che potrebbero verificarsi quando l'applicazione esegue operazioni matematiche.  
+Il **SafeInt** library consente di evitare gli overflow di interi che potrebbero verificarsi quando l'applicazione esegue operazioni matematiche.  
   
 ## <a name="in-this-section"></a>In questa sezione  
   
 |Sezione|Descrizione|  
 |-------------|-----------------|  
-|[Classe SafeInt](../windows/safeint-class.md)|Questa classe consente di proteggere gli overflow di interi.|  
-|[Funzioni SafeInt](../windows/safeint-functions.md)|Funzioni che possono essere utilizzate senza la creazione di un `SafeInt` oggetto.|  
-|[Classe SafeIntException](../windows/safeintexception-class.md)|Una classe di eccezioni correlate alla `SafeInt` classe.|  
+|[Classe SafeInt](../windows/safeint-class.md)|Questa classe consente di proteggere gli overflow di integer.|  
+|[Funzioni SafeInt](../windows/safeint-functions.md)|Funzioni che possono essere usate senza creare una **SafeInt** oggetto.|  
+|[Classe SafeIntException](../windows/safeintexception-class.md)|Una classe di eccezioni correlate per il **SafeInt** classe.|  
   
 ## <a name="related-sections"></a>Sezioni correlate  
   

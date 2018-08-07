@@ -1,5 +1,5 @@
 ---
-title: InterfaceTraits (struttura) | Documenti Microsoft
+title: InterfaceTraits (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4203fbb639b06e7e421809f9d901c70933d586d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878684"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606748"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,17 +41,17 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `I0`  
+### <a name="parameters"></a>Parametri  
+ *I0*  
  Il nome di un'interfaccia.  
   
- `CloakedType`  
- Per RuntimeClass, Implements e ChainInterfaces, un'interfaccia che non sarà nell'elenco di supportati gli ID di interfaccia.  
+ *CloakedType*  
+ Per la `RuntimeClass`, `Implements` e `ChainInterfaces`, un'interfaccia che non sarà nell'elenco di ID di interfaccia è supportata.  
   
 ## <a name="remarks"></a>Note  
- Caratteristiche comuni di implementa di un'interfaccia.  
+ Caratteristiche comuni implementa un'interfaccia.  
   
- Il secondo modello è una specializzazione per le interfacce mascherate. Il terzo modello è una specializzazione per i parametri null.  
+ Il secondo modello è una specializzazione per interfacce mascherate. Il terzo modello è una specializzazione per i parametri di tipo Nil.  
   
 ## <a name="members"></a>Membri  
   
@@ -59,29 +59,29 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`Base`|Sinonimo del parametro di modello `I0`.|  
+|`Base`|Un sinonimo per il *I0* parametro di modello.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo InterfaceTraits::CanCastTo](../windows/interfacetraits-cancastto-method.md)|Indica se il puntatore specificato può essere convertito in un puntatore a `Base`.|  
-|[Metodo InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Esegue il cast il puntatore specificato a un puntatore a `Base`.|  
-|[Metodo InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Esegue il cast il puntatore specificato a un puntatore a IUnknown.|  
-|[Metodo InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Assegna l'ID di interfaccia di `Base` all'elemento della matrice specificata dall'argomento dell'indice.|  
+|[Metodo InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Viene eseguito il cast il puntatore specificato a un puntatore a `Base`.|  
+|[Metodo InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Viene eseguito il cast il puntatore specificato a un puntatore a `IUnknown`.|  
+|[Metodo InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Assegna l'ID dell'interfaccia `Base` all'elemento della matrice specificata dall'argomento dell'indice.|  
 |[Metodo InterfaceTraits::Verify](../windows/interfacetraits-verify-method.md)|Verifica che Base è derivata in modo corretto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[Costante InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Contiene il numero di ID associato all'oggetto InterfaceTraits corrente di interfaccia.|  
+|[Costante InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Contiene il numero ID associato all'oggetto corrente di interfaccia **InterfaceTraits** oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `InterfaceTraits`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

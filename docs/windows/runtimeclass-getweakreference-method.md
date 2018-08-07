@@ -1,5 +1,5 @@
 ---
-title: 'Metodo runtimeclass:: Getweakreference | Documenti Microsoft'
+title: 'Metodo runtimeclass:: Getweakreference | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e49703e96728e7287206aa264ce12deaad611495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb0d5e6ca19749a4647ec85311e1fce0e7561b59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888218"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608534"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>Metodo RuntimeClass::GetWeakReference
-Ottiene un puntatore all'oggetto di riferimento debole per l'oggetto RuntimeClass corrente.  
+Ottiene un puntatore all'oggetto di riferimento debole per l'oggetto corrente **RuntimeClass** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ STDMETHOD(
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `weakReference`  
+### <a name="parameters"></a>Parametri  
+ *weakReference*  
  Quando questa operazione viene completata, un puntatore a un oggetto di riferimento debole.  
   
 ## <a name="return-value"></a>Valore restituito  
  Sempre S_OK.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

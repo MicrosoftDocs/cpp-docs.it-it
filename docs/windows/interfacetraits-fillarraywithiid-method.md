@@ -1,5 +1,5 @@
 ---
-title: 'Metodo interfacetraits:: Fillarraywithiid | Documenti Microsoft'
+title: 'Metodo interfacetraits:: Fillarraywithiid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6e32b2e40ba9dc2b8085f8edc99beb899e90ace
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ef552e5025a18eb4c778f9d08389d2b7e3634d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877497"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605656"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>Metodo InterfaceTraits::FillArrayWithIid
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,25 +34,24 @@ __forceinline static void FillArrayWithIid(
    _Inout_ unsigned long &index,  
    _In_ IID* iids  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `index`  
+### <a name="parameters"></a>Parametri  
+ *index*  
  Puntatore a un campo che contiene un valore di indice in base zero.  
   
- `iids`  
- Matrice di ID di interfaccia.  
+ *IID*  
+ Matrice ID di interfaccia.  
   
 ## <a name="remarks"></a>Note  
- Assegna l'ID di interfaccia di `Base` all'elemento della matrice specificata dall'argomento dell'indice.  
+ Assegna l'ID dell'interfaccia `Base` all'elemento della matrice specificata dall'argomento dell'indice.  
   
- Conflitto con il nome di questa API, solo un array è stato modificato; non è l'intera matrice.  
+ Diversamente dal nome di questa API, un solo array è stato modificato; non l'intera matrice.  
   
- Per ulteriori informazioni su `Base`, vedere la sezione typedef pubblici in [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).  
+ Per altre informazioni sulle `Base`, vedere la sezione typedef pubblici [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

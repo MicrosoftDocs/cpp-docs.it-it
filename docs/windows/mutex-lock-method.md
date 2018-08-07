@@ -1,5 +1,5 @@
 ---
-title: 'Metodo mutex:: lock | Documenti Microsoft'
+title: 'Metodo mutex:: lock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880872"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603524"
 ---
 # <a name="mutexlock-method"></a>Metodo Mutex::Lock
-Attende l'oggetto corrente o l'oggetto Mutex associato all'handle specificato, il mutex rilasciato o è trascorso l'intervallo di timeout specificato.  
+Attende fino a quando l'oggetto corrente, o la **Mutex** oggetto associato all'handle specificato, le versioni è trascorso l'intervallo di timeout specificato o il mutex.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,12 +40,12 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `milliseconds`  
- L'intervallo di timeout, espresso in millisecondi. Il valore predefinito è INFINITE, attende indefinitamente.  
+### <a name="parameters"></a>Parametri  
+ *millisecondi*  
+ L'intervallo di timeout, espresso in millisecondi. Il valore predefinito è INFINITE, che è in attesa per un periodo illimitato.  
   
- `h`  
- L'handle di un oggetto Mutex.  
+ *h*  
+ L'handle di una **Mutex** oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -55,4 +55,4 @@ static SyncLock Lock(
  **Namespace:** Microsoft::WRL::Wrappers
  
  ## <a name="see-also"></a>Vedere anche
- [Mutex (classe)](../windows/mutex-class1.md)
+ [Classe Mutex](../windows/mutex-class1.md)

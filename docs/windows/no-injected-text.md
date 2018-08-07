@@ -1,5 +1,5 @@
 ---
-title: no_injected_text | Documenti Microsoft
+title: no_injected_text | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880348"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603420"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-Impedisce al compilatore di codice in seguito a uso dell'attributo.  
+Impedisce al compilatore di inserire codice in seguito a uso dell'attributo.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ no_injected_text(  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `boolean`(facoltativo)  
- **true** se si desidera che nessun codice inserito, **false** per consentire al codice di essere inserito. **true** è l'impostazione predefinita.  
+ *booleano* (facoltativo)  
+ **true** se si desidera che nessun codice inserito, **false** per consentire al codice da inserire. **true** è il valore predefinito.  
   
 ## <a name="remarks"></a>Note  
- L'utilizzo più comune del **no_injected_text** attributo C++ è il [/Fx](../build/reference/fx-merge-injected-code.md) opzione del compilatore, che inserisce il **no_injected_text** attributo nel file mrg.  
+ L'uso più comune del **no_injected_text** consiste nell'attributo C++ il [/Fx](../build/reference/fx-merge-injected-code.md) opzione del compilatore, che consente di inserire il **no_injected_text** attributo nel file mrg.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -52,7 +51,7 @@ Impedisce al compilatore di codice in seguito a uso dell'attributo.
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

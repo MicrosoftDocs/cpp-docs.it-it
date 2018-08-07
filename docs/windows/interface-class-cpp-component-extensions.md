@@ -1,5 +1,5 @@
 ---
-title: interfaccia di classe (estensioni del componente C++) | Documenti Microsoft
+title: interfaccia class (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,49 +18,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880859"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604486"
 ---
 # <a name="interface-class--c-component-extensions"></a>classe di interfaccia (Estensioni del componente C++)
 Dichiara un'interfaccia.  Per informazioni sulle interfacce native, vedere [Interface](../cpp/interface.md).  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- **Sintassi**  
+
+### <a name="syntax"></a>Sintassi  
   
 ```  
-  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
- **Parametri**  
+### <a name="parameters"></a>Parametri  
   
  *interface_access*  
- L'accessibilità di un'interfaccia all'esterno dell'assembly.  I valori possibili sono **pubblica** e `private`.  Il valore predefinito è `private`.  Interfacce nidificate non possono avere un *interface_access* identificatore.  
+ L'accessibilità di un'interfaccia all'esterno dell'assembly.  I valori possibili sono **pubbliche** e **privati**.  **privato** è il valore predefinito. Interfacce annidate non possono avere un *interface_access* identificatore.  
   
  *name*  
  Nome dell'interfaccia.  
   
  *inherit_access*  
- L'accessibilità di *base_interface*.  L'unico consentito accessibilità per un'interfaccia di base è `public` (impostazione predefinita).  
+ L'accessibilità delle *base_interface*.  Gli unici consentiti accessibilità per è un'interfaccia di base **pubblica** (predefinito).  
   
  *base_interface* (facoltativo)  
  Un'interfaccia di base per l'interfaccia *nome*.  
   
- **Note**  
+### <a name="remarks"></a>Note  
   
- **interfaccia struct** equivale a **classe interfaccia**.  
+ **struct di interfaccia** equivale a **classe interfaccia**.  
   
- Un'interfaccia può contenere dichiarazioni di funzioni, proprietà ed eventi.  Tutti i membri di interfaccia avere accessibilità pubblica. Un'interfaccia può anche contenere le proprietà, funzioni, gli eventi e i membri dati statici e questi membri statici devono essere definiti nell'interfaccia.  
+ Un'interfaccia può contenere dichiarazioni per le funzioni, proprietà ed eventi.  Tutti i membri di interfaccia avere accessibilità pubblica. Un'interfaccia può anche contenere le proprietà, funzioni, eventi e i membri dati statici e questi membri statici devono essere definiti nell'interfaccia.  
   
- Un'interfaccia definisce la modalità può essere implementata una classe. Un'interfaccia non è una classe e le classi possono implementare solo le interfacce. Quando una classe definisce una funzione dichiarata in un'interfaccia, la funzione viene implementata, non viene sottoposto a override. Ricerca del nome, pertanto, non include i membri di interfaccia.  
+ Un'interfaccia definisce come una classe può essere implementata. Un'interfaccia non è una classe e le classi possono implementare solo le interfacce. Quando una classe definisce una funzione dichiarata in un'interfaccia, la funzione è implementata, non viene sottoposto a override. Pertanto, la ricerca del nome non include i membri di interfaccia.  
   
- Una classe o struct che deriva da un'interfaccia deve implementare tutti i membri dell'interfaccia. Quando si implementa l'interfaccia *nome* è inoltre necessario implementare le interfacce di `base_interface` elenco.  
+ Una classe o struct che deriva da un'interfaccia deve implementare tutti i membri dell'interfaccia. Quando si implementa l'interfaccia *name* è inoltre necessario implementare le interfacce nel `base_interface` elenco.  
   
  Per altre informazioni, vedere:  
   
@@ -70,9 +70,9 @@ interface class
   
  Per informazioni su altri tipi CLR, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- È possibile rilevare in fase di compilazione se un tipo è un'interfaccia con `__is_interface_class(type)`. Per ulteriori informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ È possibile rilevare in fase di compilazione se un tipo è un'interfaccia con `__is_interface_class(type)`. Per altre informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- Nell'ambiente di sviluppo, è possibile ottenere la Guida F1 in queste parole chiave evidenziando la parola chiave, (`interface class`, ad esempio) e premere F1.  
+ Nell'ambiente di sviluppo, è possibile ottenere la Guida F1 in queste parole chiave per evidenziare la parola chiave, (`interface class`, ad esempio), premendo F1.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
  **Note**  
@@ -80,7 +80,7 @@ interface class
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Note**  
@@ -88,14 +88,13 @@ interface class
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Common Language Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
  Esempio di codice seguente viene illustrato come un'interfaccia può definire il comportamento di una funzione di orologio.  
   
-```  
+```cpp  
 // mcppv2_interface_class.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -201,11 +200,9 @@ OnClick: 7, 3.14159
 in Function_1  
 ```  
   
- **Esempio**  
+ Esempio di codice seguente mostra due modi per implementare funzioni con la stessa firma dichiarata in più interfacce e in cui queste interfacce vengono usate da una classe.  
   
- Esempio di codice seguente mostra due modi per implementare funzioni con la stessa firma dichiarata in più interfacce e in cui queste interfacce vengono utilizzate da una classe.  
-  
-```  
+```cpp  
 // mcppv2_interface_class_2.cpp  
 // compile with: /clr /c  
 interface class I {  

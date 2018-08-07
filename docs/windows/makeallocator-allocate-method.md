@@ -1,5 +1,5 @@
 ---
-title: 'Metodo makeallocator:: allocate | Documenti Microsoft'
+title: 'Metodo makeallocator:: allocate | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876216"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606263"
 ---
 # <a name="makeallocatorallocate-method"></a>Metodo MakeAllocator::Allocate
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,17 +34,17 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, un puntatore alla memoria allocata; in caso contrario, `nullptr`.  
+ Se ha esito positivo, un puntatore alla memoria allocata; in caso contrario, **nullptr**.  
   
 ## <a name="remarks"></a>Note  
- Alloca memoria e lo associa all'oggetto MakeAllocator corrente.  
+ Alloca la memoria e lo associa all'oggetto corrente **MakeAllocator** oggetto.  
   
- Le dimensioni della memoria allocata sono la dimensione del tipo specificato dal parametro di modello MakeAllocator corrente.  
+ Le dimensioni della memoria allocata sono la dimensione del tipo specificato dall'oggetto corrente **MakeAllocator** parametro di modello.  
   
- Lo sviluppatore dovrà eseguire l'override solo il metodo Allocate() per implementare un modello di allocazione di memoria diverse.  
+ Uno sviluppatore deve eseguire l'override solo il **Allocate()** metodo per implementare un modello di allocazione di memoria diverse.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -1,5 +1,5 @@
 ---
-title: locale (C++) | Documenti Microsoft
+title: locale (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877917"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604200"
 ---
 # <a name="local-c"></a>local (C++)
-Quando utilizzato nell'intestazione di interfaccia, consente di usare il compilatore MIDL come generatore di intestazione. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.  
+Quando usato nell'intestazione dell'interfaccia, consente di usare il compilatore MIDL come generatore di intestazione. Se usato in una singola funzione, designa una procedura locale per cui non gli stub vengono generati.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [local]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `local` attributo C++ ha la stessa funzionalità come il [locale](http://msdn.microsoft.com/library/windows/desktop/aa367071) attributo MIDL.  
+ Il **locale** attributi di C++ ha la stessa funzionalità come la [locale](http://msdn.microsoft.com/library/windows/desktop/aa367071) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Vedere [call_as](../windows/call-as.md) per un esempio di come utilizzare `local`.  
+ Visualizzare [call_as](../windows/call-as.md) per un esempio di come usare **locale**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -47,10 +45,10 @@ Quando utilizzato nell'intestazione di interfaccia, consente di usare il compila
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`, metodo di interfaccia|  
+|**Si applica a**|**interfaccia**, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|**dispinterface**|  
+|**Attributi non validi**|`dispinterface`|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

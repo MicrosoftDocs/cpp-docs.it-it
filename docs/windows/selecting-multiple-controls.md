@@ -1,5 +1,5 @@
 ---
-title: Selezione di più controlli | Documenti Microsoft
+title: Selezione di più controlli | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,43 +18,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60da452fe4373d47f5278fa45520a45235f76df0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888708"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608267"
 ---
 # <a name="selecting-multiple-controls"></a>Selezione di più controlli
 ### <a name="to-select-multiple-controls"></a>Per selezionare più controlli  
   
-1.  Nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), selezionare il **puntatore** strumento.  
+1.  Nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), selezionare la **puntatore** dello strumento.  
   
 2.  Trascinare il puntatore del mouse per disegnare una casella di selezione intorno ai controlli che si desidera selezionare nella finestra di dialogo.  
   
-     Quando si rilascia il pulsante del mouse, tutti i controlli all'interno e l'intersezione è selezionata la casella di selezione.  
+     Quando si rilascia il pulsante del mouse, tutti i controlli all'interno e che si intersecano vengono selezionati la casella di selezione.  
   
      \- oppure -  
   
--   Tenere premuto il tasto MAIUSC e fare clic sui controlli che si desidera includere nella selezione.  
+-   Tenere premuto il **MAIUSC** della chiave e fare clic sui controlli che si desidera includere nella selezione.  
   
      \- oppure -  
   
--   Tenere premuto il tasto Ctrl e fare clic sui controlli che si desidera includere nella selezione.  
+-   Tenere premuto il **Ctrl** della chiave e fare clic sui controlli che si desidera includere nella selezione.  
   
-#### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Per rimuovere un controllo da un gruppo di controlli selezionati o per aggiungere un controllo a un gruppo di controlli selezionati  
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Per rimuovere un controllo da un gruppo di controlli selezionati o per aggiungere un controllo a un gruppo di controlli selezionati  
   
-1.  Con un gruppo di controlli selezionati, tenere premuto il tasto MAIUSC e fare clic sul controllo che si desidera rimuovere o aggiungere la selezione esistente.  
+1.  Con un gruppo di controlli selezionati, tenere premuto il **MAIUSC** della chiave e fare clic sul controllo che si desidera rimuovere o aggiungere alla selezione esistente.  
   
     > [!NOTE]
-    >  Tenendo premuto il tasto CTRL e facendo clic su un controllo all'interno di una selezione di modo che il controllo dominante della selezione. Per ulteriori informazioni, vedere [specifica del controllo dominante](../windows/specifying-the-dominant-control.md).  
+    >  Tenendo premuto il tasto CTRL e facendo clic su un controllo all'interno di una selezione renderà che controllano il controllo dominante della selezione. Per altre informazioni, vedere [impostazione del controllo dominante](../windows/specifying-the-dominant-control.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Selezione di controlli](../windows/selecting-controls.md)   
  [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
-

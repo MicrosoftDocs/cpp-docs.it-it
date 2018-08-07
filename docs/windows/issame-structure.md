@@ -1,5 +1,5 @@
 ---
-title: IsSame (struttura) | Documenti Microsoft
+title: IsSame (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877670"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603585"
 ---
 # <a name="issame-structure"></a>IsSame (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,11 +41,11 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T1`  
+### <a name="parameters"></a>Parametri  
+ *T1*  
  Tipo.  
   
- `T2`  
+ *T2*  
  Un altro tipo.  
   
 ## <a name="remarks"></a>Note  
@@ -63,7 +63,7 @@ struct IsSame<T1, T1>;
  `IsSame`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   

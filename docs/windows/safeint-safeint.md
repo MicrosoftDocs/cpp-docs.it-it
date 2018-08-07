@@ -1,5 +1,5 @@
 ---
-title: 'SafeInt:: SafeInt | Documenti Microsoft'
+title: 'SafeInt:: SafeInt | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7154349105c1953ad314b7928e7be8385179c42
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d6bcac8dec2e85f0ea7d1d4530ed6ff1b7acc08
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888747"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604343"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
-Costruisce un oggetto `SafeInt`.  
+Costruisce un **SafeInt** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,34 +53,34 @@ SafeInt (
 )  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- [in] `i`  
- Il valore per il nuovo `SafeInt` oggetto. Deve trattarsi di un parametro di tipo T o U, a seconda del costruttore.  
+### <a name="parameters"></a>Parametri  
+ [in] *ho*  
+ Il valore per il nuovo **SafeInt** oggetto. Deve trattarsi di un parametro di tipo T o U, a seconda del costruttore.  
   
- [in] `b`  
- Il valore booleano per il nuovo `SafeInt` oggetto.  
+ [in] *b*  
+ Il valore booleano per la nuova **SafeInt** oggetto.  
   
- [in] `u`  
- Oggetto `SafeInt` di tipo U. Il nuovo `SafeInt` oggetto avrà lo stesso valore di `u`, ma sarà di tipo T.  
+ [in] *u*  
+ Oggetto **SafeInt** di tipo U. Il nuovo **SafeInt** oggetto avrà lo stesso valore di *u*, ma sarà di tipo T.  
   
  G  
- Il tipo di dati archiviati nel `SafeInt`. Può trattarsi di un valore booleano, un carattere o integer di tipo. Se è un tipo integer, può essere firmato o non firmato e compreso tra 8 e a 64 bit.  
+ Il tipo di dati archiviati nel **SafeInt**. Può trattarsi di un valore booleano, carattere o integer di tipo. Se è un tipo integer, può essere con o senza segno ed essere compresa tra 8 e 64 bit.  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni sui tipi di modello `T` e `E`, vedere [classe SafeInt](../windows/safeint-class.md).  
+ Per altre informazioni sui tipi di modello `T` e `E`, vedere [classe SafeInt](../windows/safeint-class.md).  
   
- Il parametro di input per il costruttore, `i` o `u`, deve essere un tipo booleano, un carattere o integer. In caso di un altro tipo di parametro, il `SafeInt` classe chiamate [static_assert](../cpp/static-assert.md) per indicare un parametro di input non valido.  
+ Il parametro di input per il costruttore *ho* oppure *u*, deve essere un tipo Boolean, carattere o integer. Se si tratta di un altro tipo del parametro, il **SafeInt** classe chiamate [static_assert](../cpp/static-assert.md) per indicare un parametro di input non valido.  
   
- I costruttori che utilizzano il tipo di modello `U` convertire automaticamente il parametro di input nel tipo specificato da `T`. La `SafeInt` classe converte i dati senza alcuna perdita di dati. Segnala al gestore errori `E` se non è possibile convertire i dati al tipo `T` senza perdita di dati.  
+ I costruttori che utilizzano il tipo di modello `U` convertire automaticamente il parametro di input nel tipo specificato dal `T`. Il **SafeInt** classe converte i dati senza alcuna perdita di dati. Segnala al gestore errori `E` se non è possibile convertire i dati da digitare `T` senza perdita di dati.  
   
- Se si crea un `SafeInt` da un parametro booleano, è necessario inizializzare il valore immediatamente. Non è possibile costruire un `SafeInt` utilizzando il codice `SafeInt<bool> sb;`. Verrà generato un errore di compilazione.  
+ Se si crea una **SafeInt** da un parametro booleano, è necessario inizializzare il valore immediatamente. Non è possibile costruire una **SafeInt** usando il codice `SafeInt<bool> sb;`. Verrà generato un errore di compilazione.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** SafeInt. h  
   
- **Namespace:** msl::utilities  
+ **Namespace:** MSL:: Utilities  
   
 ## <a name="see-also"></a>Vedere anche  
  [Libreria SafeInt](../windows/safeint-library.md)   
- [SafeInt (classe)](../windows/safeint-class.md)   
+ [Classe SafeInt](../windows/safeint-class.md)   
  [Classe SafeIntException](../windows/safeintexception-class.md)

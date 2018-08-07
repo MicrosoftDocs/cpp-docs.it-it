@@ -1,5 +1,5 @@
 ---
-title: nonextensible | Documenti Microsoft
+title: nonextensible | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881601"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608495"
 ---
 # <a name="nonextensible"></a>nonextensible
-Specifica che il `IDispatch` implementazione include solo le proprietà e metodi elencati nella descrizione dell'interfaccia e non possono essere esteso con altri membri in fase di esecuzione.  
+Specifica che il `IDispatch` implementazione include solo le proprietà e i metodi elencati nella descrizione dell'interfaccia e non possono essere estese con membri aggiuntivi in fase di esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **nonextensible** attributo C++ ha la stessa funzionalità come il [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) attributo MIDL.  
+ Il **nonextensible** attributi di C++ ha la stessa funzionalità come la [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) attributo MIDL.  
   
- Utilizzo di **nonextensible** richiede anche il [oleautomation](../windows/oleautomation.md) attributo.  
+ Sfrutta **nonextensible** richiede inoltre il [oleautomation](../windows/oleautomation.md) attributo.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato uno degli utilizzi di **nonextensible** attributo:  
+ Il codice seguente illustra un uso del **nonextensible** attributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,10 +62,10 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`|  
+|**Si applica a**|**interface**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**dual** e **oleautomation**, o **interfaccia dispatch**|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|`dual` e `oleautomation`, o `dispinterface`|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

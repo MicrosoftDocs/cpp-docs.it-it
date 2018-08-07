@@ -1,5 +1,5 @@
 ---
-title: 'Metodo runtimeclass:: Release | Documenti Microsoft'
+title: 'Metodo runtimeclass:: Release | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888796"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607524"
 ---
 # <a name="runtimeclassrelease-method"></a>Metodo RuntimeClass::Release
-Esegue un'operazione di rilascio COM sull'oggetto RuntimeClass corrente.  
+Esegue un'operazione di rilascio COM sull'oggetto corrente **RuntimeClass** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,10 +40,10 @@ STDMETHOD_(
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  
   
 ## <a name="remarks"></a>Note  
- Se il conteggio dei riferimenti diventa zero, viene eliminato l'oggetto RuntimeClass.  
+ Se il conteggio dei riferimenti diventa zero, il **RuntimeClass** oggetto viene eliminato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

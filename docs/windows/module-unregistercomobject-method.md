@@ -1,5 +1,5 @@
 ---
-title: 'Metodo Module:: unregistercomobject | Documenti Microsoft'
+title: 'Metodo Module:: unregistercomobject | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881936"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602630"
 ---
 # <a name="moduleunregistercomobject-method"></a>Metodo Module::UnregisterCOMObject
-Annulla la registrazione di uno o più oggetti COM, che impedisce altre applicazioni di connettersi a essi.  
+Annulla la registrazione di uno o più oggetti COM, che impedisce che altre applicazioni si connettano a essi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,21 +36,21 @@ virtual HRESULT UnregisterCOMObject(
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `serverName`  
- (Non utilizzato)  
+### <a name="parameters"></a>Parametri  
+ *ServerName*  
+ (Non usato)  
   
- `cookies`  
- Matrice di puntatori ai valori che identificano gli oggetti della classe per annullare la registrazione. La matrice è stata creata con la [RegisterCOMObject](../windows/module-registercomobject-method.md) metodo.  
+ *Cookie*  
+ Matrice di puntatori a valori che identificano gli oggetti della classe per cui annullare la registrazione. La matrice è stata creata con il [RegisterCOMObject](../windows/module-registercomobject-method.md) (metodo).  
   
- `count`  
+ *count*  
  Il numero di classi per annullare la registrazione.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se l'operazione ha esito positivo. in caso contrario, un errore HRESULT che indica il motivo per l'operazione non riuscita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL
  

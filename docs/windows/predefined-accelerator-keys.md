@@ -1,5 +1,5 @@
 ---
-title: Tasti di scelta rapida predefiniti | Documenti Microsoft
+title: I tasti di scelta rapida predefiniti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880797"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608417"
 ---
 # <a name="predefined-accelerator-keys"></a>Tasti di scelta rapida predefiniti
 Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un progetto di applicazione Windows. Alcune di queste chiavi sono virtuali per l'ambiente Windows. Altri supportano browser o applicazioni Unicode. È possibile usare qualsiasi di questi tipi qualsiasi tasto di scelta rapida.  
@@ -62,7 +62,7 @@ Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un
 |VK_NONCONVERT|Annullamento della conversione IME|  
 |VK_OEM_1|Windows: Per la tastiera standard degli Stati Uniti, il tasto ';:'|  
 |VK_OEM_102|Windows: Il tasto della parentesi angolare o il tasto di barra rovesciata della tastiera principale RT 102|  
-|VK_OEM_2|Windows: per la tastiera standard degli Stati Uniti, il '/?' key|  
+|VK_OEM_2|Windows: per la tastiera standard degli Stati Uniti, il '/'? key|  
 |VK_OEM_3|Windows: Per la tastiera standard degli Stati Uniti, il tasto '`~'|  
 |VK_OEM_4|Windows: Per la tastiera standard degli Stati Uniti, il tasto '[{'|  
 |VK_OEM_5|Windows: per la tastiera standard degli Stati Uniti, il '\\&#124;' chiave|  
@@ -83,7 +83,7 @@ Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un
 |VK_XBUTTON1|Windows: Pulsante del mouse X1|  
 |VK_XBUTTON2|Windows: Pulsante del mouse X2|  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  

@@ -1,5 +1,5 @@
 ---
-title: Editor risorse | Documenti Microsoft
+title: Editor di risorse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91151b215a180fd926acf1205d810fc8eb6fd6f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879594"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604460"
 ---
 # <a name="resource-editors"></a>editor di risorse
 Un editor di risorse è un ambiente specializzato per la creazione o la modifica di risorse incluse in un progetto di Visual Studio. Gli editor di risorse di Visual Studio condividono tecniche e interfacce in modo da semplificare e velocizzare la creazione e la modifica delle risorse delle applicazioni. Gli editor di risorse consentono di [visualizzare e modificare risorse nell'editor appropriato](../windows/viewing-and-editing-resources-in-a-resource-editor.md) e di [visualizzare in anteprima le risorse](../windows/previewing-resources.md).  
@@ -36,7 +36,7 @@ Un editor di risorse è un ambiente specializzato per la creazione o la modifica
   
  **Nota** Dal momento che i progetti gestiti non usano i file di script di risorse, è necessario aprire le risorse da **Esplora soluzioni**. È possibile usare l' [Editor immagini](../windows/image-editor-for-icons.md) e l' [Editor binario](binary-editor.md) per usare i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 |Usare|Per modificare|  
 |----------------|----------------|  
@@ -51,11 +51,10 @@ Un editor di risorse è un ambiente specializzato per la creazione o la modifica
 |[Editor di informazioni sulla versione](../windows/version-information-editor.md)|Informazioni sulla versione in progetti Visual C++.|  
   
 ## <a name="requirements"></a>Requisiti  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di file di risorse](../windows/working-with-resource-files.md)   
+ [Uso di file di risorse](../windows/working-with-resource-files.md)   
  [File di risorse](../windows/resource-files-visual-studio.md)   
  [Simboli: Identificatori di risorsa](../windows/symbols-resource-identifiers.md)   
  [Menu e altre risorse](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

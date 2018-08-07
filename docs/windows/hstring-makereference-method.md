@@ -1,5 +1,5 @@
 ---
-title: 'Metodo hstring:: Makereference | Documenti Microsoft'
+title: 'Metodo hstring:: Makereference | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 673d5b10706580303f179ee453495b581d96eda3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882641"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608335"
 ---
 # <a name="hstringmakereference-method"></a>Metodo HString::MakeReference
-Crea un oggetto HStringReference da un parametro di stringa specificata.  
+Crea un `HStringReference` oggetto da un parametro di stringa specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,18 +38,18 @@ template<unsigned int sizeDest>
               unsigned int len);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `sizeDest`  
- Un parametro di modello che specifica la dimensione del buffer di HStringReference di destinazione.  
+### <a name="parameters"></a>Parametri  
+ *sizeDest*  
+ Un parametro di modello che specifica le dimensioni della destinazione `HStringReference` buffer.  
   
- `str`  
+ *str*  
  Un riferimento a una stringa di caratteri "wide".  
   
- `len`  
- La lunghezza massima del `str` buffer del parametro da utilizzare in questa operazione. Se il `len` parametro non è specificato, l'intero `str` parametro viene utilizzato.  
+ *Len*  
+ La lunghezza massima del *str* buffer del parametro da utilizzare in questa operazione. Se il *len* parametro non è specificato, l'intera *str* parametro viene utilizzato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto HStringReference il cui valore è lo stesso specificato `str` parametro.  
+ Un' `HStringReference` il cui valore è identico a quello di specificato *str* parametro.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

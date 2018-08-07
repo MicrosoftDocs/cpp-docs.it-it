@@ -1,5 +1,5 @@
 ---
-title: propget | Documenti Microsoft
+title: propget | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 339cb03b645e3aff0a6bb806e431c7be274340d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3552a8c64260345b6a956878c459182089e1af0f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881864"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607547"
 ---
 # <a name="propget"></a>propget
-Specifica una funzione di accesso della proprietà.  
+Specifica una funzione di accesso di proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [propget]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **propget** attributo C++ ha la stessa funzionalità come il [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) attributo MIDL.  
+ Il **propget** attributi di C++ ha la stessa funzionalità come la [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio dell'uso di **propget**.  
+ Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio dell'uso dei **propget**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -50,7 +48,7 @@ Specifica una funzione di accesso della proprietà.
 |**Si applica a**|Metodo|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|**propput**, **propputref**|  
+|**Attributi non validi**|`propput`, `propputref`|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

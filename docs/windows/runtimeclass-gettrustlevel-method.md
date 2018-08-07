@@ -1,5 +1,5 @@
 ---
-title: 'Metodo runtimeclass:: Gettrustlevel | Documenti Microsoft'
+title: 'Metodo runtimeclass:: Gettrustlevel | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc588950cc8752a7c2b8e1ddf00b2193aaf0f395
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98bd73d2c067e6d5bbb4425782de594bbaa47bc1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892631"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606624"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>Metodo RuntimeClass::GetTrustLevel
 
-Ottiene il livello di attendibilità dell'oggetto RuntimeClass corrente.
+Ottiene il livello di attendibilità dell'oggetto corrente **RuntimeClass** oggetto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,7 +39,7 @@ STDMETHOD(GetTrustLevel)(
 ### <a name="parameters"></a>Parametri
 
 *trustLvl*  
-Quando questa operazione viene completata, il livello di attendibilità dell'oggetto RuntimeClass corrente.
+Al termine di questa operazione, il livello di attendibilità dell'oggetto corrente **RuntimeClass** oggetto.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -51,10 +51,9 @@ Viene generato un errore di asserzione se &#95; &#95;WRL_STRICT&#95; &#95; o &#9
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** FTM.
+**Intestazione:** Implements. h
 
 **Spazio dei nomi:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vedere anche
-
-[Classe RuntimeClass](../windows/runtimeclass-class.md)
+ [Classe RuntimeClass](../windows/runtimeclass-class.md)

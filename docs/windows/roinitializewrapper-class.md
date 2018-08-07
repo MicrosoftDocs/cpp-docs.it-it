@@ -1,5 +1,5 @@
 ---
-title: Classe RoInitializeWrapper | Documenti Microsoft
+title: Classe RoInitializeWrapper | Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2018
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fab2ecd259e75767728a46448c06df4c4729ef3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705592"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606722"
 ---
 # <a name="roinitializewrapper-class"></a>Classe RoInitializeWrapper
 Inizializza il Runtime di Windows.  
@@ -32,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Note  
- RoInitializeWrapper è utile che inizializza il Runtime di Windows e restituisce un HRESULT che indica se l'operazione ha avuto esito positivo. Poiché chiama il distruttore della classe `::Windows::Foundation::Uninitialize`, le istanze di `RoInitializeWrapper` deve essere dichiarata in ambito globale o livello superiore.  
+ **RoInitializeWrapper** risulta utile in quanto Inizializza il Runtime di Windows e restituisce un HRESULT che indica se l'operazione ha avuto esito positivo. Poiché chiama il distruttore della classe `::Windows::Foundation::Uninitialize`, le istanze di **RoInitializeWrapper** deve essere dichiarata in ambito globale o di primo livello.  
   
 ## <a name="members"></a>Membri  
   
@@ -40,14 +40,14 @@ class RoInitializeWrapper
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore RoInitializeWrapper::RoInitializeWrapper](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inizializza una nuova istanza della classe RoInitializeWrapper.|  
-|[Distruttore RoInitializeWrapper::~RoInitializeWrapper](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Elimina l'istanza corrente della classe RoInitializeWrapper.|  
+|[Costruttore RoInitializeWrapper::RoInitializeWrapper](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inizializza una nuova istanza di **RoInitializeWrapper** classe.|  
+|[Distruttore RoInitializeWrapper::~RoInitializeWrapper](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Elimina l'istanza corrente del **RoInitializeWrapper** classe.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore RoInitializeWrapper::HRESULT()](../windows/roinitializewrapper-hresult-parens-operator.md)|Recupera il valore di HRESULT prodotto dal costruttore di RoInitializeWrapper.|  
+|[Operatore RoInitializeWrapper::HRESULT()](../windows/roinitializewrapper-hresult-parens-operator.md)|Recupera il valore di HRESULT prodotto dal **RoInitializeWrapper** costruttore.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `RoInitializeWrapper`  

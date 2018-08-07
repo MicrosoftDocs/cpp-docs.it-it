@@ -1,5 +1,5 @@
 ---
-title: SafeAdd | Documenti Microsoft
+title: SafeAdd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8686d0ef990e9be22ec4ebe1c81c737df9b15812
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892716"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607404"
 ---
 # <a name="safeadd"></a>SafeAdd
-Somma due numeri in modo che protegge dall'overflow.  
+Somma due numeri in modo da evita overflow.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,26 +38,26 @@ inline bool SafeAdd (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- [in] `t`  
+### <a name="parameters"></a>Parametri  
+ [in] *t*  
  Il primo numero da aggiungere. Deve essere di tipo T.  
   
- [in] `u`  
+ [in] *u*  
  Il secondo numero da aggiungere. Deve essere di tipo U.  
   
- [out] `result`  
- Il parametro in cui `SafeAdd` archivia il risultato.  
+ [out] *risultato*  
+ Il parametro in cui **SafeAdd** archivia il risultato.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se si verifica alcun errore; `false` se si verifica un errore.  
+ **true** se si verifica alcun errore; **false** se si verifica un errore.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per un'operazione singola aggiunta senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
+ Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettato per un'operazione di addizione singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
 >  Questo metodo deve essere utilizzato solo quando è necessario proteggere una singola operazione matematica. Se sono presenti più operazioni, è necessario utilizzare la classe `SafeInt` anziché chiamare le singole funzioni autonome.  
   
- Per ulteriori informazioni sui tipi di modello T e U, vedere [funzioni SafeInt](../windows/safeint-functions.md).  
+ Per altre informazioni sui tipi di modello T e U, vedere [funzioni SafeInt](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** SafeInt. h  
@@ -67,5 +67,5 @@ inline bool SafeAdd (
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni SafeInt](../windows/safeint-functions.md)   
  [Libreria SafeInt](../windows/safeint-library.md)   
- [SafeInt (classe)](../windows/safeint-class.md)   
+ [Classe SafeInt](../windows/safeint-class.md)   
  [SafeSubtract](../windows/safesubtract.md)

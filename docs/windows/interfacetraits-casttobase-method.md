@@ -1,5 +1,5 @@
 ---
-title: 'Metodo interfacetraits:: Casttobase | Documenti Microsoft'
+title: 'Metodo interfacetraits:: Casttobase | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878525"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606449"
 ---
 # <a name="interfacetraitscasttobase-method"></a>Metodo InterfaceTraits::CastToBase
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +36,23 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di parametro `ptr`.  
+### <a name="parameters"></a>Parametri  
+ *T*  
+ Il tipo del parametro *ptr*.  
   
- `ptr`  
- Puntatore a un tipo `T`.  
+ *ptr*  
+ Puntatore a un tipo *T*.  
   
 ## <a name="return-value"></a>Valore restituito  
  Un puntatore a `Base`.  
   
 ## <a name="remarks"></a>Note  
- Esegue il cast il puntatore specificato a un puntatore a `Base`.  
+ Viene eseguito il cast il puntatore specificato a un puntatore a `Base`.  
   
- Per ulteriori informazioni su `Base`, vedere la sezione typedef pubblici in [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).  
+ Per altre informazioni sulle `Base`, vedere la sezione typedef pubblici [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

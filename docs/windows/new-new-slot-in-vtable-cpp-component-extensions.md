@@ -1,5 +1,5 @@
 ---
-title: New (nuovo slot in vtable) (estensioni del componente C++) | Documenti Microsoft
+title: New (nuovo slot in vtable) (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879783"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607011"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>nuovo (nuovo slot in vtable) (Estensioni del componente C++)
-Il `new` parola chiave indica che un membro virtuale verrà visualizzato un nuovo slot in vtable.  
+Il **nuovo** parola chiave indica che un membro virtuale verrà assegnato un nuovo slot in vtable.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.  
@@ -32,25 +32,24 @@ Il `new` parola chiave indica che un membro virtuale verrà visualizzato un nuov
  Non è supportato in Windows Runtime.  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Note**  
+### <a name="remarks"></a>Note  
   
- In un **/clr** compilazione, `new` indica che un membro virtuale verrà visualizzato un nuovo slot in vtable; che la funzione non esegue l'override di un metodo della classe base.  
+ In un `/clr` compilazione **nuovi** indica che un membro virtuale verrà assegnato un nuovo slot in vtable; che la funzione non esegue l'override di un metodo della classe base.  
   
- `new` fa sì che il modificatore newslot deve essere aggiunta per il linguaggio intermedio per la funzione.  Per ulteriori informazioni su newslot, vedere:  
+ **nuovo** fa sì che il modificatore newslot da aggiungere per il linguaggio intermedio per la funzione.  Per ulteriori informazioni su newslot, vedere:  
   
--   [Metodo MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [Metodo MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [Enumerazione MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Enumerazione MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
- L'esempio seguente viene illustrato l'effetto di `new`.  
+ L'esempio seguente mostra l'effetto del **nuovo**.  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  

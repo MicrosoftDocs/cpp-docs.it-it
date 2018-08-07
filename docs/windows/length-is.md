@@ -1,5 +1,5 @@
 ---
-title: length_is | Documenti Microsoft
+title: length_is | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d41c2c4747f69b5ddfae4cd5863c072cd2316ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e0294c7cc118c4014e998ad570d7e1e453ea2c6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879607"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606501"
 ---
 # <a name="lengthis"></a>length_is
 Specifica il numero di elementi della matrice deve essere trasmesso.  
@@ -30,21 +30,20 @@ Specifica il numero di elementi della matrice deve essere trasmesso.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ length_is(  
+[ length_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- *espressione*  
- Una o più espressioni del linguaggio C. Sono consentiti gli slot di argomenti vuoto.  
+### <a name="parameters"></a>Parametri  
+ *Espressione*  
+ Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.  
   
 ## <a name="remarks"></a>Note  
- Il **length_is** attributo C++ ha la stessa funzionalità come il [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) attributo MIDL.  
+ Il **length_is** attributi di C++ ha la stessa funzionalità come la [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Vedere [first_is](../windows/first-is.md) per un esempio di come specificare una sezione di una matrice.  
+ Visualizzare [first_is](../windows/first-is.md) per un esempio di come specificare una sezione di una matrice.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -52,16 +51,16 @@ Specifica il numero di elementi della matrice deve essere trasmesso.
   
 |||  
 |-|-|  
-|**Si applica a**|Campo `struct` o **unione**, parametro di interfaccia, metodo di interfaccia|  
+|**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Attributi dei parametri](../windows/parameter-attributes.md)   
  [first_is](../windows/first-is.md)   
  [max_is](../windows/max-is.md)   

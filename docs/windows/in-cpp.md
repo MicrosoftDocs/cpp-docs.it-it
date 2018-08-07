@@ -1,5 +1,5 @@
 ---
-title: in (C++) | Documenti Microsoft
+title: in (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c09ae7e750a6372dd622f251a3b512e4ea67ef4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874018"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606436"
 ---
 # <a name="in-c"></a>in (C++)
 Indica che un parametro deve essere passato dalla routine chiamante alla routine chiamata.  
@@ -30,16 +30,14 @@ Indica che un parametro deve essere passato dalla routine chiamante alla routine
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [in]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **in** attributo C++ ha la stessa funzionalità come il [in](http://msdn.microsoft.com/library/windows/desktop/aa367051) attributo MIDL.  
+ Il **in** attributi di C++ ha la stessa funzionalità come la [in](http://msdn.microsoft.com/library/windows/desktop/aa367051) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Vedere [associabili](../windows/bindable.md) per un esempio di come utilizzare **in**.  
+ Visualizzare [associabile](../windows/bindable.md) per un esempio di come usare **in**.  
   
 ## <a name="requirements"></a>Requisiti  
   

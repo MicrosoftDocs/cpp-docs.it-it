@@ -1,5 +1,5 @@
 ---
-title: requires_category | Documenti Microsoft
+title: requires_category | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6822773292fd651eaae3be5c00fb2b693a80a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882316"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606101"
 ---
 # <a name="requirescategory"></a>requires_category
-Specifica le categorie del componente richiesto della classe di destinazione.  
+Specifica le categorie di componenti necessari della classe di destinazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-     [ requires_category(   
+[ requires_category(   
   requires_category  
 ) ]  
 ```  
@@ -41,14 +40,14 @@ Specifica le categorie del componente richiesto della classe di destinazione.
  L'ID della categoria obbligatoria.  
   
 ## <a name="remarks"></a>Note  
- Il **requires_category** attributo C++ specifica le categorie di componenti necessari per la classe di destinazione. Per ulteriori informazioni, vedere [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
+ Il **requires_category** attributo C++ specifica le categorie di componenti necessari per la classe di destinazione. Per altre informazioni, vedere [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
   
  Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente richiede che l'oggetto implementa la categoria di controllo.  
   
-```  
+```cpp  
 // cpp_attr_ref_requires_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -68,10 +67,10 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|Uno o più degli attributi seguenti: **coclass**, **progid**o **vi_progid**.|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|Uno o più delle operazioni seguenti: `coclass`, `progid`, o `vi_progid`.|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

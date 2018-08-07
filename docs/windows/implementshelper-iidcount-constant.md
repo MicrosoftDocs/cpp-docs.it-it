@@ -1,5 +1,5 @@
 ---
-title: 'Costante implementshelper:: Iidcount | Documenti Microsoft'
+title: 'Costante implementshelper:: Iidcount | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f08564088d00df332db43f207284dae9fc99109
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874002"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604255"
 ---
 # <a name="implementshelperiidcount-constant"></a>Costante ImplementsHelper::IidCount
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 static const unsigned long IidCount;  
 ```  
   
 ## <a name="remarks"></a>Note  
- Contiene il numero di ID di interfaccia implementato nell'oggetto implementa corrente.  
+ Contiene il numero di ID di interfaccia implementata nell'attuale `Implements` oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

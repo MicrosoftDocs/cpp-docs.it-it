@@ -1,5 +1,5 @@
 ---
-title: importlib | Documenti Microsoft
+title: importlib | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21b97e50fa03861245a0c0881963387dd8a3102
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4563d1b24b3af6e450a67a21d6a083f1839bc3e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876758"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603068"
 ---
 # <a name="importlib"></a>importlib
 Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la libreria dei tipi da creare.  
@@ -30,23 +30,22 @@ Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la lib
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ importlib(  
+[ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *tlb_file*  
  Nome di un file tlb, racchiuso tra virgolette, che si desidera importare nella libreria dei tipi del progetto corrente.  
   
 ## <a name="remarks"></a>Note  
- Il **importlib** attributo C++ causa un `importlib` istruzione posizionati nel blocco di libreria del file IDL generato. Il **importlib** presenta la stessa funzionalità come il [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) attributo MIDL.  
+ Il **importlib** C++ attributo provoca un `importlib` informativa per essere inserito nel blocco di libreria del file con estensione IDL generato. Il **importlib** attributo ha la stessa funzionalità come la [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato un esempio di come utilizzare **importlib**:  
+ Il codice seguente viene illustrato un esempio d'uso **importlib**:  
   
-```  
+```cpp  
 // cpp_attr_ref_importlib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -62,7 +61,7 @@ Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la lib
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
@@ -71,5 +70,5 @@ Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la lib
  [Attributi autonomi](../windows/stand-alone-attributes.md)   
  [Importazione](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [Includere](../windows/include-cpp.md)   
+ [includere](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)

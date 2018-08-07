@@ -1,5 +1,5 @@
 ---
-title: 'Metodo mutextraits:: Unlock | Documenti Microsoft'
+title: 'Metodo mutextraits:: Unlock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11e4655c69e5ecb83cebf1225384c54c96be695b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1925755ca663ba82526fb8b8dae626165f1e4862
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880362"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606683"
 ---
 # <a name="mutextraitsunlock-method"></a>Metodo MutexTraits::Unlock
-Restituisce il controllo esclusivo di una risorsa condivisa.  
+Rilascia il controllo esclusivo di una risorsa condivisa.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,8 +35,8 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `h`  
+### <a name="parameters"></a>Parametri  
+ *h*  
  Handle per un oggetto mutex.  
   
 ## <a name="return-value"></a>Valore restituito  

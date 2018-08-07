@@ -1,5 +1,5 @@
 ---
-title: registration_script | Documenti Microsoft
+title: registration_script | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4385dd12fccafb154a637dd5260764667d3887a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878723"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607673"
 ---
 # <a name="registrationscript"></a>registration_script
 Esegue lo script di registrazione personalizzato specificato.  
@@ -30,25 +30,24 @@ Esegue lo script di registrazione personalizzato specificato.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ registration_script(   
+[ registration_script(   
    script   
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Script*  
- Il percorso completo in un file di script (con estensione RGS) di registrazione personalizzato. Il valore **Nessuno**, ad esempio `script = "none"`, indica che la coclasse che dispone di alcun i requisiti di registrazione.  
+ *script*  
+ Il percorso completo in un file di script (con estensione RGS) registrazione personalizzata. Un valore pari **none**, ad esempio `script = "none"`, indica che la coclasse non è previsti requisiti di registrazione.  
   
 ## <a name="remarks"></a>Note  
- Il **registration_script** attributo C++ esegue lo script di registrazione personalizzato specificato da **script**. Se questo attributo viene omesso, viene utilizzato un file con estensione RGS standard (contenente informazioni per la registrazione del componente). Per ulteriori informazioni sui file con estensione RGS, vedere [il componente di registro di sistema ATL (Registrar)](../atl/atl-registry-component-registrar.md).  
+ Il **registration_script** attributo C++ esegue lo script di registrazione personalizzato specificato da *script*. Se questo attributo viene omesso, viene usato un file con estensione RGS standard (contenente informazioni per la registrazione del componente). Per altre informazioni sui file con estensione RGS, vedere [il componente del Registro di sistema ATL (Registrar)](../atl/atl-registry-component-registrar.md).  
   
  Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente specifica che il componente dispone di uno script del Registro di sistema denominato cpp_attr_ref_registration_script.rgs.  
   
-```  
+```cpp  
 // cpp_attr_ref_registration_script.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -73,14 +72,14 @@ class CMyClass:public IFace {};
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|Uno o più degli attributi seguenti: **coclass**, **progid**o **vi_progid**.|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|Uno o più delle operazioni seguenti: `coclass`, `progid`, o `vi_progid`.|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi COM](../windows/com-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [rdx](../windows/rdx.md)   

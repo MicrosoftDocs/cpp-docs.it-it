@@ -1,5 +1,5 @@
 ---
-title: 'operatore&lt; (Microsoft:: wrl) | Documenti Microsoft'
+title: 'operatore&lt; (Microsoft:: wrl) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3ea56386cadc638fd0234993ef6a8a0f5eb2be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2de0d40a4b506da2cec36719b8fa2fe9c22108d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881829"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604213"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>operatore&lt; (Microsoft:: wrl)
 Determina se l'indirizzo di un oggetto è minore di un altro.  
@@ -34,15 +34,15 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `a`  
+### <a name="parameters"></a>Parametri  
+ *a*  
  Oggetto a sinistra.  
   
- `b`  
+ *b*  
  Oggetto a destra.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se l'indirizzo del `a` è minore dell'indirizzo del `b`; in caso contrario, `false`.  
+ **true** se l'indirizzo del *una* è minore rispetto all'indirizzo del *b*; in caso contrario, **false**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

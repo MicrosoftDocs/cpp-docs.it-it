@@ -1,5 +1,5 @@
 ---
-title: implements_category | Documenti Microsoft
+title: implements_category | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6770f8303af63c66f0d1a656c2b36e034cc2be83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879035"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603718"
 ---
 # <a name="implementscategory"></a>implements_category
 Specifica le categorie di componenti implementate dalla classe di destinazione.  
@@ -30,25 +30,24 @@ Specifica le categorie di componenti implementate dalla classe di destinazione.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ implements_category(  
+[ implements_category(  
    implements_category="uuid"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- **implements_category**  
- L'ID della categoria di implementazione.  
+### <a name="parameters"></a>Parametri  
+ *implements_category*  
+ L'ID della categoria implementata.  
   
 ## <a name="remarks"></a>Note  
- Il **implements_category** attributo C++ specifica le categorie di componenti implementate dalla classe di destinazione. Questa operazione viene eseguita creando una mappa di categoria e aggiungendo separare le voci specificate per il **implements_category** attributo. Per ulteriori informazioni, vedere [quali sono le categorie di componenti e come si sono funzionano?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
+ Il **implements_category** attributo C++ specifica le categorie di componenti implementate dalla classe di destinazione. Questa operazione viene eseguita creando una mappa di categoria e aggiungendo separare le voci specificate per il **implements_category** attributo. Per altre informazioni, vedere [quali sono le categorie di componenti e come eseguire operazioni They Work?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
   
- Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se viene usato **progid** , vengono applicati anche **vi_progid** e **coclass** .  
+ Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente specifica che l'oggetto seguente implementa la categoria di controllo.  
   
-```  
+```cpp  
 // cpp_attr_ref_implements_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -67,15 +66,14 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|Yes|  
-|**Attributi obbligatori**|Uno dei seguenti: **coclass**, **progid**, o **vi_progid**|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|Uno dei seguenti: `coclass`, `progid`, o `vi_progid`|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi COM](../windows/com-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
- 

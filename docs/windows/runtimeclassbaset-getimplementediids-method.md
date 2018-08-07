@@ -1,5 +1,5 @@
 ---
-title: 'Metodo runtimeclassbaset:: Getimplementediids | Documenti Microsoft'
+title: 'Metodo runtimeclassbaset:: Getimplementediids | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892234"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603251"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>Metodo RuntimeClassBaseT::GetImplementedIIDS
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,27 +38,27 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
- Tipo del parametro `implements`.  
+### <a name="parameters"></a>Parametri  
+ *T*  
+ Il tipo dei *implementa* parametro.  
   
- `implements`  
- Puntatore al tipo specificato dal parametro `T`.  
+ *Implementa*  
+ Puntatore al tipo specificato dal parametro *T*.  
   
- `iidCount`  
+ *iidCount*  
  Il numero massimo di ID di interfaccia da recuperare.  
   
- `iids`  
- Se questa operazione viene completata correttamente, una matrice di ID implementate dal tipo di interfaccia `T`.  
+ *IID*  
+ Se questa operazione viene completata correttamente, una matrice di ID di interfaccia implementato dal tipo *T*.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, HRESULT che descrive l'errore.  
+ S_OK se l'esito positivo. in caso contrario, HRESULT che descrive l'errore.  
   
 ## <a name="remarks"></a>Note  
- Recupera una matrice di ID implementate da un tipo specificato di interfaccia.  
+ Recupera una matrice ID che sono implementate da un tipo specificato di interfaccia.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

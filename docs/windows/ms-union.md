@@ -1,5 +1,5 @@
 ---
-title: ms_union | Documenti Microsoft
+title: ms_union | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882037"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606699"
 ---
 # <a name="msunion"></a>ms_union
-Controlla l'allineamento di rappresentazione di dati di rete di unioni nonencapsulated.  
+Controlla l'allineamento di rappresentazione dei dati di rete di unioni nonencapsulated.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [ms_union]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **ms_union** attributo C++ ha la stessa funzionalità come il [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) attributo MIDL.  
+ Il **ms_union** attributi di C++ ha la stessa funzionalità come la [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente viene illustrata la posizione di **ms_union**:  
   
-```  
+```cpp  
 // cpp_attr_ref_ms_union.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -73,7 +71,7 @@ __interface IFireTabCtrl {
 |**Si applica a**|Unioni nonencapsulated|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|**dispinterface**|  
+|**Attributi non validi**|`dispinterface`|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

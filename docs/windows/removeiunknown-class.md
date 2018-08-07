@@ -1,5 +1,5 @@
 ---
-title: Classe RemoveIUnknown | Documenti Microsoft
+title: Classe RemoveIUnknown | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb005bc3cbf411a7d5b5ddbfa44cd6aecf802105
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69775303c5a12f82ef2a31cc61112af4b14d3aad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879542"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606169"
 ---
 # <a name="removeiunknown-class"></a>Classe RemoveIUnknown
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,14 +39,14 @@ template <
 class RemoveIUnknown : public T;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  Una classe.  
   
 ## <a name="remarks"></a>Note  
  Crea un tipo equivalente a un tipo `IUnknown`-based, ma dispone di funzioni membro `QueryInterface` `AddRef` e `Release` non virtuali.  
   
- Per impostazione predefinita, i metodi COM forniscono virtuale `QueryInterface`, `AddRef`e rilasciare i metodi. Tuttavia, `ComPtr` non richiede l'overhead dei metodi virtuali. `RemoveIUnknown` Elimina l'overhead fornendo privata, non virtuale `QueryInterface`, `AddRef`, e `Release` metodi.  
+ Per impostazione predefinita, i metodi COM forniscono virtual `QueryInterface`, `AddRef`, e `Release` metodi. Tuttavia, `ComPtr` non richiedono il sovraccarico di metodi virtuali. `RemoveIUnknown` Elimina le spese generali, fornendo privato, non virtuale `QueryInterface`, `AddRef`, e `Release` metodi.  
   
 ## <a name="members"></a>Membri  
   
@@ -54,7 +54,7 @@ class RemoveIUnknown : public T;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`ReturnType`|Un sinonimo per un tipo che corrisponde al parametro di modello `T` ma dispone di membri di IUnknown non virtuali.|  
+|`ReturnType`|Un sinonimo per un tipo equivalente al parametro di modello *T* ma non virtuali `IUnknown` membri.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `T`  

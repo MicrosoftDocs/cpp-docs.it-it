@@ -1,5 +1,5 @@
 ---
-title: SafeModulus | Documenti Microsoft
+title: SafeModulus | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eaac98e7794ba9a2475cf7b56641d3a779f84d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888868"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604885"
 ---
 # <a name="safemodulus"></a>SafeModulus
-Esegue l'operazione modulo su due numeri.  
+Esegue l'operazione di modulo in due numeri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,26 +38,26 @@ inline bool SafeModulus (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- [in] `t`  
- Divisore. Deve essere di tipo T.  
+### <a name="parameters"></a>Parametri  
+ [in] *t*  
+ Divisore. Deve essere di tipo `T`.  
   
- [in] `u`  
- Dividendo. Deve essere di tipo U.  
+ [in] *u*  
+ Dividendo. Deve essere di tipo `U`.  
   
- [out] `result`  
- Il parametro in cui `SafeModulus` archivia il risultato.  
+ [out] *risultato*  
+ Il parametro in cui **SafeModulus** archivia il risultato.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se si verifica alcun errore; `false` se si verifica un errore.  
+ **true** se si verifica alcun errore; **false** se si verifica un errore.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per un'operazione modulo singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
+ Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettato per un'operazione modulo singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
 >  Questo metodo deve essere utilizzato solo quando è necessario proteggere una singola operazione matematica. Se sono presenti più operazioni, è necessario utilizzare la classe `SafeInt` anziché chiamare le singole funzioni autonome.  
   
- Per ulteriori informazioni sui tipi di modello T e U, vedere [funzioni SafeInt](../windows/safeint-functions.md).  
+ Per altre informazioni sui tipi di modello `T` e `U`, vedere [funzioni SafeInt](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** SafeInt. h  
@@ -67,5 +67,5 @@ inline bool SafeModulus (
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni SafeInt](../windows/safeint-functions.md)   
  [Libreria SafeInt](../windows/safeint-library.md)   
- [SafeInt (classe)](../windows/safeint-class.md)   
+ [Classe SafeInt](../windows/safeint-class.md)   
  [SafeDivide](../windows/safedivide.md)

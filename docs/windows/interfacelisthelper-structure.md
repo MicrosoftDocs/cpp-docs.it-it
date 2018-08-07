@@ -1,5 +1,5 @@
 ---
-title: InterfaceListHelper (struttura) | Documenti Microsoft
+title: InterfaceListHelper (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad091114d6be6f35f1a0341961dc5122840ace8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91012112cebf6fe33858df8904691944a810f69a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878047"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608131"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,41 +50,41 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T0`  
+### <a name="parameters"></a>Parametri  
+ *T0*  
  Parametro di modello 0, che è obbligatorio.  
   
- `T1`  
- Parametro di modello 1, che, per impostazione predefinita, non è specificato.  
+ *T1*  
+ Parametro di modello 1, che per impostazione predefinita non è specificato.  
   
- `T2`  
- Parametro di modello 2, che, per impostazione predefinita, non è specificato. Il terzo parametro di modello.  
+ *T2*  
+ Parametro di modello 2, che per impostazione predefinita non è specificato. Il terzo parametro di modello.  
   
- `T3`  
- Parametro di modello 3, che, per impostazione predefinita, non è specificato.  
+ *T3*  
+ Parametro di modello 3, che per impostazione predefinita non è specificato.  
   
- `T4`  
- Parametro di modello 4, che, per impostazione predefinita, non è specificato.  
+ *T4*  
+ Parametro di modello 4, che per impostazione predefinita non è specificato.  
   
- `T5`  
- Parametro di modello 5, che, per impostazione predefinita, non è specificato.  
+ *T5*  
+ Parametro di modello 5, che per impostazione predefinita non è specificato.  
   
- `T6`  
- Parametro di modello 6, che, per impostazione predefinita, non è specificato.  
+ *T6*  
+ Parametro di modello 6, che per impostazione predefinita non è specificato.  
   
- `T7`  
- Parametro di modello 7, che, per impostazione predefinita, non è specificato.  
+ *T7*  
+ Parametro di modello 7, che per impostazione predefinita non è specificato.  
   
- `T8`  
- Parametro di modello 8, che, per impostazione predefinita, non è specificato.  
+ *T8*  
+ Parametro di modello 8, che per impostazione predefinita non è specificato.  
   
- `T9`  
- Parametro di modello 9, che, per impostazione predefinita, non è specificato.  
+ *T9*  
+ Parametro di modello 9, che per impostazione predefinita non è specificato.  
   
 ## <a name="remarks"></a>Note  
- Compila un tipo InterfaceList applicando gli argomenti di parametro di modello specificato in modo ricorsivo.  
+ Compila un `InterfaceList` tipo applicando gli argomenti di parametro di modello specificato in modo ricorsivo.  
   
- Il modello InterfaceListHelper Usa il parametro di modello `T0` per definire i dati del primo membro in una struttura InterfaceList, quindi in modo ricorsivo e applica il modello di InterfaceListHelper a eventuali parametri di modello rimanenti. InterfaceListHelper si interrompe quando non sono presenti altri parametri di modello.  
+ Il **InterfaceListHelper** modello Usa il parametro di modello *T0* per definire il primo membro di dati in un `InterfaceList` struttura, quindi in modo ricorsivo e si applica il  **InterfaceListHelper** modello per i rimanenti parametri del modello. **InterfaceListHelper** si interrompe quando non sono presenti parametri di modello rimanenti.  
   
 ## <a name="members"></a>Membri  
   
@@ -98,7 +98,7 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
  `InterfaceListHelper`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Metodo Module:: getactivationfactory | Documenti Microsoft'
+title: 'Metodo Module:: getactivationfactory | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41b90ea56f65665ccdaff0fe4dceff292d1cdcf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887013"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608105"
 ---
 # <a name="modulegetactivationfactory-method"></a>Metodo Module::GetActivationFactory
 Ottiene una factory di attivazione per il modulo.  
@@ -37,23 +37,24 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `pActivatibleClassId`  
+### <a name="parameters"></a>Parametri  
+ *pActivatibleClassId*  
  IID di una classe di runtime.  
   
- `ppIFactory`  
+ *ppIFactory*  
  IActivationFactory per la classe di runtime specificato.  
   
- `serverName`  
- Il nome di un subset di class factory del modulo corrente. Specificare il nome del server utilizzato nel [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro), oppure specificare `nullptr` per ottenere il nome del server predefinito.  
+ *ServerName*  
+ Il nome di un subset di class factory nel modulo corrente. Specificare il nome del server usato nel [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro), oppure specificare **nullptr** per ottenere il nome del server predefinito.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario, il valore HRESULT restituito da GetActivationFactory.  
+ S_OK se l'esito positivo. in caso contrario, il valore HRESULT restituito dal GetActivationFactory.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Vedere anche  
-[Classe Module](../windows/module-class.md) [macro ActivatableClass](../windows/activatableclass-macros.md)
+ [Classe Module](../windows/module-class.md)  
+ [Macro ActivatableClass](../windows/activatableclass-macros.md)

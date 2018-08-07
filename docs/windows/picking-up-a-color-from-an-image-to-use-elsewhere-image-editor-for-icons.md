@@ -1,5 +1,5 @@
 ---
-title: Selezione di un colore di un'immagine da utilizzare altrove (Editor di immagini per le icone) | Documenti Microsoft
+title: Selezione di un colore di un'immagine da utilizzare altrove (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,35 +21,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8c946d0343c45ca5223f9bf976a94b67c70a2b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30656ca7271b91adf50fed5bbc4f8dfd3c6c6acb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877410"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608813"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Selezione di un colore di un'immagine da utilizzare altrove (Editor di immagini per le icone)
-Il **Seleziona colore**, o selezione colori, lo strumento consente di crea colori dell'immagine il colore di primo piano corrente o il colore di sfondo, a seconda se si preme il pulsante destro del mouse o sinistra. Per annullare il **Seleziona colore** strumento, scegliere un altro strumento.  
+Il **Seleziona colore**, o selezione colori, lo strumento consente di creare colori nell'immagine il colore primo piano corrente o il colore di sfondo, a seconda se si preme il pulsante destro del mouse o sinistra. Per annullare il **Seleziona colore** strumento, scegliere un altro strumento.  
   
 > [!TIP]
->  Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consente di identificare la funzione di ogni pulsante.  
+>  Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consentono di identificare la funzione di ogni pulsante.  
   
 ### <a name="to-pick-up-a-color"></a>Per selezionare un colore  
   
-1.  Nel **Editor di immagini** barra degli strumenti (o dal **immagine** dal menu **strumenti** comando), fare clic su di **Seleziona colore** strumento.  
+1.  Nel **Editor di immagini** sulla barra degli strumenti (o dal **immagine** dal menu **strumenti** comando), fare clic sul **Seleziona colore** dello strumento.  
   
-2.  Selezionare il colore desiderato possono essere prelevati dall'immagine.  
+2.  Selezionare il colore che si desidera prelevare dall'immagine.  
   
     > [!NOTE]
-    >  Quando si seleziona un colore, l'editor di immagini riattiva lo strumento utilizzato più di recente.  
+    >  Una volta selezionato un colore, l'editor di immagini riattiva lo strumento usato più recentemente.  
   
-3.  Disegnare utilizzando il pulsante sinistro del mouse per il colore primo piano o il pulsante destro del mouse per il colore di sfondo.  
+3.  Disegnare con il pulsante sinistro del mouse per il colore primo piano o il pulsante destro del mouse per il colore di sfondo.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
+## <a name="requirements"></a>Requisiti  
   
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

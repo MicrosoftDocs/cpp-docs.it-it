@@ -1,5 +1,5 @@
 ---
-title: 'Metodo hstring:: Release | Documenti Microsoft'
+title: 'Metodo hstring:: Release | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fd7e09980d82cdef346202ef8a1fde4d7cb1c66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c784a0f91a5809ae1880ae6abf5bfa1e45f9a4c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875292"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604921"
 ---
 # <a name="hstringrelease-method"></a>Metodo HString::Release
-Elimina il valore string sottostante e inizializza l'oggetto HString corrente su un valore vuoto.  
+Elimina il valore string sottostante e inizializza l'oggetto corrente **HString** oggetto su un valore vuoto.  
   
 ## <a name="syntax"></a>Sintassi  
   

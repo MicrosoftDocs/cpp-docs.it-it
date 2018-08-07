@@ -1,5 +1,5 @@
 ---
-title: 'Costante interfacetraits:: Iidcount | Documenti Microsoft'
+title: 'Costante interfacetraits:: Iidcount | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2664292324ebb395f3a5f260dec57360027c60e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874067"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602727"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>Costante InterfaceTraits::IidCount
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ static const unsigned long IidCount = 1;
 ```  
   
 ## <a name="remarks"></a>Note  
- Contiene il numero di ID associato all'oggetto InterfaceTraits corrente di interfaccia.  
+ Contiene il numero ID associato all'oggetto corrente di interfaccia **InterfaceTraits** oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

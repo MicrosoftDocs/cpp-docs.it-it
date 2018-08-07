@@ -1,5 +1,5 @@
 ---
-title: ImplementsBase (struttura) | Documenti Microsoft
+title: ImplementsBase (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b6584277586f8b9bbefca020b66fb00a0ad74a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875773"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603964"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,15 +34,15 @@ struct ImplementsBase;
 ```  
   
 ## <a name="remarks"></a>Note  
- Utilizzato per convalidare i tipi di parametro di modello [implementa la struttura](../windows/implements-structure.md).  
+ Usato per convalidare i tipi di parametro di modello in [implementa la struttura](../windows/implements-structure.md).  
   
- La struttura ImplementsBase è vuota per impostazione predefinita.  
+ Il **ImplementsBase** struttura è vuota per impostazione predefinita.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `ImplementsBase`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

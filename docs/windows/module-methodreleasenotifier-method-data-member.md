@@ -1,5 +1,5 @@
 ---
-title: Membro dati Module::MethodReleaseNotifier::method_ | Documenti Microsoft
+title: Membro dati Module::MethodReleaseNotifier::method_ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce9ad8ba8659fb26c7303ff5efe236535e14d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0929ac466a5f09a0ee2401111b40a969aaf7193d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877189"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606813"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Membro dati Module::MethodReleaseNotifier::method_
-Contiene un puntatore al gestore dell'evento per l'oggetto methodreleasenotifier corrente.  
+Contiene un puntatore al gestore eventi per l'oggetto corrente **Module:: methodreleasenotifier** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +34,7 @@ void (T::* method_)();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

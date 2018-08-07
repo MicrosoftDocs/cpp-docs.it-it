@@ -1,5 +1,5 @@
 ---
-title: Piattaforma, default e cli spazi dei nomi (estensioni del componente C++) | Documenti Microsoft
+title: Platform, default e cli (estensioni del componente C++) gli spazi dei nomi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880747"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603550"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Spazi dei nomi Platform, default e cli (Estensioni del componente C++)
-Uno spazio dei nomi qualifica i nomi di un elemento del linguaggio in modo che i nomi non siano in conflitto con nomi identici nel codice sorgente. Ad esempio, un conflitto di nomi potrà impedire al compilatore riconoscendo [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md). Gli spazi dei nomi vengono utilizzati dal compilatore, ma non vengono mantenuti nell'assembly compilato.  
+Uno spazio dei nomi qualifica i nomi di un elemento del linguaggio in modo che i nomi non siano in conflitto con nomi identici nel codice sorgente. Ad esempio, un conflitto di nomi può impedire al compilatore riconoscere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md). Gli spazi dei nomi vengono utilizzati dal compilatore, ma non vengono mantenuti nell'assembly compilato.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- Quando si creare un progetto, in Visual C++ è disponibile uno spazio dei nomi predefinito per il progetto stesso. È possibile rinominare manualmente lo spazio dei nomi, anche se in Windows Runtime il nome del file. winmd deve corrispondere al nome dello spazio dei nomi radice.  
+ Quando si creare un progetto, in Visual C++ è disponibile uno spazio dei nomi predefinito per il progetto stesso. È possibile rinominare manualmente lo spazio dei nomi, anche se in Windows Runtime il nome del file con estensione winmd deve corrispondere al nome dello spazio dei nomi radice.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- Per ulteriori informazioni, vedere [gli spazi dei nomi e visibilità del tipo (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
+ Per altre informazioni, vedere [spazi dei nomi e visibilità del tipo (C + c++ /CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Sintassi**  
+### <a name="syntax"></a>Sintassi  
   
 ```  
 using namespace cli;  
 ```  
   
- **Note**  
+### <a name="remarks"></a>Note  
   
- C + + CLI supporta il `cli` dello spazio dei nomi. Durante la compilazione con **/clr**, `using` istruzione nella sezione relativa alla sintassi è implicita.  
+ C + + / CLI supporta il **cli** dello spazio dei nomi. Durante la compilazione con `/clr`, il **usando** istruzione nella sezione relativa alla sintassi è implicita.  
   
- Nello spazio dei nomi `cli` sono presenti le funzionalità del linguaggio seguenti:  
+ Le seguenti funzionalità del linguaggio sono nel **cli** dello spazio dei nomi:  
   
 -   [Array](../windows/arrays-cpp-component-extensions.md)  
   
@@ -60,14 +60,13 @@ using namespace cli;
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
- Nell'esempio di codice seguente viene illustrato che è possibile utilizzare un simbolo nello spazio dei nomi `cli` come simbolo definito dall'utente nel codice.  Tuttavia, una volta eseguita questa operazione, è necessario qualificare in modo esplicito o implicito i riferimenti all'elemento del linguaggio `cli` dello stesso nome.  
+ Esempio di codice seguente viene illustrato che è possibile utilizzare un simbolo nel **cli** dello spazio dei nomi come simbolo definito dall'utente nel codice.  Tuttavia, dopo avere eseguito questa operazione, sarà necessario qualificare in modo esplicito o implicito i riferimenti al **cli** elemento di linguaggio lo stesso nome.  
   
-```  
+```cpp  
 // cli_namespace.cpp  
 // compile with: /clr  
 using namespace cli;  
