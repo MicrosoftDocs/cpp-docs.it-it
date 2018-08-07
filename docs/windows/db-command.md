@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954981"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571438"
 ---
 # <a name="dbcommand"></a>db_command
 Crea un comando OLE DB.  
@@ -133,7 +133,7 @@ Se *bulk_fetch* è minore di 1, `SetRows` restituirà zero.
 ## <a name="remarks"></a>Note  
 **db_command** crea un oggetto [CCommand](../data/oledb/ccommand-class.md) , che viene usato da un consumer OLE DB per eseguire un comando.  
   
-È possibile usare **db_command** con un ambito di classe o un ambito di funzione. La differenza principale è l'ambito dell'oggetto `CCommand` . Con l'ambito di funzione, i dati come le associazioni terminano alla fine della funzione. Gli utilizzi di ambito di funzione sia classe implicano la classe modello Consumer OLE DB **CCommand\<>**, ma gli argomenti di modello diverso per i casi di funzione e di classe. In caso di ambito di funzione, verranno create associazioni a una **funzione di accesso** che include le variabili locali, mentre l'uso della classe dedurrà una classe derivata da `CAccessor`come argomento. Quando viene usato come attributo della classe, **db_command** funziona insieme a **db_column**.  
+È possibile usare **db_command** con un ambito di classe o un ambito di funzione. La differenza principale è l'ambito dell'oggetto `CCommand` . Con l'ambito di funzione, i dati come le associazioni terminano alla fine della funzione. Gli utilizzi di ambito di funzione sia classe implicano la classe modello Consumer OLE DB `CCommand<>`, ma gli argomenti di modello diverso per i casi di funzione e di classe. In caso di ambito di funzione, verranno create associazioni a una **funzione di accesso** che include le variabili locali, mentre l'uso della classe dedurrà una classe derivata da `CAccessor`come argomento. Quando viene usato come attributo della classe, **db_command** funziona insieme a **db_column**.  
   
 **db_command** può essere usato per eseguire comandi che non restituiscono un set di risultati.  
   

@@ -1,5 +1,5 @@
 ---
-title: event_source | Documenti Microsoft
+title: event_source | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e7e287d68bac0fe69417fe21df27ed3231cce6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e44b5757ea7b9e469275688443ba7ed1e3810571
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879383"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571389"
 ---
 # <a name="eventsource"></a>event_source
 Crea un'origine evento.  
@@ -35,16 +35,15 @@ Crea un'origine evento.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ event_source(  
+[ event_source(  
    type,  
    optimize=[speed | size],  
    decorate=[true | false]  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `type`  
+### <a name="parameters"></a>Parametri  
+ *type*  
  Un'enumerazione di uno dei valori seguenti:  
   
 -   `native` per codice C/C++ non gestito (impostazione predefinita per le classi non gestite).  
@@ -57,16 +56,16 @@ Crea un'origine evento.
     #include <atlcom.h>  
     ```  
   
- **optimize**  
- Quando `type` è **native**, è possibile specificare **optimize=size**per indicare che ci sono 4 byte di spazio di archiviazione (minimo) per tutti gli eventi di una classe o **optimize=speed** (impostazione predefinita) per indicare che ci sono 4 * (numero di eventi) byte di spazio di archiviazione.  
+ *optimize*  
+ Quando *tipo* viene `native`, è possibile specificare `optimize=size`, per indicare che ci sono 4 byte di spazio di archiviazione (minimo) per tutti gli eventi in una classe o `optimize=speed` (predefinito) per indicare che ci sono 4 * (numero di eventi) byte di spazio di archiviazione.  
   
- **decorate**  
- Quando `type` è **native**, è possibile specificare **decorate=false**per indicare che il nome espanso nel file unito (.mrg) non deve includere il nome della classe contenitore. [/Fx](../build/reference/fx-merge-injected-code.md) consente di generare file .mrg. **decorare = false**, che è l'impostazione predefinita, genera nomi di tipo completi nel file unito.  
+ *decorare*  
+ Quando *tipo* viene `native`, è possibile specificare `decorate=false`, per indicare che il nome espanso nel file unito (. mrg) non deve includere il nome della classe contenitore. [/Fx](../build/reference/fx-merge-injected-code.md) consente di generare file .mrg. `decorate=false`, che è l'impostazione predefinita, si risolve in nomi di tipo completi nel file unito.  
   
 ## <a name="remarks"></a>Note  
  L'attributo **event_source** di C++ specifica che la classe o struttura a cui viene applicato sarà un'origine evento.  
   
- **event_source** si usa in combinazione con l'attributo [event_receiver](../windows/event-receiver.md) e la parola chiave [__event](../cpp/event.md) . Usare **event_receiver** per creare i ricevitori di eventi. Usare `__event` sui metodi all'interno dell'origine evento per specificare tali metodi come eventi.  
+ **event_source** si usa in combinazione con l'attributo [event_receiver](../windows/event-receiver.md) e la parola chiave [__event](../cpp/event.md) . Usare `event_receiver` per creare i ricevitori di eventi. Uso **event** sui metodi all'interno dell'origine evento per specificare tali metodi come eventi.  
   
 > [!NOTE]
 >  Una classe o una struttura basata su template non può contenere eventi.  
@@ -77,10 +76,10 @@ Crea un'origine evento.
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**coclass** quando `type`=**com**|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|**Coclasse** quando `type`=`com`|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

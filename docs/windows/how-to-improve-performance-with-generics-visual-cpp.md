@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: migliorare le prestazioni con i Generics (Visual C++) | Documenti Microsoft'
+title: 'Procedura: migliorare le prestazioni con i Generics (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7e2476111ad5c0aaaeb5bed6fe8e806b4930071
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877566"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571516"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Procedura: migliorare le prestazioni con i generics (Visual C++)
-Con i generics, è possibile creare codice riutilizzabile basato su un parametro di tipo. Il tipo effettivo del parametro di tipo viene rinviato fino alla chiamata da parte del codice client. Per ulteriori informazioni sui generics, vedere [Generics](../windows/generics-cpp-component-extensions.md).  
+Con i generics, è possibile creare codice riutilizzabile basato su un parametro di tipo. Il tipo effettivo del parametro di tipo viene rinviato fino alla chiamata da parte del codice client. Per altre informazioni sui generics, vedere [Generics](../windows/generics-cpp-component-extensions.md).  
   
  In questo articolo viene illustrato il modo in cui i generics consentono di aumentare le prestazioni di un'applicazione in cui sono utilizzate le raccolte.  
   
@@ -39,7 +39,7 @@ Con i generics, è possibile creare codice riutilizzabile basato su un parametro
   
  Nell'esempio di codice seguente vengono mostrati i due svantaggi principali delle raccolte di .NET Framework prima dei generics.  
   
-```  
+```cpp  
 // perf_pre_generics.cpp  
 // compile with: /clr  
   
@@ -91,7 +91,7 @@ Popped an int: 7
   
  Confrontare l'esempio riportato in precedenza con questo esempio in cui viene utilizzata una raccolta <xref:System.Collections.Generic.Stack%601> generica. In caso di raccolte di grandi dimensioni a cui l'accesso viene eseguito spesso, le prestazioni di questo esempio sono decisamente migliori rispetto all'esempio precedente.  
   
-```  
+```cpp  
 // perf_post_generics.cpp  
 // compile with: /clr  
   
