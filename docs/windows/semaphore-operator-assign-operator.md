@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: operator = (operatore) | Documenti Microsoft'
+title: 'Semaphore:: operator = (operatore) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892527"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651278"
 ---
 # <a name="semaphoreoperator-operator"></a>Operatore Semaphore::operator=
-Sposta l'handle specificato da un oggetto semaforo all'oggetto semaforo corrente.  
+Sposta l'handle specificato da un **semaforo** oggetto all'oggetto corrente **semaforo** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,12 +35,12 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `h`  
- Riferimento rvalue a un oggetto semaforo.  
+### <a name="parameters"></a>Parametri  
+ *h*  
+ Riferimento rvalue a un **semaforo** oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un riferimento all'oggetto semaforo corrente.  
+ Un riferimento all'oggetto corrente **semaforo** oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

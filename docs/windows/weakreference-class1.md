@@ -1,5 +1,5 @@
 ---
-title: WeakReference Class1 | Documenti Microsoft
+title: WeakReference Class1 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a44b992138371ff33a9059990a5ec3e93689c679
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71de341be0cb482a49cbf35ddd34e414be8afde4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891646"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645542"
 ---
 # <a name="weakreference-class1"></a>WeakReference Class1
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,13 @@ class WeakReference;
 ```  
   
 ## <a name="remarks"></a>Note  
- Rappresenta un *riferimento debole* che può essere utilizzato con Windows Runtime o COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.  
+ Rappresenta un *riferimento debole* che può essere utilizzato con il Runtime di Windows o da COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.  
   
- A `WeakReference` oggetto mantiene un *riferimento forte*, che è un puntatore a un oggetto e un *conteggio dei riferimenti forti*, ovvero il numero di copie del riferimento sicuro che sono state distribuite da il metodo Resolve. Mentre il conteggio dei riferimenti forti è diverso da zero, il riferimento sicuro è valido e l'oggetto è accessibile. Quando il conteggio dei riferimenti forti diventa zero, il riferimento sicuro non è valido e l'oggetto non è accessibile.  
+ Oggetto **WeakReference** oggetto mantiene una *riferimento sicuro*, che è un puntatore a un oggetto e un *conteggio dei riferimenti forti*, che corrisponde al numero di copie della forte riferimento che sono stati distribuiti per la `Resolve()` (metodo). Anche se il conteggio dei riferimenti forti è diverso da zero, il riferimento sicuro è valido e l'oggetto è accessibile. Quando il conteggio dei riferimenti forti diventa zero, il riferimento sicuro non è valido e l'oggetto non è accessibile.  
   
- Un oggetto WeakReference viene in genere utilizzato per rappresentare un oggetto la cui esistenza è controllata da un thread esterno o un'applicazione. Ad esempio, creare un oggetto WeakReference da un riferimento a un oggetto file. Finché il file rimane aperto, il riferimento sicuro è valido. Ma se il file viene chiuso, il riferimento sicuro non è più valido.  
+ Oggetto **WeakReference** oggetto viene in genere usato per rappresentare un oggetto la cui esistenza è controllata da un'applicazione o un thread esterno. Ad esempio, creare un **WeakReference** oggetto da un riferimento a un oggetto file. Finché il file rimane aperto, il riferimento sicuro è valido. Ma se il file viene chiuso, il riferimento sicuro non è più valido.  
   
- I metodi di WeakReference sono thread-safe.  
+ Il **WeakReference** metodi sono thread-safe.  
   
 ## <a name="members"></a>Membri  
   
@@ -48,23 +48,23 @@ class WeakReference;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore WeakReference::WeakReference](../windows/weakreference-weakreference-constructor.md)|Inizializza una nuova istanza della classe WeakReference.|  
-|[Distruttore WeakReference::~WeakReference](../windows/weakreference-tilde-weakreference-destructor.md)|Deinizializza (Elimina) l'istanza corrente della classe WeakReference.|  
+|[Costruttore WeakReference::WeakReference](../windows/weakreference-weakreference-constructor.md)|Inizializza una nuova istanza di **WeakReference** classe.|  
+|[Distruttore WeakReference::~WeakReference](../windows/weakreference-tilde-weakreference-destructor.md)|Deinizializza (Elimina) l'istanza corrente del **WeakReference** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo WeakReference::DecrementStrongReference](../windows/weakreference-decrementstrongreference-method.md)|Decrementa il riferimento sicuro conteggio dell'oggetto WeakReference corrente.|  
-|[Metodo WeakReference::IncrementStrongReference](../windows/weakreference-incrementstrongreference-method.md)|Incrementa il conteggio dei riferimenti forti dell'oggetto WeakReference corrente.|  
+|[Metodo WeakReference::DecrementStrongReference](../windows/weakreference-decrementstrongreference-method.md)|Decrementa il riferimento sicuro conteggio dell'oggetto corrente **WeakReference** oggetto.|  
+|[Metodo WeakReference::IncrementStrongReference](../windows/weakreference-incrementstrongreference-method.md)|Incrementa il conteggio dei riferimenti forti dell'oggetto corrente **WeakReference** oggetto.|  
 |[Metodo WeakReference::Resolve](../windows/weakreference-resolve-method.md)|Imposta il puntatore specificato per il valore di riferimento forte corrente se il conteggio dei riferimenti forti è diverso da zero.|  
-|[Metodo WeakReference::SetUnknown](../windows/weakreference-setunknown-method.md)|Imposta il riferimento sicuro dell'oggetto WeakReference corrente del puntatore a interfaccia specificato.|  
+|[Metodo WeakReference::SetUnknown](../windows/weakreference-setunknown-method.md)|Imposta il riferimento sicuro dell'oggetto corrente **WeakReference** oggetto al puntatore a interfaccia specificato.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `WeakReference`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

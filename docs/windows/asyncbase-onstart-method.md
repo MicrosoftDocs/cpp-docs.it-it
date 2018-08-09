@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: OnStart | Documenti Microsoft'
+title: 'Metodo asyncbase:: OnStart | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c33751bd375846cf3ee4cf5b92131e2824fafd04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71e661280c62be1a8335a8e84e30664c2f35a338
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861191"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646861"
 ---
 # <a name="asyncbaseonstart-method"></a>Metodo AsyncBase::OnStart
 Quando sottoposto a override in una classe derivata, avvia un'operazione asincrona.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 virtual void OnStart(  
    void  
 ) = 0;  

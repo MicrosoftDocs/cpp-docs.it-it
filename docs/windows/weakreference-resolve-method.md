@@ -1,5 +1,5 @@
 ---
-title: 'Metodo WeakReference:: Resolve | Documenti Microsoft'
+title: 'Metodo WeakReference:: Resolve | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dccdf7554f8d102230bedc18231feb74625d621b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe78f8644768563507f98157ac859993776d7fe9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890474"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646202"
 ---
 # <a name="weakreferenceresolve-method"></a>Metodo WeakReference::Resolve
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 STDMETHOD(Resolve)  
    (REFIID riid,   
    _Deref_out_opt_ IInspectable **ppvObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `riid`  
+### <a name="parameters"></a>Parametri  
+ *riid*  
  ID di interfaccia.  
   
- `ppvObject`  
+ *ppvObject*  
  Quando questa operazione viene completata, una copia del riferimento forte corrente se il conteggio dei riferimenti forti è diverso da zero.  
   
 ## <a name="return-value"></a>Valore restituito  
   
--   S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti forti è zero. Il parametro `ppvObject` viene impostato su `nullptr`.  
+-   S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti forti è uguale a zero. Il *ppvObject* parametro è impostato su **nullptr**.  
   
--   S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti forti è diverso da zero. Il `ppvObject` parametro è impostato per il riferimento sicuro.  
+-   S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti forti è diverso da zero. Il *ppvObject* parametro è impostato per il riferimento sicuro.  
   
 -   In caso contrario, HRESULT che indica il motivo per questa operazione non riuscita.  
   
@@ -56,7 +55,7 @@ STDMETHOD(Resolve)
  Imposta il puntatore specificato per il valore di riferimento forte corrente se il conteggio dei riferimenti forti è diverso da zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

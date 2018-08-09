@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570766"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649491"
 ---
 # <a name="generics-and-templates-visual-c"></a>Generics e modelli (Visual C++)
 Generics e modelli sono entrambi funzionalità del linguaggio che forniscono supporto per i tipi con parametri. Tuttavia, sono diversi e usi diversi. In questo argomento viene fornita una panoramica di molte differenze.  
@@ -51,7 +51,7 @@ Generics e modelli sono entrambi funzionalità del linguaggio che forniscono sup
   
 ## <a name="combining-templates-and-generics"></a>Generics e modelli di combinazione  
   
--   La differenza di base nei generics ha implicazioni per la compilazione di applicazioni che combinano i generics e modelli. Ad esempio, si supponga di che avere una classe di modello che si desidera creare wrapper generici per esporre il modello per altri linguaggi come generico. Non è possibile avere il generica accettano un parametro di tipo che passa quindi anche se il modello, poiché il modello deve disporre di tale parametro di tipo in fase di compilazione, ma il tipo generico non risolverà il parametro di tipo fino al runtime. Nidificazione di un modello all'interno di un oggetto generico non funzionerà neanche perché non è possibile espandere i modelli in fase di compilazione per i tipi generici arbitrari che è stato possibile creare un'istanza in fase di esecuzione.  
+La differenza di base nei generics ha implicazioni per la compilazione di applicazioni che combinano i generics e modelli. Ad esempio, si supponga di che avere una classe di modello che si desidera creare wrapper generici per esporre il modello per altri linguaggi come generico. Non è possibile avere il generica accettano un parametro di tipo che passa quindi anche se il modello, poiché il modello deve disporre di tale parametro di tipo in fase di compilazione, ma il tipo generico non risolverà il parametro di tipo fino al runtime. Nidificazione di un modello all'interno di un oggetto generico non funzionerà neanche perché non è possibile espandere i modelli in fase di compilazione per i tipi generici arbitrari che è stato possibile creare un'istanza in fase di esecuzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>Output  
   
 ```Output  
 F  

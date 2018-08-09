@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Impostazioni griglia (Editor di immagini per le icone) | Documenti Microsoft
+title: Finestra di dialogo Impostazioni griglia (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8e3a1aba4040ce4e9f36cf15438cfd1c44492e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46c08686d2586801aea46c23e7105dc1b6ead639
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873576"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643134"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Impostazioni griglia (Editor di immagini per le icone)
 Consente di specificare le impostazioni della griglia per l'immagine e visualizza le linee della griglia sull'immagine modificata. Le righe sono utili per la modifica dell'immagine, ma non vengono salvate come parte dell'immagine stessa.  
   
  **Griglia in pixel**  
- Se selezionata, viene visualizzata una griglia attorno a ciascun pixel nell'editor di immagini. La griglia viene visualizzata solo in 4 × e risoluzioni più elevate.  
+ Se selezionata, viene visualizzata una griglia attorno a ogni pixel nell'editor di immagini. La griglia viene visualizzata solo in 4 × e risoluzioni più alte.  
   
  **Griglia affiancata**  
- Se selezionata, viene visualizzata una griglia intorno ai blocchi di pixel nell'editor di immagini, specificato dai valori di spaziatura della griglia.  
+ Se selezionata, viene visualizzata una griglia attorno a blocchi di pixel nell'editor di immagini, specificato dai valori di spaziatura della griglia.  
   
  **Larghezza**  
- Specifica la larghezza di ogni blocco affiancato. Ciò è utile quando si disegnano le bitmap che contiene più immagini che sono disposti a intervalli regolari.  
+ Specifica la larghezza di ogni blocco di riquadro. Ciò è utile quando si disegnano le bitmap che contiene più immagini disposti a intervalli regolari.  
   
  **Altezza**  
- Specifica l'altezza di ciascun blocco affiancato. Ciò è utile quando si disegnano le bitmap che contiene più immagini che sono disposti a intervalli regolari.  
+ Specifica l'altezza di ogni blocco di riquadro. Ciò è utile quando si disegnano le bitmap che contiene più immagini disposti a intervalli regolari.  
   
 ## <a name="requirements"></a>Requisiti  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ridimensionamento di un'immagine](../windows/resizing-an-image-image-editor-for-icons.md)   
  [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
-

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465298"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649783"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Vincoli su parametri di tipo generico (C++/CLI)
 Nelle dichiarazioni di metodo o di tipo generico è possibile qualificare un parametro di tipo con vincoli. Un vincolo è un requisito che deve essere soddisfatto dai tipi utilizzati come argomenti tipo. Ad esempio, un vincolo potrebbe essere l'implementazione obbligatoria di una determinata interfaccia o l'eredità da una classe specifica da parte dell'argomento di tipo.  
@@ -32,11 +32,11 @@ Nelle dichiarazioni di metodo o di tipo generico è possibile qualificare un par
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *parametro di tipo*  
  Uno dei parametri di tipo da vincolare.  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  Inoltre può essere compresa una classe. Affinché l'argomento tipo soddisfi un vincolo della classe base, deve trattarsi di una classe uguale a quella del vincolo o derivare dal vincolo.  
   
- È inoltre possibile specificare `gcnew()` per indicare l'argomento tipo deve avere un costruttore pubblico senza parametri; oppure **classe ref** per indicare il tipo di argomento deve essere un tipo riferimento, inclusi qualsiasi classe, interfaccia, delegato o matrice tipo di; oppure **classe di valore** per indicare il tipo di argomento deve essere un tipo di valore. Qualsiasi tipo valore tranne Nullable\<T > può essere specificato.  
+ È inoltre possibile specificare **gcnew ()** per indicare l'argomento tipo deve avere un costruttore pubblico senza parametri; oppure **classe ref** per indicare l'argomento tipo deve essere un tipo riferimento, inclusi qualsiasi classe, interfaccia, delegato o tipo di matrice oppure **classe di valore** per indicare il tipo di argomento deve essere un tipo di valore. Qualsiasi tipo valore tranne Nullable\<T > può essere specificato.  
   
  È inoltre possibile specificare un parametro generico come vincolo. L'argomento tipo fornito per il tipo che si sta vincolando deve corrispondere o derivare dal tipo del vincolo. Ciò viene definito vincolo di tipo naked.  
   

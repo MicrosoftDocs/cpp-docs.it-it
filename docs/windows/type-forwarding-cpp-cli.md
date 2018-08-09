@@ -1,5 +1,5 @@
 ---
-title: Inoltro del tipo (C + + CLI) | Documenti Microsoft
+title: Inoltro del tipo (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9caa2e18a1ec851967857eb068797e092835f587
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 627b0a881795a963e3739accc351ee684b7b8232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891094"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644934"
 ---
 # <a name="type-forwarding-ccli"></a>Inoltro del tipo (C++/CLI)
-*Inoltro del tipo* consente di spostare un tipo da un assembly (assembly a) in un altro assembly (assembly B), in modo che non è necessario ricompilare i client che usano assembly A.  
+*Inoltro del tipo* consente di spostare un tipo da un assembly (assembly A) in un altro assembly (assembly B), in modo che non è necessario ricompilare i client che usano assembly A.  
   
 ## <a name="all-platforms"></a>Tutte le piattaforme  
  Questa funzionalità non è supportata in tutti i Runtime.  
@@ -32,10 +32,10 @@ ms.locfileid: "33891094"
  Questa funzionalità non è supportata in Windows Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Esempio di codice seguente viene illustrato come utilizzare l'inoltro dei tipi.  
+ Esempio di codice seguente viene illustrato come usare l'inoltro dei tipi.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -45,20 +45,20 @@ ms.locfileid: "33891094"
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `new`  
- L'assembly in cui si desidera spostare la definizione del tipo.  
+ *new*  
+ L'assembly in cui si sta spostando la definizione del tipo.  
   
- `type`  
- Il tipo di cui si desidera spostare in un altro assembly di definizione.  
+ *type*  
+ Il tipo la cui definizione si spostano in un altro assembly.  
   
 ### <a name="remarks"></a>Note  
- Dopo che un componente (assembly) viene fornito e viene utilizzata da applicazioni client, è possibile utilizzare i tipo di inoltro per spostare un tipo dal componente (assembly) in un altro assembly, inclusi i componenti aggiornati (e qualsiasi assembly aggiuntivi richiesti) e il client applicazioni continuerà a funzionare senza alcuna ricompilazione.  
+ Dopo che un componente (assembly) viene fornito ed è usato da applicazioni client, è possibile usare l'inoltro per lo spostamento di un tipo in un altro assembly dal componente (assembly), sono inclusi i componenti aggiornati (e qualsiasi assembly aggiuntivi richiesti) di tipo e il client le applicazioni continuerà a funzionare senza alcuna ricompilazione.  
   
- Inoltro dei tipi funziona solo per i componenti di cui viene fatto riferimenti dalle applicazioni esistenti. Quando si ricompila l'applicazione, è necessario i riferimenti agli assembly appropriati per qualsiasi tipo usato nell'applicazione.  
+ L'inoltro dei tipi funziona solo per i componenti di cui viene fatto riferimenti dalle applicazioni esistenti. Quando si ricompila un'applicazione, deve esistere i riferimenti all'assembly appropriato per tutti i tipi usati nell'applicazione.  
   
- Per l'inoltro di un tipo (A) da un assembly, è necessario aggiungere il `TypeForwardedTo` attributo per quel tipo, nonché un riferimento all'assembly. L'assembly cui viene fatto riferimento deve contenere uno dei valori seguenti:  
+ Per l'inoltro di un tipo (A) da un assembly, è necessario aggiungere il `TypeForwardedTo` attributo per quel tipo, nonché un riferimento all'assembly. L'assembly cui viene fatto riferimento deve contenere uno dei seguenti:  
   
--   La definizione di tipo a  
+-   La definizione di tipo a.  
   
 -   Oggetto `TypeForwardedTo` attributo per un tipo, nonché un riferimento all'assembly.  
   
@@ -78,17 +78,17 @@ ms.locfileid: "33891094"
   
 -   Tipi nativi  
   
--   Tipi annidati (se si desidera inoltrare un tipo annidato, è necessario inoltrare il tipo di inclusione)  
+-   I tipi annidati (se si desidera inoltrare un tipo annidato, è necessario inoltrare il tipo di inclusione)  
   
- È possibile inoltrare un tipo a un assembly creato in qualsiasi linguaggio destinato a common language runtime.  
+ È possibile inoltrare un tipo a un assembly creato in qualsiasi linguaggio destinato common language runtime.  
   
- Pertanto, se un file di codice sorgente utilizzato per compilare l'assembly DLL contiene una definizione di tipo (`ref class MyClass`), e si desidera spostare tale tipo di definizione assembly DLL, è necessario:  
+ Pertanto, se un file di codice sorgente utilizzato per compilare assembly DLL contiene una definizione di tipo (`ref class MyClass`), e si vogliono spostare tale tipo definizione all'assembly b. dll, sarebbe:  
   
 1.  Spostare il `MyClass` definizione a un file di codice sorgente utilizzato per compilare una DLL del tipo.  
   
-2.  Compilare l'assembly DLL  
+2.  Compilare l'assembly b. dll  
   
-3.  Eliminare il `MyClass` definizione del codice sorgente utilizzato per compilare una DLL e sostituirlo con il seguente tipo:  
+3.  Eliminare il `MyClass` digitare definizione dal codice sorgente utilizzato per creare DLL e sostituirlo con quanto segue:  
   
     ```  
     #using "B.dll"  
@@ -97,7 +97,7 @@ ms.locfileid: "33891094"
   
 4.  Compilare l'assembly DLL.  
   
-5.  Utilizzo di DLL senza ricompilare le applicazioni client.  
+5.  Usare DLL senza ricompilare le applicazioni client.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**
+ Opzione del compilatore: `/clr`

@@ -1,5 +1,5 @@
 ---
-title: typeid (estensioni del componente C++) | Documenti Microsoft
+title: typeid (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3298ed426535ae7db93e5603dac8222bbe8f6470
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888367"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644073"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (Estensioni del componente C++)
 Ottiene un valore che indica il tipo di oggetto.  
   
 > [!WARNING]
->  In questo argomento viene fatto riferimento alla versione Estensioni componenti C++ di typeid. Per la versione di ISO C++ della parola chiave, vedere [operatore typeid](../cpp/typeid-operator.md).  
+>  In questo argomento viene fatto riferimento alla versione Estensioni componenti C++ di typeid. Per la versione ISO C++ di questa parola chiave, vedere [typeid Operator](../cpp/typeid-operator.md).  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
   
@@ -49,49 +49,46 @@ Platform::Type^ type = T::typeid;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  Un nome di tipo.  
   
 ### <a name="remarks"></a>Note  
- In C + + CX, typeid viene restituito un [platform:: Type](../cppcx/platform-type-class.md) che viene costruito da informazioni sul tipo di runtime.  
+ In C + + c++ /CX typeid viene restituito un [platform:: Type](../cppcx/platform-type-class.md) che viene costruito da informazioni sul tipo di runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Sintassi**  
+### <a name="syntax"></a>Sintassi  
   
 ```  
-  
 type::typeid  
 ```  
   
- **Parametri**  
-  
+### <a name="parameters"></a>Parametri   
  *type*  
- Il nome di un tipo (dichiaratore astratto) per il quale si desidera che l'oggetto System:: Type.  
+ Il nome di un tipo (astratti declarator) per il quale si desidera il `System::Type` oggetto.  
   
- **Note**  
+### <a name="remarks"></a>Note  
   
- `typeid` viene usata per ottenere il <xref:System.Type> per un tipo in fase di compilazione.  
+ `typeid` viene usato per ottenere il <xref:System.Type> per un tipo in fase di compilazione.  
   
- `typeid` è simile a come ottenere lo System:: Type per un tipo in fase di esecuzione usando <xref:System.Type.GetType%2A> o <xref:System.Object.GetType%2A>. Tuttavia, typeid accetta solo un nome di tipo come parametro.  Se si desidera utilizzare un'istanza di un tipo per ottenere il nome System:: Type, usare GetType.  
+ `typeid` è simile a come ottenere lo System:: Type per un tipo in fase di esecuzione usando <xref:System.Type.GetType%2A> o <xref:System.Object.GetType%2A>. Tuttavia, typeid accetta solo un nome di tipo come parametro.  Se si desidera usare un'istanza di un tipo per ottenere il relativo nome System:: Type, utilizzare GetType.  
   
- `typeid` deve essere in grado di valutare un nome di tipo (tipo) in fase di compilazione, mentre GetType restituisce il tipo da restituire in fase di esecuzione.  
+ `typeid` deve essere in grado di valutare un nome di tipo (tipo) in fase di compilazione mentre GetType restituisce il tipo da restituire in fase di esecuzione.  
   
- `typeid` può richiedere un tipo nativo nome o common language runtime alias per il nome di tipo nativo; vedere [equivalenti di .NET Framework a tipi nativi C++ (C + c++ /CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) per altre informazioni.  
+ `typeid` può richiedere un nome di tipo nativo o un alias di runtime del linguaggio comune per il nome di tipo nativo; visualizzare [equivalenti di .NET Framework a tipi nativi C++ (C + + CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) per altre informazioni.  
   
- `typeid` funziona anche con i tipi nativi, anche se verrà comunque restituito un System:: Type.  Per ottenere una struttura type_info, utilizzare [operatore typeid](../cpp/typeid-operator.md).  
+ `typeid` funziona anche con i tipi nativi, anche se verrà comunque restituito un System:: Type.  Per ottenere una struttura type_info, usare [typeid Operator](../cpp/typeid-operator.md).  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
- L'esempio seguente confronta la parola chiave typeid al membro GetType ().  
+ L'esempio seguente confronta la parola chiave typeid dal `GetType()` membro.  
   
-```  
+```cpp  
 // keyword__typeid.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -121,14 +118,11 @@ typeid and GetType returned the same System::Type
 G  
   
 System.Single*  
-  
 ```  
   
- **Esempio**  
+ L'esempio seguente mostra che una variabile di tipo che System:: Type può essere utilizzato per ottenere gli attributi su un tipo.  Indica inoltre che per alcuni tipi, sarà necessario creare un typedef per usare `typeid`.  
   
- L'esempio seguente viene mostrato che una variabile di tipo che System:: Type può essere utilizzato per ottenere gli attributi su un tipo.  Viene inoltre illustrato che per alcuni tipi, è necessario creare un typedef per utilizzare `typeid`.  
-  
-```  
+```cpp  
 // keyword__typeid_2.cpp  
 // compile with: /clr  
 using namespace System;  

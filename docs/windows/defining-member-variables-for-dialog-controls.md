@@ -1,5 +1,5 @@
 ---
-title: Definizione di variabili membro per i controlli finestra | Documenti Microsoft
+title: Definizione di variabili membro per i controlli di finestra di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,40 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ba8fc95290ecb90557203be2b6ab4cce18b91e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1f5cee3bf827effc7c99dd66d7dc2898c9ad55f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873836"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645464"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>Definizione di variabili membro per i controlli della finestra di dialogo
 Per definire una variabile membro per qualsiasi controllo della finestra di dialogo ad eccezione dei pulsanti, è possibile usare il metodo seguente.  
   
 > [!NOTE]
->  Questo articolo è valido solo per i controlli di finestra di dialogo in un progetto MFC. ATL (progetti) è necessario utilizzare il **nuovi messaggi di Windows e i gestori eventi** la finestra di dialogo.  
+>  Questo articolo è valido solo per i controlli di finestra di dialogo in un progetto MFC. I progetti ATL devono usare la **nuovi messaggi di Windows e i gestori eventi** nella finestra di dialogo.  
   
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Per definire una variabile membro per il controllo di una finestra di dialogo (non pulsante)  
   
 1.  Nel [editor finestre](../windows/dialog-editor.md), selezionare un controllo.  
   
-2.  Mentre si tiene premuto il **CTRL** chiave, fare doppio clic sul controllo finestra di dialogo.  
+2.  Mentre si tiene premuto il **Ctrl** della chiave, fare doppio clic sul controllo finestra di dialogo.  
   
-     Il [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md) viene visualizzato.  
+     Il [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md) viene visualizzata.  
   
-3.  Digitare le informazioni appropriate nella **Aggiunta guidata variabile membro** procedura guidata. Per ulteriori informazioni, vedere [Dialog Data Exchange](../mfc/dialog-data-exchange.md).  
+3.  Digitare le informazioni appropriate nella **Aggiunta guidata variabile membro** procedura guidata. Per altre informazioni, vedere [Dialog Data Exchange](../mfc/dialog-data-exchange.md).  
   
-4.  Fare clic su **OK** per tornare all'editor finestre.  
+4.  Fare clic su **OK** da restituire per il **dialogo** editor.  
   
     > [!TIP]
     >  Per passare da un controllo della finestra di dialogo al gestore esistente, fare doppio clic sul controllo.  
   
-
+ È anche possibile usare la **variabili di membro** scheda **Creazione guidata classe MFC** per aggiungere nuove variabili membro per una classe specificata e visualizzare quelle che sono già stati definiti.  
   
- È inoltre possibile utilizzare il **variabili membro** scheda **Creazione guidata classe MFC** per aggiungere nuove variabili membro per una classe specificata e visualizzare quelle che sono già stati definiti.  
-  
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  MFC  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -61,6 +58,5 @@ Per definire una variabile membro per qualsiasi controllo della finestra di dial
  [Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)   
  [Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)   
  [Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Override di una funzione virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)
-

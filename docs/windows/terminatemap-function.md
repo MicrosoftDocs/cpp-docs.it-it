@@ -1,5 +1,5 @@
 ---
-title: Funzione TerminateMap | Documenti Microsoft
+title: Funzione TerminateMap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890349"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645938"
 ---
 # <a name="terminatemap-function"></a>Funzione TerminateMap
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,24 +36,24 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>Parametri  
- `module`  
+### <a name="parameters"></a>Parametri  
+ *modulo*  
  Oggetto [modulo](../windows/module-class.md).  
   
- `serverName`  
- Il nome di un subset di class factory del modulo specificato dal parametro `module`.  
+ *ServerName*  
+ Il nome di un subset di class factory del modulo specificato dal parametro *modulo*.  
   
- `forceTerminate`  
- `true` Per terminare la classe factory indipendentemente da essi sono attive; `false` non terminare la class factory se qualsiasi factory è attivo.  
+ *forceTerminate*  
+ **true** per terminare la classe factory indipendentemente dal fatto sono attive; **false** non terminare le class factory se qualsiasi factory è attivo.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se sono state terminate tutti i class factory; in caso contrario, `false`.  
+ **true** se tutte le class factory sono state terminate; in caso contrario, **false**.  
   
 ## <a name="remarks"></a>Note  
- Arresta la class factory del modulo specificato.  
+ Arresta la class factory nel modulo specificato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   

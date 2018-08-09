@@ -1,5 +1,5 @@
 ---
-title: Attivazione o disattivazione della finestra colori (Editor di immagini per le icone) | Documenti Microsoft
+title: Attivazione o disattivazione della finestra colori (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872042"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645110"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Attivazione o disattivazione della finestra Colori (Editor di immagini per le icone)
 ### <a name="to-display-colors-window"></a>Per visualizzare la finestra colori  
   
-1.  Pulsante destro del mouse un **Editor di immagini** riquadro e scegliere **Visualizza finestra colori** dal menu di scelta rapida.  
+1.  Pulsante destro del mouse un' **Editor di immagini** riquadro, quindi scegliere **Visualizza finestra colori** dal menu di scelta rapida.  
   
      \- oppure -  
   
-2.  Fare clic su **Visualizza finestra colori** sul [menu immagine](../windows/image-menu-image-editor-for-icons.md).  
+2.  Fare clic su **Visualizza finestra colori** nel [menu immagine](../windows/image-menu-image-editor-for-icons.md).  
   
 ### <a name="to-hide-the-colors-window"></a>Per nascondere la finestra colori  
   
-1.  Sbloccare la finestra. In questo modo la finestra per l'opzione Nascondi automaticamente quando non è in uso.  
+1.  È possibile rimuovere la finestra. In questo modo la finestra Nascondi automaticamente quando non è in uso.  
   
  \- oppure -  
   
--   Fare clic su di **Chiudi** pulsante.  
+-   Scegliere il **Chiudi** pulsante.  
   
- Requisiti  
-  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra colori](../windows/colors-window-image-editor-for-icons.md)   

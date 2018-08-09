@@ -1,5 +1,5 @@
 ---
-title: La connessione a un Menu a comparsa all'applicazione | Documenti Microsoft
+title: La connessione di un Menu a comparsa all'applicazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 533fc4eea9299d51183a91febb371ff8142e0a7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfe5c4dba3dc8e86eb9a47a6e163af94872b933
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879529"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641262"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>Connessione di un menu di scelta rapida all'applicazione
 ### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Per connettere un menu a comparsa all'applicazione  
   
-1.  Aggiungere un gestore di messaggi per WM_CONTEXTMENU (ad esempio). Per ulteriori informazioni, vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md).  
+1.  Aggiungere un gestore di messaggi per WM_CONTEXTMENU (ad esempio). Per altre informazioni, vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md).  
   
 2.  Aggiungere al gestore messaggio il codice seguente:  
   
-    ```  
+    ```cpp  
     CMenu menu;  
     VERIFY(menu.LoadMenu(IDR_MENU1));  
     CMenu* pPopup = menu.GetSubMenu(0);  
@@ -41,14 +41,11 @@ ms.locfileid: "33879529"
     ```  
   
     > [!NOTE]
-    >  Il [CPoint](../atl-mfc-shared/reference/cpoint-class.md) **passato dal messaggio gestore sia nelle coordinate dello schermo.**  
+    >  Il [CPoint](../atl-mfc-shared/reference/cpoint-class.md) passato per il messaggio di gestore di è in coordinate dello schermo.  
   
-
-  
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti  
  MFC  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di menu di scelta rapida](../windows/creating-pop-up-menus.md)   
+ [Creazione di menu a comparsa](../windows/creating-pop-up-menus.md)   
  [Editor dei menu](../windows/menu-editor.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Membro dati boolstruct:: | Documenti Microsoft'
+title: 'Membro dati boolstruct:: | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859813"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641115"
 ---
 # <a name="boolstructmember-data-member"></a>Membro dati BoolStruct::Member
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 int Member;  
 ```  
   
 ## <a name="remarks"></a>Note  
- Specifica che un [ComPtr](../windows/comptr-class.md) è o non lo è, la durata dell'oggetto di un'interfaccia di gestione.  
+ Specifica che un [ComPtr](../windows/comptr-class.md) è o non lo è, gestire la durata dell'oggetto di un'interfaccia.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   

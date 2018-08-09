@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568878"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645126"
 ---
 # <a name="generic-functions-ccli"></a>Funzioni generiche (C++/CLI)
 Una funzione generica è una funzione dichiarata con i parametri di tipo. Quando viene chiamato, anziché i parametri di tipo vengono usati tipi effettivi.  
   
 ## <a name="all-platforms"></a>Tutte le piattaforme  
- **Note**  
+### <a name="remarks"></a>Note
   
  Questa funzionalità non è applicabile a tutte le piattaforme.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- **Note**  
+### <a name="remarks"></a>Note
   
  Questa funzionalità non è supportata in Windows Runtime.  
   
@@ -47,7 +47,7 @@ Una funzione generica è una funzione dichiarata con i parametri di tipo. Quando
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
  Esempio di codice seguente illustra una funzione generica.  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **Esempio**  
-  
  Funzioni generiche possono essere sottoposti a overload basato su firma o arietà, il numero di parametri di tipo in una funzione. Funzioni generiche, inoltre, possono risultare sovraccarico con le funzioni non generica con lo stesso nome, purché le funzioni differiscono alcuni parametri di tipo. Ad esempio, le funzioni seguenti possono essere sottoposti a overload:  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **Esempio**  
   
  L'esempio seguente usa una funzione generica per individuare il primo elemento nella matrice. Dichiara `MyClass`, che eredita dalla classe di base `MyBaseClass`. `MyClass` contiene una funzione generica `MyFunction`, che chiama un'altra funzione generica, `MyBaseClassFunction`, all'interno della classe base. Nelle `main`, la funzione generica, `MyFunction`, viene chiamato utilizzando argomenti di tipo diverso.  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 My function returned an int: 2003  

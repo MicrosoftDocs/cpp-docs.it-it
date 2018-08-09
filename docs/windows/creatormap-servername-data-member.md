@@ -1,5 +1,5 @@
 ---
-title: 'Membro dati creatormap:: ServerName | Documenti Microsoft'
+title: 'Membro dati creatormap:: ServerName | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 48095aa9f6a561baa03b0a529702cf97bdfb9785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24188c74136f0326a30b0834c99a36d3fdb5eaf3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870936"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642176"
 ---
 # <a name="creatormapservername-data-member"></a>Membro dati CreatorMap::serverName
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 const wchar_t* serverName;  
 ```  
   
@@ -37,7 +37,7 @@ const wchar_t* serverName;
  Archivia il nome del server per il CreatorMap.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   

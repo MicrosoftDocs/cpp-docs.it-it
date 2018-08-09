@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463242"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641808"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (Estensioni del componente C++)
 Il **astratta** parola chiave dichiara:  
@@ -33,16 +33,16 @@ Il **astratta** parola chiave dichiara:
 -   Che una funzione membro di tipo può essere definita solo in un tipo derivato.  
   
 ## <a name="all-platforms"></a>Tutte le piattaforme  
- **Sintassi**  
+### <a name="syntax"></a>Sintassi 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **Note**  
+### <a name="remarks"></a>Note
   
  La sintassi del primo esempio dichiara una classe astratta. Il *dichiarazione di classe* componente può essere una dichiarazione C++ nativa (**classe** oppure **struct**), o una dichiarazione di estensione C++ (**classediriferimento** oppure **struct ref**) se il `/ZW` o `/clr` è specificata l'opzione del compilatore.  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  Per altre informazioni, vedere [le classi e struct](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
- L'esempio di codice seguente genera un errore perché la classe `X` è contrassegnata come `abstract`.  
+ Esempio di codice seguente genera un errore perché classe `X` contrassegnato **astratto**.  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **Esempio**  
-  
- L'esempio di codice seguente genera un errore perché crea un'istanza di una classe nativa contrassegnata come `abstract`. Questo errore si verifica con o senza l'opzione del compilatore `/clr`.  
+ Esempio di codice seguente genera un errore perché crea un'istanza di una classe nativa contrassegnata **astratta**. Questo errore si verifica con o senza l'opzione del compilatore `/clr`.  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **Esempio**  
-  
- L'esempio di codice seguente genera un errore perché la funzione `f` include una definizione, ma è contrassegnata come `abstract`. L'istruzione finale nell'esempio illustra che dichiarare una funzione virtuale astratta equivale a dichiarare una funzione virtuale pura.  
+ Esempio di codice seguente genera un errore perché funzione `f` include una definizione, ma è contrassegnato **astratto**. L'istruzione finale nell'esempio illustra che dichiarare una funzione virtuale astratta equivale a dichiarare una funzione virtuale pura.  
   
 ```cpp  
 // abstract_keyword_3.cpp  

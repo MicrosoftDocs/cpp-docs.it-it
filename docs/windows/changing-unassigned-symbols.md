@@ -1,5 +1,5 @@
 ---
-title: Modifica di simboli non assegnati | Documenti Microsoft
+title: Modifica di simboli non assegnati | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855383"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644986"
 ---
 # <a name="changing-unassigned-symbols"></a>Modifica di simboli non assegnati
-Mentre nel [la finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md), è possibile modificare o eliminare i simboli esistenti che non sono già assegnati a una risorsa o un oggetto.  
+Durante il [finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md), è possibile modificare o eliminare i simboli esistenti che non sono già assegnati a una risorsa o oggetto.  
   
 ### <a name="to-change-an-unassigned-symbol"></a>Per modificare un simbolo non assegnato  
   
-1.  Nel **nome** casella, selezionare il simbolo non assegnato e fare clic su **modifica**.  
+1.  Nel **Name** casella, selezionare il simbolo non assegnato e fare clic su **modifica**.  
   
-2.  Modificare nome o valore nelle caselle disponibili nel simbolo di **Cambia simbolo** la finestra di dialogo.  
+2.  Modifica nome del simbolo o il valore nelle caselle disponibili nel **Cambia simbolo** nella finestra di dialogo.  
   
     > [!NOTE]
-    >  Per modificare un simbolo che *è* assegnato a una risorsa o un oggetto, è necessario utilizzare l'editor di risorse o la finestra Proprietà. Per ulteriori informazioni, vedere [la modifica di un simbolo o del nome](../windows/changing-a-symbol-or-symbol-name-id.md).  
+    >  Per modificare un simbolo che *viene* assegnato a una risorsa o oggetto, è necessario usare l'editor di risorse o **proprietà** finestra. Per altre informazioni, vedere [modifica un simbolo o del nome del simbolo](../windows/changing-a-symbol-or-symbol-name-id.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: 'Metodo asyncbase:: Checkvalidstatefordelegatecall | Documenti Microsoft'
+title: 'Metodo asyncbase:: Checkvalidstatefordelegatecall | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e3420304b0432f635d04a4892e7984dd38f144
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a03f0dcb8f6d35c1d5fc8aec5bf1cc899d575861
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859875"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653072"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>Metodo AsyncBase::CheckValidStateForDelegateCall
-Verifica se è possono modificare le proprietà di delegato nello stato asincrono corrente.  
+Verifica se le proprietà di delegato possono essere modificate nello stato asincrono corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForDelegateCall();  
 ```  
   

@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466709"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652685"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Estensioni componenti per le piattaforme runtime
 Visual C++ fornisce le estensioni del linguaggio per agevolare la programmazione per piattaforme di runtime. Usando C + + c++ /CX, è possibile programmare le app Universal Windows Platform e i componenti compilati in codice nativo. Sebbene sia possibile creare App Universal Windows Platform programmando direttamente con le interfacce di Windows Runtime COM, usando C + + c++ /CX, è possibile rivolgersi costruttori, eccezioni e altri linguaggi di programmazione C++ moderna. Per abilitare la programmazione di C++ in un ambiente di esecuzione gestito sulla piattaforma .NET, è possibile usare C + + / CLI.  
   
- **Due runtime, un set di estensioni**  
+### <a name="two-runtimes-one-set-of-extensions"></a>Due runtime, un set di estensioni  
   
- C + + / CX è un subset di C + + / CLI. Per le estensioni che sono comuni a C + + c++ /CX e c++ /CLI CLI, la semantica varia se la destinazione è common language runtime (CLR) o il Runtime di Windows. Per compilare l'app venga eseguita sul Runtime di Windows, specificare il **/ZW** opzione del compilatore. Per compilare un'applicazione per eseguirla in CLR, specificare il **/clr** opzione del compilatore. Queste opzioni vengono impostate automaticamente quando si usa Visual Studio per creare un progetto.  
+ C + + / CX è un subset di C + + / CLI. Per le estensioni che sono comuni a C + + c++ /CX e c++ /CLI CLI, la semantica varia se la destinazione è common language runtime (CLR) o il Runtime di Windows. Per compilare l'app venga eseguita sul Runtime di Windows, specificare il `/ZW` opzione del compilatore. Per compilare un'applicazione per eseguirla in CLR, specificare l'opzione del compilatore `/clr`. Queste opzioni vengono impostate automaticamente quando si usa Visual Studio per creare un progetto.  
   
  Per altre informazioni su come creare Universal Windows Platform apps in C++, vedere [app di Guida di orientamento per Windows Runtime in C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).  
   
@@ -86,7 +86,7 @@ Visual C++ fornisce le estensioni del linguaggio per agevolare la programmazione
 |**nullptr**|No|Indica che un handle o un puntatore non punta a un oggetto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Costrutti di modello  
- I seguenti costrutti di linguaggio vengono implementati come modelli, anziché come parole chiave. Se si specifica la **/ZW** l'opzione del compilatore, sono definiti nel `lang` dello spazio dei nomi. Se si specifica la **/clr** l'opzione del compilatore, sono definiti nel `cli` dello spazio dei nomi.  
+ I seguenti costrutti di linguaggio vengono implementati come modelli, anziché come parole chiave. Se si specifica l'opzione del compilatore `/ZW`, sono definiti nello spazio dei nomi `lang`. Se si specifica l'opzione del compilatore `/clr`, sono definiti nello spazio dei nomi `cli`.  
   
 |Parola chiave|Scopo|Riferimenti|  
 |-------------|-------------|---------------|  

@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore weakref:: Weakref | Documenti Microsoft'
+title: 'Costruttore weakref:: Weakref | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891048"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641473"
 ---
 # <a name="weakrefweakref-constructor"></a>Costruttore WeakRef::WeakRef
-Inizializza una nuova istanza della classe WeakRef.  
+Inizializza una nuova istanza di **WeakRef** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,12 +52,12 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `ptr`  
- Un puntatore, un riferimento o un riferimento rvalue a un oggetto esistente che inizializza l'oggetto WeakRef corrente.  
+### <a name="parameters"></a>Parametri  
+ *ptr*  
+ Un puntatore, riferimento o riferimento rvalue a un oggetto esistente che inizializza l'oggetto corrente **WeakRef** oggetto.  
   
 ## <a name="remarks"></a>Note  
- Il primo costruttore inizializza un oggetto WeakRef vuoto. Il secondo costruttore inizializza un oggetto WeakRef da un puntatore all'interfaccia IWeakReference. Il terzo costruttore inizializza un oggetto WeakRef da un riferimento a un ComPtr\<IWeakReference > oggetto. Il quarto e quinto costruttore inizializza un oggetto WeakRef da un altro oggetto WeakRef.  
+ Il primo costruttore inizializza un oggetto vuoto **WeakRef** oggetto. Il secondo costruttore inizializza un **WeakRef** da un puntatore a oggetto di `IWeakReference` interfaccia. Il terzo costruttore inizializza un **WeakRef** oggetto da un riferimento a un `ComPtr<IWeakReference>` oggetto. Il quarto e quinto costruttore inizializza un **WeakRef** da un altro oggetto **WeakRef** oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

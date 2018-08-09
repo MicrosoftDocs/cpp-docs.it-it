@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db26591bc4d0f1912c968c331266200baeea9917
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: edc4658ebf0519ef9d1792d62b303f423e658835
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463668"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643069"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>Metodo ActivationFactory::GetRuntimeClassName
 Ottiene il nome della classe di runtime dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 STDMETHOD(  
    GetRuntimeClassName  
 )(_Out_ HSTRING* runtimeName);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *runtimeName*  
  Al termine di questa operazione, un handle a una stringa che contiene il nome della classe di runtime dell'oggetto che l'oggetto corrente **ActivationFactory** crea un'istanza.  
   

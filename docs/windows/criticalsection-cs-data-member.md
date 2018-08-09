@@ -1,5 +1,5 @@
 ---
-title: Membro dati CriticalSection::cs_ | Documenti Microsoft
+title: Membro dati CriticalSection::cs_ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5da07f5328f6ff75f778e44ffafd3722e0cdfca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d00370014767d7b29de5f1efa592fd999af3d0bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882563"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641392"
 ---
 # <a name="criticalsectioncs-data-member"></a>Membro dati CriticalSection::cs_
-Dichiara un membro di dati della sezione critica.  
+Dichiara un membro dati di sezione critica.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 CRITICAL_SECTION cs_;  
 ```  
   
 ## <a name="remarks"></a>Note  
- Questo membro dati è protetta.  
+ Questo membro dati è protetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

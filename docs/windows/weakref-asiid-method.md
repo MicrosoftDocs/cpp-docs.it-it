@@ -1,5 +1,5 @@
 ---
-title: 'Metodo weakref:: Asiid | Documenti Microsoft'
+title: 'Metodo weakref:: Asiid | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69108681b181d0b2fce20f9e30a009b6b93c2180
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e5ff6510463a6fed06534236612feb460919e37
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891298"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643485"
 ---
 # <a name="weakrefasiid-method"></a>Metodo WeakRef::AsIID
-Imposta il parametro del puntatore ComPtr specificato per rappresentare l'ID di interfaccia specificato.  
+Imposta l'oggetto specificato `ComPtr` parametro del puntatore per rappresentare l'ID di interfaccia specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,27 +36,27 @@ HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `riid`  
+### <a name="parameters"></a>Parametri  
+ *riid*  
  ID di interfaccia.  
   
- `ptr`  
- Al termine dell'operazione, un oggetto che rappresenta il parametro `riid`.  
+ *ptr*  
+ Al termine di questa operazione, un oggetto che rappresenta i parametri *riid*.  
   
 ## <a name="return-value"></a>Valore restituito  
   
--   S_OK se l'operazione riesce; in caso contrario, HRESULT che indica il motivo dell'errore dell'operazione. `ptr` è impostato su `nullptr`.  
+-   S_OK se l'operazione riesce; in caso contrario, HRESULT che indica il motivo dell'errore dell'operazione e *ptr* è impostata su **nullptr**.  
   
--   S_OK se l'operazione riesce, ma l'oggetto WeakRef corrente è già stato rilasciato. Il parametro `ptr` viene impostato su `nullptr`.  
+-   S_OK se l'operazione riesce, ma l'oggetto corrente **WeakRef** oggetto è già stato rilasciato. Parametro *ptr* è impostata su **nullptr**.  
   
--   S_OK se l'operazione riesce, ma l'oggetto WeakRef corrente non è derivato dal parametro `riid`. Il parametro `ptr` viene impostato su `nullptr`. Per altre informazioni, vedere Note.  
+-   S_OK se l'operazione riesce, ma l'oggetto corrente **WeakRef** oggetto non è derivato dal parametro *riid*. Parametro *ptr* è impostata su **nullptr**. Per altre informazioni, vedere Note.  
   
 ## <a name="remarks"></a>Note  
- Se il parametro `riid` non è derivato da IInspectable, viene generato un errore. Questo errore sostituisce il valore restituito.  
+ Viene generato un errore se parametro *riid* non è derivato da `IInspectable`. Questo errore sostituisce il valore restituito.  
   
  Il primo modello è il form da usare nel codice. Il secondo modello (non illustrato di seguito, ma dichiarato nel file di intestazione) è una specializzazione helper interna che supporta le funzionalità del linguaggio C++, ad esempio la parola chiave di deduzione del tipo [auto](../cpp/auto-cpp.md) .  
   
- A partire da Windows 10 SDK, questo metodo non imposta l'istanza di WeakRef su `nullptr` se non è stato ottenuto il riferimento debole. Si consiglia, quindi, di non usare un codice per il controllo degli errori che verifica WeakRef per `nullptr`. Controllare invece `ptr` per `nullptr`.  
+ A partire da Windows 10 SDK, questo metodo non imposta il **WeakRef** istanza **nullptr** se non è stato possibile ottenere il riferimento debole, pertanto, evitare codice controllo degli errori che verifica il **WeakRef** per **nullptr**. Controllare invece *ptr* per **nullptr**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cdc7bb8a97be6fbc8c77c06caaddf95a3095323
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cd89a2a46535c145e4ef6f84cee0b5604346f4b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463743"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645201"
 ---
 # <a name="attribute-programming-faq"></a>Domande frequenti sulla programmazione con attributi
 Questo argomento sono incluse le seguenti domande frequenti:  
@@ -46,7 +46,7 @@ Questo argomento sono incluse le seguenti domande frequenti:
 -   [È possibile usare gli attributi in una classe derivata da una classe che usa anche attributi?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Che cos'è un valore HRESULT?  
- Un `HRESULT` è un tipo di dati semplice che viene spesso utilizzato come valore restituito da attributi e ATL in generale. La tabella seguente descrive i diversi valori. Altri valori sono contenuti nel file Winerror. h file di intestazione.  
+ Un valore HRESULT è un tipo di dati semplice che viene spesso utilizzato come valore restituito da attributi e ATL in generale. La tabella seguente descrive i diversi valori. Altri valori sono contenuti nel file Winerror. h file di intestazione.  
   
 |nome|Descrizione|Valore|  
 |----------|-----------------|-----------|  
@@ -65,7 +65,7 @@ Questo argomento sono incluse le seguenti domande frequenti:
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Quando è necessario specificare il nome del parametro per un attributo?  
  Nella maggior parte dei casi, se l'attributo ha un solo parametro, tale parametro è denominato. Questo nome non è obbligatorio quando si inserisce l'attributo nel codice. Ad esempio, il seguente utilizzo del [aggregabile](../windows/aggregatable.md) attributo:  
   
-```  
+```cpp  
 [coclass, aggregatable(value=allowed)]  
 class CMyClass  
 {  
@@ -75,7 +75,7 @@ class CMyClass
   
  è esattamente identico:  
   
-```  
+```cpp  
 [coclass, aggregatable(allowed)]  
 class CMyClass  
 {  
@@ -104,7 +104,7 @@ class CMyClass
   
  È consentita la seguente:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1"), /* Multiple-line  
                                        comment */  
@@ -114,7 +114,7 @@ class CMyClass
   
  Di seguito non è consentito:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1" /* Multiple-line comment */ ),  
    threading("both" // Single-line comment)  
@@ -125,10 +125,10 @@ class CMyClass
  È possibile ereditare classi sia con gli attributi e privi di attributi da altre classi, che potrebbero stessi essere attribuiti o non. Il risultato della derivazione da una classe con attributa è quello utilizzato per la derivazione dalla classe dopo che il provider di attributi ha trasformato il relativo codice. Gli attributi non vengono trasmessi alle classi derivate mediante ereditarietà C++. Un provider di attributi Trasforma solo codice in prossimità dei relativi attributi.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Come è possibile usare gli attributi in un progetto ATL senza attributo?  
- Potrebbe essere un progetto ATL senza attributo, che dispone di un file con estensione idl, e si consiglia di iniziare ad aggiungere oggetti con attributi. Per fornire il codice in questo caso, usare l'aggiunta guidata classe.  
+ Potrebbe essere un progetto ATL senza attributo, che dispone di un file con estensione idl, e si consiglia di iniziare ad aggiungere oggetti con attributi. In questo caso, usare il **Creazione guidata aggiunta classe** per fornire il codice.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Come è possibile usare un file con estensione idl in un progetto con attributo?  
- Potrebbe essere un file con estensione idl che si desidera utilizzare nel progetto ATL con attributi. In questo caso, si utilizzerebbe il [importidl](../windows/importidl.md) dell'attributo, compilare il file con estensione idl in un file con estensione h (vedere la [MIDL Property Pages](../ide/midl-property-pages.md) nella finestra di dialogo Pagine delle proprietà del progetto) e quindi includere il file con estensione h nel progetto .  
+ Potrebbe essere un file con estensione idl che si desidera utilizzare nel progetto ATL con attributi. In questo caso, si utilizzerebbe il [importidl](../windows/importidl.md) dell'attributo, compilare il file con estensione idl in un file con estensione h (vedere la [MIDL Property Pages](../ide/midl-property-pages.md) del progetto **pagine delle proprietà** nella finestra di dialogo), e quindi includere il file con estensione h nel progetto.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> È possibile modificare il codice che viene inserito da un attributo?  
  Alcuni attributi di inseriscono codice nel progetto. È possibile visualizzare il codice inserito utilizzando il [/Fx](../build/reference/fx-merge-injected-code.md) opzione del compilatore. È anche possibile copiare codice inserito nel file e incollarlo nel codice sorgente. In questo modo è possibile modificare il comportamento dell'attributo. Tuttavia, è possibile modificare altre parti del codice nonché.  

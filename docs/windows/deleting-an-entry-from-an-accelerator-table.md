@@ -1,5 +1,5 @@
 ---
-title: Eliminazione di una voce da una tabella di tasti di scelta rapida | Documenti Microsoft
+title: Eliminazione di una voce da una tabella di tasti di scelta rapida | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68f6c7e9383527e3ba77d87d6d08ce5a3e1bcc8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8f3a72f8f9a71f54a997c4ba76d51aad6fb200a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880498"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648321"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>Eliminazione di una voce da una tabella dei tasti di scelta rapida
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Per eliminare una voce da una tabella dei tasti di scelta rapida  
   
-1.  Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona in [visualizzazione risorse](../windows/resource-view-window.md).  
+1.  Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).  
   
     > [!NOTE]
     >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Selezionare la voce che si vuole eliminare. (Tenere premuto il **CTRL** o **MAIUSC** chiave mentre si fa clic per selezionare più voci.)  
+2.  Selezionare la voce che si vuole eliminare. (Tenere premuto il **Ctrl** oppure **MAIUSC** chiave mentre si fa clic per selezionare più voci.)  
   
-3.  Mouse e scegliere **eliminare** dal menu di scelta rapida (o selezionare **eliminare** dal **modifica** menu).  
+3.  Pulsante destro del mouse e scegliere **eliminare** dal menu di scelta rapida (o selezionare **eliminare** dal **Edit** menu).  
   
  \- oppure -  
   
--   Premere il tasto CANC.  
+-   Premere il **eliminare** chiave.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
   
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

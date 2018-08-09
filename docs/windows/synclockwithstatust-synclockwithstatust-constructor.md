@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore synclockwithstatust:: Synclockwithstatust | Documenti Microsoft'
+title: 'Costruttore synclockwithstatust:: Synclockwithstatust | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891350"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647755"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>Costruttore SyncLockWithStatusT::SyncLockWithStatusT
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,20 +40,20 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `other`  
- Un riferimento rvalue a un altro oggetto SyncLockWithStatusT.  
+### <a name="parameters"></a>Parametri  
+ *other*  
+ Un riferimento rvalue a un altro **SyncLockWithStatusT** oggetto.  
   
- `sync`  
- Un riferimento a un altro oggetto SyncLockWithStatusT.  
+ *sync*  
+ Un riferimento a un'altra **SyncLockWithStatusT** oggetto.  
   
- `status`  
- Il valore della [Status](../windows/synclockwithstatust-status-data-member.md) membro dati di `other` parametro o `sync` parametro.  
+ *status*  
+ Il valore della [Status](../windows/synclockwithstatust-status-data-member.md) membro dati del *altri* parametro o i *sincronizzazione* parametro.  
   
 ## <a name="remarks"></a>Note  
- Inizializza una nuova istanza della classe SyncLockWithStatusT.  
+ Inizializza una nuova istanza di **SyncLockWithStatusT** classe.  
   
- Il primo costruttore inizializza l'oggetto SyncLockWithStatusT corrente da un altro SyncLockWithStatusT specificato dal parametro `other`e quindi invalida l'altro oggetto SyncLockWithStatusT. Il secondo costruttore viene `protected`e inizializza l'oggetto SyncLockWithStatusT corrente a uno stato non valido.  
+ Il primo costruttore inizializza l'oggetto corrente **SyncLockWithStatusT** da un altro oggetto **SyncLockWithStatusT** specificato dal parametro *altri*e quindi Invalida l'altra **SyncLockWithStatusT** oggetto. Il secondo costruttore viene **protette**e la inizializza corrente **SyncLockWithStatusT** oggetto da uno stato non valido.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  
@@ -61,5 +61,5 @@ explicit SyncLockWithStatusT(
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [SyncLockWithStatusT (classe)](../windows/synclockwithstatust-class.md)   
+ [Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)   
  [Metodo SyncLockWithStatusT::GetStatus](../windows/synclockwithstatust-getstatus-method.md)

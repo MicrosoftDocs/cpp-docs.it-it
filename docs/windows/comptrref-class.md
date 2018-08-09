@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f7f392df62892ea0e053e9d243f85772fa0605d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9c45aa289b4b41ddfaf141dcaf790734284af7c8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463079"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643550"
 ---
 # <a name="comptrref-class"></a>ComPtrRef (classe)
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
@@ -55,7 +55,7 @@ class ComPtrRef : public ComPtrRefBase<T>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo ComPtrRef::GetAddressOf](../windows/comptrref-getaddressof-method.md)|Recupera l'indirizzo di un puntatore all'interfaccia rappresentata dall'oggetto ComPtrRef corrente.|  
+|[Metodo ComPtrRef::GetAddressOf](../windows/comptrref-getaddressof-method.md)|Recupera l'indirizzo di un puntatore all'interfaccia rappresentata dall'oggetto corrente **ComPtrRef** oggetto.|  
 |[Metodo ComPtrRef::ReleaseAndGetAddressOf](../windows/comptrref-releaseandgetaddressof-method.md)|Elimina l'oggetto corrente **ComPtrRef** dell'oggetto e restituisce un puntatore-a-a-puntatore all'interfaccia rappresentata dalle **ComPtrRef** oggetto.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  

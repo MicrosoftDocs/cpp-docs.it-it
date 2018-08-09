@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 948b720df6094ddd4124bb496cabb3c83a3cacf0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464691"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652988"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto Win32
 Utilizzare questa pagina della procedura guidata per impostare le opzioni per il progetto Win32.  
   
- **Tipo di applicazione**  
+## <a name="application-type"></a>Tipo di applicazione  
  Crea il tipo di applicazione specificata.  
   
 |Opzione|Descrizione|  
@@ -38,7 +38,7 @@ Utilizzare questa pagina della procedura guidata per impostare le opzioni per il
 |**DLL**|Crea una libreria di collegamento dinamico Win32 (DLL). Una DLL Win32 è un file binario, scritto in C o C++, che usa le chiamate all'API Win32 anziché le classi MFC e che funge da una libreria condivisa di funzioni che possono essere utilizzate contemporaneamente da più applicazioni.<br /><br /> Non è possibile aggiungere MFC o ATL supportano a un'applicazione DLL. È possibile indicare che la DLL Esporta simboli.|  
 |**Libreria statica**|Crea una libreria statica. Una libreria statica è un file contenente gli oggetti e le funzioni e i dati che si collega il programma quando viene compilato il file eseguibile. In questo argomento illustra come creare i file di avvio e [proprietà del progetto](../ide/property-pages-visual-cpp.md) per una libreria statica. Un file di libreria statica offre i vantaggi seguenti:<br /><br /> -Una libreria statica Win32 è utile se l'applicazione che si sta lavorando effettua le chiamate all'API Win32 anziché le classi MFC.<br />-Il processo di collegamento non cambiano se il resto dell'applicazione Windows viene scritto nel linguaggio C o C++.<br />-È possibile collegare una libreria statica a un programma basato su MFC o a un programma non MFC.|  
   
- **Opzioni aggiuntive**  
+## <a name="additional-options"></a>Opzioni aggiuntive  
  Definisce il supporto e le opzioni per l'applicazione, a seconda del tipo.  
   
 |Opzione|Descrizione|  
@@ -48,7 +48,7 @@ Utilizzare questa pagina della procedura guidata per impostare le opzioni per il
 |**Intestazione precompilata**|Specifica che il progetto di libreria statica Usa un'intestazione precompilata.|  
 |Controlli Security Development Lifecycle (SDL)|Per altre informazioni su SDL, vedere [materiale sussidiario del processo Microsoft Security Development Lifecycle (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **Aggiungere il supporto per**  
+## <a name="add-support-for"></a>Aggiungere il supporto per  
  Aggiungere il supporto per una delle librerie fornite con Visual C++.  
   
 |Opzione|Descrizione|  

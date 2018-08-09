@@ -1,5 +1,5 @@
 ---
-title: Controlli personalizzati nell'Editor finestre | Documenti Microsoft
+title: Controlli personalizzati nell'Editor finestre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,41 +21,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c2bca249958e4d25ab5377540525da34802ac04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b197baa61d741452219529e44be0e9ba1a154ce
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880244"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651051"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>Controlli personalizzati nell'editor finestre
-L'editor finestre consente di utilizzare esistente "custom" o i controlli in un modello di finestra di dialogo "user".  
+L'editor finestre consente di Usa esistente "custom" o "utente" controlli in un modello di finestra di dialogo.  
   
 > [!NOTE]
->  Controlli personalizzati in questo senso non devono essere confusi con i controlli ActiveX. Controlli ActiveX a volte chiamati controlli OLE. Inoltre, non confondere questi controlli con i controlli creati dal proprietario in Windows.  
+>  Controlli personalizzati in questo senso non sono deve essere confusa con i controlli ActiveX. Controlli ActiveX a volte sono stati chiamati controlli OLE personalizzati. Inoltre, non confondere questi controlli con i controlli creati dal proprietario Windows.  
   
- Questa funzionalità è supportata per l'utilizzo di controlli diversi da quelli forniti da Windows. In fase di esecuzione, il controllo è associato a una classe di finestra (non come una classe C++). Un modo per eseguire la stessa operazione più comune è di installare qualsiasi controllo, ad esempio un controllo statico, nella finestra di dialogo. Quindi in fase di esecuzione, nel [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funzione, rimuovere il controllo e sostituirlo con un controllo personalizzato.  
+ Questa funzionalità è progettata per consentire di usare i controlli diversi da quelli forniti da Windows. In fase di esecuzione, il controllo è associato a una classe di finestra (non come una classe C++). Un modo più comune per eseguire la stessa attività consiste nell'installare qualsiasi controllo, ad esempio un controllo statico, nella finestra di dialogo. Quindi in fase di esecuzione, nelle [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funzionamento, rimuovere il controllo e sostituirlo con un controllo personalizzato.  
   
  Questa è una tecnica precedente. Oggi è consigliabile nella maggior parte dei casi per scrivere un controllo ActiveX o una sottoclasse di un controllo comune di Windows.  
   
- Per questi controlli personalizzati, è possibile eseguire:  
+ Per questi controlli personalizzati, sono limitati a:  
   
 -   Impostazione del percorso nella finestra di dialogo.  
   
--   Digitare una didascalia.  
+-   Se si digita una didascalia.  
   
 -   Che identifica il nome della classe di Windows del controllo (il codice dell'applicazione deve registrare il controllo con questo nome).  
   
 -   Digitare un valore esadecimale a 32 bit che imposta lo stile del controllo.  
   
--   Se si imposta lo stile esteso.  
+-   Impostazione dello stile esteso.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
+ [Controlli nelle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
-

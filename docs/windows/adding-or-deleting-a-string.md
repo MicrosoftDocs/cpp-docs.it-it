@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a470aa5bb1b24ab2fe549f098a83c29e5d0828
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 93cf3eba3301b0ae000b9f461851b46be592a119
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464149"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650283"
 ---
 # <a name="adding-or-deleting-a-string"></a>Aggiunta o eliminazione di una stringa
-È possibile inserire rapidamente nuove voci nella tabella di stringhe usando l'editor di stringa. Nuove stringhe vengono posizionate alla fine della tabella e vengono assegnate l'identificatore successivo disponibile. È quindi possibile modificare le proprietà ID, Value o didascalia nella [finestra proprietà](/visualstudio/ide/reference/properties-window) in base alle esigenze.  
+È possibile inserire rapidamente le nuove voci nella tabella stringa tramite il **stringa** editor. Nuove stringhe vengono posizionate alla fine della tabella e vengono assegnate l'identificatore successivo disponibile. È quindi possibile modificare il **ID**, **valore**, o **didascalia** le proprietà nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in base alle esigenze.  
   
- Editor stringhe assicura che non si usa un ID che è già in uso. Se si seleziona un ID già in uso, l'editor di stringa verrà ricevere una notifica e quindi assegnare un ID univoco generico, ad esempio IDS_STRING58113.  
+ Il **stringa** editor garantisce che non si usa un ID che è già in uso. Se si seleziona un ID già in uso, il **stringa** editor sarà ricevere una notifica e quindi assegnare un ID univoco di tipo generico, ad esempio `IDS_STRING58113`.  
   
 ### <a name="to-add-a-string-table-entry"></a>Per aggiungere una voce di tabella di stringhe  
   
@@ -64,10 +64,9 @@ ms.locfileid: "39464149"
   
 -   Premere il **eliminare** chiave.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) e[Procedura dettagliata: utilizzo delle risorse per la localizzazione con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) e[Procedura dettagliata: utilizzo delle risorse per la localizzazione con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef99d2b4a03c8a43cbfef7064dd0da5cf4923792
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 220e70158f6d1929bd120690f61325c45432fa08
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568712"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649182"
 ---
 # <a name="handlenulltraitsgetinvalidvalue-method"></a>Metodo HANDLENullTraits::GetInvalidValue
 Rappresenta un handle non valido.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 inline static Type GetInvalidValue();  
 ```  
   

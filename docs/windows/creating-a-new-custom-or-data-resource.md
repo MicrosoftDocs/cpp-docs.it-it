@@ -1,5 +1,5 @@
 ---
-title: Creazione di una nuova risorsa personalizzata o dati | Documenti Microsoft
+title: Creazione di una nuova risorsa personalizzata o Data | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c82e41544bde9cdd945e23f4ea5884e4e76ae22b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82d68ec7c9580cf1b95d4c678c491c4e33d12e10
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871832"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650846"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Creazione di una nuova risorsa personalizzata o di dati
-È possibile creare una nuova risorsa personalizzata o di dati inserendo tale risorsa in un file separato usando la normale sintassi dei file di script delle risorse (RC), quindi includendo tale file facendo clic con il pulsante destro del mouse sul progetto in Esplora soluzioni e scegliendo **Inclusioni risorsa** dal menu di scelta rapida.  
+È possibile creare una nuova risorsa personalizzata o di dati inserendo tale risorsa in un file separato usando la sintassi dei file di script (RC) di risorsa normale, quindi includendo tale file facendo clic con il progetto in **Esplora soluzioni** e scegliendo  **Inclusioni risorsa** menu di scelta rapida.  
   
 ### <a name="to-create-a-new-custom-or-data-resource"></a>Per creare una nuova risorsa personalizzata o di dati  
   
@@ -37,9 +37,9 @@ ms.locfileid: "33871832"
   
 2.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul file RC del progetto e scegliere **Inclusioni risorsa** nel menu di scelta rapida.  
   
-3.  Nella casella **Direttive in fase di compilazione** digitare un'istruzione **#include** con il nome del file che contiene la risorsa personalizzata. Ad esempio:  
+3.  Nel **direttive in fase di compilazione** , digitare un `#include` istruzione che fornisce il nome del file contenente la risorsa personalizzata. Ad esempio:  
   
- ```  
+ ```cpp  
     #include mydata.rc  
  ```  
   
@@ -49,12 +49,10 @@ ms.locfileid: "33871832"
   
  Un altro metodo per creare una risorsa personalizzata consiste nell'importare un file esterno come risorsa personalizzata. Per altre informazioni, vedere [Importazione ed esportazione di risorse](../windows/how-to-import-and-export-resources.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Binary Editor](binary-editor.md)
-

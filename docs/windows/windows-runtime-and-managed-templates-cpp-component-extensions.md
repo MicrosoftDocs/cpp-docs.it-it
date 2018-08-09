@@ -1,5 +1,5 @@
 ---
-title: Windows Runtime e modelli gestiti (estensioni del componente C++) | Documenti Microsoft
+title: Windows Runtime e modelli gestiti (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891363"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641460"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime e modelli gestiti (Estensioni del componente C++)
 I modelli consentono di definire un prototipo di un tipo Windows Runtime o Common Language Runtime e, successivamente, di creare istanze delle variazioni di quel tipo utilizzando parametri di tipo dei modelli diversi.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- È possibile creare modelli da tipi di valore o riferimento.  Per ulteriori informazioni sulla creazione di tipi di valore o riferimento, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
+ È possibile creare modelli da tipi di valore o riferimento.  Per altre informazioni sulla creazione di tipi di valore o riferimento, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Per ulteriori informazioni sui modelli di classe C++ standard, vedere [modelli di classe](../cpp/class-templates.md).  
+ Per altre informazioni sui modelli di classe C++ standard, vedere [modelli di classe](../cpp/class-templates.md).  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  La creazione di modelli di classe dai tipi gestiti presenta alcune limitazioni che vengono illustrate nell'esempio di codice seguente.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
- È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non di un modello gestito con un parametro di modello di tipo generico.  Questa condizione dipende dal fatto che i tipi generici vengono risolti in fase di esecuzione.  Per ulteriori informazioni, vedere [Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non di un modello gestito con un parametro di modello di tipo generico.  Questa condizione dipende dal fatto che i tipi generici vengono risolti in fase di esecuzione.  Per altre informazioni, vedere [Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -67,8 +66,6 @@ ref class R {
 };  
 ```  
   
- **Esempio**  
-  
  Una funzione o un tipo generico non può essere annidato in modello gestito.  
   
 ```cpp  
@@ -79,8 +76,6 @@ template<class T> public ref class R {
    generic<class T> ref class W {};   // C2959  
 };  
 ```  
-  
- **Esempio**  
   
  Non è possibile accedere ai modelli definiti in un assembly a cui viene fatto riferimento con la sintassi del linguaggio C++/CLI, tuttavia è possibile utilizzare la reflection.  Se non viene creata alcuna istanza di un modello, quest'ultimo non viene creato nei metadati.  In caso contrario, nei metadati vengono visualizzate solo le funzioni membro a cui viene fatto riferimento.  
   
@@ -112,8 +107,6 @@ int main() {
 }  
 ```  
   
- **Esempio**  
-  
  È possibile modificare il modificatore gestito di una classe in una specializzazione parziale o esplicita di un modello di classe.  
   
 ```cpp  
@@ -139,7 +132,6 @@ interface class A<T%> {};
 // native class  
 template <>  
 class A <int> {};  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

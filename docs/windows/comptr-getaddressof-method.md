@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e11cd204c2c89c7fca9a824450d6136eb65520db
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c1be1dd844b08be23312848f007e4a57dbd893b5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461184"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646985"
 ---
 # <a name="comptrgetaddressof-method"></a>Metodo ComPtr::GetAddressOf
 Recupera l'indirizzo del [PTR _](../windows/comptr-ptr-data-member.md) membro dei dati, che contiene un puntatore all'interfaccia rappresentata da questa **ComPtr**.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 T* const* GetAddressOf() const;  
 T** GetAddressOf();  
 ```  

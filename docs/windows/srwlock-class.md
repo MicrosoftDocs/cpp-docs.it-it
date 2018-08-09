@@ -1,5 +1,5 @@
 ---
-title: SRWLock (classe) | Documenti Microsoft
+title: SRWLock (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec31b1469f437ff2776ed9da52fbcd7557fca8e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23881f2065276aa7ae7b6ee95b5449abb07dd2de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891753"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641953"
 ---
 # <a name="srwlock-class"></a>SRWLock (classe)
 Rappresenta un blocco in lettura/scrittura.  
@@ -34,7 +34,7 @@ class SRWLock;
 ```  
   
 ## <a name="remarks"></a>Note  
- Un blocco in lettura/scrittura è utilizzato per sincronizzare l'accesso attraverso i thread a un oggetto o una risorsa. Per ulteriori informazioni, vedere [funzioni di sincronizzazione](http://msdn.microsoft.com/en-us/9b6359c2-0113-49b6-83d0-316ad95aba1b).  
+ Un blocco in lettura/scrittura è utilizzato per sincronizzare l'accesso attraverso i thread a un oggetto o una risorsa. Per altre informazioni, vedere [funzioni di sincronizzazione](http://msdn.microsoft.com/9b6359c2-0113-49b6-83d0-316ad95aba1b).  
   
 ## <a name="members"></a>Membri  
   
@@ -42,30 +42,30 @@ class SRWLock;
   
 |||  
 |-|-|  
-|**SyncLockExclusive**|Sinonimo di un oggetto SRWLock che viene acquisito in modalità esclusiva.|  
-|**SyncLockShared**|Sinonimo di un oggetto SRWLock che viene acquisito in modalità condivisa.|  
+|`SyncLockExclusive`|Sinonimo di un **SRWLock** oggetto che viene acquisito in modalità esclusiva.|  
+|`SyncLockShared`|Sinonimo di un **SRWLock** oggetto che viene acquisito in modalità condivisa.|  
   
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore SRWLock::SRWLock](../windows/srwlock-srwlock-constructor.md)|Inizializza una nuova istanza della classe SRWLock.|  
-|[Distruttore SRWLock::~SRWLock](../windows/srwlock-tilde-srwlock-destructor.md)|Deinizializza un'istanza della classe SRWLock.|  
+|[Costruttore SRWLock::SRWLock](../windows/srwlock-srwlock-constructor.md)|Inizializza una nuova istanza di **SRWLock** classe.|  
+|[Distruttore SRWLock::~SRWLock](../windows/srwlock-tilde-srwlock-destructor.md)|Deinizializza un'istanza di **SRWLock** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo SRWLock::LockExclusive](../windows/srwlock-lockexclusive-method.md)|Acquisisce un oggetto SRWLock in modalità esclusiva.|  
-|[Metodo SRWLock::LockShared](../windows/srwlock-lockshared-method.md)|Acquisisce un oggetto SRWLock in modalità condivisa.|  
-|[Metodo SRWLock::TryLockExclusive](../windows/srwlock-trylockexclusive-method.md)|Tenta di acquisire un oggetto SRWLock in modalità esclusiva per l'oggetto SRWLock corrente o specificata.|  
-|[Metodo SRWLock::TryLockShared](../windows/srwlock-trylockshared-method.md)|Tenta di acquisire un oggetto SRWLock in modalità condivisa per l'oggetto SRWLock corrente o specificata.|  
+|[Metodo SRWLock::LockExclusive](../windows/srwlock-lockexclusive-method.md)|Acquisisce un **SRWLock** oggetto in modalità esclusiva.|  
+|[Metodo SRWLock::LockShared](../windows/srwlock-lockshared-method.md)|Acquisisce un **SRWLock** oggetto in modalità condivisa.|  
+|[Metodo SRWLock::TryLockExclusive](../windows/srwlock-trylockexclusive-method.md)|Prova ad acquisire un **SRWLock** oggetto in modalità esclusiva per il correnti o specificate **SRWLock** oggetto.|  
+|[Metodo SRWLock::TryLockShared](../windows/srwlock-trylockshared-method.md)|Prova ad acquisire un **SRWLock** oggetto in modalità condivisa per il correnti o specificate **SRWLock** oggetto.|  
   
 ### <a name="protected-data-member"></a>Membro dati protetti  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati SRWLock::SRWLock_](../windows/srwlock-srwlock-data-member.md)|Contiene la variabile sottostante di blocco per l'oggetto SRWLock corrente.|  
+|[Membro dati SRWLock::SRWLock_](../windows/srwlock-srwlock-data-member.md)|Contiene la variabile di blocco sottostante per l'oggetto corrente **SRWLock** oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `SRWLock`  

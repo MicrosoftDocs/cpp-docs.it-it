@@ -1,5 +1,5 @@
 ---
-title: Test di una finestra di dialogo | Documenti Microsoft
+title: Test di una finestra di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57bb9e827caae0e328971077d902673f2428c80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889544"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652070"
 ---
 # <a name="testing-a-dialog-box"></a>Verifica di una finestra di dialogo
 Quando si progetta una finestra di dialogo, è possibile simularne e verificarne il comportamento in fase di esecuzione senza compilare il programma. In questo modo è possibile:  
@@ -38,22 +38,20 @@ Quando si progetta una finestra di dialogo, è possibile simularne e verificarne
     > [!NOTE]
     >  Le connessioni al codice della finestra di dialogo effettuate tramite le procedure guidate non vengono incluse nella simulazione.  
   
- Durante la verifica di una finestra di dialogo, la posizione in cui quest'ultima viene visualizzata è in genere relativa alla finestra principale del programma. Se la proprietà Absolute Align della finestra di dialogo è stata impostata su True, la posizione in cui viene visualizzata la finestra di dialogo viene definita in base all'angolo superiore sinistro dello schermo.  
+ Durante la verifica di una finestra di dialogo, la posizione in cui quest'ultima viene visualizzata è in genere relativa alla finestra principale del programma. Se è stata impostata la finestra di dialogo **Absolute Align** proprietà **True**, la finestra di dialogo vengono visualizzati in una posizione esterna rispetto all'angolo superiore sinistro della schermata.  
   
 ### <a name="to-test-a-dialog-box"></a>Per testare una finestra di dialogo  
   
 1.  Quando l'editor finestre è la finestra attiva, sulla barra dei menu scegliere **Formato**, **Verifica finestra di dialogo**.  
   
-2.  Per terminare la simulazione, premere ESC oppure scegliere il pulsante **Chiudi** nella finestra di dialogo da testare.  
+2.  Per terminare la simulazione, premere **Esc**, oppure sceglierne le **Chiudi** pulsante nella finestra di dialogo si sta testando.  
   
- Per informazioni su come aggiungere risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index).  
+ Per informazioni su come aggiungere risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
+ [Controlli nelle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Editor finestre](../windows/dialog-editor.md)   
  [Attivazione o disattivazione della visualizzazione della barra degli strumenti dell'editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
-

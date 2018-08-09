@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un controllo alla finestra di dialogo | Documenti Microsoft
+title: Aggiunta di un controllo a una finestra di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 042d2b63602d8423cfba776ca24585c3c451f4b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bcf19d16843936dcd1f862b2b9bd1e2468a93a0d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858718"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644804"
 ---
 # <a name="adding-a-control-to-a-dialog-box"></a>Aggiunta di un controllo a una finestra di dialogo
 ### <a name="to-add-a-control-to-a-dialog-box"></a>Per aggiungere un controllo a una finestra di dialogo  
@@ -37,22 +37,20 @@ ms.locfileid: "33858718"
   
          \- oppure -  
   
-    -   Trascinare e rilasciare il controllo dalla finestra Casella degli strumenti nella posizione sulla finestra di dialogo. Per altre informazioni, vedere [Ridimensionamento di un controllo durante l'aggiunta](../windows/sizing-a-control-while-you-add-it.md).  
+    -   Trascinare e rilasciare il controllo dal **casella degli strumenti** finestra nella posizione sulla finestra di dialogo. Per altre informazioni, vedere [Ridimensionamento di un controllo durante l'aggiunta](../windows/sizing-a-control-while-you-add-it.md).  
   
          \- oppure -  
   
-    -   Fare doppio clic sul controllo nella finestra Casella degli strumenti (viene visualizzato nella finestra di dialogo) e quindi riposizionare il controllo nella posizione desiderata.  
+    -   Fare doppio clic sul controllo nella **casella degli strumenti** finestra (viene visualizzato nella finestra di dialogo) quindi riposizionare il controllo nella posizione desiderata.  
   
- Per informazioni sui tipi di controlli disponibili nella finestra Casella degli strumenti, vedere [Scheda Editor finestre, finestra Casella degli strumenti](../windows/dialog-editor-tab-toolbox.md).  
+ Per informazioni sui tipi di controlli disponibili nel **casella degli strumenti** finestra, vedere [scheda Editor finestre, finestra Casella degli strumenti](../windows/dialog-editor-tab-toolbox.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
- [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Controlli nelle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
+ [Aggiunta di gestori eventi per i controlli di finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)
-

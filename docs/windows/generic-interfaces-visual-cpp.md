@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571175"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650053"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfacce generiche (Visual C++)
 Le restrizioni applicate ai parametri di tipo nelle classi sono identici a quelli che si applicano ai parametri di tipo nelle interfacce (vedere [le classi generiche (C + + / CLI)](../windows/generic-classes-cpp-cli.md)).  
@@ -34,14 +34,14 @@ Le restrizioni applicate ai parametri di tipo nelle classi sono identici a quell
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
 ## <a name="remarks"></a>Note  
  *gli attributi* (facoltativo)  
- Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.  
+ Informazioni dichiarative aggiuntive. Per altre informazioni sugli attributi e classi di attributi, vedere **attributi**.  
   
  *chiave di classi*  
  **classe** o **typename**  

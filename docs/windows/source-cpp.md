@@ -1,5 +1,5 @@
 ---
-title: origine (C++) | Documenti Microsoft
+title: origine (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ee58fb2d500a7194fb08ee18b1af5cc7897830
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07f9c9f93b213b13694f2741b5210614626d82f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889862"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651522"
 ---
 # <a name="source-c"></a>source (C++)
-In una classe, specifica le interfacce di origine dell'oggetto COM per i punti di connessione. In un metodo o proprietà, indica che il membro restituisce un oggetto o una variante di un'origine di eventi.  
+In una classe specifica le interfacce di origine dell'oggetto COM per i punti di connessione. In una proprietà o metodo, indica che il membro restituisce un oggetto o una variante che rappresenta l'origine degli eventi.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ source(  
+[ source(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `interfaces`  
+### <a name="parameters"></a>Parametri  
+ *Interfacce*  
  Una o più interfacce di specificare quando si applica l'origine dell'attributo a una classe. Questo parametro non viene utilizzato quando l'origine viene applicata a una proprietà o metodo.  
   
 ## <a name="remarks"></a>Note  
- Il **origine** attributo C++ ha la stessa funzionalità come il [origine](http://msdn.microsoft.com/library/windows/desktop/aa367166) attributo MIDL.  
+ Il **origine** attributi di C++ ha la stessa funzionalità come la [origine](http://msdn.microsoft.com/library/windows/desktop/aa367166) attributo MIDL.  
   
- È possibile utilizzare il [predefinito](../windows/default-cpp.md) attributo per specificare l'interfaccia di origine predefinito per un oggetto.  
+ È possibile usare la [predefinito](../windows/default-cpp.md) attributo per specificare l'interfaccia di origine predefinita per un oggetto.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cpp_attr_ref_source.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -85,15 +84,15 @@ class NN : public b
   
 |||  
 |-|-|  
-|**Si applica a**|**classe**, `struct`, `interface`|  
+|**Si applica a**|**classe**, **struct**, **interfaccia**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**Coclasse** (quando applicato alla classe o struct)|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|`coclass` (quando applicato alla classe o struct)|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Attributi del metodo](../windows/method-attributes.md)   
  [coclass](../windows/coclass.md)   

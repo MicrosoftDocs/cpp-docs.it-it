@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72f5ee2beca3a3985258b12cea9091665eb74cfa
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8dd9452133267021effd307734b5c5cf55922720
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571262"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642302"
 ---
 # <a name="deferrableeventargs-class"></a>Classe DeferrableEventArgs
 Classe di modello usata per i tipi di argomento evento per rinvii.  
@@ -33,7 +33,7 @@ typename TEventArgsClass
 class DeferrableEventArgs : public TEventArgsInterface  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *TEventArgsInterface*  
  Tipo di interfaccia che dichiara gli argomenti per un evento posticipato.  
   

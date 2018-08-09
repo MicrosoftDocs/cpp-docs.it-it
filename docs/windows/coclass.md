@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463117"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647840"
 ---
 # <a name="coclass"></a>coclass
 Crea un oggetto COM, che è possibile implementare un'interfaccia COM.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ Crea un oggetto COM, che è possibile implementare un'interfaccia COM.
   
 -   Un' [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) macro viene inserita nella mappa COM.
   
- Il nome della coclasse generato nel file IDL per la classe avrà lo stesso nome di classe.  Ad esempio e che fa riferimento all'esempio seguente, per accedere all'ID di classe per una coclasse CMyClass, in un client tramite il file di intestazione generati da MIDL, usare CLSID_CMyClass.  
+ Il nome della coclasse generato nel file IDL per la classe avrà lo stesso nome di classe.  Ad esempio e che fa riferimento all'esempio seguente, per accedere all'ID di classe per una coclasse `CMyClass`, in un client tramite il file di intestazione generati da MIDL, usare `CLSID_CMyClass`.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente viene illustrato come utilizzare il **coclasse** attributo:  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- L'esempio seguente viene illustrato come sostituire l'implementazione predefinita di una funzione che viene visualizzata nel codice inserito per i **coclasse** attributo. Per altre informazioni sulla visualizzazione del codice inserito, vedere [/Fx](../build/reference/fx-merge-injected-code.md) . Tutte le classi di base o interfacce utilizzate per una classe verrà visualizzata nel codice inserito.   Inoltre, se una classe è inclusa per impostazione predefinita nel codice inserito e si specifica in modo esplicito tale classe come base per la coclasse, il provider di attributi utilizzerà il formato specificato nel codice.  
+ L'esempio seguente viene illustrato come sostituire l'implementazione predefinita di una funzione che viene visualizzata nel codice inserito per i **coclasse** attributo. Per altre informazioni sulla visualizzazione del codice inserito, vedere [/Fx](../build/reference/fx-merge-injected-code.md) . Tutte le classi di base o interfacce utilizzate per una classe verrà visualizzata nel codice inserito. Inoltre, se una classe è inclusa per impostazione predefinita nel codice inserito e si specifica in modo esplicito tale classe come base per la coclasse, il provider di attributi utilizzerà il formato specificato nel codice.  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

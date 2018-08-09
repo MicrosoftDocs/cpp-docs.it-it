@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9ea378f75f100bce02cd486139fb0aac5ea5a5ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570652"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648633"
 ---
 # <a name="eventsourceinvokeall-method"></a>Metodo EventSource::InvokeAll
 Chiama ciascun gestore eventi associato all'oggetto corrente [EventSource](../windows/eventsource-class.md) utilizzando i tipi di argomento specificati e gli argomenti dell'oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void InvokeAll();  
 template <  
    typename T0  

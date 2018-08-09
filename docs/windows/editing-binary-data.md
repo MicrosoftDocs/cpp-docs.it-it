@@ -1,5 +1,5 @@
 ---
-title: Modifica di dati binari | Documenti Microsoft
+title: Modifica di dati binari | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5259adc079381ce37da704a67a69b51758cb2aef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24b2a5eeeaa0d07ebfc1cf1a7fcdb1b2b7274f03
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884476"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651716"
 ---
 # <a name="editing-binary-data"></a>Modifica di dati binari
 ### <a name="to-edit-a-resource-in-the-binary-editor"></a>Per modificare una risorsa nell'editor binario  
   
-1.  Selezionare il byte che si desidera modificare.  
+1.  Selezionare il byte di cui che si desidera modificare.  
   
-     Tra le sezioni esadecimale e ASCII dell'editor binario, il tasto TAB sposta lo stato attivo. È possibile utilizzare i tasti PGSU e PGGIÙ per spostarsi tra la risorsa di una schermata alla volta.  
+     Il **della scheda** chiave sposta lo stato attivo tra le sezioni esadecimale e ASCII del **binario** editor. È possibile usare la **PGSU** e **PGGIÙ** tasti per spostarsi tra la risorsa di una schermata alla volta.  
   
 2.  Digitare il nuovo valore.  
   
-     Il valore diventa immediatamente in entrambe le sezioni esadecimale e ASCII e lo stato attivo passa al valore nella riga successivo.  
+     Il valore viene modificato immediatamente in entrambe le sezioni esadecimale e ASCII e lo stato attivo passa al valore nella riga successivo.  
   
     > [!NOTE]
-    >  Quando si chiude l'editor, editor binario accetta automaticamente le modifiche.  
+    >  Il **binario** editor accetta le modifiche automaticamente quando si chiude l'editor.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisiti  
-  
- Nessuno  
+## <a name="requirements"></a>Requisiti   
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Binary Editor](binary-editor.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Scheda Editor finestre, casella degli strumenti | Documenti Microsoft
+title: Scheda Editor finestre, casella degli strumenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,23 +21,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882576"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649422"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Scheda Editor finestre, Casella degli strumenti
-La scheda Editor finestre viene visualizzata nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox) quando si utilizza l'editor finestre. Per aggiungere controlli alla nuova finestra di dialogo, trascinare i controlli dalla casella degli strumenti nella finestra di dialogo creata (per ulteriori informazioni, vedere [aggiunta di un controllo alla finestra di dialogo](adding-a-control-to-a-dialog-box.md)). È quindi possibile spostare i controlli all'interno della finestra oppure modificarne la dimensione e la forma.  
+Il **Editor finestre** verrà visualizzata la scheda nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox) quando si lavora nel **dialogo** editor. Per aggiungere controlli alla nuova finestra di dialogo, trascinare i controlli dal **casella degli strumenti** alla finestra di dialogo che si sta creando (per altre informazioni, vedere [aggiunta di un controllo a una finestra di dialogo](adding-a-control-to-a-dialog-box.md)). È quindi possibile spostare i controlli all'interno della finestra oppure modificarne la dimensione e la forma.  
   
- Nella Casella degli strumenti sono disponibili i controlli standard seguenti:  
+ I controlli standard disponibili nel **casella degli strumenti** sono:  
   
--   [Button (controllo)](../mfc/reference/cbutton-class.md)  
+-   [Controllo Button](../mfc/reference/cbutton-class.md)  
   
--   [Casella di controllo](../mfc/reference/styles-used-by-mfc.md#button-styles)  
+-   [Controllo casella di controllo](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
--   [Casella combinata](../mfc/reference/ccombobox-class.md)  
+-   [Controllo casella combinata](../mfc/reference/ccombobox-class.md)  
   
 -   [Controllo di modifica](../mfc/reference/cedit-class.md)  
   
@@ -55,7 +55,7 @@ La scheda Editor finestre viene visualizzata nel [finestra Casella degli strumen
   
 -   [Controllo barra di scorrimento](../mfc/reference/cscrollbar-class.md)  
   
- Il [controlli comuni di Windows](../mfc/controls-mfc.md) disponibili nella casella degli strumenti incrementano le funzionalità dell'applicazione. e comprendono:  
+ Il [Windows Common Controls](../mfc/controls-mfc.md) disponibile nel **della casella degli strumenti** incrementano le funzionalità nell'applicazione. e comprendono:  
   
 -   [Controllo dispositivo di scorrimento](../mfc/slider-control-styles.md)  
   
@@ -67,7 +67,7 @@ La scheda Editor finestre viene visualizzata nel [finestra Casella degli strumen
   
 -   [Controllo elenco](../mfc/list-control-and-list-view.md)  
   
--   [Controllo struttura ad albero](../mfc/tree-control-styles.md)  
+-   [Controllo albero](../mfc/tree-control-styles.md)  
   
 -   [Controllo struttura a schede](../mfc/tab-controls-and-property-sheets.md)  
   
@@ -83,15 +83,15 @@ La scheda Editor finestre viene visualizzata nel [finestra Casella degli strumen
   
 -   [Controllo personalizzato](custom-controls-in-the-dialog-editor.md)  
   
- È possibile aggiungere controlli personalizzati alla finestra di dialogo selezionando il **controllo personalizzato** icona nella casella degli strumenti e trascinandolo nella finestra di dialogo. Per aggiungere un controllo Syslink, aggiungere un controllo personalizzato, quindi modificare il controllo **classe** proprietà **Syslink**. Le proprietà verranno aggiornate e verranno visualizzate le proprietà del controllo Syslink. Per informazioni sulla classe wrapper MFC, vedere [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
+ È possibile aggiungere controlli personalizzati alla finestra di dialogo selezionando il **controllo personalizzato** icona nel **della casella degli strumenti** e trascinando la finestra di dialogo. Per aggiungere un **Syslink** controllare, aggiungere un controllo personalizzato, quindi modificare il controllo **classe** proprietà **Syslink**. In questo modo le proprietà da aggiornare e visualizzare il **Syslink** proprietà del controllo. Per informazioni sulla classe wrapper MFC, vedere [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
   
- È inoltre possibile [aggiungere controlli ActiveX nella finestra di dialogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+ È anche possibile [aggiungere i controlli ActiveX alla finestra di dialogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- È anche possibile personalizzare la finestra Casella degli strumenti per una maggiore semplicità di utilizzo. Per altre informazioni, vedere [Uso della casella degli strumenti](/visualstudio/ide/using-the-toolbox).  
+ È anche possibile personalizzare il **casella degli strumenti** finestra per semplificare l'utilizzo. Per altre informazioni, vedere [Uso della casella degli strumenti](/visualstudio/ide/using-the-toolbox).  
 
- Per ulteriori informazioni sull'utilizzo del controllo RichEdit 1.0 con MFC, vedere [utilizzo del controllo RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ Per altre informazioni sull'uso di **RichEdit 1.0** controllare con MFC, vedere [utilizzo del controllo RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  
@@ -99,9 +99,8 @@ La scheda Editor finestre viene visualizzata nel [finestra Casella degli strumen
 ## <a name="see-also"></a>Vedere anche  
  [Controlli](../mfc/controls-mfc.md)   
  [Classi di controlli](../mfc/control-classes.md)   
- [Classi di finestra di dialogo](../mfc/dialog-box-classes.md)   
+ [Classi di finestre di dialogo](../mfc/dialog-box-classes.md)   
  [Stili barra di scorrimento](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
  [Esempi di controlli Rich Edit](../mfc/rich-edit-control-examples.md)   
- [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Aggiunta di gestori eventi per i controlli di finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)
-

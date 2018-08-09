@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570363"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649507"
 ---
 # <a name="delegate--c-component-extensions"></a>delegato (Estensioni del componente C++)
 Dichiara un tipo che rappresenta un puntatore a funzione.  
@@ -68,7 +68,7 @@ delegate-type-identifier
  Usare la *delegato-type-identifier* per dichiarare un evento con lo stesso prototipo del delegato. Per altre informazioni, vedere [delegati (C + c++ /CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Common language runtime supporta i delegati con la sintassi seguente.  
@@ -124,10 +124,9 @@ function_declaration
 -   [Delegati generici (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
  Nell'esempio seguente viene illustrato come dichiarare, inizializzare e richiamare delegati.  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 in func1 8  

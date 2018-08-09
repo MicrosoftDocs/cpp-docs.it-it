@@ -1,5 +1,5 @@
 ---
-title: Conversione di bitmap in barre degli strumenti | Documenti Microsoft
+title: Conversione di bitmap in barre degli strumenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e80bee7ef9bfe52abf63ac959475c5d8dbcf0ece
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74829769644c28cf13a6a6a2631f9bbef1e602a9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872627"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645519"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Conversione di bitmap in barre degli strumenti
-È possibile creare una nuova barra degli strumenti mediante la conversione di una bitmap. L'immagine di bitmap converte le immagini dei pulsanti per una barra degli strumenti. La bitmap contiene in genere diverse immagini pulsante su una sola bitmap, con un'icona per ogni pulsante. Le immagini possono essere di qualsiasi dimensione. il valore predefinito è 16 pixel di larghezza e l'altezza dell'immagine. È possibile specificare le dimensioni delle immagini nel pulsante di [la finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md) quando si sceglie di Editor barra degli strumenti dal **immagine** menu nell'editor di immagini.  
+È possibile creare una nuova barra degli strumenti mediante la conversione di una bitmap. L'immagine di bitmap converte le immagini del pulsante per una barra degli strumenti. La mappa di bit contiene in genere numerose immagini pulsante su una singola bitmap, con una sola immagine per ogni pulsante. Le immagini possono essere di qualsiasi dimensione. il valore predefinito è 16 pixel di larghezza e l'altezza dell'immagine. È possibile specificare le dimensioni delle immagini pulsante nel [finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md) quando si sceglie **Editor barra degli strumenti** dal **immagine** menu mentre nell'editor di immagini.  
   
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>Per convertire le bitmap in una barra degli strumenti  
   
-1.  Aprire una risorsa bitmap esistente nel [editor di immagini](../windows/image-editor-for-icons.md). (Se la bitmap non è inclusa nel file RC, fare doppio clic sul file RC, scegliere **importazione** dal menu di scelta rapida, selezionare la bitmap a cui si desidera aggiungere al file RC, quindi fare clic su **aprire**.)  
+1.  Aprire una risorsa bitmap esistente nel [editor di immagini](../windows/image-editor-for-icons.md). (Se la bitmap non è inclusa nel file RC, fare clic sul file RC, scegliere **importazione** dal menu di scelta rapida, passare alla bitmap da aggiungere al file RC, quindi fare clic su **Open**.)  
   
-2.  Dal **immagine** menu, scegliere **Editor barra degli strumenti**.  
+2.  Dal **immagine** menu, scegliere **sulla barra degli strumenti Editor**.  
   
-     Il [la finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md) viene visualizzato. È possibile modificare la larghezza e l'altezza delle immagini icona per la corrispondenza della bitmap. L'immagine della barra degli strumenti viene quindi visualizzato nell'editor barra degli strumenti.  
+     Il [finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md) viene visualizzata. È possibile modificare la larghezza e l'altezza delle immagini icona in modo che corrisponda il bitmap. L'immagine della barra degli strumenti viene quindi visualizzato nell'editor barra degli strumenti.  
   
-3.  Per completare la conversione, modificare il comando **ID** del pulsante utilizzando la [finestra proprietà](/visualstudio/ide/reference/properties-window). Digitare il nuovo **ID** o seleziona un **ID** dall'elenco a discesa.  
+3.  Per completare la conversione, modificare il comando **ID** del pulsante tramite il [finestra proprietà](/visualstudio/ide/reference/properties-window). Digitare il nuovo **ID** oppure selezionare un' **ID** nell'elenco a discesa.  
   
     > [!TIP]
-    >  Finestra delle proprietà contiene un pulsante puntina da disegno nella barra del titolo. Fare clic su questo pulsante Abilita o disabilita Nascondi automaticamente per la finestra. Per scorrere rapidamente tutte le proprietà del pulsante della barra degli strumenti senza dover riaprire le finestre delle proprietà singole, disattivare Nascondi automaticamente in modo che la finestra proprietà rimane ferma.  
+    >  Il **proprietà** finestra contiene un pulsante di puntina da disegno nella barra del titolo. Facendo clic su questo pulsante Abilita o disabilita **Nascondi automaticamente** per la finestra. Per scorrere rapidamente tutte le proprietà del pulsante della barra degli strumenti senza la necessità di riaprire le finestre delle proprietà singole, attivare **Nascondi automaticamente** disattivare in modo che il **proprietà** finestra rimanga fermo.  
   
- È inoltre possibile modificare l'ID di comando del pulsante sulla barra degli strumenti di nuovo usando il [finestra proprietà](/visualstudio/ide/reference/properties-window). Per informazioni sulla modifica la nuova barra degli strumenti, vedere [creazione, spostamento e modifica dei pulsanti della barra degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md).  
+ È inoltre possibile modificare l'ID di comando dei pulsanti sulla barra degli strumenti di nuovo usando il [finestra proprietà](/visualstudio/ide/reference/properties-window). Per informazioni su come modificare la nuova barra degli strumenti, vedere [creazione, spostamento e modifica dei pulsanti della barra degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  MFC o ATL  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di nuove barre degli strumenti](../windows/creating-new-toolbars.md)   
  [Editor barra degli strumenti](../windows/toolbar-editor.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di informazioni sulla versione per un'altra lingua | Documenti Microsoft
+title: Aggiunta di informazioni sulla versione per un altro linguaggio | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 897dc9291c17e916be824915a467ec85a7770548
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857571"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650456"
 ---
 # <a name="adding-version-information-for-another-language"></a>Aggiunta di informazioni sulla versione per un'altra lingua
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>Per aggiungere informazioni sulla versione per un'altra lingua (nuovo blocco di informazioni)  
@@ -42,13 +42,11 @@ ms.locfileid: "33857571"
   
 3.  Nella finestra **Proprietà** , scegliere la lingua appropriata e il set di caratteri per il nuovo blocco.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti 
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor di informazioni sulla versione](../windows/version-information-editor.md)   
  [Informazioni sulla versione (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

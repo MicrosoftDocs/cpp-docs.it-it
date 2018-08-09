@@ -1,5 +1,5 @@
 ---
-title: Attributo destinazioni (estensioni del componente C++) | Documenti Microsoft
+title: Attributo di destinazioni (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f89eb3fcc48d8341190ceb5fe74a25570543e0cd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862023"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645591"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Destinazioni degli attributi (Estensioni del componente C++)
 Gli specificatori di utilizzo degli attributi consentono di specificare le destinazioni degli attributi.  Ogni attributo viene definito per essere applicato a determinati elementi del linguaggio. Ad esempio, un attributo potrebbe essere definito per essere applicato solo alle classi e agli struct.  Nell'elenco seguente vengono mostrati i possibili elementi sintattici per cui può essere utilizzato un attributo personalizzato. È possibile utilizzare combinazioni di questi valori (tramite l'OR logico).  
@@ -31,83 +31,70 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
 -   `All` (si applica a tutti i costrutti)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::All)]  
     ref class Attr : public Attribute {};  
   
     [assembly:Attr];  
-  
     ```  
   
 -   `Assembly` (si applica a un assembly nel suo complesso)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Assembly)]  
     ref class Attr : public Attribute {};  
   
     [assembly:Attr];  
-  
     ```  
   
 -   `Module` (si applica a un modulo nel suo complesso)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Module)]  
     ref class Attr : public Attribute {};  
   
     [module:Attr];  
-  
     ```  
   
 -   `Class`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Class)]  
     ref class Attr : public System::Attribute {};  
   
     [Attr]   // same as [class:Attr]  
     ref class MyClass {};  
-  
     ```  
   
 -   `Struct`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Struct)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [struct:Attr]  
     value struct MyStruct{};  
-  
     ```  
   
 -   `enum`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Enum)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [enum:Attr]  
     enum struct MyEnum{e, d};  
-  
     ```  
   
 -   `Constructor`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Constructor)]  
     ref class Attr : public Attribute {};  
@@ -115,13 +102,11 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
     ref struct MyStruct{  
     [Attr] MyStruct(){}   // same as [constructor:Attr]  
     };  
-  
     ```  
   
 -   `Method`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Method)]  
     ref class Attr : public Attribute {};  
@@ -129,13 +114,11 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
     ref struct MyStruct{  
     [Attr] void Test(){}   // same as [method:Attr]  
     };  
-  
     ```  
   
 -   `Property`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Property)]  
     ref class Attr : public Attribute {};  
@@ -143,13 +126,11 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
     ref struct MyStruct{  
     [Attr] property int Test;   // same as [property:Attr]  
     };  
-  
     ```  
   
 -   `Field`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Field)]  
     ref class Attr : public Attribute {};  
@@ -157,13 +138,11 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
     ref struct MyStruct{  
     [Attr] int Test;   // same as [field:Attr]  
     };  
-  
     ```  
   
 -   `Event`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Event)]  
     ref class Attr : public Attribute {};  
@@ -173,26 +152,22 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
     ref struct MyStruct{  
     [Attr] event ClickEventHandler^ OnClick;   // same as [event:Attr]  
     };  
-  
     ```  
   
 -   `Interface`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Interface)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [event:Attr]  
     interface struct MyStruct{};  
-  
     ```  
   
 -   `Parameter`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Parameter)]  
     ref class Attr : public Attribute {};  
@@ -201,26 +176,22 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
     void Test([Attr] int i);  
     void Test2([parameter:Attr] int i);  
     };  
-  
     ```  
   
 -   `Delegate`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Delegate)]  
     ref class Attr : public Attribute {};  
   
     [Attr] delegate void Test();  
     [delegate:Attr] delegate void Test2();  
-  
     ```  
   
 -   `ReturnValue`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::ReturnValue)]  
     ref class Attr : public Attribute {};  
@@ -229,18 +200,17 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
     // Note required specifier  
     [returnvalue:Attr] int Test() { return 0; }  
     };  
-  
     ```  
   
  In genere, un attributo precede direttamente l'elemento del linguaggio a cui si applica. In alcuni casi, tuttavia, la posizione di un attributo non è sufficiente per determinare la relativa destinazione prevista. Si consideri l'esempio seguente:  
   
-```  
+```cpp  
 [Attr] int MyFn(double x)...  
 ```  
   
  Da un punto di vista sintattico, non è possibile dire se l'attributo è progettato per essere applicato al metodo o al valore restituito del metodo (in questo caso, è impostato in modo predefinito sul metodo). In questi casi, è possibile utilizzare un identificatore di utilizzo degli attributi. Ad esempio, per fare in modo che l'attributo si applichi al valore restituito, utilizzare l'identificatore `returnvalue` come riportato di seguito:  
   
-```  
+```cpp  
 [returnvalue:Attr] int MyFn(double x)... // applies to return value  
 ```  
   
@@ -250,7 +220,7 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
 -   Per specificare che un attributo viene applicato al valore restituito di un metodo e non al metodo:  
   
-    ```  
+    ```cpp  
     [method:Attr] int MyFn(double x)...     // Attr applies to method  
     [returnvalue:Attr] int MyFn(double x)...// Attr applies to return value  
     [Attr] int MyFn(double x)...            // default: method  
@@ -258,7 +228,7 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
 -   Per specificare che un attributo viene applicato alla funzione di accesso di una proprietà e non alla proprietà:  
   
-    ```  
+    ```cpp  
     [method:MyAttr(123)] property int Property()    
     [property:MyAttr(123)] property int Property()  
     [MyAttr(123)] property int get_MyPropy() // default: property  
@@ -266,7 +236,7 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
 -   Per specificare che un attributo viene applicato alla funzione di accesso di un evento e non all'evento:  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     ref struct X {  
        [field:MyAttr(123)] event MyDel* MyEvent;   //field  
@@ -277,13 +247,13 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
  Un identificatore di utilizzo degli attributi si applica solo all'attributo immediatamente successivo, cioè  
   
-```  
+```cpp  
 [returnvalue:Attr1, Attr2]  
 ```  
   
  è diverso da  
   
-```  
+```cpp  
 [returnvalue:Attr1, returnvalue:Attr2]  
 ```  
   
@@ -294,8 +264,7 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
 ### <a name="code"></a>Codice  
   
-```  
-  
+```cpp  
 using namespace System;  
 [AttributeUsage(AttributeTargets::Class | AttributeTargets::Struct, AllowMultiple = true )]  
 ref struct Attr : public Attribute {  

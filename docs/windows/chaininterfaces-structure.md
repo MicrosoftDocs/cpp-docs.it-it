@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461533"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646705"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (struttura)
 Specifica le funzioni di verifica e inizializzazione che possono essere applicate a un set di ID di interfaccia.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *I0*  
  (Obbligatorio) Interfaccia ID 0.  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dai parametri di modello ChainInterface.|  
-|[Metodo ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Viene eseguito il cast del tipo definito per il puntatore di interfaccia di *I0* parametro di modello in un puntatore a IUnknown.|  
+|[Metodo ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dal **ChainInterface** i parametri del modello.|  
+|[Metodo ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Viene eseguito il cast del tipo definito per il puntatore di interfaccia di *I0* parametro di modello in un puntatore a `IUnknown`.|  
 |[Metodo ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Archivia l'ID di interfaccia definito per il *I0* parametro di modello in una posizione specificata in una matrice specificata di ID di interfaccia.|  
 |[Metodo ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Verifica che ogni interfaccia definita dai parametri modello *I0* attraverso *I9* eredita `IUnknown` e/o `IInspectable`e che *I0* eredita da *I1* attraverso *I9*.|  
   

@@ -1,5 +1,5 @@
 ---
-title: L'eliminazione di un'immagine per dispositivo (Editor di immagini per le icone) | Documenti Microsoft
+title: L'eliminazione di un'immagine per dispositivo (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2922526827a4a812f31ebde209f118bd726f5b73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dd35697e6a46ae681286fd9601f7d8cdc022948e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881744"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649835"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>Eliminazione di un'immagine per dispositivo (Editor di immagini per le icone)
 ### <a name="to-delete-a-device-image"></a>Per eliminare un'immagine per dispositivo  
   
-1.  Mentre l'immagine dell'icona è visualizzata nel **immagine** editor, selezionare **Elimina immagine dispositivo** dal **immagine** menu. Quando si elimina l'ultima immagine dell'icona nella risorsa, la risorsa viene anche eliminata.  
+1.  Mentre l'immagine dell'icona viene visualizzata nel **immagine** editor, selezionare **Elimina immagine del dispositivo** dal **immagine** menu. Quando si elimina l'ultima immagine dell'icona nella risorsa, viene eliminata anche la risorsa.  
   
     > [!NOTE]
-    >  Quando si preme il tasto CANC, le immagini e i colori disegnati su un'icona vengono eliminati ma l'icona resta; è ora possibile riprogettare il. Se si preme CANC per errore, è possibile premere CTRL + Z per annullare l'azione.  
+    >  Quando si preme il **CANC** chiave, le immagini e i colori disegnate su un'icona vengono eliminati, ma l'icona resta; è ora possibile riprogettare lo. Se si preme **CANC** intenzionalmente, è possibile premere **Ctrl**+**Z** per annullare l'azione.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

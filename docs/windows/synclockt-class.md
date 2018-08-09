@@ -1,5 +1,5 @@
 ---
-title: SyncLockT (classe) | Documenti Microsoft
+title: SyncLockT (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e05a1be5d84db52573d3c3235936ecf82dde5894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6b27f45d3a9b9b308a56e1ac8f945969f8c49e2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892852"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643426"
 ---
 # <a name="synclockt-class"></a>SyncLockT (classe)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,14 +36,14 @@ template <
 class SyncLockT;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `SyncTraits`  
- Tipo che può diventare proprietari di una risorsa.  
+### <a name="parameters"></a>Parametri  
+ *SyncTraits*  
+ Tipo che può assumere la proprietà di una risorsa.  
   
 ## <a name="remarks"></a>Note  
- Rappresenta un tipo che può richiedere esclusivo o proprietà di una risorsa condivisa.  
+ Rappresenta un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.  
   
- SyncLockT (classe) viene utilizzata, ad esempio, per facilitare l'implementazione di [SRWLock](../windows/srwlock-class.md) classe.  
+ Il **SyncLockT** classe viene utilizzata, ad esempio, per facilitare l'implementazione di [SRWLock](../windows/srwlock-class.md) classe.  
   
 ## <a name="members"></a>Membri  
   
@@ -51,27 +51,27 @@ class SyncLockT;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inizializza una nuova istanza della classe SyncLockT.|  
-|[Distruttore SyncLockT::~SyncLockT](../windows/synclockt-tilde-synclockt-destructor.md)|Deinizializza un'istanza della classe SyncLockT.|  
+|[Costruttore SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inizializza una nuova istanza di **SyncLockT** classe.|  
+|[Distruttore SyncLockT::~SyncLockT](../windows/synclockt-tilde-synclockt-destructor.md)|Deinizializza un'istanza di **SyncLockT** classe.|  
   
 ### <a name="protected-constructors"></a>Costruttori protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inizializza una nuova istanza della classe SyncLockT.|  
+|[Costruttore SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inizializza una nuova istanza di **SyncLockT** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo SyncLockT::IsLocked](../windows/synclockt-islocked-method.md)|Indica se l'oggetto SyncLockT corrente appartiene a una risorsa. l'oggetto SyncLockT è *bloccato*.|  
-|[Metodo SyncLockT::Unlock](../windows/synclockt-unlock-method.md)|Restituisce il controllo della risorsa contenuta nell'oggetto SyncLockT corrente, se presente.|  
+|[Metodo SyncLockT::IsLocked](../windows/synclockt-islocked-method.md)|Indica se l'oggetto corrente **SyncLockT** oggetto proprietario di una risorsa, ovvero, il **SyncLockT** oggetto è *bloccato*.|  
+|[Metodo SyncLockT::Unlock](../windows/synclockt-unlock-method.md)|Controllo della risorsa contenuta nel corrente rilascia **SyncLockT** dell'oggetto, se presente.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati SyncLockT::sync_](../windows/synclockt-sync-data-member.md)|Contiene la risorsa sottostante rappresentata dalla classe SyncLockT.|  
+|[Membro dati SyncLockT::sync_](../windows/synclockt-sync-data-member.md)|Contiene la risorsa sottostante rappresentata dal **SyncLockT** classe.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `SyncLockT`  
@@ -82,5 +82,5 @@ class SyncLockT;
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)   
+ [Microsoft::WRL::Wrappers::Details Namespace](../windows/microsoft-wrl-wrappers-details-namespace.md)   
  [Classe SRWLock](../windows/srwlock-class.md)

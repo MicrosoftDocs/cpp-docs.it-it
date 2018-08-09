@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7811bcc61d5390257b7cbee95e2c504d3e376298
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462937"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641141"
 ---
 # <a name="comptrrefgetaddressof-method"></a>Metodo ComPtrRef::GetAddressOf
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 InterfaceType* const * GetAddressOf() const;  
 ```  
   

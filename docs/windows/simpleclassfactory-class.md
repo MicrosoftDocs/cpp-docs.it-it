@@ -1,5 +1,5 @@
 ---
-title: Classe SimpleClassFactory | Documenti Microsoft
+title: Classe SimpleClassFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21b52876cb2a6c7bbf110a06cdfb29abdf1930d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892761"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641826"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (classe)
 Fornisce un meccanismo semplice per creare una classe base.  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `Base`  
+### <a name="parameters"></a>Parametri  
+ *base*  
  Classe di base.  
   
 ## <a name="remarks"></a>Note  
  La classe di base deve fornire un costruttore predefinito.  
   
- Esempio di codice riportato di seguito viene illustrato come utilizzare SimpleClassFactory con la [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro).  
+ Esempio di codice seguente viene illustrato come utilizzare **SimpleClassFactory** con il [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   
@@ -77,7 +77,7 @@ class SimpleClassFactory : public ClassFactory<>;
  `SimpleClassFactory`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

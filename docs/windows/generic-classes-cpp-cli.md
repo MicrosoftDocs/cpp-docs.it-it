@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570672"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643189"
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 Una classe generica viene dichiarata utilizzando il formato seguente:  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>Note  
  Nella sintassi riportata sopra, vengono usati i termini seguenti:  
   
- `attributes` (facoltativo)  
+ *gli attributi* (facoltativo)  
  Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.  
   
  *chiave di classi*  
@@ -57,7 +57,7 @@ class-body
  *clausole di vincolo*  
  Un elenco (non virgole) di **in cui** clausole che specifica i vincoli per i parametri di tipo. Assume il formato:  
   
- `where`  *il parametro-Type-identifier*`:`*-elenco di vincoli*   `...`  
+ `where`  *il parametro-Type-identifier*`:`*-elenco di vincoli*  `...`  
   
  *elenco di vincoli*  
  *o-interfaccia della classe*[`,` *...* ]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- Il tipo Outer\<int >:: interna non è uguale al tipo Outer\<double >:: interna.  
+ Il tipo `Outer<int>::Inner` non è uguale al tipo di `Outer<double>::Inner`.  
   
  Come con i metodi generici in classi generiche, è possono impostare i parametri di tipo aggiuntivi per il tipo annidato. Se si usano gli stessi nomi di parametro di tipo nella classe interna ed esterna, il parametro di tipo interno nasconde il parametro di tipo esterno.  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  Poiché non esiste alcun modo per fare riferimento al parametro di tipo esterno, il compilatore genera un avviso in questa situazione.  
   
- Se sono costruiti i tipi generici annidati, il parametro di tipo per il tipo esterno non è incluso nell'elenco di parametri di tipo per il tipo interno, anche se il tipo interno in modo implicito con i parametri di parametro di tipo del tipo esterno. In questo caso, un nome di un tipo costruito sarebbe Outer\<int >:: interna\<stringa >.  
+ Se sono costruiti i tipi generici annidati, il parametro di tipo per il tipo esterno non è incluso nell'elenco di parametri di tipo per il tipo interno, anche se il tipo interno in modo implicito con i parametri di parametro di tipo del tipo esterno. In questo caso, sarebbe un nome di un tipo costruito `Outer<int>::Inner<string>`.  
   
  L'esempio seguente illustra la creazione e la lettura di un elenco collegato usando i tipi annidati in classi generiche.  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   Proprietà, eventi, indicizzatori e gli operatori possono usare i parametri di tipo della classe generica che lo contiene come valori restituiti, parametri o variabili locali, ad esempio quando `ItemType` è un parametro di tipo di una classe:  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

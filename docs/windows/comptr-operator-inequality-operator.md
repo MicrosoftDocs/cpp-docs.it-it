@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a4c15946862a66c0d4d830f590230763ce3e6f9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 91b1bb70450cac677abcc886ab2eb911280f86dd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461822"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642090"
 ---
 # <a name="comptroperator-operator"></a>Operatore ComPtr::operator!=
 Indica se due **ComPtr** oggetti non sono uguali.  
@@ -44,7 +44,7 @@ bool operator!=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *a*  
  Un riferimento a un **ComPtr** oggetto.  
   

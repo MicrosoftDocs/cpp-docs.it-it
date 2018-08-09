@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569999"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642334"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 Specifica l'ID di un argomento della Guida in un file con estensione chm o. hlp.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ Specifica l'ID di un argomento della Guida in un file con estensione chm o. hlp.
   
 ### <a name="parameters"></a>Parametri  
  *contextID*  
- Un identificatore di contesto della Guida in linea a 32 bit nel file della Guida.  
+ Un identificatore di contesto della Guida in linea a 32 bit nel **aiutare** file.  
   
 ## <a name="remarks"></a>Note  
  Il **helpstringcontext** attributi di C++ ha la stessa funzionalità come la [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL (attributo).  

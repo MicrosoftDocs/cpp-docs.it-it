@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4bddc5a453e1c3aac43fe58d105ccef863c67808
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466722"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652269"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>Metodo ActivationFactory::GetTrustLevel
 Ottiene il livello di attendibilità dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 STDMETHOD(  
    GetTrustLevel  
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *trustLvl*  
  Quando questa operazione viene completata, il livello di attendibilità del runtime di classe che il **ActivationFactory** crea un'istanza.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario, viene generato un errore di asserzione e *trustLvl* è impostato su FullTrust.  
+ S_OK se l'esito positivo. in caso contrario, viene generato un errore di asserzione e *trustLvl* è impostata su `FullTrust`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** module.h  

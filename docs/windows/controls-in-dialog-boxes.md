@@ -1,5 +1,5 @@
 ---
-title: Controlli delle finestre di dialogo | Documenti Microsoft
+title: I controlli nelle finestre di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: acbbbe0ecf1151f6159799592a8211bcf11fe7a1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873121"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646943"
 ---
 # <a name="controls-in-dialog-boxes"></a>Controlli delle finestre di dialogo
-È possibile aggiungere controlli a una finestra di dialogo utilizzando il [scheda Editor finestre](../windows/dialog-editor-tab-toolbox.md) nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), che consente di scegliere il controllo desiderato e trascinarlo nella finestra di dialogo. Per impostazione predefinita, finestra Casella degli strumenti è impostata l'opzione Nascondi automaticamente. Viene visualizzata come scheda sul margine sinistro della soluzione quando l'editor della finestra di dialogo è aperta. Tuttavia, è possibile aggiungere finestra Casella degli strumenti nella posizione desiderata, fare clic su di **Nascondi automaticamente** pulsante nell'angolo superiore destro della finestra. Per ulteriori informazioni su come controllare il comportamento di questa finestra, vedere [finestra Gestione](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+È possibile aggiungere controlli a una finestra di dialogo tramite il [scheda Editor finestre](../windows/dialog-editor-tab-toolbox.md) nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), che consente di scegliere il controllo desiderato e trascinarlo nella finestra di dialogo. Per impostazione predefinita, la finestra Casella degli strumenti è impostata per l'opzione Nascondi automaticamente. Viene visualizzata come scheda sul margine sinistro della soluzione quando l'editor finestre è aperta. Tuttavia, è possibile aggiungere il **della casella degli strumenti** finestra nella posizione desiderata, fare clic il **Nascondi automaticamente** pulsante nell'angolo superiore destro della finestra. Per altre informazioni su come controllare il comportamento di questa finestra, vedere [gestione delle finestre](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
- Il modo più rapido per aggiungere controlli a una finestra di dialogo, riposizionare i controlli esistenti o spostare i controlli da una finestra di dialogo a altro, consiste nell'utilizzare il metodo di trascinamento e rilascio. La posizione del controllo descritta in una linea punteggiata finché viene eliminato nella finestra di dialogo. Quando si aggiunge un controllo a una finestra di dialogo con il metodo di trascinamento e rilascio, il controllo viene assegnato un'altezza standard appropriata al tipo di controllo.  
+ Il modo più rapido per aggiungere controlli a una finestra di dialogo, riposizionare i controlli esistenti o spostare i controlli da una finestra di dialogo a altro, consiste nell'utilizzare il metodo di trascinamento e rilascio. La posizione del controllo è descritto in una linea punteggiata finché non viene eliminato nella finestra di dialogo. Quando si aggiunge un controllo alla finestra di dialogo con il metodo di trascinamento e rilascio, il controllo ha un'altezza standard appropriata per tale tipo di controllo.  
   
- Quando si aggiunge un controllo alla finestra di dialogo o riposizionarlo, la posizione finale può essere determinata mediante le guide o i margini, o se si è attivata la griglia di layout.  
+ Quando si aggiunge un controllo a una finestra di dialogo o riposizionarlo, la posizione finale può essere determinata mediante le guide o i margini, o se si dispone della griglia di layout attivata.  
   
- Dopo aver aggiunto un controllo nella finestra di dialogo, è possibile modificare le proprietà, ad esempio la didascalia, nel [finestra proprietà](/visualstudio/ide/reference/properties-window). È possibile selezionare più controlli e modificarne le proprietà in una sola volta.  
+ Dopo aver aggiunto un controllo alla finestra di dialogo, è possibile modificare le proprietà, ad esempio la didascalia, nella [finestra proprietà](/visualstudio/ide/reference/properties-window). È possibile selezionare più controlli e modificarne le proprietà in una sola volta.  
   
 -   [Aggiunta, modifica o eliminazione di controlli](adding-editing-or-deleting-controls.md)  
   
@@ -55,13 +55,12 @@ ms.locfileid: "33873121"
   
 -   [Impostazione della posizione e della dimensione di una finestra di dialogo](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Aggiunta di gestori eventi per i controlli di finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Tipi di variabili e controlli finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)   
  [Editor finestre](../windows/dialog-editor.md)
-

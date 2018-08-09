@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb6c655bdc8da5341a28449a25796ad59e453b4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 582a46d35d0fe5327fa15aa0eb235ae8aa8a4cb2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569430"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645506"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>Capovolgimento di un'immagine (Editor di immagini per le icone)
 È possibile capovolgere o ruotare un'immagine da:  
@@ -51,7 +51,6 @@ ms.locfileid: "39569430"
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
-  
  nessuno  
   
 ## <a name="see-also"></a>Vedere anche  

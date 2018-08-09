@@ -1,5 +1,5 @@
 ---
-title: Classe semaforo | Documenti Microsoft
+title: Classe di semaforo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889469"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652636"
 ---
 # <a name="semaphore-class"></a>Semaphore (classe)
-Rappresenta un oggetto di sincronizzazione che controlla una risorsa condivisa in grado di supportare un numero limitato di utenti.  
+Rappresenta un oggetto di sincronizzazione che controlla una risorsa condivisa che può supportare un numero limitato di utenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
@@ -46,7 +45,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore Semaphore::Semaphore](../windows/semaphore-semaphore-constructor.md)|Inizializza una nuova istanza della classe semaforo.|  
+|[Costruttore Semaphore::Semaphore](../windows/semaphore-semaphore-constructor.md)|Inizializza una nuova istanza di **semaforo** classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -58,13 +57,13 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo Semaphore::Lock](../windows/semaphore-lock-method.md)|Attende l'oggetto corrente o l'oggetto associato all'handle specificato, non è in stato segnalato o è trascorso l'intervallo di timeout specificato.|  
+|[Metodo Semaphore::Lock](../windows/semaphore-lock-method.md)|Attende che l'oggetto corrente oppure l'oggetto associato all'handle specificato, si trova nello stato segnalato oppure è trascorso l'intervallo di timeout specificato.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Sposta l'handle specificato da un oggetto semaforo all'oggetto semaforo corrente.|  
+|[Operatore Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Sposta l'handle specificato da un **semaforo** oggetto all'oggetto corrente **semaforo** oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `Semaphore`  

@@ -1,5 +1,5 @@
 ---
-title: Eliminazione di un controllo | Documenti Microsoft
+title: Eliminazione di un controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f779ec16e9ecb47b5958737bc1ca6fe3075cec33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 231e9cd3e49b7e22dfd2a0daa4f7bbc83cc967f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871422"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644918"
 ---
 # <a name="deleting-a-control"></a>Eliminazione di un controllo
 ### <a name="to-delete-a-control"></a>Per eliminare un controllo  
@@ -30,17 +30,15 @@ ms.locfileid: "33871422"
   
      \- oppure -  
   
-2.  Nel **modifica** menu, fare clic su **eliminare**.  
+2.  Nel **Edit** menu, fare clic su **eliminare**.  
   
     > [!TIP]
-    >  Durante l'utilizzo dell'editor finestre, in molti casi, è possibile fare clic sul pulsante destro del mouse per visualizzare un menu di scelta rapida con i comandi usati frequentemente.  
+    >  Quando si usa la **dialogo** editor, in molti casi, è possibile fare clic il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi usati frequentemente.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
-

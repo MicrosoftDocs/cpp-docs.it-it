@@ -1,5 +1,5 @@
 ---
-title: transmit_as | Documenti Microsoft
+title: transmit_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890412"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642525"
 ---
 # <a name="transmitas"></a>transmit_as
 Indica al compilatore di associare un tipo presentato che consentono di modificare le applicazioni client e server, con un tipo trasmesso.  
@@ -30,23 +30,22 @@ Indica al compilatore di associare un tipo presentato che consentono di modifica
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `type`  
- Specifica il tipo di dati trasmesso tra client e server.  
+### <a name="parameters"></a>Parametri  
+ *type*  
+ Specifica il tipo di dati che viene trasmesso tra client e server.  
   
 ## <a name="remarks"></a>Note  
- Il **transmit_as** attributo C++ ha la stessa funzionalità come il [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) attributo MIDL.  
+ Il **transmit_as** attributi di C++ ha la stessa funzionalità come la [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato un utilizzo del **transmit_as** attributo:  
+ Il codice seguente illustra un uso le **transmit_as** attributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -80,14 +79,14 @@ struct _TREE_NODE_TYPE * right;
   
 |||  
 |-|-|  
-|**Si applica a**|`typedef`|  
+|**Si applica a**|**typedef**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   

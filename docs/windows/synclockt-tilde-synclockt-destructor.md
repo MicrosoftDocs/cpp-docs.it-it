@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ SyncLockT distruttore | Documenti Microsoft'
+title: 'SyncLockT:: ~ SyncLockT distruttore | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892735"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646718"
 ---
 # <a name="synclocktsynclockt-destructor"></a>Distruttore SyncLockT::~SyncLockT
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,9 +34,9 @@ Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codi
 ```  
   
 ## <a name="remarks"></a>Note  
- Deinizializza un'istanza della classe SyncLockT.  
+ Deinizializza un'istanza di **SyncLockT** classe.  
   
- Questo distruttore Sblocca anche l'istanza corrente di SyncLockT.  
+ Questo distruttore Sblocca anche l'oggetto corrente **SyncLockT** istanza.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

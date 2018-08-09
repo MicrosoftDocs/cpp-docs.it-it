@@ -1,5 +1,5 @@
 ---
-title: usesgetlasterror | Documenti Microsoft
+title: usesgetlasterror | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 399b9fbbcf4b449f5f91beaea89c403d120d0a21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e5d7144f7e2a6fa3bf6937a377ccad0a711f746
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890275"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647060"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 Indica al chiamante che se si verifica un errore quando si chiama tale funzione, quindi il chiamante può quindi chiamare `GetLastError` per recuperare il codice di errore.  
@@ -30,16 +30,14 @@ Indica al chiamante che se si verifica un errore quando si chiama tale funzione,
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [usesgetlasterror]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **usesgetlasterror** attributo C++ ha la stessa funzionalità come il [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) attributo MIDL.  
+ Il **usesgetlasterror** attributi di C++ ha la stessa funzionalità come la [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Vedere il [idl_module](../windows/idl-module.md) esempio per un esempio di come utilizzare **usesgetlasterror**.  
+ Vedere le [idl_module](../windows/idl-module.md) esempio per un esempio di come usare **usesgetlasterror**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -50,7 +48,7 @@ Indica al chiamante che se si verifica un errore quando si chiama tale funzione,
 |**Si applica a**|**modulo** attributo|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

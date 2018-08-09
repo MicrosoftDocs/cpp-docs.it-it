@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21503e38bb612f935e26f6eaaa93df2097e10445
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7e4866df2d948d02a53b2532b0832f161d07ff8c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465337"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647560"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 Crea un tipo di *puntatore intelligente* che rappresenta l'interfaccia specificata dal parametro di modello. **ComPtr** automaticamente mantiene un conteggio dei riferimenti per il puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template <typename T>  
 class ComPtr;  
   
@@ -37,7 +37,7 @@ template<class T>
 friend class ComPtr;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *T*  
  L'interfaccia che il **ComPtr** rappresenta.  
   

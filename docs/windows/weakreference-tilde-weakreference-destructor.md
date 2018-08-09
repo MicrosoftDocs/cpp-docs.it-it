@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: ~ WeakReference distruttore | Documenti Microsoft'
+title: 'WeakReference:: ~ WeakReference distruttore | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3bfd80e8c6f970fb55b681f193b4ce7c2c0df5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890733"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648607"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>Distruttore WeakReference::~WeakReference
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,12 +36,12 @@ virtual ~WeakReference();
 ## <a name="return-value"></a>Valore restituito  
   
 ## <a name="remarks"></a>Note  
- Deinizializza l'istanza corrente della classe WeakReference.  
+ Deinizializza l'istanza corrente del **WeakReference** classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md) [WeakReference (classe)](../windows/weakreference-class1.md)
+ [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md) [classe WeakReference](../windows/weakreference-class1.md)

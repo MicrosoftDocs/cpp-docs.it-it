@@ -1,5 +1,5 @@
 ---
-title: FileHandleTraits (struttura) | Documenti Microsoft
+title: FileHandleTraits (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b84eaca73111e4b76390bddf55d85305c08c0c22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da8386959fcceead688976afe5da8736618004dc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872783"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652906"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits (struttura)
 Definisce le caratteristiche di un handle di file.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 struct FileHandleTraits : HANDLETraits;  
 ```  
   

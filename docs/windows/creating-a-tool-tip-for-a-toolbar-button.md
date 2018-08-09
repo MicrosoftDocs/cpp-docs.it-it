@@ -1,5 +1,5 @@
 ---
-title: Creazione di una descrizione comando per un pulsante della barra degli strumenti | Documenti Microsoft
+title: Creazione di una descrizione comando per un pulsante della barra degli strumenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41c2fa538a7888a2f14ae34fde9133b2872d13ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27f4c5e3da313352358223de1499ef379db02bd7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871767"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647778"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Creazione di una descrizione comandi per un pulsante della barra degli strumenti
 ### <a name="to-create-a-tool-tip"></a>Per creare una descrizione comando  
   
 1.  Selezionare il pulsante della barra degli strumenti.  
   
-2.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window)nella **prompt dei comandi** campo di proprietà, aggiungere una descrizione del pulsante per la barra di stato; dopo il messaggio, aggiungere \n e il nome della descrizione comandi.  
+2.  Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), nella **dei messaggi di richiesta** campo della proprietà, aggiungere una descrizione del pulsante per la barra di stato; dopo il messaggio, aggiungere `\n` e il nome della descrizione comandi.  
   
- Un esempio comune di descrizione comandi è il pulsante di stampa in WordPad:  
+ Un esempio comune di una descrizione comando è il **Print** sul pulsante **WordPad**:  
   
- 1. Aprire WordPad.  
+ 1. Aprire **WordPad**.  
   
- 2. Posizionare il puntatore del mouse sul **stampa** pulsante della barra degli strumenti.  
+ 2. Posizionare il puntatore del mouse sulle **stampa** pulsante della barra degli strumenti.  
   
- 3. Si noti che la parola "Stampa" ora è mobile sotto il puntatore del mouse.  
+ 3. Si noti che la parola `Print` ora è mobile sotto il puntatore del mouse.  
   
- 4. Nella barra di stato (nella parte inferiore della finestra di WordPad) - ora visualizzato il testo "Stampa il documento attivo".  
+ 4. Nella barra di stato (nella parte inferiore del **WordPad** finestra)-si noti che viene ora visualizzato il testo `Prints the active document`.  
   
- Stampa nel passaggio 3 è il "nome della descrizione comandi" e il messaggio "stampa il documento attivo' dal passaggio 4 è"descrizione del pulsante per la barra di stato".  
+ Il `Print` nel **passaggio 3** è il "nome della descrizione comandi," e il `Prints the active document` dalla **passaggio 4** "descrizione del pulsante della barra di stato".  
   
- Se si desidera che questo effetto utilizzando la **barra degli strumenti** editor, impostare il **Prompt** proprietà **stampa il documento attivo\nStampa**.  
+ Se si desidera che questo effetto usando il **sulla barra degli strumenti** editor, si imposta la **dei messaggi di richiesta** proprietà `Prints the active document\nPrint`.  
   
 > [!NOTE]
->  È possibile modificare il testo del messaggio utilizzando il [finestra proprietà](/visualstudio/ide/reference/properties-window).  
+>  È possibile modificare il testo del messaggio utilizzando la [finestra proprietà](/visualstudio/ide/reference/properties-window).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  MFC o ATL  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione, spostamento e modifica i pulsanti della barra degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Creazione, lo spostamento e modifica dei pulsanti della barra degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Editor barra degli strumenti](../windows/toolbar-editor.md)
-

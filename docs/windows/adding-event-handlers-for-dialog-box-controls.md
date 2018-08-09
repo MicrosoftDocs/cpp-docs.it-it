@@ -18,24 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463756"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642851"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Aggiunta di gestori eventi per i controlli della finestra di dialogo
 
 Per le finestre di dialogo progetto che sono già associate a una classe, è possibile sfruttare alcuni tasti di scelta rapida quando si crea gestori eventi. È possibile creare rapidamente un gestore per l'evento di notifica di controllo predefinito o per qualsiasi messaggio di Windows.
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Per creare un gestore per l'evento di notifica di controllo predefinito
+### <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Per creare un gestore per l'evento di notifica di controllo predefinito
 
-1. Fare doppio clic sul controllo. Si apre l'editor di testo.
+1. Fare doppio clic sul controllo. Il **testo** verrà aperto l'editor.
 
-2. Aggiungere il codice del gestore di controllo notifica nell'editor di testo.
+2. Aggiungere il codice del gestore di controllo notifica nel **testo** editor.
 
-## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Per creare un gestore per qualsiasi messaggio di Windows
+### <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Per creare un gestore per qualsiasi messaggio di Windows
 
 1. Fare clic sul controllo per il quale si desidera gestire l'evento di notifica.
 
@@ -52,12 +52,12 @@ Per le finestre di dialogo progetto che sono già associate a una classe, è pos
     > [!NOTE]
     > In alternativa, selezionare la finestra di dialogo e scegliere il **eventi di controllo** pulsante per visualizzare l'elenco di eventi Windows comuni per tutti i controlli nella finestra di dialogo.
 
-3. Nel **proprietà** finestra, selezionare la colonna destra accanto all'evento da gestire e quindi selezionare il nome di evento di notifica suggerite (ad esempio, **OnBnClickedOK** handle **BN_CLICKED** ).
+3. Nel **delle proprietà** finestra, selezionare la colonna destra accanto all'evento da gestire e quindi selezionare il nome di evento di notifica suggerite (ad esempio, `OnBnClickedOK` gestisce BN_CLICKED).
 
     > [!NOTE]
     > In alternativa, è possibile fornire un nome del gestore eventi di propria scelta, anziché selezionare il nome del gestore eventi predefinito.
 
-   Dopo aver selezionato l'evento, Visual Studio apre l'Editor di testo e visualizza il codice del gestore eventi. Ad esempio, il codice seguente viene aggiunto per impostazione predefinita **OnBnClickedOK**:
+   Dopo aver selezionato l'evento, Visual Studio apre il **Editor di testo** e visualizza il codice del gestore eventi. Ad esempio, il codice seguente viene aggiunto per impostazione predefinita `OnBnClickedOK`:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -68,19 +68,17 @@ Per le finestre di dialogo progetto che sono già associate a una classe, è pos
 
 Se si desidera aggiungere il gestore dell'evento a una classe diverso da quello che implementa la finestra di dialogo, usare il [Creazione guidata gestore eventi](../ide/event-handler-wizard.md). Per altre informazioni, vedere [aggiunta di un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
-### <a name="requirements"></a>Requisiti
-
-Win32
+## <a name="requirements"></a>Requisiti
+ Win32
 
 ## <a name="see-also"></a>Vedere anche
-
-[Eventi di controlli predefiniti](../windows/default-control-events.md)  
-[Definizione di variabili membro per i controlli della finestra di dialogo](../windows/defining-member-variables-for-dialog-controls.md)  
-[Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)  
-[Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)  
-[Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)  
-[Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)  
-[Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)  
-[Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+ [Eventi di controlli predefiniti](../windows/default-control-events.md)  
+ [Definizione di variabili membro per i controlli della finestra di dialogo](../windows/defining-member-variables-for-dialog-controls.md)  
+ [Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)  
+ [Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)  
+ [Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)  
+ [Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)  
+ [Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)  
+ [Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

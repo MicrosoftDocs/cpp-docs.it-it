@@ -1,5 +1,5 @@
 ---
-title: Attivazione o disattivazione della griglia in Pixel (Editor di immagini per le icone) | Documenti Microsoft
+title: Attivazione o disattivazione della griglia in Pixel (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adc8738f35e3018513355275b2dda43b745b011f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31a43e205ad2993f2b70188300800eb8f11fe8c8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882927"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647934"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Attivazione o disattivazione della griglia in pixel (Editor di immagini per le icone)
-Per tutti i riquadri dell'Editor di immagini con un fattore di ingrandimento pari o superiore a 4, è possibile visualizzare una griglia che delimita singoli pixel dell'immagine.  
+Per tutti i **Editor di immagini** riquadri con un fattore di ingrandimento pari a 4 o versione successiva, è possibile visualizzare una griglia che delimita i singoli pixel nell'immagine.  
   
 > [!TIP]
->  Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consente di identificare la funzione di ogni pulsante.  
+>  Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consentono di identificare la funzione di ogni pulsante.  
   
-### <a name="to-display-or-hide-the-pixel-grid"></a>Per visualizzare o nascondere la griglia di pixel  
+### <a name="to-display-or-hide-the-pixel-grid"></a>Per visualizzare o nascondere la griglia in pixel  
   
 1.  Nel **immagine** menu, fare clic su **Impostazioni griglia**.  
   
 2.  Selezionare il **griglia in Pixel** casella di controllo per visualizzare la griglia, o deselezionare la casella per nascondere la griglia.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Riquadri della finestra](../windows/window-panes-image-editor-for-icons.md)
-

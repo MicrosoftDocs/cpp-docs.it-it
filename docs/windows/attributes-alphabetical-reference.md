@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464889"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648178"
 ---
 # <a name="attributes-alphabetical-reference"></a>Riferimento alfabetico agli attributi
 Gli attributi seguenti sono disponibili in Visual C++.  
@@ -118,7 +118,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[satype](../windows/satype.md)|Specifica il tipo di dati di `SAFEARRAY`.|  
 |[size_is](../windows/size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori con dimensioni, ridimensionati i puntatori ai puntatori a dimensioni e unidimensionali o le matrici multidimensionali.|  
 |[source](../windows/source-cpp.md)|Indica che un membro di una classe, proprietà o metodo è un'origine di eventi.|  
-|[string](../windows/string-cpp.md)|Indica che l'oggetto unidimensionale **char**, **wchar_t**, **byte**, o equivalente matrice o del puntatore a una matrice di questo tipo deve essere considerato una stringa.|  
+|[string](../windows/string-cpp.md)|Indica che l'oggetto unidimensionale **char**, **wchar_t**, `byte`, o equivalente matrice o del puntatore a una matrice di questo tipo deve essere considerato una stringa.|  
 |[support_error_info](../windows/support-error-info.md)|Supporta la segnalazione degli errori per l'oggetto di destinazione.|  
 |[switch_is](../windows/switch-is.md)|Specifica l'espressione o un identificatore che agisce come l'unione discriminante che consente di selezionare il membro dell'unione.|  
 |[switch_type](../windows/switch-type.md)|Identifica il tipo della variabile utilizzata come l'unione discriminante.|  

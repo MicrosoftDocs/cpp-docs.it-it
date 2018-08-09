@@ -19,26 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbd2ab9481d8658bac75b62a4afa18f3ff77f0d5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570857"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646257"
 ---
 # <a name="default-c"></a>default (C++)
 Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rappresenta l'interfaccia di programmabilità predefinita.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ default(  
    interface1,  
    interface2  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *interfaccia1*  
  L'interfaccia predefinita che sarà resa disponibile per gli ambienti di script che creano un oggetto basato sulla classe definita con l'attributo **default** .  
   

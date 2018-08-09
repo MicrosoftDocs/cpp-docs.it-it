@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462706"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652371"
 ---
 # <a name="classfactorylockserver-method"></a>Metodo ClassFactory::LockServer
 Incrementa o decrementa il numero di base di oggetti che vengono rilevati tramite il **ClassFactory** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 STDMETHOD(  
    LockServer  
 )(BOOL fLock);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *branco*  
  **true** per incrementare il numero di oggetti registrati. **false** per ridurre il numero di oggetti registrati.  
   
@@ -43,7 +43,7 @@ STDMETHOD(
  S_OK se l'esito positivo. in caso contrario, E_FAIL.  
   
 ## <a name="remarks"></a>Note  
- ClassFactory tiene traccia degli oggetti in un'istanza sottostante del [modulo](../windows/module-class.md) classe.  
+ **ClassFactory** tiene traccia degli oggetti in un'istanza di sottostante la [modulo](../windows/module-class.md) classe.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: VerifyInheritanceHelper (struttura) | Documenti Microsoft
+title: VerifyInheritanceHelper (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889703"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652936"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (struttura)
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,11 +41,11 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `I`  
+### <a name="parameters"></a>Parametri  
+ *I*  
  Tipo.  
   
- `Base`  
+ *base*  
  Un altro tipo.  
   
 ## <a name="remarks"></a>Note  
@@ -57,13 +57,13 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Verifica le due interfacce specificate dai parametri di modello corrente e determina se un'interfaccia è derivata da altra.|  
+|[Metodo VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Testa le due interfacce specificate dai parametri di modello corrente e determina se un'interfaccia è derivata da altra.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `VerifyInheritanceHelper`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

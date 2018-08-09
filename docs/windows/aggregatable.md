@@ -17,48 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b5d94a1e66043a83e2ffb2aa8c1d44d9cbd16cc
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2b18f4c38777076357170540e35fc5515025e126
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467196"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643007"
 ---
 # <a name="aggregatable"></a>aggregatable
 Indica che la classe supporta l'aggregazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ aggregatable(   
    value  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *valore* (facoltativo)  
  Un parametro per indicare quando l'oggetto COM può essere aggregato:  
   
--   **mai** dell'oggetto COM non può essere aggregato.  
+-   `never` L'oggetto COM non può essere aggregata.  
   
--   **consentito** dell'oggetto COM può essere creato direttamente o possono essere aggregati. Questa è l'impostazione predefinita.  
+-   `allowed` È possibile creare l'oggetto COM direttamente o possono essere aggregati. Questa è l'impostazione predefinita.  
   
--   **sempre** dell'oggetto COM non è possibile creare direttamente e possono solo essere aggregato. Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'oggetto aggregando `IUnknown` interfaccia (il controllo `IUnknown`).  
+-   `always` L'oggetto COM non è possibile creare direttamente e può solo essere aggregato. Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'oggetto aggregando `IUnknown` interfaccia (il controllo `IUnknown`).  
   
 ## <a name="remarks"></a>Note  
  Il **aggregabile** attributi di C++ ha la stessa funzionalità come la [aggregabile](http://msdn.microsoft.com/library/windows/desktop/aa366721) attributo MIDL. Ciò significa che il compilatore passerà il **aggregabile** attributo tramite il file con estensione IDL generato.  
   
  Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.  
   
- **Progetti ATL**  
+### <a name="atl-projects"></a>Progetti ATL  
   
  Se questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo cambia. Oltre al comportamento descritto in precedenza, l'attributo aggiunge anche una delle macro seguenti alla classe di destinazione:  
   
 |Valore del parametro|Inserita (macro)|  
 |---------------------|--------------------|  
-|*Mai*|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|*È consentito*|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|*Sempre*|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
+|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
+|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
+|`Always`|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
 ## <a name="example"></a>Esempio  
   

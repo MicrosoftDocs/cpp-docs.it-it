@@ -1,5 +1,5 @@
 ---
-title: 'Weakref:: operator&amp; operatore | Documenti Microsoft'
+title: 'Weakref:: operator&amp; operatore | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890114"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649048"
 ---
-# <a name="weakrefoperatoramp-operator"></a>Weakref:: operator&amp; (operatore)
-Restituisce un oggetto ComPtrRef che rappresenta l'oggetto WeakRef corrente.  
+# <a name="weakrefoperatoramp-operator"></a>Weakref:: operator&amp; operatore
+Restituisce un `ComPtrRef` oggetto che rappresenta l'oggetto corrente **WeakRef** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto ComPtrRef che rappresenta l'oggetto WeakRef corrente.  
+ Oggetto `ComPtrRef` oggetto che rappresenta l'oggetto corrente **WeakRef** oggetto.  
   
 ## <a name="remarks"></a>Note  
- Questo è un operatore di supporto interno che non deve essere utilizzata nel codice.  
+ Si tratta di un operatore di helper interna che non deve essere usato nel codice.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

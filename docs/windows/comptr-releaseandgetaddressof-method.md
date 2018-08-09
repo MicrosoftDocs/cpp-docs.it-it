@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d55241ddefce0e4fcd7f72698779d6e4ec97e20
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3bded6992abc5b22e2c02a3364431a3f68b76ad6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464993"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649848"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>Metodo ComPtr::ReleaseAndGetAddressOf
 Rilascia l'interfaccia associato a questo **ComPtr** e quindi recupera l'indirizzo del [PTR _](../windows/comptr-ptr-data-member.md) membro dei dati, che contiene un puntatore a interfaccia che è stata rilasciata.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 T** ReleaseAndGetAddressOf();  
 ```  
   

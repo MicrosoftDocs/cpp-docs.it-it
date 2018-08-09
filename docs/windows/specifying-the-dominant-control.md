@@ -1,5 +1,5 @@
 ---
-title: Impostazione del controllo dominante | Documenti Microsoft
+title: Impostazione del controllo dominante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07bf73fdcd69866a811cd37af6ef59aef062c01c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c1988e05bbdf8f700688bb4b989cf5576cb86f4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889652"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642916"
 ---
 # <a name="specifying-the-dominant-control"></a>Impostazione del controllo dominante
-Il controllo selezionato per primo è il controllo dominante.  
+Il controllo selezionato è prima di tutto al controllo dominante.  
   
 ### <a name="to-specify-the-dominant-control"></a>Per specificare il controllo dominante  
   
-1.  Tenere premuto il **CTRL** chiave e fare clic sul controllo che si desidera utilizzare per determinare la dimensione o un percorso di altri controlli *prima*.  
+1.  Tenere premuto il **Ctrl** chiave e fare clic sul controllo da usare per determinare la dimensione o la posizione di altri controlli *primo*.  
   
-     **Nota** quadratini di ridimensionamento del controllo dominante sono pieni, mentre gli handle dei controlli subordinati sono vuoti. Ulteriormente il ridimensionamento o l'allineamento è basato sul controllo dominante.  
+     **Nota** quadratini di ridimensionamento del controllo dominante sono pieni, mentre gli handle dei controlli subordinati sono vuoti. Ulteriore operazione di ridimensionamento o l'allineamento è basato sul controllo dominante.  
   
 ### <a name="to-change-the-dominant-control"></a>Per modificare il controllo dominante  
   
-1.  Cancellare la selezione corrente facendo clic all'esterno di tutti i controlli attualmente selezionati.  
+1.  Facendo clic all'esterno di tutti i controlli attualmente selezionati, deselezionare la selezione corrente.  
   
-2.  Ripetere la procedura precedente, prima di selezionare un altro controllo.  
+2.  Ripetere la procedura precedente, selezionare prima un altro controllo.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti 
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Selezione di più controlli](../windows/selecting-multiple-controls.md)   
  [Selezione di controlli](../windows/selecting-controls.md)   
  [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Disabilitazione delle Guide | Documenti Microsoft
+title: Disabilitazione delle Guide | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,44 +18,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7f828fee32e8794589d5f79e0b31ede74f6dfcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f04a2e3c483c17a83cb5ab388c19dd9a2d0adf13
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882089"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651957"
 ---
 # <a name="disabling-guides"></a>Disabilitazione delle guide
-È possibile utilizzare i tasti speciali in combinazione con il mouse per disabilitare l'effetto di blocco delle Guide. Utilizzando il tasto ALT disabilita gli effetti di blocco della Guida selezionata. Spostamento di una Guida con il tasto MAIUSC impedisce lo spostamento con la Guida di controlli bloccati.  
+È possibile usare i tasti speciali in combinazione con il mouse per disabilitare l'effetto di blocco delle Guide. Usando il **Alt** chiave disabilita gli effetti di blocco della Guida selezionata. Lo spostamento di una Guida con i **MAIUSC** chiave che impedisce lo spostamento con la Guida di controlli bloccati.  
   
 ### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Per disabilitare l'effetto di blocco delle Guide  
   
-1.  Trascinare il controllo tenendo premuto il **ALT** chiave.  
+1.  Trascinare il controllo e tenendo premuto il **Alt** chiave.  
   
 ### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Per spostare le guide senza spostare i controlli bloccati  
   
-1.  Trascinare la Guida tenendo premuto il **MAIUSC** chiave.  
+1.  Trascinare la Guida e tenendo premuto il **MAIUSC** chiave.  
   
 ### <a name="to-turn-off-the-guides"></a>Per disattivare le guide  
   
 1.  Dal **formato** menu, scegliere **impostazioni Guide**.  
   
-2.  Nel [finestra di dialogo Impostazioni Guide](../windows/guide-settings-dialog-box.md)in **Guide**selezionare **Nessuno**.  
+2.  Nel [finestra di dialogo Impostazioni Guide](../windows/guide-settings-dialog-box.md), in **Guide**, selezionare **None**.  
   
     > [!NOTE]
-    >  È inoltre possibile fare doppio clic sulla barra del righello per accedere il **impostazioni Guide** la finestra di dialogo.  
+    >  È anche possibile fare doppio clic sulla barra del righello per accedere la **impostazioni della Guida** nella finestra di dialogo.  
   
  \- oppure -  
   
 -   Nel **formato** menu, fare clic su **Attiva/Disattiva guide**.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stati dell'Editor finestre (guide e griglie)](../windows/dialog-editor-states-guides-and-grids.md)   
  [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
-

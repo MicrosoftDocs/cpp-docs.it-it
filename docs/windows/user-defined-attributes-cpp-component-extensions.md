@@ -1,5 +1,5 @@
 ---
-title: Attributi (estensioni del componente C++) definiti dall'utente | Documenti Microsoft
+title: Definito dall'utente di attributi (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e09d3c285c64f049cc8e1bb8aea1c5debe88932
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891766"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644128"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Attributi definiti dall'utente (Estensioni del componente C++)
-Attributi personalizzati consentono di estendere i metadati di un'interfaccia, classe o struttura, metodo, parametro o enumerazione.  
+Gli attributi personalizzati consentono di estendere i metadati di un'interfaccia, classe o struttura, metodo, parametro o enumerazione.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
  Tutti i Runtime supportano gli attributi personalizzati.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- C + + CX attributi supportano solo le proprietà, ma l'attributo non costruttori o metodi.  
+ C + + / attributi CX supportano solo le proprietà, ma non attributo costruttori o metodi.  
   
 ### <a name="remarks"></a>Note  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Attributi personalizzati consentono di estendere i metadati di un elemento gestito. Per altre informazioni, vedere [Attributi](/dotnet/standard/attributes/index).  
+ Gli attributi personalizzati consentono di estendere i metadati di un elemento gestito. Per altre informazioni, vedere [Attributi](/dotnet/standard/attributes/index).  
   
 ### <a name="remarks"></a>Note  
- Le informazioni e la sintassi riportata in questo argomento è progettato per sostituire le informazioni presentate [attributo](../windows/attribute.md).  
+ Le informazioni e la sintassi elencate in questo argomento è destinato a sostituire le informazioni visualizzate nelle [attributo](../windows/attribute.md).  
   
- È possibile definire un attributo personalizzato che definisce un tipo e apportando <xref:System.Attribute> una classe di base per il tipo e, facoltativamente, l'applicazione di <xref:System.AttributeUsageAttribute> attributo.  
+ È possibile definire un attributo personalizzato che definisce un tipo e apportando <xref:System.Attribute> una classe di base per il tipo e, facoltativamente, applicare il <xref:System.AttributeUsageAttribute> attributo.  
   
- Ad esempio, in Microsoft Transaction Server (MTS) 1.0, il comportamento relativo a transazioni, la sincronizzazione, il bilanciamento del carico e così via è stato specificato mediante GUID personalizzati inseriti nella libreria dei tipi utilizzando l'attributo personalizzato ODL. Di conseguenza, un client di un server MTS è stato possibile determinare le caratteristiche, leggere la libreria dei tipi. In .NET Framework, l'equivalente della libreria dei tipi è metadati e l'equivalente dell'attributo personalizzato ODL è attributi personalizzati. Inoltre, durante la lettura della libreria dei tipi è analoga a tramite la reflection sui tipi.  
+ Ad esempio, in Microsoft Transaction Server (MTS) 1.0, il comportamento per quanto riguarda le transazioni, sincronizzazione, il bilanciamento del carico e così via specificata tramite GUID personalizzati inseriti nella libreria dei tipi mediante l'attributo personalizzato ODL. Di conseguenza, un client di un server MTS è stato possibile determinare le caratteristiche, leggere la libreria dei tipi. In .NET Framework, l'equivalente della libreria dei tipi è costituita da metadati e analogico dell'attributo personalizzato ODL è costituita dagli attributi personalizzati. Inoltre, la lettura della libreria dei tipi è analoga all'uso della reflection sui tipi.  
   
  Per ulteriori informazioni, vedere,  
   
@@ -56,10 +56,9 @@ Attributi personalizzati consentono di estendere i metadati di un'interfaccia, c
  Per informazioni sulla firma degli assembly in Visual C++, vedere [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
  L'esempio seguente viene illustrato come definire un attributo personalizzato.  
   
@@ -78,9 +77,7 @@ ref struct Attr : public Attribute {
 ref class MyClass {};  
 ```  
   
- **Esempio**  
-  
- L'esempio seguente illustra alcune importanti funzionalità di attributi personalizzati. Ad esempio, questo esempio viene illustrato un utilizzo comune di attributi personalizzati: creazione di un server che è possibile descrivere completamente se stessa ai client.  
+ L'esempio seguente illustra alcune importanti funzionalità di attributi personalizzati. Ad esempio, in questo esempio viene illustrato un utilizzo comune di attributi personalizzati: creazione di un server completamente descrivere se stesso ai client.  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -171,13 +168,11 @@ Service Priority = 1
 Service Access = Read  
 ```  
   
- **Esempio**  
+ Il `Object^` tipo sostituisce il tipo di dati variant. L'esempio seguente definisce un attributo personalizzato che accetta una matrice di `Object^` come parametri.  
   
- L'oggetto ^ tipo sostituisce il tipo di dati variant. L'esempio seguente definisce un attributo personalizzato che accetta una matrice di oggetti ^ come parametri.  
+ Gli argomenti degli attributi devono essere costanti in fase di compilazione; Nella maggior parte dei casi, devono essere valori letterali costanti.  
   
- Gli argomenti di attributo devono essere costanti in fase di compilazione. Nella maggior parte dei casi, dovrebbero essere valori letterali costanti.  
-  
- Vedere [typeid](../windows/typeid-cpp-component-extensions.md) per informazioni su come restituire un valore di System:: Type di un blocco di attributi personalizzati.  
+ Visualizzare [typeid](../windows/typeid-cpp-component-extensions.md) per informazioni su come restituire un valore di System:: Type di un blocco di attributi personalizzati.  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -195,9 +190,7 @@ public:
 public ref class SomeClass {};  
 ```  
   
- **Esempio**  
-  
- Il runtime richiede che la parte pubblica della classe di attributi personalizzati deve essere serializzabile.  Durante la creazione di attributi personalizzati, denominati argomenti dell'attributo personalizzato sono limitati alle costanti in fase di compilazione.  (Considerare come una sequenza di bit aggiunta al layout della classe nei metadati.)  
+ Il runtime richiede che la parte pubblica della classe attribute personalizzata deve essere serializzabile.  Durante la creazione di attributi personalizzati, gli argomenti denominati dell'attributo personalizzato sono limitati alle costanti in fase di compilazione.  (Considerarla come una sequenza di bit aggiunti al layout della classe nei metadati.)  
   
 ```cpp  
 // extending_metadata_f.cpp  

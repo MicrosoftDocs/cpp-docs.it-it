@@ -1,5 +1,5 @@
 ---
-title: Allineamento di gruppi di controlli | Documenti Microsoft
+title: Allineamento di gruppi di controlli | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,44 +15,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 743176ed52004a37718ae69db3693dde07ca7391
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac1c04f51b2e05213223ca3e20e4a4fcc3e54e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858341"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651808"
 ---
 # <a name="aligning-groups-of-controls"></a>Allineamento di gruppi di controlli
 La procedura seguente viene illustrato come allineare gruppi di controlli.  
   
-### <a name="to-align-groups-of-controls"></a>Per allineare gruppi di controlli  
+### <a name="to-align-groups-of-controls"></a>Per allineare i gruppi di controlli  
   
-1.  [Selezionare i controlli](../windows/selecting-multiple-controls.md) che si desidera allineare. Assicurarsi di selezionare il controllo che si desidera essere prima del controllo dominante o impostare il valore per il controllo dominante prima di eseguire l'allineamento o comando di ridimensionamento.  
+1.  [Selezionare i controlli](../windows/selecting-multiple-controls.md) che si desidera allineare. Assicurarsi di selezionare il controllo che si desidera essere prima di tutto al controllo dominante o impostarlo in modo che sia il controllo dominante prima di eseguire l'allineamento o comando di ridimensionamento.  
   
-     La posizione finale del gruppo di controlli dipende dalla posizione del controllo dominante. Per ulteriori informazioni sulla selezione del controllo dominante, vedere [specifica del controllo dominante](../windows/specifying-the-dominant-control.md).  
+     L'ultima posizione del gruppo di controlli dipende dalla posizione del controllo dominante. Per altre informazioni sulla selezione del controllo dominante, vedere [impostazione del controllo dominante](../windows/specifying-the-dominant-control.md).  
   
 2.  Dal **formato** menu, scegliere **Align**e quindi scegliere una delle seguenti allineamenti:  
   
-    -   **A sinistra**: consente di allineare i controlli selezionati lungo il lato sinistro.  
+    -   `Lefts`: consente di allineare i controlli selezionati lungo il lato sinistro.  
   
-    -   **Centri**: consente di allineare i controlli selezionati in senso orizzontale lungo il punto centrale.  
+    -   `Centers`: consente di allineare i controlli selezionati in senso orizzontale lungo il punto centrale.  
   
-    -   **Diritti**: consente di allineare i controlli selezionati lungo il lato destro.  
+    -   `Rights`: consente di allineare i controlli selezionati lungo il lato destro.  
   
-    -   **In alto**: consente di allineare i controlli selezionati lungo il bordo superiore.  
+    -   `Tops`: consente di allineare i controlli selezionati lungo il bordo superiore.  
   
-    -   **In mezzo**: consente di allineare i controlli selezionati verticalmente lungo il punto centrale.  
+    -   `Middles`: consente di allineare i controlli selezionati verticalmente lungo il punto centrale.  
   
-    -   **In basso**: consente di allineare i controlli selezionati lungo il bordo inferiore.  
+    -   `Bottoms`: consente di allineare i controlli selezionati lungo il bordo inferiore.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Disposizione dei controlli nelle finestre di dialogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
- [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
+ [Controlli nelle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
-

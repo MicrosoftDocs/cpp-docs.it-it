@@ -1,5 +1,5 @@
 ---
-title: 'Costruttore synclockt:: Synclockt | Documenti Microsoft'
+title: 'Costruttore synclockt:: Synclockt | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889842"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648165"
 ---
 # <a name="synclocktsynclockt-constructor"></a>Costruttore SyncLockT::SyncLockT
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,17 +39,17 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `other`  
- Un riferimento rvalue a un altro oggetto SyncLockT.  
+### <a name="parameters"></a>Parametri  
+ *other*  
+ Un riferimento rvalue a un altro **SyncLockT** oggetto.  
   
- `sync`  
- Un riferimento a un altro oggetto SyncLockWithStatusT.  
+ *sync*  
+ Un riferimento a un altro `SyncLockWithStatusT` oggetto.  
   
 ## <a name="remarks"></a>Note  
- Inizializza una nuova istanza della classe SyncLockT.  
+ Inizializza una nuova istanza di **SyncLockT** classe.  
   
- Il primo costruttore inizializza l'oggetto SyncLockT corrente da un altro oggetto SyncLockT specificato dal parametro `other`e quindi invalida l'altro oggetto SyncLockT. Il secondo costruttore viene `protected`e inizializza l'oggetto SyncLockT corrente a uno stato non valido.  
+ Il primo costruttore inizializza l'oggetto corrente **SyncLockT** da un altro oggetto **SyncLockT** oggetto specificato dal parametro *altri*e quindi invalida l'altri  **SyncLockT** oggetto. Il secondo costruttore viene **protette**e la inizializza corrente **SyncLockT** oggetto da uno stato non valido.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

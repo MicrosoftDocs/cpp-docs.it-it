@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 417ca38ab44d334fd26c503edc2727934983c39d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463941"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648142"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>Costante ChainInterfaces::IidCount
 Il numero totale di interfaccia ID contenuti nelle interfacce specificate dai parametri modello *I0* attraverso *I9*.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Metodo weakref:: CopyTo | Documenti Microsoft'
+title: 'Metodo weakref:: CopyTo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 817d984e995e7ac33ba80f978a282a8c0bac3e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890635"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652747"
 ---
 # <a name="weakrefcopyto-method"></a>Metodo WeakRef::CopyTo
 Assegna un puntatore a un'interfaccia, se disponibile, per la variabile del puntatore specificato.  
@@ -45,23 +45,23 @@ HRESULT CopyTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `U`  
- Puntatore a un'interfaccia IInspectable. Se `U` non è derivato da IInspectable, viene generato un errore.  
+### <a name="parameters"></a>Parametri  
+ *U*  
+ Puntatore a un `IInspectable` interfaccia. Viene generato un errore se *U* non è derivato da `IInspectable`.  
   
- `riid`  
- ID di interfaccia. Se `riid` non è derivato da **IWeakReference**, viene generato un errore.  
+ *riid*  
+ ID di interfaccia. Viene generato un errore se *riid* non è derivato da `IWeakReference`.  
   
- `ptr`  
- Puntatore indiretto doppio IInspectable o IWeakReference.  
+ *ptr*  
+ Un puntatore indiretto doppio `IInspectable` o `IWeakReference`.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se riesce; in caso contrario, HRESULT che descrive l'errore. Per altre informazioni, vedere la sezione Note.  
+ S_OK se riesce; in caso contrario, HRESULT che descrive l'errore. Per altre informazioni, vedere **Note**.  
   
 ## <a name="remarks"></a>Note  
- Il valore restituito S_OK indica che l'operazione è riuscita, ma non se il riferimento debole è stato risolto in un riferimento forte. Se viene restituito S_OK, verificare che il parametro `p` sia un riferimento forte, ossia che il parametro `p` non sia uguale a `nullptr`.  
+ Il valore restituito S_OK indica che l'operazione è riuscita, ma non se il riferimento debole è stato risolto in un riferimento forte. Se viene restituito S_OK, verificare che il parametro *p* è un forte riferimento, vale a dire parametro *p* non è uguale a **nullptr**.  
   
- A partire da Windows 10 SDK, questo metodo non imposta l'istanza di WeakRef su `nullptr` se non è stato ottenuto il riferimento debole. Si consiglia, quindi, di non usare un codice per il controllo degli errori che verifica WeakRef per `nullptr`. Controllare invece `ptr` per `nullptr`.  
+ A partire da Windows 10 SDK, questo metodo non imposta il **WeakRef** istanza **nullptr** se non è stato possibile ottenere il riferimento debole, pertanto, evitare errori di controllo del codice che verifica WeakRef per **nullptr**. Controllare invece *ptr* per **nullptr**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

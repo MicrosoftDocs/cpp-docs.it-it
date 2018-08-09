@@ -1,5 +1,5 @@
 ---
-title: FactoryCache (struttura) | Documenti Microsoft
+title: FactoryCache (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04356316b67f3c341fe1dd1821750fcd3136aa40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874031"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647547"
 ---
 # <a name="factorycache-structure"></a>FactoryCache (struttura)
-Supporta l'infrastruttura di libreria di modelli di Windows Runtime C++ e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura di libreria modelli C++ per Windows Runtime e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 struct FactoryCache;  
 ```  
   
 ## <a name="remarks"></a>Note  
- Contiene il percorso di una class factory e un valore che identifica un registrati wrt o oggetto di classe COM.  
+ Contiene il percorso di una class factory e un valore che identifica un oggetto registrato wrt o oggetto di classe COM.  
   
 ## <a name="members"></a>Membri  
   
@@ -49,7 +49,7 @@ struct FactoryCache;
  `FactoryCache`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   

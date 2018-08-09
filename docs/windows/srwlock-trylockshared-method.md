@@ -1,5 +1,5 @@
 ---
-title: 'Metodo SRWLOCK:: Trylockshared | Documenti Microsoft'
+title: 'Metodo SRWLOCK:: Trylockshared | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892283"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645812"
 ---
 # <a name="srwlocktrylockshared-method"></a>Metodo SRWLock::TryLockShared
-Tenta di acquisire un oggetto SRWLock in modalità condivisa per l'oggetto SRWLock corrente o specificata.  
+Prova ad acquisire un **SRWLock** oggetto in modalità condivisa per il correnti o specificate **SRWLock** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,12 +36,12 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `lock`  
- Puntatore a un oggetto SRWLock.  
+### <a name="parameters"></a>Parametri  
+ *lock*  
+ Puntatore a un **SRWLock** oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, un oggetto SRWLock in modalità condivisa e il thread chiamante diventa proprietario del blocco. In caso contrario, un SRWLock oggetto il cui stato non è valido.  
+ Se ha esito positivo, un **SRWLock** oggetto in modalità condivisa e il thread chiamante assume la proprietà del blocco. In caso contrario, un **SRWLock** oggetto il cui stato non è valido.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

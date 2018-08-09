@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fab750ce655add3ccdac9d955e1e3a36e46f8cc5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dc9ec0c0c68c2941991d0820265b9ee1499bf7cb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465129"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650833"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>Metodo AsyncBase::get_ErrorCode
 Recupera il codice di errore per l'operazione asincrona corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 STDMETHOD(  
    get_ErrorCode  
 )(HRESULT* errorCode) override;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *codice di errore*  
  Il percorso in cui è archiviato il codice di errore corrente.  
   

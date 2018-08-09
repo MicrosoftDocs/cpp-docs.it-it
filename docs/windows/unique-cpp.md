@@ -1,5 +1,5 @@
 ---
-title: Unique (C++) | Documenti Microsoft
+title: Unique (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 826d296e4c11571151ff0cd3265465b4307d2d92
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890136"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643965"
 ---
 # <a name="unique-c"></a>unique (C++)
 Specifica un puntatore univoco.  
@@ -30,16 +30,14 @@ Specifica un puntatore univoco.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 [unique]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **univoco** attributo C++ ha la stessa funzionalità come il [univoco](http://msdn.microsoft.com/library/windows/desktop/aa367294) attributo MIDL.  
+ Il **univoco** attributi di C++ ha la stessa funzionalità come la [univoco](http://msdn.microsoft.com/library/windows/desktop/aa367294) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Vedere il [ref](../windows/ref-cpp.md) esempio per un esempio dell'uso di **univoco**.  
+ Vedere le [ref](../windows/ref-cpp.md) per un esempio dell'uso di esempio **univoco**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -47,14 +45,14 @@ Specifica un puntatore univoco.
   
 |||  
 |-|-|  
-|**Si applica a**|`typedef`, `struct`, **union**, parametro di interfaccia, metodo di interfaccia|  
+|**Si applica a**|**typedef**, **struct**, **union**, parametro di interfaccia, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Attributi di parametro](../windows/parameter-attributes.md)   

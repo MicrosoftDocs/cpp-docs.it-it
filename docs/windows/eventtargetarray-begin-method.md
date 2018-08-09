@@ -1,5 +1,5 @@
 ---
-title: 'Metodo eventtargetarray:: begin | Documenti Microsoft'
+title: 'Metodo eventtargetarray:: begin | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef0c9726b089c798ff8b9a98a04da40099cf888a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b5dc081a24495fc8939f3069dc68bed4f75beaaf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871588"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642825"
 ---
 # <a name="eventtargetarraybegin-method"></a>Metodo EventTargetArray::Begin
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 ComPtr<IUnknown>* Begin();  
 ```  
   
@@ -45,5 +45,5 @@ ComPtr<IUnknown>* Begin();
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [EventTargetArray (classe)](../windows/eventtargetarray-class.md)   
+ [Classe EventTargetArray](../windows/eventtargetarray-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

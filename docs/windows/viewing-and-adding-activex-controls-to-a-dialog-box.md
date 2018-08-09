@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione e aggiunta di controlli ActiveX a una finestra di dialogo | Documenti Microsoft
+title: Visualizzazione e aggiunta di controlli ActiveX in una finestra di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61448cba890c03feaf2d9fcbda5cdb93478f4c04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad663760efb5f969a7b7cf1b14d187b0382197b7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891166"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643978"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Visualizzazione e aggiunta di controlli ActiveX in una finestra di dialogo
 Visual Studio consente di inserire controlli ActiveX nella finestra di dialogo.  
@@ -46,21 +46,19 @@ Visual Studio consente di inserire controlli ActiveX nella finestra di dialogo.
      Il controllo viene visualizzato nella finestra di dialogo, in cui è possibile modificarlo o creare i relativi gestori, come per qualsiasi altro controllo.  
   
     > [!NOTE]
-    >  È possibile aggiungere controlli ActiveX alla [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox). Per altre informazioni, vedere [Gestione di elementi e schede nella Casella degli strumenti](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db).  
+    >  È possibile aggiungere controlli ActiveX alla [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox). Per altre informazioni, vedere [gestione di elementi e le schede della casella degli strumenti](http://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).  
   
     > [!CAUTION]
     >  Potrebbe non essere legalmente consentito distribuire tutti i controlli ActiveX nel sistema. Fare riferimento al contratto di licenza del software che ha installato i controlli o contattare il produttore del software.  
   
-     È possibile inserire controlli nella finestra Casella degli strumenti per semplificare l'accesso. Per altre informazioni, vedere [Finestra di dialogo Personalizza Casella degli strumenti](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb).  
+     È possibile inserire controlli nella finestra Casella degli strumenti per semplificare l'accesso. Per altre informazioni, vedere [finestra di dialogo Personalizza casella degli strumenti](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
+ [Controlli nelle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
-

@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b64f44e2188848a25e607c53171e25aa721e9bc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466010"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641366"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>Metodo CriticalSectionTraits::Unlock
-Un modello CriticalSection è specializzata in modo che supporti il rilascio del proprietario dell'oggetto specificato sezione critica.  
+Specializza un `CriticalSection` modello in modo che non supporta il rilascio del proprietario dell'oggetto specificato sezione critica.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type cs  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *cs*  
  Un puntatore a un oggetto sezione critica.  
   
 ## <a name="remarks"></a>Note  
- Il *tipo* modificatore viene definito come `typedef CRITICAL_SECTION* Type;`.  
+ Il modificatore di `Type` viene definito come `typedef CRITICAL_SECTION* Type;`.  
   
- Per altre informazioni, vedere "Function LeaveCriticalSection" nella sezione "Funzioni di sincronizzazione" della documentazione dell'API di Windows.  
+ Per altre informazioni, vedere **funzione LeaveCriticalSection** nel **funzioni di sincronizzazione** sezione della documentazione dell'API di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione di un Menu come Menu a comparsa | Documenti Microsoft
+title: Visualizzazione di un Menu come Menu a comparsa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c97eef61917fec0e068b25116b96b8dd7db41eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891030"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652201"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Visualizzazione di un menu come menu di scelta rapida
 In genere, quando si usa l'Editor dei menu, viene visualizzata una risorsa di menu come barra dei menu. Tuttavia, potrebbero esserci risorse di menu che vengono aggiunte alla barra dei menu dell'applicazione durante l'esecuzione del programma.  
@@ -35,12 +35,9 @@ In genere, quando si usa l'Editor dei menu, viene visualizzata una risorsa di me
     > [!NOTE]
     >  Per modificare la visualizzazione della barra dei menu, fare clic su **Visualizza come Popup** nuovamente (che consente di rimuovere il segno di spunta e restituisce la visualizzazione della barra dei menu).  
   
-
-  
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di menu di scelta rapida](../windows/creating-pop-up-menus.md)   
+ [Creazione di menu a comparsa](../windows/creating-pop-up-menus.md)   
  [Editor dei menu](../windows/menu-editor.md)   

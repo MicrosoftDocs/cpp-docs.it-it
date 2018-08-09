@@ -20,26 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb77d43dabe223308ae3eb0c34ec22d0c1624e2e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466930"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646666"
 ---
 # <a name="aggregates"></a>aggregati
 Indica che l'oggetto aggrega l'oggetto specificato dal CLSID.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *clsid*  
  Specifica il CLSID dell'oggetto aggregabile.  
   
@@ -51,7 +51,7 @@ Indica che l'oggetto aggrega l'oggetto specificato dal CLSID.
   
  Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.  
   
- **Progetti ATL**  
+### <a name="atl-projects"></a>Progetti ATL  
   
  Se questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo cambia. In primo luogo, alla mappa COM dell'oggetto di destinazione viene aggiunta la voce seguente:  
   

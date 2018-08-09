@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1f06fe8c88c30caa59bdd6ced4cff22d65e31ee
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 501f2d8a8747e631c108f0f02f4ed876d912b70e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568699"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648489"
 ---
 # <a name="composablebase-class"></a>Classe ComposableBase
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<  
    typename FactoryInterface = IInspectable  
 >  

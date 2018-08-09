@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d518756d3dad234ee98a3267088eb58b6122bcf9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 32f8a643b8a960c4d5055a94abfaea5e0a911ed7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466826"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646098"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Tasti di scelta rapida per l'editor finestre
 Di seguito sono quelli predefiniti tasti di scelta rapida per i comandi dell'editor finestre. Per modificare i tasti di scelta rapida, fare clic su **opzioni** nel **strumenti** menu, quindi scegliere **tastiera** sotto il **ambiente** cartella. Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
@@ -32,25 +32,25 @@ Di seguito sono quelli predefiniti tasti di scelta rapida per i comandi dell'edi
   
 |Comando|Tasti|Descrizione|  
 |-------------|----------|-----------------|  
-|Format.AlignBottoms|CTRL + MAIUSC + FRECCIA GIÙ|Consente di allineare i bordi inferiore dei controlli selezionati con il controllo dominante|  
-|Format.AlignCenters|MAIUSC + F9|Consente di allineare l'asse verticale dei controlli selezionati con il controllo dominante|  
-|Format.AlignLefts|CTRL + MAIUSC + FRECCIA SINISTRA|Allinea il bordo sinistro dei controlli selezionati con il controllo dominante|  
-|Format.AlignMiddles|F9|Consente di allineare l'asse orizzontale dei controlli selezionati con il controllo dominante|  
-|Format.AlignRights|CTRL + MAIUSC + FRECCIA DESTRA|Allinea il bordo destro dei controlli selezionati con il controllo dominante|  
-|Format.AlignTops|CTRL + MAIUSC + FRECCIA SU|Allinea il bordo superiore dei controlli selezionati con il controllo dominante|  
-|Format.ButtonBottom|CTRL + B|Colloca i pulsanti selezionati in basso al centro della finestra di dialogo|  
-|Format.ButtonRight|CTRL + R|Colloca i pulsanti selezionati nell'angolo superiore destro della finestra di dialogo|  
-|Format.CenterHorizontal|CTRL + MAIUSC + F9|Data Center i controlli orizzontalmente nella finestra di dialogo|  
-|Format.CenterVertical|CTRL + F9|Data Center i controlli verticalmente nella finestra di dialogo|  
-|Format.CheckMnemonics|CTRL + M|Controlla l'univocità dei tasti di scelta|  
-|Format.SizeToContent|MAIUSC + F7|Ridimensiona i controlli selezionati per adattarsi al testo della didascalia|  
-|Format.SpaceAcross|ALT + FRECCIA SINISTRA|Distribuire uniformemente i controlli selezionati orizzontalmente|  
-|Format.SpaceDown|ALT + FRECCIA GIÙ|Distribuire uniformemente i controlli selezionati in verticale|  
-|Format.TabOrder|CTRL + D|Imposta l'ordine dei controlli nella finestra di dialogo|  
-|Format.TestDialog|CTRL + T|La finestra di dialogo per verificarne l'aspetto e comportamento di esecuzione|  
-|Format.ToggleGuides|CTRL + G|Consente di alternare alcuna griglia, la griglia e guide per la finestra di dialogo Modifica|  
+|Format.AlignBottoms|**CTRL** + **MAIUSC** + **freccia giù**|Consente di allineare i bordi inferiore dei controlli selezionati con il controllo dominante|  
+|Format.AlignCenters|**Shift** + **F9**|Consente di allineare l'asse verticale dei controlli selezionati con il controllo dominante|  
+|Format.AlignLefts|**CTRL** + **MAIUSC** + **freccia sinistra**|Allinea il bordo sinistro dei controlli selezionati con il controllo dominante|  
+|Format.AlignMiddles|**F9**|Consente di allineare l'asse orizzontale dei controlli selezionati con il controllo dominante|  
+|Format.AlignRights|**CTRL** + **MAIUSC** + **freccia destra**|Allinea il bordo destro dei controlli selezionati con il controllo dominante|  
+|Format.AlignTops|**CTRL** + **MAIUSC** + **freccia in su**|Allinea il bordo superiore dei controlli selezionati con il controllo dominante|  
+|Format.ButtonBottom|**CTRL** + **B**|Colloca i pulsanti selezionati in basso al centro della finestra di dialogo|  
+|Format.ButtonRight|**CTRL** + **R**|Colloca i pulsanti selezionati nell'angolo superiore destro della finestra di dialogo|  
+|Format.CenterHorizontal|**CTRL** + **MAIUSC** + **F9**|Data Center i controlli orizzontalmente nella finestra di dialogo|  
+|Format.CenterVertical|**CTRL** + **F9**|Data Center i controlli verticalmente nella finestra di dialogo|  
+|Format.CheckMnemonics|**CTRL** + **M**|Controlla l'univocità dei tasti di scelta|  
+|Format.SizeToContent|**Shift** + **F7**|Ridimensiona i controlli selezionati per adattarsi al testo della didascalia|  
+|Format.SpaceAcross|**ALT** + **Freccia SINISTRA**|Distribuire uniformemente i controlli selezionati orizzontalmente|  
+|Format.SpaceDown|**ALT** + **freccia giù**|Distribuire uniformemente i controlli selezionati in verticale|  
+|Format.TabOrder|**Ctrl** + **D**|Imposta l'ordine dei controlli nella finestra di dialogo|  
+|Format.TestDialog|**CTRL** + **T**|La finestra di dialogo per verificarne l'aspetto e comportamento di esecuzione|  
+|Format.ToggleGuides|**CTRL** + **G**|Consente di alternare alcuna griglia, la griglia e guide per la finestra di dialogo Modifica|  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  

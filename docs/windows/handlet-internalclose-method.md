@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a54b61902c8994397c7bd6effa74a90d43c7e512
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2190a8e85f81062cc1167aa844fccf4afc819bc9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568641"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648802"
 ---
 # <a name="handletinternalclose-method"></a>Metodo HandleT::InternalClose
 Chiude l'oggetto corrente **HandleT** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 virtual bool InternalClose();  
 ```  
   

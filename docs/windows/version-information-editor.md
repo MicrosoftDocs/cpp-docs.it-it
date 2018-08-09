@@ -1,5 +1,5 @@
 ---
-title: Editor di informazioni sulla versione | Documenti Microsoft
+title: Editor di informazioni sulla versione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a76dbb3d8b41c2366f354f9c3c8d66ccc3743f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e57e550527bc906d3c1170e410719c57a877eec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890590"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647381"
 ---
 # <a name="version-information-editor"></a>Editor di informazioni sulla versione
 Le informazioni sulla versione sono costituite dall'identificazione del prodotto e della società, da un numero di versione del prodotto e dalla notifica relativa al copyright e al marchio. L'editor di informazioni sulla versione consente di creare e gestire questi dati, che sono archiviati nella risorsa di informazioni sulla versione. La risorsa di informazioni sulla versione non è necessaria per un'applicazione, ma è uno strumento utile per raccogliere le informazioni che identificano l'applicazione. Le informazioni sulla versione vengono usate anche dalle API di installazione.  
@@ -47,7 +47,7 @@ Le informazioni sulla versione sono costituite dall'identificazione del prodotto
     > [!NOTE]
     >  Quando si usa l'editor di informazioni sulla versione, in molti casi è possibile fare clic con il pulsante destro del mouse per visualizzare un menu di scelta rapida con comandi specifici della risorsa. Se ad esempio si fa clic mentre il puntatore è posizionato sulla voce di intestazione di un blocco, nel menu di scelta rapida vengono visualizzati i comandi per la creazione e l'eliminazione di un blocco di informazioni sulla versione.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  
@@ -55,4 +55,3 @@ Le informazioni sulla versione sono costituite dall'identificazione del prodotto
 ## <a name="see-also"></a>Vedere anche  
  [Editor risorse](../windows/resource-editors.md)   
  [Menu e altre risorse](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

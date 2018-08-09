@@ -1,5 +1,5 @@
 ---
-title: SRWLockSharedTraits (struttura) | Documenti Microsoft
+title: SRWLockSharedTraits (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a18edef3fa658608459244143a5e48738f0c3a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c606a1a7d32a02442e767a31543a76a4dccf295e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889646"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652474"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits (struttura)
-Descrive le caratteristiche comuni della classe SRWLock nel blocco in modalità condivisa.  
+Descrive le caratteristiche comuni del `SRWLock` classe in blocco in modalità condivisa.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,14 +39,14 @@ struct SRWLockSharedTraits;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`Type`|Sinonimo di un puntatore al [SRWLOCK](../windows/srwlock-class.md) classe.|  
+|`Type`|Sinonimo di un puntatore per il [SRWLOCK](../windows/srwlock-class.md) classe.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo SRWLockSharedTraits::GetInvalidValue](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Recupera un oggetto SRWLockSharedTraits che non è sempre valido.|  
-|[Metodo SRWLockSharedTraits::Unlock](../windows/srwlocksharedtraits-unlock-method.md)|Restituisce il controllo esclusivo dell'oggetto SRWLock specificato.|  
+|[Metodo SRWLockSharedTraits::GetInvalidValue](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Recupera un' **SRWLockSharedTraits** oggetto che non è sempre valido.|  
+|[Metodo SRWLockSharedTraits::Unlock](../windows/srwlocksharedtraits-unlock-method.md)|Rilascia il controllo esclusivo del specificato `SRWLock` oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `SRWLockSharedTraits`  

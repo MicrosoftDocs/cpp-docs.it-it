@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7a0bb864fa1356089552fb3c48461fef2a63920b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569511"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641379"
 ---
 # <a name="handlethandlet-constructor"></a>Costruttore HandleT::HandleT
 Inizializza una nuova istanza di **HandleT** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 explicit HandleT(  
    typename HandleTraits::Type h =   
       HandleTraits::GetInvalidValue()  

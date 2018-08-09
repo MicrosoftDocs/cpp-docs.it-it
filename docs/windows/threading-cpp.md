@@ -1,5 +1,5 @@
 ---
-title: Threading (C++) | Documenti Microsoft
+title: Threading (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21ea8c16b4e09a5ad1845a10797be00f91b0d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e0e8b13a74c5b232e2662f80fc1cc8f80a1ffc9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891324"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653001"
 ---
 # <a name="threading-c"></a>threading (C++)
 Specifica il modello di threading per un oggetto COM.  
@@ -30,37 +30,36 @@ Specifica il modello di threading per un oggetto COM.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ threading(  
+[ threading(  
    model=enumeration  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- ***modello*** (facoltativo)  
+### <a name="parameters"></a>Parametri  
+ *modello* (facoltativo)  
  Uno dei modelli di threading seguenti:  
   
--   **apartment** (modello di threading apartment)  
+-   `apartment` (il threading apartment)  
   
--   **neutro** (componenti .NET Framework senza interfaccia utente)  
+-   `neutral` (Componenti .NET framework senza interfaccia utente)  
   
--   **singolo** (threading semplice)  
+-   `single` (threading semplice)  
   
--   **gratuito** (gratuito threading)  
+-   `free` (gratuito threading)  
   
--   **entrambi** (apartment e modello di threading free)  
+-   `both` (apartment e modello di threading free)  
   
- Il valore predefinito è **apartment**.  
+ Il valore predefinito è `apartment`.  
   
 ## <a name="remarks"></a>Note  
- Il **threading** attributo C++ non è visualizzato nel file IDL generato ma verrà utilizzato nell'implementazione dell'oggetto COM.  
+ Il **threading** attributo C++ non è presente nel file con estensione IDL generato ma verrà utilizzato nell'implementazione dell'oggetto COM.  
   
- In ATL (progetti), se il [coclasse](../windows/coclass.md) attributo è presente, anche il modello di threading specificato da *modello* viene passato come parametro di modello per il [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) classe , inserito tramite il **coclasse** attributo.  
+ Nei progetti ATL, se il [coclasse](../windows/coclass.md) attributo è presente, anche il modello di threading specificato da *model* viene passato al parametro di modello per il [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) classe , inseriti dal `coclass` attributo.  
   
  Il **threading** attributo protegge anche l'accesso a un [event_source](../windows/event-source.md).  
   
 ## <a name="example"></a>Esempio  
- Vedere il [concesso in licenza](../windows/licensed.md) esempio per un esempio dell'uso di **threading**.  
+ Vedere le [concesso in licenza](../windows/licensed.md) per un esempio dell'uso di esempio **threading**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -68,16 +67,16 @@ Specifica il modello di threading per un oggetto COM.
   
 |||  
 |-|-|  
-|**Si applica a**|**class**, `struct`|  
+|**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|**coclass**|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi COM](../windows/com-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
  [Supporto del multithreading per il codice precedente (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutro apartment](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
+ [Apartment neutro](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo della tavolozza da 256 colori (Editor di immagini per le icone) | Documenti Microsoft
+title: Utilizzo della tavolozza da 256 colori (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,35 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc78dfa5d549b37b99125cfcef5c25ae6c76b9e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890905"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645152"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Utilizzo della tavolozza da 256 colori (Editor di immagini per le icone)
-Per disegnare con una selezione dalla tavolozza a 256 colori, è necessario selezionare i colori dalla tavolozza di colori di [finestra colori](../windows/colors-window-image-editor-for-icons.md).  
+Per disegnare una selezione dalla tavolozza da 256 colori, è necessario selezionare i colori dalla tavolozza dei colori nella [finestra colori](../windows/colors-window-image-editor-for-icons.md).  
   
-### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Per scegliere un colore dalla tavolozza a 256 colori per le icone grandi  
+### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Per scegliere un colore della tavolozza da 256 colori per le icone grandi  
   
-1.  Scegliere l'icona di grandi dimensioni o di un cursore o creare una nuova icona di grandi dimensioni o di un cursore.  
+1.  Selezionare l'icona di grandi dimensioni o cursore, o creare una nuova icona di grandi dimensioni o un cursore.  
   
-2.  Scegliere un colore da 256 colori visualizzati di **colori** tavolozza di **colori** finestra.  
+2.  Scegliere un colore da 256 colori visualizzati nella **colori** tavolozza il **colori** finestra.  
   
-     Il colore selezionato diventerà il colore corrente nella tavolozza di colori di **colori** finestra.  
+     Il colore selezionato diventerà il colore corrente nella tavolozza dei colori nella **colori** finestra.  
   
     > [!NOTE]
-    >  La tavolozza inizialmente utilizzata per le immagini di 256 colori corrisponde a quella restituita dall'API CreateHalftonePalette di Windows. Tutte le icone progettate per la shell di Windows devono utilizzare questo riquadro per evitare lo sfarfallio durante la realizzazione della tavolozza.  
+    >  La tavolozza iniziale usata per le immagini di 256 colori corrisponde a quella restituita dalla `CreateHalftonePalette` API Windows. Tutte le icone progettate per la shell di Windows devono usare questo riquadro per evitare lo sfarfallio durante la realizzazione della tavolozza.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Creazione di un cursore o l'icona a 256 colori](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)   
  [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

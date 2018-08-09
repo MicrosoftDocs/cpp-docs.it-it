@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ec4f120a0b9634a0ff11c4b35ea4790674959383
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466487"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649341"
 ---
 # <a name="control"></a>controllo
 Specifica che il tipo definito dall'utente è un controllo.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [control]  
 ```  
   

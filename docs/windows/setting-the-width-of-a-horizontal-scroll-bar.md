@@ -1,5 +1,5 @@
 ---
-title: Impostazione della larghezza di una barra di scorrimento orizzontale | Documenti Microsoft
+title: Impostazione della larghezza di una barra di scorrimento orizzontale | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,29 +21,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34545a01c01146992c7d88ecabec1a29a7b438f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54b68ec8f780fc8022543813b412eaff2045cbdf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892793"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645604"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Impostazione della larghezza di una barra di scorrimento orizzontale
-Quando si aggiunge una casella di riepilogo con una barra di scorrimento orizzontale per una finestra di dialogo utilizzando le classi MFC, la barra di scorrimento non verrà visualizzati automaticamente nell'applicazione.  
+Quando si aggiunge una casella di riepilogo con una barra di scorrimento orizzontale per una finestra di dialogo utilizzando le classi MFC, la barra di scorrimento non verrà visualizzata automaticamente nell'applicazione.  
   
 ### <a name="to-make-the-scroll-bar-appear"></a>Per visualizzare la barra scorrimento  
   
-1.  Impostare una larghezza massima per l'elemento più ampio chiamando [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) nel codice.  
+1.  Impostare una larghezza massima per l'elemento più largo chiamando [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) nel codice.  
   
-     Senza questo valore è impostato, la barra di scorrimento non verranno visualizzati, anche quando gli elementi nella casella di riepilogo sono più ampio rispetto alla casella.  
+     Senza questo valore è impostato, la barra di scorrimento non verranno visualizzati, anche quando gli elementi nella casella di riepilogo sono larghi della casella.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
+## <a name="requirements"></a>Requisiti  
  MFC  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
+ [Controlli nelle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
-

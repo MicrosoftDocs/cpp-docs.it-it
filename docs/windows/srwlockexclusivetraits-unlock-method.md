@@ -1,5 +1,5 @@
 ---
-title: 'Metodo srwlockexclusivetraits:: Unlock | Documenti Microsoft'
+title: 'Metodo srwlockexclusivetraits:: Unlock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1863acc925bf66aa10435f2dadd9d9d73a43300
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892592"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648022"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>Metodo SRWLockExclusiveTraits::Unlock
-Restituisce il controllo esclusivo dell'oggetto SRWLock specificato.  
+Rilascia il controllo esclusivo del specificato `SRWLock` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `srwlock`  
- Handle a un oggetto SRWLock.  
+### <a name="parameters"></a>Parametri  
+ *SRWLOCK*  
+ Handle per un `SRWLock` oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

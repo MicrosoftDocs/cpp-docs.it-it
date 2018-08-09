@@ -1,5 +1,5 @@
 ---
-title: Tipi di File modificabili per le risorse | Documenti Microsoft
+title: Tipi di File modificabili per le risorse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870250"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648431"
 ---
 # <a name="editable-file-types-for-resources"></a>Tipi di file modificabili per le risorse
 È possibile aprire i seguenti tipi di file e modificare le risorse contenute.  
@@ -38,8 +38,6 @@ ms.locfileid: "33870250"
 |EXE|File eseguibili.|  
 |DLL|File DLL.|  
 |BMP, ICO, DIB e CUR|File bitmap, icona, della barra degli strumenti e cursore.|  
-  
-
   
 ## <a name="requirements"></a>Requisiti  
  Win32  

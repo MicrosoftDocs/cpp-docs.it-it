@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c3d0e20d8b2b88a7141672117d4c0b036682953e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571503"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641418"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Raggruppamento di pulsanti di opzione in una finestra di dialogo
-Quando si aggiungono pulsanti di opzione a una finestra di dialogo, è possibile gestirli come un gruppo impostando la proprietà Group nella finestra Proprietà per il primo pulsante del gruppo. Nell' [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md)viene quindi visualizzato un ID di controllo per tale pulsante di opzione, consentendo di aggiungere una variabile membro per il gruppo di pulsanti di opzione.  
+Quando si aggiungono pulsanti di opzione per una finestra di dialogo, è possibile gestirli come un gruppo impostando una **gruppo** proprietà nel **proprietà** finestra per il primo pulsante del gruppo. Nell' [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md)viene quindi visualizzato un ID di controllo per tale pulsante di opzione, consentendo di aggiungere una variabile membro per il gruppo di pulsanti di opzione.  
   
  Una finestra di dialogo può contenere più gruppi di pulsanti di opzione. Per aggiungere ciascun gruppo seguire la procedura riportata di seguito.  
   
@@ -44,7 +44,7 @@ Quando si aggiungono pulsanti di opzione a una finestra di dialogo, è possibile
      Modificando la proprietà **Group** su **True** viene aggiunto lo stile WS_GROUP alla voce del pulsante nell'oggetto finestra di dialogo dello script di risorsa e si assicura che l'utente possa selezionare un solo pulsante di opzione alla volta all'interno del gruppo di pulsanti.  
   
     > [!NOTE]
-    >  La proprietà **Group** deve essere impostata su **True**solo per il primo pulsante di opzione del gruppo. Se sono disponibili controlli aggiuntivi che non fanno parte del gruppo di pulsanti, impostare su **True** anche la proprietà *Group* del primo controllo **non incluso nel gruppo** . È possibile identificare rapidamente il primo controllo esterno al gruppo premendo CTRL + D in modo da visualizzare l'ordine di tabulazione.  
+    >  La proprietà **Group** deve essere impostata su **True**solo per il primo pulsante di opzione del gruppo. Se sono disponibili controlli aggiuntivi che non fanno parte del gruppo di pulsanti, impostare su **True** anche la proprietà *Group* del primo controllo **non incluso nel gruppo** . È possibile identificare rapidamente il primo controllo esterno al gruppo premendo **Ctrl**+**1!d** per visualizzare l'ordine di tabulazione.  
   
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Per aggiungere una variabile membro per il gruppo di pulsanti di opzione  
   
@@ -56,14 +56,13 @@ Quando si aggiungono pulsanti di opzione a una finestra di dialogo, è possibile
   
 4.  Nella casella **Nome variabile** digitare il nome della nuova variabile membro.  
   
-5.  Nella casella di riepilogo **Tipo variabile** , selezionare **int** o digitare **int**.  
+5.  Nel **tipo di variabile** casella di riepilogo, seleziona **int** o un tipo `int`.  
   
-6.  È quindi possibile modificare il codice per specificare il pulsante di opzione da visualizzare come selezionato. Con m_radioBox1 = 0; viene ad esempio selezionato il primo pulsante di opzione del gruppo.  
+6.  È quindi possibile modificare il codice per specificare il pulsante di opzione da visualizzare come selezionato. Ad esempio, `m_radioBox1 = 0;` seleziona il primo pulsante di opzione nel gruppo.  
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

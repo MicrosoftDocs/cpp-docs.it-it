@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466124"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644229"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Parole chiave sensibili al contesto (Estensioni del componente C++)
 *Parole chiave sensibili al contesto* sono elementi del linguaggio riconosciuti solo in contesti specifici. All'esterno del contesto specifico, una parola chiave sensibile al contesto può essere un simbolo definito dall'utente.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- **Note**  
+### <a name="remarks"></a>Note
   
  Di seguito è riportato un elenco di parole chiave sensibili al contesto:  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466124"
  Per scopi di leggibilità, è possibile limitare l'utilizzo delle parole chiave sensibili al contesto come simboli definiti dall'utente.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- **Note**  
+### <a name="remarks"></a>Note  
   
  Non esistono commenti specifici della piattaforma per questa funzionalità.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Note**  
+### <a name="remarks"></a>Note  
   
  Non esistono commenti specifici della piattaforma per questa funzionalità.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
  Esempio di codice seguente viene illustrato che nel contesto appropriato, il **proprietà** parola chiave sensibile al contesto può essere utilizzato per definire una proprietà e una variabile.  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 100  

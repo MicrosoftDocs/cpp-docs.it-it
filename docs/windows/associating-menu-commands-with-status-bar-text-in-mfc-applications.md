@@ -1,5 +1,5 @@
 ---
-title: Associazione di comandi di Menu con testo della barra di stato in applicazioni MFC | Documenti Microsoft
+title: Associazione di comandi di Menu a testo della barra di stato nelle applicazioni MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17326bdb8fe01c9ad329db0a6c7e8178fdbb25e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d868c9270e23e2ee1fa0dcdc1845d9762cefb16c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864242"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649401"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Associazione dei comandi di menu a testo della barra di stato in applicazioni MFC
-L'applicazione può visualizzare testo descrittivo per ogni comando di menu se potrebbe selezionare un utente. A tale scopo, assegnare una stringa di testo per ogni comando di menu usando la proprietà **Prompt** nella finestra Proprietà. Se si dispone di una stringa nella [tabella stringhe](../windows/string-editor.md) il cui ID è uguale al comando, un'applicazione MFC visualizzerà automaticamente questa risorsa stringa nella barra di stato dell'applicazione in esecuzione quando un utente si posiziona su una voce di menu.  
+L'applicazione può visualizzare testo descrittivo per ogni comando di menu se potrebbe selezionare un utente. Eseguire questa operazione assegnando una stringa di testo per ogni comando di menu usando la **dei messaggi di richiesta** proprietà nel **proprietà** finestra. Se si dispone di una stringa nella [tabella stringhe](../windows/string-editor.md) il cui ID è uguale al comando, un'applicazione MFC visualizzerà automaticamente questa risorsa stringa nella barra di stato dell'applicazione in esecuzione quando un utente si posiziona su una voce di menu.  
   
 ### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>Per associare un comando di menu con un stringa di testo della barra di stato  
   
@@ -32,10 +32,7 @@ L'applicazione può visualizzare testo descrittivo per ogni comando di menu se p
   
 2.  Nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)digitare il testo della barra di stato associata nella casella **Prompt** .  
   
-
-  
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti  
  MFC  
   
 ## <a name="see-also"></a>Vedere anche  

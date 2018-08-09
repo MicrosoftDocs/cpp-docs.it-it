@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a5b880e9b0425ecb0de5e59a29b216af174fa8e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568686"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652282"
 ---
 # <a name="finding-binary-data"></a>Ricerca di dati binari
 È possibile cercare le stringhe ASCII o byte esadecimali. Ad esempio, per trovare "Hello", è possibile cercare una stringa "Hello" o per "48 65 6C 6C 6F" (l'equivalente esadecimale).  
@@ -44,7 +44,6 @@ ms.locfileid: "39568686"
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
-  
  nessuno  
   
 ## <a name="see-also"></a>Vedere anche  

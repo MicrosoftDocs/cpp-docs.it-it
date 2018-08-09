@@ -1,5 +1,5 @@
 ---
-title: 'Metodo simpleclassfactory:: CreateInstance | Documenti Microsoft'
+title: 'Metodo simpleclassfactory:: CreateInstance | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892748"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651080"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>Metodo SimpleClassFactory::CreateInstance
 
@@ -41,15 +41,15 @@ STDMETHOD( CreateInstance )(
 ### <a name="parameters"></a>Parametri
 
 *pUnkOuter*  
-Deve essere `nullptr`; in caso contrario, il valore restituito è CLASS_E_NOAGGREGATION.
+Deve essere **nullptr**; in caso contrario, il valore restituito è CLASS_E_NOAGGREGATION.
 
-SimpleClassFactory non supporta l'aggregazione. Se sono supportati l'aggregazione e l'oggetto creato faceva parte di un'aggregazione, `pUnkOuter` sarebbe un puntatore a interfaccia IUnknown di controllo della funzione di aggregazione.
+SimpleClassFactory non supporta l'aggregazione. Se erano supportate aggregazione e l'oggetto da creare faceva parte di un'aggregazione *pUnkOuter* sarebbe un puntatore all'interfaccia di controllo `IUnknown` interfaccia dell'aggregazione.
 
 *riid*  
 ID di interfaccia dell'oggetto da creare.
 
 *ppvObject*  
-Quando questa operazione viene completata, puntatore a un'istanza dell'oggetto specificato per il `riid` parametro.
+Quando questa operazione viene completata, puntatore a un'istanza dell'oggetto specificato per il *riid* parametro.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -61,10 +61,9 @@ Se &#95; &#95;WRL_STRICT&#95; &#95; è definito, assert viene generato un errore
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** Implements
+**Intestazione:** module.h
 
 **Spazio dei nomi:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vedere anche
-
-[Classe SimpleClassFactory](../windows/simpleclassfactory-class.md)
+ [Classe SimpleClassFactory](../windows/simpleclassfactory-class.md)

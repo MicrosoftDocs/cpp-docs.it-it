@@ -1,5 +1,5 @@
 ---
-title: Proprietà chiave di tasti di scelta rapida | Documenti Microsoft
+title: Proprietà chiave di tasti di scelta rapida | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4fc56384d666026f4cc7e21f9d8af9347046fd1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36884376e5ff31754e4c53ef6602f6bfd129f4a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857207"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650443"
 ---
 # <a name="accelerator-key-property"></a>Proprietà Key dei tasti di scelta rapida
-Di seguito sono ammessi per la proprietà chiave della tabella di tasti di scelta rapida:  
+Di seguito sono le voci legali per la proprietà chiave della tabella di tasti di scelta rapida:  
   
 -   Numero intero compreso tra 0 e 255 in formato decimale. Il valore determina se il valore viene trattato come ASCII o ANSI come indicato di seguito:  
   
-    -   Numeri a una cifra vengono sempre interpretati come la chiave corrispondente, anziché come valori ASCII o ANSI.  
+    -   I numeri di cifra vengono sempre interpretati come la chiave corrispondente, anziché come valori ASCII o ANSI.  
   
-    -   Valori da 1 a 26, preceduti da zero, vengono interpretati come ^ A ^ Z, che rappresenta il valore ASCII delle lettere dell'alfabeto pressione con tenuto premuto CTRL.  
+    -   I valori da 1 a 26, preceduti da zero, vengono interpretati come ^ dalla alla ^ Z, che rappresenta il valore ASCII delle lettere dell'alfabeto se premuto con il **Ctrl** tasto mantenuto premuto.  
   
     -   I valori da 27 a 32 vengono sempre interpretati come valori decimali a tre cifre 027 e 032.  
   
     -   I valori da 033 a 255, preceduto da 0 o non vengono interpretati come valori ANSI.  
   
--   Un singolo carattere della tastiera. Caratteri maiuscoli A - Z o i numeri 0 - 9 ASCII o valori di chiave virtuali. qualsiasi altro carattere è ASCII.  
+-   Un singolo carattere della tastiera. Caratteri maiuscoli A - Z o i numeri da 0 - 9 può essere ASCII o valori di chiave virtuali; qualsiasi altro carattere è solo ASCII.  
   
--   Un carattere singolo compreso nell'intervallo A - Z (lettere solo), preceduto da un accento circonflesso (^) (ad esempio ^ C). Questo passa il valore ASCII della chiave quando viene premuto con il tasto CTRL premuto.  
+-   Un singolo carattere della tastiera nell'intervallo A - Z (lettere solo), preceduto da un accento circonflesso (^) (ad esempio ^ C). Si immette il valore ASCII della chiave quando viene premuto con il **Ctrl** tasto mantenuto premuto.  
   
     > [!NOTE]
-    >  Quando si immette un valore ASCII, le opzioni di proprietà modificatore sono limitate. L'unica chiave di controllo disponibile per l'utilizzo è il tasto ALT.  
+    >  Quando si immette un valore ASCII, le opzioni di proprietà modificatore siano limitate. È l'unica chiave di controllo disponibile per l'uso di **Alt** chiave.  
   
--   Qualsiasi identificatore di tasto virtuale valido. La casella di riepilogo a discesa chiave nella tabella di tasti di scelta rapida contiene un elenco di identificatori di tasto virtuale standard.  
+-   Qualsiasi identificatore di chiave virtuale valido. La casella di riepilogo a discesa chiave nella tabella di tasti di scelta rapida contiene un elenco di identificatori di chiave virtuali standard.  
   
     > [!TIP]
-    >  Un altro modo per definire un tasto di scelta rapida è possibile fare doppio clic su una o più voci nella tabella di tasti di scelta rapida scegliere **digita** dal menu di scelta rapida e quindi premere una delle chiavi o combinazioni di tasti sulla tastiera. Il **digita** comando è anche disponibile il **modifica** menu.  
+    >  È un altro modo per definire un tasto di scelta rapida per fare doppio clic su una o più voci nella tabella di tasti di scelta rapida, scegliere **digita** dal menu di scelta rapida, quindi premere una delle chiavi o combinazioni di tasti sulla tastiera. Il **digita** comando è disponibile anche la **modificare** menu.  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  

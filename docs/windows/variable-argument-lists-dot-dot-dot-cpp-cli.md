@@ -1,5 +1,5 @@
 ---
-title: Elenchi di argomenti variabili (...) (C + + CLI) | Documenti Microsoft
+title: Elenchi di argomenti variabili (...) (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eec0e3591da2417137fda3bae4ed9e7860472fb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889823"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642942"
 ---
 # <a name="variable-argument-lists--ccli"></a>Elenchi di argomenti variabili (...) (C++/CLI)
-In questo esempio viene illustrato come utilizzare il `...` sintassi in Visual C++ per implementare le funzioni che hanno un numero variabile di argomenti.  
+Questo esempio viene illustrato come utilizzare il `...` sintassi in Visual C++ per implementare le funzioni che hanno un numero variabile di argomenti.  
   
 > [!NOTE]
->  Questo argomento si riferisce al C + + CLI. Per informazioni sull'utilizzo di `...` in C++ Standard ISO, vedere [ellissi e modelli Variadic](../cpp/ellipses-and-variadic-templates.md) e puntini di sospensione e argomenti predefiniti in [espressioni in forma suffissa](../cpp/postfix-expressions.md).  
+>  Questo argomento si riferisce a C + + / CLI. Per informazioni sull'uso di `...` in C++ Standard ISO, vedere [ellissi e modelli Variadic](../cpp/ellipses-and-variadic-templates.md) e sui puntini di sospensione e argomenti predefiniti in [espressioni in forma suffissa](../cpp/postfix-expressions.md).  
   
- Il parametro che utilizza `...` deve essere l'ultimo parametro nell'elenco di parametri.  
+ Il parametro che utilizza `...` deve essere l'ultimo parametro nell'elenco dei parametri.  
   
 ## <a name="example"></a>Esempio  
   
 ### <a name="code"></a>Codice  
   
-```  
+```cpp  
 // mcppv2_paramarray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -61,9 +61,9 @@ int main() {
 ```  
   
 ## <a name="code-example"></a>Esempio di codice  
- Nell'esempio seguente viene illustrato come chiamare da c#, una funzione di Visual C++ che accetta un numero variabile di argomenti.  
+ Nell'esempio seguente viene illustrato come chiamare da c# una funzione di Visual C++ che accetta un numero variabile di argomenti.  
   
-```  
+```cpp  
 // mcppv2_paramarray2.cpp  
 // compile with: /clr:safe /LD  
 using namespace System;  
@@ -74,11 +74,11 @@ public:
 };  
 ```  
   
- La funzione `f` può essere chiamato da c# o Visual Basic, ad esempio, come se fosse una funzione che può accettare un numero variabile di argomenti.  
+ La funzione `f` può essere chiamato da codice c# o Visual Basic, ad esempio, come se fosse una funzione che può accettare un numero variabile di argomenti.  
   
- In c#, un argomento passato a un `ParamArray` parametro può essere chiamato da un numero variabile di argomenti. Esempio di codice seguente è in c#.  
+ In c#, un argomento passato a un `ParamArray` parametro può essere chiamato da un numero variabile di argomenti. Esempio di codice seguente è nel linguaggio c#.  
   
-```  
+```cs  
 // mcppv2_paramarray3.cs  
 // compile with: /r:mcppv2_paramarray2.dll  
 // a C# program  
@@ -93,9 +93,9 @@ public class X {
 }  
 ```  
   
- Una chiamata a `f` in Visual C++ è possibile passare una matrice inizializzata o una matrice a lunghezza variabile.  
+ Una chiamata a `f` in Visual C++ può passare una matrice inizializzata o una matrice a lunghezza variabile.  
   
-```  
+```cpp  
 // mcpp_paramarray4.cpp  
 // compile with: /clr  
 using namespace System;  

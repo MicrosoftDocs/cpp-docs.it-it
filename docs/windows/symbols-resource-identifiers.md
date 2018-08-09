@@ -1,5 +1,5 @@
 ---
-title: 'Simboli: Identificatori di risorsa | Documenti Microsoft'
+title: 'Simboli: Identificatori di risorsa | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ea83c97a5ee59e99b4ab743348ae2268d730e5c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891844"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650885"
 ---
 # <a name="symbols-resource-identifiers"></a>Simboli: identificatori di risorsa
 Un simbolo è un identificatore (ID) di risorsa costituito da due parti: una stringa di testo (nome del simbolo) di cui viene eseguito il mapping a un valore integer (valore del simbolo). Ad esempio:  
@@ -66,7 +66,7 @@ IDC_EDITNAME = 5100
   
 - [Visualizzare gli ID simbolo predefiniti](../windows/predefined-symbol-ids.md)  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  
@@ -75,4 +75,3 @@ IDC_EDITNAME = 5100
  [Procedura: cercare simboli nelle risorse](../windows/how-to-search-for-symbols-in-resources.md)   
  [Editor risorse](../windows/resource-editors.md)   
  [File di risorse](../windows/resource-files-visual-studio.md)
-

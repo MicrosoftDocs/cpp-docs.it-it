@@ -1,5 +1,5 @@
 ---
-title: 'Metodo handlet:: Get | Documenti Microsoft'
+title: 'Metodo handlet:: Get | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb1f4432b112daf6a0f00a4568302a75b6b40f3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b7b31161ab0539a6b31b574c8cf306b4ae33378
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882966"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651597"
 ---
 # <a name="handletget-method"></a>Metodo HandleT::Get
 Ottiene il valore dell'handle sottostante.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typename HandleTraits::Type Get() const;  
 ```  
   

@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569934"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646786"
 ---
 # <a name="eventreceiver"></a>event_receiver
 Crea un ricevitore di eventi (sink).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *type*  
  Un'enumerazione di uno dei valori seguenti:  
   
@@ -50,13 +50,13 @@ Crea un ricevitore di eventi (sink).
   
 -   `com` per il codice COM. Questo valore richiedere che si includano i file di intestazione seguente:  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  Specificare *layout_dependent* solo se `type` = **com**. *layout_dependent* è un valore booleano:  
   
 -   **true** significa che la firma dei delegati nel caso in cui deve corrispondere esattamente a quelli a cui sono associati nell'evento origine ricevitore. I nomi dei gestori di ricevitore di eventi devono corrispondere ai nomi specificati nell'interfaccia di origine evento rilevante. È necessario utilizzare `coclass` quando si *layout_dependent* viene **true**. È leggermente più efficiente specificare **true**.  
@@ -81,7 +81,7 @@ Crea un ricevitore di eventi (sink).
 |-|-|  
 |**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**Coclasse** quando si *layout_dependent*=**true**|  
+|**Attributi obbligatori**|`coclass` Quando *layout_dependent*=**true**|  
 |**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c9a7caba7ccfb8f5764a1f460835ff540c838975
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463866"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641041"
 ---
 # <a name="classfactory-class"></a>ClassFactory (classe)
 Implementa le funzionalità di base di un'interfaccia `IClassFactory`.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -45,7 +45,7 @@ class ClassFactory : public Details::RuntimeClass<
       false>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *I0*  
  L'interfaccia di zero.  
   
@@ -56,7 +56,7 @@ class ClassFactory : public Details::RuntimeClass<
  La seconda interfaccia.  
   
 ## <a name="remarks"></a>Note  
- Utilizzare `ClassFactory` per fornire un'implementazione della factory definita dall'utente.  
+ Utilizzare **ClassFactory** per fornire un'implementazione della factory definita dall'utente.  
   
  Il modello di programmazione seguente illustra come usare il [implementa](../windows/implements-structure.md) struttura per specificare più di tre interfacce in una class factory.  
   
@@ -74,10 +74,10 @@ class ClassFactory : public Details::RuntimeClass<
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Incrementa il conteggio dei riferimenti per l'oggetto ClassFactory corrente.|  
-|[Metodo ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Incrementa o decrementa il numero di sottostante oggetti che vengono rilevate dall'oggetto ClassFactory corrente.|  
+|[Metodo ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Incrementa il conteggio dei riferimenti per l'oggetto corrente **ClassFactory** oggetto.|  
+|[Metodo ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Incrementa o decrementa il numero di base di oggetti che vengono rilevati tramite il **ClassFactory** oggetto.|  
 |[Metodo ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Recupera un puntatore all'interfaccia specificata dal parametro.|  
-|[Metodo ClassFactory::Release](../windows/classfactory-release-method.md)|Decrementa il conteggio dei riferimenti per l'oggetto ClassFactory corrente.|  
+|[Metodo ClassFactory::Release](../windows/classfactory-release-method.md)|Decrementa il conteggio dei riferimenti per l'oggetto corrente **ClassFactory** oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  

@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi relativi all'Editor finestre | Documenti Microsoft
+title: Risoluzione dei problemi relativi all'Editor finestre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11de4ccdcc903d71a101ed93f995e9dea62de4f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7b7accec826bc6c52ab9c6f677ce980f40c6f20
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889904"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648620"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Risoluzione dei problemi relativi all'editor finestre
-Di seguito sono alcuni problemi di cui occorre tener presente quando si utilizza l'editor della finestra di dialogo.  
+Di seguito sono alcuni problemi di cui occorre tener presente quando si lavora nell'editor finestre.  
   
 -   [Funzionamento non corretto di una finestra di dialogo in seguito all'aggiunta di controlli](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
   
 -   [Uso del controllo RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor finestre](../windows/dialog-editor.md)
-

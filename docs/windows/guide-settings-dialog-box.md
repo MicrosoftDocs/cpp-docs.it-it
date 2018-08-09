@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568891"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647996"
 ---
 # <a name="guide-settings-dialog-box"></a>Finestra di dialogo Impostazioni guide
 ## <a name="layout-guides"></a>Guide  
  Consente di visualizzare le impostazioni per le guide di layout.  
   
- **None**  
+### <a name="none"></a>nessuno  
   
  Nasconde gli strumenti di layout.  
   
- **Righelli e guide**  
+### <a name="rulers-and-guides"></a>Righelli e guide  
   
  Quando abilitato, aggiunge i righelli per strumenti di layout. le guide possono essere posizionate nei righelli. Le guide all'impostazione predefinita sono i margini, che possono essere spostati mediante il trascinamento. Fare clic sui righelli per posizionare una Guida. Controlli "Guide" guide alle procedure quando i controlli vengono spostati sopra o accanto a essi. Controlli vengono spostati anche con una guida sono associati a esso. Quando un controllo associato a una Guida su ciascun lato e una Guida viene spostata, il controllo viene ridimensionato.  
   
- **Griglia**  
+### <a name="grid"></a>Grid  
   
  Crea una griglia di layout. Nuovi controlli vengono automaticamente allineati alla griglia.  
   
 ## <a name="grid-spacing"></a>spaziatura di griglia  
  Consente di visualizzare le impostazioni per la spaziatura della griglia in unità di finestra di dialogo (DLU-Dialog Unit).  
   
- **Width: DLU-Dialog Unit**  
+### <a name="width-dlus"></a>Width: DLU-Dialog Unit  
   
  Imposta la larghezza della griglia di layout in DLU-Dialog Unit. Una DLU orizzontale sia la larghezza media del tipo di carattere finestra dialogo diviso per quattro.  
   
- **Height: DLU-Dialog Unit**  
+### <a name="height-dlus"></a>Height: DLU-Dialog Unit 
   
  Imposta l'altezza della griglia di layout in DLU-Dialog Unit. Una DLU verticale è l'altezza di average del tipo di carattere nella finestra di dialogo diviso per 8.  
   

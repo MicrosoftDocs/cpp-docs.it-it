@@ -1,5 +1,5 @@
 ---
-title: 'Metodo weakref:: As | Documenti Microsoft'
+title: 'Metodo weakref:: As | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e694b4c86194402f48d335aac353e48c3de79a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 938c7c796bf88d4ea1e49f1f59d274b5017aa7de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890700"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649302"
 ---
 # <a name="weakrefas-method"></a>Metodo WeakRef::As
-Imposta il parametro del puntatore ComPtr specificato per rappresentare l'interfaccia specificata.  
+Imposta l'oggetto specificato `ComPtr` parametro del puntatore per rappresentare l'interfaccia specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
@@ -42,27 +41,27 @@ HRESULT As(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `U`  
+### <a name="parameters"></a>Parametri  
+ *U*  
  ID di interfaccia.  
   
- `ptr`  
- Al termine dell'operazione, un oggetto che rappresenta il parametro `U`.  
+ *ptr*  
+ Al termine di questa operazione, un oggetto che rappresenta i parametri *U*.  
   
 ## <a name="return-value"></a>Valore restituito  
   
--   S_OK se l'operazione riesce; in caso contrario, HRESULT che indica il motivo dell'errore dell'operazione. `ptr` è impostato su `nullptr`.  
+-   S_OK se l'operazione riesce; in caso contrario, HRESULT che indica il motivo dell'errore dell'operazione e *ptr* è impostata su **nullptr**.  
   
--   S_OK se l'operazione riesce, ma l'oggetto WeakRef corrente è già stato rilasciato. Il parametro `ptr` viene impostato su `nullptr`.  
+-   S_OK se l'operazione riesce, ma l'oggetto corrente **WeakRef** oggetto è già stato rilasciato. Parametro *ptr* è impostata su **nullptr**.  
   
--   S_OK se l'operazione riesce, ma l'oggetto WeakRef corrente non è derivato dal parametro `U`. Il parametro `ptr` viene impostato su `nullptr`.  
+-   S_OK se l'operazione riesce, ma l'oggetto corrente **WeakRef** oggetto non è derivato dal parametro *U*. Parametro *ptr* è impostata su **nullptr**.  
   
 ## <a name="remarks"></a>Note  
- Se il parametro `U` è IWeakReference o non è derivato da IInspectable, viene generato un errore.  
+ Viene generato un errore se parametro *U* viene `IWeakReference`, o non è derivato da `IInspectable`.  
   
  Il primo modello è il form da usare nel codice. Il secondo modello è una specializzazione helper interna che supporta le funzionalità del linguaggio C++, ad esempio la parola chiave di deduzione del tipo [auto](../cpp/auto-cpp.md) .  
   
- A partire da Windows 10 SDK, questo metodo non imposta l'istanza di WeakRef su `nullptr` se non è stato ottenuto il riferimento debole. Si consiglia, quindi, di non usare un codice per il controllo degli errori che verifica WeakRef per `nullptr`. Controllare invece `ptr` per `nullptr`.  
+ A partire da Windows 10 SDK, questo metodo non imposta il **WeakRef** istanza **nullptr** se non è stato possibile ottenere il riferimento debole, pertanto, evitare codice controllo degli errori che verifica WeakRef per **nullptr**. Controllare invece *ptr* per **nullptr**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  

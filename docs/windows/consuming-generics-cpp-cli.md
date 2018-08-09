@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cf1c7c0894eacc828a011c8c5f9fef8c2d78fba8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460491"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652513"
 ---
 # <a name="consuming-generics-ccli"></a>Utilizzo dei generics (C++/CLI)
 I generics creati con un linguaggio .NET possono essere utilizzati in altri linguaggi .NET. A differenza dei modelli, un generico in un assembly compilato rimane sempre generico. Pertanto, è possibile creare un'istanza del tipo generico in un assembly diverso e persino in un linguaggio diverso rispetto all'assembly in cui è stato definito il tipo generico.  
@@ -114,9 +114,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Output  
-  
-```  
+```Output  
 90  
 80  
 70  

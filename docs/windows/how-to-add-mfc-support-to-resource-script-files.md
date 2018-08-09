@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 659c974fccec0e54dc42d6d1a5bdb019747f81ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569742"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647024"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Procedura: aggiungere supporto MFC ai file script di risorsa
 In genere, quando si compila un'applicazione MFC per Windows utilizzando il [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la procedura guidata genera un set base di file (incluso un file di risorse (RC)) che contiene le caratteristiche principali di Microsoft Foundation classi (MFC). Tuttavia, se si modifica un file RC per un'applicazione Windows che non è basata su MFC, non sono disponibili le seguenti funzionalità specifiche del framework MFC:  
@@ -55,7 +55,6 @@ In genere, quando si compila un'applicazione MFC per Windows utilizzando il [Cre
     >  Oltre a impostare questo flag, il file RC deve essere parte di un progetto MFC. Ad esempio, l'impostazione **modalità MFC** al **True** in un file RC in Win32 project non fornisce alcuna funzionalità di MFC.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  MFC  
   
 ## <a name="see-also"></a>Vedere anche  

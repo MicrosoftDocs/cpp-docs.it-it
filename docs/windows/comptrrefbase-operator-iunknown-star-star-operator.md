@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2ec20dca7bb0a37adae576a8b5a9adfad027b21
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f4a176cedd0860251fd81dedb74deecf5f2c7e31
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465815"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648678"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>Operatore ComPtrRefBase::operator IUnknown**
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 operator IUnknown**() const;  
 ```  
   

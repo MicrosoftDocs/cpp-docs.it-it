@@ -1,5 +1,5 @@
 ---
-title: Impostazione delle dimensioni della casella combinata e dell'elenco a discesa | Documenti Microsoft
+title: Impostazione della dimensione di casella combinata e dell'elenco di riepilogo a discesa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,47 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6a22f67bdb0d9d88cd2bb448628734db30f75885
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889345"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643173"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Impostazione della dimensione di una casella combinata e dell'elenco a discesa
-Quando viene aggiunta alla finestra di dialogo, è possibile ridimensionare una casella combinata. È inoltre possibile specificare le dimensioni della casella di riepilogo a discesa.  
+È possibile ridimensionare una casella combinata quando viene aggiunta alla finestra di dialogo. È anche possibile specificare le dimensioni della casella di riepilogo a discesa.  
   
-### <a name="to-size-a-combo-box"></a>Per ridimensionare una casella combinata  
+### <a name="to-size-a-combo-box"></a>Impostare le dimensioni di una casella combinata  
   
-1.  Nella finestra di dialogo, selezionare il controllo casella combinata.  
+1.  Selezionare il controllo casella combinata nella finestra di dialogo.  
   
-     Inizialmente, solo i quadratini di ridimensionamento destro e sinistro sono attivi.  
+     Inizialmente, solo i quadratini di ridimensionamento di sinistra e destra sono attivi.  
   
-2.  Utilizzare i quadratini di ridimensionamento per impostare la larghezza della casella combinata.  
+2.  Usare i quadratini di ridimensionamento per impostare la larghezza della casella combinata.  
   
- È inoltre possibile impostare la dimensione verticale della parte di elenco a discesa della casella combinata.  
+ È anche possibile impostare la dimensione verticale della porzione elenco a discesa della casella combinata.  
   
-#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Per impostare le dimensioni della casella combinata casella a discesa  
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Per impostare le dimensioni della casella combinata elenco della casella di riepilogo  
   
 1.  Fare clic sul pulsante freccia in giù a destra della casella combinata.  
   
      ![Freccia su una casella combinata in un progetto MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")  
   
-     La struttura del controllo cambia per mostrare le dimensioni della casella combinata estesi all'area di riepilogo.  
+     La struttura del controllo cambia per mostrare le dimensioni della casella combinata con l'area di riepilogo a discesa elenco esteso.  
   
 2.  Utilizzare il quadratino di ridimensionamento inferiore per modificare le dimensioni iniziali dell'area di riepilogo.  
   
-     ![Combinata&#45;dimensionamento di finestra in un progetto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
+     ![Casella combinata&#45;ridimensionamento di casella in un progetto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
-3.  Fare clic sulla freccia a discesa per chiudere la parte a discesa della casella combinata.  
+3.  Fare clic sulla freccia giù per chiudere la parte dell'elenco a discesa della casella combinata.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di valori a un controllo casella combinata](../windows/adding-values-to-a-combo-box-control.md)   
- [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
+ [Controlli nelle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
-

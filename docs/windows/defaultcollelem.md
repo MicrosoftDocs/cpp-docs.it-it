@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 58038fdb621ca8d31ace1f756e5f3dc122af06b1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569885"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644960"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 Utilizzato per l'ottimizzazione del codice Visual Basic.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [defaultcollelem]  
 ```  
   

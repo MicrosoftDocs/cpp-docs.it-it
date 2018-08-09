@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 60a4326975f60455e6d2ef90575f5c940287042a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571018"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644112"
 ---
 # <a name="dual"></a>dual
 Inserisce un'interfaccia nel file con estensione idl come interfaccia duale.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [dual]  
 ```  
   
@@ -80,7 +80,7 @@ __interface IStatic : IDispatch
 |**Si applica a**|**interface**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|**dispinterface**|  
+|**Attributi non validi**|`dispinterface`|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

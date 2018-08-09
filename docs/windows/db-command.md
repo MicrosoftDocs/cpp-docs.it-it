@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571438"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650089"
 ---
 # <a name="dbcommand"></a>db_command
 Crea un comando OLE DB.  
@@ -41,7 +41,6 @@ Crea un comando OLE DB.
 ```  
   
 ### <a name="parameters"></a>Parametri  
-
 *command*  
 Una stringa di comando che contiene il testo di un comando OLE DB. Un semplice esempio è:  
   
@@ -112,12 +111,12 @@ La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo
 **db_command** verifica che la variabile usata per *source_name* sia valida, pertanto la variabile specificata deve essere in ambito funzione o in ambito globale.  
   
 *HRESULT* (facoltativo)  
-Identifica la variabile che riceverà il `HRESULT` di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.  
+Identifica la variabile che riceverà il valore HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.  
   
 *bindings* (facoltativo)  
 Consente di separare i parametri di associazione dal comando OLE DB.  
   
-Se si specifica un valore per *associazioni*, **db_command** analizzerà il valore associato e non verrà analizzato il \[ *bindtype*] parametro. Questo utilizzo consente di usare la sintassi del provider OLE DB. Per disabilitare l'analisi senza l'associazione dei parametri, specificare **Bindings=""**.  
+Se si specifica un valore per *associazioni*, **db_command** analizzerà il valore associato e non verrà analizzato il \[ *bindtype*] parametro. Questo utilizzo consente di usare la sintassi del provider OLE DB. Per disabilitare l'analisi senza l'associazione dei parametri, specificare `Bindings=""`.  
   
 Se non si specifica un valore per *associazioni*, **db_command** analizzerà il blocco del parametro di associazione, alla ricerca di '**(**', quindi su **\[** _bindtype_**]** tra parentesi quadre, seguite da uno o più variabili di membro C++ di dichiarato in precedenza, seguito da '**)**'. Tutto il testo tra parentesi verrà rimosso dal comando risultante e questi parametri verranno usati per creare associazioni di parametro e di colonna per questo comando.  
   
@@ -133,7 +132,7 @@ Se *bulk_fetch* è minore di 1, `SetRows` restituirà zero.
 ## <a name="remarks"></a>Note  
 **db_command** crea un oggetto [CCommand](../data/oledb/ccommand-class.md) , che viene usato da un consumer OLE DB per eseguire un comando.  
   
-È possibile usare **db_command** con un ambito di classe o un ambito di funzione. La differenza principale è l'ambito dell'oggetto `CCommand` . Con l'ambito di funzione, i dati come le associazioni terminano alla fine della funzione. Gli utilizzi di ambito di funzione sia classe implicano la classe modello Consumer OLE DB `CCommand<>`, ma gli argomenti di modello diverso per i casi di funzione e di classe. In caso di ambito di funzione, verranno create associazioni a una **funzione di accesso** che include le variabili locali, mentre l'uso della classe dedurrà una classe derivata da `CAccessor`come argomento. Quando viene usato come attributo della classe, **db_command** funziona insieme a **db_column**.  
+È possibile usare **db_command** con un ambito di classe o un ambito di funzione. La differenza principale è l'ambito dell'oggetto `CCommand` . Con l'ambito di funzione, i dati come le associazioni terminano alla fine della funzione. Gli utilizzi di ambito di funzione sia classe implicano la classe modello Consumer OLE DB `CCommand<>`, ma gli argomenti di modello diverso per i casi di funzione e di classe. In caso di funzione, verranno create associazioni a un' `Accessor` che include le variabili locali, mentre l'uso della classe dedurrà una `CAccessor`-come argomento di classe derivata. Quando viene usato come attributo della classe, **db_command** funziona insieme a **db_column**.  
   
 **db_command** può essere usato per eseguire comandi che non restituiscono un set di risultati.  
   

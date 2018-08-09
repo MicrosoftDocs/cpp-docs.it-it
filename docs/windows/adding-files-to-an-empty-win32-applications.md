@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di file a un'applicazione Win32 vuota | Documenti Microsoft
+title: Aggiunta di file a un'applicazione Win32 vuota | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856892"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646842"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Aggiunta di file a un'applicazione Win32 vuota
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Per aggiungere i file a un'applicazione desktop di Windows vuota  
@@ -36,7 +36,7 @@ ms.locfileid: "33856892"
   
 4.  Fare clic su **OK**.  
   
- Per aggiungere i file di origine, di intestazione o di risorse al progetto, fare clic con il pulsante destro del mouse sul nodo Soluzione in Esplora soluzioni e aggiungere i file al progetto nello stesso modo. Verrà creata una cartella Varie per contenere gli altri file nel progetto.  
+ Per aggiungere i file di origine, intestazione né i file di risorse al progetto, fare doppio clic il **soluzione** nodo **Esplora soluzioni** e aggiungere i file al progetto nello stesso modo. Oggetto **varie** cartella verrà creata per contenere gli altri file nel progetto.  
   
 > [!NOTE]
 >  Prima di compilare il progetto, è necessario specificare le opzioni di compilazione per questi file in modo che vengano inclusi correttamente nell'applicazione finita. Per altre informazioni, vedere [Pagine delle proprietà (Visual C++)](../ide/property-pages-visual-cpp.md) e [Compilazione di programmi C/C++](../build/building-c-cpp-programs.md).  

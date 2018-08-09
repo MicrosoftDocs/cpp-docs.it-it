@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 799d0631ce29fcebd739f29232236e7cf87b74ac
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461492"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652575"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Funzione di callback (Libreria modelli C++ per Windows Runtime)
 Crea un oggetto la cui funzione membro è un metodo di callback.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<  
    typename TDelegateInterface,  
    typename TCallback  
@@ -198,7 +198,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *TDelegateInterface*  
  Parametro di modello che specifica l'interfaccia del delegato da chiamare quando si verifica un evento.  
   

@@ -1,5 +1,5 @@
 ---
-title: Modifica delle parti di un'immagine (Editor di immagini per le icone) | Documenti Microsoft
+title: Modifica delle parti di un'immagine (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,67 +23,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b33a591a2f38062b5eaf81b0f56ab73a36f4c90c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1880853c63a236e824f9b59156181dccb2bba819
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876852"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647446"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Modifica delle parti di un'immagine (Editor di immagini per le icone)
-È possibile eseguire operazioni di modifica standard, ovvero le operazioni Taglia, copia, annullamento e lo spostamento, in un [selezione](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), se la selezione è l'intera immagine o solo una parte di esso. Poiché l'editor di immagini utilizza negli Appunti di Windows, è possibile trasferire immagini tra l'editor di immagini e altre applicazioni per Windows.  
+È possibile eseguire le operazioni di modifica standard, ovvero Taglia, copia, la cancellazione e lo spostamento, su un [selezione](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), se la selezione è l'intera immagine o solo una parte di esso. Poiché il **immagine** editor utilizza le **negli Appunti di Windows**, è possibile trasferire immagini tra il **immagine** editor e altre applicazioni per Windows.  
   
- Inoltre, è possibile ridimensionare la selezione, se include l'intera immagine o solo una parte.  
+ Inoltre, è possibile ridimensionare la selezione, se include solo una parte o l'intera immagine.  
   
 ### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Taglia la selezione corrente e spostarlo negli Appunti  
   
-1.  Fare clic su **Taglia** sul **modifica** menu.  
+1.  Fare clic su **tagliare** nel **modificare** menu.  
   
 ### <a name="to-copy-the-selection"></a>Per copiare la selezione  
   
-1.  Posizionare il puntatore all'interno del bordo di selezione oppure in qualsiasi punto su di esso, ad eccezione di quadratini di ridimensionamento.  
+1.  Posizionare il puntatore all'interno del bordo di selezione oppure ovunque ti trovi su di esso, ad eccezione di quadratini di ridimensionamento.  
   
-2.  Tenere premuto il **CTRL** mentre si trascina la selezione in un nuovo percorso della chiave. L'area della selezione originale rimane invariato.  
+2.  Tenere premuto il **Ctrl** quando si trascina la selezione in un nuovo percorso della chiave. L'area della selezione originale rimane invariato.  
   
 3.  Per copiare la selezione nell'immagine nella posizione corrente, fare clic all'esterno del cursore di selezione.  
   
-### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Per incollare il contenuto degli Appunti in un'immagine  
+### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Incollare il contenuto degli Appunti in un'immagine  
   
-1.  Dal **modifica** menu, scegliere **Incolla**.  
+1.  Dal **Edit** menu, scegliere **Incolla**.  
   
-     Il contenuto degli Appunti, racchiuso tra il bordo di selezione vengono visualizzati nell'angolo superiore sinistro del riquadro.  
+     Il contenuto degli Appunti, racchiuso tra il bordo di selezione, vengono visualizzati nell'angolo superiore sinistro del riquadro.  
   
-2.  Posizionare il puntatore all'interno del bordo di selezione e trascinare l'immagine nella posizione desiderata nell'immagine.  
+2.  Posizionare il puntatore del mouse all'interno del bordo di selezione e trascinare l'immagine nella posizione desiderata nell'immagine.  
   
-3.  Per ancorare l'immagine nella nuova posizione, fare clic all'esterno del bordo di selezione.  
+3.  Per l'immagine nella nuova posizione di ancoraggio, fare clic all'esterno del bordo di selezione.  
   
 ### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Per eliminare la selezione corrente senza spostarlo negli Appunti  
   
-1.  Dal **modifica** menu, scegliere **eliminare**.  
+1.  Dal **Edit** menu, scegliere **eliminare**.  
   
-     L'area della selezione originale viene riempita con il colore di sfondo corrente.  
+     L'area originale della selezione viene riempita con il colore di sfondo corrente.  
   
     > [!NOTE]
-    >  È possibile accedere Taglia, copia, Incolla ed eliminare comandi facendo clic nella finestra Visualizzazione risorse.  
+    >  È possibile accedere la **tagliare**, **copia**, **Incolla**, e **Elimina** comandi facendo clic con il pulsante destro il **visualizzazione risorse** finestra.  
   
 ### <a name="to-move-the-selection"></a>Per spostare la selezione  
   
-1.  Posizionare il puntatore all'interno del bordo di selezione oppure in qualsiasi punto su di esso, ad eccezione di quadratini di ridimensionamento.  
+1.  Posizionare il puntatore all'interno del bordo di selezione oppure ovunque ti trovi su di esso, ad eccezione di quadratini di ridimensionamento.  
   
 2.  Trascinare la selezione nella nuova posizione.  
   
-3.  Per ancorare la selezione dell'immagine in una nuova posizione, fare clic all'esterno del bordo di selezione.  
+3.  Per ancorare la selezione dell'immagine nella nuova posizione, fare clic all'esterno del bordo di selezione.  
   
- Per ulteriori informazioni sul disegno con una selezione, vedere [la creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
+ Per altre informazioni sul disegno con una selezione, vedere [creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisiti  
-  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
-

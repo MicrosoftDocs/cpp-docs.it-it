@@ -1,5 +1,5 @@
 ---
-title: UUID (attributi C++) | Documenti Microsoft
+title: UUID (attributi C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07258b2f7416b0747be81075f4c037a6be54e7a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891532"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647073"
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributi C++)
 Specifica l'ID univoco per una classe o interfaccia.  
@@ -30,27 +30,26 @@ Specifica l'ID univoco per una classe o interfaccia.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      [ uuid(  
+[ uuid(  
    "uuid"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *uuid*  
  Un identificatore univoco a 128 bit.  
   
 ## <a name="remarks"></a>Note  
- Se la definizione di un'interfaccia o classe non specifica il `uuid` attributo C++, quindi il compilatore Visual C++ fornirà uno. Quando si specifica un `uuid`, è necessario includere le virgolette.  
+ Se la definizione di un'interfaccia o classe non specifica la **uuid** attributo C++, quindi il compilatore Visual C++ fornisce uno. Quando si specifica un **uuid**, è necessario includere le virgolette.  
   
- Se non si specifica `uuid`, il compilatore genererà lo stesso GUID per le interfacce o classi con lo stesso nome in progetti diversi attributi in un computer.  
+ Se non si specifica **uuid**, il compilatore genererà lo stesso GUID per le interfacce o classi con lo stesso nome nei progetti di attributo diverso in un computer.  
   
- È possibile utilizzare Uuidgen.exe o Guidgen.exe per generare il proprio ID univoci. (Per eseguire uno di questi strumenti, fare clic su **avviare** e fare clic su **eseguire** dal menu. Quindi immettere il nome dello strumento richiesto.)  
+ È possibile utilizzare Uuidgen.exe o Guidgen.exe per generare il proprio ID univoci. (Per eseguire uno di questi strumenti, fare clic su **avviare** e fare clic su **eseguire** nel menu. Immettere quindi il nome dello strumento obbligatorio.)  
   
- Quando utilizzato in un progetto che non utilizzano ATL, specificando il `uuid` attributo corrisponde a quello ottenuto specificando il [uuid](../cpp/uuid-cpp.md) modificatore declspec. Per recuperare il `uuid` di una classe, è possibile utilizzare [uuidof](../cpp/uuidof-operator.md)  
+ Se usato in un progetto che non utilizza inoltre ATL, specificando il **uuid** attributo corrisponde a quello ottenuto specificando la [uuid](../cpp/uuid-cpp.md) **declspec** modificatore. Per recuperare il **uuid** di una classe, è possibile usare [uuidof](../cpp/uuidof-operator.md)  
   
 ## <a name="example"></a>Esempio  
- Vedere il [associabili](../windows/bindable.md) esempio per un esempio dell'uso di `uuid`.  
+ Vedere le [associabile](../windows/bindable.md) per un esempio dell'uso di esempio **uuid**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -58,16 +57,16 @@ Specifica l'ID univoco per una classe o interfaccia.
   
 |||  
 |-|-|  
-|**Si applica a**|**classe**, `struct`, `interface`, **unione**, `enum`|  
+|**Si applica a**|**classe**, **struct**, **interfaccia**, **union**, **enum**|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi di interfaccia](../windows/interface-attributes.md)   
- [Attributi di classe](../windows/class-attributes.md)   
- [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributi della classe](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union e struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   

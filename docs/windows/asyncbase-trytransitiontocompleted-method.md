@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2185b83a393860904903f4b82b3c3b42a2c3b33
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a44434c530bd0685627e2e807140e31068cb5eb8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460742"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645760"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>Metodo AsyncBase::TryTransitionToCompleted
 Indica se l'operazione asincrona corrente è stata completata.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 bool TryTransitionToCompleted(  
    void  
 );  

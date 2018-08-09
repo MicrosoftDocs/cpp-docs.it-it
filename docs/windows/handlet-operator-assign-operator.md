@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fa253bec9f150d08f699333cd5d5f6d4538fc2d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570041"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653157"
 ---
 # <a name="handletoperator-operator"></a>Operatore HandleT::operator=
 Sposta il valore dell'oggetto specificato **HandleT** oggetto all'oggetto corrente **HandleT** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HandleT& operator=(  
    _Inout_ HandleT&& h  
 );  

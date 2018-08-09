@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b71581687ec69a4aff85f649e85ebfe10c0a844f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466839"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650469"
 ---
 # <a name="chaininterfacesverify-method"></a>Metodo ChainInterfaces::Verify
-Verifica che ogni interfaccia definita dai parametri modello *I0* attraverso *I9* eredita da IUnknown e/o IInspectable e che *I0* eredita da *I1* attraverso *I9*.  
+Verifica che ogni interfaccia definita dai parametri modello *I0* attraverso *I9* eredita `IUnknown` e/o `IInspectable`e che *I0* eredita da *I1* attraverso *I9*.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 WRL_NOTHROW __forceinline static void Verify();  
 ```  
   

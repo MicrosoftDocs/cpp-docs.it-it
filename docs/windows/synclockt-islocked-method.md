@@ -1,5 +1,5 @@
 ---
-title: 'Metodo synclockt:: IsLocked | Documenti Microsoft'
+title: 'Metodo synclockt:: IsLocked | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 067b3763e10b2bbb310b213f7d748e953ba2a902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfbd3418af731edf826debd9d6663095be706b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888475"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641519"
 ---
 # <a name="synclocktislocked-method"></a>Metodo SyncLockT::IsLocked
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se l'oggetto SyncLockT è bloccata; in caso contrario, **false**.  
+ **true** se il **SyncLockT** oggetto è bloccato; in caso contrario, **false**.  
   
 ## <a name="remarks"></a>Note  
- Indica se l'oggetto SyncLockT corrente appartiene a una risorsa. l'oggetto SyncLockT è *bloccato*.  
+ Indica se l'oggetto corrente **SyncLockT** oggetto proprietario di una risorsa, ovvero, il **SyncLockT** oggetto è *bloccato*.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

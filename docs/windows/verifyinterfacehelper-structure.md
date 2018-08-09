@@ -1,5 +1,5 @@
 ---
-title: VerifyInterfaceHelper (struttura) | Documenti Microsoft
+title: VerifyInterfaceHelper (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f414189c60946264ce49c5d6065d91d92b8bd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d468913dcca511702deeb77b08306dd0256d6091
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890252"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641249"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (struttura)
-Supporta l'infrastruttura di libreria di modelli di Windows Runtime C++ e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura di libreria modelli C++ per Windows Runtime e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,11 +42,11 @@ template <
 struct VerifyInterfaceHelper<false, I>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `I`  
- Un'interfaccia per verificare.  
+### <a name="parameters"></a>Parametri  
+ *I*  
+ Interfaccia da verificare.  
   
- `isWinRTInterface`  
+ *isWinRTInterface*  
   
 ## <a name="remarks"></a>Note  
  Verifica che l'interfaccia specificata dal parametro di modello soddisfi determinati requisiti.  
@@ -63,7 +63,7 @@ struct VerifyInterfaceHelper<false, I>;
  `VerifyInterfaceHelper`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

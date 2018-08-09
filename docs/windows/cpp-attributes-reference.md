@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29c3aacf63396e96b4520fc849e082c6781e5d64
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 24ca39b307decbf88338295ba2650b935eca2d4f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460906"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645494"
 ---
 # <a name="c-attributes-reference"></a>Riferimenti relativi agli attributi di C++
 Microsoft definisce un set di attributi che semplificano la programmazione COM e lo sviluppo di .NET Framework common language runtime. Quando si includono attributi nei file di origine, il compilatore funziona con il provider delle DLL da inserire o modificare il codice nei file di oggetti generato.  
   
- **Nota:** se si sta cercando gli attributi standard di C++, vedere [attributi](../cpp/attributes.md).  
+ > [!NOTE] 
+ > Se si sta cercando gli attributi standard di C++, vedere [attributi](../cpp/attributes.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Concetti](../windows/attributed-programming-concepts.md)  

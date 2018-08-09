@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b3ad3ef6acb06eaef04197dc4ecffe27c2d7656d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570496"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650215"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Procedura: modificare la lingua o la condizione di una risorsa durante la copia
 Durante la copia in una risorsa, è possibile modificarne la proprietà relativa alla lingua o alla condizione oppure entrambe.  
@@ -34,7 +34,7 @@ Durante la copia in una risorsa, è possibile modificarne la proprietà relativa
   
  La lingua e la condizione di una risorsa vengono visualizzate tra parentesi dopo il nome della risorsa nella finestra Area di lavoro. Nell'esempio che segue, la risorsa denominata IDD_AboutBox usa come lingua il finlandese e la condizione è XX33.  
   
-```  
+```cpp  
 IDD_AboutBox (Finnish - XX33)  
 ```  
   
@@ -51,7 +51,6 @@ IDD_AboutBox (Finnish - XX33)
     -   Nel **condizione** , digitare la condizione.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

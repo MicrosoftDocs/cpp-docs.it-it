@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462784"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646189"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Aggiunge una voce di interfaccia nella mappa COM della classe di destinazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *COM_INTERFACE_ENTRY*  
  Stringa contenente il testo effettivo della voce. Per un elenco di valori possibili, vedere [COM_INTERFACE_ENTRY macro](../atl/reference/com-interface-entry-macros.md).  
   
@@ -58,7 +58,7 @@ Aggiunge una voce di interfaccia nella mappa COM della classe di destinazione.
   
  Questa restrizione è necessaria perché ATL Usa la prima voce nella mappa dell'interfaccia come identità `IUnknown`; di conseguenza, la voce deve essere un'interfaccia valida. Esempio di codice seguente, ad esempio, non è valido perché la prima voce nella mappa dell'interfaccia non specifica un'interfaccia COM effettiva.  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  La mappa di oggetti COM risultante per `CMyBaseClass` è come segue:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**Si applica a**|**classe**, **struct**|  
 |**Ripetibile**|Yes|  
-|**Attributi obbligatori**|Uno o più degli attributi seguenti: **coclass**, **progid**o **vi_progid**.|  
+|**Attributi obbligatori**|Uno o più delle operazioni seguenti: `coclass`, `progid`, o `vi_progid`.|  
 |**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  

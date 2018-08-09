@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571285"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645396"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizzazione o modifica di colori (Editor di immagini per le icone)
-L'editor di immagini [tavolozza di colori](../windows/colors-window-image-editor-for-icons.md) inizialmente Visualizza 16 colori standard. Oltre ai colori visualizzati, è possibile creare colori personalizzati. È quindi possibile [salvare e caricare una tavolozza colori personalizzata](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+Il **immagine** redattore [tavolozza di colori](../windows/colors-window-image-editor-for-icons.md) inizialmente Visualizza 16 colori standard. Oltre ai colori visualizzati, è possibile creare colori personalizzati. È quindi possibile [salvare e caricare una tavolozza colori personalizzata](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>Per modificare i colori nella Tavolozza colori  
   
@@ -51,7 +51,6 @@ L'editor di immagini [tavolozza di colori](../windows/colors-window-image-editor
 5.  Fare clic su **OK** per aggiungere il nuovo colore.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  nessuno  
   
 ## <a name="see-also"></a>Vedere anche  

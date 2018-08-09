@@ -1,5 +1,5 @@
 ---
-title: 'Metodo srwlocksharedtraits:: Unlock | Documenti Microsoft'
+title: 'Metodo srwlocksharedtraits:: Unlock | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95be5ae4c9db7bff4ecbfb4705904f4e48c160e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0a42d1e1010f63436951beeadbd833e2a9d445d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889358"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650524"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>Metodo SRWLockSharedTraits::Unlock
-Restituisce il controllo esclusivo dell'oggetto SRWLock specificato.  
+Rilascia il controllo esclusivo del specificato `SRWLock` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `srwlock`  
- Un handle a un oggetto SRWLock.  
+### <a name="parameters"></a>Parametri  
+ *SRWLOCK*  
+ Un handle per un `SRWLock` oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
   

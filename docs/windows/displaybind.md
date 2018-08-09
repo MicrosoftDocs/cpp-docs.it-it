@@ -1,5 +1,5 @@
 ---
-title: displaybind | Documenti Microsoft
+title: displaybind | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879887"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641740"
 ---
 # <a name="displaybind"></a>displaybind
 Indica una proprietà che deve essere visualizzata all'utente come associabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **displaybind** attributo C++ ha la stessa funzionalità come il [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) attributo MIDL.  
+ Il **displaybind** attributi di C++ ha la stessa funzionalità come la [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio di come utilizzare **displaybind**.  
+ Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio di come usare **displaybind**.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -50,7 +48,7 @@ Indica una proprietà che deve essere visualizzata all'utente come associabile.
 |**Si applica a**|Metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

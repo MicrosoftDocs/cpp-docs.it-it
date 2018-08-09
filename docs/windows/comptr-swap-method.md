@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fff9e812a6946dd15de5b2d33f57358d02246dab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 38fee8186d19d38075abab3bb16e2fcaac59a362
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462479"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649877"
 ---
 # <a name="comptrswap-method"></a>Metodo ComPtr::Swap
 Scambia l'interfaccia gestita dall'oggetto corrente **ComPtr** con l'interfaccia gestita dall'oggetto specificato **ComPtr**.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void Swap(  
    _Inout_ ComPtr&& r  
 );  
@@ -39,7 +39,7 @@ void Swap(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *r*  
  Oggetto **ComPtr**.  
   

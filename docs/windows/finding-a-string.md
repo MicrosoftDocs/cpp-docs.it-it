@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91e9523b063e9decbcb97ce9f5d8229a9c670b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 67d3d4ba38563b4716a87d4b57a4753fe1b49e9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568936"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652094"
 ---
 # <a name="finding-a-string"></a>Ricerca di una stringa
 È possibile eseguire la ricerca di una o più stringhe nella tabella di stringhe e usare [le espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) con il **Cerca nei file** comando (**Edit** menu) per individuare tutte le istanze di stringhe che corrispondono a un criterio.  
@@ -49,7 +49,6 @@ ms.locfileid: "39568936"
  Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) e[Procedura dettagliata: utilizzo delle risorse per la localizzazione con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

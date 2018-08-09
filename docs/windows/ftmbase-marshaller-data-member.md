@@ -1,5 +1,5 @@
 ---
-title: Membro dati FtmBase::marshaller_ | Documenti Microsoft
+title: Membro dati FtmBase::marshaller_ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a221cc7d460ed7db2a9eab6cc1ac2ea0200bbf92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37ad18c3daf6aee24c2e7c0c4c08c35caf87a602
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872702"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642035"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>Membro dati FtmBase::marshaller_
 Contiene un riferimento al gestore del marshalling a thread libero.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;  
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** . h  
+ **Intestazione:** ftm.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: feece642928db70a2b78dd3a4117b695b19f4af9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0aed7c8ef617152144bbe211f83f442fe93d525e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466072"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648285"
 ---
 # <a name="accelerator-editor"></a>Editor tasti di scelta rapida
 Una tabella di tasti di scelta rapida è una risorsa di Windows che contiene un elenco di tasti di scelta rapida e gli identificatori di comando associati. Un programma può avere più tabelle di tasti di scelta rapida.  
@@ -36,7 +36,7 @@ Una tabella di tasti di scelta rapida è una risorsa di Windows che contiene un 
   
  È possibile usare [Visualizzazione classi](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) per associare i comandi di tasti di scelta rapida al codice.  
   
- Con l'editor tasti di scelta rapida è possibile:  
+ Con il **acceleratore** editor, è possibile:  
   
 -   [Impostare le proprietà dei tasti di scelta rapida](../windows/setting-accelerator-properties.md)  
   
@@ -47,12 +47,12 @@ Una tabella di tasti di scelta rapida è una risorsa di Windows che contiene un 
 -   [Usare i tasti di scelta rapida predefiniti](../windows/predefined-accelerator-keys.md)  
   
     > [!TIP]
-    >  Quando si usa l'editor tasti di scelta rapida, è possibile fare clic con il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi usati frequentemente. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il puntatore.  
+    >  Quando si usa la **acceleratore** editor, è possibile fare doppio clic per visualizzare un menu di scelta rapida dei comandi usati frequentemente. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il puntatore.  
   
     > [!NOTE]
     >  Windows non consente di creare tabelle di tasti di scelta rapida vuote. Se si crea una tabella di tasti di scelta rapida priva di voci, questa verrà eliminata automaticamente al salvataggio della tabella.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  

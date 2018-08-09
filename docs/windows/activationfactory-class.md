@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461505"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649205"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory (classe)
 Abilita l'attivazione di una o più classi da Windows Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -38,7 +38,7 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *I0*  
  L'interfaccia di zero.  
   
@@ -74,7 +74,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 |[Metodo ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Incrementa il conteggio dei riferimenti dell'oggetto corrente **ActivationFactory** oggetto.|  
 |[Metodo ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Recupera una matrice di ID di interfaccia implementata.|  
 |[Metodo ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Ottiene il nome della classe di runtime dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.|  
-|[Metodo ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Ottiene il livello di attendibilità dell'oggetto che crea un'istanza di ActivationFactory corrente.|  
+|[Metodo ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Ottiene il livello di attendibilità dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.|  
 |[Metodo ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Recupera un puntatore all'interfaccia specificata.|  
 |[Metodo ActivationFactory::Release](../windows/activationfactory-release-method.md)|Decrementa il conteggio dei riferimenti dell'oggetto corrente **ActivationFactory** oggetto.|  
   

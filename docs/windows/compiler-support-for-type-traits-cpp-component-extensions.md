@@ -71,18 +71,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a88994133b65432566254fb77ddc35d5f2aab47b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463616"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644869"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Supporto del compilatore per tratti di tipo (Estensioni del componente C++)
 Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di un tipo in fase di compilazione.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- **Note**  
+### <a name="remarks"></a>Note  
   
  Tratti di tipo sono particolarmente utili per i programmatori che scrivono librerie.  
   
@@ -92,9 +92,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_assign(` `type` `)`  
   
-     Restituisce true se la piattaforma o il tipo nativo ha un operatore di assegnazione di copia.  
+     Restituisce **true** se la piattaforma o un tipo nativo ha un operatore di assegnazione di copia.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -106,9 +106,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_copy(` `type` `)`  
   
-     Restituisce true se la piattaforma o il tipo nativo ha un costruttore di copia.  
+     Restituisce **true** se la piattaforma o un tipo nativo ha un costruttore di copia.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -120,9 +120,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_finalizer(` `type` `)`  
   
-     (Non supportato in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Restituisce true se il tipo CLR ha un finalizzatore. Vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per altre informazioni.  
+     (Non supportato in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Restituisce **true** se il tipo CLR ha un finalizzatore. Vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per altre informazioni.  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -137,9 +137,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_nothrow_assign(` `type` `)`  
   
-     Restituisce true se un operatore di assegnazione di copia ha una specifica di eccezione vuota.  
+     Restituisce **true** se un operatore di assegnazione di copia ha una specifica di eccezione vuota.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -153,9 +153,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_nothrow_constructor(` `type` `)`  
   
-     Restituisce true se il costruttore predefinito ha una specifica di eccezione vuota.  
+     Restituisce **true** se il costruttore predefinito ha una specifica di eccezione vuota.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -169,9 +169,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_nothrow_copy(` `type` `)`  
   
-     Restituisce true se il costruttore di copia ha una specifica di eccezione vuota.  
+     Restituisce **true** se il costruttore di copia ha una specifica di eccezione vuota.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -185,9 +185,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_trivial_assign(` `type` `)`  
   
-     Restituisce true se il tipo ha un operatore di assegnazione semplice, generato dal compilatore.  
+     Restituisce **true** se il tipo ha un operatore di assegnazione semplice, generato dal compilatore.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -199,9 +199,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_trivial_constructor(` `type` `)`  
   
-     Restituisce true se il tipo ha un costruttore semplice, generato dal compilatore.  
+     Restituisce **true** se il tipo ha un costruttore semplice, generato dal compilatore.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -213,9 +213,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_trivial_copy(` `type` `)`  
   
-     Restituisce true se il tipo ha un costruttore di copia semplice, generato dal compilatore.  
+     Restituisce **true** se il tipo ha un costruttore di copia semplice, generato dal compilatore.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -227,7 +227,7 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_trivial_destructor(` `type` `)`  
   
-     Restituisce true se il tipo ha un distruttore semplice, generato dal compilatore.  
+     Restituisce **true** se il tipo ha un distruttore semplice, generato dal compilatore.  
   
     ``` cpp 
     // has_trivial_destructor.cpp  
@@ -242,7 +242,7 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_user_destructor(` `type` `)`  
   
-     Restituisce true se la piattaforma o il tipo nativo ha un distruttore dichiarato dall'utente.  
+     Restituisce **true** se la piattaforma o un tipo nativo ha un distruttore dichiarato dall'utente.  
   
     ```cpp
     // has_user_destructor.cpp  
@@ -259,7 +259,7 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__has_virtual_destructor(` `type` `)`  
   
-     Restituisce true se il tipo ha un distruttore virtuale.  
+     Restituisce **true** se il tipo ha un distruttore virtuale.  
   
      `__has_virtual_destructor` funziona anche su tipi di piattaforma e gli eventuali distruttori definiti dall'utente in un tipo di piattaforma sono distruttori virtuali.  
   
@@ -278,7 +278,7 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_abstract(` `type` `)`  
   
-     Restituisce true se il tipo è un tipo astratto. Per altre informazioni sui tipi astratti nativi, vedere [astratta](../windows/abstract-cpp-component-extensions.md).  
+     Restituisce **true** se il tipo è un tipo astratto. Per altre informazioni sui tipi astratti nativi, vedere [astratta](../windows/abstract-cpp-component-extensions.md).  
   
      `__is_abstract` funziona anche per i tipi di piattaforma. Un'interfaccia con almeno un membro è un tipo astratto perché è un tipo riferimento con almeno un membro astratto. Per altre informazioni sui tipi di piattaforma astratta, vedere [classi astratte](../cpp/abstract-classes-cpp.md)  
   
@@ -297,9 +297,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
-     Restituisce true se il primo tipo è una classe di base del secondo tipo o se entrambi i tipi sono uguali.  
+     Restituisce **true** se il primo tipo è una classe di base del secondo tipo, se entrambi i tipi sono uguali.  
   
-     `__is_base_of` funziona anche sui tipi di piattaforma. Ad esempio, verrà restituito true se il primo tipo è un' [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md) e il secondo tipo implementa l'interfaccia.  
+     `__is_base_of` funziona anche sui tipi di piattaforma. Ad esempio, verrà restituito **true** se il primo tipo è un [classe interfaccia](../windows/interface-class-cpp-component-extensions.md) e il secondo tipo implementa l'interfaccia.  
   
     ```cpp
     // is_base_of.cpp  
@@ -318,9 +318,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_class(` `type` `)`  
   
-     Restituisce true se il tipo è una classe nativa o uno struct.  
+     Restituisce **true** se il tipo è una classe nativa o uno struct.  
   
-    ```
+    ```cpp
     #include <stdio.h>  
     struct S {};  
   
@@ -332,9 +332,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
   
-     Restituisce true se il primo tipo può essere convertito nel secondo tipo.  
+     Restituisce **true** se il primo tipo può essere convertito nel secondo tipo.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -350,9 +350,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_delegate(` `type` `)`  
   
-     Restituisce true se `type` è un delegato. Per altre informazioni, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).  
+     Restituisce **true** se `type` è un delegato. Per altre informazioni, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
@@ -361,9 +361,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_empty(` `type` `)`  
   
-     Restituisce true se il tipo non dispone di alcun membro dati di istanza.  
+     Restituisce **true** se il tipo non dispone di alcun membro dati di istanza.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -377,7 +377,7 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_enum(` `type` `)`  
   
-     Restituisce true se il tipo è un'enumerazione nativa.  
+     Restituisce **true** se il tipo è un'enumerazione nativa.  
   
     ```cpp
     // is_enum.cpp  
@@ -399,7 +399,7 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_interface_class(` `type` `)`  
   
-     Restituisce true se viene passata un'interfaccia di piattaforma. Per altre informazioni, vedere [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md).  
+     Restituisce **true** se passata un'interfaccia di piattaforma. Per altre informazioni, vedere [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md).  
   
     ```cpp
     // is_interface_class.cpp  
@@ -413,11 +413,11 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_pod(` `type` `)`  
   
-     Restituisce true se il tipo è una classe o unione senza costruttori o membri non statici privati o protetti, senza classi di base e funzioni virtuali. Per altre informazioni sui POD, vedere lo standard C++, sezioni 8.5.1/1, 9/4 e 3.9/10.  
+     Restituisce **true** se il tipo è una classe o un'unione con alcun costruttore o membri non statici privati o protetti, senza classi di base e funzioni non virtuali. Per altre informazioni sui POD, vedere lo standard C++, sezioni 8.5.1/1, 9/4 e 3.9/10.  
   
      `__is_pod` restituisce false per i  tipi fondamentali.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -429,9 +429,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_polymorphic(` `type` `)`  
   
-     Restituisce true se un tipo nativo ha funzioni virtuali.  
+     Restituisce **true** se un tipo nativo ha funzioni virtuali.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -445,9 +445,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_ref_array(` `type` `)`  
   
-     Restituisce true se viene passata una matrice di piattaforma. Per altre informazioni, vedere [matrici](../windows/arrays-cpp-component-extensions.md).  
+     Restituisce **true** se passata una matrice di piattaforma. Per altre informazioni, vedere [matrici](../windows/arrays-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
@@ -457,9 +457,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_ref_class(` `type` `)`  
   
-     Restituisce true se viene passata una classe di riferimento. Per altre informazioni sui tipi riferimento definiti dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Restituisce **true** se passata una classe di riferimento. Per altre informazioni sui tipi riferimento definiti dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     int main() {  
@@ -470,9 +470,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_sealed(` `type` `)`  
   
-     Restituisce true se vengono passati una piattaforma o un tipo nativo contrassegnati come sealed. Per altre informazioni, vedere [sealed](../windows/sealed-cpp-component-extensions.md).  
+     Restituisce **true** se passati una piattaforma o un tipo nativo contrassegnati come sealed. Per altre informazioni, vedere [sealed](../windows/sealed-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
@@ -481,9 +481,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     Restituisce true se viene passato un tipo valore che non contiene riferimenti all'heap sottoposto a Garbage Collection. Per altre informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Restituisce **true** se viene passato un tipo di valore che non contiene riferimenti all'heap sottoposto a garbage collection. Per altre informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -499,9 +499,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_union(` `type` `)`  
   
-     Restituisce true se un tipo è un'unione.  
+     Restituisce **true** se un tipo è un'unione.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -516,9 +516,9 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
   
 -   `__is_value_class(` `type` `)`  
   
-     Restituisce true se viene passato un tipo valore. Per altre informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Restituisce **true** se viene passato un tipo di valore. Per altre informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     value struct V {};  
   
     int main() {  
@@ -527,25 +527,25 @@ Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di 
     ```  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- **Note**  
+### <a name="remarks"></a>Note  
   
  Il `__has_finalizer(` *tipo* `)` tratto di tipo non è supportato perché questa piattaforma non supporta i finalizzatori.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/ZW**  
+ Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Note**  
+### <a name="remarks"></a>Note  
   
  Non esistono commenti specifici della piattaforma per questa funzionalità.  
   
 ### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: **/clr**  
+ Opzione del compilatore: `/clr`  
   
 ### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Esempio di codice seguente viene illustrato come utilizzare un modello di classe per esporre un tratto di tipo del compilatore per un **/clr** compilazione. Per altre informazioni, vedere [Windows Runtime e modelli gestiti](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ Nell'esempio di codice seguente viene illustrato come usare un modello di classe per esporre un tratto di tipo del compilatore per una compilazione `/clr`. Per altre informazioni, vedere [Windows Runtime e modelli gestiti](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
 ```cpp  
 // compiler_type_traits.cpp  
@@ -566,8 +566,6 @@ int main () {
       Console::WriteLine("R is not a ref class");  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 R is a ref class  

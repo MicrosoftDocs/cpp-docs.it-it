@@ -15,26 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 1dcf129f551900792638018fa846557120e53e96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570324"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644352"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Override esplicito (Estensioni del componente C++)
 In questo argomento viene illustrato come eseguire l'override esplicito di un membro di una classe di base o interfaccia. Override (esplicito) denominato deve essere utilizzato solo per eseguire l'override di un metodo con un metodo derivato ha un nome diverso.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- **Sintassi**  
+### <a name="syntax"></a>Sintassi
   
-```  
+```cpp  
 overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
-  
- **Parametri**  
-  
+
+### <a name="parameters"></a>Parametri 
  *dichiaratore di funzione viene sottoposto a override*  
  L'elenco di argomenti, nome e tipo restituito della funzione esegue l'override.  Si noti che la funzione esegue l'override non deve avere lo stesso nome della funzione da sottoporre a override.  
   
@@ -47,7 +46,7 @@ overriding-function-declarator = function { overriding-function-definition }
  *override-function-definition*  
  Le istruzioni del corpo di funzione che definiscono la funzione esegue l'override.  
   
- **Note**  
+### <a name="remarks"></a>Note
   
  Utilizzare esplicite le sostituzioni per creare un alias per una firma del metodo o per fornire implementazioni diverse per i metodi con la stessa firma.  
   
@@ -59,15 +58,14 @@ overriding-function-declarator = function { overriding-function-definition }
  Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Note**  
+### <a name="remarks"></a>Note
   
  Per informazioni su explicit esegue l'override in codice nativo o codice compilato con `/clr:oldSyntax`, vedere [override espliciti](../cpp/explicit-overrides-cpp.md).  
   
 ### <a name="requirements"></a>Requisiti  
  Opzione del compilatore: `/clr`  
   
-### <a name="examples"></a>Esempi  
- **Esempio**  
+### <a name="examples"></a>Esempi   
   
  Esempio di codice seguente mostra un'implementazione di un membro e di sostituzione semplice, implicita in un'interfaccia di base, non tramite override espliciti.  
   
@@ -91,13 +89,9 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 X::f override of I1::f  
 ```  
-  
- **Esempio**  
   
  Esempio di codice seguente viene illustrato come implementare tutti i membri di interfaccia con una firma comune, usando la sintassi di override esplicito.  
   
@@ -126,18 +120,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 X::f override of I1::f and I2::f  
 X::f override of I1::f and I2::f  
 ```  
   
- **Esempio**  
-  
  Esempio di codice seguente viene illustrato come un override di funzioni può avere un nome diverso dalla funzione che sta implementando.  
   
-```  
+```cpp  
 // explicit_override_3.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -157,13 +147,9 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 X::g  
 ```  
-  
- **Esempio**  
   
  Esempio di codice seguente illustra un'implementazione esplicita dell'interfaccia che implementa una raccolta di tipi sicuri.  
   

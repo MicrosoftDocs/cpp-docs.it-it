@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione di simboli risorsa | Documenti Microsoft
+title: Visualizzazione di simboli risorsa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9857ea9f12b74983b0af8933249450a61ed907c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891107"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649354"
 ---
 # <a name="viewing-resource-symbols"></a>Visualizzazione di simboli risorsa
 ### <a name="to-view-resource-symbols"></a>Per visualizzare i simboli risorsa  
   
-1.  In [visualizzazione risorse](../windows/resource-view-window.md), fare doppio clic sul file RC.  
+1.  Nelle [visualizzazione risorse](../windows/resource-view-window.md), pulsante destro del mouse sul file RC.  
   
     > [!NOTE]
     >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Selezionare **simboli risorsa** dal menu di scelta rapida per visualizzare una tabella di simboli in risorse di [la finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md).  
+2.  Selezionare **simboli risorsa** dal menu di scelta rapida per visualizzare una tabella di simboli risorsa nella [nella finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md).  
   
     > [!NOTE]
-    >  Per visualizzare simboli predefiniti, controllare il **Mostra simboli di sola lettura** casella di controllo.  
+    >  Per visualizzare simboli predefiniti, controllare la **Mostra simboli di sola lettura** casella di controllo.  
   
-
-  
- **Requisiti**  
-  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee338d4e90f94ed7cb7f9158235c66b72e9f2e52
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 439a118bbea5adce4c306298e573bed85da26291
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464746"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641904"
 ---
 # <a name="asyncbasecancel-method"></a>Metodo AsyncBase::Cancel
 Annulla un'operazione asincrona.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 STDMETHOD(  
    Cancel  
 )(void);  
@@ -39,7 +39,7 @@ STDMETHOD(
  Per impostazione predefinita, restituisce sempre S_OK.  
   
 ## <a name="remarks"></a>Note  
- `Cancel()` è un'implementazione predefinita di `IAsyncInfo::Cancel`, e non esegue alcuna operazione effettiva. Per effettivamente annullare un'operazione asincrona, eseguire l'override di `OnCancel()` metodo virtuale puro.  
+ **Cancel ()** è un'implementazione predefinita di `IAsyncInfo::Cancel`, e non esegue alcuna operazione effettiva. Per effettivamente annullare un'operazione asincrona, eseguire l'override di `OnCancel()` metodo virtuale puro.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Async. h  

@@ -1,5 +1,5 @@
 ---
-title: Rilevamento di operatore di riferimento (estensioni del componente C++) | Documenti Microsoft
+title: Rilevamento di operatore di riferimento (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890868"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651831"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operatore di riferimento di rilevamento (Estensioni del componente C++)
-Oggetto *riferimento di rilevamento* (`%`) si comporta come un riferimento ordinario C++ (`&`) ad eccezione del fatto che quando un oggetto viene assegnato a un riferimento di rilevamento, conteggio dei riferimenti dell'oggetto viene incrementato.  
+Oggetto *riferimento di rilevamento* (`%`) si comporta come un riferimento ordinario C++ (`&`) ad eccezione del fatto che quando un oggetto viene assegnato a un riferimento di traccia, conteggio dei riferimenti dell'oggetto viene incrementato.  
   
 ## <a name="all-platforms"></a>Tutte le piattaforme  
  Un riferimento di traccia presenta le caratteristiche descritte di seguito.  
   
 -   L'assegnazione di un oggetto a un riferimento di traccia causa l'incremento del conteggio dei riferimenti dell'oggetto.  
   
--   Un riferimento nativo (&) è il risultato quando si dereferenzia un *. Un riferimento di traccia (%) è il risultato quando si dereferenzia un ^. Se si dispone di un % per un oggetto, l'oggetto rimane attivo in memoria.  
+-   Un riferimento nativo (`&`) è il risultato quando si dereferenzia un `*`. Un riferimento di traccia (`%`) è il risultato quando si dereferenzia un `^`. Fino a quando è necessario un `%` a un oggetto, l'oggetto rimane attivo in memoria.  
   
 -   L'operatore punto (`.`) di accesso ai membri viene utilizzato per accedere a un membro dell'oggetto.  
   
 -   I riferimenti di traccia sono validi per gli handle e i tipi di valore (ad esempio `String^`).  
   
--   Un riferimento di traccia non può essere assegnato a un valore null o `nullptr`. Può essere riassegnato a un altro oggetto valido quando necessario.  
+-   Un riferimento di traccia non può essere assegnato un valore null oppure **nullptr** valore. Può essere riassegnato a un altro oggetto valido quando necessario.  
   
 -   Un riferimento di traccia non può essere utilizzato come operatore unario di acquisizione indirizzo.  
   
@@ -55,7 +55,6 @@ Foo^ spFoo2 = %srFoo;
  L'esempio seguente mostra come passare ^ a una funzione che accetta un valore %.  
   
 ```  
-  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -85,11 +84,10 @@ ref class Foo sealed {};
 -   [Procedura: Usare riferimenti di rilevamento in C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>Esempi  
- **Esempio**  
   
  Nel seguente esempio per C++/CLI viene illustrato come usare un riferimento di traccia con tipi gestiti e nativi.  
   
-```  
+```cpp  
 // tracking_reference_1.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -123,14 +121,11 @@ int main() {
   
    delete[] pi;  
 }  
-  
 ```  
-  
- **Esempio**  
   
  Nel seguente esempio per C++/CLI viene illustrato come associare un riferimento di traccia a una matrice.  
   
-```  
+```cpp  
 // tracking_reference_2.cpp  
 // compile with: /clr  
 using namespace System;  
