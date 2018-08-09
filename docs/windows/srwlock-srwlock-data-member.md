@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf6e43c6e8672e8bd3b1f895658a1c16dbe77faa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cffbcde4196f37bd97dac0f67ecefa6615d6b2ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647492"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014926"
 ---
 # <a name="srwlocksrwlock-data-member"></a>Membro dati SRWLock::SRWLock_
 Contiene la variabile di blocco sottostante per l'oggetto corrente **SRWLock** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 SRWLOCK SRWLock_;  
 ```  
   

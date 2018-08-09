@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare un componente COM classico mediante WRL | Documenti Microsoft'
+title: 'Procedura: creare un componente COM classico mediante WRL | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,39 +13,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00f00b265128ca388a3e9d4eb77631a320fbda81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fc09c75c4667ee3dd0c186f5ca465047adb1023
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880085"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013167"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Procedura: creare un componente COM classico mediante WRL
-È possibile utilizzare la libreria di modelli C++ (WRL) di Windows Runtime per creare componenti COM classici base per l'utilizzo nelle App desktop, oltre a utilizzarlo per le app Universal Windows Platform (UWP). Per la creazione di componenti COM, la libreria di modelli di Windows Runtime C++ potrebbe richiedere meno codice rispetto ad ATL. Per informazioni sul subset di COM che supporta la libreria di modelli di Windows Runtime C++, vedere [libreria di modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).  
+È possibile usare la libreria di modelli C++ (WRL) di Windows Runtime per creare i componenti COM classici base per l'uso nelle App desktop, oltre a usarlo per le app Universal Windows Platform (UWP). Per la creazione di componenti COM, la libreria di modelli di Windows Runtime C++ può richiedere meno codice rispetto ad ATL. Per informazioni sul subset di COM che supporta la libreria di modelli di Windows Runtime C++, vedere [libreria modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).  
   
- Questo documento viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per creare un componente COM di base. Sebbene sia possibile usare il meccanismo di distribuzione che meglio si adatta alle proprie esigenze, questo documento illustra anche un metodo di base per registrare e utilizzare il componente COM da un'app desktop.  
+ Questo documento illustra come usare la libreria di modelli di Windows Runtime C++ per creare un componente COM di base. Sebbene sia possibile usare il meccanismo di distribuzione che meglio si adatta alle proprie esigenze, questo documento illustra anche un metodo di base per registrare e utilizzare il componente COM da un'app desktop.  
   
-### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>Utilizzare la libreria di modelli di Windows Runtime C++ per creare un componente COM di base  
+### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>Usare la libreria di modelli di Windows Runtime C++ per creare un componente COM di base  
   
-1.  In Visual Studio, creare un **soluzione vuota** progetto. Nome del progetto, ad esempio `WRLClassicCOM`.  
+1.  In Visual Studio, creare un **soluzione vuota** progetto. Denominare il progetto, ad esempio, `WRLClassicCOM`.  
   
-2.  Aggiungere un **progetto Win32** alla soluzione. Nome del progetto, ad esempio `CalculatorComponent`. Nel **le impostazioni dell'applicazione** , selezionare **DLL**.  
+2.  Aggiungere un **progetto Win32** alla soluzione. Denominare il progetto, ad esempio, `CalculatorComponent`. Nel **Application Settings** scheda, seleziona **DLL**.  
   
-3.  Aggiungere un **Midl File (. idl)** file al progetto. Nome file, ad esempio `CalculatorComponent.idl`.  
+3.  Aggiungere un **Midl File (. idl)** file al progetto. Denominare il file, ad esempio, `CalculatorComponent.idl`.  
   
 4.  Aggiungere questo codice a CalculatorComponent.idl:  
   
      [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
   
-5.  In CalculatorComponent.cpp definire la classe `CalculatorComponent`. Il `CalculatorComponent` classe eredita da [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) specifica che la classe deriva dalla [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) e non [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` è disponibile solo per i componenti di app di Windows Runtime.) `CoCreatableClass` crea una factory per la classe che può essere utilizzata con funzioni quali [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
+5.  Nelle `CalculatorComponent.cpp`, definire il `CalculatorComponent` classe. Il `CalculatorComponent` classe eredita da [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md). [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) specifica che la classe deriva dalla [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) e non [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` è disponibile solo per i componenti di app di Windows Runtime.) `CoCreatableClass` crea una factory per la classe che può essere utilizzata con le funzioni, ad esempio [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
   
      [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
   
-6.  Sostituire il contenuto di dllmain.cpp con il codice riportato di seguito. Questo file definisce le funzioni di esportazione DLL. Queste funzioni usano la [Microsoft::WRL::Module](../windows/module-class.md) classe per gestire le class factory per il modulo.  
+6.  Usare il codice seguente per sostituire il codice in `dllmain.cpp`. Questo file definisce le funzioni di esportazione DLL. Queste funzioni usano la [Microsoft::WRL::Module](../windows/module-class.md) classe per gestire le class factory per il modulo.  
   
      [!code-cpp[wrl-classic-com-component#3](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_3.cpp)]  
   
-7.  Aggiungere un **il File di definizione moduli (def)** file al progetto. Nome file, ad esempio `CalculatorComponent.def`. Questo file fornisce al linker i nomi delle funzioni da esportare.  
+7.  Aggiungere un **File di definizione moduli (def)** file al progetto. Denominare il file, ad esempio, `CalculatorComponent.def`. Questo file fornisce al linker i nomi delle funzioni da esportare.  
   
 8.  Aggiungere questo codice a CalculatorComponent.def:  
   
@@ -58,11 +58,11 @@ ms.locfileid: "33880085"
         DllCanUnloadNow         PRIVATE  
     ```
 
-9. Aggiungere runtimeobject.lib alla riga del linker. Per ulteriori informazioni, vedere [. LIB file come Input del Linker](../build/reference/dot-lib-files-as-linker-input.md).  
+9. Aggiungere runtimeobject.lib alla riga del linker. Per altre informazioni, vedere [. File LIB come Input del Linker](../build/reference/dot-lib-files-as-linker-input.md).  
   
 ### <a name="to-consume-the-com-component-from-a-desktop-app"></a>Per utilizzare il componente COM da un'app desktop  
   
-1.  Registrare il componente COM con il Registro di sistema di Windows. A tale scopo, creare un file di voci di registrazione, denominarlo `RegScript.reg`e aggiungere il testo seguente. Sostituire  *\<dll-path >* con il percorso della DLL, ad esempio, `C:\\temp\\WRLClassicCOM\\Debug\\CalculatorComponent.dll`.  
+1.  Registrare il componente COM con il Registro di sistema di Windows. A tale scopo, creare un file di voci di registrazione, denominarlo `RegScript.reg`e aggiungere il testo seguente. Sostituire  *\<dll-path >* con il percorso della DLL, ad esempio, `C:\temp\WRLClassicCOM\Debug\CalculatorComponent.dll`.  
   
     ```
     Windows Registry Editor Version 5.00
@@ -83,16 +83,16 @@ ms.locfileid: "33880085"
     @="1.0"
     ```  
   
-2.  Eseguire RegScript.reg oppure aggiungerlo al progetto **evento post-compilazione**. Per ulteriori informazioni, vedere [pre-compilazione/Post-compilazione evento della riga di comando finestra di dialogo](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box).  
+2.  Eseguire regscript. reg oppure aggiungerlo al progetto **evento post-compilazione**. Per altre informazioni, vedere [pre-compilazione/Post-compilazione riga di comando finestra di dialogo eventi](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box).  
   
-3.  Aggiungere un **applicazione Console Win32** progetto alla soluzione. Nome del progetto, ad esempio `Calculator`.  
+3.  Aggiungere un **applicazione Console Win32** progetto alla soluzione. Denominare il progetto, ad esempio, `Calculator`.  
   
-4.  Sostituire il contenuto di Calculator.cpp con il codice riportato di seguito:  
+4.  Usare questo codice sostituire il contenuto di `Calculator.cpp`:  
   
      [!code-cpp[wrl-classic-com-component#6](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_6.cpp)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
- Questo documento Usa funzioni COM standard per dimostrare che è possibile utilizzare la libreria di modelli di Windows Runtime C++ per creare un componente COM e renderlo disponibile per qualsiasi tecnologia abilitata COM. È inoltre possibile utilizzare i tipi di libreria modelli C++ per Windows Runtime, ad esempio [Microsoft::WRL::ComPtr](../windows/comptr-class.md) nell'app desktop per gestire la durata di COM e altri oggetti. Il codice seguente usa la libreria di modelli di Windows Runtime C++ per gestire la durata del `ICalculatorComponent` puntatore. La classe `CoInitializeWrapper` è un wrapper RAII che garantisce che la libreria COM venga liberata e che la sua durata sia superiore a quella dell'oggetto del puntatore intelligente `ComPtr`.  
+ Questo documento Usa funzioni COM standard per dimostrare che è possibile usare la libreria di modelli di Windows Runtime C++ per creare un componente COM e renderlo disponibile per qualsiasi tecnologia abilitata COM. È anche possibile usare i tipi di libreria modelli C++ per Windows Runtime, ad esempio [Microsoft::WRL::ComPtr](../windows/comptr-class.md) nella tua app desktop per gestire la durata di COM e altri oggetti. Il codice seguente usa la libreria di modelli di Windows Runtime C++ per gestire la durata del `ICalculatorComponent` puntatore. La classe `CoInitializeWrapper` è un wrapper RAII che garantisce che la libreria COM venga liberata e che la sua durata sia superiore a quella dell'oggetto del puntatore intelligente `ComPtr`.  
   
  [!code-cpp[wrl-classic-com-component#7](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]  
   

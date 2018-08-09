@@ -1,5 +1,5 @@
 ---
-title: Namespace Microsoft::WRL::Wrappers | Documenti Microsoft
+title: Namespace Microsoft::WRL::Wrappers | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa666c1a5de2962a4479b355966c1e8282f2989b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9667a3660f46db0a61991545108d66bf0cac9f38
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878281"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017796"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Metodo Microsoft::WRL::Wrappers
-Definisce i tipi di risorsa acquisizione è inizializzazione (RAII) wrapper che consentono di semplificare la gestione della durata di oggetti, stringhe e gli handle.  
+Definisce i tipi di wrapper risorse acquisizione è inizializzazione (RAII) che consentono di semplificare la gestione della durata di oggetti, stringhe e gli handle.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers;  
 ```  
   
@@ -48,11 +48,11 @@ namespace Microsoft::WRL::Wrappers;
 |[Classe CriticalSection](../windows/criticalsection-class.md)|Rappresenta una sezione critica.|  
 |[Classe di eventi (Libreria modelli C++ per Windows Runtime)](../windows/event-class-windows-runtime-cpp-template-library.md)|Rappresenta un evento.|  
 |[Classe HandleT](../windows/handlet-class.md)|Rappresenta un handle a un oggetto.|  
-|[Classe HString](../windows/hstring-class.md)|Fornisce il supporto per la modifica handle HSTRING.|  
+|[Classe HString](../windows/hstring-class.md)|Fornisce supporto per modificare un handle HSTRING.|  
 |[Classe HStringReference](../windows/hstringreference-class.md)|Rappresenta un HSTRING creato da una stringa esistente.|  
-|[Mutex (classe)](../windows/mutex-class1.md)|Rappresenta un oggetto di sincronizzazione che controlla esclusivamente una risorsa condivisa.|  
+|[Classe Mutex](../windows/mutex-class1.md)|Rappresenta un oggetto di sincronizzazione che controlla esclusivamente una risorsa condivisa.|  
 |[Classe RoInitializeWrapper](../windows/roinitializewrapper-class.md)|Inizializza il Runtime di Windows.|  
-|[Classe Semaphore](../windows/semaphore-class.md)|Rappresenta un oggetto di sincronizzazione che controlla una risorsa condivisa in grado di supportare un numero limitato di utenti.|  
+|[Classe Semaphore](../windows/semaphore-class.md)|Rappresenta un oggetto di sincronizzazione che controlla una risorsa condivisa che può supportare un numero limitato di utenti.|  
 |[Classe SRWLock](../windows/srwlock-class.md)|Rappresenta un blocco in lettura/scrittura.|  
   
 ## <a name="requirements"></a>Requisiti  

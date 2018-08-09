@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a32fe0e66a8f61bc17e4512f63705635cd8b5263
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 922220c9406f02568299dc60960b04a9820a7e95
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643676"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010961"
 ---
 # <a name="srwlocklockexclusive-method"></a>Metodo SRWLock::LockExclusive
 Acquisisce un **SRWLock** oggetto in modalità esclusiva.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 SyncLockExclusive LockExclusive();  
   
 static SyncLockExclusive LockExclusive(  

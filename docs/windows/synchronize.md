@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 371a974742975cec9fab9c2f822fe0540dc57ab0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 583f05e3496ea6308dac8c7fa37c7e350165e74b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643498"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020053"
 ---
 # <a name="synchronize"></a>synchronize
 Sincronizza l'accesso al metodo di destinazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [synchronize]  
 ```  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8ff7fb86b7b39e283c27ee78611444b78bc53c5b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605058"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020278"
 ---
 # <a name="modulebase-class"></a>Classe ModuleBase
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 class ModuleBase;  
 ```  
   

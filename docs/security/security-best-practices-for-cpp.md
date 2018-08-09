@@ -1,5 +1,5 @@
 ---
-title: Le procedure consigliate per C++ | Documenti Microsoft
+title: Le procedure consigliate per C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2018
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015624"
 ---
 # <a name="security-best-practices-for-c"></a>Procedure di sicurezza consigliate per C++
 
@@ -45,7 +46,7 @@ Questo articolo contiene informazioni su strumenti e procedure di sicurezza. Il 
  Queste opzioni del compilatore e del linker consentono la compatibilità con Protezione esecuzione programmi. Protezione esecuzione programmi protegge la CPU dall'esecuzione di pagine non di codice.  
   
  [/analyze (analisi codice)](../build/reference/analyze-code-analysis.md)  
- Questa opzione del compilatore attiva l'analisi codice che segnala i potenziali problemi di sicurezza, ad esempio sovraccarico del buffer, memoria non inizializzata, dereferenziazione puntatore Null e perdite di memoria. Per impostazione predefinita, questa opzione è impostata su OFF. Per ulteriori informazioni, vedere [analisi del codice per C/C++ Panoramica](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
+ Questa opzione del compilatore attiva l'analisi codice che segnala i potenziali problemi di sicurezza, ad esempio sovraccarico del buffer, memoria non inizializzata, dereferenziazione puntatore Null e perdite di memoria. Per impostazione predefinita, questa opzione è impostata su OFF. Per altre informazioni, vedere [analisi del codice per C/C++ Panoramica](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
  [/DYNAMICBASE (uso della funzionalità ASLR)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  Questa opzione del linker consente la compilazione di un'immagine eseguibile che può essere caricata in posizioni diverse in memoria all'inizio dell'esecuzione. Questa opzione rende inoltre il percorso dello stack in memoria molto meno prevedibile.  
@@ -54,14 +55,14 @@ Questo articolo contiene informazioni su strumenti e procedure di sicurezza. Il 
  La libreria di runtime C (CRT) è stata ampliata per poter includere le versioni sicure delle funzioni che comportano rischi per la sicurezza, ad esempio la funzione di copia stringa `strcpy` non controllata. Le versioni precedenti non sicure di queste funzioni, essendo deprecate, generano avvisi in fase di compilazione. Si consiglia di usare le versioni sicure di queste funzioni CRT invece di eliminare gli avvisi di compilazione. Per altre informazioni, vedere [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
 ## <a name="safeint-library"></a>Libreria SafeInt  
- [Libreria SafeInt](../windows/safeint-library.md) consente di evitare gli overflow di integer e altri errori che potrebbero verificarsi durante l'applicazione esegue operazioni matematiche. Il `SafeInt` libreria include il [SafeInt (classe)](../windows/safeint-class.md), [classe SafeIntException](../windows/safeintexception-class.md)e diversi [funzioni SafeInt](../windows/safeint-functions.md).  
+ [Libreria SafeInt](../windows/safeint-library.md) consente di impedire eventuali overflow di integer e altri errori sfruttabili che possono verificarsi quando l'applicazione esegue operazioni matematiche. Il `SafeInt` libreria include le [classe SafeInt](../windows/safeint-class.md), il [classe SafeIntException](../windows/safeintexception-class.md)e diversi [funzioni SafeInt](../windows/safeint-functions.md).  
   
  La classe `SafeInt` protegge da exploit basati sugli overflow di Integer e sulle divisioni per zero. È possibile usarla per gestire i confronti tra valori di tipi diversi. Fornisce due criteri di gestione degli errori. Il criterio predefinito è per la classe `SafeInt` che genera un'eccezione della classe `SafeIntException` che segnala perché un'operazione matematica non può essere completata. Il secondo criterio è per la classe `SafeInt` che interrompe l'esecuzione del programma. È inoltre possibile definire un criterio personalizzato.  
   
  Ogni funzione `SafeInt` protegge un'operazione matematica da un errore sfruttabile. È possibile usare due diversi generi di parametri senza convertirli nello stesso tipo. Per proteggere più operazioni matematiche, usare la classe `SafeInt`.  
   
 ## <a name="checked-iterators"></a>Iteratori verificati  
- Un iteratore verificato applica i limiti del contenitore. Per impostazione predefinita, quando un iteratore verificato è fuori limite, genera un'eccezione e termina l'esecuzione del programma. Un iteratore verificato fornisce altri livelli di risposta che dipendono dai valori assegnati al preprocessore, ad esempio  **\_sicura\_SCL\_GENERA** e  **\_ITERATORE\_DEBUG\_livello**. Ad esempio, in  **\_ITERATORE\_DEBUG\_LEVEL = 2**, un iteratore verificato fornisce controlli di correttezza completi in modalità debug, che vengono resi disponibili tramite le asserzioni. Per ulteriori informazioni, vedere [iteratori](../standard-library/checked-iterators.md) e [ \_ITERATORE\_DEBUG\_livello](../standard-library/iterator-debug-level.md).  
+ Un iteratore verificato applica i limiti del contenitore. Per impostazione predefinita, quando un iteratore verificato è fuori limite, genera un'eccezione e termina l'esecuzione del programma. Un iteratore verificato fornisce altri livelli di risposta che dipendono dai valori assegnati al preprocessore, ad esempio  **\_SECURE\_SCL\_GENERA** e  **\_ITERATORE\_eseguire il DEBUG\_livello**. Ad esempio, in  **\_ITERATORE\_DEBUG\_LEVEL = 2**, un iteratore verificato fornisce controlli di correttezza completi in modalità debug, resi disponibili tramite le asserzioni. Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) e [ \_ITERATORE\_DEBUG\_livello](../standard-library/iterator-debug-level.md).  
   
 ## <a name="code-analysis-for-managed-code"></a>Analisi del codice gestito  
  L'analisi del codice gestito, nota anche come FxCop, controlla la conformità degli assembly alle linee guida di progettazione di .NET Framework. FxCop analizza il codice e i metadati in ogni assembly per verificare la presenza di difetti nelle aree seguenti:  
@@ -89,17 +90,17 @@ Questo articolo contiene informazioni su strumenti e procedure di sicurezza. Il 
 
 -   Identificare potenziali problemi di sicurezza in un'applicazione.  
   
- AppVerifier fa parte di Application Compatibility Toolkit, è disponibile il [compatibilità delle applicazioni](http://go.microsoft.com/fwlink/p/?linkid=91277) sul sito web TechNet.  
+ AppVerifier fa parte di Application Compatibility Toolkit, disponibile tramite il [compatibilità delle applicazioni](http://go.microsoft.com/fwlink/p/?linkid=91277) sul sito web TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Account utente di Windows  
- L'uso di account utente di Windows appartenenti al gruppo Administrators espone gli sviluppatori e, per estensione, i clienti a rischi per la sicurezza. Per ulteriori informazioni, vedere [in esecuzione come membro del gruppo di utenti](running-as-a-member-of-the-users-group.md) e [applicazione influisce sulla modalità controllo Account utente (UAC)](how-user-account-control-uac-affects-your-application.md).
+ L'uso di account utente di Windows appartenenti al gruppo Administrators espone gli sviluppatori e, per estensione, i clienti a rischi per la sicurezza. Per altre informazioni, vedere [in esecuzione come membro del gruppo Users](running-as-a-member-of-the-users-group.md) e [come controllo Account utente (UAC) influisce sulle Your Application](how-user-account-control-uac-affects-your-application.md).
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>Linee guida per i canali lato di esecuzione speculativo
+## <a name="guidance-for-speculative-execution-side-channels"></a>Linee guida per l'esecuzione speculativa i canali
 
-Per informazioni su come identificare e ridurre i rischi esecuzione speculativo lato canale hardware le vulnerabilità nel software di C++, vedere [istruzioni per gli sviluppatori di C++ per canali lato esecuzione speculativo](developer-guidance-speculative-execution.md).
+Per informazioni su come semplificarne l'identificazione e ridurre i rischi dell'esecuzione speculativa side channel hardware le vulnerabilità nel software C++, vedere [istruzioni per gli sviluppatori di C++ per i canali lato esecuzione speculativo](developer-guidance-speculative-execution.md).
 
 ## <a name="see-also"></a>Vedere anche  
-- <xref:System.Security>   
-- [Sicurezza](/dotnet/standard/security/index)   
-- [Effetti del Controllo dell'account utente sull'applicazione](how-user-account-control-uac-affects-your-application.md)
+<xref:System.Security>   
+[Sicurezza](/dotnet/standard/security/index)   
+[Effetti del Controllo dell'account utente sull'applicazione](how-user-account-control-uac-affects-your-application.md)

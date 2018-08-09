@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 170d688988576d3cbc9c454eb84603f9660120a8
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 345171742f979e488c6a4bb48cf1b57e4bb2f164
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571220"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018110"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Procedura: aprire un file di script di risorsa in formato testo
 Talvolta può essere utile visualizzare il contenuto del file di script di risorsa (RC) del progetto senza aprire una risorsa, quale una finestra di dialogo, all'interno dell'editor di risorse specifico. È ad esempio possibile che si desideri cercare una stringa in tutte le finestre di dialogo del file di risorse senza che sia necessario aprire separatamente ogni finestra.  
@@ -35,7 +35,7 @@ Talvolta può essere utile visualizzare il contenuto del file di script di risor
  È possibile aprire facilmente il file di risorse in formato testo per visualizzare tutte le risorse in esso contenute ed eseguire le operazioni globali supportate per il [editor di testo](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).  
   
 > [!NOTE]
->  Gli editor di risorse non leggono direttamente i file RC o resource.h. Questi file vengono compilati dal compilatore di risorse in file APS, che vengono usati dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici. Come con un normale processo di compilazione, le informazioni che non sono simboliche (ad esempio, i commenti) vengono eliminate durante il processo di compilazione. Ogni volta che il file APS non risulta sincronizzato con il file RC, il file RC viene rigenerato (ad esempio, quando si salva, l'editor di risorse sovrascrive il file RC e il file resource.h). Eventuali modifiche alle risorse resteranno incorporate nel file RC, ma i commenti andranno sempre persi quando il file RC viene sovrascritto. Per informazioni su come mantenere i commenti, vedere [tra cui le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).  
+>  Editor di risorse non leggono direttamente RC o `resource.h` file. Questi file vengono compilati dal compilatore di risorse in file APS, che vengono usati dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici. Come con un normale processo di compilazione, le informazioni che non sono simboliche (ad esempio, i commenti) vengono eliminate durante il processo di compilazione. Ogni volta che il file APS non risulta sincronizzato con il file RC, il file RC viene rigenerato (ad esempio, quando si salva, l'editor di risorse sovrascrive il file RC e il file resource.h). Eventuali modifiche alle risorse resteranno incorporate nel file RC, ma i commenti andranno sempre persi quando il file RC viene sovrascritto. Per informazioni su come mantenere i commenti, vedere [tra cui le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).  
   
 ### <a name="to-open-a-resource-script-file-as-text"></a>Per aprire un file script di risorsa in formato testo  
   
@@ -51,7 +51,7 @@ Talvolta può essere utile visualizzare il contenuto del file di script di risor
   
 6.  Dal **aperto come** elenco a discesa, seleziona **testo**.  
   
-     La risorsa verrà aperta nell'editor del codice sorgente.  
+     La risorsa viene aperta nel **codice sorgente** editor.  
   
  \- oppure -  
   
@@ -60,7 +60,6 @@ Talvolta può essere utile visualizzare il contenuto del file di script di risor
 2.  Dal menu di scelta rapida, scegliere **Apri con...** , quindi selezionare **Editor di codice sorgente (testo)**.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c074de0bd1a736d56979910d2123ca459848a40
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 512a559eec613958cb51b0f8a06fdf42abee173f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606488"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016317"
 ---
 # <a name="modulereleasenotifier-data-member"></a>Membro dati Module::releaseNotifier_
 Contiene un puntatore a un `ReleaseNotifier` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 ReleaseNotifier *releaseNotifier_;  
 ```  
   

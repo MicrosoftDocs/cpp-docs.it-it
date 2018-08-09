@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604226"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012128"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Spazio dei nomi Microsoft::WRL::Details
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[Struttura ArgTraits](../windows/argtraits-structure.md)|Dichiara un delegato specificato dell'interfaccia e una funzione membro anonimo che include un numero specificato di parametri.|  
 |[Struttura ArgTraitsHelper](../windows/argtraitshelper-structure.md)|Consente di definire le caratteristiche comuni di argomenti del delegato.|  
-|[Struttura BoolStruct](../windows/boolstruct-structure.md)|Definisce se un ComPtr gestisce la durata dell'oggetto di un'interfaccia. BoolStruct viene usato internamente dal [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatore.|  
+|[Struttura BoolStruct](../windows/boolstruct-structure.md)|Definisce se un `ComPtr` gestisce la durata dell'oggetto di un'interfaccia. `BoolStruct` viene usato internamente dal [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatore.|  
 |[Struttura CreatorMap](../windows/creatormap-structure.md)|Contiene informazioni su come inizializzare, registrare e annullare la registrazione di oggetti.|  
 |[Struttura DerefHelper](../windows/derefhelper-structure.md)|Rappresenta un puntatore dereferenziato al `T*` parametro di modello.|  
 |[Struttura EnableIf](../windows/enableif-structure.md)|Definisce un membro dati di tipo specificato dal secondo parametro di modello, se il primo parametro di modello restituisce **true**.|  

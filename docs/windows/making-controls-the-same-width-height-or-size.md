@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffbc9f7f6a242f119fd0cd164242883e904d7114
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 6ce5b1740d09f9d4eb0f90d96cc5a0f6fd70379b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607319"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020200"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Impostazione della stessa larghezza, altezza o dimensione per i controlli
 È possibile ridimensionare un gruppo di controlli in base alla dimensione del controllo dominante. È anche possibile [ridimensiona un controllo in base alle dimensioni del testo della didascalia](../windows/sizing-individual-controls.md).  
@@ -43,7 +43,6 @@ ms.locfileid: "39607319"
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

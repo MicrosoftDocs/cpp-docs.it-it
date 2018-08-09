@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1dc6cbab11a41707aa60aa37d63ae0e5042ba5a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 45655bc906816b17711485d01fbdfd96019b5d51
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652848"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019004"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>Membro dati SyncLockWithStatusT::status_
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 DWORD status_;  
 ```  
   

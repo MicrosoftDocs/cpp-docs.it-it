@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a60f2e45e276592c7c1223526cd002bdc6e79013
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8bb780cacb15164633fcf1da2b69073b9d3ba403
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605480"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010302"
 ---
 # <a name="implementshelpercancastto-method"></a>Metodo ImplementsHelper::CanCastTo
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  

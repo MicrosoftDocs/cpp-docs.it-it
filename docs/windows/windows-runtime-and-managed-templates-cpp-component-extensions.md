@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641460"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011562"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime e modelli gestiti (Estensioni del componente C++)
 I modelli consentono di definire un prototipo di un tipo Windows Runtime o Common Language Runtime e, successivamente, di creare istanze delle variazioni di quel tipo utilizzando parametri di tipo dei modelli diversi.  
@@ -44,7 +44,7 @@ I modelli consentono di definire un prototipo di un tipo Windows Runtime o Commo
   
 ### <a name="examples"></a>Esempi  
   
- È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non di un modello gestito con un parametro di modello di tipo generico.  Questa condizione dipende dal fatto che i tipi generici vengono risolti in fase di esecuzione.  Per altre informazioni, vedere [Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non di un modello gestito con un parametro di modello di tipo generico. Questa condizione dipende dal fatto che i tipi generici vengono risolti in fase di esecuzione. Per altre informazioni, vedere [Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- Non è possibile accedere ai modelli definiti in un assembly a cui viene fatto riferimento con la sintassi del linguaggio C++/CLI, tuttavia è possibile utilizzare la reflection.  Se non viene creata alcuna istanza di un modello, quest'ultimo non viene creato nei metadati.  In caso contrario, nei metadati vengono visualizzate solo le funzioni membro a cui viene fatto riferimento.  
+ Non è possibile accedere ai modelli definiti in un assembly a cui viene fatto riferimento con la sintassi del linguaggio C++/CLI, tuttavia è possibile utilizzare la reflection. Se non viene creata alcuna istanza di un modello, quest'ultimo non viene creato nei metadati. In caso contrario, nei metadati vengono visualizzate solo le funzioni membro a cui viene fatto riferimento.  
   
 ```cpp  
 // managed_templates_3.cpp  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b63e3784529edf8957654511af53373fd80799ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603585"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014260"
 ---
 # <a name="issame-structure"></a>IsSame (struttura)
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template <  
    typename T1,  
    typename T2  

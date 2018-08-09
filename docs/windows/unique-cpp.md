@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 826d296e4c11571151ff0cd3265465b4307d2d92
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4cad715d086cf4cca1c8ff384d8a452708231804
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643965"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019441"
 ---
 # <a name="unique-c"></a>unique (C++)
 Specifica un puntatore univoco.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [unique]  
 ```  
   

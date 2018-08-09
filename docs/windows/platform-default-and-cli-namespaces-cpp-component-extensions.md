@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c63ce7dc5dcd326de426c4e4738a11e24f93161c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603550"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015533"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Spazi dei nomi Platform, default e cli (Estensioni del componente C++)
 Uno spazio dei nomi qualifica i nomi di un elemento del linguaggio in modo che i nomi non siano in conflitto con nomi identici nel codice sorgente. Ad esempio, un conflitto di nomi può impedire al compilatore riconoscere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md). Gli spazi dei nomi vengono utilizzati dal compilatore, ma non vengono mantenuti nell'assembly compilato.  
@@ -41,7 +41,7 @@ Uno spazio dei nomi qualifica i nomi di un elemento del linguaggio in modo che i
 ## <a name="common-language-runtime"></a>Common Language Runtime 
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 using namespace cli;  
 ```  
   

@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d4c00ef825274fc9db6c71522cdb789e07c3b05
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 923ff59044b57d22636c9997e6eb7268ade7860e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648665"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017139"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>L'impostazione di un cursore&#39;s Hot Spot (Editor di immagini per le icone)
-L'area sensibile di un [cursore](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) è il punto al quale fa riferimento Windows per rilevare la posizione del cursore. Per impostazione predefinita, viene impostato l'area sensibile nell'angolo superiore sinistro del cursore (coordinate 0,0). La proprietà Hotspot il [finestra proprietà](/visualstudio/ide/reference/properties-window) Mostra le coordinate di area sensibile.  
+L'area sensibile di un [cursore](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) è il punto al quale fa riferimento Windows per rilevare la posizione del cursore. Per impostazione predefinita, viene impostato l'area sensibile nell'angolo superiore sinistro del cursore (coordinate 0,0). Il **Hotspot** proprietà il [finestra proprietà](/visualstudio/ide/reference/properties-window) Mostra le coordinate di area sensibile.  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>Per impostare l'area sensibile del cursore  
   
@@ -42,7 +42,6 @@ L'area sensibile di un [cursore](../windows/icons-and-cursors-image-resources-fo
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
-  
  nessuno  
   
 ## <a name="see-also"></a>Vedere anche  

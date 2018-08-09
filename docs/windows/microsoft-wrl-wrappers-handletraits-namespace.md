@@ -1,5 +1,5 @@
 ---
-title: Namespace Microsoft::WRL::Wrappers::HandleTraits | Documenti Microsoft
+title: Namespace Microsoft::WRL::Wrappers::HandleTraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b114d067249e78d7fb935e473cc3cc952c76fe02
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c83b921aabeee34b583c8f771190ecf60edccb59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878034"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015811"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Spazio dei nomi Microsoft::WRL::Wrappers::HandleTraits
-Descrive le caratteristiche comuni basate su handle di tipi di risorse.  
+Descrive le caratteristiche dei tipi di risorse basate su handle comuni.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::HandleTraits;  
 ```  
   
@@ -39,7 +39,7 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Struttura CriticalSectionTraits](../windows/criticalsectiontraits-structure.md)|Specializzato una `CriticalSection` oggetto per supportare una sezione critica non valida o una funzione per rilasciare una sezione critica.|  
+|[Struttura CriticalSectionTraits](../windows/criticalsectiontraits-structure.md)|Specializza un `CriticalSection` oggetti per supportare una sezione critica non è valida o una funzione per rilasciare una sezione critica.|  
 |[Struttura EventTraits](../windows/eventtraits-structure.md)|Definisce le caratteristiche di un `Event` handle di classe.|  
 |[Struttura FileHandleTraits](../windows/filehandletraits-structure.md)|Definisce le caratteristiche di un handle di file.|  
 |[Struttura HANDLENullTraits](../windows/handlenulltraits-structure.md)|Definisce le caratteristiche comuni di un handle non inizializzato.|  

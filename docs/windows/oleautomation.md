@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e8c7ea92e914543d80b199ef9d52435eb7116d9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 63ffeedd172df74419ef28fa72dca2bd9927779e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608007"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012612"
 ---
 # <a name="oleautomation"></a>oleautomation
 Indica che un'interfaccia è compatibile con l'automazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [oleautomation]  
 ```  
   

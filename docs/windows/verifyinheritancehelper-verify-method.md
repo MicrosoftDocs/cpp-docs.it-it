@@ -1,5 +1,5 @@
 ---
-title: 'Metodo verifyinheritancehelper:: Verify | Documenti Microsoft'
+title: 'Metodo verifyinheritancehelper:: Verify | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 879f5fa117f0f2bc444243f540925d64a2b824b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04bf01b5fad5a9fec579e347497a28b5e8abb861
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889875"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018816"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>Metodo VerifyInheritanceHelper::Verify
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 static void Verify();  
 ```  
   
 ## <a name="remarks"></a>Note  
- Verifica le due interfacce specificate dai parametri di modello corrente e determina se un'interfaccia è derivata da altra.  
+ Testa le due interfacce specificate dai parametri di modello corrente e determina se un'interfaccia è derivata da altra.  
   
- Se un'interfaccia non è derivata da altro, viene generato un errore.  
+ Se un'interfaccia non è derivata da un altro, viene generato un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

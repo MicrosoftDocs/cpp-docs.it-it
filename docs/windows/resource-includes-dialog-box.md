@@ -1,5 +1,5 @@
 ---
-title: La finestra di dialogo Inclusioni risorsa | Documenti Microsoft
+title: Finestra di dialogo Inclusioni risorsa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,33 +23,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 756289bb819809fed63dba579c4ad1cd1e975780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d11f3abdaa4f804f9916e7313d1a4338c29a7369
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879672"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015079"
 ---
 # <a name="resource-includes-dialog-box"></a>Inclusioni risorsa (finestra di dialogo)
-È possibile utilizzare il **Inclusioni risorsa** la finestra di dialogo per modificare la disposizione dell'ambiente normale utilizzo di tutte le risorse di archiviazione nel file RC del progetto e tutti i [simboli](../windows/symbols-resource-identifiers.md) in Resource. h.  
+È possibile usare la **Inclusioni risorsa** finestra di dialogo per modificare la disposizione dell'ambiente normale utilizzo di tutte le risorse vengono archiviate nel file RC del progetto e tutte le [simboli](../windows/symbols-resource-identifiers.md) in Resource. h.  
   
- Per aprire la **Inclusioni risorsa** rapida un RC nella finestra di dialogo file in [visualizzazione risorse](../windows/resource-view-window.md), quindi scegliere **Inclusioni risorsa** dal menu di scelta rapida.  
+ Per aprire la **Inclusioni risorsa** file nella finestra di dialogo scelta un' RC [visualizzazione risorse](../windows/resource-view-window.md), quindi scegliere **Inclusioni risorsa** dal menu di scelta rapida.  
   
  **File di intestazione simboli**  
- Consente di modificare il nome del file di intestazione in cui vengono archiviate le definizioni dei simboli per il file di risorse. Per ulteriori informazioni, vedere [la modifica dei nomi di file di intestazione simboli](../windows/changing-the-names-of-symbol-header-files.md).  
+ Consente di modificare il nome del file di intestazione in cui vengono archiviate le definizioni dei simboli per il file di risorse. Per altre informazioni, vedere [modifica i nomi dei file di intestazione simboli](../windows/changing-the-names-of-symbol-header-files.md).  
   
- **Direttive per simboli in sola lettura**  
- Consente di includere file di intestazione contenenti simboli che è necessario non modificare durante una sessione di modifica. È, ad esempio, possibile includere un file di simboli condiviso da più progetti. È anche possibile includere file H di MFC. Per ulteriori informazioni, vedere [simboli inclusi condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md).  
+ **Direttive per simboli di sola lettura**  
+ Consente di includere file di intestazione contenenti simboli che è necessario non modificare durante una sessione di modifica. È, ad esempio, possibile includere un file di simboli condiviso da più progetti. È anche possibile includere file H di MFC. Per altre informazioni, vedere [simboli inclusi condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md).  
   
  **Direttive in fase di compilazione**  
- Consente di includere file di risorse creati e modificati separatamente dalle risorse nel file di risorse principale, che contengono direttive in fase di compilazione (quali quelle che includono risorse in modo condizionale) o risorse in un formato personalizzato. È possibile usare la casella Direttive in fase di compilazione anche per includere file di risorse MFC standard. Per ulteriori informazioni, vedere [inclusione di risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).  
+ Consente di includere file di risorse creati e modificati separatamente dalle risorse nel file di risorse principale, che contengono direttive in fase di compilazione (quali quelle che includono risorse in modo condizionale) o risorse in un formato personalizzato. È anche possibile usare la **casella direttive in fase di compilazione** per includere i file di risorse MFC standard. Per altre informazioni, vedere [tra cui le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).  
   
 > [!NOTE]
->  Voci di queste caselle di testo vengono visualizzate nel file RC contrassegnato da `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, e `TEXTINCLUDE 3` rispettivamente. Per ulteriori informazioni, vedere [TN035: utilizzo di più file di risorse e i file di intestazione con Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).  
+>  Visualizzazione delle voci in queste caselle di testo nel file RC contrassegnato da `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, e `TEXTINCLUDE 3` rispettivamente. Per altre informazioni, vedere [TN035: utilizzo di più file di risorse e i file di intestazione Visual c++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).  
   
- Dopo aver apportato le modifiche apportate al file di risorse utilizzando il **Inclusioni risorsa** la finestra di dialogo, è necessario chiudere il file RC e riaprirlo rendere effettive le modifiche. Per ulteriori informazioni, vedere [inclusione di risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).  
-  
-
+ Dopo aver apportato le modifiche apportate al file di risorse usando il **Inclusioni risorsa** finestra di dialogo, è necessario chiudere il file con estensione RC e quindi riaprirlo rendere effettive le modifiche. Per altre informazioni, vedere [tra cui le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  

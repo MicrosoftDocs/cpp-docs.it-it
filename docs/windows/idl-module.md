@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfda47ced14d7c112d27d0036b4d636e32c91907
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4ff8353bef24aa772621cee611519a8e7ab659af
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607560"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012115"
 ---
 # <a name="idlmodule"></a>idl_module
 Specifica un punto di ingresso in un file con estensione dll.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ idl_module (   
    name=module_name,   
    dllname=dll,   

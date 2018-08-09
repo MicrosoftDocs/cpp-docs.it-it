@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2799039aa2c198bcea3784876d8299fcaec59b20
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608430"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012449"
 ---
 # <a name="maxis"></a>max_is
 Definisce il valore massimo per un indice di matrice valida.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ max_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *Espressione*  
  Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.  
   

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9104feac603819b9420d315e619182722c87474
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 75c4558f0d783152cee2eeb53f06ee341b785994
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606218"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012167"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>Ridimensionamento di un'immagine intera (Editor di immagini per le icone)
 ### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Per ridimensionare un'immagine intera utilizzando la finestra proprietà  
@@ -32,17 +32,16 @@ ms.locfileid: "39606218"
   
 2.  Nel **larghezza** e **altezza** finestre nel [finestra proprietà](/visualstudio/ide/reference/properties-window), digitare le dimensioni desiderate.  
   
-     Se si stanno aumentando le dimensioni dell'immagine, l'editor di immagini estende l'immagine a destra, verso il basso, o entrambi e riempie la nuova area con il colore di sfondo corrente. L'immagine non viene adattata.  
+     Se si stanno aumentando le dimensioni dell'immagine, il **immagine** editor estende l'immagine a destra, verso il basso, o entrambi e riempie la nuova area con il colore di sfondo corrente. L'immagine non viene adattata.  
   
-     Se si siano riducendo le dimensioni dell'immagine, l'editor di immagini Ritaglia l'immagine a destra e/o bordo inferiore.  
+     Se si siano riducendo le dimensioni dell'immagine, il **immagine** editor Ritaglia l'immagine al bordo destro o inferiore o a entrambi.  
   
     > [!NOTE]
-    >  È possibile usare le proprietà di larghezza e altezza per ridimensionare l'intera immagine, non per una selezione parziale.  
+    >  È possibile usare la **larghezza** e **altezza** le proprietà per ridimensionare l'intera immagine, non per una selezione parziale.  
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
-  
  nessuno  
   
 ## <a name="see-also"></a>Vedere anche  

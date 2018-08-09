@@ -1,5 +1,5 @@
 ---
-title: Membro dati Module::objectCount_ | Documenti Microsoft
+title: Membro dati Module::objectCount_ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a9360a7b0ce0596e9fb1bffb71864526cf92e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e73b11ae5a29289c44bf762082397dd4ed4f826
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875019"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016691"
 ---
 # <a name="moduleobjectcount-data-member"></a>Membro dati Module::objectCount_
-Tiene traccia del numero di classi è stato creato con il [rendere](../windows/make-function.md) (funzione).  
+Tiene traccia del numero di classi siano stato creato con la [rendere](../windows/make-function.md) (funzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 volatile long objectCount_;  
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements  
+ **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL
  

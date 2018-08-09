@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9eeaacf95040f0f7e2ee435a7fbed2c173076315
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608612"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014913"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Inclusione di simboli condivisi (in sola lettura) o calcolati
 La prima volta che l'ambiente di sviluppo legge un file di risorse creato da un'altra applicazione, contrassegna tutto, inclusi i file di intestazione, come di sola lettura. Successivamente, è possibile usare la [finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md) per aggiungere i file di intestazione simboli di sola lettura aggiuntivi.  
@@ -37,7 +37,7 @@ La prima volta che l'ambiente di sviluppo legge un file di risorse creato da un'
   
  Inoltre, è possibile usare file di simboli inclusi quando si dispone di risorse esistenti con le definizioni dei simboli che usano espressioni anziché semplici numeri interi per definire il valore di simbolo. Ad esempio:  
   
-```  
+```cpp  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
@@ -60,9 +60,9 @@ La prima volta che l'ambiente di sviluppo legge un file di risorse creato da un'
     > [!NOTE]
     >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Nel **direttive per simboli di sola lettura** casella, utilizzare il **#include** direttiva del compilatore per specificare il file in cui si desidera i simboli di sola lettura da conservare.  
+2.  Nel **direttive per simboli di sola lettura** casella, utilizzare il `#include` direttiva del compilatore per specificare il file in cui si desidera i simboli di sola lettura da conservare.  
   
-     Non chiamare il file Resource.h, poiché questo è il nome file in genere usato dal file di intestazione simboli principale.  
+     Impossibile eseguire il file `Resource.h`, dal momento che è il nome del file in genere usato dal file di intestazione simboli principale.  
   
     > [!NOTE]
     >  **Importante** il testo digitato nella casella di direttive per simboli di sola lettura è inclusa nel file di risorse esattamente durante la digitazione. Verificare che il tipo non contenga errori di ortografia o di sintassi.  
@@ -76,7 +76,6 @@ La prima volta che l'ambiente di sviluppo legge un file di risorse creato da un'
 4.  Fare clic su **OK**.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

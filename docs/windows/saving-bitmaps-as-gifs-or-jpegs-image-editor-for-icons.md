@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608157"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010691"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Salvataggio di bitmap come file GIF o JPEG (Editor di immagini per le icone)
 Quando si crea una bitmap, viene creata l'immagine in formato bitmap (bmp). È possibile, tuttavia, salvare l'immagine come un file GIF o JPEG o in altri formati di immagini.  
@@ -51,9 +51,10 @@ Quando si crea una bitmap, viene creata l'immagine in formato bitmap (bmp). È p
   
 4.  Con la bitmap ancora aperta nel **immagine** editor, fare clic su **salvare *nomefile*bmp come** nel **File** menu.  
   
-5.  Nel **Salva File con nome** finestra di dialogo, digitare il nome da assegnare al file e l'estensione che indica il formato di file desiderato nel **nome File** casella. Ad esempio, MioFile. gif.  
+5.  Nel **Salva File con nome** finestra di dialogo, digitare il nome da assegnare al file e l'estensione che indica il formato di file desiderato nel **nome File** casella. Ad esempio, *MioFile. gif*.  
   
-     **Nota** è necessario creare o aprire la mappa di bit all'esterno del progetto per salvarlo come un altro formato di file. Se si crea o aprirlo all'interno del progetto, il **Salva con nome** comando non sarà disponibile. Per altre informazioni, vedere [visualizzazione di risorse in un File di Script di risorsa all'esterno di un progetto (autonomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     > [!NOTE]
+     > È necessario creare o aprire la mappa di bit all'esterno del progetto per salvarlo come un altro formato di file. Se si crea o aprirlo all'interno del progetto, il **Salva con nome** comando non sarà disponibile. Per altre informazioni, vedere [visualizzazione di risorse in un File di Script di risorsa all'esterno di un progetto (autonomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
 6.  Fare clic su **Salva**.  
   

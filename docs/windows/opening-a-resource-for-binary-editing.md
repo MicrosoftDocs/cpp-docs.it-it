@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605955"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014507"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Apertura di una risorsa per la modifica binaria
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Per aprire una risorsa desktop di Windows per la modifica binaria  
@@ -36,7 +36,7 @@ ms.locfileid: "39605955"
 2.  Fare clic con il pulsante destro del mouse sulla risorsa e scegliere **Apri dati binari** dal menu di scelta rapida.  
   
     > [!NOTE]
-    >  Se si usa la finestra [Visualizzazione risorse](../windows/resource-view-window.md) per aprire una risorsa in un formato che Visual Studio non riconosce, ad esempio RCDATA o una risorsa personalizzata, la risorsa viene aperta automaticamente nell'editor binario.  
+    >  Se si usa la [visualizzazione di risorse](../windows/resource-view-window.md) finestra per aprire una risorsa con un formato che Visual Studio non riconosce la risorsa (ad esempio RCDATA o una risorsa personalizzata), viene aperto automaticamente nel **binario** editor.  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Per aprire una risorsa gestita per la modifica binaria  
   
@@ -58,10 +58,9 @@ Dati binari per una finestra di dialogo visualizzata nell'editor binario
  Nell'editor binario vengono rappresentati solo alcuni valori ASCII (da 0x20 a 0x7E). I caratteri estesi vengono visualizzati come punti nella sezione Valore ASCII dell'editor binario (riquadro a destra). I caratteri "stampabili" sono valori ASCII da 32 a 126.  
   
 > [!NOTE]
->  Se si vuole usare l'editor binario su una risorsa già modificata in un'altra finestra dell'editor, chiudere l'altra finestra.  
+>  Se si desidera utilizzare il **binario** editor su una risorsa già modificata in un'altra finestra dell'editor, chiudere l'altra finestra dell'editor prima di tutto.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  nessuno  
   
 ## <a name="see-also"></a>Vedere anche  

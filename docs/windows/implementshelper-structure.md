@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: eca429578fd9b58a2a3229199d53812a494af045
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605617"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018348"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper (struttura)
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template <  
    typename RuntimeClassFlagsT,  
    typename ILst,  
@@ -51,7 +51,7 @@ friend struct Details::ImplementsHelper;
 ## <a name="remarks"></a>Note  
  Consente di implementare il [implementa](../windows/implements-structure.md) struttura.  
   
- Questo modello consente di scorrere un elenco di interfacce e li aggiunge come classi di base e le informazioni necessarie per abilitare QueryInterface.  
+ Questo modello consente di scorrere un elenco di interfacce e li aggiunge come classi di base e le informazioni necessarie per abilitare `QueryInterface`.  
   
 ## <a name="members"></a>Membri  
   

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569456"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015548"
 ---
 # <a name="how-to-use-resource-templates"></a>Procedura: utilizzare modelli di risorse
 Un modello di risorsa è una risorsa personalizzata salvata come un file con estensione RCT. È quindi possibile usare un modello di risorsa come punto iniziale per la creazione di altre risorse. I modelli di risorsa garantiscono un risparmio di tempo nello sviluppo di risorse o gruppi di risorse aggiuntivi che condividono alcune funzionalità, quali controlli standard e altri elementi ripetuti. Se, ad esempio, si vuole includere un pulsante ? e un'icona di un logo aziendale in più finestre di dialogo, è possibile creare un nuovo modello di finestra di dialogo e personalizzarlo con il logo e il pulsante ?.  
@@ -46,7 +46,7 @@ Un modello di risorsa è una risorsa personalizzata salvata come un file con est
   
 4.  Specificare un nome e percorso per il nuovo file RCT, quindi scegliere **aperto**.  
   
-5.  Il nuovo file RCT viene aggiunto al progetto e viene visualizzato in Esplora soluzioni con il **risorse** cartella.  
+5.  Il nuovo file RCT verrà aggiunto al progetto e viene visualizzato nella **Esplora soluzioni** sotto il **risorse** cartella.  
   
      È ora possibile fare doppio clic sul file RCT per aprirlo in una finestra del documento e quindi aggiungervi le risorse (il pulsante destro nella finestra del documento e scegliere **Aggiungi risorsa** dal menu di scelta rapida). Sarà quindi possibile personalizzare tali risorse e salvare il file RCT.  
   
@@ -76,7 +76,6 @@ Un modello di risorsa è una risorsa personalizzata salvata come un file con est
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

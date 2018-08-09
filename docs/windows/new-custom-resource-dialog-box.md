@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Nuova risorsa personalizzata | Documenti Microsoft
+title: Finestra di dialogo Nuova risorsa personalizzata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5474ff56c5a0a10842e090dc05b7c3515046dac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 420f5a6db7c537b8ccfa4d6b6ffbb86242a44299
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876124"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012963"
 ---
 # <a name="new-custom-resource-dialog-box"></a>Finestra di dialogo Nuova risorsa personalizzata
 Consente di creare una nuova risorsa personalizzata.  
   
- **Tipo di risorsa**  
- Fornisce una casella di testo immettere il nome di un tipo di risorsa personalizzata. Visual C++ in maiuscolo automaticamente il nome quando si esce dal **nuova risorsa personalizzata** la finestra di dialogo.  
+### <a name="resource-type"></a>Tipo risorsa  
+ Fornisce una casella di testo per l'utente di immettere il nome di un tipo di risorsa personalizzata. Visual C++ in maiuscolo automaticamente il nome quando si esce dal **nuova risorsa personalizzata** nella finestra di dialogo.  
   
 ## <a name="remarks"></a>Note  
  Non si specifica un nome di risorsa o un ID che è riservato da [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. I nomi riservati sono DESIGNINFO, HWB e TEXTINCLUDE e l'ID riservato è 255.  

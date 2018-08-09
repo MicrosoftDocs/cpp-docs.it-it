@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604486"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012833"
 ---
 # <a name="interface-class--c-component-extensions"></a>classe di interfaccia (Estensioni del componente C++)
 Dichiara un'interfaccia.  Per informazioni sulle interfacce native, vedere [Interface](../cpp/interface.md).  
@@ -32,14 +32,13 @@ Dichiara un'interfaccia.  Per informazioni sulle interfacce native, vedere [Inte
 
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>Parametri  
-  
  *interface_access*  
  L'accessibilità di un'interfaccia all'esterno dell'assembly.  I valori possibili sono **pubbliche** e **privati**.  **privato** è il valore predefinito. Interfacce annidate non possono avere un *interface_access* identificatore.  
   
@@ -75,7 +74,7 @@ interface class
  Nell'ambiente di sviluppo, è possibile ottenere la Guida F1 in queste parole chiave per evidenziare la parola chiave, (`interface class`, ad esempio), premendo F1.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- **Note**  
+### <a name="remarks"></a>Note 
   
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.  
   
@@ -83,7 +82,7 @@ interface class
  Opzione del compilatore: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Note**  
+### <a name="remarks"></a>Note
   
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Common Language Runtime.  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 in Function_3  

@@ -1,5 +1,5 @@
 ---
-title: ID simbolo predefiniti | Documenti Microsoft
+title: ID simbolo predefiniti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876423"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017240"
 ---
 # <a name="predefined-symbol-ids"></a>ID di simbolo già definiti
 Quando si inizia un nuovo progetto, a seconda del tipo di progetto, alcuni ID simbolo sono predefiniti per l'utilizzo. Questi ID simbolo supportano diverse librerie e tipi di progetto come MFC. Rappresentano le attività comuni che sono in genere incluse in tutte le applicazioni o azioni di dispositivi hardware, ad esempio un mouse o una stampante.  
   
- Questi ID simbolo diventano importanti quando si usano le risorse. Questi sono disponibili quando si modificano le tabelle di tasti di scelta rapida; alcuni di questi sono già associati a tasti virtuali. Sono anche disponibili tramite il [finestra proprietà](/visualstudio/ide/reference/properties-window). È possibile assegnare uno qualsiasi degli ID simbolo predefiniti a nuove risorse oppure è possibile assegnare tasti di scelta rapida agli ID e la funzionalità associata all'ID simbolo viene associata automaticamente alla combinazione di tasti.  
+ Questi ID simbolo diventano importanti quando si usano le risorse. Questi sono disponibili quando si modificano le tabelle di tasti di scelta rapida; alcuni di questi sono già associati a tasti virtuali. Sono inoltre disponibili all'utente tramite il [finestra proprietà](/visualstudio/ide/reference/properties-window). È possibile assegnare uno qualsiasi degli ID simbolo predefiniti a nuove risorse oppure è possibile assegnare tasti di scelta rapida agli ID e la funzionalità associata all'ID simbolo viene associata automaticamente alla combinazione di tasti.  
   
  Queste librerie dispongono di simboli già definiti che verranno visualizzati come parte del progetto:  
   
@@ -38,8 +38,6 @@ Quando si inizia un nuovo progetto, a seconda del tipo di progetto, alcuni ID si
   
     > [!NOTE]
     >  Simboli predefiniti sono sempre di sola lettura.  
-  
-
   
 ## <a name="requirements"></a>Requisiti  
  Win32, MFC o ATL  

@@ -1,5 +1,5 @@
 ---
-title: 'Metodo verifyinterfacehelper:: Verify | Documenti Microsoft'
+title: 'Metodo verifyinterfacehelper:: Verify | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f33935bcb042a961494f7da6d34a07b0aeda9af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4626e6cfa17b4cc050d10bb74fad0d791a8ceef
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888987"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013652"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>Metodo VerifyInterfaceHelper::Verify
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 static void Verify();  
 ```  
   
@@ -37,7 +37,7 @@ static void Verify();
  Verifica che l'interfaccia specificata dal parametro di modello corrente soddisfi determinati requisiti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   

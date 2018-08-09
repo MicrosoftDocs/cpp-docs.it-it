@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aa0d48ba96c550ff6ee1248dccd0b4c8e3021212
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651080"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020304"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>Metodo SimpleClassFactory::CreateInstance
 
@@ -39,7 +39,6 @@ STDMETHOD( CreateInstance )(
 ```
 
 ### <a name="parameters"></a>Parametri
-
 *pUnkOuter*  
 Deve essere **nullptr**; in caso contrario, il valore restituito è CLASS_E_NOAGGREGATION.
 
@@ -57,7 +56,7 @@ S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
 ## <a name="remarks"></a>Note
 
-Se &#95; &#95;WRL_STRICT&#95; &#95; è definito, assert viene generato un errore se la classe base specificata nel parametro di modello di classe non è derivata da [RuntimeClass](../windows/runtimeclass-class.md), o non è configurato con il ClassicCom o WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valore di enumerazione.
+Se `__WRL_STRICT__` è definito, assert viene generato un errore se la classe base specificata nel parametro di modello di classe non è derivata da [RuntimeClass](../windows/runtimeclass-class.md), o non è configurato con il ClassicCom o WinRtClassicComMix [ RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valore di enumerazione.
 
 ## <a name="requirements"></a>Requisiti
 

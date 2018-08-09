@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07f9c9f93b213b13694f2741b5210614626d82f9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a30598e617a4c68559d6932e20dadaf7f83dc2eb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651522"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015520"
 ---
 # <a name="source-c"></a>source (C++)
 In una classe specifica le interfacce di origine dell'oggetto COM per i punti di connessione. In una proprietà o metodo, indica che il membro restituisce un oggetto o una variante che rappresenta l'origine degli eventi.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ source(  
    interfaces  
 ) ]  

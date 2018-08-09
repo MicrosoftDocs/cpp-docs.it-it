@@ -1,5 +1,5 @@
 ---
-title: MutexTraits (struttura) | Documenti Microsoft
+title: MutexTraits (struttura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: deebac1516724469882391c3c856a9ed7a588c88
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874590"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018978"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits (struttura)
 Definisce le caratteristiche comuni del [Mutex](../windows/mutex-class1.md) classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 struct MutexTraits : HANDLENullTraits;  
 ```  
   
@@ -39,7 +39,7 @@ struct MutexTraits : HANDLENullTraits;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo MutexTraits::Unlock](../windows/mutextraits-unlock-method.md)|Restituisce il controllo esclusivo di una risorsa condivisa.|  
+|[Metodo MutexTraits::Unlock](../windows/mutextraits-unlock-method.md)|Rilascia il controllo esclusivo di una risorsa condivisa.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `HANDLENullTraits`  

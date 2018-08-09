@@ -1,5 +1,5 @@
 ---
-title: Usando TCHAR. I tipi di dati con codice MBCS H | Documenti Microsoft
+title: Usando TCHAR. Tipi di dati H con codice MBCS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,29 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3aa2f0dffd33f0ac885753e4c7fb7f413d755149
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858354"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020325"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizzo dei tipi di dati di TCHAR.H con il codice _MBCS
-Quando la costante manifesto **MBCS** è definito, una determinata routine di testo generico esegue il mapping a uno dei seguenti tipi di routine:  
+Quando la costante manifesto `_MBCS` è definito, una routine di testo generico specifica esegue il mapping a uno dei tipi di routine seguenti:  
   
--   Una routine SBCS che gestisce in modo corretto byte, caratteri e stringhe multibyte. In questo caso, gli argomenti di stringa devono essere di tipo **char\***. Ad esempio, `_tprintf` esegue il mapping a `printf`; gli argomenti stringa da `printf` sono di tipo **char\***. Se si utilizza il **TCHAR** il tipo di dati di testo generico per la stringa di tipi, i tipi dei parametri formali ed effettivi `printf` perché **TCHAR** \* esegue il mapping a **char \***.  
+-   Una routine SBCS che gestisce in modo corretto byte, caratteri e stringhe multibyte. In questo caso, il tipo previsto per gli argomenti della stringa è `char*`. Ad esempio, `_tprintf` viene mappata a `printf` e gli argomenti di stringa passati a `printf` sono di tipo `char*`. Se per i tipi stringa si usa il tipo di dati di testo generico `_TCHAR`, i tipi di parametro formali ed effettivi di `printf` corrisponderanno, poiché `_TCHAR*` è mappato a `char*`.  
   
--   Una routine specifica di MBCS. In questo caso, gli argomenti di stringa devono essere di tipo `unsigned` **char\***. Ad esempio, `_tcsrev` esegue il mapping a `_mbsrev`, che prevede e restituisce una stringa di tipo `unsigned` **char\***. Se si utilizza il **TCHAR** tipo di dati di testo generico per i tipi di stringa, non esiste infatti un potenziale conflitto di tipo **TCHAR** corrisponde al tipo `char`.  
+-   Una routine specifica di MBCS. In questo caso, il tipo previsto per gli argomenti della stringa è `unsigned char*`. Ad esempio, `_tcsrev` viene mappato a `_mbsrev`, che accetta e restituisce una stringa di tipo `unsigned char*`. Se si usa la `_TCHAR` tipo di dati di testo generico per i tipi di stringa, vi è un potenziale conflitto di tipo perché `_TCHAR` mappato al tipo `char`.  
   
  Di seguito sono riportate tre soluzioni che consentono di evitare questo conflitto di tipi e la conseguente visualizzazione dei messaggi di avviso del compilatore C o degli errori del compilatore C++:  
   
--   Usare il comportamento predefinito Tchar. h fornisce prototipi di routine di testo generico per le routine nelle librerie di runtime, come nell'esempio seguente.  
+-   Usare il comportamento predefinito Tchar. h fornisce prototipi di routine a testo generico per le routine nelle librerie di runtime, come nell'esempio seguente.  
   
     ```  
     char * _tcsrev(char *);  
     ```  
   
-     Nel caso predefinito, il prototipo per `_tcsrev` esegue il mapping a `_mbsrev` attraverso un thunk in LIBC. In questo modo, i tipi del `_mbsrev` parametri in entrata e in uscita restituito da **TCHAR \***  (vale a dire `char` **\***) per `unsigned` `char` **\***. Questo metodo garantisce tipo corrispondente quando si utilizza **TCHAR**, ma è relativamente lenta a causa del sovraccarico di chiamata di funzione.  
+     Nel caso predefinito, il prototipo `_tcsrev` esegue il mapping a `_mbsrev` tramite un thunk in LIBC. lib. In questo modo, i tipi dei `_mbsrev` parametri in entrata e in uscita restituito da `_TCHAR*` (vale a dire `char *`) a `unsigned char *`. Questo metodo assicura corrispondenza dei tipi quando si usa `_TCHAR`, ma è relativamente lento a causa del sovraccarico di chiamate di funzione.  
   
 -   Usare l'incorporamento della funzione, incorporando nel codice l'istruzione del preprocessore seguente.  
   
@@ -52,7 +52,7 @@ Quando la costante manifesto **MBCS** è definito, una determinata routine di te
     #define _USE_INLINING  
     ```  
   
-     Questo metodo determina un thunk di funzione inline, fornito in Tchar. h, per eseguire il mapping di routine di testo generico direttamente alla routine MBCS appropriata. Nel seguente estratto di codice dal TCHAR. h fornisce un esempio di questa procedura.  
+     Questo metodo fa in modo che un thunk della funzione inline, fornito in Tchar. h, per eseguire il mapping di routine a testo generico direttamente alla routine MBCS appropriata. Nel seguente estratto di codice dal TCHAR. h fornisce un esempio di come questa operazione viene eseguita.  
   
     ```  
     __inline char *_tcsrev(char *_s1)  
@@ -61,19 +61,19 @@ Quando la costante manifesto **MBCS** è definito, una determinata routine di te
   
      Se è possibile usarlo, l'incorporamento rappresenta la soluzione migliore, poiché garantisce la corrispondenza dei tipi e non presenta costi aggiuntivi in termini di tempo.  
   
--   Utilizzare il mapping diretto incorporando l'istruzione seguente per il preprocessore nel codice.  
+-   Usare il mapping diretto, incorporando l'istruzione del preprocessore seguente nel codice.  
   
     ```  
     #define _MB_MAP_DIRECT  
     ```  
   
-     Se non si vuole usare il funzionamento predefinito o se non è possibile usare l'incorporamento, questo approccio è una rapida alternativa. In questo modo la routine di testo generico eseguire il mapping da una macro direttamente alla versione MBCS di routine, come nell'esempio seguente da TCHAR. h.  
+     Se non si vuole usare il funzionamento predefinito o se non è possibile usare l'incorporamento, questo approccio è una rapida alternativa. Lo fa sì che la routine di testo generico eseguire il mapping da una macro direttamente alla versione MBCS della routine, come illustrato di seguito da TCHAR. h.  
   
     ```  
     #define _tcschr _mbschr  
     ```  
   
-     Quando si adotta questo approccio, è necessario fare attenzione a garantire l'utilizzo dei tipi di dati appropriato per gli argomenti di stringa e valori restituiti di stringa. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico **_TXCHAR**. **TXCHAR** corrisponde al tipo `char` nel codice SBCS ma corrisponde al tipo `unsigned` `char` nel codice MBCS. Per ulteriori informazioni sulle macro di testo generico, vedere [mapping testo generico](../c-runtime-library/generic-text-mappings.md) nel *riferimenti alla libreria di Run-Time*.  
+     Quando si adotta questo approccio, è necessario prestare attenzione all'uso di tipi di dati appropriati per gli argomenti stringa e valori restituiti di stringa. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico `_TXCHAR`. `_TXCHAR` viene mappato al tipo **char** nel codice SBCS, ma viene mappato al tipo **unsigned char** nel codice MBCS. Per altre informazioni sulle macro a testo generico, vedere [mapping testo generico](../c-runtime-library/generic-text-mappings.md) nel *Run-Time Library Reference*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappature di testo generico in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

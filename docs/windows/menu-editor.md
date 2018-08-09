@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 21e6d35a555ecff327bcd4b68318c17da194cb41
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606250"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018335"
 ---
 # <a name="menu-editor"></a>Editor dei menu
-I menu consentono di disporre i comandi in modo logico e facile da trovare. Con l'editor di menu è possibile creare e modificare i menu lavorando direttamente con una barra dei menu molto simile a quella dell'applicazione finita.  
+I menu consentono di disporre i comandi in modo logico e facile da trovare. Con il **Menu** editor, è possibile creare e modificare i menu lavorando direttamente con una barra dei menu molto simile a quello dell'applicazione finita.  
   
-Per i progetti Visual C++, è possibile usare l'editor di menu per:  
+Per i progetti Visual C++, è possibile usare la **Menu** editor per:  
   
 -   [Creare i menu](../windows/creating-a-menu.md)  
   
@@ -59,10 +59,10 @@ Per i progetti Visual C++, è possibile usare l'editor di menu per:
 -   [Modificare le proprietà dei comandi di menu](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Quando si usa l'editor di menu, in molti casi è possibile fare clic sul pulsante destro del mouse per visualizzare un menu a comparsa con i comandi usati più di frequente. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il puntatore.  
+    >  Quando si usa la **Menu** editor, in molti casi, è possibile fare clic sul pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi usati frequentemente. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il puntatore.  
   
     > [!NOTE]
-    >  Per i programmi ATL e della libreria Microsoft Foundation Class, è possibile usare le procedure guidate per il codice per associare i comandi di menu al codice. Per altre informazioni, vedere [Aggiunta di un evento](../ide/adding-an-event-visual-cpp.md).  
+    >  Per i programmi di classe della libreria MFC (Microsoft Foundation) e ATL, è possibile usare **creazioni guidate codice** per associare i comandi di menu al codice. Per altre informazioni, vedere [Aggiunta di un evento](../ide/adding-an-event-visual-cpp.md).  
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   

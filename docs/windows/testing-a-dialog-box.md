@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652070"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019678"
 ---
 # <a name="testing-a-dialog-box"></a>Verifica di una finestra di dialogo
 Quando si progetta una finestra di dialogo, è possibile simularne e verificarne il comportamento in fase di esecuzione senza compilare il programma. In questo modo è possibile:  
@@ -42,7 +42,7 @@ Quando si progetta una finestra di dialogo, è possibile simularne e verificarne
   
 ### <a name="to-test-a-dialog-box"></a>Per testare una finestra di dialogo  
   
-1.  Quando l'editor finestre è la finestra attiva, sulla barra dei menu scegliere **Formato**, **Verifica finestra di dialogo**.  
+1.  Quando la **finestra di dialogo** editor è la finestra attiva, sulla barra dei menu, scegliere **formato** > **verifica finestra di dialogo**.  
   
 2.  Per terminare la simulazione, premere **Esc**, oppure sceglierne le **Chiudi** pulsante nella finestra di dialogo si sta testando.  
   

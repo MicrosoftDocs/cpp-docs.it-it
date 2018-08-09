@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102465"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018845"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Linee guida per sviluppatori di C++ per l'esecuzione speculativa i canali
 
-Questo articolo contiene indicazioni per gli sviluppatori agevolare l'identificazione e attenuazione dell'esecuzione speculativa side channel hardware le vulnerabilità in software di C++. Le vulnerabilità possono rivelare informazioni riservate tra confini di trust e possono influire sul software in esecuzione su processori che supportano l'esecuzione speculativa, in ordine di istruzioni. Questa classe di vulnerabilità è stata prima descritto in gennaio 2018 e ulteriori informazioni generali e linee guida sono disponibili nel [security di Microsoft advisory](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
+Questo articolo contiene indicazioni per gli sviluppatori agevolare l'identificazione e attenuazione dell'esecuzione speculativa side channel hardware le vulnerabilità in software di C++. Le vulnerabilità possono rivelare informazioni riservate tra confini di trust e possono influire sul software in esecuzione su processori che supportano l'esecuzione speculativa, in ordine di istruzioni. Questa classe di vulnerabilità è stata prima descritto in gennaio 2018 e ulteriori informazioni generali e linee guida sono disponibili nel [security di Microsoft advisory](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
 
 Le indicazioni fornite in questo articolo sono correlata alle classi di vulnerabilità rappresentata da:
 
-1. CVE-2017-5753, noto anche come Spectre variante 1. Questa classe di vulnerabilità di hardware è correlata ai canali lato che possono verificarsi a causa dell'esecuzione speculativa che si verifica in seguito a soddisfare un ramo condizionale. Il compilatore Visual C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per il `/Qspectre` commutatore che fornisce una mitigazione in fase di compilazione per un set limitato di modelli di codice potenzialmente vulnerabili correlati per CVE 2017-5753. La documentazione per il [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) flag vengono fornite ulteriori informazioni sul relativo utilizzo e gli effetti. 
+1. CVE-2017-5753, noto anche come Spectre variante 1. Questa classe di vulnerabilità di hardware è correlata ai canali lato che possono verificarsi a causa dell'esecuzione speculativa che si verifica in seguito a soddisfare un ramo condizionale. Il compilatore Visual C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per il `/Qspectre` commutatore che fornisce una mitigazione in fase di compilazione per un set limitato di modelli di codice potenzialmente vulnerabili correlati per CVE 2017-5753. La documentazione per il [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flag vengono fornite ulteriori informazioni sul relativo utilizzo e gli effetti. 
 
 2. CVE-2018-3639, noto anche come [speculativa Store Bypass (SSB)](https://aka.ms/sescsrdssb). Questa classe di vulnerabilità di hardware è correlata ai canali lato che possono verificarsi a causa dell'esecuzione speculativa di un carico prima di un archivio dipendenti come risultato di soddisfare un accesso memoria.
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Si noti che entrambi questi esempi implica speculativa modifica dei puntatori ramo indiretta allocate nello stack. È possibile che la modifica speculativa può verificarsi anche per le variabili globali, con allocazione dell'heap di memoria e persino memoria di sola lettura su alcuni CPU. Per la memoria allocate nello stack, il compilatore Visual C++ esegue già i passaggi per rendere più difficile modificare speculativo allocate nello stack indiretta le destinazioni, ad esempio tramite il riordinamento delle variabili locali in modo che i buffer vengono posizionati accanto a un cookie di sicurezza come in parte i [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check) funzionalità di sicurezza del compilatore.
+Si noti che entrambi questi esempi implica speculativa modifica dei puntatori ramo indiretta allocate nello stack. È possibile che la modifica speculativa può verificarsi anche per le variabili globali, con allocazione dell'heap di memoria e persino memoria di sola lettura su alcuni CPU. Per la memoria allocate nello stack, il compilatore Visual C++ esegue già i passaggi per rendere più difficile modificare speculativo allocate nello stack indiretta le destinazioni, ad esempio tramite il riordinamento delle variabili locali in modo che i buffer vengono posizionati accanto a un cookie di sicurezza come in parte i [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) funzionalità di sicurezza del compilatore.
 
 ## <a name="speculative-type-confusion"></a>Confusione di tipo speculativa
 
@@ -368,6 +368,6 @@ Un'altra tecnica che consente di ridurre le vulnerabilità del canale sul lato d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Materiale sussidiario per ridurre le vulnerabilità di esecuzione speculativa canale laterale](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[Materiale sussidiario per ridurre le vulnerabilità di esecuzione speculativa canale laterale](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [Mitigazione delle vulnerabilità di esecuzione speculativa side channel hardware](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

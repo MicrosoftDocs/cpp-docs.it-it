@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: d80a5189e25542b344d5506ac1f69dfbec5514af
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569375"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012547"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Procedura: bloccare puntatori e matrici
 Il blocco di un oggetto secondario definito in un oggetto gestito comporta il blocco di tutto l'oggetto.  Ad esempio, se un qualsiasi elemento di una matrice è bloccato, sarà bloccata tutta la matrice. Non esistono estensioni del linguaggio per dichiarare una matrice bloccata. Per bloccare una matrice, dichiarare un puntatore di blocco al relativo tipo di elemento e bloccarne uno degli elementi.  
@@ -49,8 +49,6 @@ int main() {
                          // will not move during call  
 }  
 ```  
-  
-### <a name="output"></a>Output  
   
 ```Output  
 ++  

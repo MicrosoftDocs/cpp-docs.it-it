@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13f537a9f5f6a66107a381324ccef1a6bef2ff32
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0986e60fffcc8abef7e662a6839a8f25825936d5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608029"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014234"
 ---
 # <a name="runtimeclassruntimeclass-destructor"></a>Distruttore RuntimeClass::~RuntimeClass
 Deinizializza l'istanza corrente del **RuntimeClass** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 virtual ~RuntimeClass();  
 ```  
   

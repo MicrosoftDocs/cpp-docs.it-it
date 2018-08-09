@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fe50fed4fd701ba171620d2c0cd0cde6e8da2bbc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604551"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020226"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (Estensioni del componente C++)
 **sealed** è una parola chiave sensibile al contesto per le classi di riferimento che indica che un membro virtuale non può essere sottoposto a override o che un tipo non può essere utilizzato come tipo di base.  
@@ -35,13 +35,12 @@ ms.locfileid: "39604551"
   
 ## <a name="syntax"></a>Sintassi
   
-```  
+```cpp  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
 ```  
   
 ### <a name="parameters"></a>Parametri  
-  
  *identifier*  
  Nome della funzione o della classe.  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8e48b6f8ec4a985bfa7fa5b8d0069e472df86e8
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 01c000ee928e9394827a69acb48ef0f41478a699
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605990"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018507"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Costruttore Module::MethodReleaseNotifier::MethodReleaseNotifier
 Inizializza una nuova istanza di **Module:: methodreleasenotifier** classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 MethodReleaseNotifier(  
    _In_ T* object,   
    _In_ void (T::* method)(),   

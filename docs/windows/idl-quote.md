@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606514"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011578"
 ---
 # <a name="idlquote"></a>idl_quote
 Consente di usare costrutti IDL che non sono supportati nella versione corrente di Visual C++ e chiedere di pass-through per il file con estensione IDL generato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *testo*  
  Il nome dell'attributo che si intende il compilatore Visual C++, passare al file IDL generato senza restituire un errore del compilatore.  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Questo codice causa MYFLOT e MYDUB e il *testo* movimento da inserire nel file con estensione IDL generato. Il *name* parametro forza *testo* da inserire prima di tutto ciò che fa riferimento *nome* nel file con estensione IDL generato. Il *dipendenze* parametro impone le definizioni di elenco delle dipendenze da inserire prima *testo* nel file con estensione IDL generato.  
+ Questo codice causa `MYFLOT` e `MYDUB` e il *testo* movimento da inserire nel file con estensione IDL generato. Il *name* parametro forza *testo* da inserire prima di tutto ciò che fa riferimento *nome* nel file con estensione IDL generato. Il *dipendenze* parametro impone le definizioni di elenco delle dipendenze da inserire prima *testo* nel file con estensione IDL generato.  
   
 ## <a name="requirements"></a>Requisiti  
   

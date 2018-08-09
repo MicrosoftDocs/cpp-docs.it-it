@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d468913dcca511702deeb77b08306dd0256d6091
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2b1dd40487a9d843fb81be1e0be65d76a86e1f9c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641249"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013298"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (struttura)
 Supporta l'infrastruttura di libreria modelli C++ per Windows Runtime e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template <  
    bool isWinRTInterface,  
    typename I  

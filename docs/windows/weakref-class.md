@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88252e6bf4a5b7cad1ee6fcd0580d29f1bf5981a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f56b35ffb53da8947982359174784a0dbb3cef85
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641829"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012586"
 ---
 # <a name="weakref-class"></a>Classe WeakRef
 Rappresenta un *riferimento debole* che può essere usato solamente da Windows Runtime, non da COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 class WeakRef : public ComPtr<IWeakReference>  
 ```  
   

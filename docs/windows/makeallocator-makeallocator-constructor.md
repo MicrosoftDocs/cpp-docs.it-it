@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06e12754594fe2f155be9502c2059fb6ba5f84e7
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9905d878fe8592a17b86519d927a2c85629f4ed
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608209"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013860"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>Costruttore MakeAllocator::MakeAllocator
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 MakeAllocator();  
 ```  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1deeb3076d3f1bfc2243ec333f258f543a37fceb
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 97c998f7e0814c5acae55dd3e9b747faed0242e1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608391"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016223"
 ---
 # <a name="modulereleasenotifier-class"></a>Classe Module::ReleaseNotifier
 Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 class ReleaseNotifier;  
 ```  
   

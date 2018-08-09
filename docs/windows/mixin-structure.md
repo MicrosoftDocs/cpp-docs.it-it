@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8fb5fa5288829ef51bf818ad8b7cf3b46edb59bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605724"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014286"
 ---
 # <a name="mixin-structure"></a>MixIn (struttura)
 Verifica che una classe di runtime derivi da interfacce di Windows Runtime, se disponibili, quindi da interfacce COM classiche.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<  
    typename Derived,  
    typename MixInType,  

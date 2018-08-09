@@ -1,5 +1,5 @@
 ---
-title: Simboli MFC per la programmazione Windows | Documenti Microsoft
+title: Simboli MFC per la programmazione Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882693"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012781"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Simboli per la programmazione Windows di MFC
-Questi simboli fanno parte di file di supporto di MFC, ma supportano funzioni di applicazione Windows standard e le azioni. Questi simboli vengono utilizzati principalmente con i menu. Quando si lavora con i menu nell'Editor di Menu, questi simboli vengono visualizzati nella finestra delle proprietà associate ai comuni comandi di menu. Ad esempio, se l'applicazione dispone di un menu File con un comando Exit, il comando verrà associato il simbolo ID_APP_EXIT nel [finestra proprietà](/visualstudio/ide/reference/properties-window).  
+Questi simboli fanno parte di file di supporto di MFC, ma supportano le azioni e funzioni di applicazione di Windows standard. Questi simboli sono usati principalmente con i menu. Quando si lavora con menu di scelta nel **Editor di Menu**, questi simboli verranno visualizzati nel **finestra delle proprietà** associati con i comuni comandi di menu. Ad esempio, se l'applicazione include un **File** menu con un **uscita** comando, comando sarà associato il simbolo ID_APP_EXIT nel [finestra proprietà](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  
@@ -47,7 +47,7 @@ Questi simboli fanno parte di file di supporto di MFC, ma supportano funzioni di
 |ID_FILE_SAVE|ID_FILE_SAVE_AS|ID_FILE_SAVE_COPY_AS|  
 |ID_FILE_SEND_MAIL|ID_FILE_UPDATE|ID_FORMAT_FONT|  
 |ID_HELP|ID_HELP_FINDER|ID_HELP_INDEX|  
-|ID_HELP + UTILIZZANDO|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|  
+|ID_HELP + UTILIZZO|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|  
 |ID_INDICATOR_KANA|ID_INDICATOR_NUM|ID_INDICATOR_OVR|  
 |ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|  
 |ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|  

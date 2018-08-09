@@ -1,5 +1,5 @@
 ---
-title: La finestra di dialogo Carattere strumento testo (Editor di immagini per le icone) | Documenti Microsoft
+title: Finestra di dialogo Carattere strumento testo (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa7f1a88627cc3547e6d6f4028de4abef73bf181
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a197be0032c4ad42574418a153bba079366e396
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890432"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015911"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Carattere strumento Testo (Editor di immagini per le icone)
-Specifica le impostazioni del carattere quando si utilizza il [finestra di dialogo strumento testo](../windows/text-tool-dialog-box-image-editor-for-icons.md) del [Editor di immagini](../windows/image-editor-for-icons.md).  
+Specifica le impostazioni del carattere quando si usa la [finestra di dialogo dello strumento di testo](../windows/text-tool-dialog-box-image-editor-for-icons.md) del [Editor di immagini](../windows/image-editor-for-icons.md).  
   
- Utilizzare questa finestra di dialogo per:  
+ Utilizzare questa finestra di dialogo:  
   
--   [Modifica del carattere del testo in un'immagine](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
+-   [Modifica il tipo di carattere del testo in un'immagine](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- Per accedere a questa finestra di dialogo, scegliere il **carattere** pulsante nella finestra di dialogo strumento testo.  
+ Per accedere a questa finestra di dialogo, fare clic sul **Font** pulsante il **strumento testo** nella finestra di dialogo.  
   
  **Tipo di carattere**  
  Elenca i tipi di carattere disponibili.  
@@ -43,14 +43,13 @@ Specifica le impostazioni del carattere quando si utilizza il [finestra di dialo
  Elenca le dimensioni disponibili per il tipo di carattere specificato.  
   
  **Esempio**  
- Viene illustrato un esempio di come verrà visualizzato il testo con le impostazioni del carattere specificata.  
+ Visualizzare un esempio del modo in cui testo verrà visualizzato con le impostazioni del carattere specificata.  
   
  **Script**  
- Elenca gli script di linguaggio disponibili per il tipo di carattere specificato. Quando si seleziona un lingua diversa di script, il set di caratteri per quella lingua diventa disponibile per la creazione di documenti in più lingue.  
+ Elenca gli script del linguaggio disponibili per il tipo di carattere specificato. Quando si seleziona uno script in lingue diverse, il set di caratteri per quella lingua diventa disponibile per la creazione di documenti multilingue.  
   
 ## <a name="requirements"></a>Requisiti  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)
-

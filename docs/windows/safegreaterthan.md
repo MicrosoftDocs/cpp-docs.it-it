@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fda4d8cfb725daf094f581a250d7f965330b9e9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 098cc00d4b478df2be98bac6fc4a06990fe5aba0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606826"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016037"
 ---
 # <a name="safegreaterthan"></a>SafeGreaterThan
 Confronta due numeri.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeGreaterThan (  
    const T t,  

@@ -1,5 +1,5 @@
 ---
-title: 'Microsoft:: wrl Namespace | Documenti Microsoft'
+title: 'Microsoft:: wrl Namespace | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881650"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020252"
 ---
 # <a name="microsoftwrl-namespace"></a>Spazio dei nomi Microsoft::WRL
 Definisce i tipi fondamentali che costituiscono la libreria di modelli di Windows Runtime C++.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -70,8 +70,8 @@ namespace Microsoft::WRL;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Struttura ChainInterfaces](../windows/chaininterfaces-structure.md)|Specifica le funzioni di verifica e inizializzazione che possono essere applicate a un set di ID di interfaccia.|  
-|[Struttura CloakedIid](../windows/cloakediid-structure.md)|Indica ai modelli RuntimeClass, Implements e ChainInterfaces che l'interfaccia specificata non è accessibile nell'elenco di IID.|  
-|[Struttura Implements](../windows/implements-structure.md)|Implementa QueryInterface e GetIid per le interfacce specificate.|  
+|[Struttura CloakedIid](../windows/cloakediid-structure.md)|Indica al `RuntimeClass`, `Implements` e `ChainInterfaces` modelli che l'interfaccia specificata non è accessibile nell'elenco di IID.|  
+|[Struttura Implements](../windows/implements-structure.md)|Implements `QueryInterface` e `GetIid` per le interfacce specificate.|  
 |[Struttura MixIn](../windows/mixin-structure.md)|Verifica che una classe di runtime derivi da interfacce di Windows Runtime, se disponibili, quindi da interfacce COM classiche.|  
 |[Struttura RuntimeClassFlags](../windows/runtimeclassflags-structure.md)|Contiene il tipo di un'istanza di un [RuntimeClass](../windows/runtimeclass-class.md).|  
   
@@ -79,9 +79,9 @@ namespace Microsoft::WRL;
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[Enumerazione AsyncResultType](../windows/asyncresulttype-enumeration.md)|Specifica il tipo di risultato restituito dal metodo GetResults().|  
+|[Enumerazione AsyncResultType](../windows/asyncresulttype-enumeration.md)|Specifica il tipo di risultato restituito dal `GetResults()` (metodo).|  
 |[Enumerazione ModuleType](../windows/moduletype-enumeration.md)|Specifica se un modulo deve supportare un server in-process o un server out-of-process.|  
-|[Enumerazione RuntimeClassType](../windows/runtimeclasstype-enumeration.md)|Specifica il tipo di [RuntimeClass](../windows/runtimeclass-class.md) istanza che è supportata.|  
+|[Enumerazione RuntimeClassType](../windows/runtimeclasstype-enumeration.md)|Specifica il tipo della [RuntimeClass](../windows/runtimeclass-class.md) istanza in cui è supportata.|  
   
 ### <a name="functions"></a>Funzioni  
   
@@ -91,10 +91,10 @@ namespace Microsoft::WRL;
 |[Funzione di callback](../windows/callback-function-windows-runtime-cpp-template-library.md)|Crea un oggetto la cui funzione membro è un metodo di callback.|  
 |[Funzione CreateActivationFactory](../windows/createactivationfactory-function.md)|Crea una factory che produce istanze della classe specificata che può essere attivata da Windows Runtime.|  
 |[Funzione CreateClassFactory](../windows/createclassfactory-function.md)|Crea una factory che produce istanze della classe specificata.|  
-|[Funzione Make](../windows/make-function.md)|Inizializza la classe di Windows Runtime specificata.|  
+|[Funzione Make](../windows/make-function.md)|Inizializza la classe di Runtime di Windows specificata.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async. h, client. h, corewrappers. h, Event. h,. h, FTM., h, Implements  
+ **Intestazione:** Async. h, client. h, corewrappers. h, Event, ftm.h, Implements. h, FTM, module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

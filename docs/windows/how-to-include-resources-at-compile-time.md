@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 28374482abd5d2e039c92adbd34f261bdc259b9d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571340"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018916"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Procedura: includere risorse in fase di compilazione
 In genere è facile e comodo usare la disposizione predefinita di tutte le risorse in un file di script (RC) delle risorse. Tuttavia, è possibile aggiungere le risorse in altri file al progetto corrente in fase di compilazione elencandoli nella **direttive in fase di compilazione** nella casella il [finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md).  
@@ -37,7 +37,7 @@ In genere è facile e comodo usare la disposizione predefinita di tutte le risor
   
 -   Per aggiungere commenti alle istruzioni di risorse che non verranno eliminate quando si salva il file RC.  
   
-     Gli editor di risorse non leggono direttamente i file RC o resource.h. Questi file vengono compilati dal compilatore di risorse in file APS, che vengono usati dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici. Come con un normale processo di compilazione, le informazioni che non sono simboliche (ad esempio, i commenti) vengono eliminate durante il processo di compilazione. Ogni volta che il file APS non risulta sincronizzato con il file RC, il file RC viene rigenerato (ad esempio, quando si salva, l'editor di risorse sovrascrive il file RC e il file resource.h). Eventuali modifiche alle risorse resteranno incorporate nel file RC, ma i commenti andranno sempre persi quando il file RC viene sovrascritto.  
+     Editor di risorse non leggono direttamente RC o `resource.h` file. Questi file vengono compilati dal compilatore di risorse in file APS, che vengono usati dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici. Come con un normale processo di compilazione, le informazioni che non sono simboliche (ad esempio, i commenti) vengono eliminate durante il processo di compilazione. Ogni volta che il file APS non ottiene sincronizzato con il file RC, il file RC viene rigenerato (ad esempio, quando si salva, l'editor di risorse sovrascrive il file RC e `resource.h` file). Eventuali modifiche alle risorse resteranno incorporate nel file RC, ma i commenti andranno sempre persi quando il file RC viene sovrascritto.  
   
 -   Per includere risorse già sviluppate e testate e che non richiedono altre modifiche. Eventuali file inclusi, ma che non hanno estensione RC non saranno modificati dagli editor di risorse.  
   
@@ -58,7 +58,6 @@ In genere è facile e comodo usare la disposizione predefinita di tutte le risor
      Le risorse nei file incluse in questo modo diventano parte del file eseguibile in fase di compilazione. Non sono direttamente disponibili per la modifica quando si lavora sul file RC principale del progetto. È necessario aprire i file RC inclusi separatamente. Eventuali file inclusi, ma che non hanno estensione RC non saranno modificabili da parte degli editor di risorse.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

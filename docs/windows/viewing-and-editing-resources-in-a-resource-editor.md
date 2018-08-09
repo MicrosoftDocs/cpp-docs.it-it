@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646930"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014003"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Visualizzazione e modifica di risorse in un editor di risorse
-Ogni tipo di risorsa dispone di un editor di risorse specifico per quel tipo di risorsa. È possibile ridisporre, ridimensionare, aggiungere controlli e funzionalità o in caso contrario, modificare alcuni aspetti di una risorsa tramite l'editor associato. È anche possibile modificare una risorsa in [formato di testo](../windows/how-to-open-a-resource-script-file-in-text-format.md) e [formato binario](../windows/opening-a-resource-for-binary-editing.md).  
+Ogni tipo di risorsa è un **risorsa** editor specifici di quel tipo di risorsa. È possibile ridisporre, ridimensionare, aggiungere controlli e funzionalità o in caso contrario, modificare alcuni aspetti di una risorsa tramite l'editor associato. È anche possibile modificare una risorsa in [formato di testo](../windows/how-to-open-a-resource-script-file-in-text-format.md) e [formato binario](../windows/opening-a-resource-for-binary-editing.md).  
   
  Alcuni tipi di risorse sono i singoli file che possono essere importati e usati in diversi modi. Queste includono le bitmap, icone, cursori, barre degli strumenti e i file html. Tali risorse hanno nomi di file, nonché [identificatori di risorsa](../windows/symbols-resource-identifiers.md). Altri, ad esempio le finestre di dialogo, menu e le tabelle di stringhe in progetti Win32, esiste solo come parte di un file di risorse (RC) o un file modello (con estensione rct) di risorse.  
   
@@ -46,16 +46,16 @@ Ogni tipo di risorsa dispone di un editor di risorse specifico per quel tipo di 
   
 1.  Selezionare **visualizzazione di risorse** dalle **visualizzazione** menu.  
   
-2.  Se la finestra Visualizzazione risorse non è la finestra in primo piano, fare clic sui **visualizzazione risorse** pressione di tab per attivare la modalità nella parte superiore.  
+2.  Se il **visualizzazione risorse** finestra non è la finestra in primo piano, selezionare la **visualizzazione risorse** pressione di tab per attivare la modalità nella parte superiore.  
   
-3.  Dalla visualizzazione di risorse, espandere la cartella del progetto che contiene le risorse che si desidera visualizzare. Ad esempio, se si desidera visualizzare una risorsa finestra di dialogo, espandere la cartella finestra di dialogo.  
+3.  Dal **visualizzazione risorse**, espandere la cartella del progetto che contiene le risorse che si desidera visualizzare. Ad esempio, se si desidera visualizzare una risorsa finestra di dialogo, espandere la **dialogo** cartella.  
   
     > [!NOTE]
     >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-4.  Fare doppio clic sulla risorsa, ad esempio, IDD_ABOUTBOX.  
+4.  Fare doppio clic sulla risorsa, ad esempio, **IDD_ABOUTBOX**.  
   
-     La risorsa viene visualizzata nell'editor appropriato. Ad esempio, per le risorse finestra di dialogo, la risorsa viene aperta all'interno dell'editor finestre.  
+     La risorsa viene visualizzata nell'editor appropriato. Ad esempio, per le risorse finestra di dialogo, la risorsa viene aperta la **dialogo** editor.  
   
      È anche possibile [visualizzare le risorse in un file RC (script di risorsa) senza un progetto aperto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
@@ -75,7 +75,7 @@ Ogni tipo di risorsa dispone di un editor di risorse specifico per quel tipo di 
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Per visualizzare una risorsa gestita in un editor di risorse  
   
-1.  Nelle **Esplora soluzioni**, fare doppio clic sulla risorsa, ad esempio, BITMAP1.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic sulla risorsa, ad esempio **BITMAP1**.  
   
      La risorsa viene visualizzata nell'editor appropriato.  
   
@@ -83,7 +83,7 @@ Ogni tipo di risorsa dispone di un editor di risorse specifico per quel tipo di 
   
 1.  Nelle **Esplora soluzioni**, fare doppio clic la risorsa che si desidera eliminare, quindi scegliere **eliminare** dal menu di scelta rapida.  
   
-### <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti  
  nessuno  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 93cd229e93c4da36004c212cef0f09463926a0e5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642942"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015956"
 ---
 # <a name="variable-argument-lists--ccli"></a>Elenchi di argomenti variabili (...) (C++/CLI)
 Questo esempio viene illustrato come utilizzare il `...` sintassi in Visual C++ per implementare le funzioni che hanno un numero variabile di argomenti.  
@@ -54,9 +54,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Output  
-  
-```  
+```Output  
 3  
 ```  
   

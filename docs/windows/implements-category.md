@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 28df44096f3b61eb4ada17ec824292281edee602
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603718"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013714"
 ---
 # <a name="implementscategory"></a>implements_category
 Specifica le categorie di componenti implementate dalla classe di destinazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ implements_category(  
    implements_category="uuid"  
 ) ]  
@@ -45,7 +45,7 @@ Specifica le categorie di componenti implementate dalla classe di destinazione.
  Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente specifica che l'oggetto seguente implementa la categoria di controllo.  
+ Il codice seguente specifica che l'oggetto seguente implementa il `Control` categoria.  
   
 ```cpp  
 // cpp_attr_ref_implements_category.cpp  

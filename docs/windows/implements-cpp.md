@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606462"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010373"
 ---
 # <a name="implements-c"></a>implements (C++)
 Specifica le interfacce dispatch che vengono forzate per essere membri della coclasse IDL.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ Specifica le interfacce dispatch che vengono forzate per essere membri della coc
  Un elenco delimitato da virgole di interfaccia dispatch che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per la specifica di un'interfaccia sola dispatch **implementa(dispinterfaces** *= dispinterface_name***)**.  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, vengono aggiunti solo a interfacce COM che sono classi di base della coclasse la coclasse IDL. **implementa** consente di forzare le altre interfacce siano membri coclasse IDL.  
+ Per impostazione predefinita, solo i interfacce COM che sono classi di base di `coclass` vengono aggiunti nella coclasse IDL. **implementa** consente di forzare le altre interfacce a essere IDL `coclass` membri.  
   
 ## <a name="requirements"></a>Requisiti  
   

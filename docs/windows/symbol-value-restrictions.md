@@ -1,5 +1,5 @@
 ---
-title: Restrizioni relative ai valori dei simboli | Documenti Microsoft
+title: Restrizioni relative ai valori dei simboli | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e6b594ad7fe1d805511d5e2cd1b67bd0d791e8e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889553"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013401"
 ---
 # <a name="symbol-value-restrictions"></a>Restrizioni relative ai valori dei simboli
 Il valore di un simbolo può essere qualsiasi numero intero espresso in modo normale per le direttive #define per il preprocessore. Di seguito sono riportati alcuni esempi di valori di simboli:  
@@ -45,28 +45,26 @@ Il valore di un simbolo può essere qualsiasi numero intero espresso in modo nor
   
 -   Non è possibile definire il valore di un simbolo mediante altre stringhe di simbolo. Non è ad esempio supportata la seguente definizione di simbolo:  
   
-    ```  
+    ```cpp  
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
 -   Non è possibile usare macro del preprocessore con argomenti come definizioni dei valori. Ad esempio:  
   
-    ```  
+    ```cpp  
     #define   IDD_ABOUT  ID(7) //not supported  
     ```  
   
      non è un'espressione valida indipendentemente dal valore valutato da `ID` in fase di compilazione.  
   
--   L'applicazione potrebbe disporre di un file esistente contenente simboli definiti con espressioni. Per ulteriori informazioni su come includere i simboli come simboli di sola lettura, vedere [simboli utilizzando condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md).  
+-   L'applicazione potrebbe disporre di un file esistente contenente simboli definiti con espressioni. Per altre informazioni su come includere i simboli come simboli di sola lettura, vedere [simboli usando condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md).  
   
- Per ulteriori informazioni sugli intervalli di numeri, vedere [TN023: risorse MFC Standard](../mfc/tn023-standard-mfc-resources.md).  
-  
-
+ Per altre informazioni sugli intervalli di numeri, vedere [TN023: risorse MFC Standard](../mfc/tn023-standard-mfc-resources.md).  
   
 ## <a name="requirements"></a>Requisiti  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifica il valore numerico di un simbolo](../windows/changing-a-symbol-s-numeric-value.md)   
+ [Modifica valore numerico del simbolo](../windows/changing-a-symbol-s-numeric-value.md)   
  [Restrizioni relative ai nomi di simbolo](../windows/symbol-name-restrictions.md)   
  [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)

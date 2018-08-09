@@ -19,22 +19,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5337378b54c2109d05e28cb9d1bfed82f81913f3
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7d329d902014b3dff6f66fd6e3f1877a3bc70822
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652698"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016255"
 ---
 # <a name="setting-accelerator-properties"></a>Impostazione delle proprietà dei tasti di scelta rapida
-È possibile impostare le proprietà di tasti di scelta rapida nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in qualsiasi momento. È anche possibile usare l'editor tasti di scelta rapida per modificare le relative proprietà nella tabella dei tasti di scelta rapida. Le modifiche apportate tramite la finestra Proprietà o l'editor tasti di scelta rapida producono lo stesso risultato: le modifiche vengono applicate immediatamente nella tabella dei tasti di scelta rapida.  
+È possibile impostare le proprietà di tasti di scelta rapida nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in qualsiasi momento. È anche possibile usare la **acceleratore** editor per modificare le proprietà di tasti di scelta rapida della tabella di tasti di scelta rapida. Le modifiche apportate tramite il **delle proprietà** finestra o il **acceleratore** editor hanno lo stesso risultato: le modifiche vengono applicate immediatamente nella tabella di tasti di scelta rapida.  
   
- Esistono tre proprietà per ogni acceleratore [ID](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160/locales/en-US):  
+ Esistono tre proprietà per ogni acceleratore [ID](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160):  
   
 -   Il [proprietà modificatore](../windows/accelerator-modifier-property.md) Imposta controllo combinazioni per il tasto di scelta rapida.  
   
     > [!NOTE]
-    >  Nella finestra Proprietà, questa proprietà appare come tre diverse proprietà booleane, ognuno dei quali può essere controllata in modo indipendente: **Alt**, **Ctrl**, e **MAIUSC**.  
+    >  Nel **delle proprietà** , questa proprietà verrà visualizzata la finestra come tre diverse proprietà booleane, ognuno dei quali può essere controllata in modo indipendente: **Alt**, **Ctrl**e **Shift**.  
   
 -   Il [proprietà chiave](../windows/accelerator-key-property.md) imposta il tasto effettivo da usare come tasto di scelta rapida.  
   

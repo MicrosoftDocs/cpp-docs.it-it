@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651405"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019173"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Attivazione o disattivazione della visualizzazione della barra degli strumenti dell'editor finestre
-Quando si apre l'editor finestre, finestra di dialogo Editor barra degli strumenti viene visualizzato automaticamente nella parte superiore della soluzione.  
+Quando si apre la **finestra di dialogo** editor, il **Editor finestre** sulla barra degli strumenti viene visualizzato automaticamente nella parte superiore della soluzione.  
   
 ### <a name="dialog-editor-toolbar"></a>Barra degli strumenti dell'editor finestre  
   
@@ -40,9 +40,9 @@ Quando si apre l'editor finestre, finestra di dialogo Editor barra degli strumen
 |![Pulsante Centra verticalmente](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Pulsante Mostra/Nascondi griglia](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Attiva/Disattiva griglia|  
 |![Pulsante Centra orizzontalmente](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Orizzontale|![Pulsante Attiva/Disattiva guide](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Attiva/Disattiva guide|  
   
- Finestra di dialogo Editor barra degli strumenti contiene i pulsanti per la disposizione del layout dei controlli nella finestra di dialogo, ad esempio dimensioni e l'allineamento. I pulsanti della barra degli strumenti Editor finestra di dialogo corrispondono ai comandi del menu Formato. Per informazioni dettagliate, vedere [tasti di scelta rapida per l'Editor finestre](../windows/accelerator-keys-for-the-dialog-editor.md).  
+ Il **finestra di dialogo Editor** sulla barra degli strumenti contiene pulsanti per la disposizione del layout dei controlli nella finestra di dialogo, ad esempio dimensione e allineamento. **Editor finestre** pulsanti della barra degli strumenti corrispondono ai comandi nella **formato** menu. Per informazioni dettagliate, vedere [tasti di scelta rapida per l'Editor finestre](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Quando si è nell'editor finestre, è possibile attivare o disattivare la visualizzazione della barra degli strumenti finestra di dialogo Editor, selezionarlo dall'elenco di barre degli strumenti disponibili e windows.  
+ Quando si utilizza il **finestra di dialogo** editor, è possibile attivare o disattivare la visualizzazione del **Editor finestre** sulla barra degli strumenti, selezionarlo dall'elenco di barre degli strumenti disponibili e windows.  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>Per visualizzare o nascondere la barra degli strumenti editor finestre  
   

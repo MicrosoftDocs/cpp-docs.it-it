@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d8e5cbbcbbdf3cefe5211eb4f2274ce3b2b79db
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5ac49319dca429dcc0351393f73d711266cf764a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608800"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010772"
 ---
 # <a name="isbaseofstrictvalue-constant"></a>Costante IsBaseOfStrict::value
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 static const bool value = __is_base_of(Base, Derived);  
 ```  
   
 ## <a name="remarks"></a>Note  
  Indica se un tipo è la base di un altro.  
   
- `value` viene **true** se tipo `Base` è una classe di base del tipo `Derived`, in caso contrario è **false**.  
+ **valore** viene **true** se tipo `Base` è una classe di base del tipo `Derived`, in caso contrario risulta **false**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** FTM  

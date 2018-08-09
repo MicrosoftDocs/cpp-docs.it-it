@@ -19,22 +19,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e57e550527bc906d3c1170e410719c57a877eec
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8ea040d5a549c61ba17f059260cb399d82bc430
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647381"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013967"
 ---
 # <a name="version-information-editor"></a>Editor di informazioni sulla versione
-Le informazioni sulla versione sono costituite dall'identificazione del prodotto e della società, da un numero di versione del prodotto e dalla notifica relativa al copyright e al marchio. L'editor di informazioni sulla versione consente di creare e gestire questi dati, che sono archiviati nella risorsa di informazioni sulla versione. La risorsa di informazioni sulla versione non è necessaria per un'applicazione, ma è uno strumento utile per raccogliere le informazioni che identificano l'applicazione. Le informazioni sulla versione vengono usate anche dalle API di installazione.  
+Le informazioni sulla versione sono costituite dall'identificazione del prodotto e della società, da un numero di versione del prodotto e dalla notifica relativa al copyright e al marchio. Con il **le informazioni sulla versione** editor, si creano e gestiscono questi dati, che viene archiviati nella risorsa di informazioni della versione. La risorsa di informazioni sulla versione non è necessaria per un'applicazione, ma è uno strumento utile per raccogliere le informazioni che identificano l'applicazione. Le informazioni sulla versione vengono usate anche dalle API di installazione.  
   
  Una risorsa di informazioni sulla versione include un blocco superiore e uno o più blocchi inferiori: un unico blocco di informazioni fisse nella parte superiore e uno o più blocchi di informazioni sulla versione nella parte inferiore, per altre lingue e/o altri set di caratteri. Il blocco superiore presenta caselle numeriche modificabili ed elenchi a discesa in cui è possibile effettuare una selezione. I blocchi inferiori hanno solo caselle di testo modificabili.  
   
 > [!NOTE]
 >  Lo standard Windows prevede la presenza di una sola risorsa di versione, denominata VS_VERSION_INFO.  
   
- L'editor di informazioni sulla versione consente di:  
+ Il **le informazioni sulla versione** editor consente di:  
   
 -   [Modificare una stringa in una risorsa di informazioni sulla versione](../windows/editing-a-string-in-a-version-information-resource.md)  
   
@@ -45,7 +45,7 @@ Le informazioni sulla versione sono costituite dall'identificazione del prodotto
 -   [Accedere alle informazioni sulla versione dal programma](../windows/accessing-version-information-from-within-your-program.md)  
   
     > [!NOTE]
-    >  Quando si usa l'editor di informazioni sulla versione, in molti casi è possibile fare clic con il pulsante destro del mouse per visualizzare un menu di scelta rapida con comandi specifici della risorsa. Se ad esempio si fa clic mentre il puntatore è posizionato sulla voce di intestazione di un blocco, nel menu di scelta rapida vengono visualizzati i comandi per la creazione e l'eliminazione di un blocco di informazioni sulla versione.  
+    >  Quando si usa la **le informazioni sulla versione** editor, in molti casi è possibile fare doppio clic per visualizzare un menu di scelta rapida dei comandi specifici della risorsa. Ad esempio, se si fa clic mentre si punta a una voce di intestazione di blocco, il menu di scelta rapida viene illustrato il **nuovo blocco informazioni sulla versione** e **Elimina blocco informazioni sulla versione** comandi.  
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   

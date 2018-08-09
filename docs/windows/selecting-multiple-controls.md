@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608267"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015586"
 ---
 # <a name="selecting-multiple-controls"></a>Selezione di più controlli
 ### <a name="to-select-multiple-controls"></a>Per selezionare più controlli  
@@ -47,7 +47,7 @@ ms.locfileid: "39608267"
 1.  Con un gruppo di controlli selezionati, tenere premuto il **MAIUSC** della chiave e fare clic sul controllo che si desidera rimuovere o aggiungere alla selezione esistente.  
   
     > [!NOTE]
-    >  Tenendo premuto il tasto CTRL e facendo clic su un controllo all'interno di una selezione renderà che controllano il controllo dominante della selezione. Per altre informazioni, vedere [impostazione del controllo dominante](../windows/specifying-the-dominant-control.md).  
+    >  Tenendo premuto il **Ctrl** chiave e facendo clic su un controllo all'interno di una selezione renderà che controllano il controllo dominante della selezione. Per altre informazioni, vedere [impostazione del controllo dominante](../windows/specifying-the-dominant-control.md).  
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   

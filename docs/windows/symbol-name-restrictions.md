@@ -1,5 +1,5 @@
 ---
-title: Restrizioni relative ai nomi dei simboli | Documenti Microsoft
+title: Restrizioni relative ai nomi dei simboli | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892335"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011448"
 ---
 # <a name="symbol-name-restrictions"></a>Restrizioni relative ai nomi dei simboli
 I nomi dei simboli sono soggetti alle restrizioni riportate di seguito.  
   
--   Tutti [simboli](../windows/symbols-resource-identifiers.md) deve essere univoco all'interno dell'ambito dell'applicazione. In questo modo si evitano conflitti tra le definizioni dei simboli nei file di intestazione.  
+-   Tutti i [simboli](../windows/symbols-resource-identifiers.md) deve essere univoco all'interno dell'ambito dell'applicazione. In questo modo si evitano conflitti tra le definizioni dei simboli nei file di intestazione.  
   
 -   I caratteri validi per il nome di un simbolo includono i caratteri maiuscoli e minuscoli dalla A alla Z, i numeri da 0 a 9 e i caratteri di sottolineatura ( _ ).  
   
@@ -52,8 +52,6 @@ I nomi dei simboli sono soggetti alle restrizioni riportate di seguito.
 |Controlli e finestra figlio|IDC_|Control|  
 |Stringhe|IDS_|Stringa nella tabella di stringhe|  
 |MFC|AFX_|Riservati per simboli MFC predefiniti|  
-  
-
   
 ## <a name="requirements"></a>Requisiti  
  Win32  

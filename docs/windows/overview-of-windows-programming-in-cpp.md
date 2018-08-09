@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77a6049216137da56cc79cc6f28f1f7591015a33
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604518"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012193"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
@@ -39,7 +39,7 @@ Le app UWP sono in grado di eseguire in tutti i dispositivi Windows 10, come Tab
 
    Questa categoria include anche l'uso di C++ per componenti di base e codice di calcolo nel contesto della programmazione server e cloud. Talvolta il codice a prestazioni intensive alla base di un'applicazione server o cloud viene scritto in C++ per ottimizzare le prestazioni. È possibile compilare questo codice in una DLL e usarlo da C# o Visual Basic.
 
-- **Applicazioni .NET Framework**. Benché la maggior parte delle applicazioni .NET Framework sia scritta in C# o Visual Basic, è possibile usare anche C++/CLI (l'opzione del compilatore /clr in Visual C++). È consigliabile usare C++/CLI per un livello minimo di interoperabilità in un'applicazione di grandi dimensioni che include codice gestito e nativo.
+- **Applicazioni .NET Framework**. La maggior parte delle applicazioni .NET Framework sono scritti in c# o Visual Basic, ma è possibile usare anche c++ /CLI CLI (il `/clr` opzione del compilatore in Visual C++). È consigliabile usare C++/CLI per un livello minimo di interoperabilità in un'applicazione di grandi dimensioni che include codice gestito e nativo.
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 

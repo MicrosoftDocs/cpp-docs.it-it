@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651831"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011842"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operatore di riferimento di rilevamento (Estensioni del componente C++)
 Oggetto *riferimento di rilevamento* (`%`) si comporta come un riferimento ordinario C++ (`&`) ad eccezione del fatto che quando un oggetto viene assegnato a un riferimento di traccia, conteggio dei riferimenti dell'oggetto viene incrementato.  
@@ -46,7 +46,7 @@ Oggetto *riferimento di rilevamento* (`%`) si comporta come un riferimento ordin
 ## <a name="windows-runtime"></a>Windows Runtime  
  Un riferimento di traccia si comporta come un riferimento standard C++, eccetto che % è un riferimento con conteggio dei riferimenti. Il frammento di codice riportato di seguito illustra come eseguire la conversione tra i tipi % e ^:  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  L'esempio seguente mostra come passare ^ a una funzione che accetta un valore %.  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 21  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604356"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018594"
 ---
 # <a name="module-c"></a>modulo (C++)
 Definisce il blocco di libreria nel file IDL.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ Definisce il blocco di libreria nel file IDL.
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *tipo* (facoltativo)  
- Può essere uno dei seguenti:  
+*tipo* (facoltativo)  
+Può essere uno dei seguenti:  
   
 -   `dll` Aggiunge funzioni e classi che consentono alla DLL risultante di funzionare come un server COM in-process. Rappresenta il valore predefinito.  
   
@@ -61,51 +61,51 @@ Definisce il blocco di libreria nel file IDL.
   
 -   `unspecified` Disabilita l'inserimento di codice ATL correlato all'attributo di modulo: le funzioni di punto di inserimento della classe di modulo ATL, istanza globale atlmodule e voce. Non disabilita l'inserimento di codice ATL a causa di altri attributi del progetto.  
   
- *name* (facoltativo)  
- Il nome del blocco di libreria.  
+*name* (facoltativo)  
+Il nome del blocco di libreria.  
   
- *versione* (facoltativo)  
- Il numero di versione da assegnare al blocco di libreria. Il valore predefinito è 1,0.  
+*versione* (facoltativo)  
+Il numero di versione da assegnare al blocco di libreria. Il valore predefinito è 1,0.  
   
- *uuid*  
- L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare il *uuid* del blocco di libreria, è possibile ripetere l'operazione usando l'identificatore **uuidof (***NomeLibreria***)**.  
+*uuid*  
+L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare il *uuid* del blocco di libreria, è possibile ripetere l'operazione usando l'identificatore **uuidof (***NomeLibreria***)**.  
   
- *lcid*  
- Il parametro di localizzazione. Per altre informazioni, vedere [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
+*lcid*  
+Il parametro di localizzazione. Per altre informazioni, vedere [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
   
- *controllo* (facoltativo)  
- Specifica che tutte le coclassi nella libreria sono controlli.  
+*controllo* (facoltativo)  
+Specifica che tutte le coclassi nella libreria sono controlli.  
   
- *helpstring*  
- Specifica la libreria dei tipi.  
+*helpstring*  
+Specifica la libreria dei tipi.  
   
- *helpstringdll* (facoltativo)  
- Imposta il nome del file DLL da usare per eseguire una ricerca di stringhe di documento. Per altre informazioni, vedere [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .  
+*helpstringdll* (facoltativo)  
+Imposta il nome del file DLL da usare per eseguire una ricerca di stringhe di documento. Per altre informazioni, vedere [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .  
   
- *HelpFile* (facoltativo)  
- Il nome del file della Guida per la libreria dei tipi.  
+*HelpFile* (facoltativo)  
+Il nome del **aiutare** file della libreria dei tipi.  
   
- *HelpContext* (facoltativo)  
- L'ID Guida per questa libreria dei tipi.  
+*HelpContext* (facoltativo)  
+Il **Helpid** per questa libreria dei tipi.  
   
- *helpstringcontext* (facoltativo)  
- Per altre informazioni, vedere [helpstringcontext](../windows/helpstringcontext.md) .  
+*helpstringcontext* (facoltativo)  
+Per altre informazioni, vedere [helpstringcontext](../windows/helpstringcontext.md) .  
   
- *nascosto* (facoltativo)  
- Impedisce la visualizzazione dell'intera libreria. Questo utilizzo è pensato per i controlli. Gli host devono creare una nuova libreria dei tipi che esegue il wrapping del controllo con le proprietà estese. Per altre informazioni, vedere l'attributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
+*nascosto* (facoltativo)  
+Impedisce la visualizzazione dell'intera libreria. Questo utilizzo è pensato per i controlli. Gli host devono creare una nuova libreria dei tipi che esegue il wrapping del controllo con le proprietà estese. Per altre informazioni, vedere l'attributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
   
- *con restrizioni* (facoltativo)  
- I membri della libreria non possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
+*con restrizioni* (facoltativo)  
+I membri della libreria non possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
   
- *personalizzato* (facoltativo)  
- Uno o più attributi; è simile all'attributo [custom](../windows/custom-cpp.md) . Il primo parametro per *personalizzato* è il GUID dell'attributo. Ad esempio:  
+*personalizzato* (facoltativo)  
+Uno o più attributi; è simile all'attributo [custom](../windows/custom-cpp.md) . Il primo parametro per *personalizzato* è il GUID dell'attributo. Ad esempio:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- L'ID di risorsa stringa del file RGS utilizzato per registrare l'ID di APP della DLL, dell'eseguibile o del servizio. Quando il modulo è di tipo servizio, questo argomento viene usato anche per ottenere l'ID della stringa contenente il nome del servizio.  
+*resource_name*  
+L'ID di risorsa stringa del file RGS utilizzato per registrare l'ID di APP della DLL, dell'eseguibile o del servizio. Quando il modulo è di tipo servizio, questo argomento viene usato anche per ottenere l'ID della stringa contenente il nome del servizio.  
   
 > [!NOTE]
 >  Sia il file RGS che la stringa contenente il nome del servizio devono contenere lo stesso valore numerico.  

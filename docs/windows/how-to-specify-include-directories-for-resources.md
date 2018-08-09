@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b7444ccf4f3a03036a5363024d0794f67b6a1ad6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569540"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018858"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Procedura: specificare directory di inclusione per le risorse
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Per specificare le directory di inclusione per uno specifico file rc  
@@ -34,7 +34,6 @@ ms.locfileid: "39569540"
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

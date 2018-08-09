@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9c2dbb4bcbd1b6c76d00356535a9c99d983c1096
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569755"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019878"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Procedura: dichiarare i puntatori di blocco e i tipi di valore
 Un tipo di valore può essere sottoposto a boxing in modo implicito. È quindi possibile dichiarare un puntatore di blocco per l'oggetto di tipo valore stesso e utilizzare un **pin_ptr** al tipo di valore boxed.  
@@ -47,8 +47,6 @@ int main() {
    System::Console::WriteLine(mv->i);  
 }  
 ```  
-  
-### <a name="output"></a>Output  
   
 ```Output  
 8  

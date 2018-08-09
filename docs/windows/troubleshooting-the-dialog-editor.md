@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b7accec826bc6c52ab9c6f677ce980f40c6f20
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 242881100dfd9a27946bcbe74d449d078c373852
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648620"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011104"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Risoluzione dei problemi relativi all'editor finestre
-Di seguito sono alcuni problemi di cui occorre tener presente quando si lavora nell'editor finestre.  
+Ecco alcuni problemi di cui occorre tener presente quando si utilizza il **finestra di dialogo** editor.  
   
 -   [Funzionamento non corretto di una finestra di dialogo in seguito all'aggiunta di controlli](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
   

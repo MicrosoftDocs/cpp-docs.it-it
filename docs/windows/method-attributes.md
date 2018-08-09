@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604281"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016856"
 ---
 # <a name="method-attributes"></a>Attributi del metodo
 Gli attributi seguenti si applicano ai metodi in una classe, coclasse o interfaccia.  
@@ -39,8 +39,8 @@ Gli attributi seguenti si applicano ai metodi in una classe, coclasse o interfac
 |[defaultbind](../windows/defaultbind.md)|Indica la singola proprietà associabile che meglio rappresenta l'oggetto.|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Utilizzato per l'ottimizzazione del codice Visual Basic.|  
 |[displaybind](../windows/displaybind.md)|Indica una proprietà che deve essere visualizzata all'utente come associabile.|  
-|[helpcontext](../windows/helpcontext.md)|Specifica un ID di contesto che consente all'utente di visualizzare informazioni sull'elemento corrente nel file della Guida.|  
-|[helpfile](../windows/helpfile.md)|Imposta il nome del file della Guida per una libreria dei tipi.|  
+|[helpcontext](../windows/helpcontext.md)|Specifica un ID di contesto che consente all'utente di visualizzare informazioni sull'elemento corrente nel **aiutare** file.|  
+|[helpfile](../windows/helpfile.md)|Imposta il nome del **aiutare** file per una libreria dei tipi.|  
 |[helpstring](../windows/helpstring.md)|Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata.|  
 |[helpstringcontext](../windows/helpstringcontext.md)|Specifica l'ID di un argomento della Guida in un file con estensione chm o. hlp.|  
 |[helpstringdll](../windows/helpstringdll.md)|Specifica il nome della DLL da usare per eseguire la ricerca della stringa di documento (localizzazione).|  

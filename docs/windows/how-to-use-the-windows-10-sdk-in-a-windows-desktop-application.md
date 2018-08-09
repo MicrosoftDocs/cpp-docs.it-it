@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034780"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017997"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop
 Quando si crea un progetto desktop di Windows classico in Visual Studio 2017, si è configurare per impostazione predefinita per compilare con la versione di Windows 10 SDK che è stato installato quando il carico di lavoro di applicazioni Desktop C++ è stato installato o aggiornato. Questa versione di Windows SDK è compatibile con Windows 7 e versioni successive. Visualizzare [uso delle intestazioni di Windows](/windows/desktop/WinProg/using-the-windows-headers) per ulteriori informazioni sulla destinazione specifiche versioni di Windows.
@@ -31,7 +31,6 @@ Se si desidera come destinazione una versione precedente del SDK, è possibile a
   
 1.  Assicurarsi che sia installato Windows SDK per Windows 10. Windows 10 SDK viene installato come parte del **sviluppo di applicazioni Desktop con C++** carico di lavoro. È disponibile in una versione autonoma [download e strumenti per Windows 10](https://developer.microsoft.com/windows/downloads).
 
-  
 2.  Aprire il menu di scelta rapida per il nodo del progetto e scegliere **Ridestina versione SDK**.  
   
      ![Ridestina versione SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ Se si desidera come destinazione una versione precedente del SDK, è possibile a
   
      ![Versione piattaforma di destinazione](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Questa azione modifica i valori delle macro del progetto che includono i percorsi ai file di intestazione e ai file delle librerie. Per visualizzare le modifiche apportate, nella sezione directory di Visual C++ della finestra di dialogo proprietà del progetto, scegliere una delle proprietà, ad esempio la directory di inclusione, scegliere di aprire l'elenco a discesa e scegliere \<Modifica >. Viene visualizzata la finestra di dialogo **Directory di inclusione** .  
+     Questa azione modifica i valori delle macro del progetto che includono i percorsi ai file di intestazione e ai file delle librerie. Per visualizzare le modifiche apportate nel **directory di Visual C++** sezione del **le proprietà del progetto** finestra di dialogo scegliere una delle proprietà, ad esempio il **directory di inclusione**, scegliere di Aprire l'elenco a discesa e scegliere \<Modifica >. Viene visualizzata la finestra di dialogo **Directory di inclusione** .  
   
      ![Includere la finestra di dialogo Directory](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ Se si desidera come destinazione una versione precedente del SDK, è possibile a
   
 1.  Aprire il menu di scelta rapida per il nodo del progetto e scegliere **Ridestina versione SDK**.  
   
-2.  Nell'elenco a discesa della versione della piattaforma di destinazione, scegliere 8.1.  
+2.  Nel **versione piattaforma di destinazione** elenco a discesa scegliere **8.1**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni Desktop di Windows (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

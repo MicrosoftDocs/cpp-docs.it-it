@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645993"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017916"
 ---
 # <a name="string--c-component-extensions"></a>Stringa (Estensioni del componente C++)
 Il compilatore Visual C++ supporta *stringhe*, che sono oggetti che rappresentano il testo come una sequenza di caratteri. Visual C++ supporta variabili di stringa, il cui valore è implicito, e i valori letterali, il cui valore è una stringa tra virgolette esplicita.  
@@ -135,8 +135,6 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 abcdef  
   
@@ -213,8 +211,6 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -265,8 +261,6 @@ int main() {
    func3("string" + "string");   // returns System::String  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 char *  

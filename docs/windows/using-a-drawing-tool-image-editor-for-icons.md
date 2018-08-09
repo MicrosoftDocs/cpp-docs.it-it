@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fde195d465116f2fa3055d5981c2c465c4bf31ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646124"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019464"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Utilizzo di uno strumento di disegno (Editor di immagini per le icone)
-Mano di disegno e la cancellazione di tutti funzionano nello stesso modo gli strumenti dell'editor di immagini: si seleziona lo strumento e, se necessario, [selezione dei colori di primo piano e sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e le opzioni di dimensioni e la forma. Quindi spostare il puntatore all'immagine e fare clic o trascinare per disegnare e cancellare.  
+Il **immagine** mano di disegno e la cancellazione di tutti funzionano nello stesso modo gli strumenti dell'editor: si seleziona lo strumento e, se necessario, [selezionare i colori di primo piano e sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e le opzioni di dimensioni e la forma. Quindi spostare il puntatore all'immagine e fare clic o trascinare per disegnare e cancellare.  
   
  Quando si seleziona il **gomma** dello strumento, **pennello** strumento, o **aerografo** strumento, il selettore di opzioni consente di visualizzare le opzioni per tale strumento.  
   

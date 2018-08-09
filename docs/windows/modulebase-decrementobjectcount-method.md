@@ -1,5 +1,5 @@
 ---
-title: 'Metodo modulebase:: Decrementobjectcount | Documenti Microsoft'
+title: 'Metodo modulebase:: Decrementobjectcount | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: daf27930261c0350c1e48b851fe989decd52dde2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65dc4dbca2e152a62bb79ed104f9533d2fa20569
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876293"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019982"
 ---
 # <a name="modulebasedecrementobjectcount-method"></a>Metodo ModuleBase::DecrementObjectCount
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 virtual long DecrementObjectCount() = 0;  
 ```  
   
@@ -37,13 +37,13 @@ virtual long DecrementObjectCount() = 0;
  Il conteggio prima dell'operazione di decremento.  
   
 ## <a name="remarks"></a>Note  
- Quando viene implementato, riduce il numero di oggetti rilevate dal modulo.  
+ Quando viene implementato, decrementa il numero di oggetti registrati dal modulo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM.  
+ **Intestazione:** Implements. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [ModuleBase (classe)](../windows/modulebase-class.md)   
+ [Classe ModuleBase](../windows/modulebase-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

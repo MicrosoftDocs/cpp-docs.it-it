@@ -26,22 +26,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604616"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017834"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Icone e cursori: risorse immagine per i dispositivi di visualizzazione (Editor di immagini per le icone)
-Icone e cursori sono risorse grafiche che possono contenere più immagini di diverse dimensioni e le combinazioni di colori per diversi tipi di dispositivi di visualizzazione. Inoltre, un cursore ha un'"area sensibile", ovvero il punto che Windows usa per rilevare la posizione. Come per le bitmap e le altre immagini, anche le icone e i cursori vengono creati e modificati usando l'editor di immagini.  
+Icone e cursori sono risorse grafiche che possono contenere più immagini di diverse dimensioni e le combinazioni di colori per diversi tipi di dispositivi di visualizzazione. Inoltre, un cursore ha un'"area sensibile", ovvero il punto che Windows usa per rilevare la posizione. Icone e cursori vengono creati e modificati utilizzando il **immagine** editor, come le bitmap e altre immagini.  
   
- Quando si crea una nuova icona o cursore, l'editor di immagini crea innanzitutto un'immagine di un tipo standard. L'immagine viene inizialmente riempita con il colore della schermata (trasparente). Se l'immagine è un cursore, l'area sensibile inizialmente corrisponde all'angolo superiore sinistro (coordinate 0,0).  
+ Quando si crea una nuova icona o cursore, la **immagine** editor crea innanzitutto un'immagine di un tipo standard. L'immagine viene inizialmente riempita con il colore della schermata (trasparente). Se l'immagine è un cursore, l'area sensibile inizialmente corrisponde all'angolo superiore sinistro (coordinate 0,0).  
   
- Per impostazione predefinita, l'editor di immagini supporta la creazione di immagini aggiuntive per i dispositivi illustrati nella tabella seguente. È possibile creare immagini per altri dispositivi specificando i parametri di larghezza, altezza e numero di colori nella [finestra di dialogo dell'immagine personalizzata](custom-image-dialog-box-image-editor-for-icons.md).  
+ Per impostazione predefinita, il **immagine** editor supporta la creazione di immagini aggiuntive per i dispositivi illustrati nella tabella seguente. È possibile creare immagini per altri dispositivi specificando i parametri di larghezza, altezza e numero di colori nella [finestra di dialogo dell'immagine personalizzata](custom-image-dialog-box-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Utilizzando l'Editor immagini, è possibile visualizzare, ma non modificare, immagini a 32 bit.  
+>  Usando il **Editor di immagini**, è possibile visualizzare immagini a 32 bit, ma non modificarli.  
   
 |Colore|Larghezza (pixel)|Altezza (pixel)|  
 |-----------|----------------------|-----------------------|  

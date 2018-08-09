@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccfb2b234550f5b7fc03e717d92e74b1fd5d5f74
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a52f2a11634ff79bcb58302d4b2a4d7ceed362cc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604447"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017123"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (Estensioni del componente C++)
 Il **nullptr** parola chiave rappresenta un *valore puntatore null*. Usare un valore del puntatore null per indicare che un handle di oggetto, puntatore interno o al tipo di puntatore nativo non punta a un oggetto.  
@@ -116,8 +116,6 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 pMyClass == nullptr  
   
@@ -184,8 +182,6 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 test  
 ```  
@@ -212,8 +208,6 @@ int main() {
    x -> Test();  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 NULL  

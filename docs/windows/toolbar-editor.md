@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 505b97d1b3883568fc85795898f16f9821d8b930
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641647"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011728"
 ---
 # <a name="toolbar-editor"></a>Editor barra degli strumenti
-L'editor barra degli strumenti consente di creare risorse della barra degli strumenti e convertire le bitmap in risorse della barra degli strumenti. L'editor barra degli strumenti usa un'interfaccia grafica per visualizzare una barra degli strumenti e dei pulsanti con un aspetto molto simile a quello visualizzato in un'applicazione finita.  
+Il **sulla barra degli strumenti** editor consente di creare le risorse della barra degli strumenti e convertire le bitmap in risorse della barra degli strumenti. Il **sulla barra degli strumenti** editor utilizza un'interfaccia grafica per visualizzare una barra degli strumenti e pulsanti in modo molto simile come verranno visualizzati in un'applicazione finita.  
   
- Con l'editor barra degli strumenti è possibile:  
+ Con il **sulla barra degli strumenti** editor, è possibile:  
   
 -   [Creare nuove barre degli strumenti e pulsanti](../windows/creating-new-toolbars.md)  
   
@@ -40,12 +40,12 @@ L'editor barra degli strumenti consente di creare risorse della barra degli stru
   
 -   [Creare descrizioni comandi](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- La finestra Editor barra degli strumenti mostra due visualizzazioni di un'immagine del pulsante, uguali a quelle della finestra Editor di immagini. Una barra di divisione separa i due riquadri. che è possibile trascinare da un lato all'altro per modificare le dimensioni relative dei riquadri. Nel riquadro attivo viene visualizzato un bordo di selezione. Sopra le due visualizzazioni dell'immagine si trova la barra degli strumenti dell'oggetto.  
+ Il **sulla barra degli strumenti** finestra dell'editor Mostra due visualizzazioni di un'immagine del pulsante, quello utilizzato per la finestra editor di immagini. Una barra di divisione separa i due riquadri. che è possibile trascinare da un lato all'altro per modificare le dimensioni relative dei riquadri. Nel riquadro attivo viene visualizzato un bordo di selezione. Sopra le due visualizzazioni dell'immagine si trova la barra degli strumenti dell'oggetto.  
   
  ![Editor barra degli strumenti](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 Editor barra degli strumenti  
   
- Le funzionalità dell'editor barra degli strumenti sono simili a quelle dell'editor di immagini. Le voci di menu, gli strumenti grafici e la griglia delle bitmap sono identici a quelli nell'editor di immagini. Nel menu Immagine è presente un comando di menu che consente di passare dall'editor barra degli strumenti all'editor di immagini e viceversa. Per altre informazioni sull'uso della barra degli strumenti grafica, la tavolozza di colori o il menu Immagine, vedere [Editor di immagini](../windows/image-editor-for-icons.md).  
+ Il **sulla barra degli strumenti** editor è simile al **immagine** editor delle funzionalità. Le voci di menu, gli strumenti grafici e griglia delle bitmap sono identici a quelli nel **immagine** editor. Un comando di menu non è il **immagine** menu consente di passare tra il **sulla barra degli strumenti** editor e la **immagine** editor. Per altre informazioni sull'uso di **grafica** sulla barra degli strumenti, **colori** tavolozza, o **immagine** menu, vedere [Editor di immagini](../windows/image-editor-for-icons.md).  
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   

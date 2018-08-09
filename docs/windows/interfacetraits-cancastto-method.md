@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df603fe8d4c063c014118caf89a74a40e73cbe5b
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a2f8712e06838fb2d2269ba307a551997d7bd57c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607829"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018231"
 ---
 # <a name="interfacetraitscancastto-method"></a>Metodo InterfaceTraits::CanCastTo
 Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename T>  
 static __forceinline bool CanCastTo(  
    _In_ T* ptr,  

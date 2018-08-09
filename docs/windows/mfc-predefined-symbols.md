@@ -1,5 +1,5 @@
 ---
-title: Simboli predefiniti di MFC | Documenti Microsoft
+title: Simboli predefiniti di MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882060"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018494"
 ---
 # <a name="mfc-predefined-symbols"></a>Simboli predefiniti di MFC
-Progetti MFC includono sempre diversi file di intestazione che supportano windows. Questi vengono aggiunti tramite #include nel file stdafx. H:  
+Progetti MFC includono sempre più file di intestazione che supportano le finestre. Questi vengono aggiunti tramite `#include` istruzioni di `StdAfx.h` file:  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ Progetti MFC includono sempre diversi file di intestazione che supportano window
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- I file di intestazione includono valori di ID di simbolo per i valori comuni MFC. Questi simboli sono disponibili solo quando si lavora in un progetto MFC. Si noti che il prefisso AFX _ è seguito da prefissi dei nomi di simbolo standard.  
+ I file di intestazione includono i valori ID dei simboli per i valori comuni MFC. Questi simboli sono disponibili solo quando si lavora in un progetto MFC. Si noti che il prefisso AFX _ è seguito dai prefissi dei nomi di simbolo standard.  
   
 |||  
 |-|-|  
@@ -186,7 +186,7 @@ Progetti MFC includono sempre diversi file di intestazione che supportano window
 |AFX_IDS_INVALID_DATETIMESPAN|AFX_IDS_ITALIC|  
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|  
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|  
-|AFX_IDS_METAFILE_FORMAT|TIPO DI CARATTERE AFX_IDS_MINI|  
+|AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI-TIPO DI CARATTERE|  
 |AFX_IDS_NOT_DOCOBJECT|ECCEZIONE AFX_IDS_NOT_SUPPORTED_|  
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|  
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603488"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013561"
 ---
 # <a name="include-c"></a>include (C++)
 Specifica uno o più file di intestazione da includere nel file IDL generato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ Specifica uno o più file di intestazione da includere nel file IDL generato.
  Il **includono** attributi di C++ ha la stessa funzionalità come la [includono](http://msdn.microsoft.com/library/windows/desktop/aa367052) attributo MIDL.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato un esempio d'uso **includono**. Per questo esempio, il file include.h contiene solo un #include.  
+ Il codice seguente viene illustrato un esempio d'uso **includono**. Per questo esempio, il file include.h contiene solo un `#include` istruzione.  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

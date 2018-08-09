@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603345"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018361"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 Consente l'utilizzo delle parole chiave Visual C++ come identificatori.  
@@ -31,7 +31,7 @@ Consente l'utilizzo delle parole chiave Visual C++ come identificatori.
 ## <a name="all-platforms"></a>Tutte le piattaforme  
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Usare la **Identifier** parola chiave per gli identificatori che non sono parole
 ### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Nell'esempio seguente, una classe denominata `template` viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il `template` (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.  
+ Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>Esempi  
   
- Nell'esempio seguente, una classe denominata `template` viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il `template` (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.  
+ Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.  
   
 ```cs  
 // identifier_template.cs  

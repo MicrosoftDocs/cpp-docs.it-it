@@ -17,22 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b44156ae26d77247a909e45061b00a6a1d892d79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571470"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016928"
 ---
 # <a name="how-to-create-a-resource"></a>Procedura: creare una risorsa
 > [!NOTE]
->  La visualizzazione delle risorse non è supportata nelle edizioni Express.  
+>  **Visualizzazione risorse** non è supportato nelle edizioni Express.  
   
 ### <a name="to-create-a-new-resource-in-resource-view"></a>Per creare una nuova risorsa in Visualizzazione risorse  
   
-1.  Con lo stato attivo sul file RC in [Visualizzazione risorse](../windows/resource-view-window.md), scegliere **Aggiungi risorsa** dal menu **Modifica** . In alternativa fare clic con il pulsante destro del mouse sul file RC in Visualizzazione risorse e scegliere **Aggiungi risorsa** dal menu di scelta rapida.  
+1.  Con lo stato attivo sul file RC in [visualizzazione risorse](../windows/resource-view-window.md), fare clic sui **modificare** dal menu e scegliere **Aggiungi risorsa** (oppure fare clic sul file RC in **visualizzazione risorse** e scegliere **Aggiungi risorsa** dal menu di scelta rapida).  
   
-     **Note** Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  Nella [finestra di dialogo Aggiungi risorsa](../windows/add-resource-dialog-box.md)scegliere il tipo di risorsa che si vuole aggiungere al progetto.  
   
@@ -54,16 +55,14 @@ ms.locfileid: "39571470"
   
 1.  Scegliere **Aggiungi risorsa** dal menu **Progetto**.  
   
- Quando si crea una nuova risorsa, Visual C++ assegna a tale risorsa un nome univoco, ad esempio IDD_Dialog1. È possibile personalizzare questo ID risorsa modificando le proprietà della risorsa nell'editor di risorse associato oppure nella [finestra Proprietà](/visualstudio/ide/reference/properties-window).  
+ Quando si crea una nuova risorsa, Visual C++ assegna un nome univoco, ad esempio, `IDD_Dialog1`. È possibile personalizzare questo ID risorsa modificando le proprietà della risorsa nell'editor di risorse associato oppure nella [finestra Proprietà](/visualstudio/ide/reference/properties-window).  
   
  È possibile creare una risorsa come nuova risorsa predefinita, indipendente da un modello, oppure come risorsa basata su un [modello](../windows/how-to-use-resource-templates.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework.*
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.
 
-
-## <a name="requirements"></a>Requisiti  
-  
-Win32  
+## <a name="requirements"></a>Requisiti    
+ Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di risorse](../windows/resource-files-visual-studio.md)   

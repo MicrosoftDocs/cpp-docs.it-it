@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d508c6196ad9b9f32b4bcb0704272a500d0e952
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4c52b905420dcb576705d63be7d7bdce27c5eea6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643043"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015243"
 ---
 # <a name="emitidl"></a>emitidl
 Specifica se tutti gli attributi IDL successivi vengono elaborati e inseriti nel file con estensione IDL generato.  
@@ -75,4 +75,4 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 ## <a name="see-also"></a>Vedere anche  
 [Attributi del compilatore](../windows/compiler-attributes.md)   
 [Attributi autonomi](../windows/stand-alone-attributes.md)   
-[Esempi di attributi](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+[Esempi di attributi](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

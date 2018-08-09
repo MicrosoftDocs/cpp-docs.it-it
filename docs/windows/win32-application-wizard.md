@@ -1,5 +1,5 @@
 ---
-title: Creazione guidata applicazione Win32 | Documenti Microsoft
+title: Creazione guidata applicazione Win32 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891425"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014221"
 ---
 # <a name="win32-application-wizard"></a>Creazione guidata applicazione Win32
 La creazione guidata applicazione Win32 di Visual C++ consente di creare uno dei quattro tipi di progetto (elencati nell'intestazione della tabella seguente). In ogni caso, è possibile specificare opzioni aggiuntive appropriate per il tipo di progetto aperto. La tabella seguente indica quali opzioni sono disponibili per ogni tipo di applicazione.  
   
 |Tipo di supporto|Applicazione console|Applicazione (Windows) eseguibile|Libreria a collegamento dinamico|Libreria statica|  
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|  
-|**Progetto vuoto**|Yes|Sì|Sì|No|  
+|**Progetto vuoto**|Yes|Yes|Yes|No|  
 |**Simboli di esportazione**|No|No|Sì|No|  
 |**Intestazione precompilata**|No|No|No|Yes|  
 |**Supporto ATL**|Yes|No|No|No|  
@@ -56,7 +56,7 @@ La creazione guidata applicazione Win32 di Visual C++ consente di creare uno dei
 > [!NOTE]
 >  Non è possibile aggiungere classi ATL ed è possibile aggiungere classi MFC solo a quei tipi di applicazioni desktop di Windows che supportano MFC (vedere la tabella precedente).  
   
- È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
+ È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per altre informazioni sui file che verrà creato il progetto, vedere il file di progetto creato, `ReadMe.txt`. Per altre informazioni sui tipi di file, vedere [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'applicazione Desktop di Windows vuota](../windows/creating-an-empty-windows-desktop-application.md)   

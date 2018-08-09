@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570382"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013414"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Procedura: aprire un file script di risorsa all'esterno di un progetto (file autonomo)
 È possibile visualizzare le risorse in un file RC anche se non è aperto alcun progetto. Il file con estensione RC verrà aperto in una finestra del documento anziché nella [visualizzazione risorse](../windows/resource-view-window.md) finestra (come avviene quando il file è aperto all'interno di un progetto).  
@@ -46,13 +46,13 @@ ms.locfileid: "39570382"
   
 ### <a name="to-open-multiple-rc-files-outside-a-project"></a>Per aprire più file RC all'esterno di un progetto  
   
-1.  Aprire entrambi i file di risorsa in modo autonomo. Ad esempio, aprire Origine1.rc e Origine2.rc.  
+1.  Aprire entrambi i file di risorsa in modo autonomo. Ad esempio, aprire `Source1.rc` e `Source2.rc`.  
   
     1.  Dal **File** menu, scegliere **Open**, quindi fare clic su **File**.  
   
-    2.  Nel **Apri File** finestra di dialogo passare nel primo file di script di risorse si vuole aprire (Origine1.rc), evidenziare il file e fare clic su **aprire**.  
+    2.  Nel **Apri File** finestra di dialogo passare per il primo file di script di risorsa che si desidera aprire (`Source1.rc`), evidenziare il file e fare clic su **aprire**.  
   
-    3.  Ripetere il passaggio predente per aprire il secondo file RC (Origine2.rc).  
+    3.  Ripetere il passaggio precedente per aprire il secondo file RC (`Source2.rc`).  
   
          I file RC verranno quindi aperti in finestre del documento separate.  
   

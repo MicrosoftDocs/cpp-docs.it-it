@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e5ff6510463a6fed06534236612feb460919e37
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 60d2900876d7a9fbee7a193d0575bf3afdf4335b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643485"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012180"
 ---
 # <a name="weakrefasiid-method"></a>Metodo WeakRef::AsIID
 Imposta l'oggetto specificato `ComPtr` parametro del puntatore per rappresentare l'ID di interfaccia specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT AsIID(  
    REFIID riid,  
    _Out_ ComPtr<IInspectable>* ptr  

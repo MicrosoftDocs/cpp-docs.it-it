@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0287d27d975ce93e88a7a4b70a683188901ca958
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645152"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011816"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Utilizzo della tavolozza da 256 colori (Editor di immagini per le icone)
-Per disegnare una selezione dalla tavolozza da 256 colori, è necessario selezionare i colori dalla tavolozza dei colori nella [finestra colori](../windows/colors-window-image-editor-for-icons.md).  
+Per disegnare una selezione dalla tavolozza da 256 colori, è necessario selezionare i colori dal **colori** tavolozza le [finestra colori](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Per scegliere un colore della tavolozza da 256 colori per le icone grandi  
   
@@ -36,7 +36,7 @@ Per disegnare una selezione dalla tavolozza da 256 colori, è necessario selezio
   
 2.  Scegliere un colore da 256 colori visualizzati nella **colori** tavolozza il **colori** finestra.  
   
-     Il colore selezionato diventerà il colore corrente nella tavolozza dei colori nella **colori** finestra.  
+     Colore selezionato diventerà il colore corrente nella **colori** tavolozza il **colori** finestra.  
   
     > [!NOTE]
     >  La tavolozza iniziale usata per le immagini di 256 colori corrisponde a quella restituita dalla `CreateHalftonePalette` API Windows. Tutte le icone progettate per la shell di Windows devono usare questo riquadro per evitare lo sfarfallio durante la realizzazione della tavolozza.  

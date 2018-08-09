@@ -1,5 +1,5 @@
 ---
-title: Testo e stringhe in Visual C++ | Documenti Microsoft
+title: Testo e stringhe in Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,38 +34,38 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856033"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016626"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Testo e stringhe in Visual C++
-Un aspetto importante dello sviluppo di applicazioni per i mercati internazionali è la rappresentazione appropriata di set di caratteri locale. Il set di caratteri ASCII definisce i caratteri nell'intervallo da 0x00 e 0x7F. Sono presenti altri set di caratteri, principalmente europei, che definiscono i caratteri all'interno dell'intervallo da 0x00 e 0x7F in modo identico al set di caratteri ASCII e definire un carattere esteso impostare tra 0x80 e 0xFF. Pertanto, un set di 8 bit, i caratteri a byte singolo (SBCS) è sufficiente per rappresentare il set di caratteri ASCII, nonché i set di caratteri di molte lingue europee. Tuttavia, alcuni set di caratteri non europei, come il Kanji giapponese, includono molti più caratteri rispetto a uno schema di codifica a byte singolo può rappresentare e pertanto richiedono caratteri multibyte (MBCS) codifica del set.  
+Un aspetto importante dello sviluppo di applicazioni per mercati internazionali è la rappresentazione adeguata di set di caratteri locali. Il set di caratteri ASCII definisce i caratteri nell'intervallo da 0x00 a 0x7F. Sono presenti altri set di caratteri, principalmente europei, che definiscono i caratteri all'interno dell'intervallo da 0x00 a 0x7F in modo identico al set di caratteri ASCII e anche definire un carattere esteso impostato da 0x80 a 0xFF. Di conseguenza, un set di 8 bit, i caratteri a byte singolo (SBCS) è sufficiente per rappresentare il set di caratteri ASCII, nonché i set di caratteri di molte lingue europee. Tuttavia, alcuni set di caratteri non europei, come il Kanji giapponese, includono molti più caratteri rispetto a un schema di codifica a byte singolo possa rappresentare e pertanto richiedono set di caratteri multibyte (MBCS), la codifica.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Unicode e MBCS](../text/unicode-and-mbcs.md)  
- Viene descritto il supporto di Visual C++ per la programmazione Unicode e MBCS.  
+ Viene descritto il supporto di Visual C++ per la programmazione MBCS e Unicode.  
   
  [Supporto per Unicode](../text/support-for-unicode.md)  
- Il formato Unicode è una specifica per il supporto di tutti i set di caratteri, inclusi i set di caratteri che non possono essere rappresentati in un singolo byte.  
+ Il formato Unicode è una specifica per il supporto di tutti i set di caratteri, inclusi set di caratteri che non può essere rappresentato in un singolo byte.  
   
  [Supporto per set di caratteri Multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)  
- MBCS rappresentano un'alternativa a Unicode per il supporto di set di caratteri, come quello giapponese o cinese, che non può essere rappresentato in un singolo byte.  
+ Caratteri MBCS, un'alternativa a Unicode per il supporto di set di caratteri, come quello giapponese o cinese, che non possono essere rappresentato in un singolo byte.  
   
  [Mappature di testo generico in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)  
- Fornisce mapping testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti.  
+ Fornisce i mapping testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti.  
   
  [Procedura: Convertire vari tipi di stringhe](../text/how-to-convert-between-various-string-types.md)  
- Viene illustrato come convertire vari tipi di stringa di Visual C++ in altre stringhe.  
+ Viene illustrato come convertire diversi tipi di stringhe Visual C++ in altre stringhe.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Internazionalizzazione](../c-runtime-library/internationalization.md)  
- Viene descritto il supporto internazionale nella libreria di runtime C.  
+ Viene descritto il supporto internazionale della libreria di runtime C.  
   
- [Esempi internazionali](http://msdn.microsoft.com/en-us/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
- Vengono forniti collegamenti a esempi di internazionalizzazione in Visual C++.  
+ [Esempi internazionali](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ Vengono forniti collegamenti a esempi di internazionalizzazione di Visual C++.  
   
  [Stringhe relative a lingue e paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
  Fornisce le stringhe lingua e paese/area geografica della libreria di runtime C.

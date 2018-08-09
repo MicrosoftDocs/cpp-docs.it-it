@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 08b96712b2e66ebf527ccb1cbf408c2a7d028b60
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602653"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012076"
 ---
 # <a name="modulegetclassobject-method"></a>Metodo Module::GetClassObject
 Recupera una cache di class factory.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
  HRESULT GetClassObject(  
    REFCLSID clsid,  
    REFIID riid,  

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed35392180d0531133413a54ca2190ed65519546
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8da6d316050120e6eaac31b12998e5dbf0f3a012
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570574"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020265"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>Procedura: creare un file script di risorsa
 > [!NOTE]
->  L'editor delle risorse non è disponibile nelle edizioni Express.  
+>  Il **Editor di risorse** non è disponibile nelle edizioni Express.  
 >   
 >  Questo materiale si riferisce alle applicazioni desktop di Windows. I progetti in linguaggi .NET non usano file di script della risorsa. Per altre informazioni, vedere [File di risorse](../windows/resource-files-visual-studio.md).  
   
 ### <a name="to-create-a-new-resource-script-rc-file"></a>Per creare un nuovo file script di risorsa (RC)  
   
-1.  Spostare lo stato attivo nella cartella del progetto esistente in **Esplora soluzioni**, ad esempio, "MyProject".  
+1.  Spostare lo stato attivo nella cartella del progetto esistente in **Esplora soluzioni**, ad esempio, `MyProject`.  
   
     > [!NOTE]
-    >  Non confondere la cartella del progetto con la cartella Soluzione in Esplora soluzioni. Se si seleziona il **soluzione** cartella, le scelte effettuate nel **Aggiungi nuovo elemento** (nel passaggio 3) finestra di dialogo sarà diverso.  
+    >  Non confondere la cartella del progetto con la cartella della soluzione in **Esplora soluzioni**. Se si seleziona il **soluzione** cartella, le scelte effettuate nel **Aggiungi nuovo elemento** (nel passaggio 3) finestra di dialogo sarà diverso.  
   
 2.  Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**.  
   
@@ -48,10 +48,8 @@ ms.locfileid: "39570574"
 > [!NOTE]
 >  Si può aggiungere uno script di risorsa (file RC) solo a un progetto esistente caricato nell'IDE di Visual Studio. Non è possibile creare un file RC autonomo, esterno al progetto. È possibile creare[modelli di risorse](../windows/how-to-use-resource-templates.md) (file con estensione rct) in qualsiasi momento.
 
-
-## <a name="requirements"></a>Requisiti  
-  
-Win32  
+## <a name="requirements"></a>Requisiti    
+ Win32  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di risorse](../windows/resource-files-visual-studio.md)   

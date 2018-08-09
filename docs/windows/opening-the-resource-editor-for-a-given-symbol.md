@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ca604ac88e4e8c0ecbb45c764f7d22836d367b2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5911d7125b6a5cdf1e6afd8502c5891ddf680a30
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602759"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011088"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Apertura dell'editor di risorse per un determinato simbolo
 Quando si visualizzano i simboli nel [finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md), è possibile ottenere altre informazioni sull'utilizzo di un determinato simbolo. Il **Visualizza uso** pulsante offre un modo rapido per ottenere queste informazioni.  
@@ -42,7 +42,6 @@ Quando si visualizzano i simboli nel [finestra di dialogo Simboli risorsa](../wi
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
   
 ## <a name="requirements"></a>Requisiti  
-  
  Win32  
   
 ## <a name="see-also"></a>Vedere anche  

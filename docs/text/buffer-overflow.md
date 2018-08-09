@@ -1,5 +1,5 @@
 ---
-title: Overflow del buffer | Documenti Microsoft
+title: Overflow del buffer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bb362be360986371200c8cde292b3fff5acd7cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854652"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020187"
 ---
 # <a name="buffer-overflow"></a>Overflow del buffer
-Variazione delle dimensioni dei caratteri può causare problemi quando si inserisce i caratteri in un buffer. Si consideri il codice seguente, che copia i caratteri da una stringa, `sz`, in un buffer, `rgch`:  
+Dimensioni carattere diverse può causare problemi quando si inserisce i caratteri in un buffer. Si consideri il codice seguente, che copia i caratteri da una stringa, `sz`, in un buffer di `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +32,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- La domanda è: è stato l'ultimo byte copiato un byte iniziale? Di seguito non risolve il problema perché può provocare un overflow del buffer:  
+ La domanda è: è stato l'ultimo byte copiati un byte iniziale? Di seguito non risolve il problema perché può provocare un overflow del buffer:  
   
 ```  
 cb = 0;  
@@ -44,7 +44,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- Il `_mbccpy` chiamata tenta di eseguire l'operazione corretta, copiare il carattere completo, se è 1 o 2 byte. Ma non viene preso in considerazione che l'ultimo carattere copiato potrebbe non essere adatte buffer se il carattere è 2 byte. La soluzione corretta è:  
+ Il `_mbccpy` chiamata tenta di eseguire l'operazione corretta, ovvero copia il carattere completo, se è 1 o 2 byte. Ma non viene preso in considerazione che l'ultimo carattere copiato potrebbe non soddisfare buffer se il carattere wide di 2 byte. La soluzione corretta è:  
   
 ```  
 cb = 0;  
@@ -56,7 +56,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Questo codice di test per l'eventuale overflow del buffer nel ciclo di test, utilizzando `_mbclen` per verificare la dimensione del carattere corrente a cui puntata `sz`. Effettuando una chiamata al `_mbsnbcpy` funzione, è possibile sostituire il codice di `while` ciclo con una singola riga di codice. Ad esempio:  
+ Questo codice di verifica overflow del buffer possibile nel ciclo di test, usando `_mbclen` per verificare la dimensione del carattere corrente a cui punta `sz`. Effettuando una chiamata per il `_mbsnbcpy` funzione, è possibile sostituire il codice nel **mentre** ciclo con una singola riga di codice. Ad esempio:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

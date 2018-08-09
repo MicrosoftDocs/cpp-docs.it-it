@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bf681acc485b08448fcb4e936ca1096a8137384
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 93c804f9e7701ab3bf021902b62ae3f1b414d61c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607472"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019079"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Metodo Module::UnregisterWinRTObject
 Annulla la registrazione di uno o più oggetti di Windows Runtime in modo che altre applicazioni non è possibile connettersi a esse.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 virtual HRESULT UnregisterWinRTObject(  
    unsigned int,  
    _Inout_ WINRT_REGISTRATION_COOKIE* cookie  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *Cookie*  
  Puntatore a un valore che identifica l'oggetto di classe il cui registrazione viene revocato.  
-  
-## <a name="return-value"></a>Valore restituito  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** module.h  

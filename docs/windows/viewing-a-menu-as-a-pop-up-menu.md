@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652201"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015611"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Visualizzazione di un menu come menu di scelta rapida
-In genere, quando si usa l'Editor dei menu, viene visualizzata una risorsa di menu come barra dei menu. Tuttavia, potrebbero esserci risorse di menu che vengono aggiunte alla barra dei menu dell'applicazione durante l'esecuzione del programma.  
+In genere, quando si lavora **Menu** editor, una risorsa di menu viene visualizzata come una barra dei menu. Tuttavia, potrebbero esserci risorse di menu che vengono aggiunte alla barra dei menu dell'applicazione durante l'esecuzione del programma.  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Per visualizzare una risorsa di menu come menu a comparsa  
   

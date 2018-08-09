@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8686d0ef990e9be22ec4ebe1c81c737df9b15812
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9ff51780cc05a4c133975d95dc89455a90e717d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607404"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014610"
 ---
 # <a name="safeadd"></a>SafeAdd
 Somma due numeri in modo da evita overflow.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeAdd (  
    T t,  

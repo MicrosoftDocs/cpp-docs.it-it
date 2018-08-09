@@ -1,5 +1,5 @@
 ---
-title: Immagine di Menu (Editor di immagini per le icone) | Documenti Microsoft
+title: Immagine (Editor di immagini per le icone) Menu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,71 +17,70 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8bfeeda8d358bf3144cd5c3168686561b3586581
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f8a1e5acdd2f17101f61866e050e7a28f80ea837
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880530"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019787"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Menu Immagine (Editor di immagini per le icone)
-Menu immagine, viene visualizzata solo quando è attiva l'editor di immagini, è disponibili comandi per la modifica delle immagini, la gestione di tavolozze dei colori e l'impostazione di opzioni della finestra dell'Editor di immagini. Inoltre, i comandi per l'utilizzo di immagini per i dispositivi sono disponibili quando si lavora con icone e cursori.  
+Il **immagine** menu, che viene visualizzata solo quando il **immagine** editor è attiva, sono disponibili comandi per la modifica delle immagini, la gestione di tavolozze dei colori e l'impostazione **Editor di immagini** finestra Opzioni. Inoltre, i comandi per l'uso di immagini per i dispositivi sono disponibili quando si lavora con le icone e cursori.  
   
  **Inverti colori**  
- Inverte i colori. Per ulteriori informazioni, vedere [inversione dei colori in una selezione](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
+ Inverte i colori. Per altre informazioni, vedere [inversione dei colori in una selezione](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
   
  **Capovolgi orizzontalmente**  
- Consente di capovolgere orizzontalmente l'immagine o la selezione. Per ulteriori informazioni, vedere [capovolgimento di un'immagine](../windows/flipping-an-image-image-editor-for-icons.md).  
+ Consente di capovolgere orizzontalmente l'immagine o la selezione. Per altre informazioni, vedere [capovolgimento di un'immagine](../windows/flipping-an-image-image-editor-for-icons.md).  
   
  **Capovolgi verticalmente**  
- Consente di capovolgere verticalmente l'immagine o la selezione. Per ulteriori informazioni, vedere [capovolgimento di un'immagine](../windows/flipping-an-image-image-editor-for-icons.md).  
+ Consente di capovolgere verticalmente l'immagine o la selezione. Per altre informazioni, vedere [capovolgimento di un'immagine](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Ruotare di 90 gradi**  
- Consente di ruotare di 90 gradi l'immagine o la selezione. Per ulteriori informazioni, vedere [capovolgimento di un'immagine](../windows/flipping-an-image-image-editor-for-icons.md).  
+ **Ruota di 90 gradi**  
+ Consente di ruotare di 90 gradi l'immagine o la selezione. Per altre informazioni, vedere [capovolgimento di un'immagine](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Visualizza finestra colori**  
- Apre il [finestra colori](../windows/colors-window-image-editor-for-icons.md), in cui è possibile scegliere i colori da utilizzare per l'immagine. Per ulteriori informazioni, vedere [utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md).  
+ **Mostra finestra colori**  
+ Apre la [finestra colori](../windows/colors-window-image-editor-for-icons.md), in cui è possibile scegliere i colori da utilizzare per l'immagine. Per altre informazioni, vedere [utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md).  
   
- **Utilizzare la selezione come pennello**  
- Consente di creare un pennello personalizzato da una parte di un'immagine. La selezione diventa un pennello personalizzato che distribuisce i colori nella selezione tra l'immagine. Copia della selezione viene lasciati lungo il percorso di trascinamento. Più lenta si trascina, vengono eseguite le altre copie. Per ulteriori informazioni, vedere [la creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
+ **Usa selezione come pennello**  
+ Consente di creare un pennello personalizzato da una parte di un'immagine. La selezione diventa un pennello personalizzato che distribuisce i colori nella selezione tra l'immagine. Le copie della selezione vengono lasciate lungo il percorso di trascinamento. Più lenta il trascinamento, vengono eseguite le altre copie. Per altre informazioni, vedere [creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
  **Copia e struttura selezione**  
- Consente di creare e strutturare una copia della selezione corrente. Se il colore di sfondo è contenuto nella selezione corrente, verrà escluso se [trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) selezionato.  
+ Consente di creare e strutturare una copia della selezione corrente. Il colore di sfondo è contenuto nella selezione corrente, verrà escluso se hai [trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) selezionato.  
   
- **Regola i colori**  
- Apre il [regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), che consente di personalizzare i colori utilizzati per l'immagine. Per ulteriori informazioni, vedere [personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+ **Regola colori**  
+ Apre la [regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), che consente di personalizzare i colori utilizzati per l'immagine. Per altre informazioni, vedere [personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
  **Carica tavolozza**  
- Apre il [la finestra di dialogo Carica tavolozza](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), che consente di caricare i colori tavolozza precedentemente salvati in un file PAL.  
+ Apre la [finestra di dialogo Carica tavolozza](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), che consente di caricare i colori della tavolozza salvati in precedenza in un file PAL.  
   
  **Salva tavolozza**  
  Salva i colori della tavolozza in un file PAL.  
   
  **Opaco**  
- Se selezionata, rende opaco la selezione corrente. Se deselezionata, rende trasparente la selezione corrente. Per ulteriori informazioni, vedere [scegliendo uno sfondo opaco o trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+ Quando selezionato, effettua la selezione corrente opaca. Se deselezionata, rende trasparente la selezione corrente. Per altre informazioni, vedere [scelta di uno sfondo opaco o trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
  **Editor barra degli strumenti**  
- Apre il [la finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md).  
+ Apre la [finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md).  
   
  **Impostazioni griglia**  
- Apre il [la finestra di dialogo Impostazioni griglia](../windows/grid-settings-dialog-box-image-editor-for-icons.md) in cui è possibile specificare le griglie per l'immagine.  
+ Apre la [finestra di dialogo Impostazioni griglia](../windows/grid-settings-dialog-box-image-editor-for-icons.md) in cui è possibile specificare grids per l'immagine.  
   
  **Tipo nuova immagine**  
- Apre il [New \<dispositivo > la finestra di dialogo Tipo immagine](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Una singola risorsa icona può contenere più immagini di dimensioni diverse. Windows è possibile utilizzare le dimensioni dell'icona appropriata a seconda di come verrà da visualizzare. Un nuovo tipo di dispositivo non modifica le dimensioni dell'icona, ma crea una nuova immagine all'interno dell'icona. Si applica solo alle icone e cursori.  
+ Apre la [New \<dispositivo > finestra di dialogo Tipo immagine](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Una singola risorsa icona può contenere più immagini di dimensioni diverse. Windows è possibile usare le dimensioni dell'icona appropriata a seconda del modo in cui verrà da visualizzare. Un nuovo tipo di dispositivo non modifica le dimensioni dell'icona, ma crea una nuova immagine all'interno dell'icona. Si applica solo alle icone e cursori.  
   
  **Tipo di immagine icona o cursore corrente**  
- Apre un sottomenu contenente il primo disponibile immagini icona o cursore (prime nove). L'ultimo comando dal sottomenu, **più...** , verrà visualizzata la [aprire \<dispositivo > la finestra di dialogo immagine](../windows/open-device-image-dialog-box-image-editor-for-icons.md).  
+ Apre un sottomenu contenente il primo disponibili immagini icona o cursore (le nove prima). L'ultimo comando dal sottomenu, **più...** , consente di aprire la [Open \<dispositivo > finestra di dialogo immagine](../windows/open-device-image-dialog-box-image-editor-for-icons.md).  
   
- **Eliminare il tipo di immagine**  
+ **Elimina tipo di immagine**  
  Elimina l'immagine del dispositivo selezionato.  
   
  **Strumenti**  
- Consente di visualizzare un sottomenu contenente tutti gli strumenti disponibili dal [barra degli strumenti dell'Editor di immagini](../windows/toolbar-image-editor-for-icons.md).  
+ Consente di visualizzare un sottomenu che contiene tutti gli strumenti disponibili i [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Requisiti  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
-
