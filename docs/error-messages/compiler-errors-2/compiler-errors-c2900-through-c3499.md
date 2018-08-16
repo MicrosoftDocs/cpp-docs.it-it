@@ -115,7 +115,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2913](compiler-error-c2913.md)|specializzazione esplicita. '*dichiarazione*' non è una specializzazione del modello di classe|
 |[Errore del compilatore C2914](compiler-error-c2914.md)|'*identificatore*': Impossibile dedurre un argomento di modello o generico come argomento della funzione è ambiguo|
 |C2915 errore del compilatore|'*identificatore*': '*tipo*' non può essere utilizzato direttamente sulla superficie pubblicata di un tipo WinRT. Utilizzare ' platform:: Object ^' invece di passare questo tipo|
-|C2916 errore del compilatore|'*identificatore*': [FlagsAttribute] () può essere specificato solo in un'enumerazione pubblica con un 'unsigned int' tipo sottostante|
+|C2916 errore del compilatore|'*identificatore*': \[FlagsAttribute] può essere specificato solo in un'enumerazione pubblica con un 'unsigned int' tipo sottostante|
 |[Errore del compilatore C2917](compiler-error-c2917.md)|'*identificatore*': parametro di modello non valido|
 |[Errore del compilatore C2918](compiler-error-c2918.md)|'*identificatore*': Impossibile utilizzare proprietà indicizzate sulla superficie pubblicata di un tipo WinRT|
 |[Errore del compilatore C2919](compiler-error-c2919.md)|'*tipo*': Impossibile utilizzare operatori sulla superficie pubblicata di un tipo WinRT|
