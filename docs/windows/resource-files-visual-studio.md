@@ -27,71 +27,74 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc9a9f35793b010f4cea227ed629543c82b2ce87
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e07849c151cf2e361324a83b86bf98c24525f4ce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605282"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601576"
 ---
 # <a name="resource-files-visual-studio"></a>File di risorse (Visual Studio)
+
 > [!NOTE]
->  Questo materiale si riferisce alle applicazioni desktop di Windows. Per informazioni sulle risorse nelle App della piattaforma Windows universale, vedere [definizione delle risorse dell'App](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).  
->   
-> Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
->  
-> Dal momento che i progetti gestiti non usano i file di script della risorsa, è necessario aprire le risorse da **Esplora soluzioni**. È possibile usare l' [Editor immagini](../windows/image-editor-for-icons.md) e l' [Editor binario](binary-editor.md) per usare i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.  
-  
- Il termine "file di risorse" può fare riferimento a molti tipi di file, tra cui:  
-  
--   File script di risorse (con estensione rc) di un programma.  
-  
--   File modello di risorse (con estensione rct)  
-  
--   Una singola risorsa esistente come file autonomo, ad esempio un file bitmap, icona o cursore, a cui fa riferimento un file RC.  
-  
--   Un file di intestazione generato dall'ambiente di sviluppo, ad esempio Resource.h, a cui fa riferimento un file RC.  
-  
- Le risorse possono essere rilevate anche in [altri tipi di file](../windows/editable-file-types-for-resources.md) , ad esempio EXE, DLL e RES. È possibile usare risorse e file di risorse all'interno del progetto e che non fanno parte del progetto corrente. È anche possibile usare file di risorse non creati nell'ambiente di sviluppo di Visual Studio. Ad esempio, è possibile eseguire queste operazioni:  
-  
--   Usare file di risorse annidati e inclusi in modo condizionale.  
-  
--   Aggiornare le risorse esistenti o convertirle in formato Visual C++.  
-  
--   Importare o esportare risorse grafiche nel o dal file di risorse corrente.  
-  
--   Includere identificatori (simboli) condivisi o di sola lettura che non è possibile modificare tramite l'ambiente di sviluppo.  
-  
--   Includere nel file eseguibile (EXE) risorse che non richiedono modifiche o che non si vuole modificare durante il progetto corrente, quali risorse condivise da più progetti.  
-  
--   Includere tipi di risorse non supportati dall'ambiente di sviluppo.  
-  
- Questa sezione descrive le operazioni seguenti:  
-  
--   [Creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md)  
-  
--   [Creazione di una nuova risorsa](../windows/how-to-create-a-resource.md)  
-  
--   [Visualizzazione di risorse in un file script di risorsa](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
-  
--   [Apertura di un file script di risorsa in formato testo](../windows/how-to-open-a-resource-script-file-in-text-format.md)  
-  
--   [Inclusione di risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)  
-  
--   [Copia di risorse](../windows/how-to-copy-resources.md)  
-  
--   [Uso di modelli di risorse (RCT)](../windows/how-to-use-resource-templates.md)  
-  
--   [Importazione ed esportazione di risorse](../windows/how-to-import-and-export-resources.md)  
-  
--   [Tipi di file modificabili per le risorse](../windows/editable-file-types-for-resources.md)  
-  
--   [File interessati dalla modifica delle risorse](../windows/files-affected-by-resource-editing.md)  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Editor risorse](../windows/resource-editors.md)   
- [Uso di file di risorse](../windows/working-with-resource-files.md)   
- [Menu e altre risorse](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+> Questo materiale si riferisce alle applicazioni desktop di Windows. Per informazioni sulle risorse nelle App della piattaforma Windows universale, vedere [definizione delle risorse dell'App](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+>
+> Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+>
+> Dal momento che i progetti gestiti non usano i file di script della risorsa, è necessario aprire le risorse da **Esplora soluzioni**. È possibile usare l' [Editor immagini](../windows/image-editor-for-icons.md) e l' [Editor binario](binary-editor.md) per usare i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.
+
+Il termine "file di risorse" può fare riferimento a molti tipi di file, tra cui:
+
+- File script di risorse (con estensione rc) di un programma.
+
+- File modello di risorse (con estensione rct)
+
+- Una singola risorsa esistente come file autonomo, ad esempio un file bitmap, icona o cursore, a cui fa riferimento un file RC.
+
+- Un file di intestazione generato dall'ambiente di sviluppo, ad esempio Resource.h, a cui fa riferimento un file RC.
+
+Le risorse possono essere rilevate anche in [altri tipi di file](../windows/editable-file-types-for-resources.md) , ad esempio EXE, DLL e RES. È possibile usare risorse e file di risorse all'interno del progetto e che non fanno parte del progetto corrente. È anche possibile usare file di risorse non creati nell'ambiente di sviluppo di Visual Studio. Ad esempio, è possibile eseguire queste operazioni:
+
+- Usare file di risorse annidati e inclusi in modo condizionale.
+
+- Aggiornare le risorse esistenti o convertirle in formato Visual C++.
+
+- Importare o esportare risorse grafiche nel o dal file di risorse corrente.
+
+- Includere identificatori (simboli) condivisi o di sola lettura che non è possibile modificare tramite l'ambiente di sviluppo.
+
+- Includere nel file eseguibile (EXE) risorse che non richiedono modifiche o che non si vuole modificare durante il progetto corrente, quali risorse condivise da più progetti.
+
+- Includere tipi di risorse non supportati dall'ambiente di sviluppo.
+
+Questa sezione descrive le operazioni seguenti:
+
+- [Creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md)
+
+- [Creazione di una nuova risorsa](../windows/how-to-create-a-resource.md)
+
+- [Visualizzazione di risorse in un file script di risorsa](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)
+
+- [Apertura di un file script di risorsa in formato testo](../windows/how-to-open-a-resource-script-file-in-text-format.md)
+
+- [Inclusione di risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)
+
+- [Copia di risorse](../windows/how-to-copy-resources.md)
+
+- [Uso di modelli di risorse (RCT)](../windows/how-to-use-resource-templates.md)
+
+- [Importazione ed esportazione di risorse](../windows/how-to-import-and-export-resources.md)
+
+- [Tipi di file modificabili per le risorse](../windows/editable-file-types-for-resources.md)
+
+- [File interessati dalla modifica delle risorse](../windows/files-affected-by-resource-editing.md)
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Editor di risorse](../windows/resource-editors.md)  
+[Uso di file di risorse](../windows/working-with-resource-files.md)  
+[Menu e altre risorse](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

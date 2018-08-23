@@ -17,51 +17,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59753f592f099f80396f408fa531756ba91b308e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652539"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590652"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>Costruttore EventTargetArray::EventTargetArray
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-EventTargetArray(  
-   _Out_ HRESULT* hr,  
-   size_t items  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *risorse umane*  
- Dopo le operazioni di questo costruttore, parametro *hr* indica se l'allocazione della matrice ha avuto esito positivo o negativo. La tabella seguente elenca i possibili valori per *hr*.  
-  
- S_OK  
- Operazione completata.  
-  
- E_OUTOFMEMORY  
- Non è stato possibile allocare memoria per la matrice.  
-  
- S_FALSE  
- Parametro *elementi* è minore o uguale a zero.  
-  
- *elementi*  
- Il numero di elementi della matrice da allocare.  
-  
-## <a name="remarks"></a>Note  
- Inizializza una nuova istanza di **EventTargetArray** classe.  
-  
- **EventTargetArray** viene usato per mantenere una matrice dei gestori eventi in un `EventSource` oggetto.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Event. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe EventTargetArray](../windows/eventtargetarray-class.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+EventTargetArray(
+   _Out_ HRESULT* hr,
+   size_t items
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*risorse umane*  
+Dopo le operazioni di questo costruttore, parametro *hr* indica se l'allocazione della matrice ha avuto esito positivo o negativo. La tabella seguente elenca i possibili valori per *hr*.
+
+S_OK l'operazione ha avuto esito positivo.
+
+Non è stato possibile allocare memoria E_OUTOFMEMORY per la matrice.
+
+Parametro S_FALSE *elementi* è minore o uguale a zero.
+
+*elementi*  
+Il numero di elementi della matrice da allocare.
+
+## <a name="remarks"></a>Note
+
+Inizializza una nuova istanza di **EventTargetArray** classe.
+
+**EventTargetArray** viene usato per mantenere una matrice dei gestori eventi in un `EventSource` oggetto.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Event. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe EventTargetArray](../windows/eventtargetarray-class.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

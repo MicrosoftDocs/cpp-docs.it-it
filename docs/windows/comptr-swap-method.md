@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38fee8186d19d38075abab3bb16e2fcaac59a362
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b983d30a06a872ae20afa130c3a42ef0df1b0846
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649877"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601386"
 ---
 # <a name="comptrswap-method"></a>Metodo ComPtr::Swap
-Scambia l'interfaccia gestita dall'oggetto corrente **ComPtr** con l'interfaccia gestita dall'oggetto specificato **ComPtr**.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-void Swap(  
-   _Inout_ ComPtr&& r  
-);  
-  
-void Swap(  
-   _Inout_ ComPtr& r  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *r*  
- Oggetto **ComPtr**.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ComPtr](../windows/comptr-class.md)
+
+Scambia l'interfaccia gestita dall'oggetto corrente **ComPtr** con l'interfaccia gestita dall'oggetto specificato **ComPtr**.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+void Swap(
+   _Inout_ ComPtr&& r
+);
+
+void Swap(
+   _Inout_ ComPtr& r
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*r*  
+Oggetto **ComPtr**.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtr](../windows/comptr-class.md)

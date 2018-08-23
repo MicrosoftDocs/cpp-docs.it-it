@@ -1,5 +1,5 @@
 ---
-title: Suggerimenti per migliorare il codice critico | Documenti Microsoft
+title: Suggerimenti per migliorare il codice critico | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e05d0aa49a895a9632b07fe07bf38d9e6d4d6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbc04563ffa16dfb9471bd0a54fa53df159538e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379510"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571428"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Suggerimenti per il miglioramento del codice critico
 Per scrivere codice che deve essere eseguito rapidamente è necessario comprendere tutti gli aspetti dell'applicazione e come essa interagisce con il sistema. In questo argomento verranno suggerite alternative ad alcune delle più comuni tecniche di scrittura del codice, al fine di garantire che le parti di codice che devono essere eseguite rapidamente offrano prestazioni soddisfacenti.  
@@ -66,9 +66,9 @@ Per scrivere codice che deve essere eseguito rapidamente è necessario comprende
   
 -   [Mancati riscontri nella cache ed errori di pagina](#_core_cache_hits_and_page_faults)  
   
--   [Ricerca e ordinamento](#_core_sorting_and_searching)  
+-   [Ordinamento e ricerca](#_core_sorting_and_searching)  
   
--   [Librerie di classi ed MFC](#_core_mfc_and_class_libraries)  
+-   [MFC e le librerie di classi](#_core_mfc_and_class_libraries)  
   
 -   [Librerie condivise](#vcovrsharedlibraries)  
   
@@ -81,7 +81,7 @@ Per scrivere codice che deve essere eseguito rapidamente è necessario comprende
 ##  <a name="_core_cache_hits_and_page_faults"></a> Mancati riscontri nella cache ed errori di pagina  
  Le richieste non soddisfatte dalla cache, sia interna che esterna, nonché gli errori di pagina (le chiamate a supporti di archiviazione secondari per istruzioni e dati dei programmi) rallentano le prestazioni di un programma.  
   
- Un riscontro nella cache della CPU può richiedere al programma 10-20 cicli di clock. Un accesso alla cache esterna può richiedere 20-40 cicli di clock. Con un processore che gestisce 500 milioni di istruzioni al secondo e un tempo di 2 millisecondi per un errore di pagina, un errore di pagina può richiedere un milione di cicli di clock. È quindi importante, per ottimizzare l'esecuzione del programma, scrivere codice che consenta di ridurre il più possibile il numero delle richieste non soddisfatte dalla cache e degli errori di pagina.  
+ Un riscontro nella cache della CPU può richiedere al programma 10 e 20 cicli di clock. Un riscontro nella cache esterna può richiedere cicli di clock 20-40. Con un processore che gestisce 500 milioni di istruzioni al secondo e un tempo di 2 millisecondi per un errore di pagina, un errore di pagina può richiedere un milione di cicli di clock. È quindi importante, per ottimizzare l'esecuzione del programma, scrivere codice che consenta di ridurre il più possibile il numero delle richieste non soddisfatte dalla cache e degli errori di pagina.  
   
  Uno dei motivi della lentezza di alcuni programmi è il fatto che si verifica un numero di errori di pagina o di richieste non soddisfatte dalla cache più alto del necessario. Per evitare che questo accada, è importante far uso di strutture con posizione dei riferimenti ottimale, ovvero mantenendo gli elementi correlati vicini. Talvolta una struttura di dati che sembra rappresentare la soluzione migliore non fornisce i risultati sperati proprio a causa del cattivo posizionamento dei riferimenti, e viceversa. Di seguito sono riportati due esempi:  
   
@@ -89,12 +89,12 @@ Per scrivere codice che deve essere eseguito rapidamente è necessario comprende
   
 -   Le prestazioni di tabelle hash che usano elenchi collegati allocati in modo dinamico possono risultare ridotte. Per estensione, le tabelle hash che usano elenchi collegati allocati in modo dinamico per l'archiviazione dei contenuti possono subire un'ulteriore riduzione di prestazioni. Una semplice ricerca lineare all'interno di una matrice potrebbe, in ultima analisi e a seconda delle circostanze, risultare più rapida. Le tabelle hash basate su matrici a volte non vengono prese in considerazione sebbene offrano spesso prestazioni superiori.  
   
-##  <a name="_core_sorting_and_searching"></a> Ricerca e ordinamento  
+##  <a name="_core_sorting_and_searching"></a> Ordinamento e ricerca  
  In confronto ad altre operazioni comuni, l'ordinamento è un'operazione che richiede molto tempo. Il modo migliore per evitare rallentamenti non necessari è quello di non eseguire le operazioni di ordinamento nei momenti critici. Potrebbe essere possibile:  
   
--   Rimandare l'ordinamento a un momento critico non sulle prestazioni.  
+-   Rimandare l'ordinamento fino a un momento non critici per le prestazioni.  
   
--   Ordinare i dati in un momento precedente, non critici per le prestazioni.  
+-   Ordinare i dati in un momento precedente, non-performance-critical.  
   
 -   Ordinare solo la parte di dati necessaria.  
   
@@ -110,20 +110,20 @@ Per scrivere codice che deve essere eseguito rapidamente è necessario comprende
   
  Per le ricerche sono disponibili meno alternative che per l'ordinamento. Se la velocità della ricerca è un fattore critico, una ricerca binaria o una ricerca in una tabella hash rappresenta quasi sempre il metodo preferibile, ma, come per l'ordinamento, è necessario tenere presente anche il problema della posizione dei dati. Una ricerca lineare in una matrice di piccole dimensioni può essere più veloce rispetto a una ricerca binaria in una struttura di dati con numerosi puntatori, con conseguenti errori di pagina o richieste della cache non soddisfatte.  
   
-##  <a name="_core_mfc_and_class_libraries"></a> Librerie di classi ed MFC  
+##  <a name="_core_mfc_and_class_libraries"></a> MFC e le librerie di classi  
  Le classi MFC (Microsoft Foundation Classes) possono semplificare notevolmente la scrittura del codice. Quando si scrive codice che deve essere eseguito rapidamente, è opportuno essere consapevoli dell'overhead specifico di alcune classi. Esaminare il codice MFC usato dal codice che deve essere eseguito rapidamente per verificare che soddisfi i requisiti richiesti. Nell'elenco seguente sono riportate le funzioni e le classi MFC che è opportuno conoscere:  
   
--   `CString` MFC chiama la libreria di runtime C per allocare memoria per un [CString](../../atl-mfc-shared/reference/cstringt-class.md) in modo dinamico. In termini generali, l'efficacienza di `CString` non è diversa da quella di qualsiasi altra stringa allocata in modo dinamico. Come le altre stringhe allocate in modo dinamico, infatti, presenta l'overhead dovuto all'allocazione dinamica e al conseguente rilascio. Una semplice matrice `char` sullo stack spesso può servire al medesimo scopo e garantire maggiore velocità. Non usare `CString` per archiviare una stringa costante. In alternativa, utilizzare `const char *`. Qualsiasi operazione effettuata con un oggetto `CString` presenta un determinato overhead. Utilizzo della libreria di runtime [funzioni stringa](../../c-runtime-library/string-manipulation-crt.md) può risultare più veloce.  
+-   `CString` MFC chiama la libreria di runtime C per allocare memoria per un [CString](../../atl-mfc-shared/reference/cstringt-class.md) in modo dinamico. In termini generali, l'efficacienza di `CString` non è diversa da quella di qualsiasi altra stringa allocata in modo dinamico. Come le altre stringhe allocate in modo dinamico, infatti, presenta l'overhead dovuto all'allocazione dinamica e al conseguente rilascio. Una semplice matrice `char` sullo stack spesso può servire al medesimo scopo e garantire maggiore velocità. Non usare `CString` per archiviare una stringa costante. In alternativa, utilizzare `const char *`. Qualsiasi operazione effettuata con un oggetto `CString` presenta un determinato overhead. Usando la libreria run-time [funzioni stringa](../../c-runtime-library/string-manipulation-crt.md) può risultare più veloce.  
   
--   `CArray` Un [CArray](../../mfc/reference/carray-class.md) offre flessibilità che una matrice standard, ma il programma potrebbe non essere necessario che. Se si conoscono i limiti specifici della matrice, è possibile usare una matrice fissa globale. Se si usa `CArray`, usare `CArray::SetSize` per impostarne le dimensioni e specificare il numero di elementi che è possibile aggiungere quando sarà necessaria una riallocazione. In caso contrario, l'aggiunta di elementi potrebbe causare una frequente riallocazione e copia della matrice, con conseguente riduzione delle prestazioni e frammentazione della memoria. Tenere inoltre presente che se si inserisce una voce in una matrice, `CArray` sposta le voci successive nella memoria e potrebbe essere necessario aumentare le dimensioni della matrice. Queste operazioni possono causare richieste non soddisfatte dalla cache ed errori di pagina. Attraverso un esame preventivo del codice MFC ci si potrebbe quindi rendere conto della necessità di scrivere codice più specifico in base alle proprie esigenze al fine di ottenere prestazioni migliori. Dal momento che, ad esempio, `CArray` è un modello, sarà possibile fornire specifiche `CArray` più particolari per i singoli casi.  
+-   `CArray` Oggetto [CArray](../../mfc/reference/carray-class.md) offre flessibilità che una matrice standard, ma il programma potrebbe non essere necessario che. Se si conoscono i limiti specifici della matrice, è possibile usare una matrice fissa globale. Se si usa `CArray`, usare `CArray::SetSize` per impostarne le dimensioni e specificare il numero di elementi che è possibile aggiungere quando sarà necessaria una riallocazione. In caso contrario, l'aggiunta di elementi potrebbe causare una frequente riallocazione e copia della matrice, con conseguente riduzione delle prestazioni e frammentazione della memoria. Tenere inoltre presente che se si inserisce una voce in una matrice, `CArray` sposta le voci successive nella memoria e potrebbe essere necessario aumentare le dimensioni della matrice. Queste operazioni possono causare richieste non soddisfatte dalla cache ed errori di pagina. Attraverso un esame preventivo del codice MFC ci si potrebbe quindi rendere conto della necessità di scrivere codice più specifico in base alle proprie esigenze al fine di ottenere prestazioni migliori. Dal momento che, ad esempio, `CArray` è un modello, sarà possibile fornire specifiche `CArray` più particolari per i singoli casi.  
   
--   `CList` [CList](../../mfc/reference/clist-class.md) è un elenco a doppio collegamento, pertanto l'inserimento di elementi è rapido all'inizio, nella parte finale e in una posizione nota (`POSITION`) nell'elenco. La ricerca di un elemento in base al valore o all'indice richiede tuttavia una ricerca sequenziale che può essere lenta se l'elenco è lungo. Se il codice non richiede un elenco con doppio collegamento, può essere opportuno riconsiderare l'utilizzo di `CList`. Il ricorso a un elenco con singolo collegamento evita infatti l'overhead dovuto all'aggiornamento di un puntatore supplementare per tutte le operazioni, nonché la memoria necessaria per tale puntatore. La memoria supplementare richiesta non è molta, ma può rappresentare un'ulteriore causa di richieste della cache non soddisfatte o errori di pagina.  
+-   `CList` [CList](../../mfc/reference/clist-class.md) è un elenco a doppio collegamento, in modo che l'inserimento di elementi è veloce all'inizio, nella parte finale e in una posizione nota (`POSITION`) nell'elenco. La ricerca di un elemento in base al valore o all'indice richiede tuttavia una ricerca sequenziale che può essere lenta se l'elenco è lungo. Se il codice non richiede un elenco con doppio collegamento, può essere opportuno riconsiderare l'utilizzo di `CList`. Il ricorso a un elenco con singolo collegamento evita infatti l'overhead dovuto all'aggiornamento di un puntatore supplementare per tutte le operazioni, nonché la memoria necessaria per tale puntatore. La memoria supplementare richiesta non è molta, ma può rappresentare un'ulteriore causa di richieste della cache non soddisfatte o errori di pagina.  
   
 -   `IsKindOf` Questa funzione può generare numerose chiamate e accedere a una grande quantità di memoria in diverse aree di dati, causando errato posizionamento dei riferimenti. È utile nel caso di una build di debug, ad esempio in una chiamata ASSERT, ma è preferibile non usarla in una build di rilascio.  
   
--   `PreTranslateMessage` Utilizzare `PreTranslateMessage` quando un determinata struttura ad albero di finestre necessita di diversi tasti di scelta rapida o quando è necessario inserire la gestione dei messaggi nel message pump. `PreTranslateMessage` modifica i messaggi di invio MFC. Eseguire l'override di `PreTranslateMessage` se necessario, solo al livello richiesto. Se, ad esempio, si è interessati solo ai messaggi indirizzati agli elementi figlio di una determinata visualizzazione, non è necessario eseguire l'override di `CMainFrame::PreTranslateMessage`. Eseguire invece l'override di `PreTranslateMessage` per la classe di visualizzazione.  
+-   `PreTranslateMessage` Usare `PreTranslateMessage` quando una determinata struttura di windows deve diversi tasti di scelta rapida o quando è necessario inserire la gestione dei messaggi nel message pump. `PreTranslateMessage` modifica i messaggi di invio MFC. Eseguire l'override di `PreTranslateMessage` se necessario, solo al livello richiesto. Se, ad esempio, si è interessati solo ai messaggi indirizzati agli elementi figlio di una determinata visualizzazione, non è necessario eseguire l'override di `CMainFrame::PreTranslateMessage`. Eseguire invece l'override di `PreTranslateMessage` per la classe di visualizzazione.  
   
-     Non cercare di escludere il normale percorso di invio usando `PreTranslateMessage` per gestire i messaggi inviati a qualsiasi finestra. Utilizzare [routine della finestra](../../mfc/registering-window-classes.md) e mappe messaggi MFC a tale scopo.  
+     Non cercare di escludere il normale percorso di invio usando `PreTranslateMessage` per gestire i messaggi inviati a qualsiasi finestra. Uso [routine della finestra](../../mfc/registering-window-classes.md) e mappe messaggi MFC a tale scopo.  
   
 -   `OnIdle` Gli eventi di inattività possono verificarsi in momenti imprevisti, ad esempio tra `WM_KEYDOWN` e `WM_KEYUP` eventi. I timer possono rappresentare un modo più efficace per attivare il codice. Non forzare chiamate ripetute di `OnIdle` generando messaggi falsi o restituendo sempre `TRUE` da un override di `OnIdle`, perché in questo modo il thread non sarebbe mai inattivo. Anche in questo caso sarebbe più appropriato usare un timer o un thread separato.  
   
@@ -137,7 +137,7 @@ Per scrivere codice che deve essere eseguito rapidamente è necessario comprende
   
  In alcuni casi, tuttavia, il ricorso all'heap predefinito può ridurre la vicinanza dei riferimenti. Usare Process Viewer, Spy++ o Performance Monitor per misurare gli effetti dello spostamento degli oggetti da un heap all'altro.  
   
- Misurare gli heap in modo da controllare ogni allocazione su di essi. Usare il run-time C [routine dell'heap di debug](/visualstudio/debugger/crt-debug-heap-details) checkpoint ed eseguire il dump dell'heap. È possibile esportare l'output in un programma di foglio di calcolo, ad esempio Microsoft Excel, e usare tabelle pivot per visualizzare i risultati. Verificare il numero totale, la dimensione e la distribuzione delle allocazioni. Confrontare questi valori con le dimensioni dei working set. Esaminare inoltre i cluster degli oggetti di dimensioni correlate.  
+ Misurare gli heap in modo da controllare ogni allocazione su di essi. Utilizza run-time di C [routine dell'heap di debug](/visualstudio/debugger/crt-debug-heap-details) checkpoint ed eseguire il dump dell'heap. È possibile esportare l'output in un programma di foglio di calcolo, ad esempio Microsoft Excel, e usare tabelle pivot per visualizzare i risultati. Verificare il numero totale, la dimensione e la distribuzione delle allocazioni. Confrontare questi valori con le dimensioni dei working set. Esaminare inoltre i cluster degli oggetti di dimensioni correlate.  
   
  È anche possibile usare i contatori delle prestazioni per monitorare l'utilizzo della memoria.  
   
@@ -148,14 +148,14 @@ Per scrivere codice che deve essere eseguito rapidamente è necessario comprende
   
  I thread presentano inoltre problemi di comunicazione. È necessario gestire il collegamento di comunicazione tra i thread mediante un elenco di messaggi oppure allocando e usando la memoria condivisa. La gestione del collegamento di comunicazione richiede in genere una sincronizzazione al fine di evitare race condition e problemi di deadlock. Questa complessità può facilmente determinare bug e problemi di prestazioni.  
   
- Per ulteriori informazioni, vedere [elaborazione di cicli di inattività](../../mfc/idle-loop-processing.md) e [Multithreading](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+ Per altre informazioni, vedere [elaborazione di cicli di inattività](../../mfc/idle-loop-processing.md) e [Multithreading](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
 ##  <a name="_core_small_working_set"></a> Piccoli Working Set  
  I working set di dimensioni inferiori sono caratterizzati da posizionamento ottimale dei riferimenti, un numero inferiore di errori di pagina e un maggior numero di richieste soddisfatte dalla cache. Il working set del processo è la metrica più precisa fornita direttamente dal sistema operativo per valutare la posizione dei riferimenti.  
   
--   Per impostare i limiti superiore e inferiore del working set, utilizzare [SetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms683226.aspx).  
+-   Per impostare i limiti superiori e inferiori del working set, usare [SetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-getprocessworkingsetsize).  
   
--   Per ottenere i limiti superiore e inferiore del working set, usare [GetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms686234.aspx).  
+-   Per ottenere i limiti superiori e inferiori del working set, usare [GetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-setprocessworkingsetsize).  
   
 -   Per visualizzare le dimensioni del working set, usare Spy++.  
   

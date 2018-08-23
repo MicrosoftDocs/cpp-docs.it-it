@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2936a65023b32f994ed7260260476bc7b0457c2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ff8bacd14a6e8e99fb98d5e9c4ac3136fe1a1f0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336417"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571632"
 ---
 # <a name="updating-rowsets"></a>aggiornamento rowset
 Un'operazione molto semplice del database consiste nell'aggiornamento o nella scrittura dei dati nell'archivio dati. In OLE DB il meccanismo di aggiornamento è semplice: l'applicazione consumer imposta i valori dei membri dati associati, scrive tali valori nel set di righe e, infine, richiede al provider di aggiornare l'archivio dati.  
   
- I consumer possono eseguire i tipi di aggiornamento seguenti sui dati del set di righe: impostazione dei valori della colonna all'interno di una riga, inserimento di una riga ed eliminazione di una riga. Per eseguire queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa il [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interfaccia ed esegue l'override di metodi di interfaccia seguenti:  
+ I consumer possono eseguire i tipi di aggiornamento seguenti sui dati del set di righe: impostazione dei valori della colonna all'interno di una riga, inserimento di una riga ed eliminazione di una riga. Per eseguire queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa il [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfaccia ed esegue l'override di metodi di interfaccia seguenti:  
   
 -   [SetData](../../data/oledb/crowset-setdata.md) modifica i valori della colonna in una riga di un set di righe. È equivalente al comando SQL UPDATE.  
   
@@ -216,4 +216,4 @@ product.Update();                 // Update row 101 now
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo dei modelli Consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [Classe CRowset](../../data/oledb/crowset-class.md)   
- [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)
+ [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))

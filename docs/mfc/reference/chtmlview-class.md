@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027859"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540252"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (classe)
 Fornisce la funzionalità del controllo WebBrowser nel contesto dell'architettura documento/visualizzazione di MFC.  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|Recupera l'URL della risorsa che è attualmente visualizzata in WebBrowser.|  
 |[CHtmlView::GetMenuBar](#getmenubar)|Recupera un valore che determina se la barra dei menu è visibile.|  
 |[CHtmlView::GetOffline](#getoffline)|Recupera un valore che determina se il controllo è offline.|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|Recupera un puntatore all'interfaccia `IDispatch` . Per altre informazioni, vedere [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|Recupera un puntatore all'interfaccia `IDispatch` . Per altre informazioni, vedere [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|  
 |[CHtmlView::GetProperty](#getproperty)|Recupera il valore corrente di una proprietà associata all'oggetto specificato.|  
 |[CHtmlView::GetReadyState](#getreadystate)|Recupera lo stato di pronto dell'oggetto del Web browser.|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Indica se il controllo WebBrowser viene registrato come browser di livello superiore per la risoluzione dei nomi di destinazione.|  
@@ -508,7 +508,7 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al `IDispatch` interfaccia dell'oggetto documento attivo. Per altre informazioni, vedere [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Un puntatore al `IDispatch` interfaccia dell'oggetto documento attivo. Per altre informazioni, vedere [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ### <a name="remarks"></a>Note  
  Si applica a WebBrowser e Internet Explorer.  

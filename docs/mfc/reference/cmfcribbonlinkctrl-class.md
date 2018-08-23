@@ -42,16 +42,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851496"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539833"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
 Implementa un collegamento ipertestuale collocato in una barra multifunzione. Il collegamento ipertestuale apre una pagina Web quando si fa clic su di esso.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ## <a name="syntax"></a>Sintassi  
   

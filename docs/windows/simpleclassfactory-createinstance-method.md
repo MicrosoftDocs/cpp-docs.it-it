@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa0d48ba96c550ff6ee1248dccd0b4c8e3021212
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d9dfb783a8e002f249d5f6b4cc0a45193669efb3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020304"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603113"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>Metodo SimpleClassFactory::CreateInstance
 
@@ -39,6 +39,7 @@ STDMETHOD( CreateInstance )(
 ```
 
 ### <a name="parameters"></a>Parametri
+
 *pUnkOuter*  
 Deve essere **nullptr**; in caso contrario, il valore restituito è CLASS_E_NOAGGREGATION.
 
@@ -65,4 +66,5 @@ Se `__WRL_STRICT__` è definito, assert viene generato un errore se la classe ba
 **Spazio dei nomi:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vedere anche
- [Classe SimpleClassFactory](../windows/simpleclassfactory-class.md)
+
+[Classe SimpleClassFactory](../windows/simpleclassfactory-class.md)

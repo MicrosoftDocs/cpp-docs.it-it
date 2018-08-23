@@ -1,5 +1,5 @@
 ---
-title: Riferimenti a NMAKE | Documenti Microsoft
+title: Riferimenti a NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00113372d86e488882c687afb56bd5e52bb74c21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372679"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572004"
 ---
 # <a name="nmake-reference"></a>Riferimenti a NMAKE
-Microsoft Program Maintenance Utility (NMAKE.EXE) è uno strumento da riga di comando incluso in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] che compila i progetti in base ai comandi contenuti in un file di descrizione.  
+Microsoft Program Maintenance Utility (NMAKE. Con estensione EXE) è uno strumento da riga di comando incluso in Visual Studio che consente di compilare progetti basati su comandi che sono contenuti in un file di descrizione.  
   
- Per usare NMAKE, è necessario eseguirlo in una finestra del prompt dei comandi per gli sviluppatori. Una finestra del prompt dei comandi per gli sviluppatori ha le variabili di ambiente impostate per gli strumenti, le librerie e i percorsi dei file di inclusione necessari per la compilazione dalla riga di comando. Per informazioni dettagliate su come aprire una finestra del prompt dei comandi per sviluppatori, vedere [codice C/C++ di compilazione nella riga di comando](../build/building-on-the-command-line.md).  
+ Per usare NMAKE, è necessario eseguirlo in una finestra del prompt dei comandi per gli sviluppatori. Una finestra del prompt dei comandi per gli sviluppatori ha le variabili di ambiente impostate per gli strumenti, le librerie e i percorsi dei file di inclusione necessari per la compilazione dalla riga di comando. Per informazioni dettagliate su come aprire una finestra del prompt dei comandi per gli sviluppatori, vedere [codice C/C++ di compilazione dalla riga di comando](../build/building-on-the-command-line.md).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
  [Esecuzione di NMAKE](../build/running-nmake.md)  
@@ -44,10 +44,10 @@ Microsoft Program Maintenance Utility (NMAKE.EXE) è uno strumento da riga di co
   
  [Direttive con il punto](../build/dot-directives.md)  
   
- [La pre-elaborazione di makefile](../build/makefile-preprocessing.md)  
+ [Pre-elaborazione di makefile](../build/makefile-preprocessing.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compilare il codice C/C++ nella riga di comando](../build/building-on-the-command-line.md)   
+ [Compilare codice C/C++ nella riga di comando](../build/building-on-the-command-line.md)   
  [Strumenti di compilazione di C/C++](../build/reference/c-cpp-build-tools.md)   
  [Creazione e gestione di progetti Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  (Debug in Visual Studio)  

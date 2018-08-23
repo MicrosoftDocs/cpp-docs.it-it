@@ -1,7 +1,7 @@
 ---
-title: Opzioni del linker | Documenti Microsoft
+title: Le opzioni del linker | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: d514e992b165f7deb5f9354f58fe5a409f52546a
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753630"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42571506"
 ---
 # <a name="linker-options"></a>Opzioni del linker
 
@@ -40,7 +40,7 @@ La tabella seguente contiene un elenco di opzioni per LINK.exe. Per altre inform
 
 - [Parole riservate](../../build/reference/reserved-words.md)
 
-Nella riga di comando, le opzioni del linker non maiuscole e minuscole; ad esempio /base e /BASE hanno lo stesso significato. Per informazioni dettagliate su come specificare ogni opzione nella riga di comando o in Visual Studio, vedere la documentazione relativa all'opzione.
+Nella riga di comando, non sono tra maiuscole e minuscole; le opzioni del linker ad esempio /base e /BASE hanno lo stesso significato. Per informazioni dettagliate su come specificare ogni opzione nella riga di comando o in Visual Studio, vedere la documentazione relativa all'opzione.
 
 È possibile specificare alcune opzioni del linker usando il pragma [comment](../../preprocessor/comment-c-cpp.md) .
 
@@ -68,14 +68,14 @@ Nella riga di comando, le opzioni del linker non maiuscole e minuscole; ad esemp
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Controlla il caricamento ritardato delle DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Causa il caricamento ritardato della DLL specificata.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Firma parzialmente un assembly.|
-|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Imposta flag predefiniti nei caricamenti DLL dipendenti.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Imposta flag predefiniti nel caricamento della DLL dipendenti.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Compila una DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Crea un driver in modalità kernel.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Specifica se generare un'immagine eseguibile che può essere riassegnata in modo casuale in fase di caricamento usando la funzionalità ASLR (Address Space Layout Randomization).|
 |[/ENTRY](../../build/reference/entry-entry-point-symbol.md)|Imposta indirizzo iniziale.|
 |[/errorReport](../../build/reference/errorreport-report-internal-linker-errors.md)|Segnala a Microsoft gli errori interni del linker.|
 |[/EXPORT](../../build/reference/export-exports-a-function.md)|Esporta una funzione.|
-|[/ /FILEALIGN](../../build/reference/filealign.md)|Consente di allineare le sezioni all'interno del file di output in multipli di un valore specificato.|
+|[/ FILEALIGN](../../build/reference/filealign.md)|Consente di allineare le sezioni all'interno del file di output in multipli di un valore specificato.|
 |[/FIXED](../../build/reference/fixed-fixed-base-address.md)|Crea un programma caricabile solo nel relativo indirizzo di base preferito.|
 |[/FORCE](../../build/reference/force-force-file-output.md)|Forza il completamento di un collegamento nonostante la presenza di simboli non risolti o definiti più volte.|
 |[/FUNCTIONPADMIN](../../build/reference/functionpadmin-create-hotpatchable-image.md)|Crea un'immagine su cui si può applicare una patch a caldo.|
@@ -105,7 +105,7 @@ Nella riga di comando, le opzioni del linker non maiuscole e minuscole; ad esemp
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|Include le informazioni specificate nel file di mapping.|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|Combina le sezioni.|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|Specifica opzioni della riga di comando MIDL.|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Aggiunge i visualizzatori di debugger da un file Natvis nel file PDB.|
+|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Aggiunge i visualizzatori di debugger da un file Natvis a PDB.|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|Disattiva la creazione di un assembly .NET Framework.|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|Ignora tutte le librerie predefinite (o quelle specificate) durante la risoluzione dei riferimenti esterni.|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|Crea una DLL di sole risorse.|
@@ -118,11 +118,12 @@ Nella riga di comando, le opzioni del linker non maiuscole e minuscole; ad esemp
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Usa un percorso alternativo per salvare un file PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Crea un file del database di programma (PDB) senza simboli privati.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Specifica un file PDG per le ottimizzazioni PGO.|
-|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsoleta** crea una build instrumentata PGO thread-safe.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsoleto** crea una build instrumentata PGO thread-safe.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Produce un file di output che può essere usato con il profiler di Strumenti per le prestazioni.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Imposta il checksum nell'intestazione del file exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Specifica che l'immagine conterrà una tabella di gestori eccezioni sicuri.|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|Esegue l'override gli attributi di una sezione.|
+|[/ SOURCELINK](../../build/reference/sourcelink.md)|Specifica un file SourceLink da aggiungere a PDB.|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|Imposta le dimensioni in byte dello stack.|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Connette un programma stub MS-DOS a un programma Win32.|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|Indica al sistema operativo come eseguire il file exe.|
@@ -133,7 +134,7 @@ Nella riga di comando, le opzioni del linker non maiuscole e minuscole; ad esemp
 |[/USEPROFILE](../../build/reference/useprofile.md)|Dati di training ottimizzazione PGO viene utilizzato per creare un'immagine ottimizzata.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Visualizza i messaggi di stato del linker.|
 |[/VERSION](../../build/reference/version-version-information.md)|Assegna un numero di versione.|
-|[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Include tutti i file oggetto da librerie statiche specificate.|
+|[/WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Include tutti i file oggetto da librerie statiche specificate.|
 |[/WINMD](../../build/reference/winmd-generate-windows-metadata.md)|Abilita la generazione di un file di metadati di Windows Runtime.|
 |[/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md)|Specifica il nome del file di output per i metadati di Windows Runtime (winmd) generato dall'opzione del linker [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) .|
 |[/WINMDKEYFILE](../../build/reference/winmdkeyfile-specify-winmd-key-file.md)|Specifica una chiave o una coppia di chiavi per firmare un file di metadati di Windows Runtime.|

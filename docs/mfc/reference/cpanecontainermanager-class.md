@@ -1,5 +1,5 @@
 ---
-title: Classe CPaneContainerManager | Documenti Microsoft
+title: Classe CPaneContainerManager | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079377"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538669"
 ---
 # <a name="cpanecontainermanager-class"></a>Classe CPaneContainerManager
-Il `CPaneContainerManager` classe gestisce l'archiviazione e la visualizzazione del layout di ancoraggio corrente.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Il `CPaneContainerManager` classe gestisce l'archiviazione e la visualizzazione di layout di ancoraggio corrente.  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -191,12 +191,12 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Note  
- Il framework crea automaticamente le istanze di `CPaneContainerManager` oggetti e li incorpora sia in [classe CPaneDivider](../../mfc/reference/cpanedivider-class.md) oggetti o in [CMultiPaneFrameWnd classe](../../mfc/reference/cmultipaneframewnd-class.md) oggetti.  
+ Il framework crea automaticamente le istanze di `CPaneContainerManager` degli oggetti e li incorpora sia in [classe CPaneDivider](../../mfc/reference/cpanedivider-class.md) oggetti o nel [classe CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md) oggetti.  
   
- Il `CPaneContainerManager` classe archivia un puntatore all'elemento radice di un albero binario viene compilato in base alle [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) oggetti.  
+ Il `CPaneContainerManager` classe archivia un puntatore all'elemento radice di un albero binario compilato da [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) oggetti.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come ottenere un riferimento a un `CPaneContainerManager` oggetto. Questo frammento di codice fa parte il [esempio di impostare le dimensioni di riquadro](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come ottenere un riferimento a un `CPaneContainerManager` oggetto. Questo frammento di codice fa parte di [esempio imposta dimensioni del riquadro](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]  
   
@@ -906,6 +906,6 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   
  [Classe CPaneDivider](../../mfc/reference/cpanedivider-class.md)

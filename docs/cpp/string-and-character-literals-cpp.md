@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0a3a3fa5d6e9836f7de949d4c13ec19f90dbcb02
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466943"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573069"
 ---
 # <a name="string-and-character-literals--c"></a>Stringa e valori letterali carattere (C++)
 C++ supporta diversi tipi di stringa e di carattere e permette di esprimere i valori letterali di ogni tipo. Nel codice sorgente, si esprime il contenuto dei valori letterali carattere e stringa usando un set di caratteri. I nomi di caratteri universali e i caratteri di escape consentono di esprimere qualsiasi stringa usando solo il set di caratteri di origine di base. Un valore letterale stringa non elaborata permette di evitare l'uso di caratteri di escape e può essere usato per esprimere tutti i tipi di valori letterali stringa. È anche possibile creare valori letterali std::string senza dover eseguire ulteriori passaggi di costruzione o conversione.  
@@ -206,7 +206,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  I nomi di caratteri universali non possono codificare i valori nell'intervallo di punti di codice surrogati D800-DFFF. Per le coppie di surrogati Unicode, specificare il nome di carattere universale usando `\UNNNNNNNN`, dove NNNNNNNN è il punto di codice a otto cifre per il carattere. Il compilatore genera una coppia di surrogati se richiesto.  
   
- In C++03 il linguaggio consentiva solo la rappresentazione di un subset di caratteri con i rispettivi nomi di caratteri universali e consentiva alcuni nomi di caratteri universali che non rappresentano effettivamente caratteri Unicode validi. Questo problema è stato risolto nello standard C++11. In C++11, sia i valori letterali carattere sia i valori letterali stringa possono usare i nomi di caratteri universali.  Per altre informazioni sui nomi di caratteri universali, vedere [set di caratteri](../cpp/character-sets.md). Per altre informazioni su Unicode, vedere [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Per altre informazioni sulle coppie di surrogati, vedere la pagina relativa alle [coppie di surrogati e ai caratteri supplementari](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ In C++03 il linguaggio consentiva solo la rappresentazione di un subset di caratteri con i rispettivi nomi di caratteri universali e consentiva alcuni nomi di caratteri universali che non rappresentano effettivamente caratteri Unicode validi. Questo problema è stato risolto nello standard C++11. In C++11, sia i valori letterali carattere sia i valori letterali stringa possono usare i nomi di caratteri universali.  Per altre informazioni sui nomi di caratteri universali, vedere [set di caratteri](../cpp/character-sets.md). Per altre informazioni su Unicode, vedere [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Per altre informazioni sulle coppie di surrogati, vedere [coppie di surrogati e caratteri supplementari](/windows/desktop/Intl/surrogates-and-supplementary-characters).  
   
 ## <a name="string-literals"></a>Valori letterali stringa  
  Un valore letterale stringa rappresenta una sequenza di caratteri che insieme formano una stringa con terminazione null. I caratteri devono essere racchiusi tra virgolette doppie. Sono disponibili i seguenti tipi di valori letterali stringa:  

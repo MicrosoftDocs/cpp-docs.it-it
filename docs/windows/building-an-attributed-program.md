@@ -1,5 +1,5 @@
 ---
-title: Compilazione di programmi con attributi | Documenti Microsoft
+title: Creazione di un programma con attributi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,27 +25,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d87f95b456e3f99598f48e6ffa8ad29806aa168
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7909884a355ccad5e1bf9d18a38dd3e4690296ee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862277"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587507"
 ---
 # <a name="building-an-attributed-program"></a>Compilazione di un programma con attributi
-Dopo avere implementato gli attributi di Visual C++ nel codice sorgente, è il compilatore Visual C++ per produrre un file IDL e di raccolta del tipo per l'utente. Le seguenti opzioni del linker consentono di generare file tlb e IDL:  
-  
--   [/IDLOUT](../build/reference/idlout-name-midl-output-files.md)  
-  
--   [/IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)  
-  
--   [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)  
-  
--   [/TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)  
-  
- Alcuni progetti contengono più file idl indipendenti. Questi vengono utilizzati per produrre due o più file tlb ed eventualmente associati nel blocco di risorse. Questo scenario non è attualmente supportato in Visual C++.  
-  
- Inoltre, il linker Visual C++ verrà visualizzate le informazioni di attributi IDL relative tutti in un unico file MIDL. È possibile generare due librerie dei tipi da un singolo progetto.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Concetti](../windows/attributed-programming-concepts.md)
+
+Dopo aver inserito gli attributi di Visual C++ nel codice sorgente, è possibile il compilatore Visual C++ per produrre un file con estensione idl e libreria dei tipi per l'utente. Le seguenti opzioni del linker consentono di generare file con estensione tlb e IDL:
+
+- [/IDLOUT](../build/reference/idlout-name-midl-output-files.md)
+
+- [/IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+
+- [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)
+
+- [/TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)
+
+Alcuni progetti contengono più file con estensione idl indipendenti. Questi vengono usati per produrre due o più file con estensione tlb e, facoltativamente, associarle nel blocco di risorse. Questo scenario non è attualmente supportato in Visual C++.
+
+Inoltre, il linker di Visual C++ restituirà tutte le informazioni sugli attributi IDL correlati in un unico file MIDL. Non vi sarà alcun modo per generare due librerie dei tipi da un singolo progetto.
+
+## <a name="see-also"></a>Vedere anche
+
+[Concetti](../windows/attributed-programming-concepts.md)

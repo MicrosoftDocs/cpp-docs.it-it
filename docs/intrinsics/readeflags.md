@@ -1,5 +1,5 @@
 ---
-title: __readeflags | Documenti Microsoft
+title: __readeflags | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8233b949fc0ab06663e9f20fad8f47f633fadf6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6488cc42519bbbee8c8fefb242996144f6bb8a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340099"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539834"
 ---
 # <a name="readeflags"></a>__readeflags
-Legge che registrare lo stato di programma e un controllo (contenuto).  
+Legge che lo stato di programma e controllo (contenuto) registrare.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,16 +34,16 @@ unsigned __int64 __readeflags(void);
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Il valore del Registro di contenuto. Il valore restituito è a 32 bit di tempo su una piattaforma a 32 bit e a 64 bit prolungata su una piattaforma a 64 bit.  
+ Il valore del Registro di contenuto. Il valore restituito è a 32 bit a lungo in una piattaforma a 32 bit e a 64 bit a lungo in una piattaforma a 64 bit.  
   
 ## <a name="remarks"></a>Note  
- Queste routine sono disponibili solo come funzioni intrinseche.  
+ Queste routine sono disponibili solo come intrinseci.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readeflags`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

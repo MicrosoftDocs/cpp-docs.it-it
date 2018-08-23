@@ -1,5 +1,5 @@
 ---
-title: __inbyte | Documenti Microsoft
+title: __inbyte | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2e02d4e1bc1ee5d1694769b2ec217cd7acbaba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7a659c9ac452d9ff42bb37d049e5cf44ff2c261
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329829"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538864"
 ---
 # <a name="inbyte"></a>__inbyte
 **Sezione specifica Microsoft**  
   
- Genera il `in` (istruzione), restituendo un byte letti dalla porta specificata per `Port`.  
+ Genera il `in` un'istruzione di restituzione di un byte letti dalla porta specificata per `Port`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ unsigned char __inbyte(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbyte`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

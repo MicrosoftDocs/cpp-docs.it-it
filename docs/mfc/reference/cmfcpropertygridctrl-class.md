@@ -160,15 +160,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb9ed3e141a6728c298102d94ab48ad0a7fa312
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2e1bf852b10ace3dca8014e54f2b0070328da64e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852071"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539462"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
  Supporta un controllo griglia delle proprietà modificabile che può visualizzare le proprietà in ordine alfabetico o gerarchico.  
   

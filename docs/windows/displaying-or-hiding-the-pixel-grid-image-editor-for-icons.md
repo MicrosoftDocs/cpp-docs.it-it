@@ -19,30 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31a43e205ad2993f2b70188300800eb8f11fe8c8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 911810a53df47e9ea7eb0485724d23a41eef3349
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647934"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589596"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Attivazione o disattivazione della griglia in pixel (Editor di immagini per le icone)
-Per tutti i **Editor di immagini** riquadri con un fattore di ingrandimento pari a 4 o versione successiva, è possibile visualizzare una griglia che delimita i singoli pixel nell'immagine.  
-  
+
+Per tutti i **Editor di immagini** riquadri con un fattore di ingrandimento pari a 4 o versione successiva, è possibile visualizzare una griglia che delimita i singoli pixel nell'immagine.
+
 > [!TIP]
->  Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consentono di identificare la funzione di ogni pulsante.  
-  
-### <a name="to-display-or-hide-the-pixel-grid"></a>Per visualizzare o nascondere la griglia in pixel  
-  
-1.  Nel **immagine** menu, fare clic su **Impostazioni griglia**.  
-  
-2.  Selezionare il **griglia in Pixel** casella di controllo per visualizzare la griglia, o deselezionare la casella per nascondere la griglia.  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisiti  
- nessuno  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Riquadri della finestra](../windows/window-panes-image-editor-for-icons.md)
+> Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consentono di identificare la funzione di ogni pulsante.
+
+### <a name="to-display-or-hide-the-pixel-grid"></a>Per visualizzare o nascondere la griglia in pixel
+
+1. Nel **immagine** menu, fare clic su **Impostazioni griglia**.
+
+2. Selezionare il **griglia in Pixel** casella di controllo per visualizzare la griglia, o deselezionare la casella per nascondere la griglia.
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisiti
+
+nessuno
+
+## <a name="see-also"></a>Vedere anche
+
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Riquadri della finestra](../windows/window-panes-image-editor-for-icons.md)

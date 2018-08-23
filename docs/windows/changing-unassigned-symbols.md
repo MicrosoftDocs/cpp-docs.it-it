@@ -19,32 +19,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6f41967298169fcdf9637cafa1d9cfc8a3cf128
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644986"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575775"
 ---
 # <a name="changing-unassigned-symbols"></a>Modifica di simboli non assegnati
-Durante il [finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md), è possibile modificare o eliminare i simboli esistenti che non sono già assegnati a una risorsa o oggetto.  
-  
-### <a name="to-change-an-unassigned-symbol"></a>Per modificare un simbolo non assegnato  
-  
-1.  Nel **Name** casella, selezionare il simbolo non assegnato e fare clic su **modifica**.  
-  
-2.  Modifica nome del simbolo o il valore nelle caselle disponibili nel **Cambia simbolo** nella finestra di dialogo.  
-  
-    > [!NOTE]
-    >  Per modificare un simbolo che *viene* assegnato a una risorsa o oggetto, è necessario usare l'editor di risorse o **proprietà** finestra. Per altre informazioni, vedere [modifica un simbolo o del nome del simbolo](../windows/changing-a-symbol-or-symbol-name-id.md).  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Visualizzazione di simboli risorsa](../windows/viewing-resource-symbols.md)   
- [Restrizioni relative ai nomi di simbolo](../windows/symbol-name-restrictions.md)   
- [Restrizioni relative ai valori di simboli](../windows/symbol-value-restrictions.md)   
- [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)
+
+Durante il [finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md), è possibile modificare o eliminare i simboli esistenti che non sono già assegnati a una risorsa o oggetto.
+
+### <a name="to-change-an-unassigned-symbol"></a>Per modificare un simbolo non assegnato
+
+1. Nel **Name** casella, selezionare il simbolo non assegnato e fare clic su **modifica**.
+
+2. Modifica nome del simbolo o il valore nelle caselle disponibili nel **Cambia simbolo** nella finestra di dialogo.
+
+   > [!NOTE]
+   > Per modificare un simbolo che *viene* assegnato a una risorsa o oggetto, è necessario usare l'editor di risorse o **proprietà** finestra. Per altre informazioni, vedere [modifica un simbolo o del nome del simbolo](../windows/changing-a-symbol-or-symbol-name-id.md).
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Visualizzazione di simboli risorsa](../windows/viewing-resource-symbols.md)  
+[Restrizioni relative ai nomi dei simboli](../windows/symbol-name-restrictions.md)  
+[Restrizioni relative ai valori dei simboli](../windows/symbol-value-restrictions.md)  
+[ID simbolo predefiniti](../windows/predefined-symbol-ids.md)

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - header files [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6950049d9bd9b9264383ab6e5e216023526880
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404765"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602413"
 ---
 # <a name="header-files-c"></a>File di intestazione (C++)
 

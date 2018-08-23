@@ -1,5 +1,5 @@
 ---
-title: Gli oggetti CWindowDC classe | Documenti Microsoft
+title: Classe CWindowDC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121542"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540650"
 ---
-# <a name="cwindowdc-class"></a>Gli oggetti CWindowDC (classe)
+# <a name="cwindowdc-class"></a>Classe CWindowDC
 Derivata da `CDC`.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -48,12 +48,12 @@ class CWindowDC : public CDC
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|HWND ai quali questo `CWindowDC` è collegato.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|L'oggetto HWND per cui questo `CWindowDC` è collegato.|  
   
 ## <a name="remarks"></a>Note  
- Chiama la funzione di Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)in fase di costruzione e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) in fase di eliminazione. Ciò significa che una `CWindowDC` oggetto accede all'intera area dello schermo di un [CWnd](../../mfc/reference/cwnd-class.md) (entrambe aree client e).  
+ Chiama la funzione di Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)in fase di costruzione e [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) in fase di eliminazione. Ciò significa che un `CWindowDC` oggetto accede all'intera area dello schermo di un [CWnd](../../mfc/reference/cwnd-class.md) (aree client e non client).  
   
- Per ulteriori informazioni sull'utilizzo `CWindowDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).  
+ Per altre informazioni sull'uso `CWindowDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,7 +66,7 @@ class CWindowDC : public CDC
  Intestazione: AFXWIN. h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Costruisce un `CWindowDC` oggetto a cui accede l'intera area dello schermo (client e non client) del `CWnd` oggetto a cui punta *pWnd*.  
+ Costruisce un `CWindowDC` oggetti cui accede l'intera area dello schermo (client e non client) del `CWnd` oggetto a cui punta *pWnd*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
@@ -74,18 +74,18 @@ explicit CWindowDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametri  
  *pWnd*  
- Finestra cui area client accederà l'oggetto contesto di dispositivo.  
+ Finestra di cui l'area client accederà l'oggetto di contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
  Il costruttore chiama la funzione di Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
   
- Un'eccezione (di tipo `CResourceException`) viene generato se le finestre `GetWindowDC` chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di periferica disponibile. L'applicazione in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
+ Un'eccezione (di tipo `CResourceException`) viene generata se la Windows `GetWindowDC` chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di dispositivo disponibili. L'applicazione è in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- HWND della `CWnd` puntatore viene utilizzato per costruire il `CWindowDC` oggetto.  
+ L'oggetto HWND della `CWnd` puntatore viene usato per costruire il `CWindowDC` oggetto.  
   
 ```  
 HWND m_hWnd;  

@@ -1,5 +1,5 @@
 ---
-title: -prediligono (Ottimizza per le specifiche di architettura) | Documenti Microsoft
+title: -prediligono (Ottimizza per le specifiche di architettura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f91373eef29adcb9a632e80520ed6713d3e39b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75081c3a2e8918bfe8abf43373d755ca258f2595
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376221"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571420"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (ottimizzato per le specifiche di architettura)
-**/favor:** `option` genera codice ottimizzato per un'architettura specifica o per le specifiche di micro-architetture nelle architetture Intel e AMD.  
+**/favor:** `option` genera codice ottimizzato per un'architettura specifica o per le specifiche delle microarchitetture nelle architetture Intel e AMD.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,25 +35,25 @@ ms.locfileid: "32376221"
   
 ## <a name="remarks"></a>Note  
  **/favor:blend**  
- (x86 e x64) genera il codice che viene ottimizzato per le specifiche di micro-architetture nelle architetture AMD ed Intel. Mentre **/favor:blend** potrebbero non offrire le migliori prestazioni possibili su un processore specifico, è progettata per offrire le migliori prestazioni in un'ampia gamma di processori x86 e x64. Per impostazione predefinita, **/favor:blend** è attiva.  
+ (x86 e x64) genera il codice che viene ottimizzato per le specifiche di micro-architetture nelle architetture AMD ed Intel. Sebbene **/favor:blend** non offra le migliori prestazioni possibili su un processore specifico, è progettato per offrire le migliori prestazioni in un'ampia gamma di processori x86 e x64. Per impostazione predefinita **/favor:blend** è attiva.  
   
  **/favor:Atom**  
- (x86 e x64) genera codice ottimizzato per le specifiche del processore Intel Atom e della tecnologia del processore Intel Centrino Atom. Il codice generato utilizzando **/favor:ATOM** può anche produrre Intel SSSE3, SSE3, SSE2 e SSE istruzioni per i processori Intel.  
+ (x86 e x64) genera codice ottimizzato per le specifiche del processore Intel Atom e della tecnologia del processore Intel Centrino Atom. Codice generato mediante **/favor:ATOM** può anche produrre le istruzioni di Intel SSSE3, SSE3, SSE2 e SSE per processori Intel.  
   
  **/favor:AMD64**  
- (solo x64) ottimizza il codice generato per i processori AMD Opteron e Athlon che supportano estensioni a 64 bit. Il codice ottimizzato può essere eseguito su tutte le piattaforme compatibili con x64. Il codice generato utilizzando **/favor:AMD64** potrebbe compromettere le prestazioni su processori Intel che supportano Intel64.  
+ (solo x64) ottimizza il codice generato per i processori AMD Opteron e Athlon che supportano estensioni a 64 bit. Il codice ottimizzato può essere eseguito su tutte le piattaforme compatibili con x64. Codice generato mediante **/favor:AMD64** potrebbe compromettere le prestazioni su processori Intel che supportano Intel64.  
   
  **/favor:INTEL64**  
- (solo x64) ottimizza il codice generato per processori Intel che supportano Intel64, garantendo in genere prestazioni migliori per la piattaforma specifica. Il codice risultante può essere eseguito su qualsiasi piattaforma x64. Il codice generato con **/favor:INTEL64** potrebbe compromettere le prestazioni su processori AMD Opteron e Athlon che supportano estensioni a 64 bit.  
+ (solo x64) ottimizza il codice generato per processori Intel che supportano Intel64, garantendo in genere prestazioni migliori per la piattaforma specifica. Il codice risultante può essere eseguito su qualsiasi piattaforma x64. Codice generato con **/favor:INTEL64** potrebbe compromettere le prestazioni su processori AMD Opteron e Athlon che supportano estensioni a 64 bit.  
   
 > [!NOTE]
 >  Architettura Intel64 era noto in precedenza come Extended Memory 64 Technology e l'opzione del compilatore corrispondente è stata **/favor:EM64T**.  
   
- Per informazioni su come programmare per il [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] architettura, vedere [x64 convenzioni del Software](../../build/x64-software-conventions.md).  
+ Per informazioni su come programmare per x64 architettura, vedere [x64 convenzioni del Software](../../build/x64-software-conventions.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
   
 2.  Selezionare il **C/C++** cartella.  
   

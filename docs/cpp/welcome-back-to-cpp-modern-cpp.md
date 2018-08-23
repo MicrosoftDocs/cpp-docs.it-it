@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462362"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571631"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ (C++ moderno)
 C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I programmi in C++ ben scritti sono veloci ed efficienti. Il linguaggio è più flessibile di altri linguaggi, in quanto è possibile utilizzarlo per creare un'ampia gamma di applicazioni: da giochi divertenti ed emozionanti, a software scientifico a elevate prestazioni, fino a driver di dispositivo, programmi incorporati e applicazioni client Windows. Per più di 20 anni C++ è stato utilizzato per risolvere problemi come questi e molti altri. Molti non sanno che un numero sempre maggiore di programmatori in C++ ha abbandonato la vecchia programmazione di tipo C per ripiegare sul moderno C++.  
@@ -107,7 +107,7 @@ void f()
   
  C++ sta sperimentando una "rinascita" perché la potenza è nuovamente diventata l'elemento più importante. I linguaggi come Java e C# sono validi quando è importante la produttività del programmatore, ma mostrano le relative limitazioni quando sono importanti la potenza e le prestazioni. Per una buona efficienza e potenza, specialmente sui dispositivi con hardware ridotto, niente è meglio del linguaggio C++ moderno.  
   
- Anche gli strumenti di sviluppo, oltre al linguaggio, sono moderni. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] rende tutte le parti del ciclo di sviluppo affidabili ed efficienti. Include strumenti di Gestione del ciclo di vita delle applicazioni (ALM), miglioramenti IDE quali IntelliSense, meccanismi adatti agli strumenti come XAML, la compilazione, il debug e molti altri strumenti.  
+ Anche gli strumenti di sviluppo, oltre al linguaggio, sono moderni. Visual Studio apporta tutte le parti del ciclo di sviluppo affidabile ed efficiente. Include strumenti di Gestione del ciclo di vita delle applicazioni (ALM), miglioramenti IDE quali IntelliSense, meccanismi adatti agli strumenti come XAML, la compilazione, il debug e molti altri strumenti.  
   
  Gli articoli in questa parte della documentazione forniscono linee guida e procedure consigliate approfondite per le principali funzionalità e tecniche di scrittura dei moderni programmi in C++.  
   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849107cc9f0d0611eb3dc9259fc317f73a961407
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c2862945fa95ca45d8544eda0bb06080c5e45c2e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026173"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573354"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Classe ISupportErrorInfoImpl
-Questa classe fornisce un'implementazione predefinita del [ISupportErrorInfo interfaccia](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32) e può essere usato quando solo una singola interfaccia genera errori in un oggetto.  
+Questa classe fornisce un'implementazione predefinita del [ISupportErrorInfo interfaccia](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) e può essere usato quando solo una singola interfaccia genera errori in un oggetto.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 #### <a name="parameters"></a>Parametri  
  *piid*  
- Un puntatore all'IID dell'interfaccia che supporta [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447).  
+ Un puntatore all'IID dell'interfaccia che supporta [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).  
   
 ## <a name="members"></a>Membri  
   
@@ -51,10 +51,10 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Indica se l'interfaccia identificata dal `riid` supporta la [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interfaccia.|  
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Indica se l'interfaccia identificata dal `riid` supporta la [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfaccia.|  
   
 ## <a name="remarks"></a>Note  
- Il [ISupportErrorInfo interfaccia](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32) assicura che le informazioni sull'errore può essere restituiti al client. Agli oggetti che usano `IErrorInfo` deve implementare `ISupportErrorInfo`.  
+ Il [ISupportErrorInfo interfaccia](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) assicura che le informazioni sull'errore può essere restituiti al client. Agli oggetti che usano `IErrorInfo` deve implementare `ISupportErrorInfo`.  
   
  Classe `ISupportErrorInfoImpl` fornisce un'implementazione predefinita di `ISupportErrorInfo` e può essere usato quando solo una singola interfaccia genera errori in un oggetto. Ad esempio:  
   
@@ -69,14 +69,14 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
  **Intestazione:** atlcom. h  
   
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
- Indica se l'interfaccia identificata dal `riid` supporta la [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interfaccia.  
+ Indica se l'interfaccia identificata dal `riid` supporta la [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfaccia.  
   
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/a54ef18d-ee3f-4483-ac4a-99d758f0960a) in Windows SDK.  
+ Visualizzare [ISupportErrorInfo::InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) in Windows SDK.  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  Chiamare questo metodo per ottenere il numero di thread nel pool.  

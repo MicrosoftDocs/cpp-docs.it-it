@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1874eb12f7a11482cb679a743d081a8bb78bc94e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5125ff259847162d75d3e2c7553f0887e177b0ee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650040"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601301"
 ---
 # <a name="comptrcomptr-destructor"></a>Distruttore ComPtr::~ComPtr
-Deinizializza un'istanza di **ComPtr**.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-WRL_NOTHROW ~ComPtr();  
-```  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ComPtr](../windows/comptr-class.md)
+
+Deinizializza un'istanza di **ComPtr**.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+WRL_NOTHROW ~ComPtr();
+```
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtr](../windows/comptr-class.md)

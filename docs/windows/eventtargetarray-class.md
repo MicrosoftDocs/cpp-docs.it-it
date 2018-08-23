@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cf5f885a002ede8a715eb4850eef5a8810a0309
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3be91f85838ceb557edd5def7d7984aaf8904ea5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648360"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575665"
 ---
 # <a name="eventtargetarray-class"></a>Classe EventTargetArray
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown>;  
-```  
-  
-## <a name="remarks"></a>Note  
- Rappresenta una matrice di gestori di eventi.  
-  
- I gestori di eventi che sono associati un [EventSource](../windows/eventsource-class.md) oggetto vengono archiviati in un protetto **EventTargetArray** (membro dati).  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Costruttore EventTargetArray::EventTargetArray](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inizializza una nuova istanza di **EventTargetArray** classe.|  
-|[Distruttore EventTargetArray::~EventTargetArray](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinizializza corrente **EventTargetArray** classe.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo EventTargetArray::AddTail](../windows/eventtargetarray-addtail-method.md)|Aggiunge il gestore eventi specificato alla fine della matrice interna di gestori eventi.|  
-|[Metodo EventTargetArray::Begin](../windows/eventtargetarray-begin-method.md)|Ottiene l'indirizzo del primo elemento della matrice interna di gestori eventi.|  
-|[Metodo EventTargetArray::End](../windows/eventtargetarray-end-method.md)|Ottiene l'indirizzo dell'ultimo elemento nella matrice interna di gestori di eventi.|  
-|[Metodo EventTargetArray::Length](../windows/eventtargetarray-length-method.md)|Ottiene il numero corrente di elementi nella matrice interna di gestori di eventi.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `EventTargetArray`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Event. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown>;
+```
+
+## <a name="remarks"></a>Note
+
+Rappresenta una matrice di gestori di eventi.
+
+I gestori di eventi che sono associati un [EventSource](../windows/eventsource-class.md) oggetto vengono archiviati in un protetto **EventTargetArray** (membro dati).
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Costruttore EventTargetArray::EventTargetArray](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inizializza una nuova istanza di **EventTargetArray** classe.|
+|[Distruttore EventTargetArray::~EventTargetArray](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinizializza corrente **EventTargetArray** classe.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Metodo EventTargetArray::AddTail](../windows/eventtargetarray-addtail-method.md)|Aggiunge il gestore eventi specificato alla fine della matrice interna di gestori eventi.|
+|[Metodo EventTargetArray::Begin](../windows/eventtargetarray-begin-method.md)|Ottiene l'indirizzo del primo elemento della matrice interna di gestori eventi.|
+|[Metodo EventTargetArray::End](../windows/eventtargetarray-end-method.md)|Ottiene l'indirizzo dell'ultimo elemento nella matrice interna di gestori di eventi.|
+|[Metodo EventTargetArray::Length](../windows/eventtargetarray-length-method.md)|Ottiene il numero corrente di elementi nella matrice interna di gestori di eventi.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`EventTargetArray`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Event. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

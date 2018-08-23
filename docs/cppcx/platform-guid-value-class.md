@@ -1,5 +1,5 @@
 ---
-title: 'Classe di valori platform:: GUID | Documenti Microsoft'
+title: 'Classe di valori platform:: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089451"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601254"
 ---
 # <a name="platformguid-value-class"></a>Classe di valori Platform::Guid
 Rappresenta un tipo [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) nel sistema di tipi di Windows Runtime.  
@@ -42,7 +42,7 @@ public value struct Guid
 |[operator()](#operator-call)|Converte Guid in GUID.|  
   
 ### <a name="remarks"></a>Note  
- Per un esempio di come generare un nuovo oggetto Platform::Guid tramite la funzione [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx)di Windows, vedere il post di blog relativo a [come generare un GUID per il componente WinRT](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
+ Per un esempio di come generare un nuovo platform:: GUID tramite la funzione di Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), vedere [componente WinRT: come generare un GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>Requisiti  
  **Client minimo supportato:** Windows 8  
@@ -124,7 +124,7 @@ Inizializza una nuova istanza di uno struct Guid.
  Gli 8 byte rimanenti del GUID.  
   
 
-## <a name="operator-equality"></a> GUID::operator = = (operatore)
+## <a name="operator-equality"></a> GUID::operator Operator = =
 Confronta due GUID.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -134,7 +134,7 @@ Platform::Guid::operator==
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- True se due GUID sono uguali.
+ True se i due GUID sono uguali.
 
 ## <a name="operator-inequality"></a> GUID::operator! = (operatore)
 Confronta due GUID.  
@@ -146,12 +146,12 @@ Platform::Guid::operator!=
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- True se due GUID non sono uguali.
+ True se i due GUID non sono uguali.
 
 
 
 ## <a name="operator-call"></a> Operatore GUID
-Converte in modo implicito un [struttura GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID da un platform:: GUID.  
+Converte in modo implicito una [struttura GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID da un platform:: GUID.  
   
 ### <a name="syntax"></a>Sintassi  
   

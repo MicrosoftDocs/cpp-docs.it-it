@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24188c74136f0326a30b0834c99a36d3fdb5eaf3
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9c23d35a1b6447d6d775c16dfcd12aaf009df9f5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642176"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602194"
 ---
 # <a name="creatormapservername-data-member"></a>Membro dati CreatorMap::serverName
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-const wchar_t* serverName;  
-```  
-  
-## <a name="remarks"></a>Note  
- Archivia il nome del server per il CreatorMap.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [CreatorMap (struttura)](../windows/creatormap-structure.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+const wchar_t* serverName;
+```
+
+## <a name="remarks"></a>Note
+
+Archivia il nome del server per il CreatorMap.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Struttura CreatorMap](../windows/creatormap-structure.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

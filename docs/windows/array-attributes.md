@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f97f1ce98bbc3de81e1888aad7c36f237f6396
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: dfa345ba4b9960e10ebbbd0f2392204c0af34241
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650349"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590636"
 ---
 # <a name="array-attributes"></a>Attributi di matrice
-Gli attributi seguenti si applicano alle matrici o `SAFEARRAY`s.  
-  
-|Attributo|Descrizione|  
-|---------------|-----------------|  
-|[library_block](../windows/library-block.md)|Inserisce un costrutto nel blocco di libreria del file con estensione idl.|  
-|[satype](../windows/satype.md)|Specifica il tipo di dati di `SAFEARRAY` struttura.|  
-|[string](../windows/string-cpp.md)|Indica che l'oggetto unidimensionale **char**, **wchar_t**, `byte` (o equivalenti) matrice o del puntatore a una matrice di questo tipo deve essere trattato come una stringa.|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attributi per utilizzo](../windows/attributes-by-usage.md)
+
+Gli attributi seguenti si applicano alle matrici o `SAFEARRAY`s.
+
+|Attributo|Descrizione|
+|---------------|-----------------|
+|[library_block](../windows/library-block.md)|Inserisce un costrutto nel blocco di libreria del file con estensione idl.|
+|[satype](../windows/satype.md)|Specifica il tipo di dati di `SAFEARRAY` struttura.|
+|[string](../windows/string-cpp.md)|Indica che l'oggetto unidimensionale **char**, **wchar_t**, `byte` (o equivalenti) matrice o del puntatore a una matrice di questo tipo deve essere trattato come una stringa.|
+
+## <a name="see-also"></a>Vedere anche
+
+[Attributi per utilizzo](../windows/attributes-by-usage.md)

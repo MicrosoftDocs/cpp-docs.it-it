@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmwrite | Documenti Microsoft
+title: __vmx_vmwrite | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87aeafd1b9c0c1a35e3f5d99ab5b9d76410b4d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec022fe2d317ec38bc1d9b06f459b9efc7818c92
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337717"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539446"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Sezione specifica Microsoft**  
@@ -56,13 +56,13 @@ unsigned char __vmx_vmwrite(
  Operazione non riuscita senza stato disponibile.  
   
 ## <a name="remarks"></a>Note  
- Il `__vmx_vmwrite` è equivalente alla funzione di `VMWRITE` istruzioni in linguaggio macchina. Il valore di `Field` parametro è un indice codificato campo descritto nella documentazione di Intel. Per ulteriori informazioni, cercare il documento, "Intel Virtualization tecnica specifica per l'architettura IA-32 Intel," documento C97063-002 numero il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) del sito e quindi consultare l'appendice C di tale documento.  
+ Il `__vmx_vmwrite` è equivalente alla funzione il `VMWRITE` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) del sito e quindi vedere Appendice C di tale documento.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmwrite`|X64|  
   
  **File di intestazione** \<intrin. h >  
   

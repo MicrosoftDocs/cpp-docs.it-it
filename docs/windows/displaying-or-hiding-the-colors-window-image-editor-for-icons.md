@@ -18,33 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 757360f231f15bc7166008e0e8d003bebab9eb3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645110"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578755"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Attivazione o disattivazione della finestra Colori (Editor di immagini per le icone)
-### <a name="to-display-colors-window"></a>Per visualizzare la finestra colori  
-  
-1.  Pulsante destro del mouse un' **Editor di immagini** riquadro, quindi scegliere **Visualizza finestra colori** dal menu di scelta rapida.  
-  
-     \- oppure -  
-  
-2.  Fare clic su **Visualizza finestra colori** nel [menu immagine](../windows/image-menu-image-editor-for-icons.md).  
-  
-### <a name="to-hide-the-colors-window"></a>Per nascondere la finestra colori  
-  
-1.  È possibile rimuovere la finestra. In questo modo la finestra Nascondi automaticamente quando non è in uso.  
-  
- \- oppure -  
-  
--   Scegliere il **Chiudi** pulsante.  
-  
-## <a name="requirements"></a>Requisiti  
- nessuno  
-  
-## <a name="see-also"></a>Vedere anche  
- [Finestra colori](../windows/colors-window-image-editor-for-icons.md)   
- [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
+
+### <a name="to-display-colors-window"></a>Per visualizzare la finestra colori
+
+1. Pulsante destro del mouse un' **Editor di immagini** riquadro, quindi scegliere **Visualizza finestra colori** dal menu di scelta rapida.
+
+   \- oppure -
+
+2. Fare clic su **Visualizza finestra colori** nel [menu immagine](../windows/image-menu-image-editor-for-icons.md).
+
+### <a name="to-hide-the-colors-window"></a>Per nascondere la finestra colori
+
+1. È possibile rimuovere la finestra. In questo modo la finestra Nascondi automaticamente quando non è in uso.
+
+\- oppure -
+
+- Scegliere il **Chiudi** pulsante.
+
+## <a name="requirements"></a>Requisiti
+
+nessuno
+
+## <a name="see-also"></a>Vedere anche
+
+[Finestra colori](../windows/colors-window-image-editor-for-icons.md)  
+[Editor di immagini per le icone](../windows/image-editor-for-icons.md)

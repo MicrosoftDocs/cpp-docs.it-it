@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f63fa932de6dc578fa29dd66c9b4030a8aa3140c
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ce041b92a1e6d90089de1a68a89041f1d033e854
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338233"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572277"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 Incapsula un oggetto set di righe OLE DB e diverse relative interfacce e fornisce metodi di modifica per i dati di set di righe.  
@@ -281,16 +281,16 @@ class CRowset
 |-|-|  
 |[AddRefRows](#addrefrows)|Incrementa il conteggio dei riferimenti associati con la riga corrente.|  
 |[Chiudi](#close)|Rilascia le righe e corrente `IRowset` interfaccia.|  
-|[Compare](#compare)|Confronta due segnalibri usando [IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx).|  
+|[Compare](#compare)|Confronta due segnalibri usando [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)).|  
 |[CRowset](#crowset)|Crea un nuovo `CRowset` dell'oggetto e (facoltativamente) lo associa a un `IRowset` interfaccia fornita come parametro.|  
-|[Eliminazione](#delete)|Elimina le righe dal set di righe utilizzando [IRowsetChange:DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx).|  
+|[Eliminazione](#delete)|Elimina le righe dal set di righe utilizzando [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|  
 |[FindNextRow](#findnextrow)|Trova la riga corrispondente successiva dopo il segnalibro specificato.|  
 |[GetApproximatePosition](#getapproximateposition)|Restituisce la posizione approssimativa di una riga corrispondente a un segnalibro.|  
 |[GetData](#getdata)|Recupera i dati dalla copia del set di righe della riga.|  
 |[GetDataHere](#getdatahere)|Recupera i dati dal buffer specificato.|  
 |[GetOriginalData](#getoriginaldata)|Recupera i dati recuperati da più di recente o trasmesso all'origine dei dati, ignorando le modifiche in sospeso.|  
 |[GetRowStatus](#getrowstatus)|Restituisce lo stato di tutte le righe.|  
-|[Inserisci](#insert)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](https://msdn.microsoft.com/library/ms716921.aspx).|  
+|[Inserisci](#insert)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)).|  
 |[IsSameRow](#issamerow)|Confronta la riga specificata con la riga corrente.|  
 |[MoveFirst](#movefirst)|Riposiziona il percorso per il recupero successivo nella posizione iniziale.|  
 |[MoveLast](#movelast)|Passa all'ultimo record.|  
@@ -298,8 +298,8 @@ class CRowset
 |[MovePrev](#moveprev)|Passa al record precedente.|  
 |[MoveToBookmark](#movetobookmark)|Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di un offset specificato da questo segnalibro.|  
 |[MoveToRatio](#movetoratio)|Recupera le righe a partire da una posizione frazionaria nel set di righe.|  
-|[ReleaseRows](#releaserows)|Le chiamate [:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) per rilasciare l'handle di riga corrente.|  
-|[SetData](#setdata)|Imposta i valori dei dati in una o più colonne di una riga usando [IRowsetChange:SetData](https://msdn.microsoft.com/library/ms721232.aspx).|  
+|[ReleaseRows](#releaserows)|Le chiamate [:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) per rilasciare l'handle di riga corrente.|  
+|[SetData](#setdata)|Imposta i valori dei dati in una o più colonne di una riga usando [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)).|  
 |[Operazione di annullamento](#undo)|Annulla le modifiche apportate a una riga dall'ultimo recupero o [Update](../../data/oledb/crowset-update.md).|  
 |[Aggiornamento](#update)|Consente di trasmettere le modifiche apportate alla riga corrente dall'ultima istruzione fetch o aggiornamento in sospeso.|  
 |[UpdateAll](#updateall)|Consente di trasmettere le modifiche apportate a tutte le righe dopo l'ultimo recupero o l'aggiornamento in sospeso.|  
@@ -310,7 +310,7 @@ class CRowset
  Questa classe non deve essere creata un'istanza ma piuttosto passato come parametro di modello per `CTable` oppure `CCommand` (`CRowset` è l'impostazione predefinita).  
 
 ## <a name="addrefrows"></a> CRowset:: Addrefrows
-Le chiamate [IRowset:: Addrefrows](https://msdn.microsoft.com/library/ms719619.aspx) incremento (uno) il conteggio dei riferimenti associati con l'handle di riga corrente.  
+Le chiamate [IRowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) incremento (uno) il conteggio dei riferimenti associati con l'handle di riga corrente.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -325,7 +325,7 @@ HRESULT AddRefRows() throw();
  Questo metodo incrementa il conteggio dei riferimenti per l'handle di riga corrente. Chiamare [ReleaseRows](../../data/oledb/crowset-releaserows.md) per diminuire il conteggio. Righe restituite dai metodi di spostamento hanno un conteggio dei riferimenti di uno.  
 
 ## <a name="close"></a> CRowset:: Close
-Rilascia le righe e l'oggetto corrente [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) interfaccia.  
+Rilascia le righe e l'oggetto corrente [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) interfaccia.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -337,7 +337,7 @@ void Close() throw();
  Questo metodo rilascia tutte le righe correntemente nel set di righe.  
 
 ## <a name="compare"></a> CRowset:: compare
-Confronta due segnalibri usando [IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx).  
+Confronta due segnalibri usando [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -366,7 +366,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
  Per informazioni sull'utilizzo di segnalibri degli utenti, vedere [mediante segnalibri](../../data/oledb/using-bookmarks.md).  
 
 ## <a name="crowset"></a> CRowset:: CRowset
-Crea un nuovo `CRowset` dell'oggetto e (facoltativamente) lo associa a un [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) interfaccia fornita come parametro.  
+Crea un nuovo `CRowset` dell'oggetto e (facoltativamente) lo associa a un [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) interfaccia fornita come parametro.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -381,7 +381,7 @@ CRowset(IRowset* pRowset);
  [in] Puntatore a un'interfaccia `IRowset` da associare a questa classe.  
 
 ## <a name="delete"></a> CRowset:: Delete
-Le chiamate [IRowsetChange:: DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx) per eliminare la riga corrente dal set di righe.  
+Le chiamate [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) per eliminare la riga corrente dal set di righe.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -410,22 +410,22 @@ HRESULT FindNextRow(DBCOMPAREOP op,
   
 #### <a name="parameters"></a>Parametri  
  *op*  
- [in] L'operazione da usare nel confronto dei valori di riga. Per i valori, vedere [irowsetfind:: FindNextRow](https://msdn.microsoft.com/library/ms723091.aspx).  
+ [in] L'operazione da usare nel confronto dei valori di riga. Per i valori, vedere [irowsetfind:: FindNextRow](/previous-versions/windows/desktop/ms723091\(v=vs.85\)).  
   
  *pData*  
  [in] Puntatore al valore da ricercare.  
   
  *wType*  
- [in] Indica il tipo di dati della parte valore del buffer. Per informazioni sugli indicatori di tipo, vedere [tipi di dati](https://msdn.microsoft.com/library/ms723969.aspx) nel *riferimento per programmatori OLE DB* nel SDK di Windows.  
+ [in] Indica il tipo di dati della parte valore del buffer. Per informazioni sugli indicatori di tipo, vedere [tipi di dati](/previous-versions/windows/desktop/ms723969\(v=vs.85\)) nel *riferimento per programmatori OLE DB* nel SDK di Windows.  
   
  *nLength*  
- [in] La lunghezza, espressa in byte, della struttura dei dati consumer allocata per il valore dei dati. Per informazioni dettagliate, vedere la descrizione del `cbMaxLen` nelle [strutture DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) nel *riferimento per programmatori OLE DB.*  
+ [in] La lunghezza, espressa in byte, della struttura dei dati consumer allocata per il valore dei dati. Per informazioni dettagliate, vedere la descrizione del `cbMaxLen` nelle [strutture DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) nel *riferimento per programmatori OLE DB.*  
   
  *bPrecision*  
- [in] La precisione massima utilizzata durante il recupero dei dati. Utilizzato solo se *wType* è DBTYPE_NUMERIC. Per altre informazioni, vedere [conversioni DBTYPE_NUMERIC o DBTYPE_DECIMAL](https://msdn.microsoft.com/library/ms719714.aspx) nel *riferimento per programmatori OLE DB*.  
+ [in] La precisione massima utilizzata durante il recupero dei dati. Utilizzato solo se *wType* è DBTYPE_NUMERIC. Per altre informazioni, vedere [conversioni DBTYPE_NUMERIC o DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
  *bScale*  
- [in] La scala usata durante il recupero dei dati. Utilizzato solo se *wType* è DBTYPE_NUMERIC o DBTYPE_DECIMAL. Per altre informazioni, vedere [conversioni DBTYPE_NUMERIC o DBTYPE_DECIMAL](https://msdn.microsoft.com/library/ms719714.aspx) nel *riferimento per programmatori OLE DB*.  
+ [in] La scala usata durante il recupero dei dati. Utilizzato solo se *wType* è DBTYPE_NUMERIC o DBTYPE_DECIMAL. Per altre informazioni, vedere [conversioni DBTYPE_NUMERIC o DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
  *bSkipCurrent*  
  [in] Il numero di righe del segnalibro da cui iniziare la ricerca.  
@@ -596,7 +596,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
  [in] Handle per la riga da confrontare con la riga corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard. S_OK indica che le righe sono uguali. Per altri valori, vedere [IRowsetIndentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) nel *riferimento per programmatori OLE DB* nel SDK di Windows.  
+ Un valore HRESULT standard. S_OK indica che le righe sono uguali. Per altri valori, vedere [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) nel *riferimento per programmatori OLE DB* nel SDK di Windows.  
 
 ## <a name="movefirst"></a> CRowset:: MoveFirst
 Sposta il cursore nella posizione iniziale e recupera la riga iniziale.  
@@ -611,7 +611,7 @@ HRESULT MoveFirst() throw();
  Un valore HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [IRowset:: RestartPosition](https://msdn.microsoft.com/library/ms712877.aspx) per riposizionare il percorso per il recupero successivo nella posizione iniziale (la posizione che era la posizione successiva per il recupero quando è stato creato il set di righe) e recupera la riga iniziale.  
+ Le chiamate [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) per riposizionare il percorso per il recupero successivo nella posizione iniziale (la posizione che era la posizione successiva per il recupero quando è stato creato il set di righe) e recupera la riga iniziale.  
 
 ## <a name="movelast"></a> CRowset:: MoveLast
 Sposta il cursore nell'ultima riga.  
@@ -626,7 +626,7 @@ HRESULT MoveLast() throw();
  Un valore HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [IRowset:: RestartPosition](https://msdn.microsoft.com/library/ms712877.aspx) riposizionare il percorso per il recupero successivo all'ultimo per posizionare e recupera l'ultima riga.  
+ Le chiamate [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) riposizionare il percorso per il recupero successivo all'ultimo per posizionare e recupera l'ultima riga.  
   
  Questo metodo richiede l'impostazione `DBPROP_CANSCROLLBACKWARDS` su VARIANT_TRUE prima di chiamare `Open` la tabella o un comando che contiene il set di righe. (Per ottenere prestazioni migliori, è anche possibile impostare `DBPROP_QUICKRESTART` su VARIANT_TRUE.)  
 
@@ -731,12 +731,12 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- In cui `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](https://msdn.microsoft.com/library/ms709602.aspx).  
+ In cui `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)).  
   
  Questo metodo richiede l'interfaccia facoltativa `IRowsetScroll`, che potrebbe non essere supportato in tutti i provider; se questo è il caso, il metodo restituisce E_NOINTERFACE. È necessario impostare anche `DBPROP_IRowsetScroll` su VARIANT_TRUE prima di chiamare `Open` la tabella o un comando che contiene il set di righe.  
 
 ## <a name="releaserows"></a> CRowset:: ReleaseRows
-Le chiamate [:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) per rilasciare l'handle di riga corrente.  
+Le chiamate [:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) per rilasciare l'handle di riga corrente.  
   
 ### <a name="syntax"></a>Sintassi  
   

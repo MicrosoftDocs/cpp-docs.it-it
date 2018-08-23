@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333118"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540455"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Sezione specifica Microsoft**  
   
- su x64, sposta un valore a 64 bit specificato dal primo parametro a destra di un numero di bit specificati dal secondo parametro.  
+ in x64, sposta un valore a 64 bit specificato dal primo parametro a destra di un numero di bit specificato dal secondo parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,24 +40,24 @@ unsigned __int64 __ull_rshift(
   
 #### <a name="parameters"></a>Parametri  
  [in] `mask`  
- Valore integer a 64 bit da spostare a destra.  
+ Valore intero a 64 bit da spostare a destra.  
   
  [in] `nBit`  
- Il numero di bit da spostare, modulo 32 x86 e modulo 64 in x64.  
+ Il numero di bit da spostare, modulo 32 su x86 e modulo 64 in x64.  
   
 ## <a name="return-value"></a>Valore restituito  
- Spostata la maschera `nBit` bits.  
+ La maschera spostato `nBit` bits.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Se il secondo parametro è maggiore di 31 su x86 (63 su x64), tale numero viene eseguito modulo 32 (64 su x64) per determinare il numero di bit da spostare. Il `ull` indica il nome `unsigned long long (unsigned __int64)`.  
+ Se il secondo parametro è maggiore di 31 su x86 (63 su x64), tale numero viene acquisito modulo 32 (64 su x64) per determinare il numero di bit da spostare. Il `ull` nel nome indica `unsigned long long (unsigned __int64)`.  
   
 ## <a name="example"></a>Esempio  
   

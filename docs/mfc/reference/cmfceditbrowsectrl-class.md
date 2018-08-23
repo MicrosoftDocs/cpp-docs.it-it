@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854008"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541273"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 Il `CMFCEditBrowseCtrl` classe supporta il controllo di esplorazione di modifica, che è una casella di testo modificabile che contiene facoltativamente un pulsante Sfoglia. Quando l'utente fa clic sul pulsante Sfoglia, il controllo esegue un'azione personalizzata o visualizza una finestra di dialogo standard che contiene un visualizzatore file o un visualizzatore cartelle.  
@@ -174,7 +174,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>Note  
  Quando il controllo di modifica con pulsante sfoglia è in modalità di visualizzazione di file e l'utente fa clic sul pulsante Sfoglia, il controllo visualizza la finestra di dialogo di selezione file standard.  
   
- Per un elenco completo dei flag, vedere [struttura OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Per un elenco completo dei flag, vedere [struttura OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Visualizza il pulsante Sfoglia nel controllo di visualizzazione di modifica corrente e inserisce il controllo nella *Sfoglia cartella* modalità.  

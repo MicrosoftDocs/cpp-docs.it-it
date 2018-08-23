@@ -1,5 +1,5 @@
 ---
-title: back_inserter (funzione) | Documenti Microsoft
+title: Funzione back_inserter | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - back_inserter Function
 ms.assetid: 91476338-5548-44b7-bc7e-2150f4fbe31a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532b831dfd09a3a1a00637feafabcfd037b05156
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6142255c00d9764e4a1a18dab094899b5e9d9e1d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087705"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589987"
 ---
 # <a name="backinserter-function"></a>back_inserter (funzione)
 Restituisce un iteratore che viene utilizzato per inserire elementi alla fine della raccolta specificata.  
@@ -54,4 +54,4 @@ Platform::BackInsertIterator<T>
  **Spazio dei nomi:** Windows::Foundation::Collections  
   
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+ [Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

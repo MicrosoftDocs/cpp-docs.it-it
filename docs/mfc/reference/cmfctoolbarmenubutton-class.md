@@ -102,16 +102,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93e913a2ea99697927ed99a452da395d657b6b05
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 83cf5f7cbe9b903f9cdc7a96b2fa046ff3f9eab5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851707"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541045"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 Pulsante della barra degli strumenti contenente un menu di scelta rapida.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ## <a name="syntax"></a>Sintassi  
   

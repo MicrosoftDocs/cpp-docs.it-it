@@ -1,5 +1,5 @@
 ---
-title: Compilazione di programmi C/C++ | Documenti Microsoft
+title: Compilazione di programmi C/C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360975"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572840"
 ---
 # <a name="building-cc-programs"></a>Compilazione di programmi C/C++
 
-Per compilare progetti di Visual C++ è possibile usare Visual Studio o la riga di comando. IDE di Visual Studio Usa [MSBuild](../build/msbuild-visual-cpp.md) per compilare progetti e soluzioni. Sulla riga di comando è possibile usare il compilatore C/C++ (cl.exe) e il linker (link.exe) per compilare progetti semplici. Per compilare progetti più complessi nella riga di comando, è possibile utilizzare MSBuild o [NMAKE](../build/nmake-reference.md). Per una panoramica su come usare [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] per compilare progetti e soluzioni, vedere [e compilazione](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+Per compilare progetti di Visual C++ è possibile usare Visual Studio o la riga di comando. IDE di Visual Studio Usa [MSBuild](../build/msbuild-visual-cpp.md) per compilare progetti e soluzioni. Sulla riga di comando è possibile usare il compilatore C/C++ (cl.exe) e il linker (link.exe) per compilare progetti semplici. Per compilare progetti più complessi nella riga di comando, è possibile usare MSBuild o [NMAKE](../build/nmake-reference.md). Per una panoramica su come usare Visual Studio per compilare progetti e soluzioni, vedere [compilazione e creazione](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
 ## <a name="in-this-section"></a>In questa sezione  
 

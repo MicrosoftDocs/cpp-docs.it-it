@@ -1,5 +1,5 @@
 ---
-title: __outbytestring | Documenti Microsoft
+title: __outbytestring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61fcd7875fd98e73c2d4cbd6502a98624daed5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55dc6492faea101df40c2901ced24321822f36e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334623"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539257"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Sezione specifica Microsoft**  
   
- Genera il `rep outsb` (istruzione), che invia il primo `Count` byte di dati a cui puntava `Buffer` alla porta specificata da `Port`.  
+ Genera il `rep outsb` istruzione, che invia il primo `Count` byte di dati a cui punta `Buffer` alla porta specificata da `Port`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ void __outbytestring(
  La porta per inviare i dati.  
   
  [in] `Buffer`  
- I dati da inviare alla porta specificata.  
+ I dati da inviare attraverso la porta specificata.  
   
  [in] `Count`  
  Il numero di byte di dati da inviare.  
@@ -54,7 +54,7 @@ void __outbytestring(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__outbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbytestring`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Moltiplicazione | Documenti Microsoft'
+title: 'Procedura dettagliata: Moltiplicazione di matrici | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,59 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3aaf94bbe94dda019cc585b82744dbdf2332ffab
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693195"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604490"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Procedura dettagliata: moltiplicazione di matrici
-Questa procedura dettagliata viene illustrato come utilizzare C++ AMP per accelerare l'esecuzione di moltiplicazione. Vengono presentati due algoritmi, uno senza affiancamento e uno con affiancamento.  
+Questa procedura dettagliata viene illustrato come utilizzare C++ AMP per accelerare l'esecuzione della moltiplicazione di matrici. Vengono presentati due algoritmi, uno senza affiancamento e uno con affiancamento.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Prima di iniziare:  
+ 
+Prima di iniziare:  
   
--   Lettura [C++ AMP Panoramica](../../parallel/amp/cpp-amp-overview.md).  
+- Lettura [Panoramica di C++ AMP](../../parallel/amp/cpp-amp-overview.md).  
   
--   Lettura [utilizzando riquadri](../../parallel/amp/using-tiles.md).  
+- Lettura [usando i riquadri](../../parallel/amp/using-tiles.md).  
   
--   Assicurarsi che [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], o [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)] è installato nel computer in uso.  
+- Assicurarsi che Windows 7, Windows 8, Windows Server 2008 R2 o Windows Server 2012 è installato nel computer.  
   
 ### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Nella barra dei menu in Visual Studio, scegliere **File**, **New**, **progetto**.  
+1. Nella barra dei menu in Visual Studio, scegliere **File** > **New** > **progetto**.  
   
-2.  In **installato** nel riquadro Modelli selezionare **Visual C++**.  
+2. Sotto **Installed** nel riquadro Modelli selezionare **Visual C++**.  
   
-3.  Selezionare **progetto vuoto**, immettere `MatrixMultiply` nel **nome** , quindi scegliere il **OK** pulsante.  
+3. Selezionare **progetto vuoto**, immettere `MatrixMultiply` nel **Name** casella e quindi scegliere il **OK** pulsante.  
   
-4.  Fare clic su **Avanti**.  
+4. Fare clic su **Avanti**.  
   
-5.  In **Esplora**, aprire il menu di scelta rapida per **i file di origine**, quindi scegliere **Aggiungi**, **nuovo elemento**.  
+5. In **Esplora soluzioni**, aprire il menu di scelta rapida **i file di origine**, quindi scegliere **Add** > **nuovo elemento**.  
   
-6.  Nel **Aggiungi nuovo elemento** nella finestra di dialogo **File C++ (. cpp)**, immettere `MatrixMultiply.cpp` nel **nome** , quindi scegliere il **Aggiungi** pulsante.  
+6. Nel **Aggiungi nuovo elemento** finestra di dialogo **File di C++ (. cpp)**, immettere `MatrixMultiply.cpp` nel **nome** casella e quindi scegliere il **Aggiungi** pulsante.  
   
-## <a name="multiplication-without-tiling"></a>Moltiplicazione senza affiancamento  
- In questa sezione, prendere in considerazione la moltiplicazione di due matrici, A e B, che sono definiti come segue:  
+## <a name="multiplication-without-tiling"></a>Moltiplicazione senza visualizzazione affiancata  
+ 
+In questa sezione, prendere in considerazione la moltiplicazione di due matrici, A e B, che sono definiti come segue:  
   
- ![3&#45;da&#45;matrice 2](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+![3&#45;da&#45;2 matrix](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2&#45;da&#45;3 matrice](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+![2&#45;da&#45;3 matrix](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
- È una matrice 3 per 2 e B è una matrice 2 per 3. Il prodotto della moltiplicazione da B è la seguente matrice 3 per 3. Il prodotto viene calcolato moltiplicando le righe dell'oggetto da colonne di B elemento per elemento.  
+È una matrice 3 per 2 e B è una matrice 2 per 3. Il prodotto della moltiplicazione da B è la seguente matrice 3 per 3. Il prodotto viene calcolato moltiplicando le righe dell'oggetto da colonne di B elemento per elemento.  
   
- ![3&#45;da&#45;3 matrice](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+![3&#45;da&#45;3 matrix](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
-### <a name="to-multiply-without-using-c-amp"></a>Moltiplicare senza l'utilizzo di C++ AMP  
+### <a name="to-multiply-without-using-c-amp"></a>Moltiplicare senza utilizzare C++ AMP  
   
-1.  Aprire MatrixMultiply.cpp e utilizzare il codice seguente per sostituire il codice esistente.  
+1. Aprire MatrixMultiply.cpp e usare il codice seguente per sostituire il codice esistente.  
   
 ```cpp  
 #include <iostream>  
   
 void MultiplyWithOutAMP() {  
-  
     int aMatrix[3][2] = {{1, 4}, {2, 5}, {3, 6}};  
     int bMatrix[2][3] = {{7, 8, 9}, {10, 11, 12}};  
     int product[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};  
@@ -89,15 +90,15 @@ void main() {
   
     The algorithm is a straightforward implementation of the definition of matrix multiplication. It does not use any parallel or threaded algorithms to reduce the computation time.  
   
-2.  Nella barra dei menu scegliere **File**, **Salva tutto**.  
+2. Sulla barra dei menu scegliere **File** > **Salva tutto**.  
   
-3.  Scegliere la combinazione di tasti F5 per avviare il debug e verificare che l'output sia corretto.  
+3. Scegliere il **F5** tasti di scelta rapida per avviare il debug e verificare che l'output sia corretto.  
   
-4.  Premere INVIO per uscire dall'applicazione.  
+4. Scegli **invio** per uscire dall'applicazione.  
   
-### <a name="to-multiply-by-using-c-amp"></a>Per moltiplicare per l'utilizzo di C++ AMP  
+### <a name="to-multiply-by-using-c-amp"></a>Da moltiplicare con C++ AMP  
   
-1.  In MatrixMultiply.cpp, aggiungere il codice seguente prima di `main` metodo.  
+1. In MatrixMultiply.cpp, aggiungere il codice seguente prima di `main` (metodo).  
   
 ```cpp  
 void MultiplyWithAMP() {  
@@ -111,7 +112,6 @@ void MultiplyWithAMP() {
 
     array_view<int, 2> product(3, 3, productMatrix);
 
- 
     parallel_for_each(product.extent,  
         [=] (index<2> idx) restrict(amp) {  
             int row = idx[0];  
@@ -135,14 +135,14 @@ void MultiplyWithAMP() {
   
     The AMP code resembles the non-AMP code. The call to `parallel_for_each` starts one thread for each element in `product.extent`, and replaces the `for` loops for row and column. The value of the cell at the row and column is available in `idx`. You can access the elements of an `array_view` object by using either the `[]` operator and an index variable, or the `()` operator and the row and column variables. The example demonstrates both methods. The `array_view::synchronize` method copies the values of the `product` variable back to the `productMatrix` variable.  
   
-2.  Aggiungere il seguente `include` e `using` istruzioni all'inizio del MatrixMultiply.cpp.  
+2. Aggiungere il codice seguente `include` e `using` istruzioni all'inizio del MatrixMultiply.cpp.  
   
 ```cpp  
 #include <amp.h>  
 using namespace concurrency;  
 ```  
   
-3.  Modificare il `main` metodo da chiamare il `MultiplyWithAMP` metodo.  
+3. Modificare il `main` metodo da chiamare il `MultiplyWithAMP` (metodo).  
   
 ```cpp  
 void main() {  
@@ -152,53 +152,53 @@ void main() {
 }  
 ```  
   
-4.  Scegliere la combinazione di tasti Ctrl + F5 per avviare il debug e verificare che l'output sia corretto.  
+4. Scegliere il **Ctrl**+**F5** tasti di scelta rapida per avviare il debug e verificare che l'output sia corretto.  
   
-5.  Scegliere la barra spaziatrice per uscire dall'applicazione.  
+5. Scegliere il **barra spaziatrice** per uscire dall'applicazione.  
   
 ## <a name="multiplication-with-tiling"></a>Moltiplicazione con affiancamento  
- Affiancamento è una tecnica in cui i dati vengono partizionati in subset uguali dimensioni sono note come riquadri. Tre operazioni di modifica quando si utilizza l'affiancamento.  
+ 
+Visualizzazione affiancata è una tecnica di partizionamento dei dati in subset uguali dimensioni che sono note come riquadri. Tre cose cambiano quando si usa per l'affiancamento.  
   
--   È possibile creare `tile_static` variabili. Accesso ai dati in `tile_static` spazio può essere notevolmente superiore rispetto ai dati nello spazio globale. Un'istanza di un `tile_static` variabile viene creata per ogni sezione e nel riquadro tutti i thread hanno accesso alla variabile. Il vantaggio principale di affiancamento è il miglioramento delle prestazioni a causa di `tile_static` accesso.  
+- È possibile creare `tile_static` variabili. Accesso ai dati in `tile_static` spazio può essere più volte più veloce rispetto all'accesso ai dati nello spazio globale. Un'istanza di un `tile_static` variabile viene creata per ogni sezione e tutti i thread nella sezione hanno accesso alla variabile. Il vantaggio principale del sezionamento è il miglioramento delle prestazioni a causa dell'errore `tile_static` accesso.  
   
--   È possibile chiamare il [tile_barrier:: Wait](reference/tile-barrier-class.md#wait) metodo per interrompere tutti i thread in un riquadro in una riga di codice specificata. Non è possibile garantire l'ordine in cui verrà eseguito il thread, solo che tutti i thread in un riquadro verrà arrestato in corrispondenza della chiamata a `tile_barrier::wait` prima di continuare l'esecuzione.  
+- È possibile chiamare il [tile_barrier:: Wait](reference/tile-barrier-class.md#wait) metodo arrestare tutti i thread in un riquadro in una riga di codice specificata. Non è possibile garantire l'ordine in cui verranno eseguiti i thread, solo che tutti i thread in un riquadro verrà interrotta in corrispondenza della chiamata a `tile_barrier::wait` prima di continuare l'esecuzione.  
 
+- È possibile utilizzare l'indice del thread relativo all'intero `array_view` oggetto e all'indice relativo riquadro. Tramite l'indice locale, è possibile rendere il codice più facile da leggere ed eseguire il debug.  
   
--   Si ha accesso all'indice del thread relativo dell'intero `array_view` oggetto e l'indice relativo riquadro. Tramite l'indice locale, è possibile rendere il codice più facile da leggere ed eseguire il debug.  
+Per sfruttare i vantaggi del sezionamento nella moltiplicazione di matrici, l'algoritmo deve suddividere la matrice in sezioni e quindi copiare i dati del riquadro in `tile_static` variabili per un accesso più rapido. In questo esempio, la matrice viene partizionata in sottomatrici della stessa dimensione. Il prodotto è stato trovato moltiplicando i sottomatrici. Le due matrici e i prodotti in questo esempio sono:  
   
- Per sfruttare i vantaggi di affiancamento nella moltiplicazione, l'algoritmo necessario partizionare la matrice in riquadri, quindi copiare i dati della sezione in `tile_static` variabili per un accesso più rapido. In questo esempio, la matrice viene partizionata in sottomatrici di uguale dimensione. Il prodotto è stato trovato moltiplicando i sottomatrici. Le due matrici e il prodotto in questo esempio sono:  
+![4&#45;da&#45;matrice 4](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4&#45;da&#45;4 matrice](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+![4&#45;da&#45;matrice 4](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4&#45;da&#45;4 matrice](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+![4&#45;da&#45;matrice 4](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
- ![4&#45;da&#45;4 matrice](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+Le matrici sono suddivisi in quattro 2x2 matrici, che sono definite come segue:  
   
- Le matrici sono suddivisi in quattro 2x2 matrici, che sono definite come segue:  
+![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
- ![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+Il prodotto di A e B possono essere scritti e calcolata come segue:  
   
- Il prodotto di A e B può ora essere scritta e calcolata come segue:  
+![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
- ![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+Poiché le matrici `a` tramite `h` sono 2x2 matrici, tutti i prodotti e somme di essi sono anche 2x2 matrici. Segue anche che A * B è una 4x4 matrice, come previsto. Per controllare rapidamente l'algoritmo, calcolare il valore dell'elemento nella prima riga, prima colonna all'interno del prodotto. Nell'esempio, che sarà il valore dell'elemento nella prima riga e colonna prima di `ae + bg`. È sufficiente calcolare la prima colonna, la prima riga della `ae` e `bg` per ciascun termine. Tale valore per `ae` è `1*1 + 2*5 = 11`. Il valore per `bg` è `3*1 + 4*5 = 23`. Il valore finale è `11 + 23 = 34`, che sia corretto.  
   
- Poiché le matrici `a` tramite `h` è 2x2 matrici, tutti i prodotti e le somme di essi sono anche 2x2 matrici. Segue anche che A * B è una 4x4 matrice, come previsto. Per verificare rapidamente l'algoritmo, calcolare il valore dell'elemento nella prima riga della prima colonna all'interno del prodotto. Nell'esempio che sarebbe il valore dell'elemento nella prima colonna della prima riga `ae + bg`. È necessario calcolare la prima riga della prima colonna `ae` e `bg` per ogni termine. Tale valore per `ae` è `1*1 + 2*5 = 11`. Il valore per `bg` è `3*1 + 4*5 = 23`. Il valore finale è `11 + 23 = 34`, che sia corretto.  
+Per implementare questo algoritmo, il codice:  
   
- Per implementare questo algoritmo, il codice:  
+- Usa una `tiled_extent` dell'oggetto anziché un' `extent` dell'oggetto nel `parallel_for_each` chiamare.  
   
--   Usa un `tiled_extent` oggetto anziché un `extent` oggetto di `parallel_for_each` chiamare.  
+- Usa una `tiled_index` dell'oggetto anziché un' `index` dell'oggetto nel `parallel_for_each` chiamare.  
   
--   Usa un `tiled_index` oggetto anziché un `index` oggetto di `parallel_for_each` chiamare.  
+- Crea `tile_static` variabili per mantenere la sottomatrici.  
   
--   Crea `tile_static` variabili per mantenere i sottomatrici.  
+- Usa il `tile_barrier::wait` metodo per interrompere i thread per il calcolo dei prodotti per la sottomatrici.  
   
--   Usa il `tile_barrier::wait` metodo per interrompere il thread per il calcolo dei prodotti di sottomatrici.  
+### <a name="to-multiply-by-using-amp-and-tiling"></a>Moltiplicare tramite AMP e affiancamento  
   
-### <a name="to-multiply-by-using-amp-and-tiling"></a>Moltiplicare utilizzando AMP e affiancamento  
-  
-1.  In MatrixMultiply.cpp, aggiungere il codice seguente prima di `main` metodo.  
+1. In MatrixMultiply.cpp, aggiungere il codice seguente prima di `main` (metodo).  
   
 ```cpp  
 void MultiplyWithTiling() {  
@@ -271,23 +271,23 @@ void MultiplyWithTiling() {
   
     This example is significantly different than the example without tiling. The code uses these conceptual steps:  
   
-    1.  Copiare gli elementi della sezione [0,0] di `a` in `locA`. Copiare gli elementi della sezione [0,0] di `b` in `locB`. Si noti che `product` viene affiancata, non `a` e `b`. È pertanto utilizzare indici globali per accedere a `a, b`, e `product`. La chiamata a `tile_barrier::wait` è essenziale. Arresta tutti i thread nel riquadro fino a quando sia `locA` e `locB` vengono riempite completamente.  
+    1. Copiare gli elementi della sezione [0,0] dei `a` in `locA`. Copiare gli elementi della sezione [0,0] dei `b` in `locB`. Si noti che `product` viene affiancata, non `a` e `b`. Pertanto, è utilizzare indici globali per accedere `a, b`, e `product`. La chiamata a `tile_barrier::wait` è essenziale. Arresta tutti i thread nella sezione fino a quando sia `locA` e `locB` vengono compilati.  
   
-    2.  Moltiplicare `locA` e `locB` e inserire i risultati in `product`.  
+    2. Moltiplicare `locA` e `locB` e inserire i risultati in `product`.  
   
-    3.  Copiare gli elementi della sezione [0,1] di `a` in `locA`. Copiare gli elementi della sezione [1,0] di `b` in `locB`.  
+    3. Copiare gli elementi della sezione [0,1] dei `a` in `locA`. Copiare gli elementi della sezione [1,0] dei `b` in `locB`.  
   
-    4.  Moltiplicare `locA` e `locB` e aggiungerli ai risultati che sono già in `product`.  
+    4. Moltiplicare `locA` e `locB` e aggiungerli ai risultati che sono già presenti nel `product`.  
   
-    5.  La moltiplicazione di riquadro [0,0] è stata completata.  
+    5. La moltiplicazione del riquadro [0,0] è stata completata.  
   
-    6.  Ripetere per le quattro sezioni. Non vi è alcun l'indicizzazione in particolare per i riquadri e i thread possono eseguire in qualsiasi ordine. Poiché ogni thread viene eseguito, il `tile_static` le variabili vengono create in modo appropriato per ogni sezione e la chiamata a `tile_barrier::wait` controlla il flusso di programma.  
+    6. Ripetere per le quattro sezioni. Non esiste alcun processo di indicizzazione in modo specifico per i riquadri e i thread possono eseguire in qualsiasi ordine. Poiché ogni thread viene eseguito, il `tile_static` le variabili vengono create in modo appropriato per ogni sezione e la chiamata a `tile_barrier::wait` controlla il flusso di programma.  
   
-    7.  Quando si esamina attentamente l'algoritmo, si noti che ogni sottomatrice viene caricato un `tile_static` memoria due volte. Tempo di trasferimento di dati. Tuttavia, quando i dati sono `tile_static` accesso ai dati di memoria, è molto più veloce. Poiché il calcolo dei prodotti richiede l'accesso ripetuto ai valori di sottomatrici, vi è un miglioramento delle prestazioni complessive. Per ogni algoritmo, è necessario sperimentazione per trovare l'algoritmo ottimale e delle dimensioni.  
+    7. Quando si esamina da vicino l'algoritmo, si noti che ogni sottomatrice venga caricato in un `tile_static` memoria due volte. Tempo di trasferimento dei dati. Tuttavia, quando i dati sono `tile_static` memoria, l'accesso ai dati è molto più veloce. Poiché il calcolo dei prodotti richiede l'accesso ripetuta ai valori di sottomatrici, si verifica un miglioramento delle prestazioni complessive. Per ogni algoritmo, sperimentazione deve individuare l'algoritmo ottima e affiancare le dimensioni.  
   
-         Negli esempi non AMP e non di riquadro, ogni elemento dell'oggetto B a cui si accede quattro volte dalla memoria globale per calcolare il prodotto. Nell'esempio di riquadro, accesso due volte dalla memoria globale e quattro volte da ogni elemento di `tile_static` memoria. Non è un miglioramento significativo delle prestazioni. Se, tuttavia, di A e B sono state 1024 x 1024 matrici e le dimensioni della finestra sono 16, non vi sarà un miglioramento significativo delle prestazioni. In tal caso, verrà copiata in ogni elemento `tile_static` memoria solo 16 volte e sono accessibili dai `tile_static` memoria volte 1024.  
+         Negli esempi non AMP e non riquadro, ogni elemento dell'oggetto B a cui si accede quattro volte dalla memoria globale per la quale calcolare il prodotto. Nel riquadro esempio accesso due volte dalla memoria globale e quattro volte da ogni elemento di `tile_static` memoria. Non è un miglioramento significativo delle prestazioni. Tuttavia, se il A e B sono state 1024 x 1024 matrici e delle dimensioni riquadro sono stati 16, non vi sarà un miglioramento significativo delle prestazioni. In tal caso, ogni elemento verrà copiato `tile_static` memoria solo 16 volte e accedervi da `tile_static` memoria volte 1024.  
   
-2.  Modificare il metodo principale per chiamare il `MultiplyWithTiling` (metodo), come illustrato.  
+2. Modificare il metodo main per chiamare il `MultiplyWithTiling` metodo, come illustrato.  
   
 ```cpp  
 void main() {  
@@ -298,11 +298,11 @@ void main() {
 }  
 ```  
   
-3.  Scegliere la combinazione di tasti Ctrl + F5 per avviare il debug e verificare che l'output sia corretto.  
+3. Scegliere il **Ctrl**+**F5** tasti di scelta rapida per avviare il debug e verificare che l'output sia corretto.  
   
-4.  Scegliere la barra spaziatrice per uscire dall'applicazione.  
+4. Scegliere il **spazio** barra per uscire dall'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Procedura dettagliata: debug di un'applicazione C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
-
+ 
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+[Procedura dettagliata: debug di un'applicazione C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

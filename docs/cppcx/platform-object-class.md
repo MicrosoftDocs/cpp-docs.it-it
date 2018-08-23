@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: Object | Documenti Microsoft'
+title: 'Classe platform:: Object | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091881"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601738"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 Fornisce il comportamento comune per le classi e struct di riferimento nelle app di Windows Runtime. Tutte le istanze delle classi e degli struct di riferimento sono implicitamente convertibili a Platform::Object^ e possono eseguire l'override del relativo metodo ToString virtuale.  
@@ -99,7 +99,7 @@ public:int GetHashCode()
  Valore numerico che identifica in modo univoco l'oggetto.  
   
 ### <a name="remarks"></a>Note  
- Puoi usare GetHashCode per creare chiavi per gli oggetti nella mappa. È possibile confrontare i codici hash tramite [Object:: Equals](#equals). Se il percorso del codice è estremamente critico e `GetHashCode` e `Equals` non sono sufficientemente veloci, puoi passare al livello COM sottostante ed effettuare confronti tra puntatori `IUnknown` nativi.  
+ Puoi usare GetHashCode per creare chiavi per gli oggetti nella mappa. È possibile confrontare i codici hash usando [Object:: Equals](#equals). Se il percorso del codice è estremamente critico e `GetHashCode` e `Equals` non sono sufficientemente veloci, puoi passare al livello COM sottostante ed effettuare confronti tra puntatori `IUnknown` nativi.  
   
 
 
@@ -117,11 +117,11 @@ Object::GetType()
  Oggetto [platform:: Type](../cppcx/platform-type-class.md) oggetto che descrive il tipo di runtime dell'oggetto.  
   
 ### <a name="remarks"></a>Note  
- Il metodo statico [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) può essere utilizzato per ottenere un [enumerazione platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) valore che rappresenta il tipo corrente. Questa funzionalità è particolarmente utile per i tipi predefiniti. Il codice del tipo per qualsiasi classe di riferimento oltre a [platform:: String](../cppcx/platform-string-class.md) è Object (1).  
+ Il metodo statico [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) può essere utilizzato per ottenere un [enumerazione platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) valore che rappresenta il tipo corrente. Questa funzionalità è particolarmente utile per i tipi predefiniti. Il codice del tipo per qualsiasi classe di riferimento oltre [platform:: String](../cppcx/platform-string-class.md) è Object (1).  
   
- Il [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe viene utilizzata nelle API Windows come modo indipendente dal linguaggio del passaggio di informazioni sul tipo tra componenti e App Windows. T[classe platform:: Type](../cppcx/platform-type-class.md) dispone di operatori per la conversione tra `Type` e `TypeName`.  
+ Il [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe viene usata nelle API Windows come modo indipendente dal linguaggio passando informazioni sul tipo tra componenti di Windows e delle app. L'elemento T[classe platform:: Type](../cppcx/platform-type-class.md) dispone di operatori per la conversione tra `Type` e `TypeName`.  
   
- Utilizzare il [typeid](../windows/typeid-cpp-component-extensions.md) operatore per restituire un `Platform::Type` oggetto per un nome di classe, ad esempio quando ti sposti tra pagine XAML:  
+ Usare la [typeid](../windows/typeid-cpp-component-extensions.md) operatore per restituire un `Platform::Type` oggetto per un nome di classe, ad esempio quando si sposti tra pagine XAML:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
@@ -160,7 +160,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>Valore restituito  
  `true` se i due oggetti sono uguali; in caso contrario, `false`.  
  
-## <a name="tostring"></a>  Metodo Object:: ToString (C + + CX)
+## <a name="tostring"></a>  Metodo Object:: ToString (C + c++ /CX)
 Restituisce una stringa che rappresenta l'oggetto corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -185,4 +185,4 @@ public:
 };  
 ```  
 ## <a name="see-also"></a>Vedere anche  
- [Piattaforma Namespace](platform-namespace-c-cx.md)
+ [Platform Namespace](platform-namespace-c-cx.md)

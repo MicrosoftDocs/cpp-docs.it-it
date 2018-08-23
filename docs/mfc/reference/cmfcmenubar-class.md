@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853777"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539454"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 Barra dei menu che implementa l'ancoraggio.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  La larghezza del pulsante della casella combinata in pixel.  
   
 ### <a name="remarks"></a>Note  
- Il **aiutare** casella combinata è simile al **consentono** casella combinata nella barra dei menu di [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ Il **aiutare** casella combinata è simile al **Guida** casella combinata nella barra dei menu di Microsoft Word.  
   
  Quando si chiama questo metodo con *uiID* impostato su 0, questo metodo consente di nascondere la casella combinata. In caso contrario, questo metodo visualizza automaticamente la casella combinata sul lato destro della barra dei menu. Dopo aver chiamato questo metodo, chiamare [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) per ottenere un puntatore a inserita [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) oggetto.  
   

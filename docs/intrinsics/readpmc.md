@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333791"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544469"
 ---
 # <a name="readpmc"></a>__readpmc
 **Sezione specifica Microsoft**  
   
- Genera il `rdpmc` (istruzione), che consente la lettura di monitoraggio specificato dal contatore delle prestazioni `counter`.  
+ Genera il `rdpmc` istruzione, che legge il contatore specificato da di monitoraggio delle prestazioni `counter`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ unsigned __int64 __readpmc(
   
 #### <a name="parameters"></a>Parametri  
  [in] `counter`  
- Il contatore delle prestazioni per la lettura.  
+ Il contatore delle prestazioni da leggere.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il valore del contatore delle prestazioni specificato.  
@@ -49,7 +49,7 @@ unsigned __int64 __readpmc(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

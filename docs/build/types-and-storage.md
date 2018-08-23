@@ -1,5 +1,5 @@
 ---
-title: Tipi e archiviazione | Documenti Microsoft
+title: Tipi e archiviazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d53749ace6b9021bd04e681fc74eb0e5ae4a5e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c76ea1bac491a7e9484ac88834c8e4b070c57ae5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380615"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573150"
 ---
 # <a name="types-and-storage"></a>Tipi e archiviazione
-In questa sezione vengono descritti l'enumerazione e l'archiviazione di tipi di dati per il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] architettura.  
+In questa sezione vengono descritti l'enumerazione e l'archiviazione dei tipi di dati per x64 architettura.  
   
 -   [Tipi scalari](../build/scalar-types.md)  
   

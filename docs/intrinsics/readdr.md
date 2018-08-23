@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee18591ea3729551f00267fef6e4594a45f673ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332975"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539835"
 ---
 # <a name="readdr"></a>__readdr
-Legge il valore del Registro di debug specificata.  
+Legge il valore del Registro di debug specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +38,16 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
  Registrare una costante compreso tra 0 e 7 che identifica il debug.  
   
 ## <a name="return-value"></a>Valore restituito  
- Il valore del Registro di debug specificata.  
+ Il valore del Registro di debug specificato.  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come funzioni intrinseche.  
+ Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

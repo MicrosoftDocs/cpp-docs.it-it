@@ -16,26 +16,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6fda61fcaace9df1df69317149c719a716c6da6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 759ed60206ef9cb68ea2b0f502c1241c9ce5b6cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012148"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602973"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>Inserimento di un nuovo menu tra menu esistenti
-### <a name="to-insert-a-new-menu-between-existing-menus"></a>Per inserire un nuovo menu tra menu esistenti  
-  
-1.  Selezionare un nome di menu di scelta e premere esistente di **Inserisci** chiave. Il **nuovo elemento** casella viene inserita prima dell'elemento selezionato.  
-  
-     \- oppure -  
-  
-2.  Fare clic sulla barra dei menu e scegliere **Inserisci nuovo** dal menu di scelta rapida.  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Editor dei menu](../windows/menu-editor.md)   
+
+### <a name="to-insert-a-new-menu-between-existing-menus"></a>Per inserire un nuovo menu tra menu esistenti
+
+1. Selezionare un nome di menu di scelta e premere esistente di **Inserisci** chiave. Il **nuovo elemento** casella viene inserita prima dell'elemento selezionato.
+
+   \- oppure -
+
+2. Fare clic sulla barra dei menu e scegliere **Inserisci nuovo** dal menu di scelta rapida.
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Editor dei menu](../windows/menu-editor.md)  

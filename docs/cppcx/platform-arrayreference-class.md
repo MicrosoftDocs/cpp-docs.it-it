@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: arrayreference | Documenti Microsoft'
+title: 'Classe platform:: arrayreference | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7b2a0fd8c4903852e88fa80f12bc05894625888
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089114"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588311"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference (classe)
 `ArrayReference` è un tipo di ottimizzazione che puoi sostituire a [Platform::Array^](../cppcx/platform-array-class.md) nei parametri di input quando vuoi compilare una matrice di tipo C con dati di input.  
@@ -86,7 +86,7 @@ ArrayReference(ArrayReference&& otherArg)
 
 
 ## <a name="operator-assign"></a>  Arrayreference:: operator = (operatore)
-Assegna l'oggetto specificato all'oggetto corrente [platform:: arrayreference](../cppcx/platform-arrayreference-class.md) utilizzando la semantica di spostamento.  
+Assegna l'oggetto specificato all'oggetto corrente [platform:: arrayreference](../cppcx/platform-arrayreference-class.md) oggetto usando la semantica di spostamento.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -123,7 +123,7 @@ Array<TArg>^ operator ();
  Handle a oggetto di tipo `Array<TArg>^`  
   
 ### <a name="remarks"></a>Note  
- [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) e [platform:: Array](../cppcx/platform-array-class.md) sono classi di modelli di classe C++ standard, non di riferimento.  
+ [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) e [platform:: Array](../cppcx/platform-array-class.md) sono classi di modelli di classe C++ standard, non ref.  
   
 
 

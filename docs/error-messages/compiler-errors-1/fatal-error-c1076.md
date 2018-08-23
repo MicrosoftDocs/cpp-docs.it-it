@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1076 | Documenti Microsoft
+title: Errore irreversibile C1076 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38577e59ea874dda99d57297fc8c921f444648c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02cc55280202b9ce576dc1e771b3428837209c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199485"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538316"
 ---
 # <a name="fatal-error-c1076"></a>Errore irreversibile C1076
 limite del compilatore: raggiunto limite interno dell'heap. Utilizzare /Zm per specificare un limite maggiore  
@@ -30,9 +30,9 @@ limite del compilatore: raggiunto limite interno dell'heap. Utilizzare /Zm per s
   
  Per correggere l'errore, effettuare le seguenti operazioni:  
   
-1.  Utilizzare il [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opzione per impostare il limite di memoria del compilatore sul valore specificato nel [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) messaggio di errore. Per altre informazioni che include come impostare questo valore in [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)], vedere la sezione Osservazioni in [/Zm (specifica memoria allocazione limite di intestazioni precompilate)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
+1.  Usare la [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opzione per impostare il limite di memoria del compilatore sul valore specificato nelle [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) messaggio di errore. Per altre informazioni che include la procedura impostare questo valore in Visual Studio, vedere la sezione Osservazioni in [/Zm (specifica precompilato intestazione memoria limite di allocazione)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
   
-2.  Se si utilizzano i compilatori ospitati a 32 bit in un sistema operativo a 64 bit, utilizzare i compilatori ospitati a 64 bit. Per ulteriori informazioni, vedere [procedura: abilitare un 64-Bit Visual C++ set di strumenti della riga di comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
+2.  Se si utilizzano i compilatori ospitati a 32 bit in un sistema operativo a 64 bit, utilizzare i compilatori ospitati a 64 bit. Per altre informazioni, vedere [procedura: abilitare una a 64 bit Visual C++ set di strumenti della riga di comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
 3.  Eliminare i file di inclusione non necessari.  
   
@@ -46,4 +46,4 @@ limite del compilatore: raggiunto limite interno dell'heap. Utilizzare /Zm per s
   
 8.  Suddividere il file corrente in file più piccoli.  
   
- Se l'errore C1076 si verifica immediatamente dopo l'avvio della compilazione, il valore specificato per **/Zm** è probabilmente troppo elevato per il programma. Ridurre il **/Zm** valore.
+ Se l'errore C1076 si verifica subito dopo l'avvio della compilazione, il valore specificato per **/Zm** è probabilmente troppo elevato per il programma. Ridurre il **/Zm** valore.

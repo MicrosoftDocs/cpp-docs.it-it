@@ -1,5 +1,5 @@
 ---
-title: -SAFESEH (l'immagine ha gestori delle eccezioni sicuri) | Documenti Microsoft
+title: -SAFESEH (l'immagine ha gestori delle eccezioni sicuri) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d13e6922650f0193d4bbc3469d4acf25904234
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9156fd0d4d0433cfb975c242bc87008471bc4723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377909"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571692"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (L'immagine ha gestori delle eccezioni sicuri)
 ```  
 /SAFESEH[:NO]  
 ```  
   
- Quando **/SAFESEH** viene specificato, il linker produrrà un'immagine solo se è possibile creare anche una tabella di gestori eccezioni sicuri dell'immagine. Questa tabella è specifica per il sistema operativo i gestori di eccezioni sono validi per l'immagine.  
+ Quando **/SAFESEH** viene specificato, il linker produrrà solo un'immagine, se può produrre anche una tabella di gestori eccezioni sicuri dell'immagine. Questa tabella specifica per il sistema operativo i gestori di eccezioni sono validi per l'immagine.  
   
- **/SAFESEH** è valido solo durante il collegamento per x86 destinazioni. **/SAFESEH** non è supportata per le piattaforme che dispongono già di gestori delle eccezioni. Ad esempio, in [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] e ARM, tutti i gestori di eccezioni sono indicati nella sezione PDATA. Ml64.exe è supportata l'aggiunta di annotazioni che generano informazioni SEH (XDATA e PDATA) nell'immagine, consentendo di funzioni ml64. Vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) per ulteriori informazioni.  
+ **/SAFESEH** è valida solo quando si collegano x86 a destinazioni. **/SAFESEH** non è supportata per le piattaforme che hanno già i gestori delle eccezioni. Ad esempio, su ARM e x64, tutti i gestori di eccezioni sono indicati nella sezione PDATA. Ml64.exe è supportata l'aggiunta di annotazioni che generano le informazioni di gestione delle eccezioni Strutturata (XDATA e PDATA) nell'immagine, consentendo di funzioni ml64. Visualizzare [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) per altre informazioni.  
   
- Se **/SAFESEH** non viene specificato, il linker produrrà un'immagine con una tabella di gestori eccezioni sicuri se tutti i moduli sono compatibili con la funzionalità di gestione delle eccezioni sicuri. Se tutti i moduli non sono compatibili con funzionalità di gestione sicura delle eccezioni, l'immagine risultante non conterrà una tabella di gestori eccezioni sicuri. Se [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) specifica WINDOWSCE o una delle opzioni EFI _ *, il linker non tenterà di ottenere un'immagine con una tabella di gestori eccezioni sicuri, poiché nessuno di tali sottosistemi può utilizzare le informazioni.  
+ Se **/SAFESEH** non viene specificato, il linker produrrà un'immagine con una tabella dei gestori eccezioni sicuri se tutti i moduli siano compatibili con la funzionalità di gestione sicura delle eccezioni. Se tutti i moduli non sono compatibili con funzionalità di gestione delle eccezioni sicuri, l'immagine risultante non conterrà una tabella di gestori eccezioni sicuri. Se [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) specifica WINDOWSCE o una delle opzioni di EFI _ *, il linker non tenterà di produrre un'immagine con una tabella dei gestori eccezioni sicuri, poiché nessuno di questi sottosistemi possono usare le informazioni.  
   
- Se **/SAFESEH:NO** è specificato, il linker non produrrà un'immagine con una tabella di gestori eccezioni sicuri anche se tutti i moduli sono compatibili con la funzionalità di gestione sicura delle eccezioni.  
+ Se **/SAFESEH:NO** viene specificato, il linker non produrrà un'immagine con una tabella dei gestori eccezioni sicuri anche se tutti i moduli siano compatibili con la funzionalità di gestione sicura delle eccezioni.  
   
- La causa più comune per il linker non deve essere in grado di produrre un'immagine è perché uno o più file di input (moduli) per il linker non è compatibile con la funzionalità di gestori eccezioni sicuri. Un motivo comune per un modulo non sia compatibile con gestori eccezioni sicuri è perché è stato creato con un compilatore da una versione precedente di Visual C++.  
+ Il motivo più comune per il linker non deve essere in grado di produrre un'immagine è perché uno o più dei file di input (moduli) per il linker non era compatibile con la funzionalità di gestori eccezioni sicuri. Un motivo comune per un modulo non sia compatibile con gestori eccezioni sicuri è perché è stato creato con un compilatore da una versione precedente di Visual C++.  
   
- È anche possibile registrare una funzione come gestore eccezioni strutturate utilizzando [. SAFESEH](../../assembler/masm/dot-safeseh.md).  
+ È anche possibile registrare una funzione come gestore di eccezioni strutturate con [. SAFESEH](../../assembler/masm/dot-safeseh.md).  
   
- Non è possibile contrassegnare un oggetto esistente binario con gestori eccezioni sicuri (o nessun gestore eccezioni); informazioni sulla gestione delle eccezioni sicuri devono essere aggiunti in fase di compilazione.  
+ Non è possibile contrassegnare un oggetto esistente binario con gestori eccezioni sicuri (o nessun gestore eccezioni); in fase di compilazione è necessario aggiungere informazioni sulla gestione delle eccezioni sicuri.  
   
- La capacità del linker per compilare una tabella di gestori eccezioni sicuri dipende dall'applicazione mediante la libreria di runtime C. Se si collega con [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) e si desidera che una tabella di gestori eccezioni sicuri, è necessario fornire una struttura di configurazione di caricamento (ad esempio può essere trovata nel file di origine CRT loadcfg. c) che contiene tutte le voci definite per Visual C++. Ad esempio:  
+ La capacità del linker per compilare una tabella di gestori eccezioni sicuri dipende dall'applicazione usando la libreria di runtime C. Se si collega con [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) e si vuole una tabella di gestori eccezioni sicuri, è necessario fornire una struttura di configurazione di caricamento (ad esempio può essere trovata nel file di origine CRT loadcfg. c) che contiene tutte le voci definite per Visual C++. Ad esempio:  
   
 ```  
 #include <windows.h>  
@@ -113,7 +113,7 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
   
 3.  Selezionare il **riga di comando** pagina delle proprietà.  
   
-4.  Immettere l'opzione nel **opzioni aggiuntive** casella.  
+4.  Inserire l'opzione nella **opzioni aggiuntive** casella.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   

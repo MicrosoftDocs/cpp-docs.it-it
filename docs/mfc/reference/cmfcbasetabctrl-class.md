@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337484"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545831"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementa la funzionalità di base per le finestre a schede.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>Note  
  La classe `CMFCBaseTabCtrl` è una classe astratta. Di conseguenza, non è possibile crearne un'istanza. Per creare una finestra a schede, è necessario derivare una classe da `CMFCBaseTabCtrl`. La libreria MFC contiene alcuni esempi di classi derivate, due dei quali sono [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) e [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md).  
   
- A partire da [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)]questa classe supporta Microsoft Active Accessibility.  
+ A partire da Visual Studio 2015, questa classe supporta Microsoft Active Accessibility.  
   
 ## <a name="customization-tips"></a>Suggerimenti per la personalizzazione  
  I suggerimenti seguenti riguardano `CMFCBaseTabCtrl Class` e tutte le classi che ereditano da essa:  

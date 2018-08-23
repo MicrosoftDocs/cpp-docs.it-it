@@ -19,28 +19,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8319786603470ca7ef8ab58897261b1be0a3503a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648431"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603526"
 ---
 # <a name="editable-file-types-for-resources"></a>Tipi di file modificabili per le risorse
-È possibile aprire i seguenti tipi di file e modificare le risorse contenute.  
-  
-|Nome file|Descrizione|  
-|---------------|-----------------|  
-|RC|File script di risorsa.|  
-|RCT|File modello di risorse.|  
-|RES|File di risorse.|  
-|.resx|File di risorse gestite.|  
-|EXE|File eseguibili.|  
-|DLL|File DLL.|  
-|BMP, ICO, DIB e CUR|File bitmap, icona, della barra degli strumenti e cursore.|  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [File di risorse](../windows/resource-files-visual-studio.md)
+
+È possibile aprire i seguenti tipi di file e modificare le risorse contenute.
+
+|Nome file|Descrizione|
+|---------------|-----------------|
+|RC|File script di risorsa.|
+|RCT|File modello di risorse.|
+|RES|File di risorse.|
+|.resx|File di risorse gestite.|
+|EXE|File eseguibili.|
+|DLL|File DLL.|
+|BMP, ICO, DIB e CUR|File bitmap, icona, della barra degli strumenti e cursore.|
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[File di risorse](../windows/resource-files-visual-studio.md)

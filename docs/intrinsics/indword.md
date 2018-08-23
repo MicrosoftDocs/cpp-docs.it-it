@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dcfb321d526bb449335f87e7a83ba2a0aba7e60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325539"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540022"
 ---
 # <a name="indword"></a>__indword
 **Sezione specifica Microsoft**  
   
- Legge un double word di dati dalla porta specificata utilizzando il `in` istruzione.  
+ Legge un valore double word di dati dalla porta specificata usando il `in` (istruzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ unsigned long __indword(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__indword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indword`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

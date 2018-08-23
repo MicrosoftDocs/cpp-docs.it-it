@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 291cb73d3469264ad3b889cbd01c59622c4a370b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f2e88c7b4b19dd558a211327988dc68f81cc9d1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324704"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540033"
 ---
 # <a name="writecr3"></a>__writecr3
 **Sezione specifica Microsoft**  
   
- Scrive il valore `Data` al registro CR3.  
+ Scrive il valore `Data` alla CR3 registrate.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ void writecr3(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__writecr3`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr3`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

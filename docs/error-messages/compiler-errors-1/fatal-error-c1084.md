@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1084 | Documenti Microsoft
+title: Errore irreversibile C1084 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7266a2158c3e6ccd02ea82de22c6f90a8b6363d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df584fd95921594562cf4c1fb912986343b30c4c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229389"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541824"
 ---
 # <a name="fatal-error-c1084"></a>Errore irreversibile C1084
 Impossibile leggere il file tipofile: 'file': messaggio  
   
- In genere questo errore è causato da un chiamata API del sistema interno non riuscita effettuata dal compilatore. Il messaggio visualizzato quando si verifica questo errore è spesso generato da uno [wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) o [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351.aspx).  
+ In genere questo errore è causato da un chiamata API del sistema interno non riuscita effettuata dal compilatore. Il messaggio visualizzato quando si verifica questo errore viene generato spesso in uno dei modi [wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) oppure [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).  
   
  Per tentare di risolvere l'errore C1084, eseguire i passaggi seguenti:  
   
@@ -34,9 +34,9 @@ Impossibile leggere il file tipofile: 'file': messaggio
   
 -   Assicurarsi che siano impostate le autorizzazioni appropriate per accedere al file specificato.  
   
--   Assicurarsi che la sintassi della riga di comando sia conforme alle regole descritte in [sintassi della riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md).  
+-   Assicurarsi che la sintassi della riga di comando sia conforme alle regole riportate sotto [sintassi della riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md).  
   
--   Assicurarsi che le variabili di ambiente **TMP** e **TEMP** siano correttamente set, nonché le autorizzazioni appropriate per accedere a queste variabili di ambiente fare riferimento alla directory. Verificare inoltre che le unità a cui fa riferimento il **TMP** e **TEMP** le variabili di ambiente contengono una quantità di spazio libero sufficiente.  
+-   Assicurarsi che le variabili di ambiente **TMP** e **TEMP** siano correttamente set, nonché le autorizzazioni appropriate per accedere a queste variabili di ambiente fanno riferimento a directory. Assicurarsi inoltre che le unità a cui fanno riferimento le **TMP** e **TEMP** le variabili di ambiente contengono una quantità di spazio libero adeguata.  
   
 -   Se viene visualizzato il messaggio "Numero di file non valido", è possibile che il file specificato sia stato chiuso in primo piano durante la compilazione in background.  
   

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCVisualManagerOffice2007 | Documenti Microsoft
+title: Classe CMFCVisualManagerOffice2007 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -240,17 +240,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd70adb821724a476a66ad21157eb8506ffaa40
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd52e1437146c5584fa6240b4423462401921b44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039589"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539915"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>Classe CMFCVisualManagerOffice2007
-`CMFCVisualManagerOffice2007` fornisce a un'applicazione un aspetto di Microsoft Office 2007. 
+`CMFCVisualManagerOffice2007` Fornisce a un'applicazione un aspetto di Microsoft Office 2007. 
 
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -380,10 +380,10 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |`CMFCVisualManagerOffice2007::SetStyle`|Imposta la combinazione di colori di `CMFCVisualManagerOffice2007` GUI.|  
   
 ## <a name="remarks"></a>Note  
- Utilizzare `CMFCVisualManagerOffice2007` per modificare l'aspetto visivo dell'applicazione simile a quella di Microsoft Office 2007. Questo gestore visualizzazione richiede che si imposta lo stile prima di usarla. Prima di passare il gestore visualizzazione al `CMFCVisualManager::SetDefaultManager`, è necessario chiamare la funzione statica `CMFCVisualManagerOffice2007::SetStyle`.  
+ Usare `CMFCVisualManagerOffice2007` per modificare l'aspetto visivo dell'applicazione per ricordano quelle di Microsoft Office 2007. Questo gestore visualizzazione richiede l'impostazione di stile prima di usarla. Prima di passare questo gestore visualizzazione al `CMFCVisualManager::SetDefaultManager`, è necessario chiamare la funzione statica `CMFCVisualManagerOffice2007::SetStyle`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il gestore visualizzazione Office 2007. Questo frammento di codice fa parte il [esempio dimostrativo avviso Desktop](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare il gestore visualizzazione Office 2007. Questo frammento di codice fa parte di [esempio dimostrativo avviso Desktop](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
   
@@ -683,7 +683,7 @@ virtual COLORREF GetToolbarButtonTextColor(
   
 ### <a name="parameters"></a>Parametri  
  [in] *pButton*  
- [in] *stato*  
+ [in] *dello stato*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -809,7 +809,7 @@ virtual void OnDrawButtonBorder(
  [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
- [in] *stato*  
+ [in] *dello stato*  
   
 ### <a name="remarks"></a>Note  
   
@@ -829,7 +829,7 @@ virtual void OnDrawButtonSeparator(
  [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
- [in] *stato*  
+ [in] *dello stato*  
  [in] *bHorz*  
   
 ### <a name="remarks"></a>Note  
@@ -1797,7 +1797,7 @@ virtual void OnDrawShowAllMenuItems(
 ### <a name="parameters"></a>Parametri  
  [in] *pDC*  
  [in] *rect*  
- [in] *stato*  
+ [in] *dello stato*  
   
 ### <a name="remarks"></a>Note  
   
@@ -2048,7 +2048,7 @@ virtual void OnFillButtonInterior(
  [in] *pDC*  
  [in] *pButton*  
  [in] *rect*  
- [in] *stato*  
+ [in] *dello stato*  
   
 ### <a name="remarks"></a>Note  
   

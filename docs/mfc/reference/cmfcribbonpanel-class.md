@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61c5698a0ad9d6eb2c13edc6147b757a86f20e9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: cc7ae6e3d06f29b5f45c321cc7f11c9260f26ed1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850170"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540243"
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 Implementa un riquadro contenente un set di elementi della barra multifunzione. Quando il pannello viene disegnato, visualizza tutti gli elementi possibili in base alle proprie dimensioni.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
  
   
 ## <a name="syntax"></a>Sintassi  

@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dd972d2a7e8d75f7149b2dc2766ffca86b0b2e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6f73e37c8fddc54e91be13d83c54f126ab6b5a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326511"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541024"
 ---
 # <a name="lidt"></a>__lidt
 **Sezione specifica Microsoft**  
   
- Carica il registro degli interrupt descrittore tabella (IDTR) con il valore nella posizione di memoria specificata.  
+ Carica il Registro di tabella di descrittore di interrupt (IDTR) con il valore nella posizione di memoria specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,12 +47,12 @@ void __lidt(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__lidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__lidt`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Il `__lidt` è equivalente alla funzione di `LIDT` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per ulteriori informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento al Set (istruzione)," al [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__lidt` è equivalente alla funzione il `LIDT` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
   
 **Fine sezione specifica Microsoft**  
   

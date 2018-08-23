@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450f8d94510212a430fb5d5a6b4ece061fa8a59c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6c0e2e21b18b806a63a2d6ea331a84ab144a6ec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333538"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540631"
 ---
 # <a name="readwritebarrier"></a>_ReadWriteBarrier
 **Sezione specifica Microsoft**  
@@ -30,7 +30,7 @@ ms.locfileid: "33333538"
  Limita le ottimizzazioni del compilatore che possono riordinare gli accessi alla memoria nel punto della chiamata.  
   
 > [!CAUTION]
->  Le funzioni intrinseche del compilatore `_ReadBarrier`, `_WriteBarrier` e `_ReadWriteBarrier` e la macro `MemoryBarrier` sono deprecate e non vanno usate. Per la comunicazione tra thread, utilizzare meccanismi come [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) e [std:: Atomic\<T >](../standard-library/atomic.md), che sono definite nel [della libreria Standard C++](../standard-library/cpp-standard-library-reference.md). Per accedere a hardware, utilizzare il [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) con l'opzione del compilatore di [volatile](../cpp/volatile-cpp.md) (parola chiave).  
+>  Le funzioni intrinseche del compilatore `_ReadBarrier`, `_WriteBarrier` e `_ReadWriteBarrier` e la macro `MemoryBarrier` sono deprecate e non vanno usate. Per la comunicazione tra thread, usare meccanismi come [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) e [std:: Atomic\<T >](../standard-library/atomic.md), che sono definiti nella [della libreria Standard C++](../standard-library/cpp-standard-library-reference.md). Per l'accesso hardware, usare il [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) l'opzione del compilatore con la [volatile](../cpp/volatile-cpp.md) (parola chiave).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ void _ReadWriteBarrier(void);
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`_ReadWriteBarrier`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_ReadWriteBarrier`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

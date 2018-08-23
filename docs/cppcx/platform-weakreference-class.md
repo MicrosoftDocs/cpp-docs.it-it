@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: WeakReference | Documenti Microsoft'
+title: 'Classe platform:: WeakReference | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77cd035b6cf84b16f4f6d5d92f3dd247f1251509
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088378"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601561"
 ---
 # <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 Rappresenta un riferimento debole a un'istanza di una classe di riferimento.  
@@ -53,7 +53,7 @@ class WeakReference
 ### <a name="remarks"></a>Note  
  La classe WeakReference stessa non è una classe di riferimento e pertanto non eredita da Platform::Object^ e non può essere usata nella firma di un metodo pubblico.  
 
-## <a name="operator-assign"></a> WeakReference::operator =
+## <a name="operator-assign"></a> Booltype =
 Assegna un valore a WeakReference.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -66,9 +66,9 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ```  
   
 ### <a name="remarks"></a>Note  
- L'ultimo overload nell'elenco precedente consente di assegnare una classe di riferimento a una variabile WeakReference. In questo caso la classe di riferimento è downcast a [platform:: Object](../cppcx/platform-object-class.md)^. Ripristinare il tipo originale in un secondo momento specificandolo come argomento per il parametro di tipo nel [WeakReference:: Resolve\<T >](#resolve) funzione membro.  
+ L'ultimo overload nell'elenco precedente consente di assegnare una classe di riferimento a una variabile WeakReference. In questo caso la classe di riferimento è eseguire il downcast a [platform:: Object](../cppcx/platform-object-class.md)^. Ripristinare il tipo originale in un secondo momento specificandolo come argomento per il parametro di tipo nel [WeakReference:: Resolve\<T >](#resolve) funzione membro.  
   
-## <a name="booltype"></a> WeakReference::operator BoolType
+## <a name="booltype"></a> Booltype WeakReference:: operator
 Implementa il modello bool sicuro per la classe WeakReference. Non chiamarlo esplicitamente dal codice.  
   
 ### <a name="syntax"></a>Sintassi  

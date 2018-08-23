@@ -37,15 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337073"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573151"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
-Fornisce un'implementazione per il [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) interfaccia.  
+Fornisce un'implementazione per il [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -92,7 +92,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IRowsetInfo:: GetProperties](https://msdn.microsoft.com/library/ms719611.aspx) nel *riferimento per programmatori OLE DB*. 
+ Visualizzare [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
 Restituisce un puntatore di interfaccia al set di righe a cui viene applicato un segnalibro.  
@@ -106,7 +106,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx) nel *riferimento per programmatori OLE DB*. Il *iOrdinal* parametro deve essere una colonna del segnalibro. 
+ Visualizzare [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. Il *iOrdinal* parametro deve essere una colonna del segnalibro. 
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
 Restituisce un puntatore a interfaccia sull'oggetto (comando o sessione) che ha creato questo set di righe.  
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo con [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) per recuperare le proprietà dall'oggetto origine dati.  

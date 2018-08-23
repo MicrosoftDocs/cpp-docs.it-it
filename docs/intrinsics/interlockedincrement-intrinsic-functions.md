@@ -1,5 +1,5 @@
 ---
-title: Funzioni intrinseche InterlockedIncrement | Documenti Microsoft
+title: Funzioni intrinseche InterlockedIncrement | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598365e4a5439bc17baaed5e603f30c10c49bc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337980"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575788"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Funzioni intrinseche _InterlockedIncrement
 **Sezione specifica Microsoft**  
   
- Fornire il supporto intrinseco del compilatore per Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx) (funzione).  
+ Fornisce il supporto intrinseco del compilatore per il SDK di Windows Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) (funzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -118,7 +118,7 @@ __int64 _InterlockedIncrement64_nf(
   
 |Funzione intrinseca|Architettura|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|  
   
 ## <a name="remarks"></a>Note  
@@ -128,14 +128,14 @@ __int64 _InterlockedIncrement64_nf(
   
  Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.  
   
- La variabile a cui punta il parametro `lpAddend` deve essere allineata a un limite a 32 bit; in caso contrario, questa funzione non andrà a buon fine su sistemi x86 multiprocessore e su qualsiasi sistema non x86. Per ulteriori informazioni, vedere [allineare](../cpp/align-cpp.md).  
+ La variabile a cui punta il parametro `lpAddend` deve essere allineata a un limite a 32 bit; in caso contrario, questa funzione non andrà a buon fine su sistemi x86 multiprocessore e su qualsiasi sistema non x86. Per altre informazioni, vedere [allineare](../cpp/align-cpp.md).  
   
  La funzione Win32 è dichiarata in `Wdm.h` o `Ntddk.h`.  
   
  Queste routine sono disponibili solo come funzioni intrinseche.  
   
 ## <a name="example"></a>Esempio  
- Per un esempio di come utilizzare `_InterlockedIncrement`, vedere [InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Per un esempio d'uso `_InterlockedIncrement`, vedere [InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
 **Fine sezione specifica Microsoft**  
   

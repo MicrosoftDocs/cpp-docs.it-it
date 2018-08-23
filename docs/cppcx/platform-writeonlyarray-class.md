@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: writeonlyarray | Documenti Microsoft'
+title: 'Classe platform:: writeonlyarray | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091487"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603346"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 Rappresenta una matrice unidimensionale usata come parametro di input quando il chiamante passa una matrice che verrà riempita dal metodo.  
   
- Questa classe di riferimento viene dichiarata come privata in vccorlib.h, di conseguenza non viene generata nei metadati ed è supportata solo da C++. Questa classe è destinata a essere usata solo come parametro di input che riceve una matrice allocata dal chiamante. Non può essere costruita dal codice utente. Consente al metodo C++ di scrivere direttamente in una matrice, un modello noto come *FillArray* . Per ulteriori informazioni, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
+ Questa classe di riferimento viene dichiarata come privata in vccorlib.h, di conseguenza non viene generata nei metadati ed è supportata solo da C++. Questa classe è destinata a essere usata solo come parametro di input che riceve una matrice allocata dal chiamante. Non può essere costruita dal codice utente. Consente al metodo C++ di scrivere direttamente in una matrice, un modello noto come *FillArray* . Per altre informazioni, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,12 +46,12 @@ private ref class WriteOnlyArray<T, 1>
 |nome|Descrizione|  
 |----------|-----------------|  
 
-|[Writeonlyarray:: Begin](#begin)| Un iteratore che punta al primo elemento della matrice. |  
+|[Writeonlyarray](#begin)| Un iteratore che punta al primo elemento della matrice. |  
 |[Writeonlyarray:: data](#data)| Un puntatore al buffer di dati. |  
-|[Writeonlyarray:: end](#end)| Un iteratore che punta alla prima posizione oltre l'ultimo elemento nella matrice. |  
+|[Writeonlyarray](#end)| Un iteratore che punta alla posizione immediatamente successiva all'ultimo elemento nella matrice. |  
 |[Writeonlyarray:: Fastpass](#fastpass)| Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice |  
 |[Writeonlyarray:: Length](#length)| Restituisce il numero di elementi nella matrice. |  
-|[Writeonlyarray:: set](#set)| Imposta l'elemento specificato al valore specificato. |  
+|[Writeonlyarray](#set)| Imposta l'elemento specificato sul valore specificato. |  
 
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -130,7 +130,7 @@ property bool FastPass{
   
 
 
-## <a name="get"></a>  Writeonlyarray:: Get (metodo)
+## <a name="get"></a>  Metodo writeonlyarray:: Get
 Restituisce l'elemento in corrispondenza dell'indice specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -187,9 +187,9 @@ T& set(
 
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni su come interpretare il valore HRESULT, vedere [struttura dei codici di errore COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Per altre informazioni su come interpretare il valore HRESULT, vedere [Structure of COM Error Codes](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Piattaforma Namespace](platform-namespace-c-cx.md)   
+ [Platform Namespace](platform-namespace-c-cx.md)   
  [Creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -17,43 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32170ca02a9d36667ae4d718362774afa0711c60
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 17c5742fccdc32396b36d058188f3609caf08791
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019943"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586746"
 ---
 # <a name="propget"></a>propget
-Specifica una funzione di accesso di proprietà.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-[propget]  
-```  
-  
-## <a name="remarks"></a>Note  
- Il **propget** attributi di C++ ha la stessa funzionalità come la [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) attributo MIDL.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio dell'uso dei **propget**.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-### <a name="attribute-context"></a>Contesto attributo  
-  
-|||  
-|-|-|  
-|**Si applica a**|Metodo|  
-|**Ripetibile**|No|  
-|**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|`propput`, `propputref`|  
-  
- Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi del metodo](../windows/method-attributes.md)   
- [propput](../windows/propput.md)   
- [propputref](../windows/propputref.md)   
+
+Specifica una funzione di accesso di proprietà.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+[propget]
+```
+
+## <a name="remarks"></a>Note
+
+Il **propget** attributi di C++ ha la stessa funzionalità come la [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) attributo MIDL.
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio dell'uso dei **propget**.
+
+## <a name="requirements"></a>Requisiti
+
+### <a name="attribute-context"></a>Contesto attributo
+
+|||
+|-|-|
+|**Si applica a**|Metodo|
+|**Ripetibile**|No|
+|**Attributi obbligatori**|Nessuna|
+|**Attributi non validi**|`propput`, `propputref`|
+
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Attributi IDL](../windows/idl-attributes.md)  
+[Attributi di metodo](../windows/method-attributes.md)  
+[propput](../windows/propput.md)  
+[propputref](../windows/propputref.md)  

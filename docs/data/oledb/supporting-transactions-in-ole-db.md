@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338710"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572170"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Supporto delle transazioni in OLE DB
 Oggetto [transazione](../../data/transactions-mfc-data-access.md) è un modo per raggruppare o batch, una serie di aggiornamenti a un'origine dati in modo che tutti esito positivo e viene eseguito il commit in una sola volta oppure (se uno di questi ha esito negativo) non viene eseguito il commit e viene eseguito il rollback dell'intera transazione. Questo processo garantisce l'integrità del risultato nell'origine dati.  
   
  OLE DB supporta le transazioni con tre metodi seguenti:  
   
--   [ITransactionLocal:: StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction:: Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relazione tra le sessioni e transazioni  
  Un singolo oggetto origine dati è possibile creare uno o più oggetti di sessione, ognuno dei quali può essere all'interno o all'esterno dell'ambito di una transazione in un determinato momento.  
@@ -55,7 +55,7 @@ Oggetto [transazione](../../data/transactions-mfc-data-access.md) è un modo per
  La chiamata `ITransaction::Commit` o `ITransaction::Abort` termina la transazione. `Commit` fa sì che tutte le modifiche apportate all'interno dell'ambito della transazione da applicare all'archivio dati. `Abort` cause tutte le modifiche apportate all'interno dell'ambito della transazione deve essere annullata e l'archivio dati viene lasciato nello stato avevano prima dell'avvio della transazione.  
   
 ## <a name="nested-transactions"></a>Transazioni nidificate  
- Oggetto [transazione nidificata](https://msdn.microsoft.com/library/ms716985.aspx) si verifica quando si avvia una nuova transazione locale quando esiste già una transazione attiva nella sessione. La nuova transazione viene avviata come una transazione nidificata di sotto della transazione corrente. Se il provider non supporta le transazioni nidificate, la chiamata `StartTransaction` quando è già presente una transazione attiva nella sessione restituisce XACT_E_XTIONEXISTS.  
+ Oggetto [transazione nidificata](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) si verifica quando si avvia una nuova transazione locale quando esiste già una transazione attiva nella sessione. La nuova transazione viene avviata come una transazione nidificata di sotto della transazione corrente. Se il provider non supporta le transazioni nidificate, la chiamata `StartTransaction` quando è già presente una transazione attiva nella sessione restituisce XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transazioni distribuite  
  Una transazione distribuita è una transazione che aggiorna i dati distribuiti; vale a dire i dati in più di un sistema di computer in rete. Se si desidera supportare le transazioni in un sistema distribuito, è consigliabile usare .NET Framework anziché il supporto delle transazioni OLE DB.  

@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmlaunch | Documenti Microsoft
+title: vmx_vmlaunch | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926195aa8dc612d3972634f8140ce3fff753a48f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 463a0ef679250aec9489c539ef11a6e1288b3a6f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335023"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544462"
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 **Sezione specifica Microsoft**  
   
- Posiziona l'applicazione chiamante in stato di operazione non radice VMX (invio di VM) utilizzando la struttura di controllo di macchina virtuale corrente (VMCS).  
+ Inserisce l'applicazione chiamante in stato di operazione non radice VMX (invio di VM) tramite la struttura di controllo di una macchina virtuale corrente (VMCS).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,15 +45,15 @@ unsigned char __vmx_vmlaunch(
 |2|Operazione non riuscita senza stato disponibile.|  
   
 ## <a name="remarks"></a>Note  
- Un'applicazione può eseguire un'operazione di accesso VM utilizzando il [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (funzione). Il [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio è `Clear`e [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio è `Launched`. Di conseguenza, utilizzare il [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funzione per impostare lo stato di avvio di una VMCS a `Clear`e quindi usare il [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione per la prima operazione di VM-invio e la [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione per le operazioni di accesso VM successive.  
+ Un'applicazione può eseguire un'operazione della macchina virtuale usando il [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) oppure [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (funzione). Il [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio viene `Clear`e il [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio è `Launched`. Di conseguenza, usare il [vmx_vmclear](../intrinsics/vmx-vmclear.md) funzione per impostare lo stato di avvio di una VMCS per `Clear`e quindi usare i [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione per la prima operazione della macchina virtuale e la [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione per le operazioni successive della macchina virtuale.  
   
- Il `__vmx_vmlaunch` è equivalente alla funzione di `VMLAUNCH` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Intel Virtualization tecnica specifica per l'architettura IA-32 Intel," documento C97063-002 numero il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__vmx_vmlaunch` è equivalente alla funzione il `VMLAUNCH` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__vmx_vmlaunch`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmlaunch`|X64|  
   
  **File di intestazione** \<intrin. h >  
   

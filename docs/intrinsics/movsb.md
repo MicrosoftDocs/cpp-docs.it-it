@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c72910a6b8084d015f151d7e701f6b63ffd1d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328227"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540228"
 ---
 # <a name="movsb"></a>__movsb
 **Sezione specifica Microsoft**  
@@ -54,12 +54,12 @@ void __movsb(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsb`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Il risultato è che il primo `Count` byte a cui puntava `Source` vengono copiati il `Destination` stringa.  
+ Il risultato è che il primo `Count` byte a cui punta `Source` vengono copiati il `Destination` stringa.  
   
  Questa routine è disponibile solo come funzione intrinseca.  
   

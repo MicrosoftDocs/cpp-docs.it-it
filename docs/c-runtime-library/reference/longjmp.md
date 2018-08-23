@@ -1,7 +1,7 @@
 ---
 title: longjmp | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -31,16 +31,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c26cae9a3fe83012387c93e31c4005d5614d97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 857fae2e9c38dfe2c5cd468c6d1b50c6fdd2f317
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401721"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42575494"
 ---
 # <a name="longjmp"></a>longjmp
 
-Ripristina l'ambiente dello stack e le impostazioni locali di esecuzione.
+Ripristina stack ambiente e l'esecuzione impostazioni locali configurate un `setjmp` chiamare.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -53,25 +53,38 @@ void longjmp(
 
 ### <a name="parameters"></a>Parametri
 
-*env* variabile in quale ambiente è archiviato.
+*env*  
+Variabile in cui è archiviato l'ambiente.
 
-*valore* valore da restituire al **setjmp** chiamare.
+*valore*  
+Valore da restituire alla chiamata di `setjmp`.
 
 ## <a name="remarks"></a>Note
 
-Il **longjmp** funzione Ripristina stack ambiente e l'esecuzione delle impostazioni locali salvate in precedenza in *env* dal **setjmp**. **setjmp** e **longjmp** offrono un metodo per eseguire un non locali **goto**; vengono generalmente utilizzati per passare il controllo dell'esecuzione al codice di gestione degli errori o di ripristino in una routine chiamata in precedenza senza tramite le chiamate normali e le convenzioni restituite.
+Il **longjmp** funzione consente di ripristinare una lingua di ambiente e l'esecuzione dello stack salvata in precedenza *env* da `setjmp`. `setjmp` e **longjmp** offrono un modo per eseguire un'operazione **goto**; vengono utilizzati per passare il controllo dell'esecuzione al codice di gestione degli errori o di ripristino in una routine chiamata in precedenza senza utilizzare la normale chiamata e convenzioni di restituzione.
 
-Una chiamata a **setjmp** fa sì che l'ambiente dello stack corrente deve essere salvato in *env*. Una chiamata successiva a **longjmp** Ripristina l'ambiente salvato e restituisce il controllo al punto immediatamente successivo corrispondente **setjmp** chiamare. Riprende l'esecuzione come se *valore* appena è stato restituito dal **setjmp** chiamare. I valori di tutte le variabili (ad eccezione del fatto variabili registro) accessibili al controllo di ricezione di routine contengono i valori che avevano al momento **longjmp** è stato chiamato. I valori delle variabili di registro sono imprevedibili. Il valore restituito da **setjmp** deve essere diverso da zero. Se si passa 0 come *value*, il valore restituito effettivo viene sostituito con 1.
+Una chiamata a `setjmp` fa sì che l'ambiente dello stack corrente deve essere salvato in *env*. Una chiamata successiva al **longjmp** Ripristina l'ambiente salvato e restituisce il controllo al punto immediatamente successivo corrispondente `setjmp` chiamare. L'esecuzione riprende come se la chiamata `setjmp` avesse appena restituito *value*. I valori di tutte le variabili (eccetto le variabili di registro) accessibili al controllo di ricezione di routine contengono i valori che avevano al momento **longjmp** è stato chiamato. I valori delle variabili di registro sono imprevedibili. Il valore restituito da `setjmp` deve essere diverso da zero. Se si passa 0 come *value*, il valore restituito effettivo viene sostituito con 1.
 
-Chiamare **longjmp** prima della funzione che ha chiamato **setjmp** restituisce; in caso contrario i risultati sono imprevedibili.
+**Sezione specifica Microsoft**
 
-Osservare le restrizioni seguenti quando si utilizza **longjmp**:
+Nel codice C++ di Microsoft su Windows, **longjmp** utilizza la stessa semantica di rimozione dello stack come codice di gestione delle eccezioni. È possibile usare esattamente negli stessi scenari che possono essere generate le eccezioni C++. Tuttavia, questo uso non è portabile e viene fornito con alcuni avvertimenti importanti relativi.
 
-- Non partire dal presupposto che i valori delle variabili di registro rimangano invariati. I valori delle variabili di registro nella routine chiamante **setjmp** potrebbero non essere ripristinati i valori appropriati dopo **longjmp** viene eseguita.
+Chiamare solo **longjmp** prima che la funzione che ha chiamato `setjmp` restituisce; in caso contrario i risultati sono imprevedibili.
 
-- Non usare **longjmp** per trasferire il controllo all'esterno di una routine di gestione delle interruzioni a meno che l'interrupt è causato da un'eccezione a virgola mobile. In questo caso, può restituire un programma da un gestore di interrupt tramite **longjmp** se il pacchetto matematica a virgola mobile vengono reinizializzate innanzitutto chiamando **fpreset**.
+Osservare le restrizioni seguenti quando si usa **longjmp**:
 
-     **Nota** prestare attenzione quando si utilizza **setjmp** e **longjmp** nei programmi C++. Dato che queste funzioni non supportano la semantica degli oggetti C++, è preferibile usare il meccanismo di gestione delle eccezioni C++.
+- Non partire dal presupposto che i valori delle variabili di registro rimangano invariati. I valori delle variabili di registro nella routine che chiama `setjmp` potrebbero non essere ripristinati sui valori appropriati dopo **longjmp** viene eseguita.
+
+- Non utilizzare **longjmp** per trasferire il controllo all'esterno di una routine di gestione degli interrupt, a meno che l'interrupt è causato da un'eccezione a virgola mobile. In questo caso, può restituire un programma da un gestore di interrupt tramite **longjmp** se reinizializza prima di tutto il pacchetto matematica a virgola mobile chiamando [fpreset](fpreset.md).
+
+- Non utilizzare **longjmp** per trasferire il controllo da una routine di callback richiamata direttamente o indirettamente da codice di Windows.
+
+- Se il codice viene compilato usando **/EHs** oppure **/EHsc** e la funzione che contiene la **longjmp** chiamata è **noexcept** oggetti quindi locali in tale funzione non può essere eliminata durante la rimozione dello stack.
+
+**Fine sezione specifica Microsoft**
+
+> [!NOTE]  
+> Nel codice C++ portabile, è possibile presupporre `setjmp` e `longjmp` supportano la semantica degli oggetti C++. In particolare, un `setjmp` / `longjmp` chiamata coppia produce un comportamento indefinito se sostituendo il `setjmp` e `longjmp` da **catch** e **throw** invocherebbe eventuali distruttori non semplici per gli oggetti automatici. Nei programmi C++, è consigliabile che usare il meccanismo di gestione delle eccezioni C++.
 
 Per altre informazioni, vedere [Uso di setjmp e longjmp](../../cpp/using-setjmp-longjmp.md).
 
@@ -83,15 +96,11 @@ Per altre informazioni, vedere [Uso di setjmp e longjmp](../../cpp/using-setjmp-
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="libraries"></a>Librerie
-
-Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
-
 ## <a name="example"></a>Esempio
 
 Vedere l'esempio per [_fpreset](fpreset.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[setjmp](setjmp.md)<br/>
+[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)  
+[setjmp](setjmp.md)  

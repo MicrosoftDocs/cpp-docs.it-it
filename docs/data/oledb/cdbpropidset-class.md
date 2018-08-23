@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336940"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572667"
 ---
 # <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
 Eredita dal `DBPROPIDSET` strutturare e aggiunge un costruttore che inizializza i campi chiave, nonché [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) accedere al metodo.  
@@ -80,7 +80,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[operator =](#op_equal)|Assegna il contenuto di un ID della proprietà è impostata su un altro.|  
   
 ## <a name="remarks"></a>Note  
- Usare i consumer OLE DB `DBPROPIDSET` strutture per passare una matrice di ID proprietà per il quale l'utente vuole ottenere informazioni sulle proprietà. Le proprietà identificate in un'unica [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struttura appartengono al set di una proprietà.  
+ Usare i consumer OLE DB `DBPROPIDSET` strutture per passare una matrice di ID proprietà per il quale l'utente vuole ottenere informazioni sulle proprietà. Le proprietà identificate in un'unica [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struttura appartengono al set di una proprietà.  
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 Aggiunge un ID proprietà al set di ID proprietà.  
@@ -96,7 +96,7 @@ bool AddPropertyID(DBPROPID propid) throw();
  [in] ID proprietà da aggiungere al set di ID proprietà.  
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
-Costruttore. Inizializza la `rgProperties`, `cProperties`e (facoltativamente) `guidPropertySet` campi del [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struttura.  
+Costruttore. Inizializza la `rgProperties`, `cProperties`e (facoltativamente) `guidPropertySet` campi del [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struttura.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Parametri  
  *guid*  
- [in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struttura.  
+ [in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struttura.  
   
 ### <a name="remarks"></a>Note  
  Questo campo può essere impostato il [costruttore](../../data/oledb/cdbpropidset-cdbpropidset.md) anche. Chiamare questa funzione se si usa il costruttore predefinito per questa classe.  

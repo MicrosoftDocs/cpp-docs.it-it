@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027813"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538495"
 ---
 # <a name="mfc-classes"></a>Classi MFC
 Le classi nell'elenco seguente sono incluse nella libreria Microsoft Foundation Class (MFC).  
@@ -852,7 +852,7 @@ Le classi nell'elenco seguente sono incluse nella libreria Microsoft Foundation 
  Riproduce l'aspetto di Microsoft Windows XP o Microsoft Vista quando l'utente seleziona un tema di Windows XP o di Vista.  
   
  [Classe CMFCVisualManagerWindows7](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Fornisce a un'applicazione l'aspetto di un'applicazione per [!INCLUDE[win7](../../build/includes/win7_md.md)] .  
+ Fornisce a un'applicazione l'aspetto di un'applicazione di Windows 7.  
   
  [Classe CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  Consente a un utente di gestire le finestre figlio MDI in un'applicazione MDI.  
@@ -1020,7 +1020,7 @@ Le classi nell'elenco seguente sono incluse nella libreria Microsoft Foundation 
  Utilizzata per un caso speciale della finestra di dialogo di modifica collegamenti OLE, che deve essere utilizzata quando è necessario aggiornare solo oggetti collegati o incorporati esistenti in un documento.  
   
  [Classe COleVariant](../../mfc/reference/colevariant-class.md)  
- Incapsula il [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) tipo di dati.  
+ Incapsula il [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) tipo di dati.  
   
  [Classe CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)  
  La classe `CPagerCtrl` esegue il wrapping del controllo pager di Windows, che può scorrere all'interno della visualizzazione una finestra contenuta che non rientra nella finestra contenitore.  

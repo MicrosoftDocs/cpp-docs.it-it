@@ -122,17 +122,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecefc377c620028b520945c6aaefd8b178d9ff9f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 091c201b3b0b67879178d32f495410a1bbe22a53
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338450"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540126"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
 Il `CMDIChildWndEx` classe fornisce la funzionalità di un Windows finestra figlio MDI (interfaccia) a documenti multipli. Estende la funzionalità del [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Il framework richiede questa classe quando un'applicazione MDI utilizza determinate classi MFC.  
  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
 
   
 ## <a name="syntax"></a>Sintassi  
@@ -775,7 +775,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="parameters"></a>Parametri  
  *dwFlags*  
- Combinazione di valori STPFLAG. Per altre informazioni, vedere [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
+ Combinazione di valori STPFLAG. Per altre informazioni, vedere [ITaskbarList4::SetTabProperties](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties).  
   
 ### <a name="remarks"></a>Note  
   

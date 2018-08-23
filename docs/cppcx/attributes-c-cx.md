@@ -1,28 +1,28 @@
 ---
-title: Attributi (C + + CX) | Documenti Microsoft
+title: Attributi (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 627e89c844b97637897c9b5eb6c1cc7e32081fd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7db8d6c527842cd3784623002fba001a4174c1fc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086844"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601138"
 ---
 # <a name="attributes-ccx"></a>Attributi (C++/CX)
-Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai metodi e tipi di Windows Runtime per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad esempio, [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx), sono comunemente usati in C + + codice CX. Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:  
+Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai metodi e tipi Windows Runtime per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad esempio, [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx), vengono comunemente usati in C + + c++ /CLI codice /CX. Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:  
   
  [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   
 ## <a name="custom-attributes"></a>Attributi personalizzati  
- Puoi anche definire attributi personalizzati. Attributi personalizzati devono essere conformi a queste regole di Windows Runtime:  
+ Puoi anche definire attributi personalizzati. Gli attributi personalizzati devono essere conformi a queste regole di Windows Runtime:  
   
 -   Gli attributi personalizzati possono contenere solo campi pubblici.  
   
@@ -50,5 +50,5 @@ Un attributo è un tipo speciale di classe di riferimento che può essere antepo
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)   
- [Riferimenti al linguaggio di Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

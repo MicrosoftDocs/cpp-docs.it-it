@@ -1,5 +1,5 @@
 ---
-title: Namespace platform::Runtime::CompilerServices | Documenti Microsoft
+title: Namespace CompilerServices | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb3729b98726665a002cc141a7fc01e2494b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39d708d2464ba74ecd78421599c8c039bb02c214
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088102"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602512"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices (spazio dei nomi)
 Questo spazio dei nomi è solo per uso interno e non deve essere utilizzato per lo sviluppo.  
@@ -66,4 +66,4 @@ namespace Platform {
  **Spazio dei nomi:** Platform::CompilerServices  
   
 ## <a name="see-also"></a>Vedere anche  
- [Piattaforma Namespace](platform-namespace-c-cx.md)
+ [Platform Namespace](platform-namespace-c-cx.md)

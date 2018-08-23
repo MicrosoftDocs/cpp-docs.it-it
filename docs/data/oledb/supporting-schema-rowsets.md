@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c0468a9df7b79e79b3e20074c43fc1621058d71
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7f5c24623e10de23e42041592eb1b2f417f1ed5b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339705"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571494"
 ---
 # <a name="supporting-schema-rowsets"></a>Supporto dei set di righe dello schema
-I set di righe dello schema consentono agli utenti di ottenere informazioni su un archivio dati senza conoscere la struttura sottostante, o schema. Ad esempio, un archivio dati potrebbe essere tabelle organizzate in una gerarchia definita dall'utente, pertanto non vi sarebbe alcun modo per assicurarsi di conoscere lo schema, ad eccezione per leggerlo. (Un altro esempio, notare che le procedure guidate di Visual C++ utilizzano set di righe dello schema per generare le funzioni di accesso per il consumer.) Per consentire al consumer di eseguire questa operazione, l'oggetto del provider sessione espone i metodi sul [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) interfaccia. Nelle applicazioni Visual C++, si utilizza il [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe per implementare `IDBSchemaRowset`.  
+I set di righe dello schema consentono agli utenti di ottenere informazioni su un archivio dati senza conoscere la struttura sottostante, o schema. Ad esempio, un archivio dati potrebbe essere tabelle organizzate in una gerarchia definita dall'utente, pertanto non vi sarebbe alcun modo per assicurarsi di conoscere lo schema, ad eccezione per leggerlo. (Un altro esempio, notare che le procedure guidate di Visual C++ utilizzano set di righe dello schema per generare le funzioni di accesso per il consumer.) Per consentire al consumer di eseguire questa operazione, l'oggetto del provider sessione espone i metodi sul [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) interfaccia. Nelle applicazioni Visual C++, si utilizza il [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe per implementare `IDBSchemaRowset`.  
   
  `IDBSchemaRowsetImpl` supporta i metodi seguenti:  
   
@@ -64,7 +64,7 @@ I set di righe dello schema consentono agli utenti di ottenere informazioni su u
 -   Nelle **C***ShortName***SessionColSchemaRowset**, si passa il nome della tabella come un `DBID`.  
   
 ## <a name="setting-restrictions"></a>Impostazione delle restrizioni  
- Un concetto importante nel supporto di set di righe dello schema dall'impostazione di restrizioni, come accade con `SetRestrictions`. Le restrizioni consentono agli utenti di recuperare solo le righe corrispondenti (ad esempio, trovare tutte le colonne nella tabella "MyTable"). Sono facoltative e, nel caso in cui nessuna sia supportata (impostazione predefinita), vengono restituiti sempre tutti i dati. Per un esempio di un provider che supporta le restrizioni, vedere la [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) esempio.  
+ Un concetto importante nel supporto di set di righe dello schema dall'impostazione di restrizioni, come accade con `SetRestrictions`. Le restrizioni consentono agli utenti di recuperare solo le righe corrispondenti (ad esempio, trovare tutte le colonne nella tabella "MyTable"). Sono facoltative e, nel caso in cui nessuna sia supportata (impostazione predefinita), vengono restituiti sempre tutti i dati. Per un esempio di un provider che supporta le restrizioni, vedere la [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) esempio.  
   
 ## <a name="setting-up-the-schema-map"></a>Configurare il mapping dello Schema  
  Configurare un mapping dello schema di questo tipo, ad esempio UpdatePV:  
@@ -93,7 +93,7 @@ class CUpdateSessionTRSchemaRowset :
   
  Si noti che `CUpdateSession` eredita da `IDBSchemaRowsetImpl`, pertanto tutti i metodi per la gestione delle restrizioni. Usando `CSchemaRowsetImpl`, dichiara tre classi figlio (elencate nella mappa dello schema precedente): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, e `CUpdateSessionPTSchemaRowset`. Ognuna di queste classi figlio ha un `Execute` metodo che gestisce il rispettivo set di restrizioni (criteri di ricerca). Ciascuna `Execute` metodo confronta i valori del `cRestrictions` e `rgRestrictions` parametri. Vedere la descrizione di questi parametri nella [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
- Per altre informazioni sulle restrizioni corrispondano a un set di righe dello schema specifico, vedere la tabella dei GUID del set di righe dello schema in [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) nel *riferimento per programmatori OLE DB* di Windows SDK.  
+ Per altre informazioni sulle restrizioni corrispondano a un set di righe dello schema specifico, vedere la tabella dei GUID del set di righe dello schema in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) nel *riferimento per programmatori OLE DB* di Windows SDK.  
   
  Ad esempio, se è supportata la **nome_tabella** restrizione sul `DBSCHEMA_TABLES`, si potrebbero eseguire le operazioni seguenti:  
   

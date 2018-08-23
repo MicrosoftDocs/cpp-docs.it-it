@@ -1,7 +1,7 @@
 ---
 title: Creazione di un Provider aggiornabile | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/16/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340638"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572292"
 ---
 # <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
 
@@ -33,7 +33,7 @@ Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (s
  Successivamente, è necessario assicurarsi che di provider contiene tutte le funzionalità necessarie per supportare che il consumer può richiedere di esso. Se l'utente vuole aggiornare l'archivio dati, il provider deve contenere codice che rende persistenti i dati nell'archivio dati. Ad esempio, si potrebbe usare la libreria Run-Time di C o MFC per eseguire queste operazioni nell'origine dati. La sezione "[scrittura all'origine dati](#vchowwritingtothedatasource)" viene descritto come scrivere nell'origine dati, gestire i valori NULL e predefiniti e impostare i flag di colonna.  
   
 > [!NOTE]
->  UpdatePV è un esempio di un provider aggiornabile. UpdatePV è uguale a MyProv, ma con il supporto aggiornabile.  
+>  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) è riportato un esempio di un provider aggiornabile. UpdatePV è uguale a MyProv, ma con il supporto aggiornabile.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Provider di rendere aggiornabili  
 
@@ -147,3 +147,298 @@ Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (s
 ##  <a name="vchowwritingtothedatasource"></a> La scrittura all'origine dati  
  Per leggere dall'origine dati, chiamare il `Execute` (funzione). Per scrivere nell'origine dati, chiamare il `FlushData` (funzione). (In senso generale, scaricamento mezzi per salvare le modifiche apportate a una tabella o indice su disco).  
 
+```cpp
+
+FlushData(HROW, HACCESSOR);  
+
+```
+
+L'handle di riga (HROW) e gli argomenti di handle (HACCESSOR) della funzione di accesso consentono di specificare l'area in cui scrivere. In genere, si scrittura un singolo campo dati alla volta.
+
+Il `FlushData` metodo scrive i dati nel formato in cui è stato archiviato originalmente. Se non si esegue l'override di questa funzione, il provider funzioneranno correttamente ma le modifiche non verranno scaricate nell'archivio dati.
+
+### <a name="when-to-flush"></a>Quando lo scaricamento
+I modelli di provider chiamano FlushData ogni volta che i dati devono essere scritti nell'archivio dati; Ciò in genere (ma non sempre) si verifica come risultato di chiamate alle funzioni seguenti:
+
+- `IRowsetChange::DeleteRows`
+
+- `IRowsetChange::SetData`
+
+- `IRowsetChange::InsertRows` (se sono presenti nuovi dati da inserire nella riga)
+
+- `IRowsetUpdate::Update`
+
+### <a name="how-it-works"></a>Come funziona
+
+Il consumer effettua una chiamata che richiede uno scaricamento (ad esempio Update) e questa chiamata viene passata al provider, che esegue sempre le operazioni seguenti:
+
+- Le chiamate `SetDBStatus` ogni volta che si dispone di un valore di stato associato.
+
+- Controlla il flag di colonna.
+
+- Chiama `IsUpdateAllowed`.
+
+Questi tre passaggi garantiscono la protezione. Chiama quindi il provider `FlushData`.
+
+### <a name="how-to-implement-flushdata"></a>Come implementare FlushData
+
+Per implementare `FlushData`, è necessario prendere in considerazione diversi fattori:
+
+Assicurarsi che l'archivio dati può gestire le modifiche.
+
+La gestione dei valori NULL.
+
+### <a name="handling-default-values"></a>Gestire i valori predefiniti.
+
+Per implementare il proprio FlushData (metodo), è necessario:
+
+- Passare alla classe del set di righe.
+
+- Nel set di righe classe inserire la dichiarazione di:
+
+   ```cpp
+   HRESULT FlushData(HROW, HACCESSOR)  
+   {  
+      // Insert your implementation here and return an HRESULT.  
+   }  
+   ```
+
+- Fornire un'implementazione di `FlushData`.
+
+L'implementazione di FlushData archivia solo le righe e colonne che vengono effettivamente aggiornate. È possibile usare i parametri di tipo HACCESSOR e HROW per determinare la riga corrente e la colonna viene archiviato per l'ottimizzazione.
+
+In genere, la maggiore difficoltà sta lavorando con il proprio archivio dati nativi. Se possibile, provare a:
+
+- Mantenere il metodo di scrittura nell'archivio di dati più semplice possibile.
+
+- Gestire i valori NULL (facoltativi ma consigliato).
+
+- Gestire i valori predefiniti (facoltativi ma consigliato).
+
+La cosa migliore da fare è avere valori effettivi specificati nell'archivio dati per valori NULL e predefiniti. È consigliabile se è possibile estrapolare tali dati. In caso contrario, consiglia di non consentire valori NULL e predefiniti.
+
+L'esempio seguente mostra come `FlushData` viene implementato nella classe RUpdateRowset nell'esempio UpdatePV (vedere rowset nel codice di esempio):
+
+```cpp
+///////////////////////////////////////////////////////////////////////////  
+// class RUpdateRowset (in rowset.h)  
+...  
+HRESULT FlushData(HROW, HACCESSOR)  
+{  
+    ATLTRACE2(atlTraceDBProvider, 0, "RUpdateRowset::FlushData\n");  
+  
+    USES_CONVERSION;  
+    enum {  
+        sizeOfString = 256,  
+        sizeOfFileName = MAX_PATH  
+    };  
+    FILE*    pFile = NULL;  
+    TCHAR    szString[sizeOfString];  
+    TCHAR    szFile[sizeOfFileName];  
+    errcode  err = 0;  
+  
+    ObjectLock lock(this);  
+  
+    // From a filename, passed in as a command text,   
+    // scan the file placing data in the data array.  
+    if (m_strCommandText == (BSTR)NULL)  
+    {  
+        ATLTRACE( "RRowsetUpdate::FlushData -- "  
+                  "No filename specified\n");  
+        return E_FAIL;  
+    }  
+  
+    // Open the file  
+    _tcscpy_s(szFile, sizeOfFileName, OLE2T(m_strCommandText));  
+    if ((szFile[0] == _T('\0')) ||   
+        ((err = _tfopen_s(&pFile, &szFile[0], _T("w"))) != 0))  
+    {  
+        ATLTRACE("RUpdateRowset::FlushData -- Could not open file\n");  
+        return DB_E_NOTABLE;  
+    }  
+  
+    // Iterate through the row data and store it.  
+    for (long l=0; l<m_rgRowData.GetSize(); l++)  
+    {  
+        CAgentMan am = m_rgRowData[l];  
+  
+        _putw((int)am.dwFixed, pFile);  
+  
+        if (_tcscmp(&am.szCommand[0], _T("")) != 0)  
+            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand);  
+        else  
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
+        _fputts(szString, pFile);  
+  
+        if (_tcscmp(&am.szText[0], _T("")) != 0)  
+            _stprintf_s(&szString[0], _T("%s\n"), am.szText);  
+        else  
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
+        _fputts(szString, pFile);  
+  
+        if (_tcscmp(&am.szCommand2[0], _T("")) != 0)  
+            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand2);  
+        else  
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
+        _fputts(szString, pFile);  
+  
+        if (_tcscmp(&am.szText2[0], _T("")) != 0)  
+            _stprintf_s(&szString[0], _T("%s\n"), am.szText2);  
+        else  
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
+        _fputts(szString, pFile);  
+    }  
+  
+    if (fflush(pFile) == EOF || fclose(pFile) == EOF)  
+    {  
+        ATLTRACE("RRowsetUpdate::FlushData -- "  
+                 "Couldn't flush or close file\n");  
+    }  
+  
+    return S_OK;  
+}  
+```
+
+### <a name="handling-changes"></a>Gestione delle modifiche
+
+Per il provider gestire le modifiche, è necessario innanzitutto assicurarsi che l'archivio dati (ad esempio un file di testo o file video) con funzionalità che consentono di apportare modifiche su di esso. In caso contrario, è necessario creare separatamente che il codice dal progetto del provider.
+
+### <a name="handling-null-data"></a>La gestione dati NULL
+
+È possibile che un utente finale invia i dati NULL. Quando si scrivono i valori NULL per i campi dell'origine dati, si possono verificare problemi potenziali. Si immagini un'applicazione di immissione di ordini che accetta i valori per città e CAP. sarà possibile accettare i valori di uno o entrambi, ma non nessuno, perché in tal caso sarebbe impossibile recapito. Pertanto necessario limitare determinate combinazioni di valori NULL nei campi appropriati per l'applicazione.
+
+Lo sviluppatore di provider, è necessario valutare come verranno archiviati i dati, come verranno letti i dati dall'archivio dati e come si specifica che all'utente. In particolare, è necessario considerare come modificare lo stato dei dati dei set di righe di dati nell'origine dati (ad esempio DataStatus = NULL). Decidere quale valore da restituire quando un utente accede a un campo contenente un valore NULL.
+
+Esaminare il codice dell'esempio UpdatePV; viene illustrato come un provider può gestire i dati NULL. Nell'esempio UpdatePV, il provider archivia i dati NULL scrivendo la stringa "NULL" nell'archivio dati. Quando legge i dati NULL dall'archivio dati, tale stringa viene quindi svuota il buffer, creazione di una stringa NULL. htm. Include inoltre un override di `IRowsetImpl::GetDBStatus` in cui si restituisce DBSTATUS_S_ISNULL se tale valore è vuoto.
+
+### <a name="marking-nullable-columns"></a>Contrassegno delle colonne ammette valori null
+Se si implementa anche i set di righe dello schema (vedere `IDBSchemaRowsetImpl`), l'implementazione deve specificare nel set di righe DBSCHEMA_COLUMNS (in genere contrassegnati nel provider con CxxxSchemaColSchemaRowset) che la colonna è nullable.
+
+Devi anche specificare che tutte le colonne nullable contengano il valore DBCOLUMNFLAGS_ISNULLABLE nella versione del `GetColumnInfo`.
+
+Nell'implementazione di modelli OLE DB, se non si riesce a contrassegnare le colonne che ammette valori null, il provider presuppone che si deve contenere un valore e non consentirà al consumer di inviare valori null.
+
+L'esempio seguente illustra come il `CommonGetColInfo` funzione è implementata nel CUpdateCommand (vedere UpProvRS) in UpdatePV. Si noti come le colonne hanno DBCOLUMNFLAGS_ISNULLABLE per le colonne nullable.
+
+```cpp
+/////////////////////////////////////////////////////////////////////////////  
+// CUpdateCommand (in UpProvRS.cpp)  
+  
+ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookmark)  
+{  
+    static ATLCOLUMNINFO _rgColumns[6];  
+    ULONG ulCols = 0;  
+  
+    if (bBookmark)  
+    {  
+        ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0,  
+                            sizeof(DWORD), DBTYPE_BYTES,  
+                            0, 0, GUID_NULL, CAgentMan, dwBookmark,  
+                            DBCOLUMNFLAGS_ISBOOKMARK)  
+        ulCols++;  
+    }  
+  
+    // Next set the other columns up.  
+    // Add a fixed length entry for OLE DB conformance testing purposes  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Fixed"), 1, 4, DBTYPE_UI4,  
+                        10, 255, GUID_NULL, CAgentMan, dwFixed,   
+                        DBCOLUMNFLAGS_WRITE |   
+                        DBCOLUMNFLAGS_ISFIXEDLENGTH)  
+    ulCols++;  
+  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command"), 2, 16, DBTYPE_STR,  
+                        255, 255, GUID_NULL, CAgentMan, szCommand,  
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
+    ulCols++;  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text"), 3, 16, DBTYPE_STR,   
+                        255, 255, GUID_NULL, CAgentMan, szText,   
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
+    ulCols++;  
+  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command2"), 4, 16, DBTYPE_STR,  
+                        255, 255, GUID_NULL, CAgentMan, szCommand2,   
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
+    ulCols++;  
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text2"), 5, 16, DBTYPE_STR,  
+                        255, 255, GUID_NULL, CAgentMan, szText2,   
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
+    ulCols++;  
+  
+    if (pcCols != NULL)  
+    {  
+        *pcCols = ulCols;  
+    }  
+  
+    return _rgColumns;  
+}  
+
+```
+
+### <a name="default-values"></a>Valori predefiniti
+
+Oltre ai valori NULL, l'utente è tenuto a gestire le modifiche ai valori predefiniti.
+
+Il valore predefinito di FlushData / esecuzione consiste nel restituire S_OK. Pertanto, se non si esegue l'override di questa funzione, le modifiche vengano visualizzate abbia esito positivo (verrà restituito S_OK), ma non verrà trasmesso all'archivio dati.
+
+L'esempio UpdatePV (nel rowset), il `SetDBStatus` metodo gestisce i valori predefiniti, come indicato di seguito:
+
+```cpp
+virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
+                            ATLCOLUMNINFO* pColInfo)  
+{  
+    ATLASSERT(pRow != NULL && pColInfo != NULL && pdbStatus != NULL);  
+  
+    void* pData = NULL;  
+    char* pDefaultData = NULL;  
+    DWORD* pFixedData = NULL;  
+  
+    switch (*pdbStatus)  
+    {  
+        case DBSTATUS_S_DEFAULT:  
+            pData = (void*)&m_rgRowData[pRow->m_iRowset];  
+            if (pColInfo->wType == DBTYPE_STR)  
+            {  
+                pDefaultData = (char*)pData + pColInfo->cbOffset;  
+                strcpy_s(pDefaultData, "Default");  
+            }  
+            else  
+            {  
+                pFixedData = (DWORD*)((BYTE*)pData +   
+                                          pColInfo->cbOffset);  
+                *pFixedData = 0;  
+                return S_OK;  
+            }  
+            break;  
+        case DBSTATUS_S_ISNULL:  
+        default:  
+            break;  
+    }  
+    return S_OK;  
+}  
+```
+
+### <a name="column-flags"></a>Flag di colonna
+
+Se si supportano i valori predefiniti per le colonne, è necessario impostarla usando i metadati nel \<classe provider\>SchemaRowset classe. Impostare `m_bColumnHasDefault` = VARIANT_TRUE.
+
+È anche la responsabilità di impostare il flag di colonna, che vengono specificate mediante il DBCOLUMNFLAGS tipo enumerato. I flag di colonna vengono descritte le caratteristiche della colonna.
+
+Ad esempio, nel `CUpdateSessionColSchemaRowset` classe in UpdatePV (in Session. h), la prima colonna è impostata in questo modo:
+
+```cpp
+// Set up column 1  
+trData[0].m_ulOrdinalPosition = 1;  
+trData[0].m_bIsNullable = VARIANT_FALSE;  
+trData[0].m_bColumnHasDefault = VARIANT_TRUE;  
+trData[0].m_nDataType = DBTYPE_UI4;  
+trData[0].m_nNumericPrecision = 10;  
+trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
+                            DBCOLUMNFLAGS_ISFIXEDLENGTH;  
+lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
+m_rgRowData.Add(trData[0]);  
+```
+
+Questo codice specifica, tra le altre cose, che la colonna supporta un valore predefinito pari a 0, che essere scrivibile, e che tutti i dati della colonna hanno la stessa lunghezza. Se si desidera che i dati in una colonna a lunghezza variabile, non si imposterebbe questo flag.
+
+## <a name="see-also"></a>Vedere anche
+[Creazione di un provider OLE DB](creating-an-ole-db-provider.md)

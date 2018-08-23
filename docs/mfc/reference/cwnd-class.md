@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028421"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541823"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 Fornisce la funzionalità di base di tutte le classi di finestre nella libreria Microsoft Foundation Class (MFC).  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  Il `DestroyWindow` funzione membro distrugge anche le finestre di dialogo non modale create da [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
- Se il `CWnd` in corso l'eliminazione di una finestra figlio e non dispone i [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) stile set, il [WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx) messaggio viene inviato all'elemento padre.  
+ Se il `CWnd` in corso l'eliminazione di una finestra figlio e non dispone i [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) stile set, il [WM_PARENTNOTIFY ](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) messaggio viene inviato all'elemento padre.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -6613,7 +6613,7 @@ afx_msg void OnKeyDown(
   
 ### <a name="parameters"></a>Parametri  
  *NChar*  
- Specifica il codice tasto virtuale della chiave specificata. Per un elenco di standard codici di tasti virtuali, vedere winuser. h  
+ Specifica il codice tasto virtuale della chiave specificata. Per un elenco di codici di tasti virtuali standard, vedere winuser. h  
   
  *nRepCnt*  
  (Il numero di volte in cui che la sequenza di tasti viene ripetuta come risultato dell'utente tenendo premuto il tasto) n. ripetizioni.  
@@ -6655,7 +6655,7 @@ afx_msg void OnKeyUp(
   
 ### <a name="parameters"></a>Parametri  
  *NChar*  
- Specifica il codice tasto virtuale della chiave specificata. Per un elenco di standard codici di tasti virtuali, vedere winuser. h  
+ Specifica il codice tasto virtuale della chiave specificata. Per un elenco di codici di tasti virtuali standard, vedere winuser. h  
   
  *nRepCnt*  
  (Il numero di volte in cui che la sequenza di tasti viene ripetuta come risultato dell'utente tenendo premuto il tasto) n. ripetizioni.  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  Questa funzione membro viene chiamata dal framework per consentire all'applicazione di gestire un messaggio di Windows. I parametri passati alla funzione riflettono i parametri ricevuti dal framework quando è stato ricevuto il messaggio. Se si chiama l'implementazione della classe di base di questa funzione, questa userà i parametri passati in origine con il messaggio e non i parametri che si forniscono alla funzione.  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- Il framework chiama questa funzione membro quando quando viene utilizzato il tasto freccia destra o sinistra per passare dalla barra dei menu e menu di sistema.  
+ Il framework chiama questa funzione membro quando viene utilizzato il tasto freccia destra o sinistra per passare dalla barra dei menu e menu di sistema.  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8260,7 +8260,7 @@ afx_msg void OnSessionChange(
 ### <a name="remarks"></a>Note  
  Questo metodo riceve la [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) notifica, che è descritti nel SDK di Windows.  
   
- Il *nSessionState* parametro specifica che una sessione è connesso o disconnesso da un terminale remoto o la console, un utente connesso o disattivare, una sessione è bloccata o sbloccata o una sessione è stato modificato lo stato di controllo remoto. Per altre informazioni, vedere la *wParam* parametro del il [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) messaggio.  
+ Il *nSessionState* parametro specifica che una sessione è connesso o disconnesso da un terminale remoto o la console, un utente connesso o disattivare, una sessione è bloccata o sbloccata o una sessione è stato modificato lo stato di controllo remoto. Per altre informazioni, vedere la *wParam* parametro delle [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) messaggio.  
   
 > [!NOTE]
 >  Questa funzione membro viene chiamata dal framework per consentire all'applicazione di gestire un messaggio di Windows. I parametri passati alla funzione riflettono i parametri ricevuti dal framework quando è stato ricevuto il messaggio. Se si chiama l'implementazione della classe di base di questa funzione, questa userà i parametri passati in origine con il messaggio e non i parametri che si forniscono alla funzione.  
@@ -8561,7 +8561,7 @@ afx_msg void OnSysChar(
 |31|Specifica lo stato di transizione. Il valore è 1 se il tasto è stato rilasciato o è 0 se il tasto viene premuto.|  
   
 ### <a name="remarks"></a>Note  
- Specifica il codice tasto virtuale della chiave del menu di controllo. (Per un elenco di standard codici di tasti virtuali, vedere winuser. h)  
+ Specifica il codice tasto virtuale della chiave del menu di controllo. (Per un elenco di codici di tasti virtuali standard, vedere winuser. h)  
   
  Quando il codice del contesto è 0, WM_SYSCHAR può passare la [WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357) dei messaggi per il [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) funzione Windows che verrà gestito come se fosse un normale messaggio chiave anziché un sistema tasto carattere. In questo modo i tasti di scelta rapida da utilizzare con la finestra attiva, anche se la finestra attiva non ha lo stato attivo.  
   
@@ -8694,7 +8694,7 @@ afx_msg void OnSysKeyDown(
   
 ### <a name="parameters"></a>Parametri  
  *NChar*  
- Specifica il codice tasto virtuale del tasto premuto. Per un elenco di standard codici di tasti virtuali, vedere winuser. h  
+ Specifica il codice tasto virtuale del tasto premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h  
   
  *nRepCnt*  
  Specifica il numero di ripetizioni.  
@@ -8738,7 +8738,7 @@ afx_msg void OnSysKeyUp(
   
 ### <a name="parameters"></a>Parametri  
  *NChar*  
- Specifica il codice tasto virtuale del tasto premuto. Per un elenco di standard codici di tasti virtuali, vedere winuser. h  
+ Specifica il codice tasto virtuale del tasto premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h  
   
  *nRepCnt*  
  Specifica il numero di ripetizioni.  
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  Questa funzione membro viene chiamata dal framework per consentire all'applicazione di gestire un messaggio di Windows. I parametri passati alla funzione riflettono i parametri ricevuti dal framework quando è stato ricevuto il messaggio. Se si chiama l'implementazione della classe di base di questa funzione, questa userà i parametri passati in origine con il messaggio e non i parametri che si forniscono alla funzione.  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- Chiamato per modificare lo stato dell'interfaccia utente per la finestra specificata e tutte le finestre figlio.  
+ Chiamata eseguita per cambiare lo stato dell'interfaccia utente per la finestra specificata e tutte le finestre figlio.  
   
 ```  
 afx_msg void OnUpdateUIState(
@@ -9038,7 +9038,7 @@ afx_msg int OnVKeyToItem(
   
 ### <a name="parameters"></a>Parametri  
  *nKey*  
- Specifica il codice tasto virtuale del tasto premuto dall'utente. Per un elenco di standard codici di tasti virtuali, vedere winuser. h  
+ Specifica il codice tasto virtuale del tasto premuto dall'utente. Per un elenco di codici di tasti virtuali standard, vedere winuser. h  
   
  *pListBox*  
  Specifica un puntatore alla casella di riepilogo. Il puntatore può essere temporaneo e non deve essere memorizzato per usi successivi.  

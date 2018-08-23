@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dfa3b7222a25ed56d014cc90dbffa5f57a2c9436
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 398f46d5f8eb15d961d80b9a7a20b758fffd09c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651908"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584236"
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>Metodo AsyncBase::CheckValidStateForResultsCall
-Verifica se i risultati di un'operazione asincrona possono essere raccolti nello stato asincrono corrente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-inline HRESULT CheckValidStateForResultsCall();  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se i risultati possono essere raccolti; in caso contrario, E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Verifica se i risultati di un'operazione asincrona possono essere raccolti nello stato asincrono corrente.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+inline HRESULT CheckValidStateForResultsCall();
+```
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se i risultati possono essere raccolti; in caso contrario, E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Async. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

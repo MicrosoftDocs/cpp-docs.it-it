@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: classnotregisteredexception | Documenti Microsoft'
+title: 'Classe platform:: classnotregisteredexception | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ClassNotRegisteredException
 ms.assetid: 8f8871d8-51b9-46e8-902e-ae023c9f1de9
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919ee807cea61b3478c12b2d5ec53eab56f3d9f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c8edc5dd90fb4209ecf6dc227208a7375fd8ce1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087988"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589911"
 ---
 # <a name="platformclassnotregisteredexception-class"></a>Classe Platform::ClassNotRegisteredException
 Generata quando una classe COM non è stata registrata.  

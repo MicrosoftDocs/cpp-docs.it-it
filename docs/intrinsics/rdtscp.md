@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329803"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538313"
 ---
 # <a name="rdtscp"></a>__rdtscp
 **Sezione specifica Microsoft**  
   
- Genera il `rdtscp` istruzione scrive `TSC_AUX[31:0`] in memoria e restituisce 64-bit Time Stamp Counter (`TSC)` risultato.  
+ Genera il `rdtscp` scrive un'istruzione `TSC_AUX[31:0`] in memoria e restituisce i 64 bit Time Stamp Counter (`TSC)` risultato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,28 +40,28 @@ unsigned __int64 __rdtscp(
   
 #### <a name="parameters"></a>Parametri  
  [out] `Aux`  
- Puntatore a un percorso che conterrà il contenuto del Registro di specifiche del computer `TSC_AUX[31:0]`.  
+ Puntatore a un percorso che conterrà il contenuto del registro specifiche del computer `TSC_AUX[31:0]`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Conteggio un intero senza segno a 64 bit.  
+ Conteggio dei tick un intero senza segno a 64 bit.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__rdtscp`|Famiglia di processori AMD TNP 0Fh o versioni successive|  
+|`__rdtscp`|Famiglia TNP AMD 0Fh o versioni successive|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Questo intrinseco genera il `rdtscp` istruzione. Per determinare il supporto hardware per questa istruzione, chiamare il `__cpuid` intrinseco con `InfoType=0x80000001` e i bit di controllo 27 di `CPUInfo[3] (EDX)`. Questo bit è 1 se l'istruzione è supportata e 0 in caso contrario.  Se si esegue il codice che utilizza questa funzione intrinseca nell'hardware che non supporta il `rdtscp` (istruzione), i risultati sono imprevedibili.  
+ Questa funzione intrinseca genera il `rdtscp` (istruzione). Per determinare il supporto hardware per questa istruzione, chiama il `__cpuid` intrinseco con `InfoType=0x80000001` e bit di controllo 27 di `CPUInfo[3] (EDX)`. Questo bit è 1 se l'istruzione è supportata e 0 in caso contrario.  Se si esegue codice che usa questa funzione intrinseca in hardware che non supporta il `rdtscp` (istruzione), i risultati sono imprevedibili.  
   
 > [!CAUTION]
->  A differenza di `rdtsc`, `rdtscp` è un'istruzione di serializzazione, tuttavia, il compilatore può spostare codice il problema intrinseco.  
+>  A differenza `rdtsc`, `rdtscp` è un'istruzione di serializzazione; tuttavia, il compilatore può spostare il codice il problema intrinseco.  
   
- L'interpretazione del valore TSC in questa generazione di hardware è diverso da quello nelle versioni precedenti di [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Manuali dell'hardware per altre informazioni, vedere.  
+ L'interpretazione del valore del contatore TSC in questa generazione di hardware è diverso da quello nelle versioni precedenti di x64.  Manuali dell'hardware per altre informazioni, vedere.  
   
- Il significato del valore di `TSC_AUX[31:0]` dipende dal sistema operativo.  
+ Il significato del valore `TSC_AUX[31:0]` varia a seconda del sistema operativo.  
   
 ## <a name="example"></a>Esempio  
   

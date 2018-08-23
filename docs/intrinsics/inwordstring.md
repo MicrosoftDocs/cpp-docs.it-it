@@ -1,5 +1,5 @@
 ---
-title: __inwordstring | Documenti Microsoft
+title: __inwordstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073c1303661aece3340f9ac84d37ccf23e29d556
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb3f563d94d2e7685c1a83e497b1db082f131842
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333362"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541621"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Sezione specifica Microsoft**  
   
- Legge i dati dalla porta specificata utilizzando il `rep insw` istruzione.  
+ Legge i dati dalla porta specificata usando il `rep insw` (istruzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,16 +45,16 @@ void __inwordstring(
  La porta da cui leggere.  
   
  [out] `Buffer`  
- I dati letti dalla porta viene scritto in questo caso.  
+ I dati letti dalla porta viene scritto qui.  
   
  [in] `Count`  
- Il numero di parole di dati da leggere.  
+ Il numero di parole dei dati da leggere.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inwordstring`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

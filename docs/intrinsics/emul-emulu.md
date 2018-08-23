@@ -1,5 +1,5 @@
 ---
-title: __emul, __emulu | Documenti Microsoft
+title: __emul, __emulu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331035"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538472"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Sezione specifica Microsoft**  
   
- Esegue moltiplicazioni che cosa può contenere un intero a 32 bit di overflow.  
+ Consente di eseguire moltiplicazioni di overflow ciò che può contenere un numero intero a 32 bit.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,10 +47,10 @@ unsigned __int64 __emulu(
   
 #### <a name="parameters"></a>Parametri  
  [in] `a`  
- Il primo operando di tipo integer della moltiplicazione.  
+ Il primo operando integer della moltiplicazione.  
   
  [in] `b`  
- Il secondo operando di tipo integer della moltiplicazione.  
+ Il secondo operando integer della moltiplicazione.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il risultato della moltiplicazione.  
@@ -59,15 +59,15 @@ unsigned __int64 __emulu(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86, x64|  
+|`__emulu`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
  `__emul` accetta due valori con segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.  
   
- `__emulu` accetta due valori integer senza segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero senza segno a 64 bit.  
+ `__emulu` accetta due valori interi senza segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero senza segno a 64 bit.  
   
 ## <a name="example"></a>Esempio  
   

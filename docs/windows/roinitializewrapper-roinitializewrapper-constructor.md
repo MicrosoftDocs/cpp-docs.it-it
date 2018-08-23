@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 528c66da24c4cbf6c22af5b1b5f8dd3afffff64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604398"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604646"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>Costruttore RoInitializeWrapper::RoInitializeWrapper
-Inizializza una nuova istanza di **RoInitializeWrapper** classe.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
+
+Inizializza una nuova istanza di **RoInitializeWrapper** classe.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *flags*  
- Una delle enumerazioni RO_INIT_TYPE, che specifica il supporto fornito dal Runtime di Windows.  
-  
-## <a name="remarks"></a>Note  
- Il **RoInitializeWrapper** classe richiama `Windows::Foundation::Initialize(flags)`.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe HandleT](../windows/handlet-class.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*flags*  
+Una delle enumerazioni RO_INIT_TYPE, che specifica il supporto fornito dal Runtime di Windows.
+
+## <a name="remarks"></a>Note
+
+Il **RoInitializeWrapper** classe richiama `Windows::Foundation::Initialize(flags)`.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe HandleT](../windows/handlet-class.md)

@@ -1,5 +1,5 @@
 ---
-title: __writegsbyte, __writegsdword, __writegsqword, __writegsword | Documenti Microsoft
+title: __writegsbyte, __writegsdword, __writegsqword, __writegsword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c9eec7bb0da65bfd327726078766ab1befacbde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5ae6f47009600c87cb260246fca474592a5e9c6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328276"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538308"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 **Sezione specifica Microsoft**  
   
- Scrittura della memoria in un percorso specificato da un offset relativo all'inizio del segmento GS.  
+ Scrittura della memoria in un percorso specificato da un offset rispetto all'inizio del segmento GS.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,15 +66,15 @@ void __writegsqword(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__writegsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writegsbyte`|X64|  
+|`__writegsdword`|X64|  
+|`__writegsqword`|X64|  
+|`__writegsword`|X64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni intrinseche disponibili solo in modalità kernel e queste routine sono disponibili solo come funzioni intrinseche.  
+ Queste funzioni intrinseche sono disponibili in solo in modalità kernel e tali routine sono disponibili solo come intrinseci.  
   
 **Fine sezione specifica Microsoft**  
   

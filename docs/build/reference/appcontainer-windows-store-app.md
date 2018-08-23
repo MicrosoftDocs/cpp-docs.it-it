@@ -1,5 +1,5 @@
 ---
-title: /APPCONTAINER (App di Store UWP/Microsoft) | Documenti Microsoft
+title: /APPCONTAINER (UWP/Microsoft Store App) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca1a3ed5adaada689d374eeb3e67bae6c989e0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eab6a9bd8ac37dec250739e3554c370726dce9eb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369292"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589577"
 ---
-# <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (applicazione di Microsoft Store)
-Specifica se il linker crea un'immagine eseguibile che deve essere eseguita in un contenitore di app.  
+# <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (App di Microsoft Store)
+Specifica se il linker viene creata un'immagine eseguibile che deve essere eseguita in un contenitore di app.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,23 +29,23 @@ Specifica se il linker crea un'immagine eseguibile che deve essere eseguita in u
 ```  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, /APPCONTAINER è disattivata.  
+ Per impostazione predefinita, /APPCONTAINER è disattivato.  
   
- Questa opzione consente di modificare un file eseguibile per indicare se l'app deve essere eseguito nell'ambiente di isolamento del processo di appcontainer. Specificare /APPCONTAINER per un'applicazione che deve essere eseguito nell'ambiente di appcontainer, ad esempio, un'app della piattaforma UWP (Universal Windows) o Windows Phone 8. x. (L'opzione è impostata automaticamente in Visual Studio quando si crea un'app di Windows universale da un modello.) Per un'applicazione desktop, specificare /APPCONTAINER:NO o semplicemente omettere l'opzione.  
+ Questa opzione consente di modificare un file eseguibile per indicare se l'app deve essere eseguito nell'ambiente di isolamento dei processi di appcontainer. Specificare /APPCONTAINER per un'app che deve essere eseguito nell'ambiente appcontainer, ad esempio, un'app Universal Windows Platform (UWP) o Windows Phone 8.x. (L'opzione è impostata automaticamente in Visual Studio quando si crea un'app di Windows universale da un modello.) Per un'app desktop, specificare /appcontainer: No oppure omettere semplicemente l'opzione.  
   
- È stata introdotta l'opzione /APPCONTAINER in [!INCLUDE[win8](../../build/reference/includes/win8_md.md)].  
+ L'opzione /APPCONTAINER è stata introdotta in Windows 8.  
   
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per ulteriori informazioni, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Espandere il **le proprietà di configurazione** nodo.  
+2.  Espandere il nodo **Proprietà di configurazione**.  
   
-3.  Espandere il **Linker** nodo.  
+3.  Espandere la **Linker** nodo.  
   
 4.  Selezionare il **riga di comando** pagina delle proprietà.  
   
-5.  In **opzioni aggiuntive**, immettere `/APPCONTAINER` o `/APPCONTAINER:NO`.  
+5.  Nelle **opzioni aggiuntive**, immettere `/APPCONTAINER` o `/APPCONTAINER:NO`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337408"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540654"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (struttura)
 La struttura `AFX_GLOBAL_DATA` contiene i campi e i metodi usati per gestire il framework o per personalizzare l'aspetto e il comportamento dell'applicazione.  
@@ -69,7 +69,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Rileva lo stato corrente delle funzionalità di animazione del menu del desktop e della barra delle applicazioni che si nasconde automaticamente.|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Registra la classe di finestre MFC specificata.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Rilascia le interfacce ottenute tramite i metodi GetITaskbarList e GetITaskbarList3.|  
-|[AFX_GLOBAL_DATA::Resume](#resume)|Reinizializza i puntatori a funzione interna che hanno accesso ai metodi che supportano [temi e stili di visualizzazione](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)di Windows.|  
+|[AFX_GLOBAL_DATA::Resume](#resume)|Reinizializza i puntatori a funzione interna che accedono ai metodi che supportano Windows [temi e stili](/windows/desktop/Controls/visual-styles-overview).|  
 |[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Offre un modo semplice per chiamare il metodo [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) di Windows.|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Crea il tipo di carattere logico specificato.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Crea e inizializza un oggetto Shell da un nome di analisi.|  

@@ -321,17 +321,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec349041ff51441d49b5de39968417bdd071cad6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027979"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540848"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 Il `CMFCToolBar` classe simile [classe CToolBar](../../mfc/reference/ctoolbar-class.md), ma fornisce supporto aggiuntivo per le funzionalità dell'interfaccia utente. Queste includono barre degli strumenti flat, barre degli strumenti con immagini con area sensibile, icone grandi, pulsanti cercapersone, barre degli strumenti bloccate, controlli Rebar, testo sotto le immagini, immagini di sfondo e barre degli strumenti a schede. La classe `CMFCToolBar` contiene inoltre il supporto incorporato per la personalizzazione da parte dell'utente delle barre degli strumenti e dei menu, il trascinamento della selezione tra barre degli strumenti e menu, i pulsanti della casella combinata, i pulsanti della casella di modifica, le selezioni colore e i pulsanti rollup.
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.    
   
 ## <a name="syntax"></a>Sintassi  
   

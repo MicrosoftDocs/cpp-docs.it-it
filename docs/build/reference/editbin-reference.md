@@ -1,5 +1,5 @@
 ---
-title: Riferimenti a EDITBIN | Documenti Microsoft
+title: Riferimenti a EDITBIN | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20191fdb133fe09ed4f6a462cd777098acd5f05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e1e9963328d328767d97b3af34e20b1d2a1840b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372308"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572172"
 ---
 # <a name="editbin-reference"></a>Riferimenti a EDITBIN
-Microsoft COFF Binary File Editor (EDITBIN. EXE) consente di modificare i file binari comuni oggetto formato COFF (File). È possibile utilizzare EDITBIN per modificare i file oggetto, i file eseguibili e librerie a collegamento dinamico (DLL).  
+L'Editor di File di Microsoft COFF Binary (EDITBIN. EXE) consente di modificare i file binari di File formato COFF (Common Object). È possibile usare EDITBIN per modificare i file oggetto, i file eseguibili e librerie a collegamento dinamico (DLL).  
   
 > [!NOTE]
->  È possibile avviare questo strumento solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
+>  È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
   
- EDITBIN non è disponibile per l'utilizzo con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore. Eventuali modifiche apportate ai file binari generati con /GL dovranno essere apportate mediante ricompilazione e collegamento.  
+ EDITBIN non è disponibile per l'uso con i file generati con il [/GL](../../build/reference/gl-whole-program-optimization.md) opzione del compilatore. Eventuali modifiche ai file binari generati con /GL dovrà essere ottenuta tramite la ricompilazione e il collegamento.  
   
 -   [Riga di comando EDITBIN](../../build/reference/editbin-command-line.md)  
   

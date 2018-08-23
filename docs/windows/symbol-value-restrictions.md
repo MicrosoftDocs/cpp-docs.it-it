@@ -18,53 +18,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e6b594ad7fe1d805511d5e2cd1b67bd0d791e8e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5ed1631d9b8f0c591006c7b708662b3a7321f22b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013401"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602744"
 ---
 # <a name="symbol-value-restrictions"></a>Restrizioni relative ai valori dei simboli
-Il valore di un simbolo può essere qualsiasi numero intero espresso in modo normale per le direttive #define per il preprocessore. Di seguito sono riportati alcuni esempi di valori di simboli:  
-  
-```  
-18  
-4001  
-0x0012  
--3456  
-```  
-  
- I valori dei simboli per le risorse (tasti di scelta rapida, bitmap, cursori, finestre di dialogo, icone, menu, tabelle di stringhe e informazioni sulla versione) devono essere numeri decimali compresi tra 0 e 32.767, ma non possono essere valori esadecimali. I valori dei simboli per gli elementi delle risorse, quali i controlli delle finestre di dialogo o le singole stringhe nella tabella di stringhe, possono essere compresi tra 0 e 65.534 oppure tra -32.768 e 32.767.  
-  
- I simboli delle risorse sono numeri a 16 bit. È possibile immetterli come valori con o senza segno, ma vengono usati internamente come Unsigned Integer. Per i numeri negativi viene pertanto eseguito il cast ai corrispondenti valori positivi.  
-  
- Di seguito sono riportate alcune restrizioni relative ai valori dei simboli:  
-  
--   L'ambiente di sviluppo Visual Studio e MFC usano alcuni intervalli di numeri per scopi specifici. Tutti i numeri con il bit più significativo impostato (da -32.768 a -1 oppure da 32.768 a 65.534, a seconda del segno) sono riservati da MFC.  
-  
--   Non è possibile definire il valore di un simbolo mediante altre stringhe di simbolo. Non è ad esempio supportata la seguente definizione di simbolo:  
-  
-    ```cpp  
-    #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
-    ```  
-  
--   Non è possibile usare macro del preprocessore con argomenti come definizioni dei valori. Ad esempio:  
-  
-    ```cpp  
-    #define   IDD_ABOUT  ID(7) //not supported  
-    ```  
-  
-     non è un'espressione valida indipendentemente dal valore valutato da `ID` in fase di compilazione.  
-  
--   L'applicazione potrebbe disporre di un file esistente contenente simboli definiti con espressioni. Per altre informazioni su come includere i simboli come simboli di sola lettura, vedere [simboli usando condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md).  
-  
- Per altre informazioni sugli intervalli di numeri, vedere [TN023: risorse MFC Standard](../mfc/tn023-standard-mfc-resources.md).  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica valore numerico del simbolo](../windows/changing-a-symbol-s-numeric-value.md)   
- [Restrizioni relative ai nomi di simbolo](../windows/symbol-name-restrictions.md)   
- [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)
+
+Il valore di un simbolo può essere qualsiasi numero intero espresso in modo normale per le direttive #define per il preprocessore. Di seguito sono riportati alcuni esempi di valori di simboli:
+
+```
+18
+4001
+0x0012
+-3456
+```
+
+I valori dei simboli per le risorse (tasti di scelta rapida, bitmap, cursori, finestre di dialogo, icone, menu, tabelle di stringhe e informazioni sulla versione) devono essere numeri decimali compresi tra 0 e 32.767, ma non possono essere valori esadecimali. I valori dei simboli per gli elementi delle risorse, quali i controlli delle finestre di dialogo o le singole stringhe nella tabella di stringhe, possono essere compresi tra 0 e 65.534 oppure tra -32.768 e 32.767.
+
+I simboli delle risorse sono numeri a 16 bit. È possibile immetterli come valori con o senza segno, ma vengono usati internamente come Unsigned Integer. Per i numeri negativi viene pertanto eseguito il cast ai corrispondenti valori positivi.
+
+Di seguito sono riportate alcune restrizioni relative ai valori dei simboli:
+
+- L'ambiente di sviluppo Visual Studio e MFC usano alcuni intervalli di numeri per scopi specifici. Tutti i numeri con il bit più significativo impostato (da -32.768 a -1 oppure da 32.768 a 65.534, a seconda del segno) sono riservati da MFC.
+
+- Non è possibile definire il valore di un simbolo mediante altre stringhe di simbolo. Non è ad esempio supportata la seguente definizione di simbolo:
+
+    ```cpp
+    #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
+    ```
+
+- Non è possibile usare macro del preprocessore con argomenti come definizioni dei valori. Ad esempio:
+
+    ```cpp
+    #define   IDD_ABOUT  ID(7) //not supported
+    ```
+
+   non è un'espressione valida indipendentemente dal valore valutato da `ID` in fase di compilazione.
+
+- L'applicazione potrebbe disporre di un file esistente contenente simboli definiti con espressioni. Per altre informazioni su come includere i simboli come simboli di sola lettura, vedere [simboli usando condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md).
+
+Per altre informazioni sugli intervalli di numeri, vedere [TN023: risorse MFC Standard](../mfc/tn023-standard-mfc-resources.md).
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica del valore numerico di un simbolo](../windows/changing-a-symbol-s-numeric-value.md)  
+[Restrizioni relative ai nomi dei simboli](../windows/symbol-name-restrictions.md)  
+[ID simbolo predefiniti](../windows/predefined-symbol-ids.md)

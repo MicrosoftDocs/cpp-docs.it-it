@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852887"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543179"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 Implementa una barra degli strumenti popup contestuale.  
@@ -162,7 +162,7 @@ BOOL ShowWithContextMenu(
  Utilizzare questa funzione per visualizzare una barra di formattazione rapida con un menu di scelta rapida. Menu di scelta rapida è posizionata 15 pixel sotto la barra di formattazione rapida.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ```  
 BOOL IsContextMenuMode() const;  
@@ -173,7 +173,7 @@ BOOL IsContextMenuMode() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ```  
 virtual BOOL IsRibbonMiniToolBar() const;  

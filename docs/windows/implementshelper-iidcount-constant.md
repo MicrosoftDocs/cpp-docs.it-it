@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea871f2c3b75ac8f4e316b3dc680e8821ac789f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6b96165b045c44f4b15b09d6a5c48da14b7e96be
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010672"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575854"
 ---
 # <a name="implementshelperiidcount-constant"></a>Costante ImplementsHelper::IidCount
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-static const unsigned long IidCount;  
-```  
-  
-## <a name="remarks"></a>Note  
- Contiene il numero di ID di interfaccia implementata nell'attuale `Implements` oggetto.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [ImplementsHelper (struttura)](../windows/implementshelper-structure.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+static const unsigned long IidCount;
+```
+
+## <a name="remarks"></a>Note
+
+Contiene il numero di ID di interfaccia implementata nell'attuale `Implements` oggetto.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Struttura ImplementsHelper](../windows/implementshelper-structure.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

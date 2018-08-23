@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333629"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539459"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Sezione specifica Microsoft**  
   
- Genera x64 estesi versione la funzione Convert con numero a virgola mobile a precisione singola troncamento di intero a 64 Bit (`cvttss2si`) (istruzione).  
+ Genera x64 estesi versione di Convert con numero a virgola mobile a precisione singola troncamento in numero intero a 64 bit (`cvttss2si`) (istruzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,21 +39,21 @@ __int64 _mm_cvttss_si64x(
   
 #### <a name="parameters"></a>Parametri  
  [in] `value`  
- Un `__m128` struttura che contiene i valori a virgola mobile e precisione singola.  
+ Un `__m128` struttura che contiene i valori a virgola mobile a precisione singola.  
   
 ## <a name="return-value"></a>Valore restituito  
- Il risultato della conversione del primo valore a virgola mobile a un intero a 64 bit.  
+ Il risultato della conversione del primo valore a virgola mobile a un integer a 64 bit.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|X64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- La funzione intrinseca è diverso da `_mm_cvtss_si64x` solo nel fatto che le conversioni vengano troncate verso zero. Poiché il `__m128` struttura rappresenta un registro XMM, l'istruzione generata Sposta i dati da un registro XMM nella memoria di sistema.  
+ La funzione intrinseca è diverso da `_mm_cvtss_si64x` solo in quanto le conversioni inesatte vengano troncate verso lo zero. Poiché il `__m128` struttura rappresenta un registro XMM, l'istruzione generata Sposta i dati da un registro XMM nella memoria di sistema.  
   
  Questa routine è disponibile solo come funzione intrinseca.  
   

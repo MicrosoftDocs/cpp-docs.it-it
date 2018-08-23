@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852419"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541816"
 ---
 # <a name="cmfcfontinfo-class"></a>Classe CMFCFontInfo
 Il `CMFCFontInfo` classe descrive il nome e altri attributi di un tipo di carattere.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Valore restituito  
   
 ### <a name="remarks"></a>Note  
- Questa documentazione Usa i termini *set di caratteri* e *script* in modo intercambiabile. Oggetto *script*, che è noto anche come un sistema di scrittura, è una raccolta di caratteri e le regole per la scrittura di tali caratteri in una o più lingue. La raccolta di caratteri include l'alfabeto e punteggiatura usato in tale script. Alfabeto latino, ad esempio, viene utilizzato per la lingua inglese quando si è parlato negli Stati Uniti e sul relativo alfabeto include i caratteri dalla alla Z. Il `lfCharSet` membro della [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura specifica un set di caratteri. Ad esempio, il valore ANSI_CHARSET specifica il [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] set di caratteri che include la lettera dell'alfabeto latino.  
+ Questa documentazione Usa i termini *set di caratteri* e *script* in modo intercambiabile. Oggetto *script*, che è noto anche come un sistema di scrittura, è una raccolta di caratteri e le regole per la scrittura di tali caratteri in una o più lingue. La raccolta di caratteri include l'alfabeto e punteggiatura usato in tale script. Alfabeto latino, ad esempio, viene utilizzato per la lingua inglese quando si è parlato negli Stati Uniti e sul relativo alfabeto include i caratteri dalla alla Z. Il `lfCharSet` membro della [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura specifica un set di caratteri. Ad esempio, il valore ANSI_CHARSET specifica il set di caratteri ANSI, che include la lettera dell'alfabeto latino.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Recupera i nomi concatenati di un tipo di carattere e il relativo carattere set (script).  

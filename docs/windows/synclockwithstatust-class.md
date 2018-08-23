@@ -17,70 +17,76 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd514b1684571fb12a19265b57e6d5b92b8c7edd
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a0c53832acdd7a785ccc36941cd317a9d0705173
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011549"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583626"
 ---
 # <a name="synclockwithstatust-class"></a>Classe SyncLockWithStatusT
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-template <  
-   typename SyncTraits  
->  
-class SyncLockWithStatusT : public SyncLockT<SyncTraits>;  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *SyncTraits*  
- Un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.  
-  
-## <a name="remarks"></a>Note  
- Rappresenta un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.  
-  
- Il **SyncLockWithStatusT** classe viene utilizzata per implementare le [Mutex](../windows/mutex-class1.md) e [semaforo](../windows/semaphore-class.md) classi.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Costruttore SyncLockWithStatusT::SyncLockWithStatusT](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inizializza una nuova istanza di **SyncLockWithStatusT** classe.|  
-  
-### <a name="protected-constructors"></a>Costruttori protetti  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Costruttore SyncLockWithStatusT::SyncLockWithStatusT](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inizializza una nuova istanza di **SyncLockWithStatusT** classe.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo SyncLockWithStatusT::GetStatus](../windows/synclockwithstatust-getstatus-method.md)|Recupera lo stato di attesa dell'oggetto corrente **SyncLockWithStatusT** oggetto.|  
-|[Metodo SyncLockWithStatusT::IsLocked](../windows/synclockwithstatust-islocked-method.md)|Indica se l'oggetto corrente **SyncLockWithStatusT** oggetto proprietario di una risorsa, ovvero, il **SyncLockWithStatusT** oggetto è *bloccato*.|  
-  
-### <a name="protected-data-members"></a>Membri dati protetti  
-  
-|nome|Descrizione|  
-|----------|-----------------|  
-|[Membro dati SyncLockWithStatusT::status_](../windows/synclockwithstatust-status-data-member.md)|Contiene il risultato dell'operazione di attesa sottostanti dopo un'operazione di blocco su un oggetto in base a corrente **SyncLockWithStatusT** oggetto.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `SyncLockT`  
-  
- `SyncLockWithStatusT`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+template <
+   typename SyncTraits
+>
+class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
+```
+
+### <a name="parameters"></a>Parametri
+
+*SyncTraits*  
+Un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.
+
+## <a name="remarks"></a>Note
+
+Rappresenta un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.
+
+Il **SyncLockWithStatusT** classe viene utilizzata per implementare le [Mutex](../windows/mutex-class1.md) e [semaforo](../windows/semaphore-class.md) classi.
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Costruttore SyncLockWithStatusT::SyncLockWithStatusT](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inizializza una nuova istanza di **SyncLockWithStatusT** classe.|
+
+### <a name="protected-constructors"></a>Costruttori protetti
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Costruttore SyncLockWithStatusT::SyncLockWithStatusT](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inizializza una nuova istanza di **SyncLockWithStatusT** classe.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Metodo SyncLockWithStatusT::GetStatus](../windows/synclockwithstatust-getstatus-method.md)|Recupera lo stato di attesa dell'oggetto corrente **SyncLockWithStatusT** oggetto.|
+|[Metodo SyncLockWithStatusT::IsLocked](../windows/synclockwithstatust-islocked-method.md)|Indica se l'oggetto corrente **SyncLockWithStatusT** oggetto proprietario di una risorsa, ovvero, il **SyncLockWithStatusT** oggetto è *bloccato*.|
+
+### <a name="protected-data-members"></a>Membri dati protetti
+
+|nome|Descrizione|
+|----------|-----------------|
+|[Membro dati SyncLockWithStatusT::status_](../windows/synclockwithstatust-status-data-member.md)|Contiene il risultato dell'operazione di attesa sottostanti dopo un'operazione di blocco su un oggetto in base a corrente **SyncLockWithStatusT** oggetto.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`SyncLockT`
+
+`SyncLockWithStatusT`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

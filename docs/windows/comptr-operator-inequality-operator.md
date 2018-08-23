@@ -15,52 +15,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91b1bb70450cac677abcc886ab2eb911280f86dd
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4874121f22daa8e4a13bf7a1d332c9b8e3db60ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642090"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578107"
 ---
 # <a name="comptroperator-operator"></a>Operatore ComPtr::operator!=
-Indica se due **ComPtr** oggetti non sono uguali.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-bool operator!=(  
-   const ComPtr<T>& a,  
-   const ComPtr<U>& b  
-);  
-  
-bool operator!=(  
-   const ComPtr<T>& a,  
+
+Indica se due **ComPtr** oggetti non sono uguali.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+bool operator!=(
+   const ComPtr<T>& a,
+   const ComPtr<U>& b
+);
+
+bool operator!=(
+   const ComPtr<T>& a,
    decltype(__nullptr)  
-);  
-  
-bool operator!=(  
-   decltype(__nullptr),  
-   const ComPtr<T>& a  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *a*  
- Un riferimento a un **ComPtr** oggetto.  
-  
- *b*  
- Un riferimento a un'altra **ComPtr** oggetto.  
-  
-## <a name="return-value"></a>Valore restituito  
- Primo operatore rese **true** se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, **false**.  
-  
- Il secondo e terzo operatore yield **true** se oggetti *una* non è uguale a **nullptr**; in caso contrario, **false**.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Namespace Microsoft:: wrl](../windows/microsoft-wrl-namespace.md)   
- [Classe ComPtr](../windows/comptr-class.md)
+);
+
+bool operator!=(
+   decltype(__nullptr),
+   const ComPtr<T>& a
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*a*  
+Un riferimento a un **ComPtr** oggetto.
+
+*b*  
+Un riferimento a un'altra **ComPtr** oggetto.
+
+## <a name="return-value"></a>Valore restituito
+
+Primo operatore rese **true** se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, **false**.
+
+Il secondo e terzo operatore yield **true** se oggetti *una* non è uguale a **nullptr**; in caso contrario, **false**.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
+[Classe ComPtr](../windows/comptr-class.md)

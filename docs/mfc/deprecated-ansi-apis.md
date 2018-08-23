@@ -1,5 +1,5 @@
 ---
-title: API ANSI deprecate | Documenti Microsoft
+title: API ANSI deprecate | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342059"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538315"
 ---
 # <a name="deprecated-ansi-apis"></a>API ANSI deprecate
-La libreria Microsoft Foundation classe (MFC) venga eseguita la migrazione verso classi e metodi che si basano sul set di caratteri Unicode. Di conseguenza, le versioni ANSI di diversi metodi MFC sono deprecate. Utilizzare le versioni Unicode di questi metodi nelle applicazioni future.  
+La libreria di classi MFC (Microsoft Foundation) sta migrando verso le classi e metodi basati su set di caratteri Unicode. Di conseguenza, le versioni ANSI di diversi metodi MFC sono deprecate. Usare le versioni di Unicode di questi metodi nelle applicazioni future.  
   
- A partire dalla versione di Windows Common Controls 6.1, disponibile in [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], i metodi di ANSI seguenti sono deprecati.  
+ A partire da controlli comuni di Windows versione 6.1, disponibile in Windows Vista, i metodi ANSI seguenti sono deprecati.  
   
 ## <a name="cbutton-class"></a>Classe CButton  
   

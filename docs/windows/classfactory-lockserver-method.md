@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5ea76974359da2002178a342ab7d9b5523c52889
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652371"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584138"
 ---
 # <a name="classfactorylockserver-method"></a>Metodo ClassFactory::LockServer
-Incrementa o decrementa il numero di base di oggetti che vengono rilevati tramite il **ClassFactory** oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-STDMETHOD(  
-   LockServer  
-)(BOOL fLock);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *branco*  
- **true** per incrementare il numero di oggetti registrati. **false** per ridurre il numero di oggetti registrati.  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario, E_FAIL.  
-  
-## <a name="remarks"></a>Note  
- **ClassFactory** tiene traccia degli oggetti in un'istanza di sottostante la [modulo](../windows/module-class.md) classe.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ClassFactory](../windows/classfactory-class.md)
+
+Incrementa o decrementa il numero di base di oggetti che vengono rilevati tramite il **ClassFactory** oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+STDMETHOD(
+   LockServer
+)(BOOL fLock);
+```
+
+### <a name="parameters"></a>Parametri
+
+*branco*  
+**true** per incrementare il numero di oggetti registrati. **false** per ridurre il numero di oggetti registrati.
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario, E_FAIL.
+
+## <a name="remarks"></a>Note
+
+**ClassFactory** tiene traccia degli oggetti in un'istanza di sottostante la [modulo](../windows/module-class.md) classe.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ClassFactory](../windows/classfactory-class.md)

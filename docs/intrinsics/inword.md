@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40d0662e50059661b5d586aca2b865772a99235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc8ed68cad5ba6aa56a4040c62da4570981534d9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328737"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545821"
 ---
 # <a name="inword"></a>__inword
 **Sezione specifica Microsoft**  
   
- Legge i dati dalla porta specificata utilizzando il `in` istruzione.  
+ Legge i dati dalla porta specificata usando il `in` (istruzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,13 +43,13 @@ unsigned short __inword(
  La porta da cui leggere.  
   
 ## <a name="return-value"></a>Valore restituito  
- La parola dei dati letti.  
+ La parola di dati letti.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__inword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inword`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

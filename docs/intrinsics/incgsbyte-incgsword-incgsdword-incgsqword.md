@@ -1,5 +1,5 @@
 ---
-title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Documenti Microsoft
+title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b2598b5a9eb999571c6f3b5809049f1c935a0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74e1b74c95f143aac7a915b3f148a85da9c5a3d3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329462"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538485"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Sezione specifica Microsoft**  
   
- Aggiungere 1 al valore in una posizione di memoria specificata da un offset relativo all'inizio del `GS` segmento.  
+ Aggiungerne uno per il valore in una posizione di memoria specificata da un offset rispetto all'inizio del `GS` segmento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,13 +63,13 @@ void __incgsqword(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__incgsbyte`|X64|  
+|`__incgsword`|X64|  
+|`__incgsdword`|X64|  
+|`__incgsqword`|X64|  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come funzioni intrinseche.  
+ Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  
   
 **Fine sezione specifica Microsoft**  
   

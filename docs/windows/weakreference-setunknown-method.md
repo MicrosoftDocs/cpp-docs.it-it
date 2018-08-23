@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6adf747fd7612c2bcaa0964f91ecb585bbfbef0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1f127b8435f934e5cf203de2aaa6f2d0c3a58d13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018052"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603070"
 ---
 # <a name="weakreferencesetunknown-method"></a>Metodo WeakReference::SetUnknown
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-void SetUnknown(  
-   _In_ IUnknown* unk  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *UNK*  
- Un puntatore al `IUnknown` interfaccia di un oggetto.  
-  
-## <a name="remarks"></a>Note  
- Imposta il riferimento sicuro dell'oggetto corrente **WeakReference** oggetto al puntatore a interfaccia specificato.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+void SetUnknown(
+   _In_ IUnknown* unk
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*UNK*  
+Un puntatore al `IUnknown` interfaccia di un oggetto.
+
+## <a name="remarks"></a>Note
+
+Imposta il riferimento sicuro dell'oggetto corrente **WeakReference** oggetto al puntatore a interfaccia specificato.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
 ## <a name="see-also"></a>Vedere anche
- [Classe WeakReference](../windows/weakreference-class1.md)  
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+[Classe WeakReference](../windows/weakreference-class1.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

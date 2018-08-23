@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb3337ffa82bf65ba0d4ff010d0b70afd7a99d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00204e283feb14e6b8e831a12e8bd9ad3e352adc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848210"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571499"
 ---
 # <a name="introduction-to-com-and-atl"></a>Introduzione a COM e ATL
 In questa sezione fornisce una breve introduzione a COM e ATL.  
@@ -35,7 +35,7 @@ In questa sezione fornisce una breve introduzione a COM e ATL.
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Modello a oggetti del componente](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- Il [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] material in COM.  
+ Il materiale di Windows SDK in COM.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
  Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.  

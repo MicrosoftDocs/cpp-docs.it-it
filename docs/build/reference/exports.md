@@ -1,7 +1,7 @@
 ---
 title: ESPORTAZIONI | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322189"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572578"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-Se il nome che si esporta proviene da altri moduli, specificare il nome dell'esportazione nella DLL usando *other_module.exported_name*. Se ad esempio la DLL esporta una funzione `other_module.func1` e si vuole che i chiamanti la usino come `func2`, specificare:
+Se il nome che si esporta proviene da un altro modulo, specificare il nome dell'esportazione nella DLL usando *other_module.exported_name*. Se ad esempio la DLL esporta una funzione `other_module.func1` e si vuole che i chiamanti la usino come `func2`, specificare:
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+Se il nome che si esporta proviene da un altro modulo che esporta base al numero ordinale, specificare l'esportazione della ordinale nella DLL utilizzando *other_module. & ordinal_number*. Ad esempio, se la DLL esporta una funzione del modulo in cui è 42 ordinale e si vuole che i chiamanti da utilizzare come `func2`, si specificherà:
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Poiché il compilatore Visual C++ Usa la decorazione per le funzioni C++, è necessario usare il nome decorato internal_name o definire le funzioni esportate mediante l'uso di extern "C" nel codice sorgente. Il compilatore decora anche le funzioni C che usano il [stdcall](../../cpp/stdcall.md) con un prefisso un carattere di sottolineatura (_) e un suffisso composto convenzione di chiamata il simbolo di chiocciola (@) seguita dal numero di byte (in decimali) nell'elenco di argomenti.  

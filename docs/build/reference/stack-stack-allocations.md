@@ -1,5 +1,5 @@
 ---
-title: -STACK (allocazioni Stack) | Documenti Microsoft
+title: -STACK (allocazioni Stack) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8ee3fac90bcbb972278d9b3e2cf7cebd62fedf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29ed2efa73d3ec1014bf0a65e7b4b1b1b85cf879
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377875"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573345"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Allocazioni stack)
 ```  
@@ -35,15 +35,15 @@ ms.locfileid: "32377875"
 ```  
   
 ## <a name="remarks"></a>Note  
- Essa è imposta la dimensione dello stack in byte. Utilizzare questa opzione solo quando si compila un file .exe.  
+ Essa è imposta la dimensione dello stack in byte. Usare questa opzione solo quando si compila un file .exe.  
   
- Il `reserve` valore specifica l'allocazione totale per lo stack nella memoria virtuale. Per computer ARM, x86 e [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], la dimensione predefinita dello stack è 1 MB.  
+ Il `reserve` valore consente di specificare l'allocazione totale dello stack nella memoria virtuale. Per ARM, x86 e x64 computer, la dimensione predefinita è 1 MB.  
   
- `commit` viene interpretato dal sistema operativo. In WindowsRT specifica la quantità di memoria fisica da allocare alla volta. Memoria virtuale vincolata consente lo spazio da riservare nel file di paging. Un valore di `commit` più alto fa risparmiare tempo quando nell'applicazione è necessario maggior spazio per lo stack, ma aumenta i requisiti di memoria e in alcuni casi il tempo di avvio. Per computer ARM, x86 e [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], il valore di commit predefinito è 4 KB.  
+ `commit` viene interpretato dal sistema operativo. In WindowsRT specifica la quantità di memoria fisica da allocare alla volta. Memoria virtuale vincolata fa sì che lo spazio da riservare nel file di paging. Un valore di `commit` più alto fa risparmiare tempo quando nell'applicazione è necessario maggior spazio per lo stack, ma aumenta i requisiti di memoria e in alcuni casi il tempo di avvio. Per ARM, x86 e x64 computer, il valore di commit predefinito è 4 KB.  
   
  Specificare i valori `reserve` e `commit` in notazione decimale o in linguaggio C.  
   
- È possibile impostare le dimensioni dello stack con il [STACKSIZE](../../build/reference/stacksize.md) istruzione in un file di definizione moduli (def). **STACKSIZE** sostituisce le allocazioni dello Stack (/ STACK) se sono specificati entrambi. È possibile modificare la dimensione dello stack dopo che il file .exe viene compilato con la [EDITBIN](../../build/reference/editbin-reference.md) strumento.  
+ Un altro modo per impostare le dimensioni dello stack è con il [STACKSIZE](../../build/reference/stacksize.md) istruzione in un file di definizione moduli (def). **STACKSIZE** sostituisce le allocazioni di Stack (/stack) se vengono specificati entrambi. È possibile modificare la dimensione dello stack dopo che il file .exe viene compilato con il [EDITBIN](../../build/reference/editbin-reference.md) dello strumento.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   

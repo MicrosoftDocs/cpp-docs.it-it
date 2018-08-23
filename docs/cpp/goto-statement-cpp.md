@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402572"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572580"
 ---
 # <a name="goto-statement-c"></a>Istruzione goto (C++)
 Il **goto** istruzione trasferisce il controllo all'istruzione contrassegnata dall'identificatore specificato.  
@@ -36,6 +36,25 @@ goto identifier;
  L'istruzione con etichetta designata da `identifier` deve essere nella funzione corrente. Tutti i nomi di `identifier` sono membri di uno spazio dei nomi interno e quindi non interferiscono con altri identificatori.  
   
  Un'etichetta di istruzione è significativa solo a un **goto** istruzione; in caso contrario, vengono ignorate le etichette di istruzione. Le etichette non possono essere ridichiarate.  
+
+Oggetto **goto** istruzione non è consentita per trasferire il controllo in una posizione che ignora l'inizializzazione di qualsiasi variabile nell'ambito in tale percorso. Nell'esempio seguente genera C2362:
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  È buona norma programmare lo stile da utilizzare il **break**, **continuare**, e **restituire** istruzioni anziché il **goto** istruzione ogni volta che possibili. Tuttavia, poiché il **interruzione** istruzione consente di uscire da un solo livello di un ciclo, potrebbe essere necessario usare un **goto** istruzione per uscire da un ciclo eccessivamente annidato.  
   

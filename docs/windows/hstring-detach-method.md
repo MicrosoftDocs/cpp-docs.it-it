@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21bfc0516fdcdf3287c5ce2a0203038e88cd290f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4b794dea5c8b3b0fcde82c414e0cf24710cafb86
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015556"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602497"
 ---
 # <a name="hstringdetach-method"></a>Metodo HString::Detach
-Rimuove l'associazione specificata **HString** oggetto dal relativo valore sottostante.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
+
+Rimuove l'associazione specificata **HString** oggetto dal relativo valore sottostante.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
 HSTRING Detach() throw()  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Sottostante **HString** valore prima dell'operazione di scollegamento avviato.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe HString](../windows/hstring-class.md)
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Sottostante **HString** valore prima dell'operazione di scollegamento avviato.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe HString](../windows/hstring-class.md)

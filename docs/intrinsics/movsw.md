@@ -1,5 +1,5 @@
 ---
-title: __movsw | Documenti Microsoft
+title: __movsw | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b1bb1b877c0816650b78d5c6132e526afd5586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25cea28d18f8377def35959be573c1a41f9098b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334441"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538474"
 ---
 # <a name="movsw"></a>__movsw
 **Sezione specifica Microsoft**  
@@ -54,12 +54,12 @@ void __movsw(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__movsw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsw`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Il risultato è che il primo `Count` parole a cui puntava `Source` vengono copiati il `Dest` stringa.  
+ Il risultato è che il primo `Count` parole a cui punta `Source` vengono copiati il `Dest` stringa.  
   
  Questa routine è disponibile solo come funzione intrinseca.  
   

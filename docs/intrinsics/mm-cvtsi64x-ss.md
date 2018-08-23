@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340606"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539078"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Sezione specifica Microsoft**  
   
- Genera il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] versione estesa dell'intero convertire a 64 Bit di valore a virgola mobile a precisione singola scalare (`cvtsi2ss`) (istruzione).  
+ Genera l'errore x64 estesi versione dell'intero convertire 64 Bit di valore a virgola mobile e precisione singola scalare (`cvtsi2ss`) (istruzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,10 +43,10 @@ __m128 _mm_cvtsi64x_ss(
  Un `__m128` struttura che contiene quattro valori a virgola mobile a precisione singola.  
   
  [in] `b`  
- Intero a 64 bit da convertire in un valore a virgola mobile.  
+ Un intero a 64 bit da convertire in valore a virgola mobile.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un `__m128` struttura il cui primo valore a virgola mobile è il risultato della conversione. Gli altri tre valori verranno copiati così da `a`.  
+ Un `__m128` struttura il cui primo valore a virgola mobile è il risultato della conversione. I tre valori vengono copiati senza modifiche da `a`.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -57,7 +57,7 @@ __m128 _mm_cvtsi64x_ss(
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Il `__m128` struttura rappresenta un registro XMM, pertanto questa funzione intrinseca consente un valore `b` dalla memoria di sistema per essere spostati in un XMM registrare.  
+ Il `__m128` struttura rappresenta un registro XMM, pertanto, questa funzione intrinseca consente un valore `b` dalla memoria di sistema da spostare in un registri XMM registrare.  
   
  Questa routine è disponibile solo come funzione intrinseca.  
   

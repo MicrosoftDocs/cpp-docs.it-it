@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 621f852728cb40ea88a916b37147c28d8bb0db38
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 606f9560f6d490e1d50d94dd12103713781c4f1b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644462"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603760"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>Costruttore ComPtrRef::ComPtrRef
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-ComPtrRef(  
-   _In_opt_ T* ptr  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *ptr*  
- Il valore sottostante di un'altra **ComPtrRef** oggetto.  
-  
-## <a name="remarks"></a>Note  
- Inizializza una nuova istanza di **ComPtrRef** classe dal puntatore specificato a un altro **ComPtrRef** oggetto.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [ComPtrRef (classe)](../windows/comptrref-class.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+ComPtrRef(
+   _In_opt_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*ptr*  
+Il valore sottostante di un'altra **ComPtrRef** oggetto.
+
+## <a name="remarks"></a>Note
+
+Inizializza una nuova istanza di **ComPtrRef** classe dal puntatore specificato a un altro **ComPtrRef** oggetto.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtrRef](../windows/comptrref-class.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

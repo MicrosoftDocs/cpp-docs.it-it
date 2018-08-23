@@ -23,44 +23,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4a80faf8718b1db103e15cba6ee97a73553490d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 63ab877506c0b38563868374312c8f63bc28333e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017744"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583532"
 ---
 # <a name="image-editor-for-icons"></a>Editor di immagini per le icone
-L'editor di immagini comprende una vasta gamma di strumenti per la creazione e la modifica di immagini, nonché funzionalità che semplificano la creazione di bitmap per le barre degli strumenti. Oltre a bitmap, icone e cursori, è possibile modificare immagini in formato GIF o JPEG utilizzando i comandi del menu **Immagine** e gli strumenti disponibili sulla barra degli strumenti dell' **Editor immagini** .  
-  
- L'Editor immagini consente di effettuare le seguenti operazioni:  
-  
--   [Modificare le risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)  
-  
--   [Utilizzare i colori](../windows/working-with-color-image-editor-for-icons.md)  
-  
--   [Utilizzare icone e cursori ovvero risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-  
--   [Utilizzare tasti di scelta rapida per i comandi dell'Editor immagini](../windows/accelerator-keys-image-editor-for-icons.md)  
-  
- Il **Editor di immagini** finestra Mostra due visualizzazioni della stessa immagine, con una barra che separa i due riquadri di divisione. che è possibile trascinare da un lato all'altro per modificare le dimensioni relative dei riquadri. Nel riquadro attivo viene visualizzato un bordo di selezione.  
-  
- Il **Editor di immagini** finestra può essere adattata alle proprie esigenze e preferenze. È possibile [modificare il fattore di ingrandimento](../windows/changing-the-magnification-factor-image-editor-for-icons.md) e [abilitare o disabilitare la visualizzazione della griglia in pixel](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md).  
-  
+
+L'editor di immagini comprende una vasta gamma di strumenti per la creazione e la modifica di immagini, nonché funzionalità che semplificano la creazione di bitmap per le barre degli strumenti. Oltre a bitmap, icone e cursori, è possibile modificare immagini in formato GIF o JPEG utilizzando i comandi del menu **Immagine** e gli strumenti disponibili sulla barra degli strumenti dell' **Editor immagini** .
+
+L'Editor immagini consente di effettuare le seguenti operazioni:
+
+- [Modificare le risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)
+
+- [Utilizzare i colori](../windows/working-with-color-image-editor-for-icons.md)
+
+- [Utilizzare icone e cursori ovvero risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+
+- [Utilizzare tasti di scelta rapida per i comandi dell'Editor immagini](../windows/accelerator-keys-image-editor-for-icons.md)
+
+Il **Editor di immagini** finestra Mostra due visualizzazioni della stessa immagine, con una barra che separa i due riquadri di divisione. che è possibile trascinare da un lato all'altro per modificare le dimensioni relative dei riquadri. Nel riquadro attivo viene visualizzato un bordo di selezione.
+
+Il **Editor di immagini** finestra può essere adattata alle proprie esigenze e preferenze. È possibile [modificare il fattore di ingrandimento](../windows/changing-the-magnification-factor-image-editor-for-icons.md) e [abilitare o disabilitare la visualizzazione della griglia in pixel](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md).
+
 > [!NOTE]
->  Usando il **Editor di immagini**, è possibile visualizzare immagini a 32 bit, ma non modificarli.  
-  
-## <a name="visual-studio-image-library"></a>Libreria di immagini di Visual Studio  
- È possibile scaricare gratuitamente il **Visual Studio Image Library** che contiene numerose animazioni, bitmap e icone che è possibile usare nelle applicazioni. Per ulteriori informazioni sul download della libreria, vedere [Libreria di immagini di Visual Studio](/visualstudio/designers/the-visual-studio-image-library).  
-  
-## <a name="managed-resources"></a>Risorse gestite  
- È possibile usare la **immagine** editor e il [editor binario](binary-editor.md) per lavorare con i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisiti  
- nessuno  
-  
-## <a name="see-also"></a>Vedere anche  
- [Editor risorse](../windows/resource-editors.md)   
- [Icone](http://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)
+> Usando il **Editor di immagini**, è possibile visualizzare immagini a 32 bit, ma non modificarli.
+
+## <a name="visual-studio-image-library"></a>Libreria di immagini di Visual Studio
+
+È possibile scaricare gratuitamente il **Visual Studio Image Library** che contiene numerose animazioni, bitmap e icone che è possibile usare nelle applicazioni. Per ulteriori informazioni sul download della libreria, vedere [Libreria di immagini di Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
+
+## <a name="managed-resources"></a>Risorse gestite
+
+È possibile usare la **immagine** editor e il [editor binario](binary-editor.md) per lavorare con i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisiti
+
+nessuno
+
+## <a name="see-also"></a>Vedere anche
+
+[Editor di risorse](../windows/resource-editors.md)  
+[Icone](http://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)

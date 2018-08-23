@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853204"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539649"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 Rappresenta le finestre delle proprietà, note anche come finestre di dialogo a schede.  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>Note  
  Una finestra delle proprietà è costituito da un `CPropertySheet` oggetto e uno o più [CPropertyPage](../../mfc/reference/cpropertypage-class.md) oggetti. Il framework visualizza una finestra delle proprietà come una finestra con un set di indici di scheda e un'area che contiene la pagina attualmente selezionata. L'utente passa a una pagina specifica usando la scheda appropriata.  
   
- `CPropertySheet` fornisce il supporto per espanso [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struttura introdotte in [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] e NT di Windows 2000. La struttura contiene i flag aggiuntivi e i membri che supportano l'utilizzo di una bitmap di sfondo "limite".  
+ `CPropertySheet` fornisce il supporto per espanso [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struttura introdotta in Windows 98 e 2000 di Windows NT. La struttura contiene i flag aggiuntivi e i membri che supportano l'utilizzo di una bitmap di sfondo "limite".  
   
  Per visualizzare le immagini nuove automaticamente nell'oggetto finestra delle proprietà, passare i valori validi per le immagini bitmap e tavolozza nella chiamata a [CPropertySheet::Construct](#construct) o [CPropertySheet::CPropertySheet](#cpropertysheet).  
   

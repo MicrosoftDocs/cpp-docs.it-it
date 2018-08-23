@@ -1,5 +1,5 @@
 ---
-title: Vincoli delle DLL a caricamento ritardato | Documenti Microsoft
+title: Vincoli delle DLL a caricamento ritardato | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532d5ba64288fb70b19f10386186c0b520e67661
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40774d6307eb9b423ebd4fd303a48acbd87eda24
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375916"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571795"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Vincoli delle DLL a caricamento ritardato
 Per il caricamento ritardato delle importazioni esistono dei vincoli.  
@@ -30,9 +30,9 @@ Per il caricamento ritardato delle importazioni esistono dei vincoli.
   
 -   Il caricamento ritardato di Kernel32.dll non è supportato. Questa DLL è necessaria alle routine di supporto del caricamento ritardato per l'esecuzione delle relative attività.  
   
--   [Associazione](../../build/reference/binding-imports.md) della voce punti che vengono inoltrati non è supportata.  
+-   [Associazione](../../build/reference/binding-imports.md) della voce di punti che vengono inoltrati non è supportata.  
   
--   Se si verificano inizializzazioni per processo nel punto di ingresso della DLL a caricamento ritardato, il comportamento del caricamento ritardato di una DLL può essere diverso. Gli altri casi comprendono statica (archiviazione thread-local), dichiarato tramite [declspec](../../cpp/thread.md), che non è gestita quando la DLL viene caricata mediante `LoadLibrary`. La memoria locale di thread dinamica, che usa `TlsAlloc`, `TlsFree`, `TlsGetValue` e `TlsSetValue`, può essere comunque usata per DLL statiche e DLL a caricamento ritardato.  
+-   Se si verificano inizializzazioni per processo nel punto di ingresso della DLL a caricamento ritardato, il comportamento del caricamento ritardato di una DLL può essere diverso. Gli altri casi comprendono la statica (archiviazione thread-local), dichiarata usando [declspec](../../cpp/thread.md), che non è gestita quando la DLL viene caricata tramite `LoadLibrary`. La memoria locale di thread dinamica, che usa `TlsAlloc`, `TlsFree`, `TlsGetValue` e `TlsSetValue`, può essere comunque usata per DLL statiche e DLL a caricamento ritardato.  
   
 -   I puntatori a funzione statici (globali) devono essere reinizializzati sulle funzioni importate dopo la prima chiamata alla funzione, in quanto durante il primo uso della funzione a puntatore verrà considerato come riferimento il thunk.  
   
@@ -45,7 +45,7 @@ Per il caricamento ritardato delle importazioni esistono dei vincoli.
  [LoadLibrary (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
  [GetModuleHandle (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
  [GetProcAddress (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
- [TlsAlloc (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms686801.aspx)   
- [TlsFree (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms686804.aspx)   
- [TlsGetValue (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms686812.aspx)   
- [TlsSetValue (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms686818.aspx)
+ [Funzione TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
+ [TlsFree (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
+ [TlsGetValue (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   
+ [TlsSetValue (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

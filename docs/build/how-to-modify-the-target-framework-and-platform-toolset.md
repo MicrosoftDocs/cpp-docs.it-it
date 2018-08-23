@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: modificare il Framework di destinazione e un set di strumenti della piattaforma | Documenti Microsoft'
+title: 'Procedura: modificare il Framework di destinazione e il set di strumenti della piattaforma | Microsoft Docs'
 ms.custom: conceptual
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371902"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571586"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma
-È possibile modificare le impostazioni di progetto Visual C++ per versioni diverse di .NET Framework di destinazione e utilizzare i set di strumenti della piattaforma diversa. Per impostazione predefinita, il sistema del progetto usa la versione .NET Framework e la versione del set di strumenti corrispondenti alla versione di Visual Studio usata per creare il progetto. È possibile modificare il set di strumenti della piattaforma di destinazione modificando le proprietà del progetto. È possibile modificare il framework di destinazione modificando il file del progetto (vcxproj). Non è necessario mantenere una codebase separata per ogni destinazione di compilazione.  
+È possibile modificare le impostazioni di progetto Visual C++ per versioni diverse di .NET Framework di destinazione e usare i set di strumenti di piattaforma diversi. Per impostazione predefinita, il sistema del progetto usa la versione .NET Framework e la versione del set di strumenti corrispondenti alla versione di Visual Studio usata per creare il progetto. È possibile modificare il set di strumenti della piattaforma di destinazione modificando le proprietà del progetto. È possibile modificare il framework di destinazione modificando il file del progetto (vcxproj). Non è necessario mantenere una codebase separata per ogni destinazione di compilazione.  
   
 > [!IMPORTANT]
->  Alcune edizioni potrebbero non supportare i framework di destinazione o i set di strumenti della piattaforma modificati. Per informazioni sulla compatibilità, vedere [porta, eseguire la migrazione e aggiornamento di progetti di Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).  
+>  Alcune edizioni potrebbero non supportare i framework di destinazione o i set di strumenti della piattaforma modificati. Per informazioni sulla compatibilità, vedere [conversione, migrazione e aggiornare i progetti di Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).  
   
  Quando si modifica il framework di destinazione, viene modificato anche il set di strumenti della piattaforma in una versione che supporta tale framework. Per impostare .NET Framework 4.5 come destinazione, ad esempio, è necessario usare un set di strumenti della piattaforma compatibile, ad esempio Visual Studio 2015 (v140), Visual Studio 2013 (v120) o Visual Studio 2012 (v110). È possibile usare il set di strumenti della piattaforma **Windows7.1SDK** per .NET Framework 2.0, 3.0, 3.5 e 4 e le piattaforme x86, Itanium e x64.  
   
 > [!NOTE]
 >  Per modificare il set di strumenti della piattaforma di destinazione, è necessario assicurarsi che sia installata la versione associata di Visual Studio o Windows Platform SDK. Ad esempio, per fare riferimento alla piattaforma Itanium con il set di strumenti della piattaforma **Windows7.1SDK** , è necessario che siano installati [Microsoft Windows SDK per Windows 7 e .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) . È tuttavia possibile usare un'altra versione compatibile di Visual Studio per lo sviluppo, purché si faccia riferimento alla versione di .NET Framework e al set di strumenti della piattaforma corretti.  
   
- È possibile estendere ulteriormente la piattaforma di destinazione creando un set di strumenti della piattaforma personalizzato. Per ulteriori informazioni, vedere [C++ multitargeting nativo](http://go.microsoft.com/fwlink/p/?linkid=196619) sul blog di Visual C++.  
+ È possibile estendere ulteriormente la piattaforma di destinazione creando un set di strumenti della piattaforma personalizzato. Per altre informazioni, vedere [C++ multitargeting nativo](http://go.microsoft.com/fwlink/p/?linkid=196619) sul blog di Visual C++.  
   
 ### <a name="to-change-the-target-framework"></a>Per modificare il framework di destinazione  
   
@@ -63,7 +63,7 @@ ms.locfileid: "32371902"
   
 3.  Nel riquadro sinistro della finestra di dialogo espandere **Proprietà di configurazione** , quindi selezionare **Generale**.  
   
-4.  Nel riquadro destro selezionare **Set strumenti della piattaforma** , quindi selezionare il set di strumenti desiderato dall'elenco a discesa. Ad esempio, se è stato installato il set di strumenti [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] , selezionare **Visual Studio 2010 (v100)** da usare per il progetto.  
+4.  Nel riquadro destro selezionare **Set strumenti della piattaforma** , quindi selezionare il set di strumenti desiderato dall'elenco a discesa. Ad esempio, se è stato installato il set di strumenti di Visual Studio 2010, selezionare **Visual Studio 2010 (v100)** usarlo per il progetto.  
   
 5.  Fare clic sul pulsante **OK** .  
   

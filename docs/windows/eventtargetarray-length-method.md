@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 88f8402cb6a01bc46aa25f99b2b8c60151a698ce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653105"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604036"
 ---
 # <a name="eventtargetarraylength-method"></a>Metodo EventTargetArray::Length
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-size_t Length();  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Il numero corrente di elementi nella matrice interna di gestori di eventi.  
-  
-## <a name="remarks"></a>Note  
- Ottiene il numero corrente di elementi nella matrice interna di gestori di eventi.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Event. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe EventTargetArray](../windows/eventtargetarray-class.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+size_t Length();
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Il numero corrente di elementi nella matrice interna di gestori di eventi.
+
+## <a name="remarks"></a>Note
+
+Ottiene il numero corrente di elementi nella matrice interna di gestori di eventi.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Event. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe EventTargetArray](../windows/eventtargetarray-class.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd166f39f28f01d2d6b30dce81080ec1b76fcad0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d5c15b03682fa96287db29d1160932135cea0186
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018400"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589259"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Membro dati Module::GenericReleaseNotifier::callback_
-Contiene l'espressione lambda, funtore o il gestore eventi puntatore a funzione associato all'oggetto corrente `Module::GenericReleaseNotifier` oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-T callback_;  
-```  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)
+
+Contiene l'espressione lambda, funtore o il gestore eventi puntatore a funzione associato all'oggetto corrente `Module::GenericReleaseNotifier` oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+T callback_;
+```
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)

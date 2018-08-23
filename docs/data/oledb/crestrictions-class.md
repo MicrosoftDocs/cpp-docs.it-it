@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d93d1042f48ae877e61692b095be9442f9a7917
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337177"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572371"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 Una classe generica che consente di specificare le restrizioni per i set di righe dello schema.  
@@ -96,7 +96,7 @@ HRESULT Open(const CSession& session,
 ### <a name="remarks"></a>Note  
  È possibile specificare un massimo di sette restrizioni su un set di righe dello schema.  
   
- Visualizzare [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) per informazioni sulle restrizioni definite in ogni set di righe dello schema.  
+ Visualizzare [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) per informazioni sulle restrizioni definite in ogni set di righe dello schema.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

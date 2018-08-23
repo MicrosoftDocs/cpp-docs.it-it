@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: abc49a62e1cc9fb4abdc56b329b8fa057edebde7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642958"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583517"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>Enumerazione CancelTransitionPolicy
-Indica come operazione asincrona del tentativo di eseguire la transizione a uno stato terminale di completamento o errore di comportamento rispetto a uno stato annullato di richiesta del client.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-enum CancelTransitionPolicy;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="values"></a>Valori  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`RemainCanceled`|Se l'operazione asincrona è attualmente in uno stato annullato di richiesta del client, ciò indica che viene mantenuta nello stato annullato anziché in fase di transizione a uno stato di errore o il terminal completata.|  
-|`TransitionFromCanceled`|Se l'operazione asincrona è attualmente in uno stato annullato di richiesta del client, ciò indica che lo stato deve eseguire la transizione da quello stato annullato per lo stato terminale di completamento o errore, come determinato dalla chiamata che usa questo flag.|  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Indica come operazione asincrona del tentativo di eseguire la transizione a uno stato terminale di completamento o errore di comportamento rispetto a uno stato annullato di richiesta del client.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+enum CancelTransitionPolicy;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="values"></a>Valori
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`RemainCanceled`|Se l'operazione asincrona è attualmente in uno stato annullato di richiesta del client, ciò indica che viene mantenuta nello stato annullato anziché in fase di transizione a uno stato di errore o il terminal completata.|
+|`TransitionFromCanceled`|Se l'operazione asincrona è attualmente in uno stato annullato di richiesta del client, ciò indica che lo stato deve eseguire la transizione da quello stato annullato per lo stato terminale di completamento o errore, come determinato dalla chiamata che usa questo flag.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Async. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

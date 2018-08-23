@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM | Documenti Microsoft
+title: -SUBSYSTEM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12df1a2166c9ef5a1af8a33a5764a8899909edb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75e0086f96f39814bd1a7e77df2adccc47d698fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377623"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571638"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Specifica l'ambiente di esecuzione richiesto dall'immagine eseguibile.  
@@ -40,13 +40,13 @@ Specifica l'ambiente di esecuzione richiesto dall'immagine eseguibile.
  È possibile specificare uno dei sottosistemi seguenti:  
   
  BOOT_APPLICATION  
- Applicazione che viene eseguita nell'ambiente di avvio di Windows. Per ulteriori informazioni sulle applicazioni di avvio, vedere [sui Provider BCD WMI](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Applicazione che viene eseguita nell'ambiente di avvio di Windows. Per altre informazioni sulle applicazioni di avvio, vedere [sui Provider BCD WMI](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  CONSOLE  
  Applicazione in modalità carattere Windows. Il sistema operativo fornisce una console per le applicazioni console.  
   
  Immagine EFI (Extensible Firmware Interface)  
- Le opzioni del sottosistema EFI descrivono le immagini eseguibili che vengono eseguite nell'ambiente Extensible Firmware Interface. Questo ambiente è in genere fornito con l'hardware e viene eseguito prima che il sistema operativo venga caricato. Le principali differenze tra tipi di immagine EFI sono la posizione di memoria in cui l'immagine viene caricata e l'azione eseguita quando viene restituita la chiamata all'immagine. Un'immagine EFI_APPLICATION viene scaricata quando viene restituito il controllo. Il driver EFI_BOOT_SERVICE_DRIVER o EFI_RUNTIME_DRIVER viene scaricato solo se il controllo restituisce un codice errore. Un'immagine EFI_ROM viene eseguita da ROM. Per ulteriori informazioni, vedere le specifiche sul [Unified EFI Forum](http://www.uefi.org/) sito Web.  
+ Le opzioni del sottosistema EFI descrivono le immagini eseguibili che vengono eseguite nell'ambiente Extensible Firmware Interface. Questo ambiente è in genere fornito con l'hardware e viene eseguito prima che il sistema operativo venga caricato. Le principali differenze tra tipi di immagine EFI sono la posizione di memoria in cui l'immagine viene caricata e l'azione eseguita quando viene restituita la chiamata all'immagine. Un'immagine EFI_APPLICATION viene scaricata quando viene restituito il controllo. Il driver EFI_BOOT_SERVICE_DRIVER o EFI_RUNTIME_DRIVER viene scaricato solo se il controllo restituisce un codice errore. Un'immagine EFI_ROM viene eseguita da ROM. Per altre informazioni, vedere le specifiche sul [Unified EFI Forum](http://www.uefi.org/) sito Web.  
   
  NATIVE  
  Codice che viene eseguito senza un ambiente di sottosistema, ad esempio driver di dispositivo in modalità kernel e processi di sistema nativi. Questa opzione è generalmente riservata alle funzionalità di sistema di Windows.  
@@ -55,7 +55,7 @@ Specifica l'ambiente di esecuzione richiesto dall'immagine eseguibile.
  App che viene eseguita nel sottosistema POSIX in Windows.  
   
  WINDOWS  
- App che viene eseguita nell'ambiente grafico Windows. Ciò include sia le app desktop e della piattaforma UWP (Universal Windows).  
+ App che viene eseguita nell'ambiente grafico Windows. Ciò include sia le app desktop e App Universal Windows Platform (UWP).  
   
  WINDOWSCE  
  Il sottosistema WINDOWSCE indica che l'app deve essere eseguita su un dispositivo che dispone di una versione del kernel di Windows CE. Le versioni del kernel includono PocketPC, Windows Mobile, Windows Phone 7, Windows CE V1.0-6.0R3 e Windows Embedded Compact 7.  
@@ -68,9 +68,9 @@ Specifica l'ambiente di esecuzione richiesto dall'immagine eseguibile.
   
 -   I valori di `major` e `minor` devono essere compresi tra 0 e 65.535.  
   
- La scelta del sottosistema influisce sull'indirizzo iniziale predefinito per il programma. Per ulteriori informazioni, vedere [/ENTRY (simbolo del punto di ingresso)](../../build/reference/entry-entry-point-symbol.md), il linker /ENTRY:*funzione* opzione.  
+ La scelta del sottosistema influisce sull'indirizzo iniziale predefinito per il programma. Per altre informazioni, vedere [/ENTRY (simbolo del punto di ingresso)](../../build/reference/entry-entry-point-symbol.md), il linker /ENTRY:*funzione* opzione.  
   
- Per ulteriori informazioni, inclusi i valori minimo e predefinito per i numeri di versione principale e secondaria per ogni sottosistema, vedere il [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) l'opzione del linker.  
+ Per altre informazioni, inclusi i valori minimo e predefinito per i numeri di versione principale e secondaria per ogni sottosistema, vedere la [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) l'opzione del linker.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni di EDITBIN](../../build/reference/editbin-options.md)

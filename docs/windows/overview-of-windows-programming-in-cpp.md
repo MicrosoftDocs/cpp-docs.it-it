@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012193"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604279"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
@@ -26,14 +26,14 @@ ms.locfileid: "40012193"
 - efficiente nel caso di requisiti di memoria
 - conveniente in termini di consumo di energia 
 - in grado di sfruttare al meglio dei dispositivi multicore o many-core
-- in grado di eseguire attività generali di elaborazione nell'unità di elaborazione grafica (GPGPU)   
+- in grado di eseguire attività generali di elaborazione nell'unità di elaborazione grafica (GPGPU)  
 - è possibile sfruttare altri recenti progressi nell'hardware.
 
 Esistono molte ampie categorie di app di Windows che è possibile sviluppare con Visual C++. Queste categorie hanno modelli di programmazione diversi o modelli di app, che sono state introdotte nel corso degli anni. Ogni modello Usa diverse librerie e API per fornire l'accesso alla piattaforma e creare interfacce utente, ad esempio le finestre di dialogo. La libreria standard C++ nonché librerie di terze parti sono utilizzabile in una qualsiasi di queste categorie, con alcune restrizioni per la piattaforma UWP.
 
 - [App universali di Windows](#BK_WindowsUniversal). La terza categoria di app di Windows è stata introdotta con Windows 8 e il supporto per questa categoria di app continua anche in Windows 10. Queste app sono in genere chiamate semplicemente "app di Windows" e includono app desktop e per dispositivi mobili destinate a svariati dispositivi. È possibile scrivere queste app in C++/CX, un dialetto di C++ che include il supporto per lo sviluppo di Windows Runtime, oppure in C++ standard con COM usando la libreria di Windows Runtime (WRL). Queste app sono state originariamente progettate per l'esecuzione a schermo intero, ma gli utenti di Windows 10 possono scegliere di eseguirle in una finestra desktop. Benché queste app siano orientate al tocco, è facile usarle con il mouse se gli utenti lo preferiscono o se non è disponibile un touch screen. Queste App vengono distribuite di Microsoft Store, questo motivo vengono ora chiamate "Store" app.
 
-Le app UWP sono in grado di eseguire in tutti i dispositivi Windows 10, come Tablet e telefoni cellulari, nonché sul desktop. Sul desktop possono essere eseguite come finestra desktop invece che a schermo intero. Queste app possono essere eseguite anche in Xbox e sui dispositivi futuri.  Le app UWP vengono eseguite nel Runtime di Windows, che fornisce un'interfaccia per i diversi dispositivi hardware che sono supportati in Windows, servizi e gli elementi dell'interfaccia utente.  
+Le app UWP sono in grado di eseguire in tutti i dispositivi Windows 10, come Tablet e telefoni cellulari, nonché sul desktop. Sul desktop possono essere eseguite come finestra desktop invece che a schermo intero. Queste app possono essere eseguite anche in Xbox e sui dispositivi futuri.  Le app UWP vengono eseguite nel Runtime di Windows, che fornisce un'interfaccia per i diversi dispositivi hardware che sono supportati in Windows, servizi e gli elementi dell'interfaccia utente.
 
 È possibile scrivere le app UWP in C + + c++ /CX, un dialetto di C++, è possibile usare la [C + c++ /CLI libreria WinRT](https://moderncpp.com/)per alcuni scenari. Le app UWP compilate in codice nativo e hanno un'interfaccia utente XAML oppure usano DirectX. Componenti Windows Runtime scritte in codice nativo che possono utilizzare le app UWP scritte in altri linguaggi. Per altre informazioni, vedere [creare un'app della piattaforma universale di Windows in C++](http://go.microsoft.com/fwlink/?LinkID=534976), [creare il tuo primo gioco UWP con DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), e [componenti di creazione di Windows Runtime in C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
@@ -84,7 +84,7 @@ Giochi DirectX eseguibili nel PC o su Xbox. Per altre informazioni, visitare il 
 
 ## <a name="sdks-libraries-and-header-files"></a>Gli SDK, librerie e i file di intestazione
 
-Visual C++ include la libreria di Runtime C (CRT), la libreria Standard C++ e altre librerie specifiche di Microsoft. Le cartelle di inclusione che contengono i file di intestazione per queste librerie si trovano nella directory di installazione di Visual Studio nella cartella \VC\ o, nel caso di CRT, nella cartella di installazione Windows SDK.   
+Visual C++ include la libreria di Runtime C (CRT), la libreria Standard C++ e altre librerie specifiche di Microsoft. Le cartelle di inclusione che contengono i file di intestazione per queste librerie si trovano nella directory di installazione di Visual Studio nella cartella \VC\ o, nel caso di CRT, nella cartella di installazione Windows SDK.
 
 È possibile usare la [di gestione pacchetti Vcpkg](../vcpkg.md) facilmente installare centinaia di librerie open source di terze parti per Windows.
 
@@ -100,7 +100,7 @@ Le librerie Microsoft includono:
 
 Anche molti scenari di programmazione Windows richiedono Windows SDK, che include i file di intestazione che garantiscono l'accesso ai componenti del sistema operativo Windows. Per impostazione predefinita, Visual Studio installa il SDK di Windows come componente del carico di lavoro Desktop C++, che permette lo sviluppo di App di Windows universale. Per sviluppare le app UWP, è necessaria la versione di Windows 10 di Windows SDK. Per informazioni, vedere [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Per altre informazioni su Windows SDK per versioni precedenti di Windows, vedere la [archivio SDK Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
 
-**Programmare file (x86) \Windows Kit** è il percorso predefinito per tutte le versioni di Windows SDK installata.
+**Programmare file (x86) \Windows Kit** è il percorso predefinito per tutte le versioni del SDK di Windows installate.
 
 Altre piattaforme quali Xbox e Azure dispongono di SDK specifiche, che potrebbe essere necessario installare. Per altre informazioni, vedere il Centro per sviluppatori DirectX e Azure.
 

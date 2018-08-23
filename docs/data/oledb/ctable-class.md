@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 723d4f1e8f44c3ce376b4f39f34a191265ca4eab
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336726"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572750"
 ---
 # <a name="ctable-class"></a>Classe CTable
 Fornisce un mezzo per accedere direttamente a un rowset semplice (uno senza parametri).  
@@ -100,16 +100,16 @@ HRESULT Open(const CSession& session,
  [in] Il `DBID` della tabella da aprire.  
   
  *pPropSet*  
- [in] Un puntatore a una matrice di [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) strutture contenenti le proprietà e valori da impostare. Visualizzare [set di proprietà e i gruppi di proprietà](https://msdn.microsoft.com/library/ms713696.aspx) nel *riferimento per programmatori OLE DB* in Windows SDK. Il valore predefinito NULL non specifica alcuna proprietà.  
+ [in] Un puntatore a una matrice di [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) strutture contenenti le proprietà e valori da impostare. Visualizzare [set di proprietà e i gruppi di proprietà](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) nel *riferimento per programmatori OLE DB* in Windows SDK. Il valore predefinito NULL non specifica alcuna proprietà.  
   
  *ulPropSets*  
- [in] Il numero di [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) strutture passato il *pPropSet* argomento.  
+ [in] Il numero di [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) strutture passato il *pPropSet* argomento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/library/ms716724.aspx) nel *riferimento per programmatori OLE DB*.  
+ Per altre informazioni, vedere [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

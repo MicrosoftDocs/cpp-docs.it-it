@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329345"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540235"
 ---
 # <a name="stosw"></a>__stosw
 **Sezione specifica Microsoft**  
@@ -54,7 +54,7 @@ void __stosw(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

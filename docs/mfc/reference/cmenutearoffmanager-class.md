@@ -1,5 +1,5 @@
 ---
-title: Classe CMenuTearOffManager | Documenti Microsoft
+title: Classe CMenuTearOffManager | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041013"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541435"
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
 Gestisce i menu con barra a comparsa. Un menu con barra a comparsa è un menu collocato nella barra dei menu. L'utente può rimuovere un menu con barra a comparsa dalla barra dei menu, rendendolo mobile.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
    
 ## <a name="syntax"></a>Sintassi  
   
@@ -74,10 +74,10 @@ class CMenuTearOffManager : public CObject
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
 ## <a name="remarks"></a>Note  
- Per utilizzare i menu a comparsa nell'applicazione, è necessario che un `CMenuTearOffManager` oggetto. Nella maggior parte dei casi, non creare o inizializzare un `CMenuTearOffManager` direttamente l'oggetto. Questa operazione viene gestita automaticamente quando si chiama il [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) (funzione).  
+ Per usare i menu a comparsa nell'applicazione, è necessario che un `CMenuTearOffManager` oggetto. Nella maggior parte dei casi, non creare o inizializzare un `CMenuTearOffManager` direttamente l'oggetto. Questa operazione viene gestita automaticamente quando si chiama il [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) (funzione).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come creare e inizializzare un `CMenuTearOffManager` oggetto chiamando il `CWinAppEX::EnableTearOffMenus` metodo. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come creare e inizializzare un `CMenuTearOffManager` chiamando il `CWinAppEX::EnableTearOffMenus` (metodo). Questo frammento di codice fa parte dell' [esempio di Word Pad](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
   
@@ -112,7 +112,7 @@ CMenuTearOffManager();
 ```  
   
 ### <a name="remarks"></a>Note  
- Nella maggior parte dei casi, non sarà necessario creare un `CMenuTearOffManager` manualmente. Il framework dell'applicazione crea il `CMenuTearOffManager` dell'oggetto quando si chiama [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
+ Nella maggior parte dei casi, non è necessario creare un `CMenuTearOffManager` manualmente. Il framework dell'applicazione crea il `CMenuTearOffManager` dell'oggetto quando si chiama [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
@@ -137,7 +137,7 @@ BOOL Initialize(
   
 ### <a name="parameters"></a>Parametri  
  [in] *lpszRegEntry*  
- Stringa che contiene il percorso di una voce del Registro di sistema. Le applicazioni vengono archiviate le impostazioni per le barre tear-off in questa voce del Registro di sistema.  
+ Stringa che contiene il percorso di una voce del Registro di sistema. Le applicazioni vengono memorizzate le impostazioni per le barre a comparsa in questa voce del Registro di sistema.  
   
  [in] *uiTearOffMenuFirst*  
  Il primo ID di menu per un menu a comparsa.  
@@ -149,7 +149,7 @@ BOOL Initialize(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- L'intervallo di ID di menu da *uiTearOffMenuFirst* alla *uiTearOffMenuLast* deve essere un intervallo continuo. L'intervallo definisce il numero di a comparsa che possono essere visualizzati nello stesso momento nell'applicazione.  
+ L'intervallo di ID di menu dalla *uiTearOffMenuFirst* al *uiTearOffMenuLast* deve essere un intervallo continuo. L'intervallo definisce il numero di menu a comparsa che possono essere visualizzati nello stesso momento nell'applicazione.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 

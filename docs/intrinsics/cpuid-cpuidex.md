@@ -1,5 +1,5 @@
 ---
-title: CPUID, __cpuidex | Documenti Microsoft
+title: CPUID, cpuidex | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 218ade95dc3e1084e42ebceda8fbfcb83c16810b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 047f74a48b2c3f378b81868721b16ecdd22a6379
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336069"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541259"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
 **Sezione specifica Microsoft**
 
-Genera l'istruzione `cpuid` disponibile in x86 e [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Questa istruzione esegue query nel processore per ottenere informazioni sulle funzionalità supportate e sul tipo di CPU.
+Genera il `cpuid` istruzione che è disponibile in x86 e x64. Questa istruzione esegue query nel processore per ottenere informazioni sulle funzionalità supportate e sul tipo di CPU.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,26 +62,26 @@ Codice aggiuntivo che specifica le informazioni da recuperare, passato in ECX.
 
 |Funzione intrinseca|Architettura|
 |---------------|------------------|
-|`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
-|`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
+|`__cpuid`|x86, x64|
+|`__cpuidex`|x86, x64|
 
 **File di intestazione** \<intrin. h >
 
 ## <a name="remarks"></a>Note
 
-Questa funzione intrinseca archivia le funzionalità supportate e le informazioni sulla CPU restituito dal `cpuid` istruzione nel *cpuInfo*, una matrice di quattro valori integer a 32 bit che viene riempita con i valori dei registri EAX, EBX, ECX ed EDX Registra (in cui ordine). Le informazioni restituite ha un significato diverso a seconda del valore passato come il *function_id* parametro. Le informazioni restituite con diversi valori di *function_id* dipendono dal processore.
+Questa funzione intrinseca archivia le funzionalità supportate e informazioni sulla CPU restituite dal `cpuid` istruzione nel *cpuInfo*, una matrice di quattro interi a 32 bit che viene riempita con i valori dell'EAX, EBX, ECX ed EDX Registra (in cui ordine). Le informazioni restituite ha un significato diverso a seconda del valore passato come il *function_id* parametro. Le informazioni restituite con diversi valori di *function_id* dipendono dal processore.
 
-La funzione intrinseca `__cpuid` cancella il registro ECX prima di chiamare l'istruzione `cpuid`. Il `__cpuidex` intrinseco imposta il valore del registro ECX per *subfunction_id* prima di generare il `cpuid` istruzione. Ciò permette di raccogliere informazioni aggiuntive sul processore.
+La funzione intrinseca `__cpuid` cancella il registro ECX prima di chiamare l'istruzione `cpuid`. Il `__cpuidex` intrinseco imposta il valore del registro ECX al *subfunction_id* prima di generare il `cpuid` (istruzione). Ciò permette di raccogliere informazioni aggiuntive sul processore.
 
-Per ulteriori informazioni sui parametri specifici da utilizzare e i valori restituiti da queste funzioni intrinseche su processori Intel, vedere la documentazione per il `cpuid` istruzione [Intel 64 e IA-32 architetture Software sviluppatori manuale Volume 2: Riferimento dei Set di istruzioni](http://go.microsoft.com/fwlink/p/?LinkID=510021) e [estensioni riferimento alla programmazione dei Set di istruzioni dell'architettura Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). Documentazione di Intel utilizza i termini "leaf" e "subleaf" per il *function_id* e *subfunction_id* i parametri passati in EAX ed ECX.
+Per altre informazioni sui parametri specifici da usare e i valori restituiti dalle funzioni intrinseche su processori Intel, vedere la documentazione per il `cpuid` istruzione in [Intel 64 e IA-32 architetture Software gli sviluppatori manuale Volume 2: Riferimento dei Set di istruzioni](http://go.microsoft.com/fwlink/p/?LinkID=510021) e [riferimento alla programmazione delle estensioni dei Set di istruzioni di architettura Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). Documentazione di Intel Usa i termini "leaf" e "subleaf" per il *function_id* e *subfunction_id* i parametri passati in EAX ed ECX.
 
-Per ulteriori informazioni sui parametri specifici da utilizzare e i valori restituiti da queste funzioni intrinseche su processori AMD, vedere la documentazione per il `cpuid` istruzione del programmatore di architettura AMD64 manuale Volume 3: uso generale e di sistema Le istruzioni e nelle guide di revisione per le famiglie di processori specifico. Per collegamenti a questi documenti e altre informazioni, vedere AMD [ISA documenti, manuali e guide per sviluppatori](http://go.microsoft.com/fwlink/p/?LinkId=510023) pagina. Documentazione AMD Usa i termini "function number" e "subfunction numero" per il *function_id* e *subfunction_id* i parametri passati in EAX ed ECX.
+Per altre informazioni sui parametri specifici da usare e i valori restituiti dalle funzioni intrinseche su processori AMD, vedere la documentazione per il `cpuid` (istruzione) nel Volume 3 del manuale per programmatori dell'architettura AMD64: per utilizzo generico e di sistema Le istruzioni e nelle guide di revisione per le famiglie di processori specifiche. Per collegamenti a questi documenti e altre informazioni, vedere AMD [Guide per sviluppatori, manuali e ISA documenti](http://go.microsoft.com/fwlink/p/?LinkId=510023) pagina. Documentazione AMD Usa i termini "function number" e "subfunction numero" per il *function_id* e *subfunction_id* i parametri passati in EAX ed ECX.
 
-Quando il *function_id* l'argomento è 0, *cpuInfo*[0] Restituisce il più alto disponibile non esteso *function_id* valore supportate dal processore. Il produttore del processore è codificato nei *cpuInfo*[1] *cpuInfo*[2], e *cpuInfo*[3].
+Quando la *function_id* l'argomento è 0, *cpuInfo*[0] Restituisce il più alto disponibile non esteso *function_id* valore supportate dal processore. Il produttore del processore è codificato nei *cpuInfo*[1], *cpuInfo*[2], e *cpuInfo*[3].
 
-Supporto per set di istruzioni specifiche estensioni e funzionalità della CPU è codificato nel *cpuInfo* risultati restituiti per versione successiva *function_id* valori. Per altre informazioni, vedere i manuali collegati indicati sopra e l'esempio di codice seguente.
+Supporto per istruzioni specifiche del set di estensioni e funzionalità della CPU è codificato nel *cpuInfo* i risultati restituiti per versione successiva *function_id* valori. Per altre informazioni, vedere i manuali collegati indicati sopra e l'esempio di codice seguente.
 
-Alcuni processori supportano le informazioni relative alle funzioni estese CPUID. Se questa funzionalità è supportata, *function_id* per restituire le informazioni potrebbero essere utilizzati i valori da 0x80000000. Per determinare il valore significativo massimo permesso, impostare *function_id* su 0x80000000. Il valore massimo del *function_id* supportato per le funzioni estese verranno scritto *cpuInfo*[0].
+Alcuni processori supportano le informazioni relative alle funzioni estese CPUID. Se supportato, *function_id* valori da 0x80000000 potrebbero essere utilizzati per restituire informazioni. Per determinare il valore significativo massimo permesso, impostare *function_id* su 0x80000000. Il valore massimo del *function_id* supportato per le funzioni estese verranno scritto *cpuInfo*[0].
 
 ## <a name="example"></a>Esempio
 

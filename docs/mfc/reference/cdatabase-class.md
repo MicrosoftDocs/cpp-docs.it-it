@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b28dc721b3131fc413248f6ba4a0b0612176cb67
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6cb88decfd69fd7fb81667164f651e934ee08775
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337580"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539458"
 ---
 # <a name="cdatabase-class"></a>CDatabase (classe)
 Rappresenta una connessione a un'origine dati attraverso la quale è possibile utilizzare l'origine dati.  
@@ -189,7 +189,7 @@ void Cancel();
 ```  
   
 ### <a name="remarks"></a>Note  
- Si noti che le classi ODBC MFC non utilizzano non più l'elaborazione asincrona; Per eseguire un'operazione asincrona, è necessario chiamare direttamente la funzione API ODBC [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Per altre informazioni, vedere [esecuzione asincrona](https://msdn.microsoft.com/library/ms713563.aspx) nel SDK di Windows.  
+ Si noti che le classi ODBC MFC non utilizzano non più l'elaborazione asincrona; Per eseguire un'operazione asincrona, è necessario chiamare direttamente la funzione API ODBC [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\)). Per altre informazioni, vedere [esecuzione asincrona](/previous-versions/windows/desktop/ms713563\(v=vs.85\)) nel SDK di Windows.  
   
 ##  <a name="cantransact"></a>  CDatabase::CanTransact  
  Chiamare questa funzione membro per determinare se il database consente di transazioni.  

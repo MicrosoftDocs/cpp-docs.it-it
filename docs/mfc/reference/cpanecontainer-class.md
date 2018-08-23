@@ -1,5 +1,5 @@
 ---
-title: Classe CPaneContainer | Documenti Microsoft
+title: Classe CPaneContainer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -130,17 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079475"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541619"
 ---
 # <a name="cpanecontainer-class"></a>Classe CPaneContainer
-Il `CPaneContainer` classe è un componente di base del modello di ancoraggio implementato da MFC. Un oggetto di questa classe archivia i puntatori in due riquadri ancorati o in due istanze di `CPaneContainer.` . Archivia inoltre un puntatore nel divisore che separa i riquadri o i contenitori. Annidando i contenitori all'interno di altri contenitori, il framework può compilare un albero binario che rappresenta layout di ancoraggio complessi. La radice dell'albero binario è archiviata in un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) oggetto.  
+Il `CPaneContainer` classe è un componente di base del modello di ancoraggio implementato da MFC. Un oggetto di questa classe archivia i puntatori in due riquadri ancorati o in due istanze di `CPaneContainer.` . Archivia inoltre un puntatore nel divisore che separa i riquadri o i contenitori. Annidando i contenitori all'interno di altri contenitori, il framework può compilare un albero binario che rappresenta layout di ancoraggio complessi. La radice dell'albero binario è archiviata in una [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) oggetto.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
  
 ## <a name="syntax"></a>Sintassi  
   
@@ -221,7 +221,7 @@ class CPaneContainer : public CObject
  `CPaneContainer` gli oggetti vengono creati automaticamente dal framework.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come creare un'istanza di `CPaneContainer` classe. Questo frammento di codice fa parte il [esempio di impostare le dimensioni di riquadro](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come costruire un'istanza di `CPaneContainer` classe. Questo frammento di codice fa parte di [esempio imposta dimensioni del riquadro](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]  
@@ -993,5 +993,5 @@ virtual int StretchPaneContainer(
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)

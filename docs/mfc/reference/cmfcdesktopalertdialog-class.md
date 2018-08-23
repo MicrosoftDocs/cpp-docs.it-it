@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCDesktopAlertDialog | Documenti Microsoft
+title: Classe CMFCDesktopAlertDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040795"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540641"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Classe CMFCDesktopAlertDialog
-Il `CMFCDesktopAlertDialog` classe viene utilizzata in combinazione con il [classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) per visualizzare una finestra di dialogo personalizzata in una finestra popup.  
+Il `CMFCDesktopAlertDialog` classe viene usata in combinazione con il [classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) per visualizzare una finestra di dialogo personalizzata in una finestra popup.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +60,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
 2.  Creare un modello di finestra di dialogo figlio nelle risorse del progetto.  
   
-3.  Chiamare [cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) con l'ID risorsa del modello di finestra di dialogo e un indicatore di misura per le informazioni sulla classe di runtime della classe derivata come parametri.  
+3.  Chiamare [cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) con l'ID risorsa del modello di finestra di dialogo e un puntatore alle informazioni sulla classe di runtime della classe derivata come parametri.  
   
 4.  Programmare la finestra di dialogo personalizzata per gestire tutte le notifiche provenienti dai controlli ospitati oppure programmare i controlli ospitati per gestire direttamente queste notifiche.  
   

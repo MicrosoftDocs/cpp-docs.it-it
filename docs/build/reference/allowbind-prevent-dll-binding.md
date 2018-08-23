@@ -1,5 +1,5 @@
 ---
-title: -ALLOWBIND (impedisce l'associazione di DLL) | Documenti Microsoft
+title: -ALLOWBIND (prevenzione dell'associazione di DLL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31968e27c46cb5ea220a4cfe19c36820c4cf8444
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0bff9ec6502aab5787c492a15e008bc29926163
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369640"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571426"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (prevenzione dell'associazione di DLL)
 ```  
@@ -41,11 +41,11 @@ ms.locfileid: "32369640"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
   
 2.  Espandere **le proprietà di configurazione**, **Linker**e selezionare **riga di comando**.  
   
-3.  Immettere `/ALLOWBIND:NO` in **opzioni aggiuntive**.  
+3.  Immettere `/ALLOWBIND:NO` nelle **le opzioni aggiuntive**.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
@@ -54,5 +54,5 @@ ms.locfileid: "32369640"
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)   
- [BindImage (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
- [BindImageEx (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)
+ [Funzione BindImage](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)   
+ [BindImageEx (funzione)](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

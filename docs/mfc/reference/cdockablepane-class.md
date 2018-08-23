@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028291"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543173"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementa un riquadro che può essere ancorato in un sito di ancoraggio o incluso in un riquadro a schede.  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo per gestire l'ancoraggio di un riquadro mobile.  
   
- Barre degli strumenti mobili o i riquadri che utilizzano la modalità di ancoraggio DT_IMMEDIATE ancorabili, il framework ritarda il comando di ancoraggio per consentire all'utente la finestra viene spostata all'esterno dell'area client del frame padre prima che venga eseguita di ancoraggio. La lunghezza del ritardo è misurata in millisecondi e viene controllata per il [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membro dati... Il valore predefinito [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) è 200. Questo comportamento emula il comportamento di ancoraggio [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Barre degli strumenti mobili o i riquadri che utilizzano la modalità di ancoraggio DT_IMMEDIATE ancorabili, il framework ritarda il comando di ancoraggio per consentire all'utente la finestra viene spostata all'esterno dell'area client del frame padre prima che venga eseguita di ancoraggio. La lunghezza del ritardo è misurata in millisecondi e viene controllata per il [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membro dati... Il valore predefinito [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) è 200. Questo comportamento emula il comportamento di ancoraggio di Microsoft Word 2007.  
   
  Gli stati di ancoraggio ritardati (CS_DELAY_DOCK e CS_DELAY_DOCK_TO_TAB), il framework non esegue ancoraggio fino a quando l'utente rilascia il pulsante del mouse. Se un riquadro viene utilizzata la modalità di ancoraggio DT_STANDARD, il framework visualizza un rettangolo in corrispondenza della posizione di ancoraggio prevista. Se un riquadro viene utilizzata la modalità di ancoraggio DT_SMART, il framework Visualizza marcatori di ancoraggio e rettangoli semi-trasparenti in corrispondenza della posizione di ancoraggio prevista. Per specificare la modalità di ancoraggio per il riquadro, chiamare il [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) (metodo). Per altre informazioni sull'ancoraggio intelligente, vedere [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Per un effetto di animazione più veloce, ridurre questo valore. Per un effetto di animazione più lento, aumentare questo valore.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

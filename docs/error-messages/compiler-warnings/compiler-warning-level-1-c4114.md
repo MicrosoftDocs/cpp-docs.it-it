@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4114 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4114 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283923"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541050"
 ---
-# <a name="compiler-warning-level-1-c4114"></a>Compilatore (livello 1) Avviso C4114
+# <a name="compiler-warning-level-1-c4114"></a>Compilatore Warning (level 1) C4114
 stesso qualificatore di tipo utilizzato più di una volta  
   
- Una definizione o una dichiarazione di tipo viene utilizzato un qualificatore di tipo (**const**, `volatile`, **firmato**, o `unsigned`) più volte. In questo modo un avviso con le estensioni Microsoft (/Ze) e un errore in compatibilità ANSI (/Za).  
+ Una definizione o dichiarazione di tipo Usa un qualificatore di tipo (**const**, **volatile**, **firmato**, oppure **unsigned**) più volte. In questo modo un avviso con le estensioni Microsoft (/Ze) e un errore in compatibilità ANSI (/Za).  
   
  L'esempio seguente genera l'errore C4114:  
   

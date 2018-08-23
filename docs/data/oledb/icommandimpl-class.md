@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337794"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571690"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
-Fornisce l'implementazione per il [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) interfaccia.  
+Fornisce l'implementazione per il [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\)) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -124,7 +124,7 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [ICommand::Cancel](https://msdn.microsoft.com/library/ms714402.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
 
 ## <a name="cancelexecution"></a> ICommandImpl:: Cancelexecution
 Annulla l'esecuzione del comando corrente.  
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ### <a name="remarks"></a>Note  
  Per creare più di un set di righe o per fornire il proprio le condizioni per la creazione di diversi set di righe, inserire chiamate diverse al `CreateRowset` dall'interno `Execute`.  
   
- Visualizzare [ICommand:: Execute](https://msdn.microsoft.com/library/ms718095.aspx) nel *riferimento per programmatori OLE DB.*  
+ Visualizzare [ICommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) nel *riferimento per programmatori OLE DB.*  
 
 ## <a name="execute"></a> ICommandImpl:: Execute
 Esegue il comando.  
@@ -194,7 +194,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [ICommand:: Execute](https://msdn.microsoft.com/library/ms718095.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [ICommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
  L'interfaccia in uscita richiesta sarà un'interfaccia acquisita dall'oggetto set di righe che consente di creare questa funzione.  
@@ -212,7 +212,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [ICommand::GetDBSession](https://msdn.microsoft.com/library/ms719622.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
  È utile per il recupero delle proprietà dalla sessione.  

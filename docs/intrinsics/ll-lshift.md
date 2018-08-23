@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327372"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541454"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Sezione specifica Microsoft**  
   
- Passa il valore a 64 bit a sinistra del numero specificato di bit.  
+ Sposta il valore fornito a 64 bit a sinistra del numero specificato di bit.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,20 +47,20 @@ unsigned __int64 __ll_lshift(
  Numero di bit da spostare.  
   
 ## <a name="return-value"></a>Valore restituito  
- La maschera spostato a sinistra di `nBit` bits.  
+ La maschera spostato a sinistra `nBit` bits.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Se si compila il programma usando l'architettura a 64 bit e `nBit` è maggiore di 63, il numero di bit da spostare è `nBit` modulo 64. Se si compila il programma usando l'architettura a 32 bit e `nBit` è maggiore di 31, il numero di bit da spostare è `nBit` modulo 32.  
+ Se si compila il programma usando l'architettura a 64 bit e `nBit` è maggiore di 63 e tra il numero di bit da spostare sia `nBit` modulo 64. Se si compila il programma usando l'architettura a 32 bit e `nBit` è maggiore di 31, il numero di bit da spostare sia `nBit` modulo 32.  
   
- Il `ll` nel nome indica che si tratta di un'operazione in `long long` (`__int64`).  
+ Il `ll` nel nome indica che si tratta di un'operazione sul `long long` (`__int64`).  
   
 ## <a name="example"></a>Esempio  
   
@@ -89,7 +89,7 @@ int main()
 10000  
 ```  
   
- **Nota** non è disponibile alcuna versione senza segno dell'operazione di spostamento a sinistra. In questo modo `__ll_lshift` è già utilizzato da un parametro di input senza segno. Differenza di spostamento a destra, non si verifica alcuna dipendenza di accesso per lo spostamento a sinistra, poiché il bit meno significativo nel risultato è sempre impostato su zero indipendentemente dal segno del valore spostato.  
+ **Nota** non è disponibile alcuna versione senza segno dell'operazione di spostamento a sinistra. Infatti, `__ll_lshift` Usa già un parametro di input senza segno. A differenza di spostamento a destra, non si verifica alcuna dipendenza dalla sign per lo spostamento a sinistra, poiché il bit meno significativo del risultato è sempre impostato su zero indipendentemente dal segno del valore spostato.  
   
 **Fine sezione specifica Microsoft**  
   

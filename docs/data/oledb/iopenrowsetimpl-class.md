@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e2212a10269b852d0df6f10a87e08370c1d27cf8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4de30a1abdf111f171ad49a028a25cc2683cbef4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340625"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573051"
 ---
 # <a name="iopenrowsetimpl-class"></a>Classe IOpenRowsetImpl
 Fornisce l'implementazione per il `IOpenRowset` interfaccia.  
@@ -59,10 +59,10 @@ class IOpenRowsetImpl : public IOpenRowset
 |[OpenRowset](#openrowset)|Apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice. (Non in ATLDB. H)|  
   
 ## <a name="remarks"></a>Note  
- Il [IOpenRowset](https://msdn.microsoft.com/library/ms716946.aspx) interfaccia è obbligatoria per un oggetto di sessione. Apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice.  
+ Il [IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) interfaccia è obbligatoria per un oggetto di sessione. Apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice.  
   
 ## <a name="createrowset"></a> Iopenrowsetimpl:: CreateRowset
-Crea un oggetto set di righe. Non chiamato direttamente dall'utente. Visualizzare [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/library/ms716724.aspx) nel *riferimento per programmatori OLE DB.*  
+Crea un oggetto set di righe. Non chiamato direttamente dall'utente. Visualizzare [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) nel *riferimento per programmatori OLE DB.*  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -85,7 +85,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
  *pRowsetObj*  
  [out] Un puntatore a un oggetto set di righe. In genere non viene usato questo parametro, ma può essere utilizzato se è necessario eseguire altre operazioni sul set di righe prima di passarlo a un oggetto COM. La durata del *pRowsetObj* associato da *ppRowset*.  
   
- Per altri parametri, vedere [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/library/ms716724.aspx) nel *riferimento per programmatori OLE DB.*  
+ Per altri parametri, vedere [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) nel *riferimento per programmatori OLE DB.*  
 
 ## <a name="openrowset"></a> Iopenrowsetimpl:: OPENROWSET
 Apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice.  
@@ -103,7 +103,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/library/ms716724.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo non viene trovato in ATLDB. H. Viene creato dalla creazione guidata oggetto ATL quando si crea un provider.  

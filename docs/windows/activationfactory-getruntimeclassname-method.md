@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc4658ebf0519ef9d1792d62b303f423e658835
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643069"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590182"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>Metodo ActivationFactory::GetRuntimeClassName
-Ottiene il nome della classe di runtime dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-STDMETHOD(  
-   GetRuntimeClassName  
-)(_Out_ HSTRING* runtimeName);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *runtimeName*  
- Al termine di questa operazione, un handle a una stringa che contiene il nome della classe di runtime dell'oggetto che l'oggetto corrente **ActivationFactory** crea un'istanza.  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ActivationFactory](../windows/activationfactory-class.md)
+
+Ottiene il nome della classe di runtime dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+STDMETHOD(
+   GetRuntimeClassName
+)(_Out_ HSTRING* runtimeName);
+```
+
+### <a name="parameters"></a>Parametri
+
+*runtimeName*  
+Al termine di questa operazione, un handle a una stringa che contiene il nome della classe di runtime dell'oggetto che l'oggetto corrente **ActivationFactory** crea un'istanza.
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ActivationFactory](../windows/activationfactory-class.md)

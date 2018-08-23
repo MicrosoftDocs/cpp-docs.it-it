@@ -1,5 +1,5 @@
 ---
-title: Portabilità dei Set vantaggi del carattere | Documenti Microsoft
+title: Portabilità dei Set i vantaggi del carattere | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - character sets [C++], benefits
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d1b78048baebfd89aed0ccc898c2bb9e3612525
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b812b0712e6df24422ebe4a3b73376619051b484
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853817"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586805"
 ---
 # <a name="benefits-of-character-set-portability"></a>Vantaggi della portabilità dei set di caratteri
-È possibile trarre vantaggio dall'utilizzo delle funzionalità di portabilità di runtime C e MFC anche se non si intende attualmente da internazionalizzare l'applicazione:  
+È possibile trarre vantaggio dall'utilizzo delle funzionalità di portabilità di runtime C e MFC anche se non si prevede attualmente da internazionalizzare dell'applicazione:  
   
--   La portabilità della codifica la codebase più flessibile. È possibile in un secondo momento spostarla facilmente Unicode e MBCS.  
+-   Scrittura di codice in modo portabile la codebase più flessibile. È in un secondo momento possibile spostarla facilmente a MBCS o Unicode.  
   
--   Utilizzo di Unicode rende più efficiente delle applicazioni per Windows. Poiché Windows utilizza Unicode, le stringhe non Unicode passate da e verso il sistema operativo devono essere convertite, che comporta un sovraccarico.  
+-   Utilizzo di Unicode rende più efficiente delle applicazioni per Windows. Dato che Windows Usa Unicode, le stringhe non Unicode passate da e verso il sistema operativo devono essere convertite, che comporta un sovraccarico.  
 
   
 ## <a name="see-also"></a>Vedere anche  

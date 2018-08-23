@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850157"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539467"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 Fornisce la funzionalità del controllo indicatore di stato comune di Windows.  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in] *clrBar*|Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che specifica il nuovo colore indicatore dell'indicatore di stato. Specificare CLR_DEFAULT per causare l'indicatore di stato da utilizzare sul colore predefinito.|  
   
 ### <a name="return-value"></a>Valore restituito  
- Il colore precedente della barra di indicatore di stato di avanzamento, rappresentato come un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore o CLR_DEFAULT se il colore della barra di indicatore di stato di avanzamento è il colore predefinito.  
+
+Il colore precedente della barra di indicatore di stato di avanzamento, rappresentato come un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore o CLR_DEFAULT se il colore della barra di indicatore di stato di avanzamento è il colore predefinito.  
   
 ### <a name="remarks"></a>Note  
- Il `SetBarColor` metodo imposta l'indicatore di stato solo se color una [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [tema](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) non è attiva.  
+
+Il `SetBarColor` metodo imposta l'indicatore di stato solo se color di una Vista di Windows [tema](/windows/desktop/Controls/visual-styles-overview) non è attiva.  
   
  Questo metodo invia il [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) messaggio, che è descritti nel SDK di Windows.  
   

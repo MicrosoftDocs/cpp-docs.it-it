@@ -60,17 +60,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3135c95ddc32c198bb7abc6ddea4ef5aea5a1d8a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338019"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540234"
 ---
 # <a name="cmfcautohidebutton-class"></a>Classe CMFCAutoHideButton
 Pulsante che visualizza o nasconde una [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) configurata per nascondere elementi.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.    
 ## <a name="syntax"></a>Sintassi  
   
 ```  

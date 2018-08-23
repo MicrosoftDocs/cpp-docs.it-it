@@ -82,17 +82,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0f97eb2bce0bb39641aeceeaaa57d73dd45994e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854031"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539910"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 Il `CMFCStatusBar` classe implementa una barra di stato simile al `CStatusBar` classe. Tuttavia, la classe `CMFCStatusBar` offre funzionalità non fornite dalla classe `CStatusBar` , ad esempio le capacità di visualizzare immagini, animazioni e indicatori di stato, oltre alla possibilità di rispondere al doppio clic del mouse. 
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.   
   
 ## <a name="syntax"></a>Sintassi  
   

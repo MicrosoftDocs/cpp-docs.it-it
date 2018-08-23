@@ -1,5 +1,5 @@
 ---
-title: Classe CGlobalUtils | Documenti Microsoft
+title: Classe CGlobalUtils | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952085"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540240"
 ---
 # <a name="cglobalutils-class"></a>Classe CGlobalUtils
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ## <a name="syntax"></a>Sintassi  
   

@@ -1,5 +1,5 @@
 ---
-title: __readgsbyte, __readgsdword, __readgsqword, __readgsword | Documenti Microsoft
+title: __readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a0732f5a93c152588f0a7fdc99c7a10787bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325279"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540629"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 **Sezione specifica Microsoft**  
   
- Leggere la memoria da una posizione specificata da un offset relativo all'inizio del segmento GS.  
+ Leggere la memoria da una posizione specificata da un offset rispetto all'inizio del segmento GS.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,15 +62,15 @@ unsigned __int64 __readgsqword(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsbyte`|X64|  
+|`__readgsdword`|X64|  
+|`__readgsqword`|X64|  
+|`__readgsword`|X64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come funzioni intrinseche.  
+ Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  
   
 **Fine sezione specifica Microsoft**  
   

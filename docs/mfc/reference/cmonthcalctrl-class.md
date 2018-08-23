@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853550"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540250"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 Incapsula la funzionalità di un controllo calendario mensile.  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in] *cxyBorder*|La larghezza del bordo, in pixel.|  
   
 ### <a name="remarks"></a>Note  
- Se questo metodo ha esito positivo, lo spessore del bordo è impostato il *cxyBorder* parametro. In caso contrario, lo spessore del bordo viene reimpostato sul valore predefinito specificato dall'oggetto corrente [tema](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), oppure zero se non vengono usati i temi.  
+ Se questo metodo ha esito positivo, lo spessore del bordo è impostato il *cxyBorder* parametro. In caso contrario, lo spessore del bordo viene reimpostato sul valore predefinito specificato dall'oggetto corrente [tema](/windows/desktop/Controls/visual-styles-overview), oppure zero se non vengono usati i temi.  
   
  Questo metodo invia il [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) messaggio, che è descritti nel SDK di Windows.  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Note  
- Lo spessore del bordo è impostato sul valore predefinito specificato dall'oggetto corrente [tema](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), oppure zero se non vengono usati i temi.  
+ Lo spessore del bordo è impostato sul valore predefinito specificato dall'oggetto corrente [tema](/windows/desktop/Controls/visual-styles-overview), oppure zero se non vengono usati i temi.  
   
  Questo metodo invia il [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) messaggio, che è descritti nel SDK di Windows.  
   

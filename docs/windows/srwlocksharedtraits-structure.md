@@ -17,44 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db9a16671be21b2df7a4ce4f9d87a8b66e097e33
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 50bcfc728a2f228e4fa8444fe41cc25c3ff449a2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020148"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602246"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits (struttura)
-Descrive le caratteristiche comuni del `SRWLock` classe in blocco in modalità condivisa.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-struct SRWLockSharedTraits;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-typedefs"></a>Typedef pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`Type`|Sinonimo di un puntatore per il [SRWLOCK](../windows/srwlock-class.md) classe.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo SRWLockSharedTraits::GetInvalidValue](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Recupera un' **SRWLockSharedTraits** oggetto che non è sempre valido.|  
-|[Metodo SRWLockSharedTraits::Unlock](../windows/srwlocksharedtraits-unlock-method.md)|Rilascia il controllo esclusivo del specificato `SRWLock` oggetto.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `SRWLockSharedTraits`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Descrive le caratteristiche comuni del `SRWLock` classe in blocco in modalità condivisa.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+struct SRWLockSharedTraits;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-typedefs"></a>Typedef pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`Type`|Sinonimo di un puntatore per il [SRWLOCK](../windows/srwlock-class.md) classe.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Metodo SRWLockSharedTraits::GetInvalidValue](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Recupera un' **SRWLockSharedTraits** oggetto che non è sempre valido.|
+|[Metodo SRWLockSharedTraits::Unlock](../windows/srwlocksharedtraits-unlock-method.md)|Rilascia il controllo esclusivo del specificato `SRWLock` oggetto.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`SRWLockSharedTraits`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

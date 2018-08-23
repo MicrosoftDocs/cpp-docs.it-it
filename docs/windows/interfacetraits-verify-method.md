@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5b160a941343fce656313f588065573d7b00c90
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 8c6491968541a0015110c55edf2bede40c084947
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017948"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583444"
 ---
 # <a name="interfacetraitsverify-method"></a>Metodo InterfaceTraits::Verify
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-__forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>Note  
- Verifica che `Base` viene derivato correttamente.  
-  
- Per altre informazioni sulle `Base`, vedere la **typedef pubblici** sezione [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+__forceinline static void Verify();
+```
+
+## <a name="remarks"></a>Note
+
+Verifica che `Base` viene derivato correttamente.
+
+Per altre informazioni sulle `Base`, vedere la **typedef pubblici** sezione [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Struttura InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

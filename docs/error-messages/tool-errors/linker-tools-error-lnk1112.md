@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1112 errore | Documenti Microsoft
+title: Strumenti del linker LNK1112 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ca2afc7270a69c443447d1b294ee7ec8bbe5a7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e08e8dae82675d9503575d543edfcaa2c96275e9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704997"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538674"
 ---
 # <a name="linker-tools-error-lnk1112"></a>Errore degli strumenti del linker LNK1112
 
-> tipo di modulo computer '*type1*'è in conflitto con il tipo di computer di destinazione'*type2*'
+> tipo di modulo machine '*type1*'è in conflitto con il tipo di computer di destinazione'*type2*'
 
 ## <a name="remarks"></a>Note
 
 I file oggetto specificati come input sono stati compilati per tipi di computer diversi.
 
-Il linker genererà ad esempio l'errore LNK1112 quando si prova a collegare un file oggetto compilato con **/clr** e un file oggetto compilato con **/clr:pure** (tipo di computer CEE). Il **/clr: pure** opzione del compilatore è deprecato in Visual Studio 2015 e non supportata in Visual Studio 2017.
+Il linker genererà ad esempio l'errore LNK1112 quando si prova a collegare un file oggetto compilato con **/clr** e un file oggetto compilato con **/clr:pure** (tipo di computer CEE). Il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
 
-Analogamente, l'errore si verifica se si prova a collegare un modulo creato con il compilatore [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] e un modulo creato con il compilatore x86.
+Analogamente, se si crea un modulo con x64 del compilatore e un altro modulo con x86 compilatore e prova a collegare, il linker genererà LNK1112.
 
 Questo errore può verificarsi nel caso in cui si usa un'applicazione a 64 bit senza avere installato compilatori di Visual C++ a 64 bit. In questo caso, le configurazioni a 64 bit non saranno disponibili. Per correggere questo errore, eseguire il programma di installazione per Visual Studio e installare i componenti C++ mancanti.
 

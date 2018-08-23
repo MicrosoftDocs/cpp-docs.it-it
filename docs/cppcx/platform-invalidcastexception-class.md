@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: InvalidCastException | Documenti Microsoft'
+title: 'Classe platform:: InvalidCastException | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::InvalidCastException
 ms.assetid: 0215131d-1251-4913-9561-824410e045b6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ebae678ea52c9728dc7e6d10f5f2104e94002d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec74810503fa86d6b5d102aa0fd1ca34b4fef1c6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087120"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589103"
 ---
 # <a name="platforminvalidcastexception-class"></a>Classe Platform::InvalidCastException
 Generata quando una conversione o un cast esplicito non è valido.  

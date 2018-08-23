@@ -1,5 +1,5 @@
 ---
-title: Allocazione e deallocazione di memoria per un oggetto BSTR | Documenti Microsoft
+title: Allocazione e deallocazione della memoria per un oggetto BSTR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ab5ae9d6f0bfa98231cbc41aa4ae0d10b89537
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 355d89a3cb5817cc64512ae885a075bf44ee2a86
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358325"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573162"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Allocazione e rilascio di memoria per un oggetto BSTR
-Quando si crea `BSTR`s e passarle tra gli oggetti COM, è necessario prestare attenzione nella gestione della memoria utilizzano per evitare perdite di memoria. Quando un `BSTR` rimane all'interno di un'interfaccia, è necessario liberare la memoria al termine con esso. Tuttavia, quando un `BSTR` passa da un'interfaccia, l'oggetto ricevente assume la responsabilità per la gestione della memoria.  
+Quando si creano `BSTR`s e passarle tra gli oggetti COM, è necessario prestare attenzione nella gestione della memoria usano per evitare perdite di memoria. Quando un `BSTR` rimane all'interno di un'interfaccia, è necessario liberare la memoria al termine con esso. Tuttavia, quando un `BSTR` passa all'esterno di un'interfaccia, l'oggetto ricevente assume la responsabilità per la gestione della memoria.  
   
  In generale, le regole di allocazione e deallocazione di memoria allocata per `BSTR`sono come segue:  
   
--   Quando si chiama una funzione che prevede un `BSTR` argomento, è necessario allocare la memoria per il `BSTR` prima della chiamata e rilasciarlo in un secondo momento. Ad esempio:  
+-   Quando si chiama una funzione che prevede un `BSTR` argomento, è necessario allocare la memoria per il `BSTR` prima della chiamata e deallocarla. Ad esempio:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
   
@@ -52,6 +52,6 @@ Quando si crea `BSTR`s e passarle tra gli oggetti COM, è necessario prestare at
 ## <a name="see-also"></a>Vedere anche  
  [Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
- [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx)   
- [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)
+ [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)   
+ [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
 

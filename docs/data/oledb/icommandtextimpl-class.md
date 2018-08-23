@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340293"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571868"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
-Fornisce un'implementazione per il [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx) interfaccia.  
+Fornisce un'implementazione per il [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\)) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -87,7 +87,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx) nel *riferimento per programmatori OLE DB*. Il *pguidDialect* parametro viene ignorato per impostazione predefinita.  
+ Visualizzare [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. Il *pguidDialect* parametro viene ignorato per impostazione predefinita.  
 
 ## <a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
 Imposta il testo del comando, sostituendo il testo del comando esistenti.  
@@ -100,7 +100,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [ICommandText:: SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx) nel *riferimento per programmatori OLE DB*. 
+ Visualizzare [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
 
 ## <a name="strcommandtext"></a> ICommandTextImpl:: M_strcommandtext
 Archivia la stringa di testo del comando.  

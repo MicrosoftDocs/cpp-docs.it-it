@@ -1,5 +1,5 @@
 ---
-title: Riferimenti a DUMPBIN | Documenti Microsoft
+title: Riferimenti a DUMPBIN | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d116ad1efde9ae144e17eb9a4ac2ad996add13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4858fe41db5e9a5ac6208881a045e7915b9bdfee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372656"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575487"
 ---
 # <a name="dumpbin-reference"></a>Riferimenti a DUMPBIN
-Microsoft COFF Binary File Dumper (DUMPBIN. Con estensione EXE) consente di visualizzare informazioni sui file binari comuni oggetto formato COFF (File). È possibile utilizzare DUMPBIN per esaminare i file oggetto COFF, librerie standard di oggetti COFF, file eseguibili e librerie a collegamento dinamico (DLL).  
+Microsoft COFF Binary File Dumper (DUMPBIN. Con estensione EXE) consente di visualizzare informazioni sui file binari File formato COFF (Common Object). È possibile usare DUMPBIN per esaminare i file oggetto COFF, le librerie standard di oggetti COFF, i file eseguibili e librerie a collegamento dinamico (DLL).  
   
 > [!NOTE]
->  È possibile avviare questo strumento solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
+>  È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
   
- Solo il [/HEADERS](../../build/reference/headers.md) (opzione DUMPBIN) è disponibile per l'utilizzo con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore.  
+ Solo le [/HEADERS](../../build/reference/headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) opzione del compilatore.  
   
 -   [Riga di comando DUMPBIN](../../build/reference/dumpbin-command-line.md)  
   

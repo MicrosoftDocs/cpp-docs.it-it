@@ -1,5 +1,5 @@
 ---
-title: __outdwordstring | Documenti Microsoft
+title: __outdwordstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331760"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539634"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Sezione specifica Microsoft**  
   
- Genera il `rep outsd` (istruzione), che consente di inviare `Count` Double Word a partire da `Buffer` attraverso la porta dei / o specificata da `Port`.  
+ Genera il `rep outsd` (istruzione), che consente di inviare `Count` Double Word a partire `Buffer` attraverso la porta dei / o specificata da `Port`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,16 +45,16 @@ void __outdwordstring(
  La porta per inviare i dati.  
   
  [in] `Buffer`  
- Puntatore ai dati da inviare alla porta specificata.  
+ Puntatore ai dati da inviare attraverso la porta specificata.  
   
  [in] `Count`  
- Il numero di parole doppie da inviare.  
+ Il numero di parole doppie per l'invio.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__outdwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

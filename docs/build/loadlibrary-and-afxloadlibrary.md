@@ -1,5 +1,5 @@
 ---
-title: LoadLibrary e AfxLoadLibrary | Documenti Microsoft
+title: LoadLibrary e AfxLoadLibrary | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2018
 ms.technology:
@@ -20,37 +20,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc3be5d374995c657021952184794f146c37f4dc
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753588"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572992"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 
-Elabora chiamata [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) per il collegamento esplicito a una DLL. Se la funzione ha esito positivo, associa la DLL specificata nello spazio degli indirizzi del processo chiamante e restituisce un handle alla DLL che può essere utilizzato con altre funzioni nel collegamento esplicito, ad esempio, `GetProcAddress` e `FreeLibrary`.
+Elabora chiamata [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) per il collegamento esplicito a una DLL. Se la funzione ha esito positivo, associa la DLL specificata nello spazio degli indirizzi del processo chiamante e restituisce un handle alla DLL che può essere utilizzata con altre funzioni impiegate nel collegamento esplicito, ad esempio, `GetProcAddress` e `FreeLibrary`.
 
-`LoadLibrary` tenta di individuare la DLL utilizzando la stessa sequenza di ricerca utilizzato per il collegamento implicito. Se il sistema non è possibile trovare la DLL o se la funzione di punto di ingresso restituisce FALSE, `LoadLibrary` restituisce NULL. Se la chiamata a `LoadLibrary` specifica di un modulo DLL che è già mappato nello spazio degli indirizzi del processo chiamante, la funzione restituisce un handle di file DLL e incrementa il conteggio dei riferimenti del modulo.
+`LoadLibrary` tenta di individuare la DLL usando la stessa sequenza di ricerca che viene usata per il collegamento implicito. Se il sistema non è possibile trovare il file DLL o se la funzione di punto di ingresso restituisce FALSE, `LoadLibrary` restituisce NULL. Se la chiamata a `LoadLibrary` specifica un modulo DLL già associato allo spazio degli indirizzi del processo chiamante, la funzione restituisce un handle della DLL e incrementa il conteggio dei riferimenti del modulo.
 
-Se la DLL contiene una funzione di punto di ingresso, il sistema operativo chiama la funzione nel contesto del thread che ha chiamato `LoadLibrary`. La funzione di punto di ingresso non viene chiamata se la DLL è già collegata al processo a causa di una chiamata precedente a `LoadLibrary` che non dispone di alcuna chiamata corrispondente al `FreeLibrary` (funzione).
+Se la DLL include una funzione di punto di ingresso, il sistema operativo chiama la funzione nel contesto del thread che ha chiamato `LoadLibrary`. La funzione di punto di ingresso non viene chiamata se la DLL è già collegata al processo a causa di una chiamata precedente a `LoadLibrary` che non dispone di alcuna chiamata corrispondente al `FreeLibrary` (funzione).
 
-Per le applicazioni MFC che caricano DLL di estensione MFC, è consigliabile utilizzare `AfxLoadLibrary` anziché `LoadLibrary`. `AfxLoadLibrary` gli handle di sincronizzazione di thread prima di chiamare `LoadLibrary`. L'interfaccia (prototipo di funzione) per `AfxLoadLibrary` equivale `LoadLibrary`.
+Per le applicazioni MFC che caricano DLL estensione MFC, è consigliabile usare `AfxLoadLibrary` invece di `LoadLibrary`. `AfxLoadLibrary` gli handle di sincronizzazione di thread prima di chiamare `LoadLibrary`. L'interfaccia (prototipo di funzione) al `AfxLoadLibrary` equivale a `LoadLibrary`.
 
-Se Windows non è possibile caricare la DLL, il processo può tentare di correggere l'errore. Ad esempio, il processo potrebbe informare l'utente dell'errore e chiedere all'utente di specificare un percorso diverso per la DLL.
+Se Windows non è possibile caricare la DLL, il processo può tentare la correzione dell'errore. Ad esempio, il processo è stato possibile notificare all'utente dell'errore e chiedere all'utente di specificare un altro percorso della DLL.
 
 > [!IMPORTANT]  
-> Assicurarsi di specificare il percorso completo di tutte le DLL. La directory corrente viene cercata innanzitutto quando vengono caricati i file. Se non si specifica il percorso del file, è possibile caricare un file non è quello previsto. Un altro modo per evitare questo problema consiste nell'usare il [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) opzione del linker.
+> Assicurarsi di specificare il percorso completo di tutte le DLL. La directory corrente viene cercata innanzitutto quando i file vengono caricati. Se non si specifica il percorso del file, potrebbe essere possibile caricare un file che non è quello previsto. Un altro modo per evitare questo problema consiste nell'usare la [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) l'opzione del linker.
 
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
 
-- [Come collegare in modo implicito a una DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Come collegare in modo implicito in una DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Determinare quale metodo di collegamento](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Determinare quale metodo di collegamento da utilizzare](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [Ordine di ricerca di libreria a collegamento dinamico](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)
+- [Ordine di ricerca di libreria a collegamento dinamico](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 - [FreeLibrary e AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)
 

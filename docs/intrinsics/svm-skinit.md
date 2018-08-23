@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e47608b7ec58e433d9be5e2f2178a825b6be2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338104"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540471"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Sezione specifica Microsoft**  
   
- Avvia il caricamento di software indipendente dai tipi verificabile protetto, ad esempio un monitor della macchina virtuale.  
+ Avvia il caricamento di software indipendente dai tipi verificabile protetto, ad esempio un monitor di macchina virtuale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,20 +41,20 @@ void __svm_skinit(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|`SLB`|L'indirizzo fisico a 32 bit di un byte di 64 KB blocco del caricatore di proteggere (SLB).|  
+|`SLB`|L'indirizzo fisico a 32 bit di un byte 64K blocco del caricatore di Secure (SLB).|  
   
 ## <a name="remarks"></a>Note  
- Il `__svm_skinit` è equivalente alla funzione di `SKINIT` istruzioni in linguaggio macchina. Questa funzione è parte di un sistema di sicurezza che usa il processore e un modulo di piattaforma attendibile (TPM) per verificare e caricare software attendibile chiamato un kernel di sicurezza (SK). Un monitoraggio della macchina virtuale è un esempio di un kernel di sicurezza. Il sistema di sicurezza verifica caricati durante il processo di inizializzazione dei componenti del programma e protegge i componenti da eventuali manomissioni gli interrupt, accedere al dispositivo o un altro programma, se il computer è un computer multiprocessore.  
+ Il `__svm_skinit` è equivalente alla funzione il `SKINIT` istruzioni in linguaggio macchina. Questa funzione è parte di un sistema di sicurezza che usa il processore e un Trusted Platform Module (TPM) per verificare e caricare il software considerato attendibile chiamato un kernel di sicurezza (SK). Un monitor di macchina virtuale è un esempio di un kernel di sicurezza. Il sistema di sicurezza verifica caricati durante il processo di inizializzazione dei componenti del programma e protegge i componenti dalla manomissione da parte degli interrupt, accesso al dispositivo o un altro programma se il computer è un computer multiprocessore.  
   
- Il `SLB` parametro specifica l'indirizzo fisico di un blocco di 64 KB di memoria denominata la *Secure blocco del caricatore* (SLB). Il SLB contiene un programma denominato il caricatore sicuro che stabilisce l'ambiente operativo per il computer e successivamente viene caricato il kernel di sicurezza.  
+ Il `SLB` parametro specifica l'indirizzo fisico di un blocco di 64 KB di memoria denominata la *Secure blocco del caricatore* (SLB). Il bilanciamento del carico software contiene un programma denominato il caricatore sicuro che consente di stabilire l'ambiente operativo per il computer e successivamente carica il kernel di sicurezza.  
   
- Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Volume manuale del programmatore di architettura AMD64 2: programmazione di sistema," documento numero 24593, 3.11, revisione di [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
+ Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__svm_skinit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_skinit`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

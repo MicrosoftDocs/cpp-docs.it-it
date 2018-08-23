@@ -29,15 +29,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fd28a97b9e1b6238e4f231845282739a6d15aeb2
-ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
+ms.openlocfilehash: 2cdc00280db8c764d06739499b65ff75f9e331d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39092981"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602790"
 ---
 # <a name="graphics-operations-ccli"></a>Operazioni di grafica (C++/CLI)
-Illustra l'uso di manipolazione di immagini di [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Illustra la modifica delle immagini tramite SDK Windows.  
   
  Gli argomenti seguenti illustrano l'uso del <xref:System.Drawing.Image?displayProperty=fullName> classe per eseguire una manipolazione delle immagini.  
   

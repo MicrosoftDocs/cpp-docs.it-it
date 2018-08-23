@@ -1,5 +1,5 @@
 ---
-title: Classi e struct di valore (C + + CX) | Documenti Microsoft
+title: Le classi e struct di valore (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090714"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589056"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classi e struct di valore (C++/CX)
-Oggetto *struct di valore* o *classe di valori* POD Runtime compatibile ("plain precedente struttura di dati") di Windows Installer. con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.  
+Oggetto *struct di valore* oppure *classe di valore* è un Windows Runtime compatibile con struttura POD "(plain old data"). con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.  
   
  Gli esempi seguenti mostrano come dichiarare e inizializzare struct di valore.  
   
@@ -59,7 +59,7 @@ Oggetto *struct di valore* o *classe di valori* POD Runtime compatibile ("plain 
   
  Una *classe di valore* è analoga a uno `value struct` , eccetto per il fatto che ai relativi campi deve essere concessa esplicitamente l'accessibilità pubblica. La classe viene dichiarata utilizzando la parola chiave `value class` .  
   
- Uno struct o classe di valore può contenere come campi solo tipi numerici fondamentali, classi di enumerazione, `Platform::String^`, o [platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md) dove T è una classe di enumerazione o di tipo numerica o una classe o struct. Un campo `IBox<T>^` può contenere un valore `nullptr`. Ecco come C++ implementa il concetto di *tipi di valore nullable*.  
+ Uno struct di valore o una classe di valore può contenere come campi solo tipi numerici fondamentali, classi di enumerazione `Platform::String^`, oppure [platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md) dove T è una classe numerica di tipo o un'enumerazione o classe o struct. Un campo `IBox<T>^` può contenere un valore `nullptr`. Ecco come C++ implementa il concetto di *tipi di valore nullable*.  
   
  Uno struct o una classe di valori che contiene un tipo `Platform::String^` o `IBox<T>^` come membro non supporta `memcpy`.  
   
@@ -155,6 +155,6 @@ public:
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)   
- [Riferimenti al linguaggio di Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)   
  [Classi e struct di riferimento (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

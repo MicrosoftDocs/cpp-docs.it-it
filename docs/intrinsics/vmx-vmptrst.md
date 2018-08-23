@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrst | Documenti Microsoft
+title: __vmx_vmptrst | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad1b6587f4386565ae7de84a7b6a170da98b6df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328594"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541436"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Sezione specifica Microsoft**  
   
- Contiene il puntatore alla struttura di controllo di macchina virtuale corrente (VMCS) all'indirizzo specificato.  
+ Contiene il puntatore alla struttura di controllo di una macchina virtuale corrente (VMCS) all'indirizzo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,18 +39,18 @@ void __vmx_vmptrst(
   
 #### <a name="parameters"></a>Parametri  
  [in] *`VmcsPhysicalAddress`  
- L'indirizzo in cui è memorizzato il puntatore VMCS corrente.  
+ L'indirizzo in cui è archiviato il puntatore VMCS corrente.  
   
 ## <a name="remarks"></a>Note  
  Il puntatore VMCS è un indirizzo fisico a 64 bit.  
   
- Il `__vmx_vmptrst` è equivalente alla funzione di `VMPTRST` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Intel Virtualization tecnica specifica per l'architettura IA-32 Intel," documento C97063-002 numero il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__vmx_vmptrst` è equivalente alla funzione il `VMPTRST` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrst`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

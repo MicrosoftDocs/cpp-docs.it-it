@@ -1,5 +1,5 @@
 ---
-title: Riferimenti a LIB | Documenti Microsoft
+title: Riferimenti a LIB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371941"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571583"
 ---
 # <a name="lib-reference"></a>Riferimenti a LIB
-Gestione librerie Microsoft (LIB.exe) Crea e gestisce una raccolta di file oggetto comune oggetto formato COFF (File). LIB consente anche di creare file di esportazione e librerie di importazione per le definizioni di riferimento esportato.  
+Gestione librerie Microsoft (LIB.exe) Crea e gestisce una libreria di file oggetto File formato COFF (Common Object). LIB è anche utilizzabile per creare i file di esportazione e librerie di importazione per le definizioni dei riferimento esportato.  
   
 > [!NOTE]
->  È possibile avviare questo strumento solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
+>  È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
   
 -   [Panoramica di LIB](../../build/reference/overview-of-lib.md)  
   

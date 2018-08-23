@@ -1,5 +1,5 @@
 ---
-title: __segmentlimit | Documenti Microsoft
+title: __segmentlimit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fffacbaebc99d3298b5463a014db1e9117cd7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330752"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540644"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Sezione specifica Microsoft**  
   
- Genera il `lsl` istruzione (limite del segmento carico).  
+ Genera il `lsl` istruzione (limite di carico segmento).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,12 +48,12 @@ unsigned long __segmentlimit(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__segmentlimit`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Se non è possibile recuperare il limite massimo di segmenti, questa istruzione ha esito negativo. In caso di errore, questa istruzione consente di cancellare il flag ZF e il valore restituito è indefinito.  
+ Se il limite di segmento non può essere recuperato, questa istruzione ha esito negativo. In caso di errore, questa istruzione consente di cancellare il flag ZF e il valore restituito è indefinito.  
   
  Questa routine è disponibile solo come funzione intrinseca.  
   

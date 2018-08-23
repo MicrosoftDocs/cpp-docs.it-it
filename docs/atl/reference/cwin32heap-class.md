@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881727"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42575493"
 ---
 # <a name="cwin32heap-class"></a>Classe CWin32Heap
 Questa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando le funzioni di allocazione dell'heap Win32.  
@@ -162,7 +162,7 @@ CWin32Heap(
   
  Il parametro HEAP_NO_SERIALIZE specifica che l'esclusione reciproca non userà per le funzioni degli heap allocano e liberano memoria, con un aumento delle prestazioni.  
   
- Il terzo parametro viene impostato sul valore predefinito 0 che consente all'heap di crescere come necessario. Visualizzare [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) per una spiegazione dei flag e le dimensioni della memoria.  
+ Il terzo parametro viene impostato sul valore predefinito 0 che consente all'heap di crescere come necessario. Visualizzare [HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate) per una spiegazione dei flag e le dimensioni della memoria.  
   
 ##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  Distruttore.  

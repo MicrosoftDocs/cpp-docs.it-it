@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e163eabd802fdd33d9f90d3a3a111017188dd89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23727ed40b12506ddd47a03055eaf8514d5685c5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329407"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541252"
 ---
 # <a name="int2c"></a>__int2c
 **Sezione specifica Microsoft**  
@@ -41,7 +41,7 @@ void __int2c(void);
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__int2c`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__int2c`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5bd2a384af6e73ae0c113bf8c27ae9d0c7529a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881100"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575491"
 ---
 # <a name="ccompolyobject-class"></a>Classe CComPolyObject
 Questa classe implementa `IUnknown` per un oggetto aggregato o non aggregato.  
@@ -63,7 +63,7 @@ class CComPolyObject : public IUnknown,
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Incrementa il conteggio di riferimenti dell'oggetto.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Statico) Consente di creare una nuova **CComPolyObject <** `contained` **>** oggetto senza l'overhead della [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Statico) Consente di creare una nuova **CComPolyObject <** `contained` **>** oggetto senza l'overhead della [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Esegue l'inizializzazione finale del `m_contained`.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|Esegue la distruzione finale di `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Recupera un puntatore all'interfaccia richiesta.|  
@@ -137,7 +137,7 @@ CComPolyObject(void* pv);
  Libera tutte le risorse allocate, le chiamate [FinalRelease](#finalrelease), e riduce il modulo conteggio dei blocchi.  
   
 ##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
- Consente di creare una nuova **CComPolyObject <** `contained` **>** oggetto senza l'overhead della [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Consente di creare una nuova **CComPolyObject <** `contained` **>** oggetto senza l'overhead della [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(  

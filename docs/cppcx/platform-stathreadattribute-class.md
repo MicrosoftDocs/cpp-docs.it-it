@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: STAThreadAttribute | Documenti Microsoft'
+title: 'Classe platform:: STAThreadAttribute | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089353"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590783"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute (classe)
 Indica che il modello di threading per un'applicazione è di tipo apartment a thread singolo (STA, Single-Threaded Apartment).  
@@ -120,4 +120,4 @@ public:String^ ToString()
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Piattaforma Namespace](platform-namespace-c-cx.md)
+ [Platform Namespace](platform-namespace-c-cx.md)

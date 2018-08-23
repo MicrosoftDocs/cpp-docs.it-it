@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16fa7964af8f56ec54f6870b8866e69266bdc414
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 468b38dac2082e47e94e4bd52af50d77327f5ef4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648789"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590689"
 ---
 # <a name="comptrrefoperator-void-operator"></a>Operatore comptrref:: void\* \* operatore
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-operator void**() const;  
-```  
-  
-## <a name="remarks"></a>Note  
- Elimina l'oggetto corrente **ComPtrRef** dell'oggetto, viene eseguito il cast di puntatore all'interfaccia rappresentata dalle **ComPtrRef** oggetto come un puntatore a puntatore-a **void**e quindi Restituisce il puntatore di cast.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [ComPtrRef (classe)](../windows/comptrref-class.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+operator void**() const;
+```
+
+## <a name="remarks"></a>Note
+
+Elimina l'oggetto corrente **ComPtrRef** dell'oggetto, viene eseguito il cast di puntatore all'interfaccia rappresentata dalle **ComPtrRef** oggetto come un puntatore a puntatore-a **void**e quindi Restituisce il puntatore di cast.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtrRef](../windows/comptrref-class.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

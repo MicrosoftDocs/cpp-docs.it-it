@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b29a5d0538cb3608ceeb5ec09bd629b1de18b4b6
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a39e4d600ab5bb209a74ce74dd37af2eb496de0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338220"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573052"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (classe)
 
@@ -304,7 +304,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
  [in] Numero di parametro (offset da 1). Il parametro 0 è riservato ai valori restituiti. Il numero di parametro è l'indice del parametro in base al relativo ordine nella chiamata SQL o nella chiamata della stored procedure. Visualizzare [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) per un esempio.  
   
  *pStatus*  
- [out] Puntatore alla variabile che contiene lo stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](https://msdn.microsoft.com/library/ms722617.aspx) nel *riferimento per programmatori OLE DB*, o cercare DBSTATUS in OleDb.  
+ [out] Puntatore alla variabile che contiene lo stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) nel *riferimento per programmatori OLE DB*, o cercare DBSTATUS in OleDb.  
   
 ### <a name="remarks"></a>Note  
  Il primo override restituisce **true** esito è positivo oppure **false** in caso di errore. Il secondo override punta alla memoria che contiene lo stato del parametro specificato.
@@ -407,7 +407,7 @@ bool SetParam(TCHAR* pParamName,
  [in] Puntatore alla memoria contenente i dati da scrivere nel buffer.  
   
  *status*  
- [in] Stato della colonna DBSTATUS. Per informazioni sui valori DBSTATUS, vedere [lo stato](https://msdn.microsoft.com/library/ms722617.aspx) nel *riferimento per programmatori OLE DB*, o cercare DBSTATUS in OleDb.  
+ [in] Stato della colonna DBSTATUS. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) nel *riferimento per programmatori OLE DB*, o cercare DBSTATUS in OleDb.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce **true** esito è positivo oppure **false** in caso di errore.  
@@ -449,7 +449,7 @@ bool SetParamStatus(DBORDINAL nParam,
  [in] Numero di parametro (offset da 1). Il parametro 0 è riservato ai valori restituiti. Il numero di parametro è l'indice del parametro in base al relativo ordine nella chiamata SQL o nella chiamata della stored procedure. Visualizzare [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) per un esempio.  
   
  *status*  
- [in] Lo stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](https://msdn.microsoft.com/library/ms722617.aspx) nel *riferimento per programmatori OLE DB*, o cercare DBSTATUS in OleDb.  
+ [in] Lo stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) nel *riferimento per programmatori OLE DB*, o cercare DBSTATUS in OleDb.  
   
 ### <a name="remarks"></a>Note  
  Restituisce **true** esito è positivo oppure **false** in caso di errore. 
@@ -475,7 +475,7 @@ bool SetParamString(DBORDINAL nParam,
  [in] Un puntatore a ANSI (**CHAR**) o Unicode (**WCHAR**) stringa dei dati del parametro specificato. Vedere DBSTATUS in OleDb.  
   
  *status*  
- [in] Lo stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](https://msdn.microsoft.com/library/ms722617.aspx) nel *riferimento per programmatori OLE DB*, o cercare DBSTATUS in OleDb.  
+ [in] Lo stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) nel *riferimento per programmatori OLE DB*, o cercare DBSTATUS in OleDb.  
   
 ### <a name="remarks"></a>Note  
  Restituisce **true** esito è positivo oppure **false** in caso di errore.  

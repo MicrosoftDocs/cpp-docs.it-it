@@ -1,5 +1,5 @@
 ---
-title: Funzioni intrinseche interlockedbittestandset | Documenti Microsoft
+title: Funzioni intrinseche interlockedbittestandset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6789a8e602fded02d4d521be74e602557ebdaefe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b64118753138087bce446a92716c6cb1731c7ea
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340333"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538672"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>Funzioni intrinseche _interlockedbittestandset
 **Sezione specifica Microsoft**  
@@ -95,14 +95,14 @@ unsigned char _interlockedbittestandset64_HLERelease(
   
 |Funzione intrinseca|Architettura|Header|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandset`|x86, ARM, x64|\<intrin.h>|  
 |`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
-|`_interlockedbittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h>|  
+|`_interlockedbittestandset64`|X64|\<intrin.h>|  
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Note  
- Nei processori x86 e [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] queste funzioni intrinseche usano l'istruzione `lock bts` per leggere e impostare il bit specificato su 1. L'operazione è atomica.  
+ Nei processori x86 e x64, queste funzioni intrinseche usano il `lock bts` (istruzione) per leggere e impostare il bit specificato su 1. L'operazione è atomica.  
   
  Nei processori ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.  
   

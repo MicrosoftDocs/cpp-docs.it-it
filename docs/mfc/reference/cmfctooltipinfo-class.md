@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0a8ec3a7898f846af85614dec75c10c5a0393e24
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850891"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539075"
 ---
 # <a name="cmfctooltipinfo-class"></a>Classe CMFCToolTipInfo
 Memorizza informazioni sull'aspetto visivo delle descrizioni comandi.  
@@ -222,7 +222,7 @@ BOOL m_bVislManagerTheme;
  Se `m_bVislManagerTheme` è TRUE, ogni della descrizione comando richiede una nuova [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) dal gestore visualizzazione dell'applicazione prima che vengono visualizzati sullo schermo e Usa i valori in tale oggetto per determinare l'aspetto. Gli altri membri dei [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) vengono ignorati.  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);

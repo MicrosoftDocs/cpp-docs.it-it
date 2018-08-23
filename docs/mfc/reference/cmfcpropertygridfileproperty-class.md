@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851601"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541055"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Classe CMFCPropertyGridFileProperty
 Il `CMFCPropertyGridFileProperty` classe supporta un elemento controllo elenco delle proprietà che verrà visualizzata una finestra di dialogo Selezione file.  
@@ -105,7 +105,7 @@ CMFCPropertyGridFileProperty(
 ### <a name="return-value"></a>Valore restituito  
   
 ### <a name="remarks"></a>Note  
- Per un elenco completo dei flag, vedere [struttura OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Per un elenco completo dei flag, vedere [struttura OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene illustrato come creare un oggetto mediante il costruttore della classe `CMFCPropertyGridFileProperty`. In questo esempio fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).  

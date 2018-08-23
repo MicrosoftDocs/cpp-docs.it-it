@@ -15,99 +15,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cbdb6a312d6658fc880aa43ffc1205378d3935e7
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 196834a5181164d141c1b9ee025cee5b6f1a5bd9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607650"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591046"
 ---
 # <a name="makeandinitialize-function"></a>Funzione MakeAndInitialize
-Inizializza la classe di Runtime di Windows specificata. Utilizzare questa funzione per creare un'istanza di un componente definito nello stesso modulo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-template <typename T, typename I,   
-typename TArg1,   
-typename TArg2,   
-typename TArg3,   
-typename TArg4,   
-typename TArg5,   
-typename TArg6,   
-typename TArg7,   
-typename TArg8,   
+
+Inizializza la classe di Runtime di Windows specificata. Utilizzare questa funzione per creare un'istanza di un componente definito nello stesso modulo.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+template <typename T, typename I,
+typename TArg1,
+typename TArg2,
+typename TArg3,
+typename TArg4,
+typename TArg5,
+typename TArg6,
+typename TArg7,
+typename TArg8,
 typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *T*  
- Classe definita dall'utente che eredita da `WRL::RuntimeClass`.  
-  
- *TArg1*  
- Tipo di argomento 1 che viene passato alla classe di runtime specificato.  
-  
- *TArg2*  
- Tipo di argomento 2 che viene passato alla classe di runtime specificato.  
-  
- *TArg3*  
- Tipo di argomento 3 che viene passato alla classe di runtime specificato.  
-  
- *TArg4*  
- Tipo di argomento 4 che viene passato alla classe di runtime specificato.  
-  
- *TArg5*  
- Tipo di argomento 5 che viene passato alla classe di runtime specificato.  
-  
- *TArg6*  
- Tipo di argomento 6 che viene passato alla classe di runtime specificato.  
-  
- *TArg7*  
- Tipo di argomento 7 che viene passato alla classe di runtime specificato.  
-  
- *TArg8*  
- Tipo di argomento 8 che viene passato alla classe di runtime specificato.  
-  
- *TArg9*  
- Tipo di argomento 9 che viene passato alla classe di runtime specificato.  
-  
- *arg1*  
- Argomento 1 che viene passato alla classe di runtime specificato.  
-  
- *Arg2*  
- Argomento 2 che viene passato alla classe di runtime specificato.  
-  
- *arg3*  
- Argomento 3 che viene passato alla classe di runtime specificato.  
-  
- *Arg4*  
- Argomento 4 che viene passato alla classe di runtime specificato.  
-  
- *Arg5*  
- Argomento 5 che viene passato alla classe di runtime specificato.  
-  
- *Arg6*  
- Argomento 6 che viene passato alla classe di runtime specificato.  
-  
- *Arg7*  
- Argomento 7 che viene passato alla classe di runtime specificato.  
-  
- *arg8*  
- Argomento 8 che viene passato alla classe di runtime specificato.  
-  
- *arg9*  
- Argomento 9 che viene passato alla classe di runtime specificato.  
-  
-## <a name="return-value"></a>Valore restituito  
- Valore HRESULT.  
-  
-## <a name="remarks"></a>Note  
- Visualizzare [procedura: creare un'istanza direttamente i componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md) per informazioni sulle differenze tra questa funzione e [makeandinitialize](../windows/make-function.md)e per un esempio.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*T*  
+Classe definita dall'utente che eredita da `WRL::RuntimeClass`.
+
+*TArg1*  
+Tipo di argomento 1 che viene passato alla classe di runtime specificato.
+
+*TArg2*  
+Tipo di argomento 2 che viene passato alla classe di runtime specificato.
+
+*TArg3*  
+Tipo di argomento 3 che viene passato alla classe di runtime specificato.
+
+*TArg4*  
+Tipo di argomento 4 che viene passato alla classe di runtime specificato.
+
+*TArg5*  
+Tipo di argomento 5 che viene passato alla classe di runtime specificato.
+
+*TArg6*  
+Tipo di argomento 6 che viene passato alla classe di runtime specificato.
+
+*TArg7*  
+Tipo di argomento 7 che viene passato alla classe di runtime specificato.
+
+*TArg8*  
+Tipo di argomento 8 che viene passato alla classe di runtime specificato.
+
+*TArg9*  
+Tipo di argomento 9 che viene passato alla classe di runtime specificato.
+
+*arg1*  
+Argomento 1 che viene passato alla classe di runtime specificato.
+
+*Arg2*  
+Argomento 2 che viene passato alla classe di runtime specificato.
+
+*arg3*  
+Argomento 3 che viene passato alla classe di runtime specificato.
+
+*Arg4*  
+Argomento 4 che viene passato alla classe di runtime specificato.
+
+*Arg5*  
+Argomento 5 che viene passato alla classe di runtime specificato.
+
+*Arg6*  
+Argomento 6 che viene passato alla classe di runtime specificato.
+
+*Arg7*  
+Argomento 7 che viene passato alla classe di runtime specificato.
+
+*arg8*  
+Argomento 8 che viene passato alla classe di runtime specificato.
+
+*arg9*  
+Argomento 9 che viene passato alla classe di runtime specificato.
+
+## <a name="return-value"></a>Valore restituito
+
+Valore HRESULT.
+
+## <a name="remarks"></a>Note
+
+Visualizzare [procedura: creare un'istanza direttamente i componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md) per informazioni sulle differenze tra questa funzione e [makeandinitialize](../windows/make-function.md)e per un esempio.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324928"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541260"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Sezione specifica Microsoft**  
   
- Sposta un valore a 64 bit specificato dal primo parametro a destra di un numero di bit specificati dal secondo parametro.  
+ Sposta un valore a 64 bit specificato dal primo parametro a destra di un numero di bit specificato dal secondo parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,24 +41,24 @@ __int64 __ll_rshift(
   
 #### <a name="parameters"></a>Parametri  
  [in] `Mask`  
- Valore integer a 64 bit da spostare a destra.  
+ Valore intero a 64 bit da spostare a destra.  
   
  [in] `nBit`  
  Il numero di bit da spostare, modulo 64 in x64 e modulo 32 x86.  
   
 ## <a name="return-value"></a>Valore restituito  
- Spostata la maschera `nBit` bits.  
+ La maschera spostato `nBit` bits.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Se il secondo parametro è maggiore di 64 su x64 (32 x86), tale numero viene eseguito modulo 64 (32 x86) per determinare il numero di bit da spostare. Il `ll` prefisso indica che si tratta di un'operazione in `long long`, in un altro nome per `__int64`, il tipo integrale con segno a 64 bit.  
+ Se il secondo parametro è maggiore di 64 su x64 (32 su x86), tale numero viene acquisito modulo 64 (32 su x86) per determinare il numero di bit da spostare. Il `ll` prefisso indica che si tratta di un'operazione sul `long long`, in un altro nome per `__int64`, il tipo integrale con segno a 64 bit.  
   
 ## <a name="example"></a>Esempio  
   
@@ -93,7 +93,7 @@ fffffffffffffff0
  - 10  
 ```  
   
- **Nota** se `_ull_rshift` è stato utilizzato, il byte più significativo del valore spostato a destra che sarebbe stata zero, pertanto il risultato desiderato non sarebbe stato ottenuto nel caso di un valore negativo.  
+ **Nota** se `_ull_rshift` è stata usata, il byte più significativo del valore spostato a destra sarebbe stato uguale a zero, in modo che il risultato desiderato non sarebbe stato ottenuto nel caso di un valore negativo.  
   
 **Fine sezione specifica Microsoft**  
   
