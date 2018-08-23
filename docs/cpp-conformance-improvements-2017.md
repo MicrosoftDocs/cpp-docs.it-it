@@ -1,7 +1,7 @@
 ---
 title: Miglioramenti della conformità C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 08/15/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209092"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571503"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Miglioramenti della conformità C++ in Visual Studio 2017 versioni 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) e [15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Miglioramenti della conformità C++ in Visual Studio 2017 versioni 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) e [15.8](#update_158)
 
 Con il supporto per constexpr generalizzata e NSDMI per le aggregazioni, il compilatore di Microsoft Visual C++ è ora completo per le funzionalità aggiunte nello standard C++14. Si noti che il compilatore manca ancora di alcune funzionalità relative agli standard C++11 e C++98. Vedere [Visual C++ Language Conformance](visual-cpp-language-conformance.md) (Conformità al linguaggio Visual C++) per una tabella che mostra lo stato corrente del compilatore.
 
@@ -333,7 +333,7 @@ void bar(A<0> *p)
 
 ### <a name="c17-repairing-elementary-string-conversions"></a>C++17 Ripristino delle conversioni di stringhe elementari
 
-[P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) Spostare le nuove funzioni di conversione delle stringhe elementari da P0067R5 in una nuova intestazione \<charconv> e apportare altri miglioramenti, incluso la modifica della gestione degli errori per l'utilizzo di `std::errc` anziché `std::error_code`.
+[P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) Spostare le nuove funzioni di conversione delle stringhe elementari da P0067R5 in una nuova intestazione \<charconv> e apportare altri miglioramenti, inclusa la modifica della gestione degli errori per l'uso di `std::errc` invece di `std::error_code`.
 
 ### <a name="c17-constexpr-for-chartraits-partial"></a>C++17 constexpr per char_traits (parziale)
 
@@ -1624,6 +1624,8 @@ int main() {
 ```
 
 ## <a name="update_158"></a> Correzioni di bug e modifiche funzionali in Visual Studio 2017 versione 15.8
+
+Le modifiche del compilatore in Visual Studio 2017 versione 15.8 rientrano tutte nella categoria delle correzioni di bug e delle modifiche del comportamento e sono elencate di seguito:
 
 ### <a name="typename-on-unqualified-identifiers"></a>typename per identificatori non qualificati
 
