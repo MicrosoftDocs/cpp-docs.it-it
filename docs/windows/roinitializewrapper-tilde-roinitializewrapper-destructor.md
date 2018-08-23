@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c6eaeb044cf3e169bf5927a2fec948cc8d4294c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5548eb413f0d5cd4c72983e00bdf65f61bb98f6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606276"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597923"
 ---
 # <a name="roinitializewrapperroinitializewrapper-destructor"></a>Distruttore RoInitializeWrapper::~RoInitializeWrapper
-Non inizializza il Runtime di Windows.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
+
+Non inizializza il Runtime di Windows.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
 ~RoInitializeWrapper()  
-```  
-  
-## <a name="remarks"></a>Note  
- Il **RoInitializeWrapper** classe richiama `Windows::Foundation::Uninitialize()`.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe HandleT](../windows/handlet-class.md)
+```
+
+## <a name="remarks"></a>Note
+
+Il **RoInitializeWrapper** classe richiama `Windows::Foundation::Uninitialize()`.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe HandleT](../windows/handlet-class.md)

@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f513ac83e0ee83109f42cf87b80b4fcc4960db1f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461562"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598603"
 ---
 # <a name="comptroperatoramp-operator"></a>Operatore comptr::&amp; operatore
-Rilascia l'interfaccia associato a questo **ComPtr** dell'oggetto e quindi recupera l'indirizzo delle **ComPtr** oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-Details::ComPtrRef<WeakRef> operator&()  
-  
-const Details::ComPtrRef<const WeakRef> operator&() const  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Un riferimento debole all'oggetto corrente **ComPtr**.  
-  
-## <a name="remarks"></a>Note  
- Questo metodo è diverso da [comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) in quanto questo metodo rilascia un riferimento al puntatore a interfaccia. Usare `ComPtr::GetAddressOf` quando si richiedono l'indirizzo del puntatore a interfaccia ma non si desidera rilasciare tale interfaccia.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ComPtr](../windows/comptr-class.md)
+
+Rilascia l'interfaccia associato a questo **ComPtr** dell'oggetto e quindi recupera l'indirizzo delle **ComPtr** oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+Details::ComPtrRef<WeakRef> operator&()
+
+const Details::ComPtrRef<const WeakRef> operator&() const
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Un riferimento debole all'oggetto corrente **ComPtr**.
+
+## <a name="remarks"></a>Note
+
+Questo metodo è diverso da [comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) in quanto questo metodo rilascia un riferimento al puntatore a interfaccia. Usare `ComPtr::GetAddressOf` quando si richiedono l'indirizzo del puntatore a interfaccia ma non si desidera rilasciare tale interfaccia.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtr](../windows/comptr-class.md)

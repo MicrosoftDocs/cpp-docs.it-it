@@ -20,31 +20,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f78fa02b991fbdf7c18457a8018ea46b0c240585
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 23028ee742f05016509da5147c8f6c0ab6b1a532
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647957"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598158"
 ---
 # <a name="windows-desktop-applications-c"></a>Applicazioni desktop di Windows (C++)
-Questa sezione illustra come creare applicazioni desktop C++ eseguite in una finestra.  
 
-> [!TIP]  
+Questa sezione illustra come creare applicazioni desktop C++ eseguite in una finestra.
+
+> [!TIP]
 > Per Windows 10, è possibile utilizzare il Desktop App Converter per creare il pacchetto dell'applicazione desktop esistente per la distribuzione tramite il Microsoft Store. Per altre informazioni, vedere i post relativi all'[uso del runtime di Visual C++ nel progetto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e al [trasferimento dell'app desktop sulla piattaforma UWP con Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
-  
-## <a name="prerequisites"></a>Prerequisiti  
- Questi argomenti presuppongono la conoscenza delle nozioni di base del linguaggio C++.  
-  
-## <a name="in-this-section"></a>In questa sezione  
-  
--   [Creazione guidata applicazione Win32](../windows/win32-application-wizard.md)  
-  
--   [Procedura dettagliata: creazione di applicazioni desktop di Windows (C++)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
-  
--   [Creazione di un'applicazione desktop di Windows vuota](../windows/creating-an-empty-windows-desktop-application.md)  
-  
--   [Uso di file di risorse](../windows/working-with-resource-files.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Visual C++ in Visual Studio](../visual-cpp-in-visual-studio.md)
+
+## <a name="prerequisites"></a>Prerequisiti
+
+Questi argomenti presuppongono la conoscenza delle nozioni di base del linguaggio C++.
+
+## <a name="in-this-section"></a>In questa sezione
+
+- [Creazione guidata applicazione Win32](../windows/win32-application-wizard.md)
+
+- [Procedura dettagliata: creazione di applicazioni desktop di Windows (C++)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)
+
+- [Creazione di un'applicazione desktop di Windows vuota](../windows/creating-an-empty-windows-desktop-application.md)
+
+- [Uso di file di risorse](../windows/working-with-resource-files.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Visual C++ in Visual Studio](../visual-cpp-in-visual-studio.md)

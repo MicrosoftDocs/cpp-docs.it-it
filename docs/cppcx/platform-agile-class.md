@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: Agile | Documenti Microsoft'
+title: 'Classe platform:: Agile | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092431"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596602"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
-Rappresenta un oggetto con MashalingBehavior=Standard come oggetto Agile, che riduce fortemente le probabilità che si verifichino eccezioni di threading di runtime. `Agile<T>` consente all'oggetto non Agile di chiamare o essere chiamato dallo stesso thread o da un thread differente. Per ulteriori informazioni, vedere [Threading e marshalling](../cppcx/threading-and-marshaling-c-cx.md).  
+Rappresenta un oggetto con MashalingBehavior=Standard come oggetto Agile, che riduce fortemente le probabilità che si verifichino eccezioni di threading di runtime. `Agile<T>` consente all'oggetto non Agile di chiamare o essere chiamato dallo stesso thread o da un thread differente. Per altre informazioni, vedere [Threading e marshalling](../cppcx/threading-and-marshaling-c-cx.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -139,7 +139,7 @@ Restituisce un handle all'oggetto rappresentato dall'oggetto Agile corrente.
 ### <a name="return-value"></a>Valore restituito  
  Handle all'oggetto rappresentato dall'oggetto Agile corrente.  
   
- Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **auto** parola chiave di deduzione del tipo. Ad esempio `auto x = myAgileTvariable->Get();`.  
+ Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per contenere il valore restituito è assegnarlo a una variabile dichiarata con la **automatica** digita parola chiave di deduzione dei tipi. Ad esempio `auto x = myAgileTvariable->Get();`.  
   
 ## <a name="getaddressof"></a>  Metodo Agile:: getaddressof
 Reinizializza l'oggetto Agile corrente e restituisce l'indirizzo di un handle a un oggetto di tipo `T`.  
@@ -160,7 +160,7 @@ throw();
  L'indirizzo di un handle a un oggetto di tipo `T`.  
   
 ### <a name="remarks"></a>Note  
- Questa operazione rilascia la rappresentazione corrente di un oggetto di tipo `T`, se presente; reinizializza i membri di dati dell'oggetto Agile, acquisisce il contesto di threading corrente e restituisce l'indirizzo di una variabile di handle a un oggetto che può rappresentare un oggetto non agile. Affinché un'istanza della classe Agile rappresentare un oggetto, utilizzare l'operatore di assegnazione ([Agile:: operator =](#operator-assign)) per assegnare l'oggetto per l'istanza della classe Agile.  
+ Questa operazione rilascia la rappresentazione corrente di un oggetto di tipo `T`, se presente, reinizializza i membri dati dell'oggetto Agile, acquisisce il contesto di threading corrente e restituisce l'indirizzo di una variabile handle a oggetto che può rappresentare un oggetto non agile. Affinché un'istanza della classe Agile rappresentare un oggetto, utilizzare l'operatore di assegnazione ([Agile:: operator =](#operator-assign)) per assegnare l'oggetto all'istanza della classe Agile.  
 
 ## <a name="getaddressofforinout"></a>  Metodo Agile:: getaddressofforinout
 Restituisce l'indirizzo di un handle all'oggetto rappresentato dall'oggetto Agile corrente.  
@@ -197,7 +197,7 @@ void Release() throw();
 ### <a name="remarks"></a>Note  
  Se esistono, l'oggetto e il contesto sottostanti dell'oggetto Agile corrente vengono rimossi, quindi il valore dell'oggetto Agile viene impostato su null.  
 
-## <a name="operator-arrow"></a>  Agile:: operator -&gt; (operatore)
+## <a name="operator-arrow"></a>  Agile:: operator -&gt; operatore
 Recupera un handle all'oggetto rappresentato dall'oggetto Agile corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -211,7 +211,7 @@ const throw();
 ### <a name="return-value"></a>Valore restituito  
  Handle all'oggetto rappresentato dall'oggetto Agile corrente.  
   
- Questo operatore restituisce un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **auto** parola chiave di deduzione del tipo.  
+ Questo operatore restituisce un tipo interno riservato. Un modo pratico per contenere il valore restituito è assegnarlo a una variabile dichiarata con la **automatica** digita parola chiave di deduzione dei tipi.  
 
 ## <a name="operator-assign"></a>  Agile:: operator = (operatore)
 Assegna l'oggetto specificato all'oggetto Agile corrente.  
@@ -255,4 +255,4 @@ Assegna l'oggetto specificato all'oggetto Agile corrente.
  L'operazione di assegnazione rende automaticamente persistente il contesto dell'oggetto Agile corrente. 
        
 ## <a name="see-also"></a>Vedere anche  
- [Piattaforma Namespace](platform-namespace-c-cx.md)
+ [Platform Namespace](platform-namespace-c-cx.md)

@@ -17,40 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a0bb864fa1356089552fb3c48461fef2a63920b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4a932428b274f8ef8fcda88cd48a4d24464e818c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641379"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597216"
 ---
 # <a name="handlethandlet-constructor"></a>Costruttore HandleT::HandleT
-Inizializza una nuova istanza di **HandleT** classe.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-explicit HandleT(  
-   typename HandleTraits::Type h =   
+
+Inizializza una nuova istanza di **HandleT** classe.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+explicit HandleT(
+   typename HandleTraits::Type h =
       HandleTraits::GetInvalidValue()  
-);  
-  
-HandleT(  
-   _Inout_ HandleT&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *h*  
- Un handle.  
-  
-## <a name="remarks"></a>Note  
- Il primo costruttore inizializza un **HandleT** oggetto che non è un handle valido a un oggetto. Il secondo costruttore crea un nuovo **HandleT** oggetto dal parametro *h*.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe HandleT](../windows/handlet-class.md)
+);
+
+HandleT(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*h*  
+Un handle.
+
+## <a name="remarks"></a>Note
+
+Il primo costruttore inizializza un **HandleT** oggetto che non è un handle valido a un oggetto. Il secondo costruttore crea un nuovo **HandleT** oggetto dal parametro *h*.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe HandleT](../windows/handlet-class.md)

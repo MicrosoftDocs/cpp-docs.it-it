@@ -21,36 +21,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3ac4a7f23e6f37891851740ed65356d7d2bec3c0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015943"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593623"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Salvataggio e caricamento di tavolozze dei colori diverse (Editor di immagini per le icone)
-È possibile salvare e caricare un **colori** tavolozza contenente [colori personalizzati](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Per impostazione predefinita, il **colori** tavolozza usato di recente viene caricata automaticamente quando si avvia Visual Studio.)  
-  
+
+È possibile salvare e caricare un **colori** tavolozza contenente [colori personalizzati](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Per impostazione predefinita, il **colori** tavolozza usato di recente viene caricata automaticamente quando si avvia Visual Studio.)
+
 > [!TIP]
->  Poiché il **immagine** editor non è in grado di ripristinare il valore predefinito **colori** tavolozza, è consigliabile salvare il valore predefinito **colori** con un nome, ad esempio  *PAL* oppure *default. PAL* in modo che sia possibile ripristinare facilmente le impostazioni predefinite.  
-  
-### <a name="to-save-a-custom-colors-palette"></a>Per salvare una tavolozza di colori personalizzati  
-  
-1.  Dal **immagine** menu, scegliere **Salva tavolozza**.  
-  
-2.  Passare alla directory in cui si intende salvare la tavolozza e digitare un nome per la tavolozza.  
-  
-3.  Fare clic su **Salva**.  
-  
-### <a name="to-load-a-custom-colors-palette"></a>Per caricare una tavolozza di colori personalizzati  
-  
-1.  Dal **immagine** menu, scegliere **Carica tavolozza**.  
-  
-2.  Nel [finestra di dialogo Carica tavolozza](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), passare alla directory corretta e selezionare la tavolozza che si desidera caricare. **Colore** tavolozze vengono salvate con un'estensione di file PAL.  
-  
-## <a name="requirements"></a>Requisiti  
- nessuno  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)
+> Poiché il **immagine** editor non è in grado di ripristinare il valore predefinito **colori** tavolozza, è consigliabile salvare il valore predefinito **colori** con un nome, ad esempio  *PAL* oppure *default. PAL* in modo che sia possibile ripristinare facilmente le impostazioni predefinite.
+
+### <a name="to-save-a-custom-colors-palette"></a>Per salvare una tavolozza di colori personalizzati
+
+1. Dal **immagine** menu, scegliere **Salva tavolozza**.
+
+2. Passare alla directory in cui si intende salvare la tavolozza e digitare un nome per la tavolozza.
+
+3. Fare clic su **Salva**.
+
+### <a name="to-load-a-custom-colors-palette"></a>Per caricare una tavolozza di colori personalizzati
+
+1. Dal **immagine** menu, scegliere **Carica tavolozza**.
+
+2. Nel [finestra di dialogo Carica tavolozza](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), passare alla directory corretta e selezionare la tavolozza che si desidera caricare. **Colore** tavolozze vengono salvate con un'estensione di file PAL.
+
+## <a name="requirements"></a>Requisiti
+
+nessuno
+
+## <a name="see-also"></a>Vedere anche
+
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)

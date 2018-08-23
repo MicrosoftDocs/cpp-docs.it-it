@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e64cfcd0ad8a71a67815b592908d57725fef9f1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 341333b0c4f51c42004ad638a5a8f4fcb7d7e466
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648646"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596491"
 ---
 # <a name="eventtargetarrayend-method"></a>Metodo EventTargetArray::End
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-ComPtr<IUnknown>* End();  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- L'indirizzo dell'ultimo elemento nella matrice interna di gestori di eventi.  
-  
-## <a name="remarks"></a>Note  
- Ottiene l'indirizzo dell'ultimo elemento nella matrice interna di gestori di eventi.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Event. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe EventTargetArray](../windows/eventtargetarray-class.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+ComPtr<IUnknown>* End();
+```
+
+## <a name="return-value"></a>Valore restituito
+
+L'indirizzo dell'ultimo elemento nella matrice interna di gestori di eventi.
+
+## <a name="remarks"></a>Note
+
+Ottiene l'indirizzo dell'ultimo elemento nella matrice interna di gestori di eventi.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Event. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe EventTargetArray](../windows/eventtargetarray-class.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

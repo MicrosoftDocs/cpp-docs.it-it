@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b7b31161ab0539a6b31b574c8cf306b4ae33378
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e987be9ae368917a70e8dcbb5796bb12228da81b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651597"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592355"
 ---
 # <a name="handletget-method"></a>Metodo HandleT::Get
-Ottiene il valore dell'handle sottostante.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-typename HandleTraits::Type Get() const;  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Un handle.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe HandleT](../windows/handlet-class.md)
+
+Ottiene il valore dell'handle sottostante.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+typename HandleTraits::Type Get() const;
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Un handle.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe HandleT](../windows/handlet-class.md)

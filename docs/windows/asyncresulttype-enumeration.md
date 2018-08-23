@@ -17,35 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7989f28ae9c9e3af4c73ec454487d34dd7cff570
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2a79ef02302208aa14bc1620e486fcfbc6e12253
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644755"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591263"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType (enumerazione)
-Specifica il tipo di risultato restituito dal `GetResults()` (metodo).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-enum AsyncResultType;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="values"></a>Valori  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`MultipleResults`|Un set di risultati più, che vengono presentati progressivamente between `Start` lo stato e prima `Close()` viene chiamato.|  
-|`SingleResult`|Un singolo risultato, viene visualizzato dopo il `Complete` evento si verifica.|  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Specifica il tipo di risultato restituito dal `GetResults()` (metodo).
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+enum AsyncResultType;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="values"></a>Valori
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`MultipleResults`|Un set di risultati più, che vengono presentati progressivamente between `Start` lo stato e prima `Close()` viene chiamato.|
+|`SingleResult`|Un singolo risultato, viene visualizzato dopo il `Complete` evento si verifica.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Async. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

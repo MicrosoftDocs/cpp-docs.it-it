@@ -26,34 +26,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e6cb463f95bc68d6880fb593ba394ec94d585696
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648210"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597336"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Finestra Colori (Editor di immagini per le icone)
-Il **colori** finestra dispone di due parti:  
-  
-1.  Il **tavolozza di colori**, che è una matrice di campioni di colore che rappresentano i colori disponibili. È possibile fare clic sugli esempi per selezionare i colori di primo piano e sfondo quando si usano gli strumenti di grafica.  
-  
-2.  Il **indicatore colori**, che mostra i colori di sfondo e primo piano e i selettori per il colore dello schermo e inverso.  
-  
-     ![Finestra colori](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-Finestra Colori  
-  
+
+Il **colori** finestra dispone di due parti:
+
+1. Il **tavolozza di colori**, che è una matrice di campioni di colore che rappresentano i colori disponibili. È possibile fare clic sugli esempi per selezionare i colori di primo piano e sfondo quando si usano gli strumenti di grafica.
+
+2. Il **indicatore colori**, che mostra i colori di sfondo e primo piano e i selettori per il colore dello schermo e inverso.
+
+   ![Finestra colori](../windows/media/vccolorswindow.gif "vcColorsWindow")  
+Finestra Colori
+
 > [!NOTE]
->  Il **schermata colore** e **inversione di colore** strumenti sono disponibili solo per le icone e cursori.  
-  
- È possibile usare la **colori** finestra con il [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md).  
-  
-## <a name="requirements"></a>Requisiti  
- nessuno  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attivazione o disattivazione della finestra colori](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
- [Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
- [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Finestra di dialogo del selettore di colore personalizzato](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
- [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
+> Il **schermata colore** e **inversione di colore** strumenti sono disponibili solo per le icone e cursori.
+
+È possibile usare la **colori** finestra con il [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md).
+
+## <a name="requirements"></a>Requisiti
+
+nessuno
+
+## <a name="see-also"></a>Vedere anche
+
+[Attivazione o disattivazione della finestra colori](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
+[Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Finestra di dialogo del selettore di colore personalizzato](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Editor di immagini per le icone](../windows/image-editor-for-icons.md)

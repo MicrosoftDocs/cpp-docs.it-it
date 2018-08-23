@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71fe5244ecf3f7e64192d86f25104daf1139a463
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010276"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591139"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>Metodo ImplementsHelper::FillArrayWithIid
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-void FillArrayWithIid(  
-   _Inout_ unsigned long *index,   
-   _Inout_ IID* iids) throw();  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *index*  
- Indice in base zero che indica l'elemento di matrice iniziale per questa operazione. Al termine, questa operazione *indice* viene incrementato di 1.  
-  
- *IID*  
- Matrice di tipo IID.  
-  
-## <a name="remarks"></a>Note  
- Inserisce l'ID di interfaccia specificato dal parametro di modello iniziale corrente nell'elemento di matrice specificato.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [ImplementsHelper (struttura)](../windows/implementshelper-structure.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+void FillArrayWithIid(
+   _Inout_ unsigned long *index,
+   _Inout_ IID* iids) throw();
+```
+
+### <a name="parameters"></a>Parametri
+
+*index*  
+Indice in base zero che indica l'elemento di matrice iniziale per questa operazione. Al termine, questa operazione *indice* viene incrementato di 1.
+
+*IID*  
+Matrice di tipo IID.
+
+## <a name="remarks"></a>Note
+
+Inserisce l'ID di interfaccia specificato dal parametro di modello iniziale corrente nell'elemento di matrice specificato.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Struttura ImplementsHelper](../windows/implementshelper-structure.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

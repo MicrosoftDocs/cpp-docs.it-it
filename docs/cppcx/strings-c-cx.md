@@ -1,23 +1,23 @@
 ---
-title: Stringhe (C + + CX) | Documenti Microsoft
+title: Stringhe (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f33b6b1738e9027c88d171fc7bacc729fb507b10
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092470"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592469"
 ---
 # <a name="strings-ccx"></a>Stringhe (C++/CX)
-Testo in Windows Runtime è rappresentato in C + + CX dal [classe platform:: String](../cppcx/platform-string-class.md). Utilizzare il `Platform::String Class` quando si passano stringhe avanti e indietro ai metodi nelle classi di Windows Runtime o quando si interagisce con altri componenti di Windows Runtime attraverso il limite dell'interfaccia binaria (ABI). L'oggetto `Platform::String Class` fornisce i metodi per numerose operazioni di stringa comuni ma non è progettato per essere una classe String completa. Nel modulo C++ utilizza i tipi di stringa C++ standard quali [wstring](../standard-library/basic-string-class.md) per l'elaborazione dei testi importanti e converti il risultato finale in [Platform::String^](../cppcx/platform-string-class.md) prima di passarlo a o da un'interfaccia pubblica. La conversione tra `wstring` o `wchar_t*` e `Platform::String`è un'operazione semplice ed efficace.  
+Viene rappresentato il testo in Windows Runtime in C + + c++ /CX per il [classe platform:: String](../cppcx/platform-string-class.md). Usare il `Platform::String Class` quando si passano le stringhe e viceversa ai metodi nelle classi di Windows Runtime o quando si interagisce con altri componenti Runtime Windows attraverso il limite dell'interfaccia binaria (ABI). L'oggetto `Platform::String Class` fornisce i metodi per numerose operazioni di stringa comuni ma non è progettato per essere una classe String completa. Nel modulo C++ utilizza i tipi di stringa C++ standard quali [wstring](../standard-library/basic-string-class.md) per l'elaborazione dei testi importanti e converti il risultato finale in [Platform::String^](../cppcx/platform-string-class.md) prima di passarlo a o da un'interfaccia pubblica. La conversione tra `wstring` o `wchar_t*` e `Platform::String`è un'operazione semplice ed efficace.  
   
  **Passaggio rapido**  
   
@@ -40,7 +40,7 @@ Testo in Windows Runtime è rappresentato in C + + CX dal [classe platform:: Str
  [!code-cpp[cx_strings#03](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#03)]  
   
 ## <a name="string-conversions"></a>Conversioni di stringhe  
- `Platform::String` può contenere solo caratteri `char16` o il carattere `NULL` . Se l'applicazione deve utilizzare caratteri a 8 bit, utilizzare il [String:: data](../cppcx/platform-string-class.md#data) per estrarre il testo come una `const wchar_t*`. Puoi quindi utilizzare le funzioni di Windows o le funzioni di libreria standard appropriate per eseguire operazioni sui dati e convertirli di nuovo in `wchar_t*` o [wstring](../standard-library/basic-string-class.md)da utilizzare per costruire un nuovo oggetto `Platform::String`.  
+ `Platform::String` può contenere solo caratteri `char16` o il carattere `NULL` . Se l'applicazione deve utilizzare caratteri a 8 bit, usare il [String:: data](../cppcx/platform-string-class.md#data) per estrarre il testo come un `const wchar_t*`. Puoi quindi utilizzare le funzioni di Windows o le funzioni di libreria standard appropriate per eseguire operazioni sui dati e convertirli di nuovo in `wchar_t*` o [wstring](../standard-library/basic-string-class.md)da utilizzare per costruire un nuovo oggetto `Platform::String`.  
   
  Nel frammento di codice riportato di seguito viene illustrato come convertire una variabile `String^` in o da una variabile `wstring` . Per ulteriori informazioni sulla gestione della stringa utilizzata in questo esempio, vedi [basic_string::replace](../standard-library/basic-string-class.md#replace).  
   
@@ -52,7 +52,7 @@ Testo in Windows Runtime è rappresentato in C + + CX dal [classe platform:: Str
  `Platform::String` può contenere valori NULL, ma solo quando NULL è un risultato di un'operazione di concatenazione. I caratteri NULL incorporati non sono supportati nei valori letterali di stringa; pertanto, non li puoi utilizzare in quel modo per inizializzare un oggetto `Platform::String`. I valori NULL incorporati in `Platform::String` vengono ignorati nella visualizzazione della stringa, ad esempio, quando la stringa è assegnata a una proprietà `TextBlock::Text` . I caratteri NULL incorporati vengono rimossi quando il valore stringa viene restituito dalla proprietà `Data` .  
   
 ## <a name="stringreference"></a>StringReference  
- In alcuni casi il codice (a) riceve un std:: wstring, o stringa wchar_t o L"" stringa letterale e semplicemente lo passa a un altro metodo che accetta String ^ come parametro di input. Finché lo stesso buffer di stringa originale rimane valido e non viene modificato prima della restituzione della funzione, puoi convertire la stringa o il valore letterale stringa `wchar_t*` in un valore [Platform::StringReference](../cppcx/platform-stringreference-class.md)e passarlo al posto di `Platform::String^`. Ciò è consentito perché `StringReference` dispone di una conversione definita dall'utente in `Platform::String^`. Utilizzando `StringReference` puoi evitare di eseguire una copia aggiuntiva dei dati di tipo stringa. Nei cicli in cui passi un elevato numero di stringhe, o quando passi di dimensioni considerevoli, puoi ottenere un miglioramento significativo delle prestazioni utilizzando `StringReference`. Poiché tuttavia `StringReference` utilizza essenzialmente il buffer di stringa originale, devi prestare particolare attenzione per evitare il danneggiamento della memoria. Evita di passare `StringReference` a un metodo asincrono a meno di avere la certezza che la stringa originale sia nell'ambito quando viene restituito il metodo. Un parametro String^ inizializzato da StringReference forza un'allocazione e una copia dei dati di tipo stringa se si verifica una seconda operazione di assegnazione. In questo caso, perderai il vantaggio in termini di prestazioni di `StringReference`.  
+ In alcuni casi il codice (a) riceve un std:: wstring, o stringa wchar_t o L"" stringa letterale e semplicemente li passa ad un altro metodo che accetta String ^ come parametro di input. Finché lo stesso buffer di stringa originale rimane valido e non viene modificato prima della restituzione della funzione, puoi convertire la stringa o il valore letterale stringa `wchar_t*` in un valore [Platform::StringReference](../cppcx/platform-stringreference-class.md)e passarlo al posto di `Platform::String^`. Ciò è consentito perché `StringReference` dispone di una conversione definita dall'utente in `Platform::String^`. Utilizzando `StringReference` puoi evitare di eseguire una copia aggiuntiva dei dati di tipo stringa. Nei cicli in cui passi un elevato numero di stringhe, o quando passi di dimensioni considerevoli, puoi ottenere un miglioramento significativo delle prestazioni utilizzando `StringReference`. Poiché tuttavia `StringReference` utilizza essenzialmente il buffer di stringa originale, devi prestare particolare attenzione per evitare il danneggiamento della memoria. Evita di passare `StringReference` a un metodo asincrono a meno di avere la certezza che la stringa originale sia nell'ambito quando viene restituito il metodo. Un parametro String^ inizializzato da StringReference forza un'allocazione e una copia dei dati di tipo stringa se si verifica una seconda operazione di assegnazione. In questo caso, perderai il vantaggio in termini di prestazioni di `StringReference`.  
   
  Tieni presente che `StringReference` è un tipo di classe C++ standard, non una classe di riferimento, quindi non puoi usarla nell'interfaccia pubblica delle classi di riferimento che definisci.  
   

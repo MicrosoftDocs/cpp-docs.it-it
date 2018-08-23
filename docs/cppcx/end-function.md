@@ -1,5 +1,5 @@
 ---
-title: end (funzione) | Documenti Microsoft
+title: Funzione end | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 771d7e83024f9c258df1437ff902d638bffc8478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec25b92ca9ce21f72ff2fb573aae316ef1c19eac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086421"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596650"
 ---
 # <a name="end-function"></a>end (funzione)
 Restituisce un iteratore che punta oltre la fine di una raccolta a cui si accede dal parametro di interfaccia specificato.  
@@ -52,10 +52,10 @@ template <typename T>
  Parametro del tipo di modello.  
   
  `v`  
- Una raccolta di vettore\<T > o VectorView\<T > gli oggetti che sono accessibili da un IVector\<T >, IVectorView o\<T > interface.  
+ Una raccolta di vettore\<T > o VectorView\<T > gli oggetti a cui accedono un IVector\<T >, o IVectorView\<T > interface.  
   
  `i`  
- Raccolta di Windows Runtime arbitrari oggetti che è possibile accedere attraverso un'IIterable\<T > interface.  
+ Raccolta di Runtime di Windows arbitrari oggetti che sono accessibili da un IIterable\<T > interface.  
   
 ### <a name="return-value"></a>Valore restituito  
  Iteratore che punta oltre la fine della raccolta.  
@@ -71,4 +71,4 @@ template <typename T>
  **Spazio dei nomi:** Windows::Foundation::Collections  
   
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+ [Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

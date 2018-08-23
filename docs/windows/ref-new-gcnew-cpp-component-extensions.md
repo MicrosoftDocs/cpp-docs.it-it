@@ -20,76 +20,83 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed742d3762232846b2cac189978ea07c140b65f2
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012657"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596158"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Estensioni del componente C++)
-Il **ref nuove** parola chiave aggregata alloca un'istanza di un tipo che viene sottoposto a garbage collection quando l'oggetto non è accessibile e che restituisce un handle ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) all'oggetto allocato.  
-  
-## <a name="all-runtimes"></a>Tutti i runtime  
- Memoria per un'istanza di un tipo che viene allocata dal **ref nuovo** viene deallocata automaticamente.  
-  
- Oggetto **ref nuove** genera un'eccezione operazione `OutOfMemoryException` se non è in grado di allocare memoria.  
-  
- Per altre informazioni su come memoria per i tipi nativi C++ viene allocata e deallocata, vedere [la nuova ed eliminare operatori](../cpp/new-and-delete-operators.md).  
-  
-## <a name="windows-runtime"></a>Windows Runtime  
- Uso **ref nuovo** ad allocare memoria per oggetti di Runtime di Windows la cui durata si desidera amministrare automaticamente. L'oggetto viene automaticamente deallocato quando il conteggio dei riferimenti scende a zero. Questo si verifica dopo che l'ultima copia del riferimento esce dall'ambito. Per altre informazioni, vedere [le classi e struct](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
-  
-### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: `/ZW`  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime 
- Per un tipo gestito (tipo riferimento o valore) di memoria allocata **gcnew**e deallocata tramite garbage collection.  
-  
-### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: `/clr`  
-  
-### <a name="examples"></a>Esempi  
-  
- L'esempio seguente usa **gcnew** per allocare un oggetto del messaggio.  
-  
-```cpp  
-// mcppv2_gcnew_1.cpp  
-// compile with: /clr  
-ref struct Message {  
-   System::String^ sender;  
-   System::String^ receiver;  
-   System::String^ data;  
-};  
-  
-int main() {  
-   Message^ h_Message  = gcnew Message;  
-  //...  
-}  
-```  
-  
- L'esempio seguente usa **gcnew** per creare un tipo di valore boxed da utilizzare come tipo di riferimento.  
-  
-```cpp  
-// example2.cpp : main project file.  
-// compile with /clr  
-using namespace System;  
-value class Boxed {  
-    public:  
-        int i;  
-};  
+
+Il **ref nuove** parola chiave aggregata alloca un'istanza di un tipo che viene sottoposto a garbage collection quando l'oggetto non è accessibile e che restituisce un handle ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) all'oggetto allocato.
+
+## <a name="all-runtimes"></a>Tutti i runtime
+
+Memoria per un'istanza di un tipo che viene allocata dal **ref nuovo** viene deallocata automaticamente.
+
+Oggetto **ref nuove** genera un'eccezione operazione `OutOfMemoryException` se non è in grado di allocare memoria.
+
+Per altre informazioni su come memoria per i tipi nativi C++ viene allocata e deallocata, vedere [la nuova ed eliminare operatori](../cpp/new-and-delete-operators.md).
+
+## <a name="windows-runtime"></a>Windows Runtime
+
+Uso **ref nuovo** ad allocare memoria per oggetti di Runtime di Windows la cui durata si desidera amministrare automaticamente. L'oggetto viene automaticamente deallocato quando il conteggio dei riferimenti scende a zero. Questo si verifica dopo che l'ultima copia del riferimento esce dall'ambito. Per altre informazioni, vedere [le classi e struct](../cppcx/ref-classes-and-structs-c-cx.md).
+
+### <a name="requirements"></a>Requisiti
+
+Opzione del compilatore: `/ZW`
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+Per un tipo gestito (tipo riferimento o valore) di memoria allocata **gcnew**e deallocata tramite garbage collection.
+
+### <a name="requirements"></a>Requisiti
+
+Opzione del compilatore: `/clr`
+
+### <a name="examples"></a>Esempi
+
+L'esempio seguente usa **gcnew** per allocare un oggetto del messaggio.
+
+```cpp
+// mcppv2_gcnew_1.cpp
+// compile with: /clr
+ref struct Message {
+   System::String^ sender;
+   System::String^ receiver;
+   System::String^ data;
+};
+
+int main() {
+   Message^ h_Message  = gcnew Message;
+  //...
+}
+```
+
+L'esempio seguente usa **gcnew** per creare un tipo di valore boxed da utilizzare come tipo di riferimento.
+
+```cpp
+// example2.cpp : main project file.
+// compile with /clr
+using namespace System;
+value class Boxed {
+    public:
+        int i;
+};
 int main()  
-{  
-    Boxed^ y = gcnew Boxed;  
-    y->i = 32;  
-    Console::WriteLine(y->i);  
-    return 0;  
-}  
-```  
-  
-```Output  
-32  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+{
+    Boxed^ y = gcnew Boxed;
+    y->i = 32;
+    Console::WriteLine(y->i);
+    return 0;
+}
+```
+
+```Output
+32
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

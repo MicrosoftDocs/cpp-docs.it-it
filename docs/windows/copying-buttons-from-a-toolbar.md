@@ -17,25 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc7ea145b76f17ccd8b29b287faa3ef921e7dc73
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f4e35cd10b2e41551cb7eb019b53a2bcf0735bcc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646280"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596010"
 ---
 # <a name="copying-buttons-from-a-toolbar"></a>Copia di pulsanti da una barra degli strumenti
-### <a name="to-copy-buttons-from-a-toolbar"></a>Per copiare i pulsanti da una barra degli strumenti  
-  
-1.  Tenere premuto il **Ctrl** chiave.  
-  
-2.  Nel **sulla barra degli strumenti visualizzazione** riquadro, trascinare il pulsante a una nuova posizione sulla barra degli strumenti o in una posizione sulla barra degli strumenti un altro.  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisiti  
- MFC o ATL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Creazione, lo spostamento e modifica dei pulsanti della barra degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md)   
- [Editor barra degli strumenti](../windows/toolbar-editor.md)
+
+### <a name="to-copy-buttons-from-a-toolbar"></a>Per copiare i pulsanti da una barra degli strumenti
+
+1. Tenere premuto il **Ctrl** chiave.
+
+2. Nel **sulla barra degli strumenti visualizzazione** riquadro, trascinare il pulsante a una nuova posizione sulla barra degli strumenti o in una posizione sulla barra degli strumenti un altro.
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisiti
+
+MFC o ATL
+
+## <a name="see-also"></a>Vedere anche
+
+[Creazione, spostamento e modifica dei pulsanti delle barre degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Editor barra degli strumenti](../windows/toolbar-editor.md)

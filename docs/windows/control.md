@@ -17,56 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec4f120a0b9634a0ff11c4b35ea4790674959383
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 18a53f75f783f5843e3bdf603d21dbacf6746e2b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649341"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591781"
 ---
 # <a name="control"></a>controllo
-Specifica che il tipo definito dall'utente è un controllo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-[control]  
-```  
-  
-## <a name="remarks"></a>Note  
- Il **controllo** attributo implica la [coclasse](../windows/coclass.md) attributo. Il **controllo** attributi di C++ ha la stessa funzionalità come la [controllo](http://msdn.microsoft.com/library/windows/desktop/aa366764) attributo MIDL.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp  
-// cpp_attr_ref_control.cpp  
-// compile with: /LD  
-#include <windows.h>  
-[module(name="Test", control=true)];  
-  
-[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb")]  
-__interface ICustom {  
-   HRESULT Custom([in] long l, [out, retval] long *pLong);  
-};  
-  
-[coclass, control, appobject, uuid("9e66a294-4365-11d2-a997-00c04fa37ddb")]  
-class CTest : public ICustom {};  
-```  
-  
-## <a name="requirements"></a>Requisiti  
-  
-### <a name="attribute-context"></a>Contesto attributo  
-  
-|||  
-|-|-|  
-|**Si applica a**|**classe**, **struct**|  
-|**Ripetibile**|No|  
-|**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
-  
- Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi della classe](../windows/class-attributes.md)   
- [Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+Specifica che il tipo definito dall'utente è un controllo.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+[control]
+```
+
+## <a name="remarks"></a>Note
+
+Il **controllo** attributo implica la [coclasse](../windows/coclass.md) attributo. Il **controllo** attributi di C++ ha la stessa funzionalità come la [controllo](http://msdn.microsoft.com/library/windows/desktop/aa366764) attributo MIDL.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// cpp_attr_ref_control.cpp
+// compile with: /LD
+#include <windows.h>
+[module(name="Test", control=true)];
+
+[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb")]
+__interface ICustom {
+   HRESULT Custom([in] long l, [out, retval] long *pLong);
+};
+
+[coclass, control, appobject, uuid("9e66a294-4365-11d2-a997-00c04fa37ddb")]
+class CTest : public ICustom {};
+```
+
+## <a name="requirements"></a>Requisiti
+
+### <a name="attribute-context"></a>Contesto attributo
+
+|||
+|-|-|
+|**Si applica a**|**classe**, **struct**|
+|**Ripetibile**|No|
+|**Attributi obbligatori**|Nessuna|
+|**Attributi non validi**|nessuno|
+
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Attributi IDL](../windows/idl-attributes.md)  
+[Attributi di classe](../windows/class-attributes.md)  
+[Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

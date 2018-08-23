@@ -18,29 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1efde876cadd5a8620bef83c37a61b8b471dba8b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019238"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594403"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Aggiunta di file a un'applicazione Win32 vuota
-### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Per aggiungere i file a un'applicazione desktop di Windows vuota  
-  
-1.  Selezionare la directory in **Esplora soluzioni**.  
-  
-2.  Fare clic con il pulsante destro del mouse sul nome della directory, fare clic su **Aggiungi** dal menu di scelta rapida, quindi scegliere **Elemento esistente**.  
-  
-3.  Nella **finestra di dialogo Aggiungi elemento esistente**, passare ai file da aggiungere al progetto.  
-  
-4.  Fare clic su **OK**.  
-  
- Per aggiungere i file di origine, intestazione né i file di risorse al progetto, fare doppio clic il **soluzione** nodo **Esplora soluzioni** e aggiungere i file al progetto nello stesso modo. Oggetto **varie** cartella verrà creata per contenere gli altri file nel progetto.  
-  
+
+### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Per aggiungere i file a un'applicazione desktop di Windows vuota
+
+1. Selezionare la directory in **Esplora soluzioni**.
+
+2. Fare clic con il pulsante destro del mouse sul nome della directory, fare clic su **Aggiungi** dal menu di scelta rapida, quindi scegliere **Elemento esistente**.
+
+3. Nella **finestra di dialogo Aggiungi elemento esistente**, passare ai file da aggiungere al progetto.
+
+4. Fare clic su **OK**.
+
+Per aggiungere i file di origine, intestazione né i file di risorse al progetto, fare doppio clic il **soluzione** nodo **Esplora soluzioni** e aggiungere i file al progetto nello stesso modo. Oggetto **varie** cartella verrà creata per contenere gli altri file nel progetto.
+
 > [!NOTE]
->  Prima di compilare il progetto, è necessario specificare le opzioni di compilazione per questi file in modo che vengano inclusi correttamente nell'applicazione finita. Per altre informazioni, vedere [Pagine delle proprietà (Visual C++)](../ide/property-pages-visual-cpp.md) e [Compilazione di programmi C/C++](../build/building-c-cpp-programs.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Creazione di un'applicazione Desktop di Windows vuota](../windows/creating-an-empty-windows-desktop-application.md)   
- [Distribuzione di applicazioni](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+> Prima di compilare il progetto, è necessario specificare le opzioni di compilazione per questi file in modo che vengano inclusi correttamente nell'applicazione finita. Per altre informazioni, vedere [Pagine delle proprietà (Visual C++)](../ide/property-pages-visual-cpp.md) e [Compilazione di programmi C/C++](../build/building-c-cpp-programs.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Creazione di un'applicazione desktop di Windows vuota](../windows/creating-an-empty-windows-desktop-application.md)  
+[Distribuzione di applicazioni](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

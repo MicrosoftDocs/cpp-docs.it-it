@@ -16,36 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f96c5e3bcdd48f4fe3144b0e8885e82c2093a1d3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: aa757834e61dab89ce6ff4682bd9a390c9b650bf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608845"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598697"
 ---
 # <a name="parameter-attributes"></a>Attributi dei parametri
-Gli attributi seguenti si applicano ai parametri di un metodo in una classe o interfaccia.  
-  
-|Attributo|Descrizione|  
-|---------------|-----------------|  
-|[custom](../windows/custom-cpp.md)|È possibile definire un attributo personalizzato.|  
-|[defaultvalue](../windows/defaultvalue.md)|Consente di specificare un valore predefinito per un parametro facoltativo tipizzato.|  
-|[first_is](../windows/first-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|  
-|[iid_is](../windows/iid-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|  
-|[immediatebind](../windows/immediatebind.md)|Indica che il database verrà immediatamente notificato tutte le modifiche apportate a una proprietà di un oggetto con associazione a dati.|  
-|[in](../windows/in-cpp.md)|Indica che un parametro deve essere passato dalla routine chiamante alla routine chiamata.|  
-|[last_is](../windows/last-is.md)|Specifica l'indice dell'ultimo elemento di matrice deve essere trasmesso.|  
-|[lcid](../windows/lcid.md)|Consente di passare un identificatore delle impostazioni locali a una funzione.|  
-|[length_is](../windows/length-is.md)|Specifica il numero di elementi della matrice deve essere trasmesso.|  
-|[max_is](../windows/max-is.md)|Definisce il valore massimo per un indice di matrice valida.|  
-|[Facoltativo](../windows/optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|  
-|[out](../windows/out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|  
-|[Intervallo](../windows/range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|  
-|[ref](../windows/ref-cpp.md)|Identifica un puntatore di riferimento.|  
-|[retval](../windows/retval.md)|Specifica il parametro che riceve il valore restituito del membro.|  
-|[satype](../windows/satype.md)|Specifica il tipo di dati di `SAFEARRAY` struttura.|  
-|[size_is](../windows/size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori con dimensioni, ridimensionati i puntatori ai puntatori a dimensioni e unidimensionali o le matrici multidimensionali.|  
-|[unique](../windows/unique-cpp.md)|Specifica un puntatore univoco.|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attributi per utilizzo](../windows/attributes-by-usage.md)
+
+Gli attributi seguenti si applicano ai parametri di un metodo in una classe o interfaccia.
+
+|Attributo|Descrizione|
+|---------------|-----------------|
+|[custom](../windows/custom-cpp.md)|È possibile definire un attributo personalizzato.|
+|[defaultvalue](../windows/defaultvalue.md)|Consente di specificare un valore predefinito per un parametro facoltativo tipizzato.|
+|[first_is](../windows/first-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|
+|[iid_is](../windows/iid-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|
+|[immediatebind](../windows/immediatebind.md)|Indica che il database verrà immediatamente notificato tutte le modifiche apportate a una proprietà di un oggetto con associazione a dati.|
+|[in](../windows/in-cpp.md)|Indica che un parametro deve essere passato dalla routine chiamante alla routine chiamata.|
+|[last_is](../windows/last-is.md)|Specifica l'indice dell'ultimo elemento di matrice deve essere trasmesso.|
+|[lcid](../windows/lcid.md)|Consente di passare un identificatore delle impostazioni locali a una funzione.|
+|[length_is](../windows/length-is.md)|Specifica il numero di elementi della matrice deve essere trasmesso.|
+|[max_is](../windows/max-is.md)|Definisce il valore massimo per un indice di matrice valida.|
+|[Facoltativo](../windows/optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
+|[out](../windows/out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|
+|[Intervallo](../windows/range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
+|[ref](../windows/ref-cpp.md)|Identifica un puntatore di riferimento.|
+|[retval](../windows/retval.md)|Specifica il parametro che riceve il valore restituito del membro.|
+|[satype](../windows/satype.md)|Specifica il tipo di dati di `SAFEARRAY` struttura.|
+|[size_is](../windows/size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori con dimensioni, ridimensionati i puntatori ai puntatori a dimensioni e unidimensionali o le matrici multidimensionali.|
+|[unique](../windows/unique-cpp.md)|Specifica un puntatore univoco.|
+
+## <a name="see-also"></a>Vedere anche
+
+[Attributi per utilizzo](../windows/attributes-by-usage.md)

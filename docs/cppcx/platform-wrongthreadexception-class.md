@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: wrongthreadexception | Documenti Microsoft'
+title: 'Classe platform:: wrongthreadexception | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WrongThreadException
 ms.assetid: c193f97e-0392-4535-a4c4-0711e4e4a836
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f01b52470f5c70c588c7905a2c46f7cae9b26d06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbe88c460dfc3341832abdcda21698357a649570
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088258"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597425"
 ---
 # <a name="platformwrongthreadexception-class"></a>Classe Platform::WrongThreadException
 Generata quando un thread esegue una chiamata tramite un puntatore a interfaccia per un oggetto proxy che non appartiene all'apartment del thread.  

@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: Type | Documenti Microsoft'
+title: 'Classe platform:: Type | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255538"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596701"
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
-Contiene le informazioni di runtime su un tipo, in particolare un nome di stringa e un codice del tipo. Ottenute chiamando [Object:: GetType](../cppcx/platform-object-class.md#gettype) su qualsiasi oggetto o o tramite il [typeid](../windows/typeid-cpp-component-extensions.md) operatore su un nome di classe o struttura.  
+Contiene le informazioni di runtime su un tipo, in particolare un nome di stringa e un codice del tipo. Ottenuto chiamando [Object:: GetType](../cppcx/platform-object-class.md#gettype) a tutti gli oggetti o tramite il [typeid](../windows/typeid-cpp-component-extensions.md) operatore su un nome di classe o struct.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[Type:: FullName](#fullname)|Restituisce una classe [Platform::String](../cppcx/platform-string-class.md)^ che rappresenta il nome completo del tipo e usa il punto (.) come separatore, non:: (doppio carattere due punti), ad esempio, `MyNamespace.MyClass`.|  
+|[Type:: FullName](#fullname)|Restituisce una classe [Platform::String](../cppcx/platform-string-class.md)^ che rappresenta il nome completo del tipo e usa il punto (punto) come separatore, non:: (doppio carattere due punti), ad esempio, `MyNamespace.MyClass`.|  
   
 ## <a name="conversion-operators"></a>Operatori di conversione  
   
@@ -108,7 +108,7 @@ Platform::TypeCode GetTypeCode();
  Uno dei valori enumerati di Platform::TypeCode.  
   
 ### <a name="remarks"></a>Note  
- È l'equivalente del metodo GetTypeCode membro il `typeid` proprietà.
+ L'equivalente del metodo membro GetTypeCode () è il `typeid` proprietà.
 
 ## <a name="tostring"></a> Metodo Type::ToString
 Recupera un nome del tipo.  

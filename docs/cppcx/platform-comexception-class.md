@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: COMException | Documenti Microsoft'
+title: 'Classe platform:: COMException | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090526"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597000"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 Rappresenta errori COM che si verificano durante l'esecuzione dell'applicazione. COMException è la classe di base per un set di eccezioni standard predefinite.  
@@ -54,8 +54,8 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|[Exception](#hresult)|Valore HRESULT corrispondente all'eccezione.|  
-|[Exception](#message)|Messaggio in cui viene descritta l'eccezione.|  
+|[Exception:: HRESULT](#hresult)|Valore HRESULT corrispondente all'eccezione.|  
+|[Exception:: Message](#message)|Messaggio in cui viene descritta l'eccezione.|  
   
 ## <a name="derived-exceptions"></a>Eccezioni derivate  
  Le seguenti eccezioni predefinite sono derivate da COMException. Differiscono da COMException solo nel nome, nel nome del costruttore e nel valore di HRESULT sottostante.  
@@ -100,7 +100,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a> COMException:: HRESULT proprietà
+## <a name="hresult"></a> Proprietà COMException:: HRESULT
 Valore HRESULT corrispondente all'eccezione.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -113,9 +113,9 @@ public:property int HResult {    int get();}
  Valore HRESULT che specifica l'errore.  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni su come interpretare il valore HRESULT, vedere [struttura dei codici di errore COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Per altre informazioni su come interpretare il valore HRESULT, vedere [Structure of COM Error Codes](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
 
-## <a name="message"></a> Proprietà COMException::Message
+## <a name="message"></a> Proprietà COMException:: Message
 Messaggio in cui viene descritta l'eccezione.  
   
 ### <a name="syntax"></a>Sintassi  

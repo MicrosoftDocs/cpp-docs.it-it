@@ -1,5 +1,5 @@
 ---
-title: Namespace platform::Collections::Details | Documenti Microsoft
+title: Namespace platform::Collections::Details | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb046b7e609b053d6dcd0b7d10d864b6194fe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d3a6b839b51f9398a2c2ab6b4942e0f728fed6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088128"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594785"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Spazio dei nomi Platform::Collections::Details
 Questo spazio dei nomi supporta l'infrastruttura `Platform` e non può essere utilizzato direttamente dal codice.  
@@ -42,4 +42,4 @@ namespace Platform {  namespace Collections {    namespace Details {}}}
  **Spazio dei nomi:** Platform::Collection::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Piattaforma Namespace](platform-namespace-c-cx.md)
+ [Platform Namespace](platform-namespace-c-cx.md)

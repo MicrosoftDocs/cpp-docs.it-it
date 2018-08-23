@@ -26,33 +26,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5eb9b7da8b09fbac1e462394c6ae087b61814ede
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645396"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598775"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizzazione o modifica di colori (Editor di immagini per le icone)
-Il **immagine** redattore [tavolozza di colori](../windows/colors-window-image-editor-for-icons.md) inizialmente Visualizza 16 colori standard. Oltre ai colori visualizzati, è possibile creare colori personalizzati. È quindi possibile [salvare e caricare una tavolozza colori personalizzata](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
-  
-### <a name="to-change-colors-on-the-colors-palette"></a>Per modificare i colori nella Tavolozza colori  
-  
-1.  Dal **immagine** menu, scegliere **regola colori**.  
-  
-2.  Nel [finestra di dialogo Regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriate o scegliere un colore nella **visualizzazione delle sfumature** casella.  
-  
-3.  Impostare la luminosità spostando il dispositivo di scorrimento **luminosità** barra.  
-  
-4.  Molti colori personalizzati sono retinati. Se si desidera il colore a tinta unita più vicino al colore retinato, fare doppio clic il **colore** casella.  
-  
-     Se si decide in seguito si desidera che il colore retinato, spostare il dispositivo di scorrimento **luminosità** barre o a spostare il mirino **visualizzazione delle sfumature** nuovamente la casella per ripristinare il dithering.  
-  
-5.  Fare clic su **OK** per aggiungere il nuovo colore.  
-  
-## <a name="requirements"></a>Requisiti  
- nessuno  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)
+
+Il **immagine** redattore [tavolozza di colori](../windows/colors-window-image-editor-for-icons.md) inizialmente Visualizza 16 colori standard. Oltre ai colori visualizzati, è possibile creare colori personalizzati. È quindi possibile [salvare e caricare una tavolozza colori personalizzata](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).
+
+### <a name="to-change-colors-on-the-colors-palette"></a>Per modificare i colori nella Tavolozza colori
+
+1. Dal **immagine** menu, scegliere **regola colori**.
+
+2. Nel [finestra di dialogo Regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriate o scegliere un colore nella **visualizzazione delle sfumature** casella.
+
+3. Impostare la luminosità spostando il dispositivo di scorrimento **luminosità** barra.
+
+4. Molti colori personalizzati sono retinati. Se si desidera il colore a tinta unita più vicino al colore retinato, fare doppio clic il **colore** casella.
+
+   Se si decide in seguito si desidera che il colore retinato, spostare il dispositivo di scorrimento **luminosità** barre o a spostare il mirino **visualizzazione delle sfumature** nuovamente la casella per ripristinare il dithering.
+
+5. Fare clic su **OK** per aggiungere il nuovo colore.
+
+## <a name="requirements"></a>Requisiti
+
+nessuno
+
+## <a name="see-also"></a>Vedere anche
+
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)

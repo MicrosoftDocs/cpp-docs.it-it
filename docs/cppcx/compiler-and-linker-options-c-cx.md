@@ -1,23 +1,23 @@
 ---
-title: Opzioni del compilatore e del Linker (C + + CX) | Documenti Microsoft
+title: Opzioni del compilatore e Linker (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1597acfdf608d5e8801870fcebb43109c2eb803d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088480"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593792"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opzioni del compilatore e del linker (C++/CX)
-Una variabile di ambiente, C + +, opzioni del compilatore CX e opzioni del linker supportano la compilazione di App per Windows Runtime.  
+Una variabile di ambiente C + + c++ /CLI, le opzioni del compilatore CX e le opzioni del linker supportano la compilazione di App per il Runtime di Windows.  
   
 ## <a name="library-path"></a>Percorso di libreria  
  La variabile di ambiente %LIBPATH% specifica il percorso predefinito in cui trovare i file con estensione winmd.  
@@ -26,10 +26,10 @@ Una variabile di ambiente, C + +, opzioni del compilatore CX e opzioni del linke
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Abilita le estensioni del linguaggio di Windows Runtime.<br /><br /> Il parametro `nostdlib` impedisce al compilatore di usare il percorso di ricerca predefinito standard per trovare i file WINMD e di assembly.<br /><br /> L'opzione del compilatore **/ZW** specifica in modo implicito le seguenti opzioni del compilatore:<br /><br /> -   **/Fi** vccorlib. h, che impone l'inclusione del file di intestazione vccorlib. h che definisce molti tipi richiesti dal compilatore.<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) winmd, che impone l'inclusione del file di metadati winmd che è fornito dal sistema operativo e che definisce molti tipi in Windows Runtime.<br />-   **/FU** Platform.winmd, che impone l'inclusione del file di metadati Platform.winmd che è fornito dal compilatore e che definisce la maggior parte dei tipi nella famiglia di spazi dei nomi Platform.|  
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Abilita le estensioni del linguaggio di Windows Runtime.<br /><br /> Il parametro `nostdlib` impedisce al compilatore di usare il percorso di ricerca predefinito standard per trovare i file WINMD e di assembly.<br /><br /> L'opzione del compilatore **/ZW** specifica in modo implicito le seguenti opzioni del compilatore:<br /><br /> -   **/Fi** vccorlib. h, che impone l'inclusione del file di intestazione vccorlib. h che definisce molti tipi richiesti dal compilatore.<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows. winmd, che impone l'inclusione del file di metadati Windows. winmd che è fornito dal sistema operativo e che definisce molti tipi di runtime di Windows.<br />-   **/FU** Platform.winmd, che impone l'inclusione del file di metadati Platform.winmd che è fornito dal compilatore e che definisce la maggior parte dei tipi nella famiglia di spazi dei nomi Platform.|  
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Aggiunge una directory, specificata dal parametro *dir* , al percorso di ricerca usato dal compilatore per trovare i file WINMD e di assembly.|  
 |**/FU**  *file*|Impone l'inclusione del file con estensione winmd o del modulo specificato. Questo significa che non è necessario specificare `#using`*file* nel codice sorgente. Il compilatore impone automaticamente l'inclusione del relativo file di metadati di Windows, Platform.winmd.|  
-|/D "WINAPI_FAMILY=2"|Crea una definizione che consente l'utilizzo di un sottoinsieme di Win32 SDK compatibile con Windows Runtime.|  
+|/D "WINAPI_FAMILY=2"|Crea una definizione che consente l'utilizzo di un sottoinsieme di Win32 SDK compatibile con il Runtime di Windows.|  
   
 ## <a name="linker-options"></a>Opzioni del linker  
   
@@ -43,7 +43,7 @@ Una variabile di ambiente, C + +, opzioni del compilatore CX e opzioni del linke
 |/WINMDKEYFILE:*filename*|Specifica una chiave o una coppia di chiavi per la firma dell'assembly. Il parametro *filename* corrisponde alla chiave usata per la firma del file di metadati.|  
   
 ### <a name="remarks"></a>Note  
- Quando si usa **/ZW**, il compilatore collega automaticamente la versione DLL di C Runtime (CRT). Il collegamento alla versione libreria statica non è consentito e qualsiasi uso di funzioni CRT che non sono consentiti in un'app Universal Windows Platform causerà un errore in fase di compilazione.  
+ Quando si usa **/ZW**, il compilatore collega automaticamente la versione DLL di C Runtime (CRT). Collegamento alla versione della libreria statica non è consentito e qualsiasi uso di funzioni CRT che non sono consentiti in un'app Universal Windows Platform causerà un errore in fase di compilazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compilazione di applicazioni e librerie](../cppcx/building-apps-and-libraries-c-cx.md)
+ [Creazione di App e librerie](../cppcx/building-apps-and-libraries-c-cx.md)

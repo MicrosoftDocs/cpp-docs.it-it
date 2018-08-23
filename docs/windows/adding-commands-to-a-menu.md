@@ -21,45 +21,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0c744e920c71b74d9296e6961add704435658fe
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 79dbc2644b721c62b67e0671b0caa2e053c7a923
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644729"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593578"
 ---
 # <a name="adding-commands-to-a-menu"></a>Aggiunta di comandi a un menu
-### <a name="to-add-commands-to-a-menu"></a>Per aggiungere comandi a un menu  
-  
-1.  [Creare un menu](../windows/creating-a-menu.md).  
-  
-2.  Fare clic sul nome del menu, ad esempio, **File**.  
-  
-     Ciascuna voce di menu espanderà ed esporrà una casella nuovo elemento per i comandi. Ad esempio, è possibile aggiungere i comandi **New**, **Open**, e **Chiudi** da un **File** menu.  
-  
-3.  Nella casella del nuovo elemento, digitare un nome per il nuovo comando di menu.  
-  
-    > [!NOTE]
-    >  Il testo immesso verrà visualizzato nell'editor di **menu** e nella casella **Didascalia** della [finestra Proprietà](/visualstudio/ide/reference/properties-window). È possibile modificare le proprietà per il nuovo menu in questa posizione.  
-  
-    > [!TIP]
-    >  È possibile definire un tasto di scelta rapida che consente all'utente di selezionare il comando di menu. Digitare una e commerciale (`&`) davanti a una lettera per specificarla come tasto di scelta. L'utente può selezionare il comando di menu digitando quella lettera.  
-  
-4.  Nel **proprietà** finestra, seleziona il menu comando proprietà che si applicano. Per informazioni dettagliate, vedere [proprietà dei comandi di Menu](../windows/menu-command-properties.md).  
-  
-5.  Nel **prompt dei comandi** nella casella il **proprietà** finestra, digitare la stringa di messaggio di richiesta da visualizzare nella barra di stato dell'applicazione.  
-  
-     In questo modo viene creata una voce nella tabella di stringhe con lo stesso identificatore di risorsa del comando di menu creato.  
-  
-    > [!NOTE]
-    >  È possibile applicare solo alle voci di menu con un **Popup** proprietà di **True**. Ad esempio, gli elementi del menu di primo livello possono avere richieste se dispongono di voci di menu secondario. Lo scopo di un **dei messaggi di richiesta** consiste nell'indicare cosa succede se un utente fa clic sulla voce di menu.  
-  
-6.  Premere **invio** per completare il comando di menu.  
-  
-     La casella del nuovo elemento è selezionata, pertanto è possibile creare comandi di menu aggiuntivi.  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Editor dei menu](../windows/menu-editor.md)   
+
+### <a name="to-add-commands-to-a-menu"></a>Per aggiungere comandi a un menu
+
+1. [Creare un menu](../windows/creating-a-menu.md).
+
+2. Fare clic sul nome del menu, ad esempio, **File**.
+
+   Ciascuna voce di menu espanderà ed esporrà una casella nuovo elemento per i comandi. Ad esempio, è possibile aggiungere i comandi **New**, **Open**, e **Chiudi** da un **File** menu.
+
+3. Nella casella del nuovo elemento, digitare un nome per il nuovo comando di menu.
+
+   > [!NOTE]
+   > Il testo immesso verrà visualizzato nell'editor di **menu** e nella casella **Didascalia** della [finestra Proprietà](/visualstudio/ide/reference/properties-window). È possibile modificare le proprietà per il nuovo menu in questa posizione.
+
+   > [!TIP]
+   > È possibile definire un tasto di scelta rapida che consente all'utente di selezionare il comando di menu. Digitare una e commerciale (`&`) davanti a una lettera per specificarla come tasto di scelta. L'utente può selezionare il comando di menu digitando quella lettera.
+
+4. Nel **proprietà** finestra, seleziona il menu comando proprietà che si applicano. Per informazioni dettagliate, vedere [proprietà dei comandi di Menu](../windows/menu-command-properties.md).
+
+5. Nel **prompt dei comandi** nella casella il **proprietà** finestra, digitare la stringa di messaggio di richiesta da visualizzare nella barra di stato dell'applicazione.
+
+   In questo modo viene creata una voce nella tabella di stringhe con lo stesso identificatore di risorsa del comando di menu creato.
+
+   > [!NOTE]
+   > È possibile applicare solo alle voci di menu con un **Popup** proprietà di **True**. Ad esempio, gli elementi del menu di primo livello possono avere richieste se dispongono di voci di menu secondario. Lo scopo di un **dei messaggi di richiesta** consiste nell'indicare cosa succede se un utente fa clic sulla voce di menu.
+
+6. Premere **invio** per completare il comando di menu.
+
+   La casella del nuovo elemento è selezionata, pertanto è possibile creare comandi di menu aggiuntivi.
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Editor dei menu](../windows/menu-editor.md)  

@@ -17,73 +17,79 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6cb96b90a069c12e65c53158717d9a89fb0aed3d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 966759acdac3cf78625cfd072471245a6e42ad63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014100"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597115"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (struttura)
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-template<  
-   typename I0  
->  
-struct __declspec(novtable) InterfaceTraits;  
-template<typename CloakedType>  
-struct __declspec(novtable) InterfaceTraits<CloakedIid<CloakedType>>;  
-  
-template<>  
-struct __declspec(novtable) InterfaceTraits<Nil>;  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *I0*  
- Il nome di un'interfaccia.  
-  
- *CloakedType*  
- Per la `RuntimeClass`, `Implements` e `ChainInterfaces`, un'interfaccia che non sarà nell'elenco di ID di interfaccia è supportata.  
-  
-## <a name="remarks"></a>Note  
- Caratteristiche comuni implementa un'interfaccia.  
-  
- Il secondo modello è una specializzazione per interfacce mascherate. Il terzo modello è una specializzazione per i parametri di tipo Nil.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-typedefs"></a>Typedef pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`Base`|Un sinonimo per il *I0* parametro di modello.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo InterfaceTraits::CanCastTo](../windows/interfacetraits-cancastto-method.md)|Indica se il puntatore specificato può essere convertito in un puntatore a `Base`.|  
-|[Metodo InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Viene eseguito il cast il puntatore specificato a un puntatore a `Base`.|  
-|[Metodo InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Viene eseguito il cast il puntatore specificato a un puntatore a `IUnknown`.|  
-|[Metodo InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Assegna l'ID dell'interfaccia `Base` all'elemento della matrice specificata dall'argomento dell'indice.|  
-|[Metodo InterfaceTraits::Verify](../windows/interfacetraits-verify-method.md)|Verifica che `Base` viene derivato correttamente.|  
-  
-### <a name="public-constants"></a>Costanti pubbliche  
-  
-|nome|Descrizione|  
-|----------|-----------------|  
-|[Costante InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Contiene il numero ID associato all'oggetto corrente di interfaccia **InterfaceTraits** oggetto.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `InterfaceTraits`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+template<
+   typename I0
+>
+struct __declspec(novtable) InterfaceTraits;
+template<typename CloakedType>
+struct __declspec(novtable) InterfaceTraits<CloakedIid<CloakedType>>;
+
+template<>
+struct __declspec(novtable) InterfaceTraits<Nil>;
+```
+
+### <a name="parameters"></a>Parametri
+
+*I0*  
+Il nome di un'interfaccia.
+
+*CloakedType*  
+Per la `RuntimeClass`, `Implements` e `ChainInterfaces`, un'interfaccia che non sarà nell'elenco di ID di interfaccia è supportata.
+
+## <a name="remarks"></a>Note
+
+Caratteristiche comuni implementa un'interfaccia.
+
+Il secondo modello è una specializzazione per interfacce mascherate. Il terzo modello è una specializzazione per i parametri di tipo Nil.
+
+## <a name="members"></a>Membri
+
+### <a name="public-typedefs"></a>Typedef pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`Base`|Un sinonimo per il *I0* parametro di modello.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Metodo InterfaceTraits::CanCastTo](../windows/interfacetraits-cancastto-method.md)|Indica se il puntatore specificato può essere convertito in un puntatore a `Base`.|
+|[Metodo InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Viene eseguito il cast il puntatore specificato a un puntatore a `Base`.|
+|[Metodo InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Viene eseguito il cast il puntatore specificato a un puntatore a `IUnknown`.|
+|[Metodo InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Assegna l'ID dell'interfaccia `Base` all'elemento della matrice specificata dall'argomento dell'indice.|
+|[Metodo InterfaceTraits::Verify](../windows/interfacetraits-verify-method.md)|Verifica che `Base` viene derivato correttamente.|
+
+### <a name="public-constants"></a>Costanti pubbliche
+
+|nome|Descrizione|
+|----------|-----------------|
+|[Costante InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Contiene il numero ID associato all'oggetto corrente di interfaccia **InterfaceTraits** oggetto.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`InterfaceTraits`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

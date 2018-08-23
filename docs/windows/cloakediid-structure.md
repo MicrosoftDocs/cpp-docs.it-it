@@ -17,39 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b766858d0f558b4fdff3a703c612ec07c038abf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3a60d12adfade18c9989d1dc8609a38252d32073
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641920"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599098"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid (struttura)
-Indica al `RuntimeClass`, `Implements` e `ChainInterfaces` modelli che l'interfaccia specificata non è accessibile nell'elenco di IID.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-template<typename T>  
-struct CloakedIid : T;  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *T*  
- L'interfaccia viene nascosta (mascherato).  
-  
-## <a name="remarks"></a>Note  
- Di seguito è riportato un esempio di come **CloakedIid** viene usata: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `T`  
-  
- `CloakedIid`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Indica al `RuntimeClass`, `Implements` e `ChainInterfaces` modelli che l'interfaccia specificata non è accessibile nell'elenco di IID.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+template<typename T>
+struct CloakedIid : T;
+```
+
+#### <a name="parameters"></a>Parametri
+
+*T*  
+L'interfaccia viene nascosta (mascherato).
+
+## <a name="remarks"></a>Note
+
+Di seguito è riportato un esempio di come **CloakedIid** viene usata: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`T`
+
+`CloakedIid`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

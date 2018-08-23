@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56b6642bb24107da4c09856dbd8daaf70fb7dfd5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7ba556ee3803bb00f07032e0589209af2d32addf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015007"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591753"
 ---
 # <a name="universal-windows-apps-c"></a>App di Windows universale (C++)
 
 App universali di Windows Platform (UWP) contengono un set di principi di progettazione che mettono in evidenza semplici interfacce utente incentrate sul contenuto che viene automaticamente regolata per diverse dimensioni dello schermo in dispositivi diversi. L'interfaccia utente viene creata con il markup XAML, mentre il code-behind in codice C++ nativo. È anche possibile creare componenti (DLL) che possono essere usati da app UWP scritte in altri linguaggi. La superficie dell'API per le app UWP è il Runtime di Windows, vale a dire una libr che offre un'ampia gamma di servizi del sistema operativo.
 
-> [!TIP]  
+> [!TIP]
 > Per Windows 10, è possibile usare il convertitore di tipi di app Desktop Bridge per creare il pacchetto dell'applicazione desktop esistente per la distribuzione tramite il Microsoft Store. Per altre informazioni, vedere [tramite Runtime di Visual C++ nel progetto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
 ## <a name="uwp-apps-that-use-cwinrt"></a>Le app UWP che usano C + + / WinRT
@@ -46,4 +46,5 @@ C + + / WinRT è una nuova, di sola intestazione basato sulla libreria proiezion
 La libreria di modelli di Windows Runtime C++ fornisce le interfacce COM di basso livello mediante il quale codice C++ ISO può accedere al Runtime di Windows in un ambiente privo di eccezioni. Nella maggior parte dei casi, è consigliabile usare C + + c++ /CLI WinRT o C + + c++ /CX anziché la libreria di modelli Windows Runtime C++ per lo sviluppo di app UWP. Per informazioni sulla libreria di modelli di Windows Runtime C++, vedere [libreria modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>

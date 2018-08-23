@@ -1,5 +1,5 @@
 ---
-title: Ottimizzazione a virgola mobile di Microsoft Visual C++ | Documenti Microsoft
+title: Ottimizzazione a virgola mobile di Microsoft Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -9,23 +9,22 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35c9263fa6252469124eefb0dfd575ef5bd2ac34
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422734"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595048"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Ottimizzazione a virgola mobile di Microsoft Visual C++
 
-Ottenere un handle per l'ottimizzazione di codice a virgola mobile utilizzando il metodo del compilatore Microsoft C++ di gestione della semantica della virgola mobile. Creare applicazioni veloci assicurando che vengono eseguite ottimizzazioni provvisoria solo sul codice a virgola mobile.
+Ottenere un handle sull'ottimizzazione del codice a virgola mobile usando il metodo del compilatore Microsoft C++ di gestione della semantica della virgola mobile. Creare applicazioni veloci assicurando che vengano eseguite ottimizzazioni sicura solo sul codice a virgola mobile.
 
 ## <a name="optimization-of-floating-point-code-in-c"></a>Ottimizzazione del codice a virgola mobile in C++
 
-Un compilatore C++ ottimizzazione converte non solo codice sorgente in codice macchina, organizza le istruzioni del computer in modo da migliorare l'efficienza e/o ridurre le dimensioni. Sfortunatamente, molti ottimizzazioni comuni non sono necessariamente sicuri quando applicato a calcoli a virgola mobile. Un buon esempio di questo può essere visualizzato con l'algoritmo di somma seguente, tratto dal David Goldberg, "Ciò che ogni Computer Scientist deve sapere sulle aritmetica a virgola mobile", *Computing sondaggi*, marzo 1991, pg. 203:
+Un compilatore C++ di ottimizzazione si traduce non solo il codice sorgente in codice macchina, ne predispone le istruzioni del computer in modo da migliorare l'efficienza e/o ridurre le dimensioni. Sfortunatamente, molti ottimizzazioni comuni non sono necessariamente sicuri quando applicato a calcoli a virgola mobile. Un buon esempio di questo oggetto può essere verificato con l'algoritmo di somma seguente, tratto dal David Goldberg, "Ciò che ogni Computer Scientist devono conoscere sulla aritmetica a virgola mobile", *Computing Surveys*, marzo 1991, pg. 203:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -42,17 +41,17 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Questa funzione aggiunge n **float** valori nell'oggetto vector matrice `A`. All'interno del corpo di ciclo, l'algoritmo calcola un valore di "correzione" che viene quindi applicato al passaggio successivo della somma. Questo metodo riduce significativamente gli errori di arrotondamento cumulativi rispetto a una somma semplice, mantenendo la complessità della fase o (n).
+Questa funzione consente di aggiungere n **float** valori del vettore di matrice `A`. All'interno del corpo di ciclo, l'algoritmo calcola un valore di "correzione" che viene quindi applicato al passaggio successivo della somma. Questo metodo riduce notevolmente gli errori di arrotondamento cumulativi rispetto a una semplice somma, mantenendo la complessità di tempo o (n).
 
-Un compilatore C++ naïve potrebbe supporre che aritmetica a virgola mobile segue le stesse regole algebriche come numero reale aritmetica. Un compilatore di questo tipo potrebbe quindi erroneamente concludere che
+Un compilatore C++ Naive potrebbe supporre che aritmetica a virgola mobile segue le stesse regole algebriche come numero reale aritmetica. Un compilatore di questo tipo potrebbe quindi erroneamente concludere che
 
-> C = T - sum - Y = = > (sum + Y) - sum - Y = = > 0;
+> C = T - sum - Y = = > (somma + Y) - sum - Y = = > 0.
 
-Vale a dire che il valore percepito di C è sempre un costante zero. Se questo valore costante viene quindi propagato nelle espressioni successive, il corpo del ciclo viene ridotta a una somma semplice. Per essere preciso,
+Vale a dire che il valore percepito del C è sempre un costante zero. Se questo valore costante viene quindi propagato nelle espressioni successive, il corpo del ciclo viene ridotto a una somma semplice. Per essere precisi,
 
-> Y = [i] - C = = > Y = [i]<br/>T = sum + Y = = > T = sum + [i]<br/>somma = T = = > somma = sum + [i]
+> Y = [i] - C = = > Y = [i]<br/>T = somma + Y = = > T = somma + [i]<br/>somma = T = = > SOMMA = somma + [i]
 
-Di conseguenza, per il compilatore naïve, una trasformazione logico del `KahanSum` funzione sarebbe:
+Di conseguenza, al compilatore Naive, una trasformazione logico del `KahanSum` funzione sarebbe:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -64,11 +63,11 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Anche se è più veloce perché l'algoritmo trasformato *non è una rappresentazione accurata di intento del programmatore*. La correzione degli errori create con destrezza è stato rimosso completamente e ciò che resta con un algoritmo di somma semplice e diretto con tutti i relativi errore associato.
+Anche se è più veloce perché l'algoritmo trasformato *non è una rappresentazione accurata dell'intento del programmatore*. La correzione degli errori appositamente è stata rimossa completamente, e ciò che resta un algoritmo di somma semplice e diretto con tutti i relativi errore associato.
 
-Un compilatore C++ sofisticato sarebbe naturalmente algebriche che le regole di reale aritmetica non si applicano in genere a aritmetica a virgola mobile. Tuttavia, anche un compilatore C++ sofisticato potrebbe comunque in modo non corretto interpretare intento del programmatore.
+Naturalmente un compilatore C++ sofisticato saprebbe algebrici che le regole del reale aritmetica non a livello generale verranno applicate a aritmetica a virgola mobile. Tuttavia, anche un compilatore C++ sofisticato comunque in modo non corretto potrebbe interpretare intento del programmatore.
 
-Prendere in considerazione un'ottimizzazione comune che tenta di mantenere tutti i valori nei registri presto (denominato "registrazione" un valore). Nel `KahanSum` esempio, questa ottimizzazione potrebbe provare a essere registrate le variabili `C`, `Y` e `T` poiché vengono utilizzati solo all'interno del corpo del ciclo. Se la precisione di registro è 52bits (double) anziché 23bits (singolo), questa ottimizzazione in modo efficace tipo Alza di livello `C`, `Y` e `T` in cui digitare **doppie**. Se la variabile di somma non è in modo analogo registrate, questo rimarrà codificato in precisione singola. Ciò consente di trasformare la semantica di `KahanSum` al seguente
+Prendere in considerazione un'ottimizzazione comune che tenta di mantenere tutti i valori nei registri minor (chiamato "registrazione" un valore). Nel `KahanSum` esempio, questa ottimizzazione potrebbe provare a essere registrate le variabili `C`, `Y` e `T` quanto vengono usati solo all'interno del corpo del ciclo. Se la precisione register è 52bits (double) anziché 23bits (singolo), questa ottimizzazione in modo efficace tipo Alza di livello `C`, `Y` e `T` per digitare **double**. Se la variabile di somma non è allo stesso modo registrate, rimarrà con codifica e precisione singola. Ciò consente di trasformare la semantica di `KahanSum` al seguente
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -86,9 +85,9 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Sebbene `Y`, `T` e `C` vengono ora calcolate una precisione più elevata, questa nuova codifica potrebbe produrre un risultato meno accurato dipende dai valori specificati in `A[]`. Pertanto anche apparentemente innocue ottimizzazioni potrebbero avere conseguenze negative.
+Sebbene `Y`, `T` e `C` vengono ora calcolate una precisione superiore, questa nuova codifica potrebbe produrre un risultato meno accurato dipende dai valori specificati in `A[]`. In questo modo anche apparentemente innocue ottimizzazioni potrebbero avere conseguenze negative.
 
-Questi tipi di problemi di ottimizzazione non sono limitati a codice a virgola mobile "complesso". Gli algoritmi a virgola mobile anche semplici potrebbero non riuscire quando ottimizzato in modo non corretto. Si consideri un algoritmo semplice e diretto sommatoria:
+Questi tipi di problemi di ottimizzazione non sono limitati al codice a virgola mobile "complesso". Neanche i semplici algoritmi a virgola mobile possono non riuscire quando ottimizzato in modo non corretto. Si consideri un semplice algoritmo direct-somma:
 
 ```cpp
 float Sum( const float A[], int n )
@@ -100,7 +99,7 @@ float Sum( const float A[], int n )
 }
 ```
 
-Perché alcune unità a virgola mobile sono in grado di eseguire più operazioni contemporaneamente, un compilatore possibile scegliere di avviare un'ottimizzazione riduzione scalare. Questa ottimizzazione consente di trasformare in modo efficace la funzione Sum semplice dall'alto in quanto segue:
+Poiché alcune unità a virgola mobile sono in grado di eseguire più operazioni contemporaneamente, un compilatore potrebbe scegliere di coinvolgere un'ottimizzazione riduzione scalare. Questa ottimizzazione consente di trasformare in modo efficace la funzione Sum semplice in precedenza in quanto segue:
 
 ```cpp
 float Sum( const float A[], int n )
@@ -122,7 +121,7 @@ float Sum( const float A[], int n )
 }
 ```
 
-La funzione adesso gestisce quattro somme separate, che possono essere elaborate contemporaneamente in ogni passaggio. Anche se la funzione ottimizzata ora è molto più veloce, i risultati ottimizzati possono essere piuttosto diversi dai risultati non ottimizzata. In questa modifica, il compilatore presuppone associativa addizione a virgola mobile; vale a dire che le due espressioni sono equivalenti: `(a + b) + c == a + (b + c)`. Tuttavia, un'associatività da non sempre valere anche per numeri a virgola mobile. Anziché calcolare la somma come:
+La funzione gestisce ora quattro somme separati, che possono essere elaborate contemporaneamente in ogni passaggio. Anche se la funzione ottimizzata è ora molto più veloce, i risultati ottimizzati possono essere piuttosto diversi dai risultati non ottimizzata. In questa modifica, il compilatore presuppone addizione a virgola mobile associativa; vale a dire che questi due espressioni sono equivalenti: `(a + b) + c == a + (b + c)`. Tuttavia, associatività degli operatori non sempre restituire true per numeri a virgola mobile. Anziché la somma come:
 
 ```cpp
 sum = A[0]+A[1]+A[2]+...+A[n-1];
@@ -137,17 +136,17 @@ sum = (A[0]+A[4]+A[8]+...)
     + (A[3]+A[7]+A[11]+...);
 ```
 
-Per alcuni valori di `A[]`, questo ordinamento diversi di operazioni di aggiunta può produrre risultati imprevisti. A complicare ulteriormente il tutto, alcuni programmatori possono scegliere di anticipare tali ottimizzazioni e compensare loro in modo appropriato. In questo caso, un programma può costruire la matrice `A` in un ordine diverso, in modo che la somma ottimizzata produce i risultati previsti. Inoltre, in molte circostanze l'accuratezza del risultato ottimizzato può essere "sufficientemente vicino". Ciò vale soprattutto quando l'ottimizzazione offre vantaggi significativi velocità. Videogiochi, ad esempio, richiedere velocità molto possibile ma non richiedono spesso accurati calcoli a virgola mobile. I responsabili del compilatore devono pertanto forniscono un meccanismo per i programmatori controllare gli obiettivi spesso diversi di velocità e accuratezza.
+Per alcuni valori di `A[]`, questo ordinamento diversi di operazioni di addizione può produrre risultati imprevisti. Quadro è ulteriormente complicato, alcuni programmatori possono scegliere di anticipare tali ottimizzazioni e proposito in modo appropriato. In questo caso, un programma può costruire la matrice `A` in un ordine diverso, in modo che la somma ottimizzata produce i risultati previsti. Inoltre, in molte circostanze l'accuratezza dei risultati dell'ottimizzazione può essere "sufficientemente vicino". Ciò è particolarmente vero quando l'ottimizzazione offre vantaggi significativi velocità. Videogiochi, ad esempio, richiedono molto più veloci possibili ma spesso non richiedono calcoli a virgola mobile e altamente accurati. Responsabili del compilatore devono pertanto fornire un meccanismo per i programmatori di controllare gli obiettivi di velocità e precisione spesso molto diversi.
 
-Alcuni compilatori di risolvere il compromesso tra velocità e precisione, fornendo un'opzione separata per ogni tipo di ottimizzazione. Ciò consente agli sviluppatori di disabilitare le ottimizzazioni che causano modifiche con precisione a virgola mobile per la propria applicazione particolare. Sebbene questa soluzione può offrire un livello elevato di controllo rispetto al compilatore, introduce numerosi problemi aggiuntivi:
+Alcuni compilatori di risolvere il compromesso tra velocità e la precisione, fornendo un'opzione separata per ogni tipo di ottimizzazione. Ciò consente agli sviluppatori di disabilitare le ottimizzazioni che causano modifiche per la precisione a virgola mobile e per la propria applicazione specifico. Mentre questa soluzione può offrire un elevato livello di controllo rispetto al compilatore, presenta diversi problemi aggiuntivi:
 
-- Spesso risulta chiaro che cambia per abilitare o disabilitare.
-- La disabilitazione di tutte le ottimizzazioni singola potrebbero compromettere le prestazioni del codice non a virgola mobile a.
-- Ogni commutatore aggiuntive comporta molte combinazioni di commutatore nuova; il numero di combinazioni rapidamente diventa difficile da gestire.
+- Spesso è chiaro quale passa per abilitare o disabilitare.
+- La disabilitazione di tutte le ottimizzazioni singola potrebbero compromettere le prestazioni del codice non a virgola mobile e.
+- Ogni opzione aggiuntiva comporta molte combinazioni di commutatore nuovo; il numero di combinazioni rapidamente diventa difficile da gestire.
 
-Pertanto, anche fornendo commutatori separati per ogni ottimizzazione potrebbe sembrare interessante, utilizzano tali compilatori può essere complesso e affidabile.
+Pertanto, fornendo commutatori separati per ogni ottimizzazione potrebbe sembrare interessante, con questi compilatori può essere complesso e non affidabili.
 
-Molti compilatori C++ offrono un *coerenza* modello a virgola mobile, (tramite un **/Op** o **/fltconsistency** commutatore) che consente agli sviluppatori di creare applicazioni conformi con la semantica a virgola mobile strict. Quando attivata, questo modello impedisce il compilatore di usare la maggior parte delle ottimizzazioni su calcoli a virgola mobile consentendo allo stesso tali ottimizzazioni per il codice non a virgola mobile. Il modello di coerenza, tuttavia, presenta un dark-side. Per restituire i risultati prevedibili in diverse architetture FPU, quasi tutte le implementazioni di **/Op** le espressioni intermedie arrotondamento all'utente specificato precisione; ad esempio, si consideri l'espressione seguente:
+Molti compilatori C++ offrono un *coerenza* modello a virgola mobile, (tramite un **/op.** o **/fltconsistency** commutatore) che consente agli sviluppatori di creare programmi compatibili con con la semantica ridotta a virgola mobile. Quando attivata, questo modello impedisce al compilatore di utilizzando la maggior parte delle ottimizzazioni su calcoli a virgola mobile, consentendo di tali ottimizzazioni per il codice non a virgola mobile. Il modello di coerenza, tuttavia, ha un lato scuro. Per non restituire risultati prevedibili in architetture FPU diversi, quasi tutte le implementazioni di **/op.** round espressioni intermedie all'utente specificato precisione, ad esempio, si consideri l'espressione seguente:
 
 ```cpp
 float a, b, c, d, e;
@@ -155,7 +154,7 @@ float a, b, c, d, e;
 a = b * c + d * e;
 ```
 
-Per produrre risultati coerenti e ripetibili sotto **/Op**, questa espressione viene valutata come se venisse implementata come segue:
+Per produrre risultati coerenti e ripetibili sotto **/op.**, questa espressione viene valutata come se venisse implementata come indicato di seguito:
 
 ```cpp
 float x = b  *c;
@@ -163,7 +162,7 @@ float y = d * e;
 a = x + y;
 ```
 
-Il risultato finale ora presenta errori di arrotondamento e con precisione singola *a ogni passaggio di valutazione dell'espressione*. Sebbene questa interpretazione rigorosamente non violino le regole di semantica di C++, è quasi mai il modo migliore per valutare le espressioni a virgola mobile. È in genere preferibile intermedie comporta più alto come precisione come pratica di calcolo. Ad esempio, sarebbe migliore calcolare l'espressione `a = b * c + d * e` in una precisione maggiore, come in
+Il risultato finale risente ora di errori di arrotondamento e con precisione singola *a ogni passaggio di valutazione dell'espressione*. Sebbene questa interpretazione rigorosamente non violino le regole di semantica di C++, è quasi mai il modo migliore per valutare le espressioni a virgola mobile. È in genere preferibile compute intermedie comporta il precisione come pratico più alto. Ad esempio, sarebbe meglio calcolare l'espressione `a = b * c + d * e` in una precisione superiore, come in
 
 ```cpp
 double x = b * c;
@@ -172,7 +171,7 @@ double z = x + y;
 a = (float)z;
 ```
 
-o, meglio ancora
+o meglio ancora
 
 ```cpp
 long double x = b * c;
@@ -181,42 +180,42 @@ long double z = x + y;
 a = (float)z;
 ```
 
-Quando si calcolano i risultati intermedi in una precisione maggiore, il risultato finale è significativamente più accurato. Paradossalmente, adottando un modello di coerenza, la probabilità di errore viene aumentata esattamente quando l'utente tenta di ridurre errore disabilitando le ottimizzazioni unsafe. In questo modo il modello di coerenza può compromettere l'efficienza e nel contempo non fornisce alcuna garanzia di aumentare l'accuratezza. Per i programmatori numerici gravi, ciò non sembra un compromesso molto efficaci per ed è il principale motivo che il modello non viene in genere anche ricevuto.
+Quando si calcolano i risultati intermedi in una precisione superiore, il risultato finale è significativamente più accurato. Adottando un modello di coerenza, Ironicamente, la probabilità di errore viene aumentata con precisione quando l'utente tenta di ridurre l'errore disabilitando le ottimizzazioni non sicure. In questo modo il modello di coerenza può compromettere l'efficienza fornendo nel contempo alcuna garanzia di una maggiore accuratezza. Per i programmatori numerici gravi, questo non sembra un ottimo compromesso ed è il motivo principale che il modello non viene in genere anche ricevuto.
 
-Partire dalla versione 8.0 (Visual C++® 2005), Microsoft C++ il compilatore fornisce migliore alternativa. Consente ai programmatori di selezionare una delle tre modalità a virgola mobile generale: /fp: precise, /fp: fast e /fp: strict.
+Partire dalla versione 8.0 (Visual C++® 2005), Microsoft C++ il compilatore fornisce un'alternativa molto migliore. Consente ai programmatori di selezionare una delle tre modalità a virgola mobile generale: /fp: precise, /fp: fast e /fp: strict.
 
-- In /fp: precise, vengono eseguite solo le ottimizzazioni-safe sul codice a virgola mobile e, a differenza **/Op**, calcoli intermedi vengono eseguiti in modo coerente a livello la massima precisione pratica.
+- In /fp: precise, vengono eseguite solo sicuro ottimizzazioni sul codice a virgola mobile e, a differenza **/op.**, calcoli intermedi vengono eseguiti in modo coerente con la precisione pratica più elevata.
 - modalità /fp: fast rilassa a virgola mobile e regole che consentono di ottimizzazione più aggressiva a scapito della precisione.
-- /fp: la modalità strict fornisce tutte della correttezza generale /fp: precise durante l'abilitazione la semantica delle eccezioni a virgola mobile e impedendo trasformazioni non valide in presenza di FPU ambiente modifiche (ad esempio, per la precisione di registro, arrotondamento direzione e così via).
+- /fp: modalità strict fornisce tutti la correttezza generale del /fp: precise, abilitare la semantica delle eccezioni a virgola mobile e impedire le trasformazioni non valide in presenza di modifiche all'ambiente FPU (ad esempio, le modifiche in base alla registrazione precisione, arrotondamento direzione e così via).
 
-La semantica delle eccezioni a virgola mobile può essere controllata in modo indipendente da un'opzione della riga di comando o un pragma del compilatore. Per impostazione predefinita, la semantica delle eccezioni a virgola mobile è disabilitata in /fp: precise e abilitati in /fp: strict. Il compilatore fornisce inoltre controllare FPU ambiente sensibilità e alcune ottimizzazioni specifiche a virgola mobile, ad esempio contrazioni. Questo modello semplice offre agli sviluppatori un notevole controllo sulla compilazione di codice a virgola mobile senza l'onere troppe opzioni del compilatore o la prospettiva di effetti collaterali indesiderati.
+La semantica delle eccezioni a virgola mobile può essere controllata in modo indipendente da un'opzione della riga di comando o un pragma del compilatore. Per impostazione predefinita, la semantica delle eccezioni a virgola mobile è disabilitata in /fp: precise e abilitati in /fp: strict. Il compilatore consente anche di controllare sensibilità ambiente FPU e alcune ottimizzazioni specifiche a virgola mobile, ad esempio termini più semplici. Questo modello molto semplice offre agli sviluppatori un elevato livello di controllo tramite la compilazione del codice a virgola mobile senza l'onere di opzioni del compilatore che un numero eccessivo o la prospettiva di effetti collaterali indesiderati.
 
 ## <a name="the-fpprecise-mode-for-floating-point-semantics"></a>Fp: modalità precise per la semantica della virgola mobile
 
-La modalità di semantica della virgola mobile predefinita è /fp: precise. Quando viene selezionata questa modalità, il compilatore strettamente conformi a un set di regole di sicurezza per l'ottimizzazione delle operazioni a virgola mobile. Queste regole consentono al compilatore di generare codice macchina efficiente, mantenendo l'accuratezza dei calcoli a virgola mobile. Per facilitare la produzione di fast programmi, il /fp: precisa modello disabilita la semantica delle eccezioni a virgola mobile (anche se essi possono essere abilitate in modo esplicito). Microsoft ha selezionato /fp: precise come modalità predefinita a virgola mobile, poiché crea programmi rapide e accurati.
+La modalità di semantica della virgola mobile predefinita è /fp: precise. Quando viene selezionata questa modalità, il compilatore strettamente conformi a un set di regole di sicurezza durante l'ottimizzazione di operazioni a virgola mobile. Queste regole consentono al compilatore di generare codice macchina efficace mantenendo l'accuratezza dei calcoli a virgola mobile. Per facilitare la produzione di veloci programmi, il /fp: precisa modello disabilita la semantica delle eccezioni a virgola mobile (anche se essi può essere abilitate in modo esplicito). Microsoft ha selezionato /fp: precise come la modalità a virgola mobile predefinita perché crea programmi sia rapido e accurati.
 
-Per richiedere in modo esplicito il /fp: modalità precise utilizzando il compilatore della riga di comando, usare il [/fp: precise](fp-specify-floating-point-behavior.md) passare:
+Per richiedere in modo esplicito il fp: modalità precise utilizzando il compilatore della riga di comando, usare il [/fp: precise](fp-specify-floating-point-behavior.md) passare:
 
 > CL /fp: precise source.cpp
 
-Ciò indica al compilatore di utilizzare /fp: precisa semantica durante la generazione di codice per il file source.cpp. Il /fp: precisa modello può essere richiamato anche in base a ogni singola dalla funzione utilizzando il [float_control (pragma) del compilatore](#the-float-control-pragma).
+Ciò indica al compilatore di usare /fp: precisa semantica durante la generazione di codice per il file source.cpp. Il /fp: precisa modello può essere richiamato anche in funzione dalla base usando la [float_control (pragma) del compilatore](#the-float-control-pragma).
 
-Sotto il /fp: modalità precise, il compilatore non vengono eseguite le ottimizzazioni che studi l'accuratezza dei calcoli a virgola mobile. Il compilatore verrà sempre correttamente l'arrotondamento in assegnazioni, cast di tipo e chiamate di funzione e arrotondamento intermedio verrà sempre eseguita alla stessa precisione come registra l'unità FPU. Le ottimizzazioni provvisoria, ad esempio forme contratte, sono abilitate per impostazione predefinita. La semantica delle eccezioni e sensibilità ambiente FPU sono disabilitate per impostazione predefinita.
+Sotto il /fp: precise modalità, il compilatore non esegue mai tutte le ottimizzazioni che impostazione l'accuratezza dei calcoli a virgola mobile. Il compilatore eseguirà sempre l'arrotondamento correttamente in assegnazioni, typecast e chiamate di funzione e arrotondamento intermedio verrà costantemente eseguito con la stessa precisione registra l'unità FPU. Sono abilitate le ottimizzazioni sicuro, ad esempio forme contratte, per impostazione predefinita. La semantica delle eccezioni e alla sensibilità di ambiente FPU sono disabilitati per impostazione predefinita.
 
 |/fp: precisa semantica|Descrizione|
 |-|-|
-|La semantica di arrotondamento|Arrotondamento esplicita alla assegnazioni, cast di tipo, e chiamate di funzione. Le espressioni intermedie verranno valutate al registro precisione.|
-|Trasformazioni algebriche|Una stretta osservanza di algebra a virgola mobile non associativo, non pacchetto di distribuzione, a meno che non è garantita una trasformazione sempre producono gli stessi risultati.|
-|Forme contratte|È consentito per impostazione predefinita. Per altre informazioni, vedere sezione [fp_contract (pragma)](#the-fp-contract-pragma).|
-|Ordine di valutazione a virgola mobile|Il compilatore potrebbe riordinare la valutazione delle espressioni a virgola mobile a condizione che i risultati finali non vengono modificati.|
-|L'accesso all'ambiente FPU|Disattivata per impostazione predefinita. Per altre informazioni, vedere sezione [il pragma fenv_access](#the-fenv-access-pragma). Viene utilizzata la precisione predefinita e la modalità di arrotondamento.|
+|La semantica di arrotondamento|Arrotondamento esplicita alla assegnazioni, typecast e chiamate di funzione. Verranno valutate espressioni intermedie con precisione di registrazione.|
+|Trasformazioni algebriche|Aderendo a non-pacchetto di distribuzione, non associativa algebra a virgola mobile, a meno che una trasformazione è sicuramente sempre producono gli stessi risultati.|
+|Più ricercati|È consentito per impostazione predefinita. Per altre informazioni, vedere sezione [pragma fp_contract](#the-fp-contract-pragma).|
+|Ordine di valutazione a virgola mobile|Il compilatore potrebbe riordinare la valutazione di espressioni a virgola mobile a condizione che i risultati finali non vengono modificati.|
+|Accesso all'ambiente FPU|Disattivata per impostazione predefinita. Per altre informazioni, vedere sezione [pragma fenv_access](#the-fenv-access-pragma). Si presuppone che la precisione predefinita e la modalità di arrotondamento.|
 |Semantica delle eccezioni a virgola mobile|Disattivata per impostazione predefinita. Per altre informazioni, vedere [/fp: tranne](fp-specify-floating-point-behavior.md).|
 
 ### <a name="rounding-semantics-for-floating-point-expressions-under-fpprecise"></a>Arrotondamento semantica per le espressioni a virgola mobile in /fp: precise
 
-Il /fp: precisa modello viene sempre eseguita calcoli intermedi in precisione pratica più alto, arrotondamento in modo esplicito solo in determinati momenti nella valutazione dell'espressione. Arrotondamento sempre alla precisione specificata dall'utente si verifica in quattro punti: (a) quando viene effettuata un'assegnazione, (b) quando viene eseguito un cast di tipo, (c) quando un valore a virgola mobile viene passato come argomento a una funzione e (d) quando viene restituito un valore a virgola mobile da un funzione. Poiché i calcoli intermedi vengono sempre eseguiti precisione register, l'accuratezza dei risultati intermedi è dipende dalla piattaforma (sebbene precisione sarà sempre almeno più accurata l'utente specificato precisione).
+Il /fp: precisa modello esegue sempre i calcoli intermedi in precisione pratico più elevato, arrotondamento in modo esplicito solo in determinati punti nella valutazione dell'espressione. Arrotondamento sempre alla precisione specificata dall'utente si verifica in quattro punti: (a) quando viene effettuata un'assegnazione, (b) quando viene eseguito un cast di tipo, (c) quando un valore a virgola mobile viene passato come argomento a una funzione e (d) quando viene restituito un valore a virgola mobile da un funzione. Poiché i calcoli intermedi vengono sempre eseguiti con precisione register, l'accuratezza dei risultati intermedi è dipende dalla piattaforma (anche se la precisione sarà sempre almeno più accurata l'utente specificato precisione).
 
-Si consideri l'espressione di assegnazione nel codice seguente. L'espressione sul lato destro dell'operatore di assegnazione '=' verrà calcolato durante la precisione di registro e arrotondato in modo esplicito al tipo del lato sinistro dell'assegnazione.
+Si consideri l'espressione di assegnazione nel codice seguente. L'espressione sul lato destro dell'operatore di assegnazione '=' verrà calcolato al registro precisione e quindi arrotondato in modo esplicito al tipo del lato sinistro dell'assegnazione.
 
 ```cpp
 float a, b, c, d;
@@ -225,7 +224,7 @@ double x;
 x = a*b + c*d;
 ```
 
-viene calcolata come
+viene calcolato come
 
 ```cpp
 float a, b, c, d;
@@ -237,7 +236,7 @@ register tmp3 = tmp1+tmp2;
 x = (double) tmp3;
 ```
 
-Per eseguire l'arrotondamento in modo esplicito un risultato intermedio, introdurre un cast di tipo. Ad esempio, se il codice precedente viene modificato mediante l'aggiunta esplicita il cast di tipo, l'espressione intermedia (c * 1!d) verrà arrotondato al tipo del cast di tipo.
+Per completare in modo esplicito un risultato intermedio, introdurre un cast di tipo. Ad esempio, se il codice precedente viene modificato mediante l'aggiunta esplicita cast di tipo, l'espressione intermedia (c * 1!d) verrà arrotondato al tipo del cast di tipo.
 
 ```cpp
 float a, b, c, d;
@@ -246,7 +245,7 @@ double x;
 x = a*b + (float)(c*d);
 ```
 
-viene calcolata come
+viene calcolato come
 
 ```cpp
 float a, b, c, d;
@@ -258,7 +257,7 @@ register tmp3 = tmp1+tmp2;
 x = (double) tmp3;
 ```
 
-Una delle implicazioni di questo metodo di arrotondamento è che alcune trasformazioni apparentemente equivalente in realtà non hanno una semantica identica. Ad esempio, la seguente trasformazione suddivide un'espressione di assegnazione singola in due espressioni di assegnazione.
+Una delle implicazioni di questo metodo di arrotondamento è che alcune trasformazioni apparentemente equivalente non è necessario che la semantica identica. Ad esempio, la seguente trasformazione suddivide una singola espressione di assegnazione in due espressioni di assegnazione.
 
 ```cpp
 float a, b, c, d;
@@ -287,7 +286,7 @@ NON è equivalente a
 a = b*(a=c+d);
 ```
 
-Queste codifiche non hanno una semantica equivalente perché ognuno le codifiche secondo hanno introdotto un'operazione di assegnazione aggiuntive e pertanto un arrotondamento aggiuntive punto.
+Queste codifiche non è equivalente semantica in quanto ognuna le codifiche secondo hanno introdotto un'operazione di assegnazione aggiuntiva e pertanto un arrotondamento altri punti.
 
 Quando una funzione restituisce un valore a virgola mobile, il valore verrà arrotondato al tipo della funzione. Quando un valore a virgola mobile viene passato come parametro a una funzione, il valore verrà arrotondato al tipo del parametro. Ad esempio:
 
@@ -298,7 +297,7 @@ float sumsqr(float a, float b)
 }
 ```
 
-viene calcolata come
+viene calcolato come
 
 ```cpp
 float sumsqr(float a, float b)
@@ -319,7 +318,7 @@ double c;
 c = symsqr(w*x+y, z);
 ```
 
-viene calcolata come
+viene calcolato come
 
 ```cpp
 float x, y, z;
@@ -331,27 +330,27 @@ float tmp3 = tmp2;
 c = symsqr( tmp3, z);
 ```
 
-### <a name="architecture-specific-rounding-under-fpprecise"></a>Arrotondamento specifici per l'architettura in /fp: precise
+### <a name="architecture-specific-rounding-under-fpprecise"></a>Specifici dell'architettura di arrotondamento in /fp: precise
 
 |Processore|Precisione per le espressioni intermedie di arrotondamento|
 |-|-|
-|x86|Le espressioni intermedie vengono calcolate nella precisione a 53 bit predefinita con un intervallo esteso fornito da un esponente a 16 bit. Quando questi valori 53:16 sono "distribuiti" per la memoria (come può verificarsi anche durante una chiamata di funzione), l'intervallo esteso esponente verrà limitato a 11 bit. Vale a dire, vengono eseguito il cast valori stati distribuiti nel formato standard e precisione doppia con solo un esponente a 11 bit.<br/>Un utente può passare alla precisione a 64 bit estesa per l'arrotondamento intermedia modificando la parola di controllo a virgola mobile usando `_controlfp` e abilitando l'accesso all'ambiente FPU (vedere [il pragma fenv_access](#the-fenv-access-pragma)). Tuttavia, quando vengono passati valori di precisione estesa registro per la memoria, i risultati intermedi ancora essere arrotondati a precisione doppia.<br/>Questa particolare semantica è soggette a modifiche.|
-|amd64|Semantica FP su amd64 è leggermente diversa da altre piattaforme. Per motivi di prestazioni, le operazioni intermedi vengono calcolate nella precisione più ampia degli operandi anziché alla precisione più larga disponibile.  Per imporre i calcoli per essere calcolata con una precisione più ampia rispetto a operandi, gli utenti devono presentare un'operazione cast su almeno un operando in una sottoespressione.<br/>Questa particolare semantica è soggette a modifiche.|
+|x86|Espressioni intermedie vengono calcolate con la precisione a 53 bit predefinito con un intervallo esteso fornito da un esponente a 16 bit. Quando questi valori 53:16 sono "distribuiti" per la memoria (come può accadere durante una chiamata di funzione), l'intervallo esteso esponente verrà limitato a 11 bit. Questi valori, ovvero vengono eseguito il cast nel formato standard a precisione doppia con solo un esponente a 11 bit.<br/>Un utente può passare a precisione a 64 bit estesa per l'arrotondamento intermedio modificando la parola di controllo a virgola mobile usando `_controlfp` e abilitando l'accesso all'ambiente FPU (vedere [pragma fenv_access](#the-fenv-access-pragma)). Tuttavia, quando register-valori di precisione estesa sono stati distribuiti per la memoria, i risultati intermedi verranno comunque arrotondati al valore a precisione doppia.<br/>Questo particolare semantica è soggette a modifiche.|
+|amd64|La semantica di virgola mobile in amd64 è leggermente diversa da altre piattaforme. Per motivi di prestazioni, operazioni intermedie vengono calcolate con la precisione più ampia degli operandi anziché con la precisione più ampia disponibile.  Per forzare i calcoli per essere calcolata con una precisione maggiore rispetto a operandi, gli utenti devono presentare un'operazione cast in almeno un operando in una sottoespressione.<br/>Questo particolare semantica è soggette a modifiche.|
 
-### <a name="algebraic-transformations-under-fpprecise"></a>Trasformazioni algebriche in /fp: precise
+### <a name="algebraic-transformations-under-fpprecise"></a>Le trasformazioni algebriche in /fp: precise
 
-Quando il /fp: precise è abilitata, il compilatore non verrà mai eseguire trasformazioni algebriche *, a meno che il risultato finale è probabilmente identico*. Molte delle regole algebriche familiare per numero reale aritmetici non contengono sempre per i calcoli a virgola mobile. Ad esempio, le espressioni seguenti sono equivalenti per Reals, ma non necessariamente per gli elementi mobili.
+Quando il fp: modalità precise è abilitata, il compilatore non eseguirà mai trasformazioni algebriche *, a meno che il risultato finale è probabilmente identico*. Molte delle familiari algebriche regole per un numero reale aritmetici non contengono sempre per i calcoli a virgola mobile. Ad esempio, le espressioni seguenti sono equivalenti per Reals, ma non necessariamente per valori a virgola mobile.
 
 |Form|Descrizione|
 |-|-|
 |`(a+b)+c = a+(b+c)`|Regola associativa per l'aggiunta|
-|`(a*b)*c = a*(b*c)`|Associativa regola per la moltiplicazione|
+|`(a*b)*c = a*(b*c)`|Regola associativo da preferire per la moltiplicazione|
 |`a*(b+c) = a*b + b*c`|Distribuzione di moltiplicazione su aggiunta|
-|`(a+b)(a-b) = a*a-b*b`|Eseguire il Factoring algebriche|
+|`(a+b)(a-b) = a*a-b*b`|Eseguire il Factoring algebrici|
 |`a/b = a*(1/b)`|Divisione per moltiplicativo|
 |`a*1.0 = a`|Identità moltiplicativa|
 
-Come illustrato nell'esempio introduzione con la funzione `KahanSum`, il compilatore potrebbe essere tentato di eseguire trasformazioni algebriche diverse per produrre programmi notevolmente più veloci. Anche se le ottimizzazioni dipende da tali trasformazioni algebriche sono quasi sempre corrette, esistono casi per la quale siano perfettamente sicure. Ad esempio, è talvolta utile per sostituire la divisione per un *costante* valore con moltiplicazione per la moltiplicazione-inverso della costante:
+Come illustrato nell'esempio introduzione con la funzione `KahanSum`, il compilatore potrebbe essere tentato di eseguire trasformazioni algebriche diversi per produrre programmi notevolmente più veloci. Anche se le ottimizzazioni dipende da tali trasformazioni algebriche sono quasi sempre errate, esistono situazioni di cui sono perfettamente sicura. Ad esempio, è talvolta utile per sostituire la divisione per un *costante* valore con moltiplicazione per l'inverso di moltiplicazione-della costante:
 
 ```cpp
 const double four = 4.0;
@@ -371,19 +370,19 @@ double a, b;
 a = b*tmp0;
 ```
 
-Si tratta di una trasformazione sicuro perché query optimizer può determinare in fase di compilazione che x / 4.0 = = x*(1/4.0) per tutti i valori a virgola mobile di x, inclusi valori infiniti e NaN. Tramite la sostituzione di un'operazione di divisione con una moltiplicazione, il compilatore può salvare diversi cicli: in particolar modo nei FPUs che non implementano direttamente la divisione, ma richiedono al compilatore di generare una combinazione di approssimazione reciproco e aggiungere moltiplicare istruzioni. Il compilatore può eseguire questo tipo un'ottimizzazione in /fp: precise solo quando la sostituzione della moltiplicazione esatto l'elemento stesso risultato come la divisione. Il compilatore può inoltre eseguire trasformazioni semplice in /fp: precise, purché i risultati sono identici. Sono inclusi:
+Si tratta di una trasformazione sicura perché query optimizer può determinare in fase di compilazione che x / 4.0 = = x*(1/4.0) per tutti i valori a virgola mobile di x, inclusi valori infiniti e NaN. Sostituendo un'operazione di divisione con una moltiplicazione, il compilatore può salvare diversi cicli, specialmente su FPUs che non implementano direttamente la divisione, ma richiede al compilatore di generare una combinazione di approssimazione di reciproco e aggiunta multipla istruzioni. Il compilatore può eseguire questo tipo un'ottimizzazione in /fp: precise solo quando la sostituzione della moltiplicazione esatti stesso risultato come la divisione. Il compilatore può anche eseguire semplici trasformazioni in /fp: precise, purché i risultati sono identici. Sono inclusi:
 
 |Form|Descrizione
 |-|-|
-|`(a+b) == (b+a)`|Regola commutativa per l'aggiunta|
-|`(a*b) == (b*a)`|Commutativa regola per la moltiplicazione|
+|`(a+b) == (b+a)`|Regola per l'aggiunta di commutativo|
+|`(a*b) == (b*a)`|Commutativo regola per la moltiplicazione|
 |`1.0*x*y == x*1.0*y == x*y*1.0 == x*y`|Moltiplicazione per 1,0|
 |`x/1.0*y == x*y/1.0 == x*y`|Divisione per 1,0|
 |`2.0*x == x+x`|Moltiplicazione per 2.0|
 
 ### <a name="contractions-under-fpprecise"></a>Forme contratte in /fp: precise
 
-Una funzionalità chiave dell'architettura di molte unità a virgola mobile moderna è la possibilità di eseguire una moltiplicazione seguita da un'aggiunta come una singola operazione senza errori di arrotondamento intermedi. Ad esempio, l'architettura Intel Itanium vengono fornite istruzioni per combinare ognuna di queste operazioni ternarie (un*b + c), (un*b, c) e (c-a * b), in una singola istruzione a virgola mobile (fma, fms e fnma rispettivamente). Queste istruzioni singole sono più velocemente rispetto all'esecuzione separata multiply e aggiungere le istruzioni e sono più accurate poiché non esiste alcun arrotondamento intermedio del prodotto. Questa ottimizzazione può velocizzare le funzioni contenenti diversi con interfoliazione multiply in modo significativo e operazioni di aggiunta. Ad esempio, si consideri il seguente algoritmo che calcola il prodotto scalare di due vettori di n-dimensionale.
+Una funzionalità chiave dell'architettura di moderno numero di unità a virgola mobile è la possibilità di eseguire una moltiplicazione seguita da un'aggiunta come una singola operazione senza errori di arrotondamento intermedio. Ad esempio, l'architettura Itanium di Intel fornisce istruzioni per ognuna di queste operazioni ternarie, combinare (un*b + c), (una*b + c) e (c-a * b), in una singola istruzione a virgola mobile (fma, fms e fnma rispettivamente). Queste istruzioni singole sono più veloci rispetto all'esecuzione separata moltiplicare e aggiungere le istruzioni e sono più accurate, perché è presente alcun arrotondamento intermedio del prodotto. Questa ottimizzazione può significativamente velocizzare le funzioni contenenti più di tipo interleaved multiply e operazioni di aggiunta. Ad esempio, si consideri il seguente algoritmo che calcola il prodotto scalare di due vettori di n-dimensionale.
 
 ```cpp
 float dotProduct( float x[], float y[], int n )
@@ -395,9 +394,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Questo calcolo può essere eseguito una serie di moltiplicare-aggiungere le istruzioni del modulo p = p + x [i] * y [i].
+Questo calcolo può essere eseguito una serie di aggiunta multipla istruzioni del modulo p = p + x [i] * y [i].
 
-L'ottimizzazione contrazione può essere controllata in modo indipendente tramite il `fp_contract` pragma del compilatore. Per impostazione predefinita, il /fp: precisa modello consente contrazioni poiché essi migliorare sia la precisione e velocità. In /fp: precise, il compilatore non verrà mai contratto un'espressione con arrotondamento esplicita.
+L'ottimizzazione contrazione può essere controllata in modo indipendente usando il `fp_contract` pragma del compilatore. Per impostazione predefinita, il /fp: precisa modello consente più ricercati dal momento in cui migliorare sia la precisione e velocità. In /fp: precise, il compilatore mai contatterà un'espressione con arrotondamento esplicita.
 Esempi
 
 ```cpp
@@ -416,7 +415,7 @@ d = t + c;           // won't be contracted because of rounding of a*b
 
 ### <a name="order-of-floating-point-expression-evaluation-under-fpprecise"></a>Ordine di valutazione dell'espressione a virgola mobile in /fp: precise
 
-Le ottimizzazioni che mantiene l'ordine di valutazione dell'espressione a virgola mobile sono sempre sicure e sono pertanto consentite in fp: modalità precise. Si consideri la seguente funzione che calcola il prodotto scalare di due vettori di n-dimensionale in precisione singola. Il primo blocco di codice riportato di seguito è la funzione originale come può essere codificato dal programmatore, seguita dalla stessa funzione dopo l'ottimizzazione di cicli parziale.
+Le ottimizzazioni che mantiene l'ordine di valutazione dell'espressione a virgola mobile sono sempre sicure e sono pertanto consentite in fp: modalità precise. Si consideri la funzione seguente che calcola il prodotto scalare di due vettori di n-dimensionale di precisione singola. Il primo blocco di codice riportato di seguito è la funzione originale come potrebbe essere codificato dal programmatore, seguita dalla stessa funzione dopo un'ottimizzazione (loop unrolling) ciclo parziale.
 
 ```cpp
 //original function
@@ -451,9 +450,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Il vantaggio principale di questa ottimizzazione è che riduce il numero di diramazioni ciclo condizionale da quanto il 75%. Inoltre, se si aumenta il numero di operazioni all'interno del corpo del ciclo, il compilatore può ora disponibili più opportunità per ottimizzare ulteriormente. Ad esempio, alcuni FPUs potrebbero essere in grado di eseguire la moltiplicazione-aggiuntivo + p = x [i] * y [i] durante il recupero contemporaneamente i valori per x [i+1] e y [i+1] per l'utilizzo nel passaggio successivo. Questo tipo di ottimizzazione infatti perfettamente sicuro per i calcoli a virgola mobile e mantiene l'ordine delle operazioni.
+Il vantaggio principale di questa ottimizzazione è che riduce il numero di ciclo-diramazione condizionale quanto più il 75%. Inoltre, se si aumenta il numero di operazioni all'interno del corpo del ciclo, il compilatore può ora disponibili ulteriori opportunità per ottimizzare ulteriormente. Ad esempio, alcuni FPUs potrebbero essere in grado di eseguire l'aggiunta multipla in p + = x [i] * y e y [i] durante il recupero contemporaneamente i valori di x [i+1] [i+1] per l'uso nel passaggio successivo. Questo tipo di ottimizzazione è perfettamente sicuro per i calcoli a virgola mobile, perché mantiene l'ordine delle operazioni.
 
-Spesso risulta vantaggioso per il compilatore riordinare le operazioni per produrre codice più veloce. Esaminare il codice seguente:
+Spesso è vantaggioso per il compilatore riordinare le operazioni per produrre codice più veloce. Esaminare il codice seguente:
 
 ```cpp
 double a, b, c, d;
@@ -466,7 +465,7 @@ y = a*a + b*b + c*c;
 z = a + b + c;
 ```
 
-Le regole semantiche di C++ indicano che il programma dovrebbe produrre risultati come se sia innanzitutto calcolarla x quindi y e infine z. Si supponga che il compilatore includa solo quattro registri a virgola mobile disponibili. Se il compilatore viene forzato per il calcolo x, y e z in ordine, è possibile scegliere di generare il codice con la semantica seguente:
+Le regole semantiche di C++ indicano che il programma deve produrre risultati come se calcolata prima di tutto, x e y e infine z. Si supponga che il compilatore ha solo quattro registri a virgola mobile disponibili. Se il compilatore viene imposto di calcolo x, y e z in ordine, può scegliere di generare il codice con la semantica seguente:
 
 ```cpp
 double a, b, c, d;
@@ -507,7 +506,7 @@ r0 = r0 + r3;
 z = r0;         // z = r1+r2+r3
 ```
 
-Sono presenti numerose operazioni di archiviazione con ridondanza chiaramente questa codifica. Se il compilatore rispetta le regole semantiche di C++, questo ordinamento è necessario perché il programma potrebbe accedere all'ambiente di FPU intermedi ogni assegnazione. Tuttavia, le impostazioni predefinite per /fp: precise consentire al compilatore di ottimizzazione come se il programma non accede all'ambiente, che consente di riordinare le espressioni. È quindi libero di rimuovere le ridondanze calcolando i tre valori in ordine inverso, come segue:
+Esistono diverse operazioni chiaramente ridondanti è questa codifica. Se il compilatore segue esclusivamente le regole semantiche di C++, tale ordinamento è necessario perché il programma potrebbe accedere all'ambiente di FPU intermedi ogni assegnazione. Tuttavia, le impostazioni predefinite per /fp: precise consentono al compilatore di ottimizzare come se il programma non acceda all'ambiente, in modo che possa riordinare queste espressioni. È quindi possibile rimuovere le ridondanze calcolando i tre valori in ordine inverso, come indicato di seguito:
 
 ```cpp
 double a, b, c, d;
@@ -542,9 +541,9 @@ r0 = r0+r3;
 x = r0;
 ```
 
-Questa codifica è chiaramente superiore, con ridotto il numero di istruzioni a virgola mobile quasi 40%. I risultati per x, y e z sono gli stessi come in precedenza, ma calcolata con un sovraccarico minore.
+Questa codifica è chiaramente superiore, con stato ridotto il numero di istruzioni a virgola mobile da quasi del 40%. I risultati per x, y e z sono uguali come in precedenza, ma calcolata con un minor overhead.
 
-In /fp: precise, il compilatore potrebbe inoltre *interlacciata* sottoespressioni comuni in modo da produrre codice più veloce. Codice per calcolare le radici di un'equazione quadratica, ad esempio, potrebbe essere scritto come segue:
+In /fp: precisi, il compilatore può inoltre *interlacciare* sottoespressioni comuni in modo da produrre codice più veloce. Codice per calcolare le radici di un'equazione quadratica, ad esempio, potrebbe essere scritto come indicato di seguito:
 
 ```cpp
 double a, b, c, root0, root1;
@@ -553,7 +552,7 @@ root0 = (-b + sqrt(b*b-4*a*c))/(2*a);
 root1 = (-b - sqrt(b*b-4*a*c))/(2*a);
 ```
 
-Sebbene queste espressioni si differenziano solo per una singola operazione, il programmatore potrebbe averlo scritto in questo modo per garantire che ogni valore radice verrà calcolato per la massima precisione pratica. In /fp: precise, il compilatore è libero di interlacciata il calcolo del root0 e root1 per rimuovere le sottoespressioni comuni senza perdita di precisione. Ad esempio, di seguito è rimosso diversi passaggi ridondanti continuando a produrre la stessa risposta esatta.
+Anche se queste espressioni si differenziano solo per una singola operazione, il programmatore potrebbe averlo scritto in questo modo di garantire che ogni valore radice verrà calcolata per la precisione di pratico più elevata. In /fp: precise, il compilatore è libero di interlacciata il calcolo del root0 e root1 per rimuovere le sottoespressioni comuni senza perdita di precisione. Ad esempio, di seguito è rimosso diversi passaggi ridondanti con la stessa risposta esatta.
 
 ```cpp
 double a, b, c, root0, root1;
@@ -565,7 +564,7 @@ root0 = (tmp0+tmp1)/tmp2;
 root1 = (tmp0-tmp1)/tmp2;
 ```
 
-Altre ottimizzazioni potrebbero provare a spostare la valutazione di alcune espressioni indipendenti. Si consideri il seguente algoritmo che contiene un ramo condizionale all'interno di un corpo del ciclo.
+Altre ottimizzazioni potrebbero tentare di spostare la valutazione di alcune espressioni indipendenti. Prendere in considerazione l'algoritmo seguente che contiene un ramo condizionale all'interno di un corpo di ciclo.
 
 ```cpp
 vector<double> a(n);
@@ -580,7 +579,7 @@ for (int i=0; i<n; i++)
 }
 ```
 
-Il compilatore potrebbe rilevare che il valore dell'espressione (abs(d) > 1) è invariato rispetto all'interno del corpo del ciclo. Ciò consente al compilatore di "eseguire" if istruzione di fuori del corpo del ciclo, trasformare il codice sopra riportato in quanto segue:
+Il compilatore potrebbe rilevare che il valore dell'espressione (abs(d) > 1) è invariato rispetto all'interno del corpo del ciclo. Ciò consente al compilatore di "esegue il lift" if istruzione di fuori del corpo del ciclo, trasformando il codice sopra riportato in quanto segue:
 
 ```cpp
 vector<double> a(n);
@@ -594,17 +593,17 @@ else
       s = s+a[i]*d;
 ```
 
-Dopo la trasformazione, non è più una diramazione condizionale in uno dei corpi di ciclo, migliorando notevolmente le prestazioni complessive del ciclo. Questo tipo di ottimizzazione è perfettamente sicuro perché la valutazione dell'espressione (abs(d) > 1.0) è indipendente da altre espressioni.
+Dopo la trasformazione, non è più un ramo condizionale in uno dei corpi di ciclo, migliorando notevolmente le prestazioni complessive del ciclo. Questo tipo di ottimizzazione è perfettamente sicuro perché la valutazione dell'espressione (abs(d) > 1.0) è indipendente da altre espressioni.
 
-In presenza di eccezioni a virgola mobile oppure l'accesso all'ambiente FPU questi tipi di ottimizzazione sono contraindicated perché viene cambiata il semantica del flusso. Tali ottimizzazioni disponibili solo in fp: modalità precise perché l'accesso all'ambiente FPU e la semantica delle eccezioni a virgola mobile è disabilitata per impostazione predefinita. Le funzioni che accedono l'ambiente FPU possono disabilitare in modo esplicito tali ottimizzazioni tramite il `fenv_access` pragma del compilatore. Allo stesso modo, è necessario utilizzare le funzioni utilizzano eccezioni a virgola mobile il `float_control(except ... )` pragma del compilatore (oppure usare il **/fp: tranne** opzione della riga di comando).
+In presenza di accesso all'ambiente FPU o eccezioni a virgola mobile, questi tipi di ottimizzazione sono contraindicated perché modificano il flusso di semantico. Queste ottimizzazioni sono disponibili sotto il fp solo: modalità precise perché la semantica delle eccezioni a virgola mobile e l'accesso all'ambiente FPU è disabilitata per impostazione predefinita. Funzioni di accedere all'ambiente FPU in modo esplicito disabilitare tali ottimizzazioni, usare il `fenv_access` pragma del compilatore. Allo stesso modo, è necessario utilizzare funzioni mediante le eccezioni a virgola mobile e il `float_control(except ... )` pragma del compilatore (oppure usare il **/fp: tranne** opzione della riga di comando).
 
-In sintesi, la /fp: precise modalità consente al compilatore di riordinare la valutazione delle espressioni a virgola mobile a condizione che i risultati finali non vengono modificati e che i risultati non siano dipendenti nell'ambiente di FPU o in caso di eccezioni a virgola mobile.
+In sintesi, la virgola mobile: modalità precise consente al compilatore di riordinare la valutazione di espressioni a virgola mobile a condizione che i risultati finali non vengono modificati e che i risultati non siano dipendenti all'ambiente FPU o in caso di eccezioni a virgola mobile.
 
-### <a name="fpu-environment-access-under-fpprecise"></a>L'accesso di ambiente FPU con /fp: precise
+### <a name="fpu-environment-access-under-fpprecise"></a>Accesso all'ambiente FPU in /fp: precise
 
-Quando il /fp: precise è abilitata, il compilatore presuppone che un programma non accedere o modificare l'ambiente di FPU. Come indicato in precedenza, questa ipotesi consente al compilatore di riordinare o spostare le operazioni a virgola mobile per migliorare l'efficienza in /fp: precise.
+Quando il fp: modalità precise è abilitata, il compilatore presuppone che un programma non accedere o modificare l'ambiente FPU. Come indicato in precedenza, questo presupposto consente al compilatore di riordinare o spostare operazioni a virgola mobile per migliorare l'efficienza in /fp: precise.
 
-Alcuni programmi possono modificare la direzione di arrotondamento a virgola mobile tramite la `_controlfp` (funzione). Ad esempio, una o più applicazioni di calcolo superiore e inferiore dei limiti di errore in operazioni aritmetiche eseguendo lo stesso calcolo due volte, innanzitutto durante l'arrotondamento verso l'infinito negativo, quindi while arrotondamento verso l'infinito positivo. Poiché l'unità FPU fornisce un modo pratico per controllare l'arrotondamento, un programmatore può scegliere di modificare la modalità di arrotondamento modificando l'ambiente di FPU. Il codice seguente calcola il che errore esatto associato di una moltiplicazione a virgola mobile e modificando l'ambiente di FPU.
+Alcuni programmi possono modificare la direzione di arrotondamento a virgola mobile tramite il `_controlfp` (funzione). Ad esempio, alcuni programmi di calcolo superiore e inferiore ai limiti di errore nelle operazioni aritmetiche eseguendo lo stesso calcolo due volte, prima di tutto durante l'arrotondamento verso l'infinito negativo, quindi mentre arrotondamento verso l'infinito positivo. Poiché l'unità FPU fornisce un modo pratico per controllare l'arrotondamento, un programmatore potrebbe scegliere di modificare la modalità di arrotondamento, modifica dell'ambiente FPU. Il codice seguente calcola il che errore esatto associato di una moltiplicazione a virgola mobile e modificando l'ambiente FPU.
 
 ```cpp
 double a, b, cLower, cUpper;
@@ -616,7 +615,7 @@ cUpper = a*b;
 _controlfp( _RC_NEAR, _MCW_RC );    // restore rounding mode
 ```
 
-In /fp: precise, il compilatore sempre presuppone l'uso dell'ambiente di FPU predefinito, pertanto è gratuito ignorare le chiamate a query optimizer `_controlfp` e ridurre le assegnazioni sopra per cUpper = cLower = un * b; Ciò produrrebbe chiaramente risultati non corretti. Per evitare tali ottimizzazioni, abilitare l'accesso all'ambiente FPU utilizzando il `fenv_access` pragma del compilatore.
+In /fp: precisi, il compilatore presuppone sempre l'ambiente FPU predefinito, in modo che query optimizer è gratuito ignorare le chiamate a `_controlfp` e ridurre le assegnazioni di precedente a cUpper = cLower = un * b; chiaramente ciò potrebbe restituire risultati non corretti. Per evitare tali ottimizzazioni, abilitare l'accesso all'ambiente FPU utilizzando il `fenv_access` pragma del compilatore.
 
 Altri programmi potrebbero tentare di rilevare alcuni errori a virgola mobile e controllando la parola di stato dell'unità a virgola mobile. Ad esempio, il codice seguente controlla le condizioni di divisione per zero e inesatto
 
@@ -635,42 +634,42 @@ if (_statusfp() & _SW_INEXACT)
 etc...
 ```
 
-In /fp: precise, ottimizzazioni che riordino valutazione dell'espressione possono modificare i punti in corrispondenza del quale si verificano alcuni errori. La parola di stato di accesso ai programmi devono consentire l'accesso di ambiente FPU utilizzando il `fenv_access` pragma del compilatore.
+In /fp: precise, alle ottimizzazioni di riordinare la valutazione dell'espressione possono modificare i punti che si verificano determinati errori. La parola di stato di accesso ai programmi devono abilitare l'accesso all'ambiente FPU usando il `fenv_access` pragma del compilatore.
 
-Per altre informazioni, vedere sezione [il pragma fenv_access](#the-fenv-access-pragma).
+Per altre informazioni, vedere sezione [pragma fenv_access](#the-fenv-access-pragma).
 
 ### <a name="floating-point-exception-semantics-under-fpprecise"></a>La semantica delle eccezioni a virgola mobile in /fp: precise
 
-Per impostazione predefinita, la semantica delle eccezioni a virgola mobile è disabilitata in /fp: precise. La maggior parte dei programmatori in C++ preferiscono gestire condizioni a virgola mobile eccezionali senza l'utilizzo di sistema o le eccezioni C++. Inoltre, come indicato in precedenza, la semantica delle eccezioni a virgola mobile disabilitando la maggiore flessibilità del compilatore per l'ottimizzazione delle operazioni a virgola mobile. Utilizzare uno il **/fp: tranne** passare o il `float_control` pragma per abilitare la semantica delle eccezioni a virgola mobile e quando si usa il /fp: precisa modello.
+Per impostazione predefinita, la semantica delle eccezioni a virgola mobile è disabilitata in /fp: precise. La maggior parte dei programmatori C++ che preferiscono gestire condizioni eccezionali a virgola mobile senza l'utilizzo del sistema o le eccezioni C++. Inoltre, come indicato in precedenza, la semantica delle eccezioni a virgola mobile disabilitando la maggiore flessibilità del compilatore durante l'ottimizzazione di operazioni a virgola mobile. Usare il **/fp: tranne** passare o il `float_control` pragma per abilitare la semantica delle eccezioni a virgola mobile e quando si utilizza la virgola mobile: modello preciso.
 
-Per altre informazioni, vedere sezione [abilitazione la semantica delle eccezioni a virgola mobile](#enabling-floating-point-exception-semantics).
+Per altre informazioni, vedere sezione [abilitare la semantica delle eccezioni a virgola mobile](#enabling-floating-point-exception-semantics).
 
 ## <a name="the-fpfast-mode-for-floating-point-semantics"></a>La modalità /fp: fast per semantica della virgola mobile
 
-Quando è abilitata la modalità /fp: fast, il compilatore rilassa le regole tale /fp: precise utilizza per l'ottimizzazione delle operazioni a virgola mobile. Questa modalità è consente al compilatore di ottimizzare ulteriormente il codice a virgola mobile per la velocità a scapito della precisione a virgola mobile e della correttezza. Programmi che non si basano su calcoli a virgola mobile accurati verifichi un miglioramento significativo velocità attivando la modalità /fp: fast.
+Quando è abilitata la modalità /fp: fast, il compilatore riduce le regole tale /fp: precise utilizza durante l'ottimizzazione di operazioni a virgola mobile. Questa modalità è consente al compilatore di ottimizzare ulteriormente il codice a virgola mobile per la velocità a scapito della precisione a virgola mobile e la correttezza. I programmi che non fare affidamento su calcoli a virgola mobile e altamente accurati potrebbero riscontrare un miglioramento della velocità significativo abilitando la modalità /fp: fast.
 
-La modalità a virgola mobile /fp: fast viene abilitata tramite il [/fp: fast](fp-specify-floating-point-behavior.md) opzione del compilatore da riga di comando come indicato di seguito:
+La modalità a virgola mobile /fp: fast attivata mediante il [/fp: fast](fp-specify-floating-point-behavior.md) opzione del compilatore da riga di comando come indicato di seguito:
 
-> CL /fp: fast source.cpp
+> source.cpp /fp: fast CL
 
-Questo esempio si indica al compilatore di usare /fp: fast semantica durante la generazione di codice per il file source.cpp. Il modello /fp: fast può essere richiamato anche in base a ogni singola dalla funzione utilizzando il `float_control` pragma del compilatore.
+Questo esempio si indica al compilatore di usare /fp: fast semantica durante la generazione di codice per il file source.cpp. Il modello /fp: fast può anche essere richiamato in una funzione dalla base usando la `float_control` pragma del compilatore.
 
 Per altre informazioni, vedere sezione [float_control (pragma)](#the-float-control-pragma).
 
-Nella modalità /fp: fast, il compilatore può eseguire le ottimizzazioni che modificano l'accuratezza dei calcoli a virgola mobile. Il compilatore potrebbe non correttamente l'arrotondamento in assegnazioni, typecast o chiamate di funzione e arrotondamento intermedio non verrà sempre eseguito. Ottimizzazioni a virgola mobile specifiche, ad esempio forme contratte, sono sempre abilitate. La semantica delle eccezioni a virgola mobile e la sensibilità ambiente FPU sono disabilitati e non disponibile.
+Nella modalità /fp: fast, il compilatore può eseguire le ottimizzazioni che modificano l'accuratezza dei calcoli a virgola mobile. Il compilatore potrebbe non correttamente l'arrotondamento in assegnazioni, typecast o chiamate di funzione e arrotondamento intermedio non verrà sempre eseguito. Ottimizzazioni a virgola mobile specifiche, ad esempio forme contratte, sono sempre abilitate. La semantica delle eccezioni a virgola mobile e alla sensibilità di ambiente FPU sono disabilitati e non è disponibile.
 
 |semantica /fp: fast|Descrizione
 |-|-|
-|La semantica di arrotondamento|Arrotondamento esplicita alla assegnazioni, cast di tipo, e chiamate di funzione possono essere ignorate.<br/>Le espressioni intermedie possono essere arrotondate meno registrare precisione in base ai requisiti di prestazioni.|
-|Trasformazioni algebriche|Il compilatore può trasformare le espressioni in base al numero reale algebra associativa, distributiva; Queste trasformazioni non sono necessariamente essere accurate o corretto.|
-|Forme contratte|Sempre attivata; non può essere disabilitata dal pragma `fp_contract`|
+|La semantica di arrotondamento|Arrotondamento esplicita alla assegnazioni, typecast e chiamate di funzione possono essere ignorate.<br/>Espressioni intermedie possono essere arrotondate in inferiori a registrare la precisione in base ai requisiti di prestazioni.|
+|Trasformazioni algebriche|Il compilatore può trasformare espressioni in base a numero reale algebra associativo da preferire, distributiva; Queste trasformazioni non vengono necessariamente essere accurate o corretti.|
+|Più ricercati|Sempre abilitato. non può essere disabilitata dal (pragma) `fp_contract`|
 |Ordine di valutazione a virgola mobile|Il compilatore potrebbe riordinare la valutazione delle espressioni a virgola mobile, anche quando tali modifiche potrebbero alterare i risultati finali.|
-|L'accesso all'ambiente FPU|Disabilitato. Non disponibile|
+|Accesso all'ambiente FPU|Disabilitato. Non disponibile|
 |Semantica delle eccezioni a virgola mobile|Disabilitato. Non disponibile|
 
 ### <a name="rounding-semantics-for-floating-point-expressions-under-fpfast"></a>Arrotondamento semantica per le espressioni a virgola mobile in /fp: fast
 
-A differenza di /fp: precisa modello, il modello /fp: fast esegue calcoli intermedi precisione più pratico. Arrotondamento alla assegnazioni, cast di tipo e le chiamate di funzione non sempre si verifichi. Ad esempio, la prima funzione seguita introdotta tre variabili di e con precisione singola (`C`, `Y` e `T`). Il compilatore può scegliere di essere registrate queste variabili, in effetti di tipo promozione `C`, `Y` e `T` a precisione doppia.
+A differenza di /fp: precisa modello, il modello /fp: fast esegue calcoli intermedi precisione più pratica. Arrotondamento alla assegnazioni, typecast e chiamate di funzione non possono sempre verificarsi. Ad esempio, la prima funzione seguente introdotta tre variabili di precisione singola (`C`, `Y` e `T`). Il compilatore può scegliere di essere registrate queste variabili, in effetti di tipo promozione `C`, `Y` e `T` a precisione doppia.
 
 Funzione originale:
 
@@ -707,9 +706,9 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-In questo esempio, /fp: fast ha subverted lo scopo della funzione originale. Finale ottimizzata risultato, della variabile `sum`, potrebbe essere piuttosto perturbed dal risultato corretto.
+In questo esempio, /fp: fast ha subverted lo scopo della funzione originale. L'elemento finale con ottimizzazione per la conseguenza della variabile `sum`, potrebbe essere piuttosto perturbed dal risultato corretto.
 
-In /fp: fast, il compilatore in genere tenterà di mantenere almeno la precisione specificata per il codice sorgente. Tuttavia, in alcuni casi il compilatore possa scegliere di eseguire le espressioni intermedie in un *abbassare precisione* rispetto a quanto specificato nel codice sorgente. Il primo blocco di codice riportato di seguito chiama ad esempio, una versione a precisione doppia della funzione radice quadrata. In /fp: fast, in alcune circostanze, ad esempio quando il risultato e degli operandi della funzione sono esplicitamente il cast di e con precisione singola, il compilatore può scegliere di sostituire la chiamata a precisione doppia `sqrt` con una chiamata a una precisione singola `sqrtf`(funzione). Poiché i cast assicurarsi che il valore verso `sqrt` e il valore in uscita vengono arrotondati a precisione singola, cambia solo il posto di arrotondamento. Se il valore in entrata nella sqrt è un valore di precisione doppia e il compilatore ha eseguito questa trasformazione, fino a metà dei bit precisione potrebbe essere errata.
+In /fp: fast, il compilatore in genere tenterà di mantenere almeno alla precisione specificata per il codice sorgente. Tuttavia, in alcuni casi il compilatore può scegliere di eseguire espressioni intermedie in un *ridurre la precisione* rispetto a quanto specificato nel codice sorgente. Il primo blocco di codice riportato di seguito chiama ad esempio, una versione a precisione doppia di funzione della radice quadrata. In /fp: fast, in alcune circostanze, ad esempio quando il risultato e gli operandi di funzione sono il cast esplicito a precisione singola, il compilatore potrebbe scegliere di sostituire la chiamata a precisione doppia `sqrt` con una chiamata a una precisione singola `sqrtf`(funzione). Perché i cast di assicurarsi che il valore approfondire `sqrt` e il valore in uscita vengono arrotondate alla precisione singola, cambia solo il posto di arrotondamento. Se il valore di arrivo in sqrt è un valore a precisione doppia e il compilatore ha eseguito questa trasformazione, circa la metà dei bit precisione potrebbe essere errata.
 
 Funzione originale
 
@@ -737,9 +736,9 @@ float length = sqrtf(tmp1); // rounded sqrt result
 float sum = f1 + f2;
 ```
 
-Sebbene sia meno preciso, questa ottimizzazione può essere particolarmente utile quando la destinazione processori che forniscono, ad esempio precisione singola, versioni intrinseche di funzioni `sqrt`. Solo con precisione quando il compilatore utilizzerà tali ottimizzazioni è dipendenti sia della piattaforma e il contesto.
+Anche se meno precisi, questa ottimizzazione può essere particolarmente utile quando la destinazione di processori che forniscono, ad esempio precisione singola e e versioni intrinseche di funzioni `sqrt`. Solo con precisione quando il compilatore userà tali ottimizzazioni è dipendente di piattaforma e di contesto.
 
-Inoltre, non è non garantita la coerenza per la precisione dei calcoli intermedi, che possono essere eseguite in qualsiasi livello di precisione disponibile al compilatore. Anche se il compilatore proverà a mantenere almeno il livello di precisione come specificato dal codice, /fp: fast consente all'utilità di ottimizzazione downcast calcoli intermedi per produrre codice macchina più veloce o più piccoli. Ad esempio, il compilatore potrebbe ottimizzare il codice precedente per arrotondare alcune moltiplicazioni intermediate a precisione singola.
+Inoltre, non esiste alcun garantita la coerenza per la precisione dei calcoli intermedi, che possono essere eseguite in qualsiasi livello di precisione disponibile per il compilatore. Anche se il compilatore proverà a mantenere almeno il livello di precisione specificata dal codice, /fp: fast consente a query optimizer di eseguire il downcast calcoli intermedi per produrre codice più veloce o più piccolo del computer. Ad esempio, il compilatore potrebbe ottimizzare ulteriormente il codice precedente per arrotondare alcune delle moltiplicazioni intermediate a precisione singola.
 
 ```cpp
 float sqrtf(float)...
@@ -755,41 +754,41 @@ float length = sqrtf(tmp3);
 float sum = f1 + f2;
 ```
 
-Questo tipo di conversione e arrotondamento aggiuntive potrà derivati dall'utilizzo di una minore precisione a virgola mobile a unità, ad esempio SSE2, per eseguire alcuni calcoli intermedi. Dipende dalla piattaforma; viene pertanto la precisione di conversione e arrotondamento /fp: fast il codice che compila anche per un processore necessariamente potrebbe non funzionare bene per un altro processore. Viene rimosso per l'utente per determinare se i vantaggi di velocità siano prevalenti rispetto agli eventuali problemi di accuratezza.
+Questo tipo di conversione e arrotondamento aggiuntive potrà derivati dall'utilizzo di una minore precisione a virgola mobile e unità, ad esempio SSE2, per eseguire alcuni dei calcoli intermedi. L'accuratezza di arrotondamento /fp: fast viene pertanto dipende dalla piattaforma; il codice che compila anche per un processore necessariamente potrebbe non funzionare bene per un altro processore. Rimarrà all'utente per determinare se i vantaggi di velocità siano prevalenti rispetto agli eventuali problemi di accuratezza.
 
-Se ottimizzazione /fp: fast è particolarmente problematico per una funzione specifica, la modalità a virgola mobile può essere disattivata in locale per fp: utilizzando preciso il `float_control` pragma del compilatore.
+Se l'ottimizzazione /fp: fast è particolarmente problematico per una funzione specifica, la modalità a virgola mobile può essere usata in locale in /fp: preciso tramite i `float_control` pragma del compilatore.
 
 
 ### <a name="algebraic-transformations-under-fpfast"></a>Trasformazioni algebriche in /fp: fast
 
-La modalità /fp: fast consente al compilatore di eseguire alcuni, le trasformazioni algebriche unsafe in virgola mobile punto espressioni. Ad esempio, le seguenti ottimizzazioni unsafe possono essere impiegate in /fp: fast.
+La modalità /fp: fast consente al compilatore di adempiere ad alcuni, le trasformazioni algebriche unsafe a virgola mobile punto espressioni. Ad esempio, le seguenti ottimizzazioni unsafe possono essere impiegate in /fp: fast.
 
 ||||
 |-|-|-|
-|Codice originale|Passaggio 1 #|Passaggio 2 #
+|Codice originale|Passaggio #1|Passaggio #2
 |`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = y – a – b;`<br/><br/>`c = x – z;`<br/><br/>`c = x * z;`<br/><br/>`c = x - z;`<br/><br/>`c = x + z;`<br/><br/>`c = z-x;`|`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = 0;`<br/><br/>`c = x – 0;`<br/><br/>`c = x * 0;`<br/><br/>`c = x - 0;`<br/><br/>`c = x + 0;`<br/><br/>`c = 0 - x;`|`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = 0;`<br/><br/>`c = x;`<br/><br/>`c = 0;`<br/><br/>`c = x;`<br/><br/>`c = x;`<br/><br/>`c = -x;`|
 
-Nel passaggio 1, il compilatore rileva che `z = y – a – b` è sempre uguale a zero. Anche se si tratta tecnicamente un'osservazione non valida, è consentito in /fp: fast. Il compilatore quindi propaga il valore di costante zero per tutte le successive Usa la variabile z. Nel passaggio 2, il compilatore ulteriormente Ottimizza mediante l'osservazione che `x - 0 == x`, `x * 0 == 0`e così via. Nuovamente, anche se queste osservazioni non sono necessariamente valide, sono consentite con /fp: fast. Il codice ottimizzato è molto più veloce, ma può essere molto meno accurato o persino non corretto.
+Nel passaggio 1, il compilatore rileva che `z = y – a – b` è sempre uguale a zero. Sebbene sia tecnicamente un'osservazione non è valida, è consentito in /fp: fast. Il compilatore quindi propaga il valore costante zero per tutte le successive Usa la variabile z. Nel passaggio 2, consente di ottimizzare ulteriormente il compilatore osservando che `x - 0 == x`, `x * 0 == 0`e così via. Anche in questo caso, anche se queste osservazioni non sono necessariamente valide, sono consentite con /fp: fast. Il codice ottimizzato è ora molto più veloce, ma può anche essere notevolmente meno accurato o addirittura non corrette.
 
-Una delle seguenti regole algebriche (unsafe) può essere impiegata da query optimizer quando è abilitata la modalità /fp: fast:
+Una delle seguenti regole algebriche (non sicure) possono essere impiegata da query optimizer quando è abilitata la modalità /fp: fast:
 
 |||
 |-|-|
 |Form|Descrizione|
 |`(a + b) + c = a + (b + c)`|Regola associativa per l'aggiunta|
-|`(a * b) * c = a * (b * c)`|Associativa regola per la moltiplicazione|
+|`(a * b) * c = a * (b * c)`|Regola associativo da preferire per la moltiplicazione|
 |`a * (b + c) = a * b + b * c`|Distribuzione di moltiplicazione su aggiunta|
-|`(a + b)(a - b) = a * a - b * b`|Eseguire il Factoring algebriche|
+|`(a + b)(a - b) = a * a - b * b`|Eseguire il Factoring algebrici|
 |`a / b = a * (1 / b)`|Divisione per moltiplicativo|
 |`a * 1.0 = a, a / 1.0 = a`|Identità moltiplicativa|
 |`a ± 0.0 = a, 0.0 - a = -a`|Identità additiva|
 |`a / a = 1.0, a - a = 0.0`|Annullamento|
 
-Se ottimizzazione /fp: fast è particolarmente problematico per una determinata funzione, la modalità a virgola mobile può essere disattivata localmente per fp: utilizzando preciso il `float_control` pragma del compilatore.
+Se l'ottimizzazione /fp: fast è particolarmente problematico per una determinata funzione, la modalità a virgola mobile può essere usata in locale in /fp: preciso tramite i `float_control` pragma del compilatore.
 
 ### <a name="order-of-floating-point-expression-evaluation-under-fpfast"></a>Ordine di valutazione dell'espressione a virgola mobile in /fp: fast
 
-A differenza di /fp: precise, /fp: fast consente al compilatore di riordinare le operazioni a virgola mobile in modo da produrre codice più veloce. Di conseguenza, alcune ottimizzazioni in /fp: fast potrebbero non mantenere l'ordine previsto delle espressioni. Ad esempio, si consideri la seguente funzione che calcola il prodotto scalare di due vettori di n-dimensionale.
+A differenza di /fp: precise, /fp: fast consente al compilatore di riordinare le operazioni a virgola mobile in modo da produrre codice più veloce. Di conseguenza, alcune ottimizzazioni in /fp: fast potrebbero non mantiene l'ordine previsto delle espressioni. Si consideri ad esempio la funzione seguente che calcola il prodotto scalare di due vettori di n-dimensionale.
 
 ```cpp
 float dotProduct( float x[], float y[],
@@ -802,7 +801,7 @@ float dotProduct( float x[], float y[],
 }
 ```
 
-In /fp: fast, query optimizer può eseguire una riduzione scalare del `dotProduct` funzionare in modo efficace trasformare la funzione come segue:
+In /fp: fast, query optimizer può eseguire una riduzione scalare del `dotProduct` funzionare in modo efficace trasformando la funzione come indicato di seguito:
 
 ```cpp
 float dotProduct( float x[], float y[],int n )
@@ -828,36 +827,36 @@ float dotProduct( float x[], float y[],int n )
 }
 ```
 
-Nella versione ottimizzata di funzione separate prodotto-quattro somme vengono eseguite contemporaneamente e successivamente aggiunti insieme. Questa ottimizzazione può velocizzare il calcolo del `dotProduct` da quanto un fattore di quattro a seconda del processore di destinazione, ma il risultato finale potrebbe non essere corrette in modo da renderlo inutilizzabile. Se tali ottimizzazioni sono particolarmente problematici per singola funzione o unità di conversione, la modalità a virgola mobile può essere disattivata localmente per /fp: precise utilizzando il `float_control` pragma del compilatore.
+Nella versione ottimizzata della funzione quattro prodotto separati-somme vengono eseguite contemporaneamente e successivamente aggiunti insieme. Questa ottimizzazione può velocizzare il calcolo del `dotProduct` da tutte quelle un fattore pari a quattro a seconda del processore di destinazione, ma il risultato finale potrebbe non essere corrette in modo da renderlo inutilizzabile. Se tali ottimizzazioni sono particolarmente problematici per singola funzione o unità di conversione, la modalità a virgola mobile può essere usata in locale in /fp: preciso tramite i `float_control` pragma del compilatore.
 
 ## <a name="the-fpstrict-mode-for-floating-point-semantics"></a>Il /fp: strict modalità per la semantica della virgola mobile
 
-Quando fp: modalità strict è attivata, il compilatore rispetti le stesse regole che /fp: precise utilizza per l'ottimizzazione delle operazioni a virgola mobile. Questa modalità consente la semantica delle eccezioni a virgola mobile e sensibilità all'ambiente FPU anche e disabilita determinate ottimizzazioni, ad esempio contrazioni. È la modalità più restrittivo dell'operazione.
+Quando fp: modalità strict è attivata, il compilatore è conforme a tutte le stesse regole che /fp: precise utilizza durante l'ottimizzazione di operazioni a virgola mobile. Questa modalità, inoltre, consente la semantica delle eccezioni a virgola mobile e tra maiuscole e minuscole all'ambiente FPU e disabilita determinate ottimizzazioni quali termini più semplici. È la modalità Strict di livello massimo dell'operazione.
 
-Fp: la modalità a virgola mobile strict viene abilitata tramite il [/fp: strict](fp-specify-floating-point-behavior.md) opzione del compilatore da riga di comando come indicato di seguito:
+Fp: è abilitata la modalità a virgola mobile strict usando il [/fp: strict](fp-specify-floating-point-behavior.md) opzione del compilatore da riga di comando come indicato di seguito:
 
 > CL /fp: strict source.cpp
 
-Questo esempio si indica al compilatore di usare /fp: strict semantica durante la generazione di codice per il file source.cpp. Il /fp: strict modello può essere richiamato anche in base a ogni singola dalla funzione utilizzando il `float_control` pragma del compilatore.
+Questo esempio si indica al compilatore di usare /fp: strict semantica durante la generazione di codice per il file source.cpp. Il /fp: strict modello può essere richiamato anche in funzione dalla base usando la `float_control` pragma del compilatore.
 
 Per altre informazioni, vedere sezione [float_control (pragma)](#the-float-control-pragma).
 
-Sotto il /fp: la modalità strict, il compilatore mai vengono eseguite le ottimizzazioni che studi l'accuratezza dei calcoli a virgola mobile. Il compilatore verrà sempre correttamente l'arrotondamento in assegnazioni, cast di tipo e chiamate di funzione e arrotondamento intermedio verrà sempre eseguita alla stessa precisione come registra l'unità FPU. La semantica delle eccezioni a virgola mobile e sensibilità ambiente FPU sono abilitate per impostazione predefinita. Alcune funzionalità di ottimizzazione, ad esempio forme contratte, sono disabilitati perché il compilatore non garantisce la correttezza in ogni caso.
+Sotto il fp: modalità strict, il compilatore non esegue mai tutte le ottimizzazioni che impostazione l'accuratezza dei calcoli a virgola mobile. Il compilatore eseguirà sempre l'arrotondamento correttamente in assegnazioni, typecast e chiamate di funzione e arrotondamento intermedio verrà costantemente eseguito con la stessa precisione registra l'unità FPU. La semantica delle eccezioni a virgola mobile e alla sensibilità di ambiente FPU sono abilitate per impostazione predefinita. Alcune funzionalità di ottimizzazione, ad esempio forme contratte, sono disabilitate perché il compilatore non garantisce la correttezza in ogni caso.
 
 |/fp: strict semantica|Descrizione|
 |-|-|
-|La semantica di arrotondamento|Arrotondamento esplicita alla assegnazioni, cast di tipo, e chiamate di funzione<br/>Le espressioni intermedie verranno valutate al registro precisione.<br/>Uguale a /fp: precise|
-|Trasformazioni algebriche|Una stretta osservanza di algebra a virgola mobile non associativo, non pacchetto di distribuzione, a meno che non è garantita una trasformazione sempre producono gli stessi risultati.<br/>Uguale a /fp: precise|
-|Forme contratte|Sempre disabilitata|
-|Ordine di valutazione a virgola mobile|Il compilatore non verrà riordinate la valutazione delle espressioni a virgola mobile|
-|L'accesso all'ambiente FPU|Sempre abilitata.|
+|La semantica di arrotondamento|Arrotondamento esplicita alla assegnazioni, typecast e chiamate di funzione<br/>Verranno valutate espressioni intermedie con precisione di registrazione.<br/>Uguale a /fp: precise|
+|Trasformazioni algebriche|Aderendo a non-pacchetto di distribuzione, non associativa algebra a virgola mobile, a meno che una trasformazione è sicuramente sempre producono gli stessi risultati.<br/>Uguale a /fp: precise|
+|Più ricercati|Sempre disabilitata|
+|Ordine di valutazione a virgola mobile|Il compilatore non riordinerà la valutazione di espressioni a virgola mobile|
+|Accesso all'ambiente FPU|Sempre abilitato.|
 |Semantica delle eccezioni a virgola mobile|Abilitato per impostazione predefinita.|
 
 ### <a name="floating-point-exception-semantics-under-fpstrict"></a>La semantica delle eccezioni a virgola mobile in /fp: strict
 
-Per impostazione predefinita, viene abilitata la semantica delle eccezioni a virgola mobile con fp: modello di tipo strict. Per disabilitare questa semantica, utilizzare il **/fp: eccetto-** passare o introdurre una `float_control(except, off)` pragma.
+Per impostazione predefinita, la semantica delle eccezioni a virgola mobile viene abilitata con la /fp: strict modello. Per disabilitare questa semantica, usare il **/fp: tranne-** switch o introdurre un `float_control(except, off)` pragma.
 
-Per altre informazioni, vedere le sezioni [abilitazione la semantica delle eccezioni a virgola mobile](#enabling-floating-point-exception-semantics) e [float_control (pragma)](#the-float-control-pragma).
+Per altre informazioni, vedere le sezioni [abilitare la semantica delle eccezioni a virgola mobile](#enabling-floating-point-exception-semantics) e [float_control (pragma)](#the-float-control-pragma).
 
 ## <a name="the-fenvaccess-pragma"></a>Il pragma fenv_access
 
@@ -867,9 +866,9 @@ Utilizzo:
 #pragma fenv_access( [ on  | off ] )
 ```
 
-Il [fenv_access](../../preprocessor/fenv-access.md) pragma consente al compilatore di determinate ottimizzazioni che potrebbero compromettere test dei flag FPU e cambia la modalità FPU. Quando lo stato di `fenv_access` è disabilitata, il compilatore può assumere la modalità FPU predefinite sono valide e che non sono testati i flag FPU. Per impostazione predefinita, l'accesso all'ambiente è disabilitata per il /fp: precise modalità, anche se può essere abilitato in modo esplicito utilizzando il pragma. In /fp: strict, `fenv_access` è sempre abilitata e non può essere disabilitata. In /fp: fast, `fenv_access` è sempre disabilitato e non può essere abilitato.
+Il [fenv_access](../../preprocessor/fenv-access.md) pragma consente al compilatore di eseguire alcune ottimizzazioni che potrebbero compromettere i test di flag FPU e cambia la modalità FPU. Quando lo stato di `fenv_access` è disabilitata, il compilatore non può presupporre la modalità FPU predefinite sono valide e che non sono testati i flag FPU. Per impostazione predefinita, l'accesso all'ambiente è disabilitata per il fp: modalità precise, ma che potrà essere esplicitamente attivata utilizzando il pragma. In /fp: strict, `fenv_access` è sempre abilitata e non può essere disabilitata. In /fp: fast, `fenv_access` è sempre disabilitato e non può essere abilitato.
 
-Come descritto in fp: sezione preciso, alcuni programmatori possono modificare la direzione di arrotondamento a virgola mobile utilizzando il `_controlfp` (funzione). Ad esempio, per calcolare i limiti superiore e inferiore di errore in operazioni aritmetiche, alcuni programmi eseguono due volte lo stesso calcolo innanzitutto durante arrotondamento verso l'infinito negativo, quindi durante l'arrotondamento verso l'infinito positivo. Poiché l'unità FPU fornisce un modo pratico per controllare l'arrotondamento, un programmatore può scegliere di modificare la modalità di arrotondamento modificando l'ambiente di FPU. Il codice seguente calcola il che errore esatto associato di una moltiplicazione a virgola mobile e modificando l'ambiente di FPU.
+Come descritto in fp: sezione precisa, alcuni programmatori possono modificare la direzione di arrotondamento a virgola mobile usando il `_controlfp` (funzione). Ad esempio, per calcolare i limiti superiore e inferiore di errore nelle operazioni aritmetiche, alcuni programmi eseguono due volte, lo stesso calcolo prima di tutto durante l'arrotondamento verso l'infinito negativo e quindi durante l'arrotondamento verso l'infinito positivo. Poiché l'unità FPU fornisce un modo pratico per controllare l'arrotondamento, un programmatore potrebbe scegliere di modificare la modalità di arrotondamento, modifica dell'ambiente FPU. Il codice seguente calcola il che errore esatto associato di una moltiplicazione a virgola mobile e modificando l'ambiente FPU.
 
 ```cpp
 double a, b, cLower, cUpper;
@@ -881,9 +880,9 @@ cUpper = a*b;
 _controlfp( _RC_NEAR, _MCW_RC );    // restore rounding mode
 ```
 
-Se disabilitato, il `fenv_access` pragma consente al compilatore di supporre l'ambiente di FPU predefinito; pertanto è disponibile ignorare le chiamate a query optimizer `_controlfp` e ridurre le assegnazioni sopra per `cUpper = cLower = a*b`. Quando abilitata, tuttavia, `fenv_access` impedisce che tali ottimizzazioni.
+Se disabilitato, il `fenv_access` pragma consente al compilatore di supporre ambiente FPU predefinito; in questo modo è gratuito ignorare le chiamate a query optimizer `_controlfp` riducendo le assegnazioni di precedente a `cUpper = cLower = a*b`. Quando abilitata, tuttavia, `fenv_access` impedisce che tali ottimizzazioni.
 
-Programmi è anche possono controllare la parola di stato FPU per rilevare alcuni errori a virgola mobile. Ad esempio, il codice seguente controlla le condizioni di divisione per zero e inesatto
+I programmi possono verificare anche la parola di stato FPU per rilevare determinati errori a virgola mobile. Ad esempio, il codice seguente controlla le condizioni di divisione per zero e inesatto
 
 ```cpp
 double a, b, c, r;
@@ -900,9 +899,9 @@ if (_statusfp() & _SW_INEXACT)
 etc...
 ```
 
-Quando `fenv_access` è disabilitata, il compilatore potrebbe ottimizzare l'ordine di esecuzione delle espressioni a virgola mobile, pertanto subverting probabilmente i controlli di stato FPU. Abilitazione `fenv_access` impedisce che tali ottimizzazioni.
+Quando si `fenv_access` è disabilitata, il compilatore potrebbe riordinare l'ordine di esecuzione delle espressioni a virgola mobile, pertanto probabilmente subverting i controlli di stato FPU. Abilitazione `fenv_access` impedisce che tali ottimizzazioni.
 
-## <a name="the-fpcontract-pragma"></a>Fp_contract (pragma)
+## <a name="the-fpcontract-pragma"></a>Il fp_contract (pragma)
 
 Utilizzo:
 
@@ -910,7 +909,7 @@ Utilizzo:
 #pragma fp_contract( [ on | off ] )
 ```
 
-Come descritto in fp: sezione preciso, contrazione è una funzionalità fondamentale dell'architettura per molte unità a virgola mobile moderne. Forme contratte offrono la possibilità di eseguire una moltiplicazione seguita da un'aggiunta come una singola operazione senza errori di arrotondamento intermedi. Queste istruzioni singole sono più velocemente rispetto all'esecuzione separata multiply e aggiungere le istruzioni e sono più accurate poiché non esiste alcun arrotondamento intermedio del prodotto. Un'operazione di contratto possono calcola il valore di `(a*b+c)` come se entrambe le operazioni sono state calcolate a precisione infinita e quindi arrotondate il più vicino al numero a virgola mobile. Questa ottimizzazione può velocizzare le funzioni contenenti diversi con interfoliazione multiply in modo significativo e operazioni di aggiunta. Ad esempio, si consideri il seguente algoritmo che calcola il prodotto scalare di due vettori di n-dimensionale.
+Come descritto in fp: sezione precisa, contrazione è una caratteristica fondamentale dell'architettura per numero di unità a virgola mobile e moderne. Forme contratte offrono la possibilità di eseguire una moltiplicazione seguita da un'aggiunta come una singola operazione senza errori di arrotondamento intermedio. Queste istruzioni singole sono più veloci rispetto all'esecuzione separata moltiplicare e aggiungere le istruzioni e sono più accurate, perché è presente alcun arrotondamento intermedio del prodotto. Un'operazione di contratto può calcola il valore di `(a*b+c)` come se entrambe le operazioni sono state calcolate a precisione infinita e quindi arrotondate il più vicino al numero a virgola mobile. Questa ottimizzazione può significativamente velocizzare le funzioni contenenti più di tipo interleaved multiply e operazioni di aggiunta. Ad esempio, si consideri il seguente algoritmo che calcola il prodotto scalare di due vettori di n-dimensionale.
 
 ```cpp
 float dotProduct( float x[], float y[], int n )
@@ -922,9 +921,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Questo calcolo può essere eseguito una serie di moltiplicare-aggiungere le istruzioni del modulo `p = p + x[i]*y[i]`.
+Questo calcolo può essere eseguito una serie di aggiunta multipla istruzioni del modulo `p = p + x[i]*y[i]`.
 
-Il [fp_contract](../../preprocessor/fp-contract.md) pragma specifica se è possano ridurre espressioni a virgola mobile. Per impostazione predefinita, il /fp: precise modalità consente di utilizzare contrazioni poiché essi migliorare sia la precisione e velocità. Forme contratte sono sempre abilitati per la modalità /fp: fast. Tuttavia, poiché contrazioni possono compromettere il rilevamento esplicito delle condizioni di errore, il `fp_contract` pragma è sempre disabilitato in fp: la modalità strict. Esempi di espressioni che possono essere contratte quando il `fp_contract` pragma è abilitato:
+Il [fp_contract](../../preprocessor/fp-contract.md) pragma specifica se le espressioni a virgola mobile possono entrare in contatto. Per impostazione predefinita, la virgola mobile: modalità precise consente più ricercati dal momento in cui migliorare sia la precisione e velocità. Forme contratte sono sempre abilitati per la modalità /fp: fast. Tuttavia, in quanto più ricercati possono compromettere il rilevamento esplicito di condizioni di errore, il `fp_contract` pragma è sempre disabilitato in fp: modalità strict. Esempi di espressioni che possono essere sviluppate quando il `fp_contract` pragma è abilitato:
 
 ```cpp
 float a, b, c, d, e, t;
@@ -941,7 +940,7 @@ d = t + c;           // won't be contracted because of rounding of a*b
 
 ## <a name="the-floatcontrol-pragma"></a>Float_control (pragma)
 
-Il **/fp: precise**, **/fp: fast**, **/fp: strict** e **/fp: tranne** commutatori semantica della virgola mobile in un file dal file di controllo base. Il [float_control](../../preprocessor/float-control.md) pragma fornisce controllo di questo tipo in base a una funzione dalla funzione.
+Il **/fp: precise**, **/fp: fast**, **/fp: strict** e **/fp: tranne** commutatori semantica della virgola mobile in un file per file di controllo base. Il [float_control](../../preprocessor/float-control.md) pragma fornisce controllo di questo tipo in base a una funzione per funzione.
 
 Utilizzo:
 
@@ -952,22 +951,22 @@ Utilizzo:
 #pragma float_control( except, on | off [, push] )
 ```
 
-I pragma `float_control(push)` e `float_control(pop)` rispettivamente push e pull lo stato corrente della modalità a virgola mobile e l'opzione di eccezione in uno stack. Si noti che lo stato del `fenv_access` e `fp_contract` pragma non sono interessati da `pragma float_control(push/pop)`.
+I pragma `float_control(push)` e `float_control(pop)` rispettivamente di inserire e visualizzare lo stato corrente della modalità a virgola mobile e l'opzione di eccezione in uno stack. Si noti che lo stato del `fenv_access` e `fp_contract` pragma non sono interessati da `pragma float_control(push/pop)`.
 
-Chiamare il pragma `float_control(precise, on)` abiliterà e `float_control(precise, off)` disabiliterà la semantica di modalità precise. Analogamente, il pragma `float_control(except, on)` abiliterà e `float_control(except, off)` disabiliterà la semantica delle eccezioni. La semantica delle eccezioni può essere abilitata solo quando viene attivata anche semantica precisa. Quando l'opzione facoltativa `push` argomento è presente, gli stati del `float_control` opzioni vengono inserite prima di modificare la semantica.
+Chiamare il pragma `float_control(precise, on)` abiliterà e `float_control(precise, off)` disabiliterà la semantica di modalità precise. Analogamente, il pragma `float_control(except, on)` abiliterà e `float_control(except, off)` disabiliterà la semantica delle eccezioni. La semantica delle eccezioni può essere abilitata solo quando viene attivata anche semantica precisa. Quando l'opzione facoltativa `push` argomento è presente, gli stati del `float_control` opzioni vengono inviate prima della modifica la semantica.
 
 ### <a name="setting-the-floating-point-semantic-mode-on-a-function-by-function-basis"></a>Impostazione della modalità di semantica a virgola mobile in base a una funzione per funzione
 
-Le opzioni della riga di comando siano effettivamente a sintassi abbreviata per impostare le quattro pragma a virgola mobile diversi. Per scegliere in modo esplicito una specifica modalità semantica a virgola mobile in base a una funzione dalla funzione, selezionare ciascuno dei quattro pragma a virgola mobile opzione come descritto nella tabella seguente:
+Le opzioni della riga di comando sono infatti sintassi abbreviata per impostare le quattro pragma a virgola mobile diversi. Per scegliere in modo esplicito una determinata modalità di semantica a virgola mobile in base a una funzione per funzione, selezionare ciascuno dei quattro pragma a virgola mobile opzione come descritto nella tabella seguente:
 
 ||||||
 |-|-|-|-|-|
 ||float_control(precise)|float_control(except)|fp_contract|fenv_access|
-|/fp: strict|attivo|attivo|Disattivato|attivo|
-|/fp: strict /fp: eccezione-|attivo|Disattivato|Disattivato|attivo|
-|/fp: precise|attivo|Disattivato|attivo|Disattivato|
-|/fp: precise /fp: tranne|attivo|attivo|attivo|Disattivato|
-|/fp: fast|Disattivato|Disattivato|attivo|Disattivato|
+|/fp: strict|attivo|attivo|Off|attivo|
+|/fp: strict /fp: tranne:|attivo|Off|Off|attivo|
+|/fp: precise|attivo|Off|attivo|Off|
+|/fp: precise /fp: tranne|attivo|attivo|attivo|Off|
+|/fp: fast|Off|Off|attivo|Off|
 
 Ad esempio, il seguente Abilita in modo esplicito /fp: fast semantica.
 
@@ -979,11 +978,11 @@ Ad esempio, il seguente Abilita in modo esplicito /fp: fast semantica.
 ```
 
 > [!Note]
-> La semantica delle eccezioni deve essere spenta prima di spegnere la semantica "precisa".
+> La semantica di eccezione deve essere disattivata prima di spegnere la semantica "precisa".
 
 ## <a name="enabling-floating-point-exception-semantics"></a>Abilitare la semantica delle eccezioni a virgola mobile
 
-Alcune condizioni a virgola mobile eccezionali, ad esempio divisione per zero, possono causare l'unità FPU segnalare un'eccezione hardware. Eccezioni a virgola mobile sono disabilitate per impostazione predefinita. Vengono abilitate le eccezioni a virgola mobile modificando la parola di controllo FPU con il `_controlfp` (funzione). Il codice seguente consente ad esempio, l'eccezione a virgola mobile di divisione per zero:
+Alcune condizioni a virgola mobile eccezionali, ad esempio divisione per zero, possono causare l'unità FPU segnalare un'eccezione hardware. Eccezioni a virgola mobile sono disabilitate per impostazione predefinita. Le eccezioni a virgola mobile sono abilitate modificando la parola di controllo FPU con la `_controlfp` (funzione). Ad esempio, il codice seguente Abilita l'eccezione a virgola mobile di divisione per zero:
 
 ```cpp
 _clearfp(); // always call _clearfp before
@@ -991,13 +990,13 @@ _clearfp(); // always call _clearfp before
 _controlfp( _EM_ZERODIVIDE, _MCW_EM );
 ```
 
-Quando è abilitata l'eccezione di divisione per zero, qualsiasi operazione di divisione con un denominatore pari a zero genererà un'eccezione di FPU venga segnalato.
+Quando è abilitata l'eccezione di divisione per zero, qualsiasi operazione di divisione con un denominatore è uguale a zero genererà un'eccezione FPU venga segnalato.
 
 Per ripristinare la parola di controllo FPU per la modalità predefinita, chiamare `_controlfp(_CW_DEFAULT, ~0)`.
 
-Abilitare la semantica delle eccezioni a virgola mobile e con il **/fp: tranne** flag non corrisponde all'abilitazione di eccezioni a virgola mobile. Quando la semantica delle eccezioni a virgola mobile è abilitata, il compilatore deve considerazione la possibilità che qualsiasi operazione a virgola mobile potrebbe generare un'eccezione. Poiché l'unità FPU è un'unità del processore separati, le istruzioni in esecuzione su unità a virgola mobile possono essere eseguite contemporaneamente a istruzioni su altre unità.
+Abilitare la semantica delle eccezioni a virgola mobile con il **/fp: tranne** flag non corrisponde all'abilitazione di eccezioni a virgola mobile. Quando la semantica delle eccezioni a virgola mobile è abilitata, il compilatore necessario tenere conto della possibilità che qualsiasi operazione a virgola mobile potrebbe generare un'eccezione. Poiché l'unità FPU è un'unità del processore separato, le istruzioni in esecuzione su unità a virgola mobile possono essere eseguite contemporaneamente a istruzioni su altre unità.
 
-Quando un'eccezione a virgola mobile è abilitata, l'unità FPU arresterà l'esecuzione dell'istruzione che causa l'errore e quindi segnalare una condizione eccezionale impostando la parola di stato FPU. Quando la CPU raggiunge l'istruzione successiva a virgola mobile, viene verificata per tutte le eccezioni FPU in sospeso. Se si verifica un'eccezione in sospeso, il processore vengono intercettati chiamando un gestore di eccezioni fornito dal sistema operativo. Ciò significa che quando un'operazione a virgola mobile rileva una condizione eccezionale, l'eccezione corrispondente non verrà rilevato fino a quando non viene eseguita la successiva operazione a virgola mobile. Ad esempio, il codice seguente vengono intercettati un'eccezione di divisione per zero:
+Quando un'eccezione a virgola mobile è abilitata, l'unità FPU arresterà l'esecuzione dell'istruzione che causa l'errore e quindi segnalare una condizione eccezionale, impostare la parola di stato FPU. Quando la CPU raggiunge la successiva istruzione a virgola mobile, viene verificata per tutte le eccezioni FPU in sospeso. Se si verifica un'eccezione in sospeso, il processore intercetta chiamando un gestore di eccezioni fornito dal sistema operativo. Ciò significa che quando un'operazione a virgola mobile rileva una condizione eccezionale, l'eccezione corrispondente non rilevato fino a quando non viene eseguita l'operazione a virgola mobile successiva. Ad esempio, il codice seguente intercetta un'eccezione di divisione per zero:
 
 ```cpp
 double a, b, c;
@@ -1016,14 +1015,14 @@ __except( EXCEPTION_EXECUTE_HANDLER )
 // . . .
 ```
 
-Se si verifica una condizione di divisione per zero nell'espressione un = b/c, l'unità FPU non trap/genera l'eccezione fino alla successiva operazione a virgola mobile nell'espressione 2.0 * b. Ciò produce il seguente output:
+Se si verifica una condizione di divisione per zero nell'espressione un = b/c, l'unità FPU non trap/genera l'eccezione fino all'operazione a virgola mobile successiva nell'espressione 2.0 * b. Ciò produce l'output seguente:
 
 ```Output
 This line shouldn't be reached when c==0.0
 SEH Exception Detected
 ```
 
-Deve printf corrispondente alla prima riga dell'output non sono state raggiunte; è stato raggiunto perché non è stata generata l'eccezione a virgola mobile dovuto l'espressione b/c fino al raggiungimento di esecuzione 2.0 * b. Per generare l'eccezione subito dopo l'esecuzione di b/c, il compilatore deve essere introdotto un'istruzione "wait":
+Le funzioni intrinseche printf corrispondente alla prima riga dell'output deve non sono stati raggiunti; è stato raggiunto perché non è stato generato l'eccezione a virgola mobile generata dall'espressione b/c fino al raggiungimento di esecuzione 2.0 * b. Per generare l'eccezione subito dopo l'esecuzione di b/c, il compilatore deve essere introdotto un'istruzione "wait":
 
 ```cpp
 // . . .
@@ -1037,15 +1036,15 @@ Deve printf corrispondente alla prima riga dell'output non sono state raggiunte;
 // . . .
 ```
 
-Questa istruzione "wait" forza il processore per eseguire la sincronizzazione con lo stato della FPU e gestire tutte le eccezioni in sospeso. Il compilatore genererà solo questi "wait" istruzioni quando è abilitata semantica della virgola mobile. Quando questa semantica è disabilitata, sono presenti per impostazione predefinita, i programmi possono riscontrare errori synchronicity, simili a quello precedente, quando si utilizza le eccezioni a virgola mobile.
+Questa istruzione "attendere" forza il processore per eseguire la sincronizzazione con lo stato dell'unità a virgola mobile e gestire le eccezioni in sospeso. Il compilatore genererà solo questi "attendere" istruzioni quando semantica della virgola mobile è abilitata. Quando tale semantica è disabilitata, perché sono presenti per impostazione predefinita, i programmi potrebbero verificarsi errori di synchronicity, simili a quello riportato sopra, quando si usano le eccezioni a virgola mobile.
 
-Quando la semantica a virgola mobile è abilitata, il compilatore non verrà introdotti solo istruzioni "wait", anche impedirà il compilatore illegalmente ottimizzazione del codice a virgola mobile in presenza di possibili eccezioni. Sono incluse tutte le trasformazioni che modificano i punti in corrispondenza del quale vengono generate eccezioni. A causa di questi fattori, l'abilitazione di semantica della virgola mobile può ridurre notevolmente l'efficienza del codice macchina generato conseguente calo delle prestazioni dell'applicazione.
+Quando la semantica a virgola mobile è abilitata, il compilatore non introduce solo le istruzioni "wait", anche impedirà al compilatore illegalmente ottimizzazione del codice a virgola mobile in presenza di possibili eccezioni. Questo include tutte le trasformazioni che modificano i punti in corrispondenza del quale vengono generate eccezioni. A causa di questi fattori, l'abilitazione di semantica della virgola mobile può ridurre notevolmente l'efficienza del codice macchina generato con conseguente calo delle prestazioni di un'applicazione.
 
-La semantica delle eccezioni a virgola mobile è abilitata per impostazione predefinita in fp: la modalità strict. Per abilitare questa semantica in fp: modalità precise, aggiungere il **/fp: tranne** passare al compilatore da riga di comando. La semantica delle eccezioni a virgola mobile può anche essere abilitata e disabilitata in base a ogni singola dalla funzione utilizzando il `float_control` pragma.
+La semantica delle eccezioni a virgola mobile è abilitata per impostazione predefinita sotto la fp: modalità strict. Per abilitare tale semantica in fp: modalità precise, aggiungere il **/fp: tranne** passare al compilatore della riga di comando. La semantica delle eccezioni a virgola mobile può anche essere abilitata e disabilitata in una funzione dalla base usando la `float_control` pragma.
 
-### <a name="floating-point-exceptions-as-c-exceptions"></a>Eccezioni a virgola mobile come eccezioni di C++
+### <a name="floating-point-exceptions-as-c-exceptions"></a>Eccezioni a virgola mobile come eccezioni C++
 
-Come con tutte le eccezioni hardware, le eccezioni a virgola mobile non causano per sé un'eccezione C++, ma invece attivano un'eccezione strutturata. Per mappare le eccezioni strutturate a virgola mobile a eccezioni C++, gli utenti possono introdurre una funzione di conversione di eccezione SEH personalizzato. In primo luogo, introduce un'eccezione C++ corrispondente a ogni eccezione a virgola mobile:
+Come con tutte le eccezioni hardware, le eccezioni a virgola mobile e intrinsecamente non provocano un'eccezione C++, ma invece generano un'eccezione strutturata. Per eseguire il mapping a virgola mobile e delle eccezioni strutturate delle eccezioni C++, gli utenti possono introdurre un convertitore di eccezioni SEH personalizzato. In primo luogo, introduce un'eccezione C++ corrispondente a ogni eccezione a virgola mobile:
 
 ```cpp
 class float_exception : public std::exception {};
@@ -1059,7 +1058,7 @@ class fe_stack_check : public float_exception {};
 class fe_underflow : public float_exception {};
 ```
 
-Quindi, introdurre una funzione di conversione che rileverà un'eccezione SEH a virgola mobile e generare l'eccezione C++ corrispondente. Per utilizzare questa funzione, impostare il convertitore di gestore di eccezioni strutturato per il thread del processo corrente con il [set_se_translator](../../c-runtime-library/reference/set-se-translator.md) funzione dalla libreria di runtime.
+Quindi, introdurre una funzione di conversione che consentirà di rilevare un'eccezione SEH a virgola mobile e di generare l'eccezione C++ corrispondente. Per usare questa funzione, impostare il convertitore di gestore di eccezioni strutturate per il thread del processo corrente con il [set_se_translator](../../c-runtime-library/reference/set-se-translator.md) funzione dalla libreria di runtime.
 
 ```cpp
 void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
@@ -1075,7 +1074,7 @@ void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
 _set_se_translator(se_fe_trans_func);
 ```
 
-Dopo questo mapping viene inizializzato, le eccezioni a virgola mobile si comporteranno come se fossero le eccezioni C++. Ad esempio:
+Dopo questo mapping viene inizializzato, eccezioni a virgola mobile si comporteranno come se fossero eccezioni C++. Ad esempio:
 
 ```cpp
 try
@@ -1095,7 +1094,7 @@ catch(float_exception)
 
 ## <a name="references"></a>Riferimenti
 
-[Che cosa esperto ogni Computer necessario essere a conoscenza aritmetica a virgola mobile](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf) da David guerra.
+[Che cosa ogni esperto di informatica dovrebbe conoscere su aritmetica a virgola mobile](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf) da David guerra.
 
 ## <a name="see-also"></a>Vedere anche
 

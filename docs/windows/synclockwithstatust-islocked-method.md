@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80c744431fe7df32be705fcf91eef0a8691b8fa4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d70a2c316f9e7994292f3dc29cef5bce993778ad
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015798"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595063"
 ---
 # <a name="synclockwithstatustislocked-method"></a>Metodo SyncLockWithStatusT::IsLocked
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-bool IsLocked() const;  
-```  
-  
-## <a name="remarks"></a>Note  
- Indica se l'oggetto corrente **SyncLockWithStatusT** oggetto proprietario di una risorsa, ovvero, il **SyncLockWithStatusT** oggetto è *bloccato*.  
-  
-## <a name="return-value"></a>Valore restituito  
- **true** se il **SyncLockWithStatusT** oggetto è bloccato; in caso contrario, **false**.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="remarks"></a>Note
+
+Indica se l'oggetto corrente **SyncLockWithStatusT** oggetto proprietario di una risorsa, ovvero, il **SyncLockWithStatusT** oggetto è *bloccato*.
+
+## <a name="return-value"></a>Valore restituito
+
+**true** se il **SyncLockWithStatusT** oggetto è bloccato; in caso contrario, **false**.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)

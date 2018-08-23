@@ -1,20 +1,20 @@
 ---
-title: Interfacce (C + + CX) | Documenti Microsoft
+title: Interfacce (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090652"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592552"
 ---
 # <a name="interfaces-ccx"></a>Interfacce (C++/CX)
 Sebbene possa ereditare solo da una classe base concreta, una classe di riferimento può implementare qualsiasi numero di classi di interfaccia. Una classe di interfaccia (o struct di interfaccia) può ereditare (o richiedere) più classi di interfaccia, eseguire l'overload delle relative funzioni membro e avere parametri di tipo.  
@@ -30,7 +30,7 @@ Sebbene possa ereditare solo da una classe base concreta, una classe di riferime
   
 -   Non sono consentiti campi e membri statici.  
   
--   Tipi che sono utilizzati come proprietà, parametri di metodo o valori restituiscono possono essere solo tipi Windows Runtime. sono inclusi i tipi fondamentali e i tipi di classe di enumerazione.  
+-   Tipi che vengono usati come parametri del metodo, proprietà o restituiscono i valori possono essere solo tipi Windows Runtime. Questo include i tipi fondamentali e i tipi di classe di enumerazione.  
   
 ## <a name="declaration-and-usage"></a>Dichiarazione e utilizzo  
  Nell'esempio riportato di seguito viene illustrato come dichiarare un'interfaccia. Nota che un'interfaccia può essere dichiarata come tipo di classe o come tipo di struct.  
@@ -63,9 +63,9 @@ Sebbene possa ereditare solo da una classe base concreta, una classe di riferime
  [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]  
   
 ## <a name="generic-interfaces"></a>Interfacce generiche  
- In C + + CX, il `generic` parola chiave viene utilizzata per rappresentare un tipo Windows Runtime con parametri. Un tipo con parametri viene emesso nei metadati e può essere utilizzato da codice scritto in qualsiasi linguaggio che supporta i parametri di tipo. Windows Runtime definisce alcune interfacce generiche, ad esempio, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), ma non supporta la creazione di interfacce generiche definite dall'utente pubbliche in C + + CX. Tuttavia, è possibile creare interfacce generiche private.  
+ In C + + c++ /CX, la `generic` (parola chiave) viene usato per rappresentare un tipo Windows Runtime con parametri. Un tipo con parametri viene emesso nei metadati e può essere utilizzato da codice scritto in qualsiasi linguaggio che supporta i parametri di tipo. Windows Runtime definisce alcune interfacce generiche, ad esempio, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), ma non supporta la creazione di interfacce generiche definite dall'utente pubbliche in C + + c++ /CLI CX. Tuttavia, è possibile creare interfacce generiche private.  
   
- Ecco come tipi di Windows Runtime utilizzabile per creare un'interfaccia generica:  
+ Ecco come tipi Windows Runtime utilizzabile per creare un'interfaccia generica:  
   
 -   Una `interface class` generica definita dall'utente in un componente non può essere emessa nel relativo file di metadati Windows, pertanto non può avere accessibilità pubblica e il codice client in altri file con estensione winmd non può implementarla. Può essere implementata da classi di riferimento non pubbliche nello stesso componente. Una classe di riferimento pubblica può avere un tipo di interfaccia generico come membro privato.  
   
@@ -77,7 +77,7 @@ Sebbene possa ereditare solo da una classe base concreta, una classe di riferime
   
 -   Questo tipo di interfaccia può accettare uno o più parametri di tipo generico che sono preceduti da `typename` o da `class`. Non sono supportati i parametri non di tipo.  
   
--   Un parametro di tipo può essere qualsiasi tipo di Windows Runtime. Ciò significa che il parametro di tipo può essere un tipo di riferimento, un tipo di valore, una classe di interfaccia, un delegato, un tipo fondamentale o una classe enum pubblica.  
+-   Un parametro di tipo può essere qualsiasi tipo Windows Runtime. Ciò significa che il parametro di tipo può essere un tipo di riferimento, un tipo di valore, una classe di interfaccia, un delegato, un tipo fondamentale o una classe enum pubblica.  
   
 -   Un' *interfaccia generica chiusa* è un'interfaccia che eredita da un'interfaccia generica e specifica gli argomenti di tipo concreti per tutti i parametri di tipo. Può essere utilizzata in tutti i casi in cui è consentito l'uso di un'interfaccia privata non generica.  
   
@@ -97,5 +97,5 @@ Sebbene possa ereditare solo da una classe base concreta, una classe di riferime
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi](../cppcx/type-system-c-cx.md)   
- [Riferimenti al linguaggio di Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

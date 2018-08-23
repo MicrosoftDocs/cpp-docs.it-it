@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417ca38ab44d334fd26c503edc2727934983c39d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a97ea483bddb0ed6b2fadce1f9daa50eab82591a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648142"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596905"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>Costante ChainInterfaces::IidCount
-Il numero totale di interfaccia ID contenuti nelle interfacce specificate dai parametri modello *I0* attraverso *I9*.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Il numero totale di ID di interfaccia.  
-  
-## <a name="remarks"></a>Note  
- I parametri del modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *I9* sono facoltativi. Il conteggio IID di ogni interfaccia in genere è 1.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Struttura ChainInterfaces](../windows/chaininterfaces-structure.md)
+
+Il numero totale di interfaccia ID contenuti nelle interfacce specificate dai parametri modello *I0* attraverso *I9*.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Il numero totale di ID di interfaccia.
+
+## <a name="remarks"></a>Note
+
+I parametri del modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *I9* sono facoltativi. Il conteggio IID di ogni interfaccia in genere è 1.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Struttura ChainInterfaces](../windows/chaininterfaces-structure.md)

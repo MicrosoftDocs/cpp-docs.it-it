@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c795a3a80c48e7fa976807ab3e261fc927d7e104
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 09e0dc3b9caf059bb8ecdce0468dfc118ce9ebfa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644271"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594944"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>Metodo ChainInterfaces::FillArrayWithIid
-Archivia l'ID di interfaccia definito per il *I0* parametro di modello in una posizione specificata in una matrice specificata di ID di interfaccia.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-__forceinline static void FillArrayWithIid(  
-   _Inout_ unsigned long &index,  
-   _In_ IID* iids  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *index*  
- Puntatore a un valore di indice nel *IID* matrice.  
-  
- *IID*  
- Matrice ID di interfaccia.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Struttura ChainInterfaces](../windows/chaininterfaces-structure.md)
+
+Archivia l'ID di interfaccia definito per il *I0* parametro di modello in una posizione specificata in una matrice specificata di ID di interfaccia.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*index*  
+Puntatore a un valore di indice nel *IID* matrice.
+
+*IID*  
+Matrice ID di interfaccia.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Struttura ChainInterfaces](../windows/chaininterfaces-structure.md)

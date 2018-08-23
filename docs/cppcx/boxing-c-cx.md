@@ -1,20 +1,20 @@
 ---
-title: La conversione boxing (C + + CX) | Documenti Microsoft
+title: Boxing (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e47313f65c4129bbc6fbf0a7bfbf698eb092f9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e70b908bddbf7034e1d60f16cb0e492c0a707586
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086499"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598880"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 L'operazione*Boxing* esegue il wrapping di una variabile di tipo valore come [Windows::Foundation::DateTime](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)o di un tipo scalare fondamentale come `int`in una classe di riferimento quando la variabile viene passata a un metodo che accetta [Platform::Object^](../cppcx/platform-object-class.md) come relativo tipo di input.  
@@ -25,7 +25,7 @@ L'operazione*Boxing* esegue il wrapping di una variabile di tipo valore come [Wi
  [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]  
   
 ### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Tramite platform:: ibox\<T > per supportare i tipi di valore nullable  
- C# e Visual Basic supportano il concetto dei tipi di valore nullable. In C + + CX, è possibile utilizzare il `Platform::IBox<T>` tipo per esporre metodi pubblici che supportano i parametri di tipo di valore nullable. Nell'esempio seguente viene illustrato C + + metodo pubblico CX che restituisce null quando un chiamante c# passa un valore null per uno degli argomenti.  
+ C# e Visual Basic supportano il concetto dei tipi di valore nullable. In C + + c++ /CX, è possibile usare il `Platform::IBox<T>` tipo per esporre metodi pubblici che supportano i parametri di tipo valore nullable. L'esempio seguente mostra una C + + / metodo pubblico CX che restituisce null quando un chiamante c# passa un valore null per uno degli argomenti.  
   
  [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]  
   
@@ -43,6 +43,6 @@ L'operazione*Boxing* esegue il wrapping di una variabile di tipo valore come [Wi
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)   
- [Cast (C + + CX)](../cppcx/casting-c-cx.md)   
- [Riferimenti al linguaggio di Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Esegue il cast (C + c++ /CX)](../cppcx/casting-c-cx.md)   
+ [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

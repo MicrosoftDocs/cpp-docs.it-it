@@ -17,41 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32418b163cb31f5eaf20c9d2b3ff3a4b585850dd
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6ce3e391ac0da93ed7571a95ce328a5260a8dd44
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644099"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593607"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake (classe)
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-class DontUseNewUseMake;  
-```  
-  
-## <a name="remarks"></a>Note  
- Impedisce usando l'operatore **nuove** in `RuntimeClass`. Di conseguenza, è necessario usare il [rendere funzione](../windows/make-function.md) invece.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-operators"></a>Operatori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Operatore DontUseNewUseMake::operator new](../windows/dontusenewusemake-operator-new-operator.md)|Operatore di overload **nuove** e impedisce l'utilizzo `RuntimeClass`.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `DontUseNewUseMake`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Microsoft::WRL::Details Namespace](../windows/microsoft-wrl-details-namespace.md)   
- [Funzione Make](../windows/make-function.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+class DontUseNewUseMake;
+```
+
+## <a name="remarks"></a>Note
+
+Impedisce usando l'operatore **nuove** in `RuntimeClass`. Di conseguenza, è necessario usare il [rendere funzione](../windows/make-function.md) invece.
+
+## <a name="members"></a>Membri
+
+### <a name="public-operators"></a>Operatori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Operatore DontUseNewUseMake::operator new](../windows/dontusenewusemake-operator-new-operator.md)|Operatore di overload **nuove** e impedisce l'utilizzo `RuntimeClass`.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`DontUseNewUseMake`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)  
+[Funzione Make](../windows/make-function.md)

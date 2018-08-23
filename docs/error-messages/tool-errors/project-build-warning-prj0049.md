@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0049 avviso di compilazione | Documenti Microsoft
+title: Avviso di compilazione PRJ0049 di progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df6fcb8bc5d6517a46279e0bef5036db1e81241
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 726294f420000ab1d1b98be72d310dfcbfcd04c0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319810"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591884"
 ---
 # <a name="project-build-warning-prj0049"></a>Avviso di compilazione progetto PRJ0049
 Destinazione di riferimento '\<riferimento >' richiede .NET Framework \<MinFrameworkVersion > e non verrà eseguito nel framework di destinazione del progetto  
   
- Le applicazioni create utilizzando Visual Studio 2008 è possono specificare quale versione di [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)] di destinazione. Se si aggiunge un riferimento a un assembly o un progetto che dipende da una versione di [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)] successiva alla versione di destinazione, verrà visualizzato questo avviso in fase di compilazione.  
+ Le applicazioni create con Visual Studio 2008 è possono specificare quale versione di .NET Framework di destinazione. Se si aggiunge un riferimento a un assembly o un progetto che dipende da una versione di .NET Framework successiva alla versione di destinazione, si otterrà questo avviso in fase di compilazione.  
   
 ### <a name="to-correct-this-warning"></a>Per risolvere il problema  
   
 1.  Effettuare una delle seguenti operazioni:  
   
-    -   Modificare il framework di destinazione del progetto **pagine delle proprietà** nella finestra di dialogo in modo che sia successivo o uguale alla versione minima framework di riferimento a tutti gli assembly e progetti. Per ulteriori informazioni, vedere [aggiunta di riferimenti](../../ide/adding-references-in-visual-cpp-projects.md).  
+    -   Modificare il framework di destinazione del progetto **pagine delle proprietà** finestra di dialogo, in modo che sia successiva o uguale alla versione minima framework di tutti i riferimenti di assembly e progetti. Per altre informazioni, vedere [aggiunta di riferimenti](../../ide/adding-references-in-visual-cpp-projects.md).  
   
-    -   Rimuovere il riferimento all'assembly o un progetto con una versione minima del framework che è successiva a quella del framework di destinazione. Questi elementi verranno contrassegnati con un'icona di avviso del progetto **pagine delle proprietà**.  
+    -   Rimuovere il riferimento all'assembly o un progetto con una versione minima del framework successiva a quella di framework di destinazione. Questi elementi verranno contrassegnati con un'icona di avviso del progetto **pagine delle proprietà**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Errori e avvisi relativi alla compilazione di progetti (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

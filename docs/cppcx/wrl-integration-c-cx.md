@@ -1,36 +1,36 @@
 ---
-title: Integrazione WRL (C + + CX) | Documenti Microsoft
+title: Integrazione WRL (C++ c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090260"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598090"
 ---
 # <a name="wrl-integration-ccx"></a>Integrazione WRL (C++/CX)
 
-È possibile combinare liberamente il codice WRL con [!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) codice. Nella stessa unità di conversione, è possibile utilizzare oggetti dichiarati con WRL handle a oggetto (`^`) notazione e [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] puntatore intelligente (`ComPtr<T>`) notazione. Tuttavia, è necessario gestire manualmente i valori restituiti, e [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] HRESULT codici di errore e le eccezioni possono essere richiesti.
+È possibile combinare liberamente il codice WRL con codice di libreria modelli C++ (WRL) di Windows Runtime. Nella stessa unità di conversione, è possibile utilizzare oggetti dichiarati con WRL handle a oggetto (`^`) la notazione e WRL smart puntatore (`ComPtr<T>`) notation. Tuttavia, è necessario gestire manualmente i valori restituiti e i codici di errore WRL HRESULT ed eccezioni WRL.
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>Sviluppo in[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 
+## <a name="wrl-development"></a>Sviluppo di WRL
 
-Per ulteriori informazioni sulla creazione e utilizzo [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] componenti, vedere [libreria di modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).
+Per altre informazioni sulla creazione e l'utilizzo dei componenti WRL, vedere [libreria modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Esempio
 
-Frammento di codice seguente viene illustrato come utilizzare WRL e [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] utilizzare [!INCLUDE[wrt](includes/wrt-md.md)] classi ed esaminare un file di metadati.
+Il frammento di codice seguente illustra l'uso di WRL e WRL per usare le classi di Windows Runtime e analizzare un file di metadati.
 
-L'esempio è tratto da un frammento di codice nel forum di App di compilazione Microsoft Store. L'autore del frammento di codice presenta le seguenti dichiarazioni di non responsabilità e condizioni:
+L'esempio è tratto da un frammento di codice all'interno del forum di App di Microsoft Store predefiniti. L'autore del frammento di codice presenta le seguenti dichiarazioni di non responsabilità e condizioni:
 
-1. Il linguaggio C++ non fornisce API specifiche che si riflettono sui tipi [!INCLUDE[wrt](includes/wrt-md.md)] , ma i file di metadati di Windows (.winmd) per un tipo sono pienamente compatibili con i file di metadati CLR. Windows fornisce la nuova API di individuazione dei metadati (RoGetMetaDataFile) per ottenere il file .winmd per un determinato tipo. Tuttavia, queste API sono limitate all'uso da parte degli sviluppatori C++ perché non è possibile creare istanze di una classe.
+1. C++ non fornisce API specifiche che si riflettono sui tipi Windows Runtime, ma i file di metadati Windows (con estensione winmd) per un tipo sono pienamente compatibili con i file di metadati CLR. Windows fornisce la nuova API di individuazione dei metadati (RoGetMetaDataFile) per ottenere il file .winmd per un determinato tipo. Tuttavia, queste API sono limitate all'uso da parte degli sviluppatori C++ perché non è possibile creare istanze di una classe.
 
 1. Una volta compilato il codice, dovrai anche passare i file Runtimeobject.lib e Rometadata.lib al linker.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: NotImplementedException | Documenti Microsoft'
+title: 'Classe platform:: NotImplementedException | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ad78bb1eebd9bf5b1bc268fc64bb7c7c3c0818
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee6e30b4f55b5d87ee5b1f67d39d3cc96932f065
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088503"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597742"
 ---
 # <a name="platformnotimplementedexception-class"></a>Classe Platform::NotImplementedException
 Generata quando un membro di interfaccia non viene implementato in un tipo derivato.  

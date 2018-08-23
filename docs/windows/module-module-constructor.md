@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d63b90bb3622129589fca41c029f548a07ec21b8
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e0459c729368dc182de955f85afda514b2ff5071
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017656"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591862"
 ---
 # <a name="modulemodule-constructor"></a>Costruttore Module::Module
-Inizializza una nuova istanza di **modulo** classe.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-Module();  
-```  
-  
-## <a name="remarks"></a>Note  
- Questo costruttore è protetto e non può essere chiamato con il **nuovo** (parola chiave). In alternativa, chiamare [metodo Module:: GetModule](../windows/module-getmodule-method.md) oppure [metodo Module:: Create](../windows/module-create-method.md).  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Vedere anche
- [Classe Module](../windows/module-class.md)
+
+Inizializza una nuova istanza di **modulo** classe.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+Module();
+```
+
+## <a name="remarks"></a>Note
+
+Questo costruttore è protetto e non può essere chiamato con il **nuovo** (parola chiave). In alternativa, chiamare [metodo Module:: GetModule](../windows/module-getmodule-method.md) oppure [metodo Module:: Create](../windows/module-create-method.md).
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+[Classe Module](../windows/module-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Heapallocationtrackinglevel (enumerazione) | Documenti Microsoft
+title: Heapallocationtrackinglevel (enumerazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::HeapAllocationTrackingLevel Enumeration
 ms.assetid: dc341bc0-b47b-4eb2-9445-fbaf788e7b1a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1c3dd382604e51f049ac157faba38e0d7d0032
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d80a91c8dcca5b2b66f0225a39c3cb208656b46c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086928"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593848"
 ---
 # <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::Details::HeapAllocationTrackingLevel (enumerazione)
 Questa enumerazione è solo per uso interno e non deve essere usata per lo sviluppo.  
@@ -44,4 +44,4 @@ enumm class HeapAllocationTrackingLevel;
  **Spazio dei nomi:** Platform::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Piattaforma Namespace](platform-namespace-c-cx.md)
+ [Platform Namespace](platform-namespace-c-cx.md)
