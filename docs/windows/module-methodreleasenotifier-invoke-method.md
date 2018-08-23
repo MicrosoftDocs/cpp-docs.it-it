@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aecfcb724207b51ef17220735c4019e14b799ec0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d41c864f4198b0db34253c5dc300f8f9728f4d21
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019812"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607437"
 ---
 # <a name="modulemethodreleasenotifierinvoke-method"></a>Metodo Module::MethodReleaseNotifier::Invoke
-Chiama il gestore dell'evento associato all'oggetto corrente **Module:: methodreleasenotifier** oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-void Invoke();  
-```  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)
+
+Chiama il gestore dell'evento associato all'oggetto corrente **Module:: methodreleasenotifier** oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+void Invoke();
+```
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)

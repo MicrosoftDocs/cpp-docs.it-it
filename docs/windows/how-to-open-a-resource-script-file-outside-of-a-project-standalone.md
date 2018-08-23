@@ -20,56 +20,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2711c34d55c4f4a7f1acfba4f315e06768623014
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013414"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600910"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Procedura: aprire un file script di risorsa all'esterno di un progetto (file autonomo)
-È possibile visualizzare le risorse in un file RC anche se non è aperto alcun progetto. Il file con estensione RC verrà aperto in una finestra del documento anziché nella [visualizzazione risorse](../windows/resource-view-window.md) finestra (come avviene quando il file è aperto all'interno di un progetto).  
-  
+
+È possibile visualizzare le risorse in un file RC anche se non è aperto alcun progetto. Il file con estensione RC verrà aperto in una finestra del documento anziché nella [visualizzazione risorse](../windows/resource-view-window.md) finestra (come avviene quando il file è aperto all'interno di un progetto).
+
 > [!NOTE]
->  Questa distinzione è importante poiché alcuni comandi sono disponibili solo quando il file viene aperto in modo autonomo, all'esterno di un progetto. Ad esempio, è possibile solo salvare un file in un formato diverso o con un nome diverso quando il file viene aperto all'esterno di un progetto (il **Salva con nome** comando non è disponibile quando un file viene aperto all'interno di un progetto).  
-  
-### <a name="to-open-an-rc-file-outside-a-project"></a>Per aprire un file RC all'esterno di un progetto  
-  
-1.  Dal **File** menu, scegliere **Open**, quindi fare clic su **File**.  
-  
-2.  Nel **Apri File** finestra di dialogo passare al file di script di risorse si vuole visualizzare, evidenziare il file e fare clic su **Open**.  
-  
-    > [!NOTE]
-    >  Se si apre innanzitutto il progetto (**File**, **aprire**, **progetto**), alcuni comandi non saranno disponibili all'utente. Aprire un file "in modo autonomo" significa aprirlo senza caricare il progetto.  
-  
- Per aprire e visualizzare il file di risorse in formato testo, vedere [modifica di uno Script di risorsa (RC)](../windows/how-to-open-a-resource-script-file-in-text-format.md).  
-  
-### <a name="to-open-multiple-rc-files-outside-a-project"></a>Per aprire più file RC all'esterno di un progetto  
-  
-1.  Aprire entrambi i file di risorsa in modo autonomo. Ad esempio, aprire `Source1.rc` e `Source2.rc`.  
-  
-    1.  Dal **File** menu, scegliere **Open**, quindi fare clic su **File**.  
-  
-    2.  Nel **Apri File** finestra di dialogo passare per il primo file di script di risorsa che si desidera aprire (`Source1.rc`), evidenziare il file e fare clic su **aprire**.  
-  
-    3.  Ripetere il passaggio precedente per aprire il secondo file RC (`Source2.rc`).  
-  
-         I file RC verranno quindi aperti in finestre del documento separate.  
-  
-2.  Quando entrambi i file RC sono aperti, affiancare le finestra in modo da visualizzarle contemporaneamente:  
-  
-    -   Dal **finestra** menu, scegliere **nuovo gruppo di schede orizzontali** oppure **nuovo gruppo di schede verticali**.  
-  
-         \- oppure -  
-  
-    -   Fare doppio clic su uno dei file con estensione RC e scegliere **nuovo gruppo di schede orizzontali** oppure **gruppo di schede verticali** dal menu di scelta rapida.  
-  
+> Questa distinzione è importante poiché alcuni comandi sono disponibili solo quando il file viene aperto in modo autonomo, all'esterno di un progetto. Ad esempio, è possibile solo salvare un file in un formato diverso o con un nome diverso quando il file viene aperto all'esterno di un progetto (il **Salva con nome** comando non è disponibile quando un file viene aperto all'interno di un progetto).
+
+### <a name="to-open-an-rc-file-outside-a-project"></a>Per aprire un file RC all'esterno di un progetto
+
+1. Dal **File** menu, scegliere **Open**, quindi fare clic su **File**.
+
+2. Nel **Apri File** finestra di dialogo passare al file di script di risorse si vuole visualizzare, evidenziare il file e fare clic su **Open**.
+
+   > [!NOTE]
+   > Se si apre innanzitutto il progetto (**File**, **aprire**, **progetto**), alcuni comandi non saranno disponibili all'utente. Aprire un file "in modo autonomo" significa aprirlo senza caricare il progetto.
+
+Per aprire e visualizzare il file di risorse in formato testo, vedere [modifica di uno Script di risorsa (RC)](../windows/how-to-open-a-resource-script-file-in-text-format.md).
+
+### <a name="to-open-multiple-rc-files-outside-a-project"></a>Per aprire più file RC all'esterno di un progetto
+
+1. Aprire entrambi i file di risorsa in modo autonomo. Ad esempio, aprire `Source1.rc` e `Source2.rc`.
+
+   1. Dal **File** menu, scegliere **Open**, quindi fare clic su **File**.
+
+   2. Nel **Apri File** finestra di dialogo passare per il primo file di script di risorsa che si desidera aprire (`Source1.rc`), evidenziare il file e fare clic su **aprire**.
+
+   3. Ripetere il passaggio precedente per aprire il secondo file RC (`Source2.rc`).
+
+       I file RC verranno quindi aperti in finestre del documento separate.
+
+2. Quando entrambi i file RC sono aperti, affiancare le finestra in modo da visualizzarle contemporaneamente:
+
+   - Dal **finestra** menu, scegliere **nuovo gruppo di schede orizzontali** oppure **nuovo gruppo di schede verticali**.
+
+       \- oppure -
+
+   - Fare doppio clic su uno dei file con estensione RC e scegliere **nuovo gruppo di schede orizzontali** oppure **gruppo di schede verticali** dal menu di scelta rapida.
+
 > [!NOTE]
->  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [File di risorse](../windows/resource-files-visual-studio.md)   
- [Editor di risorse](../windows/resource-editors.md)
+> Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[File di risorse](../windows/resource-files-visual-studio.md)  
+[Editor di risorse](../windows/resource-editors.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405188"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606415"
 ---
 # <a name="raising-software-exceptions"></a>Generazione di eccezioni software
 Alcuni degli errori di programma più comuni non sono contrassegnati come eccezioni dal sistema. Ad esempio, se si tenta di allocare un blocco di memoria ma non vi è memoria sufficiente, il runtime o la funzione API non genera un'eccezione ma restituisce un codice di errore.  
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- Se si desidera semplicemente generare un'eccezione, è possibile impostare gli ultimi tre parametri su 0. Gli ultimi tre parametri sono utili per comunicare le informazioni aggiuntive e impostare un contrassegno che impedisce ai gestori di proseguire l'esecuzione. Vedere le [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) funzionare nel [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] per altre informazioni.  
+ Se si desidera semplicemente generare un'eccezione, è possibile impostare gli ultimi tre parametri su 0. Gli ultimi tre parametri sono utili per comunicare le informazioni aggiuntive e impostare un contrassegno che impedisce ai gestori di proseguire l'esecuzione. Vedere le [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) funzione nel SDK di Windows per altre informazioni.  
   
  Nei filtri di gestione delle eccezioni, è quindi possibile eseguire il test dei codici definiti. Ad esempio:  
   

@@ -1,5 +1,5 @@
 ---
-title: ID proprietà | Documenti Microsoft
+title: Proprietà ID | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebe701711de329d7b763b7bf3b3d3dbf1ce0ce93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 89a6b3392491ad36a0b0c9d542ffac4738b7c0f6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881117"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605359"
 ---
 # <a name="id-property"></a>Proprietà ID
-La proprietà ID fa riferimento a ogni voce della tabella di tasti di scelta rapida nel codice programma. Questo è il valore del comando che il programma verrà visualizzato quando l'utente preme il tasto di scelta rapida o una combinazione di tasti. Per rendere un acceleratore come una voce di menu, verificare i relativi ID lo stesso da (purché l'ID della tabella di tasti di scelta rapida è lo stesso ID per la risorsa di menu).  
+La proprietà ID fa riferimento a ogni voce della tabella di tasti di scelta rapida nel codice del programma. Questo è il valore del comando che riceverà il programma quando l'utente preme il tasto di scelta rapida o una combinazione di tasti. Per rendere un acceleratore quello utilizzato per una voce di menu, verificare i relativi ID lo stesso da (purché l'ID della tabella di tasti di scelta rapida è quello utilizzato per l'ID per la risorsa di menu).
   
-## <a name="requirements"></a>Requisiti  
- Win32  
+## <a name="requirements"></a>Requisiti
+ Win32
   
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle proprietà dei tasti di scelta rapida](../windows/setting-accelerator-properties.md)   
+## <a name="see-also"></a>Vedere anche
+ [Impostazione delle proprietà dei tasti di scelta rapida](../windows/setting-accelerator-properties.md)  
  [Editor tasti di scelta rapida](../windows/accelerator-editor.md)

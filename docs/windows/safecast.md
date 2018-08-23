@@ -12,55 +12,61 @@ dev_langs:
 helpviewer_keywords:
 - SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07311e916fa78f1ba946ad4631905968912f8195
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 27c049b57d51f173e2a388e48f24d9b9674ae46b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019066"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606097"
 ---
 # <a name="safecast"></a>SafeCast
-Esegue il cast di un tipo di numero in un altro tipo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-template<typename T, typename U>  
-inline bool SafeCast (  
-   const T From,  
-   U& To  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- [in] *Da*  
- Il numero di origine da convertire. Deve essere di tipo `T`.  
-  
- [out] *a*  
- Riferimento per il nuovo tipo di numero. Deve essere di tipo `U`.  
-  
-## <a name="return-value"></a>Valore restituito  
- **true** se si verifica alcun errore; **false** se si verifica un errore.  
-  
-## <a name="remarks"></a>Note  
- Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettato per un'operazione cast singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
-  
+
+Esegue il cast di un tipo di numero in un altro tipo.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+template<typename T, typename U>
+inline bool SafeCast (
+   const T From,
+   U& To
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+[in] *Da*  
+Il numero di origine da convertire. Deve essere di tipo `T`.
+
+[out] *a*  
+Riferimento per il nuovo tipo di numero. Deve essere di tipo `U`.
+
+## <a name="return-value"></a>Valore restituito
+
+**true** se si verifica alcun errore; **false** se si verifica un errore.
+
+## <a name="remarks"></a>Note
+
+Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettato per un'operazione cast singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).
+
 > [!NOTE]
->  Questo metodo deve essere utilizzato solo quando deve essere protetto una sola operazione. Se sono presenti più operazioni, è necessario utilizzare la classe `SafeInt` anziché chiamare le singole funzioni autonome.  
-  
- Per altre informazioni sui tipi di modello T e U, vedere [funzioni SafeInt](../windows/safeint-functions.md).  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** SafeInt. h  
-  
- **Namespace:** Microsoft:: Utilities  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni SafeInt](../windows/safeint-functions.md)   
- [Libreria SafeInt](../windows/safeint-library.md)   
- [Classe SafeInt](../windows/safeint-class.md)
+> Questo metodo deve essere utilizzato solo quando deve essere protetto una sola operazione. Se sono presenti più operazioni, è necessario utilizzare la classe `SafeInt` anziché chiamare le singole funzioni autonome.
+
+Per altre informazioni sui tipi di modello T e U, vedere [funzioni SafeInt](../windows/safeint-functions.md).
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** SafeInt. h
+
+**Namespace:** Microsoft:: Utilities
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni SafeInt](../windows/safeint-functions.md)  
+[Libreria SafeInt](../windows/safeint-library.md)  
+[Classe SafeInt](../windows/safeint-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: OutOfMemoryException | Documenti Microsoft'
+title: 'Classe platform:: OutOfMemoryException | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::OutOfMemoryException
 ms.assetid: 49c19f6b-f66c-4448-b861-91dcbf32de2c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f80424026d903127bfd4eb9e29faa0a4001ce938
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ded5bb355b961e7d271fdb51d2cf6aac9a134f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087256"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612194"
 ---
 # <a name="platformoutofmemoryexception-class"></a>Classe Platform::OutOfMemoryException
 Generata quando la memoria disponibile non è sufficiente per completare l'operazione.  

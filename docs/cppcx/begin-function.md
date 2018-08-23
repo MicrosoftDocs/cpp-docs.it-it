@@ -1,5 +1,5 @@
 ---
-title: Begin (funzione) | Documenti Microsoft
+title: Funzione Begin | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1a8c09e43613014b43ef4e3c075a54cdd90e08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4954e98c1e6f1da30e321aad0c0e37cc5c1ab994
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086512"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606532"
 ---
 # <a name="begin-function"></a>begin (funzione)
 Restituisce un iteratore che punta all'inizio di una raccolta a cui si accede dal parametro di interfaccia specificato.  
@@ -52,10 +52,10 @@ template <typename T>
  Parametro del tipo di modello.  
   
  `v`  
- Una raccolta di vettore\<T > o VectorView\<T > gli oggetti che sono accessibili da un IVector\<T > o IVectorView\<T > interface.  
+ Una raccolta di vettore\<T > o VectorView\<T > gli oggetti a cui accedono un IVector\<T > o IVectorView\<T > interface.  
   
  `i`  
- Una raccolta di oggetti arbitrari di Windows Runtime che è possibile accedere attraverso un'IIterable\<T > interface.  
+ Una raccolta di oggetti Windows Runtime arbitrari a cui accede un IIterable\<T > interface.  
   
 ### <a name="return-value"></a>Valore restituito  
  Iteratore che punta all'inizio della raccolta.  
@@ -63,7 +63,7 @@ template <typename T>
 ### <a name="remarks"></a>Note  
  Le prime due funzioni di modello restituiscono degli iteratori, la terza funzione restituisce un iteratore di input.  
   
- L'oggetto VectorIterator restituito da begin è un iteratore proxy che archivia elementi di tipo VectorProxy\<T >. L'oggetto proxy, tuttavia, non è quasi mai visibile al codice utente. Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).  
+ L'oggetto VectorIterator oggetto restituito da begin è un iteratore proxy che archivia elementi di tipo VectorProxy\<T >. L'oggetto proxy, tuttavia, non è quasi mai visibile al codice utente. Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** collection.h  
@@ -71,4 +71,4 @@ template <typename T>
  **Spazio dei nomi:** Windows::Foundation::Collections  
   
 ## <a name="see-also"></a>Vedere anche  
- [Namespace Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+ [Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

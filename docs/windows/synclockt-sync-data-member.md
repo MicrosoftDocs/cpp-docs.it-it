@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7fa3193e505480a0acb8616510d8c2cdbc4f5d94
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d6f1c2f9aba65fd96603f966649d3ba62f25cde7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016353"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612298"
 ---
 # <a name="synclocktsync-data-member"></a>Membro dati SyncLockT::sync_
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-typename SyncTraits::Type sync_;  
-```  
-  
-## <a name="remarks"></a>Note  
- Contiene la risorsa sottostante rappresentata dal **SyncLockT** classe.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe SyncLockT](../windows/synclockt-class.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+typename SyncTraits::Type sync_;
+```
+
+## <a name="remarks"></a>Note
+
+Contiene la risorsa sottostante rappresentata dal **SyncLockT** classe.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe SyncLockT](../windows/synclockt-class.md)

@@ -1,31 +1,31 @@
 ---
-title: Riferimento rapido (C + + CX) | Documenti Microsoft
+title: Riferimento rapido (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 830c27d89e427e2ea36a68d891aac0ebadcf3f21
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092558"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608333"
 ---
 # <a name="quick-reference-ccx"></a>Riferimento rapido (C++/CX)
-Windows Runtime supporta le app Universal Windows Platform (UWP) eseguite solo in un ambiente con sistema operativo attendibile, utilizzano funzioni autorizzate, tipi di dati e dispositivi e vengono distribuite tramite Microsoft Store. C + + CX semplificano la scrittura di App per Windows Runtime. In questo articolo è un riferimento rapido. Per informazioni più complete, vedere [Type System](../cppcx/type-system-c-cx.md) e [estensioni componenti per le piattaforme Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+Il Runtime di Windows supporta le app Universal Windows Platform (UWP) eseguite solo in un ambiente di sistema operativo attendibile, utilizzano funzioni autorizzate, tipi di dati e dispositivi e vengono distribuite tramite il Microsoft Store. C + c++ /CX semplifica lo sviluppo di App per Windows Runtime. Questo articolo è un riferimento rapido. Per informazioni più complete, vedere [sistema di tipi](../cppcx/type-system-c-cx.md) e [Component Extensions for Runtime Platforms](http://go.microsoft.com/fwlink/p/?linkid=228720).  
   
- Quando si compila dalla riga di comando, utilizzare il **/ZW** l'opzione del compilatore per compilare un'app UWP o un componente Windows Runtime. Per accedere alle dichiarazioni di Windows Runtime, che sono definite nei file di metadati (con estensione winmd) di Windows Runtime, specificare il `#using` direttiva o **/FU** l'opzione del compilatore. Quando si crea un progetto per un'app UWP, Visual Studio per impostazione predefinita queste opzioni vengono impostate e aggiunge i riferimenti a tutte le librerie di Runtime di Windows.  
+ Quando si compila dalla riga di comando, usare il **/ZW** opzione del compilatore per compilare un'app UWP o un componente Windows Runtime. Per accedere alle dichiarazioni di Windows Runtime, che sono definite nei file di metadati (con estensione winmd) di Windows Runtime, specificare il `#using` direttiva o il **/FU** opzione del compilatore. Quando si crea un progetto per un'app UWP, Visual Studio per impostazione predefinita imposta queste opzioni e aggiunge i riferimenti a tutte le librerie di Runtime di Windows.  
   
 ## <a name="quick-reference"></a>Riferimento rapido  
   
 |Concetto|C++ standard|C++/CX|Note|  
 |-------------|--------------------|------------------------------------------------------------------|-------------|  
-|Tipi fondamentali|Tipi di base di C++.|C + + tipi fondamentali CX che implementano i tipi di base definiti in Windows Runtime.|Il `default` spazio dei nomi contiene C + + CX fondamentali tipi incorporati. Il compilatore esegue il mapping in modo implicito C + + tipi fondamentali di CX ai tipi C++ standard.<br /><br /> Il `Platform` famiglia di spazi dei nomi contiene tipi che implementano i tipi fondamentali di Windows Runtime.|  
+|Tipi fondamentali|Tipi di base di C++.|C + + / tipi fondamentali di CX che implementano i tipi fondamentali che sono definiti nel Runtime di Windows.|Il `default` dello spazio dei nomi contiene C + + c++ /CLI CX predefinito i tipi di base. Il compilatore in modo implicito esegue il mapping di C + + c++ /CX fondamentali ai tipi standard C++.<br /><br /> Il `Platform` famiglia di spazi dei nomi contiene tipi che implementano i tipi fondamentali di Windows Runtime.|  
 ||`bool`|`bool`|Valore booleano a 8 bit.|  
 ||`__wchar_t`|`char16`|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|  
 ||`short`<br /><br /> `unsigned short`|`int16`<br /><br /> `uint16`|Intero con segno a 16 bit.<br /><br /> Intero senza segno a 16 bit.|  
@@ -36,11 +36,11 @@ Windows Runtime supporta le app Universal Windows Platform (UWP) eseguite solo i
 ||Non applicabile|`Platform::Guid`|Valore non numerico a 128 bit (GUID) nello spazio dei nomi `Platform` .|  
 ||`std::time_get`|`Windows::Foundation::DateTime`|Struttura di data e ora.|  
 ||Non applicabile|`Windows::Foundation::TimeSpan`|Struttura timespan.|  
-||Non applicabile|`Platform::Object^`|L'oggetto di base con conteggio dei riferimenti nella visualizzazione C++ del sistema di tipi Windows Runtime.|  
+||Non applicabile|`Platform::Object^`|L'oggetto di base con conteggio dei riferimenti nella vista del sistema di tipi Windows Runtime C++.|  
 ||`std::wstring`<br /><br /> `L"..."`|`Platform::String^`|`Platform::String^` è una sequenza di caratteri Unicode che rappresenta del testo. La sequenza è non modificabile e con conteggio dei riferimenti.|  
-|Puntatore|Puntatore a oggetto (`*`):<br /><br /> `std::shared_ptr`|Handle all'oggetto (`^`):<br /><br /> *Identificatore T^*|Tutte le classi di Windows Runtime vengono dichiarate mediante il modificatore handle a oggetto. Ai membri dell'oggetto si accede tramite l'operatore di accesso membro-classe a freccia (`->`).<br /><br /> Il modificatore di hat significa "puntatore a un oggetto Windows Runtime che fa automaticamente riferimento conteggiati". Più precisamente, l'handle all'oggetto dichiara che tramite il compilatore deve essere inserito del codice per gestire automaticamente il conteggio dei riferimenti dell'oggetto e, se il conteggio dei riferimenti scende a zero, l'oggetto viene eliminato.|  
-|Riferimenti|Riferimento a un oggetto (`&`):<br /><br /> *T* `&` *identifier*|Riferimento di rilevamento (`%`):<br /><br /> *T* `%` *identifier*|Modificatore di fare riferimento a tipi possono essere dichiarati mediante il rilevamento solo di Windows Runtime. Ai membri dell'oggetto si accede tramite l'operatore di accesso membro-classe a punto (`.`).<br /><br /> Il riferimento di rilevamento indica "riferimento a un oggetto Windows Runtime che fa automaticamente riferimento conteggiato". Più precisamente, un riferimento di rilevamento dichiara che tramite il compilatore deve essere inserito del codice per gestire automaticamente il conteggio dei riferimenti dell'oggetto e, se il conteggio dei riferimenti scende a zero, l'oggetto viene eliminato.|  
-|dichiarazione di tipo dinamico|`new`|`ref new`|Alloca un oggetto Windows Runtime e quindi restituisce un handle all'oggetto.|  
+|Puntatore|Puntatore a oggetto (`*`):<br /><br /> `std::shared_ptr`|Handle all'oggetto (`^`):<br /><br /> *Identificatore T^*|Tutte le classi di Windows Runtime vengono dichiarate usando il modificatore handle a oggetto. Ai membri dell'oggetto si accede tramite l'operatore di accesso membro-classe a freccia (`->`).<br /><br /> Il modificatore di hat significa "puntatore a un oggetto Windows Runtime che viene automaticamente riferimento conteggiata". Più precisamente, l'handle all'oggetto dichiara che tramite il compilatore deve essere inserito del codice per gestire automaticamente il conteggio dei riferimenti dell'oggetto e, se il conteggio dei riferimenti scende a zero, l'oggetto viene eliminato.|  
+|Riferimenti|Riferimento a un oggetto (`&`):<br /><br /> *T* `&` *identifier*|Riferimento di rilevamento (`%`):<br /><br /> *T* `%` *identifier*|Solo Windows Runtime, i tipi possono essere dichiarati usando il rilevamento di fare riferimento a modificatore. Ai membri dell'oggetto si accede tramite l'operatore di accesso membro-classe a punto (`.`).<br /><br /> Il riferimento di rilevamento indica che "un riferimento a un oggetto Windows Runtime che viene automaticamente riferimenti". Più precisamente, un riferimento di rilevamento dichiara che tramite il compilatore deve essere inserito del codice per gestire automaticamente il conteggio dei riferimenti dell'oggetto e, se il conteggio dei riferimenti scende a zero, l'oggetto viene eliminato.|  
+|dichiarazione di tipo dinamico|`new`|`ref new`|Alloca un oggetto Windows Runtime e quindi restituisce un handle a quell'oggetto.|  
 |gestione della durata degli oggetti|`delete` *identifier*<br /><br /> `delete[]`  *identifier*|Richiama il distruttore.|La durata è dipende dal conteggio dei riferimenti. Una chiamata per l'eliminazione richiama il distruttore, ma non libera di per sé la memoria.|  
 |dichiarazione di matrice|*Identificatore T* `[]`<br /><br /> `std::array` *identifier*|`Array<` *T* `^>^` *identifier* `(` *size* `)`<br /><br /> oppure<br /><br /> `WriteOnlyArray<` *T* `^>`  *identifier* `(` *size* `)`|Dichiara una matrice unidimensionale modificabile o di sola scrittura di tipo T^. La matrice stessa è un oggetto con conteggio dei riferimenti che deve essere dichiarato mediante il modificatore handle a oggetto.<br /><br /> Le dichiarazioni di matrice utilizzano una classe intestazione del modello nello spazio dei nomi `Platform` .|  
 |dichiarazione di classe|`class`  *identifier* `{}`<br /><br /> `struct` *identifier* `{}`|`ref class` *identifier* `{}`<br /><br /> `ref struct` *identifier* `{}`|Dichiara una classe di runtime con accessibilità privata predefinita.<br /><br /> Dichiara una classe di runtime con accessibilità pubblica predefinita.|  
@@ -53,4 +53,4 @@ Windows Runtime supporta le app Universal Windows Platform (UWP) eseguite solo i
 |Tipi valore nullable|`boost::optional<T>`|[Platform:: ibox \<T >](../cppcx/platform-ibox-interface.md)|Consente alle variabili dei tipi scalari e degli struct di valore di avere un valore `nullptr`.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio di Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+ [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

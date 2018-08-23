@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: stringreference | Documenti Microsoft'
+title: 'Classe platform:: stringreference | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097510"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609663"
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
 Tipo di ottimizzazione che puoi usare per passare dati in formato stringa dai parametri di input di `Platform::String^` ad altri metodi con un minimo di operazioni di copia.  
@@ -69,7 +69,7 @@ class StringReference
  **Intestazione:** vccorlib.h  
 
 ## <a name="data"></a>  Metodo stringreference:: data
-Restituisce il contenuto di questo `StringReference` come una matrice di valori char16.  
+Restituisce il contenuto di questo `StringReference` sotto forma di matrice di valori char16.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -149,7 +149,7 @@ StringReference& operator=(const ::default::char16* __strArg);
  Riferimento a un oggetto di tipo `StringReference`.  
   
 ### <a name="remarks"></a>Note  
- Poiché `StringReference` è una classe C++ standard e non una classe di riferimento, non viene visualizzato nel **Visualizzatore oggetti**.  
+ In quanto `StringReference` è una classe C++ standard e non una classe di riferimento, non viene visualizzato nei **Visualizzatore oggetti**.  
   
 
 

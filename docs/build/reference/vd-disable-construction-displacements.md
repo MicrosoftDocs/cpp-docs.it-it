@@ -1,5 +1,5 @@
 ---
-title: -vd (Disabilita spostamenti costruttori) | Documenti Microsoft
+title: -vd (Disabilita spostamenti costruttori) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e983da4521db077235c2b879e0d1277b9505e94
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377597"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605868"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Disabilita spostamenti costruttori)
 ## <a name="syntax"></a>Sintassi  
@@ -42,30 +42,30 @@ ms.locfileid: "32377597"
   
 ## <a name="arguments"></a>Argomenti  
  `0`  
- Elimina il membro di spostamento di un costruttore/distruttore vtordisp. Scegliere questa opzione solo se si è certi che tutti i costruttori di classe e i distruttori chiamano virtuali virtualmente le funzioni.  
+ Elimina il membro di spostamento di vtordisp costruttore/distruttore. Scegliere questa opzione solo se si è certi che tutti i costruttori della classe e i distruttori chiamano virtuali virtualmente le funzioni.  
   
  `1`  
- Consente di creare membri costruttore/distruttore vtordisp nascosti. Questa scelta è il valore predefinito.  
+ Consente la creazione di membri di vtordisp nascosti costruttore/distruttore distanziato dello spostamento. Questa scelta è l'impostazione predefinita.  
   
  `2`  
- Consente di utilizzare [operatore dynamic_cast](../../cpp/dynamic-cast-operator.md) su un oggetto viene costruito. Ad esempio, un dynamic_cast da una classe base virtuale per una classe derivata.  
+ Consente di usare [dynamic_cast Operator](../../cpp/dynamic-cast-operator.md) su un oggetto in fase di costruzione. Ad esempio, un dynamic_cast da una classe base virtuale per una classe derivata.  
   
- **/ vd2** aggiunge un campo vtordisp quando si dispone di una base virtuale con le funzioni virtuali. **/ vd1** dovrebbe essere sufficiente. La più comune caso dove **/vd2** è necessaria quando la funzione virtuale solo nella base virtuale ha un distruttore.  
+ **/ vd2** aggiunge un campo di vtordisp quando si dispone di una base virtuale per le funzioni virtuali. **/ vd1** dovrebbero essere sufficienti. I più comuni caso in cui **/vd2** è necessaria quando la funzione virtuale esclusivamente in base virtuale è un distruttore.  
   
 ## <a name="remarks"></a>Note  
  Queste opzioni si applicano solo al codice C++ che utilizza basi virtuali.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implementa il supporto di C++ la costruzione dello spostamento in situazioni in cui viene utilizzata l'ereditarietà virtuale. Spostamenti costruttori risolvono il problema creato quando una funzione virtuale dichiarato in una base virtuale e sottoposto a override in una classe derivata, viene chiamato da un costruttore durante la costruzione di un'ulteriore classe derivata.  
+ Visual C++ implementa il supporto di C++ la costruzione dello spostamento in situazioni in cui viene utilizzata l'ereditarietà virtuale. Costruttori risolve il problema creato quando una funzione virtuale dichiarata in una base virtuale e sottoposto a override in una classe derivata, viene chiamato da un costruttore durante la costruzione di un'ulteriore classe derivata.  
   
- Il problema è che la funzione virtuale è possibile passare un'implementazione non corretta `this` puntatore come conseguenza di discrepanze tra gli spostamenti nelle virtuale basi di una classe e gli spostamenti nelle relative classi derivate. La soluzione offre una regolazione dello spostamento di costruzione unico, denominata campo vtordisp, per ogni base virtuale di una classe.  
+ Il problema è che la funzione virtuale è possibile passare un'implementazione non corretta `this` puntatore come conseguenza di discrepanze tra gli spostamenti nelle virtuale basi di una classe e gli spostamenti nelle relative classi derivate. La soluzione fornisce una modifica allo spostamento di costruzione unico, definita campo di vtordisp, per ogni base virtuale di una classe.  
   
- Per impostazione predefinita, i campi vtordisp vengono introdotti ogni volta che il codice definisce costruttori definiti dall'utente e i distruttori ed esegue inoltre l'override di funzioni virtuali di basi virtuali.  
+ Per impostazione predefinita, sono introdotta vtordisp (campi) ogni volta che il codice definisce i distruttori e i costruttori definiti dall'utente ed esegue inoltre l'override di funzioni virtuali di basi virtuali.  
   
- Queste opzioni influiscono interi file di origine. Utilizzare [vtordisp](../../preprocessor/vtordisp.md) per eliminare e quindi riabilitare i campi vtordisp classe per classe.  
+ Queste opzioni influiscono interi file di origine. Uso [vtordisp](../../preprocessor/vtordisp.md) per eliminare e quindi riabilitare i campi vtordisp classe per classe.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
   
 2.  Fare clic sulla cartella **C/C++** .  
   

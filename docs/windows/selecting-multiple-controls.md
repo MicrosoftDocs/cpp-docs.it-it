@@ -18,42 +18,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 72daa8e4bebfb8a3483c26a25c1f1d253faee8c2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015586"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611982"
 ---
 # <a name="selecting-multiple-controls"></a>Selezione di più controlli
-### <a name="to-select-multiple-controls"></a>Per selezionare più controlli  
-  
-1.  Nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), selezionare la **puntatore** dello strumento.  
-  
-2.  Trascinare il puntatore del mouse per disegnare una casella di selezione intorno ai controlli che si desidera selezionare nella finestra di dialogo.  
-  
-     Quando si rilascia il pulsante del mouse, tutti i controlli all'interno e che si intersecano vengono selezionati la casella di selezione.  
-  
-     \- oppure -  
-  
--   Tenere premuto il **MAIUSC** della chiave e fare clic sui controlli che si desidera includere nella selezione.  
-  
-     \- oppure -  
-  
--   Tenere premuto il **Ctrl** della chiave e fare clic sui controlli che si desidera includere nella selezione.  
-  
-### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Per rimuovere un controllo da un gruppo di controlli selezionati o per aggiungere un controllo a un gruppo di controlli selezionati  
-  
-1.  Con un gruppo di controlli selezionati, tenere premuto il **MAIUSC** della chiave e fare clic sul controllo che si desidera rimuovere o aggiungere alla selezione esistente.  
-  
-    > [!NOTE]
-    >  Tenendo premuto il **Ctrl** chiave e facendo clic su un controllo all'interno di una selezione renderà che controllano il controllo dominante della selezione. Per altre informazioni, vedere [impostazione del controllo dominante](../windows/specifying-the-dominant-control.md).  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Selezione di controlli](../windows/selecting-controls.md)   
- [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
+
+### <a name="to-select-multiple-controls"></a>Per selezionare più controlli
+
+1. Nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), selezionare la **puntatore** dello strumento.
+
+2. Trascinare il puntatore del mouse per disegnare una casella di selezione intorno ai controlli che si desidera selezionare nella finestra di dialogo.
+
+   Quando si rilascia il pulsante del mouse, tutti i controlli all'interno e che si intersecano vengono selezionati la casella di selezione.
+
+   \- oppure -
+
+- Tenere premuto il **MAIUSC** della chiave e fare clic sui controlli che si desidera includere nella selezione.
+
+   \- oppure -
+
+- Tenere premuto il **Ctrl** della chiave e fare clic sui controlli che si desidera includere nella selezione.
+
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Per rimuovere un controllo da un gruppo di controlli selezionati o per aggiungere un controllo a un gruppo di controlli selezionati
+
+1. Con un gruppo di controlli selezionati, tenere premuto il **MAIUSC** della chiave e fare clic sul controllo che si desidera rimuovere o aggiungere alla selezione esistente.
+
+   > [!NOTE]
+   > Tenendo premuto il **Ctrl** chiave e facendo clic su un controllo all'interno di una selezione renderà che controllano il controllo dominante della selezione. Per altre informazioni, vedere [impostazione del controllo dominante](../windows/specifying-the-dominant-control.md).
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Selezione di controlli](../windows/selecting-controls.md)  
+[Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)

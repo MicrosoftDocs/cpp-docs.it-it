@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208389"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608267"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele affidabili, scalabili ed efficienti. Innalza il livello di astrazione in modo da evitare di dover gestire i dettagli dell'infrastruttura correlati alla concorrenza. È anche possibile usarlo per specificare i criteri di pianificazione che soddisfano le richieste di qualità del servizio delle applicazioni. Queste risorse permettono di iniziare a usare il runtime di concorrenza.  
@@ -111,7 +111,7 @@ Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele af
 |[Esempi di codice per il Runtime di concorrenza e la libreria PPL in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornisce le applicazioni di esempio e utilità che illustrano il runtime di concorrenza.|  
 |[Programmazione parallela nel blog del codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|  
 |[Elaborazione parallela in C++ e codice nativo forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|  
-|[Programmazione parallela](/dotnet/standard/parallel-programming/index)|Illustra il modello di programmazione in parallelo disponibile in [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
+|[Programmazione parallela](/dotnet/standard/parallel-programming/index)|Illustra il modello di programmazione parallelo che è disponibile in .NET Framework.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento](../../parallel/concrt/reference/reference-concurrency-runtime.md)

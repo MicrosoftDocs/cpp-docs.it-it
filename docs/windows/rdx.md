@@ -17,76 +17,81 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32dd702dd7d429c4437875a6aead86ae687dfb2b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 423cd4585fa6e9ae5a5fbb16cf7d5c43aaf7c152
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011049"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605927"
 ---
 # <a name="rdx"></a>rdx
-Crea una chiave del Registro di sistema o modifica una chiave del Registro di sistema esistente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-[ rdx(   
-   key,   
-   valuename=NULL,   
-   regtype   
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *key*  
- Il nome della chiave può essere creato o aperto.  
-  
- *VALUENAME* (facoltativo)  
- Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.  
-  
- *regtype*  
- Il tipo di chiave del Registro di sistema da aggiungere. Può essere uno dei seguenti: `text`, `dword`, `binary`, o `CString`.  
-  
-## <a name="remarks"></a>Note  
- Il **rdx** attributo C++ crea o modifica una chiave del Registro di sistema esistente per un componente COM. L'attributo aggiunge una macro BEGIN_RDX_MAP all'oggetto che implementa il membro di destinazione. `RegistryDataExchange`, una funzione inserita come risultato la macro BEGIN_RDX_MAP, può essere usata per trasferire dati tra il Registro di sistema e i membri dati  
-  
- Questo attributo può essere utilizzato in combinazione con il [coclasse](../windows/coclass.md), [progid](../windows/progid.md), o [vi_progid](../windows/vi-progid.md) attributi o altri attributi che implica uno di questi.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-### <a name="attribute-context"></a>Contesto attributo  
-  
-|||  
-|-|-|  
-|**Si applica a**|**classe** oppure **struct** membro|  
-|**Ripetibile**|No|  
-|**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
-  
- Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
-  
-## <a name="example"></a>Esempio  
- Il codice seguente aggiunge una chiave del Registro di sistema denominata MyValue per il sistema che descrive il componente COM CMyClass.  
-  
-```cpp  
-// cpp_attr_ref_rdx.cpp  
-// compile with: /LD /link /OPT:NOREF  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-  
-[module (name="MyLib")];  
-  
-class CMyClass {  
-public:  
-   CMyClass() {  
-      strcpy_s(m_sz, "SomeValue");  
-   }  
-  
-   [ rdx(key = "HKCR\\MyApp.MyApp.1", valuename = "MyValue", regtype = "text")]   
-   char m_sz[256];  
-};  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attributi COM](../windows/com-attributes.md)   
- [registration_script](../windows/registration-script.md)   
+
+Crea una chiave del Registro di sistema o modifica una chiave del Registro di sistema esistente.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+[ rdx(
+   key,
+   valuename=NULL,
+   regtype
+) ]
+```
+
+### <a name="parameters"></a>Parametri
+
+*key*  
+Il nome della chiave può essere creato o aperto.
+
+*VALUENAME* (facoltativo)  
+Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.
+
+*regtype*  
+Il tipo di chiave del Registro di sistema da aggiungere. Può essere uno dei seguenti: `text`, `dword`, `binary`, o `CString`.
+
+## <a name="remarks"></a>Note
+
+Il **rdx** attributo C++ crea o modifica una chiave del Registro di sistema esistente per un componente COM. L'attributo aggiunge una macro BEGIN_RDX_MAP all'oggetto che implementa il membro di destinazione. `RegistryDataExchange`, una funzione inserita come risultato la macro BEGIN_RDX_MAP, può essere usata per trasferire dati tra il Registro di sistema e i membri dati
+
+Questo attributo può essere utilizzato in combinazione con il [coclasse](../windows/coclass.md), [progid](../windows/progid.md), o [vi_progid](../windows/vi-progid.md) attributi o altri attributi che implica uno di questi.
+
+## <a name="requirements"></a>Requisiti
+
+### <a name="attribute-context"></a>Contesto attributo
+
+|||
+|-|-|
+|**Si applica a**|**classe** oppure **struct** membro|
+|**Ripetibile**|No|
+|**Attributi obbligatori**|Nessuna|
+|**Attributi non validi**|nessuno|
+
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).
+
+## <a name="example"></a>Esempio
+
+Il codice seguente aggiunge una chiave del Registro di sistema denominata MyValue per il sistema che descrive il componente COM CMyClass.
+
+```cpp
+// cpp_attr_ref_rdx.cpp
+// compile with: /LD /link /OPT:NOREF
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+
+[module (name="MyLib")];
+
+class CMyClass {
+public:
+   CMyClass() {
+      strcpy_s(m_sz, "SomeValue");
+   }
+
+   [ rdx(key = "HKCR\\MyApp.MyApp.1", valuename = "MyValue", regtype = "text")]
+   char m_sz[256];
+};
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Attributi COM](../windows/com-attributes.md)  
+[registration_script](../windows/registration-script.md)  

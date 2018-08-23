@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110021"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609349"
 ---
 # <a name="windows-operations-ccli"></a>Operazioni Windows (C++/CLI)
-Vengono illustrate alcune attività di Windows specifico usando il [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Illustra alcune attività specifiche di Windows usando il SDK di Windows.  
   
- Gli argomenti seguenti illustrano varie operazioni di Windows eseguite con la [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] usando Visual C++.  
+ Gli argomenti seguenti illustrano varie operazioni di Windows eseguite con il SDK di Windows usando Visual C++.  
 
 ## <a name="determine_shutdown"></a> Determinare se l'arresto è stata avviata
 Esempio di codice seguente viene illustrato come determinare se l'applicazione o a .NET Framework è in fase di chiusura. Ciò è utile per l'accesso a elementi statici in .NET Framework, poiché, durante l'arresto, questi costrutti, vengono completati dal sistema e non possono essere usati in modo affidabile. Controllando il <xref:System.Environment.HasShutdownStarted%2A> proprietà in primo luogo, per evitare potenziali errori, non l'accesso a questi elementi.  

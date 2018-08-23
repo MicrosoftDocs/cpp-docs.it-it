@@ -1,5 +1,5 @@
 ---
-title: Classe platform::Collections::UnorderedMap | Documenti Microsoft
+title: Classe platform::Collections::UnorderedMap | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d86e5e36c7219a79b77d79fe02e6b2ae811ccabc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092331"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612718"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -42,7 +42,7 @@ Tipo di chiave nella coppia chiave-valore.
 Tipo di valore nella coppia chiave-valore.
 
 *C*  
-Tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinare l'ordine relativo nella mappa. Per impostazione predefinita, [std:: equal_to\<K >](../standard-library/equal-to-struct.md).
+Tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinare l'ordine relativo nella mappa. Per impostazione predefinita [std:: equal_to\<K >](../standard-library/equal-to-struct.md).
 
 ### <a name="remarks"></a>Note
 
@@ -58,9 +58,9 @@ I tipi consentiti sono:
 
 - classe enum pubblica
 
-**UnorderedMap** è fondamentalmente un wrapper per [std:: unordered_map](../standard-library/unordered-map-class.md) che supporta l'archiviazione dei tipi di Windows Runtime. È di un'implementazione concreta del [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) tipi che vengono passati attraverso le interfacce di Windows Runtime. Se tenti di usare un tipo `Platform::Collections::UnorderedMap` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. È possibile correggere l'errore modificando il tipo di valore restituito o parametro in [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** è fondamentalmente un wrapper per [std:: unordered_map](../standard-library/unordered-map-class.md) che supporta l'archiviazione dei tipi Windows Runtime. È di un'implementazione concreta del [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) tipi che vengono passati attraverso interfacce di Windows Runtime. Se tenti di usare un tipo `Platform::Collections::UnorderedMap` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. Puoi correggere l'errore modificando il tipo di valore restituito o parametro in [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
-Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
+Per altre informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membri
 
@@ -112,7 +112,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Metodo unorderedmap:: First
 
-Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento nella mappa non ordinata.
+Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento della mappa non ordinata.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -128,11 +128,11 @@ Iteratore che specifica il primo elemento nella mappa.
 
 ### <a name="remarks"></a>Note
 
-Un modo pratico per contenere l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **auto** parola chiave di deduzione del tipo. Ad esempio `auto x = myUnorderedMap->First();`.
+Un modo pratico per contenere l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **automatica** digita parola chiave di deduzione dei tipi. Ad esempio `auto x = myUnorderedMap->First();`.
 
 ## <a name="getview"></a>  Metodo unorderedmap:: GetView
 
-Restituisce una visualizzazione di sola lettura dell'elemento UnorderedMap corrente; vale a dire un [Platform::Collections::UnorderedMapView classe](../cppcx/platform-collections-unorderedmapview-class.md) che implementa il [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interfaccia.
+Restituisce una visualizzazione di sola lettura dell'elemento UnorderedMap corrente; vale a dire, un' [classe Platform::Collections::UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md) che implementa il [interfaccia Windows::Foundation::Collections::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
 
 ### <a name="syntax"></a>Sintassi
 
@@ -159,7 +159,7 @@ bool HasKey(
 ### <a name="parameters"></a>Parametri
 
 *key*  
-Chiave usata per individuare l'elemento UnorderedMap. Il tipo di *chiave* è typename *K*.
+Chiave usata per individuare l'elemento UnorderedMap. Il tipo della *key* è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -181,14 +181,14 @@ virtual bool Insert(
 ### <a name="parameters"></a>Parametri
 
 *key*  
-Chiave della coppia chiave-valore. Il tipo di *chiave* è typename *K*.
+Chiave della coppia chiave-valore. Il tipo della *key* è typename *K*.
 
 *valore*  
-Valore della coppia chiave-valore. Il tipo di *valore* è typename *V*.
+Valore della coppia chiave-valore. Il tipo della *valore* è typename *V*.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde *chiave* e parte del valore di tale elemento è impostata su *valore*. `false` Se nessun elemento esistente nell'oggetto Map corrente corrisponde *chiave* e *chiave* e *valore* i parametri vengono applicati a una coppia chiave-valore e successivamente aggiunti all'oggetto UnorderedMap corrente.
+`true` Se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde a *key* e la parte valore di tale elemento è impostata su *valore*. `false` Se nessun elemento esistente nell'oggetto Map corrente corrisponde *key* e il *chiave* e *valore* parametri vengono trasformati in una coppia chiave-valore e successivamente aggiunti all'oggetto UnorderedMap corrente.
 
 ## <a name="lookup"></a>  Metodo unorderedmap:: lookup
 
@@ -205,7 +205,7 @@ V Lookup(
 ### <a name="parameters"></a>Parametri
 
 *key*  
-Chiave usata per individuare un elemento in UnorderedMap. Il tipo di *chiave* è typename *K*.
+Chiave usata per individuare un elemento in UnorderedMap. Il tipo della *key* è typename *K*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -223,11 +223,11 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito
 
-Oggetto [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx) che contiene informazioni sull'oggetto che ha generato l'evento e il tipo di modifica che si sono verificati. Vedere anche [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Oggetto [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) che contiene informazioni sull'oggetto che ha generato l'evento e il tipo di modifica che si sono verificati. Vedere anche [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
 
-App di Windows Runtime che usa c# e Visual Basic il progetto IMap\<K, V > come IDictionary\<K, V >.
+Le app di Windows Runtime che usano c# o Visual Basic il progetto IMap\<K, V > come IDictionary\<K, V >.
 
 ## <a name="remove"></a>  Metodo unorderedmap:: Remove
 
@@ -243,7 +243,7 @@ virtual void Remove(
 ### <a name="parameters"></a>Parametri
 
 *key*  
-Chiave della coppia chiave-valore. Il tipo di *chiave* è typename *K*.
+Chiave della coppia chiave-valore. Il tipo della *key* è typename *K*.
 
 ## <a name="size"></a>  Metodo unorderedmap:: Size
 
@@ -350,15 +350,15 @@ UnorderedMap(
 Typename dell'oggetto UnorderedMap corrente.
 
 *P*  
-Oggetto funzione che può confrontare due chiavi per determinare se sono uguali. Per impostazione predefinita questo parametro per [std:: equal_to\<K >](../standard-library/equal-to-struct.md).
+Oggetto funzione che può confrontare due chiavi per determinare se sono uguali. Questo parametro viene impostato su [std:: equal_to\<K >](../standard-library/equal-to-struct.md).
 
 *H*  
-Oggetto funzione che produce un valore hash per una chiave. Per impostazione predefinita questo parametro per [hash classe 1](../standard-library/hash-class.md) per i tipi di chiave che supporta la classe.
+Oggetto funzione che produce un valore hash per una chiave. Questo parametro viene impostato su [hash classe 1](../standard-library/hash-class.md) per i tipi di chiave che supporta la classe.
 
 *m*  
-Un riferimento o [elementi lvalue e Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) per un [std:: unordered_map](../standard-library/unordered-map-class.md) che viene utilizzato per inizializzare l'oggetto UnorderedMap corrente.
+Un riferimento oppure [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std:: unordered_map](../standard-library/unordered-map-class.md) che viene usato per inizializzare l'oggetto UnorderedMap corrente.
 
-*il* A [std:: initializer_list](../standard-library/initializer-list-class.md) di [std:: Pair](../standard-library/pair-structure.md) oggetti utilizzati per inizializzare la mappa.
+*linguaggio intermedio* un' [std:: initializer_list](../standard-library/initializer-list-class.md) dei [std:: Pair](../standard-library/pair-structure.md) gli oggetti che consente di inizializzare la mappa.
 
 *first*  
 Iteratore di input del primo elemento in un intervallo di elementi usato per inizializzare l'oggetto UnorderedMap corrente.
@@ -368,7 +368,7 @@ Iteratore di input del primo elemento dopo un intervallo di elementi usato per i
 
 ## <a name="see-also"></a>Vedere anche
 
-[Piattaforma Namespace](platform-namespace-c-cx.md)  
+[Platform Namespace](platform-namespace-c-cx.md)  
 [Spazio dei nomi Platform::Collections](../cppcx/platform-collections-namespace.md)  
 [Platform::Collections::Map](../cppcx/platform-collections-map-class.md)  
 [Classe Platform::Collections::UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md)  

@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffe517b75df4e1cdd8172279c12256db940f0980
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: eab2a577d0c7b31f833a8dcc0208f9939b729ad9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647037"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607469"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>Metodo AsyncBase::GetOnComplete
-Copia l'indirizzo del gestore dell'evento di completamento corrente per la variabile specificata.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-STDMETHOD(  
-   GetOnComplete  
-)(TComplete** completeHandler);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *completeHandler*  
- Il percorso in cui è archiviato l'indirizzo del gestore dell'evento di completamento corrente.  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Copia l'indirizzo del gestore dell'evento di completamento corrente per la variabile specificata.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+STDMETHOD(
+   GetOnComplete
+)(TComplete** completeHandler);
+```
+
+### <a name="parameters"></a>Parametri
+
+*completeHandler*  
+Il percorso in cui è archiviato l'indirizzo del gestore dell'evento di completamento corrente.
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Async. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

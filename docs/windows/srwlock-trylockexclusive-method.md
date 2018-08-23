@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 674a7dced019926e6ea07b41641eb42db70c45a0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2ec8275b1db692410677276e762f79ccf23548cc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013480"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606231"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>Metodo SRWLock::TryLockExclusive
-Prova ad acquisire un **SRWLock** oggetto in modalità esclusiva per il correnti o specificate **SRWLock** oggetto. Se la chiamata ha esito positivo, il thread chiamante ha la proprietà del blocco.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-SyncLockExclusive TryLockExclusive();  
-  
-static SyncLockExclusive TryLockExclusive(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *lock*  
- Puntatore a un **SRWLock** oggetto.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, un **SRWLock** oggetto in modalità esclusiva e il thread chiamante assume la proprietà del blocco. In caso contrario, un **SRWLock** oggetto il cui stato non è valido.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe SRWLock](../windows/srwlock-class.md)
+
+Prova ad acquisire un **SRWLock** oggetto in modalità esclusiva per il correnti o specificate **SRWLock** oggetto. Se la chiamata ha esito positivo, il thread chiamante ha la proprietà del blocco.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+SyncLockExclusive TryLockExclusive();
+
+static SyncLockExclusive TryLockExclusive(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*lock*  
+Puntatore a un **SRWLock** oggetto.
+
+## <a name="return-value"></a>Valore restituito
+
+Se ha esito positivo, un **SRWLock** oggetto in modalità esclusiva e il thread chiamante assume la proprietà del blocco. In caso contrario, un **SRWLock** oggetto il cui stato non è valido.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe SRWLock](../windows/srwlock-class.md)

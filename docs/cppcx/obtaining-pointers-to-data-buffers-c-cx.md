@@ -1,27 +1,27 @@
 ---
-title: Recupero di puntatori a buffer di dati (C + + CX) | Documenti Microsoft
+title: Recupero di puntatori ai buffer di dati (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090549"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613030"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Recupero di puntatori a buffer di dati (C++/CX)
 In Windows Runtime l'interfaccia [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) fornisce un modo indipendente dalla lingua e basato sui flussi per accedere ai buffer di dati. In C++ puoi ottenere un puntatore non elaborato alla matrice di byte sottostante utilizzando l'interfaccia IBufferByteAccess della libreria di Windows Runtime definita in robuffer.h. Con questo approccio puoi modificare la matrice di byte sul posto senza creare inutili copie dei dati.  
   
- Il diagramma seguente mostra un elemento immagine XAML, la cui origine è [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Un'app client scritta in qualsiasi linguaggio può passare un riferimento a `WriteableBitmap` al codice C++, quindi C++ può utilizzare il riferimento per ottenere il buffer sottostante. In un'app Universal Windows Platform che viene scritto in C++, è possibile utilizzare la funzione nell'esempio seguente direttamente nel codice sorgente senza comprimerlo in un componente Windows Runtime.  
+ Il diagramma seguente mostra un elemento immagine XAML, la cui origine è [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Un'app client scritta in qualsiasi linguaggio può passare un riferimento a `WriteableBitmap` al codice C++, quindi C++ può utilizzare il riferimento per ottenere il buffer sottostante. In un'app Universal Windows Platform scritta in C++, è possibile usare la funzione nell'esempio seguente direttamente nel codice sorgente senza comprimerlo in un componente Windows Runtime.  
   
- ![C&#43; &#43; accesso diretto del codice dati pixel](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
+ ![C&#43; &#43; codice ai dati pixel direttamente](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
  Il metodo seguente accetta [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) e restituisce un puntatore non elaborato alla matrice di byte sottostante. Per chiamare la funzione, passare una proprietà [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) .  
@@ -56,11 +56,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 ```  
   
 ## <a name="complete-example"></a>Esempio completo  
- I passaggi seguenti mostrano come creare un'app c# Universal Windows Platform che passa un `WriteableBitmap` per una DLL del componente C++ di Windows Runtime. Il codice C++ ottiene un puntatore al buffer di pixel ed esegue una semplice modifica dell'immagine sul posto. In alternativa, puoi creare l'app client in Visual Basic, in JavaScript o in C++, anziché C#. Se usi C++, non è necessaria la DLL del componente. Puoi semplicemente aggiungere tali metodi direttamente alla classe MainPage o a un'altra classe che definisci.  
+ La procedura seguente illustra come creare un'app c# (Universal Windows Platform) che passa un `WriteableBitmap` per una DLL del componente C++ di Windows Runtime. Il codice C++ ottiene un puntatore al buffer di pixel ed esegue una semplice modifica dell'immagine sul posto. In alternativa, puoi creare l'app client in Visual Basic, in JavaScript o in C++, anziché C#. Se usi C++, non è necessaria la DLL del componente. Puoi semplicemente aggiungere tali metodi direttamente alla classe MainPage o a un'altra classe che definisci.  
   
 #### <a name="create-the-client"></a>Creare il client  
   
-1.  Utilizzare il modello di progetto applicazione vuota per creare un'app c# Universal Windows Platform.  
+1.  Usare il modello di progetto app vuota per creare un'app c# (Universal Windows Platform).  
   
 2.  In MainPage.xaml  
   
@@ -134,7 +134,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
 #### <a name="create-the-c-component"></a>Creare il componente C++  
   
-1.  Aggiungere un nuovo componente C++ di Windows Runtime alla soluzione esistente e denominarla `ImageManipCPP`. Aggiungi un riferimento al progetto C# facendo clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliendo **Aggiungi**, **Riferimento**.  
+1.  Aggiungere un nuovo componente di Runtime di Windows C++ alla soluzione esistente e denominarlo `ImageManipCPP`. Aggiungi un riferimento al progetto C# facendo clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliendo **Aggiungi**, **Riferimento**.  
   
 2.  In Class1.h  
   

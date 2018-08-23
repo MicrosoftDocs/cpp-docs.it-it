@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
 author: mikeblome
-ms.author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015624"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610053"
 ---
 # <a name="security-best-practices-for-c"></a>Procedure di sicurezza consigliate per C++
 
@@ -34,7 +34,7 @@ Questo articolo contiene informazioni su strumenti e procedure di sicurezza. Il 
  Queste funzionalità di sicurezza sono incluse nel compilatore e nel linker di Visual C++:  
   
  [/guard (abilita guard flusso di controllo)](../build/reference/guard-enable-control-flow-guard.md)  
- Fa in modo che il compilatore analizzi il flusso di controllo per verificare la presenza di destinazioni di chiamata indiretta in fase di compilazione e che quindi inserisca il codice per verificare le destinazioni in fase di esecuzione.  
+ Il compilatore analizzi il flusso di controllo per le destinazioni di chiamata indiretta in fase di compilazione e quindi inserire il codice per verificare le destinazioni in fase di esecuzione.  
   
  [/GS (controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md)  
  Indica al compilatore di inserire il codice di rilevamento di sovraccarico nelle funzioni esposte al rischio di exploit. Quando viene rilevato un sovraccarico, l'esecuzione viene interrotta. Per impostazione predefinita, questa opzione è attivata.  

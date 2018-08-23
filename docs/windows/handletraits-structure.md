@@ -17,44 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f722745b1283f25bd284adb3b55dcb340d78f07
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c2193743da9e7b5667714650660cd8e1efdb5cf4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649913"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610981"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits (struttura)
-Definisce le caratteristiche comuni di un handle.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-struct HANDLETraits;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-typedefs"></a>Typedef pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`Type`|Un sinonimo di HANDLE.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo HANDLETraits::Close](../windows/handletraits-close-method.md)|Chiude l'handle specificato.|  
-|[Metodo HANDLETraits::GetInvalidValue](../windows/handletraits-getinvalidvalue-method.md)|Rappresenta un handle non valido.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `HANDLETraits`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Definisce le caratteristiche comuni di un handle.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+struct HANDLETraits;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-typedefs"></a>Typedef pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`Type`|Un sinonimo di HANDLE.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Metodo HANDLETraits::Close](../windows/handletraits-close-method.md)|Chiude l'handle specificato.|
+|[Metodo HANDLETraits::GetInvalidValue](../windows/handletraits-getinvalidvalue-method.md)|Rappresenta un handle non valido.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`HANDLETraits`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

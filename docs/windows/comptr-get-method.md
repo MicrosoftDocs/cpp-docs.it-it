@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1acf443cfa1251649a33e55e81e03fb1b62e17a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ca996b7893fd19076504fd91bbb5e80bbe692883
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648334"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608664"
 ---
 # <a name="comptrget-method"></a>Metodo ComPtr::Get
-Recupera un puntatore all'interfaccia associata a questo **ComPtr**.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-T* Get() const;  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Puntatore all'interfaccia associata a questo **ComPtr**.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ComPtr](../windows/comptr-class.md)
+
+Recupera un puntatore all'interfaccia associata a questo **ComPtr**.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+T* Get() const;
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Puntatore all'interfaccia associata a questo **ComPtr**.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtr](../windows/comptr-class.md)

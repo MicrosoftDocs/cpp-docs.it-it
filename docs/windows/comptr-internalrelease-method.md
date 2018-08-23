@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30be6015fec0f210f0b1f70502881f2ce2c3b54b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0ba3e4b916556ebe83303228cfa9a056780962e3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644317"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612927"
 ---
 # <a name="comptrinternalrelease-method"></a>Metodo ComPtr::InternalRelease
-Esegue un'operazione di rilascio COM sull'interfaccia associata a questo **ComPtr**.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-void InternalRelease();  
-```  
-  
-## <a name="remarks"></a>Note  
- Questo metodo è protetto.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ComPtr](../windows/comptr-class.md)
+
+Esegue un'operazione di rilascio COM sull'interfaccia associata a questo **ComPtr**.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+void InternalRelease();
+```
+
+## <a name="remarks"></a>Note
+
+Questo metodo è protetto.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtr](../windows/comptr-class.md)

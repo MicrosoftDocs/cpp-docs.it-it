@@ -1,5 +1,5 @@
 ---
-title: ValueType (classe) | Documenti Microsoft
+title: 'Classe platform:: ValueType | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1994aa6445c67bae138a51f1d3eebb2a54f9b17d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12766e81ddd90b257830b6bf5adefd2562781d9e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088206"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611047"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType (classe)
 Classe di base per istanze di tipi di valore.  
@@ -49,7 +49,7 @@ public ref class ValueType : Object
   
  **Metadati:** platform.winmd  
 
-## <a name="tostring"></a> Metodo ValueType::ToString
+## <a name="tostring"></a> Metodo ValueType:: ToString
 Restituisce una rappresentazione di stringa dell'oggetto.  
   
 ### <a name="syntax"></a>Sintassi  

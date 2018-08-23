@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4bddc5a453e1c3aac43fe58d105ccef863c67808
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: bfec8bfa6940fd4a702334f0d3068c6d936ea8c1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652269"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607314"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>Metodo ActivationFactory::GetTrustLevel
-Ottiene il livello di attendibilità dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-STDMETHOD(  
-   GetTrustLevel  
-)(_Out_ TrustLevel* trustLvl);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *trustLvl*  
- Quando questa operazione viene completata, il livello di attendibilità del runtime di classe che il **ActivationFactory** crea un'istanza.  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario, viene generato un errore di asserzione e *trustLvl* è impostata su `FullTrust`.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ActivationFactory](../windows/activationfactory-class.md)
+
+Ottiene il livello di attendibilità dell'oggetto a cui l'oggetto corrente **ActivationFactory** crea un'istanza.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+### <a name="parameters"></a>Parametri
+
+*trustLvl*  
+Quando questa operazione viene completata, il livello di attendibilità del runtime di classe che il **ActivationFactory** crea un'istanza.
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario, viene generato un errore di asserzione e *trustLvl* è impostata su `FullTrust`.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ActivationFactory](../windows/activationfactory-class.md)

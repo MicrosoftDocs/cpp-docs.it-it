@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa26f2f5898e65827095a11841eae1f52403c3c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e0f0a866a64592de9f85cbc8a47530b742918ca6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650560"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607542"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>Costruttore AsyncBase::AsyncBase
-Inizializza un'istanza di **AsyncBase** classe.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-AsyncBase();  
-```  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Inizializza un'istanza di **AsyncBase** classe.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+AsyncBase();
+```
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Async. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

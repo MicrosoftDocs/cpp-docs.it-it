@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 925ebb50c571c37d5137a24539429d75469a5f9b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6e0d2b6d41598195b2615e4d6b4a8585d1ca1cf2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010748"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599725"
 ---
 # <a name="runtimeclassinternaladdref-method"></a>Metodo RuntimeClass::InternalAddRef
-Incrementa il conteggio dei riferimenti all'oggetto corrente **RuntimeClass** oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-ULONG InternalAddRef();  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Il conteggio dei riferimenti risultante.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe RuntimeClass](../windows/runtimeclass-class.md)
+
+Incrementa il conteggio dei riferimenti all'oggetto corrente **RuntimeClass** oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+ULONG InternalAddRef();
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Il conteggio dei riferimenti risultante.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe RuntimeClass](../windows/runtimeclass-class.md)

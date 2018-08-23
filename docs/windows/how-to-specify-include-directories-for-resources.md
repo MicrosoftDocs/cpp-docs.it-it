@@ -17,28 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7444ccf4f3a03036a5363024d0794f67b6a1ad6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: baa317610339e7073f2e829860e11ab15e66277e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018858"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611061"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Procedura: specificare directory di inclusione per le risorse
-### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Per specificare le directory di inclusione per uno specifico file rc  
-  
-1.  Fare clic sul file RC in Esplora soluzioni e selezionare **proprietà** dal menu di scelta rapida.  
-  
-2.  Nel **pagine delle proprietà** della finestra di dialogo fare clic sui **risorse** nodo nel riquadro sinistro, quindi specificare aggiuntivi includono le directory nel **directory di inclusione aggiuntive** proprietà.  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md)   
- [TN035: Utilizzo di più file di risorse e i file di intestazione Visual c++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
- [Simboli: Identificatori di risorsa](../windows/symbols-resource-identifiers.md)   
- [File di risorse](../windows/resource-files-visual-studio.md)   
- [Editor di risorse](../windows/resource-editors.md)
+
+### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Per specificare le directory di inclusione per uno specifico file rc
+
+1. Fare clic sul file RC in Esplora soluzioni e selezionare **proprietà** dal menu di scelta rapida.
+
+2. Nel **pagine delle proprietà** della finestra di dialogo fare clic sui **risorse** nodo nel riquadro sinistro, quindi specificare aggiuntivi includono le directory nel **directory di inclusione aggiuntive** proprietà.
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md)  
+[TN035: uso di più file di risorse e di intestazione in Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
+[Simboli: identificatori di risorsa](../windows/symbols-resource-identifiers.md)  
+[File di risorse](../windows/resource-files-visual-studio.md)  
+[Editor di risorse](../windows/resource-editors.md)

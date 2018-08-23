@@ -1,23 +1,23 @@
 ---
-title: Funzioni CRT non supportate nelle App Universal Windows Platform | Documenti Microsoft
+title: Funzioni CRT non supportate nelle App della piattaforma Windows universale | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8b5c150632d035060b0e34f3962f2e903990a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ef64ac81e36a298d89078997992343d92b7dbdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090868"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609185"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)
-Molte funzioni di runtime C (CRT) non sono disponibili per lo sviluppo di app della piattaforma UWP (Universal Windows Platform). In alcuni casi, sono disponibili soluzioni alternative,-, ad esempio, è possibile utilizzare Windows Runtime o le API Win32. Tuttavia, in altri casi, le funzioni CRT sono state escluse perché le funzionalità corrispondenti o le API di supporto non sono applicabili alle app UWP. Per cercare un metodo alternativo supportato per Windows Runtime, vedere [alternative alle API di Windows nelle App UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
+Molte funzioni di runtime C (CRT) non sono disponibili per lo sviluppo di app della piattaforma UWP (Universal Windows Platform). In alcuni casi, sono disponibili soluzioni alternative, ovvero-ad esempio, è possibile usare Windows Runtime o le API Win32. Tuttavia, in altri casi, le funzioni CRT sono state escluse perché le funzionalità corrispondenti o le API di supporto non sono applicabili alle app UWP. Per cercare un metodo alternativo supportato per il Runtime di Windows, vedere [alternative alle API di Windows nelle App UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
   
 La tabella seguente elenca le funzioni CRT non disponibili quando si sviluppano app UWP, con l'indicazione delle eventuali soluzioni alternative applicabili.  
   
@@ -39,13 +39,13 @@ La tabella seguente elenca le funzioni CRT non disponibili quando si sviluppano 
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|Le variabili di ambiente non sono disponibili per le app UWP.|Nessuna soluzione alternativa. Per impostare il fuso orario, usare _tzset.|  
 |_loaddll _getdllprocaddr _unloaddll|Queste funzioni sono obsolete nelle precedenti versioni di CRT. Inoltre, l'utente non può caricare DLL, a eccezione di quelle disponibili nello stesso pacchetto dell'applicazione.|Usare le API Win32 `LoadPackagedLibrary`, `GetProcAddress`e `FreeLibrary` per caricare e usare le DLL disponibili nel pacchetto.|  
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|La funzionalità non è disponibile nelle app UWP. Un'app UWP non può richiamare un'altra app UWP o un'app desktop.|Nessuna soluzione alternativa.|  
-|_heapwalk _heapadd _heapchk _heapset _heapused|Queste funzioni vengono in genere usate per l'interazione con l'heap. Tuttavia, le API Win32 corrispondenti non sono supportate nelle app UWP. Inoltre le app non possono più creare o usare heap privati.|Nessuna soluzione alternativa. Tuttavia, la funzione `_heapwalk` è disponibile in CRT DEBUG solo a scopo di debug. Questi non può essere utilizzati nelle applicazioni che vengono caricate a Microsoft Store.|  
+|_heapwalk _heapadd _heapchk _heapset _heapused|Queste funzioni vengono in genere usate per l'interazione con l'heap. Tuttavia, le API Win32 corrispondenti non sono supportate nelle app UWP. Inoltre le app non possono più creare o usare heap privati.|Nessuna soluzione alternativa. Tuttavia, la funzione `_heapwalk` è disponibile in CRT DEBUG solo a scopo di debug. Questi non possono essere usati nelle App caricate in di Microsoft Store.|  
   
- Le funzioni seguenti sono disponibili in CRT per App UWP, ma deve essere utilizzate solo quando il corrispondente Win32 o APIs di Windows Runtime non può essere utilizzato, ad esempio, quando si esegue il porting di codebase di grandi dimensioni  
+ Le funzioni seguenti sono disponibili in CRT per le app UWP, ma deve essere usate solo quando non è possibile usare la corrispondente Win32 o APIs di Windows Runtime, ad esempio, quando si esegue il porting di codebase di grandi dimensioni  
   
 |||  
 |-|-|  
-|Funzioni stringa a byte singolo, ad esempio `strcat`, `strcpy`, `strlwr`e così via.|Verificare le proprie App UWP strettamente in formato Unicode perché tutte le API Win32 e APIs di Windows Runtime esposte usano esclusivamente set di caratteri Unicode.  Le funzioni a byte singolo sono state mantenute per il trasferimento di codebase di grandi dimensioni, ma in altri casi devono essere evitate, usando quando possibile le corrispondenti funzioni con caratteri wide.|  
+|Funzioni stringa a byte singolo, ad esempio `strcat`, `strcpy`, `strlwr`e così via.|Rendi le tue App UWP strettamente in formato Unicode perché tutte le API di Win32 e Windows Runtime APIs esposte usano esclusivamente set di caratteri Unicode.  Le funzioni a byte singolo sono state mantenute per il trasferimento di codebase di grandi dimensioni, ma in altri casi devono essere evitate, usando quando possibile le corrispondenti funzioni con caratteri wide.|  
 |Funzioni I/O di flusso e file di basso livello, ad esempio `fopen`, `open`e così via.|Queste funzioni sono sincrone, quindi sconsigliate per le app UWP. Nelle app UWP usare API asincrone per aprire, leggere e scrivere nei file, in modo da evitare il blocco del thread UI. Esempi di tali API sono quelle incluse nella classe `Windows::Storage::FileIO` .|  
   
 ## <a name="windows-8x-store-apps-and-windows-phone-8x-apps"></a>App di Windows 8.x Store e app di Windows Phone 8.x  

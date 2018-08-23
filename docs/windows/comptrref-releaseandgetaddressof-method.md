@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 273c8aaded45e04f1564d434c1a4f4a6920c3883
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 03f709feddb1c0e9c82cf80a4bd5f24e531414d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647801"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611219"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>Metodo ComPtrRef::ReleaseAndGetAddressOf
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-InterfaceType** ReleaseAndGetAddressOf();  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Puntatore all'interfaccia rappresentata da eliminati **ComPtrRef** oggetto.  
-  
-## <a name="remarks"></a>Note  
- Elimina l'oggetto corrente **ComPtrRef** dell'oggetto e restituisce un puntatore-a-a-puntatore all'interfaccia rappresentata dalle **ComPtrRef** oggetto.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [ComPtrRef (classe)](../windows/comptrref-class.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+InterfaceType** ReleaseAndGetAddressOf();
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Puntatore all'interfaccia rappresentata da eliminati **ComPtrRef** oggetto.
+
+## <a name="remarks"></a>Note
+
+Elimina l'oggetto corrente **ComPtrRef** dell'oggetto e restituisce un puntatore-a-a-puntatore all'interfaccia rappresentata dalle **ComPtrRef** oggetto.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtrRef](../windows/comptrref-class.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

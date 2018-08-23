@@ -19,42 +19,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27f4c5e3da313352358223de1499ef379db02bd7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aef763e20df3d8b19326a008706a45cc5508cd9c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647778"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600110"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Creazione di una descrizione comandi per un pulsante della barra degli strumenti
-### <a name="to-create-a-tool-tip"></a>Per creare una descrizione comando  
-  
-1.  Selezionare il pulsante della barra degli strumenti.  
-  
-2.  Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), nella **dei messaggi di richiesta** campo della proprietà, aggiungere una descrizione del pulsante per la barra di stato; dopo il messaggio, aggiungere `\n` e il nome della descrizione comandi.  
-  
- Un esempio comune di una descrizione comando è il **Print** sul pulsante **WordPad**:  
-  
- 1. Aprire **WordPad**.  
-  
- 2. Posizionare il puntatore del mouse sulle **stampa** pulsante della barra degli strumenti.  
-  
- 3. Si noti che la parola `Print` ora è mobile sotto il puntatore del mouse.  
-  
- 4. Nella barra di stato (nella parte inferiore del **WordPad** finestra)-si noti che viene ora visualizzato il testo `Prints the active document`.  
-  
- Il `Print` nel **passaggio 3** è il "nome della descrizione comandi," e il `Prints the active document` dalla **passaggio 4** "descrizione del pulsante della barra di stato".  
-  
- Se si desidera che questo effetto usando il **sulla barra degli strumenti** editor, si imposta la **dei messaggi di richiesta** proprietà `Prints the active document\nPrint`.  
-  
+
+### <a name="to-create-a-tool-tip"></a>Per creare una descrizione comando
+
+1. Selezionare il pulsante della barra degli strumenti.
+
+2. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), nella **dei messaggi di richiesta** campo della proprietà, aggiungere una descrizione del pulsante per la barra di stato; dopo il messaggio, aggiungere `\n` e il nome della descrizione comandi.
+
+Un esempio comune di una descrizione comando è il **Print** sul pulsante **WordPad**:
+
+1. Aprire **WordPad**.
+
+2. Posizionare il puntatore del mouse sulle **stampa** pulsante della barra degli strumenti.
+
+3. Si noti che la parola `Print` ora è mobile sotto il puntatore del mouse.
+
+4. Nella barra di stato (nella parte inferiore del **WordPad** finestra)-si noti che viene ora visualizzato il testo `Prints the active document`.
+
+Il `Print` nel **passaggio 3** è il "nome della descrizione comandi," e il `Prints the active document` dalla **passaggio 4** "descrizione del pulsante della barra di stato".
+
+Se si desidera che questo effetto usando il **sulla barra degli strumenti** editor, si imposta la **dei messaggi di richiesta** proprietà `Prints the active document\nPrint`.
+
 > [!NOTE]
->  È possibile modificare il testo del messaggio utilizzando la [finestra proprietà](/visualstudio/ide/reference/properties-window).  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisiti  
- MFC o ATL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Creazione, lo spostamento e modifica dei pulsanti della barra degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md)   
- [Editor barra degli strumenti](../windows/toolbar-editor.md)
+> È possibile modificare il testo del messaggio utilizzando la [finestra proprietà](/visualstudio/ide/reference/properties-window).
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisiti
+
+MFC o ATL
+
+## <a name="see-also"></a>Vedere anche
+
+[Creazione, spostamento e modifica dei pulsanti delle barre degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Editor barra degli strumenti](../windows/toolbar-editor.md)

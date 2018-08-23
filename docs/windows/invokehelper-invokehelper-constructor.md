@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75ad1b82d6d4a28db94ef00a234547091969722b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1ad09a5a4794a9db8882a088f90da5046b6f7b9d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020027"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609240"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>Costruttore InvokeHelper::InvokeHelper
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-explicit InvokeHelper(  
-   TCallback callback  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *callback*  
- Un gestore eventi.  
-  
-## <a name="remarks"></a>Note  
- Inizializza una nuova istanza di **InvokeHelper** classe.  
-  
- Il `TCallback` modello parametro specifica il tipo del gestore dell'evento.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Event. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [InvokeHelper (struttura)](../windows/invokehelper-structure.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*callback*  
+Un gestore eventi.
+
+## <a name="remarks"></a>Note
+
+Inizializza una nuova istanza di **InvokeHelper** classe.
+
+Il `TCallback` modello parametro specifica il tipo del gestore dell'evento.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Event. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Struttura InvokeHelper](../windows/invokehelper-structure.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

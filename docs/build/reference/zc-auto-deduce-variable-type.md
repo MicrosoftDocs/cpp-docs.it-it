@@ -1,5 +1,5 @@
 ---
-title: '-Zc: auto (deduzione del tipo di variabile) | Documenti Microsoft'
+title: '-Zc: auto (deduzione del tipo di variabile) | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caa64f64b75145c850c6f6393570dc3f9ba0b0d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b306a104b9f71d536684e62f6dda1cac45b1d9dd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379575"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612941"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (deduzione del tipo di variabile)
 
-Il **/Zc: auto [-]** l'opzione del compilatore indica al compilatore come usare il [parola chiave auto](../../cpp/auto-keyword.md) per dichiarare le variabili. Se si specifica l'opzione predefinita, **/Zc: Auto**, il compilatore deduce il tipo di variabile dichiarata dall'espressione di inizializzazione. Se si specifica **/Zc:auto-**, il compilatore alloca la variabile alla classe di archiviazione automatica.
+Il **/Zc: auto [-]** l'opzione del compilatore indica al compilatore come usare i [parola chiave auto](../../cpp/auto-keyword.md) per dichiarare le variabili. Se si specifica l'opzione predefinita **/Zc: Auto**, il compilatore deduce il tipo di variabile dichiarata dalla relativa espressione di inizializzazione. Se si specifica **/Zc:auto-**, il compilatore alloca la variabile alla classe di archiviazione automatica.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,17 +36,17 @@ Il **/Zc: auto [-]** l'opzione del compilatore indica al compilatore come usare 
 
 ## <a name="remarks"></a>Note
 
-Lo standard C++ definisce un significato originale e uno rivisto per la parola chiave `auto`. Prima di [!INCLUDE[cpp_dev10_long](../../build/includes/cpp_dev10_long_md.md)], la parola chiave dichiara una variabile nella classe di archiviazione automatica; ovvero, una variabile che ha una durata locale. A partire da [!INCLUDE[cpp_dev10_long](../../build/includes/cpp_dev10_long_md.md)], la parola chiave deduce il tipo di una variabile dall'espressione di inizializzazione della dichiarazione. Utilizzare il **/Zc: auto [-]** dell'opzione del compilatore indicano al compilatore di utilizzare il significato originale o rivisto del `auto` (parola chiave). Il **/Zc: Auto** opzione è attivata per impostazione predefinita. Il [/ permissiva-](permissive-standards-conformance.md) opzione non modifica l'impostazione predefinita **/Zc: Auto**.
+Lo standard C++ definisce un significato originale e uno rivisto per la parola chiave `auto`. Prima di Visual C++ 2010, la parola chiave dichiara una variabile nella classe di archiviazione automatica; vale a dire, una variabile che ha una durata locale. A partire da Visual C++ 2010, la parola chiave deduce il tipo di una variabile dall'espressione di inizializzazione della dichiarazione. Usare la **/Zc: auto [-]** opzione del compilatore per indicare al compilatore di usare il significato originale o rivisto della `auto` (parola chiave). Il **/Zc: Auto** opzione è attivata per impostazione predefinita. Il [/PERMISSIVE--](permissive-standards-conformance.md) opzione non modifica l'impostazione predefinita **/Zc: Auto**.
 
-Il compilatore genera un messaggio di diagnostica appropriato se l'utilizzo del `auto` corrente è in contrasto con parola chiave **/Zc: Auto** opzione del compilatore. Per ulteriori informazioni, vedere [parola chiave auto](../../cpp/auto-keyword.md). Per ulteriori informazioni sui problemi di conformità con Visual C++, vedere [comportamento non standard](../../cpp/nonstandard-behavior.md).
+Il compilatore genera un messaggio di diagnostica appropriato se l'utilizzo dei `auto` parola chiave meno avanzata vengono contraddetti corrente **/Zc: Auto** opzione del compilatore. Per altre informazioni, vedere [parola chiave auto](../../cpp/auto-keyword.md). Per altre informazioni sui problemi di conformità in Visual C++, vedere [comportamento non standard](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Per impostare questa opzione del compilatore in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **C/C++** > **riga di comando** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
-1. Aggiungere **/Zc: Auto** o **/Zc:auto-** per il **opzioni aggiuntive:** riquadro.
+1. Aggiungere **/Zc: Auto** oppure **/Zc:auto-** per il **opzioni aggiuntive:** riquadro.
 
 ## <a name="see-also"></a>Vedere anche
 

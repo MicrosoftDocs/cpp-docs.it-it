@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32f75c838ea178b1313ab0bf9f005ff2a4c5d75b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d79707eaa3e5e93ab5c05e120d1556ee86168af2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652562"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607298"
 ---
 # <a name="comptrasiid-method"></a>Metodo ComPtr::AsIID
-Restituisce un **ComPtr** oggetto che rappresenta l'interfaccia identificata dall'ID dell'interfaccia specificata.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-WRL_NOTHROW HRESULT AsIID(  
-   REFIID riid,  
-   _Out_ ComPtr<IUnknown>* p  
-) const;  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *riid*  
- ID di interfaccia.  
-  
- *p*  
- Se l'oggetto presenta un'interfaccia il cui ID corrisponde *riid*, un puntatore indiretto doppio a un'interfaccia specificata per il *riid* parametro; in caso contrario, un puntatore a `IUnknown`.  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se riesce; in caso contrario, HRESULT indica un errore.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ComPtr](../windows/comptr-class.md)
+
+Restituisce un **ComPtr** oggetto che rappresenta l'interfaccia identificata dall'ID dell'interfaccia specificata.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+WRL_NOTHROW HRESULT AsIID(
+   REFIID riid,
+   _Out_ ComPtr<IUnknown>* p
+) const;
+```
+
+### <a name="parameters"></a>Parametri
+
+*riid*  
+ID di interfaccia.
+
+*p*  
+Se l'oggetto presenta un'interfaccia il cui ID corrisponde *riid*, un puntatore indiretto doppio a un'interfaccia specificata per il *riid* parametro; in caso contrario, un puntatore a `IUnknown`.
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se riesce; in caso contrario, HRESULT indica un errore.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtr](../windows/comptr-class.md)

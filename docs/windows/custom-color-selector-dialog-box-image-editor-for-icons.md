@@ -18,47 +18,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2d32083194efc81fdfe2be1c38eec4ce9ce175d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 254734bec6649c7181e67d4d2330493b0f22197b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642812"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609437"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Regola colori (Editor di immagini per le icone)
-Questa finestra di dialogo consente di personalizzare i colori utilizzati per l'immagine. Per altre informazioni, vedere [personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
-  
- **Visualizzazione delle sfumature**  
- Modifica i valori del colore selezionato. Posizionare il selettore di precisione sul colore che si desidera modificare. Quindi spostare il dispositivo di scorrimento verso l'alto o il basso per modificarne la luminosità o valori RGB del colore.  
-  
- **Barra luminosità**  
- Imposta la luminosità per il colore selezionato nel **visualizzazione delle sfumature** casella. Fare clic e trascinare la freccia bianca la barra della luminosità maggiore o verso il basso per il minore. Si noti che il **colore** casella viene visualizzato il colore selezionato e l'effetto della luminosità è impostato.  
-  
- **Colore**  
- Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.  
-  
- **Hue**  
- Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.  
-  
- **Sabato**  
- Specifica il valore di saturazione del colore che si sta definendo. La saturazione è la quantità di colore in una tonalità specificata. I valori compresi tra 0 e 240.  
-  
- **LUM**  
- Elenca la luminosità del colore che si sta definendo. I valori compresi tra 0 e 240.  
-  
- **Rosso**  
- Specifica il valore di colore rosso del colore che si sta definendo. I valori compresi tra 0 e 255.  
-  
- **Verde**  
- Specifica il valore di colore verde del colore che si sta definendo. I valori compresi tra 0 e 255.  
-  
- **Blu**  
- Specifica il valore di colore blu del colore che si sta definendo. I valori compresi tra 0 e 255.  
-  
-## <a name="requirements"></a>Requisiti  
- nessuno  
-  
-## <a name="see-also"></a>Vedere anche  
- [Menu immagine](../windows/image-menu-image-editor-for-icons.md)   
- [La personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
- [Finestra colori](../windows/colors-window-image-editor-for-icons.md)
+
+Questa finestra di dialogo consente di personalizzare i colori utilizzati per l'immagine. Per altre informazioni, vedere [personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
+
+**Visualizzazione delle sfumature**  
+Modifica i valori del colore selezionato. Posizionare il selettore di precisione sul colore che si desidera modificare. Quindi spostare il dispositivo di scorrimento verso l'alto o il basso per modificarne la luminosità o valori RGB del colore.
+
+**Barra luminosità**  
+Imposta la luminosità per il colore selezionato nel **visualizzazione delle sfumature** casella. Fare clic e trascinare la freccia bianca la barra della luminosità maggiore o verso il basso per il minore. Si noti che il **colore** casella viene visualizzato il colore selezionato e l'effetto della luminosità è impostato.
+
+**Colore**  
+Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.
+
+**Hue**  
+Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.
+
+**Sabato**  
+Specifica il valore di saturazione del colore che si sta definendo. La saturazione è la quantità di colore in una tonalità specificata. I valori compresi tra 0 e 240.
+
+**LUM**  
+Elenca la luminosità del colore che si sta definendo. I valori compresi tra 0 e 240.
+
+**Rosso**  
+Specifica il valore di colore rosso del colore che si sta definendo. I valori compresi tra 0 e 255.
+
+**Verde**  
+Specifica il valore di colore verde del colore che si sta definendo. I valori compresi tra 0 e 255.
+
+**Blu**  
+Specifica il valore di colore blu del colore che si sta definendo. I valori compresi tra 0 e 255.
+
+## <a name="requirements"></a>Requisiti
+
+nessuno
+
+## <a name="see-also"></a>Vedere anche
+
+[Menu immagine](../windows/image-menu-image-editor-for-icons.md)  
+[La personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
+[Finestra colori](../windows/colors-window-image-editor-for-icons.md)

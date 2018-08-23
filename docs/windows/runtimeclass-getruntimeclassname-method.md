@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5e367f956fbaeb36837733d619b19cdc8363ca3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020395"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606827"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>Metodo RuntimeClass::GetRuntimeClassName
 
@@ -37,6 +37,7 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>Parametri
+
 *runtimeName*  
 Quando questa operazione viene completata, il nome di classe di runtime.
 
@@ -55,4 +56,5 @@ Viene generato un errore di asserzione se `__WRL_STRICT__` o `__WRL_FORCE_INSPEC
 **Spazio dei nomi:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vedere anche
- [Classe RuntimeClass](../windows/runtimeclass-class.md)
+
+[Classe RuntimeClass](../windows/runtimeclass-class.md)

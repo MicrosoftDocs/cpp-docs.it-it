@@ -1,5 +1,5 @@
 ---
-title: Module (attributi) | Documenti Microsoft
+title: Attributi di modulo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 650a2190e59b995962672deccdf202902f8a5b07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01ac7cfb1c53f0616431a33638bd04fdb586f557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875266"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609637"
 ---
 # <a name="module-attributes"></a>Attributi di modulo
-L'attributo seguente può essere applicato solo per il [modulo](../windows/module-cpp.md) attributo.  
+L'attributo seguente può essere applicato solo per i [modulo](../windows/module-cpp.md) attributo.
   
-|Attributo|Descrizione|  
-|---------------|-----------------|  
-|[helpstringdll](../windows/helpstringdll.md)|Specifica il nome della DLL da utilizzare per eseguire la ricerca della stringa di documento (localizzazione).|  
+|Attributo|Descrizione|
+|---------------|-----------------|
+|[helpstringdll](../windows/helpstringdll.md)|Specifica il nome della DLL da usare per eseguire la ricerca della stringa di documento (localizzazione).|
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
  [Attributi per utilizzo](../windows/attributes-by-usage.md)

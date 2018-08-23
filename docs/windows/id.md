@@ -17,51 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a89758933aef4646aaf11d08d7193d48a44f468
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7b7ac87241e9089cc8c0152a6d0c3966dc32fa08
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013545"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600242"
 ---
 # <a name="id"></a>ID
-Specifica un *dispid* parametro per una funzione membro (una proprietà o un metodo, in un'interfaccia o interfaccia dispatch).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-[ id(  
-   dispid  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *DISPID*  
- L'ID di invio per il metodo di interfaccia.  
-  
-## <a name="remarks"></a>Note  
- Il **id** attributi di C++ ha la stessa funzionalità come la [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) attributo MIDL.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio di come usare **id**.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-### <a name="attribute-context"></a>Contesto attributo  
-  
-|||  
-|-|-|  
-|**Si applica a**|Metodo di interfaccia|  
-|**Ripetibile**|No|  
-|**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
-  
- Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attributi IDL](../windows/idl-attributes.md)   
- [Attributi del metodo](../windows/method-attributes.md)   
- [Attributi del membro dati](../windows/data-member-attributes.md)   
- [DefaultValue](../windows/defaultvalue.md)   
- [in](../windows/in-cpp.md)   
- [out](../windows/out-cpp.md)   
+
+Specifica un *dispid* parametro per una funzione membro (una proprietà o un metodo, in un'interfaccia o interfaccia dispatch).
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+[ id(
+   dispid
+) ]
+```
+
+### <a name="parameters"></a>Parametri
+
+*DISPID*  
+L'ID di invio per il metodo di interfaccia.
+
+## <a name="remarks"></a>Note
+
+Il **id** attributi di C++ ha la stessa funzionalità come la [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) attributo MIDL.
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio relativo [associabile](../windows/bindable.md) per un esempio di come usare **id**.
+
+## <a name="requirements"></a>Requisiti
+
+### <a name="attribute-context"></a>Contesto attributo
+
+|||
+|-|-|
+|**Si applica a**|Metodo di interfaccia|
+|**Ripetibile**|No|
+|**Attributi obbligatori**|Nessuna|
+|**Attributi non validi**|nessuno|
+
+Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Attributi IDL](../windows/idl-attributes.md)  
+[Attributi di metodo](../windows/method-attributes.md)  
+[Attributi di membro dati](../windows/data-member-attributes.md)  
+[defaultvalue](../windows/defaultvalue.md)  
+[in](../windows/in-cpp.md)  
+[out](../windows/out-cpp.md)  

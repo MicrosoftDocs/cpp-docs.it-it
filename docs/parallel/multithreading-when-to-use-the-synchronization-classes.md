@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Quando utilizzare le classi di sincronizzazione | Documenti Microsoft'
+title: 'Multithreading: Quando usare le classi di sincronizzazione | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05922b826de81b5192b183e1c0afdfcda189f03
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688258"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606064"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>Multithreading: quando usare le classi di sincronizzazione
-Le classi multithread disponibili in MFC rientrano in due categorie: gli oggetti di sincronizzazione ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), e [CEvent](../mfc/reference/cevent-class.md)) e gli oggetti di accesso di sincronizzazione ([CMultiLock](../mfc/reference/cmultilock-class.md) e [CSingleLock](../mfc/reference/csinglelock-class.md)).  
+Le classi multithreading fornite con MFC rientrano in due categorie: gli oggetti di sincronizzazione ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), e [CEvent](../mfc/reference/cevent-class.md)) e oggetti di sincronizzazione accesso ([CMultiLock](../mfc/reference/cmultilock-class.md) e [CSingleLock](../mfc/reference/csinglelock-class.md)).  
   
- Classi di sincronizzazione vengono utilizzate quando l'accesso a una risorsa deve essere controllato per assicurare l'integrità della risorsa. Classi di accesso di sincronizzazione vengono utilizzate per accedere a tali risorse controllate. In questo argomento viene descritto quando utilizzare ogni classe.  
+Classi di sincronizzazione vengono usate quando l'accesso a una risorsa deve essere controllato per assicurare l'integrità della risorsa. Accesso delle classi di sincronizzazione per ottenere l'accesso a tali risorse controllate. In questo argomento viene descritto quando utilizzare ciascuna classe.  
   
- Per determinare quale classe di sincronizzazione è necessario utilizzare, porre le domande seguenti:  
+Per determinare quale classe di sincronizzazione è consigliabile usare, richiedere la serie di domande seguenti:  
   
-1.  L'applicazione dispone di attesa di un intervento prima di poter accedere alla risorsa (ad esempio, dati devono essere ricevuti da una porta di comunicazione prima che possono essere scritti in un file)?  
+1. L'applicazione deve attendere per un evento prima di poter accedere alla risorsa (ad esempio, i dati devono essere ricevuti da una porta di comunicazione prima può essere scritta in un file)?  
   
-     In caso affermativo, utilizzare `CEvent`.  
+     In caso affermativo, usare `CEvent`.  
   
-2.  Possibile più di un thread all'interno dello stesso accesso dell'applicazione questa risorsa in una sola volta (ad esempio, l'applicazione consente fino a cinque windows con le viste nello stesso documento)?  
+2. Possa più di un thread all'interno di accesso dell'applicazione stessa questa risorsa in una sola volta (ad esempio, l'applicazione consente fino a cinque windows con le viste nello stesso documento)?  
   
-     In caso affermativo, utilizzare `CSemaphore`.  
+     In caso affermativo, usare `CSemaphore`.  
   
-3.  Se più applicazioni possono utilizzare questa risorsa (ad esempio, la risorsa è in una DLL)?  
+3. Se più applicazioni possono utilizzare questa risorsa (ad esempio, la risorsa è in una DLL)?  
   
-     In caso affermativo, utilizzare `CMutex`.  
+     In caso affermativo, usare `CMutex`.  
   
-     Se no, utilizzare `CCriticalSection`.  
+     Se no, usare `CCriticalSection`.  
   
- **CSyncObject** non viene mai usato direttamente. È la classe base per le altre quattro classi di sincronizzazione.  
+`CSyncObject` non viene mai usato direttamente. È la classe di base per altri quattro classi di sincronizzazione.  
   
 ## <a name="example-1-using-three-synchronization-classes"></a>Esempio 1: Utilizzo di tre classi di sincronizzazione  
- Ad esempio, eseguire un'applicazione che mantiene un elenco collegato di account. Questa applicazione consente di esaminare in finestre distinte fino a tre account, ma solo uno può essere aggiornato in un determinato momento. Quando viene aggiornato un account, i dati aggiornati sono inviati in rete in un archivio dati.  
+ 
+Ad esempio, eseguire un'applicazione che gestisce un elenco collegato dell'account. Questa applicazione consente fino a tre account da esaminare in finestre separate, ma solo uno può essere aggiornato in qualsiasi momento specifico. Quando viene aggiornato un account, i dati aggiornati vengono inviati attraverso la rete a un archivio dati.  
   
- Questa applicazione di esempio utilizza i tre tipi di classi di sincronizzazione. Poiché è consentito un massimo di tre account da esaminare in una sola volta, utilizza `CSemaphore` per limitare l'accesso ai tre oggetti. Quando si tenta di visualizzare un quarto account si verifica, l'applicazione sia attende fino a quando una delle prime tre finestre chiude o si verifica un errore. Quando viene aggiornato un account, l'applicazione utilizza `CCriticalSection` per assicurare che solo un account di aggiornamento alla volta. Dopo l'aggiornamento ha esito positivo, viene segnalato `CEvent`, che rilascia un thread in attesa per l'evento venga segnalato. Questo thread invia i nuovi dati nell'archivio dati.  
+Questa applicazione di esempio Usa tutti i tre tipi di classi di sincronizzazione. Poiché è consentito un massimo di tre account da esaminare in una sola volta, utilizza `CSemaphore` per limitare l'accesso a tre oggetti di visualizzazione. Quando si tenta di visualizzare un quarto account si verifica, l'applicazione sia in attesa fino a quando una delle prime tre finestre chiude o si verifica un errore. Quando viene aggiornato un account, l'applicazione usa `CCriticalSection` per garantire che solo un account venga aggiornato contemporaneamente. Dopo l'aggiornamento ha esito positivo, viene segnalato `CEvent`, che rilascia un thread in attesa per l'evento venga segnalato. Questo thread invia i dati di nuovo all'archivio dati.  
   
-## <a name="example-2-using-synchronization-access-classes"></a>Esempio 2: Utilizzo di classi di accesso di sincronizzazione  
- La scelta è ancora più semplice la classe di accesso di sincronizzazione da utilizzare. Se l'applicazione viene eseguito l'accesso a una singola risorsa controllata, utilizzare `CSingleLock`. Se è richiesto l'accesso a una qualsiasi di un numero di risorse controllate, utilizzare `CMultiLock`. Nell'esempio 1, `CSingleLock` sarebbe stata utilizzata, in ogni caso è necessaria solo una risorsa in un determinato momento.  
+## <a name="example-2-using-synchronization-access-classes"></a>Esempio 2: Uso di classi di accesso di sincronizzazione  
+ 
+Scelta della classe da usare l'accesso di sincronizzazione è ancora più semplice. Se l'applicazione viene eseguito l'accesso a una singola risorsa controllata, usare `CSingleLock`. Se è richiesto l'accesso a una delle numerose risorse controllate, usare `CMultiLock`. Nell'esempio 1, `CSingleLock` sarebbe stata utilizzata, perché in ogni caso è necessaria solo una risorsa in un determinato momento.  
   
- Per informazioni sull'utilizzo delle classi di sincronizzazione, vedere [Multithreading: utilizzo delle classi di sincronizzazione](../parallel/multithreading-how-to-use-the-synchronization-classes.md). Per informazioni sulla sincronizzazione, vedere [sincronizzazione](http://msdn.microsoft.com/library/windows/desktop/ms686353) nel [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Per informazioni sul supporto multithreading in MFC, vedere [Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Per informazioni sull'uso delle classi di sincronizzazione, vedere [Multithreading: come usare le classi di sincronizzazione](../parallel/multithreading-how-to-use-the-synchronization-classes.md). Per informazioni sulla sincronizzazione, vedere [sincronizzazione](http://msdn.microsoft.com/library/windows/desktop/ms686353) nel SDK di Windows. Per informazioni sul supporto del multithreading in MFC, vedere [Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ 
+[Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)

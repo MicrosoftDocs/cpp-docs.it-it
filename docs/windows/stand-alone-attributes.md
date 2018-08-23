@@ -1,5 +1,5 @@
 ---
-title: Attributi autonomi | Documenti Microsoft
+title: Attributi autonomi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59846b1ca031cc02c85cb6ace23f96e8c5cc9f37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6562a1de8baa9a5805f044233b97bf8dd8840638
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890431"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613758"
 ---
 # <a name="stand-alone-attributes"></a>Attributi autonomi
-Un attributo autonomo non funziona su una parola chiave C++, ma è più simile a una riga di codice. Le istruzioni di un attributo autonomo richiedono un punto e virgola alla fine della riga.  
+Un attributo autonomo non agisce su una parola chiave C++, ma è più simile a una riga di codice. Le istruzioni di attributi autonomi richiedono un punto e virgola alla fine della riga.
   
-|Attributo|Descrizione|  
-|---------------|-----------------|  
-|[cpp_quote](../windows/cpp-quote.md)|Genera la stringa specificata, senza virgolette, nel file di intestazione generato.|  
-|[custom](../windows/custom-cpp.md)|Consente di definire un attributo personalizzato.|  
-|[db_command](../windows/db-command.md)|Crea un comando OLE DB.|  
-|[emitidl](../windows/emitidl.md)|Determina se tutti gli attributi IDL successive saranno elaborati e inseriti nel file IDL generato.|  
-|[idl_module](../windows/idl-module.md)|Specifica un punto di ingresso in una DLL.|  
-|[idl_quote](../windows/idl-quote.md)|Consente di utilizzare costrutti IDL che non sono supportati nella versione corrente di Visual C++ e farli pass-through per il file IDL generato.|  
-|[import](../windows/import.md)|Specifica un altro file IDL o ODL. h che contiene le definizioni di che fare riferimento dal file con estensione idl principale.|  
-|[importidl](../windows/importidl.md)|Inserisce il file IDL specificato nel file IDL generato|  
-|[importlib](../windows/importlib.md)|Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la libreria dei tipi da creare.|  
-|[include](../windows/include-cpp.md)|Specifica uno o più file di intestazione da includere nel file IDL generato.|  
-|[includelib](../windows/includelib-cpp.md)|Fa sì che un file IDL o h da includere nel file IDL generato.|  
-|[library_block](../windows/library-block.md)|Inserisce un costrutto di blocco di libreria del file IDL.|  
-|[Modulo](../windows/module-cpp.md)|Definisce il blocco di libreria nel file IDL.|  
-|[no_injected_text](../windows/no-injected-text.md)|Impedisce al compilatore di codice in seguito a uso dell'attributo.|  
-|[pragma](../windows/pragma.md)|Genera la stringa specificata, senza virgolette, nel file IDL generato.|  
+|Attributo|Descrizione|
+|---------------|-----------------|
+|[cpp_quote](../windows/cpp-quote.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file di intestazione generato.|
+|[custom](../windows/custom-cpp.md)|È possibile definire un attributo personalizzato.|
+|[db_command](../windows/db-command.md)|Crea un comando OLE DB.|
+|[emitidl](../windows/emitidl.md)|Determina se tutti gli attributi IDL successivi verranno elaborati e inseriti nel file con estensione IDL generato.|
+|[idl_module](../windows/idl-module.md)|Specifica un punto di ingresso in una DLL.|
+|[idl_quote](../windows/idl-quote.md)|Consente di usare costrutti IDL che non sono supportati nella versione corrente di Visual C++ e chiedere di pass-through per il file con estensione IDL generato.|
+|[import](../windows/import.md)|Specifica un altro file con estensione idl o ODL. h che contiene le definizioni che si desidera fare riferimento dal file con estensione idl principale.|
+|[importidl](../windows/importidl.md)|Inserisce il file con estensione idl specificato nel file con estensione IDL generato|
+|[importlib](../windows/importlib.md)|Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la libreria dei tipi da creare.|
+|[include](../windows/include-cpp.md)|Specifica uno o più file di intestazione da includere nel file IDL generato.|
+|[includelib](../windows/includelib-cpp.md)|Fa sì che un file con estensione idl o con estensione h da includere nel file IDL generato.|
+|[library_block](../windows/library-block.md)|Inserisce un costrutto nel blocco di libreria del file con estensione idl.|
+|[modulo](../windows/module-cpp.md)|Definisce il blocco di libreria nel file IDL.|
+|[no_injected_text](../windows/no-injected-text.md)|Impedisce al compilatore di inserire codice in seguito a uso dell'attributo.|
+|[pragma](../windows/pragma.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file con estensione IDL generato.|
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
  [Attributi per utilizzo](../windows/attributes-by-usage.md)

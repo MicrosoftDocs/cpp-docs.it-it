@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7084b16536533c9605b741adb596a2a7d383c153
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 952de0ca136d29eb0b170856410b18a1d65120c1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649998"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612888"
 ---
 # <a name="comparestringordinal-method"></a>Metodo CompareStringOrdinal
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-inline INT32 CompareStringOrdinal(  
-   HSTRING lhs,   
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+inline INT32 CompareStringOrdinal(
+   HSTRING lhs,
    HSTRING rhs)  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *sul lato sinistro*  
- Il primo HSTRING da confrontare.  
-  
- *rhs*  
- Il secondo HSTRING da confrontare.  
-  
-## <a name="return-value"></a>Valore restituito  
-  
-|Valore|Condizione|  
-|-----------|---------------|  
-|-1|*LHS* è minore di *rhs*.|  
-|0|*LHS* è uguale a *rhs*.|  
-|1|*LHS* è maggiore di quella *rhs*.|  
-  
-## <a name="remarks"></a>Note  
- Confronta due oggetti HSTRING specificati e restituisce un intero che indica la posizione relativa di una sequenza di ordinamento.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*sul lato sinistro*  
+Il primo HSTRING da confrontare.
+
+*rhs*  
+Il secondo HSTRING da confrontare.
+
+## <a name="return-value"></a>Valore restituito
+
+|Valore|Condizione|
+|-----------|---------------|
+|-1|*LHS* è minore di *rhs*.|
+|0|*LHS* è uguale a *rhs*.|
+|1|*LHS* è maggiore di quella *rhs*.|
+
+## <a name="remarks"></a>Note
+
+Confronta due oggetti HSTRING specificati e restituisce un intero che indica la posizione relativa di una sequenza di ordinamento.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

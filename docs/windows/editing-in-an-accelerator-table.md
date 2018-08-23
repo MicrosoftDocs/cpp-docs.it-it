@@ -16,38 +16,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0844ab8a4233e2204c42a8d165309c89026fb01
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ed8e2b630444c28675b4714b65676a049a8b285b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646228"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611097"
 ---
 # <a name="editing-in-an-accelerator-table"></a>Modifica in una tabella dei tasti di scelta rapida
-### <a name="to-edit-in-an-accelerator-table"></a>Per eseguire una modifica in una tabella dei tasti di scelta rapida  
-  
-1.  Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Selezionare una voce nella tabella e fare clic per attivare la modifica sul posto.  
-  
-3.  Eseguire la selezione dalla casella combinata a discesa oppure digitare sul posto per apportare modifiche.  
-  
-    -   Per la [ID](id-property.md), selezionarlo dall'elenco o digitarlo per apportare modifiche.  
-  
-    -   Per la [modificatore](../windows/accelerator-modifier-property.md)selezionare dall'elenco.  
-  
-    -   Per la [chiave](../windows/accelerator-key-property.md), selezionarlo dall'elenco o digitarlo per apportare modifiche.  
-  
-    -   Per la [tipo](../windows/accelerator-type-property.md), selezionare **ASCII** oppure **VIRTKEY** dall'elenco.  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.  
-  
-## <a name="requirements"></a>Requisiti  
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica delle tabelle di tasti di scelta rapida](../windows/editing-accelerator-tables.md)   
- [Editor tasti di scelta rapida](../windows/accelerator-editor.md)
+
+### <a name="to-edit-in-an-accelerator-table"></a>Per eseguire una modifica in una tabella dei tasti di scelta rapida
+
+1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
+
+2. Selezionare una voce nella tabella e fare clic per attivare la modifica sul posto.
+
+3. Eseguire la selezione dalla casella combinata a discesa oppure digitare sul posto per apportare modifiche.
+
+   - Per la [ID](id-property.md), selezionarlo dall'elenco o digitarlo per apportare modifiche.
+
+   - Per la [modificatore](../windows/accelerator-modifier-property.md)selezionare dall'elenco.
+
+   - Per la [chiave](../windows/accelerator-key-property.md), selezionarlo dall'elenco o digitarlo per apportare modifiche.
+
+   - Per la [tipo](../windows/accelerator-type-property.md), selezionare **ASCII** oppure **VIRTKEY** dall'elenco.
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica delle tabelle dei tasti di scelta rapida](../windows/editing-accelerator-tables.md)  
+[Editor tasti di scelta rapida](../windows/accelerator-editor.md)

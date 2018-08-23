@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 313492990113ad1a1d6037c4c08e1baa464676d8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e1af266d769b950324a1a4a9b8023b6b8e164038
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651038"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606035"
 ---
 # <a name="classfactoryrelease-method"></a>Metodo ClassFactory::Release
-Decrementa il conteggio dei riferimenti per l'oggetto corrente **ClassFactory** oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-STDMETHOD_(  
-   ULONG,  
-   Release  
-)();  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ClassFactory](../windows/classfactory-class.md)
+
+Decrementa il conteggio dei riferimenti per l'oggetto corrente **ClassFactory** oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ClassFactory](../windows/classfactory-class.md)

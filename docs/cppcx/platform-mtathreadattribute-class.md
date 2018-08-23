@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: MTAThreadAttribute | Documenti Microsoft'
+title: 'Classe platform:: MTAThreadAttribute | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089165"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613459"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (classe)
 Indica che il modello di threading per un'applicazione è un apartment a thread multipli (MTA).  
@@ -60,7 +60,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 
 
-## <a name="ctor"></a> MTAThreadAttribute (costruttore)
+## <a name="ctor"></a> Costruttore MTAThreadAttribute
 Inizializza una nuova istanza della classe MTAThreadAttribute.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -116,4 +116,4 @@ public:String^ ToString()
  Stringa che rappresenta l'oggetto corrente.  
     
 ## <a name="see-also"></a>Vedere anche  
- [Piattaforma Namespace](platform-namespace-c-cx.md)
+ [Platform Namespace](platform-namespace-c-cx.md)

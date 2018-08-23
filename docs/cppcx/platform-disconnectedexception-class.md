@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: disconnectedexception | Documenti Microsoft'
+title: 'Classe platform:: disconnectedexception | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::DisconnectedException
 ms.assetid: c25e0d64-5bff-4c21-88e5-c4ec2776fa7f
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b756ef02082eb80cd8c9bd6b118ee9abca47236e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a84d07db2e3fe48d981641d2803352d90268d93a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087489"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606307"
 ---
 # <a name="platformdisconnectedexception-class"></a>Classe Platform::DisconnectedException
 Generato quando un oggetto proxy COM tenta di fare riferimento a un server COM che non esiste più.  

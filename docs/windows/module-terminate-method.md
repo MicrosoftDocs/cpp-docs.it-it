@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7f89922fb107c1454ec81dfd8a9ac213608da962
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016892"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610843"
 ---
 # <a name="moduleterminate-method"></a>Metodo Module::Terminate
-Fa sì che tutte le factory creata un'istanza mediante il modulo da arrestare.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-void Terminate();  
-```  
-  
-## <a name="remarks"></a>Note  
- Rilascia le factory nella cache.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Vedere anche
- [Classe Module](../windows/module-class.md)
+
+Fa sì che tutte le factory creata un'istanza mediante il modulo da arrestare.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+void Terminate();
+```
+
+## <a name="remarks"></a>Note
+
+Rilascia le factory nella cache.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+[Classe Module](../windows/module-class.md)

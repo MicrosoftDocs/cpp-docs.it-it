@@ -17,74 +17,80 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ff70348f2305a5c75515630a5b6b9e2937494b5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fb26a6d7449dae4abe28be5687cea7d84ece7b8d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641278"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604843"
 ---
 # <a name="comptroperator-operator"></a>Operatore ComPtr::operator=
-Assegna un valore all'oggetto corrente **ComPtr**.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-WRL_NOTHROW ComPtr& operator=(  
+
+Assegna un valore all'oggetto corrente **ComPtr**.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+WRL_NOTHROW ComPtr& operator=(
    decltype(__nullptr)  
-);  
-WRL_NOTHROW ComPtr& operator=(  
-   _In_opt_ T *other  
-);  
-template <typename U>  
-WRL_NOTHROW ComPtr& operator=(  
-   _In_opt_ U *other  
-);  
-WRL_NOTHROW ComPtr& operator=(  
-   const ComPtr &other  
-);  
-template<class U>  
-WRL_NOTHROW ComPtr& operator=(  
-   const ComPtr<U>& other  
-);  
-WRL_NOTHROW ComPtr& operator=(  
-   _Inout_ ComPtr &&other  
-);  
-template<class U>  
-WRL_NOTHROW ComPtr& operator=(  
-   _Inout_ ComPtr<U>&& other  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *U*  
- Una classe.  
-  
- *other*  
- Un puntatore, riferimento o riferimento rvalue a un tipo o un altro **ComPtr**.  
-  
-## <a name="return-value"></a>Valore restituito  
- Un riferimento all'oggetto corrente **ComPtr**.  
-  
-## <a name="remarks"></a>Note  
- La prima versione di questo operatore assegna un valore vuoto all'oggetto corrente **ComPtr**.  
-  
- Nella seconda versione, se il puntatore di interfaccia di assegnazione non è quello utilizzato per l'oggetto corrente **ComPtr** puntatore a interfaccia, il secondo puntatore a interfaccia viene assegnato all'oggetto corrente **ComPtr**.  
-  
- Nella terza versione, il puntatore a interfaccia assegnazione viene assegnato all'oggetto corrente **ComPtr**.  
-  
- Nella quarta versione, se il puntatore di interfaccia del valore di assegnazione non è quello utilizzato per l'oggetto corrente **ComPtr** puntatore a interfaccia, il secondo puntatore a interfaccia viene assegnato all'oggetto corrente **ComPtr**.  
-  
- La quinta versione è un operatore di copia. un riferimento a un **ComPtr** viene assegnato all'oggetto corrente **ComPtr**.  
-  
- La sesta versione è un operatore di copia che usa la semantica; di spostamento un riferimento rvalue a un **ComPtr** se è statico qualsiasi tipo di cast e quindi assegnata all'attuale **ComPtr**.  
-  
- La versione del settima è un operatore di copia che usa la semantica; di spostamento un riferimento rvalue a un **ComPtr** typu *U* è static cast quindi e assegnato all'oggetto corrente **ComPtr**.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** client.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe ComPtr](../windows/comptr-class.md)
+);
+WRL_NOTHROW ComPtr& operator=(
+   _In_opt_ T *other
+);
+template <typename U>
+WRL_NOTHROW ComPtr& operator=(
+   _In_opt_ U *other
+);
+WRL_NOTHROW ComPtr& operator=(
+   const ComPtr &other
+);
+template<class U>
+WRL_NOTHROW ComPtr& operator=(
+   const ComPtr<U>& other
+);
+WRL_NOTHROW ComPtr& operator=(
+   _Inout_ ComPtr &&other
+);
+template<class U>
+WRL_NOTHROW ComPtr& operator=(
+   _Inout_ ComPtr<U>&& other
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*U*  
+Una classe.
+
+*other*  
+Un puntatore, riferimento o riferimento rvalue a un tipo o un altro **ComPtr**.
+
+## <a name="return-value"></a>Valore restituito
+
+Un riferimento all'oggetto corrente **ComPtr**.
+
+## <a name="remarks"></a>Note
+
+La prima versione di questo operatore assegna un valore vuoto all'oggetto corrente **ComPtr**.
+
+Nella seconda versione, se il puntatore di interfaccia di assegnazione non è quello utilizzato per l'oggetto corrente **ComPtr** puntatore a interfaccia, il secondo puntatore a interfaccia viene assegnato all'oggetto corrente **ComPtr**.
+
+Nella terza versione, il puntatore a interfaccia assegnazione viene assegnato all'oggetto corrente **ComPtr**.
+
+Nella quarta versione, se il puntatore di interfaccia del valore di assegnazione non è quello utilizzato per l'oggetto corrente **ComPtr** puntatore a interfaccia, il secondo puntatore a interfaccia viene assegnato all'oggetto corrente **ComPtr**.
+
+La quinta versione è un operatore di copia. un riferimento a un **ComPtr** viene assegnato all'oggetto corrente **ComPtr**.
+
+La sesta versione è un operatore di copia che usa la semantica; di spostamento un riferimento rvalue a un **ComPtr** se è statico qualsiasi tipo di cast e quindi assegnata all'attuale **ComPtr**.
+
+La versione del settima è un operatore di copia che usa la semantica; di spostamento un riferimento rvalue a un **ComPtr** typu *U* è static cast quindi e assegnato all'oggetto corrente **ComPtr**.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** client.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe ComPtr](../windows/comptr-class.md)

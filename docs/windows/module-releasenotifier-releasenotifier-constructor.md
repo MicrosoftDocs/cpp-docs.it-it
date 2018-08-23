@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f4ab2d5d03516147acda38ea2133d7445695de80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608469"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598788"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Costruttore Module::ReleaseNotifier::ReleaseNotifier
-Inizializza una nuova istanza di **Module:: releasenotifier** classe.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-ReleaseNotifier(bool release) throw();  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *release*  
- **true** per eliminare questa istanza quando la `Release` viene chiamato; **false** non eliminare questa istanza.  
-  
-## <a name="exceptions"></a>Eccezioni  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)
+
+Inizializza una nuova istanza di **Module:: releasenotifier** classe.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+ReleaseNotifier(bool release) throw();
+```
+
+### <a name="parameters"></a>Parametri
+
+*release*  
+**true** per eliminare questa istanza quando la `Release` viene chiamato; **false** non eliminare questa istanza.
+
+## <a name="exceptions"></a>Eccezioni
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)

@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3636cdb2c30d08547fd9085141aa9283bdc85c7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6dba6e5d7fd478d198e48e9d8517d34e13b43484
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652383"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613666"
 ---
 # <a name="factorycachecookie-data-member"></a>Membro dati FactoryCache::cookie
-Supporta l'infrastruttura di libreria modelli C++ per Windows Runtime e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-union {   
-   WINRT_REGISTRATION_COOKIE winrt;  
-   DWORD com;   
-} cookie;  
-```  
-  
-## <a name="remarks"></a>Note  
- Contiene un valore che identifica un oggetto di classe di Windows Runtime o COM registrato e viene successivamente utilizzato per annullare la registrazione dell'oggetto.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [FactoryCache (struttura)](../windows/factorycache-structure.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura di libreria modelli C++ per Windows Runtime e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+union {
+   WINRT_REGISTRATION_COOKIE winrt;
+   DWORD com;
+} cookie;
+```
+
+## <a name="remarks"></a>Note
+
+Contiene un valore che identifica un oggetto di classe di Windows Runtime o COM registrato e viene successivamente utilizzato per annullare la registrazione dell'oggetto.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** module.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Struttura FactoryCache](../windows/factorycache-structure.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

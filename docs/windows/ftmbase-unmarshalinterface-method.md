@@ -17,43 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef462ae884aad4160ffbae1883485ac7e06d3aa5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644034"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610701"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>Metodo FtmBase::UnmarshalInterface
-Inizializza un proxy appena creato e restituisce un puntatore a interfaccia a tale proxy.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-STDMETHODIMP UnmarshalInterface(  
-   __in IStream *pStm,  
-   __in REFIID riid,  
-   __deref_out void **ppv  
-) override;  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pStm*  
- Puntatore al flusso da cui il puntatore di interfaccia deve essere sottoposta a unmarshalling.  
-  
- *riid*  
- Riferimento all'identificatore dell'interfaccia di essere sottoposta a unmarshalling.  
-  
- *ppv*  
- Al termine di questa operazione, l'indirizzo di una variabile puntatore che riceve il puntatore a interfaccia richiesto *riid*. Se questa operazione ha esito positivo, **ppv* contiene il puntatore all'interfaccia richiesta dell'interfaccia di essere sottoposta a unmarshalling.  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario, E_NOINTERFACE o E_FAIL.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** ftm.h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe FtmBase](../windows/ftmbase-class.md)
+
+Inizializza un proxy appena creato e restituisce un puntatore a interfaccia a tale proxy.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>Parametri
+
+*pStm*  
+Puntatore al flusso da cui il puntatore di interfaccia deve essere sottoposta a unmarshalling.
+
+*riid*  
+Riferimento all'identificatore dell'interfaccia di essere sottoposta a unmarshalling.
+
+*ppv*  
+Al termine di questa operazione, l'indirizzo di una variabile puntatore che riceve il puntatore a interfaccia richiesto *riid*. Se questa operazione ha esito positivo, **ppv* contiene il puntatore all'interfaccia richiesta dell'interfaccia di essere sottoposta a unmarshalling.
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario, E_NOINTERFACE o E_FAIL.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** ftm.h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe FtmBase](../windows/ftmbase-class.md)

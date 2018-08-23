@@ -15,99 +15,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ef754c380353716c923f6d5f404106cebc163c9
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5ac6b6401870e29ec10b17ff2c06fb970328af82
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011881"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612685"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>nuovo (nuovo slot in vtable) (Estensioni del componente C++)
-Il **nuovo** parola chiave indica che un membro virtuale verrà assegnato un nuovo slot in vtable.  
-  
-## <a name="all-runtimes"></a>Tutti i runtime  
- Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.  
-  
-## <a name="windows-runtime"></a>Windows Runtime  
- Non è supportato in Windows Runtime.  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime 
-### <a name="remarks"></a>Note  
-  
- In un `/clr` compilazione **nuovi** indica che un membro virtuale verrà assegnato un nuovo slot in vtable; che la funzione non esegue l'override di un metodo della classe base.  
-  
- **nuovo** fa sì che il modificatore newslot da aggiungere per il linguaggio intermedio per la funzione.  Per ulteriori informazioni su newslot, vedere:  
-  
--   [Metodo MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
-  
--   [Enumerazione MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
-  
-### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: `/clr`  
-  
-### <a name="examples"></a>Esempi  
-  
- L'esempio seguente mostra l'effetto del **nuovo**.  
-  
-```cpp  
-// newslot.cpp  
-// compile with: /clr  
-ref class C {  
-public:  
-   virtual void f() {  
-      System::Console::WriteLine("C::f() called");  
-   }  
-  
-   virtual void g() {  
-      System::Console::WriteLine("C::g() called");  
-   }  
-};  
-  
-ref class D : public C {  
-public:  
-   virtual void f() new {  
-      System::Console::WriteLine("D::f() called");  
-   }  
-  
-   virtual void g() override {  
-      System::Console::WriteLine("D::g() called");  
-   }  
-};  
-  
-ref class E : public D {  
-public:  
-   virtual void f() override {  
-      System::Console::WriteLine("E::f() called");  
-   }  
-};  
-  
-int main() {  
-   D^ d = gcnew D;  
-   C^ c = gcnew D;  
-  
-   c->f();   // calls C::f  
-   d->f();   // calls D::f  
-  
-   c->g();   // calls D::g  
-   d->g();   // calls D::g  
-  
-   D ^ e = gcnew E;  
-   e->f();   // calls E::f  
-}  
-```  
-  
-```Output  
-C::f() called  
-  
-D::f() called  
-  
-D::g() called  
-  
-D::g() called  
-  
-E::f() called  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md)   
- [Identificatori di override](../windows/override-specifiers-cpp-component-extensions.md)
+
+Il **nuovo** parola chiave indica che un membro virtuale verrà assegnato un nuovo slot in vtable.
+
+## <a name="all-runtimes"></a>Tutti i runtime
+
+Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.
+
+## <a name="windows-runtime"></a>Windows Runtime
+
+Non è supportato in Windows Runtime.
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+### <a name="remarks"></a>Note
+
+In un `/clr` compilazione **nuovi** indica che un membro virtuale verrà assegnato un nuovo slot in vtable; che la funzione non esegue l'override di un metodo della classe base.
+
+**nuovo** fa sì che il modificatore newslot da aggiungere per il linguaggio intermedio per la funzione.  Per ulteriori informazioni su newslot, vedere:
+
+- [Metodo MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)
+
+- [Enumerazione MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)
+
+### <a name="requirements"></a>Requisiti
+
+Opzione del compilatore: `/clr`
+
+### <a name="examples"></a>Esempi
+
+L'esempio seguente mostra l'effetto del **nuovo**.
+
+```cpp
+// newslot.cpp
+// compile with: /clr
+ref class C {
+public:
+   virtual void f() {
+      System::Console::WriteLine("C::f() called");
+   }
+
+   virtual void g() {
+      System::Console::WriteLine("C::g() called");
+   }
+};
+
+ref class D : public C {
+public:
+   virtual void f() new {
+      System::Console::WriteLine("D::f() called");
+   }
+
+   virtual void g() override {
+      System::Console::WriteLine("D::g() called");
+   }
+};
+
+ref class E : public D {
+public:
+   virtual void f() override {
+      System::Console::WriteLine("E::f() called");
+   }
+};
+
+int main() {
+   D^ d = gcnew D;
+   C^ c = gcnew D;
+
+   c->f();   // calls C::f
+   d->f();   // calls D::f
+
+   c->g();   // calls D::g
+   d->g();   // calls D::g
+
+   D ^ e = gcnew E;
+   e->f();   // calls E::f
+}
+```
+
+```Output
+C::f() called
+
+D::f() called
+
+D::g() called
+
+D::g() called
+
+E::f() called
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)  
+[Identificatori di override](../windows/override-specifiers-cpp-component-extensions.md)

@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc9ec0c0c68c2941991d0820265b9ee1499bf7cb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8e1e9355b6063ae67a40373828f394e3e6334f7d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650833"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613422"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>Metodo AsyncBase::get_ErrorCode
-Recupera il codice di errore per l'operazione asincrona corrente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-STDMETHOD(  
-   get_ErrorCode  
-)(HRESULT* errorCode) override;  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *codice di errore*  
- Il percorso in cui è archiviato il codice di errore corrente.  
-  
-## <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL se l'operazione asincrona corrente è chiuso.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Recupera il codice di errore per l'operazione asincrona corrente.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+STDMETHOD(
+   get_ErrorCode
+)(HRESULT* errorCode) override;
+```
+
+### <a name="parameters"></a>Parametri
+
+*codice di errore*  
+Il percorso in cui è archiviato il codice di errore corrente.
+
+## <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL se l'operazione asincrona corrente è chiuso.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Async. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

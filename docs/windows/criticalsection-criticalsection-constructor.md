@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87f95a0683f6b4440d2be8b770902a7e4ecde59
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 892a32c6ff6f8e9a3a30452d05dd6e15c38a4fa8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644294"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605052"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>Costruttore CriticalSection::CriticalSection
-Inizializza un oggetto di sincronizzazione che è simile a un oggetto mutex, ma può essere utilizzato da solo i thread di un singolo processo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-explicit CriticalSection(  
-   ULONG spincount = 0  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *spinCount*  
- Il conteggio di selezione per l'oggetto sezione critica. Il valore predefinito è 0.  
-  
-## <a name="remarks"></a>Note  
- Per altre informazioni sulle sezioni critiche e spincounts, vedere la `InitializeCriticalSectionAndSpinCount` funzionare nel **sincronizzazione** sezione della documentazione di Windows API.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe CriticalSection](../windows/criticalsection-class.md)
+
+Inizializza un oggetto di sincronizzazione che è simile a un oggetto mutex, ma può essere utilizzato da solo i thread di un singolo processo.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+explicit CriticalSection(
+   ULONG spincount = 0
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*spinCount*  
+Il conteggio di selezione per l'oggetto sezione critica. Il valore predefinito è 0.
+
+## <a name="remarks"></a>Note
+
+Per altre informazioni sulle sezioni critiche e spincounts, vedere la `InitializeCriticalSectionAndSpinCount` funzionare nel **sincronizzazione** sezione della documentazione di Windows API.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe CriticalSection](../windows/criticalsection-class.md)

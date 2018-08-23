@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa253bec9f150d08f699333cd5d5f6d4538fc2d6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cf539082ef88abb5fb27f09d92b73403dc2d03a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653157"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611342"
 ---
 # <a name="handletoperator-operator"></a>Operatore HandleT::operator=
-Sposta il valore dell'oggetto specificato **HandleT** oggetto all'oggetto corrente **HandleT** oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-HandleT& operator=(  
-   _Inout_ HandleT&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parametri  
- *h*  
- Un riferimento rvalue a un handle.  
-  
-## <a name="return-value"></a>Valore restituito  
- Un riferimento all'oggetto corrente **HandleT** oggetto.  
-  
-## <a name="remarks"></a>Note  
- Questa operazione consente di invalidare la **HandleT** oggetto specificato dal parametro *h*.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corewrappers. h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe HandleT](../windows/handlet-class.md)
+
+Sposta il valore dell'oggetto specificato **HandleT** oggetto all'oggetto corrente **HandleT** oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+HandleT& operator=(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*h*  
+Un riferimento rvalue a un handle.
+
+## <a name="return-value"></a>Valore restituito
+
+Un riferimento all'oggetto corrente **HandleT** oggetto.
+
+## <a name="remarks"></a>Note
+
+Questa operazione consente di invalidare la **HandleT** oggetto specificato dal parametro *h*.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corewrappers. h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe HandleT](../windows/handlet-class.md)

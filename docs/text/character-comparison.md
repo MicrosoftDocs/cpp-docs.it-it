@@ -1,5 +1,5 @@
 ---
-title: Confronto di caratteri | Documenti Microsoft
+title: Confronto di caratteri | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - MBCS [C++], character comparison
 - characters [C++], comparing
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b969783a19c0836a8ab81d75820fc688df3ef31e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 246801abcb04cc8d9c2fd1a005183501bde240d1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854951"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612326"
 ---
 # <a name="character-comparison"></a>Confronto tra caratteri
-Utilizzare i suggerimenti seguenti:  
+Usare i suggerimenti seguenti:  
   
--   Confronto tra un byte iniziale noto con un carattere ASCII funziona correttamente:  
+-   Confronto di un byte iniziale noto con un carattere ASCII funziona correttamente:  
   
     ```  
     if( *sz1 == 'A' )  
     ```  
   
--   Il confronto di due caratteri sconosciuti richiede l'utilizzo di una delle macro definite in Mbstring. h:  
+-   Confronto tra due caratteri sconosciuti richiede l'uso di una delle macro definite in Mbstring. h:  
   
     ```  
     if( !_mbccmp( sz1, sz2) )  
     ```  
   
-     In questo modo si garantisce che entrambi i byte di un carattere a byte doppio vengono confrontati per verificarne l'uguaglianza.  
+     Ciò garantisce che entrambi i byte di un carattere a byte doppio devono essere confrontati per verificarne l'uguaglianza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md)   

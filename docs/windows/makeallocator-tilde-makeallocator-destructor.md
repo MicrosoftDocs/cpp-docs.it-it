@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09450b7883467640cc7176334ea18c07f43a098b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7115bd3ad6ef1a385b8c2a509f42316c9f8b69bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010873"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607198"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>Distruttore MakeAllocator::~MakeAllocator
-Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-~MakeAllocator();  
-```  
-  
-## <a name="remarks"></a>Note  
- Deinizializza l'istanza corrente del **MakeAllocator** classe.  
-  
- Questo distruttore elimina anche la memoria allocata sottostante, se necessario.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Implements. h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [MakeAllocator (classe)](../windows/makeallocator-class.md)   
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+~MakeAllocator();
+```
+
+## <a name="remarks"></a>Note
+
+Deinizializza l'istanza corrente del **MakeAllocator** classe.
+
+Questo distruttore elimina anche la memoria allocata sottostante, se necessario.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Implements. h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe MakeAllocator](../windows/makeallocator-class.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

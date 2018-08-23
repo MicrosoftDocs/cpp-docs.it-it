@@ -14,73 +14,77 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class, constructor
 ms.assetid: 39e6f632-a396-40e6-9ece-cc3d4c5a78ef
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cfc0085164cfc9d5f3c8691fb50e0b98f796b32
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015066"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606955"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
-Costruisce un **SafeInt** oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-SafeInt() throw  
-  
-SafeInt (  
-   const T& i  
-) throw ()  
-  
-SafeInt (  
-   bool b  
-) throw ()  
-  
-template <typename U>  
-SafeInt (  
-   const SafeInt <U, E>& u  
+
+Costruisce un **SafeInt** oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+SafeInt() throw
+
+SafeInt (
+   const T& i
+) throw ()
+
+SafeInt (
+   bool b
+) throw ()
+
+template <typename U>
+SafeInt (
+   const SafeInt <U, E>& u
+)
+
+I template <typename U>
+SafeInt (
+   const U& i
 )  
-  
-I template <typename U>  
-SafeInt (  
-   const U& i  
-)  
-```  
-  
-### <a name="parameters"></a>Parametri  
- [in] *ho*  
- Il valore per il nuovo **SafeInt** oggetto. Deve trattarsi di un parametro di tipo T o U, a seconda del costruttore.  
-  
- [in] *b*  
- Il valore booleano per la nuova **SafeInt** oggetto.  
-  
- [in] *u*  
- Oggetto **SafeInt** di tipo U. Il nuovo **SafeInt** oggetto avrà lo stesso valore di *u*, ma sarà di tipo T.  
-  
- G  
- Il tipo di dati archiviati nel **SafeInt**. Può trattarsi di un valore booleano, carattere o integer di tipo. Se è un tipo integer, può essere con o senza segno ed essere compresa tra 8 e 64 bit.  
-  
-## <a name="remarks"></a>Note  
- Per altre informazioni sui tipi di modello `T` e `E`, vedere [classe SafeInt](../windows/safeint-class.md).  
-  
- Il parametro di input per il costruttore *ho* oppure *u*, deve essere un tipo Boolean, carattere o integer. Se si tratta di un altro tipo del parametro, il **SafeInt** classe chiamate [static_assert](../cpp/static-assert.md) per indicare un parametro di input non valido.  
-  
- I costruttori che utilizzano il tipo di modello `U` convertire automaticamente il parametro di input nel tipo specificato dal `T`. Il **SafeInt** classe converte i dati senza alcuna perdita di dati. Segnala al gestore errori `E` se non è possibile convertire i dati da digitare `T` senza perdita di dati.  
-  
- Se si crea una **SafeInt** da un parametro booleano, è necessario inizializzare il valore immediatamente. Non è possibile costruire una **SafeInt** usando il codice `SafeInt<bool> sb;`. Verrà generato un errore di compilazione.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** SafeInt. h  
-  
- **Namespace:** MSL:: Utilities  
-  
-## <a name="see-also"></a>Vedere anche  
- [Libreria SafeInt](../windows/safeint-library.md)   
- [Classe SafeInt](../windows/safeint-class.md)   
- [Classe SafeIntException](../windows/safeintexception-class.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+[in] *ho*  
+Il valore per il nuovo **SafeInt** oggetto. Deve trattarsi di un parametro di tipo T o U, a seconda del costruttore.
+
+[in] *b*  
+Il valore booleano per la nuova **SafeInt** oggetto.
+
+[in] *u*  
+Oggetto **SafeInt** di tipo U. Il nuovo **SafeInt** oggetto avrà lo stesso valore di *u*, ma sarà di tipo T.
+
+Il tipo di dati archiviati in U il **SafeInt**. Può trattarsi di un valore booleano, carattere o integer di tipo. Se è un tipo integer, può essere con o senza segno ed essere compresa tra 8 e 64 bit.
+
+## <a name="remarks"></a>Note
+
+Per altre informazioni sui tipi di modello `T` e `E`, vedere [classe SafeInt](../windows/safeint-class.md).
+
+Il parametro di input per il costruttore *ho* oppure *u*, deve essere un tipo Boolean, carattere o integer. Se si tratta di un altro tipo del parametro, il **SafeInt** classe chiamate [static_assert](../cpp/static-assert.md) per indicare un parametro di input non valido.
+
+I costruttori che utilizzano il tipo di modello `U` convertire automaticamente il parametro di input nel tipo specificato dal `T`. Il **SafeInt** classe converte i dati senza alcuna perdita di dati. Segnala al gestore errori `E` se non è possibile convertire i dati da digitare `T` senza perdita di dati.
+
+Se si crea una **SafeInt** da un parametro booleano, è necessario inizializzare il valore immediatamente. Non è possibile costruire una **SafeInt** usando il codice `SafeInt<bool> sb;`. Verrà generato un errore di compilazione.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** SafeInt. h
+
+**Namespace:** MSL:: Utilities
+
+## <a name="see-also"></a>Vedere anche
+
+[Libreria SafeInt](../windows/safeint-library.md)  
+[Classe SafeInt](../windows/safeint-class.md)  
+[Classe SafeIntException](../windows/safeintexception-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Funzioni intrinseche InterlockedExchangeAdd | Documenti Microsoft
+title: Funzioni intrinseche InterlockedExchangeAdd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340554"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600892"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchangeAdd
 **Sezione specifica Microsoft**  
   
- Fornire il supporto intrinseco del compilatore per Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedExchangeAdd Intrinsic Functions](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) (funzione).  
+ Fornisce il supporto intrinseco del compilatore per il SDK di Windows Win32 [funzioni intrinseche InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) (funzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -177,9 +177,9 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
 |Funzione intrinseca|Architettura|Intestazione|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Note  
  Ci sono diverse varianti di `_InterlockedExchangeAdd` che variano in base ai tipi di dati interessati e all'uso della semantica di acquisizione o di rilascio specifica del processore.  
@@ -190,10 +190,10 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
  Sulle piattaforme Intel che supportano le istruzioni HLE (Hardware Lock Elision), le funzioni intrinseche con suffissi `_HLEAcquire` e `_HLERelease` includono un hint per il processore che consente di accelerare le prestazioni eliminando un passaggio di blocco scrittura nell'hardware. Se queste funzioni intrinseche vengono chiamate su piattaforme che non supportano HLE, l'hint viene ignorato.  
   
- Queste routine sono disponibili solo come funzioni intrinseche. Di conseguenza, sono intrinseci a prescindere o non [/Oi](../build/reference/oi-generate-intrinsic-functions.md) o [#pragma intrinseco](../preprocessor/intrinsic.md) viene utilizzato. Non è possibile utilizzare [#pragma funzione](../preprocessor/function-c-cpp.md) su queste funzioni intrinseche.  
+ Queste routine sono disponibili solo come funzioni intrinseche. Di conseguenza, sono intrinseci a prescindere [/Oi](../build/reference/oi-generate-intrinsic-functions.md) oppure [#pragma intrinseco](../preprocessor/intrinsic.md) viene usato. Non è possibile usare [#pragma funzione](../preprocessor/function-c-cpp.md) su queste funzioni intrinseche.  
   
 ## <a name="example"></a>Esempio  
- Per un esempio di come utilizzare `_InterlockedExchangeAdd`, vedere [InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Per un esempio d'uso `_InterlockedExchangeAdd`, vedere [InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
 **Fine sezione specifica Microsoft**  
   

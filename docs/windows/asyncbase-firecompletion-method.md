@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 199d84afe198c4fc41808144105ea704822aa00a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 19b796b1fbc618bb909b186aa86d3c893c8536c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646607"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600256"
 ---
 # <a name="asyncbasefirecompletion-method"></a>Metodo AsyncBase::FireCompletion
-Richiama il gestore di evento di completamento, o Reimposta il delegato di stato interno.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-void FireCompletion(  
-   void  
-) override;  
-  
-virtual void FireCompletion();  
-```  
-  
-## <a name="remarks"></a>Note  
- La prima versione di **FireCompletion()** Reimposta la variabile delegato stato interno. La seconda versione richiama il gestore di evento di completamento se l'operazione asincrona è completa.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async. h  
-  
- **Spazio dei nomi:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe AsyncBase](../windows/asyncbase-class.md)
+
+Richiama il gestore di evento di completamento, o Reimposta il delegato di stato interno.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+void FireCompletion(
+   void
+) override;
+
+virtual void FireCompletion();
+```
+
+## <a name="remarks"></a>Note
+
+La prima versione di **FireCompletion()** Reimposta la variabile delegato stato interno. La seconda versione richiama il gestore di evento di completamento se l'operazione asincrona è completa.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** Async. h
+
+**Spazio dei nomi:** Microsoft::WRL
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe AsyncBase](../windows/asyncbase-class.md)

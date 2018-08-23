@@ -18,88 +18,95 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d578c820660d99e6fa217a14181330d258ab081b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018361"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613322"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-Consente l'utilizzo delle parole chiave Visual C++ come identificatori.  
-  
-## <a name="all-platforms"></a>Tutte le piattaforme  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-__identifier(  
-Visual_C++_keyword  
+
+Consente l'utilizzo delle parole chiave Visual C++ come identificatori.
+
+## <a name="all-platforms"></a>Tutte le piattaforme
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+__identifier(
+Visual_C++_keyword
 )  
-```  
-  
-### <a name="remarks"></a>Note  
-  
-Usare la **Identifier** parola chiave per gli identificatori che non sono parole chiave è consentita, ma sconsigliata per una questione di stile.  
-  
-## <a name="windows-runtime"></a>Windows Runtime  
-  
-### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: `/ZW`  
-  
-### <a name="examples"></a>Esempi  
- **Esempio**  
-  
- Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.  
-  
-```cs  
-// identifier_template.cs  
-// compile with: /target:library  
-public class template {  
-   public void Run() { }  
-}  
-```  
-  
-```cpp  
-// keyword__identifier.cpp  
-// compile with: /ZW  
-#using <identifier_template.dll>  
-int main() {  
-   __identifier(template)^ pTemplate = ref new __identifier(template)();  
-   pTemplate->Run();  
-}  
-```  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime 
-### <a name="remarks"></a>Note  
-  
- Il **Identifier** parola chiave è valida con il `/clr` opzione del compilatore.  
-  
-### <a name="requirements"></a>Requisiti  
- Opzione del compilatore: `/clr`  
-  
-### <a name="examples"></a>Esempi  
-  
- Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.  
-  
-```cs  
-// identifier_template.cs  
-// compile with: /target:library  
-public class template {  
-   public void Run() { }  
-}  
-```  
-  
-```cpp  
-// keyword__identifier.cpp  
-// compile with: /clr  
-#using <identifier_template.dll>  
-  
-int main() {  
-   __identifier(template) ^pTemplate = gcnew __identifier(template)();  
-   pTemplate->Run();  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md)   
- [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+```
+
+### <a name="remarks"></a>Note
+
+Usare la **Identifier** parola chiave per gli identificatori che non sono parole chiave è consentita, ma sconsigliata per una questione di stile.
+
+## <a name="windows-runtime"></a>Windows Runtime
+
+### <a name="requirements"></a>Requisiti
+
+Opzione del compilatore: `/ZW`
+
+### <a name="examples"></a>Esempi
+
+**Esempio**
+
+Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.
+
+```cs
+// identifier_template.cs
+// compile with: /target:library
+public class template {
+   public void Run() { }
+}
+```
+
+```cpp
+// keyword__identifier.cpp
+// compile with: /ZW
+#using <identifier_template.dll>
+int main() {
+   __identifier(template)^ pTemplate = ref new __identifier(template)();
+   pTemplate->Run();
+}
+```
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+### <a name="remarks"></a>Note
+
+Il **Identifier** parola chiave è valida con il `/clr` opzione del compilatore.
+
+### <a name="requirements"></a>Requisiti
+
+Opzione del compilatore: `/clr`
+
+### <a name="examples"></a>Esempi
+
+Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.
+
+```cs
+// identifier_template.cs
+// compile with: /target:library
+public class template {
+   public void Run() { }
+}
+```
+
+```cpp
+// keyword__identifier.cpp
+// compile with: /clr
+#using <identifier_template.dll>
+
+int main() {
+   __identifier(template) ^pTemplate = gcnew __identifier(template)();
+   pTemplate->Run();
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)  
+[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

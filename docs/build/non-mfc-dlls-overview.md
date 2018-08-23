@@ -1,5 +1,5 @@
 ---
-title: 'DLL non MFC: Panoramica | Documenti Microsoft'
+title: 'DLL non MFC: Panoramica | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ad8e6d1107dfdacc91c32d48ca1e3624a0211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368642"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613219"
 ---
 # <a name="non-mfc-dlls-overview"></a>DLL non MFC: cenni preliminari
-Una DLL non MFC è una DLL che non utilizza MFC internamente e le funzioni esportate nella DLL possono essere chiamate da file eseguibili MFC o non MFC. Le funzioni sono generalmente esportate da una DLL non MFC mediante l'interfaccia C standard.  
+Una DLL non MFC è una DLL che non utilizza MFC internamente e le funzioni esportate della DLL possono essere chiamate da file eseguibili MFC e non MFC. Le funzioni vengono in genere esportate da una DLL non MFC usando l'interfaccia di C standard.  
   
- Per ulteriori informazioni sulle DLL non MFC, vedere [librerie a collegamento dinamico](http://msdn.microsoft.com/library/windows/desktop/ms682589) nel [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Per altre informazioni sulle DLL non MFC, vedere [librerie a collegamento dinamico](http://msdn.microsoft.com/library/windows/desktop/ms682589) nel SDK di Windows.  
   
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Procedura dettagliata: Creazione e utilizzo di una libreria di collegamento dinamico](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
+-   [Procedura dettagliata: Creazione e utilizzo di una libreria a collegamento dinamico](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
   
 -   [Esportazione da una DLL](../build/exporting-from-a-dll.md)  
   
 -   [Collegare un eseguibile a una DLL](../build/linking-an-executable-to-a-dll.md)  
   
--   [Inizializzazione di una DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
+-   [Inizializzare una DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: Array | Documenti Microsoft'
+title: 'Classe platform:: Array | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fa689035a6e95db7f9471d4972063ec35486e0cb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704672"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605885"
 ---
 # <a name="platformarray-class"></a>Platform::Array (classe)
 Rappresenta una matrice unidimensionale modificabile che può essere ricevuta e passata tramite l'interfaccia ABI (Application Binary Interface).  
@@ -37,7 +37,7 @@ private ref class Array<TArg, 1> :
 ```  
   
 ### <a name="members"></a>Membri  
- Platform:: Array eredita tutti i metodi da [classe platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) e implementa il `Value` proprietà del [interfaccia platform:: iboxarray](../cppcx/platform-iboxarray-interface.md).  
+ Platform:: Array eredita tutti i relativi metodi dallo [classe platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) e implementa il `Value` proprietà del [interfaccia platform:: iboxarray](../cppcx/platform-iboxarray-interface.md).  
   
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
@@ -46,20 +46,20 @@ private ref class Array<TArg, 1> :
 |[Costruttori Array](#ctor)|Inizializza una matrice modificabile unidimensionale di tipi specificati dal parametro del modello di classe, *T*.|  
   
 ### <a name="methods"></a>Metodi  
- Vedere [classe platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md).  
+ Visualizzare [classe platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md).  
   
 ### <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
-|[Array](#value)|Recupera un handle alla matrice corrente.|  
+|[Array:: value](#value)|Recupera un handle alla matrice corrente.|  
   
 ### <a name="remarks"></a>Note  
  La classe Array è sealed e non può essere ereditata.  
   
  Il sistema di tipi Windows Runtime non supporta il concetto di matrici di matrici e pertanto non è possibile passare un IVector < platform:: Array\<T >> come un parametro di metodo o valore restituito. Per passare una matrice di matrici o una sequenza di sequenze attraverso l'interfaccia applicativa binaria (ABI), usa `IVector<IVector<T>^>`.  
   
- Per ulteriori informazioni su quando e come usare platform:: Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
+ Per altre informazioni su quando e come usare platform:: Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
   
  Il sistema di tipi Windows Runtime non supporta il concetto di matrici di matrici e pertanto non è possibile passare un IVector < platform:: Array\<T >> come un parametro di metodo o valore restituito. Per passare una matrice di matrici o una sequenza di sequenze attraverso l'interfaccia applicativa binaria (ABI), usa `IVector<IVector<T>^>`.  
   
@@ -90,7 +90,7 @@ Array(T* data, unsigned int size);
  Puntatore a una matrice di dati di tipo `T` utilizzato per inizializzare l'oggetto Array.  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni su come creare istanze di platform:: Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+ Per altre informazioni su come creare istanze di platform:: Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ## <a name="get"></a>  Metodo Array:: Get
 Recupera un riferimento all'elemento di matrice in corrispondenza della posizione di indice specificata.  
@@ -108,7 +108,7 @@ T& get(unsigned int index)  const;
 ### <a name="return-value"></a>Valore restituito  
  Elemento di matrice specificato dal parametro `index`.  
   
-## <a name="value"></a>  Proprietà Array
+## <a name="value"></a>  Proprietà array:: value
 Recupera un handle alla matrice corrente.  
   
 ## <a name="syntax"></a>Sintassi  

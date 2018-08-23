@@ -1,5 +1,5 @@
 ---
-title: 'valore predefinito:: (type_name):: metodo Equals | Documenti Microsoft'
+title: 'predefinito:: (type_name):: metodo Equals | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2a8246597715ee2be2f55ba396a57f0ed014819
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36bd6e933d4e7bb1563ec6738c7ba3ed314c1cfd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087666"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612385"
 ---
 # <a name="defaulttypenameequals-method"></a>Metodo default::(type_name)::Equals
 Determina se l'oggetto specificato è uguale all'oggetto corrente.  

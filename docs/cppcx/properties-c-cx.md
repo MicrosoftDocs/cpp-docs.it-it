@@ -1,23 +1,23 @@
 ---
-title: Proprietà (C + + CX) | Documenti Microsoft
+title: Proprietà (C + c++ /CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089559"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600855"
 ---
 # <a name="properties-ccx"></a>Proprietà (C++/CX)
-Tipi di Windows Runtime espongono i dati pubblici come proprietà. Il codice client accede alla proprietà come un membro dati pubblico. Internamente, la proprietà viene implementata come blocco contenente un metodo di funzione di accesso get, un metodo di funzione di accesso set, o entrambi. L'utilizzo dei metodi di funzione di accesso ti consente di eseguire azioni aggiuntive prima o dopo aver recuperato il valore. Puoi, ad esempio, generare un evento o eseguire controlli di convalida.  
+Tipi Windows Runtime espongono i dati pubblici come proprietà. Il codice client accede alla proprietà come un membro dati pubblico. Internamente, la proprietà viene implementata come blocco contenente un metodo di funzione di accesso get, un metodo di funzione di accesso set, o entrambi. L'utilizzo dei metodi di funzione di accesso ti consente di eseguire azioni aggiuntive prima o dopo aver recuperato il valore. Puoi, ad esempio, generare un evento o eseguire controlli di convalida.  
   
 ### <a name="remarks"></a>Note  
  Il valore di una proprietà è contenuto in una variabile privata, nota come l' *archivio di backup*, che è dello stesso tipo della proprietà. Una proprietà può contenere sia una funzione di accesso set, che assegna un valore all'archivio di backup, che una funzione di accesso get, che recupera il valore dell'archivio di backup. La proprietà è di sola lettura se contiene solo una funzione di accesso get, di sola scrittura se contiene solo una funzione di accesso set e di lettura/scrittura (modificabile) se contiene entrambe le funzioni di accesso.  
@@ -41,5 +41,5 @@ Tipi di Windows Runtime espongono i dati pubblici come proprietà. Il codice cli
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi](../cppcx/type-system-c-cx.md)   
- [Riferimenti al linguaggio di Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

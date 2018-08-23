@@ -1,5 +1,5 @@
 ---
-title: Classe platform::Collections::UnorderedMapView | Documenti Microsoft
+title: Classe platform::Collections::UnorderedMapView | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092677"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613574"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 Rappresenta una visualizzazione di sola lettura in una *mappa*, che rappresenta una raccolta di coppie chiave-valore.  
@@ -39,10 +39,10 @@ ref class UnorderedMapView sealed;
  Tipo di valore nella coppia chiave-valore.  
   
  `C`  
- Tipo che fornisce un oggetto funzione che può confrontare due valori di chiavi per la loro uguaglianza. Per impostazione predefinita, [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
+ Tipo che fornisce un oggetto funzione che può confrontare due valori di chiavi per la loro uguaglianza. Per impostazione predefinita [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Note  
- UnorderedMapView è un'implementazione concreta di C++ del [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfaccia passata attraverso l'interfaccia applicativa binaria (ABI). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView è un'implementazione concreta di C++ del [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) passata attraverso l'interfaccia applicativa binaria (ABI). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Membri  
   
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **Spazio dei nomi:** Platform::Collections  
 
 ## <a name="first"></a>  Metodo UnorderedMapView::First
-Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento nella mappa non ordinata.  
+Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento della mappa non ordinata.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -85,7 +85,7 @@ virtual Windows::Foundation::Collections::IIterator<
  Iteratore che specifica il primo elemento nella visualizzazione della mappa.  
   
 ### <a name="remarks"></a>Note  
- Un modo pratico per contenere l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **auto** parola chiave di deduzione del tipo. Ad esempio `auto x = myMapView->First();`.  
+ Un modo pratico per contenere l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **automatica** digita parola chiave di deduzione dei tipi. Ad esempio `auto x = myMapView->First();`.  
   
 
 
@@ -100,7 +100,7 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>Parametri  
  `key`  
- Chiave usata per individuare l'elemento. Il tipo di `key` è typename *K*.  
+ Chiave usata per individuare l'elemento. Il tipo della `key` è typename *K*.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` se la chiave viene trovata; in caso contrario, `false`.  
@@ -118,7 +118,7 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>Parametri  
  `key`  
- Chiave usata per individuare un elemento in UnorderedMapView. Il tipo di `key` è typename *K*.  
+ Chiave usata per individuare un elemento in UnorderedMapView. Il tipo della `key` è typename *K*.  
   
 ### <a name="return-value"></a>Valore restituito  
  Valore abbinato a `key`. Il tipo del valore restituito è typename *V*.  
@@ -227,7 +227,7 @@ UnorderedMapView(
  Tipo che fornisce un oggetto funzione che può confrontare due chiavi per determinare la loro uguaglianza. Per impostazione predefinita [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  
   
  `m`  
- Un riferimento o [elementi lvalue e Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) per un [std:: unordered_map](../standard-library/unordered-map-class.md) che viene utilizzato per inizializzare l'oggetto unorderedmapview corrente.  
+ Un riferimento oppure [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std:: unordered_map](../standard-library/unordered-map-class.md) che viene usato per inizializzare l'oggetto unorderedmapview corrente.  
   
  `first`  
  Iteratore di input del primo elemento in un intervallo di elementi usato per inizializzare l'oggetto UnorderedMapView corrente.  
@@ -236,5 +236,5 @@ UnorderedMapView(
  Iteratore di input del primo elemento dopo un intervallo di elementi usato per inizializzare l'oggetto UnorderedMapView corrente.  
    
 ## <a name="see-also"></a>Vedere anche  
- [Namespace platform:: Collections](../cppcx/platform-collections-namespace.md)   
+ [Platform:: Collections Namespace](../cppcx/platform-collections-namespace.md)   
  [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)

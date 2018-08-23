@@ -18,16 +18,16 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aa2f0dffd33f0ac885753e4c7fb7f413d755149
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 445e4c9e5c3c7a71d527b6a378cad9e1d767354a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020325"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604731"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizzo dei tipi di dati di TCHAR.H con il codice _MBCS
 Quando la costante manifesto `_MBCS` è definito, una routine di testo generico specifica esegue il mapping a uno dei tipi di routine seguenti:  

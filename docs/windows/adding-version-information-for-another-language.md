@@ -21,32 +21,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: db11dee47b51cf695a93489d4ab851be47c39144
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650456"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612658"
 ---
 # <a name="adding-version-information-for-another-language"></a>Aggiunta di informazioni sulla versione per un'altra lingua
-### <a name="to-add-version-information-for-another-language-new-info-block"></a>Per aggiungere informazioni sulla versione per un'altra lingua (nuovo blocco di informazioni)  
-  
-1.  Aprire una risorsa di informazioni sulla versione facendo doppio clic in [Visualizzazione risorse](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Fare clic con il pulsante destro del mouse all'interno della tabella di informazioni sulla versione e scegliere **Nuovo blocco informazioni sulla versione** dal menu di scelta rapida.  
-  
-     Questo comando aggiunge un blocco di informazioni aggiuntive alla risorsa di informazioni sulla versione corrente e apre le proprietà corrispondenti nella [finestra Proprietà](/visualstudio/ide/reference/properties-window).  
-  
-3.  Nella finestra **Proprietà** , scegliere la lingua appropriata e il set di caratteri per il nuovo blocco.  
-  
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisiti 
- Win32  
-  
-## <a name="see-also"></a>Vedere anche  
- [Editor di informazioni sulla versione](../windows/version-information-editor.md)   
- [Informazioni sulla versione (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+### <a name="to-add-version-information-for-another-language-new-info-block"></a>Per aggiungere informazioni sulla versione per un'altra lingua (nuovo blocco di informazioni)
+
+1. Aprire una risorsa di informazioni sulla versione facendo doppio clic in [Visualizzazione risorse](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
+
+2. Fare clic con il pulsante destro del mouse all'interno della tabella di informazioni sulla versione e scegliere **Nuovo blocco informazioni sulla versione** dal menu di scelta rapida.
+
+   Questo comando aggiunge un blocco di informazioni aggiuntive alla risorsa di informazioni sulla versione corrente e apre le proprietà corrispondenti nella [finestra Proprietà](/visualstudio/ide/reference/properties-window).
+
+3. Nella finestra **Proprietà** , scegliere la lingua appropriata e il set di caratteri per il nuovo blocco.
+
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisiti
+
+Win32
+
+## <a name="see-also"></a>Vedere anche
+
+[Editor di informazioni sulla versione](../windows/version-information-editor.md)  
+[Informazioni sulla versione (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
