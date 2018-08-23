@@ -1,5 +1,5 @@
 ---
-title: funzione intrinseca | Documenti Microsoft
+title: funzione intrinseca | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e908a07253e924fa3cfc0a11cdef57a9253eee00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844790"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540205"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -39,9 +39,9 @@ Specifica che le chiamate alle funzioni specificate nell'elenco di argomenti del
 
 Il **intrinseco** pragma indica al compilatore che una funzione è noto il comportamento.  Il compilatore può chiamare la funzione e non sostituire la chiamata di funzione con istruzioni inline, se questo può garantire prestazioni migliori.
 
-Le funzioni di libreria con formato intrinseco sono elencate di seguito. Una volta un **intrinseco** è stato rilevato pragma, viene applicato alla prima definizione di funzione che contiene una funzione intrinseca specificata. L'effetto continua fino alla fine del file di origine o alla rilevazione di un **funzione** pragma specificando la stessa funzione intrinseca. Il **intrinseco** pragma può essere utilizzato solo all'esterno di una definizione di funzione, ovvero a livello globale.
+Le funzioni di libreria con formato intrinseco sono elencate di seguito. Una volta un' **intrinseco** è stato rilevato il pragma, verrà applicato alla prima definizione di funzione che contiene una funzione intrinseca specificata. L'effetto continua fino alla fine del file di origine o alla rilevazione di un `function` pragma specificando la stessa funzione intrinseca. Il **intrinseco** pragma può essere usato solo all'esterno di una definizione di funzione, ovvero a livello globale.
 
-Le seguenti funzioni hanno formati intrinseci e formati intrinseci vengono utilizzati quando si specifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+Le seguenti funzioni hanno formati intrinseci e i formati intrinseci vengono usati quando si specifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
 |||||
 |-|-|-|-|
@@ -56,11 +56,11 @@ I programmi che utilizzano le funzioni intrinseche sono più veloci in quanto no
 
 **x86 specifico**
 
-Il **Disable** e **attiva** intrinseci generare istruzioni in modalità kernel per Abilita/disabilita gli interrupt e possono essere utili in driver in modalità kernel.
+Il `_disable` e `_enable` intrinseci generano istruzioni in modalità kernel per disabilitare o abilitare gli interrupt e possono essere utili in driver in modalità kernel.
 
 ### <a name="example"></a>Esempio
 
-Compilare il codice seguente dalla riga di comando con "cl -c -FAs sample.c" ed esaminare il file sample.asm per verificare che venga trasformano in istruzioni x86 CLI e STI:
+Compilare il codice seguente dalla riga di comando con `cl -c -FAs sample.c` ed esaminare file Sample. asm per verificare che venga trasformano in x86 istruzioni CLI e STI:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -86,7 +86,7 @@ Le funzioni a virgola mobile elencate di seguito non hanno formati intrinseci re
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- Le funzioni a virgola mobile elencate di seguito hanno formati intrinseci reali quando si specifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), e [Fast](../build/reference/fp-specify-floating-point-behavior.md) (o qualsiasi opzione che include /Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)e /O2):
+ Le funzioni a virgola mobile elencate di seguito hanno formati intrinseci reali quando si specifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), e [/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) (o qualsiasi opzione che include /Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)e/O2):
 
 |||||
 |-|-|-|-|
@@ -94,11 +94,11 @@ Le funzioni a virgola mobile elencate di seguito non hanno formati intrinseci re
 |[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
 |[cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-È possibile utilizzare [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) o [/Za](../build/reference/za-ze-disable-language-extensions.md) per eseguire l'override di generazione delle opzioni a virgola mobile intrinseche true. In tal caso le funzioni vengono generate come routine della libreria che passano gli argomenti direttamente al chip a virgola mobile anziché inserirli nello stack del programma.
+È possibile usare [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) oppure [/Za](../build/reference/za-ze-disable-language-extensions.md) per eseguire l'override della generazione delle opzioni a virgola mobile intrinseche true. In tal caso le funzioni vengono generate come routine della libreria che passano gli argomenti direttamente al chip a virgola mobile anziché inserirli nello stack del programma.
 
-Vedere [#pragma funzione](../preprocessor/function-c-cpp.md) per informazioni e un esempio su come abilitare o disabilitare le funzioni intrinseche per un blocco di testo di origine.
+Visualizzare [#pragma funzione](../preprocessor/function-c-cpp.md) per informazioni e un esempio su come abilitare o disabilitare le funzioni intrinseche per un blocco di testo di origine.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)  

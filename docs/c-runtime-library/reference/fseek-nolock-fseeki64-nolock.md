@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397353"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572056"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -67,7 +68,7 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *offset*<br/>
@@ -78,11 +79,11 @@ Posizione iniziale.
 
 ## <a name="return-value"></a>Valore restituito
 
-Uguale a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), rispettivamente.
+Uguale allo [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), rispettivamente.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni sono elencate le versioni non blocca il thread di [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), rispettivamente. Sono identiche a [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) con la differenza che esse non sono protette da interferenze da altri thread. Queste funzioni potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Queste funzioni sono elencate le versioni non blocca il thread del [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md), rispettivamente. Identici agli [fseek](fseek-fseeki64.md) e [_fseeki64](fseek-fseeki64.md) ad eccezione del fatto che non sono protette da interferenze da altri thread. Queste funzioni potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ## <a name="requirements"></a>Requisiti
 

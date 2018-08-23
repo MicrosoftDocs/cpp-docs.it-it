@@ -1,5 +1,5 @@
 ---
-title: messaggio | Documenti Microsoft
+title: messaggio | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b9fd580d1ebabf4352104fe49f1d3c982a49e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3ce9091fe380f7d255dd321dbb9eb5ca7134b8d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846363"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541409"
 ---
 # <a name="message"></a>messaggio
 Invia un valore letterale stringa all'output standard senza terminare la compilazione.  
@@ -31,20 +31,20 @@ Invia un valore letterale stringa all'output standard senza terminare la compila
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 #pragma message( messagestring )  
 ```  
   
 ## <a name="remarks"></a>Note  
- Un tipico utilizzo del **messaggio** pragma consiste nel visualizzare i messaggi informativi in fase di compilazione.  
+
+Un tipico utilizzo dei **messaggio** pragma consiste nel visualizzare i messaggi informativi in fase di compilazione.  
   
- Il *messagestring* parametro può essere una macro che si espande in un valore letterale stringa e consente di concatenare tali macro con valori letterali stringa in qualsiasi combinazione.  
+Il *messagestring* parametro può essere una macro che si espande in un valore letterale stringa e consente di concatenare tale macro con i valori letterali stringa in qualsiasi combinazione.  
   
- Se si utilizza una macro predefinita nel **messaggio** pragma, la macro deve restituire una stringa, altrimenti sarà necessario convertire l'output della macro in una stringa.  
+Se si utilizza una macro predefinita nel **messaggio** pragma, tale macro deve restituire una stringa, altrimenti sarà necessario convertire l'output della macro a una stringa.  
   
- Il frammento di codice seguente utilizza il **messaggio** pragma per visualizzare i messaggi durante la compilazione:  
+Il frammento di codice seguente usa il **messaggio** pragma per visualizzare i messaggi durante la compilazione:  
   
-```  
+```cpp  
 // pragma_directives_message1.cpp  
 // compile with: /LD  
 #if _M_IX86 >= 500  
@@ -68,4 +68,5 @@ Invia un valore letterale stringa all'output standard senza terminare la compila
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

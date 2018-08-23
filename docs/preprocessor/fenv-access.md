@@ -1,5 +1,5 @@
 ---
-title: fenv_access | Documenti Microsoft
+title: fenv_access | Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,16 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
-ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963323"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540605"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-Disabilita (**sul**) o Abilita (**off**) le ottimizzazioni che potrebbero modificare l'ambiente a virgola mobile e contrassegno i test e cambia la modalità.
+Disabilita (**sul**) o Abilita (**off**) le ottimizzazioni che è stato possibile modificare l'ambiente a virgola mobile e contrassegno i test e cambia la modalità.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,9 +34,9 @@ Disabilita (**sul**) o Abilita (**off**) le ottimizzazioni che potrebbero modifi
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita **fenv_access** viene **off**. Se il compilatore può presupporre che il codice non accedere o modificare l'ambiente a virgola mobile, quindi è possibile eseguire molte delle ottimizzazioni di codice a virgola mobile. Impostare **fenv_access** alla **su** per informare il compilatore che il codice accede all'ambiente a virgola mobile e per verificare i flag di stato, eccezioni, o per impostare il flag della modalità di controllo. Il compilatore Disabilita queste ottimizzazioni in modo che il codice può accedere all'ambiente a virgola mobile in modo coerente. 
+Per impostazione predefinita **fenv_access** viene **off**. Se il compilatore non può presupporre che il codice non accedere o modificare l'ambiente a virgola mobile, quindi può eseguire numerose ottimizzazioni di codice a virgola mobile. Impostare **fenv_access** al **su** per informare il compilatore che il codice accede l'ambiente a virgola mobile per verificare i flag di stato, eccezioni, o per impostare il flag della modalità di controllo. Il compilatore disabilita le ottimizzazioni in modo che il codice possa accedere l'ambiente a virgola mobile in modo coerente. 
 
-Per ulteriori informazioni sul comportamento della virgola mobile, vedere [/fp (specifica il comportamento a virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md).
+Per altre informazioni sul comportamento della virgola mobile, vedere [/fp (specifica il comportamento della virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md).
 
 I tipi di ottimizzazioni soggette a **fenv_access** sono:
 
@@ -55,7 +54,7 @@ Altri pragma a virgola mobile sono i seguenti:
 
 ## <a name="examples"></a>Esempi
 
-Questo esempio viene impostato **fenv_access** alla **su** per impostare il Registro di controllo a virgola mobile e precisione di 24 bit:
+Questo esempio viene impostato **fenv_access** al **su** per impostare il Registro di controllo a virgola mobile e per la precisione di 24 bit:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -85,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-Se impostare come commento `#pragma fenv_access (on)` tratto dall'esempio precedente, si noti che l'output è diverso perché il compilatore non di valutazione in fase di compilazione, che non utilizza la modalità di controllo.
+Commento `#pragma fenv_access (on)` rispetto all'esempio precedente, si noti che l'output è diverso perché il compilatore non di valutazione in fase di compilazione, che non usa la modalità di controllo.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

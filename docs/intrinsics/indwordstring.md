@@ -1,5 +1,5 @@
 ---
-title: __indwordstring | Documenti Microsoft
+title: __indwordstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe9f7616a20dc09265028cf414aa15340b68c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c0f8e67a535d126eab3a19bf17b0bf8bfd7440
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333414"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539815"
 ---
 # <a name="indwordstring"></a>__indwordstring
 **Sezione specifica Microsoft**  
   
- Legge i dati dalla porta specificata utilizzando il `rep insd` istruzione.  
+ Legge i dati dalla porta specificata usando il `rep insd` (istruzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ void __indwordstring(
  La porta da cui leggere.  
   
  [out] `Buffer`  
- I dati letti dalla porta viene scritto in questo caso.  
+ I dati letti dalla porta viene scritto qui.  
   
  [in] `Count`  
  Il numero di byte di dati da leggere.  
@@ -54,7 +54,7 @@ void __indwordstring(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__indwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indwordstring`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

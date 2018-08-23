@@ -1,5 +1,5 @@
 ---
-title: __inbytestring | Documenti Microsoft
+title: __inbytestring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fb619a3fbc38925f2d91ae344b00bf1be34db5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327863"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540623"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Sezione specifica Microsoft**  
   
- Legge i dati dalla porta specificata utilizzando il `rep insb` istruzione.  
+ Legge i dati dalla porta specificata usando il `rep insb` (istruzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ void __inbytestring(
  La porta da cui leggere.  
   
  [out] `Buffer`  
- I dati letti dalla porta viene scritto in questo caso.  
+ I dati letti dalla porta viene scritto qui.  
   
  [in] `Count`  
  Il numero di byte di dati da leggere.  
@@ -54,7 +54,7 @@ void __inbytestring(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__inbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbytestring`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

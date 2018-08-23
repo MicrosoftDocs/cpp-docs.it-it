@@ -1,5 +1,5 @@
 ---
-title: Struttura scheduler_ptr | Documenti Microsoft
+title: Struttura scheduler_ptr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686984"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539814"
 ---
 # <a name="schedulerptr-structure"></a>Struttura scheduler_ptr
-Rappresenta un puntatore a un'utilità di pianificazione. Questa classe esiste per consentire di specificare una durata condivisa utilizzando shared_ptr o semplicemente un riferimento normale utilizzando il puntatore raw.  
+Rappresenta un puntatore a un'utilità di pianificazione. Questa classe esiste per consentire la specifica di una durata condivisa utilizzando shared_ptr o semplicemente un riferimento normale utilizzando puntatore non elaborato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ struct scheduler_ptr;
  `scheduler_ptr`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** pplinterface  
+ **Intestazione:** pplinterface. h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -75,14 +75,14 @@ scheduler_interface* get() const;
 ##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool   
  Verificare se il puntatore dell'utilità di pianificazione è diverso da null  
   
-' ' operatore bool() const.
+' ' operator bool () const;
 ```  
   
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
  Behave like a pointer  
   
 ```
-scheduler_interface * operator -> () const.
+scheduler_interface * operator -> () const;
 ```  
   
 ### Return Value  
@@ -93,7 +93,7 @@ scheduler_interface * operator -> () const.
 ```
 esplicita scheduler_ptr (std:: shared_ptr < scheduler_interface > dell'utilità di pianificazione);
 
-esplicita scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
+scheduler_ptr esplicito (_In_opt_ scheduler_interface * pScheduler);
 ```  
   
 ### Parameters  

@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - fseek
@@ -37,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a327bf196da71f47262c957e7fe6a8352971c36d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01c0eee248090f6bffad6f68b34d59f1a6fa7265
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403742"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571772"
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 
@@ -65,7 +66,7 @@ int _fseeki64(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *offset*<br/>
@@ -76,11 +77,11 @@ Posizione iniziale.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, **fseek** e **_fseeki64** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Nei dispositivi che non supportano la ricerca, il valore restituito è indefinito. Se *flusso* è un puntatore null, o se *origine* non è uno dei valori consentiti descritti di seguito **fseek** e **_fseeki64** invoke non valido gestore di parametri, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1.
+Caso di esito positivo **fseek** e **_fseeki64** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Nei dispositivi che non supportano la ricerca, il valore restituito è indefinito. Se *stream* è un puntatore null, o se *origin* non è uno dei valori consentiti descritti di seguito, **fseek** e **_fseeki64** invoke non valido gestore di parametri, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1.
 
 ## <a name="remarks"></a>Note
 
-Il **fseek** e **_fseeki64** funzioni si sposta il puntatore del file (se presente) associato *flusso* in una nuova posizione è *offset* byte da *origine*. L'operazione successiva nel flusso viene eseguita nella nuova posizione. In un flusso aperto per l'aggiornamento, l'operazione successiva può essere un'operazione di lettura o scrittura. L'argomento *origine* deve essere una delle seguenti costanti, definite in STDIO. H:
+Il **fseek** e **_fseeki64** funzioni si sposta il puntatore del file (se presente) associato *flusso* a una nuova posizione distante *offset* byte da *origin*. L'operazione successiva nel flusso viene eseguita nella nuova posizione. In un flusso aperto per l'aggiornamento, l'operazione successiva può essere un'operazione di lettura o scrittura. L'argomento *origin* deve essere una delle costanti seguenti, definite in STDIO. H:
 
 |valore di origine|Significato|
 |-|-|
@@ -88,19 +89,19 @@ Il **fseek** e **_fseeki64** funzioni si sposta il puntatore del file (se presen
 **SEEK_END**|Fine del file.
 **SEEK_SET**|Inizio del file.
 
-È possibile utilizzare **fseek** e **_fseeki64** per riposizionare il puntatore in un punto qualsiasi in un file. Il puntatore può essere posizionato anche oltre la fine del file. **fseek** e **_fseeki64** Cancella l'indicatore di fine del file e Annulla l'effetto di eventuali prima [ungetc](ungetc-ungetwc.md) chiama contro *flusso*.
+È possibile usare **fseek** e **_fseeki64** per riposizionare il puntatore del mouse in qualsiasi punto in un file. Il puntatore può essere posizionato anche oltre la fine del file. **fseek** e **_fseeki64** Cancella l'indicatore di fine del file e Annulla l'effetto di qualsiasi prima [ungetc](ungetc-ungetwc.md) chiama contro *flusso*.
 
 Quando un file viene aperto per l'accodamento dei dati, la posizione corrente nel file è determinata dall'ultima operazione di I/O e non dalla posizione in cui si verificherà la scrittura successiva. Se non è ancora stata eseguita alcuna operazione di I/O su un file aperto per l'accodamento, la posizione nel file è l'inizio del file.
 
-Per i flussi aperti in modalità testo, **fseek** e **_fseeki64** hanno un utilizzo limitato, perché possono causare traduzioni ritorno-avanzamento riga, ritorno a capo **fseek** e **_ fseeki64** per produrre risultati imprevisti. L'unico **fseek** e **_fseeki64** operazioni potrebbero funzionare in flussi aperti in modalità testo sono:
+Per i flussi aperti in modalità testo, **fseek** e **_fseeki64** hanno un uso limitato, perché a causa delle conversioni di ritorno a capo con avanzamento di riga **fseek** e **_ fseeki64** per produrre risultati imprevisti. Gli unici **fseek** e **_fseeki64** operazioni certamente funzionanti sui flussi aperti in modalità testo sono:
 
 - Ricerca con offset 0 rispetto a qualsiasi valore di origine.
 
-- La ricerca dall'inizio del file con un valore di offset restituito da una chiamata a [ftell](ftell-ftelli64.md) quando si utilizza **fseek** oppure [_ftelli64](ftell-ftelli64.md) quando si utilizza **_fseeki64**.
+- La ricerca dall'inizio del file con un valore di offset restituito da una chiamata a [ftell](ftell-ftelli64.md) quando si usa **fseek** oppure [_ftelli64](ftell-ftelli64.md) quando si usa **_fseeki64**.
 
-In modalità testo, inoltre, CTRL+Z viene interpretato nell'input come un carattere di fine file. Nei file aperti per la lettura/scrittura [fopen](fopen-wfopen.md) e tutte le routine correlate verificare la presenza di una combinazione CTRL + Z alla fine del file e rimuoverla se possibile. Questa operazione viene eseguita perché l'utilizzo di combinazione **fseek** e [ftell](ftell-ftelli64.md) oppure **_fseeki64** e [_ftelli64](ftell-ftelli64.md), per spostarsi all'interno di un file che termina con CTRL + Z può causare **fseek** oppure **_fseeki64** in prossimità della fine del file, un comportamento non corretto.
+In modalità testo, inoltre, CTRL+Z viene interpretato nell'input come un carattere di fine file. Nei file aperti per la lettura/scrittura [fopen](fopen-wfopen.md) e tutte le routine correlate verificare la presenza di una combinazione CTRL + Z alla fine del file e rimuovono, se possibile. Ciò avviene perché l'uso del **fseek** e [ftell](ftell-ftelli64.md) oppure **_fseeki64** e [_ftelli64](ftell-ftelli64.md)per spostarsi all'interno di un file che termina con CTRL + Z può causare **fseek** oppure **_fseeki64** a un comportamento non corretto verso la fine del file.
 
-Quando CRT apre un file che inizia con un BOM (Byte Order Mark), il puntatore del file viene posizionato dopo il BOM, ovvero all'inizio del contenuto effettivo del file. Se è necessario **fseek** all'inizio del file, utilizzare [ftell](ftell-ftelli64.md) per ottenere la posizione iniziale e **fseek** anziché alla posizione 0.
+Quando CRT apre un file che inizia con un BOM (Byte Order Mark), il puntatore del file viene posizionato dopo il BOM, ovvero all'inizio del contenuto effettivo del file. Se devi **fseek** all'inizio del file, usare [ftell](ftell-ftelli64.md) per ottenere la posizione iniziale e **fseek** ad esso anziché alla posizione 0.
 
 Questa funzione blocca altri thread durante l'esecuzione e pertanto è thread-safe. Per una versione che non blocca i thread, vedere [_fseek_nolock, _fseeki64_nolock](fseek-nolock-fseeki64-nolock.md).
 

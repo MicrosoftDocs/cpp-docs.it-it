@@ -1,5 +1,5 @@
 ---
-title: '#Errore (direttiva) (C/C++) | Documenti Microsoft'
+title: '#Errore (direttiva) (C/C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905572"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543128"
 ---
 # <a name="error-directive-cc"></a>Direttiva #error (C/C++)
-La direttiva `#error` genera un messaggio di errore definito in fase di compilazione e quindi termina la compilazione.  
+Il **#error** direttiva genera un messaggio di errore specificato dall'utente in fase di compilazione e quindi termina la compilazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +35,8 @@ La direttiva `#error` genera un messaggio di errore definito in fase di compilaz
 ```  
   
 ## <a name="remarks"></a>Note  
- Il messaggio di errore che genera la direttiva include il *token-string* parametro. Il parametro `token-string` non è soggetto all'espansione di macro. Questa direttiva è molto utile durante la fase di pre-elaborazione per comunicare allo sviluppatore un'incoerenza di programma o la violazione di un vincolo. Nell'esempio seguente viene illustrata l'elaborazione di errore durante la fase di pre-elaborazione:  
+ 
+Il messaggio di errore che la direttiva genera include il *token-string* parametro. Il *token-string* parametro non è soggetto all'espansione di macro. Questa direttiva è molto utile durante la fase di pre-elaborazione per comunicare allo sviluppatore un'incoerenza di programma o la violazione di un vincolo. Nell'esempio seguente viene illustrata l'elaborazione di errore durante la fase di pre-elaborazione:  
   
 ```  
 #if !defined(__cplusplus)  
@@ -44,4 +45,5 @@ La direttiva `#error` genera un messaggio di errore definito in fase di compilaz
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)
+ 
+[Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)

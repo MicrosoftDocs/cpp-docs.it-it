@@ -1,5 +1,5 @@
 ---
-title: Shared (/openmp) | Documenti Microsoft
+title: Shared (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8287f96f80748272e29b22ed5c43c364f4353b86
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691677"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541234"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
-Specifica che una o più variabili devono essere condivisa tra tutti i thread.  
+Specifica che una o più variabili devono essere condivise tra tutti i thread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ shared(var)
  dove  
   
  `var`  
- Uno più più variabili di condividere. Se è specificata più di una variabile, separare i nomi delle variabili con una virgola.  
+ Uno o più variabili da condividere. Se è specificata più di una variabile, separare i nomi delle variabili con una virgola.  
   
 ## <a name="remarks"></a>Note  
  È possibile condividere le variabili tra i thread con il [copyprivate](../../../parallel/openmp/reference/copyprivate.md) clausola.  
@@ -47,12 +47,12 @@ shared(var)
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [Nelle sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Per ulteriori informazioni, vedere [2.7.2.4 condiviso](../../../parallel/openmp/2-7-2-4-shared.md).  
+ Per altre informazioni, vedere [2.7.2.4 condiviso](../../../parallel/openmp/2-7-2-4-shared.md).  
   
 ## <a name="example"></a>Esempio  
- Vedere [privata](../../../parallel/openmp/reference/private-openmp.md) per un esempio di utilizzo `shared`.  
+ Visualizzare [privati](../../../parallel/openmp/reference/private-openmp.md) per un esempio d'uso `shared`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Clausole](../../../parallel/openmp/reference/openmp-clauses.md)

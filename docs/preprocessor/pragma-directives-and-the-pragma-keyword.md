@@ -1,5 +1,5 @@
 ---
-title: Direttive pragma e parola chiave pragma | Documenti Microsoft
+title: Direttive pragma e parola chiave pragma | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,34 +23,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20a476e1701f58782b97f986ee6c3d4b310b566
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846233"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541772"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Direttive pragma e parola chiave __Pragma
-Le direttive pragma specificano funzionalità del compilatore specifiche del computer o del sistema operativo. La parola chiave `__pragma`, che è specifica del compilatore Microsoft, consente di codificare direttive pragma all'interno delle definizioni di macro.  
+Le direttive pragma specificano funzionalità del compilatore specifiche del computer o del sistema operativo. Il **pragma** parola chiave, che è specifico per il compilatore Microsoft, consente di codificare direttive pragma all'interno delle definizioni di macro.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      #pragma token-string  
+#pragma token-string  
 __pragma(token-string)  
 ```  
   
 ## <a name="remarks"></a>Note  
- Ogni implementazione di C e C++ supporta alcune funzionalità esclusive del computer host o del sistema operativo di utilizzo. Alcuni programmi, ad esempio, devono esercitare un controllo preciso sulle aree di memoria in cui i dati vengono immessi o controllare il modo in cui alcune funzioni ricevono i parametri. Le direttive `#pragma` offrono un metodo con cui ogni compilatore può fornire le funzionalità specifiche del sistema operativo e del computer mantenendo la compatibilità generale con i linguaggi C e C++.  
+ 
+Ogni implementazione di C e C++ supporta alcune funzionalità esclusive del computer host o del sistema operativo di utilizzo. Alcuni programmi, ad esempio, devono esercitare un controllo preciso sulle aree di memoria in cui i dati vengono immessi o controllare il modo in cui alcune funzioni ricevono i parametri. Il **#pragma** direttive offrono un modo per ogni compilatore per fornire funzionalità specifiche del sistema operativo e del computer mantenendo la compatibilità generale con i linguaggi C e C++.  
   
- I pragma sono per definizione specifici del computer o del sistema operativo e, in genere, sono diversi per ogni compilatore. I pragma possono essere utilizzati nelle istruzioni condizionali, per fornire nuove funzionalità del preprocessore o per fornire al compilatore informazioni definite dall'implementazione.  
+I pragma sono per definizione specifici del computer o del sistema operativo e, in genere, sono diversi per ogni compilatore. I pragma possono essere utilizzati nelle istruzioni condizionali, per fornire nuove funzionalità del preprocessore o per fornire al compilatore informazioni definite dall'implementazione.  
   
- La stringa `token-string` è una serie di caratteri che fornisce a un compilatore specifico eventuali istruzioni e argomenti. Il simbolo di cancelletto (**#**) deve essere il primo carattere non spazio vuoto nella riga che contiene il pragma; i caratteri di spazio possono separare il simbolo di numero e la parola "pragma". Qualsiasi testo che il convertitore può analizzare come token di pre-elaborazione, deve essere scritto dopo `#pragma`. L'argomento di `#pragma` è soggetto all'espansione di macro.  
+La stringa `token-string` è una serie di caratteri che fornisce a un compilatore specifico eventuali istruzioni e argomenti. Il simbolo di cancelletto (**#**) deve essere il primo carattere non spazio vuoto sulla riga che contiene il pragma; gli spazi vuoti possono separare il simbolo di cancelletto e la parola "pragma". Seguendo **#pragma**, scrivere un testo che il convertitore può analizzare come token di pre-elaborazione. L'argomento **#pragma** è soggetto all'espansione di macro.  
   
- Se il compilatore rileva un pragma che non riconosce, genera un messaggio di avviso e continua la compilazione.  
+Se il compilatore rileva un pragma che non riconosce, genera un messaggio di avviso e continua la compilazione.  
   
- I compilatori Microsoft C e C++ riconoscono i seguenti pragma:  
+I compilatori Microsoft C e C++ riconoscono i seguenti pragma:  
   
 ||||  
 |-|-|-|  
@@ -73,7 +73,8 @@ __pragma(token-string)
  1. Supportato solo dal compilatore C++.  
   
 ## <a name="pragmas-and-compiler-options"></a>Opzioni relative a compilatore e pragma  
- Alcuni pragma offrono la stessa funzionalità delle opzioni del compilatore. Quando viene rilevato un pragma nel codice sorgente, viene eseguito l'override del comportamento specificato dall'opzione del compilatore. Ad esempio, se è stato specificato [/Zp8](../build/reference/zp-struct-member-alignment.md), è possibile eseguire l'override di questa impostazione del compilatore per sezioni specifiche del codice con [pack](../preprocessor/pack.md):  
+ 
+Alcuni pragma offrono la stessa funzionalità delle opzioni del compilatore. Quando viene rilevato un pragma nel codice sorgente, viene eseguito l'override del comportamento specificato dall'opzione del compilatore. Ad esempio, se è stato specificato [/zp8](../build/reference/zp-struct-member-alignment.md), è possibile eseguire l'override di questa impostazione del compilatore per alcune sezioni specifiche del codice con [pack](../preprocessor/pack.md):  
   
 ```  
 cl /Zp8 ...  
@@ -87,11 +88,12 @@ cl /Zp8 ...
 ```  
   
 ## <a name="the-pragma-keyword"></a>Parola chiave __pragma()  
- **Sezione specifica Microsoft**  
+ 
+**Specifiche di Microsoft**  
   
- Il compilatore supporta inoltre la parola chiave `__pragma`, che ha la stessa funzionalità della direttiva `#pragma`, ma può essere utilizzata inline in una definizione di macro. Il `#pragma` direttiva non può essere utilizzata in una definizione di macro perché il compilatore interpreta il carattere segno di cancelletto ('#') nella direttiva di [operatore (#)](../preprocessor/stringizing-operator-hash.md).  
+Il compilatore supporta anche il **pragma** parola chiave, che ha la stessa funzionalità come la **#pragma** direttiva, ma può essere utilizzata inline in una definizione di macro. Il **#pragma** direttiva non può essere utilizzata in una definizione di macro perché il compilatore interpreta il carattere segno di cancelletto ('#') nella direttiva di [operatore per (#)](../preprocessor/stringizing-operator-hash.md).  
   
- Nell'esempio di codice riportato di seguito viene illustrato come può essere utilizzata la parola chiave `__pragma` in una macro. Questo codice è stato estratto dall'intestazione mfcdual.h presente nell'esempio ACDUAL in "Esempi di supporto COM per il compilatore":  
+L'esempio di codice seguente illustra come la **pragma** parola chiave può essere utilizzata in una macro. Questo codice è stato estratto dall'intestazione mfcdual.h presente nell'esempio ACDUAL in "Esempi di supporto COM per il compilatore":  
   
 ```  
 #define CATCH_ALL_DUAL \  
@@ -111,9 +113,10 @@ END_CATCH_ALL \
 return _hr; \  
 ```  
   
- **Fine sezione specifica Microsoft**  
+**Fine sezione specifica Microsoft**  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
- [Pragma C](../c-language/c-pragmas.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+ 
+[Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[Pragma C](../c-language/c-pragmas.md)   
+[Parole chiave](../cpp/keywords-cpp.md)

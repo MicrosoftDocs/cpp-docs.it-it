@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b58b02781f266b24fa321b3849f42b2e090b860
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842976"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545777"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 Questo pragma fornisce controllo di sicurezza avanzato.  
@@ -36,16 +36,18 @@ Questo pragma fornisce controllo di sicurezza avanzato.
 ```  
   
 ## <a name="remarks"></a>Note  
- Indica al compilatore di inserire un cookie casuale nello stack di funzione per il rilevamento di alcune categorie di sovraccarico del buffer basato su stack. Per impostazione predefinita, l'opzione del compilatore /GS (controllo di sicurezza buffer) non inserisce un cookie per tutte le funzioni. Per altre informazioni, vedere [/GS (Controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md).  
+ 
+Indica al compilatore di inserire un cookie casuale nello stack di funzione per il rilevamento di alcune categorie di sovraccarico del buffer basato su stack. Per impostazione predefinita, il `/GS` (controllo sicurezza Buffer) l'opzione del compilatore non comporta l'inserimento di un cookie per tutte le funzioni. Per altre informazioni, vedere [/GS (Controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md).  
   
- È necessario compilare con /GS (controllo di sicurezza buffer) per abilitare lo strict_gs_check.  
+È necessario compilare con `/GS` (controllo sicurezza Buffer) per abilitare **lo strict_gs_check**.  
   
- Utilizzare questo pragma in moduli di codice esposti a dati potenzialmente dannosi. Questo pragma è particolarmente aggressivo e si applica alle funzioni che potrebbero non necessitare di questa difesa, ma è ottimizzato per ridurre l'effetto sulle prestazioni dell'applicazione risultante.  
+Utilizzare questo pragma in moduli di codice esposti a dati potenzialmente dannosi. Questo pragma è particolarmente aggressivo e si applica alle funzioni che potrebbero non necessitare di questa difesa, ma è ottimizzato per ridurre l'effetto sulle prestazioni dell'applicazione risultante.  
   
- Anche se si utilizza questo pragma, si deve cercare di scrivere un codice sicuro. Vale a dire, assicurarsi che il codice non ha sovraccarichi del buffer. strict_gs_check potrebbe impedire l'applicazione sovraccarichi del buffer che rimangono nel codice.  
+Anche se si utilizza questo pragma, si deve cercare di scrivere un codice sicuro. Vale a dire, assicurarsi che sia il codice non sovraccarichi del buffer. **strict_gs_check** potrebbe proteggere l'applicazione dai sovraccarichi del buffer che rimangono nel codice.  
   
 ## <a name="example"></a>Esempio  
- Nel codice seguente si verifica un sovraccarico del buffer quando copiamo una matrice in una matrice locale. Quando si compila questo codice con /GS, non viene inserito nessun cookie nello stack, poiché il tipo di dati di una matrice è un puntatore. L'aggiunta del pragma strict_gs_check impone un cookie dello stack nello stack di funzione.  
+ 
+Nel codice seguente si verifica un sovraccarico del buffer quando copiamo una matrice in una matrice locale. Quando si compila questo codice con `/GS`, viene inserito nessun cookie nello stack, perché il tipo di dati della matrice è un puntatore. Aggiungere il **strict_gs_check** pragma forza il cookie stack nello stack di funzione.  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -70,9 +72,9 @@ void ** ReverseArray(void **pData,
   
     return pData;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive pragma e parola chiave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [/GS (controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md)
+ 
+[Direttive pragma e parola chiave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[/GS (controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md)

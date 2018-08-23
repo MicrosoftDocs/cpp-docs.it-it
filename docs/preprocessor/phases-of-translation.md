@@ -1,5 +1,5 @@
 ---
-title: Fasi di conversione | Documenti Microsoft
+title: Fasi di conversione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,59 +19,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e8e3a84d425966908bc1be37268c91cbbd34d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 172c7d755f0e7a7b8f2eb198d19775ffb0f2cc53
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842768"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539212"
 ---
 # <a name="phases-of-translation"></a>Fasi di conversione
 I programmi in C e C++ sono costituiti da uno o più file di origine, ciascuno contenente parte del testo del programma. Un file di origine, insieme ai relativi file di inclusione (file che vengono inclusi utilizzando la direttiva per il preprocessore `#include`) e ad esclusione delle sezioni di codice rimosse dalle direttive di compilazione condizionale, come `#if`, viene chiamato "unità di conversione."  
   
- I file di origine possono essere convertiti in momenti diversi. È pratica comune, infatti, convertire solo i file obsoleti. Le unità di conversione convertite possono essere elaborate in distinti file oggetto o in librerie di codice oggetto. Tali distinte unità di conversione convertite vengono, in seguito, collegate, in modo da formare un programma eseguibile o una libreria di collegamento dinamico (DLL).  Per ulteriori informazioni sui file che può essere utilizzato come input per il linker, vedere [file di Input di collegamento](../build/reference/link-input-files.md).  
+I file di origine possono essere convertiti in momenti diversi. È pratica comune, infatti, convertire solo i file obsoleti. Le unità di conversione convertite possono essere elaborate in distinti file oggetto o in librerie di codice oggetto. Tali distinte unità di conversione convertite vengono, in seguito, collegate, in modo da formare un programma eseguibile o una libreria di collegamento dinamico (DLL).  Per altre informazioni sui file che può essere utilizzato come input del linker, vedere [file di Input LINK](../build/reference/link-input-files.md).  
   
- Le unità di conversione possono comunicare utilizzando:  
+Le unità di conversione possono comunicare utilizzando:  
   
--   Chiamate alle funzioni con collegamento esterno.  
+- Chiamate alle funzioni con collegamento esterno.  
   
--   Chiamate alle funzioni membri di classe che hanno un collegamento esterno.  
+- Chiamate alle funzioni membri di classe che hanno un collegamento esterno.  
   
--   Modifica diretta degli oggetti che hanno un collegamento esterno.  
+- Modifica diretta degli oggetti che hanno un collegamento esterno.  
   
--   Modifica diretta dei file.  
+- Modifica diretta dei file.  
   
--   Comunicazione interprocesso (solo con le applicazioni basate su Microsoft Windows).  
+- Comunicazione interprocesso (solo con le applicazioni basate su Microsoft Windows).  
   
- Nell'elenco seguente vengono descritti i passaggi ai quali il compilatore si attiene per converte i file:  
+Nell'elenco seguente vengono descritti i passaggi ai quali il compilatore si attiene per converte i file:  
   
- *Mapping dei caratteri*  
- I caratteri presenti nel file di origine vengono mappati alla rappresentazione interna di origine. Durante questa fase, le sequenze di trigramma vengono convertite in una rappresentazione interna a un solo carattere.  
+*Mapping dei caratteri*  
+I caratteri presenti nel file di origine vengono mappati alla rappresentazione interna di origine. Durante questa fase, le sequenze di trigramma vengono convertite in una rappresentazione interna a un solo carattere.  
   
- *Splicing riga*  
- Tutte le righe che terminano con una barra rovesciata (**\\**) e seguito immediatamente da un carattere di nuova riga vengono unite carattere con la riga successiva nel file di origine che costituiscono le righe logiche dalle righe fisiche. A meno che non sia vuoto, un file di origine deve terminare con un carattere di nuova riga non preceduto da una barra rovesciata.  
+*Splicing riga*  
+Tutte le righe che terminano con una barra rovesciata (**\\**) e seguito immediatamente da un carattere di nuova riga carattere vengono unite con la riga successiva nel file di origine formare righe logiche dalle righe fisiche. A meno che non sia vuoto, un file di origine deve terminare con un carattere di nuova riga non preceduto da una barra rovesciata.  
   
- *Suddivisione in token*  
- Il file di origine viene suddiviso in spazi vuoti e token di pre-elaborazione. I commenti presenti nel file di origine vengono sostituiti ognuno con uno spazio. I caratteri di nuova riga vengono mantenuti.  
+*Suddivisione in token*  
+Il file di origine viene suddiviso in spazi vuoti e token di pre-elaborazione. I commenti presenti nel file di origine vengono sostituiti ognuno con uno spazio. I caratteri di nuova riga vengono mantenuti.  
   
- *Pre-elaborazione*  
- Le direttive di pre-elaborazione vengono eseguite e le macro vengono espanse nel file di origine. L'istruzione `#include` richiama la conversione a partire dai precedenti tre passaggi di conversione in ogni testo incluso.  
+*Pre-elaborazione*  
+Le direttive di pre-elaborazione vengono eseguite e le macro vengono espanse nel file di origine. L'istruzione `#include` richiama la conversione a partire dai precedenti tre passaggi di conversione in ogni testo incluso.  
   
- *Mapping di set di caratteri*  
- Tutti i membri del set di caratteri e le sequenze di escape vengono convertite negli relativi equivalenti del set di caratteri di esecuzione. Per Microsoft C e C++, i set di caratteri di esecuzione e di origine sono entrambi ASCII.  
+*Mapping di set di caratteri*  
+Tutti i membri del set di caratteri e le sequenze di escape vengono convertite negli relativi equivalenti del set di caratteri di esecuzione. Per Microsoft C e C++, i set di caratteri di esecuzione e di origine sono entrambi ASCII.  
   
- *Concatenazione di stringhe*  
- Tutti i valori letterali stringa adiacenti e a caratteri "wide" vengono concatenati. `"String " "concatenation"`, ad esempio, diventa `"String concatenation"`.  
+*Concatenazione di stringhe*  
+Tutti i valori letterali stringa adiacenti e a caratteri "wide" vengono concatenati. `"String " "concatenation"`, ad esempio, diventa `"String concatenation"`.  
   
- *Conversione*  
- Tutti i token vengono analizzati sintatticamente e semanticamente; gli stessi token vengono poi convertiti in codice oggetto.  
+*Traduzione*  
+Tutti i token vengono analizzati sintatticamente e semanticamente; gli stessi token vengono poi convertiti in codice oggetto.  
   
- *Collegamento*  
- Tutti i riferimenti esterni vengono risolti per creare un programma eseguibile o una libreria di collegamento dinamico.  
+*Collegamento*  
+Tutti i riferimenti esterni vengono risolti per creare un programma eseguibile o una libreria di collegamento dinamico.  
   
- Il compilatore genera avvisi o errori durante le fasi di conversione in cui rileva errori di sintassi.  
+Il compilatore genera avvisi o errori durante le fasi di conversione in cui rileva errori di sintassi.  
   
- Il linker risolve tutti i riferimenti esterni e crea un programma eseguibile o una DLL, combinando una o più unità di conversione elaborate separatamente con le librerie standard.  
+Il linker risolve tutti i riferimenti esterni e crea un programma eseguibile o una DLL, combinando una o più unità di conversione elaborate separatamente con le librerie standard.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Preprocessore](../preprocessor/preprocessor.md)
+ 
+[Preprocessore](../preprocessor/preprocessor.md)

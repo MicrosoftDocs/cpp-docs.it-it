@@ -1,5 +1,5 @@
 ---
-title: '#Se, #elif, #else e # #endif (C/C++) | Documenti Microsoft'
+title: '#Se, #elif, #else e #endif direttive (C/C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,87 +31,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222aa7cf4960095461daa26388f2b969985a6069
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846649"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544440"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Direttive #if, #elif, #else e #endif (C/C++)
-La direttiva `#if`, con le direttive `#elif`, `#else` e `#endif`, controlla la compilazione di parti di un file di origine. Se l'espressione scritta (dopo `#if`) presenta un valore diverso da zero, il gruppo di righe immediatamente successivo alla direttiva `#if` viene mantenuto nell'unità di conversione.  
+Il **#if** direttiva, con la **#elif**, **#else**, e **#endif** direttive, controlla la compilazione di parti di un file di origine. Se l'espressione scritta (dopo il **#if**) ha un valore diverso da zero, il gruppo di linee subito dopo la **#if** direttiva viene mantenuta nell'unità di conversione.  
   
 ## <a name="grammar"></a>Grammatica  
- *condizionale* :  
- *Se parte elif-parti*opt*parte else*opt*endif riga*  
+ 
+*condizionale* :  
+*Se parti elif-part*opt*parte else*opt*endif-line*  
   
- *Se parte* :  
- *testo della riga di if*  
+*Se parti* :  
+*testo a riga singola if*  
   
- *Se-line* :  
- **#if**  *constant-expression*  
+*Se-line* :  
+**#if**  *constant-expression*  
   
- **#ifdef***identificatore*   
+**#ifdef***identificatore*  
   
- **#ifndef***identificatore*   
+**#ifndef***identificatore*  
   
- *elif parti* :  
- *testo della riga di elif*  
+*elif parti* :  
+*testo a riga singola elif*  
   
- *testo della riga di elif elif parti*  
+*testo a riga singola elif elif parti*  
   
- *elif riga* :  
- **#elif**  *constant-expression*  
+*elif-line* :  
+**#elif**  *constant-expression*  
   
- *parte else* :  
- *testo riga else*  
+*parte else* :  
+*testo riga else*  
   
- *riga else* :  
- `#else`  
+*Else-line* :  
+`#else`  
   
- *endif riga* :  
- `#endif`  
+*endif-line* :  
+`#endif`  
   
- Ogni direttiva `#if` in un file di origine deve corrispondere a una direttiva `#endif` di chiusura. Tra le direttive `#elif` e `#if` può essere presente un numero qualsiasi di direttive `#endif`, ma è consentita al massimo una direttiva `#else`. La direttiva `#else`, se disponibile, deve essere l'ultima direttiva prima di `#endif`.  
+Ciascuna **#if** direttiva in un file di origine deve essere corrisposte da una chiusura **#endif** direttiva. Un numero qualsiasi di **#elif** direttive possono apparire tra le **#if** e **#endif** direttive, ma al massimo uno **#else** direttiva è consentita. Il **#else** direttiva, se presente, deve essere l'ultima direttiva prima **#endif**.  
   
- Le direttive `#if`, `#elif`, `#else` e `#endif` possono essere annidate in parti di testo di altre direttive `#if`. Ciascuna direttiva `#else`, `#elif` o `#endif` annidata appartiene alla direttiva `#if` precedente più vicina.  
+Il **#if**, **#elif**, **#else**, e **#endif** direttive possono essere annidate in parti di testo da altro **#if**direttive. Ogni annidati **#else**, **#elif**, o **#endif** direttiva a cui appartiene il precedente più vicina **#if** direttiva.  
   
- Tutte le direttive di compilazione condizionale, ad esempio `#if` e **#ifdef**, deve essere associato a chiusura `#endif` direttive prima della fine del file; in caso contrario, viene generato un messaggio di errore. Quando le direttive di compilazione condizionale sono contenute in file di inclusione, devono soddisfare le stesse condizioni: non devono esistere direttive di compilazione condizionale non corrispondenti alla fine del file di inclusione.  
+Tutte le direttive di compilazione condizionale, ad esempio **#if** e **#ifdef**, deve essere associata a chiusura **#endif** direttive prima della fine del file; in caso contrario, un errore messaggio viene generato. Quando le direttive di compilazione condizionale sono contenute in file di inclusione, devono soddisfare le stesse condizioni: non devono esistere direttive di compilazione condizionale non corrispondenti alla fine del file di inclusione.  
   
- Sostituzione della macro viene eseguita all'interno della parte della riga di comando che segue un `#elif` comando, è possibile usare una chiamata di macro nel *espressione costante*.  
+Sostituzione della macro viene eseguita all'interno della parte della riga di comando che segue un' **#elif** comando, in modo che una chiamata della macro può essere usata nel *espressione costante*.  
   
- Il preprocessore seleziona una delle occorrenze determinate *testo* per un'ulteriore elaborazione. Un blocco specificato in *testo* può essere qualsiasi sequenza di testo. Può occupare più righe. In genere *testo* è il testo di programma che ha un significato al compilatore o il preprocessore.  
+Il preprocessore seleziona una delle occorrenze specificate di *testo* per un'ulteriore elaborazione. Un blocco specificato in *testo* può essere qualsiasi sequenza di testo. Può occupare più righe. In genere *testo* è testo di programma utile al compilatore o al preprocessore.  
   
- Il preprocessore elabora selezionato *testo* e lo passa al compilatore. Se *testo* contiene direttive del preprocessore, i preprocessore esegue tali direttive. Solo i blocchi di testo selezionati dal preprocessore vengono compilati.  
+Il preprocessore elabora selezionato *testo* e lo passa al compilatore. Se *testo* contiene le direttive del preprocessore, le eseguirà tali direttive. Solo i blocchi di testo selezionati dal preprocessore vengono compilati.  
   
- Il preprocessore seleziona un singolo *testo* elemento valutando l'espressione costante che segue ogni `#if` o `#elif` direttiva finché trova l'espressione costante true (diverso da zero). Seleziona tutto il testo (incluse altre direttive del preprocessore che iniziano con **#**) fino a essa associati `#elif`, `#else`, o `#endif`.  
+Il preprocessore seleziona un singolo *testo* elemento valutando l'espressione costante che segue ogni **#if** oppure **#elif** direttiva finché non trova una costante true (diverso da zero) espressione. Seleziona tutto il testo (incluse altre direttive del preprocessore che iniziano con **#**) fino a esso associata **#elif**, **#else**, o **#endif** .  
   
- Se tutte le occorrenze di *espressione costante* sono false, o se nessun `#elif` direttive, il preprocessore seleziona il blocco di testo dopo il `#else` clausola. Se il `#else` clausola viene omessa e tutte le istanze di *espressione costante* nel `#if` blocco sono false, non viene selezionato alcun blocco di testo.  
+Se tutte le occorrenze di *espressione costante* sono false, o se nessun **#elif** direttive viene visualizzata, il preprocessore seleziona il blocco testo dopo la **#else** clausola. Se il **#else** clausola viene omessa e tutte le istanze di *espressione costante* nel **#if** blocco sono false, non viene selezionato alcun blocco testo.  
   
- Il *espressione costante* è un'espressione costante integer con queste ulteriori restrizioni:  
+Il *espressione costante* è un'espressione costante integer con queste ulteriori restrizioni:  
   
--   Le espressioni devono avere un tipo integrale e possono includere solo le costanti integer, costanti carattere e **definito** operatore.  
+- Le espressioni devono avere un tipo integrale e possono includere solo le costanti integer, costanti carattere e il **definiti** operatore.  
   
--   L'espressione non può utilizzare `sizeof` o un operatore di cast di tipo.  
+- L'espressione non può utilizzare `sizeof` o un operatore di cast di tipo.  
   
--   È possibile che l'ambiente di destinazione non sia in grado di rappresentare tutti gli intervalli di Integer.  
+- È possibile che l'ambiente di destinazione non sia in grado di rappresentare tutti gli intervalli di Integer.  
   
--   La traslazione rappresenta il tipo `int` identico al tipo **lungo**, e `unsigned int` identico `unsigned long`.  
+- La traslazione rappresenta il tipo **int** uguale al tipo **long**, e **unsigned int** identico **long senza segno**.  
   
--   Il convertitore può traslare le costanti carattere in un set di valori di codice diverso dal set per l'ambiente di destinazione. Per determinare le proprietà dell'ambiente di destinazione, verificare i valori delle macro da LIMITS.H in un'applicazione sviluppata per l'ambiente di destinazione.  
+- Il convertitore può traslare le costanti carattere in un set di valori di codice diverso dal set per l'ambiente di destinazione. Per determinare le proprietà dell'ambiente di destinazione, verificare i valori delle macro da LIMITS.H in un'applicazione sviluppata per l'ambiente di destinazione.  
   
--   L'espressione non deve eseguire alcuna analisi di ambiente e deve rimanere isolata dai dettagli di implementazione nel computer di destinazione.  
+- L'espressione non deve eseguire alcuna analisi di ambiente e deve rimanere isolata dai dettagli di implementazione nel computer di destinazione.  
 
 ## <a name="defined"></a>definizione  
- L'operatore del preprocessore **definito** può essere utilizzato nelle espressioni costanti speciali, come indicato dalla sintassi seguente:  
+ 
+L'operatore del preprocessore **definiti** può essere usato nelle espressioni costanti speciali, come illustrato dalla sintassi seguente:  
   
- defined( `identifier` )  
+defined( `identifier` )  
   
- defined `identifier`  
+defined `identifier`  
   
- Questa espressione costante è considerata true (diverso da zero) se il *identificatore* è attualmente definito; in caso contrario, la condizione è false (0). Un identificatore definito come testo vuoto viene considerato definito. Il **definito** direttiva può essere utilizzata un `#if` e `#elif` direttiva, ma non altrove.  
+Questa espressione costante è considerata true (diverso da zero) se il *identificatore* è attualmente definito; in caso contrario, la condizione è false (0). Un identificatore definito come testo vuoto viene considerato definito. Il **definite** direttiva può essere utilizzata un **#if** e un **#elif** direttiva, ma non altrove.  
   
- Nell'esempio seguente, le direttive `#if` e `#endif` controllano la compilazione di una delle tre chiamate di funzioni:  
+Nell'esempio seguente, il **#if** e **#endif** direttive controllano la compilazione di uno dei tre chiamate di funzione:  
   
 ```  
 #if defined(CREDIT)  
@@ -123,9 +125,9 @@ La direttiva `#if`, con le direttive `#elif`, `#else` e `#endif`, controlla la c
 #endif  
 ```  
   
- La chiamata di funzione a `credit` viene compilata se è definito l'identificatore `CREDIT`. Se è definito l'identificatore `DEBIT`, viene compilata la chiamata di funzione a `debit`. Se non viene definito alcun identificatore, viene compilata la chiamata a `printerror`. Si noti che `CREDIT` e `credit` sono identificatori distinti nei linguaggi C e C++ poiché i casi sono diversi.  
+La chiamata di funzione a `credit` viene compilata se è definito l'identificatore `CREDIT`. Se è definito l'identificatore `DEBIT`, viene compilata la chiamata di funzione a `debit`. Se non viene definito alcun identificatore, viene compilata la chiamata a `printerror`. Si noti che `CREDIT` e `credit` sono identificatori distinti nei linguaggi C e C++ poiché i casi sono diversi.  
   
- Per le istruzioni di compilazione condizionali nell'esempio seguente si presuppone una costante simbolica precedentemente definita, denominata `DLEVEL`.  
+Per le istruzioni di compilazione condizionali nell'esempio seguente si presuppone una costante simbolica precedentemente definita, denominata `DLEVEL`.  
   
 ```  
 #if DLEVEL > 5  
@@ -154,20 +156,20 @@ La direttiva `#if`, con le direttive `#elif`, `#else` e `#endif`, controlla la c
 #endif  
 ```  
   
- Il primo blocco `#if` mostra due set di direttive `#if`, `#else` e `#endif` annidate. Il primo set delle direttive viene elaborato solo se `DLEVEL > 5` è true. In caso contrario, le istruzioni dopo #**else** vengono elaborati.  
+Il primo **#if** vengono mostrate due set di nidificata **#if**, **#else**, e **#endif** direttive. Il primo set delle direttive viene elaborato solo se `DLEVEL > 5` è true. In caso contrario, le istruzioni successive **#else** vengono elaborati.  
   
- Le direttive `#elif` e `#else` nel secondo esempio sono utilizzate per scegliere una delle quattro possibilità in base al valore di `DLEVEL`. La costante `STACK` è impostata su 0, 100 o 200, a seconda della definizione di `DLEVEL`. Se `DLEVEL` è maggiore di 5, allora l'istruzione  
+Il **#elif** e **#else** direttive nel secondo esempio vengono utilizzate per eseguire una delle quattro possibilità in base al valore di `DLEVEL`. La costante `STACK` è impostata su 0, 100 o 200, a seconda della definizione di `DLEVEL`. Se `DLEVEL` è maggiore di 5, allora l'istruzione  
   
 ```  
 #elif DLEVEL > 5  
 display(debugptr);  
 ```  
   
- verrà compilata e `STACK` non è definito.  
+verrà compilata e `STACK` non è definito.  
   
- Generalmente la compilazione condizionale viene utilizzata per evitare più inclusioni dello stesso file di intestazione. In C++, in cui le classi sono spesso definite in file di intestazione, è possibile utilizzare costrutti come quelli riportati di seguito per impedire più definizioni:  
+Generalmente la compilazione condizionale viene utilizzata per evitare più inclusioni dello stesso file di intestazione. In C++, in cui le classi sono spesso definite in file di intestazione, è possibile utilizzare costrutti come quelli riportati di seguito per impedire più definizioni:  
   
-```  
+```cpp  
 /*  EXAMPLE.H - Example header file  */  
 #if !defined( EXAMPLE_H )  
 #define EXAMPLE_H  
@@ -180,10 +182,11 @@ class Example
 #endif // !defined( EXAMPLE_H )  
 ```  
   
- Il codice precedente verifica se la costante simbolica `EXAMPLE_H` è definita. In questo caso, il file è già stato incluso e non deve essere rielaborato. In caso contrario, la costante `EXAMPLE_H` viene definita per contrassegnare EXAMPLE.H come già elaborato.  
+Il codice precedente verifica se la costante simbolica `EXAMPLE_H` è definita. In questo caso, il file è già stato incluso e non deve essere rielaborato. In caso contrario, la costante `EXAMPLE_H` viene definita per contrassegnare EXAMPLE.H come già elaborato.  
 
 ## <a name="hasinclude"></a>__has_include
-**Visual Studio 2017 15.3 e versioni successive**: determina se un'intestazione di libreria è disponibile per l'inclusione:  
+
+**Visual Studio 2017 versione 15.3 e versioni successive**: determina se un'intestazione della libreria è disponibile per l'inclusione:  
 
 ```cpp
 #ifdef __has_include
@@ -201,4 +204,5 @@ class Example
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)
+ 
+[Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)

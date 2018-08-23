@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025984"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572834"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 Questa procedura guidata imposta una classe di consumer OLE DB con le associazioni dati necessaria per accedere all'origine dati specificata tramite il provider OLE DB specificato.  
@@ -33,7 +33,7 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
   
 ## <a name="uielement-list"></a>Elenco UIElement  
 **Origine dati**  
-Il **Zdroj dat** pulsante configurare l'origine dati specificata utilizzando il provider OLE DB specificato. Quando si fa clic sul pulsante, il **proprietà di Data Link** verrà visualizzata la finestra di dialogo. Per altre informazioni sulla creazione di stringhe di connessione e il **proprietà di Data Link** finestra di dialogo, vedere [Cenni preliminari sull'API di collegamento dati](https://msdn.microsoft.com/library/ms718102.aspx) nella documentazione di Windows SDK.  
+Il **Zdroj dat** pulsante configurare l'origine dati specificata utilizzando il provider OLE DB specificato. Quando si fa clic sul pulsante, il **proprietà di Data Link** verrà visualizzata la finestra di dialogo. Per altre informazioni sulla creazione di stringhe di connessione e il **proprietà di Data Link** finestra di dialogo, vedere [Cenni preliminari sull'API di collegamento dati](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) nella documentazione di Windows SDK.  
   
 > [!NOTE]
 >  Nelle versioni precedenti, facendo clic MAIUSC i **Zdroj dat** pulsante aperta una finestra di dialogo Apri File per consentire di selezionare un file di Data Link (UDL). Questa funzionalità non è più supportata.  
@@ -176,7 +176,7 @@ Fare clic su **OK** alla fine. Il **Seleziona oggetto di Database** verrà visua
  Selezionare questa opzione se si desidera utilizzare `CCommand` o `db_command` per creare il comando e una funzione di accesso di comando delle dichiarazioni di classe. Questa è la selezione predefinita.  
   
  **Supporto**  
- Selezionare le caselle di controllo per specificare i tipi di aggiornamento devono essere supportati nel consumer (il valore predefinito è none). Gli aspetti seguenti imposterà [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) e le voci appropriate per [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) nel set di proprietà della mappa.  
+ Selezionare le caselle di controllo per specificare i tipi di aggiornamento devono essere supportati nel consumer (il valore predefinito è none). Gli aspetti seguenti imposterà [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) e le voci appropriate per [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) nel set di proprietà della mappa.  
   
  **Modifica**  
  Specifica che il consumer supportano gli aggiornamenti dei dati di riga nel set di righe.  
@@ -190,4 +190,4 @@ Fare clic su **OK** alla fine. Il **Seleziona oggetto di Database** verrà visua
 ## <a name="see-also"></a>Vedere anche  
  [Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Stringhe di connessione e i collegamenti dati (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Stringhe di connessione e i collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

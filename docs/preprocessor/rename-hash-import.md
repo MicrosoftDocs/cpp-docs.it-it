@@ -1,5 +1,5 @@
 ---
-title: Rinomina (#import) | Documenti Microsoft
+title: Rinomina (#import) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bad195e0885c18748ddd39d2ed6e7a565606398
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2930ab9cbc5b847252e20f185b335a547317fa5b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840433"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544441"
 ---
 # <a name="rename-import"></a>rename (#import)
 **Sezione specifica C++**  
   
- Risolve i problemi di conflitto di nomi.  
+Risolve i problemi di conflitto di nomi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,37 +34,39 @@ ms.locfileid: "33840433"
 rename("OldName","NewName")  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `OldName`  
- Nome precedente nella libreria di tipi.  
+### <a name="parameters"></a>Parametri  
+*OldName*  
+Nome precedente nella libreria di tipi.  
   
- `NewName`  
- Nome da utilizzare al posto del nome precedente.  
+*NewName*  
+Nome da utilizzare al posto del nome precedente.  
   
 ## <a name="remarks"></a>Note  
- Se questo attributo viene specificato, il compilatore sostituisce tutte le occorrenze di *OldName* in una libreria dei tipi con fornito dall'utente *NewName* nei file di intestazione risultante.  
+ 
+Se questo attributo è specificato, il compilatore sostituisce tutte le occorrenze di *OldName* in una libreria dei tipi con il fornito dall'utente *NewName* nei file di intestazione risultante.  
   
- Questo attributo può essere utilizzato quando un nome nella libreria di tipi coincide con una definizione macro nei file di intestazione del sistema. Se non viene risolto il problema, quindi si verranno generati i diversi errori di sintassi, ad esempio [errore del compilatore C2059](../error-messages/compiler-errors-1/compiler-error-c2059.md) e [errore del compilatore C2061](../error-messages/compiler-errors-1/compiler-error-c2061.md).  
+Questo attributo può essere utilizzato quando un nome nella libreria di tipi coincide con una definizione macro nei file di intestazione del sistema. Se non viene risolto il problema, diversi errori di sintassi non verranno generati, ad esempio [errore del compilatore C2059](../error-messages/compiler-errors-1/compiler-error-c2059.md) e [errore del compilatore C2061](../error-messages/compiler-errors-1/compiler-error-c2061.md).  
   
 > [!NOTE]
->  La sostituzione riguarda un nome utilizzato nella libreria di tipi, non un nome utilizzato nel file di intestazione risultante.  
+> La sostituzione riguarda un nome utilizzato nella libreria di tipi, non un nome utilizzato nel file di intestazione risultante.  
   
- Ad esempio, si supponga che una proprietà denominata `MyParent` esiste in una libreria di tipi e che una macro `GetMyParent` è definita in un file di intestazione e viene utilizzata prima di `#import`. Poiché `GetMyParent` è il nome predefinito di una funzione wrapper per la gestione degli errori **ottenere** proprietà, si verifica un conflitto di nomi. Per ovviare al problema, utilizzare il seguente attributo nell'istruzione `#import` :  
+Ad esempio, si supponga che una proprietà denominata `MyParent` esiste in una libreria di tipi e che una macro `GetMyParent` è definita in un file di intestazione e viene utilizzata prima di `#import`. Poiché `GetMyParent` è il nome predefinito di una funzione wrapper per la gestione degli errori `get` proprietà, si verifica un conflitto di nomi. Per ovviare al problema, utilizzare il seguente attributo nell'istruzione `#import` :  
   
 ```  
 rename("MyParent","MyParentX")  
 ```  
   
- il quale rinomina il nome `MyParent` nella libreria di tipi. Il tentativo di rinominare il nome del wrapper `GetMyParent` non riuscirà:  
+il quale rinomina il nome `MyParent` nella libreria di tipi. Il tentativo di rinominare il nome del wrapper `GetMyParent` non riuscirà:  
   
 ```  
 rename("GetMyParent","GetMyParentX")  
 ```  
   
- Questo perché il nome `GetMyParent` ricorre solo nel file di intestazione della libreria di tipi risultante.  
+Questo perché il nome `GetMyParent` ricorre solo nel file di intestazione della libreria di tipi risultante.  
   
- **Fine sezione specifica C++**  
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1305 | Documenti Microsoft
+title: Errore irreversibile C1305 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cb1cf19d0fc4152fbb458d684972bb5a4418f37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90d73003d9f19eb41f9eb34cd47c7b90b1e6164f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227147"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538651"
 ---
 # <a name="fatal-error-c1305"></a>Errore irreversibile C1305
-il database di profilo 'pgd_file' è per un'architettura differente  
+'pgd_file ' del database di profilo è per un'architettura differente  
   
- Un file pgd è stato generato dall'operazione /LTCG: PGINSTRUMENT per un'altra piattaforma è stata passata a [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Le ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md) sono disponibili per x86 e [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] piattaforme. Tuttavia, un file pgd generato con un'operazione di /LTCG: PGINSTRUMENT per una piattaforma non è valido come input per un /LTCG: PGOPTIMIZE per una piattaforma diversa.  
+ Un file PDG generato dall'operazione di /LTCG: PGINSTRUMENT per un'altra piattaforma è stata passata al [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Le ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md) sono disponibili per piattaforme x86 e x64. Tuttavia, un file PDG generato con un'operazione di /LTCG: PGINSTRUMENT per una piattaforma non è valido come input per un /LTCG: PGOPTIMIZE per una piattaforma diversa.  
   
- Per correggere l'errore, passare solo un file PDG creato con /LTCG: PGINSTRUMENT in /LTCG: PGOPTIMIZE sulla stessa piattaforma.
+ Per risolvere questo errore, passare solo un file PDG creata con /LTCG: PGINSTRUMENT in /LTCG: PGOPTIMIZE sulla stessa piattaforma.

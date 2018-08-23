@@ -1,5 +1,5 @@
 ---
-title: escludere (#import) | Documenti Microsoft
+title: escludere (#import) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cbc9d6f5ae0dcb1f82264ff07d3ea93a71cab60
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: d700f19235ac18af27fa958420aa4ed467807624
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954128"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540598"
 ---
 # <a name="exclude-import"></a>exclude (#import)
 **Sezione specifica C++**  
   
- Esclude gli elementi dai file di intestazione della libreria dei tipi generati.  
+Esclude gli elementi dai file di intestazione della libreria dei tipi generati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,18 +34,20 @@ ms.locfileid: "33954128"
 exclude("Name1"[, "Name2",...])  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `Name1`  
- Primo elemento da escludere.  
+### <a name="parameters"></a>Parametri  
+*Nome1*  
+Primo elemento da escludere.  
   
- `Name2`  
- Secondo elemento da escludere (se necessario).  
+*Nome2*  
+Secondo elemento da escludere (se necessario).  
   
 ## <a name="remarks"></a>Note  
- Le librerie dei tipi possono includere definizioni di elementi definiti nelle intestazioni di sistema o in altre librerie dei tipi. Questo attributo può accettare un numero qualsiasi di argomenti, ognuno dei quali è un elemento di primo livello della libreria dei tipi da escludere.  
+ 
+Le librerie dei tipi possono includere definizioni di elementi definiti nelle intestazioni di sistema o in altre librerie dei tipi. Questo attributo può accettare un numero qualsiasi di argomenti, ognuno dei quali è un elemento di primo livello della libreria dei tipi da escludere.  
   
- **Fine sezione specifica C++**  
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: rename_search_namespace | Documenti Microsoft
+title: rename_search_namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 367294991b9cbb07ee7c852d757842a20c51cc30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20072a5196ce476cf178f7c6e1071bd495202062
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850255"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544439"
 ---
 # <a name="renamesearchnamespace"></a>rename_search_namespace
 **Sezione specifica C++**  
   
- Ha la stessa funzionalità come il [rename_namespace](../preprocessor/rename-namespace.md) attributo ma viene usato in librerie dei tipi che si utilizza la direttiva #import con il [auto_search](../preprocessor/auto-search.md) attributo.  
+Ha la stessa funzionalità come la [rename_namespace](../preprocessor/rename-namespace.md) dell'attributo, ma viene usato su librerie dei tipi che usano il `#import` direttiva con il [auto_search](../preprocessor/auto-search.md) attributo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,13 +34,15 @@ ms.locfileid: "33850255"
 rename_search_namespace("NewName")  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `NewName`  
- Nuovo nome dello spazio dei nomi.  
+### <a name="parameters"></a>Parametri  
+*NewName*  
+Nuovo nome dello spazio dei nomi.  
   
 ## <a name="remarks"></a>Note  
- **Fine sezione specifica C++**  
+ 
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

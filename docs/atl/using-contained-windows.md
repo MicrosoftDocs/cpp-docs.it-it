@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc17925e36e0e224a657177d0aa18912c564efed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 64a2f9d5d296e28b4b773e072edc90e1b339feae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850800"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571859"
 ---
 # <a name="using-contained-windows"></a>Utilizzando Windows indipendente
 Implementate in windows indipendente con ATL [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Una finestra contenuta rappresenta una finestra che delega i messaggi a un oggetto contenitore invece di gestirli nella sua classe personale.  
@@ -40,7 +40,7 @@ Implementate in windows indipendente con ATL [CContainedWindowT](../atl/referenc
   
  [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]  
   
- Per altre informazioni sulle finestre contenute, vedere la [SUBEDIT](../visual-cpp-samples.md) esempio.  
+ Per altre informazioni sulle finestre contenute, vedere la [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) esempio.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi di finestre](../atl/atl-window-classes.md)

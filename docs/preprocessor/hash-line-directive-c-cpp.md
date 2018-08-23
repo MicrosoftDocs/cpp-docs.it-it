@@ -1,5 +1,5 @@
 ---
-title: '#Line (direttiva) (C/C++) | Documenti Microsoft'
+title: '#Line (direttiva) (C/C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/18/2017
 ms.technology:
@@ -18,34 +18,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ebbcea7432b27e9269b5041d90d14534a77b812
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0994c8266828ab8bff8d43171c275d9058a3b7ce
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839754"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539997"
 ---
 # <a name="line-directive-cc"></a>Direttiva #line (C/C++)
 
-La direttiva `#line` indica al preprocessore di modificare il numero di riga memorizzato internamente e il nome del file per un determinato numero di riga e nome del file.
+Il **#line** direttiva indica al preprocessore di modificare il numero di riga memorizzato internamente del compilatore e nome file in un determinato numero di riga e il nome file.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#line** *sequenza di cifre* ["*filename*"]
+> **#line** *digit-sequence* ["*filename*"]
 
 ## <a name="remarks"></a>Note
 
 Il compilatore utilizza il numero di riga e il nome del file facoltativo per fare riferimento agli errori rilevati durante la compilazione. Il numero di riga in genere si riferisce alla linea di input corrente, mentre il nome del file fa riferimento al file di input corrente. Il numero di riga viene incrementato dopo l'elaborazione di ogni riga.
 
-Il *sequenza di cifre* valore può essere qualsiasi costante integer. La sostituzione della macro può essere eseguita sui token di pre-elaborazione, ma il risultato deve valutare la sintassi corretta. Il *filename* può essere qualsiasi combinazione di caratteri e deve essere racchiuso tra virgolette doppie (**""**). Se *filename* viene omesso, il nome del file precedente rimane invariato.
+Il *digit-sequence* valore può essere qualsiasi costante integer. La sostituzione della macro può essere eseguita sui token di pre-elaborazione, ma il risultato deve valutare la sintassi corretta. Il *nomefile* può essere qualsiasi combinazione di caratteri e deve essere racchiuso tra virgolette doppie (**""**). Se *filename* viene omesso, il nome del file precedente rimane invariato.
 
-È possibile modificare il numero della riga di codice e il nome del file sorgente scrivendo una direttiva `#line`. Il convertitore utilizza il numero di riga e il nome file per determinare i valori delle macro predefinite **&#95; &#95;FILE&#95; &#95;** e **&#95; &#95;riga&#95; &#95;**. È possibile utilizzare queste macro per inserire messaggi di errore autodescrittivi nel testo del programma. Per ulteriori informazioni su queste macro predefinite, vedere [macro predefinite](../preprocessor/predefined-macros.md).
+È possibile modificare il numero di riga di origine e il nome per la scrittura di un **#line** direttiva. Il convertitore utilizza il numero di riga e il nome file per determinare i valori delle macro predefinite `__FILE__` e `__LINE__`. È possibile utilizzare queste macro per inserire messaggi di errore autodescrittivi nel testo del programma. Per altre informazioni su queste macro predefinite, vedere [macro predefinite](../preprocessor/predefined-macros.md).
 
-Il **&#95; &#95;FILE&#95; &#95;** macro si espande in una stringa il cui contenuto è il nome del file, racchiuso tra virgolette doppie (**""**).
+Il `__FILE__` macro si espande in una stringa il cui contenuto è il nome del file, racchiuso tra virgolette doppie (**""**).
 
-Se si modifica il numero di riga e il nome del file, il compilatore ignora i valori precedenti e continua l'elaborazione con i nuovi valori. La direttiva `#line` è in genere utilizzata dai generatori di programmi per visualizzare messaggi di errore che fanno riferimento al file sorgente anziché al programma generato.
+Se si modifica il numero di riga e il nome del file, il compilatore ignora i valori precedenti e continua l'elaborazione con i nuovi valori. Il **#line** direttiva viene generalmente utilizzata dai generatori di programma per i messaggi di errore fare riferimento al file di origine originale anziché al programma generato.
 
-Gli esempi seguenti illustrano `#line` e il **&#95; &#95;riga&#95; &#95;** e **&#95; &#95;FILE&#95; &#95;** macro.
+Gli esempi seguenti illustrano **#line** e il `__LINE__` e `__FILE__` macro.
 
 In questa istruzione, il numero di riga archiviato internamente è impostato su 151 e il nome del file viene modificato in copy.c.
 
@@ -53,7 +53,7 @@ In questa istruzione, il numero di riga archiviato internamente è impostato su 
 #line 151 "copy.c"
 ```
 
- In questo esempio, la macro `ASSERT` utilizza le macro predefinite **&#95; &#95;riga&#95; &#95;** e **&#95; &#95;FILE&#95; &#95;** per stampare un messaggio di errore sul file di origine se un'asserzione specificata non è true.
+In questo esempio, la macro `ASSERT` utilizza le macro predefinite `__LINE__` e `__FILE__` per stampare un messaggio di errore sul file di origine se un'asserzione specificata non è true.
 
 ```cpp
 #define ASSERT(cond) if( !(cond) )\

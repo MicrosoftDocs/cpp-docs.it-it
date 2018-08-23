@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327525"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540821"
 ---
 # <a name="invlpg"></a>__invlpg
 **Sezione specifica Microsoft**  
   
- Genera l'errore x86 `invlpg` (istruzione), che invalida il buffer di translation lookaside (TLB) per la pagina associata alla memoria a cui puntata `Address`.  
+ Genera l'errore x86 `invlpg` istruzione, che invalida il buffer di translation lookaside (TLB) per la pagina associata alla memoria a cui punta `Address`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,12 +46,12 @@ void __invlpg(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- La funzione intrinseca `__invlpg` genera un'istruzione riservata ed è disponibile solo in modalità kernel con un livello di privilegio (CPL) pari a 0.  
+ La funzione intrinseca `__invlpg` genera un'istruzione privilegiata ed è disponibile solo in modalità kernel con un livello di privilegio (CPL) pari a 0.  
   
  Questa routine è disponibile solo come funzione intrinseca.  
   

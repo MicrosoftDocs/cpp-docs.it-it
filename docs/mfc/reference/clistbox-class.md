@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22e48299b6a97f4cb6acba87c7c7bf9a68b16240
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5b77254c78dbb84d546e080ca5bc275919aac64a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339254"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541236"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 Fornisce la funzionalità di una casella di riepilogo di Windows.  
@@ -1307,7 +1307,7 @@ virtual int VKeyToItem(
   
 ### <a name="parameters"></a>Parametri  
  *nKey*  
- Il codice tasto virtuale del tasto premuto dall'utente. Per un elenco di standard codici di tasti virtuali, vedere winuser. h  
+ Il codice tasto virtuale del tasto premuto dall'utente. Per un elenco di codici di tasti virtuali standard, vedere winuser. h  
   
  *nIndex*  
  La posizione corrente del punto di inserimento di caselle di riepilogo.  

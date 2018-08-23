@@ -1,5 +1,5 @@
 ---
-title: assume | Documenti Microsoft
+title: assume | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec83775a007e3a07582f218c5588ae4fe7909b20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340567"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540621"
 ---
 # <a name="assume"></a>__assume
 **Sezione specifica Microsoft**  
@@ -51,7 +51,7 @@ __assume(
   
  `__assume` non è una funzione intrinseca originale. Non deve essere dichiarata come funzione e non può essere usata in una direttiva `#pragma intrinsic`. Anche se non viene generato alcun codice, viene interessato il codice generato dall'utilità di ottimizzazione.  
   
- Utilizzare `__assume` in un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo quando l'asserzione non è ripristinabile. Non usare `__assume` in un'asserzione per cui si dispone di un codice di recupero da errori successivi perché il compilatore potrebbe ottimizzare il codice di gestione degli errori.  
+ Uso `__assume` in un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo quando l'asserzione non è recuperabile. Non usare `__assume` in un'asserzione per cui si dispone di un codice di recupero da errori successivi perché il compilatore potrebbe ottimizzare il codice di gestione degli errori.  
   
  L'istruzione `__assume(0)` è un caso speciale. Usare `__assume(0)` per indicare un percorso del codice che non può essere raggiunto. L'esempio seguente illustra come usare `__assume(0)` per indicare che il caso predefinito di un'istruzione switch non può essere raggiunto. Viene illustrato l'uso più comune di `__assume(0)`.  
   
@@ -59,7 +59,7 @@ __assume(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__assume`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__assume`|x86, ARM, x64|  
   
 ## <a name="example"></a>Esempio  
   

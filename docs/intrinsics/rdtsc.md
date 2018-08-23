@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b47a76b3045465d8c3c5c21a87020ee1e74a69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7888f00b1b95a18e839ab61fc8ff28a2646f9875
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337080"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540622"
 ---
 # <a name="rdtsc"></a>__rdtsc
 **Sezione specifica Microsoft**  
   
- Genera il `rdtsc` (istruzione), che restituisce il timestamp del processore. Il timestamp processore registra il numero di cicli di clock dall'ultimo ripristino.  
+ Genera il `rdtsc` istruzione, che restituisce il timestamp del processore. Il timestamp del processore registrato il numero di cicli di clock dall'ultimo ripristino.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +37,20 @@ unsigned __int64 __rdtsc();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Intero senza segno a 64 bit che rappresenta un conteggio di tick.  
+ Un intero senza segno a 64 bit che rappresenta un conteggio dei tick.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__rdtsc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__rdtsc`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
  Questa routine è disponibile solo come funzione intrinseca.  
   
- L'interpretazione del valore TSC in questa generazione di hardware è diverso da quello nelle versioni precedenti di [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Manuali dell'hardware per altre informazioni, vedere.  
+ L'interpretazione del valore del contatore TSC in questa generazione di hardware è diverso da quello nelle versioni precedenti di x64. Manuali dell'hardware per altre informazioni, vedere.  
   
 ## <a name="example"></a>Esempio  
   

@@ -1,5 +1,5 @@
 ---
-title: Classe CPaneDivider | Documenti Microsoft
+title: Classe CPaneDivider | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -94,15 +94,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079364"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540823"
 ---
 # <a name="cpanedivider-class"></a>Classe CPaneDivider
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
  Il `CPaneDivider` classe Divide due riquadri, divide due gruppi di riquadri o separa un gruppo di riquadri dall'area client della finestra cornice principale.  
   
@@ -163,8 +163,8 @@ class CPaneDivider : public CBasePane
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|Restituisce l'elenco dei riquadri che si trovano nel [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Questo metodo deve essere chiamato solo per i divisori di riquadro predefinito.|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Restituisce l'elenco di divisori di riquadro che si trovano nel [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Questo metodo deve essere chiamato solo per i divisori di riquadro predefinito.|  
+|[CPaneDivider::GetPanes](#getpanes)|Restituisce l'elenco di riquadri che si trovano nel [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Questo metodo deve essere chiamato solo per i divisori di riquadro predefinito.|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Restituisce l'elenco di divisori di riquadro che si trovano nel [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Questo metodo deve essere chiamato solo per i divisori di riquadro predefinito.|  
   
 ### <a name="data-members"></a>Membri di dati  
   
@@ -178,12 +178,12 @@ class CPaneDivider : public CBasePane
   
  Esistono due tipi di divisori di riquadro:  
   
--   un divisore di riquadro predefinita viene creato quando un gruppo di riquadri è ancorato a un lato della finestra cornice principale. Divisore di riquadro predefinito contiene un puntatore per il [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) e reindirizza la maggior parte delle operazioni sul gruppo di riquadri (ad esempio il ridimensionamento di un riquadro o un altro di ancoraggio riquadro o un contenitore) per il gestore del contenitore. Ogni riquadro ancorato viene conservato un puntatore il divisore di riquadro predefinito.  
+-   Quando un gruppo di riquadri è ancorato a un lato della finestra cornice principale, viene creato un divisore di riquadro predefinito. Il divisore di riquadro predefinito contiene un puntatore al [classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) e reindirizza la maggior parte delle operazioni nel gruppo di riquadri (ad esempio il ridimensionamento di un riquadro o ancoraggio a un altro riquadro o un contenitore) per il gestore del contenitore. Ogni riquadro ancorato viene conservato un puntatore per il divisore di riquadro predefinito.  
   
--   Un divisore di riquadro regolare appena Divide due riquadri in un contenitore. Per altre informazioni, vedere [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md).  
+-   Un divisore di riquadro regolari appena Divide due riquadri in un contenitore. Per altre informazioni, vedere [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come chiamare un oggetto `CPaneDivider` da un oggetto `CWorkspaceBar`. Questo frammento di codice fa parte il [esempio dimostrativo schede MDI](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come chiamare un oggetto `CPaneDivider` da un oggetto `CWorkspaceBar`. Questo frammento di codice fa parte di [esempio dimostrativo schede MDI](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]  
   
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- Restituisce l'elenco di divisori di riquadro che si trovano nel [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Questo metodo deve essere chiamato solo per i divisori di riquadro predefinito.  
+ Restituisce l'elenco di divisori di riquadro che si trovano nel [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Questo metodo deve essere chiamato solo per i divisori di riquadro predefinito.  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -451,7 +451,7 @@ void GetPaneDividers(CObList& lstSliders);
  Contiene l'elenco di divisori di riquadro che si trovano nel contenitore di riquadro.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo deve essere chiamato per divisori di riquadro predefinito solo. Un divisore di riquadro predefinito è un divisore che ridimensiona il riquadro intero contenitore.  
+ Questo metodo deve essere chiamato per solo i divisori di riquadro predefinito. Un divisore di riquadro predefinito è un divisore che ridimensiona il riquadro intero contenitore.  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- Restituisce l'elenco dei riquadri che si trovano nel [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md). Questo metodo deve essere chiamato solo per recuperare i divisori di riquadro predefinito.  
+ Restituisce l'elenco di riquadri che si trovano nel [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Questo metodo deve essere chiamato solo per recuperare i divisori di riquadro predefinito.  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -473,10 +473,10 @@ void GetPanes(CObList& lstBars);
   
 ### <a name="parameters"></a>Parametri  
  [out] *lstBars*  
- Contiene l'elenco dei riquadri che si trovano nel contenitore di riquadro.  
+ Contiene l'elenco di riquadri che si trovano nel contenitore di riquadro.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo deve essere chiamato per divisori di riquadro predefinito solo. Un divisore di riquadro predefinito è un divisore che ridimensiona il riquadro intero contenitore.  
+ Questo metodo deve essere chiamato per solo i divisori di riquadro predefinito. Un divisore di riquadro predefinito è un divisore che ridimensiona il riquadro intero contenitore.  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -592,14 +592,14 @@ virtual void Move(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC  
- Contiene un puntatore a informazioni sulle classi di runtime su un `CPaneDivider`-oggetto derivato.  
+ Contiene un puntatore alle informazioni di classe di runtime su un `CPaneDivider`-oggetto derivato.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Impostare questa variabile membro se si crea un divisore di riquadro personalizzato. Ciò consente al framework creare il divisore di riquadro quando viene disegnato il riquadro.  
+ Impostare questa variabile membro, se si crea un divisore di riquadro personalizzato. In questo modo il framework creare il divisore di riquadro quando viene disegnato il riquadro.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come impostare il `m_pSliderRTC` variabile membro:  
@@ -710,7 +710,7 @@ void ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nCmdShow*  
+ [in] *CmdShow*  
   
 ### <a name="remarks"></a>Note  
   

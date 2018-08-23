@@ -1,5 +1,5 @@
 ---
-title: __writemsr | Documenti Microsoft
+title: __writemsr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76131f4d07dec1713c80b4cd4f98f729b9ecf07b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323524"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543167"
 ---
 # <a name="writemsr"></a>__writemsr
 **Sezione specifica Microsoft**  
   
- Genera l'errore di scrittura per Model Specific Register (`wrmsr`) (istruzione).  
+ Genera la scrittura in Model Specific Register (`wrmsr`) (istruzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,12 +50,12 @@ void __writemsr(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writemsr`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Questa funzione può essere utilizzata solo in modalità kernel e questa routine è disponibile solo come funzione intrinseca.  
+ Questa funzione può essere usata solo in modalità kernel e questa routine è disponibile solo come funzione intrinseca.  
   
 **Fine sezione specifica Microsoft**  
   

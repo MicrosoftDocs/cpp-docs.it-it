@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852275"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540617"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 La classe `CNetAddressCtrl` rappresenta il controllo indirizzo di rete, che è possibile utilizzare per immettere e convalidare il formato di indirizzi IPv4, IPv6 e DNS denominati.  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  La figura seguente rappresenta una finestra di dialogo contenente un controllo di indirizzo di rete. Il testo casella (1) per il controllo di indirizzo di rete contiene un indirizzo di rete non è valida. Se l'indirizzo di rete non è valido, viene visualizzato il messaggio finestra popup (2).  
   
- ![Finestra di dialogo con un controllo dell'indirizzo di rete e una finestra popup. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![Finestra di dialogo con un controllo dell'indirizzo di rete e una finestra popup. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>Esempio  
  Esempio di codice seguente è una parte di una finestra di dialogo che consente di convalidare un indirizzo di rete. I gestori eventi per tre pulsanti di opzione specifica che l'indirizzo di rete può essere uno dei tre tipi di indirizzo. L'utente immette un indirizzo nella casella di testo del controllo di rete, quindi preme un pulsante per convalidare l'indirizzo. Se l'indirizzo è valido, viene visualizzato un messaggio di esito positivo; in caso contrario, viene visualizzato il messaggio di errore infotip predefiniti.  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcmn.h  
   
- Questa classe è supportata in [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] e versioni successive.  
+ Questa classe è supportata in Windows Vista e versioni successive.  
   
  Requisiti aggiuntivi per questa classe sono descritte nel [compilare i requisiti per Windows Vista controlli comuni](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   

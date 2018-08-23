@@ -1,5 +1,5 @@
 ---
-title: Classe concurrent_unordered_map | Documenti Microsoft
+title: Classe concurrent_unordered_map | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c570bd05edd81fc08f49785a1bc50668953553b0
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695529"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539236"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 La classe `concurrent_unordered_map` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const K, _Element_type>`. La sequenza viene rappresentata in un modo che abilita le operazioni di accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.  
@@ -69,7 +69,7 @@ template <typename K,
  Tipo di oggetto della funzione di confronto di uguaglianza. Questo argomento è facoltativo e il valore predefinito è `std::equal_to<K>`.  
   
  `_Allocator_type`  
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione della memoria per la mappa non ordinata simultanea. Questo argomento è facoltativo e il valore predefinito è `std::allocator<std::pair<K`, `_Element_type>>`.  
+ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione di memoria per la mappa non ordinata simultanea. Questo argomento è facoltativo e il valore predefinito è `std::allocator<std::pair<K`, `_Element_type>>`.  
   
 ## <a name="members"></a>Membri  
   
@@ -104,19 +104,19 @@ template <typename K,
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[at](#at)|Di overload. Trova un elemento in un `concurrent_unordered_map` con un valore di chiave specificato. Questo metodo è indipendente dalla concorrenza.|  
+|[at](#at)|Di overload. Trova un elemento in un `concurrent_unordered_map` con un valore di chiave specificato... Questo metodo è indipendente dalla concorrenza.|  
 |[hash_function](#hash_function)|Ottiene l'oggetto della funzione hash archiviato.|  
-|[insert](#insert)|Di overload. Aggiunge gli elementi per il `concurrent_unordered_map` oggetto.|  
-|[key_eq](#key_eq)|Ottiene l'oggetto funzione di confronto di uguaglianza stored.|  
+|[insert](#insert)|Di overload. Aggiunge gli elementi di `concurrent_unordered_map` oggetto.|  
+|[key_eq](#key_eq)|Ottiene l'oggetto funzione di confronto di uguaglianza archiviato.|  
 |[swap](#swap)|Scambia il contenuto di due `concurrent_unordered_map` oggetti. Questo metodo non è indipendente dalla concorrenza.|  
-|[unsafe_erase](#unsafe_erase)|Di overload. Rimuove gli elementi dal `concurrent_unordered_map` in posizioni specificate. Questo metodo non è indipendente dalla concorrenza.|  
+|[unsafe_erase](#unsafe_erase)|Di overload. Rimuove gli elementi dal `concurrent_unordered_map` alle posizioni specificate. Questo metodo non è indipendente dalla concorrenza.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[operator]](#operator_at)|Di overload. Trova o inserisce un elemento con la chiave specificata. Questo metodo è indipendente dalla concorrenza.|  
-|[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_unordered_map` questo oggetto. Questo metodo non è indipendente dalla concorrenza.|  
+|[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_unordered_map` a questo oggetto. Questo metodo non è indipendente dalla concorrenza.|  
   
 ## <a name="remarks"></a>Note  
  Per informazioni dettagliate sul `concurrent_unordered_map` classe, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -135,7 +135,7 @@ template <typename K,
   
 ##  <a name="at"></a> in 
 
- Trova un elemento in un `concurrent_unordered_map` con un valore di chiave specificato. Questo metodo è indipendente dalla concorrenza.  
+ Trova un elemento in un `concurrent_unordered_map` con un valore di chiave specificato... Questo metodo è indipendente dalla concorrenza.  
   
 ```
 mapped_type& at(const key_type& KVal);
@@ -153,7 +153,7 @@ const mapped_type& at(const key_type& KVal) const;
 ### <a name="remarks"></a>Note  
  Se il valore della chiave dell'argomento non è presente, tramite la funzione viene generato un oggetto di classe `out_of_range`.  
   
-##  <a name="begin"></a> Begin 
+##  <a name="begin"></a> iniziare 
 
  Restituisce un iteratore che punta al primo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -267,7 +267,7 @@ concurrent_unordered_map(
   
  Tramite l'ultimo costruttore viene specificato uno spostamento della mappa non ordinata simultanea `_Umap`.  
   
-##  <a name="count"></a> Conteggio 
+##  <a name="count"></a> conteggio 
 
  Conta il numero di elementi corrispondenti a una chiave specificata. Questa funzione è concorrenza-safe.  
   
@@ -280,9 +280,9 @@ size_type count(const key_type& KVal) const;
  Chiave da ricercare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il numero di volte numero di volte in cui che la chiave presente nel contenitore.  
+ Il numero di volte in cui numero di volte in cui che la chiave viene visualizzata nel contenitore.  
   
-##  <a name="empty"></a> vuoto 
+##  <a name="empty"></a> vuota 
 
  Verifica se sono presenti o meno degli elementi. Questo metodo è concorrenza-safe.  
   
@@ -294,7 +294,7 @@ bool empty() const;
  `true` Se è vuoto, il contenitore simultaneo `false` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Indica se il contenitore simultaneo è vuoto è possibile modificare in presenza di istruzioni INSERT simultanee, immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.  
+ In presenza di operazioni di inserimento simultanee, indica se il contenitore simultaneo è vuoto potrebbe cambiare immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.  
   
 ##  <a name="end"></a> Fine 
 
@@ -328,12 +328,12 @@ std::pair<const_iterator,
  Il valore della chiave da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [coppia](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) in cui il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
+ Oggetto [coppia](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) dove il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
   
 ### <a name="remarks"></a>Note  
- È possibile per gli inserimenti simultanei a causa di altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.  
+ È possibile per gli inserimenti simultanei causare altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.  
   
-##  <a name="find"></a> Trova 
+##  <a name="find"></a> trovare 
 
  Trova un elemento che corrisponde a una chiave specificata. Questa funzione è concorrenza-safe.  
   
@@ -348,7 +348,7 @@ const_iterator find(const key_type& KVal) const;
  Il valore della chiave da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un iteratore che punta alla posizione del primo elemento che corrisponde la chiave specificata o l'iteratore `end()` se tale elemento non esiste.  
+ Un iteratore che punta alla posizione del primo elemento corrispondente la chiave specificata o l'iteratore `end()` se tale elemento non esiste.  
   
 ##  <a name="get_allocator"></a> get_allocator 
 
@@ -372,9 +372,9 @@ hasher hash_function() const;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto della funzione hash archiviato.  
   
-##  <a name="insert"></a> Inserimento 
+##  <a name="insert"></a> Insert 
 
- Aggiunge gli elementi per il `concurrent_unordered_map` oggetto.  
+ Aggiunge gli elementi di `concurrent_unordered_map` oggetto.  
   
 ```
 std::pair<iterator,
@@ -422,27 +422,27 @@ typename std::enable_if<!std::is_same<const_iterator,
  Fine dell'intervallo da inserire.  
   
 ### <a name="return-value"></a>Valore restituito  
- Una coppia che contiene un iteratore e un valore booleano. Vedere la sezione Osservazioni per ulteriori dettagli.  
+ Una coppia che contiene un iteratore e un valore booleano. Vedere la sezione Osservazioni per altri dettagli.  
   
 ### <a name="remarks"></a>Note  
- La prima funzione membro determina l'esistenza di un elemento X nella sequenza di cui chiave ha un ordinamento equivalente a quello di `value`. Se non crea un elemento X e la inizializza con `value`. La funzione determina quindi l'iteratore `where` che designa X. Se si è verificato un inserimento, la funzione restituisce `std::pair(where, true)`. In caso contrario restituirà `std::pair(where, false)`.  
+ La prima funzione membro determina l'esistenza di un elemento X nella sequenza di cui chiave ha ordinamento equivalente a quella di `value`. Se non crea tale elemento X e la inizializza con `value`. La funzione determina quindi che l'iteratore `where` che designa X. Se si è verificato un inserimento, la funzione restituisce `std::pair(where, true)`. In caso contrario restituirà `std::pair(where, false)`.  
   
- La seconda funzione membro restituisce insert ( `value`), utilizzando `_Where` come punto di partenza nella sequenza controllata per la ricerca del punto di inserimento.  
+ La seconda funzione membro restituisce insert ( `value`), usando `_Where` come punto di partenza nella sequenza controllata per la ricerca del punto di inserimento.  
   
- La terza funzione membro inserisce la sequenza di valori di elemento dell'intervallo [ `first`, `last`).  
+ La terza funzione membro inserisce la sequenza di valori degli elementi dall'intervallo [ `first`, `last`).  
   
  Il comportamento delle ultime due funzioni membro è uguale a quello delle prime due, con la differenza che `value` viene utilizzato per costruire il valore inserito.  
   
 ##  <a name="key_eq"></a> key_eq 
 
- Ottiene l'oggetto funzione di confronto di uguaglianza stored.  
+ Ottiene l'oggetto funzione di confronto di uguaglianza archiviato.  
   
 ```
 key_equal key_eq() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- L'oggetto di funzione di confronto di uguaglianza stored.  
+ Oggetto funzione di confronto di uguaglianza archiviato.  
   
 ##  <a name="load_factor"></a> load_factor 
 
@@ -457,7 +457,7 @@ float load_factor() const;
   
 ##  <a name="max_load_factor"></a> max_load_factor 
 
- Ottiene o imposta il fattore di carico massimo del contenitore. Il fattore di carico massimo è il numero massimo di elementi che possono essere in un bucket prima che il contenitore di aumento delle dimensioni dalla tabella interna.  
+ Ottiene o imposta il fattore di carico massimo del contenitore. Il fattore di carico massimo è il maggior numero di elementi che possono essere bucket prima che il contenitore aumenta la tabella interna.  
   
 ```
 float max_load_factor() const;
@@ -469,7 +469,7 @@ void max_load_factor(float _Newmax);
  `_Newmax`  
   
 ### <a name="return-value"></a>Valore restituito  
- La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro non restituisce un valore, ma genera un [out_of_range](../../../standard-library/out-of-range-class.md) eccezione se il fattore di carico fornito non è valido...  
+ La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro restituisce il valore ma genera un [out_of_range](../../../standard-library/out-of-range-class.md) eccezione se il fattore di carico fornito non è valido...  
   
 ##  <a name="max_size"></a> max_size 
 
@@ -480,10 +480,10 @@ size_type max_size() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Numero massimo di elementi che possono essere inseriti in questo contenitore simultaneo.  
+ Il numero massimo di elementi che possono essere inseriti in questo contenitore simultaneo.  
   
 ### <a name="remarks"></a>Note  
- Questo valore limite superiore effettivamente può essere superiore a ciò che effettivamente può contenere il contenitore.  
+ Questo valore limite superiore potrebbe risultare superiore rispetto a ciò che effettivamente può contenere il contenitore.  
   
 ##  <a name="operator_at"></a> operator] 
 
@@ -509,11 +509,11 @@ mapped_type& operator[](key_type&& kval);
   
  `operator[]` può essere utilizzato per inserire elementi in una mappa `m` utilizzando `m[key] = DataValue;`, dove `DataValue` è il valore di `mapped_type` dell'elemento con un valore della chiave pari a `key`.  
   
- Quando si utilizza `operator[]` per inserire gli elementi, il riferimento restituito non indica se un inserimento modifica un elemento già esistente o ne crea uno nuovo. Le funzioni membro `find` e [inserire](#insert) può essere utilizzato per determinare se un elemento con una chiave specificata è già presente prima di un inserimento.  
+ Quando si utilizza `operator[]` per inserire gli elementi, il riferimento restituito non indica se un inserimento modifica un elemento già esistente o ne crea uno nuovo. Le funzioni membro `find` e [Inserisci](#insert) può essere utilizzato per determinare se un elemento con una chiave specificata è già presente prima di un inserimento.  
   
 ##  <a name="operator_eq"></a> operator= 
 
- Assegna il contenuto di un altro `concurrent_unordered_map` questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
+ Assegna il contenuto di un altro `concurrent_unordered_map` a questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
   
 ```
 concurrent_unordered_map& operator= (const concurrent_unordered_map& _Umap);
@@ -531,7 +531,7 @@ concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
 ### <a name="remarks"></a>Note  
  Dopo l'eliminazione di tutti gli elementi esistenti, tramite `operator=` il contenuto di `_Umap` viene copiato o spostato nel vettore simultaneo.  
   
-##  <a name="rehash"></a> rehash 
+##  <a name="rehash"></a> rehash) 
 
  Ricompila la tabella hash.  
   
@@ -541,10 +541,10 @@ void rehash(size_type _Buckets);
   
 ### <a name="parameters"></a>Parametri  
  `_Buckets`  
- Il numero di bucket desiderato.  
+ Il numero desiderato di bucket.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro modifica il numero di bucket in modo da essere almeno pari a `_Buckets` e ricompila la tabella hash in base alle esigenze. Il numero di bucket deve essere una potenza di 2. Se non una potenza di 2, verrà essere arrotondato alla potenza successiva più grande di 2.  
+ La funzione membro modifica il numero di bucket in modo da essere almeno pari a `_Buckets` e ricompila la tabella hash in base alle esigenze. Il numero di bucket deve essere una potenza di 2. Se non una potenza di 2, si verranno arrotondati per eccesso alla potenza di 2 più grande.  
   
  Genera un [out_of_range](../../../standard-library/out-of-range-class.md) eccezione se il numero di bucket non è valido (0 o maggiore del numero massimo di bucket).  
   
@@ -562,7 +562,7 @@ size_type size() const;
 ### <a name="remarks"></a>Note  
  In presenza di operazioni di inserimento simultanee, il numero di elementi presenti nel contenitore simultaneo potrebbe cambiare immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.  
   
-##  <a name="swap"></a> Swap 
+##  <a name="swap"></a> swap 
 
  Scambia il contenuto di due `concurrent_unordered_map` oggetti. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -576,7 +576,7 @@ void swap(concurrent_unordered_map& _Umap);
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
- Restituisce un iteratore al primo elemento nel contenitore per un bucket specifico.  
+ Restituisce un iteratore al primo elemento in questo contenitore per un bucket specifico.  
   
 ```
 local_iterator unsafe_begin(size_type _Bucket);
@@ -593,7 +593,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
   
 ##  <a name="unsafe_bucket"></a> unsafe_bucket 
 
- Restituisce l'indice di bucket con una chiave specifica di mapping a questo contenitore.  
+ Restituisce l'indice di bucket che una chiave specifica esegue il mapping a in questo contenitore.  
   
 ```
 size_type unsafe_bucket(const key_type& KVal) const;
@@ -601,7 +601,7 @@ size_type unsafe_bucket(const key_type& KVal) const;
   
 ### <a name="parameters"></a>Parametri  
  `KVal`  
- Chiave dell'elemento da cercare.  
+ La chiave dell'elemento da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice di bucket per la chiave in questo contenitore.  
@@ -634,7 +634,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
   
 ##  <a name="unsafe_cbegin"></a> unsafe_cbegin 
 
- Restituisce un iteratore al primo elemento nel contenitore per un bucket specifico.  
+ Restituisce un iteratore al primo elemento in questo contenitore per un bucket specifico.  
   
 ```
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
@@ -664,7 +664,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
   
 ##  <a name="unsafe_end"></a> unsafe_end 
 
- Restituisce un iteratore all'ultimo elemento nel contenitore per un bucket specifico.  
+ Restituisce un iteratore all'ultimo elemento in questo contenitore per un bucket specifico.  
   
 ```
 local_iterator unsafe_end(size_type _Bucket);
@@ -681,7 +681,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
   
 ##  <a name="unsafe_erase"></a> unsafe_erase 
 
- Rimuove gli elementi dal `concurrent_unordered_map` in posizioni specificate. Questo metodo non è indipendente dalla concorrenza.  
+ Rimuove gli elementi dal `concurrent_unordered_map` alle posizioni specificate. Questo metodo non è indipendente dalla concorrenza.  
   
 ```
 iterator unsafe_erase(
@@ -697,7 +697,7 @@ size_type unsafe_erase(
   
 ### <a name="parameters"></a>Parametri  
  `_Where`  
- La posizione dell'iteratore da cancellare dal.  
+ La posizione dell'iteratore da cancellare.  
   
  `_Begin`  
  Posizione del primo elemento nell'intervallo di elementi da cancellare.  
@@ -706,15 +706,15 @@ size_type unsafe_erase(
  Posizione del primo elemento oltre l'intervallo di elementi da cancellare.  
   
  `KVal`  
- Per cancellare il valore della chiave.  
+ Il valore della chiave da cancellare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Le prime due funzioni membro restituiscono un iteratore che definisce il primo elemento rimanente successivo a tutti gli elementi eliminati, o `concurrent_unordered_map::end`() se tale elemento non esiste. La terza funzione membro restituisce il numero di elementi che vengono rimossi.  
+ Le prime due funzioni membro restituiscono un iteratore che designa il primo elemento rimanente oltre gli elementi rimossi o `concurrent_unordered_map::end`() se tale elemento non esiste. La terza funzione membro restituisce il numero di elementi che viene rimosso.  
   
 ### <a name="remarks"></a>Note  
  Tramite la prima funzione membro viene rimosso l'elemento della sequenza controllata puntata da `_Where`. La seconda funzione membro rimuove gli elementi nell'intervallo [ `_Begin`, `_End`).  
   
- La terza funzione membro rimuove gli elementi nell'intervallo delimitato dal `concurrent_unordered_map::equal_range`(KVal).  
+ La terza funzione membro rimuove gli elementi nell'intervallo delimitato da `concurrent_unordered_map::equal_range`(KVal).  
   
 ##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
 

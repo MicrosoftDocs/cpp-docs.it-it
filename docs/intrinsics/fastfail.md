@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b59aeb1bd2e7986e173608689b0b1c37a0ef247e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334366"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541798"
 ---
 # <a name="fastfail"></a>__fastfail
 **Sezione specifica Microsoft**  
@@ -38,14 +38,14 @@ void __fastfail(unsigned int code);
  La funzione intrinseca `__fastfail` non restituisce alcun risultato.  
   
 ## <a name="remarks"></a>Note  
- Il `__fastfail` intrinseco fornisce un meccanismo per un *veloce fail* richiesta, ovvero un modo per un processo potenzialmente danneggiato per la terminazione immediata richiesta. Gli errori critici che possono aver danneggiato lo stato del programma e lo stack senza ripristino non possono essere gestiti tramite la normale funzionalità di gestione delle eccezioni. Usare `__fastfail` per terminare il processo con un sovraccarico minimo.  
+ Il `__fastfail` intrinseco fornisce un meccanismo per un *fail fast* richiesta, ovvero un modo per un processo potenzialmente danneggiato per la terminazione immediata richiesta. Gli errori critici che possono aver danneggiato lo stato del programma e lo stack senza ripristino non possono essere gestiti tramite la normale funzionalità di gestione delle eccezioni. Usare `__fastfail` per terminare il processo con un sovraccarico minimo.  
   
  Internamente, `__fastfail` viene implementato tramite diversi meccanismi specifici per l'architettura:  
   
 |Architettura|Istruzione|Posizione dell'argomento code|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
+|X64|int 0x29|rcx|  
 |ARM|Opcode 0xDEFB|r0|  
   
  Una richiesta di errore immediato è autonoma e in genere richiede l'esecuzione di solo due istruzioni. Dopo l'esecuzione di una richiesta di errore immediato, il kernel eseguirà l'azione appropriata. Quando viene generato un evento di errore immediato, nel codice in modalità utente non ci sono dipendenze di memoria oltre al puntatore all'istruzione stesso. Ciò ottimizza l'affidabilità, anche nel caso di un grave danneggiamento della memoria.  
@@ -62,7 +62,7 @@ void __fastfail(unsigned int code);
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__fastfail`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], ARM|  
+|`__fastfail`|x86, x64, ARM|  
   
  **File di intestazione** \<intrin. h >  
   

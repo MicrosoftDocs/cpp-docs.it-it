@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba43b12377bd9df959434c1c38d80ed8220c818a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4717fdc2018788d1fe56c26ae913a71e4f83475f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333336"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539628"
 ---
 # <a name="svmstgi"></a>__svm_stgi
 **Sezione specifica Microsoft**  
@@ -36,15 +36,15 @@ void __svm_stgi(void);
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `__svm_stgi` è equivalente alla funzione di `STGI` istruzioni in linguaggio macchina. Il flag di interrupt globale determina se il microprocessore Ignora, viene posticipato o gestione degli interrupt a causa di eventi, ad esempio un completamento dei / o, un avviso di temperatura hardware o un'eccezione di debug.  
+ Il `__svm_stgi` è equivalente alla funzione il `STGI` istruzioni in linguaggio macchina. Il flag di interrupt global determina se il microprocessore Ignora, vengono posticipati o gestione degli interrupt a causa di eventi, ad esempio un completamento i/o, un avviso di temperatura hardware o un'eccezione di debug.  
   
- Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Volume manuale del programmatore di architettura AMD64 2: programmazione di sistema," documento numero 24593, 3.11, revisione di [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
+ Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__svm_stgi`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_stgi`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

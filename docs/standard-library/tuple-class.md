@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963926"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538642"
 ---
 # <a name="tuple-class"></a>Classe tuple
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che archivia gli oggetti di N di tipi `T1`, `T2`,..., `TN`, rispettivamente, in cui in cui `0 <= N <= Nmax`. L'ambito di un'istanza di tupla `tuple<T1, T2, ..., TN>` è il numero `N` dei relativi argomenti di modello. L'indice dell'argomento del modello `Ti` e del valore archiviato corrispondente di quel tipo è `i - 1`. Di conseguenza, mentre è numerare i tipi da 1 a N in questa documentazione, l'indice corrispondente i valori compresi tra 0 e N - 1.
+La classe modello descrive un oggetto che archivia gli oggetti di N di tipi `T1`, `T2`,..., `TN`, rispettivamente, in cui `0 <= N <= Nmax`. L'ambito di un'istanza di tupla `tuple<T1, T2, ..., TN>` è il numero `N` dei relativi argomenti di modello. L'indice dell'argomento del modello `Ti` e del valore archiviato corrispondente di quel tipo è `i - 1`. Di conseguenza, mentre è numerare i tipi da 1 a N in questa documentazione, l'indice corrispondente i valori compresi tra 0 e N - 1.
 
 ## <a name="example"></a>Esempio
 

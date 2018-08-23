@@ -1,5 +1,5 @@
 ---
-title: make_public | Documenti Microsoft
+title: make_public | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27db5ac934973178e2485327090ed70f994becec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bdec8afa2088cad5faf700b3946926bb9d85748
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849587"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538273"
 ---
 # <a name="makepublic"></a>make_public
 Indica che un tipo nativo deve avere accessibilità pubblica dell'assembly.  
@@ -35,16 +35,17 @@ Indica che un tipo nativo deve avere accessibilità pubblica dell'assembly.
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `type` è il nome del tipo per cui si desidera disporre di accessibilità pubblica dell'assembly.  
+*tipo* è il nome del tipo di cui si desidera avere accessibilità pubblica dell'assembly.  
   
 ## <a name="remarks"></a>Note  
-`make_public` è utile per quando il tipo nativo cui si desidera fare riferimento ha origine da un file h che non è possibile modificare. Se si desidera utilizzare il tipo nativo nella firma di una funzione pubblica in un tipo con visibilità pubblica dell'assembly, il tipo nativo deve disporre anche di accessibilità pubblica dell'assembly o il compilatore genererà un avviso.  
+
+**make_public** è utile per l'utilizzo da un file con estensione h che non è possibile modificare il tipo nativo cui fare riferimento. Se si desidera utilizzare il tipo nativo nella firma di una funzione pubblica in un tipo con visibilità pubblica dell'assembly, il tipo nativo deve disporre anche di accessibilità pubblica dell'assembly o il compilatore genererà un avviso.  
   
-`make_public` deve essere specificato in ambito globale ed è attivo solo dal punto in cui viene dichiarato fino alla fine del file di codice sorgente.  
+**make_public** deve essere specificato in ambito globale ed è attivo solo dal punto in cui viene dichiarato fino alla fine del file del codice sorgente.  
   
-Il tipo nativo potrebbe essere in modo implicito o esplicito privato. vedere [visibilità del tipo](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) per ulteriori informazioni.  
+Il tipo nativo può essere implicitamente o esplicitamente privato. visualizzare [visibilità del tipo](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) per altre informazioni.  
   
-## <a name="example"></a>Esempio  
+## <a name="examples"></a>Esempi  
 Nell'esempio seguente viene illustrato il contenuto di un file h contenente le definizioni per due struct nativi.  
   
 ```cpp  
@@ -52,9 +53,8 @@ Nell'esempio seguente viene illustrato il contenuto di un file h contenente le d
 struct Native_Struct_1 { int i; };  
 struct Native_Struct_2 { int i; };  
 ```  
-  
-## <a name="example"></a>Esempio  
-Nell'esempio di codice seguente viene utilizzato il file di intestazione e viene indicato che, se gli struct nativi non vengono contrassegnati in modo esplicito come pubblici, utilizzando `make_public`, il compilatore genererà un avviso durante il tentativo di utilizzo degli struct nativi nella firma della funzione pubblica di un tipo gestito pubblico.  
+
+L'esempio di codice seguente usa il file di intestazione e viene mostrato che, a meno che non si contrassegnare in modo esplicito come pubblici, degli struct nativi usando **make_public**, il compilatore genererà un avviso quando si prova a usare gli struct nativi di firma della funzione pubblica di un tipo gestito pubblico.  
   
 ```cpp  
 // make_public_pragma.cpp  
@@ -69,5 +69,6 @@ public ref struct A {
 };  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

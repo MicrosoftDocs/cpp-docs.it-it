@@ -18,32 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7790cadf9b5bc0b9a1fa37b5131f4fb704142ad2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3106bc3c74be0f6d5a9a386b0f4c8c9c64bdfedf
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849639"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545778"
 ---
 # <a name="popmacro"></a>pop_macro
-Imposta il valore della *macro_name* macro per il valore all'inizio dello stack per questa macro.  
+Imposta il valore della *macro_name* macro per il valore nella parte superiore dello stack per questa macro.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 #pragma pop_macro("  
 macro_name  
 ")  
-  
 ```  
   
 ## <a name="remarks"></a>Note  
- È necessario generare un [push_macro](../preprocessor/push-macro.md) per *macro_name* prima di effettuare un **pop_macro**.  
+ 
+È necessario generare una [push_macro](../preprocessor/push-macro.md) per *macro_name* prima di poter eseguire un **pop_macro**.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // pragma_directives_pop_macro.cpp  
 // compile with: /W1  
 #include <stdio.h>  
@@ -76,4 +75,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

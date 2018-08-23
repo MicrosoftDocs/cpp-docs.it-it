@@ -1,5 +1,5 @@
 ---
-title: __shiftright128 | Documenti Microsoft
+title: __shiftright128 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339722"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540449"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Sezione specifica Microsoft**  
@@ -55,7 +55,7 @@ unsigned __int64 __shiftright128(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__shiftright128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftright128`|X64|  
   
  **File di intestazione** \<intrin. h >  
   
@@ -63,7 +63,7 @@ unsigned __int64 __shiftright128(
  Il valore `Shift` è sempre modulo 64 in modo che, ad esempio, se si chiama `__shiftright128(0, 1, 64)`, la funzione sposterà la parte più significativa di `0` bit a destra e restituirà la parte meno significativa di `0` e non di `1`, come ci si aspetterebbe altrimenti.  
   
 ## <a name="example"></a>Esempio  
- Per un esempio, vedere [shiftleft128](../intrinsics/shiftleft128.md).  
+ Per un esempio, vedere [__shiftleft128](../intrinsics/shiftleft128.md).  
   
 **Fine sezione specifica Microsoft**  
   

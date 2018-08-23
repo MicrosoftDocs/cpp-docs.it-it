@@ -1,5 +1,5 @@
 ---
-title: Sintassi della riga di comando del linker | Documenti Microsoft
+title: Sintassi della riga di comando del linker | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd5b1b809bfbbb01bca91f3677774d396515f56e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dab367a7bcb03030f807c8f24ecab088308036bd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376166"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572749"
 ---
 # <a name="linker-command-line-syntax"></a>Sintassi della riga di comando del linker
-Per eseguire il collegamento. EXE, utilizzare la sintassi seguente:  
+Per eseguire il collegamento. EXE, usare la sintassi del comando seguente:  
   
 ```  
 LINK arguments  
 ```  
   
- Il `arguments` includere opzioni e nomi di file e può essere specificato in qualsiasi ordine. Le opzioni vengono elaborate prima, quindi i file. Utilizzare uno o più spazi o tabulazioni per separare gli argomenti.  
+ Il `arguments` includono opzioni e nomi di file e può essere specificato in qualsiasi ordine. Le opzioni vengono elaborate prima, quindi i file. Usare uno o più spazi o tabulazioni per separare gli argomenti.  
   
 > [!NOTE]
->  È possibile avviare questo strumento solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
+>  È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
   
- Riga di comando un'opzione è costituito da un identificatore di opzione, un trattino (-) o una barra (/), seguito dal nome dell'opzione. I nomi delle opzioni non possono essere abbreviati. Alcune opzioni accettano un argomento, dopo i due punti (:) specificato. Spazi o tabulazioni non sono consentiti all'interno di una specifica opzione, ad eccezione all'interno di una stringa tra virgolette nell'opzione /COMMENT. Specificare gli argomenti numerici nella notazione decimale o in linguaggio C. I nomi delle opzioni e i corrispondenti argomenti parola chiave o nome file non sono tra maiuscole e minuscole, ma gli identificatori come argomenti tra maiuscole e minuscole.  
+ Nella riga di comando, un'opzione è costituito da un identificatore di opzione, un trattino (-) o una barra (/), seguito dal nome dell'opzione. I nomi di opzione non possono essere abbreviati. Alcune opzioni di accettano un argomento, dopo i due punti (:) specificato. Spazi o tabulazioni non sono consentite all'interno di una specifica opzione, ad eccezione all'interno di una stringa tra virgolette nell'opzione /COMMENT. Specificare gli argomenti numerici nella notazione decimale o del linguaggio C. I nomi e i relativi argomenti parola chiave o un nome file non sono tra maiuscole e minuscole, ma gli identificatori come argomenti sono tra maiuscole e minuscole.  
   
- Per passare un file al linker, specificare il nome del file nella riga di comando dopo il comando di collegamento. È possibile specificare un percorso relativo o assoluto con il nome del file e, è possibile utilizzare caratteri jolly nel nome file. Se si omette il punto (.) e l'estensione del nome file, obj ricerca del file. COLLEGAMENTO non utilizza estensioni di file o la mancata per presupporre il contenuto di file; Determina il tipo di file, esaminare ed elabora di conseguenza.  
+ Per passare un file del linker, specificare il nome del file nella riga di comando dopo il comando di collegamento. È possibile specificare un percorso relativo o assoluto con il nome del file e si possono usare caratteri jolly nel nome file. Se si omette il punto (.) e l'estensione del nome file, viene presupposto obj allo scopo di trovare il file. COLLEGAMENTO non utilizza estensioni di file o la mancanza di essi per fare ipotesi sul contenuto dei file; Determina il tipo di file tramite l'analisi e lo elabora di conseguenza.  
   
- Link.exe restituisce zero per l'esito positivo (nessun errore).  In caso contrario, il linker restituisce il numero di errore che è stato arrestato il collegamento.  Se, ad esempio, il linker genera l'errore LNK1104, il linker restituisce 1104.  Di conseguenza, il numero minimo di errore restituito in caso di errore dal linker è 1000.  Valore restituito pari a 128 rappresenta un problema di configurazione con il sistema operativo o un file con estensione config. il caricatore non è stato caricato link.exe o c2.dll.  
+ Link.exe restituisce zero per l'esito positivo (senza errori).  In caso contrario, il linker restituisce il numero di errore che è stato arrestato il collegamento.  Ad esempio, se il linker genera LNK1104, il linker restituisce 1104.  Di conseguenza, il numero di errore più basso restituito in caso di errore dal linker è 1000.  Valore restituito di 128 rappresenta un problema di configurazione con il sistema operativo o un file con estensione config. il caricatore non è stato caricato link.exe o c2.dll.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   

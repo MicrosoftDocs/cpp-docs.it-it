@@ -1,5 +1,5 @@
 ---
-title: x64 convenzioni del software | Documenti Microsoft
+title: x64 convenzioni del software | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2115b353f269ff59c107737eeb4fdb590ffd71b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380888"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572656"
 ---
 # <a name="x64-software-conventions"></a>Convenzioni del software x64
-Questa sezione vengono descritte la metodologia di convenzione di chiamata di Visual C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], estensioni a 64 bit per x86 architettura.  
+Questa sezione viene descritto il Visual C++ metodologia della convenzione di chiamata per x64, x86 a 64 bit estensione architettura.  
   
 -   [Panoramica delle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)  
   
@@ -43,7 +43,7 @@ Questa sezione vengono descritte la metodologia di convenzione di chiamata di Vi
   
 -   [Formato immagine](../build/image-format.md)  
   
- L'opzione del compilatore seguente consente di ottimizzare l'applicazione per [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
+ L'opzione del compilatore seguente consente di ottimizzare l'applicazione per x64:  
   
 -   [/favor (ottimizza per le specifiche di architettura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   

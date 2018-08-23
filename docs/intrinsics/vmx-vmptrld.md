@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrld | Documenti Microsoft
+title: __vmx_vmptrld | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 599e15414a944602ee196f3910a1c5dd561c906d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f12ff4f0f109ac97f9e9e2e4f8d800455159a10b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324850"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541426"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Sezione specifica Microsoft**  
   
- Carica il puntatore alla struttura di controllo di macchina virtuale corrente (VMCS) dall'indirizzo specificato.  
+ Carica il puntatore alla struttura di controllo di una macchina virtuale corrente (VMCS) dall'indirizzo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ int __vmx_vmptrld(
   
 #### <a name="parameters"></a>Parametri  
  [in] *`VmcsPhysicalAddress`  
- L'indirizzo in cui è memorizzato il puntatore VMCS.  
+ L'indirizzo in cui è archiviato il puntatore VMCS.  
   
 ## <a name="return-value"></a>Valore restituito  
  0  
@@ -54,13 +54,13 @@ int __vmx_vmptrld(
 ## <a name="remarks"></a>Note  
  Il puntatore VMCS è un indirizzo fisico a 64 bit.  
   
- Il `__vmx_vmptrld` è equivalente alla funzione di `VMPTRLD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Intel Virtualization tecnica specifica per l'architettura IA-32 Intel," documento C97063-002 numero il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__vmx_vmptrld` è equivalente alla funzione il `VMPTRLD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__vmx_vmptrld`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrld`|X64|  
   
  **File di intestazione** \<intrin. h >  
   

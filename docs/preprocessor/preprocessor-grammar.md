@@ -1,5 +1,5 @@
 ---
-title: Grammatica del preprocessore | Documenti Microsoft
+title: Grammatica del preprocessore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,97 +16,98 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843366"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541414"
 ---
 # <a name="preprocessor-grammar"></a>Grammatica del preprocessore
-**#define***identificatore* *token-string*consenso esplicito  
+**#define***identificatore* *token-string*opt    
   
- *#* **definire***identificatore*[**(** *identificatore*opt **,** *...*  **,** *identificatore*opt **)**] *token-string*consenso esplicito  
+*#* **definire***identificatore*[**(** *identificatore*opt **,** *...*  **,** *identificatore*opt **)**] *token-string*opt    
   
- **definita (***identificatore* **)**   
+**definita (***identificatore* **)**   
   
- **definita***identificatore*   
+**definite***identificatore*   
   
- `#include` **"***path-spec***"**  
+`#include` **"***path-spec***"**  
   
- `#include` **\<***Path-spec***>**  
+`#include` **\<***Path-spec***>**  
   
- **#line***sequenza di cifre***"** *filename* **"** opt      
+**#line***digit-sequence***"** *filename* **"** opt      
   
- *#* **undef***identificatore*  
+*#* **undef***identificatore*   
   
- **#error***token-string*   
+**#error***token-string*   
   
- **#pragma**  *token-string*  
+**#pragma**  *token-string*  
   
- *condizionale* :  
- *Se parte elif-parti*opt*parte else*opt*endif riga*  
+*condizionale* :  
+*Se parti elif-part*opt*parte else*opt*endif-line*  
   
- *Se parte* :  
- *if-linetext*  
+*Se parti* :  
+*if-linetext*  
   
- *Se-line* :  
- **#if**  *constant-expression*  
+*Se-line* :  
+**#if**  *constant-expression*  
   
- **#ifdef***identificatore*   
+**#ifdef***identificatore*   
   
- **#ifndef***identificatore*   
+**#ifndef***identificatore*   
   
- *elif parti* :  
- *testo della riga di elif*  
+*elif parti* :  
+*testo a riga singola elif*  
   
- *testo della riga di elif elif parti*  
+*testo a riga singola elif elif parti*  
   
- *elif riga* :  
- **#elif**  *constant-expression*  
+*elif-line* :  
+**#elif**  *constant-expression*  
   
- *parte else* :  
- *else-linetext*  
+*parte else* :  
+*else-linetext*  
   
- *riga else* :  
- `#else`  
+*Else-line* :  
+`#else`  
   
- *endif riga* :  
- `#endif`  
+*endif-line* :  
+`#endif`  
   
- *sequenza di cifre* :  
- *digit*  
+*Digit-sequence* :  
+*digit*  
   
- *digit-sequence digit*  
+*digit-sequence digit*  
   
- *cifra* : uno dei  
- **0 1 2 3 4 5 6 7 8 9**  
+*cifra* : uno dei  
+**0 1 2 3 4 5 6 7 8 9**  
   
- *stringa di token* :  
- Stringa di token  
+*token-string* :  
+Stringa di token  
   
- *token* :  
- *keyword*  
+*token* :  
+*keyword*  
   
- *identifier*  
+*identifier*  
   
- *constant*  
+*constant*  
   
- *operator*  
+*operator*  
   
- `punctuator`  
+`punctuator`  
   
- *nome del file* :  
- Nome file del sistema operativo valido  
+*nome del file* :  
+Nome file del sistema operativo valido  
   
- *Path-spec* :  
- Percorso file valido  
+*Path-spec* :  
+Percorso file valido  
   
- *testo* :  
- Qualsiasi sequenza di testo  
+*testo* :  
+Qualsiasi sequenza di testo  
   
 > [!NOTE]
->  I seguenti non terminal vengono espanse nel [convenzioni lessicali](../cpp/lexical-conventions.md) sezione la *riferimenti al linguaggio C++*: `constant`, `constant` - *espressione* , *identificatore*, *(parola chiave)*, `operator`, e `punctuator`.  
+> I non terminal seguenti vengono espanse nel [convenzioni lessicali](../cpp/lexical-conventions.md) sezione il *riferimenti al linguaggio C++*: `constant`, `constant` - *espressione* , *identificatore*, *parola chiave*, `operator`, e `punctuator`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riepilogo grammatica (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+ 
+[Riepilogo grammatica (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

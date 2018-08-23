@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984dc392b6ffa51d662d3ab56b1c0dc0dbc92233
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839155"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540607"
 ---
 # <a name="constseg"></a>const_seg
 Specifica il segmento in cui [const](../cpp/const-cpp.md) le variabili vengono archiviate nel file obj.  
@@ -35,34 +35,35 @@ Specifica il segmento in cui [const](../cpp/const-cpp.md) le variabili vengono a
 ```  
   
 ## <a name="remarks"></a>Note  
- Il significato dei termini *segmento* e *sezione* sono intercambiabili in questo argomento.  
+ 
+Il significato dei termini *segmento* e *sezione* sono intercambiabili in questo argomento.  
   
- File con estensione OBJ possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file con estensione obj per le variabili `const` è .rdata. Alcune variabili `const`, come le variabili scalari, vengono automaticamente inserite nel flusso di codice. Il codice inline non verrà visualizzato in .rdata.  
+I file OBJ possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file con estensione obj per le variabili `const` è .rdata. Alcune variabili `const`, come le variabili scalari, vengono automaticamente inserite nel flusso di codice. Il codice inline non verrà visualizzato in .rdata.  
   
- La definizione di un oggetto che richiede l'inizializzazione dinamica in un `const_seg` produce un comportamento non definito.  
+La definizione di un oggetto che richiede l'inizializzazione dinamica in un `const_seg` produce un comportamento non definito.  
   
- `#pragma const_seg` senza parametri reimposta il segmento su .rdata.  
+`#pragma const_seg` senza parametri reimposta il segmento su .rdata.  
   
- `push` (facoltativo)  
- Inserisce un record nello stack interno del compilatore. `push` può presentare un elemento `identifier` e un elemento `segment-name`.  
+*push* (facoltativo)  
+Inserisce un record nello stack interno del compilatore. Oggetto *push* può avere un *identifier* e *nome segmento*.  
   
- `pop` (facoltativo)  
- Rimuove un record dall'inizio dello stack interno del compilatore.  
+*POP* (facoltativo)  
+Rimuove un record dall'inizio dello stack interno del compilatore.  
   
- `identifier` (facoltativo)  
- Se usato con `push`, assegna un nome al record nello stack del compilatore interno. Se usato con `pop`, estrae record dallo stack interno finché non viene rimosso `identifier`; se `identifier` non viene trovato nello stack interno, nulla viene estratto.  
+*Identificatore* (facoltativo)  
+Quando abbinata *push*, assegna un nome al record nello stack del compilatore interno. Quando abbinata *pop*, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
   
- L'uso di `identifier` consente di visualizzare più record con un unico comando `pop`.  
+Usando *identifier* consente di più record da estrarre con un'unica *pop* comando.  
   
- "`segment-name`" (facoltativo)  
- Nome di un segmento. Se usato con `pop`, viene visualizzato lo stack e `segment-name` diventa il nome del segmento attivo.  
+"*-nome del segmento*" (facoltativo)  
+Nome di un segmento. Quando abbinata *pop*, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.  
   
- "`segment-class`" (facoltativo)  
- Incluso per la compatibilità con le versioni di C++ precedenti alla versione 2.0. Ignorato.  
+"*-classe di segmento*" (facoltativo)  
+Incluso per la compatibilità con le versioni di C++ precedenti alla versione 2.0. Ignorato.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // pragma_directive_const_seg.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -97,9 +98,11 @@ test4
 ```  
   
 ## <a name="comments"></a>Commenti  
- Vedere [/sezione](../build/reference/section-specify-section-attributes.md) per un elenco di nomi di non utilizzare durante la creazione di una sezione.  
+ 
+Visualizzare [/Section](../build/reference/section-specify-section-attributes.md) per un elenco dei nomi non è consigliabile usare durante la creazione di una sezione.  
   
- È inoltre possibile specificare le sezioni per i dati inizializzati ([data_seg](../preprocessor/data-seg.md)), dati non inizializzati ([bss_seg](../preprocessor/bss-seg.md)) e funzioni ([code_seg](../preprocessor/code-seg.md)).  
+È anche possibile specificare le sezioni per i dati inizializzati ([data_seg](../preprocessor/data-seg.md)), dati non inizializzati ([bss_seg](../preprocessor/bss-seg.md)) e funzioni ([code_seg](../preprocessor/code-seg.md)).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

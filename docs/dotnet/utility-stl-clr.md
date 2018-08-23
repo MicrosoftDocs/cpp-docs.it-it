@@ -49,12 +49,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e1150fb6d3df325fd9d5d9b4180318fa029102c3
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 931e0561a57cd65b8f0f9204eb08e4df99c0150e
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375916"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572055"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 Includere l'intestazione STL/CLR `<cliext/utility>` per definire la classe modello `pair` e diverse funzioni del modello di supporto.  
@@ -288,7 +288,7 @@ pair(Value1 val1, Value2 val2);
   
  `pair(Value1 val1, Value2 val2);`  
   
- Inizializza la coppia archiviata con con *val1* e *val2*.  
+ Inizializza la coppia con stored *val1* e *val2*.  
   
 ### <a name="example"></a>Esempio  
   

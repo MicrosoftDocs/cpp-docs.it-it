@@ -1,5 +1,5 @@
 ---
-title: __svm_vmsave | Documenti Microsoft
+title: __svm_vmsave | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b1a76d4dca7a7177a44c56fc7c25832ace89c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54cc51ee320c6b942c3ff0563f293cf48d1c34db
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329665"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538652"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Sezione specifica Microsoft**  
   
- Archivia un subset di stato del processore in blocco di controllo della macchina virtuale specificata (VMCB).  
+ Archivia un subset di stato del processore in blocco di controllo (VMCB) della macchina virtuale specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,13 +44,13 @@ void __svm_vmsave(
 |[in] `VmcbPhysicalAddress`|L'indirizzo fisico del VMCB.|  
   
 ## <a name="remarks"></a>Note  
- Il `__svm_vmsave` è equivalente alla funzione di `VMSAVE` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Volume manuale del programmatore di architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nel [Corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
+ Il `__svm_vmsave` è equivalente alla funzione il `VMSAVE` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nelle [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__svm_vmsave`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmsave`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

@@ -1,5 +1,5 @@
 ---
-title: _bittestandreset, _bittestandreset64 | Documenti Microsoft
+title: _bittestandreset, _bittestandreset64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d97ddf2d9267f647644fbcc9d10f6072dffc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f55be256ec7b400be6c46f928a2f2309d047ca2c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331636"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540452"
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
 **Sezione specifica Microsoft**  
@@ -60,8 +60,8 @@ unsigned char _bittestandreset64(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`_bittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandreset`|x86, ARM, x64|  
+|`_bittestandreset64`|X64|  
   
  **File di intestazione** \<intrin. h >  
   

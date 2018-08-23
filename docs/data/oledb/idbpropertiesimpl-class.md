@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337115"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572060"
 ---
 # <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
 Fornisce un'implementazione per il `IDBProperties` interfaccia.  
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties](#setproperties)|Imposta le proprietà nei gruppi di proprietà origine dati e l'inizializzazione, per gli oggetti origine dati, o il gruppo di proprietà di inizializzazione, per gli enumeratori.|  
   
 ## <a name="remarks"></a>Note  
- [IDBProperties](https://msdn.microsoft.com/library/ms719607.aspx) è un'interfaccia obbligatoria per gli oggetti origine dati e un'interfaccia facoltativa per gli enumeratori. Tuttavia, se espone un enumeratore [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx), deve esporre `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` utilizzando una funzione statica definita da [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+ [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) è un'interfaccia obbligatoria per gli oggetti origine dati e un'interfaccia facoltativa per gli enumeratori. Tuttavia, se espone un enumeratore [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), deve esporre `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` utilizzando una funzione statica definita da [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ## <a name="getproperties"></a> Idbpropertiesimpl:: GetProperties
 Restituisce i valori delle proprietà nei gruppi di proprietà di origine dati, informazioni sull'origine dati e l'inizializzazione che sono attualmente impostati nell'oggetto origine dati o i valori delle proprietà nel gruppo di proprietà di inizializzazione che sono attualmente impostate nel enumeratore.  
@@ -84,7 +84,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IDBProperties:: GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
  Alcuni parametri corrispondono ai *riferimento per programmatori OLE DB* i parametri dei nomi diversi, descritte nelle `IDBProperties::GetProperties`:  
   
@@ -112,7 +112,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IDBProperties:: GetPropertyInfo](https://msdn.microsoft.com/library/ms718175.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [IDBProperties:: GetPropertyInfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
  Alcuni parametri corrispondono ai *riferimento per programmatori OLE DB* i parametri dei nomi diversi, descritte nelle `IDBProperties::GetPropertyInfo`:  
   
@@ -135,7 +135,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IDBProperties:: SetProperties](https://msdn.microsoft.com/library/ms723049.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
  Se il provider viene inizializzato, questo metodo imposta i valori delle proprietà nella finestra di DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, gruppi di proprietà DBPROPSET_DBINIT per l'oggetto origine dati. Se il provider non è inizializzato, viene impostato solo le proprietà del gruppo DBPROPSET_DBINIT.  

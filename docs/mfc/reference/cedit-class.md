@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339592"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543166"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fornisce la funzionalità di un controllo di modifica di Windows.  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>Valore restituito  
  Per i controlli di modifica a riga singola, il valore restituito è la lunghezza, in TCHARs, del testo nel controllo di modifica.  
   
- Per i controlli di modifica multiriga, il valore restituito è di lunghezza, espressa in TCHARs, della riga specificata per il *nRiga* parametro. Per [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] testo, la lunghezza è il numero di byte nella riga; per il testo Unicode, la lunghezza è il numero di caratteri nella riga. La lunghezza non include il carattere di ritorno a capo alla fine della riga.  
+ Per i controlli di modifica multiriga, il valore restituito è di lunghezza, espressa in TCHARs, della riga specificata per il *nRiga* parametro. Per il testo ANSI, la lunghezza è il numero di byte nella riga di. per il testo Unicode, la lunghezza è il numero di caratteri nella riga. La lunghezza non include il carattere di ritorno a capo alla fine della riga.  
   
  Se il *nRiga* parametro è maggiore del numero di caratteri di controllo, il valore restituito è uguale a zero.  
   

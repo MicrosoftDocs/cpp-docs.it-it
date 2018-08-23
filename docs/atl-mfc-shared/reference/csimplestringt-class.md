@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883632"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573047"
 ---
 # <a name="csimplestringt-class"></a>Classe CSimpleStringT
 Questa classe rappresenta un `CSimpleStringT` oggetto.  
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  La memoria del buffer viene automaticamente liberato quando il `CSimpleStringT` oggetto viene eliminato definitivamente.  
   
- Se si tiene traccia della lunghezza della stringa se stessi, non non si aggiunge il carattere di terminazione null. È necessario specificare la lunghezza della stringa finale quando si rilascia il buffer usando `ReleaseBuffer`. Se si aggiunge un carattere di terminazione null quando si chiama `ReleaseBuffer`, passare -1 (predefinito) per la lunghezza `ReleaseBuffer`, e `ReleaseBuffer` eseguirà un `strlen` nel buffer per determinare la lunghezza.  
+ Se si tiene traccia della lunghezza della stringa se stessi, non si aggiunge il carattere di terminazione null. È necessario specificare la lunghezza della stringa finale quando si rilascia il buffer usando `ReleaseBuffer`. Se si aggiunge un carattere di terminazione null quando si chiama `ReleaseBuffer`, passare -1 (predefinito) per la lunghezza `ReleaseBuffer`, e `ReleaseBuffer` eseguirà un `strlen` nel buffer per determinare la lunghezza.  
   
  Per altre informazioni sul conteggio dei riferimenti, vedere gli articoli seguenti:  
   

@@ -1,5 +1,5 @@
 ---
-title: raw_interfaces_only | Documenti Microsoft
+title: raw_interfaces_only | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4643181bf70bc92f4ef5e88b8a9add1ba7bdaad7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63097c9ac47f3b791ff7fd5949cece4d85e5ca1f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849301"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540434"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
 **Sezione specifica C++**  
   
- Elimina la generazione di funzioni wrapper di gestione degli errori e [proprietà](../cpp/property-cpp.md) dichiarazioni che utilizzano le funzioni wrapper.  
+Elimina la generazione di funzioni wrapper di gestione degli errori e [proprietà](../cpp/property-cpp.md) dichiarazioni che utilizzano tali funzioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,12 +35,14 @@ raw_interfaces_only
 ```  
   
 ## <a name="remarks"></a>Note  
- L'attributo `raw_interfaces_only` causa inoltre la rimozione del prefisso predefinito utilizzato durante l'assegnazione del nome alle funzioni non di proprietà. In genere, il prefisso è **raw _**. Se viene specificato questo attributo, i nomi delle funzioni vengono derivati direttamente dalla libreria dei tipi.  
+ 
+Il **raw_interfaces_only** attributo determina anche il prefisso predefinito usato nei nomi di funzioni non di proprietà da rimuovere. È in genere il prefisso **raw _**. Se viene specificato questo attributo, i nomi delle funzioni vengono derivati direttamente dalla libreria dei tipi.  
   
- Questo attributo consente di esporre solo i contenuti di basso livello della libreria dei tipi.  
+Questo attributo consente di esporre solo i contenuti di basso livello della libreria dei tipi.  
   
- **Fine sezione specifica C++**  
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

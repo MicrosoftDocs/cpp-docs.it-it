@@ -1,5 +1,5 @@
 ---
-title: __addgsbyte, __addgsword, __addgsdword, __addgsqword | Documenti Microsoft
+title: __addgsbyte, __addgsword, __addgsdword, __addgsqword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271f5bf7140dff437b6ef0935f8a4c90daabccd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50c0025e561c86fc18bbf5c4554c9f894fe32ec7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329475"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538855"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 **Sezione specifica Microsoft**  
   
- Aggiungere un valore in una posizione di memoria specificata da un offset relativo all'inizio del `GS` segmento.  
+ Aggiungere un valore a una posizione di memoria specificata da un offset rispetto all'inizio del `GS` segmento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,19 +64,19 @@ void __addgsqword(
  L'offset dall'inizio del `GS`.  
   
  [in] `Data`  
- Il valore da aggiungere nella posizione di memoria.  
+ Il valore da aggiungere alla posizione di memoria.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__addgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__addgsbyte`|X64|  
+|`__addgsword`|X64|  
+|`__addgsdword`|X64|  
+|`__addgsqword`|X64|  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni intrinseche disponibili solo in modalità kernel e queste routine sono disponibili solo come funzioni intrinseche.  
+ Queste funzioni intrinseche sono disponibili in solo in modalità kernel e tali routine sono disponibili solo come intrinseci.  
   
 **Fine sezione specifica Microsoft**  
   

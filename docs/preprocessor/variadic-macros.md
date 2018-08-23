@@ -1,5 +1,5 @@
 ---
-title: Macro Variadic | Documenti Microsoft
+title: Macro Variadic | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5918c7d91a3568799f361fcb42edb2e9c7b1445e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16549d6b7a80a8aa0f3f98cf9c7cd89c74058959
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850535"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541589"
 ---
 # <a name="variadic-macros"></a>Macro variadic
 Le macro variadic sono macro di tipo funzione che contengono un numero variabile di argomenti.  
   
 ## <a name="remarks"></a>Note  
- Per utilizzare le macro variadic, i puntini di sospensione può essere specificata come argomento formale finale in una definizione di macro e l'identificatore di sostituzione `__VA_ARGS__` può essere utilizzato nella definizione per inserire gli argomenti aggiuntivi.  `__VA_ARGS__` viene sostituito da tutti gli argomenti corrispondenti sui puntini di sospensione, incluse le virgole tra di essi.  
+ 
+Per usare le macro variadic, i puntini di sospensione può essere specificato come argomento formale finale in una definizione di macro e l'identificatore di sostituzione `__VA_ARGS__` può essere usato nella definizione per inserire gli argomenti aggiuntivi.  `__VA_ARGS__` viene sostituito da tutti gli argomenti corrispondenti sui puntini di sospensione, incluse le virgole tra di essi.  
   
- Lo standard C specifica che almeno un argomento deve essere passato ai puntini di sospensione per garantire che la macro non risolva un'espressione con una virgola finale.  L'implementazione Visual C++ tronca una virgola finale se ai puntini di sospensione non è stato passato alcun argomento.  
+Lo standard C specifica che almeno un argomento deve essere passato ai puntini di sospensione per garantire che la macro non risolva un'espressione con una virgola finale.  L'implementazione Visual C++ tronca una virgola finale se ai puntini di sospensione non è stato passato alcun argomento.  
   
 ## <a name="example"></a>Esempio  
   
@@ -58,10 +59,8 @@ int main() {
                              // suppresses the trailing comma  
 }  
 ```  
-  
-## <a name="output"></a>Output  
-  
-```  
+    
+```Output  
 here are some varargs1(1)  
 here are some varargs2(4)  
 here are some varargs3(5)  
@@ -70,4 +69,5 @@ error
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Macro (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[Macro (C/C++)](../preprocessor/macros-c-cpp.md)

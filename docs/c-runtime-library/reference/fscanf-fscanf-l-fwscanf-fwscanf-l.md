@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ed322c78723826615e1264642eb53f6f9eb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 825a63b38f443ce770739fe614ab6a4a44b8de39
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404074"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572646"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
@@ -90,13 +90,13 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
 Stringa di controllo del formato.
 
-*Argomento*<br/>
+*argomento*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -104,17 +104,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Se si verifica un errore o se viene raggiunta la fine del flusso di file prima della conversione primo, il valore restituito è **EOF** per **fscanf** e **fwscanf**.
+Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Se si verifica un errore o se viene raggiunta la fine del flusso di file prima della prima conversione, il valore restituito è **EOF** per **fscanf** e **fwscanf**.
 
-Queste funzioni convalidano i relativi parametri. Se *flusso* oppure *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se *stream* oppure *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **fscanf** funzione legge i dati dalla posizione corrente del *flusso* in posizioni fornite date da *argomento* (se presente). Ogni *argomento* deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo in *formato*. *formato* controlli l'interpretazione dell'input di campi e ha lo stesso modulo e funziona come il *formato* argomento per **scanf**; vedere [scanf](scanf-scanf-l-wscanf-wscanf-l.md) per un Descrizione della *formato*.
+Il **fscanf** funzione legge i dati dalla posizione corrente del *stream* nei percorsi specificati da *argomento* (se presente). Ciascuna *argomenti* deve essere un puntatore a una variabile di un tipo che corrisponde all'identificatore di tipo in *formato*. *formato* controlla l'interpretazione dell'input campi e ha lo stesso formato e funzione come i *formato* argomento per **scanf**; vedere [scanf](scanf-scanf-l-wscanf-wscanf-l.md) per un Descrizione della *formato*.
 
-**fwscanf** è una versione a caratteri wide **fscanf**; l'argomento di formato **fwscanf** è una stringa di caratteri "wide". Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fscanf** non supporta attualmente l'input da un flusso UNICODE.
+**fwscanf** è una versione a caratteri wide di **fscanf**; l'argomento format per **fwscanf** è una stringa di caratteri "wide". Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fscanf** attualmente non supporta l'input da un flusso UNICODE.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -123,7 +123,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 |**ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-Per ulteriori informazioni, vedere [campi di specifica di formato: funzioni scanf e Wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Per altre informazioni, vedere [campi di specifica del formato: funzioni scanf e Wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: incorporare un manifesto all'interno di un'applicazione C/C++ | Documenti Microsoft"
+title: "Procedura: incorporare un manifesto in un'applicazione C/C++ | Microsoft Docs"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dec5377bca1cc56e2444d7466fc5107d594205a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369052"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572938"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedura: incorporare un manifesto in un'applicazione C/C++
-È consigliabile che un'applicazione C/C++ (o libreria) il manifesto sia incorporato all'interno del file binario finale perché in questo modo il comportamento di runtime corretto nella maggior parte degli scenari. Per impostazione predefinita, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tenta di incorporare il manifesto quando compila un progetto da file di origine; vedere [generazione in Visual Studio](../build/manifest-generation-in-visual-studio.md) per ulteriori informazioni. Tuttavia se un'applicazione compilata con nmake, sono necessarie alcune modifiche al makefile esistente. In questa sezione viene illustrato come modificare makefile esistenti per incorporare automaticamente il manifesto nel file binario finale.  
+È consigliabile che un'applicazione C/C++ (o libreria) abbiano il manifesto incorporato all'interno del file binario finale perché in questo modo il comportamento di runtime corretto nella maggior parte degli scenari. Per impostazione predefinita, Visual Studio prova a incorporare il manifesto durante la generazione di un progetto da file di origine. visualizzare [generazione di manifesti in Visual Studio](../build/manifest-generation-in-visual-studio.md) per altre informazioni. Tuttavia se un'applicazione viene compilata usando nmake, sono necessarie alcune modifiche al makefile esistente. In questa sezione viene illustrato come modificare un makefile esistente per incorporare automaticamente il manifesto nel file binario finale.  
   
 ## <a name="two-approaches"></a>Due approcci  
- Esistono due modi per incorporare il manifesto all'interno di un'applicazione o di una libreria.  
+ Esistono due modi per incorporare il manifesto in un'applicazione o una libreria.  
   
--   Se non si sta eseguendo una compilazione incrementale è possibile incorporare direttamente il manifesto tramite la riga di comando simile al seguente come passaggio post-compilazione:  
+-   Se non si sta eseguendo una compilazione incrementale è possibile incorporare direttamente il manifesto tramite la riga di comando simile al seguente come passaggio di post-compilazione:  
   
      **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32369052"
   
      (1 per un file EXE, 2 per una DLL).  
   
--   Se si sta eseguendo una compilazione incrementale, direttamente, come illustrato di seguito, la modifica della risorsa verrà disattivata la compilazione incrementale e causerà una ricompilazione completa. pertanto è necessario adottare un approccio diverso:  
+-   Se si esegue una compilazione incrementale, la modifica diretta della risorsa come illustrato di seguito verrà disabilitare la compilazione incrementale e causare una ricompilazione completa, di conseguenza debba adottare un approccio diverso:  
   
     -   Collegare il file binario per generare il file MyApp.exe.manifest.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "32369052"
   
     -   Collegare nuovamente (incrementale) per incorporare la risorsa del manifesto nel file binario.  
   
- Nell'esempio seguente viene illustrato come modificare makefile per incorporare entrambe le tecniche.  
+ Gli esempi seguenti illustrano come modificare makefile per incorporare entrambe le tecniche.  
   
 ## <a name="makefiles-before"></a>Makefile (prima)  
- Si consideri lo script nmake per MyApp.exe, una semplice applicazione generata da un file:  
+ Si consideri lo script di nmake per MyApp.exe, una semplice applicazione generata da un file:  
   
 ```  
 # build MyApp.exe  
@@ -70,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Se questo script viene eseguito immutato con Visual C++, crea correttamente MyApp.exe. Crea anche il file manifesto esterno MyApp.exe.manifest, per l'uso dal sistema operativo per caricare gli assembly dipendenti in fase di esecuzione.  
+ Se questo script viene eseguito senza modifiche con Visual C++, crea correttamente MyApp.exe. Crea anche il file manifesto esterno MyApp.exe.manifest, da usare dal sistema operativo per caricare gli assembly dipendenti in fase di esecuzione.  
   
- Lo script nmake per MyLibrary. dll è molto simile:  
+ Lo script di nmake per MyLibrary. dll è molto simile:  
   
 ```  
 # build MyLibrary.dll  
@@ -96,7 +96,7 @@ clean :
 ```  
   
 ## <a name="makefiles-after"></a>Makefile (dopo)  
- Per la compilazione con manifesti che è necessario apportare quattro modifiche di piccola per i makefile originali incorporati. Per il file di progetto MyApp.exe:  
+ Per compilare con incorporati manifesti che è necessario apportare quattro modifiche minime per i makefile originali. Per il makefile MyApp.exe:  
   
 ```  
 # build MyApp.exe  
@@ -126,7 +126,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Per i makefile MyLibrary. dll:  
+ Per il makefile MyLibrary. dll:  
   
 ```  
 # build MyLibrary.dll  
@@ -159,7 +159,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- I makefile includono ora due file di cui eseguire il lavoro effettivo, effettivo e makefile.targ.inc.  
+ I makefile includono ora due file che il lavoro effettivo, l'effettivo e makefile.targ.inc.  
   
  Creare effettivo e copiarvi il seguente:  
   

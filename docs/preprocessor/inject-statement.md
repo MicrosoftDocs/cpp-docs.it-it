@@ -1,5 +1,5 @@
 ---
-title: inject_statement | Documenti Microsoft
+title: inject_statement | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115f5b3d7012ae3e9073d81e0c1005dcb513e045
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb4142b742ae6c2a758c2a2fb5e09c604959433f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849340"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541580"
 ---
 # <a name="injectstatement"></a>inject_statement
 **Sezione specifica C++**  
   
- Inserisce il proprio argomento come testo di origine nell'intestazione della libreria dei tipi.  
+Inserisce il proprio argomento come testo di origine nell'intestazione della libreria dei tipi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,15 +34,17 @@ ms.locfileid: "33849340"
 inject_statement("source_text")  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `source_text`  
- Testo di origine da inserire nel file di intestazione della libreria dei tipi.  
+### <a name="parameters"></a>Parametri  
+*source_text*  
+Testo di origine da inserire nel file di intestazione della libreria dei tipi.  
   
 ## <a name="remarks"></a>Note  
- Il testo viene inserito all'inizio della dichiarazione dello spazio dei nomi che esegue il wrapping del contenuto della libreria dei tipi nel file di intestazione.  
+ 
+Il testo viene inserito all'inizio della dichiarazione dello spazio dei nomi che esegue il wrapping del contenuto della libreria dei tipi nel file di intestazione.  
   
- **Fine sezione specifica C++**  
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: avviso | Documenti Microsoft
+title: avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b739a3f72416b6ab58cbdba45a496e10fef4424
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581194fdeab233e3ad07b2af6a7087bb1877e1f2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842963"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539230"
 ---
 # <a name="warning-pragma"></a>Warning (pragma)
 Consente la modifica selettiva del comportamento dei messaggi di avviso del compilatore.  
@@ -40,18 +40,19 @@ Consente la modifica selettiva del comportamento dei messaggi di avviso del comp
 ```  
   
 ## <a name="remarks"></a>Note  
+
 Sono disponibili i seguenti parametri identificatore-avviso.  
   
 |identificatore-avviso|Significato|  
 |------------------------|-------------|  
-|`1, 2, 3, 4`|Applica il livello specificato agli avvisi specificati. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita.|  
-|`default`|Reimposta il comportamento dell'avviso sul valore predefinito. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per ulteriori informazioni, vedere [gli avvisi del compilatore disattivati per impostazione predefinita](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
-|`disable`|Non genera i messaggi di avviso specificati.|  
-|`error`|Segnala gli avvisi specificati come errori.|  
-|`once`|Visualizza i messaggi specificati solo una volta.|  
-|`suppress`|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|  
+|*1, 2, 3, 4*|Applica il livello specificato agli avvisi specificati. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita.|  
+|*default*|Reimposta il comportamento dell'avviso sul valore predefinito. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per altre informazioni, vedere [gli avvisi del compilatore disattivati per impostazione predefinita](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
+|*disable*|Non genera i messaggi di avviso specificati.|  
+|*Errore*|Segnala gli avvisi specificati come errori.|  
+|*once*|Visualizza i messaggi specificati solo una volta.|  
+|*non visualizzare*|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|  
   
- Nell'istruzione di codice seguente viene illustrato che un parametro `warning-number-list` può contenere più numeri di avviso e che è possibile specificare più parametri `warning-specifier` nella stessa direttiva pragma.  
+Nell'istruzione di codice seguente viene illustrato che un parametro `warning-number-list` può contenere più numeri di avviso e che è possibile specificare più parametri `warning-specifier` nella stessa direttiva pragma.  
   
 ```cpp  
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )  
@@ -70,9 +71,9 @@ Sono disponibili i seguenti parametri identificatore-avviso.
 #pragma warning( error : 164 )  
 ```  
   
- Il compilatore aggiunge 4000 a qualsiasi numero di avviso compreso tra 0 e 999.  
+Il compilatore aggiunge 4000 a qualsiasi numero di avviso compreso tra 0 e 999.  
   
- Per i numeri di avviso compresi tra 4700 e 4999, che sono quelli associati alla generazione del codice, lo stato dell'avviso attivo al momento della rilevazione della parentesi graffa di apertura di una funzione da parte del compilatore sarà attivo per il resto della funzione. L'utilizzo del pragma `warning` della funzione per modificare lo stato di un avviso con un numero maggiore di 4699 avrà effetto solo dopo la fine della funzione. Nell'esempio seguente viene illustrata la posizione corretta dei pragma `warning` per disabilitare e quindi ripristinare un messaggio di avviso di generazione di codice.  
+Per i numeri di avviso compresi tra 4700 e 4999, che sono quelli associati alla generazione del codice, lo stato dell'avviso attivo al momento della rilevazione della parentesi graffa di apertura di una funzione da parte del compilatore sarà attivo per il resto della funzione. Usando il **avviso** pragma nella funzione di modifica dello stato di un avviso con un numero maggiore di 4699 diventerà effettiva solo dopo la fine della funzione. L'esempio seguente mostra la posizione corretta dei **avviso** pragma per disabilitare un messaggio di avviso di generazione del codice e quindi ripristinarlo.  
   
 ```cpp  
 // pragma_warning.cpp  
@@ -90,18 +91,19 @@ int main() {
 }  
 ```  
   
- Si noti che in un corpo della funzione, l'ultima impostazione del pragma `warning` verrà applicata all'intera funzione.  
+Si noti che in una funzione del corpo, l'ultima impostazione delle **avviso** pragma sarà attivo per l'intera funzione.  
   
 ## <a name="push-and-pop"></a>Push e pull  
- Il `warning` pragma supporta anche la sintassi seguente, dove `n` rappresenta un livello di avviso (da 1 a 4).  
+ 
+Il **avviso** pragma supporta anche la sintassi seguente, dove *n* rappresenta un livello di avviso (da 1 a 4).  
   
- `#pragma warning( push [ , n ] )`  
+`#pragma warning( push [ , n ] )`  
   
- `#pragma warning( pop )`  
+`#pragma warning( pop )`  
    
- Il pragma `warning( push )` archivia lo stato di avviso corrente per ogni avviso. Il pragma `warning( push, n )` archivia lo stato corrente per ogni avviso e imposta il livello di avviso globale su `n`.  
+Il pragma `warning( push )` archivia lo stato di avviso corrente per ogni avviso. Il pragma `warning( push, n )` archivia lo stato corrente di ogni avviso e imposta il livello di avviso globale *n*.  
   
- Il pragma `warning( pop )` estrae l'ultimo stato di avviso inserito nello stack. Tutte le modifiche apportate allo stato dell'avviso tra `push` e `pop` vengono annullate. Si consideri l'esempio seguente:  
+Il pragma `warning( pop )` estrae l'ultimo stato di avviso inserito nello stack. Tutte le modifiche apportate allo stato dell'avviso tra *push* e *pop* vengono annullate. Si consideri l'esempio seguente:  
   
 ```cpp  
 #pragma warning( push )  
@@ -112,9 +114,9 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Alla fine di questo codice, `pop` ripristina per ogni avviso (inclusi 4705, 4706 e 4707) lo stato esistente all'inizio del codice.  
+Alla fine di questo codice *pop* Ripristina lo stato di ogni avviso (inclusi 4705, 4706 e 4707) si trovava all'inizio del codice.  
   
- Quando si scrivono i file di intestazione, è possibile utilizzare `push` e `pop` per garantire che le modifiche dello stato dell'avviso apportate da un utente non impediscano la compilazione corretta delle intestazioni. Utilizzare `push` all'inizio dell'intestazione e `pop` alla fine. Ad esempio, se si dispone di un'intestazione che non viene compilata correttamente al livello di avviso 4, il codice riportato di seguito imposta il livello di avviso su 3, quindi ripristina il livello di avviso originale alla fine dell'intestazione.  
+Quando si scrivono i file di intestazione, è possibile usare *push* e *pop* per garantire che le modifiche dello stato dell'avviso apportate da un utente non impediscono le intestazioni di compilazione corretta. Uso *push* all'inizio dell'intestazione e *pop* alla fine. Ad esempio, se si dispone di un'intestazione che non viene compilata correttamente al livello di avviso 4, il codice riportato di seguito imposta il livello di avviso su 3, quindi ripristina il livello di avviso originale alla fine dell'intestazione.  
   
 ```cpp  
 #pragma warning( push, 3 )  
@@ -122,7 +124,8 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Per ulteriori informazioni sul compilatore opzioni che consentono di eliminare gli avvisi, vedere [/FI](../build/reference/fi-name-forced-include-file.md) e [/w](../build/reference/compiler-option-warning-level.md).  
+Per altre informazioni sul compilatore opzioni che consentono di eliminare gli avvisi, vedere [/FI](../build/reference/fi-name-forced-include-file.md) e [/w](../build/reference/compiler-option-warning-level.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

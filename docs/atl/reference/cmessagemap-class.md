@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ae6f41c2e8e8d142ee143d7ba0829751e1c230a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884854"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575483"
 ---
 # <a name="cmessagemap-class"></a>Classe CMessageMap
 Questa classe consente di che mappe messaggi di un oggetto accessibile tramite un altro oggetto.  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="remarks"></a>Note  
  `CMessageMap` è una classe base astratta che consente i messaggi di un oggetto viene eseguito il mapping per l'accesso da un altro oggetto. Affinché un oggetto di esporre le mappe messaggi, la classe deve derivare da `CMessageMap`.  
   
- Usa ATL `CMessageMap` al supporto contenuto windows e il messaggio dinamico mappa concatenamento. Ad esempio, qualsiasi classe che contiene un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) oggetto deve derivare da `CMessageMap`. Il codice seguente è tratto dal [SUBEDIT](../../visual-cpp-samples.md) esempio. Attraverso [CComControl](../../atl/reference/ccomcontrol-class.md), il `CAtlEdit` automaticamente deriva dalla classe `CMessageMap`.  
+ Usa ATL `CMessageMap` al supporto contenuto windows e il messaggio dinamico mappa concatenamento. Ad esempio, qualsiasi classe che contiene un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) oggetto deve derivare da `CMessageMap`. Il codice seguente è tratto dal [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) esempio. Attraverso [CComControl](../../atl/reference/ccomcontrol-class.md), il `CAtlEdit` automaticamente deriva dalla classe `CMessageMap`.  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   

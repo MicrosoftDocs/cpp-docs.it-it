@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8196b25b1507c92542faa6dd8ca59b4632d8f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3be04079de11642b2641260fdfe997d3fcb48d6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335913"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539626"
 ---
 # <a name="readmsr"></a>__readmsr
 **Sezione specifica Microsoft**  
   
- Genera il `rdmsr` istruzione, che legge il Registro di specifiche del modello specificato da `register` e restituisce il valore.  
+ Genera il `rdmsr` istruzione, che legge il Registro di specifica del modello specificato da `register` e restituisce il valore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +40,23 @@ __int64 __readmsr(
   
 #### <a name="parameters"></a>Parametri  
  [in] `register`  
- Registro specifico di modello per la lettura.  
+ Il registro specifico del modello per la lettura.  
   
 ## <a name="return-value"></a>Valore restituito  
- Il valore nel registro specificato.  
+ Il valore del registro specificato.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__readmsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readmsr`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Questa funzione è disponibile solo in modalità kernel e la routine è disponibile solo come funzione intrinseca.  
+ Questa funzione di disponibile solo in modalità kernel e la routine è disponibile solo come funzione intrinseca.  
   
- Per ulteriori informazioni, vedere la documentazione AMD.  
+ Per altre informazioni, vedere la documentazione AMD.  
   
 **Fine sezione specifica Microsoft**  
   

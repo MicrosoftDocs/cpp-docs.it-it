@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonGalleryMenuButton | Documenti Microsoft
+title: Classe CMFCRibbonGalleryMenuButton | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041260"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540828"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe CMFCRibbonGalleryMenuButton
 Implementa un pulsante di menu della barra multifunzione contenente raccolte della barra multifunzione.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
    
 ## <a name="syntax"></a>Sintassi  
   
@@ -133,7 +133,7 @@ CMFCRibbonGalleryMenuButton(
   
 ### <a name="parameters"></a>Parametri  
  *uiID*  
- L'ID di comando del pulsante. Questo è il valore inviato nel messaggio WM_COMMAND quando l'utente fa clic su questo pulsante.  
+ ID comando del pulsante. Questo è il valore inviato nel messaggio WM_COMMAND quando l'utente fa clic su questo pulsante.  
   
  *iImage*  
  L'indice dell'immagine da visualizzare con il pulsante di menu della raccolta. Le immagini vengono archiviate nel *imagesPalette* parametro.  
@@ -154,7 +154,7 @@ CMFCRibbonGalleryMenuButton(
  Il pulsante di menu della raccolta viene visualizzato come menu a comparsa con una freccia. Quando l'utente fa clic su questo pulsante, viene visualizzata una raccolta di immagini.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonGalleryMenuButton` classe. Questo frammento di codice fa parte il [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonGalleryMenuButton` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   

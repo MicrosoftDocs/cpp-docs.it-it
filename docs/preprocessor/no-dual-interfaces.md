@@ -1,5 +1,5 @@
 ---
-title: no_dual_interfaces | Documenti Microsoft
+title: no_dual_interfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8923adb4cf2e92d72bf656064c6de8fc66e2a91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1e919e48b79c9fe98a7a33257ebd0f70061d788
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850782"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541216"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
 **Sezione specifica C++**  
   
- Modifica il modo in cui il compilatore genera funzioni wrapper per i metodi di interfaccia duale.  
+Modifica il modo in cui il compilatore genera funzioni wrapper per i metodi di interfaccia duale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,10 +35,12 @@ no_dual_interfaces
 ```  
   
 ## <a name="remarks"></a>Note  
- In genere, il wrapper chiama il metodo attraverso la tabella di funzioni virtuali dell'interfaccia. Con `no_dual_interfaces`, il wrapper chiama invece **IDispatch:: Invoke** per richiamare il metodo.  
+ 
+In genere, il wrapper chiama il metodo attraverso la tabella di funzioni virtuali dell'interfaccia. Con **no_dual_interfaces**, il wrapper chiama invece `IDispatch::Invoke` per richiamare il metodo.  
   
- **Fine sezione specifica C++**  
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

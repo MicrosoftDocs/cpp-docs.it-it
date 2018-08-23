@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028317"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42544451"
 ---
 # <a name="ltatomicgt-functions"></a>Funzioni &lt;atomic&gt;
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>Note
 
-Un' *operazione di confronto e scambio atomico* confronta il valore archiviato nell'oggetto a cui punta *Atom* con il valore a cui fa riferimento *Exp*. Se i valori sono uguali, il valore archiviato nell'oggetto a cui fa riferimento *atom* viene sostituito con `Val` usando un `read-modify-write` operazione e applicando la memoria ordinare i vincoli specificati da *Diffgr:ID="Order1*. Se i valori non sono uguali, l'operazione sostituisce il valore a cui punta *Exp* con il valore archiviato nell'oggetto a cui punta *Atom* e applica i vincoli di ordinamento della memoria che sono specificato da *Order2*.
+Un' *operazione di confronto e scambio atomico* confronta il valore archiviato nell'oggetto a cui punta *Atom* con il valore a cui fa riferimento *Exp*. Se i valori sono uguali, il valore archiviato nell'oggetto a cui punta *atom* viene sostituito con *valore* utilizzando un `read-modify-write` operazione e applicando i vincoli di ordinamento della memoria che sono specificato da *diffgr:ID="Order1*. Se i valori non sono uguali, l'operazione sostituisce il valore a cui punta *Exp* con il valore archiviato nell'oggetto a cui punta *Atom* e applica i vincoli di ordinamento della memoria che sono specificato da *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 

@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bce7d2bef75c7fba88c986d22e95d3ab40ba652
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4711238c45955ee7067e3e418212bcdb0fae09ca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329774"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540443"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Sezione specifica Microsoft**  
   
- Avvia l'esecuzione del codice macchina virtuale guest che corrisponde al blocco di controllo della macchina virtuale specificata (VMCB).  
+ Avvia l'esecuzione del codice guest macchina virtuale corrispondente al blocco di controllo (VMCB) della macchina virtuale specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,15 +44,15 @@ void __svm_vmrun(
 |[in] `VmcbPhysicalAddress`|L'indirizzo fisico del VMCB.|  
   
 ## <a name="remarks"></a>Note  
- Il `__svm_vmrun` funzione utilizza una quantità minima di informazioni di VMCB per iniziare a eseguire il codice guest della macchina virtuale. Utilizzare il [__svm_vmsave](../intrinsics/svm-vmsave.md) o [__svm_vmload](../intrinsics/svm-vmload.md) funzione se sono necessarie ulteriori informazioni per gestire un complesso interrupt o passare a un altro guest.  
+ Il `__svm_vmrun` funzione utilizza una quantità minima di informazioni di VMCB per avviare l'esecuzione del codice guest macchina virtuale. Usare la [__svm_vmsave](../intrinsics/svm-vmsave.md) oppure [__svm_vmload](../intrinsics/svm-vmload.md) funzionare se sono necessarie altre informazioni per la gestione di un interrupt complesso oppure passare a un altro guest.  
   
- Il `__svm_vmrun` è equivalente alla funzione di `VMRUN` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Volume manuale del programmatore di architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nel [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
+ Il `__svm_vmrun` è equivalente alla funzione il `VMRUN` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nelle [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__svm_vmrun`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmrun`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   

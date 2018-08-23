@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 756aea4400d98b2bf061a54955b3df4b4eddd993
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ebadd9e453e8a34e92acee363d0dd6b6ff765910
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849275"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540804"
 ---
 # <a name="include"></a>include()
 **Sezione specifica C++**  
   
- Disabilita l'esclusione automatica.  
+Disabilita l'esclusione automatica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,18 +34,20 @@ ms.locfileid: "33849275"
 include("Name1"[,"Name2", ...])  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `Name1`  
- Primo elemento da includere forzatamente.  
+### <a name="parameters"></a>Parametri  
+*Nome1*  
+Primo elemento da includere forzatamente.  
   
- `Name2`  
- Secondo elemento da includere forzatamente (se necessario).  
+*Nome2*  
+Secondo elemento da includere forzatamente (se necessario).  
   
 ## <a name="remarks"></a>Note  
- Le librerie dei tipi possono includere definizioni di elementi definiti nelle intestazioni di sistema o in altre librerie dei tipi. `#import` tenta di evitare più errori di definizione escludendo automaticamente tali elementi. Se sono stati esclusi gli elementi, come indicato dalla [avviso del compilatore (livello 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md), e non devono avere stato, questo attributo può essere utilizzato per disabilitare l'esclusione automatica. Questo attributo può accettare un numero qualsiasi di argomenti, ognuno dei quali costituisce il nome dell'elemento della libreria dei tipi da includere.  
+ 
+Le librerie dei tipi possono includere definizioni di elementi definiti nelle intestazioni di sistema o in altre librerie dei tipi. `#import` tenta di evitare più errori di definizione escludendo automaticamente tali elementi. Se gli elementi sono stati esclusi, come indicato dal [avviso del compilatore (livello 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md), e non sarebbe stato, questo attributo può essere utilizzato per disabilitare l'esclusione automatica. Questo attributo può accettare un numero qualsiasi di argomenti, ognuno dei quali costituisce il nome dell'elemento della libreria dei tipi da includere.  
   
- **Fine sezione specifica C++**  
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

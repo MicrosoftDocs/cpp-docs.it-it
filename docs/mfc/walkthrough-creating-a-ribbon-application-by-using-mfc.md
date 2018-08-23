@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21478cdfd96fc32efaa674d7ec4f838e2f6b989b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7d13503ff19c4c7c132bd100921ff716ca3abca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026893"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538657"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC
 Questa procedura dettagliata illustra come usare il **Creazione guidata applicazione MFC** per creare un'applicazione con una barra multifunzione per impostazione predefinita. È quindi possibile espandere la barra multifunzione aggiungendo un **personalizzato** categoria della barra multifunzione con un **Preferiti** sulla barra multifunzione pannello e l'aggiunta di alcuni comandi al pannello di utilizzati frequentemente.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questa procedura dettagliata si presuppone di aver impostato [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] da utilizzare **impostazioni generali per lo sviluppo**. Se utilizzi impostazioni diverse, è possibile che alcuni elementi dell'interfaccia utente a cui viene fatto riferimento nelle istruzioni seguenti non vengano visualizzati. Per informazioni su come modificare le impostazioni, vedere [procedura: reimpostare le impostazioni](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
+ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per utilizzare **delle impostazioni di sviluppo generale**. Se utilizzi impostazioni diverse, è possibile che alcuni elementi dell'interfaccia utente a cui viene fatto riferimento nelle istruzioni seguenti non vengano visualizzati. Per informazioni su come modificare le impostazioni, vedere [procedura: reimpostare le impostazioni](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Per creare un'applicazione MFC con una barra multifunzione  
   

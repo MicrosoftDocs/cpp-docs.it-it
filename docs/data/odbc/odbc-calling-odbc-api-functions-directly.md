@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336595"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571682"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: chiamata diretta delle funzioni dell'API ODBC
 Le classi di database forniscono un'interfaccia più semplice a un [zdroj dat](../../data/odbc/data-source-odbc.md) rispetto a ODBC. Di conseguenza, le classi non includono tutte le API ODBC. Per tutte le funzionalità non è compresa la capacità delle classi, è necessario chiamare direttamente le funzioni API ODBC. Ad esempio, è necessario chiamare le funzioni di catalogo ODBC (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`e altri ancora) direttamente.  
@@ -48,7 +48,7 @@ Le classi di database forniscono un'interfaccia più semplice a un [zdroj dat](.
   
 -   Al termine, deallocare spazio di archiviazione.  
   
- Per altre informazioni su questi passaggi, vedere la [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK nella documentazione MSDN.  
+ Per altre informazioni su questi passaggi, vedere la [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK nella documentazione MSDN.  
   
  Oltre a questi passaggi, è necessario eseguire passaggi aggiuntivi per verificare i valori restituiti di funzione, assicurarsi che il programma non è in attesa di una chiamata asincrona terminare e così via. È possibile semplificare questi ultimi passaggi usando le macro macro AFX_SQL_ASYNC e AFX_SQL_SYNC. Per altre informazioni, vedere [macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md) nel *riferimento MFC*.  
 

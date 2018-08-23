@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTINPUT (specificare Input del manifesto) | Documenti Microsoft
+title: -MANIFESTDEPENDENCY (specifica l'Input del manifesto) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecf1740855c2feef0d7cac4bbcc85ad95eade6f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1b5ed266f1b8929deee3ffb60a10b18b7604afc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372851"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572937"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTDEPENDENCY (specifica l'input del manifesto)
-Specifica un file di input del manifesto da includere nel manifesto incorporato nell'immagine.  
+Specifica un file di input manifesto da includere nel manifesto incorporato nell'immagine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,9 +33,9 @@ Specifica un file di input del manifesto da includere nel manifesto incorporato 
  Il file manifesto da includere nel manifesto incorporato.  
   
 ## <a name="remarks"></a>Note  
- Il **/MANIFESTINPUT** opzione specifica il percorso di file di input da utilizzare per creare il manifesto incorporato in un'immagine eseguibile. Se si dispone di un manifesto più file di input, utilizzare l'opzione più volte, una volta per ogni file di input. I file manifesto di input vengono uniti per creare il manifesto incorporato. Questa opzione richiede il **/manifest: incorporare** opzione.  
+ Il **/MANIFESTINPUT** opzione specifica il percorso di file di input da utilizzare per creare il manifesto incorporato in un'immagine eseguibile. Se si dispone di manifesto più file di input, utilizzare l'opzione più volte, una volta per ogni file di input. I file di input manifesto vengono uniti per creare il manifesto incorporato. Questa opzione richiede la **/manifest: incorporare** opzione.  
   
- Questa opzione non può essere impostata direttamente nel [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Utilizzare invece il **file manifesto aggiuntivi** proprietà del progetto per specificare il file manifesto aggiuntivi da includere. Per ulteriori informazioni, vedere [Input e Output, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../../ide/input-and-output-manifest-tool.md).  
+ Questa opzione non può essere impostata direttamente in Visual Studio. Usare invece i **file manifesto aggiuntivi** proprietà del progetto per specificare i file manifesto aggiuntivi da includere. Per altre informazioni, vedere [Input e Output, strumento manifesto, proprietà di configurazione \<NomeProgetto > finestra di dialogo Pagine delle proprietà](../../ide/input-and-output-manifest-tool.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   

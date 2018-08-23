@@ -1,5 +1,5 @@
 ---
-title: Riferimento a Microsoft Macro Assembler | Documenti Microsoft
+title: Riferimento a Microsoft Macro Assembler | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713e11262a660bcd42aea27bcb0da9e5f7f0c956
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: edf1289b20d710ff6b579a56150d01568fb21fbd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052827"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575481"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Riferimento a Microsoft Macro Assembler
-Microsoft Macro Assembler (MASM) offre numerosi vantaggi rispetto assembly inline. MASM contiene una lingua di macro che include funzionalità quali l'elaborazione di stringhe di ciclo, aritmetici e di testo. MASM fornisce inoltre un controllo maggiore sull'hardware perché supporta il set di istruzioni di 386, 486 e processori Pentium. Utilizzando MASM, è anche possibile ridurre il sovraccarico di tempo e memoria.  
+Microsoft Macro Assembler (MASM) offre diversi vantaggi rispetto a assembly inline. MASM contiene un linguaggio macro che dispone di funzionalità, ad esempio l'elaborazione di stringhe di ciclo, aritmetici e di testo. MASM inoltre offre un maggiore controllo sull'hardware, perché supporta il set di istruzioni del 386 486 e processori Pentium. Usando MASM, è possibile anche ridurre l'overhead di memoria e tempo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Opzione della riga di comando ML e ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)  
@@ -35,19 +35,19 @@ Microsoft Macro Assembler (MASM) offre numerosi vantaggi rispetto assembly inlin
  Descrive gli avvisi e messaggi di errore irreversibile e non irreversibili ML.exe.  
   
  [Riferimento a direttive](../../assembler/masm/directives-reference.md)  
- Vengono forniti collegamenti ad articoli che illustrano l'uso di direttive di MASM.  
+ Fornisce collegamenti ad articoli che illustrano l'uso delle direttive di MASM.  
   
  [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)  
- Vengono forniti collegamenti ad articoli che illustrano l'utilizzo di simboli in MASM.  
+ Fornisce collegamenti ad articoli che illustrano l'uso di simboli in MASM.  
   
  [Riferimento a operatori](../../assembler/masm/operators-reference.md)  
- Vengono forniti collegamenti ad articoli che illustrano l'utilizzo di operatori di MASM.  
+ Fornisce collegamenti ad articoli che illustrano l'uso degli operatori di MASM.  
   
  [Manuali di programmazione del produttore del processore](../../assembler/masm/processor-manufacturer-programming-manuals.md)  
- Fornisce collegamenti a siti Web che possono contenere informazioni di programmazione su processori che non prodotte, venduto o supportata da Microsoft.  
+ Vengono forniti collegamenti a siti Web che possono contenere informazioni sulla programmazione su processori che non sono prodotte, venduto o supportata da Microsoft.  
   
  [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)  
- Informazioni su come creare l'output di file per [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
+ Informazioni su come creare i file di output per x64.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Visual C++](../../visual-cpp-in-visual-studio.md)  
@@ -56,4 +56,4 @@ Microsoft Macro Assembler (MASM) offre numerosi vantaggi rispetto assembly inlin
 ## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../../intrinsics/compiler-intrinsics.md)   
  [x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)   
- [x64 (amd64) funzioni intrinseche](../../intrinsics/x64-amd64-intrinsics-list.md)
+ [x64 (amd64) le funzioni intrinseche](../../intrinsics/x64-amd64-intrinsics-list.md)

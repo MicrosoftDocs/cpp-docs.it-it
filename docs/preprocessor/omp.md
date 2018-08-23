@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87dd737b1bbe9263af5ef6416e7d6b8d287feb53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849470"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543132"
 ---
 # <a name="omp"></a>omp
 Accetta una o più direttive OpenMP, con eventuali clausole direttive facoltative.  
@@ -31,12 +31,13 @@ Accetta una o più direttive OpenMP, con eventuali clausole direttive facoltativ
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 #pragma omp directive  
 ```  
   
 ## <a name="remarks"></a>Note  
- Vedere [direttive OpenMP](../parallel/openmp/reference/openmp-directives.md) per ulteriori informazioni.  
+ 
+Visualizzare [direttive OpenMP](../parallel/openmp/reference/openmp-directives.md) per altre informazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

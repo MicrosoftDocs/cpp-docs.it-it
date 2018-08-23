@@ -1,5 +1,5 @@
 ---
-title: float_control | Documenti Microsoft
+title: float_control | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840355"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538445"
 ---
 # <a name="floatcontrol"></a>float_control
 Specifica il comportamento a virgola mobile per una funzione.  
@@ -35,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Flag  
- `value`, `setting` **[push]**  
- Specifica il comportamento a virgola mobile. `value` può essere **preciso** o **tranne**. Per altre informazioni, vedere [/fp (Specifica il comportamento della virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md). `setting` può essere **su** o **off**.  
+ 
+*valore*, *impostazione* *[push]*  
+Specifica il comportamento a virgola mobile. *valore* può essere `precise` o `except`. Per altre informazioni, vedere [/fp (Specifica il comportamento della virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md). *l'impostazione* può essere `on` o `off`.  
   
- Se `value` è **preciso**, le impostazioni per **preciso** e **tranne** vengono specificate. **ad eccezione di** può essere impostato solo su **su** quando **preciso** è impostata su **su**.  
+Se *valore* viene `precise`, le impostazioni per `precise` e `except` siano state specificate. `except` può essere impostato solo su `on` quando si `precise` è impostata su `on`.  
   
- Se l'opzione facoltativa **push** token viene aggiunto, corrente l'impostazione per `value` viene inserita nello stack del compilatore interno.  
+Se l'opzione facoltativa *push* token viene aggiunto, corrente l'impostazione per *valore* viene inserita nello stack del compilatore interno.  
   
- **push**  
- Inserire l'impostazione `float_control` corrente nello stack del compilatore interno  
+*push*  
+Eseguire il push corrente **float_control** impostazione sullo stack del compilatore interno  
   
- **pop**  
- Rimuove il `float_control` impostazione dall'inizio dello stack del compilatore interno e lo rende il nuovo `float_control` impostazione.  
+*pop*  
+Rimuove il **float_control** impostazione dall'inizio dello stack del compilatore interno e lo rende la nuova **float_control** impostazione.  
   
 ## <a name="remarks"></a>Note  
- Non è possibile disattivare `float_control precise` off quando **tranne** si trova in. Analogamente, **preciso** non può essere disattivato quando `fenv_access` si trova in. Per passare dal modello di tipo strict a un modello di tipo fast con il pragma `float_control`, utilizzare il codice seguente:  
+ 
+Non è possibile disattivare `float_control precise` da quando `except` è attivo. Analogamente, `precise` non può essere disattivato quando `fenv_access` è attivo. Per passare dal modello di tipo strict a un modello di tipo fast con il **float_control** pragma, usare il codice seguente:  
   
 ```  
 #pragma float_control(except, off)  
@@ -57,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- Per passare dal modello di tipo fast a un modello di tipo strict con il pragma `float_control`, utilizzare il codice seguente:  
+Per passare dal modello di tipo fast a un modello di tipo strict con il **float_control** pragma, usare il codice seguente:  
   
 ```  
 #pragma float_control(precise, on)  
@@ -65,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- Altri pragma a virgola mobile sono i seguenti:  
+Altri pragma a virgola mobile sono i seguenti:  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>Esempio  
- Il seguente esempio mostra come acquisire un'eccezione a virgola mobile dell'overflow utilizzando il pragma `float_control`.  
+ 
+L'esempio seguente viene illustrato come intercettare un'eccezione a virgola mobile dell'overflow utilizzando il pragma **float_control**.  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -113,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

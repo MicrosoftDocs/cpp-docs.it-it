@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3aa9b10b53f4b520ed6d42932ba3e73f11077fdc
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7554e7ee59f1d25344c61bd208fd0341add797a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337060"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571680"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lettura di stringhe in un provider OLE DB
-Il `RMyProviderRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx). Il provider riceve il nome del file e lo archivia nella variabile membro `m_szCommandText`. `Execute` legge il nome del file da `m_szCommandText`. Se il nome del file non è valido o non è disponibile, il file `Execute` restituisce un errore. In caso contrario, viene aperto il file e le chiamate `fgets` per recuperare le stringhe. Per ciascun insieme di stringhe, letture `Execute` crea un'istanza del record utente (`CAgentMan`) e lo inserisce in una matrice.  
+Il `RMyProviderRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). Il provider riceve il nome del file e lo archivia nella variabile membro `m_szCommandText`. `Execute` legge il nome del file da `m_szCommandText`. Se il nome del file non è valido o non è disponibile, il file `Execute` restituisce un errore. In caso contrario, viene aperto il file e le chiamate `fgets` per recuperare le stringhe. Per ciascun insieme di stringhe, letture `Execute` crea un'istanza del record utente (`CAgentMan`) e lo inserisce in una matrice.  
   
  Se il file non può essere aperto, `Execute` dovrà restituire DB_E_NOTABLE. Se viene restituito E_FAIL, il provider non funzionerà con molti utenti e non passerà OLE DB [test di conformità](../../data/oledb/testing-your-provider.md).  
   

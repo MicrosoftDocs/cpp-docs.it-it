@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852588"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539251"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Il `CMFCTabCtrl` classe fornisce funzionalità per un controllo struttura a schede. Il controllo scheda visualizza una finestra ancorabile con schede flat o tridimensionali nella parte superiore o inferiore. Le schede possono visualizzare testo e un'immagine e possono cambiare colore quando sono attive.  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   Finestre a schede rimovibili.  
   
- Il `CMFCTabCtrl` classe può essere utilizzata con una finestra di dialogo, ma è rivolta a barre, ad esempio di controllo di applicazioni che usano l'ancoraggio [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] e [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Per altre informazioni, vedere [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
+ Il `CMFCTabCtrl` classe può essere utilizzata con una finestra di dialogo, ma è stato concepito per le applicazioni che usano l'ancoraggio controllano barre, ad esempio Microsoft Excel e Visual Studio. Per altre informazioni, vedere [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
  Seguire questi passaggi per aggiungere un ridimensionabile, ancoraggio controllo struttura a schede nell'applicazione:  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  Indice a base zero di una scheda da visualizzare, oppure -1 per specificare la scheda attualmente attiva.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

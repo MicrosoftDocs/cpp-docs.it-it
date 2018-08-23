@@ -1,5 +1,5 @@
 ---
-title: Le definizioni per il riepilogo della grammatica | Documenti Microsoft
+title: Le definizioni per il riepilogo della grammatica | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6c84354332b4d01ca07f672024fe9b488cd0a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ac3b742406f1e8be955921a9ee238f3b35d3bdf
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840067"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538844"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Definizioni per il riepilogo della grammatica
 I terminali sono endpoint in una definizione di sintassi. Non è possibile nessun'altra soluzione. I terminali includono il set di parole riservate e di identificatori definiti dall'utente.  
   
-I non terminali sono segnaposto nella sintassi. La maggior parte viene definita altrove in questo riepilogo della sintassi. Le definizioni possono essere ricorsive. I seguenti non terminal sono definiti nel [convenzioni lessicali](../cpp/lexical-conventions.md) sezione la *riferimenti al linguaggio C++*:  
+I non terminali sono segnaposto nella sintassi. La maggior parte viene definita altrove in questo riepilogo della sintassi. Le definizioni possono essere ricorsive. I non terminal seguenti sono definite nel [convenzioni lessicali](../cpp/lexical-conventions.md) sezione il *riferimenti al linguaggio C++*:  
   
 `constant`, *constant-expression*, *identifier*, *keyword*, `operator`, `punctuator`  
   
@@ -33,5 +33,6 @@ Un componente facoltativo viene indicato dall'opzione di indice. Ad esempio, di 
   
 **{** *espressione*opt **}**  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche 
+ 
 [Riepilogo grammatica (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

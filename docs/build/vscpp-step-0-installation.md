@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
-ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
+ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496558"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573046"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installare il supporto di C++ in Visual Studio
 
@@ -61,7 +61,7 @@ Per dettagli sui requisiti del sistema operativo e lo spazio su disco, vedere [r
 
    La prima volta che si esegue Visual Studio, viene chiesto di accedere con un Account Microsoft. Se non si dispone di uno, è possibile crearne uno gratuitamente. È anche necessario scegliere un tema. Non preoccuparti, è possibile modificarlo in un secondo momento se si desidera. 
 
-   Visual Studio potrebbe richiedere alcuni minuti per ottenere pronti all'uso alla prima esecuzione. Ecco l'effetto in una Guida introduttiva di time-lapse:
+   Visual Studio potrebbe richiedere alcuni minuti per preparare per usano la prima volta viene eseguito. Ecco l'effetto in una Guida introduttiva di time-lapse:
 
    ![Accedi Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "Accedi Visual Studio 2017")
 

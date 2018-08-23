@@ -1,5 +1,5 @@
 ---
-title: Parallelizzazione automatica e vettorizzazione automatica | Documenti Microsoft
+title: Parallelizzazione automatica e vettorizzazione automatica | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b1ec19065647f78b4d9b2665003c0aa3a2795ba
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688466"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539231"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallelizzazione automatica e vettorizzazione automatica
 Le funzioni di parallelizzazione automatica e vettorizzazione automatica sono progettate per fornire miglioramenti automatici nelle prestazioni per i cicli nel codice.  
   
 ## <a name="auto-parallelizer"></a>Parallelizzazione automatica  
- Il [/Qpar](../build/reference/qpar-auto-parallelizer.md) consente di opzione del compilatore *la parallelizzazione automatica* di cicli nel codice. Quando si specifica questo flag senza modificare il codice esistente, il compilatore valuta il codice per trovare i cicli per i quali potrebbe essere utile la parallelizzazione. Il compilatore adotta un approccio conservativo nella selezione dei cicli da parallelizzare perché potrebbe trovare cicli per i quali questa funzione non è utile oppure perché tutte le parallelizzazioni non necessarie possono comportare la generazione di un pool di thread, una sincronizzazione aggiuntiva o altri tipi di elaborazione che rallentano le prestazioni invece di migliorarle. Ad esempio, prendere in considerazione il seguente esempio in cui il limite superiore del ciclo non è noto in fase di compilazione:  
+
+Il [/Qpar](../build/reference/qpar-auto-parallelizer.md) Abilita opzione del compilatore *parallelizzazione automatica* dei cicli nel codice. Quando si specifica questo flag senza modificare il codice esistente, il compilatore valuta il codice per trovare i cicli per i quali potrebbe essere utile la parallelizzazione. Il compilatore adotta un approccio conservativo nella selezione dei cicli da parallelizzare perché potrebbe trovare cicli per i quali questa funzione non è utile oppure perché tutte le parallelizzazioni non necessarie possono comportare la generazione di un pool di thread, una sincronizzazione aggiuntiva o altri tipi di elaborazione che rallentano le prestazioni invece di migliorarle. Ad esempio, prendere in considerazione il seguente esempio in cui il limite superiore del ciclo non è noto in fase di compilazione:  
   
 ```cpp  
 void loop_test(int u) {  
@@ -32,7 +33,7 @@ void loop_test(int u) {
 }  
 ```  
   
- Poiché `u` potrebbe essere un valore basso, il compilatore non parallelizza automaticamente questo ciclo. Tuttavia, se l'utente sa che `u` sarà sempre un valore alto, è possibile parallelizzarlo. Per abilitare la parallelizzazione automatica, specificare [#pragma loop(hint_parallel(n))](../preprocessor/loop.md), dove `n` è il numero di thread da parallelizzare. Nel seguente esempio, il compilatore tenta di parallelizzare il in 8 thread.  
+Poiché `u` potrebbe essere un valore basso, il compilatore non parallelizza automaticamente questo ciclo. Tuttavia, se l'utente sa che `u` sarà sempre un valore alto, è possibile parallelizzarlo. Per abilitare la parallelizzazione automatica, specificare [#pragma loop(hint_parallel(n))](../preprocessor/loop.md), dove `n` è il numero di thread da parallelizzare. Nel seguente esempio, il compilatore tenta di parallelizzare il in 8 thread.  
   
 ```cpp  
 void loop_test(int u) {  
@@ -42,9 +43,9 @@ void loop_test(int u) {
 }  
 ```  
   
- Come con tutti [direttive pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), la sintassi alternativa pragma `__pragma(loop(hint_parallel(n)))` è anche supportato.  
+Come per tutte le [direttive pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), la sintassi alternativa pragma `__pragma(loop(hint_parallel(n)))` è anche supportato.  
   
- Alcuni cicli non possono essere parallelizzati dal compilatore, anche se lo si desidera. Di seguito è riportato un esempio:  
+Alcuni cicli non possono essere parallelizzati dal compilatore, anche se lo si desidera. Di seguito è riportato un esempio:  
   
 ```cpp  
 #pragma loop(hint_parallel(8))  
@@ -52,7 +53,7 @@ for (int i=0; i<upper_bound(); ++i)
     A[i] = B[i] * C[i];  
 ```  
   
- La funzione `upper_bound()` può cambiare ogni volta che viene chiamata. Poiché il limite superiore non può essere rilevato, il compilatore può generare un messaggio di diagnostica che spiega perché non è possibile parallelizzare il ciclo. Nel seguente esempio viene mostrato un ciclo parallelizzabile, un ciclo non parallelizzabile, la sintassi del compilatore da usare al prompt dei comandi e l'output del compilatore per ciascuna opzione della riga di comando:  
+La funzione `upper_bound()` può cambiare ogni volta che viene chiamata. Poiché il limite superiore non può essere rilevato, il compilatore può generare un messaggio di diagnostica che spiega perché non è possibile parallelizzare il ciclo. Nel seguente esempio viene mostrato un ciclo parallelizzabile, un ciclo non parallelizzabile, la sintassi del compilatore da usare al prompt dei comandi e l'output del compilatore per ciascuna opzione della riga di comando:  
   
 ```cpp  
 int A[1000];  
@@ -66,59 +67,58 @@ void test() {
         A[i] = A[i] + 1;  
     }  
 }  
-  
 ```  
   
- La compilazione con il seguente comando:  
+La compilazione con il seguente comando:  
   
- **CL d:\myproject\mylooptest.cpp/O2 /Qpar /Qpar-report:1**  
-  
- restituisce questo output:  
-  
- **---Funzione di analisi: void test(void) cdecl**   
- **d:\myproject\mytest.cpp(4): ciclo parallelizzato**  
-  
- La compilazione con il seguente comando:  
-  
- **CL d:\myproject\mylooptest.cpp/O2 /Qpar /Qpar-report: 2**  
+`cl d:\myproject\mylooptest.cpp /O2 /Qpar /Qpar-report:1`  
   
  restituisce questo output:  
   
- **---Funzione di analisi: void test(void) cdecl**   
- **d:\myproject\mytest.cpp(4): ciclo parallelizzato**   
- **d:\myproject\mytest.cpp(4): ciclo non parallelizzato a causa del motivo '1008'**  
+**---Funzione di analisi: cdecl test(void) void**   
+**d:\myproject\mytest.cpp(4): ciclo parallelizzato**  
   
- Si noti la differenza tra i due diversi output [/qpar (parallelizzazione automatica Reporting livello)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opzioni. **/Qpar-report:1** restituisce i messaggi di parallelizzazione solo per i cicli correttamente parallelizzati. **/Qpar-report:2** restituisce i messaggi di parallelizzazione per entrambe le parallelizzazioni ciclo esito positivo e negativo.  
+La compilazione con il seguente comando:  
   
- Per ulteriori informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+`cl d:\myproject\mylooptest.cpp /O2 /Qpar /Qpar-report:2`  
+  
+restituisce questo output:  
+  
+**---Funzione di analisi: cdecl test(void) void**   
+**d:\myproject\mytest.cpp(4): ciclo parallelizzato**   
+**d:\myproject\mytest.cpp(4): ciclo non parallelizzato a causa del motivo '1008'**  
+  
+Si noti la differenza nell'output tra le due diverse [/Qpar-report (livello di segnalazione parallelizzazione automatica)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opzioni. `/Qpar-report:1` restituisce i messaggi di parallelizzazione solo per i cicli correttamente parallelizzati. `/Qpar-report:2` restituisce i messaggi di parallelizzazione sia per le parallelizzazioni dei cicli riuscite che per quelle non riuscite.  
+  
+Per altre informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
 ## <a name="auto-vectorizer"></a>Vettorizzazione automatica  
- La vettorizzazione automatica analizza i cicli nel codice e usa i registri e le istruzioni del vettore nel computer di destinazione per eseguirli, se possibile. Questa funzione può migliorare le prestazioni del codice. Il compilatore fa riferimento le istruzioni SSE2, AVX e AVX2 nei processori Intel o AMD o alle istruzioni NEON nei processori ARM, in base al [/arch](../build/reference/arch-minimum-cpu-architecture.md) passare.  
+ 
+La vettorizzazione automatica analizza i cicli nel codice e usa i registri e le istruzioni del vettore nel computer di destinazione per eseguirli, se possibile. Questa funzione può migliorare le prestazioni del codice. Il compilatore fa riferimento le istruzioni SSE2, AVX e AVX2 nei processori Intel o AMD o alle istruzioni NEON nei processori ARM, in base al [/arch](../build/reference/arch-minimum-cpu-architecture.md) passare.  
   
- La vettorizzazione automatica può generare istruzioni diverse rispetto a quanto specificato da di **/arch** passare. Queste istruzioni sono protette da un controllo di runtime per verificare il corretto funzionamento del codice. Ad esempio, quando esegue la compilazione **/arch: SSE2**, possono essere generate istruzioni SSE 4.2. Un controllo di runtime verifica che SSE4.2 sia disponibile nel processore di destinazione e passa a una versione non SSE4.2 del ciclo se il processore non supporta tali istruzioni.  
+La vettorizzazione automatica può generare istruzioni diverse da quelle specificate dall'opzione `/arch`. Queste istruzioni sono protette da un controllo di runtime per verificare il corretto funzionamento del codice. Ad esempio, quando si compila `/arch:SSE2`, è possibile che vengano generate istruzioni SSE4.2. Un controllo di runtime verifica che SSE4.2 sia disponibile nel processore di destinazione e passa a una versione non SSE4.2 del ciclo se il processore non supporta tali istruzioni.  
   
- Per impostazione predefinita, la vettorizzazione automatica è abilitata. Se si desidera confrontare le prestazioni del codice con la vettorizzazione applicata, è possibile utilizzare [#pragma loop (no_vector)](../preprocessor/loop.md) per disabilitare la vettorizzazione di cicli specificati.  
+Per impostazione predefinita, la vettorizzazione automatica è abilitata. Se si desidera confrontare le prestazioni del codice con la vettorizzazione applicata, è possibile usare [loop (no_vector) #pragma](../preprocessor/loop.md) per disabilitare la vettorizzazione di cicli specificati.  
   
-```  
-  
-      #pragma loop(no_vector)  
+```cpp
+#pragma loop(no_vector)  
 for (int i = 0; i < 1000; ++i)  
    A[i] = B[i] + C[i];  
-  
 ```  
   
- Come con tutti [direttive pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), la sintassi alternativa pragma `__pragma(loop(no_vector))` è anche supportato.  
+Come per tutte le [direttive pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), la sintassi alternativa pragma `__pragma(loop(no_vector))` è anche supportato.  
   
- Come con la parallelizzazione automatica, è possibile specificare il [/Qvec-report (livello di segnalazione vettorizzazione automatica)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) opzione della riga di comando per correttamente vettorizzato solo cicli:**/Qvec-report: 1**, o sia correttamente o vettorizzato cicli:**/Qvec-report: 2**).  
+Come con la parallelizzazione automatica, è possibile specificare il [/Qvec-report (livello di segnalazione vettorizzazione automatica)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) opzione della riga di comando per correttamente vettorizzati solo i cicli:`/Qvec-report:1`, o entrambi correttamente e non correttamente vettorizzati cicli, ovvero`/Qvec-report:2`).  
   
- Per ulteriori informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+Per altre informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
- Per un esempio che illustra il funzionamento della vettorizzazione in pratica, vedere [progetto Austin, parte 2 di 6: pagina Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)  
+Per un esempio che illustra come la vettorizzazione funziona in pratica, vedere [progetto Austin parte 2 di 6: pagine](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
- [ciclo](../preprocessor/loop.md)   
- [Programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)   
- [/Qpar (parallelizzazione automatica)](../build/reference/qpar-auto-parallelizer.md)   
- [/Qvec-report (livello segnalazione parallelizzazione automatica)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
- [/Qvec-report (livello segnalazione vettorizzazione automatica)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)   
- [Messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)
+ 
+[ciclo](../preprocessor/loop.md)   
+[Programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)   
+[/Qpar (parallelizzazione automatica)](../build/reference/qpar-auto-parallelizer.md)   
+[/Qvec/report (livello segnalazione parallelizzazione automatica)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
+[/Qvec/report (livello segnalazione vettorizzazione automatica)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)   
+[Messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)

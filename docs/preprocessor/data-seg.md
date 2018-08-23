@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a463d966c681557525bb9512762731c01a7ce30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841232"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541000"
 ---
 # <a name="dataseg"></a>data_seg
 Specifica il segmento di dati in cui le variabili inizializzate vengono archiviate nel file .obj.  
@@ -31,37 +31,37 @@ Specifica il segmento di dati in cui le variabili inizializzate vengono archivia
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Note  
- Il significato dei termini *segmento* e *sezione* sono intercambiabili in questo argomento.  
+## <a name="remarks"></a>Note 
+
+Il significato dei termini *segmento* e *sezione* sono intercambiabili in questo argomento.  
   
- File con estensione OBJ possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file .obj per le variabili inizializzate è .data. Le variabili che non sono inizializzate sono considerate inizializzate sul valore zero e vengono archiviate nel segmento .bss.  
+I file OBJ possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file .obj per le variabili inizializzate è .data. Le variabili che non sono inizializzate sono considerate inizializzate sul valore zero e vengono archiviate nel segmento .bss.  
   
- **data_seg** senza parametri Reimposta il segmento su. Data.  
+**data_seg** senza parametri Reimposta il segmento su. Data.  
   
- **push**(facoltativo)  
- Inserisce un record nello stack interno del compilatore. Oggetto **push** può avere un *identificatore* e *nome segmento*.  
+*push* (facoltativo)  
+Inserisce un record nello stack interno del compilatore. Oggetto *push* può avere un *identifier* e *nome segmento*.  
   
- **POP** (facoltativo)  
- Rimuove un record dall'inizio dello stack interno del compilatore.  
+*POP* (facoltativo)  
+Rimuove un record dall'inizio dello stack interno del compilatore.  
   
- *Identificatore* (facoltativo)  
- Se usato con **push**, assegna un nome al record nello stack del compilatore interno. Se usato con **pop**, estrae record dallo stack interno finché non *identificatore* viene rimosso; se *identificatore* non trovato nello stack interno, nulla viene estratto.  
+*Identificatore* (facoltativo)  
+Quando abbinata *push*, assegna un nome al record nello stack del compilatore interno. Quando abbinata *pop*, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
   
- *Identificatore* consente a più record con un singolo **pop** comando.  
+*Identificatore* consente di più record da estrarre con un'unica *pop* comando.  
   
- *"segment-name"*(facoltativo)  
- Nome di un segmento. Se usato con **pop**, viene visualizzato lo stack e *nome segmento* diventa il nome del segmento attivo.  
+*"segment-name"*(facoltativo)  
+Nome di un segmento. Quando abbinata *pop*, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.  
   
- *"classe del segmento"* (facoltativo)  
- Incluso per la compatibilità con le versioni di C++ precedenti alla versione 2.0. Ignorato.  
+*"segmento-class"* (facoltativo)  
+Incluso per la compatibilità con le versioni di C++ precedenti alla versione 2.0. Ignorato.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // pragma_directive_data_seg.cpp  
 int h = 1;                     // stored in .data  
 int i = 0;                     // stored in .bss  
@@ -78,11 +78,12 @@ int main() {
 }  
 ```  
   
- I dati allocati mediante **data_seg** non mantengono le informazioni sulla posizione.  
+I dati allocati mediante **data_seg** non mantengono le informazioni sulla relativa posizione.  
   
- Vedere [/sezione](../build/reference/section-specify-section-attributes.md) per un elenco di nomi di non utilizzare durante la creazione di una sezione.  
+Visualizzare [/Section](../build/reference/section-specify-section-attributes.md) per un elenco dei nomi non è consigliabile usare durante la creazione di una sezione.  
   
- È inoltre possibile specificare le sezioni per le variabili const ([const_seg](../preprocessor/const-seg.md)), dati non inizializzati ([bss_seg](../preprocessor/bss-seg.md)) e funzioni ([code_seg](../preprocessor/code-seg.md)).  
+È anche possibile specificare le sezioni per le variabili const ([const_seg](../preprocessor/const-seg.md)), dati non inizializzati ([bss_seg](../preprocessor/bss-seg.md)) e funzioni ([code_seg](../preprocessor/code-seg.md)).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

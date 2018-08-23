@@ -1,5 +1,5 @@
 ---
-title: -MIDL (Specifica opzioni della riga di comando MIDL) | Documenti Microsoft
+title: -MIDL (Specifica opzioni della riga di comando MIDL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d125042041af1e20b6dfc4a02197c2124adbeb9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375188"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572265"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Specifica opzioni della riga di comando MIDL)
 ```  
@@ -40,7 +40,7 @@ ms.locfileid: "32375188"
  Il nome del file che contiene [opzioni della riga di comando MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
   
 ## <a name="remarks"></a>Note  
- Tutte le opzioni per la conversione di un file IDL in un file TLB devono essere assegnate in `file`; Impossibile specificare le opzioni della riga di comando MIDL nella riga di comando del linker. Se /MIDL non è specificato, verrà richiamato il compilatore MIDL con solo il nome del file IDL e senza altre opzioni.  
+ Tutte le opzioni per la conversione di un file IDL in un file TLB devono essere assegnate in `file`; Opzioni della riga di comando di MIDL non è possibile specificare nella riga di comando del linker. Se /MIDL non viene specificato, il compilatore MIDL verrà richiamato con solo il nome del file IDL e senza altre opzioni.  
   
  Il file deve contenere un'opzione della riga di comando MIDL per riga.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "32375188"
   
 1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic su di **Linker** cartella.  
+2.  Scegliere il **Linker** cartella.  
   
-3.  Fare clic su di **IDL incorporato** pagina delle proprietà.  
+3.  Scegliere il **IDL incorporato** pagina delle proprietà.  
   
 4.  Modificare il **comandi MIDL** proprietà.  
   
@@ -63,5 +63,5 @@ ms.locfileid: "32375188"
  [Opzioni del linker](../../build/reference/linker-options.md)   
  [/IDLOUT (assegna un nome file di Output MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
  [/IGNOREIDL (non elabora gli attributi in MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [/TLBOUT (nome. File TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+ [/TLBOUT (nome. Al File TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
  [Compilazione di un programma con attributi](../../windows/building-an-attributed-program.md)

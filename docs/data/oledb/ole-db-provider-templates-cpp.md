@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4983234cdbc64f4ca8364c5afcc2d8e735ba2d01
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339575"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571860"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelli provider OLE DB (C++)
 OLE DB è una parte importante della strategia di Microsoft Universal Data Access. La progettazione di OLE DB consente l'accesso ai dati ad alte prestazioni da qualsiasi origine dati. I dati tabulari sono visualizzabili tramite OLE DB indipendentemente dal fatto che proviene da un database. La flessibilità ti offre una notevole quantità di energia elettrica.  
@@ -63,7 +63,7 @@ OLE DB è una parte importante della strategia di Microsoft Universal Data Acces
  I provider possono variare significativamente in funzionalità e complessità. È utile suddividere i provider provider aggiornabili e provider di sola lettura:  
   
 -   Visual C++ 6.0 supportati solo i provider di sola lettura. [Creazione di un Provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md) viene illustrato come creare un provider di sola lettura.  
--   Visual C++ supporta i provider aggiornabili, che è possono aggiornare (scrivere) nell'archivio dati. Per informazioni sui provider aggiornabili, vedere [creazione di un Provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md); gli [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) esempio è riportato un esempio di un provider aggiornabile.  
+-   Visual C++ supporta i provider aggiornabili, che è possono aggiornare (scrivere) nell'archivio dati. Per informazioni sui provider aggiornabili, vedere [creazione di un Provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md); gli [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) esempio è riportato un esempio di un provider aggiornabile.  
   
  Per altre informazioni, vedere:  
   
@@ -75,5 +75,5 @@ OLE DB è una parte importante della strategia di Microsoft Universal Data Acces
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso ai dati](../data-access-in-cpp.md)   
- [Documentazione di OLE DB SDK](https://msdn.microsoft.com/library/ms722784.aspx)   
- [Riferimento per programmatori OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)
+ [Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [Riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

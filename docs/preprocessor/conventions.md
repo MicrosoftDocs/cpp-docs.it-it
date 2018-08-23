@@ -1,5 +1,5 @@
 ---
-title: Convenzioni | Documenti Microsoft
+title: Convenzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae91b383159a6de7e28507f9e272e5ea60093e0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1227136dfc42269348fa8ac2d996ca80d063c610
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912667"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539041"
 ---
 # <a name="conventions"></a>Convenzioni
 Le convenzioni utilizzano gli attributi del tipo di carattere differenti per i diversi componenti della sintassi. I simboli e i caratteri sono i seguenti:  
@@ -32,7 +32,8 @@ Le convenzioni utilizzano gli attributi del tipo di carattere differenti per i d
 |opt|I non terminali seguiti da opt sono sempre facoltativi.|  
 |carattere tipografico predefinito|I caratteri nel set descritto o elencato in questo carattere tipografico possono essere utilizzati come terminali nelle istruzioni.|  
   
- I due punti (:) che seguono il non terminale introducono la relativa definizione. Le definizioni alternative sono elencate in righe separate.  
+I due punti (:) che seguono il non terminale introducono la relativa definizione. Le definizioni alternative sono elencate in righe separate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riepilogo grammatica (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+
+[Riepilogo grammatica (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

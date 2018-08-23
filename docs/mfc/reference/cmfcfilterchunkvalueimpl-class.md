@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c11e50755097176b276c82877c7a636be149756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: fdce28feddfca0789306a16f8dc6d047dc375120
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852575"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538277"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
 Si tratta di una classe che semplifica la logica di blocchi e proprietà coppia di valori.  
@@ -91,7 +91,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Recupera il GUID di blocco.|  
 |[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Recupera il blocco PID (ID di proprietà).|  
 |[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Ottiene chunk tipo.|  
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|Recupera il valore stringa.|  
+|[CMFCFilterChunkValueImpl::GetString](#getstring)|Recupera il valore di stringa.|  
 |[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Recupera il valore come un propvariant allocato.|  
 |[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Valore restituisce non allocato (valore interno).|  
 |[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Controlla se il valore della proprietà è valido o meno.|  

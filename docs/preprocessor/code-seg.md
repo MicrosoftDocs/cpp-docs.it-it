@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f958d1652f82f297ae530c1e24bdf331976e0dc0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839073"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545801"
 ---
 # <a name="codeseg"></a>code_seg
 Specifica il segmento di testo in cui le funzioni vengono archiviate nel file OBJ.  
@@ -35,37 +35,39 @@ Specifica il segmento di testo in cui le funzioni vengono archiviate nel file OB
 ```  
   
 ## <a name="remarks"></a>Note  
- La direttiva pragma `code_seg` non controlla il posizionamento di codice oggetto generato per modelli di cui sono state create istanze, né di codice generato in modo implicito dal compilatore, ad esempio funzioni membro speciali. È consigliabile utilizzare il [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) attributo poiché consente di controllare il posizionamento del codice oggetto. È incluso il codice generato dal compilatore.  
+ 
+Il **code_seg** direttiva pragma non controlla il posizionamento del codice oggetto generato per istanziati modelli, né il codice generato in modo implicito dal compilatore, ad esempio, le funzioni membro speciali. È consigliabile usare il [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) attributo poiché consente il controllo di selezione host di tutto il codice oggetto. È incluso il codice generato dal compilatore.  
   
- Oggetto *segmento* in un obj file è un blocco denominato di dati che viene caricati in memoria come unità. Oggetto *segmento di testo* è un segmento contenente codice eseguibile. In questo articolo i termini *segmento* e *sezione* vengono utilizzati in modo intercambiabile.  
+Oggetto *segmento* in obj un file è un blocco denominato di dati che viene caricati in memoria come unità. Oggetto *segmento di testo* è un segmento contenente codice eseguibile. In questo articolo i termini *segmento* e *sezione* vengono usati indifferentemente.  
   
- La direttiva pragma `code_seg` indica al compilatore di inserire tutto il codice oggetto successivo dall'unità di conversione in un segmento di testo denominato `segment-name`. Per impostazione predefinita, il segmento di testo utilizzato per le funzioni in un file OBJ viene denominato .text.  
+Il **code_seg** direttiva pragma indica al compilatore di inserire tutto il codice oggetto successivo dall'unità di conversione in un segmento di testo denominato *-nome del segmento*. Per impostazione predefinita, il segmento di testo utilizzato per le funzioni in un file OBJ viene denominato .text.  
   
- Una direttiva pragma `code_seg` senza parametri reimposta il nome del segmento di testo per il codice oggetto successivo su .text.  
+Oggetto **code_seg** direttiva pragma senza parametri Reimposta il nome del segmento di testo per il codice oggetto successivo su. Text.  
   
- **push** (facoltativo)  
- Inserisce un record nello stack interno del compilatore. Oggetto **push** può avere un `identifier` e `segment-name`.  
+*push* (facoltativo)  
+Inserisce un record nello stack interno del compilatore. Oggetto *push* può avere un *identifier* e *nome segmento*.  
   
- **POP** (facoltativo)  
- Rimuove un record dall'inizio dello stack interno del compilatore.  
+*POP* (facoltativo)  
+Rimuove un record dall'inizio dello stack interno del compilatore.  
   
- `identifier` (facoltativo)  
- Se usato con **push**, assegna un nome al record nello stack del compilatore interno. Se usato con **pop**, estrae record dallo stack interno finché non `identifier` viene rimosso; se `identifier` non trovato nello stack interno, nulla viene estratto.  
+*Identificatore* (facoltativo)  
+Quando abbinata *push*, assegna un nome al record nello stack del compilatore interno. Quando abbinata *pop*, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
   
- `identifier` consente a più record con uno **pop** comando.  
+*Identificatore* consente di visualizzare con un solo record più *pop* comando.  
   
- "`segment-name`" (facoltativo)  
- Nome di un segmento. Se usato con **pop**, viene visualizzato lo stack e `segment-name` diventa il nome del segmento di testo attivo.  
+"*-nome del segmento*" (facoltativo)  
+Nome di un segmento. Quando abbinata *pop*, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento di testo attivo.  
   
- "`segment-class`" (facoltativo)  
- Ignorato, ma incluso per compatibilità con le versioni di C++ precedenti alla versione 2.0.  
+"*-classe di segmento*" (facoltativo)  
+Ignorato, ma incluso per compatibilità con le versioni di C++ precedenti alla versione 2.0.  
   
- È possibile utilizzare il [DUMPBIN. EXE](../build/reference/dumpbin-command-line.md) applicazione per visualizzare i file obj. Versioni di DUMPBIN per ogni architettura di destinazione supportata sono incluse con [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+È possibile usare il [DUMPBIN. File EXE](../build/reference/dumpbin-command-line.md) dell'applicazione per visualizzare i file con estensione obj. Versioni di DUMPBIN per ogni architettura di destinazione supportati sono incluse con Visual Studio.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene illustrato come utilizzare la direttiva pragma `code_seg` per controllare il posizionamento del codice oggetto:  
+
+Questo esempio illustra come usare il **code_seg** direttiva pragma per controllare il posizionamento di codice oggetto:  
   
-```  
+```cpp  
 // pragma_directive_code_seg.cpp  
 void func1() {                  // stored in .text  
 }  
@@ -86,10 +88,11 @@ int main() {
 }  
 ```  
   
- Per un elenco di nomi che non deve essere utilizzato per creare una sezione, vedere [/sezione](../build/reference/section-specify-section-attributes.md).  
+Per un elenco di nomi che non deve essere utilizzato per creare una sezione, vedere [/Section](../build/reference/section-specify-section-attributes.md).  
   
- È inoltre possibile specificare le sezioni per i dati inizializzati ([data_seg](../preprocessor/data-seg.md)), dati non inizializzati ([bss_seg](../preprocessor/bss-seg.md)) e le variabili const ([const_seg](../preprocessor/const-seg.md)).  
+È anche possibile specificare le sezioni per i dati inizializzati ([data_seg](../preprocessor/data-seg.md)), dati non inizializzati ([bss_seg](../preprocessor/bss-seg.md)) e le variabili const ([const_seg](../preprocessor/const-seg.md)).  
   
 ## <a name="see-also"></a>Vedere anche  
- [code_seg (__declspec)](../cpp/code-seg-declspec.md)   
- [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[code_seg (__declspec)](../cpp/code-seg-declspec.md)   
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

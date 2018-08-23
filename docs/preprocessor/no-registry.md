@@ -1,5 +1,5 @@
 ---
-title: no_registry | Documenti Microsoft
+title: no_registry | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 416663592f4362c110637fb4d4b4b418d9776cde
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 105c2b0ee4d2648a1cc43d0baca9f30146184e78
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849665"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541003"
 ---
 # <a name="noregistry"></a>no_registry
-`no_registry` indica al compilatore di non cercare nel registro librerie dei tipi importate con `#import`.  
+**no_registry** indica al compilatore di non cercare nel registro librerie dei tipi importate con `#import`.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 #import filename no_registry  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- *filename*  
- Una libreria dei tipi.  
+### <a name="parameters"></a>Parametri  
+*filename*  
+Una libreria dei tipi.  
   
 ## <a name="remarks"></a>Note  
- Se una libreria dei tipi di riferimento non viene trovata nella directory di inclusione, la compilazione avrà esito negativo anche se la libreria dei tipi nel Registro di sistema.  `no_registry` propaga alle altre librerie dei tipi importate in modo implicito con `auto_search`.  
+ 
+Se una libreria dei tipi di cui viene fatto riferimento non viene trovata nella directory di inclusione, la compilazione avrà esito negativo anche se la libreria dei tipi nel Registro di sistema.  **no_registry** propaga alle altre librerie dei tipi implicitamente importate con `auto_search`.  
   
- Il compilatore non cercherà mai nel Registro di sistema librerie dei tipi specificate dal nome file e passate direttamente a `#import`.  
+Il compilatore non cercherà mai nel Registro di sistema librerie dei tipi specificate dal nome file e passate direttamente a `#import`.  
   
- Quando viene specificato `auto_search`, `#import` aggiuntivi verranno generati con l'impostazione `no_registry` di `#import` iniziale (se la direttiva `#import` iniziale era `no_registry`, `auto_search` generato da `#import` è anche `no_registry`).  
+Quando `auto_search` viene specificato, aggiuntiva `#import`verranno generati con la **no_registry** impostazione iniziale `#import` (se iniziale `#import` direttiva è stata **no_registry** , un' `auto_search`-generato `#import` anche **no_registry**.)  
   
- `no_registry` è utile se si desidera importare le librerie dei tipi di riferimento incrociato senza il rischio che il compilatore di ricerca di una versione precedente del file del Registro di sistema.  `no_registry` è utile anche se la libreria dei tipi non è registrata.  
+**no_registry** è utile se si desidera importare tra le librerie dei tipi riferimento senza il rischio che il compilatore trovi una versione precedente del file del Registro di sistema. **no_registry** è utile anche se la libreria dei tipi non è registrata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

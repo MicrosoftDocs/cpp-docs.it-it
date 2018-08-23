@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e41b0edd9b2a3da1046888f16a55e19f2d9f20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96d20916210b0fe55817dceb86d388a33f8e238b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324512"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541602"
 ---
 # <a name="sidt"></a>__sidt
 **Sezione specifica Microsoft**  
   
- Archivia il valore del Registro di tabella descrittore interrupt (IDTR) in posizione di memoria specificata.  
+ Archivia il valore del Registro di tabella del descrittore di interrupt (IDTR) nella posizione di memoria specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,18 +40,18 @@ void __sidt(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] `Destination`|Un puntatore nella posizione di memoria in cui è archiviato il IDTR.|  
+|[in] `Destination`|Puntatore alla posizione di memoria in cui è archiviato il IDTR.|  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__sidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__sidt`|x86, x64|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Il `__sidt` è equivalente alla funzione di `SIDT` istruzioni in linguaggio macchina. Per ulteriori informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento al Set (istruzione)," al [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__sidt` è equivalente alla funzione il `SIDT` istruzioni in linguaggio macchina. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
   
 **Fine sezione specifica Microsoft**  
   

@@ -1,5 +1,5 @@
 ---
-title: Operatori del preprocessore | Documenti Microsoft
+title: Operatori del preprocessore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6ff2a87007892cb5a76e7fc003e1d172056fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839338"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539794"
 ---
 # <a name="preprocessor-operators"></a>Operatori del preprocessore
-Quattro operatori specifici del preprocessore vengono utilizzati nel contesto della direttiva `#define` (vedere il seguente elenco per un riepilogo di ciascun operatore). Gli operatori per la creazione di stringhe, caratteri e concatenamento dei token sono descritti nelle tre sezioni seguenti. Per informazioni sul **definito** (operatore), vedere [#if, #elif, #else e #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
+Quattro operatori specifici del preprocessore vengono utilizzati nel contesto della direttiva `#define` (vedere il seguente elenco per un riepilogo di ciascun operatore). Gli operatori per la creazione di stringhe, caratteri e concatenamento dei token sono descritti nelle tre sezioni seguenti. Per informazioni sul `defined` operatore, vedere [#if, #elif, #else e #endif direttive](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
   
 |Operatore|Operazione|  
 |--------------|------------|  
-|[Creazione di stringhe (operatore) (#)](../preprocessor/stringizing-operator-hash.md)|Racchiude l'argomento corrispondente tra virgolette doppie|  
+|[Creazione di stringhe operatore # (#)](../preprocessor/stringizing-operator-hash.md)|Racchiude l'argomento corrispondente tra virgolette doppie|  
 |[Operatore per (#@)](../preprocessor/charizing-operator-hash-at.md)|Racchiude l'argomento corrispondente tra virgolette singole e lo considera come un carattere (Microsoft Specific)|  
-|[Operatore di concatenamento dei token (#)](../preprocessor/token-pasting-operator-hash-hash.md)|Consente ai token utilizzati come argomenti effettivi di essere concatenati per formare altri token|  
+|[Operatore di Incolla per token (#)](../preprocessor/token-pasting-operator-hash-hash.md)|Consente ai token utilizzati come argomenti effettivi di essere concatenati per formare altri token|  
 |[operatore definito](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|Semplifica la scrittura di espressioni composte in alcune direttive macro|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Direttive del preprocessore](../preprocessor/preprocessor-directives.md)   
- [Macro predefinite](../preprocessor/predefined-macros.md)   
- [Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+ 
+[Direttive del preprocessore](../preprocessor/preprocessor-directives.md)   
+[Macro predefinite](../preprocessor/predefined-macros.md)   
+[Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

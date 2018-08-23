@@ -1,5 +1,5 @@
 ---
-title: Preprocessore | Documenti Microsoft
+title: Per il preprocessore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,37 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bb5a9740bab3f69ff66a51cd58e6e1378e178f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848450"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544429"
 ---
 # <a name="preprocessor"></a>Preprocessore
 Il preprocessore è un processore di testo che modifica il testo di un file di origine durante la prima fase di traslazione. Il preprocessore non analizza il testo di origine, ma lo suddivide in token allo scopo di individuare le chiamate della macro. Sebbene il compilatore in genere richiami il preprocessore nel primo test superato, il preprocessore può essere anche richiamato separatamente per elaborare il testo senza compilazione.  
   
- Il materiale di riferimento sul preprocessore include le sezioni seguenti:  
+Il materiale di riferimento sul preprocessore include le sezioni seguenti:  
   
--   [Direttive del preprocessore](../preprocessor/preprocessor-directives.md)  
+- [Direttive del preprocessore](../preprocessor/preprocessor-directives.md)  
   
--   [Operatori del preprocessore](../preprocessor/preprocessor-operators.md)  
+- [Operatori del preprocessore](../preprocessor/preprocessor-operators.md)  
   
--   [Macro predefinite](../preprocessor/predefined-macros.md)  
+- [Macro predefinite](../preprocessor/predefined-macros.md)  
   
--   [Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+- [Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
   
- **Sezione specifica Microsoft**  
+**Sezione specifica Microsoft**  
   
- È possibile ottenere un elenco del codice sorgente dopo la pre-elaborazione utilizzando la [/E](../build/reference/e-preprocess-to-stdout.md) o [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) l'opzione del compilatore. Entrambe le opzioni richiamano il preprocessore e restituiscono il testo risultante al dispositivo di output standard, che, nella maggior parte dei casi, è la console. La differenza tra le due opzioni è che /E include le direttive `#line` mentre /EP rimuove tali direttive.  
+È possibile ottenere un elenco del codice sorgente dopo la pre-elaborazione utilizzando la [/E](../build/reference/e-preprocess-to-stdout.md) oppure [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opzione del compilatore. Entrambe le opzioni richiamano il preprocessore e restituiscono il testo risultante al dispositivo di output standard, che, nella maggior parte dei casi, è la console. La differenza tra le due opzioni è che /E include le direttive `#line` mentre /EP rimuove tali direttive.  
   
- **Fine sezione specifica Microsoft**  
+**Fine sezione specifica Microsoft**  
   
 ##  <a name="_predir_special_terminology"></a> Terminologia speciale  
- Nella documentazione del preprocessore, il termine "argomento" si riferisce all'entità che viene passata a una funzione. In alcuni casi, è modificato da "effettivo" o "formale", che descrive l'espressione dell'argomento specificata nella chiamata di funzione e nella dichiarazione dell'argomento specificata nella definizione di funzione, rispettivamente.  
+
+Nella documentazione del preprocessore, il termine "argomento" si riferisce all'entità che viene passata a una funzione. In alcuni casi, è modificato da "effettivo" o "formale", che descrive l'espressione dell'argomento specificata nella chiamata di funzione e nella dichiarazione dell'argomento specificata nella definizione di funzione, rispettivamente.  
   
- Il termine "variabile" si riferisce a un oggetto dati di tipo C semplice. Il termine "oggetto" si riferisce sia agli oggetti che alle variabili C++; è un termine inclusivo.  
+Il termine "variabile" si riferisce a un oggetto dati di tipo C semplice. Il termine "oggetto" si riferisce sia agli oggetti che alle variabili C++; è un termine inclusivo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
- [Fasi di conversione](../preprocessor/phases-of-translation.md)
+ 
+[Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[Fasi di conversione](../preprocessor/phases-of-translation.md)

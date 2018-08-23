@@ -1,5 +1,5 @@
 ---
-title: La compilazione e collegamento di programmi Multithread | Documenti Microsoft
+title: La compilazione e collegamento di programmi Multithread | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c77cb217fe841e15f4c7470340bd3fbb502f6a9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df81fa3d47005fc80bdb3b1c78cba050775cda6
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695733"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538279"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Compilazione e collegamento di programmi multithread
-Il programma Bounce è stato introdotto in [Sample Multithread C Program](../parallel/sample-multithread-c-program.md).  
+Il programma di Bounce. c è stato introdotto in [C programma Multithread di esempio](../parallel/sample-multithread-c-program.md).  
   
- Vengono compilati i programmi con multithreading per impostazione predefinita.  
+Vengono compilati i programmi con multithreading per impostazione predefinita.  
   
-#### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Per compilare e collegare il programma multithread Bounce dall'ambiente di sviluppo  
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Per compilare e collegare il programma multithread Bounce. c all'interno dell'ambiente di sviluppo  
   
 1.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
@@ -42,9 +42,9 @@ Il programma Bounce è stato introdotto in [Sample Multithread C Program](../par
   
 4.  Aggiungere il file contenente il codice sorgente C per il progetto.  
   
-5.  Nel **compilare** dal menu Compila il progetto, fare clic su di **compilare** comando.  
+5.  Nel **compilare** dal menu Compila il progetto facendo clic la **compilazione** comando.  
   
-#### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>Per compilare e collegare il programma multithread Bounce. c dalla riga di comando  
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>Per compilare e collegare il programma multithread Bounce. c dalla riga di comando  
   
 1.  Compilare e collegare il programma:  
   
@@ -52,5 +52,6 @@ Il programma Bounce è stato introdotto in [Sample Multithread C Program](../par
     CL BOUNCE.C  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Multithreading con C e Win32](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>Vedere anche
+
+[Multithreading con C e Win32](../parallel/multithreading-with-c-and-win32.md)

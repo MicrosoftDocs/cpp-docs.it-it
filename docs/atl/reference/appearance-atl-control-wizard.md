@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd95e3e25cd015fd326c236f15a965e3fb9e801
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025880"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571779"
 ---
 # <a name="appearance-atl-control-wizard"></a>Aspetto, Creazione guidata controllo ATL
 Inserisci qui "Riepilogo risultati di ricerca".  
@@ -97,5 +97,5 @@ Imposta le opzioni di comportamento aggiuntive per il controllo.
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md)   
- [SUBEDIT esempio: Superclasse un controllo Windows Standard](http://msdn.microsoft.com/30e46bdc-ed92-417c-b6b8-359017265a7b)
+ [SUBEDIT esempio: Superclasse un controllo Windows Standard](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
 

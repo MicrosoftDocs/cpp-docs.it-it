@@ -1,5 +1,5 @@
 ---
-title: raw_dispinterfaces | Documenti Microsoft
+title: raw_dispinterfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2a0d91d0f0dd3d23886ade75072526e6c895f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 093c994de24b947c53bfc19d33213e77f3ec2593
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849454"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541774"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
 **Sezione specifica C++**  
   
- Indica al compilatore di generare funzioni wrapper di basso livello per le proprietà che chiamano e metodi di interfaccia dispatch **IDispatch:: Invoke** e restituire il `HRESULT` codice di errore.  
+Indica al compilatore di generare funzioni wrapper di basso livello per i metodi di interfaccia dispatch e proprietà che chiamano `IDispatch::Invoke` e restituire il codice di errore HRESULT.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,10 +35,12 @@ raw_dispinterfaces
 ```  
   
 ## <a name="remarks"></a>Note  
- Se questo attributo non viene specificato, solo i wrapper di alto livello vengono generati, che generano eccezioni C++ in caso di errore.  
+ 
+Se questo attributo non viene specificato, solo i wrapper di alto livello vengono generati, che generano eccezioni C++ in caso di errore.  
   
- **Fine sezione specifica C++**  
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

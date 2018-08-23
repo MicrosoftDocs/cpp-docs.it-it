@@ -1,5 +1,5 @@
 ---
-title: named_guids | Documenti Microsoft
+title: named_guids | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2022f979205fed461f02e5886698d9455021a855
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fe616785c63602b5de9702cd3e6c7d80f9872fc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912849"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541215"
 ---
 # <a name="namedguids"></a>named_guids
 **Sezione specifica C++**  
   
- Indica al compilatore di definire e inizializzare variabili GUID di vecchio stile, nel formato **LIBID_MyLib**, **CLSID_MyCoClass**, **IID_MyInterface**, e **DIID _MyDispInterface**.  
+Indica al compilatore di definire e inizializzare variabili GUID di vecchio stile, del form `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, e `DIID_MyDispInterface`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,8 +35,10 @@ named_guids
 ```  
   
 ## <a name="remarks"></a>Note  
- **Fine sezione specifica C++**  
+
+**Fine sezione specifica C++**  
   
 ## <a name="see-also"></a>Vedere anche  
- [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

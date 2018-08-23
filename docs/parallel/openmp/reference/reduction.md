@@ -1,5 +1,5 @@
 ---
-title: riduzione | Documenti Microsoft
+title: riduzione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692535"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538280"
 ---
 # <a name="reduction"></a>reduction
-Specifica che una o più variabili che sono private per ogni thread vengano eseguita un'operazione di riduzione alla fine di tale area.  
+Specifica che una o più variabili private per ogni thread sono l'oggetto di un'operazione di riduzione alla fine di tale area.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ reduction(operation:var)
  L'operatore per l'operazione da eseguire sulle variabili (`var`) alla fine di tale area.  
   
  `var`  
- Uno più più variabili in cui eseguire la riduzione scalare. Se è specificata più di una variabile, separare i nomi delle variabili con una virgola.  
+ Una o più variabili in cui eseguire la riduzione scalare. Se è specificata più di una variabile, separare i nomi delle variabili con una virgola.  
   
 ## <a name="remarks"></a>Note  
  `reduction` si applica alle direttive seguenti:  
@@ -48,9 +48,9 @@ reduction(operation:var)
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [Nelle sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Per ulteriori informazioni, vedere [2.7.2.6 riduzione](../../../parallel/openmp/2-7-2-6-reduction.md).  
+ Per altre informazioni, vedere [2.7.2.6 riduzione](../../../parallel/openmp/2-7-2-6-reduction.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -127,10 +127,10 @@ int main( )
              "%d to %d, is %d\n", 1, 10, nSum);  
   
     if (bSucceed)  
-        printf_s("All of the the functions, func1 through "  
+        printf_s("All of the functions, func1 through "  
                  "func5 succeeded!\n");  
     else  
-        printf_s("One or more of the the functions, func1 "  
+        printf_s("One or more of the functions, func1 "  
                  "through func5 failed!\n");  
   
     if (nCount != NUM_THREADS)   
@@ -162,7 +162,7 @@ int main( )
 ```Output  
 The parallel section was executed 4 times in parallel.  
 The sum of the consecutive integers from 1 to 10, is 55  
-All of the the functions, func1 through func5 succeeded!  
+All of the functions, func1 through func5 succeeded!  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

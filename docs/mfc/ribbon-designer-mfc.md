@@ -1,5 +1,5 @@
 ---
-title: Sulla barra multifunzione progettazione (MFC) | Documenti Microsoft
+title: Sulla barra multifunzione progettazione (MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931157"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539437"
 ---
 # <a name="ribbon-designer-mfc"></a>Finestra di progettazione della barra multifunzione (MFC)
 La finestra di progettazione della barra multifunzione permette di creare e personalizzare barre multifunzione in applicazioni MFC. Una barra multifunzione è un elemento dell'interfaccia utente che organizza i comandi in gruppi logici. Questi gruppi sono visualizzati in schede separate in una striscia che occupa tutta la parte superiore della finestra. La barra multifunzione sostituisce la barra dei menu e le barre degli strumenti. Una barra multifunzione può migliorare significativamente l'usabilità delle applicazioni. Per altre informazioni, vedere [barre multifunzione](http://go.microsoft.com/fwlink/p/?linkid=129233). La figura seguente mostra una barra multifunzione.  
   
  ![Controllo delle risorse della barra multifunzione MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- Nelle versioni precedenti di Visual Studio, barre multifunzione dovevano essere creato mediante la scrittura di codice che usa le classi ribbon MFC, ad esempio [classe CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md). In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], la finestra di progettazione della barra multifunzione offre un metodo alternativo per la creazione di barre multifunzione. Prima di tutto, creare e personalizzare una barra multifunzione come risorsa. Caricare quindi la risorsa barra multifunzione dal codice nell'applicazione MFC. È anche possibile usare risorse barra multifunzione e classi Ribbon MFC insieme. Ad esempio, è possibile creare una risorsa barra multifunzione e a livello di programmazione aggiungervi più elementi in fase di esecuzione tramite il codice.  
+ Nelle versioni precedenti di Visual Studio, dovevano essere creato mediante la scrittura di codice che usa le classi ribbon MFC, ad esempio le barre multifunzione [classe CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md). In Visual Studio 2010 e versioni successive, la finestra di progettazione della barra multifunzione fornisce un metodo alternativo per la creazione di barre multifunzione. Prima di tutto, creare e personalizzare una barra multifunzione come risorsa. Caricare quindi la risorsa barra multifunzione dal codice nell'applicazione MFC. È anche possibile usare risorse barra multifunzione e classi Ribbon MFC insieme. È possibile, ad esempio, crea una risorsa barra multifunzione e quindi a livello di programmazione aggiungervi più elementi in fase di esecuzione tramite il codice.  
   
 ## <a name="understanding-the-ribbon-designer"></a>Informazioni sulla finestra di progettazione della barra multifunzione  
  La finestra di progettazione della barra multifunzione crea e archivia la barra multifunzione come risorsa. Quando si crea una risorsa barra multifunzione, la finestra di progettazione della barra multifunzione esegue tre operazioni:  
   
--   Aggiunge una voce nello script di definizione delle risorse del progetto (*.rc). Nell'esempio seguente, IDR_RIBBON è il nome univoco che identifica la risorsa barra multifunzione, RT_RIBBON_XML è il tipo di risorsa e ribbon.mfcribbon ms è il nome del file di risorse.  
+-   Aggiunge una voce nello script di definizione delle risorse del progetto (*.rc). Nell'esempio seguente, IDR_RIBBON è il nome univoco che identifica la risorsa barra multifunzione, RT_RIBBON_XML è il tipo di risorsa e mfcribbon-ms è il nome del file di risorse.  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
@@ -46,7 +46,7 @@ La finestra di progettazione della barra multifunzione permette di creare e pers
  #define IDR_RIBBON            307  
  ```  
   
--   Crea un file di risorse della barra multifunzione (*.mfcribbon-ms) che contiene il codice XML che definisce i pulsanti, i controlli e gli attributi della barra multifunzione. Le modifiche apportate alla barra multifunzione nella finestra di progettazione della barra multifunzione vengono archiviate come XML nel file di risorse. Esempio di codice seguente viene illustrata parte del contenuto di un \*file mfcribbon-ms:  
+-   Crea un file di risorse della barra multifunzione (*.mfcribbon-ms) che contiene il codice XML che definisce i pulsanti, i controlli e gli attributi della barra multifunzione. Le modifiche apportate alla barra multifunzione nella finestra di progettazione della barra multifunzione vengono archiviate come XML nel file di risorse. Esempio di codice seguente viene illustrata parte del contenuto di un \*file con estensione mfcribbon-ms:  
   
  ```  
  <RIBBON_BAR>  
@@ -79,13 +79,13 @@ La finestra di progettazione della barra multifunzione permette di creare e pers
   
  ![Finestra di progettazione della barra multifunzione MFC](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
-- **Casella degli strumenti:** contiene i controlli che possono essere trascinati nell'area di progettazione.  
+- **Casella degli strumenti:** contiene controlli che possono essere trascinati nell'area di progettazione.  
   
-- **Area di progettazione:** contiene la rappresentazione visiva della risorsa barra multifunzione.  
+- **Nell'area di progettazione:** contiene la rappresentazione visiva della risorsa barra multifunzione.  
   
-- **Finestra Proprietà:** vengono elencati gli attributi dell'elemento selezionato nell'area di progettazione.  
+- **Finestra delle proprietà:** Elenca gli attributi dell'elemento selezionato nell'area di progettazione.  
   
-- **Finestra Visualizzazione risorse:** vengono visualizzate le risorse che includono le risorse della barra multifunzione, nel progetto.  
+- **Finestra Visualizzazione risorse:** vengono visualizzate le risorse che includono risorse della barra multifunzione, nel progetto.  
   
 - **Barra degli strumenti Editor Ribbon:** contiene i comandi che consentono di visualizzare l'anteprima della barra multifunzione e modificarne il tema visivo.  
   
@@ -104,15 +104,15 @@ La finestra di progettazione della barra multifunzione permette di creare e pers
   
 - **Pulsante dell'applicazione:** pulsante visualizzato nell'angolo superiore sinistro di una barra multifunzione. Il pulsante dell'applicazione sostituisce il menu File ed è visibile anche quando la barra multifunzione è ridotta a icona. Quando si fa clic su questo pulsante, viene visualizzato un menu che contiene un elenco di comandi.  
   
-- **Barra di accesso rapido:** comandi utilizzati più di una piccola barra degli strumenti personalizzabile che visualizza frequentemente.  
+- **Barra di accesso rapido:** comandi utilizzati più di una piccola barra degli strumenti personalizzabile che viene visualizzato di frequente.  
   
 - **Categoria**: raggruppamento logico che rappresenta il contenuto di una scheda della barra multifunzione.  
   
-- **Pulsante predefinito della categoria:** pulsante visualizzato sulla barra multifunzione quando la barra multifunzione è ridotta a icona. Quando si fa clic su questo pulsante, la categoria viene visualizzata di nuovo come menu.  
+- **Pulsante predefinito della categoria:** pulsante visualizzato sulla barra multifunzione quando si è ridotta a icona la barra multifunzione. Quando si fa clic su questo pulsante, la categoria viene visualizzata di nuovo come menu.  
   
-- **Pannello:** un'area della barra multifunzione che consente di visualizzare un gruppo di controlli correlati. Ogni categoria della barra multifunzione contiene uno o più pannelli della barra multifunzione.  
+- **Pannello:** un'area della barra multifunzione che visualizza un gruppo di controlli correlati. Ogni categoria della barra multifunzione contiene uno o più pannelli della barra multifunzione.  
   
-- **Elementi della barra multifunzione:** controlli nei pannelli, ad esempio, i pulsanti e caselle combinate. Per i diversi controlli che possono essere ospitati in una barra multifunzione, vedere la sezione [esempio RibbonGadgets: applicazione gadget della barra multifunzione](../visual-cpp-samples.md).  
+- **Elementi della barra multifunzione:** controlli nei pannelli, ad esempio, i pulsanti e caselle combinate. Per i vari controlli che possono essere ospitati in una barra multifunzione, vedere [esempio RibbonGadgets: applicazione gadget della barra multifunzione](../visual-cpp-samples.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340417"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572833"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Riferimenti ai modelli del provider OLE DB
 Le classi e interfacce per i modelli di Provider OLE DB possono essere raggruppate nelle categorie seguenti. Il materiale di riferimento include anche informazioni sul [macro per i modelli di Provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -60,7 +60,7 @@ Le classi e interfacce per i modelli di Provider OLE DB possono essere raggruppa
  Apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice. Interfaccia obbligatoria per un oggetto di sessione.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Implementa OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interfaccia, che consente l'aggiornamento dei valori delle colonne in righe esistenti, l'eliminazione delle righe e inserendo nuove righe.  
+ Implementa OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfaccia, che consente l'aggiornamento dei valori delle colonne in righe esistenti, l'eliminazione delle righe e inserendo nuove righe.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
  Questa classe eredita da [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) ed esegue l'override [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` esegue le stesse funzioni `IObjectWithSite` ma consente anche le proprietà OLE DB `DBPROPCANSCROLLBACKWARDS` e `DBPROPCANFETCHBACKWARDS`.  
@@ -75,13 +75,13 @@ Le classi e interfacce per i modelli di Provider OLE DB possono essere raggruppa
  Implementa le proprietà del set di righe usando la proprietà set di mapping definito nella classe del comando. Interfaccia obbligatoria nel set di righe.  
   
  [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- Implementa OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) interfaccia, che recupera righe arbitrarie da un set di righe. Per supportare i segnalibri di OLE DB in un set di righe, verificare il set di righe ereditano da questa classe.  
+ Implementa OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) interfaccia, che recupera righe arbitrarie da un set di righe. Per supportare i segnalibri di OLE DB in un set di righe, verificare il set di righe ereditano da questa classe.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Implementa funzioni per comunicare ai listener nel punto di connessione di broadcast `IID_IRowsetNotify` delle modifiche al contenuto del set di righe. Implementano i consumer che gestiscono le notifiche [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) e registrarlo nel punto di connessione.  
+ Implementa funzioni per comunicare ai listener nel punto di connessione di broadcast `IID_IRowsetNotify` delle modifiche al contenuto del set di righe. Implementano i consumer che gestiscono le notifiche [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) e registrarlo nel punto di connessione.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implementa OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) interfaccia, che consente agli utenti di ritardare la trasmissione delle modifiche apportate con [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) per l'origine dati e annullare le modifiche prima della trasmissione.  
+ Implementa OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) interfaccia, che consente agli utenti di ritardare la trasmissione delle modifiche apportate con [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) per l'origine dati e annullare le modifiche prima della trasmissione.  
   
 ## <a name="command-classes"></a>Classi di comandi  
  [ICommandImpl](../../data/oledb/icommandimpl-class.md)  
@@ -114,7 +114,7 @@ Le classi e interfacce per i modelli di Provider OLE DB possono essere raggruppa
   
  [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implementa OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interfaccia, l'aggiunta di record a e il recupero dei record da un membro dati.  
+ Implementa OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) interfaccia, l'aggiunta di record a e il recupero dei record da un membro dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti ai modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   

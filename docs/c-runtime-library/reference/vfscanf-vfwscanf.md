@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b7194aa5b7c60b03e3701567ffdb236f32f0b3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e4a9c2d36ef8b60eed7b8277c39a8ca7ab998d9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413271"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572935"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -59,7 +59,7 @@ int vfwscanf(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
@@ -70,15 +70,15 @@ Elenco di argomenti variabili.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Se si verifica un errore o se viene raggiunta la fine del flusso di file prima della conversione primo, il valore restituito è **EOF** per **vfscanf** e **vfwscanf**.
+Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Se si verifica un errore o se viene raggiunta la fine del flusso di file prima della prima conversione, il valore restituito è **EOF** per **vfscanf** e **vfwscanf**.
 
-Queste funzioni convalidano i relativi parametri. Se *flusso* oppure *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se *stream* oppure *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **vfscanf** funzione legge i dati dalla posizione corrente del *flusso* nelle posizioni fornite per il *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo in *formato*. *formato* controlli l'interpretazione dell'input di campi e ha lo stesso modulo e funziona come il *formato* argomento per **scanf**; vedere [scanf](scanf-scanf-l-wscanf-wscanf-l.md) per un Descrizione della *formato*.
+Il **vfscanf** funzione legge i dati dalla posizione corrente del *stream* nelle posizioni specificate dal *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde all'identificatore di tipo in *formato*. *formato* controlla l'interpretazione dell'input campi e ha lo stesso formato e funzione come i *formato* argomento per **scanf**; vedere [scanf](scanf-scanf-l-wscanf-wscanf-l.md) per un Descrizione della *formato*.
 
-**vfwscanf** è una versione a caratteri wide **vfscanf**; l'argomento di formato **vfwscanf** è una stringa di caratteri "wide". Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vfscanf** non supporta input da un flusso UNICODE.
+**vfwscanf** è una versione a caratteri wide di **vfscanf**; l'argomento format per **vfwscanf** è una stringa di caratteri "wide". Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vfscanf** non supporta l'input da un flusso UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
