@@ -1,5 +1,5 @@
 ---
-title: 'Classe platform:: Exception | Documenti Microsoft'
+title: 'Classe platform:: Exception | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -14,16 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091560"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586635"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 Rappresenta gli errori che si verificano durante l'esecuzione dell'applicazione. Le classi di eccezione personalizzate non possono essere derivate da `Platform::Exception`. Se devi utilizzare un'eccezione personalizzata, puoi utilizzare `Platform::COMException` e specificare un valore HRESULT specifico dell'applicazione.  
@@ -57,8 +57,8 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|[Exception](#hresult)|Valore HRESULT corrispondente all'eccezione.|  
-|[Exception](#message)|Messaggio in cui viene descritta l'eccezione. Questo valore è di sola lettura e non può essere modificato una volta costruito `Exception` .|  
+|[Exception:: HRESULT](#hresult)|Valore HRESULT corrispondente all'eccezione.|  
+|[Exception:: Message](#message)|Messaggio in cui viene descritta l'eccezione. Questo valore è di sola lettura e non può essere modificato una volta costruito `Exception` .|  
   
 ### <a name="requirements"></a>Requisiti  
  **Client minimo supportato:** Windows 8  
@@ -69,7 +69,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **Metadati:** platform.winmd  
 
-## <a name="createexception"></a> Exception:: CreateException (metodo)
+## <a name="createexception"></a> Metodo Exception:: CreateException
 Crea Platform::Exception^ da un valore HRESULT specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -81,7 +81,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 ### <a name="parameters"></a>Parametri  
  hr  
- Valore HRESULT che in genere si ottiene da una chiamata a un metodo COM. Se il valore è 0, che è uguale a S_OK, questo metodo genera [platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) quanto i metodi COM con esito positivo non devono generare eccezioni.  
+ Valore HRESULT che in genere si ottiene da una chiamata a un metodo COM. Se il valore è 0, che è uguale a S_OK, questo metodo genera un'eccezione [platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) perché i metodi COM con esito positivo non devono generare eccezioni.  
   
  messaggio  
  Stringa che descrive l'errore.  
@@ -92,7 +92,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
 ### <a name="remarks"></a>Note  
  Utilizza questo metodo per creare un'eccezione da un valore HRESULT restituito, ad esempio, da una chiamata a un metodo di un'interfaccia COM. Puoi utilizzare l'overload che accetta un parametro String^ per fornire un messaggio personalizzato.  
   
- È consigliabile utilizzare CreateException per creare un'eccezione fortemente tipizzata, anziché creare un [platform:: COMException](../cppcx/platform-comexception-class.md) che contiene solo il valore HRESULT.  
+ È fortemente consigliabile utilizzare CreateException per creare un'eccezione fortemente tipizzata, anziché creare un [platform:: COMException](../cppcx/platform-comexception-class.md) che contiene solo il valore HRESULT.  
   
 
 
@@ -116,7 +116,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>  Proprietà Exception
+## <a name="hresult"></a>  Proprietà Exception:: HRESULT
 Valore HRESULT corrispondente all'eccezione.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -133,7 +133,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a> Proprietà Exception
+## <a name="message"></a> Proprietà Exception:: Message
 Messaggio in cui viene descritto l'errore.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -146,7 +146,7 @@ public:property String^ Message;
  Nelle eccezioni originate da Windows Runtime, si tratta di una descrizione dell'errore fornita dal sistema.  
   
 ### <a name="remarks"></a>Note  
- In Windows 8, questa proprietà è di sola lettura perché le eccezioni in tale versione di Windows Runtime vengono trasportate tramite ABI solo come HRESULT. In Windows 8.1 e versioni successive le informazioni sull'eccezione più dettagliate viene trasportate tramite ABI ed puoi fornire un messaggio personalizzato a cui altri componenti possono accedere a livello di codice. Per ulteriori informazioni, vedere [eccezioni (C + + CX)](../cppcx/exceptions-c-cx.md).  
+ In Windows 8, questa proprietà è di sola lettura poiché le eccezioni in tale versione di Windows Runtime vengono trasportate tramite ABI solo come HRESULT. In Windows 8.1 e versioni successive le informazioni sull'eccezione più dettagliate viene trasportate tramite ABI ed puoi fornire un messaggio personalizzato a cui altri componenti possono accedere a livello di codice. Per altre informazioni, vedere [eccezioni (C + c++ /CX)](../cppcx/exceptions-c-cx.md).  
   
 
   

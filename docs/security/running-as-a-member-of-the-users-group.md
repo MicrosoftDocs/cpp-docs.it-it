@@ -1,5 +1,5 @@
 ---
-title: Esecuzione come membro del gruppo di utenti | Documenti Microsoft
+title: Esecuzione come membro del gruppo di utenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fd9d0deded3180529bfa714519a9b8d415c6b15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841660"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586322"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Esecuzione come membro del gruppo Users
 In questo argomento viene illustrato come aumentare il livello di sicurezza e ridurre le possibilità di essere infettati da codice dannoso mediante la configurazione di account utente Windows come membri del gruppo Users, in contrapposizione al gruppo Administrators.  
@@ -36,7 +36,7 @@ In questo argomento viene illustrato come aumentare il livello di sicurezza e ri
  Se si accede con diritti di amministratore, il sistema è vulnerabile a diversi tipi di attacchi alla sicurezza, quali Trojan horse e sovraccarico del buffer. La semplice visita di un sito Web con diritti di amministratore può danneggiare il sistema, in quanto del codice dannoso scaricato dal sito potrebbe infettare il computer. Se l'attacco riesce, il codice infatti eredita le autorizzazioni di amministratore ed è in grado di eseguire operazioni quali l'eliminazione di tutti i file, la formattazione del disco rigido e la creazione di nuovi account utente con accesso di amministratore.  
   
 ## <a name="non-administrator-user-groups"></a>Gruppi di utenti diversi dagli amministratori  
- Gli account utente di Windows utilizzati normalmente dagli sviluppatori devono essere aggiunti ai gruppi Users o Power Users. Gli sviluppatori devono essere aggiunti anche al gruppo di debug. L'appartenenza al gruppo Users consente di effettuare attività comuni come eseguire programmi e visitare siti Web senza esporre il computer a rischi inutili. In qualità di membro del gruppo Power Users, è possibile inoltre eseguire attività come installare applicazioni, stampanti e la maggior parte delle operazioni disponibili dal Pannello di controllo. In caso sia necessario eseguire attività amministrative come l'aggiornamento del sistema operativo o la configurazione di parametri di sistema, è possibile accedere con un account di amministratore per il tempo necessario all'attività. In alternativa, le finestre **runas** comando può essere utilizzato per avviare applicazioni specifiche con accesso amministrativo.  
+ Gli account utente di Windows utilizzati normalmente dagli sviluppatori devono essere aggiunti ai gruppi Users o Power Users. Gli sviluppatori devono essere aggiunti anche al gruppo di debug. L'appartenenza al gruppo Users consente di effettuare attività comuni come eseguire programmi e visitare siti Web senza esporre il computer a rischi inutili. In qualità di membro del gruppo Power Users, è possibile inoltre eseguire attività come installare applicazioni, stampanti e la maggior parte delle operazioni disponibili dal Pannello di controllo. In caso sia necessario eseguire attività amministrative come l'aggiornamento del sistema operativo o la configurazione di parametri di sistema, è possibile accedere con un account di amministratore per il tempo necessario all'attività. In alternativa, di Windows **runas** comando può essere utilizzato per avviare applicazioni specifiche con accesso amministrativo.  
   
 ## <a name="exposing-customers-to-security-risks"></a>Esposizione degli utenti a rischi di sicurezza  
  La non appartenenza al gruppo Administrators è di particolare importanza per gli sviluppatori perché, oltre a proteggere i computer di sviluppo, impedisce loro di scrivere inavvertitamente codice che richieda agli utenti di far parte del gruppo Administrators per l'esecuzione delle applicazioni sviluppate. Se nel corso dello sviluppo viene introdotto codice che richiede l'accesso come amministratore, non verrà eseguito in fase di esecuzione e lo sviluppatore verrà avvisato del fatto che l'applicazione richiederà agli utenti di accedere come amministratori.  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688b4ad19f7b71c27933c1ad8663b37a3b3b6708
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8da8ca089a34f6e763ab6dfdb9bea8467d6316f1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327054"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545834"
 ---
 # <a name="readcr8"></a>__readcr8
 **Sezione specifica Microsoft**  
@@ -41,7 +41,7 @@ unsigned __int64 __readcr8(void);
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__readcr8`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr8`|X64|  
   
  **File di intestazione** \<intrin. h >  
   
