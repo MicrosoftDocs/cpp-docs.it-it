@@ -15,52 +15,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6343d7be23e633fe383343bd7f154d5cc9bb234
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 05f88eaaef32c509b400441830b5dcc311bf6769
+ms.sourcegitcommit: 7127467af82147657d0fd7a41fe9c633c4a8453c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407611"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43054015"
 ---
 # <a name="assignment"></a>Assegnazione
-L'operatore di assegnazione (**=**) è, in senso stretto, un operatore binario. La relativa dichiarazione è identica a qualsiasi altro operatore binario, con le seguenti eccezioni:  
-  
--   Deve essere una funzione membro non statica. No **operatore =** può essere dichiarato come una funzione non membro.  
-  
--   Non è ereditato da classi derivate.  
-  
--   Un valore predefinito **operatore =** funzione può essere generata dal compilatore per i tipi di classe se non ne esiste alcuno.  
-  
- Nell'esempio seguente viene illustrato come dichiarare un operatore di assegnazione:  
-  
-```cpp 
-// assignment.cpp  
-class Point  
-{  
-public:  
-   Point &operator=( Point & );  // Right side is the argument.  
-   int _x, _y;  
-};  
-  
-// Define assignment operator.  
-Point &Point::operator=( Point &ptRHS )  
-{  
-   _x = ptRHS._x;  
-   _y = ptRHS._y;  
-  
-   return *this;  // Assignment operator returns left side.  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Si noti che l'argomento fornito è il lato destro dell'espressione. L'operatore restituisce l'oggetto per mantenere il comportamento dell'operatore di assegnazione, che restituisce il valore del lato sinistro una volta completata l'assegnazione. In questo modo vengono consentite istruzioni di scrittura come:  
-  
-```cpp 
-pt1 = pt2 = pt3;  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Overload degli operatori](../cpp/operator-overloading.md)
+
+L'operatore di assegnazione (**=**) è, in senso stretto, un operatore binario. La relativa dichiarazione è identica a qualsiasi altro operatore binario, con le seguenti eccezioni:
+
+- Deve essere una funzione membro non statica. No **operatore =** può essere dichiarato come una funzione non membro.
+- Non è ereditato da classi derivate.
+- Un valore predefinito **operatore =** funzione può essere generata dal compilatore per i tipi di classe, se non ne esiste alcuno.
+
+Nell'esempio seguente viene illustrato come dichiarare un operatore di assegnazione:
+
+```cpp
+class Point
+{
+public:
+    int _x, _y;
+
+    // Right side of copy assignment is the argument.
+    Point& operator=(const Point&);
+};
+
+// Define copy assignment operator.
+Point& Point::operator=(const Point& otherPoint)
+{
+    _x = otherPoint._x;
+    _y = otherPoint._y;
+
+    // Assignment operator returns left side of assignment.
+    return *this;
+}
+
+int main()
+{
+    Point pt1, pt2;
+    pt1 = pt2;
+}
+```
+
+L'argomento fornito è il lato destro dell'espressione. L'operatore restituisce l'oggetto per mantenere il comportamento dell'operatore di assegnazione, che restituisce il valore del lato sinistro una volta completata l'assegnazione. In questo modo il concatenamento delle assegnazioni, ad esempio:
+
+```cpp
+pt1 = pt2 = pt3;
+```
+
+L'operatore di assegnazione di copia non deve essere confuso con il costruttore di copia. Quest'ultimo viene chiamato durante la creazione di un nuovo oggetto da una esistente:
+
+```cpp
+// Copy constructor is called--not overloaded copy assignment operator!
+Point pt3 = pt1;
+
+// The previous initialization is line is similar to the following:
+Point pt4(pt1); // Copy constructor call
+```
+
+> [!NOTE]
+> È consigliabile seguire le [regola pari a tre](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) che una classe che definisce un operatore di assegnazione di copia debba definire in modo esplicito anche costruttore di copia, distruttore e, a partire da c++11, costruttore e spostamento di assegnazione di spostamento operatore.
+
+## <a name="see-also"></a>Vedere anche
+
+- [Overload degli operatori](../cpp/operator-overloading.md)
+- [Costruttori di copia e operatori di assegnazione di copia (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)
