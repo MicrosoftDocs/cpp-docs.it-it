@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Come usare le classi di sincronizzazione | Microsoft Docs'
+title: 'Multithreading: Come usare le classi di sincronizzazione MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597889"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131262"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithreading: utilizzo delle classi di sincronizzazione
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Come usare le classi di sincronizzazione di MFC
 La sincronizzazione di accesso alle risorse tra i thread è un problema comune quando si scrivono applicazioni a thread multipli. Presenza di due o più thread che accedono contemporaneamente che gli stessi dati possono portare a risultati indesiderati e imprevedibili. Ad esempio, un thread è stato possibile l'aggiornamento del contenuto di una struttura mentre un altro thread sta leggendo il contenuto della stessa struttura. Non è possibile determinare quali dati riceverà il thread di lettura: i dati precedenti, i dati appena scritti o eventualmente una combinazione di entrambi. MFC fornisce una serie di sincronizzazione e le classi di accesso di sincronizzazione per aiuto nella risoluzione del problema. Questo argomento illustra le classi disponibili e su come usarli per creare classi thread-safe in una tipica applicazione a thread multipli.  
   
 Una tipica applicazione a thread multipli dispone di una classe che rappresenta una risorsa per essere condivisa tra thread. Una classe correttamente progettata, completamente thread-safe non richiede di chiamare le funzioni di sincronizzazione. Tutto ciò che viene gestito internamente per la classe, consentendo di concentrarsi su come utilizzare al meglio la classe, non sul modo in cui potrebbe ottenere danneggiato. Una tecnica efficace per la creazione di una classe completamente thread-safe è la classe di sincronizzazione di tipo merge nella classe di risorse. Unione delle classi di sincronizzazione alla classe condivisa è un processo semplice.  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 Lo svantaggio principale di questo approccio sono che la classe sarà leggermente più lenta rispetto alla stessa classe senza gli oggetti di sincronizzazione aggiunti. Inoltre, se è probabile che più thread potrebbero eliminare l'oggetto, l'approccio di unione potrebbe non funzionare. In questo caso, è preferibile mantenere gli oggetti di sincronizzazione separato.  
   
-Per informazioni su come determinare quale classe di sincronizzazione da usare in situazioni diverse, vedere [Multithreading: quando usare le classi di sincronizzazione](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Per altre informazioni sulla sincronizzazione, vedere [sincronizzazione](http://msdn.microsoft.com/library/windows/desktop/ms686353) nel SDK di Windows. Per altre informazioni sul supporto del multithreading in MFC, vedere [Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Per informazioni su come determinare quale classe di sincronizzazione da usare in situazioni diverse, vedere [Multithreading: quando usare le classi di sincronizzazione](multithreading-when-to-use-the-synchronization-classes.md). Per altre informazioni sulla sincronizzazione, vedere [sincronizzazione](/windows/desktop/Sync/synchronization) nel SDK di Windows. Per altre informazioni sul supporto del multithreading in MFC, vedere [Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md)

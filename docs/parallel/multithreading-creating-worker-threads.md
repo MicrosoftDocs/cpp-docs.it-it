@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Creazione di thread di lavoro | Microsoft Docs'
+title: 'Multithreading: Creazione di thread di lavoro in MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb5828947524c9cbeeabb47f9f6b174ac8115a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590600"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131189"
 ---
-# <a name="multithreading-creating-worker-threads"></a>Multithreading: creazione di thread di lavoro
+# <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Creazione di thread di lavoro in MFC
 Un thread di lavoro viene comunemente utilizzato per gestire le attività in background che l'utente non può attendere per continuare a usare l'applicazione. Le attività come il ricalcolo e stampa in background sono ottimi esempi di thread di lavoro. In questo argomento illustra in dettaglio i passaggi necessari per creare un thread di lavoro. Gli argomenti trattati includono:  
   
 - [Avvio del thread](#_core_starting_the_thread)  
@@ -64,11 +64,11 @@ La funzione di controllo consente di definire il thread. Quando si accede a ques
 UINT MyControllingFunction( LPVOID pParam );  
 ```  
   
-Il parametro è un singolo valore. Il valore ricevuto dalla funzione in questo parametro è il valore passato al costruttore quando l'oggetto thread è stato creato. La funzione di controllo può interpretare questo valore in qualunque modo. Ma può essere trattato come un valore scalare o un puntatore a una struttura contenente più parametri oppure può essere ignorato. Se il parametro fa riferimento a una struttura, la struttura è utilizzabile non solo per passare i dati dal computer chiamante al thread, ma anche per passare i dati dal thread al chiamante. Se si usa tale struttura per passare dati al chiamante, il thread dovrà notificare al chiamante quando i risultati sono pronti. Per informazioni sulla comunicazione tra il thread di lavoro al chiamante, vedere [Multithreading: suggerimenti sulla programmazione](../parallel/multithreading-programming-tips.md).  
+Il parametro è un singolo valore. Il valore ricevuto dalla funzione in questo parametro è il valore passato al costruttore quando l'oggetto thread è stato creato. La funzione di controllo può interpretare questo valore in qualunque modo. Ma può essere trattato come un valore scalare o un puntatore a una struttura contenente più parametri oppure può essere ignorato. Se il parametro fa riferimento a una struttura, la struttura è utilizzabile non solo per passare i dati dal computer chiamante al thread, ma anche per passare i dati dal thread al chiamante. Se si usa tale struttura per passare dati al chiamante, il thread dovrà notificare al chiamante quando i risultati sono pronti. Per informazioni sulla comunicazione tra il thread di lavoro al chiamante, vedere [Multithreading: suggerimenti sulla programmazione](multithreading-programming-tips.md).  
   
-Quando la funzione termina, deve restituire un valore UINT che indica il motivo della terminazione. In genere, questo codice di uscita è 0 per indicare l'esito positivo con altri valori indicano diversi tipi di errori. Si tratta esclusivamente dall'implementazione dipendenti. Alcuni thread potrebbero gestire conteggi dell'utilizzo di oggetti e restituisce il numero corrente di utilizzi dell'oggetto. Per informazioni su come le applicazioni possono recuperare questo valore, vedere [Multithreading: terminazione dei thread](../parallel/multithreading-terminating-threads.md).  
+Quando la funzione termina, deve restituire un valore UINT che indica il motivo della terminazione. In genere, questo codice di uscita è 0 per indicare l'esito positivo con altri valori indicano diversi tipi di errori. Si tratta esclusivamente dall'implementazione dipendenti. Alcuni thread potrebbero gestire conteggi dell'utilizzo di oggetti e restituisce il numero corrente di utilizzi dell'oggetto. Per informazioni su come le applicazioni possono recuperare questo valore, vedere [Multithreading: terminazione dei thread](multithreading-terminating-threads.md).  
   
-Esistono alcune restrizioni sulle operazioni che è possibile eseguire in un programma multithread scritto con la libreria MFC. Per una descrizione di queste restrizioni e per altri suggerimenti sull'uso dei thread, vedere [Multithreading: suggerimenti sulla programmazione](../parallel/multithreading-programming-tips.md).  
+Esistono alcune restrizioni sulle operazioni che è possibile eseguire in un programma multithread scritto con la libreria MFC. Per una descrizione di queste restrizioni e per altri suggerimenti sull'uso dei thread, vedere [Multithreading: suggerimenti sulla programmazione](multithreading-programming-tips.md).  
   
 ##  <a name="_core_controlling_function_example"></a> Controllo di esempio (funzione)  
  
@@ -101,8 +101,8 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
-- [Multithreading: creazione di thread dell'interfaccia utente](../parallel/multithreading-creating-user-interface-threads.md)  
+- [Multithreading: creazione di thread dell'interfaccia utente](multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md)

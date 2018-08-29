@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5eadb13e71e65e07c807812ad00fc1989c3a19f9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879559"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132207"
 ---
 # <a name="date-and-time"></a>Data e ora
 MFC supporta diversi modi di utilizzo di date e ore. Sono inclusi:  
@@ -34,8 +34,6 @@ MFC supporta diversi modi di utilizzo di date e ore. Sono inclusi:
 -   Supporto per l'automazione [tipo di dati DATE](../atl-mfc-shared/date-type.md). Supporta la data, ora e valori data/ora. Il [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classi incapsulano questa funzionalità. Funzionano con il [COleVariant](../mfc/reference/colevariant-class.md) classe usando il supporto di automazione.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Data e ora: classi generiche](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 -   [Data e ora: supporto per SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   

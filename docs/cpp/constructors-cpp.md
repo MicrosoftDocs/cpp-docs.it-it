@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572261"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131842"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
@@ -598,7 +598,7 @@ L'oggetto creato dai costruttori viene completamente inizializzato non appena vi
 
 ## <a name="inheriting_constructors"></a> Ereditarietà dei costruttori (c++11)
 
-Una classe derivata può ereditare i costruttori da una classe base diretta usando una dichiarazione using, come illustrato nell'esempio seguente:
+Una classe derivata può ereditare i costruttori da una classe base diretta usando una **usando** dichiarazione, come illustrato nell'esempio seguente:
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-L'istruzione using porta nell'ambito tutti i costruttori dalla classe base, ad eccezione di quelli che hanno una firma identica ai costruttori disponibili nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori.
+**Visual Studio 2017 versione 15.7 e successive**: il **utilizzando** istruzione **/std: c + + 17** modalità introduce nell'ambito tutti i costruttori dalla classe di base, ad eccezione di quelli che hanno una firma identica per i costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori. Vedere anche [miglioramenti in Visual Studio 2017 versione 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
 
 Un modello di classe può ereditare tutti i costruttori da un argomento tipo, se tale tipo specifica una classe base:
 
