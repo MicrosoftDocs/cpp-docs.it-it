@@ -1,5 +1,5 @@
 ---
-title: Installare il supporto di C++ in Visual Studio | Microsoft Docs
+title: Installare il supporto di C++ in Visual Studio 2017 | Microsoft Docs
 description: Installare il supporto di Visual Studio per Visual C++
 ms.custom: mvc
 ms.date: 06/21/2018
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42573046"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130891"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installare il supporto di C++ in Visual Studio
 
-Se è ancora stato scaricato e installato Visual Studio e gli strumenti di Visual C++ ancora, ecco come iniziare a usare.
+Se è ancora stato scaricato e installato Visual Studio 2017 e strumenti di Visual C++ ancora, ecco come iniziare a usare.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -35,7 +35,13 @@ Se è ancora stato scaricato e installato Visual Studio e gli strumenti di Visua
 
 Per dettagli sui requisiti del sistema operativo e lo spazio su disco, vedere [requisiti del sistema di famiglia di prodotti di Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs). Il programma di installazione indica quanto spazio su disco è necessaria per le opzioni selezionate.
 
-## <a name="installation"></a>Installazione
+## <a name="visual-studio-2015-installation"></a>Installazione di Visual Studio 2015
+
+ Per installare Visual Studio 2015, visitare [Scarica le versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Eseguire il programma di installazione e scegliere **installazione personalizzata** e quindi scegliere il componente C++. 
+
+ In generale, è consigliabile usare Visual Studio 2017 anche se è necessario compilare il codice usando il compilatore di Visual Studio 2015. Per altre informazioni, vedere [Usare multitargeting nativo in Visual Studio per compilare progetti precedenti](../porting/use-native-multi-targeting.md).
+
+## <a name="visual-studio-2017-installation"></a>Installazione di Visual Studio 2017
 
 1. Scaricare il programma di installazione più recente Visual Studio 2017 per Windows.
 

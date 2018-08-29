@@ -1,7 +1,7 @@
 ---
 title: Supporto del multithreading per il codice precedente (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539612"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132102"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Supporto del multithreading per il codice precedente (Visual C++)
 Visual C++ consente di disporre di più thread simultanei di esecuzione in esecuzione contemporaneamente. Con multithreading, è possibile demandare le attività in background, gestire flussi di input simultanei, gestire un'interfaccia utente e molto altro ancora.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  
-[Multithreading con C e Win32](../parallel/multithreading-with-c-and-win32.md)  
+[Multithreading con C e Win32](multithreading-with-c-and-win32.md)  
 Fornisce il supporto per la creazione di applicazioni multithread con Microsoft Windows  
   
-[Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+[Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md)  
 Vengono descritti i processi e thread e l'approccio MFC al multithreading è.  
   
-[Multithreading e impostazioni locali](../parallel/multithreading-and-locales.md)  
+[Multithreading e impostazioni locali](multithreading-and-locales.md)  
 Vengono illustrati i problemi che si verificano quando si usa la funzionalità delle impostazioni locali della libreria di Runtime C sia la libreria Standard C++ in un'applicazione multithreading.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

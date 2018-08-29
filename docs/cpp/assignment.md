@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05f88eaaef32c509b400441830b5dcc311bf6769
-ms.sourcegitcommit: 7127467af82147657d0fd7a41fe9c633c4a8453c
+ms.openlocfilehash: b4955fb16d76bc68166bf314b9e1e8c02cd8e244
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43054015"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131473"
 ---
 # <a name="assignment"></a>Assegnazione
 
@@ -71,8 +71,8 @@ L'operatore di assegnazione di copia non deve essere confuso con il costruttore 
 // Copy constructor is called--not overloaded copy assignment operator!
 Point pt3 = pt1;
 
-// The previous initialization is line is similar to the following:
-Point pt4(pt1); // Copy constructor call
+// The previous initialization is similar to the following:
+Point pt4(pt1); // Copy constructor call.
 ```
 
 > [!NOTE]

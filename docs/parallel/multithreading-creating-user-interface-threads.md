@@ -1,7 +1,7 @@
 ---
-title: "Multithreading: Creazione di thread dell'interfaccia utente | Microsoft Docs"
+title: "Multithreading: Creazione di thread dell'interfaccia utente MFC | Microsoft Docs"
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223e342bf2312919247d42564445a9e116ca59b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607395"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131560"
 ---
-# <a name="multithreading-creating-user-interface-threads"></a>Multithreading: creazione di thread dell'interfaccia utente
+# <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Creazione di thread dell'interfaccia utente MFC
 Un thread dell'interfaccia utente viene comunemente utilizzato per gestire l'input dell'utente e rispondere agli eventi utente indipendentemente dal thread in esecuzione altre parti dell'applicazione. Il thread principale dell'applicazione (forniti nel `CWinApp`-classe derivata) è già stato creato e avviato automaticamente. Questo argomento descrive i passaggi necessari per creare thread aggiuntivi dell'interfaccia utente.  
   
 La prima cosa è necessario eseguire durante la creazione di un thread dell'interfaccia utente è una classe derivata da [CWinThread](../mfc/reference/cwinthread-class.md). È necessario dichiarare e implementare questa classe mediante il [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) e [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) macro. Questa classe deve eseguire l'override di alcune funzioni e può eseguire l'override di altri utenti. Queste funzioni e ciò che devono effettuare vengono presentati nella tabella seguente.  
@@ -37,13 +37,12 @@ La prima cosa è necessario eseguire durante la creazione di un thread dell'inte
   
 |Funzione|Scopo|  
 |--------------|-------------|  
-
-|[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)| Eseguire la pulizia al termine di thread. In genere viene sottoposto a override. |  
-|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)| Eseguire l'inizializzazione dell'istanza di thread. Deve essere sottoposto a override. |  
-|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)| Eseguire l'elaborazione di tempo di inattività specifico del thread. In genere non viene sottoposto a override. |  
-|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)| Filtrare i messaggi prima che vengano inviati alle `TranslateMessage` e `DispatchMessage`. In genere non viene sottoposto a override. |  
-|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)| Intercettare le eccezioni non gestite generate da gestori di messaggi e comandi del thread. In genere non viene sottoposto a override. |  
-|[Eseguire](../mfc/reference/cwinthread-class.md#run)| Funzione di controllo per il thread. Contiene il message pump. Raramente sottoposto a override. |  
+|[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|Eseguire la pulizia al termine di thread. In genere viene sottoposto a override.|  
+|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|Eseguire l'inizializzazione dell'istanza di thread. Deve essere sottoposto a override.|  
+|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)|Eseguire l'elaborazione di tempo di inattività specifico del thread. In genere non viene sottoposto a override.|  
+|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrare i messaggi prima che vengano inviati alle `TranslateMessage` e `DispatchMessage`. In genere non viene sottoposto a override.|  
+|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|Intercettare le eccezioni non gestite generate da gestori di messaggi e comandi del thread. In genere non viene sottoposto a override.|  
+|[Run](../mfc/reference/cwinthread-class.md#run)|Funzione di controllo per il thread. Contiene il message pump. Raramente sottoposto a override.|  
 
   
 MFC fornisce due versioni di `AfxBeginThread` tramite l'overload di parametri: una che può creare solo thread di lavoro e una che può creare thread di lavoro o thread di interfaccia utente. Per avviare il thread dell'interfaccia utente, chiamare il secondo overload del [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), fornendo le informazioni seguenti:  
@@ -62,12 +61,12 @@ MFC fornisce due versioni di `AfxBeginThread` tramite l'overload di parametri: u
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
-- [Multithreading: terminazione dei thread](../parallel/multithreading-terminating-threads.md)  
+- [Multithreading: terminazione dei thread](multithreading-terminating-threads.md)  
   
-- [Multithreading: creazione di thread di lavoro](../parallel/multithreading-creating-worker-threads.md)  
+- [Multithreading: creazione di thread di lavoro](multithreading-creating-worker-threads.md)  
   
-- [Processi e thread](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
+- [Processi e thread](/windows/desktop/ProcThread/processes-and-threads)  
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md)

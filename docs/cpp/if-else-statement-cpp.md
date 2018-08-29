@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405110"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131891"
 ---
 # <a name="if-else-statement-c"></a>Istruzione if-else (C++)
 Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco if* vengono eseguiti solo se il *espressione if* restituisce un valore diverso da zero (o TRUE). Se il valore di *espressione* è diverso da zero, *statement1* e vengono eseguite le altre istruzioni nel blocco e l'altro blocco, se presente, viene ignorato. Se il valore di *espressione* è uguale a zero, quindi il blocco se viene ignorato e l'altro blocco, se presente, viene eseguito. Sono espressioni che restituiscono diverso da zero
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>Se l'istruzione con un inizializzatore
+## <a name="if_with_init"></a> Se l'istruzione con un inizializzatore
+
 **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): un' **se** istruzione può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questa forma di istruzione if quando la variabile è necessaria solo all'interno dell'ambito del blocco di if. 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  Il **else** clausola di un `if...else` istruzione è associata a più vicina precedente **se** istruzione nello stesso ambito che non ha un corrispondente **else** istruzione.   
 
-## <a name="constexpr-if-statements"></a>constexpr se le istruzioni
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione, è possibile usare un `constexpr if` istruzione per prendere decisioni di diramazione in fase di compilazione senza dovere ricorrere al multiplo overload della funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle decompressione (non è necessario alcun overload di parametro da zero): 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Se le istruzioni di constexpr
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione, è possibile usare un' **se constexpr** istruzione per prendere decisioni di diramazione in fase di compilazione senza dover ricorrere ai più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle decompressione (non è necessario alcun overload di parametro da zero): 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

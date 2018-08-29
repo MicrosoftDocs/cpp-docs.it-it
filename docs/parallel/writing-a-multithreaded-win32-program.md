@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 266bb7aa664489ee23c39554ebc91d1f99336f7e
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 98abce752ca02e40be68787d06fa8d4c17ce3e4b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541422"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131203"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Scrittura di un programma multithread Win32
 Quando si scrive un programma a thread multipli, è necessario coordinare il comportamento e [l'uso delle risorse del programma](#_core_sharing_common_resources_between_threads). È anche necessario assicurarsi che ogni thread riceve [il proprio stack](#_core_thread_stacks).  
@@ -37,7 +37,7 @@ Quando si scrive un programma a thread multipli, è necessario coordinare il com
 ##  <a name="_core_sharing_common_resources_between_threads"></a> Condivisione di risorse comuni tra i thread  
   
 > [!NOTE]
->  Per informazioni analoghe dal punto di vista di MFC, vedere [Multithreading: suggerimenti sulla programmazione](../parallel/multithreading-programming-tips.md) e [Multithreading: quando usare le classi di sincronizzazione](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
+>  Per informazioni analoghe dal punto di vista di MFC, vedere [Multithreading: suggerimenti sulla programmazione](multithreading-programming-tips.md) e [Multithreading: quando usare le classi di sincronizzazione](multithreading-when-to-use-the-synchronization-classes.md).  
   
 Ogni thread dispone di un proprio stack e registra la propria copia della CPU. Altre risorse, ad esempio file, i dati statici e della memoria dell'heap, vengono condivisi da tutti i thread nel processo. È necessario sincronizzare i thread che utilizzano le risorse comuni. Win32 offre diversi modi per sincronizzare le risorse, inclusi i semafori, sezioni critiche, gli eventi e i mutex.  
   
@@ -45,7 +45,7 @@ Quando più thread accedono ai dati statici, il programma deve fornire per i con
   
 Un mutex (abbreviazione di *Mutual*ual *ex*exclusion) è una soluzione di comunicazione tra thread o processi in esecuzione in modo asincrono una da altra. Questa comunicazione viene in genere usata per coordinare le attività di più thread o processi, in genere controllando l'accesso a una risorsa condivisa tramite il blocco e sblocco della risorsa. Per risolvere il problema *x*,*y* problema di aggiornamento delle coordinate, il thread di aggiornamento imposta un mutex per indicare che la struttura dei dati è in uso prima di eseguire l'aggiornamento. , Il mutex dopo che erano state elaborate entrambe le coordinate. Il thread di visualizzazione deve attendere per il mutex essere chiari prima di aggiornare la visualizzazione. Questo processo di attesa di un mutex viene spesso definito il blocco su un mutex perché il processo è bloccato e non può continuare fino a quando non cancella il mutex.  
   
-Il programma di Bounce. c illustrato nella [C programma Multithread di esempio](../parallel/sample-multithread-c-program.md) Usa un mutex denominato `ScreenMutex` per coordinare gli aggiornamenti della schermata. Ogni volta che uno dei thread visualizzato è pronto per scrivere nella schermata di chiama `WaitForSingleObject` con l'handle `ScreenMutex` e la costante INFINITE per indicare che il `WaitForSingleObject` chiamata deve bloccare il mutex e verifica il timeout. Se `ScreenMutex` è evidente, la funzione di attesa definisce il mutex in modo che altri thread non può interferire con la visualizzazione e continua l'esecuzione del thread. In caso contrario, il thread si blocca fino a quando non cancella il mutex. Quando il thread ha completato l'aggiornamento della visualizzazione, il mutex viene rilasciato tramite una chiamata `ReleaseMutex`.  
+Il programma di Bounce. c illustrato nella [C programma Multithread di esempio](sample-multithread-c-program.md) Usa un mutex denominato `ScreenMutex` per coordinare gli aggiornamenti della schermata. Ogni volta che uno dei thread visualizzato è pronto per scrivere nella schermata di chiama `WaitForSingleObject` con l'handle `ScreenMutex` e la costante INFINITE per indicare che il `WaitForSingleObject` chiamata deve bloccare il mutex e verifica il timeout. Se `ScreenMutex` è evidente, la funzione di attesa definisce il mutex in modo che altri thread non può interferire con la visualizzazione e continua l'esecuzione del thread. In caso contrario, il thread si blocca fino a quando non cancella il mutex. Quando il thread ha completato l'aggiornamento della visualizzazione, il mutex viene rilasciato tramite una chiamata `ReleaseMutex`.  
   
 Viene visualizzato sullo schermo e dati statici sono solo due delle risorse che richiedono una gestione accurata. Ad esempio, il programma potrebbe avere più thread accesso al file stesso. Poiché un altro thread potrà avere spostato il puntatore del file, ogni thread deve reimpostare il puntatore del file prima della lettura o scrittura. Inoltre, ogni thread necessario assicurarsi che non è interrotto tra il momento in cui che posiziona il puntatore e l'ora in cui che accede al file. Questi thread devono usare un semaforo per coordinare l'accesso al file facendo precedere ogni accesso al file con `WaitForSingleObject` e `ReleaseMutex` chiamate. L'esempio di codice seguente illustra questa tecnica:  
   
@@ -68,8 +68,8 @@ Thread che effettuano chiamate alla libreria di runtime di C o all'API Win32 dev
   
 Poiché ogni thread ha un proprio stack, è possibile evitare potenziali conflitti rispetto agli elementi di dati, usando come quantità ridotta di dati statici come possibili. Progettare il programma da usare le variabili dello stack automatici per tutti i dati che possono essere privati a un thread. Le uniche variabili globali nel programma di Bounce. c sono i mutex o le variabili che mai modificati dopo l'inizializzazione.  
   
-Win32 offre inoltre archiviazione Thread-Local (TLS) per archiviare i dati per ogni thread. Per altre informazioni, vedere [Thread Local Storage (TLS)](../parallel/thread-local-storage-tls.md).  
+Win32 offre inoltre archiviazione Thread-Local (TLS) per archiviare i dati per ogni thread. Per altre informazioni, vedere [Thread Local Storage (TLS)](thread-local-storage-tls.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Multithreading con C e Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading con C e Win32](multithreading-with-c-and-win32.md)

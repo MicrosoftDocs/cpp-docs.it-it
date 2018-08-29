@@ -1,7 +1,7 @@
 ---
 title: Enumerazioni (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/01/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 00a1b940ad6c792abbb13ec91b7376b73b2be16b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406253"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130950"
 ---
 # <a name="enumerations-c"></a>Enumerazioni (C++)
 Un'enumerazione è un tipo definito dall'utente costituito da un set di costanti integrali note come enumeratori.  
@@ -149,7 +149,8 @@ namespace ScopedEnumConversions
   
  Notare che la riga `hand = account_num;` causa ancora l'errore che si verifica con le enumerazioni senza ambito, come illustrato in precedenza. È consentita con un cast esplicito. Tuttavia, con le enumerazioni con ambito, la conversione tentata nell'istruzione successiva, `account_num = Suit::Hearts;`, non è più consentita senza un cast esplicito. 
 
-## <a name="enums-with-no-enumerators"></a>Enumerazioni con nessun enumeratori
+## <a name="no_enumerators"></a> Enumerazioni con nessun enumeratori
+
 **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): definendo un'enumerazione (normale o con ambita) con un tipo sottostante esplicito e non gli enumeratori, si può in effetti introduce un nuovo tipo di dati integrale che non dispone di alcuna conversione implicita in qualsiasi altro tipo. Tramite questo tipo anziché il relativo tipo sottostante predefinito, è possibile eliminare la possibilità di lievi errori dovuti a conversioni implicite accidentale.  
 
 

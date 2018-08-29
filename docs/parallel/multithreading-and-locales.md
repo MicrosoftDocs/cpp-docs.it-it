@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1e6bef9e707636d18ed5ecb78098661a753111ba
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540610"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132181"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading e impostazioni locali
 Sia la libreria di Runtime C e la libreria Standard C++ forniscono supporto per modificare le impostazioni locali del programma. In questo argomento vengono illustrati i problemi che si verificano quando si usa la funzionalità delle impostazioni locali di entrambe le raccolte in un'applicazione multithreading.  
@@ -446,7 +446,7 @@ unsigned __stdcall RunThreadB(void *params)
   
 ## <a name="see-also"></a>Vedere anche  
 
-[Supporto del multithreading per il codice precedente (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[Supporto del multithreading per il codice precedente (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
 [setlocale](../preprocessor/setlocale.md)   
