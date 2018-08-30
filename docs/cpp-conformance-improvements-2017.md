@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571503"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900700"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Miglioramenti della conformità C++ in Visual Studio 2017 versioni 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) e [15.8](#update_158)
 
@@ -1680,6 +1680,8 @@ struct S : Base<T> {
 ```
 
 Per correggere l'errore, modificare l'istruzione `return` in `return this->base_value;`.
+
+**Nota:** nella libreria Boost python è disponibile da lungo tempo una soluzione specifica per MSVC per una dichiarazione di inoltro del modello in [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). Nella modalità [/permissive-](build/reference/permissive-standards-conformance.md), a partire da Visual Studio 2017 versione 15.8 (_MSC_VER=1915), il compilatore MSVC gestisce correttamente la ricerca dei nomi dipendente dall'argomento ed è coerente con altri compilatori, rendendo superflua questa misura di protezione. Per evitare questo errore *C3861: 'unwind_type': identificatore non trovato*, vedere la [richiesta pull 229](https://github.com/boostorg/python/pull/229) nel repository Boostorg per aggiornare il file di intestazione. È già stata applicata la patch al pacchetto Boost [vcpkg](vcpkg.md), quindi se si recuperano o aggiornano le origini Boost da vcpkg non è necessario applicare la patch separatamente.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>dichiarazioni e definizioni con prototipo in namespace std
 

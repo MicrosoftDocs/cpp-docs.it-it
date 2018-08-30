@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540850"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198126"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funzionalità avanzate, Creazione guidata applicazione MFC
 In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'applicazione, ad esempio la Guida, il supporto di stampa e così via. In ogni sezione specificare supporto aggiuntivo per queste funzionalità avanzate.  
@@ -47,17 +47,17 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
  Supporta i socket Windows, che è possibile utilizzare per scrivere applicazioni in grado di comunicare su reti TCP/IP.  
   
  **Active Accessibility**  
- Aggiunge il supporto per [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) al [CWnd](../../mfc/reference/cwnd-class.md)-classi derivate, che è possibile usare per personalizzare l'interfaccia utente per una migliore interazione con i client di accessibilità.  
+ Aggiunge il supporto per [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) al [CWnd](../../mfc/reference/cwnd-class.md)-classi derivate, che è possibile usare per personalizzare l'interfaccia utente per una migliore interazione con i client di accessibilità.  
   
  **Manifesto controlli comuni**  
  Abilitato per impostazione predefinita. Genera un manifesto dell'applicazione per abilitare la DLL dei controlli comuni fornita con Microsoft Windows XP e i sistemi operativi più recenti.  
   
  La versione 6 della DLL dei controlli comuni non consente l'aggiornamento automatico della versione precedente dei controlli comuni utilizzata dalle applicazioni esistenti. Per utilizzare la versione 6 della DLL dei controlli comuni, è necessario creare un manifesto dell'applicazione che induca l'applicazione a caricare la DLL. La DLL dei controlli comuni supporta anche i temi di Windows XP.  
   
- Un manifesto dell'applicazione può anche specificare altre DLL e versioni necessarie all'applicazione. Per altre informazioni sui manifesti dell'applicazione, vedere [applicazioni isolate e assembly Side-by-Side](http://msdn.microsoft.com/library/dd408052) nel SDK di Windows.  
+ Un manifesto dell'applicazione può anche specificare altre DLL e versioni necessarie all'applicazione. Per altre informazioni sui manifesti dell'applicazione, vedere [applicazioni isolate e assembly Side-by-Side](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) nel SDK di Windows.  
   
  **Supporto Gestione riavvio**  
- Aggiunge il supporto per la [Gestione riavvio di Windows](/windows/desktop/RstMgr/using-restart-manager). In questo video viene illustrato come utilizzare Gestione riavvio da MFC: [procedura: utilizzo del nuovo Restart Manager](http://msdn.microsoft.com/vstudio/ee886407).  
+ Aggiunge il supporto per la [Gestione riavvio di Windows](/windows/desktop/RstMgr/using-restart-manager). In questo video viene illustrato come utilizzare Gestione riavvio da MFC: [procedura: utilizzo del nuovo Restart Manager](https://msdn.microsoft.com/vstudio/ee886407).  
   
  **Riquadri frame avanzati**  
  |Opzione|Descrizione|  

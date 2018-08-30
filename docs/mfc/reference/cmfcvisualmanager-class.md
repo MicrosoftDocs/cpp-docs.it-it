@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540648"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203642"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 Fornisce supporto per modificare l'aspetto dell'applicazione a un livello globale. La classe `CMFCVisualManager` funziona insieme a una classe che fornisce le istruzioni per disegnare i controlli GUI dell'applicazione utilizzando uno stile coerente. Queste altre classi sono definite come gestori visualizzazione ed ereditano da `CMFCBaseVisualManager`.  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  Un puntatore a un pulsante Nascondi automaticamente.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che specifica il colore del testo *pButton*.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che specifica il colore del testo *pButton*.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata per personalizzare il colore del testo di un pulsante Nascondi automaticamente nell'applicazione. A tale scopo, restituisce il colore che si vuole che l'applicazione da utilizzare come colore del testo.  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  Puntatore a una barra del titolo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore del testo nel *pBar*.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore del testo nel *pBar*.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo nella classe derivata per personalizzare il colore del testo per una barra del titolo. Nel metodo sottoposto a override, restituisce il colore desiderato.  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  Un puntatore all'elenco delle proprietà che disegna il framework.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore di sfondo *pPropList*.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore di sfondo *pPropList*.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per personalizzare il colore di sfondo di un elenco delle proprietà nell'applicazione.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Un puntatore all'elenco delle proprietà.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore del testo dell'elenco.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore del testo dell'elenco.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per personalizzare il colore del testo di un elenco delle proprietà nell'applicazione.  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  Puntatore alla finestra a schede in cui il fotogramma Disegna una scheda.  
   
  [out] *clrDark*  
- Un riferimento a un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro in cui questo metodo consente di memorizzare il colore del bordo scuro di una scheda.  
+ Un riferimento a un [COLORREF](/windows/desktop/gdi/colorref) parametro in cui questo metodo consente di memorizzare il colore del bordo scuro di una scheda.  
   
  [out] *clrBlack*  
  Un riferimento a un parametro COLORREF in cui questo metodo consente di memorizzare il colore del bordo della finestra scheda. Il colore predefinito per il bordo è nero.  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  Valore enumerato che specifica lo stato del pulsante.  
   
  [out] *clrText*  
- Un riferimento a un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro. Questo è un valore riservato e non viene attualmente utilizzato.  
+ Un riferimento a un [COLORREF](/windows/desktop/gdi/colorref) parametro. Questo è un valore riservato e non viene attualmente utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  Un rettangolo che specifica i limiti dei pulsanti di didascalia.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore del testo della didascalia.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore del testo della didascalia.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo in un gestore visualizzazione derivato per personalizzare l'aspetto delle barre del titolo riquadro.  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Puntatore a una barra del titolo. Il gestore visualizzazione disegna ciò [classe CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore del testo nella barra del titolo.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore del testo nella barra del titolo.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata per personalizzare l'aspetto della barra del titolo per una categoria della barra multifunzione. Per altre informazioni sulla barra del titolo, vedere [classe CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  Lo stato di avanzamento corrente per l'indicatore di stato.  
   
  [in] *clrBar*  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore iniziale per l'indicatore di stato. Il valore è l'inizio di una sfumatura di colore o il colore dell'indicatore di stato completato.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore iniziale per l'indicatore di stato. Il valore è l'inizio di una sfumatura di colore o il colore dell'indicatore di stato completato.  
   
  [in] *clrProgressBarDest*  
  Un parametro COLORREF che indica la fine di una sfumatura di colore per l'indicatore di stato. Se *clrProgressBarDest* è -1, il framework non consente di disegnare l'indicatore di stato come una sfumatura di colore. Al contrario, riempie l'indicatore di stato intera con il colore specificato da *clrBar*.  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  Un rettangolo che specifica i limiti della barra del titolo.  
   
  [out] *clrText*  
- Un riferimento a un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro. Il metodo scrive il colore del testo nella barra del titolo di questo parametro.  
+ Un riferimento a un [COLORREF](/windows/desktop/gdi/colorref) parametro. Il metodo scrive il colore del testo nella barra del titolo di questo parametro.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questo metodo viene riempita la barra del titolo con il colore per le ombreggiature basato su interfaccia corrente. Eseguire l'override di questo metodo in un gestore visualizzazione derivato per personalizzare il colore della barra del titolo di Outlook.  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  Un parametro booleano che specifica se viene premuto il pulsante.  
   
  [out] *clrText*  
- Un riferimento a un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro. Questo metodo consente di memorizzare il colore del testo del pulsante pagina outlook in questo parametro.  
+ Un riferimento a un [COLORREF](/windows/desktop/gdi/colorref) parametro. Questo metodo consente di memorizzare il colore del testo del pulsante pagina outlook in questo parametro.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione in un gestore visualizzazione derivata per personalizzare l'aspetto dei pulsanti pagina Outlook.  

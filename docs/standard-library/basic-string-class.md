@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957974"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209084"
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -881,7 +881,7 @@ Puntatore alla versione in formato C della stringa di richiamo.  Il valore del p
 
 ### <a name="remarks"></a>Note
 
-Gli oggetti di tipo string appartenenti alla classe modello C++ basic_string\<char> non terminano necessariamente con null. Il carattere null ' \0 ' viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo string e può essere parte della stringa come qualsiasi altro carattere. La conversione di const **char\*** in stringhe viene eseguita automaticamente, mentre la classe string non fornisce conversioni automatiche di stringhe in formato C in oggetti di tipo **basic_string\<char>**.
+Gli oggetti di tipo string appartenenti alla classe modello C++ basic_string\<char> non terminano necessariamente con null. Il carattere null ' \0 ' viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo string e può essere parte della stringa come qualsiasi altro carattere. È una conversione automatica dal **const char** <strong>\*</strong> in stringhe, ma la stringa di classe non fornisce conversioni automatiche di stringhe in formato C in oggetti di tipo **basic_string\<char >**.
 
 La stringa in formato C restituita non deve essere modificata o eliminata poiché la modifica potrebbe invalidare il puntatore alla stringa in quanto la stringa ha una durata limitata ed è di proprietà della classe string.
 
@@ -1652,7 +1652,7 @@ Puntatore al primo elemento della matrice che include il contenuto della stringa
 
 Gli oggetti di tipo string appartenenti alla classe modello C++ basic_string \<char> non terminano necessariamente con null. Il tipo restituito per `data` non è una stringa C valida, poiché ottiene accodato nessun carattere null. Il carattere null ' \0 ' viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo string e può essere parte dell'oggetto stringa come qualsiasi altro carattere.
 
-La conversione di const **char\*** in stringhe viene eseguita automaticamente, mentre la classe string non fornisce conversioni automatiche di stringhe in formato C in oggetti di tipo **basic_string \<char>**.
+È una conversione automatica dal **const char** <strong>\*</strong> in stringhe, ma la stringa di classe non fornisce conversioni automatiche di stringhe in formato C in oggetti di tipo **basic_string \<char >**.
 
 La stringa restituita non deve essere modificata o eliminata poiché la modifica potrebbe invalidare il puntatore alla stringa in quanto la stringa ha una durata limitata ed è di proprietà della classe string.
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 Il tipo è sinonimo di `allocator_type::pointer`.
 
-Per il tipo `string`, è equivalente a **char\***.
+Per il tipo `string`, è equivalente a **char**<strong>\*</strong>.
 
 ### <a name="example"></a>Esempio
 

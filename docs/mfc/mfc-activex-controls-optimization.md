@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028174"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220506"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Controlli ActiveX MFC: ottimizzazione
 Questo articolo illustra le tecniche che è possibile usare per ottimizzare i controlli ActiveX per ottenere prestazioni migliori.  
@@ -53,7 +53,7 @@ Questo articolo illustra le tecniche che è possibile usare per ottimizzare i co
 |**Passare il mouse quando inattivo le notifiche del puntatore** casella di controllo|Seleziona|[Inserimento di interazione del mouse in stato di inattività](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Codice di disegno ottimizzato** casella di controllo|Seleziona|[Ottimizzazione del disegno dei controlli](../mfc/optimizing-control-drawing.md)|  
   
- Per informazioni dettagliate sulle funzioni membro che implementano queste ottimizzazioni, vedere [COleControl](../mfc/reference/colecontrol-class.md). Le funzioni membro sono elencate da usare, ad esempio [privi di finestra operazioni](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) e [funzioni di gestione con puntatore inattiva](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Per informazioni dettagliate sulle funzioni membro che implementano queste ottimizzazioni, vedere [COleControl](../mfc/reference/colecontrol-class.md).  
   
  Per altre informazioni, vedere:  
   

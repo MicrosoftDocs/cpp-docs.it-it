@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa96bdb0471a4ff6a93006225a9492429d18bd2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028278"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211554"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 Fornisce la funzionalità del controllo intestazione comune di Windows.  
@@ -132,7 +132,7 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::SetOrderArray](#setorderarray)|Imposta l'ordine da sinistra a destra degli elementi in un controllo intestazione.|  
   
 ## <a name="remarks"></a>Note  
- Un controllo intestazione è una finestra che viene in genere posizionata di sopra di un set di colonne di testo o numeri. Contiene un titolo per ogni colonna e può essere diviso in parti. L'utente può trascinare separatori che separano le parti per impostare la larghezza di ogni colonna. Per un'illustrazione di un controllo intestazione, vedere [controlli intestazione](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
+ Un controllo intestazione è una finestra che viene in genere posizionata di sopra di un set di colonne di testo o numeri. Contiene un titolo per ogni colonna e può essere diviso in parti. L'utente può trascinare separatori che separano le parti per impostare la larghezza di ogni colonna. Per un'illustrazione di un controllo intestazione, vedere [controlli intestazione](/windows/desktop/Controls/header-controls).  
   
  Questo controllo (e pertanto il `CHeaderCtrl` classe) è disponibile solo per i programmi che vengono eseguiti in Windows 95 o 98 e Windows NT versione 3.51 e successive.  
   
@@ -183,7 +183,7 @@ BOOL ClearAllFilters();
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo implementa il comportamento del messaggio Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) con un valore di colonna pari a -1, come descritto nel SDK di Windows.  
+ Questo metodo implementa il comportamento del messaggio Win32 [HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter) con un valore di colonna pari a -1, come descritto nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
@@ -203,7 +203,7 @@ BOOL ClearFilter(int nColumn);
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo implementa il comportamento del messaggio Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), come descritto nel SDK di Windows.  
+ Questo metodo implementa il comportamento del messaggio Win32 [HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter), come descritto nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
@@ -221,10 +221,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *dwStyle*  
- Specifica lo stile del controllo intestazione. Per una descrizione di stili del controllo intestazione, vedere [stili del controllo intestazione](http://msdn.microsoft.com/library/windows/desktop/bb775241) nel SDK di Windows.  
+ Specifica lo stile del controllo intestazione. Per una descrizione di stili del controllo intestazione, vedere [stili del controllo intestazione](/windows/desktop/Controls/header-control-styles) nel SDK di Windows.  
   
  *Rect*  
- Specifica le dimensioni e la posizione del controllo intestazione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.  
+ Specifica le dimensioni e la posizione del controllo intestazione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.  
   
  *pParentWnd*  
  Specifica finestra padre del controllo intestazione, in genere un `CDialog`. Non deve essere NULL.  
@@ -238,7 +238,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Note  
  Si costruisce un `CHeaderCtrl` oggetto in due passaggi. In primo luogo, chiamare il costruttore e quindi chiamare `Create`, che crea il controllo di intestazione e lo collega al `CHeaderCtrl` oggetto.  
   
- Oltre gli stili del controllo intestazione, è possibile usare gli stili di controllo comuni seguenti per determinare le posizioni e si ridimensiona il controllo intestazione (vedere [stili dei controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775498) per altre informazioni):  
+ Oltre gli stili del controllo intestazione, è possibile usare gli stili di controllo comuni seguenti per determinare le posizioni e si ridimensiona il controllo intestazione (vedere [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) per altre informazioni):  
   
 - CCS_BOTTOM fa sì che il controllo per posizionarsi nella parte inferiore dell'area client della finestra padre e imposta la larghezza sia uguale all'oggetto padre larghezza della finestra.  
   
@@ -283,13 +283,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
   
  *dwStyle*  
- Stile del controllo intestazione. Per una descrizione di stili del controllo intestazione, vedere [stili del controllo intestazione](http://msdn.microsoft.com/library/windows/desktop/bb775241) nel SDK di Windows. Visualizzare [Create](#create) per un elenco di stili aggiuntivi.  
+ Stile del controllo intestazione. Per una descrizione di stili del controllo intestazione, vedere [stili del controllo intestazione](/windows/desktop/Controls/header-control-styles) nel SDK di Windows. Visualizzare [Create](#create) per un elenco di stili aggiuntivi.  
   
  *Rect*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
   
  *pParentWnd*  
  Puntatore alla finestra padre del controllo.  
@@ -318,7 +318,7 @@ CImageList* CreateDragImage(int nIndex);
  Un puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) oggetto se riesce; in caso contrario, NULL. L'elenco restituito contiene solo un'immagine.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308), come descritto nel SDK di Windows. Viene fornito per supportare l'intestazione elemento trascinamento della selezione.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_CREATEDRAGIMAGE](/windows/desktop/Controls/hdm-createdragimage), come descritto nel SDK di Windows. Viene fornito per supportare l'intestazione elemento trascinamento della selezione.  
   
  Il `CImageList` oggetto a cui punta il puntatore restituito è un oggetto temporaneo e viene eliminata durante l'elaborazione di tempo di inattività successivo.  
   
@@ -348,7 +348,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parametri  
  *lpDrawItemStruct*  
- Un puntatore a un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) struttura che descrive l'elemento da disegnare.  
+ Un puntatore a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struttura che descrive l'elemento da disegnare.  
   
 ### <a name="remarks"></a>Note  
  Il `itemAction` membro del `DRAWITEMSTRUCT` struttura definisce l'azione di disegno che deve essere eseguita.  
@@ -374,7 +374,7 @@ BOOL EditFilter(
  La colonna da modificare.  
   
  *bDiscardChanges*  
- Un valore che specifica come gestire l'utente di modifica delle modifiche se l'utente sta modificando il filtro quando il [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) messaggio viene inviato.  
+ Un valore che specifica come gestire l'utente di modifica delle modifiche se l'utente sta modificando il filtro quando il [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter) messaggio viene inviato.  
   
  Specificare TRUE per annullare le modifiche apportate dall'utente, o FALSO per accettare le modifiche apportate dall'utente.  
   
@@ -382,7 +382,7 @@ BOOL EditFilter(
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo implementa il comportamento del messaggio Win32 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), come descritto nel SDK di Windows.  
+ Questo metodo implementa il comportamento del messaggio Win32 [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter), come descritto nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
@@ -398,7 +398,7 @@ int GetBitmapMargin() const;
  La larghezza del margine di bitmap in pixel.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_GETBITMAPMARGIN](/windows/desktop/Controls/hdm-getbitmapmargin), come descritto nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
@@ -414,7 +414,7 @@ int GetFocusedItem() const;
  Indice a base zero dell'elemento dell'intestazione con lo stato attivo.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [HDM_GETFOCUSEDITEM](/windows/desktop/Controls/hdm-getfocuseditem) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile `m_headerCtrl`, che viene usato per accedere al controllo intestazione corrente. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -437,7 +437,7 @@ CImageList* GetImageList() const;
  Un puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332), come descritto nel SDK di Windows. Il `CImageList` oggetto a cui punta il puntatore restituito è un oggetto temporaneo e viene eliminata durante l'elaborazione di tempo di inattività successivo.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist), come descritto nel SDK di Windows. Il `CImageList` oggetto a cui punta il puntatore restituito è un oggetto temporaneo e viene eliminata durante l'elaborazione di tempo di inattività successivo.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
@@ -456,7 +456,7 @@ BOOL GetItem(
  Specifica l'indice in base zero dell'elemento da recuperare.  
   
  *pHeaderItem*  
- Puntatore a un [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struttura che riceve il nuovo elemento. Questa struttura viene usata con il `InsertItem` e `SetItem` funzioni membro. Tutti i flag impostati `mask` elemento assicurarsi che i valori negli elementi corrispondenti vengono compilati correttamente al momento della restituzione. Se il `mask` elemento è impostato su zero, i valori negli altri elementi di struttura sono prive di significato.  
+ Puntatore a un [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struttura che riceve il nuovo elemento. Questa struttura viene usata con il `InsertItem` e `SetItem` funzioni membro. Tutti i flag impostati `mask` elemento assicurarsi che i valori negli elementi corrispondenti vengono compilati correttamente al momento della restituzione. Se il `mask` elemento è impostato su zero, i valori negli altri elementi di struttura sono prive di significato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -490,14 +490,14 @@ BOOL GetItemDropDownRect(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iItem*|Indice in base zero di un elemento di intestazione il cui tipo è ' ultimo. Per altre informazioni, vedere la `fmt` membro della [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struttura.|  
-|[out] *lpRect*|Puntatore a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura per ricevere le informazioni di rettangolo di delimitazione.|  
+|[in] *iItem*|Indice in base zero di un elemento di intestazione il cui tipo è ' ultimo. Per altre informazioni, vedere la `fmt` membro della [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struttura.|  
+|[out] *lpRect*|Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura per ricevere le informazioni di rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questa funzione ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [HDM_GETITEMDROPDOWNRECT](/windows/desktop/Controls/hdm-getitemdropdownrect) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile `m_headerCtrl`, che viene usato per accedere al controllo intestazione corrente. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -523,13 +523,13 @@ BOOL GetItemRect(
  Indice a base zero dell'elemento del controllo intestazione.  
   
  *lpRect*  
- Un puntatore all'indirizzo di un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni di rettangolo di delimitazione.  
+ Un puntatore all'indirizzo di un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni di rettangolo di delimitazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo implementa il comportamento del messaggio Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), come descritto nel SDK di Windows.  
+ Questo metodo implementa il comportamento del messaggio Win32 [HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect), come descritto nel SDK di Windows.  
   
 ##  <a name="getorderarray"></a>  CHeaderCtrl:: GetOrderArray  
  Recupera l'ordine da sinistra a destra degli elementi in un controllo intestazione.  
@@ -551,7 +551,7 @@ BOOL GetOrderArray(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343), come descritto nel SDK di Windows. Viene fornito per supportare l'ordinamento degli elementi di intestazione.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_GETORDERARRAY](/windows/desktop/Controls/hdm-getorderarray), come descritto nel SDK di Windows. Viene fornito per supportare l'ordinamento degli elementi di intestazione.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
@@ -567,15 +567,15 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *lpRect*|Puntatore a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni di rettangolo di delimitazione.|  
+|[out] *lpRect*|Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni di rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questa funzione ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Se il controllo di intestazione contiene più elementi che possono essere visualizzate contemporaneamente, il controllo può visualizzare un pulsante di overflow che supporta lo scorrimento per elementi non visibili. Il controllo intestazione deve avere gli stili HDS_OVERFLOW e ' ultimo per visualizzare il pulsante di overflow. Il rettangolo di delimitazione racchiude il pulsante di overflow e si verifica solo quando viene visualizzato il pulsante di overflow. Per altre informazioni, vedere [stili del controllo intestazione](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
+ Se il controllo di intestazione contiene più elementi che possono essere visualizzate contemporaneamente, il controllo può visualizzare un pulsante di overflow che supporta lo scorrimento per elementi non visibili. Il controllo intestazione deve avere gli stili HDS_OVERFLOW e ' ultimo per visualizzare il pulsante di overflow. Il rettangolo di delimitazione racchiude il pulsante di overflow e si verifica solo quando viene visualizzato il pulsante di overflow. Per altre informazioni, vedere [stili del controllo intestazione](/windows/desktop/Controls/header-control-styles).  
   
- Questo metodo invia il [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile `m_headerCtrl`, che viene usato per accedere al controllo intestazione corrente. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -598,13 +598,13 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in, out] *phdhti*|Puntatore a un [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struttura che specifica il punto da testare e riceve i risultati del test.|  
+|[in, out] *phdhti*|Puntatore a un [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) struttura che specifica il punto da testare e riceve i risultati del test.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero dell'elemento dell'intestazione, se presente, in corrispondenza della posizione specificata; in caso contrario, -1.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [HDM_HITTEST](/windows/desktop/Controls/hdm-hittest) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile `m_headerCtrl`, che viene usato per accedere al controllo intestazione corrente. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -630,7 +630,7 @@ int InsertItem(
  Indice in base zero dell'elemento da inserire. Se il valore è zero, l'elemento viene inserito all'inizio del controllo intestazione. Se il valore è maggiore del valore massimo, l'elemento viene inserito alla fine del controllo intestazione.  
   
  *phdi*  
- Puntatore a un [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struttura che contiene informazioni sull'elemento da inserire.  
+ Puntatore a un [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struttura che contiene informazioni sull'elemento da inserire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice dell'elemento nuovo caso di esito positivo; in caso contrario, - 1.  
@@ -647,7 +647,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
   
 ### <a name="parameters"></a>Parametri  
  *pHeaderLayout*  
- Puntatore a un [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) struttura che contiene informazioni utilizzate per impostare le dimensioni e posizione di un controllo intestazione.  
+ Puntatore a un [HDLAYOUT](/windows/desktop/api/commctrl/ns-commctrl-_hd_layout) struttura che contiene informazioni utilizzate per impostare le dimensioni e posizione di un controllo intestazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -673,7 +673,7 @@ int OrderToIndex(int nOrder) const;
  L'indice dell'elemento, basato sull'ordine nel controllo header. L'indice conta da sinistra a destra, a partire da 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento della macro Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), come descritto nel SDK di Windows. Viene fornito per supportare l'ordinamento degli elementi di intestazione.  
+ Questa funzione membro implementa il comportamento della macro Win32 [HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355), come descritto nel SDK di Windows. Viene fornito per supportare l'ordinamento degli elementi di intestazione.  
   
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  Imposta la larghezza del margine di una bitmap in un controllo intestazione.  
@@ -690,13 +690,13 @@ int SetBitmapMargin(int nWidth);
  La larghezza del margine di bitmap in pixel.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_SETBITMAPMARGIN](/windows/desktop/Controls/hdm-setbitmapmargin), come descritto nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
 ##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
- Imposta l'intervallo di timeout tra l'ora di una modifica viene eseguita negli attributi di filtro e la registrazione di un' [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) notifica.  
+ Imposta l'intervallo di timeout tra l'ora di una modifica viene eseguita negli attributi di filtro e la registrazione di un' [HDN_FILTERCHANGE](/windows/desktop/Controls/hdn-filterchange) notifica.  
   
 ```  
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -710,7 +710,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
  L'indice del controllo filtro in fase di modifica.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_SETFILTERCHANGETIMEOUT](/windows/desktop/Controls/hdm-setfilterchangetimeout), come descritto nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
@@ -732,7 +732,7 @@ BOOL SetFocusedItem(int iItem);
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [HDM_SETFOCUSEDITEM](/windows/desktop/Controls/hdm-setfocuseditem) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile `m_headerCtrl`, che viene usato per accedere al controllo intestazione corrente. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -763,7 +763,7 @@ int SetHotDivider(int nIndex);
  L'indice della barra di divisione evidenziato.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363), come descritto nel SDK di Windows. Viene fornito per supportare l'intestazione elemento trascinamento della selezione.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_SETHOTDIVIDER](/windows/desktop/Controls/hdm-sethotdivider), come descritto nel SDK di Windows. Viene fornito per supportare l'intestazione elemento trascinamento della selezione.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
@@ -783,7 +783,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Un puntatore per il [CImageList](../../mfc/reference/cimagelist-class.md) oggetto precedentemente assegnato al controllo header.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365), come descritto nel SDK di Windows. Il `CImageList` oggetto a cui punta il puntatore restituito è un oggetto temporaneo e viene eliminata durante l'elaborazione di tempo di inattività successivo.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist), come descritto nel SDK di Windows. Il `CImageList` oggetto a cui punta il puntatore restituito è un oggetto temporaneo e viene eliminata durante l'elaborazione di tempo di inattività successivo.  
   
 ### <a name="example"></a>Esempio  
   Vedere l'esempio relativo [CHeaderCtrl::GetImageList](#getimagelist).  
@@ -802,7 +802,7 @@ BOOL SetItem(
  Indice a base zero dell'elemento da modificare.  
   
  *pHeaderItem*  
- Puntatore a un [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struttura che contiene informazioni sul nuovo elemento.  
+ Puntatore a un [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struttura che contiene informazioni sul nuovo elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -830,7 +830,7 @@ BOOL SetOrderArray(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento della macro Win32 [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369), come descritto nel SDK di Windows. Viene fornito per supportare l'ordinamento degli elementi di intestazione.  
+ Questa funzione membro implementa il comportamento della macro Win32 [HDM_SETORDERARRAY](/windows/desktop/Controls/hdm-setorderarray), come descritto nel SDK di Windows. Viene fornito per supportare l'ordinamento degli elementi di intestazione.  
   
 ### <a name="example"></a>Esempio  
   Vedere l'esempio relativo [CHeaderCtrl:: GetOrderArray](#getorderarray).  

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00d66c8d3842c03cc58e389bc308bc9515369b3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a3625667ccdbff85291d82ea519815bfc30c600f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882263"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219810"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 Questa classe fornisce metodi per il supporto di valori di proprietà predefinite.  
@@ -502,7 +502,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
   
 ### <a name="parameters"></a>Parametri  
  *ppPicture*  
- Variabile che riceve un puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.  
+ Variabile che riceve un puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
@@ -869,7 +869,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Parametri  
  *pPicture*  
- Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.  
+ Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
@@ -990,7 +990,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Parametri  
  *pPicture*  
- Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.  
+ Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  

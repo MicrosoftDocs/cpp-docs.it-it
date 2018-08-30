@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66c1e1eea44ee105176d8693cec95bcce3c18a1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407588"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200640"
 ---
 # <a name="argument-definitions"></a>Definizioni di argomenti
 Gli argomenti nel prototipo  
@@ -44,7 +44,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  Il primo argomento della riga di comando è sempre `argv` **[1]** ed è il penultimo `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e se si usa sia il primo e secondo argomento (*lpApplicationName* e *lpCommandLine*), `argv` **[0]** potrebbe non essere il file eseguibile nome; usare [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome dell'eseguibile e il relativo percorso completo.  
+>  Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) e se si usa sia il primo e secondo argomento (*lpApplicationName* e *lpCommandLine*), `argv` **[0]** potrebbe non essere il file eseguibile nome; usare [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome dell'eseguibile e il relativo percorso completo.  
   
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  *envp*  
