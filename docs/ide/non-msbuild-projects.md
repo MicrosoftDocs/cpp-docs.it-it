@@ -1,7 +1,7 @@
 ---
 title: Progetti Apri cartella in Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2017
+ms.date: 06/01/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337285"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131323"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Progetti Apri cartella in Visual C++
-In Visual Studio 2017 viene introdotta la funzionalità "Apri cartella", che consente di aprire una cartella di file di origine e avviare la codifica con il supporto di IntelliSense, esplorazione, refactoring, debug e così via. Non viene caricato nessun file con estensione sln o vcxproj. Se necessario, è possibile specificare attività personalizzate e creare e avviare parametri mediante semplici file con estensione json. Grazie alla funzionalità Apri cartella, Visual C++ ora può supportare non solo raccolte loose di file, ma anche la maggior parte dei sistemi di compilazione, tra cui CMake, Ninja, QMake (per progetti Qt), gyp, SCons, Gradle, Buck, make e molti altri ancora. 
+
+In Visual Studio 2017 e versioni successive la funzionalità "Apri cartella" consente di aprire una cartella di file di origine e avviare la codifica con il supporto di IntelliSense, esplorazione, refactoring, debug e così via. Non viene caricato nessun file con estensione sln o vcxproj. Se necessario, è possibile specificare attività personalizzate e creare e avviare parametri mediante semplici file con estensione json. Grazie alla funzionalità Apri cartella, Visual C++ ora può supportare non solo raccolte loose di file, ma anche la maggior parte dei sistemi di compilazione, tra cui CMake, Ninja, QMake (per progetti Qt), gyp, SCons, Gradle, Buck, make e molti altri ancora. 
 
 Per usare Apri cartella, nel menu principale selezionare *File | Apri | Cartella* oppure premere *CTRL+MAIUSC+ALT+O*. Esplora soluzioni visualizza immediatamente tutti i file presenti nella cartella. È possibile fare clic su qualsiasi file per iniziare a modificarlo. Visual Studio avvia l'indicizzazione dei file in background per abilitare le funzionalità IntelliSense, di navigazione e di refactoring. Man mano che si modificano, creano, spostano o eliminano file, Visual Studio tiene traccia automaticamente delle modifiche e aggiorna continuamente il relativo indice IntelliSense. 
   
@@ -30,7 +31,7 @@ Per usare Apri cartella, nel menu principale selezionare *File | Apri | Cartella
 CMake è integrato nell'IDE di Visual Studio come Strumenti Visual C++ per CMake, un componente del carico di lavoro desktop di C++. Per altre informazioni, vedere [CMake Tools for Visual C++](cmake-tools-for-visual-cpp.md) (Strumenti CMake per Visual C++).
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Progetti QMake destinati al framework Qt
-È possibile usare Strumenti Visual C++ per CMake e usare Qt come destinazione per la compilazione di progetti Qt, oppure usare Qt Visual Studio Extension. Nota: da agosto 2017, il [supporto di Qt Visual Studio Extension per Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/) è disponibile come versione beta.
+È possibile usare Strumenti Visual C++ per CMake per la compilazione di progetti Qt destinati a Qt oppure usare [Qt Visual Studio Extension](https://download.qt.io/development_releases/vsaddin/) per Visual Studio 2015 o Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck e così via
 È possibile usare qualsiasi sistema di compilazione in Visual C++ e sfruttare i vantaggi dell'IDE e del debugger di Visual C++. Quando si apre la cartella radice del progetto, Visual C++ usa regole euristiche per indicizzare i file di origine per IntelliSense e la ricerca. È possibile aggiungere suggerimenti sulla struttura del codice modificando il file CppProperties.json. In modo analogo è possibile configurare il programma di compilazione modificando il file launch.vs.json. 
