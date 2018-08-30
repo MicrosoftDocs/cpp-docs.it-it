@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 449887e2424ce86fd97407b416e741c908910dfa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e8d226f508f5f5e8c717bd671413f21377c0ae01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592011"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202290"
 ---
 # <a name="restricted"></a>restricted
 
@@ -43,7 +43,7 @@ Una o più interfacce che non possono essere chiamate in modo arbitrario su un o
 
 ## <a name="remarks"></a>Note
 
-Il **con restrizioni** attributi di C++ ha la stessa funzionalità come il [limitato](http://msdn.microsoft.com/library/windows/desktop/aa367157) attributo MIDL.
+Il **con restrizioni** attributi di C++ ha la stessa funzionalità come il [limitato](/windows/desktop/Midl/restricted) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

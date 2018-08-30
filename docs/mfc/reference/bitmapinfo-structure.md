@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b1bd896157d7f11792a5a6514e30ecd3d46a19
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0bc5adbb62e70a012d9dff4f9a390a46476aaa36
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336257"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200256"
 ---
 # <a name="bitmapinfo-structure"></a>Struttura BITMAPINFO
 Il `BITMAPINFO` struttura definisce le dimensioni e le informazioni relative ai colori per una mappa di bit di Windows indipendente dalla periferica (DIB).  
@@ -37,10 +37,10 @@ typedef struct tagBITMAPINFO {
   
 #### <a name="parameters"></a>Parametri  
  *bmiHeader*  
- Specifica un [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) struttura che contiene informazioni sulle dimensioni e formato di colore di una bitmap indipendente dalla periferica.  
+ Specifica un [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) struttura che contiene informazioni sulle dimensioni e formato di colore di una bitmap indipendente dalla periferica.  
   
  *bmiColors*  
- Specifica una matrice di [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) o DWORD i tipi di dati che definiscono i colori della bitmap.  
+ Specifica una matrice di [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) o DWORD i tipi di dati che definiscono i colori della bitmap.  
   
 ## <a name="remarks"></a>Note  
  Device-independent bitmap è costituito da due parti distinte: una `BITMAPINFO` struttura che descrive le dimensioni e colori della bitmap e una matrice di byte che specificano i pixel nella bitmap. I bit nella matrice vengono compresse insieme, ma ogni linea di digitalizzazione deve essere riempita con zeri terminerà in una **lungo** limite. Se l'altezza è positivo, l'origine della bitmap è l'angolo inferiore sinistro. Se l'altezza è negativo, l'origine è nell'angolo superiore sinistro.  
@@ -49,11 +49,11 @@ typedef struct tagBITMAPINFO {
   
  Per altre informazioni sul `BITMAPINFO` strutturare e valori appropriati per i membri del `BITMAPINFOHEADER` e `RGBQUAD` strutture, vedere gli argomenti seguenti nella documentazione di Windows SDK.  
   
-- [Struttura BITMAPINFO](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
+- [Struttura BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)  
   
-- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) struttura  
+- [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) struttura  
   
-- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struttura  
+- [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) struttura  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** WinGDI. h  
@@ -61,6 +61,6 @@ typedef struct tagBITMAPINFO {
 ## <a name="see-also"></a>Vedere anche  
  [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CBrush::CreateDIBPatternBrush](../../mfc/reference/cbrush-class.md#createdibpatternbrush)   
- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)   
- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)
+ [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376)   
+ [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)
 

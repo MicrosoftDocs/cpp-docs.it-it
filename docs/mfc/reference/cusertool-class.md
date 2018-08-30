@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541266"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202976"
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
 Uno strumento utente è una voce di menu che esegue un'applicazione esterna. Il **degli strumenti** scheda della finestra di **Personalizza** nella finestra di dialogo ( [classe CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) consente all'utente di aggiungere strumenti utente e per specificare il nome, comandi, argomenti, e directory iniziale per ogni strumento.  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  Diverso da zero se il comando è stato eseguito correttamente. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) per eseguire un comando associato allo strumento utente. La funzione ha esito negativo se il comando è vuoto o se [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) ha esito negativo.  
+ Le chiamate [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) per eseguire un comando associato allo strumento utente. La funzione ha esito negativo se il comando è vuoto o se [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) ha esito negativo.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Carica l'icona predefinita per uno strumento dell'utente.  

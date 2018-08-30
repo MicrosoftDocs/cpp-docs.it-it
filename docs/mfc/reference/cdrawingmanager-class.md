@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209170"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196060"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 Il `CDrawingManager` classe implementa gli algoritmi di disegni complessi.  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  Un handle alla bitmap DIB appena creato se questo metodo ha esito positivo; in caso contrario NULL.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni su come creare una bitmap DIB, vedere [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
+ Per altre informazioni su come creare una bitmap DIB, vedere [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap).  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  Consente di visualizzare le bitmap con pixel trasparente o semitrasparente.  
@@ -196,7 +196,7 @@ void DrawAlpha(
  Il rettangolo di origine.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo esegue la fusione alfa per due immagini bitmap. Per altre informazioni sulla fusione alfa, vedere [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) nel SDK di Windows.  
+ Questo metodo esegue la fusione alfa per due immagini bitmap. Per altre informazioni sulla fusione alfa, vedere [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) nel SDK di Windows.  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  Disegna un'ellisse con colori di riempimento e bordo specificati.  

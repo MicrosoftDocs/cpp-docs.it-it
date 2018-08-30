@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c7572ffd5a53456cd4555b82a8d3e235286339
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961708"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200346"
 ---
 # <a name="hashset-class"></a>Classe hash_set
 
@@ -121,11 +121,14 @@ class hash_set
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave* tipo di dati degli elementi da archiviare nell'oggetto hash_set.
+*Key*<br/>
+ Il tipo di dati elemento da archiviare in hash_set.
 
-*Tratti* tipo che include due oggetti funzione, uno della classe compare, vale a dire un predicato binario in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash che rappresenta un unario predicato mapping di valori chiave del gli elementi a valori unsigned integer di tipo `size_t`. Questo argomento è facoltativo e il `hash_compare` *< chiave,* **meno * * *\<chiave >>* è il valore predefinito.
+*Tratti*<br/>
+ Tipo che include due oggetti funzione, uno della classe compare, vale a dire un predicato binario in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash che rappresenta un mapping predicato unario chiave i valori degli elementi a valori senza segno Integer di tipo `size_t`. Questo argomento è facoltativo e il valore predefinito è `hash_compare<Key, less<Key> >`.
 
-*Allocatore* il tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione della memoria dell'oggetto hash_set. Questo argomento è facoltativo e il valore predefinito è **allocator * * *\<Key >.*
+*Allocatore*<br/>
+ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di hash_set e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<Key>`.
 
 ## <a name="remarks"></a>Note
 
@@ -559,7 +562,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* la chiave degli elementi per cui trovare un corrispondenza nell'oggetto hash_set.
+*key*<br/>
+ La chiave degli elementi per cui trovare un corrispondenza nell'hash_set.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1025,7 +1029,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_set da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_set in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1111,13 +1116,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE* posizione dell'elemento da rimuovere dall'hash_set.
+*WHERE*<br/>
+ Posizione dell'elemento da rimuovere dall'hash_set.
 
-*primo* posizione del primo elemento rimosso dall'hash_set.
+*first*<br/>
+ Posizione del primo elemento rimosso dall'hash_set.
 
-*ultimo* posizione immediatamente successiva all'ultimo elemento rimosso dall'hash_set.
+*last*<br/>
+ Posizione oltre l'ultimo elemento rimosso dall'hash_set.
 
-*chiave* la chiave degli elementi da rimuovere dall'hash_set.
+*key*<br/>
+ La chiave degli elementi da rimuovere dall'hash_set.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1225,7 +1234,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_set cercato.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza in base alla chiave di ordinamento di un elemento presente nell'oggetto hash_set in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1650,7 +1660,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_set da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_set in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2139,7 +2150,8 @@ void swap(hash_set& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* l'argomento di tipo hash_set che fornisce gli elementi da scambiare con l'oggetto hash_set di destinazione.
+*right*<br/>
+ Argomento di tipo hash_set che fornisce gli elementi da scambiare con l'oggetto hash_set di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -2214,7 +2226,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_set da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_set in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

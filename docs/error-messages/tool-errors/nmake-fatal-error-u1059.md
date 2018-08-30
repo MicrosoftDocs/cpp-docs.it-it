@@ -1,7 +1,7 @@
 ---
-title: Errore irreversibile U1059 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1059 di NMAKE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb038befdb7c587c6fe2a734003abba585c3e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b54919398c757bfe05f747ff57341f31decfc61
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320703"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200790"
 ---
 # <a name="nmake-fatal-error-u1059"></a>Errore irreversibile U1059 di NMAKE 
-Errore di sintassi: '}' mancante nel dipendente  
-  
- Un percorso di ricerca di un dipendente è stato specificato correttamente. È presente uno spazio nel percorso o la parentesi graffa chiusa (**}**) è stato omesso.  
-  
- La sintassi per una specifica della directory di un dipendente è  
-  
- **{**   
- ***directory* } dipendenti**  
-  
- dove `directories` specifica uno o più percorsi, ciascuno separati da un punto e virgola (**;**). Non sono consentiti spazi.  
-  
- Se o parte di un percorso di ricerca è sostituito da una macro, assicurarsi che non contenga spazi presenti nell'espansione della macro.
+
+> Errore di sintassi: '}' mancante nel dipendente
+
+Un percorso di ricerca di un dipendente è stato specificato correttamente. È presente uno spazio nel percorso o la parentesi graffa di chiusura (**}**) è stato omesso.
+
+La sintassi per una specifica di directory per un dipendente è
+
+> **{** *directory* **} dipendenti**
+
+in cui *directory* specifica uno o più percorsi, ciascuno separati da punto e virgola (**;**). Non sono consentiti spazi.
+
+Se da una macro viene sostituito o parte di un percorso di ricerca, verificare che non contenga spazi presenti nell'espansione della macro.

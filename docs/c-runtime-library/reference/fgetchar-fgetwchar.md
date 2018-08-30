@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194318"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -62,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-**fgetchar** restituisce il carattere letto come un **int** o restituire **EOF** per indicare un errore o fine del file. **_ * * * fgetwchar** viene restituito, come un [wint_t](../../c-runtime-library/standard-types.md), il carattere "wide" che corrisponde al carattere letto o restituisce **WEOF** per indicare un errore o fine del file. Per entrambe le funzioni, usare **feof** oppure **ferror** per distinguere tra un errore e una condizione di fine del file.
+**\_fgetchar** restituisce il carattere letto come un **int** o restituisce `EOF` per indicare un errore o fine del file. **\_fgetwchar** viene restituito, come un [wint_t](../../c-runtime-library/standard-types.md), il carattere wide che corrisponde al carattere letto o restituisce `WEOF` per indicare un errore o fine del file. Per entrambe le funzioni, usare **feof** oppure **ferror** per distinguere un errore e una condizione di fine del file.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni leggono un singolo carattere da **stdin**. La funzione quindi incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Se il flusso è alla fine del file, viene impostato l'indicatore di fine del file per il flusso.
+Queste funzioni leggono un singolo carattere dalla **stdin**. La funzione quindi incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Se il flusso è alla fine del file, viene impostato l'indicatore di fine del file per il flusso.
 
-**fgetchar** equivale a `fgetc( stdin )`. Inoltre è equivalente a **getchar**, ma è implementata solo come funzione, anziché come una funzione e una macro. **fgetwchar** è la versione a caratteri "wide" di **fgetchar**.
+**fgetchar** equivale a `fgetc( stdin )`. È anche equivalente a **getchar**, ma implementata solo come funzione, anziché come una funzione e macro. **fgetwchar** è la versione a caratteri wide di **fgetchar**.
 
 Queste funzioni non sono compatibili con gli standard ANSI.
 
@@ -85,7 +85,7 @@ Queste funzioni non sono compatibili con gli standard ANSI.
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console, ovvero**stdin**, **stdout**, e **stderr**, ovvero devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console —**stdin**, **stdout**, e **stderr**, ovvero devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

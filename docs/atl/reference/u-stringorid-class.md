@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886167"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196397"
 ---
 # <a name="ustringorid-class"></a>Classe u_stringorid
 Classe dell'adattatore in questo argomento consente di eseguire i nomi delle risorse (LPCTSTRs) o gli ID delle risorse (UINTs) deve essere passato a una funzione senza la necessità di convertire l'ID in una stringa utilizzando la macro MAKEINTRESOURCE al chiamante.  
@@ -53,7 +53,7 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Identificatore della risorsa.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe è progettata per l'implementazione del wrapper per le API di gestione risorse di Windows, ad esempio la [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), e [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funzioni che accettano un argomento LPCTSTR che potrebbe essere il nome di una risorsa o al relativo ID.  
+ Questa classe è progettata per l'implementazione del wrapper per le API di gestione risorse di Windows, ad esempio la [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), e [LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua) funzioni che accettano un argomento LPCTSTR che potrebbe essere il nome di una risorsa o al relativo ID.  
   
  La classe definisce due overload del costruttore: uno accetta un argomento LPCTSTR e l'altro accetta un argomento UINT. L'argomento UINT viene convertito in un tipo di risorsa compatibile con le funzioni di gestione risorse di Windows usando la macro MAKEINTRESOURCE e il risultato archiviato nel membro dati della classe, [m_lpstr](#_u_stringorid__m_lpstr). L'argomento del costruttore LPCTSTR verrà archiviato direttamente, senza conversione.  
   

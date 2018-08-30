@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e25f33e882769219200e6b9a6f8a0949a01d661
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593357"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200218"
 ---
 # <a name="module-c"></a>modulo (C++)
 
@@ -73,7 +73,7 @@ Il numero di versione da assegnare al blocco di libreria. Il valore predefinito 
 L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare il *uuid* del blocco di libreria, è possibile ripetere l'operazione usando l'identificatore **uuidof (** *NomeLibreria* **)**.
 
 *lcid*  
-Il parametro di localizzazione. Per altre informazioni, vedere [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .
+Il parametro di localizzazione. Visualizzare [lcid](/windows/desktop/Midl/lcid) per altre informazioni.
 
 *controllo* (facoltativo)  
 Specifica che tutte le coclassi nella libreria sono controlli.
@@ -82,7 +82,7 @@ Specifica che tutte le coclassi nella libreria sono controlli.
 Specifica la libreria dei tipi.
 
 *helpstringdll* (facoltativo)  
-Imposta il nome del file DLL da usare per eseguire una ricerca di stringhe di documento. Per altre informazioni, vedere [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .
+Imposta il nome del file DLL da usare per eseguire una ricerca di stringhe di documento. Visualizzare [helpstringdll](/windows/desktop/Midl/helpstringdll) per altre informazioni.
 
 *HelpFile* (facoltativo)  
 Il nome del **aiutare** file della libreria dei tipi.
@@ -94,10 +94,10 @@ Il **Helpid** per questa libreria dei tipi.
 Per altre informazioni, vedere [helpstringcontext](../windows/helpstringcontext.md) .
 
 *nascosto* (facoltativo)  
-Impedisce la visualizzazione dell'intera libreria. Questo utilizzo è pensato per i controlli. Gli host devono creare una nuova libreria dei tipi che esegue il wrapping del controllo con le proprietà estese. Per altre informazioni, vedere l'attributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .
+Impedisce la visualizzazione dell'intera libreria. Questo utilizzo è pensato per i controlli. Gli host devono creare una nuova libreria dei tipi che esegue il wrapping del controllo con le proprietà estese. Vedere le [nascosto](/windows/desktop/Midl/hidden) attributo MIDL per altre informazioni.
 
 *con restrizioni* (facoltativo)  
-I membri della libreria non possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .
+I membri della libreria non possono essere chiamati in modo arbitrario. Vedere le [limitato](/windows/desktop/Midl/restricted) attributo MIDL per altre informazioni.
 
 *personalizzato* (facoltativo)  
 Uno o più attributi; è simile all'attributo [custom](../windows/custom-cpp.md) . Il primo parametro per *personalizzato* è il GUID dell'attributo. Ad esempio:
@@ -124,15 +124,15 @@ Se questo attributo viene usato in un progetto che usa ATL, il comportamento del
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) si usa come classe base e punti di ingresso standard della DLL richiesti per un server COM. Questi punti di ingresso sono [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368)e [DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) si usa come classe base e punti di ingresso standard della DLL richiesti per un server COM. Questi punti di ingresso vengono [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) viene usato come classe di base e punto di ingresso standard dell'eseguibile [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) viene usato come classe di base e punto di ingresso standard dell'eseguibile [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **unspecified**
 
@@ -193,7 +193,7 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 [Attributi autonomi](../windows/stand-alone-attributes.md)  
 [Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
 [usesgetlasterror](../windows/usesgetlasterror.md)  
-[Libreria](http://msdn.microsoft.com/library/windows/desktop/aa367069)  
+[Libreria](/windows/desktop/Midl/library)  
 [helpcontext](../windows/helpcontext.md)  
 [helpstring](../windows/helpstring.md)  
 [helpfile](../windows/helpfile.md)  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257573bad0650f7e721c2d584ed8f22ba7b2d31b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e176742295b0e2f40e19c063aae38079ac3537
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026224"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196220"
 ---
 # <a name="coleinsertdialog-class"></a>Classe COleInsertDialog
 Utilizzata per la finestra di dialogo di inserimento oggetto OLE.  
@@ -82,7 +82,7 @@ class COleInsertDialog : public COleDialog
 > [!NOTE]
 >  Il codice dell'applicazione contenitore generato dalla procedura guidata Usa questa classe.  
   
- Per altre informazioni, vedere la [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) struttura nel SDK di Windows.  
   
  Per altre informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -184,7 +184,7 @@ INT_PTR
   
 -   IDCANCEL, se l'utente ha annullato la finestra di dialogo.  
   
--   IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) funzione nel SDK di Windows.  
+-   IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIInsertObject](/windows/desktop/api/oledlg/nf-oledlg-oleuiinsertobjecta) funzione nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
  Se si desidera inizializzare i vari controlli di finestra di dialogo impostando i membri del [m_io](#m_io) struttura, è necessario eseguire questa operazione prima di chiamare `DoModal`, ma dopo che viene costruito l'oggetto finestra di dialogo.  
@@ -202,7 +202,7 @@ REFCLSID GetClassID() const;
  Restituisce il CLSID associato all'elemento selezionato.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [CLSID chiave](http://msdn.microsoft.com/library/windows/desktop/ms691424) nel SDK di Windows.  
+ Per altre informazioni, vedere [CLSID chiave](/windows/desktop/com/clsid-key-hklm) nel SDK di Windows.  
   
 ##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  Chiamare questa funzione per determinare se l'utente sceglie di visualizzare l'elemento selezionato come icona.  
@@ -221,7 +221,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione solo se [DoModal](#domodal) restituisce IDOK.  
   
- Per altre informazioni sugli aspetti di disegno, vedere [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura dei dati in Windows SDK.  
+ Per altre informazioni sugli aspetti di disegno, vedere [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura dei dati in Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  Chiamare questa funzione per ottenere un handle del metafile che contiene l'aspetto delle icone dell'elemento selezionato.  
@@ -282,7 +282,7 @@ OLEUIINSERTOBJECT m_io;
 ### <a name="remarks"></a>Note  
  I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.  
   
- Per altre informazioni, vedere la [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) struttura nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio MFC OCLIENT](../../visual-cpp-samples.md)   

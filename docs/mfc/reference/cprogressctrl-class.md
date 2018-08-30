@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539467"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196190"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 Fornisce la funzionalità del controllo indicatore di stato comune di Windows.  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *dwStyle*  
- Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione di finestra stylesdescribed nelle [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows, oltre a indicatore degli stili del controllo, al controllo di stato seguente:  
+ Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione di finestra stylesdescribed nelle [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows, oltre a indicatore degli stili del controllo, al controllo di stato seguente:  
   
 - PBS_VERTICAL consente di visualizzare informazioni di stato verticalmente, dall'alto verso il basso. Senza questo flag, controllo indicatore di stato vengono visualizzati orizzontalmente, da sinistra a destra.  
   
 - Graduale consente di visualizzare PBS_SMOOTH, smooth compilando il controllo barra di stato di avanzamento. Senza questo flag, riempirà con i blocchi.  
   
  *Rect*  
- Specifica le dimensioni e la posizione del controllo indicatore di stato. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Poiché il controllo deve essere una finestra figlio, delle coordinate specificate sono relativo all'area client del *pParentWnd*.  
+ Specifica le dimensioni e la posizione del controllo indicatore di stato. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Poiché il controllo deve essere una finestra figlio, delle coordinate specificate sono relativo all'area client del *pParentWnd*.  
   
  *pParentWnd*  
  Specifica lo stato di avanzamento della barra di finestra padre del controllo, in genere un `CDialog`. Non deve essere NULL.  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
   
  *dwStyle*  
- Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione degli stili finestra descritto nella [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows.  
+ Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione degli stili finestra descritto nella [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows.  
   
  *Rect*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
   
  *pParentWnd*  
  Puntatore alla finestra padre del controllo.  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il colore dell'indicatore di stato corrente, rappresentato come un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore o CLR_DEFAULT se il colore della barra di stato di avanzamento indicatore è il colore predefinito.  
+ Il colore dell'indicatore di stato corrente, rappresentato come un [COLORREF](/windows/desktop/gdi/colorref) valore o CLR_DEFAULT se il colore della barra di stato di avanzamento indicatore è il colore predefinito.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Ottiene il colore di sfondo della barra di stato di avanzamento corrente.  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il colore di sfondo della barra di stato di avanzamento corrente, rappresentato come un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore.  
+ Il colore di sfondo della barra di stato di avanzamento corrente, rappresentato come un [COLORREF](/windows/desktop/gdi/colorref) valore.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Recupera la posizione corrente dell'indicatore di stato.  
@@ -282,7 +282,7 @@ int GetState() const;
 |PBST_PAUSED|In pausa|  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  L'esempio di codice seguente definisce la variabile `m_progressCtrl`, che viene usata per accedere a livello di codice al controllo indicatore di stato. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>Note  
  L'incremento di passaggio è la quantità da una chiamata a [CProgressCtrl::StepIt](#stepit) aumenta la posizione corrente dell'indicatore di stato.  
   
- Questo metodo invia il [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  L'esempio di codice seguente definisce la variabile `m_progressCtrl`, che viene usata per accedere a livello di codice al controllo indicatore di stato. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *clrBar*|Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che specifica il nuovo colore indicatore dell'indicatore di stato. Specificare CLR_DEFAULT per causare l'indicatore di stato da utilizzare sul colore predefinito.|  
+|[in] *clrBar*|Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che specifica il nuovo colore indicatore dell'indicatore di stato. Specificare CLR_DEFAULT per causare l'indicatore di stato da utilizzare sul colore predefinito.|  
   
 ### <a name="return-value"></a>Valore restituito  
 
-Il colore precedente della barra di indicatore di stato di avanzamento, rappresentato come un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore o CLR_DEFAULT se il colore della barra di indicatore di stato di avanzamento è il colore predefinito.  
+Il colore precedente della barra di indicatore di stato di avanzamento, rappresentato come un [COLORREF](/windows/desktop/gdi/colorref) valore o CLR_DEFAULT se il colore della barra di indicatore di stato di avanzamento è il colore predefinito.  
   
 ### <a name="remarks"></a>Note  
 
 Il `SetBarColor` metodo imposta l'indicatore di stato solo se color di una Vista di Windows [tema](/windows/desktop/Controls/visual-styles-overview) non è attiva.  
   
- Questo metodo invia il [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  L'esempio di codice seguente definisce la variabile `m_progressCtrl`, che viene usata per accedere a livello di codice al controllo indicatore di stato. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  Valore COLORREF che specifica il nuovo colore di sfondo. Specificare il valore CLR_DEFAULT per usare il colore di sfondo predefinito per l'indicatore di stato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che indica il colore di sfondo precedente o CLR_DEFAULT se il colore di sfondo è il colore predefinito.  
+ Il [COLORREF](/windows/desktop/gdi/colorref) valore che indica il colore di sfondo precedente o CLR_DEFAULT se il colore di sfondo è il colore predefinito.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>Note  
  Quando è attivata la modalità di selezione, la barra di avanzamento viene animata e scorre, ad esempio un segno in un testo scorrevole teatro.  
   
- Questo metodo invia il [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  L'esempio di codice seguente definisce la variabile `m_progressCtrl`, che viene usata per accedere a livello di codice al controllo indicatore di stato. Questa variabile viene usata nell'esempio riportato di seguito.  
@@ -484,7 +484,7 @@ int SetState(int iState);
  Stato precedente del controllo indicatore di stato corrente.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  L'esempio di codice seguente definisce la variabile `m_progressCtrl`, che viene usata per accedere a livello di codice al controllo indicatore di stato. Questa variabile viene usata nell'esempio riportato di seguito.  

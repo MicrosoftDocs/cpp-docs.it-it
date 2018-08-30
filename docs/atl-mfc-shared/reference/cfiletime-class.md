@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 3ab0e457f90f3130295d287ae9a32d18ab212d50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208663"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202603"
 ---
 # <a name="cfiletime-class"></a>Classe CFileTime
 Questa classe fornisce metodi per gestire i valori di data e ora associati a un file.  
@@ -107,7 +107,7 @@ class CFileTime :  public FILETIME
 |Day|Ora \* 24|  
 |Settimana|Giorno \* 7|  
   
- **Nota** non tutti i file System in grado di registrare la creazione e l'ora dell'ultimo accesso e non tutti i sistemi di file registrano nello stesso modo. Per esempio, nel file system FAT di Windows NT, creare ora ha una risoluzione di 10 millisecondi, ora di scrittura ha una risoluzione di 2 secondi e ora di accesso ha una risoluzione di 1 giorno (Data access). Su NTFS, ora di accesso ha una risoluzione di 1 ora. Inoltre, FAT registra volte su disco nell'ora locale, ma NTFS registra volte su disco in formato UTC. Per altre informazioni, vedere [tempi File](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
+ **Nota** non tutti i file System in grado di registrare la creazione e l'ora dell'ultimo accesso e non tutti i sistemi di file registrano nello stesso modo. Per esempio, nel file system FAT di Windows NT, creare ora ha una risoluzione di 10 millisecondi, ora di scrittura ha una risoluzione di 2 secondi e ora di accesso ha una risoluzione di 1 giorno (Data access). Su NTFS, ora di accesso ha una risoluzione di 1 ora. Inoltre, FAT registra volte su disco nell'ora locale, ma NTFS registra volte su disco in formato UTC. Per altre informazioni, vedere [tempi File](/windows/desktop/SysInfo/file-times).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `FILETIME`  
@@ -128,7 +128,7 @@ CFileTime(ULONGLONG nTime) throw();
   
 ### <a name="parameters"></a>Parametri  
  *full-text*  
- Oggetto [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struttura.  
+ Oggetto [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura.  
   
  *Nintervallo*  
  Data e ora espresse come valore a 64 bit.  
@@ -418,7 +418,7 @@ static const ULONGLONG Week = Day* 7;
  Vedere l'esempio relativo [CFileTime::Millisecond](#millisecond).  
   
 ## <a name="see-also"></a>Vedere anche  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [Classe CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

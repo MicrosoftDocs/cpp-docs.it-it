@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ddb4396d5ba2b7057286e1a0730eb4baa3fdd0d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fc66a63478c07ee47ae32f536ebad6f9ee6f20e2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598398"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194333"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -36,7 +36,7 @@ Indica che il membro delle informazioni sul tipo è il membro predefinito per la
 
 ## <a name="remarks"></a>Note
 
-Il **uidefault** attributi di C++ ha la stessa funzionalità come la [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) attributo MIDL.
+Il **uidefault** attributi di C++ ha la stessa funzionalità come la [uidefault](/windows/desktop/Midl/uidefault) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

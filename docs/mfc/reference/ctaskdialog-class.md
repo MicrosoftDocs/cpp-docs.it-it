@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff939abc93c38be198bf6edb21cbb3e3dc9fbaa
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900852"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202395"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -837,7 +837,7 @@ L'implementazione predefinita restituisce S_OK.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo chiama [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) prima che venga restituito S_OK.
+Questo metodo chiama [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) prima che venga restituito S_OK.
 
 L'override del metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -1619,7 +1619,7 @@ I valori per *wParam* e *lParam* dipendono il messaggio generato specifico. È p
 |TDN_CREATED|Non usato.|Non usato.|
 |TDN_NAVIGATED|Non usato.|Non usato.|
 |TDN_BUTTON_CLICKED|Il pulsante di comando di controllo ID.|Non usato.|
-|TDN_HYPERLINK_CLICKED|Non usato.|Oggetto [LPCWSTR](http://msdn.microsoft.com/library/windows/desktop/aa383751) struttura che contiene il collegamento.|
+|TDN_HYPERLINK_CLICKED|Non usato.|Oggetto [LPCWSTR](/windows/desktop/WinProg/windows-data-types) struttura che contiene il collegamento.|
 |TDN_TIMER|Tempo in millisecondi dopo il `CTaskDialog` è stato creato o è stato reimpostato il timer.|Non usato.|
 |TDN_DESTROYED|Non usato.|Non usato.|
 |TDN_RADIO_BUTTON_CLICKED|L'ID del pulsante di opzione.|Non usato.|

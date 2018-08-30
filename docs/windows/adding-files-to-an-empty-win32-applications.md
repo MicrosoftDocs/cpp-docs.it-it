@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2a01c319f8a93931539b8ba79cc9c9f554317bab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594403"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200169"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Aggiunta di file a un'applicazione Win32 vuota
 
@@ -45,4 +45,4 @@ Per aggiungere i file di origine, intestazione né i file di risorse al progetto
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione di un'applicazione desktop di Windows vuota](../windows/creating-an-empty-windows-desktop-application.md)  
-[Distribuzione di applicazioni](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[Distribuzione di applicazioni](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

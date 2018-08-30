@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338860"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197003"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (classe)
 Implementa un metafile di Windows che contiene una sequenza di comandi GDI (Graphics Device Interface) che è possibile riprodurre per creare un'immagine o un testo desiderato.  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  Dopo aver inviato i comandi desiderati al metafile, chiamare il `Close` funzione membro, che chiude i contesti di dispositivo metafile e restituisce un handle del metafile. Quindi eliminare il `CMetaFileDC` oggetto.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) quindi usare l'handle del metafile per riprodurre ripetutamente il metafile. Metafile può anche essere modificato dalle funzioni di Windows, ad esempio [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), che consente di copiare un metafile per disco.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) quindi usare l'handle del metafile per riprodurre ripetutamente il metafile. Metafile può anche essere modificato dalle funzioni di Windows, ad esempio [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea), che consente di copiare un metafile per disco.  
   
- Quando il metafile non è più necessario, eliminarlo dalla memoria con il [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funzione Windows.  
+ Quando il metafile non è più necessario, eliminarlo dalla memoria con il [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) funzione Windows.  
   
  È anche possibile implementare il `CMetaFileDC` dell'oggetto in modo da poter gestire entrambe le chiamate di output e attributo, ad esempio chiamate GDI `GetTextExtent`. Un metafile di questo tipo è più flessibile e più riutilizzare facilmente codice GDI generale, che spesso è costituito da una combinazione di chiamate di output e di attributo. Il `CMetaFileDC` due contesti di dispositivo, eredita `m_hDC` e `m_hAttribDC`, da CDC. Il `m_hDC` contesto di dispositivo gestisce tutto [CDC](../../mfc/reference/cdc-class.md) GDI chiamate di output e il `m_hAttribDC` contesto di dispositivo gestisce tutte le chiamate di attributo GDI CDC. In genere, questi contesti di due dispositivo fare riferimento allo stesso dispositivo. Nel caso di `CMetaFileDC`, l'attributo controller di dominio è impostato su NULL per impostazione predefinita.  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  Un HMETAFILE valido se la funzione ha esito positivo. in caso contrario NULL.  
   
 ### <a name="remarks"></a>Note  
- L'handle del metafile di Windows possa essere utilizzato anche per modificare il metafile con funzioni di Windows, ad esempio [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+ L'handle del metafile di Windows possa essere utilizzato anche per modificare il metafile con funzioni di Windows, ad esempio [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea).  
   
- Eliminare il metafile dopo l'uso tramite una chiamata di Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) (funzione).  
+ Eliminare il metafile dopo l'uso tramite una chiamata di Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) (funzione).  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Chiude un contesto di dispositivo metafile avanzato e restituisce un handle che identifica un formato enhanced metafile.  

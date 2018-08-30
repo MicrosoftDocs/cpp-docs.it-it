@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2d5e0fac0d9ab89ef14a3bfafc78fe1c1138673
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd546f6d3eb3b2eae60b4bbc8c8fa9b0b4ed00f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602007"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201025"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -36,7 +36,7 @@ Indica che il database verrà immediatamente notificato tutte le modifiche appor
 
 ## <a name="remarks"></a>Note
 
-Il **immediatebind** attributi di C++ ha la stessa funzionalità come la [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) attributo MIDL.
+Il **immediatebind** attributi di C++ ha la stessa funzionalità come la [immediatebind](/windows/desktop/Midl/immediatebind) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

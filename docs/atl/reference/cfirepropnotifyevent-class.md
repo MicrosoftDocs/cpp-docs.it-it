@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3ec6fb0d54cd748b707c81b88e09fb7d846aaa2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881529"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194424"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Classe CFirePropNotifyEvent
 Questa classe fornisce metodi per inviare la notifica sink del contenitore relative alle modifiche delle proprietà di controllo.  
@@ -60,7 +60,7 @@ class CFirePropNotifyEvent
  **Intestazione:** atlctl. h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- Notifica tutti connessa [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfacce (per ogni punto di connessione dell'oggetto) che la proprietà dell'oggetto specificato è stato modificato.  
+ Notifica tutti connessa [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfacce (per ogni punto di connessione dell'oggetto) che la proprietà dell'oggetto specificato è stato modificato.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -80,7 +80,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  Questa funzione è sicura chiamare anche se il controllo non supporta i punti di connessione.  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- Notifica tutti connessa [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfacce (per ogni punto di connessione dell'oggetto) che la proprietà dell'oggetto specificato sta per essere modificata.  
+ Notifica tutti connessa [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfacce (per ogni punto di connessione dell'oggetto) che la proprietà dell'oggetto specificato sta per essere modificata.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
