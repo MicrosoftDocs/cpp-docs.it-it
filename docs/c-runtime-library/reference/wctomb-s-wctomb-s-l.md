@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450908"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195119"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -97,15 +97,15 @@ Condizioni di errore
 |qualsiasi|>**INT_MAX**|**EINVAL**|non modificato|
 |qualsiasi|troppo piccolo|**EINVAL**|non modificato|
 
-Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **wctomb** restituisce **EINVAL** e imposta **errno** a **EINVAL**.
+Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **wctomb** restituisce **EINVAL** e imposta **errno** al **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **wctomb_s** funzione converte relativo *wchar* argomento nel carattere multibyte corrispondente e archivia il risultato al *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma.
+Il **wctomb_s** funzione converte relativo *wchar* argomento nel carattere multibyte corrispondente e archivia il risultato alla *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma.
 
-Se **wctomb_s** converte il carattere "wide" a un carattere multibyte, tale client inserisce il numero di byte (che non è mai maggiore **MB_CUR_MAX**) in caratteri "wide" in integer a cui puntato *pRetValue*. Se *wchar* è il carattere null di caratteri wide (L '\0'), **wctomb_s** riempie *pRetValue* con 1. Se l'indicatore di misura di destinazione *mbchar* viene **NULL**, **wctomb_s** inserisce 0 in *pRetValue*. Se la conversione non è possibile che in impostazioni locali correnti, **wctomb_s** Inserisce -1 in *pRetValue*.
+Se **wctomb_s** converte il carattere wide in un carattere multibyte, inserisce il numero di byte (che non è mai maggiore **MB_CUR_MAX**) nel caratteri wide nel valore intero a cui punta *pRetValue*. Se *wchar* è il carattere null di caratteri "wide" (L '\0'), **wctomb_s** riempie *pRetValue* con 1. Se il puntatore di destinazione *mbchar* viene **NULL**, **wctomb_s** inserisce 0 in *pRetValue*. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb_s** Inserisce -1 in *pRetValue*.
 
-**wctomb_s** Usa le impostazioni locali correnti per le informazioni dipendente dalle impostazioni locali; **wctomb_s_l** è identica ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**wctomb_s** Usa le impostazioni locali correnti per qualsiasi informazione dipendente; **wctomb_s_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -118,7 +118,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Questo programma viene illustrato il comportamento del **wctomb** (funzione).
+Questo programma illustra il comportamento dei **wctomb** (funzione).
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -152,4 +152,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

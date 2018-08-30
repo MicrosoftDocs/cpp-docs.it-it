@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: chiamare DLL Native da codice gestito tramite PInvoke | Documenti Microsoft'
+title: 'Procedura: chiamare DLL Native da codice gestito tramite PInvoke | Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e82690e49daf324d0ff77f89710ecdd09b208c19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195668"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Procedura: chiamare DLL native da codice gestito tramite PInvoke
-Funzioni che vengono implementate nella DLL non gestite possono essere chiamate da codice gestito tramite la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, Visual C++ fornisce un'alternativa a P/Invoke. Per ulteriori informazioni, vedere [utilizzando l'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+Funzioni che sono implementate nella DLL non gestite possono essere chiamate da codice gestito tramite la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, Visual C++ offre un'alternativa al P/Invoke. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio di codice seguente usa Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) funzione per recuperare la risoluzione corrente dello schermo in pixel.  
+ L'esempio di codice seguente usa Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funzione per recuperare la risoluzione corrente dello schermo in pixel.  
   
- Per le funzioni che utilizzano solo tipi intrinseci come argomenti e valori restituiscono, è necessario alcun intervento aggiuntivo. Altri tipi di dati, ad esempio i puntatori a funzione, matrici e strutture, richiedono attributi aggiuntivi per garantire il marshalling dei dati corretti.  
+ Per le funzioni che usano solo tipi intrinseci come argomenti e valori restituiscono, non è necessario alcun lavoro aggiuntivo. Altri tipi di dati, ad esempio i puntatori a funzione, matrici e strutture, richiedono attributi aggiuntivi per assicurarsi che il marshalling dei dati appropriati.  
   
- Sebbene non sia obbligatorio, è buona norma che i membri statici di dichiarazioni P/Invoke di una classe di valori in modo che non sono presenti nello spazio dei nomi globale, come illustrato in questo esempio.  
+ Sebbene non sia obbligatorio, è buona norma apportare membri statici di dichiarazioni P/Invoke di una classe di valori in modo che non sono presenti nello spazio dei nomi globale, come illustrato in questo esempio.  
   
 ```  
 // pinvoke_basic.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Notifiche da un Rich Edit controllo | Documenti Microsoft
+title: Notifiche da un Rich Edit controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928728093ff6e2150578c4ba48f2d8081620a48d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: a64abf4312460384ddfa78fa2220cfb88bf664c7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931144"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195071"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Notifiche da un controllo Rich Edit
-Report controllo di eventi che interessano un rich edit i messaggi di notifica ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Gli utenti possono essere elaborati dalla finestra padre o, usando la reflection di messaggio, da rich edit controllo stesso. Controlli rich edit supportano tutti i messaggi di notifica utilizzati con i controlli di modifica, nonché numerosi altri messaggi. È possibile determinare quali messaggi di notifica un controllo rich edit invia alla finestra padre mediante l'impostazione relativa "maschera evento".  
+Report di controllo di eventi che interessano un rich edit i messaggi di notifica ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Può essere elaborati dalla finestra padre o, usando la reflection di messaggio, dal ricco di modifica controllo stesso. I controlli rich edit supportano tutti i messaggi di notifica usati con i controlli di modifica, nonché alcune tabelle aggiuntive. È possibile determinare quali messaggi di notifica un controllo rich edit inviati alla finestra padre mediante l'impostazione "maschera dell'evento."  
   
- Per impostare la maschera di evento per un controllo rich edit, utilizzare il [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) funzione membro. È possibile recuperare la maschera corrente di eventi per un controllo rich edit utilizzando la [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) funzione membro.  
+ Per impostare la maschera di eventi per un controllo rich edit, usare il [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) funzione membro. È possibile recuperare la maschera corrente di eventi per un controllo rich edit utilizzando la [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) funzione membro.  
   
- Di seguito sono descritte diverse notifiche specifiche e il relativo utilizzo:  
+ Di seguito sono descritte diverse notifiche specifiche e i relativi utilizzi:  
   
--   EN_MSGFILTER la gestione della notifica EN_MSGFILTER consente a una classe, ovvero controllo rich edit o finestra padre, filtrare tutti tastiera e mouse di input al controllo. Il gestore può impedire l'elaborazione messaggio della tastiera o mouse o possibile cambiare il messaggio modificando l'oggetto specificato [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) struttura.  
+-   EN_MSGFILTER la gestione della notifica EN_MSGFILTER consente a una classe, ovvero controllo rich edit o finestra padre, filtrare tutti tastiera e mouse per il controllo di input. Il gestore di è possibile evitare il messaggio di mouse o tastiera in fase di elaborazione o possono modificare il messaggio modificando l'oggetto specificato [MSGFILTER](/windows/desktop/api/richedit/ns-richedit-_msgfilter) struttura.  
   
--   EN_PROTECTED consente di gestire il messaggio di notifica EN_PROTECTED consente di rilevare quando l'utente tenta di modificare un testo protetto. Per contrassegnare un intervallo di testo come protetto, è possibile impostare l'effetto di carattere protetto. Per altre informazioni, vedere [formattazione caratteri nei controlli Rich Edit](../mfc/character-formatting-in-rich-edit-controls.md).  
+-   EN_PROTECTED consente di gestire il messaggio di notifica EN_PROTECTED consente di rilevare quando l'utente tenta di modificare un testo protetto. Per contrassegnare un intervallo di testo come protetto, è possibile impostare gli effetti carattere protetto. Per altre informazioni, vedere [formattazione di caratteri in controlli Rich Edit](../mfc/character-formatting-in-rich-edit-controls.md).  
   
--   EN_DROPFILES è possibile consentire all'utente di rilasciare un file in un controllo rich edit per l'elaborazione del messaggio di notifica EN_DROPFILES. L'oggetto specificato [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) struttura contiene informazioni sui file da eliminare.  
+-   EN_DROPFILES è possibile abilitare l'utente eliminare i file in un controllo rich edit per l'elaborazione del messaggio di notifica EN_DROPFILES. L'oggetto specificato [ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-_endropfiles) struttura contiene informazioni sui file da eliminare.  
   
--   EN_SELCHANGE un'applicazione è possibile rilevare quando cambia la selezione corrente per l'elaborazione del messaggio di notifica EN_SELCHANGE. Il messaggio di notifica specifica un [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) struttura contenente informazioni sulla nuova selezione.  
+-   EN_SELCHANGE un'applicazione può rilevare quando cambia la selezione corrente per l'elaborazione del messaggio di notifica EN_SELCHANGE. Il messaggio di notifica specifica un [SELCHANGE](/windows/desktop/api/richedit/ns-richedit-_selchange) struttura che contiene informazioni sulla nuova selezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CRichEditCtrl](../mfc/using-cricheditctrl.md)   

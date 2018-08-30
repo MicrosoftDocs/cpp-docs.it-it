@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961113"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195403"
 ---
 # <a name="ltistreamgt-operators"></a>Operatori &lt;istream&gt;
 
@@ -90,7 +90,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 estrae un massimo di *N* - 1 elementi e li archivia nella matrice a partire da _ *Str*. Se `Istr`. [width](../standard-library/ios-base-class.md#width) è maggiore di zero, *N* è `Istr`. **Larghezza**; in caso contrario, la dimensione della matrice più grande di `Elem` che possono essere dichiarate. La funzione archivia sempre il valore `Elem()` dopo eventuali elementi estratti archiviati. L'estrazione termina prima della fine del file, in corrispondenza di un carattere con valore **Elem**(0) (non estratto) o di qualsiasi elemento (non estratto) che verrebbe rimosso da [ws](../standard-library/istream-functions.md#ws). Se non estrae alcun elemento, la funzione chiama `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**failbit**). In tutti i casi, chiama `Istr`. **Larghezza**(0) e restituisce *Istr*.
 
-**Nota sulla sicurezza** la stringa con terminazione null da estrarre dal flusso di input non può superare le dimensioni del buffer di destinazione *str*. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Nota sulla sicurezza** la stringa con terminazione null da estrarre dal flusso di input non può superare le dimensioni del buffer di destinazione *str*. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 La funzione modello:
 
@@ -110,7 +110,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```
 
-restituisce `Istr` >> ( `char`**\***) `str`.
+Restituisce `Istr >> ( char * ) str`.
 
 La funzione modello:
 
@@ -120,7 +120,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```
 
-restituisce `Istr` >> ( **char&**) `Ch`.
+Restituisce `Istr >> ( char& ) Ch`.
 
 La funzione modello:
 
@@ -130,7 +130,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```
 
-restituisce `Istr` >> ( **char \***) `str`.
+Restituisce `Istr >> ( char * ) str`.
 
 La funzione modello:
 
@@ -140,7 +140,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```
 
-restituisce `Istr` >> ( **char&**) `Ch`.
+Restituisce `Istr >> ( char& ) Ch`.
 
 La funzione modello:
 
@@ -151,7 +151,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-restituisce `Istr` `>>` `val` e converte un `rvalue reference` a `Istr` in un `lvalue` nel processo.
+Restituisce `Istr >> val` (e converte un riferimento rvalue a `Istr` a un elemento lvalue nel processo).
 
 ### <a name="example"></a>Esempio
 

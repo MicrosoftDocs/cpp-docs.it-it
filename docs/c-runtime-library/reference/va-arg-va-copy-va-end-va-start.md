@@ -47,12 +47,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f634e713bcf87aa6d97ed4e49595e4c0f8b72ab3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33c8dbfe55008c084daf8f6b9f4700f13281012
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417233"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195429"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -90,10 +90,10 @@ Tipo di argomento da recuperare.
 Puntatore all'elenco di argomenti.
 
 *dest*<br/>
-Puntatore all'elenco di argomenti di essere inizializzata da *src*
+Puntatore all'elenco di argomenti da inizializzare da *src*
 
 *src*<br/>
-Puntatore all'elenco di argomenti da copiare in inizializzato *dest*.
+Puntatore all'elenco inizializzato di argomenti da copiare *dest*.
 
 *prev_param*<br/>
 Parametro che precede il primo argomento facoltativo.
@@ -104,19 +104,19 @@ Parametro che precede il primo argomento facoltativo.
 
 ## <a name="remarks"></a>Note
 
-Il **va_arg**, **va_copy**, **va_end**, e **va_start** macro offrono un modo portabile per accedere agli argomenti a una funzione quando il funzione accetta un numero variabile di argomenti. Esistono due versioni delle macro: le macro definite in STDARG.H conformi allo standard ISO C99 e le macro definite in VARARGS.H che sono deprecate, ma vengono mantenute per compatibilità con le versioni precedenti del codice scritto prima dello standard ANSI C89.
+Il **va_arg**, **va_copy**, **va_end**, e **va_start** macro forniscono un modo portabile per accedere agli argomenti a una funzione quando la funzione accetta un numero variabile di argomenti. Esistono due versioni delle macro: le macro definite in STDARG.H conformi allo standard ISO C99 e le macro definite in VARARGS.H che sono deprecate, ma vengono mantenute per compatibilità con le versioni precedenti del codice scritto prima dello standard ANSI C89.
 
 Queste macro presuppongono che la funzione accetti un numero fisso di argomenti obbligatori, seguito da un numero variabile di argomenti facoltativi. Gli argomenti obbligatori vengono dichiarati come parametri comuni per la funzione e sono accessibili tramite i nomi dei parametri. Gli argomenti facoltativi sono accessibili tramite le macro in STDARG.H (o VARARGS.H per il codice scritto prima dello standard ANSI C89), che impostano un puntatore al primo argomento facoltativo nell'elenco di argomenti, recuperano gli argomenti dall'elenco e reimpostano il puntatore al termine dell'elaborazione degli argomenti.
 
 Le macro standard C, definite in STDARG. H, vengono usate come segue:
 
-- **va_start** imposta *arg_ptr* per il primo argomento facoltativo nell'elenco di argomenti passato alla funzione. L'argomento *arg_ptr* deve avere il **va_list** tipo. L'argomento *prev_param* è il nome del parametro obbligatorio che precede il primo argomento facoltativo nell'elenco di argomenti. Se *prev_param* è dichiarato con la classe di archiviazione, il comportamento della macro non è definito. **va_start** deve essere usata prima **va_arg** viene utilizzato per la prima volta.
+- **va_start** imposta *arg_ptr* sul primo argomento facoltativo nell'elenco di argomenti passato alla funzione. L'argomento *arg_ptr* deve avere il **va_list** tipo. L'argomento *prev_param* è il nome del parametro obbligatorio che precede immediatamente il primo argomento facoltativo nell'elenco di argomenti. Se *prev_param* è dichiarato con la classe di archiviazione, il comportamento della macro non è definito. **va_start** devono essere usati prima **va_arg** viene usato per la prima volta.
 
-- **va_arg** recupera un valore di *tipo* dal percorso fornito da *arg_ptr*e incrementa *arg_ptr* in modo da puntare all'argomento successivo nell'elenco da utilizzando le dimensioni dei *tipo* per determinare dove inizia l'argomento successivo. **va_arg** può essere utilizzato qualsiasi numero di volte nella funzione per recuperare gli argomenti dall'elenco.
+- **va_arg** recupera un valore di *tipo* dal percorso di cui viene assegnato dal *arg_ptr*e incrementa *arg_ptr* in modo che punti all'argomento successivo nell'elenco da utilizzando le dimensioni dei *tipo* per determinare dove inizia l'argomento successivo. **va_arg** può essere usato qualsiasi numero di volte nella funzione per recuperare gli argomenti dall'elenco.
 
-- **va_copy** crea una copia di un elenco di argomenti nello stato corrente. Il *src* parametro deve essere già inizializzato con **va_start**; potrebbero essere stati aggiornato con **va_arg** chiama, ma è necessario non sono state reimpostate con **va_end** . L'argomento successivo che viene recuperato dal **va_arg** da *dest* corrisponde all'argomento successivo che viene recuperato dalla *src*.
+- **va_copy** crea una copia di un elenco di argomenti nello stato corrente. Il *src* parametro deve essere già stato inizializzato con **va_start**; potrebbe essere stata aggiornata con **va_arg** viene chiamato, ma è necessario non sono stati ripristinati con **va_end** . L'argomento successivo recuperato dal **va_arg** dalla *dest* equivale all'argomento successivo recuperato da *src*.
 
-- Dopo aver recuperati, tutti gli argomenti **va_end** Reimposta il puntatore **NULL**. **va_end** deve essere chiamato per ogni elenco di argomenti che viene inizializzato con **va_start** o **va_copy** prima che la funzione restituisce.
+- Dopo aver recuperati, tutti gli argomenti **va_end** Reimposta il puntatore su **NULL**. **va_end** deve essere chiamato su ogni elenco di argomenti inizializzato con **va_start** oppure **va_copy** prima che la funzione restituisce.
 
 > [!NOTE]
 > Le macro in VARARGS.H sono deprecate e vengono mantenute solo per garantire la compatibilità con il codice scritto prima dello standard ANSI C89. In tutti gli altri casi, usare le macro in STDARGS.H.
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-Si noti che **testit** prevede che il secondo parametro può essere un **int** o un **char\***. Gli argomenti passati sono 0xffffffff (un **unsigned** **int**, non un **int**) e **NULL** (effettivamente un **int**, non un **char\***). Quando il programma viene compilato per il codice nativo, produce il seguente output:
+Si noti che **testit** prevede che il secondo parametro sia un **int** o un **char**<strong>\*</strong>. Gli argomenti passati sono 0xffffffff (un **unsigned** **int**, non un **int**) e **NULL** (effettivamente un **int**, non una **char**<strong>\*</strong>). Quando il programma viene compilato per il codice nativo, produce il seguente output:
 
 ```Output
 -1

@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86822cfeb26428a53e94d50a3d831732241007ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d714499ebb33d1d4dc2636ab80b2ad727ccac39
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411663"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195158"
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 Sposta un puntatore di stringa in avanti di un carattere.
 
 > [!IMPORTANT]
-> **mbsinc** e **mbsinc_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsinc** e **mbsinc_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -95,18 +95,18 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un puntatore al carattere che segue immediatamente *corrente*.
+Ognuna di queste routine restituisce un puntatore al carattere che segue immediatamente *correnti*.
 
 ## <a name="remarks"></a>Note
 
-Il **mbsinc** funzione restituisce un puntatore al primo byte del carattere multibyte che segue immediatamente *corrente*. **mbsinc** riconosce le sequenze di caratteri multibyte in base al [tabella codici multibyte](../../c-runtime-library/code-pages.md) che è attualmente in uso. **mbsinc_l** è identico ma utilizza invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il **mbsinc** funzione restituisce un puntatore al primo byte del carattere multibyte che segue immediatamente *corrente*. **mbsinc** riconosce le sequenze di caratteri multibyte in base al [tabella codici multibyte](../../c-runtime-library/code-pages.md) che è attualmente in uso. **mbsinc_l** è identica ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-La funzione di testo generico **tcsinc**, definito in Tchar. h, corrisponde a **mbsinc** se **MBCS** è stata definita, o a **wcsinc** se **Unicode** è stato definito. In caso contrario, **tcsinc** esegue il mapping a **strinc**. **strinc** e **wcsinc** sono versioni caratteri a byte singolo e a caratteri wide di **mbsinc**. **strinc** e **wcsinc** vengono forniti solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
+La funzione di testo generico **tcsinc**, definito in Tchar. h, corrisponde a **mbsinc** se **MBCS** è stata definita, o su **wcsinc** se **Unicode** è stata definita. In caso contrario, **tcsinc** esegue il mapping ai **strinc**. **strinc** e **wcsinc** sono versioni a caratteri a byte singolo e caratteri wide di **mbsinc**. **strinc** e **wcsinc** sono disponibili solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 
 Se *correnti* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
 
 > [!IMPORTANT]
-> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Requisiti
 

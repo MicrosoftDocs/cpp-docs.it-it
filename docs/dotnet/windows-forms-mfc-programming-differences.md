@@ -1,5 +1,5 @@
 ---
-title: Differenze tra la programmazione di Windows Form MFC | Documenti Microsoft
+title: Differenze tra la programmazione Windows Forms MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ad9e47ba2bb3d9a5e5b21620a4bf4b50177d63b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48a337ab82045543035c2612c707d8c47186ed2d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172671"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195452"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Differenze tra la programmazione con Windows Form e quella con MFC
-Negli argomenti di [utilizzando un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) viene descritto il supporto MFC per Windows Form. Se non si ha familiarità con .NET Framework o MFC di programmazione, in questo argomento vengono fornite informazioni sulle differenze tra i due oggetti di programmazione.  
+Negli argomenti [usando un controllo utente di Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) viene descritto il supporto MFC per Windows Form. Se non si ha familiarità con .NET Framework o MFC di programmazione, in questo argomento vengono fornite informazioni sulle differenze tra i due oggetti di programmazione.  
   
- Windows Form è per la creazione di applicazioni di Microsoft Windows su .NET Framework. Questo framework fornisce un set di moderno ed estendibile orientata agli oggetti di classi che consentono di sviluppare applicazioni basate su Windows. Con Windows Form, si è in grado di creare un'applicazione rich client che può accedere a un'ampia gamma di origini dati e fornire la visualizzazione dei dati e modifica dei dati utilizzando i controlli Windows Form.  
+ Windows Forms è per la creazione di applicazioni di Microsoft Windows su .NET Framework. Questo framework fornisce un set moderno, orientato, estensibile di classi che consentono di sviluppare applicazioni basate su Windows. Con Windows Forms, si è in grado di creare un'applicazione rich client che può accedere a un'ampia gamma di origini dati e fornire le funzionalità di modifica dei dati con controlli Windows Form e visualizzazione dei dati.  
   
- Tuttavia, se si è abituati a MFC, potrebbe essere utilizzata per la creazione di determinati tipi di applicazioni non ancora supportato in modo esplicito in Windows Form. Applicazioni Windows Forms sono equivalenti alle applicazioni di finestra di dialogo MFC. Tuttavia, non forniscono l'infrastruttura per il supporto diretto di altri tipi di applicazione contenitore/server di documenti OLE, i documenti ActiveX, il supporto documento/visualizzazione MFC per interfaccia a documento singolo (SDI), interfaccia a documenti multipli (MDI), e più di primo livello MTI (). È possibile scrivere la logica per creare queste applicazioni.  
+ Tuttavia, se si è abituati a MFC, potrebbe essere usate per creare alcuni tipi di applicazioni non ancora supportate in modo esplicito in Windows Form. Le applicazioni Windows Forms sono equivalenti alle applicazioni di finestra di dialogo MFC. Tuttavia, non forniscono l'infrastruttura per il supporto diretto di altri tipi di applicazioni MFC, ad esempio server/contenitore di documenti OLE, i documenti di ActiveX, il supporto documento/visualizzazione di interfaccia a documento singolo (SDI), interfaccia a documenti multipli (MDI), e più di primo livello MTI (). È possibile scrivere una propria logica per creare queste applicazioni.  
   
- Per ulteriori informazioni sulle applicazioni Windows Forms, vedere [Introduzione a Windows Form](/dotnet/framework/winforms/windows-forms-overview).  
+ Per altre informazioni sulle applicazioni Windows Forms, vedere [Introduzione a Windows Forms](/dotnet/framework/winforms/windows-forms-overview).  
   
- Per un'applicazione di esempio che mostra i Windows Form con MFC, vedere [MFC e integrazione con Windows Form](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
+ Per un'applicazione di esempio che illustra Windows Form utilizzato con MFC, vedere [MFC e Windows Forms Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
   
- Visualizzazione MFC o documento le seguenti funzionalità di routing dei comandi non dispongono di equivalenti in Windows Form:  
+ La visualizzazione MFC o documento e le funzionalità di routing dei comandi seguenti non dispongono di equivalenti in Windows Form:  
   
 -   Integrazione della shell  
   
-     MFC gestisce i comandi dynamic data exchange (DDE) e gli argomenti della riga di comando che viene utilizzata la shell quando fare doppio clic su un documento e selezionare tali verbi come aprire, modificare o stampare. Windows Form non dispone di alcuna integrazione della shell e non risponde ai verbi della shell.  
+     MFC gestisce i comandi dynamic data exchange (DDE) e gli argomenti della riga di comando utilizzati dalla shell quando fare doppio clic su un documento e selezionano questi verbi come aprire, modificare o di stampa. Windows Form non è prevista alcuna integrazione shell e non risponde ai verbi della shell.  
   
 -   Modelli di documento  
   
-     In MFC, modelli di documento associare una visualizzazione, che è contenuta in una finestra cornice (in modalità MDI, SDI o MTI), il documento che è aperto. Windows Form non dispone di alcun equivalente di modelli di documento.  
+     In MFC, modelli di documento associare una visualizzazione, che è contenuta in una finestra cornice (in modalità MTI, SDI o MDI), il documento che è stato aperto. Windows Form non ha equivalenti ai modelli di documento.  
   
 -   Documenti  
   
-     Registrare i tipi di file di documento ed elabora il tipo di documento quando si apre un documento dalla shell di MFC. Windows Form non dispone di alcun supporto per i documenti.  
+     MFC registra i tipi di file di documento ed elabora il tipo di documento quando si apre un documento dalla shell. Windows Form non dispone di alcun supporto per i documenti.  
   
 -   Stati del documento  
   
-     MFC conserva gli stati modificati per il documento. Pertanto, quando si chiude l'applicazione, chiuderla l'ultima visualizzazione che contiene l'applicazione o si esce da Windows, MFC viene richiesto di salvare il documento. Windows Form dispone di un supporto equivalente.  
+     MFC gestisce gli stati modificati per il documento. Pertanto, quando chiude l'applicazione, chiuderla l'ultima visualizzazione contenente l'applicazione o uscire da Windows, MFC viene richiesto di salvare il documento. Windows Form non dispone di alcun supporto equivalente.  
   
 -   Comandi:  
   
-     MFC è presente il concetto di comandi. La barra dei menu della barra degli strumenti e menu di scelta rapida può richiamare tutti lo stesso comando, ad esempio Taglia e copia. In Windows Form, i comandi sono strettamente associati eventi da un determinato elemento dell'interfaccia utente (ad esempio una voce di menu); Pertanto, è necessario associare tutti gli eventi di comando in modo esplicito. È anche possibile gestire più eventi con un singolo gestore in Windows Form. Per ulteriori informazioni, vedere [connessione di più eventi a un singolo gestore eventi in Windows Form](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).  
+     MFC è presente il concetto di comandi. La barra dei menu della barra degli strumenti e menu di scelta rapida può richiamare tutti lo stesso comando, ad esempio, le operazioni Taglia e copia. In Windows Form, i comandi sono strettamente associati eventi da un determinato elemento dell'interfaccia utente (ad esempio, una voce di menu); Pertanto, è necessario associare in modo esplicito tutti gli eventi di comando. È anche possibile gestire più eventi con un singolo gestore in Windows Form. Per altre informazioni, vedere [connessione di più eventi a un singolo gestore di eventi in Windows Form](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).  
   
--   Comandi (routing)  
+-   Routing dei comandi  
   
-     Routing di comandi MFC consente la visualizzazione attiva o il documento, l'elaborazione dei comandi. Poiché lo stesso comando spesso ha significati diversi per le viste diverse (ad esempio copia si comporta in modo diverso nella visualizzazione di modifica testo di in un editor grafico), i comandi devono essere gestiti dalla visualizzazione attiva. Poiché il menu di Windows Form e le barre degli strumenti non sono della visualizzazione attiva, è possibile avere un gestore diverso per ogni tipo di visualizzazione per il **MenuItem** eventi senza scrivere codice interno aggiuntivo.  
+     Routing dei comandi MFC consente la visualizzazione attiva o il documento per elaborare i comandi. Poiché lo stesso comando spesso ha significati diversi per diverse visualizzazioni (ad esempio, copia si comporta in modo diverso nella visualizzazione di modifica testo rispetto a in un editor grafico), i comandi devono essere gestiti dalla visualizzazione attiva. Poiché Windows Forms menu e barre degli strumenti non dispone di alcuna conoscenza intrinseca della visualizzazione attiva, è possibile disporre di un gestore diverso per ogni tipo di visualizzazione per il **MenuItem** eventi senza scrivere codice aggiuntivo interno.  
   
--   Meccanismo di aggiornamento di comando  
+-   Meccanismo di aggiornamento comandi  
   
-     MFC dispone di un comando meccanismo di aggiornamento. Pertanto, la visualizzazione attiva o il documento è responsabile dello stato degli elementi dell'interfaccia utente (ad esempio, l'abilitazione o disabilitazione di un pulsante di menu elemento o lo strumento e degli stati di selezione). Windows Form non dispone di alcun equivalente di un comando del meccanismo di aggiornamento.  
+     MFC dispone di un comando meccanismo di aggiornamento. Pertanto, la visualizzazione attiva o il documento è responsabile per lo stato degli elementi dell'interfaccia utente (ad esempio, l'abilitazione o disabilitazione di un pulsante di menu elemento o degli strumenti e degli stati di selezione). Windows Form non ha un equivalente di un meccanismo di aggiornamento di comando.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Procedure dettagliate su Windows Form](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)
+ [Utilizzo di un controllo utente di Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
+ [Procedure dettagliate su Windows Form](https://msdn.microsoft.com/fd44d13d-4733-416f-aefc-32592e59e5d9)

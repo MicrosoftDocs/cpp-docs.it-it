@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd54c27f4208dce317d9c09720cb63b65af4a54b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e4e7776688fa95a81cd76e6db48f38f82bc076d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195294"
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 
@@ -93,7 +93,7 @@ int _vfwprintf_p_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
@@ -109,20 +109,20 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-**vfprintf_p** e **vfwprintf_p** restituire il numero di caratteri scritti, senza includere il carattere di terminazione null o un valore negativo se si verifica un errore di output.
+**vfprintf_p** e **vfwprintf_p** restituiscono il numero di caratteri scritti, escludendo il carattere null di terminazione o un valore negativo se si verifica un errore di output.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formattare e scrivere i dati specificati nel *flusso*. Queste funzioni differiscono dal **_vfprint_s** e **_vfwprint_s** versioni solo che supportano i parametri posizionali. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati in *flusso*. Queste funzioni differiscono dalle **_vfprint_s** e **_vfwprint_s** versioni solo per il fatto che supportano parametri posizionali. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
-**vfwprintf_p** è la versione a caratteri "wide" di **vprintf_p**; le due funzioni si comportano in modo identico, se il flusso viene aperto in modalità ANSI. **vprintf_p** attualmente non supporta output in un flusso UNICODE.
+**vfwprintf_p** è la versione a caratteri wide di **vprintf_p**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vprintf_p** attualmente non supporta output in un flusso UNICODE.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Se entrambi *flusso* oppure *formato* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e impostare **errno** alla **EINVAL**.
+Se uno dei due *stream* oppure *formato* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

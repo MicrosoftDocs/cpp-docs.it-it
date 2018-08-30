@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 78d846db4080c780bfa72fca52b7c9f6868edc2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885640"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195338"
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
 Questa classe crea un thread di lavoro o viene utilizzato uno esistente, è in attesa su una o più handle di oggetto kernel ed esegue una funzione di client specificato quando uno degli handle viene segnalato.  
@@ -232,7 +232,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Quando viene rimosso l'handle [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) viene chiamato sull'oggetto associato passato al [AddHandle](#addhandle). Se questa chiamata ha esito negativo, `CWorkerThread` chiamerà il Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) dell'handle di funzione.  
+ Quando viene rimosso l'handle [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) viene chiamato sull'oggetto associato passato al [AddHandle](#addhandle). Se questa chiamata ha esito negativo, `CWorkerThread` chiamerà il Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) dell'handle di funzione.  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Chiamare questo metodo per arrestare il thread di lavoro.  

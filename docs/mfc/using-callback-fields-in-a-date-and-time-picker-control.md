@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei campi Callback in una selezione data e ora controllo | Documenti Microsoft
+title: Utilizzo dei campi Callback in una selezione data e ora controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,55 +23,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf132de39eb630f314c1c5a99e629cbfb25394a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 092038a141f3ace1969fcfa50ec4a5cefb77de0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951127"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195173"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Utilizzo dei campi callback in un controllo selezione data e ora
-Oltre ai caratteri di formato standard che definiscono i campi di selezione data e ora, è possibile personalizzare l'output specificando determinate parti di una stringa di formato personalizzata come campi callback. Per dichiarare un campo callback, includere uno o più caratteri "X" (codice ASCII 88) in un punto qualsiasi nel corpo della stringa di formato. Ad esempio, la stringa seguente "' oggi è: 'yy' / 'MM' / 'dd' (Day 'X')'", il controllo di selezione data e ora visualizzare il valore corrente dell'anno seguita da mese, data e il giorno dell'anno.  
+Oltre ai caratteri di formato standard che definiscono i campi di selezione data e ora, è possibile personalizzare l'output specificando determinate parti di una stringa di formato personalizzato come campi callback. Per dichiarare un campo callback, includere uno o più caratteri "X" (codice ASCII 88) in un punto qualsiasi nel corpo della stringa di formato. Ad esempio, la stringa seguente "' oggi è: 'yy' / 'MM' / 'gg' (giorno 'X')'", il controllo di selezione data e ora visualizzare il valore corrente dell'anno di seguito dal mese di date e infine il giorno dell'anno.  
   
 > [!NOTE]
->  Il numero di x in un callback di campo non corrisponde al numero di caratteri che verrà visualizzato.  
+>  Il numero di x in un callback del campo non corrisponde al numero di caratteri che verrà visualizzato.  
   
- È possibile distinguere tra più campi callback in una stringa personalizzata ripetendo il carattere "X". Di conseguenza, la stringa di formato "XXddddMMMdd', ' yyyXXX" contiene due campi callback univoci, "XX" e "XXX".  
+ È possibile distinguere tra più campi callback in una stringa personalizzata ripetendo il carattere "X". Pertanto, la stringa di formato "XXddddMMMdd', ' yyyXXX" contiene due campi callback univoco "XX" e "XXX".  
   
 > [!NOTE]
->  Campi callback vengono considerati come campi validi, pertanto l'applicazione deve essere preparata a gestire i messaggi di notifica DTN_WMKEYDOWN.  
+>  Campi callback vengono trattati come campi validi, in modo che l'applicazione deve essere pronta a gestire i messaggi di notifica DTN_WMKEYDOWN.  
   
  Implementazione di campi callback nel controllo selezione data e ora è costituito da tre parti:  
   
--   Inizializzando la stringa di formato personalizzato  
+-   Inizializzazione di stringa di formato personalizzata  
   
--   Gestione della notifica DTN_FORMATQUERY  
+-   La gestione di DTN_FORMATQUERY (notifica)  
   
--   Gestione di DTN_FORMAT (notifica)  
+-   La gestione di DTN_FORMAT (notifica)  
   
-## <a name="initializing-the-custom-format-string"></a>Inizializzando la stringa di formato personalizzato  
- Inizializza la stringa personalizzata con una chiamata a `CDateTimeCtrl::SetFormat`. Per altre informazioni, vedere [utilizzo di stringhe di formato personalizzate in una data e un controllo selezione ora](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md). Il contesto comune per impostare la stringa di formato personalizzata è il `OnInitDialog` funzione della classe di finestra di dialogo contenente o `OnInitialUpdate` funzione della classe di visualizzazione.  
+## <a name="initializing-the-custom-format-string"></a>Inizializzazione di stringa di formato personalizzata  
+ Inizializza la stringa personalizzata con una chiamata a `CDateTimeCtrl::SetFormat`. Per altre informazioni, vedere [uso di stringhe di formato personalizzate in una data e ora controllo di selezione](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md). Una posizione frequente per impostare la stringa di formato personalizzato è nel `OnInitDialog` funzione di classe della finestra che lo contiene o `OnInitialUpdate` funzione della classe di visualizzazione che lo contiene.  
   
-## <a name="handling-the-dtnformatquery-notification"></a>Gestione della notifica DTN_FORMATQUERY  
- Quando il controllo analizza la stringa di formato e rileva un campo callback, l'applicazione invia messaggi di notifica DTN_FORMAT e DTN_FORMATQUERY. Stringa del campo callback è inclusa con le notifiche, pertanto è possibile determinare quale campo callback viene eseguita la query.  
+## <a name="handling-the-dtnformatquery-notification"></a>La gestione di DTN_FORMATQUERY (notifica)  
+ Quando il controllo consente di analizzare la stringa di formato e rileva un campo callback, l'applicazione invia i messaggi di notifica di DTN_FORMAT e DTN_FORMATQUERY. Stringa del campo callback è incluso con le notifiche in modo che è possibile determinare quale campo callback viene eseguita la query.  
   
  DTN_FORMATQUERY (notifica) viene inviata per recuperare la dimensione massima consentita in pixel della stringa che verrà visualizzato nel campo callback corrente.  
   
- Per calcolare correttamente questo valore, è necessario calcolare l'altezza e la larghezza della stringa, con cui sostituire il campo con tipo di carattere del controllo. Il calcolo effettivo della stringa viene ottenuto facilmente con una chiamata ai [GetTextExtentPoint32](http://msdn.microsoft.com/library/windows/desktop/dd144938) funzione Win32. Una volta determinata la dimensione, passare il valore restituito all'applicazione e uscire dalla funzione del gestore.  
+ Per calcolare correttamente questo valore, è necessario calcolare l'altezza e la larghezza della stringa, deve essere sostituito per il campo con tipo di carattere del controllo. Il calcolo effettivo della stringa viene ottenuto facilmente con una chiamata per il [funzione GetTextExtentPoint32](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpoint32a) funzione Win32. Dopo aver determinata le dimensioni, passare il valore all'applicazione e uscire dalla funzione del gestore.  
   
- L'esempio seguente è un metodo per fornire le dimensioni della stringa di callback:  
+ L'esempio seguente è un metodo per fornire la dimensione della stringa di callback:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]  
   
  Dopo aver calcolata la dimensione del campo callback corrente, è necessario fornire un valore per il campo. Questa operazione viene eseguita nel gestore per il DTN_FORMAT (notifica).  
   
-## <a name="handling-the-dtnformat-notification"></a>Gestione di DTN_FORMAT (notifica)  
+## <a name="handling-the-dtnformat-notification"></a>La gestione di DTN_FORMAT (notifica)  
  DTN_FORMAT (notifica) viene usata dall'applicazione per richiedere la stringa di caratteri che sarà sostituita. Nell'esempio seguente viene illustrato un possibile metodo:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]  
   
 > [!NOTE]
->  Il puntatore per il **NMDATETIMEFORMAT** struttura viene rilevata il primo parametro del gestore di notifica del tipo appropriato.  
+>  Il puntatore per il **NMDATETIMEFORMAT** struttura viene calcolata eseguendo il cast del primo parametro del gestore notifica al tipo corretto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   

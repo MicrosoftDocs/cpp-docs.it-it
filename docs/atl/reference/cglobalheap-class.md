@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c39a91fb01f8a67c9e6eb2e5189cf1b81ba4bd51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882832"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195212"
 ---
 # <a name="cglobalheap-class"></a>Classe CGlobalHeap
 Questa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando le funzioni globali dell'heap Win32.  
@@ -55,7 +55,7 @@ class CGlobalHeap : public IAtlMemMgr
  `CGlobalHeap` implementa funzioni di allocazione di memoria usando le funzioni globali dell'heap Win32.  
   
 > [!NOTE]
->  Le funzioni degli heap globali sono più lente rispetto alle altre funzioni di gestione della memoria e non offrono tutte le funzionalità. Di conseguenza, le nuove applicazioni devono usare la [funzioni heap](http://msdn.microsoft.com/library/windows/desktop/aa366711). Questi sono disponibili nel [CWin32Heap](../../atl/reference/cwin32heap-class.md) classe. Funzioni globali vengono comunque usate da DDE e di funzioni negli Appunti.  
+>  Le funzioni degli heap globali sono più lente rispetto alle altre funzioni di gestione della memoria e non offrono tutte le funzionalità. Di conseguenza, le nuove applicazioni devono usare la [funzioni heap](/windows/desktop/Memory/heap-functions). Questi sono disponibili nel [CWin32Heap](../../atl/reference/cwin32heap-class.md) classe. Funzioni globali vengono comunque usate da DDE e di funzioni negli Appunti.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio relativo [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Note  
  Chiamare [cglobalheap:: Free](#free) oppure [cglobalheap:: ReAllocate](#reallocate) per liberare la memoria allocata da questo metodo.  
   
- Implementato mediante [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) con un parametro di GMEM_FIXED flag.  
+ Implementato mediante [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) con un parametro di GMEM_FIXED flag.  
   
 ##  <a name="free"></a>  Cglobalheap:: Free  
  Chiamare questo metodo per liberare un blocco di memoria allocata da questo gestore della memoria.  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  Puntatore alla memoria precedentemente allocata dal gestore di memoria. NULL è un valore valido e non esegue alcuna operazione.  
   
 ### <a name="remarks"></a>Note  
- Implementato mediante [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
+ Implementato mediante [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree).  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  Chiamare questo metodo per ottenere le dimensioni allocate di un blocco di memoria allocata da questo gestore della memoria.  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  Restituisce la dimensione del blocco di memoria allocata in byte.  
   
 ### <a name="remarks"></a>Note  
- Implementato mediante [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
+ Implementato mediante [GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize).  
   
 ##  <a name="reallocate"></a>  Cglobalheap:: ReAllocate  
  Chiamare questo metodo per riallocare la memoria allocata da questo gestore di memoria.  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Note  
  Chiamare [cglobalheap:: Free](#free) per liberare la memoria allocata da questo metodo.  
   
- Implementato mediante [GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+ Implementato mediante [GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della classe](../../atl/atl-class-overview.md)   

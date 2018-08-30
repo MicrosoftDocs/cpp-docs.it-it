@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6a6c25367e2b978ac4a8c82f36c07907614bbc3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584750"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195790"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -74,7 +74,7 @@ Uso **db_column** in combinazione con la [db_table](../windows/db-table.md) oppu
 
 Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore Rinomina la classe \_ *NomeClasse*della funzione di accesso, dove *NomeClasse* è il nome è stato assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
-Per esempi di questo attributo usato in un'applicazione, vedere gli esempi [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409), e [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).
+Per esempi di questo attributo usato in un'applicazione, vedere gli esempi [AtlAgent](https://github.com/Microsoft/VCSamples), e [MultiRead](https://github.com/Microsoft/VCSamples).
 
 ## <a name="example"></a>Esempio
 

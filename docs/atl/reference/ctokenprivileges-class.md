@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa48af82fb5b6119e1efc14081c6851eafb85fa5
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 23c8776e462c2b275b0c7620e01b4bc82e7ad7ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208702"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195744"
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 Questa classe è un wrapper per il `TOKEN_PRIVILEGES` struttura.  
@@ -79,13 +79,13 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|Operatore di assegnazione.|  
   
 ## <a name="remarks"></a>Note  
- Un' [token di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374909) è un oggetto che descrive il contesto di sicurezza di un processo o thread e viene allocato a ogni utente connesso a un sistema di Windows.  
+ Un' [token di accesso](/windows/desktop/SecAuthZ/access-tokens) è un oggetto che descrive il contesto di sicurezza di un processo o thread e viene allocato a ogni utente connesso a un sistema di Windows.  
   
- Il token di accesso viene usato per descrivere i vari privilegi di sicurezza concessi a ogni utente. Un privilegio è costituito da un numero a 64 bit, denominato identificatore univoco locale ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) e una stringa del descrittore.  
+ Il token di accesso viene usato per descrivere i vari privilegi di sicurezza concessi a ogni utente. Un privilegio è costituito da un numero a 64 bit, denominato identificatore univoco locale ( [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)) e una stringa del descrittore.  
   
- Il `CTokenPrivileges` classe è un wrapper per il [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) strutturare e contiene 0 o più privilegi. Possibile aggiungere i privilegi, eliminato o sottoposti a query usando i metodi di classe fornita.  
+ Il `CTokenPrivileges` classe è un wrapper per il [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) strutturare e contiene 0 o più privilegi. Possibile aggiungere i privilegi, eliminato o sottoposti a query usando i metodi di classe fornita.  
   
- Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) nel SDK di Windows.  
+ Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nel SDK di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** ATLSecurity. h  
@@ -106,7 +106,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  Se true, il privilegio è abilitato. Se false, il privilegio è disabilitato.  
   
  *rPrivileges*  
- Fare riferimento a un [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struttura. I privilegi e gli attributi vengono copiati da questa struttura e aggiunto al `CTokenPrivileges` oggetto.  
+ Fare riferimento a un [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struttura. I privilegi e gli attributi vengono copiati da questa struttura e aggiunto al `CTokenPrivileges` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il primo form di questo metodo restituisce true se i privilegi sono aggiunto correttamente, false in caso contrario.  
@@ -125,7 +125,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  Il `CTokenPrivileges` oggetto da assegnare al nuovo oggetto.  
   
  *rPrivileges*  
- Il [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struttura da assegnare al nuovo `CTokenPrivileges` oggetto.  
+ Il [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struttura da assegnare al nuovo `CTokenPrivileges` oggetto.  
   
 ### <a name="remarks"></a>Note  
  Il `CTokenPrivileges` oggetto può facoltativamente essere creato usando un' `TOKEN_PRIVILEGES` struttura o un oggetto definito in precedenza `CTokenPrivileges` oggetto.  
@@ -214,7 +214,7 @@ void GetLuidsAndAttributes(
   
 ### <a name="parameters"></a>Parametri  
  *pPrivileges*  
- Puntatore a una matrice di [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) oggetti. `CLUIDArray` è un typedef definito come `CAtlArray<LUID> CLUIDArray`.  
+ Puntatore a una matrice di [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) oggetti. `CLUIDArray` è un typedef definito come `CAtlArray<LUID> CLUIDArray`.  
   
  *pAttributes*  
  Puntatore a una matrice di oggetti valore DWORD. Se questo parametro viene omesso o è NULL, gli attributi non vengono recuperati. `CAttributes` è un typedef definito come `CAtlArray <DWORD> CAttributes`.  
@@ -251,7 +251,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore per il [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struttura.  
+ Restituisce un puntatore per il [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struttura.  
   
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  Recupera l'attributo associato al nome di un determinato privilegio.  
@@ -282,7 +282,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
   
 ### <a name="parameters"></a>Parametri  
  *rPrivileges*  
- Il [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) da assegnare alla struttura di `CTokenPrivileges` oggetto.  
+ Il [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) da assegnare alla struttura di `CTokenPrivileges` oggetto.  
   
  *rhs*  
  Il `CTokenPrivileges` oggetto da assegnare all'oggetto.  
@@ -298,12 +298,12 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>Note  
- Esegue il cast a un puntatore a un valore di [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struttura.  
+ Esegue il cast a un puntatore a un valore di [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struttura.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di sicurezza](../../visual-cpp-samples.md)   
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
- [IDENTIFICATORE UNIVOCO LOCALE](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
- [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
+ [IDENTIFICATORE UNIVOCO LOCALE](/windows/desktop/api/winnt/ns-winnt-_luid)   
+ [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
  [Panoramica della classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

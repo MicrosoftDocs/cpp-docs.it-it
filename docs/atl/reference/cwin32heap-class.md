@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: b1a15397ee74c94c0d3af088a7b6eb80bd21c66d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42575493"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195336"
 ---
 # <a name="cwin32heap-class"></a>Classe CWin32Heap
 Questa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando le funzioni di allocazione dell'heap Win32.  
@@ -73,7 +73,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|Handle per l'oggetto heap.|  
   
 ## <a name="remarks"></a>Note  
- `CWin32Heap` implementa metodi di allocazione di memoria usando le funzioni di allocazione dell'heap Win32, inclusi [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) e [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). A differenza di altre classi di Heap, `CWin32Heap` richiede un handle heap valido per essere forniti prima della memoria viene allocata: le altre classi usano per impostazione predefinita l'heap del processo. L'handle può essere fornito al costruttore o al [CWin32Heap::Attach](#attach) (metodo). Vedere le [CWin32Heap::CWin32Heap](#cwin32heap) metodo per altri dettagli.  
+ `CWin32Heap` implementa metodi di allocazione di memoria usando le funzioni di allocazione dell'heap Win32, inclusi [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc) e [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree). A differenza di altre classi di Heap, `CWin32Heap` richiede un handle heap valido per essere forniti prima della memoria viene allocata: le altre classi usano per impostazione predefinita l'heap del processo. L'handle può essere fornito al costruttore o al [CWin32Heap::Attach](#attach) (metodo). Vedere le [CWin32Heap::CWin32Heap](#cwin32heap) metodo per altri dettagli.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio relativo [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -103,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Note  
  Chiamare [CWin32Heap::Free](#free) oppure [CWin32Heap::Reallocate](#reallocate) per liberare la memoria allocata da questo metodo.  
   
- Implementato mediante [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
+ Implementato mediante [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc).  
   
 ##  <a name="attach"></a>  CWin32Heap::Attach  
  Collega l'oggetto heap a un heap esistente.  

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9880bdbc608933a1b6cfffe3473a9b07f0252ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f75aa6a32277fda0796fe2433062f5062fdd47eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405367"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196079"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -76,17 +76,17 @@ Il valore di *dest*.
 
 ## <a name="remarks"></a>Note
 
-**memcpy** copie *conteggio* byte dal *src* a *dest*; **wmemcpy** copie *conteggio* caratteri "wide" (due byte). Se l'origine e destinazione si sovrappongono, il comportamento delle **memcpy** è definito. Uso **memmove** per gestire le aree di sovrapposizione.
+**memcpy** copie *conteggio* byte dal *src* alla *dest*; **wmemcpy** copie *conteggio* caratteri "wide" (due byte). Se l'origine e destinazione si sovrappongono, il comportamento delle **memcpy** è definito. Uso **memmove** per gestire le aree di sovrapposizione.
 
 > [!IMPORTANT]
-> Verificare che il buffer di destinazione abbia una dimensione maggiore o uguale al buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Verificare che il buffer di destinazione abbia una dimensione maggiore o uguale al buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Poiché molti sovraccarichi del buffer e pertanto potenziali attacchi alla sicurezza, sono stati per un utilizzo non corretto di **memcpy**, questa funzione viene elencata tra le funzioni "bloccate" da Security Development Lifecycle (SDL).  È possibile osservare che alcune classi di libreria VC + + continuino a usare **memcpy**.  Inoltre, è possibile osservare che l'utilità di ottimizzazione del compilatore di VC + + a volte emette chiamate a **memcpy**.  Il prodotto Visual C++ viene sviluppato in conformità con il processo SDL, quindi l'utilizzo di questa funzione bloccata è stato esaminato attentamente.  In caso di utilizzo della funzione da parte di una libreria, le chiamate sono state analizzate attentamente per assicurare il blocco dei sovraccarichi del buffer attraverso tali chiamate.  Nel caso del compilatore, a volte alcuni modelli di codice vengono riconosciuti come identici rispetto al modello di **memcpy**e vengono quindi sostituiti con una chiamata alla funzione.  In questi casi, l'utilizzo di **memcpy** non è più rischioso rispetto a quello originale sarebbero state le istruzioni; sono state ottimizzate semplicemente a una chiamata a prestazioni ottimizzate **memcpy** (funzione).  Il semplice utilizzo delle funzioni CRT "sicure" non garantisce la protezione (rendono solo il sistema un po' meno insicuro), così come l'utilizzo delle funzioni "bloccate" non espone maggiormente a rischi (richiedono solo un controllo maggiore che ne garantisca la sicurezza).
+> Perché così tante sovraccarichi del buffer e pertanto potenziali attacchi alla sicurezza, sono stati registrati per un utilizzo non corretto di **memcpy**, questa funzione viene elencata tra le funzioni "bloccate" da Security Development Lifecycle (SDL).  È possibile osservare che alcune classi di libreria VC + + continuano a usare **memcpy**.  Inoltre, è possibile osservare che l'ottimizzatore del compilatore VC + + a volte emette chiamate a **memcpy**.  Il prodotto Visual C++ viene sviluppato in conformità con il processo SDL, quindi l'utilizzo di questa funzione bloccata è stato esaminato attentamente.  In caso di utilizzo della funzione da parte di una libreria, le chiamate sono state analizzate attentamente per assicurare il blocco dei sovraccarichi del buffer attraverso tali chiamate.  Nel caso del compilatore, a volte alcuni modelli di codice vengono riconosciuti come identici rispetto al modello di **memcpy**e vengono quindi sostituiti con una chiamata alla funzione.  In questi casi, l'uso di **memcpy** non è più rischioso rispetto all'originale sarebbero state le istruzioni; sono state ottimizzate semplicemente a una chiamata per le prestazioni ottimizzate **memcpy** (funzione).  Il semplice utilizzo delle funzioni CRT "sicure" non garantisce la protezione (rendono solo il sistema un po' meno insicuro), così come l'utilizzo delle funzioni "bloccate" non espone maggiormente a rischi (richiedono solo un controllo maggiore che ne garantisca la sicurezza).
 >
-> Poiché **memcpy** utilizzo dalla librerie e compilatore VC + + è stato pertanto scrupolosamente, queste chiamate sono permesse all'interno del codice conforme a SDL.  **memcpy** chiamate introdotte nel codice sorgente dell'applicazione sono conformi a SDL solo quando l'utilizzo è stato esaminato da esperti di sicurezza.
+> In quanto **memcpy** utilizzo dalle librerie e compilatore VC + + è stato così scrupolosamente, queste chiamate sono permesse all'interno del codice conforme a SDL.  **memcpy** chiamate introdotte nel codice sorgente dell'applicazione sono conformi a SDL solo quando tale uso è stato esaminato da esperti di sicurezza.
 
-Il **memcpy** e **wmemcpy** funzioni verranno deprecate solo se la costante **_CRT_SECURE_DEPRECATE_MEMORY** è definito prima dell'istruzione di inclusione in ordine per le funzioni per essere deprecate, come nell'esempio riportato di seguito:
+Il **memcpy** e **wmemcpy** funzioni verranno deprecate solo se la costante **_CRT_SECURE_DEPRECATE_MEMORY** è definita prima dell'istruzione di inclusione nell'ordine per le funzioni deprecate, ad esempio come illustrato nell'esempio riportato di seguito:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -111,7 +111,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Vedere [memmove](memmove-wmemmove.md) per un esempio di come utilizzare **memcpy**.
+Visualizzare [memmove](memmove-wmemmove.md) per un esempio d'uso **memcpy**.
 
 ## <a name="see-also"></a>Vedere anche
 

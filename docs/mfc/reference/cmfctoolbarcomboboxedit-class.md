@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCToolBarComboBoxEdit | Documenti Microsoft
+title: Classe CMFCToolBarComboBoxEdit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c287d30a2a54b6e300f34ca83703baf154b36bf
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aa01a9cb38de2297ebf1282f0d86333218861a0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042508"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195486"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>Classe CMFCToolBarComboBoxEdit
 Il framework utilizza il `CMFCToolBarComboBoxEdit` classe per creare un pulsante della barra degli strumenti che si comporta come un controllo casella combinata modificabile.  
@@ -47,7 +47,7 @@ class CMFCToolBarComboBoxEdit : public CEdit
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
   
 ### <a name="remarks"></a>Note  
  Derivare una classe dal `CMFCToolBarComboBoxEdit` classe per personalizzare le operazioni di modifica.  
@@ -78,7 +78,7 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
  Un riferimento a un [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) oggetto, ovvero un pulsante della barra degli strumenti contenente un controllo casella combinata.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCToolBarComboBoxEdit` classe. Questo frammento di codice fa parte il [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCToolBarComboBoxEdit` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]  
   

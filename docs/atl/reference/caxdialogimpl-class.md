@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd019112e846875bfa8e27faac5088fbcf1cdaef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 88cb742464507fe7040b38d88355ab473b366bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881987"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196010"
 ---
 # <a name="caxdialogimpl-class"></a>Classe CAxDialogImpl
 Questa classe implementa una finestra di dialogo (modale o non modale) che ospita i controlli ActiveX.  
@@ -170,7 +170,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parametri  
  *hWndParent*  
- [in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) funzione Win32.  
+ [in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funzione Win32.  
   
  *dwInitParam*  
  [in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.  
@@ -235,7 +235,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
   
 ### <a name="parameters"></a>Parametri  
  *pMsg*  
- Puntatore a un [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) struttura che contiene il messaggio da controllare.  
+ Puntatore a un [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) struttura che contiene il messaggio da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se il messaggio è stata elaborata, FALSE in caso contrario.  

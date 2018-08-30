@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57dc254bab0acd875378dfd26ba3fe6e8d5650f4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407510"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196207"
 ---
 # <a name="based-pointers-c"></a>Puntatori based (C++)
 **Sezione specifica Microsoft**  
@@ -56,7 +56,7 @@ struct llist_t {
  Il puntatore `vpBuffer` viene assegnato l'indirizzo di memoria allocata in un qualche punto successivo del programma. L'elenco collegato viene rilocato rispetto al valore `vpBuffer`.  
   
 > [!NOTE]
->  Rendere persistenti gli identificatori che contengono puntatori possono essere eseguiti anche utilizzando [file mappati alla memoria](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
+>  Rendere persistenti gli identificatori che contengono puntatori possono essere eseguiti anche utilizzando [file mappati alla memoria](/windows/desktop/Memory/file-mapping).  
   
  Quando si dereferenzia un puntatore based, la base deve essere specificata in modo esplicito o essere implicitamente nota tramite la dichiarazione.  
   

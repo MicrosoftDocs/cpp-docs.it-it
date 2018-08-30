@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959935"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195815"
 ---
 # <a name="output-file-stream-member-functions"></a>Funzioni membro del flussi di file di output
 
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-Il `write` funzione non si arresta quando raggiunge un carattere null, in modo che la struttura di classe completa è stata scritta. La funzione accetta due argomenti: una **char** puntatore e il numero di caratteri da scrivere. Si noti il cast necessario per **char\*** prima dell'indirizzo dell'oggetto di struttura.
+Il `write` funzione non si arresta quando raggiunge un carattere null, in modo che la struttura di classe completa è stata scritta. La funzione accetta due argomenti: una **char** puntatore e il numero di caratteri da scrivere. Si noti il cast necessario per **char** <strong>\*</strong> prima l'indirizzo dell'oggetto di struttura.
 
 ## <a name="the-seekp-and-tellp-functions"></a>Funzioni seekp e tellp
 
@@ -114,12 +114,12 @@ Usare queste funzioni membro per verificare gli errori durante la scrittura in u
 
 |Funzione|Valore restituito|
 |--------------|------------------|
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Restituisce **true** se è presente un errore irreversibile.|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Restituisce **true** se è presente un errore irreversibile o una condizione "prevista", ad esempio un errore di conversione, o se è impossibile trovare il file. L'elaborazione può spesso riprendere dopo una chiamata a `clear` con un argomento di zero.|
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Restituisce **true** se non è presente alcuna condizione di errore (errore irreversibile o altro errore) e non è impostato il flag di fine file.|
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Restituisce **true** in caso di condizione di fine file.|
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Imposta lo stato di errore interno. Se chiamato con gli argomenti predefiniti, cancella tutti i bit di errore.|
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Restituisce lo stato di errore corrente.|
+|[bad](basic-ios-class.md#bad)|Restituisce **true** se è presente un errore irreversibile.|
+|[fail](basic-ios-class.md#fail)|Restituisce **true** se è presente un errore irreversibile o una condizione "prevista", ad esempio un errore di conversione, o se è impossibile trovare il file. L'elaborazione può spesso riprendere dopo una chiamata a `clear` con un argomento di zero.|
+|[good](basic-ios-class.md#good)|Restituisce **true** se non è presente alcuna condizione di errore (errore irreversibile o altro errore) e non è impostato il flag di fine file.|
+|[eof](basic-ios-class.md#eof)|Restituisce **true** in caso di condizione di fine file.|
+|[clear](basic-ios-class.md#clear)|Imposta lo stato di errore interno. Se chiamato con gli argomenti predefiniti, cancella tutti i bit di errore.|
+|[rdstate] (basic-ios-class.md #rdstate|Restituisce lo stato di errore corrente.|
 
 L'operatore **!** operatore viene sottoposto a overload per eseguire la stessa funzione di `fail` (funzione). Pertanto, l'espressione:
 

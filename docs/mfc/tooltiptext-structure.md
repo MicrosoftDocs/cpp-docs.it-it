@@ -1,5 +1,5 @@
 ---
-title: TOOLTIPTEXT (struttura) | Documenti Microsoft
+title: Struttura TOOLTIPTEXT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cae7efbee59b24ff34518b62ff212d436973053
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0f65b94294b3b3d55f9839dffa99a18be61c5639
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953932"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195984"
 ---
 # <a name="tooltiptext-structure"></a>Struttura TOOLTIPTEXT
-Nella scrittura del [gestore descrizione comando notifica](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), è necessario usare il **TOOLTIPTEXT** struttura. I membri del **TOOLTIPTEXT** struttura sono:  
+Iscritto il [gestore descrizione comando notifica](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), è necessario utilizzare il **TOOLTIPTEXT** struttura. I membri del **TOOLTIPTEXT** struttura sono:  
   
  `typedef struct {`  
   
@@ -46,16 +46,16 @@ Nella scrittura del [gestore descrizione comando notifica](../mfc/handling-ttn-n
  `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
   
  *HDR*  
- Identifica lo strumento che richiede il testo. L'unico membro di questa struttura che potrebbe essere necessario è l'ID di comando. del controllo ID di comando del controllo verrà incluso il *idFrom* membro del **NMHDR** struttura, accedere con la sintassi `hdr.idFrom`. Vedere [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) per una descrizione dei membri del **NMHDR** struttura.  
+ Identifica lo strumento che richiede il testo. L'unico membro della struttura che potrebbe essere necessario è l'ID del comando. del controllo ID comando del controllo sarà nel *idFrom* membro delle **NMHDR** struttura, l'accesso con la sintassi `hdr.idFrom`. Visualizzare [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) per una descrizione dei membri delle **NMHDR** struttura.  
   
  *lpszText*  
  Indirizzo di una stringa che riceve il testo per uno strumento.  
   
  *szText*  
- Buffer che riceve il testo della descrizione comando. Un'applicazione è possibile copiare il testo di questo buffer come alternativa alla specifica di un indirizzo di stringa.  
+ Buffer che riceve il testo della descrizione comando. Un'applicazione può copiare il testo per questo buffer come alternativa alla specifica di un indirizzo di stringa.  
   
  *hinst*  
- Handle dell'istanza che contiene una stringa da usare come testo della descrizione comando. Se *lpszText* è l'indirizzo del testo della descrizione comando, questo membro è NULL.  
+ Handle dell'istanza che contiene una stringa da utilizzare come il testo della descrizione comando. Se *lpszText* è l'indirizzo del testo della descrizione comandi, questo membro è NULL.  
   
  Quando si gestisce il `TTN_NEEDTEXT` notifica di messaggio, specificare la stringa da visualizzare in uno dei modi seguenti:  
   
@@ -63,7 +63,7 @@ Nella scrittura del [gestore descrizione comando notifica](../mfc/handling-ttn-n
   
 -   Copiare l'indirizzo del buffer che contiene il testo per il *lpszText* membro.  
   
--   Copiare l'identificatore di una risorsa stringa per il *lpszText* membro e copia l'handle dell'istanza che contiene la risorsa per il *hinst* membro.  
+-   Copiare l'identificatore della risorsa stringa per il *lpszText* membro e copiare l'handle dell'istanza che contiene la risorsa per il *hinst* membro.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)

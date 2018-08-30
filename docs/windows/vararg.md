@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4f79b8c7fa91356828bcd76dd2bcfecddce882f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 23e76d00afc23a511c81cb7ef10703433de3cab2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606504"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195908"
 ---
 # <a name="vararg"></a>vararg
 
@@ -36,7 +36,7 @@ Specifica che la funzione accetta un numero variabile di argomenti.
 
 ## <a name="remarks"></a>Note
 
-Il **vararg** attributi di C++ ha la stessa funzionalità come la [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) attributo MIDL.
+Il **vararg** attributi di C++ ha la stessa funzionalità come la [vararg](/windows/desktop/Midl/vararg) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 
