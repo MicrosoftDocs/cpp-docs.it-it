@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: f10422d8efcebec62e77a495a6fb04c980da6060
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215161"
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
@@ -73,11 +73,11 @@ Carattere wide.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **wctomb** converte il carattere "wide" per un carattere multibyte, viene restituito il numero di byte (che non è mai maggiore **MB_CUR_MAX**) in caratteri "wide". Se *wchar* è il carattere null di caratteri wide (L '\0'), **wctomb** restituisce 1. Se l'indicatore di misura di destinazione *mbchar* viene **NULL**, **wctomb** restituisce 0. Se la conversione non è possibile che in impostazioni locali correnti, **wctomb** restituisce -1 e **errno** è impostato su **EILSEQ**.
+Se **wctomb** converte il carattere wide in un carattere multibyte, restituisce il numero di byte (che non è mai maggiore **MB_CUR_MAX**) nel caratteri wide. Se *wchar* è il carattere null di caratteri "wide" (L '\0'), **wctomb** restituisce 1. Se il puntatore di destinazione *mbchar* viene **NULL**, **wctomb** restituisce 0. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb** restituisce -1 e **errno** è impostata su **EILSEQ**.
 
 ## <a name="remarks"></a>Note
 
-Il **wctomb** funzione converte relativo *wchar* argomento nel carattere multibyte corrispondente e archivia il risultato al *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma. **wctomb** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **wctomb_l** è identica alla **wctomb** ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il **wctomb** funzione converte relativo *wchar* argomento nel carattere multibyte corrispondente e archivia il risultato alla *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma. **wctomb** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **wctomb_l** è identica alla **wctomb** ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 **wctomb** convalida i propri parametri. Se *mbchar* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
 
@@ -127,4 +127,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

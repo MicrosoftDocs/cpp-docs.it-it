@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a5d94f92d21ea435bf7d73a6e28470babd293ed3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883674"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206915"
 ---
 # <a name="win32threadtraits-class"></a>Classe Win32ThreadTraits
 Questa classe fornisce la funzione di creazione di un thread di Windows. Utilizzare questa classe se il thread non useranno le funzioni CRT.  
@@ -48,7 +48,7 @@ class Win32ThreadTraits
 |[Win32ThreadTraits::CreateThread](#createthread)|(Statico) Chiamare questa funzione per creare un thread che non deve utilizzare funzioni CRT.|  
   
 ## <a name="remarks"></a>Note  
- Tratti di thread sono classi che forniscono una funzione di creazione per un particolare tipo di thread. La funzione di creazione ha la stessa firma e la semantica di Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) (funzione).  
+ Tratti di thread sono classi che forniscono una funzione di creazione per un particolare tipo di thread. La funzione di creazione ha la stessa firma e la semantica di Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) (funzione).  
   
  Tratti di thread vengono usati dalle classi seguenti:  
   
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out] Indirizzo della variabile DWORD che, in caso di esito positivo riceve l'ID del thread del thread appena creato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'handle per il thread appena creato oppure NULL in caso di errore. Chiamare [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) per ottenere informazioni dettagliate sull'errore.  
+ Restituisce l'handle per il thread appena creato oppure NULL in caso di errore. Chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) per ottenere informazioni dettagliate sull'errore.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) per altre informazioni sui parametri per questa funzione.  
+ Visualizzare [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) per altre informazioni sui parametri per questa funzione.  
   
  Questa funzione chiama `CreateThread` per creare il thread.  
   

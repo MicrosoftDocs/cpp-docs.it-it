@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c01326056a5fd3a106e09db94d2a84435f32e3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6c9fd7cedc1e16c6f784edebf35faf055b09ed82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879665"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217188"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Classe CPrivateObjectSecurityDesc
 Questa classe rappresenta un oggetto descrittore di sicurezza oggetto privato.  
@@ -65,7 +65,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="remarks"></a>Note  
  Questa classe, derivata da [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), fornisce i metodi per creare e gestire il descrittore di sicurezza di un oggetto privato.  
   
- Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) nel SDK di Windows.  
+ Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nel SDK di Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [Ci CSecurityDesc](../../atl/reference/csecuritydesc-class.md)  
@@ -97,13 +97,13 @@ bool ConvertToAutoInherit(
  Specifica se il nuovo oggetto può contenere altri oggetti. Il valore true indica che il nuovo oggetto è un contenitore. Il valore false indica che il nuovo oggetto non è un contenitore.  
   
  *GenericMapping*  
- Puntatore a un [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.  
+ Puntatore a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo tenta di determinare se le voci ACE nel controllo di accesso discrezionale (DACL) di elenco e un elenco di controllo di accesso di sistema (SACL) del descrittore di sicurezza corrente sono state ereditate dal descrittore di sicurezza dell'elemento padre. Chiama il [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) (funzione).  
+ Questo metodo tenta di determinare se le voci ACE nel controllo di accesso discrezionale (DACL) di elenco e un elenco di controllo di accesso di sistema (SACL) del descrittore di sicurezza corrente sono state ereditate dal descrittore di sicurezza dell'elemento padre. Chiama il [ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403) (funzione).  
   
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  Costruttore.  
@@ -160,7 +160,7 @@ bool Create(
  Riferimento per la [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto per conto del quale l'oggetto viene creato il processo di client.  
   
  *GenericMapping*  
- Puntatore a un [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.  
+ Puntatore a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.  
   
  *ObjectType*  
  Puntatore a un `GUID` struttura che identifica il tipo di oggetto associato all'oggetto corrente. Impostare *ObjectType* su NULL se l'oggetto non ha un GUID.  
@@ -169,13 +169,13 @@ bool Create(
  Specifica se il nuovo oggetto può contenere altri oggetti. Il valore true indica che il nuovo oggetto è un contenitore. Il valore false indica che il nuovo oggetto non è un contenitore.  
   
  *AutoInheritFlags*  
- Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) per altri dettagli.  
+ Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) per altri dettagli.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo chiama [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) oppure [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
+ Questo metodo chiama [CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405) oppure [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
  Il secondo metodo consente di specificare il tipo di oggetto GUID del nuovo oggetto o controllo del modo in cui le voci ACE vengono ereditate.  
   
@@ -193,7 +193,7 @@ bool Get(
   
 ### <a name="parameters"></a>Parametri  
  *sistema internazionale di misura*  
- Un set di flag di bit che indicano le parti del descrittore di sicurezza da recuperare. Questo valore può essere una combinazione dei [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) flag di bit.  
+ Un set di flag di bit che indicano le parti del descrittore di sicurezza da recuperare. Questo valore può essere una combinazione dei [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) flag di bit.  
   
  *pResult*  
  Puntatore a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) oggetto che riceve una copia delle informazioni richieste dal descrittore di sicurezza specificato.  
@@ -238,19 +238,19 @@ bool Set(
   
 ### <a name="parameters"></a>Parametri  
  *sistema internazionale di misura*  
- Un set di flag di bit che indicano le parti del descrittore di sicurezza da impostare. Questo valore può essere una combinazione dei [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) flag di bit.  
+ Un set di flag di bit che indicano le parti del descrittore di sicurezza da impostare. Questo valore può essere una combinazione dei [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) flag di bit.  
   
  *Modifica*  
  Puntatore a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) oggetto. Le parti di questo descrittore di sicurezza indicato dal *sistema internazionale di misura* parametro vengono applicate al descrittore di sicurezza dell'oggetto.  
   
  *GenericMapping*  
- Puntatore a un [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.  
+ Puntatore a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.  
   
  *Token*  
  Riferimento per la [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto per conto del quale l'oggetto viene creato il processo di client.  
   
  *AutoInheritFlags*  
- Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) per altri dettagli.  
+ Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) per altri dettagli.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.  
@@ -259,7 +259,7 @@ bool Set(
  Il secondo metodo consente di specificare il tipo di oggetto GUID dell'oggetto o controllo del modo in cui le voci ACE vengono ereditate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Panoramica della classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)   
  [Classe CSecurityDesc](../../atl/reference/csecuritydesc-class.md)

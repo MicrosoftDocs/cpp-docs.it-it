@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849695"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221132"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Esegue il wrapping di funzioni API di Windows, fornendo un'interfaccia orientata a oggetti che è possibile utilizzare per accedere al Registro di sistema.  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Note  
  Se *bPercorso amm* è impostata su TRUE, il `m_hKey` variabile membro è impostata su **HKEY_LOCAL_MACHINE**. Se si imposta *bPercorso amm* su FALSE, `m_hKey` è impostata su **HKEY_CURRENT_USER**.  
   
- L'accesso di sicurezza dipende il *bReadOnly* parametro. Se *bReadonly* è FALSE, l'accesso di sicurezza verrà impostato su **KEY_ALL_ACCESS**. Se *bReadyOnly* è TRUE, l'accesso di sicurezza verrà impostato su una combinazione di **KEY_QUERY_VALUE, KEY_NOTIFY** e **KEY_ENUMERATE_SUB_KEYS**. Per altre informazioni sull'accesso di sicurezza con il Registro di sistema, vedere [diritti di accesso e sicurezza della chiave del Registro di sistema](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ L'accesso di sicurezza dipende il *bReadOnly* parametro. Se *bReadonly* è FALSE, l'accesso di sicurezza verrà impostato su **KEY_ALL_ACCESS**. Se *bReadyOnly* è TRUE, l'accesso di sicurezza verrà impostato su una combinazione di **KEY_QUERY_VALUE, KEY_NOTIFY** e **KEY_ENUMERATE_SUB_KEYS**. Per altre informazioni sull'accesso di sicurezza con il Registro di sistema, vedere [diritti di accesso e sicurezza della chiave del Registro di sistema](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  Il distruttore `CSettingsStore` rilascia `m_hKey` automaticamente.  
   

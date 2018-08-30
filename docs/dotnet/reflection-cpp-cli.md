@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110008"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212169"
 ---
 # <a name="reflection-ccli"></a>Reflection (C++/CLI)
 
@@ -42,12 +42,12 @@ La reflection consente ai tipi di dati noti essere controllata in fase di esecuz
 
 Si noti che il nome dell'assembly specificato è il nome sicuro (vedere [creazione e assembly con nome sicuro](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), che include la versione dell'assembly, le impostazioni cultura e le informazioni sulla firma. Si noti inoltre che il nome dello spazio dei nomi in cui è definito il tipo di dati può essere recuperato, insieme al nome della classe di base.
 
-Il modo più comune per accedere alle funzionalità di reflection è tramite il <xref:System.Object.GetType%2A> (metodo). Questo metodo è fornito da [System:: Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), da cui derivano tutte le classi di garbage collection.
+Il modo più comune per accedere alle funzionalità di reflection è tramite il <xref:System.Object.GetType%2A> (metodo). Questo metodo è fornito da [System:: Object](https://msdn.microsoft.com/library/system.object.aspx), da cui derivano tutte le classi di garbage collection.
 
 > [!NOTE]
 > La reflection su un .exe compilate con il compilatore Visual C++ è consentita solo se il .exe viene compilata con il **/clr: pure** oppure **/CLR: safe** opzioni del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non è disponibile in Visual Studio 2017. Visualizzare [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) per altre informazioni.
 
-Per altre informazioni, vedere [Namespace System. Reflection](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+Per altre informazioni, vedere [Namespace System. Reflection](https://msdn.microsoft.com/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>Esempio: GetType
 
@@ -188,9 +188,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Esempio: ispezione degli assembly
 
-Se il codice riportato sopra viene compilato in una DLL denominata vcpp_reflection_6. dll, è quindi possibile usare la reflection per esaminare il contenuto di questo assembly. Tale scopo, utilizzare la funzione API di reflection statica [assembly:: Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) per caricare l'assembly. Questa funzione restituisce l'indirizzo di un **Assembly** oggetto che è quindi possibile eseguire query relative a moduli e tipi all'interno.
+Se il codice riportato sopra viene compilato in una DLL denominata vcpp_reflection_6. dll, è quindi possibile usare la reflection per esaminare il contenuto di questo assembly. Tale scopo, utilizzare la funzione API di reflection statica [assembly:: Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) per caricare l'assembly. Questa funzione restituisce l'indirizzo di un **Assembly** oggetto che è quindi possibile eseguire query relative a moduli e tipi all'interno.
 
-Una volta che il sistema di reflection è stato caricato l'assembly, una matrice di **tipo** oggetti viene recuperato con il [assembly:: GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) (funzione). Ogni elemento della matrice contiene informazioni su un tipo diverso, anche se in questo caso, viene definita una sola classe. Usando un ciclo, ciascuna **tipo** in questa matrice viene eseguita una query sui membri del tipo tramite il **:: GetMembers** (funzione). Questa funzione restituisce una matrice di **MethodInfo** oggetti, ogni oggetto che contiene informazioni sulla funzione membro, membro dati o proprietà del tipo.
+Una volta che il sistema di reflection è stato caricato l'assembly, una matrice di **tipo** oggetti viene recuperato con il [assembly:: GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) (funzione). Ogni elemento della matrice contiene informazioni su un tipo diverso, anche se in questo caso, viene definita una sola classe. Usando un ciclo, ciascuna **tipo** in questa matrice viene eseguita una query sui membri del tipo tramite il **:: GetMembers** (funzione). Questa funzione restituisce una matrice di **MethodInfo** oggetti, ogni oggetto che contiene informazioni sulla funzione membro, membro dati o proprietà del tipo.
 
 Si noti che l'elenco dei metodi include in modo esplicito le funzioni definite **TestClass** e le funzioni ereditate in modo implicito dalle **System:: Object** classe. Come parte dell'adozione in .NET anziché nella sintassi di Visual C++, le proprietà vengono visualizzate come membri dati sottostanti a cui che si accede tramite le funzioni get/set. Le funzioni get/set vengono visualizzati in questo elenco come i metodi regolari. Reflection è supportata tramite common language runtime, non dal compilatore Visual C++.
 

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85c19e4f23f7c6e9454793ac86a574614ec2fae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847247"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207923"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -39,7 +39,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> A partire dalla versione di Visual Studio 2017, il \<filesystem > intestazione non è ancora uno standard di C++. Visual C++ 2017 implementa gli standard della bozza finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> A partire dalla versione di Visual Studio 2017, il \<filesystem > dell'intestazione non era ancora uno standard di C++. Visual C++ 2017 implementa gli standard della bozza finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Questa intestazione supporta file system per uno di due ampie classi di sistemi operativi host: Microsoft Windows e Posix.
 
@@ -128,7 +128,7 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 
 |nome|Descrizione|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) che determina il comportamento nel caso in cui un file di destinazione esista già.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) che determina il comportamento nel caso in cui un file di destinazione esista già.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumerazione che specifica le opzioni per gli iteratori di directory.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumerazione di tipi di file.|
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo di maschera di bit usato per trasferire le autorizzazioni e le opzioni per le autorizzazioni|

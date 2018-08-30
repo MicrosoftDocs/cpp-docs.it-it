@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 96f459c8360969146f8cf76a48c9141000066745
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451719"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214293"
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -99,17 +99,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce la lunghezza della stringa trasformata, senza contare il carattere di terminazione null. Se il valore restituito è maggiore o uguale a *conteggio*, il contenuto degli *strDest* è imprevedibile. In caso di errore, ogni funzione imposta **errno** e restituisce **INT_MAX**. Per un carattere non valido **errno** è impostata su **EILSEQ**.
+Restituisce la lunghezza della stringa trasformata, senza contare il carattere di terminazione null. Se il valore restituito è maggiore o uguale a *conteggio*, il contenuto degli *strDest* è imprevedibile. In caso di errore, ogni funzione imposta **errno** e restituisce **INT_MAX**. Per un carattere non valido, **errno** è impostata su **EILSEQ**.
 
 ## <a name="remarks"></a>Note
 
-Il **strxfrm** funzione Trasforma la stringa a cui puntata *strSource* in un nuovo formato fascicolato che viene archiviato in *strDest*. Non più di *conteggio* caratteri, incluso il carattere null, vengono trasformati e inseriti nella stringa risulta. La trasformazione viene eseguita usando le impostazioni locali **LC_COLLATE** impostazione della categoria. Per ulteriori informazioni sul **LC_COLLATE**, vedere [setlocale](setlocale-wsetlocale.md). **strxfrm** utilizza le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali; **strxfrm_l** è identica ad eccezione del fatto che usa le impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il **strxfrm** funzione Trasforma la stringa a cui punta *strSource* in un nuovo formato fascicolato che viene archiviato nella *strDest*. Non oltre *conteggio* caratteri, incluso il carattere null, vengono trasformati e inseriti nella stringa risultante. La trasformazione viene eseguita usando le impostazioni locali **LC_COLLATE** impostazione di categoria. Per ulteriori informazioni sul **LC_COLLATE**, vedere [setlocale](setlocale-wsetlocale.md). **strxfrm** Usa le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali; **strxfrm_l** è identica, ma usa le impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Dopo la trasformazione, una chiamata a **strcmp** con le due stringhe trasformate restituisce risultati identici a quelli di una chiamata a **strcoll** applicata alle due stringhe originali. Come con **strcoll** e **stricoll**, **strxfrm** gestisce automaticamente stringhe di caratteri multibyte in modo appropriato.
+Dopo la trasformazione, una chiamata a **strcmp** con le due stringhe trasformate restituisce risultati identici a quelli di una chiamata a **strcoll** applicata alle due stringhe originali. Come per gli **strcoll** e **stricoll**, **strxfrm** gestisce automaticamente stringhe di caratteri multibyte in modo appropriato.
 
-**wcsxfrm** è una versione a caratteri wide **strxfrm**; gli argomenti di stringa del **wcsxfrm** sono puntatori a caratteri "wide". Per **wcsxfrm**, dopo la trasformazione di stringa, una chiamata a **wcscmp** con le due stringhe trasformate restituisce risultati identici a quelli di una chiamata a **wcscoll** applicato per il due stringhe originali. **wcsxfrm** e **strxfrm** si comportano in modo identico in caso contrario. **wcsxfrm** utilizza le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali; **wcsxfrm_l** utilizza le impostazioni locali passate anziché le impostazioni locali correnti.
+**wcsxfrm** è una versione a caratteri wide di **strxfrm**; gli argomenti di stringa del **wcsxfrm** sono puntatori a caratteri "wide". Per **wcsxfrm**, dopo la trasformazione di stringa, una chiamata a **wcscmp** con le due stringhe trasformate restituisce risultati identici a quelli di una chiamata a **wcscoll** applicato per il due stringhe originali. **wcsxfrm** e **strxfrm** hanno lo stesso comportamento in caso contrario. **wcsxfrm** Usa le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali; **wcsxfrm_l** Usa le impostazioni locali passate anziché le impostazioni locali correnti.
 
-Queste funzioni convalidano i relativi parametri. Se *strSource* è un puntatore null, o *strDest* è un **NULL** puntatore (a meno che non conteggio è zero), oppure se *conteggio* è maggiore di **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **INT_MAX**.
+Queste funzioni convalidano i relativi parametri. Se *strSource* è un puntatore null, o *strDest* è un **NULL** puntatore (a meno che non conteggio è zero), oppure se *conteggio* è maggiore di quella **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -120,15 +120,15 @@ Queste funzioni convalidano i relativi parametri. Se *strSource* è un puntatore
 
 Nelle impostazioni locali "C", l'ordine dei caratteri nel set di caratteri (set di caratteri ASCII) è lo stesso dell'ordine lessicografico dei caratteri. Tuttavia, in altre impostazioni locali, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico dei caratteri. Ad esempio, in alcune impostazioni locali europee, il carattere 'a' (valore 0x61) precede il carattere '&\#x00E4;' (valore 0xE4) nel set di caratteri, ma il carattere 'ä' precede lessicograficamente il carattere 'a'.
 
-In impostazioni locali per cui il set di caratteri e l'ordine lessicografico dei caratteri differiscono, utilizzare **strxfrm** sulle stringhe originali, quindi **strcmp** sulle stringhe risultanti per produrre una stringa lessicografico confronto in base alle impostazioni locali correnti **LC_COLLATE** impostazione della categoria. Di conseguenza, per confrontare lessicograficamente due stringhe nelle impostazioni locali precedenti, utilizzare **strxfrm** sulle stringhe originali, quindi **strcmp** sulle stringhe risultanti. In alternativa, è possibile utilizzare **strcoll** anziché **strcmp** sulle stringhe originali.
+Nelle impostazioni locali per le quali il set di caratteri e l'ordine lessicografico dei caratteri differiscono, utilizzare **strxfrm** sulle stringhe originali e quindi **strcmp** sulle stringhe risultanti per produrre una stringa lessicografico confronto in base alle impostazioni locali correnti **LC_COLLATE** impostazione di categoria. In questo modo, per confrontare lessicograficamente due stringhe nelle impostazioni locali precedenti, usare **strxfrm** sulle stringhe originali, quindi **strcmp** sulle stringhe risultanti. In alternativa, è possibile usare **strcoll** invece **strcmp** sulle stringhe originali.
 
-**strxfrm** è fondamentalmente un wrapper intorno [LCMapString](http://msdn.microsoft.com/library/windows/desktop/dd318700) con **LCMAP_SORTKEY**.
+**strxfrm** è fondamentalmente un wrapper intorno [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa) con **LCMAP_SORTKEY**.
 
-Il valore della seguente espressione corrisponde alla dimensione della matrice necessaria per contenere il **strxfrm** trasformazione della stringa di origine:
+Il valore dell'espressione riportata di seguito è la dimensione della matrice in cui inserire il **strxfrm** trasformazione della stringa di origine:
 
 `1 + strxfrm( NULL, string, 0 )`
 
-Le impostazioni locali "C", solo **strxfrm** equivale alla seguente:
+Le impostazioni locali "C", solo **strxfrm** equivale al seguente:
 
 ```C
 strncpy( _string1, _string2, _count );

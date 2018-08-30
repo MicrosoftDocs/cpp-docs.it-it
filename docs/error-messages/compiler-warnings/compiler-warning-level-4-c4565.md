@@ -1,7 +1,7 @@
 ---
-title: Compilatore avviso (livello 4) C4565 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4565 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4249783686c1fabb44395d3c092eca0d9230a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c25f2f1fc16c6d45a7d1eddec8d3efe62db142f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293362"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211262"
 ---
 # <a name="compiler-warning-level-4-c4565"></a>Avviso del compilatore (livello 4) C4565
-'function': ridefinizione. il simbolo era dichiarato in precedenza con __declspec(modifier)  
-  
- Un simbolo è stato ridefinito o ridichiarato e la seconda definizione o dichiarazione, diversamente dalla prima, non conteneva un `__declspec` modificatore (***modificatore***). Si tratta di un avviso informativo. Per risolvere questo problema, eliminare una delle definizioni.  
-  
- L'esempio seguente genera l'errore C4565:  
-  
-```  
-// C4565.cpp  
-// compile with: /W4 /LD  
-__declspec(noalias) void f();  
-void f();   // C4565  
+
+> «*funzione*': ridefinizione; il simbolo era dichiarato in precedenza con declspec (*modificatore*)
+
+## <a name="remarks"></a>Note
+
+Un simbolo è stato ridefinito o ridichiarazione e la seconda definizione o dichiarazione, diversamente dalla prima, non è un `__declspec` modificatore (*modificatore*). Si tratta di un avviso informativo. Per risolvere questo avviso, eliminare una delle definizioni.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4565:
+
+```cpp
+// C4565.cpp
+// compile with: /W4 /LD
+__declspec(noalias) void f();
+void f();   // C4565
 ```

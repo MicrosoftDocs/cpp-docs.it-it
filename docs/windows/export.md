@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e696b3c141a83882af67e72039c164a0f917d446
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d5da3f03500ccaadb4cff3be0226592e36ed3160
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611200"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200889"
 ---
 # <a name="export"></a>esportazione
 
@@ -42,7 +42,7 @@ Non è possibile applicare il **esportare** anche se la classe contiene solo mem
 
 Se si esporta un oggetto senza nome **enum** oppure **struct**, viene assegnato un nome che inizia con **unnamed**<em>x</em>, dove *x* è un numero sequenza.
 
-Il typedef valido per l'esportazione sono tipi di base, le strutture, unioni, enumerazioni, o gli identificatori dei tipi.  Visualizzare [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) per altre informazioni.
+Il typedef valido per l'esportazione sono tipi di base, le strutture, unioni, enumerazioni, o gli identificatori dei tipi.  Visualizzare [typedef](/windows/desktop/Midl/typedef) per altre informazioni.
 
 ## <a name="example"></a>Esempio
 

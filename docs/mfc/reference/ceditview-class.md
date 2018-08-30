@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338496"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220830"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 Tipo di classe di visualizzazione che fornisce la funzionalità di un controllo di modifica di Windows e che può essere utilizzato per implementare funzionalità di tipo editor di testo semplice.  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  L'implementazione predefinita della classe `CEditView` gestisce i comandi seguenti: ID_EDIT_SELECT_ALL ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT e ID_FILE_PRINT.  
   
- Il limite di carattere predefinito per `CEditView` è (1024 \* 1024-1 = 1048575). Ciò può essere modificato chiamando la funzione EM_LIMITTEXT del controllo di modifica sottostante. Tuttavia, i limiti sono diversi a seconda del sistema operativo e il tipo di modifica controllo (singola o multiriga). Per altre informazioni su questi limiti, vedere [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607).  
+ Il limite di carattere predefinito per `CEditView` è (1024 \* 1024-1 = 1048575). Ciò può essere modificato chiamando la funzione EM_LIMITTEXT del controllo di modifica sottostante. Tuttavia, i limiti sono diversi a seconda del sistema operativo e il tipo di modifica controllo (singola o multiriga). Per altre informazioni su questi limiti, vedere [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).  
   
  Per modificare questo limite nel controllo, eseguire l'override di `OnCreate()` funzionare per i `CEditView` classe e inserire la riga di codice seguente:  
   

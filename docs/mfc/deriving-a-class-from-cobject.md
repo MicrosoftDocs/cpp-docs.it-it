@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9e098890a90b76da8452fb2a2ca86222b49c296
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198255"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivazione da una classe da CObject
 Questo articolo descrive i passaggi minimi necessari per derivare una classe dalla classe [CObject](../mfc/reference/cobject-class.md). Altri `CObject` classe articoli descrivono i passaggi necessari per sfruttare i vantaggi di specifico `CObject` funzionalità, ad esempio la serializzazione e di diagnostica supporto del debug.  
@@ -68,7 +68,7 @@ Questo articolo descrive i passaggi minimi necessari per derivare una classe dal
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- In genere, tuttavia, è possibile eseguire l'override di alcune delle `CObject`di funzioni membro per gestire le specifiche della nuova classe. Ad esempio, è in genere possibile eseguire l'override di `Dump` funzione di `CObject` per fornire l'output di debug per il contenuto della classe. Per informazioni dettagliate su come eseguire l'override `Dump`, vedere l'articolo [diagnostica: il dump di oggetti contenuto](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59). È anche possibile eseguire l'override di `AssertValid` funzione di `CObject` per una verifica personalizzata per convalidare la coerenza dei membri dati degli oggetti classe. Per una descrizione di come eseguire l'override `AssertValid`, vedere [ASSERT_VALID e MFC CObject:: AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
+ In genere, tuttavia, è possibile eseguire l'override di alcune delle `CObject`di funzioni membro per gestire le specifiche della nuova classe. Ad esempio, è in genere possibile eseguire l'override di `Dump` funzione di `CObject` per fornire l'output di debug per il contenuto della classe. Per informazioni dettagliate su come eseguire l'override `Dump`, vedere l'articolo [diagnostica: il dump di oggetti contenuto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\)). È anche possibile eseguire l'override di `AssertValid` funzione di `CObject` per una verifica personalizzata per convalidare la coerenza dei membri dati degli oggetti classe. Per una descrizione di come eseguire l'override `AssertValid`, vedere [ASSERT_VALID e MFC CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\)).  
   
  L'articolo [specificando i livelli di funzionalità](../mfc/specifying-levels-of-functionality.md) viene descritto come specificare gli altri livelli di funzionalità, tra cui informazioni sulle classi in fase di esecuzione, creazione di oggetti dinamici e la serializzazione.  
   

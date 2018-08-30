@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336566"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202730"
 ---
 # <a name="cinternetfile-class"></a>Classe CInternetFile
 Consente l'accesso ai file nei sistemi remoti che utilizzano protocolli Internet.  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  Un riferimento per la [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto che riceve la riga letta.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al buffer contenente dati normali recuperati dal [CInternetFile](../../mfc/reference/cinternetfile-class.md) oggetto. Indipendentemente dal tipo di dati del buffer passato a questo metodo, eventuali modifiche non viene eseguita sui dati (ad esempio, la conversione in Unicode), pertanto è necessario eseguire il mapping dei dati restituiti nella struttura ci si aspetta, come se il **void\***  tipo sono stati restituiti.  
+ Un puntatore al buffer contenente dati normali recuperati dal [CInternetFile](../../mfc/reference/cinternetfile-class.md) oggetto. Indipendentemente dal tipo di dati del buffer passato a questo metodo, eventuali modifiche non viene eseguita sui dati (ad esempio, la conversione in Unicode), pertanto è necessario eseguire il mapping dei dati restituiti nella struttura ci si aspetta, come se il **void** <strong>\*</strong> tipo sono stati restituiti.  
   
  NULL se è stata raggiunta la fine del file senza dover leggere tutti i dati; In alternativa, se è stato raggiunto il valore boolean, FALSE se la fine del file senza dover leggere tutti i dati.  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Dimensione desiderata del buffer in byte.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
+ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
  APIs WinInet sottostanti non eseguire la memorizzazione nel buffer, quindi scegliere una dimensione del buffer che consente all'applicazione di leggere i dati in modo efficiente, indipendentemente dalla quantità di dati da leggere. Se ogni chiamata a [lettura](#read) implica in genere un aount grandi di dati (ad esempio, quattro o più kilobyte), non è necessario un buffer. Tuttavia, se si chiama `Read` per ottenere piccoli blocchi di dati, oppure se si utilizza [ReadString](#readstring) per leggere una nuova riga alla volta, un buffer di lettura consente di migliorare le prestazioni dell'applicazione.  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  Dimensioni del buffer in byte.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
+ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
  Sottostante APIs WinInet non eseguono la memorizzazione nel buffer, quindi scegliere una dimensione del buffer che consente all'applicazione di scrivere dati in modo efficiente anche la quantità di dati da scrivere. Se ogni chiamata a [scrivere](#write) implica in genere una grande quantità di dati (ad esempio, quattro o più kilobyte alla volta), non è necessario un buffer. Tuttavia, se si chiama [scrivere](#write) per scrivere piccoli blocchi di dati, un buffer di scrittura migliora le prestazioni dell'applicazione.  

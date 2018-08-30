@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3dc1743b0c0b795d7aaa10a7a47689de2336094
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac5e03b7a9453b4b33c4a495842465b16a186543
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600395"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219192"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Procedura: attivare e utilizzare un componente Windows Runtime mediante WRL
 
@@ -46,7 +46,7 @@ La procedura seguente usa il `Windows::Foundation::IUriRuntimeClass` interfaccia
 
    Si consiglia di utilizzare la direttiva `using namespace` nel file con estensione cpp per rendere il codice più leggibile.
 
-2. Inizializzare il thread in cui viene eseguita l'app. Ogni app deve inizializzare il thread e threading di modello. Questo esempio Usa la [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) per inizializzare il Runtime di Windows e specifica [RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) come il modello di threading. Il `RoInitializeWrapper` classe chiamate `Windows::Foundation::Initialize` in fase di costruzione, e `Windows::Foundation::Uninitialize` quando viene eliminato definitivamente.
+2. Inizializzare il thread in cui viene eseguita l'app. Ogni app deve inizializzare il thread e threading di modello. Questo esempio Usa la [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) per inizializzare il Runtime di Windows e specifica [RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx) come il modello di threading. Il `RoInitializeWrapper` classe chiamate `Windows::Foundation::Initialize` in fase di costruzione, e `Windows::Foundation::Uninitialize` quando viene eliminato definitivamente.
 
    [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
@@ -76,7 +76,7 @@ La procedura seguente usa il `Windows::Foundation::IUriRuntimeClass` interfaccia
 
    [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   Il [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) funzione recupera il formato Unicode sottostante della stringa URI.
+   Il [WindowsGetStringRawBuffer](https://msdn.microsoft.com/library/windows/apps/br224636.aspx) funzione recupera il formato Unicode sottostante della stringa URI.
 
 Ecco un esempio completo:
 

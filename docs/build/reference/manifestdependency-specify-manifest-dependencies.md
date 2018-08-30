@@ -1,5 +1,5 @@
 ---
-title: -/MANIFESTDEPENDENCY (specifica le dipendenze tra manifesti) | Documenti Microsoft
+title: -MANIFESTDEPENDENCY (specifica le dipendenze tra manifesti) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9b2de39f5b5340eff22c7e22244aca3d05af67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d486047b708e0c3412aa63e0a0b026a2a4204f71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376572"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213899"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Specifica le dipendenze tra manifesti)
 ```  
@@ -31,25 +31,25 @@ ms.locfileid: "32376572"
 ```  
   
 ## <a name="remarks"></a>Note  
- /MANIFESTDEPENDENCY consente di specificare gli attributi che verranno inseriti nella \<dipendenza > della sezione del file manifesto.  
+ /MANIFESTDEPENDENCY consente di specificare gli attributi che verranno inseriti nella \<dipendenza > sezione del file manifesto.  
   
- Vedere [/MANIFEST (Crea Side-by-Side Assembly manifesto)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) per informazioni su come creare un file manifesto.  
+ Visualizzare [/MANIFEST (Crea Side-by-Side manifesto dell'Assembly)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) per informazioni su come creare un file manifesto.  
   
- Per ulteriori informazioni sul \<dipendenza > sezione del file manifesto, vedere [file di configurazione dell'editore](http://msdn.microsoft.com/library/aa375682).  
+ Per altre informazioni sul \<dipendenza > sezione del file manifesto, vedere [Publisher Configuration Files](/windows/desktop/SbsCs/publisher-configuration-files).  
   
- /MANIFESTDEPENDENCY informazioni possono essere passate al linker in uno dei due modi:  
+ Informazioni /MANIFESTDEPENDENCY possono essere passate al linker in uno dei due modi:  
   
 -   Direttamente nella riga di comando (o in un file di risposta) con /MANIFESTDEPENDENCY.  
   
 -   Tramite il [commento](../../preprocessor/comment-c-cpp.md) pragma.  
   
- L'esempio seguente mostra un commento di /MANIFESTDEPENDENCY tramite il pragma,  
+ L'esempio seguente mostra un commento /MANIFESTDEPENDENCY tramito il pragma,  
   
 ```  
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
 ```  
   
- che genera la seguente voce nel file manifesto:  
+ che restituisce la seguente voce nel file manifesto:  
   
 ```  
 <dependency>  
@@ -59,23 +59,23 @@ ms.locfileid: "32376572"
 </dependency>  
 ```  
   
- I commenti /MANIFESTDEPENDENCY stesso possono essere passati dalla riga di comando come segue:  
+ I commenti /MANIFESTDEPENDENCY stesso possono essere passati dalla riga di comando come indicato di seguito:  
   
 ```  
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
 ```  
   
- Il linker raccogliere commenti /MANIFESTDEPENDENCY, eliminare le voci duplicate e quindi aggiungere la stringa XML risultante nel file manifesto.  Se il linker rileva le voci in conflitto, il file manifesto verrà danneggiato e l'applicazione non verrà avviata (è possibile aggiungere una voce nel registro eventi, che indica l'origine dell'errore).  
+ Il linker verrà raccogliere commenti /MANIFESTDEPENDENCY, eliminare le voci duplicate e quindi aggiungere la stringa XML risultante al file manifesto.  Se il linker vengono recuperate le voci in conflitto, il file manifesto verrà danneggiarsi e l'applicazione avrà esito negativo avviare (è possibile aggiungere una voce nel registro eventi, che indica l'origine dell'errore).  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
   
-2.  Espandere il **le proprietà di configurazione** nodo.  
+2.  Espandere il nodo **Proprietà di configurazione**.  
   
-3.  Espandere il **Linker** nodo.  
+3.  Espandere la **Linker** nodo.  
   
-4.  Selezionare il **File manifesto** pagina delle proprietà.  
+4.  Selezionare il **Manifest File** pagina delle proprietà.  
   
 5.  Modificare il **dipendenze aggiuntive manifesto** proprietà.  
   

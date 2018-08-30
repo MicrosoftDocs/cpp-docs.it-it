@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ae23f641becea5a7bdb47eefbdee59e18c2f27a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572076"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205595"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 Questa classe fornisce una base per le classi di puntatore intelligente con le routine di memoria basato su COM.  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  CLSID associato ai dati e al codice che verrà utilizzato per creare l'oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK in caso di esito positivo o REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING o E_NOINTERFACE in caso di errore. Visualizzare [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) e [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) per una descrizione di questi errori.  
+ Restituisce S_OK in caso di esito positivo o REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING o E_NOINTERFACE in caso di errore. Visualizzare [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) e [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) per una descrizione di questi errori.  
   
 ### <a name="remarks"></a>Note  
- Se il primo form del metodo viene chiamato, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) viene usato per ripristinare il CLSID. Quindi chiamare entrambi i formati [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
+ Se il primo form del metodo viene chiamato, [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) viene usato per ripristinare il CLSID. Quindi chiamare entrambi i formati [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
  Nelle build di debug, si verifica un errore di asserzione se [CComPtrBase::p](#p) non è uguale a NULL.  
   
@@ -339,7 +339,7 @@ template <class Q> HRESULT QueryInterface(Q
  Restituisce S_OK su operazione riuscita o E_NOINTERFACE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo chiama [IUnknown:: QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
+ Questo metodo chiama [IUnknown:: QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).  
   
  Nelle build di debug, si verifica un errore di asserzione se *pp* non è uguale a NULL.  
   

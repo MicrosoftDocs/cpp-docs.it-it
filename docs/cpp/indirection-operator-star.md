@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409126"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200493"
 ---
 # <a name="indirection-operator-"></a>Operatore di riferimento indiretto: *
 ## <a name="syntax"></a>Sintassi  
@@ -32,7 +32,7 @@ ms.locfileid: "39409126"
 ```  
   
 ## <a name="remarks"></a>Note  
- L'operatore di riferimento indiretto unario (**\***) dereferenzia un puntatore; vale a dire, la funzione converte un valore del puntatore a un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'utilizzo dei **\*** operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.  
+ L'operatore di riferimento indiretto unario (<strong>\*</strong>) dereferenzia un puntatore; vale a dire, la funzione converte un valore del puntatore a un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'utilizzo dei <strong>\*</strong> operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.  
   
  Se l'operando punta a una funzione, il risultato è un indicatore di funzione. Se invece punta a un percorso di archiviazione, il risultato è un valore l-value che definisce il percorso di archiviazione.  
   

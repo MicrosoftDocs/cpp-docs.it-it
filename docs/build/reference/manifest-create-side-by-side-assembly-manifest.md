@@ -1,5 +1,5 @@
 ---
-title: -MANIFEST (Crea manifesto dell'Assembly Side-by-Side) | Documenti Microsoft
+title: -MANIFEST (Crea manifesto dell'Assembly Side-by-Side) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5486eca41c93adb074cde6dc9602149d7dfa4f13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7cdf0f5d1d736635af3d7bf1a853e9002e072ef5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378314"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199113"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Crea manifesto dell'assembly syde-by-side)
 ```  
@@ -31,13 +31,13 @@ ms.locfileid: "32378314"
 ```  
   
 ## <a name="remarks"></a>Note  
- /MANIFEST specifica che il linker deve creare un file manifesto side-by-side. Per ulteriori informazioni sui file manifesti, vedere [Manifest Files Reference](http://msdn.microsoft.com/library/aa375632).  
+ /MANIFEST specifica che il linker deve creare un file manifesto side-by-side. Per altre informazioni sui file manifesto, vedere [Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference).  
   
  Il valore predefinito è /MANIFEST.  
   
  L'opzione /MANIFEST:EMBED specifica che il linker deve includere il file manifesto nell'immagine come risorsa di tipo RT_MANIFEST. Il parametro facoltativo `ID` è l'ID della risorsa da utilizzare per il manifesto. Utilizzare un valore 1 per un file eseguibile. Utilizzare un valore 2 per una dll per permettergli di specificare le dipendenze private. Se il parametro `ID` non viene specificato, il valore predefinito è 2 se l'opzione /DLL è impostata; altrimenti il valore predefinito è 1.  
   
- A partire da Visual Studio 2008, i file manifesto per gli eseguibili contengono una sezione che specifica le informazioni di controllo Account utente (UAC). Se si specifica /MANIFEST ma si specifica né [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) né [/DLL](../../build/reference/dll-build-a-dll.md), un frammento del controllo dell'account utente predefinito che ha il controllo dell'account utente di livello impostato su *asInvoker* è inserito nel manifesto. Per ulteriori informazioni sui livelli di controllo dell'account utente, vedere [/MANIFESTUAC (informazioni dell'account vengono incorporati nel manifesto)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
+ A partire da Visual Studio 2008, i file manifesto per gli eseguibili contengono una sezione che specifica le informazioni di controllo Account utente (UAC). Se si specifica /MANIFEST ma non si specifica né [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) né [/DLL](../../build/reference/dll-build-a-dll.md), un frammento di controllo dell'account utente predefinito con il set a livello di controllo dell'account utente da *asInvoker* viene inserito nel manifesto. Per altre informazioni sui livelli di controllo dell'account utente, vedere [/MANIFESTUAC (incorpora UAC information nel manifesto)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
   
  Per modificare il comportamento predefinito del controllo dell'account utente, effettuare una delle operazioni seguenti:  
   
@@ -45,19 +45,19 @@ ms.locfileid: "32378314"
   
 -   In alternativa, l'opzione /MANIFESTUAC:NO se non si desidera generare un frammento del controllo dell'account utente nel manifesto.  
   
- Se si specifica /MANIFEST ma si specifica [/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) commenti, viene creato un file manifesto. Un file manifesto non viene creato se si specifica /MANIFEST:NO.  
+ Se non si specifica /MANIFEST ma si specifica [/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) commenti, viene creato un file manifesto. Un file manifesto non viene creato se si specifica /MANIFEST:NO.  
   
- Se si specifica /MANIFEST, il nome del file manifesto è lo stesso del nome del file di output con aggiunta l'estensione manifest. Ad esempio, se il nome del file di output è MyFile.exe, il nome del file manifesto è MyFile.exe.manifest.  Se si specifica /MANIFESTFILE:*nome*, il nome del manifesto è quello specificato in *nome*.  
+ Se si specifica /MANIFEST, il nome del file manifesto è lo stesso del nome del file di output con aggiunta l'estensione manifest. Ad esempio, se il nome del file di output è MyFile.exe, il nome del file manifesto è MyFile.exe.manifest.  Se si specifica /MANIFESTFILE:*name*, il nome del manifesto è quello specificato in *nome*.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
   
-2.  Espandere il **le proprietà di configurazione** nodo.  
+2.  Espandere il nodo **Proprietà di configurazione**.  
   
-3.  Espandere il **Linker** nodo.  
+3.  Espandere la **Linker** nodo.  
   
-4.  Selezionare il **File manifesto** pagina delle proprietà.  
+4.  Selezionare il **Manifest File** pagina delle proprietà.  
   
 5.  Modificare il **Genera manifesto** proprietà.  
   

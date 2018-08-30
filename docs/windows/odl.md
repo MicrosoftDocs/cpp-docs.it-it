@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fdc9e12a72758129f19ccd515c705df76bfe47ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9f376c2294dde0cc2fe538d3896aa28a9d136627
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594601"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221043"
 ---
 # <a name="odl"></a>odl
 
@@ -36,7 +36,7 @@ Identifica un'interfaccia come interfaccia oggetto Description Language (ODL). I
 
 ## <a name="remarks"></a>Note
 
-Il **odl** attributi di C++ ha la stessa funzionalità come la [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) attributo MIDL.
+Il **odl** attributi di C++ ha la stessa funzionalità come la [odl](/windows/desktop/Midl/odl) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

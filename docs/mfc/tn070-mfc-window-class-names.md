@@ -1,5 +1,5 @@
 ---
-title: 'TN070: Nomi delle classi di finestra MFC | Documenti Microsoft'
+title: 'TN070: Nomi delle classi di finestra MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66c434503bbd2c6d7ee1b0557fa73d843e0caaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf73633c22191d54f2b03f11cb2b84cbbd24d807
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220848"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: nomi delle classi di finestre MFC
 > [!NOTE]
 >  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.  
   
- Windows MFC utilizzare un nome di classe creata dinamicamente che riflette le funzionalità della finestra. MFC genera i nomi delle classi in modo dinamico per le finestre cornice, visualizzazioni e finestre popup generate dall'applicazione. Finestre di dialogo e controlli prodotti da un'applicazione MFC hanno il nome fornito a Windows per la classe della finestra in questione.  
+ Windows MFC Usa un nome di classe creata dinamicamente che riflette le funzionalità della finestra. MFC genera i nomi delle classi in modo dinamico per le finestre cornice, viste e le finestre popup generate dall'applicazione. Finestre di dialogo e controlli prodotti da un'applicazione MFC hanno il nome fornito dal Windows per la classe della finestra in questione.  
   
- È possibile sostituire il nome di classe specificato in modo dinamico la propria classe di finestra di registrazione e l'uso in un override di [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). I nomi di classe specificato MFC soddisfare uno dei due formati seguenti:  
+ È possibile sostituire il nome della classe specificato in modo dinamico per registrare la propria classe di finestra e l'uso in un override di [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). I nomi di classe fornito dal MFC rientrano in nessuno dei due formati seguenti:  
   
 ```  
 Afx:%x:%x  
 Afx:%x:%x:%x:%x:%x  
 ```  
   
- Le cifre esadecimali che sostituiscono il `%x` caratteri vengono compilati dai dati di [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struttura. MFC utilizza questa tecnica, in modo che più classi C++ che richiedono identici **WNDCLASS** strutture possono condividere la stessa classe finestra registrati. A differenza di molte applicazioni Win32 semplice, le applicazioni MFC è presente un solo **WNDPROC**, pertanto è possibile condividere facilmente **WNDCLASS** strutture per risparmiare tempo e memoria. I valori sostituibili per il `%x` caratteri illustrati in precedenza sono i seguenti:  
+ Le cifre esadecimali che sostituiscono il `%x` caratteri vengono compilati da dati di [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura. MFC utilizza questa tecnica, in modo che più classi C++ che richiedono identici **WNDCLASS** strutture possono condividere la stessa classe di finestra registrata. A differenza di molte applicazioni Win32 semplice, le applicazioni MFC hanno una sola **WNDPROC**, quindi è possibile condividere facilmente **WNDCLASS** strutture per risparmiare tempo e memoria. I valori sostituibili per le `%x` caratteri illustrati in precedenza sono i seguenti:  
   
 - **WNDCLASS.hInstance**  
   
@@ -49,7 +49,7 @@ Afx:%x:%x:%x:%x:%x
   
 - **WNDCLASS.hIcon**  
   
- Il primo form (`Afx:%x:%x`) viene utilizzato quando **hCursor**, **hbrBackground**, e **icona** sono tutti **NULL**.  
+ Il primo form (`Afx:%x:%x`) viene usato quando **hCursor**, **hbrBackground**, e **hIcon** sono tutti **NULL**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Note tecniche per numero](../mfc/technical-notes-by-number.md)   

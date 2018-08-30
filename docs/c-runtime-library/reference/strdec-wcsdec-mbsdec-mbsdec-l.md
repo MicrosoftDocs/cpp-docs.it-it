@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73813c406011eaadd540398d3364ec183f8deaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a700d6e7befb71b1161ec27beb7a839f93e003e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414217"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211474"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
 Sposta un puntatore di stringa indietro di un carattere.
 
 > [!IMPORTANT]
-> **mbsdec** e **mbsdec_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdec** e **mbsdec_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -89,28 +89,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Parametri
 
 *start*<br/>
-Puntatore a qualsiasi carattere (o per **mbsdec** e **mbsdec_l**, il primo byte di un carattere multibyte) nella stringa di origine; *avviare* deve precedere *corrente* nella stringa di origine.
+Puntatore a qualsiasi carattere (o per **mbsdec** e **mbsdec_l**, il primo byte di qualsiasi carattere multibyte) nella stringa di origine. *avviare* deve precedere *corrente* nella stringa di origine.
 
 *current*<br/>
-Puntatore a qualsiasi carattere (o per **mbsdec** e **mbsdec_l**, il primo byte di un carattere multibyte) nella stringa di origine; *correnti* deve seguire *avviare* nella stringa di origine.
+Puntatore a qualsiasi carattere (o per **mbsdec** e **mbsdec_l**, il primo byte di qualsiasi carattere multibyte) nella stringa di origine. *correnti* deve seguire *avviare* nella stringa di origine.
 
 *locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**mbsdec**, **mbsdec_l**, **strdec**, e **wcsdec** ogni funzione restituisce un puntatore al carattere che precede immediatamente *corrente*; **mbsdec** restituisce **NULL** se il valore di *avviare* è maggiore o uguale a quella del *corrente*. **tcsdec** viene mappata a una di queste funzioni e il relativo valore restituito dipende dal mapping.
+**mbsdec**, **mbsdec_l**, **strdec**, e **wcsdec** restituiscono ognuna un puntatore al carattere che precede immediatamente *corrente*; **mbsdec** restituisce **NULL** se il valore di *avviare* è maggiore o uguale a quello del *corrente*. **tcsdec** viene mappata a una di queste funzioni e il relativo valore restituito dipende dal mapping.
 
 ## <a name="remarks"></a>Note
 
 Il **mbsdec** e **mbsdec_l** funzioni restituiscono un puntatore al primo byte del carattere multibyte che precede immediatamente *corrente* nella stringa che contiene *avviare*.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni.  **mbsdec** riconosce le sequenze di caratteri multibyte in base alle impostazioni locali che è attualmente in uso, mentre **mbsdec_l** è identico ma utilizza invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali; vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni.  **mbsdec** riconosce le sequenze di caratteri multibyte in base alle impostazioni locali che è attualmente in uso, mentre **mbsdec_l** è identica ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *avviare* oppure *corrente* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
+Se *avviare* oppure *corrente* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
 
 > [!IMPORTANT]
-> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -118,7 +118,7 @@ Se *avviare* oppure *corrente* è **NULL**, viene richiamato il gestore di param
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**strdec** e **wcsdec** sono versioni caratteri a byte singolo e a caratteri wide di **mbsdec** e **mbsdec_l**. **strdec** e **wcsdec** vengono forniti solo per questo mapping e non deve essere utilizzato in caso contrario.
+**strdec** e **wcsdec** sono versioni a caratteri a byte singolo e caratteri wide di **mbsdec** e **mbsdec_l**. **strdec** e **wcsdec** sono disponibili solo per questo mapping e non deve essere utilizzato in caso contrario.
 
 Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 
@@ -135,7 +135,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato un utilizzo del **tcsdec**.
+L'esempio seguente illustra un uso **tcsdec**.
 
 ```cpp
 // crt_tcsdec.cpp
@@ -161,7 +161,7 @@ int main()
 }
 ```
 
-Nell'esempio seguente viene illustrato un utilizzo del **mbsdec**.
+L'esempio seguente illustra un uso **mbsdec**.
 
 ```cpp
 // crt_mbsdec.cpp

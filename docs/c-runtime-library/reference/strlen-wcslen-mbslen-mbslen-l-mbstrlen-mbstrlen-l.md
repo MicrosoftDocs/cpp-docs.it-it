@@ -58,19 +58,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c92c43a820bc1c8694689c9d99a47b0c46b484e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451589"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209449"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Ottiene la lunghezza di una stringa, usando le impostazioni locali correnti o le impostazioni locali specificate. Sono disponibili versioni più sicure di queste funzioni. Vedere [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md).
 
 > [!IMPORTANT]
-> **mbslen**, **mbslen_l**, **mbstrlen**, e **mbstrlen_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbslen**, **mbslen_l**, **mbstrlen**, e **mbstrlen_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -111,9 +111,9 @@ Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il c
 
 ## <a name="remarks"></a>Note
 
-**strlen** interpreta la stringa come stringa di caratteri a byte singolo, pertanto il relativo valore restituito è sempre uguale al numero di byte, anche se la stringa contiene caratteri multibyte. **wcslen** è una versione a caratteri wide **strlen**; l'argomento del **wcslen** è una stringa di caratteri wide e il numero di caratteri è espresso in caratteri wide (due byte). **wcslen** e **strlen** si comportano in modo identico in caso contrario.
+**strlen** interpreta la stringa come una stringa di caratteri a byte singolo, pertanto il relativo valore restituito è sempre uguale al numero di byte, anche se la stringa contiene caratteri multibyte. **wcslen** è una versione a caratteri wide di **strlen**; l'argomento della **wcslen** è una stringa di caratteri "wide" e il numero di caratteri è in caratteri wide (a due byte). **wcslen** e **strlen** hanno lo stesso comportamento in caso contrario.
 
-**Nota sulla sicurezza** Queste funzioni sono esposte a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Nota sulla sicurezza** Queste funzioni sono esposte a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -123,7 +123,7 @@ Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il c
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**mbslen** e **mbslen_l** restituiscono il numero di caratteri multibyte in una stringa di caratteri multibyte, ma non testano la validità dei caratteri multibyte. **mbstrlen** e **mbstrlen_l** testare la validità di caratteri multibyte e riconoscono le sequenze di caratteri multibyte. Se la stringa passata a **mbstrlen** oppure **mbstrlen_l** contiene un carattere multibyte non valido per la tabella codici, la funzione restituisce -1 e imposta **errno** a **EILSEQ**.
+**mbslen** e **mbslen_l** restituisce il numero di caratteri multibyte in una stringa di caratteri multibyte, ma non testano la validità dei caratteri multibyte. **mbstrlen** e **mbstrlen_l** testare la validità di caratteri multibyte e riconoscono le sequenze di caratteri multibyte. Se la stringa passata a **mbstrlen** oppure **mbstrlen_l** contiene un carattere multibyte non valido per la tabella codici, la funzione restituisce -1 e imposta **errno** a **EILSEQ**.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

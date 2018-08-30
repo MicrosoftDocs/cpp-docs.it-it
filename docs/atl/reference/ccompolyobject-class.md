@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575491"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206372"
 ---
 # <a name="ccompolyobject-class"></a>Classe CComPolyObject
 Questa classe implementa `IUnknown` per un oggetto aggregato o non aggregato.  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|I delegati `IUnknown` le chiamate a unknown esterno se l'oggetto è aggregato o per il `IUnknown` dell'oggetto se l'oggetto non è aggregato.|  
   
 ## <a name="remarks"></a>Note  
- `CComPolyObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un oggetto aggregato o non aggregato.  
+ `CComPolyObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) per un oggetto aggregato o non aggregato.  
   
  Quando un'istanza di `CComPolyObject` creato, il valore di esterna sconosciuta viene controllato. Se è NULL, `IUnknown` viene implementata per un oggetto non aggregato. Se unknown esterno non è NULL, `IUnknown` è implementata per un oggetto aggregato.  
   

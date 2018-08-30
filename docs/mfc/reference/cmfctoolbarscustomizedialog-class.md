@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c12b23c2250f2b0d26b053410c864c8cf435469
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852874"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211052"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe CMFCToolBarsCustomizeDialog
 Una finestra di dialogo schede non modale ( [CPropertySheet (classe)](../../mfc/reference/cpropertysheet-class.md)) che consente all'utente di personalizzare le barre degli strumenti, menu, tasti di scelta rapida, gli strumenti definiti dall'utente e dello stile di visualizzazione in un'applicazione. In genere, l'utente accede a questa finestra di dialogo scegliendo **Personalizza** dal menu **Strumenti** .  
@@ -507,7 +507,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
   
 ### <a name="parameters"></a>Parametri  
  [in, out] *pAccel*  
- Puntatore per l'assegnazione del proposto da tastiera che è espresso come un [accelerazione](http://msdn.microsoft.com/library/windows/desktop/ms646340) struct.  
+ Puntatore per l'assegnazione del proposto da tastiera che è espresso come un [accelerazione](/windows/desktop/api/winuser/ns-winuser-tagaccel) struct.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la chiave può essere assegnata o FALSE se la chiave non può essere assegnata. L'implementazione predefinita restituisce sempre TRUE.  

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cff2dcb8d6b0ad3756a8a0047fcc9b982fb7bb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61d92c02c4410bdc01b76ac6307fb9bb2652880a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411445"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203608"
 ---
 # <a name="wctob"></a>wctob
 
@@ -59,11 +59,11 @@ Valore da convertire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **wctob** converte correttamente un carattere wide, restituisce la rappresentazione in caratteri multibyte solo se il carattere multibyte è lungo esattamente un byte. Se **wctob** rileva un carattere "wide" non è possibile convertire un carattere multibyte o il carattere multibyte non è esattamente un byte lungo, viene restituito -1.
+Se **wctob** converte correttamente un carattere wide, restituisce la rappresentazione in caratteri multibyte solo se il carattere multibyte è lungo esattamente un byte. Se **wctob** rileva un carattere wide che non è possibile convertire in carattere multibyte o carattere multibyte non è esattamente un byte, long, viene restituito -1.
 
 ## <a name="remarks"></a>Note
 
-Il **wctob** funzione converte un carattere wide contenuto in *wchar* nel carattere multibyte corrispondente passato per la restituzione **int** valore, se multibyte carattere è lungo esattamente un byte.
+Il **wctob** funzione converte un carattere wide contenuto in *wchar* nel carattere multibyte corrispondente passato per il valore restituito **int** valore, se il multibyte carattere è lungo esattamente un byte.
 
 Se **wctob** non è riuscita e nessun carattere multibyte corrispondente è stato trovato, la funzione imposta **errno** al **EILSEQ** e restituisce -1.
 
@@ -77,7 +77,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Questo programma viene illustrato il comportamento del **wcstombs** (funzione).
+Questo programma illustra il comportamento dei **wcstombs** (funzione).
 
 ```C
 // crt_wctob.c
@@ -118,4 +118,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

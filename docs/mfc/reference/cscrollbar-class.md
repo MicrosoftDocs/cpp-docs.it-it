@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850045"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199201"
 ---
 # <a name="cscrollbar-class"></a>Classe CScrollBar
 Fornisce la funzionalità di un controllo barra di scorrimento di Windows.  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>Parametri  
  *pScrollInfo*  
- Un puntatore per il [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) struttura.  
+ Un puntatore per il [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità dei [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) del messaggio, come descritto nel SDK di Windows.  
+ Questa funzione membro emula la funzionalità dei [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) del messaggio, come descritto nel SDK di Windows.  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Recupera le informazioni gestite dalla struttura `SCROLLINFO` su una barra di scorrimento.  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>Parametri  
  *lpScrollInfo*  
- Un puntatore a un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struttura. Vedere il SDK di Windows per altre informazioni su questa struttura.  
+ Un puntatore a un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struttura. Vedere il SDK di Windows per altre informazioni su questa struttura.  
   
  *nMask*  
  Specifica i parametri di barra di scorrimento da recuperare. Utilizzo tipici, SIF_ALL, specifica una combinazione di SIF_PAGE, SIF_POS, SIF_TRACKPOS e SIF_RANGE. Vedere `SCROLLINFO` per altre informazioni sui valori nMask.  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>Note  
  `GetScrollInfo` consente alle applicazioni di usare posizioni di scorrimento a 32 bit.  
   
- Il [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struttura contiene informazioni su una barra di scorrimento, tra cui i valori minimo e massimo scorrimento posizioni, le dimensioni della pagina e la posizione della casella di scorrimento (pulsante di scorrimento). Vedere il `SCROLLINFO` argomento struttura nel SDK di Windows per altre informazioni su come modificare le impostazioni predefinite di struttura.  
+ Il [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struttura contiene informazioni su una barra di scorrimento, tra cui i valori minimo e massimo scorrimento posizioni, le dimensioni della pagina e la posizione della casella di scorrimento (pulsante di scorrimento). Vedere il `SCROLLINFO` argomento struttura nel SDK di Windows per altre informazioni su come modificare le impostazioni predefinite di struttura.  
   
  Indicano posizione della barra di scorrimento, i gestori dei messaggi di Windows di MFC [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), fornire solo 16 bit di dati di posizione. `GetScrollInfo` e `SetScrollInfo` forniscono 32 bit della barra dei dati di posizione di scorrimento. Di conseguenza, un'applicazione può chiamare `GetScrollInfo` durante l'elaborazione di uno `CWnd::OnHScroll` o `CWnd::OnVScroll` per ottenere i dati di posizione barra di scorrimento a 32 bit.  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>Parametri  
  *lpScrollInfo*  
- Un puntatore a un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struttura.  
+ Un puntatore a un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struttura.  
   
  *bRedraw*  
  Specifica se la barra di scorrimento deve essere ridisegnata in modo da riflettere le nuove informazioni. Se *bRedraw* è TRUE, la barra di scorrimento viene ridisegnata. Se è FALSE, non viene ridisegnato. La barra di scorrimento viene ridisegnata per impostazione predefinita.  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>Note  
  È necessario fornire i valori necessari per il `SCROLLINFO` strutturare i parametri, inclusi i valori di flag.  
   
- Il `SCROLLINFO` struttura contiene informazioni su una barra di scorrimento, tra cui i valori minimo e massimo scorrimento posizioni, le dimensioni della pagina e la posizione della casella di scorrimento (pulsante di scorrimento). Vedere le [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) argomento struttura nel SDK di Windows per altre informazioni su come modificare le impostazioni predefinite di struttura.  
+ Il `SCROLLINFO` struttura contiene informazioni su una barra di scorrimento, tra cui i valori minimo e massimo scorrimento posizioni, le dimensioni della pagina e la posizione della casella di scorrimento (pulsante di scorrimento). Vedere le [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) argomento struttura nel SDK di Windows per altre informazioni su come modificare le impostazioni predefinite di struttura.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

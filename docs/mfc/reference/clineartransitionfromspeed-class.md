@@ -1,5 +1,5 @@
 ---
-title: Classe CLinearTransitionFromSpeed | Documenti Microsoft
+title: Classe CLinearTransitionFromSpeed | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac677549c01f7e5360cfcda7c640dbf10318c172
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039482"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203308"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Classe CLinearTransitionFromSpeed
 Incapsula una transizione a velocità lineare.  
@@ -58,11 +58,11 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione alla fine della transizione.|  
-|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Il valore assoluto di velocità della variabile.|  
+|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione al termine della transizione.|  
+|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Il valore assoluto della velocità della variabile.|  
   
 ## <a name="remarks"></a>Note  
- Durante una transizione a velocità lineare, il valore della variabile di animazione viene modificato con una frequenza specificata. La durata della transizione è determinata dalla differenza tra il valore iniziale e il valore finale specificato. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
+ Durante una transizione a velocità lineare, viene modificato il valore della variabile di animazione con una frequenza specificata. La durata della transizione è determinata dalla differenza tra il valore iniziale e quello finale specificato. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile allocata li utilizzando l'operatore new. L'oggetto incapsulato IUIAnimationTransition COM viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,10 +85,10 @@ CLinearTransitionFromSpeed(
   
 ### <a name="parameters"></a>Parametri  
  *dblSpeed*  
- Il valore assoluto di velocità della variabile.  
+ Il valore assoluto della velocità della variabile.  
   
  *dblFinalValue*  
- Il valore della variabile di animazione alla fine della transizione.  
+ Il valore della variabile di animazione al termine della transizione.  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
  Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.  
@@ -101,20 +101,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
 *pLibrary*  
- Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](https://msdn.microsoft.com/library/windows/desktop/dd371897), che definisce una raccolta di transizioni standard.  
+ Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), che definisce una raccolta di transizioni standard.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue  
- Il valore della variabile di animazione alla fine della transizione.  
+ Il valore della variabile di animazione al termine della transizione.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
 ##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed  
- Il valore assoluto di velocità della variabile.  
+ Il valore assoluto della velocità della variabile.  
   
 ```  
 DOUBLE m_dblSpeed;  

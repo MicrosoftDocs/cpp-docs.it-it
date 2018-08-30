@@ -1,5 +1,5 @@
 ---
-title: threadprivate | Documenti Microsoft
+title: threadprivate | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7e7edaa36f929750087e3c81f42204ff20e9f62
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692912"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217745"
 ---
 # <a name="threadprivate"></a>threadprivate
 Specifica che una variabile privata di un thread.  
@@ -36,20 +36,20 @@ Specifica che una variabile privata di un thread.
  dove  
   
  `var`  
- Un elenco delimitato da virgole delle variabili che si desidera rendere privato a un thread. `var` deve essere una variabile globale o dello spazio dei nomi-con ambito o una variabile locale statica.  
+ Elenco delimitato da virgole di variabili che si desidera rendere privato a un thread. `var` deve essere una variabile globale o dello spazio dei nomi-con ambito o una variabile locale statica.  
   
 ## <a name="remarks"></a>Note  
- Il `threadprivate` direttiva non supporta clausole OpenMP.  
+ Il `threadprivate` direttiva non supporta nessuna clausole OpenMP.  
   
- Per ulteriori informazioni, vedere [2.7.1 direttiva threadprivate](../../../parallel/openmp/2-7-1-threadprivate-directive.md).  
+ Per altre informazioni, vedere [2.7.1 direttiva threadprivate](../../../parallel/openmp/2-7-1-threadprivate-directive.md).  
   
- Il `threadprivate` (direttiva) si basa sul [thread](../../../cpp/thread.md) `__declspec` attributo; limiti **declspec** si applicano a `threadprivate`.  
+ Il `threadprivate` direttiva si basa sul [thread](../../../cpp/thread.md) `__declspec` attributo; limiti sulle **declspec** si applicano a `threadprivate`.  
   
- Non è possibile utilizzare `threadprivate` in qualsiasi DLL che verrà caricato tramite [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175).  Sono incluse le DLL che vengono caricate con [/DELAYLOAD (importazione a caricamento ritardato)](../../../build/reference/delayload-delay-load-import.md), che utilizza anche **LoadLibrary**.  
+ Non è possibile usare `threadprivate` in qualsiasi DLL che verrà caricata mediante [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175).  Ciò include le DLL che siano state caricate [/DELAYLOAD (importazione a caricamento ritardato)](../../../build/reference/delayload-delay-load-import.md), che utilizza anch **LoadLibrary**.  
   
- È possibile utilizzare `threadprivate` in una DLL viene caricata in modo statico all'avvio del processo.  
+ È possibile usare `threadprivate` in una DLL che viene caricata in modo statico all'avvio del processo.  
   
- Poiché `threadprivate` si basa sul **declspec**, `threadprivate` variabile sarà presenti in qualsiasi thread avviato il processo, non solo i thread che fanno parte di un gruppo di thread generato da un'area parallela.  Questo è un dettaglio di implementazione da tenere in considerazione, poiché è possibile, ad esempio, i costruttori per un `threadprivate` tipo definito dall'utente chiamato più spesso quella prevista.  
+ Poiché `threadprivate` basa **declspec**, un `threadprivate` variabile sarà presente in qualsiasi thread avviato nel processo, non solo i thread che fanno parte di un team di thread generato da un'area parallela.  Questo è un dettaglio di implementazione che è possibile essere a conoscenza, poiché è possibile notare, ad esempio, i costruttori per una `threadprivate` chiamato più spesso quindi previsto tipo definito dall'utente.  
   
  Oggetto `threadprivate` variabile di tipo destructable non è garantito che il relativo distruttore chiamato.  Ad esempio:  
   
@@ -68,10 +68,10 @@ int main()
 }  
 ```  
   
- Gli utenti non dispongono di alcun controllo quando i thread che costituiscono l'area parallela comporta la terminazione.  Se tali thread è presente quando il processo viene chiuso, il thread non verrà notificato dell'uscita del processo e non verrà chiamato il distruttore per `threaded_var` in qualsiasi thread ad eccezione di quello che viene chiusa (, il thread principale).  In modo da codice non è necessario contare sulla corretta distruzione di `threadprivate` variabili.  
+ Gli utenti non hanno alcun controllo sulla quando terminerà il thread che costituisce l'area parallela.  Se tali thread esistano al momento della chiusura del processo, il thread non sarà necessario notificare l'uscita dal processo e non verrà chiamato il distruttore per `threaded_var` in qualsiasi thread ad eccezione di quello che viene chiuso (, il thread principale).  In modo da codice non deve influire sulla corretta distruzione di `threadprivate` variabili.  
   
 ## <a name="example"></a>Esempio  
- Per un esempio dell'utilizzo di `threadprivate`, vedere [privata](../../../parallel/openmp/reference/private-openmp.md).  
+ Per un esempio d'uso `threadprivate`, vedere [private](../../../parallel/openmp/reference/private-openmp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Direttive](../../../parallel/openmp/reference/openmp-directives.md)

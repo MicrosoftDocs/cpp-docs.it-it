@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b3792bc5377d90acb6f5ddf619e888ddd606e1e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1852e765ed859f95f6de5319a1e9d8fa364f7681
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594093"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207063"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -43,7 +43,7 @@ Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consen
 
 ## <a name="remarks"></a>Note
 
-Il **length_is** attributi di C++ ha la stessa funzionalità come la [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) attributo MIDL.
+Il **length_is** attributi di C++ ha la stessa funzionalità come la [length_is](/windows/desktop/Midl/length-is) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

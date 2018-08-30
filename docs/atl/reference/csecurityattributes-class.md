@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 47b0058cba19ac804c2d996052e9a5ec2df68bc5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879347"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208948"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
 Questa classe è un wrapper sottile per la struttura di attributi di sicurezza.  
@@ -53,9 +53,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[CSecurityAttributes:: set](#set)|Chiamare questo metodo per impostare gli attributi del `CSecurityAttributes` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- Il `SECURITY_ATTRIBUTES` struttura contiene una [descrittore di sicurezza](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilizzata per la creazione di un oggetto e specifica se l'handle recuperato specificando questa struttura è ereditabile.  
+ Il `SECURITY_ATTRIBUTES` struttura contiene una [descrittore di sicurezza](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) utilizzata per la creazione di un oggetto e specifica se l'handle recuperato specificando questa struttura è ereditabile.  
   
- Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) nel SDK di Windows.  
+ Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nel SDK di Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `SECURITY_ATTRIBUTES`  
@@ -99,7 +99,7 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di sicurezza](../../visual-cpp-samples.md)   
- [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
- [descrittore di sicurezza](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
+ [descrittore di sicurezza](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Panoramica della classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

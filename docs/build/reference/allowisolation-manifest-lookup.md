@@ -1,5 +1,5 @@
 ---
-title: -ALLOWISOLATION (ricerca di manifesti) | Documenti Microsoft
+title: -ALLOWISOLATION (ricerca di manifesti) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0e063aa51e136dfcc7a4445948e8a68d7a99bca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62f467ff467d785d17601737436e0eb1ff972f37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369838"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205493"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Ricerca di manifesti)
 Specifica il comportamento per la ricerca del manifesto.  
@@ -35,27 +35,27 @@ Specifica il comportamento per la ricerca del manifesto.
 ```  
   
 ## <a name="remarks"></a>Note  
- **/ALLOWISOLATION:No** indica che le DLL vengono caricate come se esistesse alcun manifesto e fa sì che il linker imposti il `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit nell'intestazione facoltativa `DllCharacteristics` campo.  
+ **/ALLOWISOLATION:No** indica che le DLL vengono caricate come se esistesse alcun manifesto e fa sì che il linker imposti il `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dell'intestazione facoltativa `DllCharacteristics` campo.  
   
- **/ALLOWISOLATION** fa sì che il sistema operativo per le ricerche e caricamenti di manifesti.  
+ **/ALLOWISOLATION** fa sì che il sistema operativo per le ricerche e caricamenti del manifesto.  
   
- **/ALLOWISOLATION** è l'impostazione predefinita.  
+ **/ALLOWISOLATION** è il valore predefinito.  
   
- Quando per un file eseguibile è disabilitato l'isolamento, il caricatore di Windows non tenterà di trovare un manifesto dell'applicazione per il processo appena creato. Il nuovo processo non avrà un contesto di attivazione predefinito, anche se è presente un manifesto all'interno del file eseguibile o inserito nella stessa directory dell'eseguibile con nome * eseguibile-name ***. manifest**.  
+ Quando l'isolamento è disabilitato per un file eseguibile, il caricatore di Windows non tenterà di trovare un manifesto dell'applicazione per il processo appena creato. Il nuovo processo non avrà un contesto di attivazione predefinito, anche se non esiste un manifesto all'interno dell'eseguibile o nella stessa directory dell'eseguibile con nome <em>nome-eseguibile</em>**. manifest**.  
   
- Per ulteriori informazioni, vedere [Manifest Files Reference](http://msdn.microsoft.com/library/aa375632).  
+ Per altre informazioni, vedere [Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference).  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
   
-2.  Espandere il **le proprietà di configurazione** nodo.  
+2.  Espandere il nodo **Proprietà di configurazione**.  
   
-3.  Espandere il **Linker** nodo.  
+3.  Espandere la **Linker** nodo.  
   
-4.  Selezionare il **File manifesto** pagina delle proprietà.  
+4.  Selezionare il **Manifest File** pagina delle proprietà.  
   
-5.  Modificare il **Consenti isolamento** proprietà.  
+5.  Modificare il **consentire isolamento** proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   

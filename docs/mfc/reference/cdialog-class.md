@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339410"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217333"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 La classe base utilizzata per la visualizzazione di finestre di dialogo sullo schermo.  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  Per creare una finestra di dialogo modale, costruire un oggetto nello stack utilizzando il costruttore per la classe di finestre di dialogo derivata e quindi chiamare `DoModal` per creare la finestra di dialogo e i relativi controlli. Se si vuole creare una finestra di dialogo non modale, chiamare `Create` nel costruttore della classe della finestra.  
   
- È anche possibile creare un modello in memoria usando un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struttura dei dati, come descritto nel SDK di Windows. Dopo aver creato un `CDialog` dell'oggetto, chiamare [CreateIndirect](#createindirect) per creare un non modale la finestra di dialogo oppure chiamare [InitModalIndirect](#initmodalindirect) e [DoModal](#domodal) per creare una finestra modale finestra di dialogo.  
+ È anche possibile creare un modello in memoria usando un [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struttura dei dati, come descritto nel SDK di Windows. Dopo aver creato un `CDialog` dell'oggetto, chiamare [CreateIndirect](#createindirect) per creare un non modale la finestra di dialogo oppure chiamare [InitModalIndirect](#initmodalindirect) e [DoModal](#domodal) per creare una finestra modale finestra di dialogo.  
   
  Il mapping dei dati di exchange e la convalida viene scritto in un override di `CWnd::DoDataExchange` che viene aggiunto alla nuova classe della finestra. Vedere le [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) funzione di membro in `CWnd` per altre informazioni sulla funzionalità di exchange e la convalida.  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  Il `Create` funzione membro restituisce immediatamente dopo aver creato la finestra di dialogo.  
   
- Utilizzare lo stile WS_VISIBLE nel modello di finestra di dialogo se la finestra di dialogo deve essere visualizzato quando viene creata la finestra padre. In caso contrario, è necessario chiamare `ShowWindow`. Per un'ulteriore gli stili di finestra di dialogo e la loro applicazione, vedere la [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struttura nel SDK di Windows e [stili Window](../../mfc/reference/styles-used-by-mfc.md#window-styles) nel *riferimenti alla libreria MFC*.  
+ Utilizzare lo stile WS_VISIBLE nel modello di finestra di dialogo se la finestra di dialogo deve essere visualizzato quando viene creata la finestra padre. In caso contrario, è necessario chiamare `ShowWindow`. Per un'ulteriore gli stili di finestra di dialogo e la loro applicazione, vedere la [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struttura nel SDK di Windows e [stili Window](../../mfc/reference/styles-used-by-mfc.md#window-styles) nel *riferimenti alla libreria MFC*.  
   
  Usare la `CWnd::DestroyWindow` funzione eliminare definitivamente una finestra di dialogo creata dal `Create` (funzione).  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>Parametri  
  *lpDialogTemplate*  
- Punta alla memoria che contiene un modello di finestra di dialogo considerato di creare la finestra di dialogo. Questo modello è sotto forma di una [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informazioni di struttura e il controllo, come descritto nel SDK di Windows.  
+ Punta alla memoria che contiene un modello di finestra di dialogo considerato di creare la finestra di dialogo. Questo modello è sotto forma di una [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) informazioni di struttura e il controllo, come descritto nel SDK di Windows.  
   
  *pParentWnd*  
  Punta all'oggetto finestra padre dell'oggetto finestra di dialogo (typu [CWnd](../../mfc/reference/cwnd-class.md)). Se è NULL, finestra padre dell'oggetto finestra di dialogo è impostata per la finestra principale dell'applicazione.  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Note  
  Il `CreateIndirect` funzione membro restituisce immediatamente dopo aver creato la finestra di dialogo.  
   
- Utilizzare lo stile WS_VISIBLE nel modello di finestra di dialogo se la finestra di dialogo deve essere visualizzato quando viene creata la finestra padre. In caso contrario, è necessario chiamare `ShowWindow` per fare in modo che venga visualizzato. Per altre informazioni sul modo in cui è possibile specificare altri stili di finestra di dialogo nel modello, vedere la [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struttura nel SDK di Windows.  
+ Utilizzare lo stile WS_VISIBLE nel modello di finestra di dialogo se la finestra di dialogo deve essere visualizzato quando viene creata la finestra padre. In caso contrario, è necessario chiamare `ShowWindow` per fare in modo che venga visualizzato. Per altre informazioni sul modo in cui è possibile specificare altri stili di finestra di dialogo nel modello, vedere la [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struttura nel SDK di Windows.  
   
  Usare la `CWnd::DestroyWindow` funzione eliminare definitivamente una finestra di dialogo creata dal `CreateIndirect` (funzione).  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un' **int** valore che specifica il valore della *Nrisultato* parametro passato al [CDialog::EndDialog](#enddialog) funzione membro, che consente di chiudere la finestra di dialogo. Il valore restituito è -1 se la funzione non è stato possibile creare la finestra di dialogo o IDABORT se si è verificato un altro errore, nel qual caso la finestra di output conterrà informazioni sull'errore dal [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Un' **int** valore che specifica il valore della *Nrisultato* parametro passato al [CDialog::EndDialog](#enddialog) funzione membro, che consente di chiudere la finestra di dialogo. Il valore restituito è -1 se la funzione non è stato possibile creare la finestra di dialogo o IDABORT se si è verificato un altro errore, nel qual caso la finestra di output conterrà informazioni sull'errore dal [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Note  
  Questa funzione membro gestisce tutte le interazioni con l'utente mentre è attiva la finestra di dialogo. Questo è ciò che rende la finestra di dialogo modale; vale a dire, l'utente non è possibile interagire con altre finestre fino a quando non viene chiusa la finestra di dialogo.  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>Parametri  
  *lpDialogTemplate*  
- Punta alla memoria che contiene un modello di finestra di dialogo considerato di creare la finestra di dialogo. Questo modello è sotto forma di una [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informazioni di struttura e il controllo, come descritto nel SDK di Windows.  
+ Punta alla memoria che contiene un modello di finestra di dialogo considerato di creare la finestra di dialogo. Questo modello è sotto forma di una [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) informazioni di struttura e il controllo, come descritto nel SDK di Windows.  
   
  *hDialogTemplate*  
  Contiene un handle per la memoria globale che contiene un modello di finestra di dialogo. Questo modello è sotto forma di un `DLGTEMPLATE` struttura e i dati per ogni controllo nella finestra di dialogo.  

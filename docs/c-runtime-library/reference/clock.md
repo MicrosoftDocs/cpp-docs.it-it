@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4caf2518de21a938822e443c0383c22cf170d44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd4b399900802d110ff5746a0ccb2424ba40e6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395367"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209866"
 ---
 # <a name="clock"></a>clock
 
@@ -54,13 +54,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Il tempo trascorso dopo l'inizializzazione CRT all'inizio del processo, misurato in **CLOCKS_PER_SEC** unità al secondo. Se il tempo trascorso è disponibile o ha superato il tempo positivo massimo che può essere registrato come un **clock_t** tipo, la funzione restituisce il valore `(clock_t)(-1)`.
+Il tempo trascorso dopo l'inizializzazione di CRT all'inizio del processo, espresso come proporzione **CLOCKS_PER_SEC** unità al secondo. Se il tempo trascorso non è disponibile o ha superato il tempo positivo massimo che può essere registrato come un **clock_t** tipo, la funzione restituisce il valore `(clock_t)(-1)`.
 
 ## <a name="remarks"></a>Note
 
-Il **clock** funzione indica quanto tempo è trascorso l'inizializzazione CRT durante l'avvio del processo. Si noti che questa funzione non è strettamente conforme a ISO C, che specifica il tempo di CPU net come valore restituito. Per ottenere i tempi di CPU, usare la funzione [GetProcessTimes](https://msdn.microsoft.com/library/windows/desktop/ms683223) di Win32. Per determinare il tempo trascorso in secondi, dividere il valore restituito dal **clock** funzione dalla macro **CLOCKS_PER_SEC**.
+Il **clock** funzione indica quanto tempo trascorso dall'inizializzazione di CRT durante l'avvio del processo. Si noti che questa funzione non è strettamente conforme a ISO C, che specifica il tempo di CPU net come valore restituito. Per ottenere i tempi di CPU, usare la funzione [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) di Win32. Per determinare il tempo trascorso in secondi, dividere il valore restituito per il **orologio** funzione dalla macro **CLOCKS_PER_SEC**.
 
-Dato un tempo sufficiente, il valore restituito da **clock** può superare il massimo valore positivo di **clock_t**. Quando il processo viene eseguito, il valore restituito da **clock** è sempre `(clock_t)(-1)`, come specificato da standard ISO C99 (7.23.2.1) e standard C11 ISO (7.27.2.1). Microsoft implementa **clock_t** come una **long**, un intero con segno a 32 bit e il **CLOCKS_PER_SEC** macro viene definita come 1000. In questo modo, un massimo **clock** funzione di valore restituito di 2147483,647 secondi o circa 24.8 giorni. Non fare affidamento sul valore restituito da **clock** nei processi che hanno eseguito per più di questo periodo di tempo. È possibile usare a 64 bit [tempo](time-time32-time64.md) funzione o Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) funzione a volte trascorso processo record di molti anni.
+Dato un tempo sufficiente, il valore restituito da **orologio** può superare il massimo valore positivo di **clock_t**. Quando il processo viene eseguito, il valore restituito da **orologio** è sempre `(clock_t)(-1)`, come specificato dalla standard ISO C99 (7.23.2.1) e dallo standard ISO C11 (7.27.2.1). Microsoft implementa **clock_t** come una **long**, un intero con segno a 32 bit e il **CLOCKS_PER_SEC** macro viene definita come 1000. In questo modo un massimo **clock** funzione valore restituito è 2147483,647 secondi o circa 24,8 giorni. Non fare affidamento sul valore restituito da **clock** nei processi che sono stati eseguiti per più di questo periodo di tempo. È possibile usare la a 64 bit [tempo](time-time32-time64.md) funzione o Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) funzione al record di processo tempo trascorso per molti anni.
 
 ## <a name="requirements"></a>Requisiti
 

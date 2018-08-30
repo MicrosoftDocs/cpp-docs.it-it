@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b775b14cb2f6b0f87bca1c81938c1a4c05c1304
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2c539feaac9cac5bca3a41868cc03379a63bf6bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335669"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204359"
 ---
 # <a name="rgndata-structure"></a>Struttura RGNDATA
 Il `RGNDATA` struttura contiene un'intestazione e una matrice di rettangoli che costituiscono un'area. I rettangoli, ordinate dall'alto verso il basso a sinistra a destra, non si sovrappongano.  
@@ -37,7 +37,7 @@ typedef struct _RGNDATA { /* rgnd */
   
 #### <a name="parameters"></a>Parametri  
  *rdh*  
- Specifica un [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) struttura. (Per altre informazioni su questa struttura, vedere il SDK di Windows). I membri di questa struttura di specificano il tipo di area (se è rettangolare o trapezoidale), il numero di rettangoli che formano l'area, le dimensioni del buffer che contiene le strutture di rettangolo, e così via.  
+ Specifica un [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) struttura. (Per altre informazioni su questa struttura, vedere il SDK di Windows). I membri di questa struttura di specificano il tipo di area (se è rettangolare o trapezoidale), il numero di rettangoli che formano l'area, le dimensioni del buffer che contiene le strutture di rettangolo, e così via.  
   
  *Buffer*  
  Specifica un buffer di dimensione arbitraria che contiene il [RECT](../../mfc/reference/rect-structure1.md) le strutture che compongono l'area.  

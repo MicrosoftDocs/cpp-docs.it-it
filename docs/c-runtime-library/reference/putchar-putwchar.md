@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7602ca44d6f8ec8197d1ebc61b4ef1d0847133f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00016bb191cc3a4d7b4df47f5252706a129c3583
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404623"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199731"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -67,13 +67,13 @@ Carattere da scrivere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il carattere scritto. Per indicare una condizione di errore o fine del file, **putc** e **putchar** restituiscono * * EOF`; **putwc` e **putwchar** restituire **WEOF**. Per tutte e quattro le routine, usare [ferror](ferror.md) o [feof](feof.md) per verificare la presenza di un errore o della fine del file. Se passato un puntatore null per *flusso*, queste funzioni generano un'eccezione di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **EOF** oppure **WEOF** e impostare **errno** a **EINVAL**.
+Restituisce il carattere scritto. Per indicare un errore o condizione di fine del file, **putc** e **putchar** restituiscono * * EOF`; **putwc` e **putwchar** restituire **WEOF**. Per tutte e quattro le routine, usare [ferror](ferror.md) o [feof](feof.md) per verificare la presenza di un errore o della fine del file. Se viene passato un puntatore null *stream*, queste funzioni generano un'eccezione di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **EOF** oppure **WEOF** e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **putc** routine scrive il singolo carattere *c* all'output *flusso* in corrispondenza della posizione corrente. Qualsiasi numero intero può essere passato a **putc**, ma solo gli 8 bit inferiori vengono scritte. Il **putchar** routine è identica alla **putc (** * c ***, stdout)**. Per ogni routine, se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. **putc** e **putchar** sono simili alle **fputc** e **fputchar**rispettivamente, ma vengono implementati come funzioni sia come macro (vedere [ Scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** e **putwchar** sono versioni a caratteri wide di **putc** e **putchar**, rispettivamente.
+Il **putc** routine scrive il carattere singolo *c* all'output *flusso* in corrispondenza della posizione corrente. Qualsiasi numero intero può essere passato a **putc**, ma solo gli 8 bit inferiori vengono scritte. Il **putchar** routine è identico a `putc( c, stdout )`. Per ogni routine, se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. **putc** e **putchar** sono simili agli **fputc** e **fputchar**rispettivamente, ma vengono implementate sia come funzioni che come macro (vedere [ Scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** e **putwchar** sono versioni a caratteri wide di **putc** e **putchar**, rispettivamente.
 
 Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
@@ -90,7 +90,7 @@ Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che 
 |**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

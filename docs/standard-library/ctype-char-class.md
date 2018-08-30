@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: faed3af6595b37146bfd565e09e9ceeea3ca5d73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960661"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217654"
 ---
 # <a name="ctypeltchargt-class"></a>Classe ctype&lt;char&gt;
 
@@ -154,6 +154,6 @@ Le funzioni membro [do_narrow](../standard-library/ctype-class.md#do_narrow) e [
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe facet](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)<br/>
+[Classe facet](locale-class.md#facet_class)<br/>
 [Classe ctype_base](../standard-library/ctype-base-class.md)<br/>
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

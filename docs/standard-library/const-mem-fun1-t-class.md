@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059ad07e50fb6325850d1095940ce084893bf70b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 32a748c240d8da55765ac5862c9a2f11eafb14ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966507"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201723"
 ---
 # <a name="constmemfun1t-class"></a>Classe const_mem_fun1_t
 
@@ -41,11 +41,14 @@ class const_mem_fun1_t
 
 ### <a name="parameters"></a>Parametri
 
-*_Pm* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
+*_Pm*<br/>
+Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-*Pleft* il **const** oggetto a cui il *_Pm* funzione membro viene chiamata su.
+*Pleft*<br/>
+Il **const** oggetto a cui il *_Pm* funzione membro viene chiamata su.
 
-*a destra* l'argomento che viene assegnato a *_Pm*.
+*right*<br/>
+L'argomento che viene assegnato a *_Pm*.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -53,7 +56,7 @@ Funzione binaria adattabile.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia della *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` prevede la restituzione ( **pleft** -> \* * Pm) (***destra**) **const**.
+La classe modello archivia una copia della *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` prevede la restituzione ( *pleft*->\*<em>Pm</em>) ( *destro* ) **const**.
 
 ## <a name="example"></a>Esempio
 

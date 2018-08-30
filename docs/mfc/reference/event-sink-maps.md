@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336605"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212043"
 ---
 # <a name="event-sink-maps"></a>Mappe sink di evento
 Quando un controllo OLE incorporato viene generato un evento, il contenitore del controllo riceve l'evento usando un meccanismo denominato una "evento sink della mappa," fornita da MFC. Questa mappa di sink di evento definisce funzioni del gestore per ogni evento specifico, nonché i parametri di tali eventi. Per altre informazioni su mappe sink di evento, vedere l'articolo [contenitori di controlli ActiveX](../../mfc/activex-control-containers.md).  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  ID dispatch della proprietà coinvolti nella notifica.  
   
  *pfnRequest*  
- Puntatore a una funzione membro che gestisce il `OnRequestEdit` notifica per questa proprietà. Questa funzione deve avere un valore booleano il tipo restituito e un **BOOL\***  parametro. Questa funzione deve impostare il parametro su TRUE per consentire la proprietà da modificare e FALSE per non consentire. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
+ Puntatore a una funzione membro che gestisce il `OnRequestEdit` notifica per questa proprietà. Questa funzione deve avere un valore booleano il tipo restituito e un **BOOL** <strong>\*</strong> parametro. Questa funzione deve impostare il parametro su TRUE per consentire la proprietà da modificare e FALSE per non consentire. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
   
  *pfnChanged*  
  Puntatore a una funzione membro che gestisce il `OnChanged` notifica per questa proprietà. La funzione deve avere un valore booleano il tipo restituito e un parametro UINT. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  ID dispatch della proprietà coinvolti nella notifica.  
   
  *pfnRequest*  
- Puntatore a una funzione membro che gestisce il `OnRequestEdit` notifica per questa proprietà. Questa funzione deve avere un valore booleano il tipo restituito e UINT e **BOOL\***  parametri. La funzione deve impostare il parametro su TRUE per consentire la proprietà da modificare e FALSE per non consentire. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
+ Puntatore a una funzione membro che gestisce il `OnRequestEdit` notifica per questa proprietà. Questa funzione deve avere una `BOOL` il tipo restituito e `UINT` e `BOOL*` parametri. La funzione deve impostare il parametro su TRUE per consentire la proprietà da modificare e FALSE per non consentire. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
   
  *pfnChanged*  
- Puntatore a una funzione membro che gestisce il `OnChanged` notifica per questa proprietà. La funzione deve avere un valore booleano il tipo restituito e un parametro UINT. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
+ Puntatore a una funzione membro che gestisce il `OnChanged` notifica per questa proprietà. La funzione deve avere una `BOOL` il tipo restituito e un `UINT` parametro. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
   
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdisp. h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  ID dispatch della proprietà coinvolti nella notifica.  
   
  *pfnRequest*  
- Puntatore a una funzione membro che gestisce il `OnRequestEdit` notifica per questa proprietà. Questa funzione deve avere un valore booleano il tipo restituito e un **BOOL\***  parametro. Questa funzione deve impostare il parametro su TRUE per consentire la proprietà da modificare e FALSE per non consentire. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
+ Puntatore a una funzione membro che gestisce il `OnRequestEdit` notifica per questa proprietà. Questa funzione deve avere un valore booleano il tipo restituito e un **BOOL** <strong>\*</strong> parametro. Questa funzione deve impostare il parametro su TRUE per consentire la proprietà da modificare e FALSE per non consentire. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  
   
  *pfnChanged*  
  Puntatore a una funzione membro che gestisce il `OnChanged` notifica per questa proprietà. La funzione deve avere un valore booleano il tipo restituito e nessun parametro. La funzione deve restituire TRUE per indicare che la notifica è stata gestita; in caso contrario, FALSE.  

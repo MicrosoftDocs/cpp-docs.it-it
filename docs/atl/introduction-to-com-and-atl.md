@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00204e283feb14e6b8e831a12e8bd9ad3e352adc
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f0863e00d95c4056d988198b4978eb16597111f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222550"
 ---
 # <a name="introduction-to-com-and-atl"></a>Introduzione a COM e ATL
 In questa sezione fornisce una breve introduzione a COM e ATL.  
@@ -34,7 +34,7 @@ In questa sezione fornisce una breve introduzione a COM e ATL.
  Descritto brevemente, quali la libreria ATL (Active Template) è stato progettato per le librerie di modelli e i numeri di versione ATL. Include suggerimenti per la scelta tra ATL e MFC.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Modello a oggetti del componente](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [Modello a oggetti del componente](/windows/desktop/com/the-component-object-model)  
  Il materiale di Windows SDK in COM.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  

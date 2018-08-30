@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27cde859c20f4c9cddc1ceb3e2cae568afb6e960
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5e3f3adabdd1d5345fa9f5d3c24e6cde86ddb3fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027219"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219704"
 ---
 # <a name="memory-management-frame-allocation"></a>Gestione della memoria: allocazione di frame
 Allocazione sul frame prende il nome da "frame dello stack" è impostato ogni volta che viene chiamata una funzione. Il frame dello stack è un'area di memoria che temporaneamente contiene gli argomenti alla funzione, nonché eventuali variabili definite locali rispetto alla funzione. Variabili di frame vengono spesso denominate "automatiche" variabili perché il compilatore alloca automaticamente lo spazio per loro.  
@@ -46,7 +46,7 @@ Allocazione sul frame prende il nome da "frame dello stack" è impostato ogni vo
   
  Quando un oggetto viene definito come una variabile di frame, il relativo costruttore viene richiamato automaticamente in corrispondenza del punto in cui viene rilevata la definizione. Quando l'oggetto esce dall'ambito, il relativo distruttore viene chiamato automaticamente prima che la memoria per l'oggetto venga recuperata. La costruzione e distruzione di $ può essere molto utile, ma occorre tenere presenti le chiamate automatiche, in particolare al distruttore.  
   
- Il vantaggio principale di allocazione di oggetti nel frame è che questi vengono eliminati automaticamente. Quando si allocano oggetti sul frame, non devi preoccuparti oggetti dimenticati causando perdite di memoria. (Per informazioni dettagliate sulle perdite di memoria, vedere l'articolo [rilevamento di perdite di memoria in MFC](http://msdn.microsoft.com/29ee8909-96e9-4246-9332-d3a8aa8d4658).) Uno svantaggio dell'allocazione di frame è che le variabili di frame possono essere usate all'esterno all'ambito. Un altro fattore nella scelta di allocazione di frame e allocazione dell'heap è che per gli oggetti e strutture di grandi dimensioni, è spesso preferibile usare heap anziché lo stack per l'archiviazione, poiché lo spazio dello stack è spesso limitato.  
+ Il vantaggio principale di allocazione di oggetti nel frame è che questi vengono eliminati automaticamente. Quando si allocano oggetti sul frame, non devi preoccuparti oggetti dimenticati causando perdite di memoria. (Per informazioni dettagliate sulle perdite di memoria, vedere l'articolo [rilevamento di perdite di memoria in MFC](https://msdn.microsoft.com/29ee8909-96e9-4246-9332-d3a8aa8d4658).) Uno svantaggio dell'allocazione di frame è che le variabili di frame possono essere usate all'esterno all'ambito. Un altro fattore nella scelta di allocazione di frame e allocazione dell'heap è che per gli oggetti e strutture di grandi dimensioni, è spesso preferibile usare heap anziché lo stack per l'archiviazione, poiché lo spazio dello stack è spesso limitato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione della memoria](../mfc/memory-management.md)

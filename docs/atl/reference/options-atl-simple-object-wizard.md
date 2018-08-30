@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1cef503bf9862f1259e25aff76a013d60776077
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 36aab0177eaa62e5ec9601d9258c7de1a6ce7b59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883726"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205690"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opzioni, Creazione guidata oggetto semplice ATL
 Utilizzare questa pagina della creazione guidata oggetto semplice ATL per progettare per aumentare l'efficienza e supporto per gli errori per l'oggetto.  
@@ -35,14 +35,14 @@ Utilizzare questa pagina della creazione guidata oggetto semplice ATL per proget
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Single**|Specifica che l'oggetto viene sempre eseguito nel thread COM primario. Visualizzare [apartment a thread singolo](http://msdn.microsoft.com/library/windows/desktop/ms680112) e [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) per altre informazioni.|  
-|**Apartment**|Specifica che l'oggetto Usa il threading apartment. Apartment di thread equivalente al singolo. Ogni oggetto di un componente di apartment a thread viene assegnato un apartment per il relativo thread per tutta la durata dell'oggetto. Tuttavia, più thread possono essere utilizzati per più oggetti. Ogni tipo di apartment è associato a un thread specifico e ha un message pump Windows (impostazione predefinita).<br /><br /> Visualizzare [apartment a thread singolo](http://msdn.microsoft.com/library/windows/desktop/ms680112) per altre informazioni.|  
+|**Single**|Specifica che l'oggetto viene sempre eseguito nel thread COM primario. Visualizzare [apartment a thread singolo](/windows/desktop/com/single-threaded-apartments) e [InprocServer32](/windows/desktop/com/inprocserver32) per altre informazioni.|  
+|**Apartment**|Specifica che l'oggetto Usa il threading apartment. Apartment di thread equivalente al singolo. Ogni oggetto di un componente di apartment a thread viene assegnato un apartment per il relativo thread per tutta la durata dell'oggetto. Tuttavia, più thread possono essere utilizzati per più oggetti. Ogni tipo di apartment è associato a un thread specifico e ha un message pump Windows (impostazione predefinita).<br /><br /> Visualizzare [apartment a thread singolo](/windows/desktop/com/single-threaded-apartments) per altre informazioni.|  
 |**Entrambi**|Specifica che l'oggetto può utilizzare apartment o modello di threading free, a seconda dal tipo di un thread viene creato.|  
-|**gratuito**|Specifica che l'oggetto utilizza il modello di threading free. Modello di threading Free è equivalente a un modello di apartment con multithreading. Visualizzare [apartment a thread multipli](http://msdn.microsoft.com/library/windows/desktop/ms693421) per altre informazioni.|  
+|**gratuito**|Specifica che l'oggetto utilizza il modello di threading free. Modello di threading Free è equivalente a un modello di apartment con multithreading. Visualizzare [apartment a thread multipli](/windows/desktop/com/multithreaded-apartments) per altre informazioni.|  
 |**Neutral**|Specifica che l'oggetto segue le linee guida per apartment a thread multipli, ma può essere eseguito su qualsiasi tipo di thread.|  
   
  **Aggregazione**  
- Indica se l'oggetto utilizza [aggregazione](http://msdn.microsoft.com/library/windows/desktop/ms686558). Oggetto di aggregazione sceglie interfacce da esporre ai client e le interfacce vengono esposte come se l'oggetto aggregato state implementate. I client dell'oggetto di aggregazione comunicare solo con l'oggetto aggregato.  
+ Indica se l'oggetto utilizza [aggregazione](/windows/desktop/com/aggregation). Oggetto di aggregazione sceglie interfacce da esporre ai client e le interfacce vengono esposte come se l'oggetto aggregato state implementate. I client dell'oggetto di aggregazione comunicare solo con l'oggetto aggregato.  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
@@ -71,5 +71,5 @@ Utilizzare questa pagina della creazione guidata oggetto semplice ATL per proget
 ## <a name="see-also"></a>Vedere anche  
  [Creazione guidata oggetto semplice ATL](../../atl/reference/atl-simple-object-wizard.md)   
  [Oggetto semplice ATL](../../atl/reference/adding-an-atl-simple-object.md)   
- [Problemi relativi al Threading di Server in-Process](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [Problemi relativi al Threading di Server in-Process](/windows/desktop/com/in-process-server-threading-issues)
 

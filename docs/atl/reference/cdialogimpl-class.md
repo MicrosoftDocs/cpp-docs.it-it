@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880703"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206641"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 Questa classe fornisce metodi per la creazione di una finestra di dialogo modale o non modale.  
@@ -102,7 +102,7 @@ template <class T,
 |Creazione di controlli|[Esercitazione ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Tramite le finestre di dialogo ATL|[Classi di finestra ATL](../../atl/atl-window-classes.md)|  
 |Creazione guidata progetto ATL|[Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Finestre di dialogo|[Finestre di dialogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) e argomenti successivi nel SDK di Windows|  
+|Finestre di dialogo|[Finestre di dialogo](https://msdn.microsoft.com/library/windows/desktop/ms632588) e argomenti successivi nel SDK di Windows|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
@@ -126,7 +126,7 @@ HWND Create(
  [in] Handle alla finestra proprietaria.  
   
  **RECT &** *rect*  
- [in] Oggetto [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le dimensioni e la posizione della finestra di dialogo.  
+ [in] Oggetto [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le dimensioni e la posizione della finestra di dialogo.  
   
  *dwInitParam*  
  [in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parametri  
  *hWndParent*  
- [in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) funzione Win32.  
+ [in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funzione Win32.  
   
  *dwInitParam*  
  [in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.  

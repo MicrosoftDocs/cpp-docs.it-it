@@ -41,15 +41,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7692f60731c47f295630885c77e0e61e8bb5aac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7377a6b47df76190c4dc97b916590e53c7df8f9c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884750"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210111"
 ---
 # <a name="ipropertypageimpl-class"></a>Classe IPropertyPageImpl
-Questa classe implementa `IUnknown` e fornisce un'implementazione predefinita del [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfaccia.  
+Questa classe implementa `IUnknown` e fornisce un'implementazione predefinita del [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfaccia.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
@@ -105,7 +105,7 @@ class IPropertyPageImpl
 |[IPropertyPageImpl::m_size](#m_size)|Archivia l'altezza e la larghezza della finestra di dialogo della pagina delle proprietà, in pixel.|  
   
 ## <a name="remarks"></a>Note  
- Il [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfaccia consente a un oggetto gestire una determinata pagina delle proprietà all'interno di una finestra delle proprietà. Classe `IPropertyPageImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
+ Il [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfaccia consente a un oggetto gestire una determinata pagina delle proprietà all'interno di una finestra delle proprietà. Classe `IPropertyPageImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
   
  **Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [la creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -130,7 +130,7 @@ HRESULT Activate(
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, la finestra di dialogo è sempre non modale, indipendentemente dal valore della *bModal* parametro.  
   
- Visualizzare [IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) in Windows SDK.  
+ Visualizzare [IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) in Windows SDK.  
   
 ##  <a name="apply"></a>  IPropertyPageImpl  
  Applica i valori correnti della pagina proprietà agli oggetti sottostanti specificati tramite `SetObjects`.  
@@ -143,7 +143,7 @@ HRESULT Apply();
  Restituisce S_OK.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) in Windows SDK.  
+ Visualizzare [IPropertyPage::Apply](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-apply) in Windows SDK.  
   
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate  
  Elimina definitivamente la finestra di dialogo creata con [Activate](#activate).  
@@ -153,7 +153,7 @@ HRESULT Deactivate();
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) in Windows SDK.  
+ Visualizzare [IPropertyPage::Deactivate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-deactivate) in Windows SDK.  
   
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo  
  Riempie i *pPageInfo* struttura con le informazioni contenute nei membri di dati.  
@@ -165,7 +165,7 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ### <a name="remarks"></a>Note  
  `GetPageInfo` Carica le risorse stringa associate [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile), e [m_dwTitle](#m_dwtitle).  
   
- Visualizzare [IPropertyPage:: GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) in Windows SDK.  
+ Visualizzare [IPropertyPage:: GetPageInfo](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) in Windows SDK.  
   
 ##  <a name="help"></a>  IPropertyPageImpl::Help  
  Richiama la Guida di Windows per la pagina delle proprietà.  
@@ -175,7 +175,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) in Windows SDK.  
+ Visualizzare [IPropertyPage::Help](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-help) in Windows SDK.  
   
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl  
  Costruttore.  
@@ -240,7 +240,7 @@ UINT m_dwTitle;
 ```  
   
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite  
- Punta al [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) interfaccia tramite il quale la pagina delle proprietà comunica con il frame di proprietà.  
+ Punta al [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) interfaccia tramite il quale la pagina delle proprietà comunica con il frame di proprietà.  
   
 ```
 IPropertyPageSite* m_pPageSite;
@@ -268,7 +268,7 @@ HRESULT Move(LPCRECT pRect);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) in Windows SDK.  
+ Visualizzare [IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) in Windows SDK.  
   
 ##  <a name="setdirty"></a>  IPropertyPageImpl:: SetDirty  
  Flag di stato della pagina delle proprietà come modificata o invariato, a seconda del valore di *bDirty*.  
@@ -292,17 +292,17 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) in Windows SDK.  
+ Visualizzare [IPropertyPage::SetObjects](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setobjects) in Windows SDK.  
   
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite  
- Fornisce la pagina delle proprietà con un [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) puntatore, attraverso il quale la pagina delle proprietà comunica con il frame di proprietà.  
+ Fornisce la pagina delle proprietà con un [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) puntatore, attraverso il quale la pagina delle proprietà comunica con il frame di proprietà.  
   
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) in Windows SDK.  
+ Visualizzare [IPropertyPage::SetPageSite](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setpagesite) in Windows SDK.  
   
 ##  <a name="show"></a>  IPropertyPageImpl::Show  
  Rende la finestra di dialogo pagina proprietà visibile o invisibile.  
@@ -312,7 +312,7 @@ HRESULT Show(UINT nCmdShow);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) in Windows SDK.  
+ Visualizzare [IPropertyPage::Show](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-show) in Windows SDK.  
   
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator  
  Elabora la sequenza di tasti specificata `pMsg`.  
@@ -322,7 +322,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) in Windows SDK.  
+ Visualizzare [IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)   

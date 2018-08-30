@@ -17,95 +17,101 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af8470d0ae45d1075fa8b35585225ee0c48db80b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406507"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197397"
 ---
 # <a name="hook"></a>__hook
-Associa un metodo del gestore a un evento.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-long __hook(  
-   &SourceClass::EventMethod,  
-   source,  
-   &ReceiverClass::HandlerMethod  
-   [, receiver = this]  
-);  
-long __hook(  
-   interface,  
-   source  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- **&** *SourceClass* `::` *EventMethod*  
- Puntatore al metodo di eventi cui associare il metodo del gestore eventi:  
-  
--   Eventi C++ nativi: *SourceClass* è la classe dell'origine evento e *EventMethod* è l'evento.  
-  
--   Eventi COM: *SourceClass* è l'interfaccia di origine evento e *EventMethod* è uno dei relativi metodi.  
-  
--   Eventi gestiti: *SourceClass* è la classe dell'origine evento e *EventMethod* è l'evento.  
-  
- *interface*  
- Il nome dell'interfaccia associato a *ricevitore*, solo per i ricevitori di eventi COM in cui il *layout_dependent* parametro la [event_receiver](../windows/event-receiver.md) attributo è **true**.  
-  
- *source*  
- Puntatore a un'istanza dell'origine evento. A seconda del codice `type` specificato in `event_receiver`, *origine* può essere uno dei seguenti:  
-  
--   Un puntatore a un oggetto di origine dell'evento nativo.  
-  
--   Un `IUnknown`-basato su puntatore (origine COM).  
-  
--   Un puntatore a un oggetto gestito (per gli eventi gestiti).  
-  
- **&** *ReceiverClass* `::` `HandlerMethod`  
- Puntatore al metodo del gestore eventi da associare a un evento. Il gestore di è specificato come un metodo di una classe o un riferimento allo stesso; Se non si specifica il nome della classe, **hook** presuppone che la classe sia che in cui viene chiamato.  
-  
--   Eventi C++ nativi: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.  
-  
--   Eventi COM: *ReceiverClass* è l'interfaccia del ricevitore di eventi e `HandlerMethod` è uno dei relativi gestori.  
-  
--   Eventi gestiti: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.  
-  
- *ricevitore*(facoltativo)  
- Puntatore a un'istanza della classe del ricevitore di eventi. Se non si specifica un ricevitore, il valore predefinito è la classe del ricevitore o la struttura in cui **hook** viene chiamato.  
-  
-## <a name="usage"></a>Utilizzo  
- Può essere utilizzato in qualunque ambito della funzione, incluso il principale, all'esterno della classe del ricevitore di eventi.  
-  
-## <a name="remarks"></a>Note  
- Utilizzare la funzione intrinseca **hook** in un ricevitore di eventi per associare o dissociare un metodo del gestore con un metodo dell'evento. Il gestore specificato viene quindi chiamato quando l'origine genera l'evento specificato. È possibile associare più gestori a un singolo evento o associare più eventi a un singolo gestore.  
-  
- Esistono due forme di **hook**. È possibile utilizzare la prima tipologia (a quattro argomenti) nella maggior parte dei casi, in particolare, per i ricevitori di eventi COM in cui il *layout_dependent* parametro delle [event_receiver](../windows/event-receiver.md) attributo **false** .  
-  
- In questi casi non è necessario associare tutti i metodi in un'interfaccia prima di generare un evento a uno dei metodi; solo il metodo che gestisce l'evento deve essere associato. È possibile utilizzare la seconda tipologia (a due argomenti) di **hook** solo per un ricevitore di eventi COM in cui * * layout_dependent **= true**.  
-  
- **hook** restituisce un valore long. Un valore restituito diverso da zero indica che si è verificato un errore (gli eventi gestiti generano un'eccezione).  
-  
- Il compilatore controlla l'esistenza di un evento e che la firma dell'evento coincida con la firma del delegato.  
-  
- Fatta eccezione per eventi COM, **hook** e **unhook** può essere chiamato all'esterno del ricevitore di eventi.  
-  
- Un'alternativa all'uso **hook** consiste nell'usare l'operatore + =.  
-  
- Per informazioni sulla codifica di eventi gestiti nella nuova sintassi, vedere [evento](../windows/event-cpp-component-extensions.md).  
-  
+
+Associa un metodo del gestore a un evento.
+
+## <a name="syntax"></a>Sintassi
+
+```
+long __hook(
+    &SourceClass::EventMethod,
+    source,
+    &ReceiverClass::HandlerMethod
+    [, receiver = this]
+);
+long __hook(
+    interface,
+    source
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*& SourceClass::EventMethod*<br/>
+Puntatore al metodo di eventi cui associare il metodo del gestore eventi:
+
+- Eventi C++ nativi: *SourceClass* è la classe dell'origine evento e *EventMethod* è l'evento.
+
+- Eventi COM: *SourceClass* è l'interfaccia di origine evento e *EventMethod* è uno dei relativi metodi.
+
+- Eventi gestiti: *SourceClass* è la classe dell'origine evento e *EventMethod* è l'evento.
+
+*interface*<br/>
+Il nome dell'interfaccia associato a *ricevitore*, solo per i ricevitori di eventi COM in cui il *layout_dependent* parametro la [event_receiver](../windows/event-receiver.md) attributo è **true**.
+
+*source*<br/>
+Puntatore a un'istanza dell'origine evento. A seconda del codice `type` specificato in `event_receiver`, *origine* può essere uno dei seguenti:
+
+- Un puntatore a un oggetto di origine dell'evento nativo.
+
+- Un `IUnknown`-basato su puntatore (origine COM).
+
+- Un puntatore a un oggetto gestito (per gli eventi gestiti).
+
+*& ReceiverClass::HandlerMethod*<br/>
+Puntatore al metodo del gestore eventi da associare a un evento. Il gestore di è specificato come un metodo di una classe o un riferimento allo stesso; Se non si specifica il nome della classe, **hook** presuppone che la classe sia che in cui viene chiamato.
+
+- Eventi C++ nativi: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.
+
+- Eventi COM: *ReceiverClass* è l'interfaccia del ricevitore di eventi e `HandlerMethod` è uno dei relativi gestori.
+
+- Eventi gestiti: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.
+
+*ricevitore* (facoltativo)<br/>
+Puntatore a un'istanza della classe del ricevitore di eventi. Se non si specifica un ricevitore, il valore predefinito è la classe del ricevitore o la struttura in cui **hook** viene chiamato.
+
+## <a name="usage"></a>Utilizzo
+
+Può essere utilizzato in qualunque ambito della funzione, incluso il principale, all'esterno della classe del ricevitore di eventi.
+
+## <a name="remarks"></a>Note
+
+Utilizzare la funzione intrinseca **hook** in un ricevitore di eventi per associare o dissociare un metodo del gestore con un metodo dell'evento. Il gestore specificato viene quindi chiamato quando l'origine genera l'evento specificato. È possibile associare più gestori a un singolo evento o associare più eventi a un singolo gestore.
+
+Esistono due forme di **hook**. È possibile utilizzare la prima tipologia (a quattro argomenti) nella maggior parte dei casi, in particolare, per i ricevitori di eventi COM in cui il *layout_dependent* parametro delle [event_receiver](../windows/event-receiver.md) attributo **false** .
+
+In questi casi non è necessario associare tutti i metodi in un'interfaccia prima di generare un evento a uno dei metodi; solo il metodo che gestisce l'evento deve essere associato. È possibile utilizzare la seconda tipologia (a due argomenti) di **hook** solo per un ricevitore di eventi COM in cui *layout_dependent* **= true**.
+
+**hook** restituisce un valore long. Un valore restituito diverso da zero indica che si è verificato un errore (gli eventi gestiti generano un'eccezione).
+
+Il compilatore controlla l'esistenza di un evento e che la firma dell'evento coincida con la firma del delegato.
+
+Fatta eccezione per eventi COM, **hook** e **unhook** può essere chiamato all'esterno del ricevitore di eventi.
+
+Un'alternativa all'uso **hook** consiste nell'usare l'operatore + =.
+
+Per informazioni sulla codifica di eventi gestiti nella nuova sintassi, vedere [evento](../windows/event-cpp-component-extensions.md).
+
 > [!NOTE]
->  Una classe o una struttura basata su template non può contenere eventi.  
-  
-## <a name="example"></a>Esempio  
- Visualizzare [gestione degli eventi in C++ nativo](../cpp/event-handling-in-native-cpp.md) e [gestione degli eventi in COM](../cpp/event-handling-in-com.md) per gli esempi.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave](../cpp/keywords-cpp.md)   
- [Gestione degli eventi](../cpp/event-handling.md)   
- [event_source](../windows/event-source.md)   
- [event_receiver](../windows/event-receiver.md)   
- [unhook](../cpp/unhook.md)   
- [__raise](../cpp/raise.md)
+> Una classe o una struttura basata su template non può contenere eventi.
+
+## <a name="example"></a>Esempio
+
+Visualizzare [gestione degli eventi in C++ nativo](../cpp/event-handling-in-native-cpp.md) e [gestione degli eventi in COM](../cpp/event-handling-in-com.md) per gli esempi.
+
+## <a name="see-also"></a>Vedere anche
+
+[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[Gestione di eventi](../cpp/event-handling.md)<br/>
+[event_source](../windows/event-source.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
+[__raise](../cpp/raise.md)<br/>

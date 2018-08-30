@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeba73be12fdf8e068800d192cef7df9462aa4fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6600706690dea3573f8eb1aa47f68b592b3bff1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402787"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200307"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
 
@@ -65,7 +65,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>Parametri
 
 *wchar*<br/>
-Indirizzo di un carattere "wide" (tipo **wchar_t**).
+Indirizzo di un carattere wide (tipo **wchar_t**).
 
 *mbchar*<br/>
 Indirizzo di una sequenza di byte (carattere multibyte).
@@ -78,11 +78,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **mbchar** non **NULL** e se l'oggetto che *mbchar* punta a un form un carattere multibyte valido, **mbtowc** restituisce la lunghezza in byte del carattere multibyte. Se *mbchar* viene **NULL** o l'oggetto a cui punta è un carattere null di caratteri wide (L '\0'), la funzione restituisce 0. Se l'oggetto che *mbchar* punta a non formano un carattere multibyte valido all'interno della prima *conteggio* caratteri, restituisce -1.
+Se **mbchar** non è **NULL** e, se l'oggetto che *mbchar* punta al form un carattere multibyte valido, **mbtowc** restituisce la lunghezza in byte del carattere multibyte. Se *mbchar* viene **NULL** o l'oggetto a cui punta è un carattere null di caratteri "wide" (L '\0'), la funzione restituisce 0. Se l'oggetto che *mbchar* punta a non formano un carattere multibyte valido entro i primi *conteggio* caratteri, restituisce -1.
 
 ## <a name="remarks"></a>Note
 
-Il **mbtowc** funzione converte *conteggio* o un numero di byte a cui puntato *mbchar*, se *mbchar* non **NULL**, un carattere wide corrispondente. **mbtowc** archivia il carattere "wide" risulta al *wchar e* se *wchar* non **NULL**. **mbtowc** non esamina più **MB_CUR_MAX** byte. **mbtowc** utilizza le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; **mbtowc_l** è identica ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il **mbtowc** funzione converte *conteggio* o un numero di byte a cui fa riferimento *mbchar*, se *mbchar* non **NULL**, a un carattere wide corrispondente. **mbtowc** archivia il carattere wide risulta *wchar,* se *wchar* non **NULL**. **mbtowc** non esamina più **MB_CUR_MAX** byte. **mbtowc** Usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; **mbtowc_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

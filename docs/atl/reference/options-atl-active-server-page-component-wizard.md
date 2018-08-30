@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd3e62915b81311450cf4d798b04f8df30492ff
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 29a5209eb05958861a5c021f48bff1bf36654115
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884600"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205444"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opzioni, Creazione guidata componente ASP ATL
 Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata componente ATL per progettare per aumentare l'efficienza e supporto per gli errori per l'oggetto.  
@@ -35,14 +35,14 @@ Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata c
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Single**|Specifica che l'oggetto Usa il modello di threading singolo. Nel modello di threading singolo, un oggetto viene sempre eseguito nel thread COM primario. Visualizzare [apartment a thread singolo](http://msdn.microsoft.com/library/windows/desktop/ms680112) e [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) per altre informazioni.|  
-|**Apartment**|Specifica che l'oggetto Usa il threading apartment. Apartment di thread equivalente al singolo. Ogni oggetto di un componente di apartment a thread viene assegnato un apartment per il relativo thread per tutta la durata dell'oggetto. Tuttavia, più thread possono essere utilizzati per più oggetti. Ogni tipo di apartment è associato a un thread specifico e ha un message pump Windows (impostazione predefinita).<br /><br /> Visualizzare [apartment a thread singolo](http://msdn.microsoft.com/library/windows/desktop/ms680112) per altre informazioni.|  
+|**Single**|Specifica che l'oggetto Usa il modello di threading singolo. Nel modello di threading singolo, un oggetto viene sempre eseguito nel thread COM primario. Visualizzare [apartment a thread singolo](/windows/desktop/com/single-threaded-apartments) e [InprocServer32](/windows/desktop/com/inprocserver32) per altre informazioni.|  
+|**Apartment**|Specifica che l'oggetto Usa il threading apartment. Apartment di thread equivalente al singolo. Ogni oggetto di un componente di apartment a thread viene assegnato un apartment per il relativo thread per tutta la durata dell'oggetto. Tuttavia, più thread possono essere utilizzati per più oggetti. Ogni tipo di apartment è associato a un thread specifico e ha un message pump Windows (impostazione predefinita).<br /><br /> Visualizzare [apartment a thread singolo](/windows/desktop/com/single-threaded-apartments) per altre informazioni.|  
 |**Entrambi**|Specifica che l'oggetto può utilizzare apartment o modello di threading free, a seconda dal tipo di un thread viene creato.|  
-|**gratuito**|Specifica che l'oggetto utilizza il modello di threading free. Modello di threading Free è equivalente a un modello di apartment con multithreading. Visualizzare [apartment a thread multipli](http://msdn.microsoft.com/library/windows/desktop/ms693421) per altre informazioni.|  
+|**gratuito**|Specifica che l'oggetto utilizza il modello di threading free. Modello di threading Free è equivalente a un modello di apartment con multithreading. Visualizzare [apartment a thread multipli](/windows/desktop/com/multithreaded-apartments) per altre informazioni.|  
 |**Neutral**|Specifica che l'oggetto segue le linee guida per apartment a thread multipli, ma può essere eseguito su qualsiasi tipo di thread.|  
   
  **Aggregazione**  
- Indica se l'oggetto utilizza [aggregazione](http://msdn.microsoft.com/library/windows/desktop/ms686558). Oggetto di aggregazione sceglie interfacce da esporre ai client e le interfacce vengono esposte come se l'oggetto aggregato state implementate. I client dell'oggetto di aggregazione comunicare solo con l'oggetto aggregato.  
+ Indica se l'oggetto utilizza [aggregazione](/windows/desktop/com/aggregation). Oggetto di aggregazione sceglie interfacce da esporre ai client e le interfacce vengono esposte come se l'oggetto aggregato state implementate. I client dell'oggetto di aggregazione comunicare solo con l'oggetto aggregato.  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  

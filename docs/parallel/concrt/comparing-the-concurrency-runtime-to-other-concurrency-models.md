@@ -1,5 +1,5 @@
 ---
-title: Confronto tra Runtime di concorrenza e altri modelli di concorrenza | Documenti Microsoft
+title: Confronto tra Runtime di concorrenza e altri modelli di concorrenza | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fb4a588f1b9c7f5bc1d9d4f82ca9f7de767ba7e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694069"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207211"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Confronto tra runtime di concorrenza e altri modelli di concorrenza
 Questo documento descrive le differenze tra le funzionalità e i modelli di programmazione del runtime di concorrenza e quelli di altre tecnologie. È importante poter confrontare i vantaggi del runtime di concorrenza con quelli di altri modelli di programmazione per poter scegliere la tecnologia che meglio soddisfa i requisiti delle applicazioni in uso.  
@@ -64,7 +64,7 @@ Questo documento descrive le differenze tra le funzionalità e i modelli di prog
  L'API Windows usa il linguaggio di programmazione C per esporre il modello di programmazione. Il runtime di concorrenza offre un'interfaccia di programmazione in C++ che sfrutta i vantaggi delle nuove funzionalità del linguaggio C++. Le funzioni lambda offrono, ad esempio, un meccanismo sintetico indipendente dai tipi per la definizione di funzioni di lavoro parallele. Per altre informazioni sulle funzionalità di C++ più recenti usate dal runtime di concorrenza, vedere [Panoramica](../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ### <a name="threads-and-thread-pools"></a>Thread e pool di thread  
- Il meccanismo di concorrenza centrale nell'API Windows è il thread. Per la creazione dei thread viene generalmente usata la funzione [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) . Sebbene la creazione e l'uso dei thread siano operazioni relativamente semplici, il sistema operativo alloca una quantità significativa di tempo e di altre risorse per la gestione dei thread. Inoltre, anche se per ogni thread è garantito lo stesso tempo di esecuzione di un altro thread con lo stesso livello di priorità, l'overhead associato richiede anche la creazione di attività sufficientemente grandi. Per le attività più piccole o più dettagliate, l'overhead associato alla concorrenza può risultare più vantaggioso rispetto all'esecuzione delle attività in parallelo.  
+ Il meccanismo di concorrenza centrale nell'API Windows è il thread. Per la creazione dei thread viene generalmente usata la funzione [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) . Sebbene la creazione e l'uso dei thread siano operazioni relativamente semplici, il sistema operativo alloca una quantità significativa di tempo e di altre risorse per la gestione dei thread. Inoltre, anche se per ogni thread è garantito lo stesso tempo di esecuzione di un altro thread con lo stesso livello di priorità, l'overhead associato richiede anche la creazione di attività sufficientemente grandi. Per le attività più piccole o più dettagliate, l'overhead associato alla concorrenza può risultare più vantaggioso rispetto all'esecuzione delle attività in parallelo.  
   
  I pool di thread rappresentano un modo per ridurre il costo di gestione dei thread. I pool di thread personalizzati e l'implementazione di pool di thread fornita dall'API Windows consentono entrambi l'esecuzione efficiente in parallelo di piccoli elementi di lavoro. Il pool di thread di Windows gestisce gli elementi di lavoro in una coda FIFO (First-In, First-Out). Ogni elemento di lavoro viene avviato nell'ordine in cui è stato aggiunto nel pool.  
   
@@ -77,7 +77,7 @@ Questo documento descrive le differenze tra le funzionalità e i modelli di prog
   
  In Windows 7 e Windows Server 2008 R2, il sistema operativo supporta anche la concorrenza e la scalabilità. Questi sistemi operativi supportano, ad esempio, computer con oltre 64 thread di hardware. Un'applicazione esistente che usa l'API Windows deve essere modificata in modo da sfruttare i vantaggi di queste nuove funzionalità. Un'applicazione che usa il runtime di concorrenza, tuttavia, implementa automaticamente queste funzionalità e non richiede alcuna modifica.  
   
- [base.user-mode_scheduling](http://msdn.microsoft.com/library/windows/desktop/dd627187)  
+ [base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)  
   
  [[Torna all'inizio](#top)]  
   

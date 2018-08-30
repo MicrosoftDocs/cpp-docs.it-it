@@ -1,5 +1,5 @@
 ---
-title: -/ASSEMBLYRESOURCE (incorpora una risorsa gestita) | Documenti Microsoft
+title: -ASSEMBLYRESOURCE (incorpora una risorsa gestita) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372178"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213401"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Incorpora una risorsa gestita)
 ```  
@@ -35,21 +35,21 @@ ms.locfileid: "32372178"
   
 ## <a name="parameters"></a>Parametri  
  *filename*  
- La risorsa gestita che si desidera incorporare nell'assembly.  
+ La risorsa gestita da incorporare nell'assembly.  
   
  *name*  
- Facoltativo. Il nome logico per la risorsa. il nome utilizzato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file.  
+ Facoltativo. Il nome logico della risorsa nome utilizzato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file.  
   
- Facoltativamente, è possibile specificare se il file deve essere privato nel manifesto dell'assembly. Per impostazione predefinita, *nome* è pubblico nell'assembly.  
+ Facoltativamente, è possibile specificare se il file deve essere privato nel manifesto dell'assembly. Per impostazione predefinita *nome* è pubblico nell'assembly.  
   
 ## <a name="remarks"></a>Note  
- Utilizzare l'opzione /ASSEMBLYRESOURCE per incorporare una risorsa in un assembly.  
+ Usare l'opzione /ASSEMBLYRESOURCE. per incorporare una risorsa in un assembly.  
   
- Le risorse sono pubbliche nell'assembly quando creato con il linker. Il linker non è possibile rinominare la risorsa nell'assembly.  
+ Le risorse sono pubbliche nell'assembly quando viene creato con il linker. Il linker non consente di rinominare la risorsa nell'assembly.  
   
- Se *filename* è un file di risorse (con estensione resources) di .NET Framework creato, ad esempio, mediante il [generatore di File di risorse (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi con i membri il **System. Resources** dello spazio dei nomi (vedere [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx) per altre informazioni). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi **casi** classe per accedere alla risorsa in fase di esecuzione.  
+ Se *nomefile* è un file di risorse (con estensione resources) di .NET Framework creato ad esempio, dalle [Resource File Generator Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di **System. Resources** dello spazio dei nomi (vedere [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) per altre informazioni). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi **System** classe per accedere alla risorsa in fase di esecuzione.  
   
- Altre opzioni dei linker che influiscono sulla generazione di assembly sono:  
+ Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -69,9 +69,9 @@ ms.locfileid: "32372178"
   
 1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic su di **Linker** cartella.  
+2.  Scegliere il **Linker** cartella.  
   
-3.  Fare clic su di **Input** pagina delle proprietà.  
+3.  Scegliere il **Input** pagina delle proprietà.  
   
 4.  Modificare il **incorpora File di risorse gestite** proprietà.  
   

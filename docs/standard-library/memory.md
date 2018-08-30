@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858929"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217949"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -85,7 +85,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|La classe modello descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per matrici di oggetti di tipo **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Descrive un oggetto che determina tutte le informazioni necessarie per un contenitore abilitato dall'allocatore.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe modello descrive un oggetto che archivia un puntatore a un oggetto allocato di tipo **Type \*** che garantisce che l'oggetto a cui punta venga eliminato quando il relativo auto_ptr che lo contiene viene eliminato definitivamente.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe modello descrive un oggetto che archivia un puntatore a un oggetto allocato di tipo **tipo** <strong>\*</strong> che garantisce che l'oggetto a cui si punta eliminato quando il relativo auto_ptr che lo contiene Ottiene eliminato definitivamente.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Segnala un'eccezione weak_ptr non valida.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Consente di generare un `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Fornisce le informazioni necessarie per un oggetto della classe modello `allocator_traits` per descrivere un allocatore con il tipo di puntatore `Ptr`.|

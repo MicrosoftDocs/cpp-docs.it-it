@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di CSpinButtonCtrl | Documenti Microsoft
+title: Utilizzo di CSpinButtonCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bea2f2f51ed3b012ee9b5afe2572b2a6be9e0d57
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 3768cda94eb0adda8562c46124be8e9b2d4a2501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955482"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215092"
 ---
 # <a name="using-cspinbuttonctrl"></a>Utilizzo di CSpinButtonCtrl
-Il *pulsante di selezione* controllo (noto anche come un *UpDown* controllo) offre una coppia di frecce che un utente può fare clic per modificare un valore. Questo valore è noto come il *posizione corrente*. La posizione rimane all'interno dell'intervallo del pulsante di selezione. Quando l'utente fa clic sulla freccia in su, la posizione si sposta verso il valore massimo; e quando l'utente fa clic sulla freccia in giù, la posizione si sposta verso il valore minimo.  
+Il *casella di selezione* controllo (noto anche come un' *giù* controllo) offre una coppia di frecce su cui un utente può fare clic per modificare un valore. Questo valore è noto come il *posizione corrente*. La posizione rimane all'interno dell'intervallo del pulsante di selezione. Quando l'utente fa clic sulla freccia in su, la posizione viene spostato verso il valore massimo; e quando l'utente fa clic sulla freccia in giù, la posizione viene spostato verso il valore minimo.  
   
- Il controllo pulsante di selezione viene rappresentato in MFC per la [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) classe.  
+ Il controllo pulsante di selezione è rappresentato in MFC per la [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) classe.  
   
 > [!NOTE]
->  Per impostazione predefinita, l'intervallo per il pulsante di selezione è il valore massimo impostato su zero (0) e il valore minimo è impostato su 100. Poiché il valore massimo è minore del valore minimo, facendo clic sulla freccia in su diminuisce la posizione e facendo clic sulla freccia in giù aumenta. Uso [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) per modificare questi valori.  
+>  Per impostazione predefinita, l'intervallo per il pulsante di selezione ha il valore massimo impostato su zero (0) e il valore minimo impostato su 100. Poiché il valore massimo è minore del valore minimo, facendo clic sulla freccia riduce la posizione e facendo clic sulla freccia in giù aumenta lo. Uso [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) per modificare questi valori.  
   
- In genere, la posizione corrente viene visualizzata in un controllo correlato. Il controllo correlato è noto come il *finestra buddy*. Per un'illustrazione di un controllo pulsante di selezione, vedere [sui controlli di scorrimento](http://msdn.microsoft.com/library/windows/desktop/bb759889) in Windows SDK.  
+ In genere, la posizione corrente viene visualizzata in un controllo correlato. Il controllo correlato è noto come il *finestra buddy*. Per un'illustrazione di un controllo pulsante di selezione, vedere [informazioni sui controlli giù](/windows/desktop/Controls/up-down-controls) nel SDK di Windows.  
   
- Per creare un controllo di selezione e una finestra buddy controllo di modifica, in Visual Studio, trascinare un controllo di modifica nella finestra di dialogo o e quindi trascinare un controllo di selezione. Selezionare la casella di selezione e impostare il relativo **Auto Buddy** e **Set Buddy Integer** le proprietà da **True**. Impostare anche il **allineamento** proprietà. **Right Align** è più comune. Con queste impostazioni, il controllo di modifica viene impostato come finestra buddy poiché questo operatore precede direttamente il controllo di modifica nell'ordine di tabulazione. Il controllo di modifica vengono visualizzati numeri interi e il controllo di selezione è incorporato nel lato destro del controllo di modifica. Facoltativamente, è possibile impostare l'intervallo valido di casella di selezione utilizzando la [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) metodo. Nessun gestore di eventi è necessari per la comunicazione tra il controllo di selezione e finestra buddy perché dello scambio dei dati direttamente. Se si utilizza un controllo di selezione per altri scopi, ad esempio, per scorrere una sequenza di windows o finestre di dialogo, quindi aggiungere un gestore per il messaggio UDN_DELTAPOS ed eseguire l'azione personalizzata non esiste.  
+ Per creare un controllo di selezione e una finestra buddy controllo di modifica, in Visual Studio, trascinare un controllo di modifica nella finestra di dialogo o nella finestra e quindi trascinare un controllo di selezione. Selezionare la casella di selezione e impostare relativi **Auto Buddy** e **Set Buddy Integer** le proprietà da **True**. Impostare anche il **allineamento** proprietà. **Right Align** è più comune. Con queste impostazioni, il controllo di modifica viene impostato come finestra buddy poiché che precede immediatamente il controllo di modifica nell'ordine di tabulazione. Il controllo di modifica vengono visualizzati numeri interi e il controllo di selezione è incorporato nel lato destro del controllo di modifica. Facoltativamente, è possibile impostare l'intervallo valido della casella di selezione utilizzando la [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) (metodo). Nessun gestore di eventi sono necessari per la comunicazione tra il controllo di selezione e finestra buddy poiché scambiano direttamente i dati. Se si usa un controllo di selezione per altri scopi, ad esempio, per scorrere una sequenza di finestre o finestre di dialogo, quindi aggiungere un gestore per il messaggio UDN_DELTAPOS ed eseguire l'azione personalizzata non esiste.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   

@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377206"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198315"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-Aggiunge dati di profilo da uno o più file. pgc al file pgd.
+Aggiunge i dati del profilo da uno o più file. pgc per il file pgd.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,41 +33,41 @@ Aggiunge dati di profilo da uno o più file. pgc al file pgd.
 ### <a name="parameters"></a>Parametri
 
 *Opzioni*<br/>
-Le opzioni seguenti possono essere specificate per **pgomgr**:
+Le opzioni seguenti possono essere specificate da **pgomgr**:
 
 - **/Help** o **/?** Consente di visualizzare disponibili **pgomgr** opzioni.
 
-- **/ deselezionare** fa sì che il file pgd da cancellare tutte le informazioni sul profilo. Non è possibile specificare un pgc file quando **/Clear** specificato.
+- **/ cancellare** fa sì che il file pgd essere cancellate tutte le informazioni di profilo. Non è possibile specificare un. pgc file quando **/Clear** è specificato.
 
 - **/Detail** vengono visualizzate statistiche dettagliate, incluse le informazioni di code coverage grafico del flusso.
 
-- **/ summary** Visualizza statistiche per ogni funzione.
+- **/ summary** consente di visualizzare le statistiche per ogni funzione.
 
-- **/ univoco** se utilizzata con **/summary**, nomi di funzione per visualizzare decorati vengono illustrate le cause. L'impostazione predefinita, quando **/ univoco** non viene utilizzato per i nomi delle funzioni non decorato da visualizzare.
+- **/ univoci** quando abbinata **/summary**, determina decorati i nomi delle funzioni da visualizzare. L'impostazione predefinita, quando **/ univoco** non viene utilizzato sia per i nomi di funzione non decorati da visualizzare.
 
-- **/ merge**[**: * * * n*] fa sì che i dati nel file devono essere aggiunti al file pgd o. pgc file. Il parametro facoltativo *n*, consente di specificare che i dati devono essere aggiunti *n* volte. Ad esempio, se uno scenario comunemente sei volte fatto in modo da riflettere la frequenza con cui viene eseguita da parte dei clienti, è possibile eseguire una volta in un'esecuzione dei test e aggiungerlo al file pgd sei volte con **pgomgr /merge: 6**.
+- **/ merge**\[**:**<em>n</em>] fa sì che i dati nel file. pgc o dei file da aggiungere al file pgd. Il parametro facoltativo *n*, consente di specificare che i dati devono essere aggiunte *n* volte. Ad esempio, se uno scenario comunemente sarebbe sei volte eseguite in modo da riflettere la frequenza avviene da parte dei clienti, è possibile eseguire una volta in un'esecuzione dei test e aggiungerlo al file pgd con sei volte **/merge: 6 pgomgr**.
 
 *pgcfiles*<br/>
-Uno o più file pgc i cui dati di profilo che si desidera unire il file pgd. È possibile specificare un file pgc singolo o più file. pgc. Se non si specifica tutti i file pgc **pgomgr** unisce tutti i file pgc cui nomi corrispondono a quelle come il file pgd.
+Uno o più file pgc cui dati di profilo che si desidera unire il file pgd. È possibile specificare un file pgc singolo o più file. pgc. Se non si specifica tutti i file. pgc **pgomgr** unisce tutti i file. pgc cui nomi sono gli stessi file pgd.
 
-*pgdFile* il file pgd in cui si uniscono i dati da file. pgc o i file.
+*pgdFile* il file pgd in cui vengono uniti i dati dal file. pgc o dei file.
 
 ## <a name="remarks"></a>Note
 
 > [!NOTE]
-> È possibile avviare questo strumento solo da un prompt dei comandi per sviluppatori di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.
+> È possibile avviare questo strumento solo da un prompt dei comandi per gli sviluppatori di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.
 
 ## <a name="example"></a>Esempio
 
-Questo comando di esempio cancella il file pgd di dati di profilo:
+Questo comando Cancella il file pgd di dati di profilo:
 
 `pgomgr /clear myapp.pgd`
 
-Questo comando di esempio consente di aggiungere dati di profilo in MyApp1 al file pgd tre volte:
+Questo comando di esempio consente di aggiungere i dati del profilo in MyApp1 al file pgd tre volte:
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-In questo esempio, i dati di profilo da tutti i file #. pgc myapp vengono aggiunti al file pgd.
+In questo esempio, i dati del profilo da tutti i file. pgc & myapp viene aggiunto al file pgd.
 
 `pgomgr -merge myapp1.pgd`
 

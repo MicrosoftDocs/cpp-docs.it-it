@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c773cb242b3ac432ad5c0482bfad318c4c33b78a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883855"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197201"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 Fornisce metodi per la creazione di una finestra o di una sottoclasse di finestra.  
@@ -150,22 +150,22 @@ HWND Create(
  [in] Handle alla finestra padre o proprietaria.  
   
  *Rect*  
- [in] Oggetto [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica la posizione della finestra. Il `RECT` renserlo passabile per puntatore o riferimento.  
+ [in] Oggetto [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica la posizione della finestra. Il `RECT` renserlo passabile per puntatore o riferimento.  
   
  *szWindowName*  
  [in] Specifica il nome della finestra. Il valore predefinito è NULL.  
   
  *dwStyle*  
- [in] Lo stile della finestra. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows.  
+ [in] Lo stile della finestra. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows.  
   
  *dwExStyle*  
- [in] Lo stile della finestra estesi. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ [in] Lo stile della finestra estesi. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
   
  *MenuOrID*  
  [in] Per una finestra figlio, l'identificatore di finestra. Per una finestra di primo livello, un handle di menu per la finestra. Il valore predefinito è **0U**.  
   
  *lpCreateParam*  
- [in] Un puntatore ai dati di creazione della finestra. Per una descrizione completa, vedere la descrizione per il parametro finale [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Un puntatore ai dati di creazione della finestra. Per una descrizione completa, vedere la descrizione per il parametro finale [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Valore restituito  
  Se l'operazione riesce, l'handle della finestra appena creata. In caso contrario, NULL.  
@@ -207,7 +207,7 @@ LRESULT DefWindowProc();
  Il risultato dell'elaborazione del messaggio.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita `DefWindowProc` chiama il [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) funzione Win32 per inviare le informazioni del messaggio alla routine della finestra specificata [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Per impostazione predefinita `DefWindowProc` chiama il [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) funzione Win32 per inviare le informazioni del messaggio alla routine della finestra specificata [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
  La funzione senza parametri recupera automaticamente i parametri necessari dal messaggio corrente.  
   
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Tipo di finestra|Procedura di finestra|  
 |--------------------|----------------------|  
-|Una finestra basata su una nuova classe di finestra, specificata tramite il [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|Il [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) funzione Win32.|  
+|Una finestra basata su una nuova classe di finestra, specificata tramite il [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|Il [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) funzione Win32.|  
 |Una finestra basata su una classe della finestra che consente di modificare una classe esistente, specificata tramite il [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro.|Routine di finestra della classe finestra esistente.|  
 |Una finestra sottoclassata.|La sottoclasse routine della finestra originale.|  
   

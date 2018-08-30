@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9522db579641d79b8b77cc870cd1df6f03c0413
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607673"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206701"
 ---
 # <a name="importlib"></a>importlib
 
@@ -43,7 +43,7 @@ Nome di un file tlb, racchiuso tra virgolette, che si desidera importare nella l
 
 ## <a name="remarks"></a>Note
 
-Il **importlib** C++ attributo provoca un `importlib` informativa per essere inserito nel blocco di libreria del file con estensione IDL generato. Il **importlib** attributo ha la stessa funzionalità come la [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) attributo MIDL.
+Il **importlib** C++ attributo provoca un `importlib` informativa per essere inserito nel blocco di libreria del file con estensione IDL generato. Il **importlib** attributo ha la stessa funzionalità come la [importlib](/windows/desktop/Midl/importlib) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

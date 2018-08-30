@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 4) avviso C4242 | Documenti Microsoft
+title: Del compilatore (livello 4) avviso C4242 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befe02b363c17a670d3b33632ffa50ed8a7cb1f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 623183e5ee54c995d624f47461c724ee8f4befae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294482"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217398"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>Avviso del compilatore (livello 4) C4242
-'identifier': conversione da 'type1' a 'type2', possibile perdita di dati  
+'identifier': conversione da 'type1' a 'type2'. possibile perdita di dati  
   
- I tipi sono diversi. Conversione di tipo può comportare la perdita di dati. Il compilatore effettua la conversione del tipo.  
+ I tipi sono diversi. Conversione del tipo può comportare una perdita di dati. Il compilatore effettua la conversione del tipo.  
   
  Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
- Per ulteriori informazioni sull'avviso C4242, vedere [errori comuni del compilatore](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Per altre informazioni sull'avviso C4242, vedere [errori comuni del compilatore](/windows/desktop/WinProg64/common-compiler-errors).  
   
- L'esempio seguente genera l'errore C4242:  
+ L'esempio seguente genera l'avviso C4242:  
   
 ```  
 // C4242.cpp  

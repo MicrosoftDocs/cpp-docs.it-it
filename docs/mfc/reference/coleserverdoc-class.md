@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67920590979c4b9bf3099e8c64c142aeb813b1ce
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a02ade5beb9c3a8480672211fff4b9d23fe48562
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851658"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217589"
 ---
 # <a name="coleserverdoc-class"></a>Classe COleServerDoc
 Classe di base per i documenti del server OLE.  
@@ -296,7 +296,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Recupera un puntatore sottostante [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) interfaccia.  
+ Recupera un puntatore sottostante [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite) interfaccia.  
   
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  Eseguire l'override di questa funzione per creare un nuovo `CDocObjectServer` di elemento e restituire un puntatore a esso.  
@@ -492,7 +492,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita chiama `CDocument::OnCloseDocument`.  
   
- Per altre informazioni e valori aggiuntivi, vedere [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) nel SDK di Windows.  
+ Per altre informazioni e valori aggiuntivi, vedere [OLECLOSE](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose) nel SDK di Windows.  
   
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  Chiamato dal framework quando l'utente disattiva un elemento incorporato o collegato che è attualmente attiva.  
@@ -668,7 +668,7 @@ virtual void OnResizeBorder(
 ### <a name="remarks"></a>Note  
  Questa funzione viene ridimensionata e regola le barre degli strumenti e altri elementi dell'interfaccia utente in base alle nuove dimensioni della finestra.  
   
- Per altre informazioni, vedere [Oleinplaceuiwindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) nel SDK di Windows.  
+ Per altre informazioni, vedere [Oleinplaceuiwindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) nel SDK di Windows.  
   
  Si tratta di un'avanzata sottoponibile a override.  
   

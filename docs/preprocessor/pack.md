@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544438"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207492"
 ---
 # <a name="pack"></a>pack
 Specifica l'allineamento di compressione per una struttura, un'unione e i membri della classe.  
@@ -38,7 +38,7 @@ Specifica l'allineamento di compressione per una struttura, un'unione e i membri
 
 Comprimere una classe vuol dire inserire i suoi membri direttamente in memoria l'uno dopo l'altro. Questo può significare che alcuni o tutti i membri possono essere allineati a un limite inferiore rispetto all'allineamento predefinito dell'architettura di destinazione. **Pack** offre un controllo a livello di dichiarazione di dati. Questo comportamento è diverso dall'opzione del compilatore [/Zp](../build/reference/zp-struct-member-alignment.md), che fornisce solo il controllo a livello di modulo. **Pack** ha effetto in corrispondenza del primo **struct**, **union**, oppure **classe** dichiarazione dopo che viene individuato il pragma. **Pack** non ha alcun effetto sulle definizioni. La chiamata **pack** senza argomenti imposta *n* sul valore impostato nell'opzione del compilatore `/Zp`. Se l'opzione del compilatore non è impostata, il valore predefinito è 8.  
   
-Se si modifica l'allineamento di una struttura, ciò può non utilizzare molto spazio in memoria, ma è possibile osservare una riduzione delle prestazioni o addirittura ottenere un'eccezione generata dall'hardware per l'accesso non allineato.  È possibile modificare questo comportamento dell'eccezione mediante [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
+Se si modifica l'allineamento di una struttura, ciò può non utilizzare molto spazio in memoria, ma è possibile osservare una riduzione delle prestazioni o addirittura ottenere un'eccezione generata dall'hardware per l'accesso non allineato.  È possibile modificare questo comportamento dell'eccezione mediante [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
 *Mostra* (facoltativo)  
 Visualizza il valore di byte corrente per l'allineamento di compressione. Il valore viene visualizzato da un messaggio di avviso.  

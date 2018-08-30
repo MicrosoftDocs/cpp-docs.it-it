@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51beef03fe4e92f4eacd733b2d92b04675ed4242
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541634"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215253"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Indica se il riquadro attività esegue l'a capo automatico nelle etichette.|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Indica se il riquadro attività esegue l'a capo automatico nelle attività.|  
-|[CMFCTasksPane::LoadState](#loadstate)|(Esegue l'override [CDockablePane:: LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Esegue l'override [CDockablePane:: LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|Chiamato dal framework quando l'utente fa clic su un elemento nel riquadro attività.|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,8 +293,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Chiamato dal framework quando l'utente fa clic sul pulsante di navigazione home.|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Esegue l'override [cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Esegue l'override [CDockablePane:: OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Esegue l'override [CDockablePane:: PreTranslateMessage](http://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Esegue l'override [CDockablePane:: OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Esegue l'override [CDockablePane:: PreTranslateMessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(Esegue l'override [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Rimuove tutti i gruppi nella pagina specificata.|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|Rimuove tutte le pagine dal riquadro attività tranne che nella (prima) pagina predefinita.|  
@@ -302,8 +302,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemoveGroup](#removegroup)|Rimuove un gruppo.|  
 |[CMFCTasksPane::RemovePage](#removepage)|Rimuove una pagina specifica dal riquadro attività.|  
 |[CMFCTasksPane::RemoveTask](#removetask)|Rimuove un'attività da un gruppo di attività.|  
-|[CMFCTasksPane::SaveState](#savestate)|(Esegue l'override [CDockablePane:: SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
-|[CMFCTasksPane::Serialize](#serialize)|(Esegue l'override [CDockablePane:: Serialize](http://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SaveState](#savestate)|(Esegue l'override [CDockablePane:: SaveState](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Esegue l'override [CDockablePane:: Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Attiva una pagina specificata nel riquadro attività.|  
 |[CMFCTasksPane::SetCaption](#setcaption)|Imposta il nome della didascalia del riquadro attività.|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Imposta l'altezza di una didascalia del gruppo.|  

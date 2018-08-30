@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3d49b7a96f98c701c2748379ed880267bff3fa5a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196648"
 ---
 # <a name="crect-class"></a>Classe CRect
 Simile a un Windows [RECT](../../mfc/reference/rect-structure1.md) struttura.  
@@ -375,7 +375,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
  Specifica il numero di unità da deflate superiore e inferiore di `CRect`.  
   
  *size*  
- Oggetto [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) oppure [CSize](csize-class.md) che specifica il numero di unità da deflate `CRect`. Il `cx` valore specifica il numero di unità da deflate i lati sinistro e destro e `cy` valore specifica il numero di unità da deflate superiore e inferiore.  
+ Oggetto [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) oppure [CSize](csize-class.md) che specifica il numero di unità da deflate `CRect`. Il `cx` valore specifica il numero di unità da deflate i lati sinistro e destro e `cy` valore specifica il numero di unità da deflate superiore e inferiore.  
   
  *lpRect*  
  Punta a un [RECT](../../mfc/reference/rect-structure1.md) struttura o `CRect` che specifica il numero di unità per ogni lato di compressione.  
@@ -494,7 +494,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  Specifica il numero di unità di ingrandimento superiore e inferiore di `CRect`.  
   
  *size*  
- Oggetto [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) oppure [CSize](csize-class.md) che specifica il numero di unità ingrandimento `CRect`. Il `cx` valore specifica il numero di unità ingrandimento i lati sinistro e destro e `cy` valore specifica il numero di unità ingrandimento superiore e inferiore.  
+ Oggetto [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) oppure [CSize](csize-class.md) che specifica il numero di unità ingrandimento `CRect`. Il `cx` valore specifica il numero di unità ingrandimento i lati sinistro e destro e `cy` valore specifica il numero di unità ingrandimento superiore e inferiore.  
   
  *lpRect*  
  Punta a un [RECT](../../mfc/reference/rect-structure1.md) struttura o `CRect` che specifica il numero di unità ingrandimento ogni lato.  
@@ -753,7 +753,7 @@ void OffsetRect(SIZE size) throw();
  Contiene un [punto](../../mfc/reference/point-structure1.md) struttura oppure [CPoint](cpoint-class.md) oggetto specificare entrambe le dimensioni per eseguire lo spostamento.  
   
  *size*  
- Contiene un [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](csize-class.md) oggetto specificare entrambe le dimensioni per eseguire lo spostamento.  
+ Contiene un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](csize-class.md) oggetto specificare entrambe le dimensioni per eseguire lo spostamento.  
   
 ### <a name="remarks"></a>Note  
  Sposta `CRect` *x* unità lungo l'asse x e *y* unità lungo l'asse y. Il *x* e *y* parametri sono pertanto i valori con segno, `CRect` possono essere spostati a sinistra o a destra e attivo o inattivo.  
@@ -919,7 +919,7 @@ void operator+=(LPCRECT lpRect) throw();
  Oggetto [punto](../../mfc/reference/point-structure1.md) struttura oppure [CPoint](cpoint-class.md) oggetto che specifica il numero di unità da spostare il rettangolo.  
   
  *size*  
- Oggetto [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](csize-class.md) oggetto che specifica il numero di unità da spostare il rettangolo.  
+ Oggetto [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](csize-class.md) oggetto che specifica il numero di unità da spostare il rettangolo.  
   
  *lpRect*  
  Punta a un [RECT](../../mfc/reference/rect-structure1.md) struttura oppure `CRect` oggetto che contiene il numero di unità ingrandimento ogni lato della `CRect`.  
@@ -958,7 +958,7 @@ void operator-=(LPCRECT lpRect) throw();
  Oggetto [punto](../../mfc/reference/point-structure1.md) struttura oppure [CPoint](cpoint-class.md) oggetto che specifica il numero di unità da spostare il rettangolo.  
   
  *size*  
- Oggetto [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](csize-class.md) oggetto che specifica il numero di unità da spostare il rettangolo.  
+ Oggetto [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](csize-class.md) oggetto che specifica il numero di unità da spostare il rettangolo.  
   
  *lpRect*  
  Punta a un [RECT](../../mfc/reference/rect-structure1.md) struttura oppure `CRect` oggetto che contiene il numero di unità per ogni lato della deflate `CRect`.  
@@ -1050,7 +1050,7 @@ CRect operator+(SIZE size) const throw();
  Oggetto [punto](../../mfc/reference/point-structure1.md) struttura oppure [CPoint](cpoint-class.md) oggetto che specifica il numero di unità da spostare il valore restituito.  
   
  *size*  
- Oggetto [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](csize-class.md) oggetto che specifica il numero di unità da spostare il valore restituito.  
+ Oggetto [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](csize-class.md) oggetto che specifica il numero di unità da spostare il valore restituito.  
   
  *lpRect*  
  Punta a un [RECT](../../mfc/reference/rect-structure1.md) struttura o `CRect` oggetto che contiene il numero di unità ingrandimento ogni lato del valore restituito.  
@@ -1089,7 +1089,7 @@ CRect operator-(LPCRECT lpRect) const throw();
  Oggetto [punto](../../mfc/reference/point-structure1.md) struttura o `CPoint` oggetto che specifica il numero di unità da spostare il valore restituito.  
   
  *size*  
- Oggetto [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura o `CSize` oggetto che specifica il numero di unità da spostare il valore restituito.  
+ Oggetto [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura o `CSize` oggetto che specifica il numero di unità da spostare il valore restituito.  
   
  *lpRect*  
  Punta a un [RECT](../../mfc/reference/rect-structure1.md) struttura o `CRect` oggetto che contiene il numero di unità per ogni lato del valore restituito di compressione.  

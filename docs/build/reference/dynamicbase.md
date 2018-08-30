@@ -1,7 +1,7 @@
 ---
-title: -DYNAMICBASE | Documenti Microsoft
+title: -DYNAMICBASE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,29 +18,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7a4cf7aa35d7ad6b41fc6d61f3f27662ae2c8d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 255123157da3f802eafaf26206598d54fea02335
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223459"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
-Specifica se un'immagine eseguibile può essere riassegnata in modo casuale in fase di caricamento utilizzando la funzionalità ASLR (Address Space Layout Randomization).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-/DYNAMICBASE[:NO]  
-```  
-  
-## <a name="remarks"></a>Note  
- Per impostazione predefinita, il linker imposta il **/DYNAMICBASE** opzione.  
-  
- Questa opzione modifica l'intestazione di un'immagine eseguibile per indicare se il caricatore può riassegnare in modo casuale l'immagine al momento del caricamento.  
-  
- ASLR è supportato in Windows Vista, Windows Server 2008, Windows 7, Windows 8 e Windows Server 2012.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di EDITBIN](../../build/reference/editbin-options.md)   
- [Difesa Software ISV di Windows](http://msdn.microsoft.com/library/bb430720.aspx)
+
+Specifica se generare un'immagine eseguibile che può essere riassegnata in modo casuale in fase di caricamento usando la funzionalità indirizzi dello spazio layout randomization (ASLR) di Windows che prima era disponibile in Windows Vista.
+
+## <a name="syntax"></a>Sintassi
+
+> **/ DYNAMICBASE**[**: NO**]
+
+## <a name="remarks"></a>Note
+
+Il **/DYNAMICBASE** opzione Modifica l'intestazione di un *immagine eseguibile*, un file con estensione dll o .exe, per indicare se l'applicazione deve essere riassegnata in modo casuale in fase di caricamento e consente di indirizzo virtuale sequenza casuale di allocazione, che influisce sulla posizione di memoria virtuale dell'heap, stack e altre allocazioni del sistema operativo. Il **/DYNAMICBASE** opzione si applica alle immagini sia a 32 e 64 bit. ASLR è supportato in Windows Vista e sistemi operativi successivi. L'opzione viene ignorata nei sistemi operativi precedenti.
+
+Per impostazione predefinita **/DYNAMICBASE** è abilitata. Per disabilitare questa opzione, usare **/DynamicBase: No**. Il **/DYNAMICBASE** opzione è obbligatoria per il [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md) opzione abbia effetto.
+
+## <a name="see-also"></a>Vedere anche
+
+- [Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+- [Difese di sicurezza Software ISV di Windows](https://msdn.microsoft.com/library/bb430720.aspx)

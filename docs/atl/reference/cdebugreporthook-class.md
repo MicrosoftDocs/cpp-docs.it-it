@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884363"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209325"
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
 Usare questa classe per inviare i report di debug a una named pipe.  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>Note  
  Creare un'istanza di questa classe nelle build di debug del servizi o applicazioni di inviare i report di debug a una named pipe. Report di debug vengono generati chiamando [CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) o tramite un wrapper per questa funzione, ad esempio le [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) e [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) macro.  
   
- Utilizzo di questa classe consente di eseguire in modo interattivo il debug di componenti in esecuzione interattivo [postazioni](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Utilizzo di questa classe consente di eseguire in modo interattivo il debug di componenti in esecuzione interattivo [postazioni](/windows/desktop/winstation/window-stations).  
   
  Si noti che i report di debug vengono inviati utilizzando il contesto di sicurezza sottostante del thread. La rappresentazione è temporaneamente disabilitata in modo che sia possono visualizzare i report di debug nelle situazioni in cui la rappresentazione di utenti con privilegi limitati è in corso, ad esempio nelle applicazioni web.  
   

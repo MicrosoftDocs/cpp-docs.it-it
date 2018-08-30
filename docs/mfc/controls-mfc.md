@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1226584d52d9f09b34e9dae8d00095fc923396fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353684"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206875"
 ---
 # <a name="controls-mfc"></a>Controlli (MFC)
 I controlli sono oggetti con cui gli utenti possono interagire per immettere o modificare i dati. In genere vengono visualizzati nelle finestre di dialogo o nelle barre degli strumenti. In questo gruppo di argomenti vengono illustrati tre tipi principali di controlli:  
@@ -107,7 +107,7 @@ I controlli sono oggetti con cui gli utenti possono interagire per immettere o m
   
 -   [Esempi](../mfc/common-control-sample-list.md)  
   
- Per informazioni sui controlli comuni di Windows in Windows SDK, vedere [controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Per informazioni sui controlli comuni di Windows in Windows SDK, vedere [Common Controls](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)   

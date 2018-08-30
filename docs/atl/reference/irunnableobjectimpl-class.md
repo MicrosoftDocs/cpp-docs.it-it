@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a98456d3d7d0d2e4600267a81151c44e38993c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 035d59d71dc7166b12b6e894803645aacda83887
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885587"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218698"
 ---
 # <a name="irunnableobjectimpl-class"></a>Classe IRunnableObjectImpl
-Questa classe implementa `IUnknown` e fornisce un'implementazione predefinita del [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interfaccia.  
+Questa classe implementa `IUnknown` e fornisce un'implementazione predefinita del [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) interfaccia.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
@@ -63,7 +63,7 @@ class IRunnableObjectImpl
 |[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Indica che il controllo è incorporato. L'implementazione di ATL restituisce S_OK.|  
   
 ## <a name="remarks"></a>Note  
- Il [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interfaccia consente a un contenitore stabilire se un controllo è in esecuzione, forzare l'esecuzione, oppure bloccarlo in stato di esecuzione. Classe `IRunnableObjectImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
+ Il [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) interfaccia consente a un contenitore stabilire se un controllo è in esecuzione, forzare l'esecuzione, oppure bloccarlo in stato di esecuzione. Classe `IRunnableObjectImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
   
  **Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [la creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -86,7 +86,7 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
  I set di implementazione ATL \* *lpClsid* GUID_NULL e viene restituito E_UNEXPECTED.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) in Windows SDK.  
+ Visualizzare [IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) in Windows SDK.  
   
 ##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning  
  Determina se il controllo è in esecuzione.  
@@ -99,7 +99,7 @@ virtual BOOL IsRunning();
  L'implementazione di ATL restituisce TRUE.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) in Windows SDK.  
+ Visualizzare [IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) in Windows SDK.  
   
 ##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning  
  Blocca il controllo allo stato di esecuzione.  
@@ -112,7 +112,7 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
  L'implementazione di ATL restituisce S_OK.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) in Windows SDK.  
+ Visualizzare [IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) in Windows SDK.  
   
 ##  <a name="run"></a>  IRunnableObjectImpl::Run  
  Forza l'esecuzione del controllo.  
@@ -125,7 +125,7 @@ HRESULT Run(LPBINDCTX lpbc);
  L'implementazione di ATL restituisce S_OK.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) in Windows SDK.  
+ Visualizzare [IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) in Windows SDK.  
   
 ##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject  
  Indica che il controllo è incorporato.  
@@ -138,7 +138,7 @@ HRESULT SetContainedObject(BOOL fContained);
  L'implementazione di ATL restituisce S_OK.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IRunnableObject::SetContainedObject](http://msdn.microsoft.com/library/windows/desktop/ms693710) in Windows SDK.  
+ Visualizzare [IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CComControl](../../atl/reference/ccomcontrol-class.md)   

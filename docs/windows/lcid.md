@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1e8085810eea78d18a5ef68f18e4323ec9d3f4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 936777adf9863c233303c4b78ffd9e45aa0f3b95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605421"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209531"
 ---
 # <a name="lcid"></a>lcid
 
@@ -36,7 +36,7 @@ Consente di passare un identificatore delle impostazioni locali a una funzione.
 
 ## <a name="remarks"></a>Note
 
-Il **lcid** attributi di C++ implementa la funzionalità delle [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) attributo MIDL. Se si desidera implementare le impostazioni locali per un blocco di libreria, usare il **lcid =** `lcid` parametro per il [modulo](../windows/module-cpp.md) attributo.
+Il **lcid** attributi di C++ implementa la funzionalità delle [lcid](/windows/desktop/Midl/lcid) attributo MIDL. Se si desidera implementare le impostazioni locali per un blocco di libreria, usare il **lcid =** `lcid` parametro per il [modulo](../windows/module-cpp.md) attributo.
 
 ## <a name="example"></a>Esempio
 

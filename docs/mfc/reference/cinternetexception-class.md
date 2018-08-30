@@ -1,5 +1,5 @@
 ---
-title: Classe CInternetException | Documenti Microsoft
+title: Classe CInternetException | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db83d88eec06ce21258ed751c5e1b232f696836
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f1439fc2a5d49a775f55c7c25e45f4faa9b9c99f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037889"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211277"
 ---
 # <a name="cinternetexception-class"></a>Classe CInternetException
 Rappresenta una condizione di eccezione correlata a un'operazione su Internet.  
@@ -54,7 +54,7 @@ class CInternetException : public CException
 |[CInternetException::m_dwError](#m_dwerror)|Errore che ha causato l'eccezione.|  
   
 ## <a name="remarks"></a>Note  
- Il `CInternetException` classe include due membri dati pubblici: una contiene il codice di errore associato all'eccezione e l'altro contiene l'identificatore di contesto dell'applicazione Internet associato all'errore.  
+ Il `CInternetException` classe include due membri dati pubblici: uno contiene il codice di errore associato all'eccezione e l'altro contiene l'identificatore di contesto dell'applicazione Internet associato all'errore.  
   
  Per ulteriori informazioni sugli identificatori di contesto per le applicazioni Internet, vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -83,14 +83,14 @@ CInternetException(DWORD dwError);
  Per generare un CInternetException, chiamare la funzione globale MFC [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext  
- Il valore di contesto associato all'operazione Internet correlato.  
+ Il valore di contesto associato all'operazione Internet correlata.  
   
 ```  
 DWORD_PTR m_dwContext;  
 ```  
   
 ### <a name="remarks"></a>Note  
- L'identificatore di contesto è specificata in origine [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passato da MFC per [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classi derivate. È possibile sostituire questa impostazione predefinita e assegnare qualsiasi *dwContext* parametro un valore di propria scelta. *dwContext* è associato a qualsiasi operazione dell'oggetto specificato. *dwContext* identifica le informazioni sullo stato dell'operazione restituite da [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+ L'identificatore di contesto viene originariamente specificato nella [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passato da MFC per [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-le classi derivate. È possibile eseguire l'override di questo valore predefinito e assegnare uno qualsiasi *dwContext* parametro un valore di propria scelta. *dwContext* è associato a qualsiasi operazione dell'oggetto specificato. *dwContext* identifica le informazioni sullo stato dell'operazione restituite da [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  Errore che ha causato l'eccezione.  
@@ -100,9 +100,9 @@ DWORD m_dwError;
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo valore di errore può essere un sistema di codice di errore, trovato in WINERROR. H o un valore di errore da WININET. H.  
+ Questo valore di errore può essere un sistema di codice di errore, disponibile in WINERROR. H o un valore di errore da WININET. H.  
   
- Per un elenco di codici di errore Win32, vedere [codici di errore](http://msdn.microsoft.com/library/windows/desktop/ms681381). Per un elenco di messaggi di errore Internet specifiche, vedere. In entrambi gli argomenti sono in Windows SDK.  
+ Per un elenco dei codici di errore Win32, vedere [codici di errore](/windows/desktop/Debug/system-error-codes). Per un elenco di messaggi di errore Internet specifiche, vedere. Entrambi gli argomenti sono in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CException (classe)](../../mfc/reference/cexception-class.md)   

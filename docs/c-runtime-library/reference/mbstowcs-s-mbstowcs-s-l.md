@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f366e01fbaa8da5c0dbc96ff4da324611e132f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3457195b07335345476153038d7ab38606607a2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403921"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217359"
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -90,13 +90,13 @@ Numero di caratteri convertiti.
 Indirizzo del buffer per la stringa di caratteri wide convertita risultante.
 
 *sizeInWords*<br/>
-Le dimensioni del *wcstr* buffer in parole.
+Le dimensioni dei *wcstr* buffer in parole.
 
 *mbstr*<br/>
 Indirizzo di una sequenza di caratteri multibyte con terminazione Null.
 
 *count*<br/>
-Il numero massimo di caratteri "wide" per l'archiviazione nel *wcstr* buffer, senza includere il carattere di terminazione null, o [truncate](../../c-runtime-library/truncate.md).
+Il numero massimo di caratteri wide da archiviare nel *wcstr* buffer, escluso il carattere null oppure [truncate](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Impostazioni locali da usare.
@@ -116,7 +116,7 @@ Se si verifica una di queste condizioni, viene richiamata l'eccezione di paramet
 
 ## <a name="remarks"></a>Note
 
-Il **mbstowcs_s** funzione converte una stringa di caratteri multibyte a cui puntata *mbstr* in caratteri wide archiviati nel buffer a cui puntato *wcstr*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
+Il **mbstowcs_s** funzione converte una stringa di caratteri multibyte a cui punta *mbstr* in caratteri wide archiviati nel buffer a cui fa riferimento *wcstr*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
 
 - Viene rilevato un carattere Null multibyte
 
@@ -126,18 +126,18 @@ Il **mbstowcs_s** funzione converte una stringa di caratteri multibyte a cui pun
 
 La stringa di destinazione termina sempre con Null, anche in caso di errore.
 
-Se *conteggio* è il valore speciale [truncate](../../c-runtime-library/truncate.md), quindi **mbstowcs_s** Converte la gran parte della stringa come rientrano nel buffer di destinazione, lasciando comunque una chat room per un valore null carattere di terminazione.
+Se *conteggio* è il valore speciale [truncate](../../c-runtime-library/truncate.md), quindi **mbstowcs_s** Converte la porzione di stringa rientrano nel buffer di destinazione, lasciando però spazio per un valore null carattere di terminazione.
 
-Se **mbstowcs_s** converte correttamente la stringa di origine, inserisce la dimensione in caratteri "wide" della stringa convertita, incluso il terminatore null, in  *&#42;pReturnValue* (fornito *pReturnValue* non è **NULL**). Questo errore si verifica anche se il *wcstr* argomento **NULL** e fornisce un modo per determinare le dimensioni del buffer richieste. Si noti che se *wcstr* viene **NULL**, *conteggio* viene ignorato e *sizeInWords* deve essere 0.
+Se **mbstowcs_s** converte correttamente la stringa di origine, inserisce la dimensione in caratteri wide della stringa convertita, incluso il carattere di terminazione null, nel  *&#42;pReturnValue* (fornito *pReturnValue* non è **NULL**). Questo errore si verifica anche se il *wcstr* l'argomento è **NULL** e fornisce un modo per determinare le dimensioni del buffer richieste. Si noti che se *wcstr* viene **NULL**, *count* viene ignorato, e *sizeInWords* deve essere 0.
 
-Se **mbstowcs_s** rileva un carattere multibyte non valido, in tale client inserisce 0  *&#42;pReturnValue*, imposta il buffer di destinazione in una stringa vuota, imposta **errno** a  **EILSEQ**e restituisce **EILSEQ**.
+Se **mbstowcs_s** rileva un carattere multibyte non valido, inserisce 0 in  *&#42;pReturnValue*, imposta il buffer di destinazione in una stringa vuota, imposta **errno** a  **EILSEQ**e restituisce **EILSEQ**.
 
-Se le sequenze a cui punta *mbstr* e *wcstr* si sovrappongono, il comportamento di **mbstowcs_s** è definito.
+Se le sequenze a cui punta *mbstr* e *wcstr* si sovrappongono, il comportamento delle **mbstowcs_s** è definito.
 
 > [!IMPORTANT]
-> Assicurarsi che *wcstr* e *mbstr* si sovrappongano e che *conteggio* rispecchi correttamente il numero di caratteri multibyte da convertire.
+> Assicurarsi che *wcstr* e *mbstr* non si sovrappongano e che *conteggio* rispecchi correttamente il numero di caratteri multibyte da convertire.
 
-**mbstowcs_s** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **mbstowcs_s_l** è identica ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**mbstowcs_s** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **mbstowcs_s_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -154,7 +154,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 [Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

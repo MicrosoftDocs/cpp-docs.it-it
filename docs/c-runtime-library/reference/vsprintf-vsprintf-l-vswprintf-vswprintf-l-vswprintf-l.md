@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c1c4c22bb309516c751af66845acdb69b090797
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baa34ae887e12a59785bafd0551fe383fac5f7b1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417314"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220450"
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 Scrivere l'output formattato mediante un puntatore a un elenco di argomenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
@@ -132,7 +132,7 @@ int _vswprintf_l(
 Percorso di archiviazione per l'output.
 
 *count*<br/>
-Numero massimo di caratteri da archiviare nelle versioni di stringa "wide" di questa funzione.
+Numero massimo di caratteri da archiviare nelle versioni di stringa a caratteri wide di questa funzione.
 
 *format*<br/>
 Specifica di formato.
@@ -145,20 +145,20 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**vsprintf** e **vswprintf** restituire il numero di caratteri scritti, senza includere il carattere di terminazione null o un valore negativo se si verifica un errore di output. Se *buffer* oppure *formato* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+**vsprintf** e **vswprintf** restituiscono il numero di caratteri scritti, escludendo il carattere null di terminazione o un valore negativo se si verifica un errore di output. Se *buffer* oppure *formato* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati per la memoria a cui puntata *buffer*.
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati per la memoria a cui punta *buffer*.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
-> Utilizzo **vsprintf**, non vi è alcun modo per limitare il numero di caratteri scritti, che significa che codice che usa questa funzione è soggetto a sovraccarichi del buffer. Usare [vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) in alternativa o chiamare [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) per determinare le dimensioni necessarie per un buffer. Inoltre, assicurarsi che *formato* non è una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Usando **vsprintf**, non vi è alcun modo per limitare il numero di caratteri scritti, che significa che codice che usa questa funzione è soggetto a sovraccarichi del buffer. Usare [vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) in alternativa o chiamare [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) per determinare le dimensioni necessarie per un buffer. Inoltre, assicurarsi che *formato* non è una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-**vswprintf** conforme allo Standard ISO C, che richiede il secondo parametro, *conteggio*, di tipo **size_t**. Per forzare il comportamento non standard precedente, definire **_CRT_NON_CONFORMING_SWPRINTFS**. Il comportamento precedente potrebbe non essere in una versione futura, in modo da codice deve essere modificato per utilizzare il nuovo comportamento conforme.
+**vswprintf** è conforme allo Standard ISO C, che richiede il secondo parametro, *conteggio*, di tipo **size_t**. Per forzare il comportamento non standard precedente, definire **_CRT_NON_CONFORMING_SWPRINTFS**. Il comportamento precedente potrebbe non essere in una versione futura, quindi il codice deve essere modificato per usare il nuovo comportamento conforme.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

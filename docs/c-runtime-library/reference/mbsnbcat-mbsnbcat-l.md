@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f6d75df13263c0eb6a239f2fe6f4f5a400e03d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405058"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210082"
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 
-Aggiunge al massimo i primi **n** byte di una stringa di caratteri multibyte a un altro. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
+Aggiunge al massimo i primi **n** byte di una stringa di caratteri multibyte a un'altra. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -94,7 +94,7 @@ Stringa di destinazione di caratteri multibyte con terminazione Null.
 Stringa di origine di caratteri multibyte con terminazione Null.
 
 *count*<br/>
-Numero di byte da *src* da aggiungere alla *dest*.
+Numero di byte dal *src* da aggiungere alla *dest*.
 
 *locale*<br/>
 Impostazioni locali da usare.
@@ -105,13 +105,13 @@ Impostazioni locali da usare.
 
 ## <a name="remarks"></a>Note
 
-Il **mbsnbcat** funzione aggiunge al massimo, il primo *conteggio* byte di *src* a *dest*. Se il byte immediatamente precedente il carattere null in *dest* è un byte iniziale, il byte iniziale di *src* sovrascrive il byte di apertura. In caso contrario, il byte iniziale di *src* sovrascrive il carattere di terminazione null di *dest*. Se un byte null viene visualizzato nella *src* prima *conteggio* byte vengano aggiunti, **mbsnbcat** aggiunge tutti i byte da *src*, fino al carattere null. Se *conteggio* è maggiore della lunghezza di *src*, la lunghezza del *src* è usato al posto di *conteggio*. La stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **mbsnbcat** funzione aggiunge al massimo i primi *conteggio* byte del *src* al *dest*. Se il byte immediatamente prima del carattere null in *dest* è un byte di apertura, il byte iniziale di *src* sovrascrive questo byte di apertura. In caso contrario, il byte iniziale di *src* sovrascrive il carattere null di terminazione del *dest*. Se un byte null viene visualizzato nella *src* prima *conteggio* byte vengano aggiunti, **mbsnbcat** aggiunge tutti i byte da *src*, fino al carattere null. Se *conteggio* è maggiore della lunghezza di *src*, la lunghezza del *src* viene usato al posto della *conteggio*. La stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Il **mbsnbcat** versione della funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la **mbsnbcat_l** versione è identica ad eccezione del fatto che usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Il **mbsnbcat** versione della funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; le **mbsnbcat_l** versione è identica, ma usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-**Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Se *dest* oppure *src* è **NULL**, la funzione verrà generato un errore di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
+Se *dest* oppure *src* viene **NULL**, la funzione genera un errore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a46a2f9b18a45e7ea627488881b0289e733ddd7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87186ee70b5863f51a7cd91f8695052f361bd11c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608967"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222532"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -44,7 +44,7 @@ Il numero di versione il `coclass`. Se non specificato, 1.0 verrà inserita nel 
 
 ## <a name="remarks"></a>Note
 
-Il **versione** attributi di C++ ha la stessa funzionalità come la [versione](http://msdn.microsoft.com/library/windows/desktop/aa367306) attributo MIDL e viene passato al file con estensione IDL generato.
+Il **versione** attributi di C++ ha la stessa funzionalità come la [versione](/windows/desktop/Midl/version) attributo MIDL e viene passato al file con estensione IDL generato.
 
 ## <a name="example"></a>Esempio
 

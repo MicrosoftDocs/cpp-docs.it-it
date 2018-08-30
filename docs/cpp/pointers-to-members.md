@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407780"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208516"
 ---
 # <a name="pointers-to-members"></a>Puntatori a membri
 Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del puntatore.  Le funzioni vengono dichiarate tramite la seguente sequenza:  
@@ -45,7 +45,7 @@ Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del
   - Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).  
 1. Il nome completo della classe che contiene i membri a cui puntare.  
   - Operatore ::.  
-  - Il **\*** operatore.  
+  - Il <strong>\*</strong> operatore.  
   - Facoltativo **const** e/o **volatile** identificatori.  
   - L'identificatore di denominazione del puntatore a membro.  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- La differenza tra il **.\***  e **-> \*** operatori (gli operatori puntatore a membro) è che la **.\***  operatore consente di selezionare i membri dato un oggetto o un riferimento all'oggetto, mentre la **-> \*** operatore consente di selezionare i membri tramite un puntatore. (Per altre informazioni su questi operatori, vedere [espressioni con operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ La differenza tra il **.** <strong>\*</strong> e **->** <strong>\*</strong> operatori (gli operatori puntatore a membro) è che la **.** <strong>\*</strong> operatore consente di selezionare i membri dato un oggetto o un riferimento all'oggetto, mentre il **->** <strong>\*</strong> operatore Seleziona i membri tramite un puntatore. (Per altre informazioni su questi operatori, vedere [espressioni con operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  Il risultato degli operatori puntatore a membro è il tipo del membro, ovvero in questo caso, `char *`.  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>Limitazioni sui puntatori ai membri  
- L'indirizzo di un membro statico non è un puntatore a un membro. È un normale puntatore all'istanza del membro statico. Poiché esiste solo un'istanza di un membro statico per tutti gli oggetti di una determinata classe, address-of ordinario **(&)** e dereferenziare **(\*)** possono essere utilizzati.  
+ L'indirizzo di un membro statico non è un puntatore a un membro. È un normale puntatore all'istanza del membro statico. Poiché esiste solo un'istanza di un membro statico per tutti gli oggetti di una determinata classe, ordinario address-of (**&**) e dereference (<strong>\*</strong>) possono essere utilizzati.  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>Puntatori a membri e funzioni virtuali  
  Il richiamo di una funzione virtuale tramite una funzione puntatore a membro funziona come se la funzione sia stata chiamata direttamente; la funzione corretta viene individuata nella v- table e viene richiamata.  

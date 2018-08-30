@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572072"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200388"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Specifica il sottosistema)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42572072"
 ```  
   
  BOOT_APPLICATION  
- Applicazione che viene eseguita nell'ambiente di avvio di Windows. Per altre informazioni sulle applicazioni di avvio, vedere [sulle BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
+ Applicazione che viene eseguita nell'ambiente di avvio di Windows. Per altre informazioni sulle applicazioni di avvio, vedere [sulle BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  CONSOLE  
  Applicazione in modalità carattere Win32. Il sistema operativo fornisce una console per le applicazioni console. Se `main` oppure `wmain` è definito per il codice nativo `int main(array<String ^> ^)` è definito per il codice gestito, o si compila l'applicazione completamente utilizzando `/clr:safe`, CONSOLE è il valore predefinito.  

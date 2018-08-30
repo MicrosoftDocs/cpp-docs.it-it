@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe924627b0b0f4f5d02fab0040a4037085d94738
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595583"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220420"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -53,7 +53,7 @@ Se non si specifica un'interfaccia di origine predefinita, viene usata come pred
 
 ## <a name="remarks"></a>Note
 
-L'attributo C++ **default** ha la stessa funzione dell'attributo MIDL [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) . L'attributo **default** viene usato anche con l'attributo [case](../windows/case-cpp.md) .
+Il **predefinito** attributi di C++ ha la stessa funzionalità come il [predefinita](/windows/desktop/Midl/default) attributo MIDL. L'attributo **default** viene usato anche con l'attributo [case](../windows/case-cpp.md) .
 
 ## <a name="example"></a>Esempio
 

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222094"
 ---
 # <a name="cmfcfontinfo-class"></a>Classe CMFCFontInfo
 Il `CMFCFontInfo` classe descrive il nome e altri attributi di un tipo di carattere.  
@@ -95,16 +95,16 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>Parametri  
  [in] *lpszName*  
- Il nome del tipo di carattere. Per altre informazioni, vedere la `lfFaceName` membro della [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura.  
+ Il nome del tipo di carattere. Per altre informazioni, vedere la `lfFaceName` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
   
  [in] *lpszScript*  
  Il nome dello script (set di caratteri) del tipo di carattere.  
   
  [in] *nCharSet*  
- Un valore che specifica il set di caratteri (script) del tipo di carattere. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura.  
+ Un valore che specifica il set di caratteri (script) del tipo di carattere. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
   
  [in] *nPitchAndFamily*  
- Un valore che specifica passo e famiglia del tipo di carattere. Per altre informazioni, vedere la `lfPitchAndFamily` membro della [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura.  
+ Un valore che specifica passo e famiglia del tipo di carattere. Per altre informazioni, vedere la `lfPitchAndFamily` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
   
  [in] *NLE*  
  Un valore che specifica il tipo di carattere. Questo parametro può essere una combinazione bit per bit (OR) di DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Valore restituito  
   
 ### <a name="remarks"></a>Note  
- Questa documentazione Usa i termini *set di caratteri* e *script* in modo intercambiabile. Oggetto *script*, che è noto anche come un sistema di scrittura, è una raccolta di caratteri e le regole per la scrittura di tali caratteri in una o più lingue. La raccolta di caratteri include l'alfabeto e punteggiatura usato in tale script. Alfabeto latino, ad esempio, viene utilizzato per la lingua inglese quando si è parlato negli Stati Uniti e sul relativo alfabeto include i caratteri dalla alla Z. Il `lfCharSet` membro della [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura specifica un set di caratteri. Ad esempio, il valore ANSI_CHARSET specifica il set di caratteri ANSI, che include la lettera dell'alfabeto latino.  
+ Questa documentazione Usa i termini *set di caratteri* e *script* in modo intercambiabile. Oggetto *script*, che è noto anche come un sistema di scrittura, è una raccolta di caratteri e le regole per la scrittura di tali caratteri in una o più lingue. La raccolta di caratteri include l'alfabeto e punteggiatura usato in tale script. Alfabeto latino, ad esempio, viene utilizzato per la lingua inglese quando si è parlato negli Stati Uniti e sul relativo alfabeto include i caratteri dalla alla Z. Il `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura specifica un set di caratteri. Ad esempio, il valore ANSI_CHARSET specifica il set di caratteri ANSI, che include la lettera dell'alfabeto latino.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Recupera i nomi concatenati di un tipo di carattere e il relativo carattere set (script).  

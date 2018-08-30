@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca12ba74df7099aa137e5e7dc9c1b8b75131ab66
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336618"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201526"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 Estende il controllo della casella combinata fornendo il supporto per elenchi di immagini.  
@@ -109,7 +109,7 @@ class CComboBoxEx : public CComboBox
  Questi flag di stile sono descritti dettagliatamente nella [utilizzo di CComboBoxEx](../../mfc/using-ccomboboxex.md).  
   
 ## <a name="item-retention-and-callback-item-attributes"></a>Il mantenimento degli elementi e gli attributi dell'elemento di Callback  
- Informazioni sull'elemento, ad esempio gli indici per gli elementi e le immagini, i valori del rientro e stringhe di testo, viene archiviate nella struttura Win32 [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746), come descritto nel SDK di Windows. La struttura contiene anche i membri che corrispondono ai flag di callback.  
+ Informazioni sull'elemento, ad esempio gli indici per gli elementi e le immagini, i valori del rientro e stringhe di testo, viene archiviate nella struttura Win32 [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema), come descritto nel SDK di Windows. La struttura contiene anche i membri che corrispondono ai flag di callback.  
   
  Per informazioni dettagliate, concettuale, vedere [utilizzo di CComboBoxEx](../../mfc/using-ccomboboxex.md).  
   
@@ -150,7 +150,7 @@ virtual BOOL Create(
  Specifica la combinazione degli stili casella combinata applicato alla casella combinata. Visualizzare **osservazioni** sotto per altre informazioni sugli stili.  
   
  *Rect*  
- Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, ovvero la posizione e dimensioni della casella combinata.  
+ Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, ovvero la posizione e dimensioni della casella combinata.  
   
  *pParentWnd*  
  Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre della casella combinata (in genere un `CDialog`). Non deve essere NULL.  
@@ -182,7 +182,7 @@ virtual BOOL Create(
   
 - WS_CHILD  
   
- Vengono ignorati tutti gli altri stili passati quando si crea la finestra. Il `ComboBoxEx` controllo supporta anche i stili estesi che forniscono funzionalità aggiuntive. Questi stili sono descritte nel [ComboBoxEx controllare stili estesi](http://msdn.microsoft.com/library/windows/desktop/bb775742), nel SDK di Windows. Impostare gli stili chiamando [SetExtendedStyle](#setextendedstyle).  
+ Vengono ignorati tutti gli altri stili passati quando si crea la finestra. Il `ComboBoxEx` controllo supporta anche i stili estesi che forniscono funzionalità aggiuntive. Questi stili sono descritte nel [ComboBoxEx controllare stili estesi](/windows/desktop/Controls/comboboxex-control-extended-styles), nel SDK di Windows. Impostare gli stili chiamando [SetExtendedStyle](#setextendedstyle).  
   
  Se si desidera utilizzare gli stili estesi di windows con il controllo, chiamare [CreateEx](#createex) invece di `Create`.  
   
@@ -200,13 +200,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
   
  *dwStyle*  
  Stile del controllo casella combinata. Visualizzare [Create](#create) per un elenco degli stili.  
   
  *Rect*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
   
  *pParentWnd*  
  Puntatore alla finestra padre del controllo.  
@@ -220,7 +220,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
  Uso `CreateEx` invece di `Create` per applicare stili estesi di Windows, specificati dal prefisso di stile esteso di Windows **WS_EX _**.  
   
- `CreateEx` Crea il controllo con gli stili estesi di Windows specificati da *dwExStyle*. È necessario impostare stili estesi specifici per un controllo casella combinata estesa utilizzando [SetExtendedStyle](#setextendedstyle). Ad esempio, usare `CreateEx` per impostare tali stili come WS_EX_CONTEXTHELP, ma userà `SetExtendedStyle` per impostare tali stili come CBES_EX_CASESENSITIVE. Per altre informazioni, vedere gli stili descritti nell'argomento [stili estesi dei controlli ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) nel SDK di Windows.  
+ `CreateEx` Crea il controllo con gli stili estesi di Windows specificati da *dwExStyle*. È necessario impostare stili estesi specifici per un controllo casella combinata estesa utilizzando [SetExtendedStyle](#setextendedstyle). Ad esempio, usare `CreateEx` per impostare tali stili come WS_EX_CONTEXTHELP, ma userà `SetExtendedStyle` per impostare tali stili come CBES_EX_CASESENSITIVE. Per altre informazioni, vedere gli stili descritti nell'argomento [stili estesi dei controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) nel SDK di Windows.  
   
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  Rimuove un elemento da un `ComboBoxEx` controllo.  
@@ -237,7 +237,7 @@ int DeleteItem(int iIndex);
  Il numero di elementi rimanenti nel controllo. Se *iIndex* è valido, la funzione restituisce CB_ERR.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa la funzionalità del messaggio [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), come descritto nel SDK di Windows. Quando si chiama DeleteItem, un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) messaggio con notifica CBEN_DELETEITEM verrà inviato alla finestra padre.  
+ Questa funzione membro implementa la funzionalità del messaggio [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), come descritto nel SDK di Windows. Quando si chiama DeleteItem, un [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) messaggio con notifica CBEN_DELETEITEM verrà inviato alla finestra padre.  
   
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl  
  Chiamare questa funzione membro per ottenere un puntatore a un controllo casella combinata all'interno di un `CComboBoxEx` oggetto.  
@@ -280,7 +280,7 @@ DWORD GetExtendedStyle() const;
  Il valore DWORD che contiene gli stili estesi che vengono usati per il controllo casella combinata.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [stili estesi dei controlli ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) nel SDK di Windows per altre informazioni su questi stili.  
+ Visualizzare [stili estesi dei controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) nel SDK di Windows per altre informazioni su questi stili.  
   
 ##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList  
  Chiamare questa funzione membro per ottenere un puntatore all'elenco di immagini utilizzato da un `CComboBoxEx` controllo.  
@@ -304,13 +304,13 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>Parametri  
  *pCBItem*  
- Un puntatore a un [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struttura che riceverà le informazioni sull'elemento.  
+ Un puntatore a un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struttura che riceverà le informazioni sull'elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'operazione ha avuto esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa la funzionalità del messaggio [CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa la funzionalità del messaggio [CBEM_GETITEM](/windows/desktop/Controls/cbem-getitem), come descritto nel SDK di Windows.  
   
 ##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged  
  Determina se l'utente ha modificato il contenuto del `ComboBoxEx` controllo edit digitando.  
@@ -323,7 +323,7 @@ BOOL HasEditChanged();
  Diverso da zero se l'utente ha digitato nella casella di modifica del controllo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa la funzionalità del messaggio [CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa la funzionalità del messaggio [CBEM_HASEDITCHANGED](/windows/desktop/Controls/cbem-haseditchanged), come descritto nel SDK di Windows.  
   
 ##  <a name="insertitem"></a>  CComboBoxEx:: InsertItem  
  Inserisce un nuovo elemento in un `ComboBoxEx` controllo.  
@@ -334,13 +334,13 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>Parametri  
  *pCBItem*  
- Un puntatore a un [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struttura che riceverà le informazioni sull'elemento. Questa struttura contiene valori di flag di callback per l'elemento.  
+ Un puntatore a un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struttura che riceverà le informazioni sull'elemento. Questa struttura contiene valori di flag di callback per l'elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice in corrispondenza del quale è stato inserito il nuovo elemento, se ha esito positivo. in caso contrario,-1.  
   
 ### <a name="remarks"></a>Note  
- Quando si chiama `InsertItem`, una [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) dei messaggi con [CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764) verrà inviata notifica alla finestra padre.  
+ Quando si chiama `InsertItem`, una [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) dei messaggi con [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) verrà inviata notifica alla finestra padre.  
   
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle  
  Chiamare questa funzione membro per impostare gli stili estesi utilizzati per una casella combinata estesi di controllo.  
@@ -362,7 +362,7 @@ DWORD SetExtendedStyle(
  Un valore DWORD che contiene gli stili estesi usati in precedenza per il controllo.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [stili estesi dei controlli ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) nel SDK di Windows per altre informazioni su questi stili.  
+ Visualizzare [stili estesi dei controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) nel SDK di Windows per altre informazioni su questi stili.  
   
  Per creare una casella combinata estesa con stili di visualizzazione estesa di windows, usare [CreateEx](#createex).  
   
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Un puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) contenente le immagini usate in precedenza per il `CComboBoxEx` controllo. NULL se nessun elenco di immagini è stato impostato in precedenza.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa la funzionalità del messaggio [CBEM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775787), come descritto nel SDK di Windows. Se si modifica l'altezza del controllo di modifica predefinito, chiamare la funzione Win32 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) per ridimensionare il controllo dopo aver chiamato `SetImageList`, o non viene visualizzata correttamente.  
+ Questa funzione membro implementa la funzionalità del messaggio [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), come descritto nel SDK di Windows. Se si modifica l'altezza del controllo di modifica predefinito, chiamare la funzione Win32 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) per ridimensionare il controllo dopo aver chiamato `SetImageList`, o non viene visualizzata correttamente.  
   
  Il `CImageList` oggetto a cui punta il valore restituito è un oggetto temporaneo e viene eliminato definitivamente durante il tempo di elaborazione di inattività successivo.  
   
@@ -394,13 +394,13 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>Parametri  
  *pCBItem*  
- Un puntatore a un [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struttura che riceverà le informazioni sull'elemento.  
+ Un puntatore a un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struttura che riceverà le informazioni sull'elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'operazione ha avuto esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa la funzionalità del messaggio [CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa la funzionalità del messaggio [CBEM_SETITEM](/windows/desktop/Controls/cbem-setitem), come descritto nel SDK di Windows.  
   
 ##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme  
  Imposta lo stile di visualizzazione della casella combinata estesa di controllo di finestra.  
@@ -417,7 +417,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  Il valore restituito non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità dei [CBEM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb775790) del messaggio, come descritto nel SDK di Windows.  
+ Questa funzione membro emula la funzionalità dei [CBEM_SETWINDOWTHEME](/windows/desktop/Controls/cbem-setwindowtheme) del messaggio, come descritto nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio MFCIE di MFC](../../visual-cpp-samples.md)   

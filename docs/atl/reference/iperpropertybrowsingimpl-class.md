@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5c202ed5e4c7e58ab8c503cece3750f2dd606e3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c018b5c7ffa8e72ae9ce68fb23799d712a879df8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883105"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206676"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>Classe IPerPropertyBrowsingImpl
 Questa classe implementa `IUnknown` e consente a un client accedere alle informazioni nelle pagine delle proprietà di un oggetto.  
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 |[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|Recupera il CLSID della pagina delle proprietà associato a una determinata proprietà.|  
   
 ## <a name="remarks"></a>Note  
- Il [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432) interfaccia consente a un client accedere alle informazioni nelle pagine delle proprietà di un oggetto. Classe `IPerPropertyBrowsingImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
+ Il [IPerPropertyBrowsing](/windows/desktop/api/ocidl/nn-ocidl-iperpropertybrowsing) interfaccia consente a un client accedere alle informazioni nelle pagine delle proprietà di un oggetto. Classe `IPerPropertyBrowsingImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
   
 > [!NOTE]
 >  Se si usa Microsoft Access come l'applicazione del contenitore, è necessario derivare la classe da `IPerPropertyBrowsingImpl`. In caso contrario, l'accesso non verrà caricato il controllo.  
@@ -86,7 +86,7 @@ STDMETHOD(GetDisplayString)(
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734) in Windows SDK.  
+ Visualizzare [IPerPropertyBrowsing::GetDisplayString](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getdisplaystring) in Windows SDK.  
   
 ##  <a name="getpredefinedstrings"></a>  IPerPropertyBrowsingImpl::GetPredefinedStrings  
  Inserito in ogni matrice con zero elementi.  
@@ -102,7 +102,7 @@ STDMETHOD(GetPredefinedStrings)(
  L'implementazione del ATL [GetPredefinedValue](#getpredefinedvalue) restituisce E_NOTIMPL.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) in Windows SDK.  
+ Visualizzare [GetPredefinedStrings](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedstrings) in Windows SDK.  
   
 ##  <a name="getpredefinedvalue"></a>  IPerPropertyBrowsingImpl::GetPredefinedValue  
  Recupera un valore VARIANT contenente il valore di una proprietà identificata da un DISPID specificato. DISPID è associato con il nome di stringa recuperato da `GetPredefinedStrings`.  
@@ -120,7 +120,7 @@ STDMETHOD(GetPredefinedValue)(
 ### <a name="remarks"></a>Note  
  L'implementazione del ATL [GetPredefinedStrings](#getpredefinedstrings) non recupera stringhe corrispondenti.  
   
- Visualizzare [IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) in Windows SDK.  
+ Visualizzare [IPerPropertyBrowsing::GetPredefinedValue](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedvalue) in Windows SDK.  
   
 ##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage  
  Recupera il CLSID della pagina delle proprietà associato alla proprietà specificata.  
@@ -134,7 +134,7 @@ STDMETHOD(MapPropertyToPage)(
 ### <a name="remarks"></a>Note  
  ATL Usa il mapping di proprietà dell'oggetto per ottenere queste informazioni.  
   
- Visualizzare [IPerPropertyBrowsing::MapPropertyToPage](http://msdn.microsoft.com/library/windows/desktop/ms694476) in Windows SDK.  
+ Visualizzare [IPerPropertyBrowsing::MapPropertyToPage](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-mappropertytopage) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)   

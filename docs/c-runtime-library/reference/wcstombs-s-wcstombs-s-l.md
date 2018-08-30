@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416501"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216977"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -97,13 +97,13 @@ Numero di caratteri convertiti.
 Indirizzo di un buffer per la stringa di caratteri multibyte convertita risultante.
 
 *sizeInBytes*<br/>
-Le dimensioni in byte del *mbstr* buffer.
+La dimensione in byte del *mbstr* buffer.
 
 *wcstr*<br/>
 Punta alla stringa di caratteri wide da convertire.
 
 *count*<br/>
-Il numero massimo di byte da archiviare nel *mbstr* buffer, escluso il carattere di terminazione null o [truncate](../../c-runtime-library/truncate.md).
+Il numero massimo di byte da archiviare nel *mbstr* buffer, senza includere il carattere di terminazione null oppure [truncate](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Impostazioni locali da usare.
@@ -122,28 +122,28 @@ Se si verifica una di queste condizioni, viene richiamata l'eccezione di paramet
 
 ## <a name="remarks"></a>Note
 
-Il **wcstombs_s** funzione converte una stringa di caratteri "wide" a cui puntata *wcstr* in caratteri multibyte archiviati nel buffer a cui puntato *mbstr*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
+Il **wcstombs_s** funzione converte una stringa di caratteri wide a cui punta *wcstr* in caratteri multibyte archiviati nel buffer a cui fa riferimento *mbstr*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
 
 - Viene rilevato un carattere Null wide
 
 - Viene rilevato un carattere wide che non può essere convertito
 
-- Il numero di byte archiviato nel *mbstr* buffer equals *conteggio*.
+- Il numero di byte archiviato nel *mbstr* uguale a un buffer *conteggio*.
 
 La stringa di destinazione termina sempre con Null, anche in caso di errore.
 
-Se *conteggio* è il valore speciale [truncate](../../c-runtime-library/truncate.md), quindi **wcstombs_s** Converte la gran parte della stringa come rientrano nel buffer di destinazione, lasciando comunque una chat room per un valore null carattere di terminazione. Se la stringa viene troncata, il valore restituito è **STRUNCATE**, e la conversione viene considerata riuscita.
+Se *conteggio* è il valore speciale [truncate](../../c-runtime-library/truncate.md), quindi **wcstombs_s** Converte la porzione di stringa rientrano nel buffer di destinazione, lasciando però spazio per un valore null carattere di terminazione. Se la stringa viene troncata, il valore restituito è **STRUNCATE**, e la conversione viene considerato come esito positivo.
 
-Se **wcstombs_s** converte correttamente la stringa di origine, inserisce la dimensione in byte della stringa convertita, incluso il terminatore null, in  *&#42;pReturnValue* (fornito  *pReturnValue* non è **NULL**). Questo errore si verifica anche se il *mbstr* argomento **NULL** e fornisce un modo per determinare le dimensioni del buffer richieste. Si noti che se *mbstr* viene **NULL**, *conteggio* viene ignorato.
+Se **wcstombs_s** converte correttamente la stringa di origine, inserisce la dimensione in byte della stringa convertita, incluso il carattere di terminazione null, nel  *&#42;pReturnValue* (fornito  *pReturnValue* non è **NULL**). Questo errore si verifica anche se il *mbstr* l'argomento è **NULL** e fornisce un modo per determinare le dimensioni del buffer richieste. Si noti che se *mbstr* viene **NULL**, *conteggio* viene ignorato.
 
-Se **wcstombs_s** rileva un carattere "wide" non è possibile convertire un carattere multibyte in tale client inserisce 0  *&#42;pReturnValue*, imposta il buffer di destinazione in una stringa vuota, imposta **errno**  al **EILSEQ**e restituisce **EILSEQ**.
+Se **wcstombs_s** rileva un carattere wide che non è possibile convertire in carattere multibyte, inserisce 0 in  *&#42;pReturnValue*, imposta il buffer di destinazione in una stringa vuota, imposta **errno**  al **EILSEQ**e restituisce **EILSEQ**.
 
-Se le sequenze a cui punta *wcstr* e *mbstr* si sovrappongono, il comportamento di **wcstombs_s** è definito.
+Se le sequenze a cui punta *wcstr* e *mbstr* si sovrappongono, il comportamento delle **wcstombs_s** è definito.
 
 > [!IMPORTANT]
-> Verificare che *wcstr* e *mbstr* si sovrappongano e che *conteggio* rispecchi correttamente il numero di caratteri wide da convertire.
+> Assicurarsi che *wcstr* e *mbstr* non si sovrappongano e che *conteggio* rispecchi correttamente il numero di caratteri wide da convertire.
 
-**wcstombs_s** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **wcstombs_s_l** è identica alla **wcstombs** ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**wcstombs_s** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **wcstombs_s_l** è identica alla **wcstombs** ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -157,7 +157,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Questo programma viene illustrato il comportamento del **wcstombs_s** (funzione).
+Questo programma illustra il comportamento dei **wcstombs_s** (funzione).
 
 ```C
 // crt_wcstombs_s.c
@@ -208,4 +208,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

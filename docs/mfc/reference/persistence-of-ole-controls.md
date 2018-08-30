@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204569"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenza di controlli OLE
 Una funzionalità di controlli OLE è persistenza proprietà (o serializzazione), che consente il controllo OLE leggere o scrivere i valori delle proprietà da e verso un file o flusso. Un'applicazione contenitore può utilizzare la serializzazione per archiviare i valori delle proprietà di un controllo anche dopo l'applicazione ha eliminato il controllo. I valori delle proprietà del controllo OLE possono essere letti dal file o flusso quando una nuova istanza del controllo viene creato in un secondo momento.  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   Un blocco di memoria che contiene i dati binari effettivi.  
   
- Si noti che `PX_Blob` dovrà allocare memoria, utilizzo di Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, quando il caricamento delle proprietà di tipo BLOB. Si è responsabile della liberazione della memoria. Pertanto, è necessario chiamare il distruttore del controllo [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) su qualsiasi proprietà di tipo BLOB gestisce per liberare backup quantità di memoria allocata al controllo.  
+ Si noti che `PX_Blob` dovrà allocare memoria, utilizzo di Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) API, quando il caricamento delle proprietà di tipo BLOB. Si è responsabile della liberazione della memoria. Pertanto, è necessario chiamare il distruttore del controllo [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) su qualsiasi proprietà di tipo BLOB gestisce per liberare backup quantità di memoria allocata al controllo.  
   
 ##  <a name="px_bool"></a>  PX_Bool  
  Chiamare questa funzione all'interno del controllo `DoPropExchange` funzione membro per serializzare o inizializzare una proprietà di tipo BOOL.  

@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538663"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217041"
 ---
 # <a name="coleipframewndex-class"></a>Classe COleIPFrameWndEx
 La classe `COleIPFrameWndEx` implementa un contenitore OLE che supporta MFC. È necessario derivare la classe della finestra cornice sul posto per l'applicazione dalla classe `COleIPFrameWndEx` , anziché dalla classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.   
@@ -929,7 +929,7 @@ virtual void WinHelp(
  Specifica i dati necessari per il tipo di Guida specificato da *nCmd*.  
   
  [in] *nCmd*  
- Specifica il tipo di Guida richiesto. Per un elenco di valori possibili e gli effetti di *dwData* parametro, vedere la [funzione WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) nel SDK di Windows.  
+ Specifica il tipo di Guida richiesto. Per un elenco di valori possibili e gli effetti di *dwData* parametro, vedere la [funzione WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
   

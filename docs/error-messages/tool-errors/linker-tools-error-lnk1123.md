@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1123 errore | Documenti Microsoft
+title: Strumenti del linker LNK1123 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12a65e61c5677943b4ea1b4b85c12cfc796af45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300277"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206788"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Errore degli strumenti del linker LNK1123
 
@@ -35,13 +35,13 @@ I file di input devono avere il formato COFF (Common Object File Format). Se un 
 
 - Applicare tutti i Service Pack e gli aggiornamenti per la versione di Visual Studio. Ciò è particolarmente importante per Visual Studio 2010.
 
-- Provare a compilare con disattivato il collegamento incrementale. Sulla barra dei menu scegliere **Progetto**, **Proprietà**. Nel **pagine delle proprietà** finestra di dialogo espandere **le proprietà di configurazione**, **Linker**. Modificare il valore di **Attiva collegamento incrementale** a **n**.
+- Provare a compilare con disattivato il collegamento incrementale. Sulla barra dei menu scegliere **Progetto**, **Proprietà**. Nel **pagine delle proprietà** finestra di dialogo espandere **delle proprietà di configurazione**, **Linker**. Modificare il valore della **Abilita collegamento incrementale** al **No**.
 
 - Verificare che la versione di CVTRES.EXE trovata per prima nella variabile di ambiente PATH corrisponda alla versione degli strumenti per la compilazione o alla versione del set di strumenti della piattaforma usati nel progetto.
 
-- Provare a disattivare l'opzione Incorpora manifesto. Sulla barra dei menu scegliere **Progetto**, **Proprietà**. Nel **pagine delle proprietà** finestra di dialogo espandere **le proprietà di configurazione**, **strumento manifesto**, **di Input e Output**. Modificare il valore di **Incorpora manifesto** a **n**.
+- Provare a disattivare l'opzione Incorpora manifesto. Sulla barra dei menu scegliere **Progetto**, **Proprietà**. Nel **pagine delle proprietà** finestra di dialogo, espandere **delle proprietà di configurazione**, **strumento manifesto**, **Input e Output**. Modificare il valore della **Incorpora manifesto** al **No**.
 
-- Verificare che il tipo di file sia valido. Assicurarsi, ad esempio, che un oggetto OMF sia da 32 bit e non da 16 bit. Per ulteriori informazioni, vedere [. File obj come Input del Linker](../../build/reference/dot-obj-files-as-linker-input.md) e [formato PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+- Verificare che il tipo di file sia valido. Assicurarsi, ad esempio, che un oggetto OMF sia da 32 bit e non da 16 bit. Per altre informazioni, vedere [. File obj come Input del Linker](../../build/reference/dot-obj-files-as-linker-input.md) e [formato PE](/windows/desktop/Debug/pe-format).
 
 - Verificare che il file non sia danneggiato. Ricompilare, se necessario.
 

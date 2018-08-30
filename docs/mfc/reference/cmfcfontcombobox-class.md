@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852277"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197613"
 ---
 # <a name="cmfcfontcombobox-class"></a>Classe CMFCFontComboBox
 Il `CMFCFontComboBox` classe crea un controllo casella combinata che contiene un elenco dei tipi di carattere.  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|Chiamata eseguita dal framework per disegnare un elemento specificato nel controllo della casella combinata tipo di carattere corrente. (Esegue l'override [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|Recupera le informazioni sul tipo di carattere attualmente selezionato.|  
 |`CMFCFontComboBox::MeasureItem`|Chiamato dal framework per informa Windows delle dimensioni della casella di riepilogo nel controllo della casella combinata tipo di carattere corrente. (Esegue l'override [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CMFCFontComboBox::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|Seleziona il tipo di carattere che corrisponde ai criteri specificati dalla casella combinata tipo di carattere.|  
 |[CMFCFontComboBox::Setup](#setup)|Inizializza l'elenco di elementi nella casella combinata tipo di carattere.|  
   
@@ -139,7 +139,7 @@ BOOL SelectFont(
  Specifica il nome del tipo di carattere.  
   
  [in] *nCharSet*  
- Specifica un set di caratteri. Il valore predefinito è DEFAULT_CHARSET. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura.  
+ Specifica un set di caratteri. Il valore predefinito è DEFAULT_CHARSET. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'oggetto descrizione tipo di carattere specificato o il nome del tipo di carattere e set di caratteri; corrisponde a un elemento nella casella combinata tipo di carattere in caso contrario, FALSE.  

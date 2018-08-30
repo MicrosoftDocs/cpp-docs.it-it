@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) avviso C4311 | Documenti Microsoft
+title: Del compilatore (livello 1) avviso C4311 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba06488ed41e7e296f9f6c16f34af827274acfd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adfd27a116ae5747a2dd899ce51c38f01055f356
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279123"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218540"
 ---
 # <a name="compiler-warning-level-1-c4311"></a>Avviso del compilatore (livello 1) C4311
 'variabile': troncamento puntatore da 'tipo' a 'tipo'  
   
- Questo avviso rileva problemi di troncamento del puntatore a 64 bit. Ad esempio, se il codice viene compilato per un'architettura a 64 bit, il valore di un puntatore (64 bit) verrà troncato se viene assegnato a un `int` (32 bit). Per ulteriori informazioni, vedere [regole per usare i puntatori](http://msdn.microsoft.com/library/windows/desktop/aa384242).  
+ Questo avviso rileva problemi di troncamento del puntatore a 64 bit. Ad esempio, se il codice viene compilato per un'architettura a 64 bit, il valore di un puntatore (64 bit) verrà troncato se viene assegnato a un `int` (32 bit). Per altre informazioni, vedere [regole per usare i puntatori](/windows/desktop/WinProg64/rules-for-using-pointers).  
   
- Per ulteriori informazioni sulle cause comuni dell'avviso C4311, vedere [errori comuni del compilatore](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Per altre informazioni sulle cause comuni dell'avviso C4311, vedere [errori comuni del compilatore](/windows/desktop/WinProg64/common-compiler-errors).  
   
  L'esempio di codice seguente genera l'errore C4311 quando viene eseguita la compilazione per una destinazione a 64 bit e quindi illustra come risolverlo:  
   

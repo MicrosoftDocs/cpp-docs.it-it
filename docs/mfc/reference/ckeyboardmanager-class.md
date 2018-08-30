@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212891"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 Gestisce le tabelle di tasti di scelta rapida per la finestra cornice principale e le finestre cornice figlio.  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |Parametro|Descrizione|  
 |[in] *nKey*|Tasto da controllare.|  
-|[in] *fVirt*|Specifica il comportamento del tasto di scelta rapida. Per un elenco di valori possibili, vedere [accelerazione struttura](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *fVirt*|Specifica il comportamento del tasto di scelta rapida. Per un elenco di valori possibili, vedere [accelerazione struttura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
 |[in] *pWndFrame*|Una finestra cornice. Questo metodo determina se un tasto di scelta rapida viene gestito in questo frame.|  
 |[in] *bIsDefaultFrame*|Un parametro booleano che indica se *pWndFrame* è la finestra cornice predefinito.|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  Diverso da zero se il carattere stampabile, zero in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo non riesce se una chiamata a [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) ha esito negativo.  
+ Questo metodo non riesce se una chiamata a [GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299) ha esito negativo.  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Indica se i menu mostrano tutti i tasti di scelta rapida associati con i comandi di menu o solo i tasti di scelta rapida predefiniti.  

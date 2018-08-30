@@ -1,5 +1,5 @@
 ---
-title: Eliminazione definitiva del controllo elenco | Documenti Microsoft
+title: Eliminazione definitiva del controllo elenco | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb26671ba775cfa7daf98d39c7eccc9fd4111bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01cdbc0f404c34a8c5ebc3ae09adf30e0cea0851
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343282"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215042"
 ---
 # <a name="destroying-the-list-control"></a>Eliminazione definitiva del controllo List
-Se si incorpora il [CListCtrl](../mfc/reference/clistctrl-class.md) dell'oggetto come un membro dati di una classe di visualizzazione o della finestra di dialogo, viene eliminato quando viene eliminato il relativo proprietario. Se si utilizza un [CListView](../mfc/reference/clistview-class.md), il framework Elimina definitivamente il controllo quando elimina la vista.  
+Se si incorpora il [CListCtrl](../mfc/reference/clistctrl-class.md) dell'oggetto di un membro dati di una classe di finestra di dialogo o visualizzazione, viene eliminato definitivamente quando viene eliminato il relativo proprietario. Se si usa un' [CListView](../mfc/reference/clistview-class.md), il framework Elimina definitivamente il controllo quando la visualizzazione viene eliminata.  
   
- Se le Disponi per i dati di elenco per essere archiviato nell'applicazione anziché con il controllo elenco, è necessario disporre della relativa deallocazione. Per ulteriori informazioni, vedere [elementi di Callback e maschera di Callback](http://msdn.microsoft.com/library/windows/desktop/bb774736) in Windows SDK.  
+ Se le Disponi per alcuni dati elenco da archiviare nell'applicazione anziché con il controllo elenco, è necessario disporre della relativa deallocazione. Per altre informazioni, vedere [elementi di Callback e maschera di Callback](/windows/desktop/Controls/using-list-view-controls) nel SDK di Windows.  
   
- Inoltre, è responsabile per la deallocazione di qualsiasi elenchi di immagini è creato e associato all'oggetto controllo elenco.  
+ Inoltre, è responsabile per la deallocazione qualsiasi elenchi di immagini è creato e associato all'oggetto di controllo elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)   

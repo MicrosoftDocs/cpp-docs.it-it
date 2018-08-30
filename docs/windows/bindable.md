@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601589"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214852"
 ---
 # <a name="bindable"></a>bindable
 
@@ -36,15 +36,15 @@ Indica che la proprietà supporta il data binding.
 
 ## <a name="remarks"></a>Note
 
-Il **associabile** attributi di C++ ha la stessa funzionalità come la [associabile](http://msdn.microsoft.com/library/windows/desktop/aa366738) attributo MIDL. È possibile usarlo nelle proprietà definite con la [propget](../windows/propget.md), [propput](../windows/propput.md), o [propputref](../windows/propputref.md) attributi, oppure è possibile definire manualmente un metodo associabile.
+Il **associabile** attributi di C++ ha la stessa funzionalità come la [associabile](/windows/desktop/Midl/bindable) attributo MIDL. È possibile usarlo nelle proprietà definite con la [propget](../windows/propget.md), [propput](../windows/propput.md), o [propputref](../windows/propputref.md) attributi, oppure è possibile definire manualmente un metodo associabile.
 
 L'uso di mostrato nei seguenti esempi MFC **associabile**:
 
-- [Esempi di controlli: I controlli ActiveX, basata su MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [Esempi di controlli: I controlli ActiveX, basata su MFC](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
 
-- [Esempio CIRC: Controllo ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [Esempio CIRC: Controllo ActiveX](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
 
-- [Esempio: TESTHELP controllo ActiveX con le descrizioni comandi e la Guida](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [Esempio: TESTHELP controllo ActiveX con le descrizioni comandi e la Guida](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
 
 ## <a name="example"></a>Esempio
 

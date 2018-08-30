@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545831"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198568"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementa la funzionalità di base per le finestre a schede.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Ricalcola il layout interno di una finestra a schede.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Rimuove tutte le schede dalla finestra a schede.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Rimuove una scheda dalla finestra a schede.|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che specifica il colore di sfondo della scheda attiva.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che specifica il colore di sfondo della scheda attiva.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il colore di sfondo della scheda attiva è COLOR_WINDOW. È possibile modificare il colore di sfondo per la scheda attiva tramite il metodo [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che specifica il colore del testo della scheda attiva.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che specifica il colore del testo della scheda attiva.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il colore del testo per le schede attive è COLOR_WINDOWTEXT. È possibile modificare il colore del testo con il metodo [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un riferimento a una matrice di [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valori il [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) oggetto viene utilizzato per la colorazione automatica della scheda.  
+ Un riferimento a una matrice di [COLORREF](/windows/desktop/gdi/colorref) valori il [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) oggetto viene utilizzato per la colorazione automatica della scheda.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il framework consente di inizializzare la matrice di colori per i colori definiti dal libreria. È possibile fornire una matrice di colori personalizzata chiamando il metodo [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  Indice a base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che indica il colore di sfondo della scheda specificata, -1 se *iTab* è compreso nell'intervallo.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che indica il colore di sfondo della scheda specificata, -1 se *iTab* è compreso nell'intervallo.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Recupera le dimensioni dei bordi del controllo.  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  Indice a base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore del testo della scheda specificata, -1 se *iTab* è compreso nell'intervallo.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore del testo della scheda specificata, -1 se *iTab* è compreso nell'intervallo.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Restituisce il puntatore del mouse nel riquadro che si trova nella scheda specificata.  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Specifica il nuovo colore di sfondo.  
   
 ### <a name="remarks"></a>Note  
- Il framework Ottiene il colore di sfondo predefinito per le schede attive dal [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)(metodo).  
+ Il framework Ottiene il colore di sfondo predefinito per le schede attive dal [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)(metodo).  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Imposta il colore del testo per le schede attive.  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parametri  
  [in] *clr*  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che specifica il nuovo colore del testo.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che specifica il nuovo colore del testo.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, il framework Ottiene il colore del testo dal [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Eseguire l'override di questo colore predefinito tramite la `SetActiveTabTextColor` (metodo).  
+ Per impostazione predefinita, il framework Ottiene il colore del testo dal [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Eseguire l'override di questo colore predefinito tramite la `SetActiveTabTextColor` (metodo).  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Imposta i colori del controllo struttura a schede che usa il framework in modalità colore automatica.  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  La larghezza di ogni immagine in pixel.  
   
  [in] *clrTransp*  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore trasparente dell'immagine.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore trasparente dell'immagine.  
   
  [in] *hImageList*  
  Handle per un elenco di immagini precaricati.  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  Indice a base zero della scheda.  
   
  [in] *colore*  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il nuovo colore del testo.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il nuovo colore del testo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  

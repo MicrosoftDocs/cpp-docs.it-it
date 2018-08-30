@@ -1,5 +1,5 @@
 ---
-title: Impostazione delle immagini per un singolo elemento | Documenti Microsoft
+title: Impostazione delle immagini per un singolo elemento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec02a07de8fad2f9ad063295090be5ace4146e6
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c64ab33f053c941bd5332269d4c952b3a318cb6b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953802"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209304"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Impostazione delle immagini per un singolo elemento
-I diversi tipi di immagini usata per l'elemento casella combinata estesa sono determinati in base ai valori di *iImage*, *iSelectedImage*, e *iOverlay* i membri del [ COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struttura. Ogni valore è l'indice di un'immagine nell'elenco di immagini associato del controllo. Per impostazione predefinita, questi membri sono impostati su 0, causando il controllo da non visualizzare alcuna immagine dell'elemento. Se si desidera utilizzare le immagini di un elemento specifico, è possibile modificare la struttura di conseguenza, quando si inserisce l'elemento casella combinata o modificando un elemento casella combinata esistente.  
+I diversi tipi di immagini utilizzate dall'elemento della casella combinata estesi vengono determinati in base ai valori di *iImage*, *iSelectedImage*, e *iOverlay* i membri del [ COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struttura. Ogni valore è l'indice di un'immagine nell'elenco delle immagini associate del controllo. Per impostazione predefinita, questi membri sono impostati su 0, causando il controllo da non visualizzare alcuna immagine dell'elemento. Se si desidera usare le immagini di un elemento specifico, è possibile modificare la struttura di conseguenza, quando si inserisce l'elemento della casella combinata o modificando un elemento di casella combinata esistente.  
   
-## <a name="setting-the-image-for-a-new-item"></a>Impostazione dell'immagine per un nuovo elemento  
- Se si inseriscono un nuovo elemento, inizializzare il *iImage*, *iSelectedImage*, e *iOverlay* i membri con i valori appropriati della struttura e quindi inserire l'elemento con una chiamata a [CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
+## <a name="setting-the-image-for-a-new-item"></a>L'impostazione dell'immagine per un nuovo elemento  
+ Se si inserisce un nuovo elemento, inizializzare il *iImage*, *iSelectedImage*, e *iOverlay* strutturare i membri con i valori appropriati e quindi inserire l'elemento con una chiamata a [CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
   
- L'esempio seguente inserisce un nuovo elemento casella combinata estesa (`cbi`) nel controllo casella combinata estesa (`m_comboEx`), fornendo gli indici per tutte e tre stati dell'immagine:  
+ L'esempio seguente inserisce un nuovo elemento della casella combinata estesa (`cbi`) nel controllo casella combinata estesa (`m_comboEx`), fornendo gli indici per tutte e tre gli stati di immagine:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]  
   
 ## <a name="setting-the-image-for-an-existing-item"></a>L'impostazione dell'immagine per un elemento esistente  
- Se si modifica un elemento esistente, è necessario utilizzare con il *maschera* membro di un **COMBOBOXEXITEM** struttura.  
+ Se si modifica un elemento esistente, è necessario lavorare con i *maschera* membro di un **COMBOBOXEXITEM** struttura.  
   
-#### <a name="to-modify-an-existing-item-to-use-images"></a>Per modificare un elemento esistente per l'utilizzo di immagini  
+#### <a name="to-modify-an-existing-item-to-use-images"></a>Per modificare un elemento esistente per usare le immagini  
   
-1.  Dichiarare una **COMBOBOXEXITEM** struttura e impostare il *mask* membro dati per i valori si è interessati in caso di modifica.  
+1.  Dichiarare un **COMBOBOXEXITEM** struttura e impostare le *maschera* membro dati per i valori si è interessati in caso di modifica.  
   
-2.  Utilizzare questa struttura, effettuare una chiamata a [CComboBoxEx:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
+2.  Con questa struttura, effettuare una chiamata a [CComboBoxEx:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
   
-3.  Modificare il *maschera*, *iImage*, e *iSelectedImage* membri della struttura restituita appena, usando i valori appropriati.  
+3.  Modificare il *maschera*, *iImage*, e *iSelectedImage* membri di struttura appena restituita, usando i valori appropriati.  
   
 4.  Effettuare una chiamata a [CComboBoxEx:: SetItem](../mfc/reference/ccomboboxex-class.md#setitem), passando la struttura modificata.  
   
- Nell'esempio seguente viene illustrata questa procedura, le immagini selezionate e del terzo elemento della casella combinata estesa vengono sostituite da:  
+ Nell'esempio seguente viene illustrata questa procedura scambiando le immagini selezionate e del terzo elemento casella combinata estesa:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]  
   

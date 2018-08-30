@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540018"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217346"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Strumenti di diagnostica in parallelo (runtime di concorrenza)
 Visual Studio fornisce supporto completo per il debug e la profilatura di applicazioni multithread.  
@@ -31,7 +31,7 @@ Visual Studio fornisce supporto completo per il debug e la profilatura di applic
  Gli strumenti di profilatura offrono tre visualizzazioni di dati che forniscono informazioni grafiche, tabulari e numeriche sulla modalità di interazione di un'applicazione multithread con se stesso e con altri programmi. Le viste consentono di identificare rapidamente le aree problematiche e per passare dai punti in visualizzazioni grafiche per stack di chiamate, siti di chiamata e il codice sorgente. Per altre informazioni, vedere [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="event-tracing"></a>Event Tracing  
- Usa il Runtime di concorrenza [traccia eventi per Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) per notificare a strumenti di strumentazione, ad esempio i profiler, quando si verificano diversi eventi. Queste fasi includono quando un'utilità di pianificazione è attivata o disattivata, quando un contesto inizia, termina, bloccato, sblocca o produce e quando un algoritmo parallelo inizia o termina.  
+ Usa il Runtime di concorrenza [traccia eventi per Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) per notificare a strumenti di strumentazione, ad esempio i profiler, quando si verificano diversi eventi. Queste fasi includono quando un'utilità di pianificazione è attivata o disattivata, quando un contesto inizia, termina, bloccato, sblocca o produce e quando un algoritmo parallelo inizia o termina.  
   
  Gli strumenti, ad esempio la [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer) utilizzare questa funzionalità; pertanto, in genere non è necessario lavorare direttamente con questi eventi. Tuttavia, questi eventi sono utili quando si sviluppa un profiler personalizzato o quando si utilizzano strumenti di traccia eventi, ad esempio [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   

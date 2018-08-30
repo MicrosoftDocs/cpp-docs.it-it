@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b9e008b586b1a312770d7cdfc43dc500932158
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611445"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221369"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshalling (C++/CX)
 Nella maggior parte dei casi, le istanze di classi di Windows Runtime, come oggetti C++ standard, è possibile accedere da qualsiasi thread. Tali classi sono indicate come "Agile". Tuttavia, un numero ridotto di classi di Windows Runtime fornite con Windows non è agile e deve essere utilizzato come oggetti COM piuttosto oggetti C++ standard. Non occorre essere un esperto di COM per usare le classi non Agile, ma è importante tenere in considerazione il modello di threading della classe e il relativo comportamento di marshalling. Questo articolo illustra i rari scenari in cui è necessario utilizzare un'istanza di una classe non Agile e fornisce indicazioni in merito.  
@@ -100,7 +100,7 @@ ref class MyOptions
  In Visual C++, quando si crea un riferimento a una classe di Windows Runtime in-process che dispone di un comportamento di marshalling "None", il compilatore un avviso C4451 ma non consigliabile considerare l'uso di `Platform::Agile<T>`.  Il compilatore non offre altro supporto oltre a questo avviso, pertanto è tua responsabilità utilizzare la classe nel modo corretto e assicurarti che il codice chiami i componenti STA solo dal thread dell'interfaccia utente e i componenti MTA solo da un thread in background.  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>Creazione di componenti Windows Runtime agili  
- Quando si definisce una classe di riferimento in C + + c++ /CX, è agile per impostazione predefinita, ovvero, ovvero ha `ThreadingModel`impostato su Both e `MarshallingType`= Agile.  Se si usa la libreria di modelli di Windows Runtime C++, è possibile rendere la classe agile derivando da `FtmBase`, che usa il `FreeThreadedMarshaller`.  Se crei una classe con l'attributo `ThreadingModel`impostato su Both o l'attributo `ThreadingModel`impostato su MTA, assicurati che la classe sia thread-safe. Per altre informazioni, vedere l'articolo sulla [creazione e l'utilizzo degli oggetti (WRL)](http://msdn.microsoft.com/en-us/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
+ Quando si definisce una classe di riferimento in C + + c++ /CX, è agile per impostazione predefinita, ovvero, ovvero ha `ThreadingModel`impostato su Both e `MarshallingType`= Agile.  Se si usa la libreria di modelli di Windows Runtime C++, è possibile rendere la classe agile derivando da `FtmBase`, che usa il `FreeThreadedMarshaller`.  Se crei una classe con l'attributo `ThreadingModel`impostato su Both o l'attributo `ThreadingModel`impostato su MTA, assicurati che la classe sia thread-safe. Per altre informazioni, vedere [creazione e utilizzo degli oggetti (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
   
  È possibile modificare il modello di threading e il comportamento di marshalling di una classe di riferimento. Tuttavia, se apporti modifiche che rendono la classe non Agile, è importante che tu comprenda le implicazioni che ne derivano.  
   
@@ -127,5 +127,5 @@ public ref class MySTAClass
  Il threading e marshalling le informazioni necessarie da un componente Windows Runtime di terze parti viene specificato nelle informazioni di registrazione del manifesto di app per il componente. È consigliabile eseguire tutti i componenti Windows Runtime agile. In questo modo il codice client potrà chiamare il componente da un thread qualsiasi dell'applicazione. Inoltre, si otterranno prestazioni migliori dalle chiamate essendo chiamate dirette che non dispongono di marshalling. Questa modalità di creazione della classe consente al codice client di non utilizzare `Platform::Agile<T>` per utilizzare la classe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ThreadingModel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
- [MarshallingBehavior](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+ [ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
+ [MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)

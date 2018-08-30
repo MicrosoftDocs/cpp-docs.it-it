@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882432"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203716"
 ---
 # <a name="composite-control-global-functions"></a>Funzioni globali di controllo composito
 Queste funzioni forniscono il supporto per la creazione di finestre di dialogo e per la creazione, hosting e gestione delle licenze dei controlli ActiveX.  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in] Identifica un'istanza del modulo il cui file eseguibile contiene il modello di finestra di dialogo.  
   
  *lpTemplateName*  
- [in] Identifica il modello di finestra di dialogo. Questo parametro è il puntatore a una stringa di caratteri con terminazione null che specifica il nome del modello della finestra di dialogo o un valore intero che specifica l'identificatore di risorsa del modello della finestra di dialogo. Se il parametro specifica un identificatore di risorsa, la parola più significativa deve essere zero e la parola meno significativa deve contenere l'identificatore. È possibile usare la [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) macro per creare questo valore.  
+ [in] Identifica il modello di finestra di dialogo. Questo parametro è il puntatore a una stringa di caratteri con terminazione null che specifica il nome del modello della finestra di dialogo o un valore intero che specifica l'identificatore di risorsa del modello della finestra di dialogo. Se il parametro specifica un identificatore di risorsa, la parola più significativa deve essere zero e la parola meno significativa deve contenere l'identificatore. È possibile usare la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro per creare questo valore.  
   
  *hWndParent*  
  [in] Identifica la finestra proprietaria la finestra di dialogo.  
   
  *lpDialogProc*  
- [in] Punta alla routine della finestra di dialogo. Per altre informazioni sulla procedura di finestra di dialogo, vedere [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Punta alla routine della finestra di dialogo. Per altre informazioni sulla procedura di finestra di dialogo, vedere [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Per altre informazioni su come modificare gli script di risorsa, vedere [procedura: aprire un File di Script di risorsa in formato testo](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Per altre informazioni sulle istruzioni di definizione di risorsa di controllo, vedere [parametri comuni di controllo](http://msdn.microsoft.com/library/windows/desktop/aa380902) in Windows SDK *: SDK Tools*.  
+ Per altre informazioni su come modificare gli script di risorsa, vedere [procedura: aprire un File di Script di risorsa in formato testo](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Per altre informazioni sulle istruzioni di definizione di risorsa di controllo, vedere [parametri comuni di controllo](/windows/desktop/menurc/common-control-parameters) in Windows SDK *: SDK Tools*.  
   
- Per altre informazioni sulle finestre di dialogo in generale, consultare [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) e [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) nel SDK di Windows.  
+ Per altre informazioni sulle finestre di dialogo in generale, consultare [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) nel SDK di Windows.  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Crea una finestra di dialogo non modale da un modello di finestra di dialogo fornito dall'utente.  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in] Identifica un'istanza del modulo il cui file eseguibile contiene il modello di finestra di dialogo.  
   
  *lpTemplateName*  
- [in] Identifica il modello di finestra di dialogo. Questo parametro è il puntatore a una stringa di caratteri con terminazione null che specifica il nome del modello della finestra di dialogo o un valore intero che specifica l'identificatore di risorsa del modello della finestra di dialogo. Se il parametro specifica un identificatore di risorsa, la parola più significativa deve essere zero e la parola meno significativa deve contenere l'identificatore. È possibile usare la [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) macro per creare questo valore.  
+ [in] Identifica il modello di finestra di dialogo. Questo parametro è il puntatore a una stringa di caratteri con terminazione null che specifica il nome del modello della finestra di dialogo o un valore intero che specifica l'identificatore di risorsa del modello della finestra di dialogo. Se il parametro specifica un identificatore di risorsa, la parola più significativa deve essere zero e la parola meno significativa deve contenere l'identificatore. È possibile usare la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro per creare questo valore.  
   
  *hWndParent*  
  [in] Identifica la finestra proprietaria la finestra di dialogo.  
   
  *lpDialogProc*  
- [in] Punta alla routine della finestra di dialogo. Per altre informazioni sulla procedura di finestra di dialogo, vedere [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Punta alla routine della finestra di dialogo. Per altre informazioni sulla procedura di finestra di dialogo, vedere [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Note  
  La finestra di dialogo risultante può contenere i controlli ActiveX.  
   
- Visualizzare [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) e [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) in Windows SDK.  
+ Visualizzare [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) in Windows SDK.  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Crea un controllo ActiveX, lo inizializza e lo ospita nella finestra specificata.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Diverso da zero se l'inizializzazione del controllo codice di hosting ha avuto esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione deve essere chiamata prima di usare l'API di hosting del controllo ATL. Segue una chiamata a questa funzione, il **"AtlAxWin"** classe finestra può essere utilizzata nelle chiamate a [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) oppure [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), come descritto nel SDK di Windows.  
+ Questa funzione deve essere chiamata prima di usare l'API di hosting del controllo ATL. Segue una chiamata a questa funzione, il **"AtlAxWin"** classe finestra può essere utilizzata nelle chiamate a [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) oppure [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), come descritto nel SDK di Windows.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Questa funzione Annulla l'inizializzazione del controllo ATL codice di hosting annullando il **"Atlaxwinlic80"** e **"Atlaxwin80"** classi di finestra.  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  Restituisce sempre TRUE.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione chiama semplicemente [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) come descritto nel SDK di Windows.  
+ Questa funzione chiama semplicemente [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) come descritto nel SDK di Windows.  
   
  Chiamare questa funzione per la pulizia dopo che tutte le finestre host esistenti sono stati eliminati definitivamente se è stato chiamato [AtlAxWinInit](#atlaxwininit) e non è più necessario creare host di windows. Se non si chiama questa funzione, la classe della finestra verrà annullata la registrazione automaticamente al termine del processo.  
   

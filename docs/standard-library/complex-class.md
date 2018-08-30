@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d85f50889f75f387fc6455872a38396e7b9728dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026407"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203278"
 ---
 # <a name="complex-class"></a>Classe complex
 
@@ -792,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Membri complessi](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[Membri complessi](https://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

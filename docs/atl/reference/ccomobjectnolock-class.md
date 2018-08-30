@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884116"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208175"
 ---
 # <a name="ccomobjectnolock-class"></a>Classe CComObjectNoLock
 Questa classe implementa `IUnknown` per un oggetto non aggregato, ma non non incremento il modulo conteggio dei blocchi nel costruttore.  
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Decrementa il conteggio dei riferimenti nell'oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `CComObjectNoLock` è simile a [CComObject](../../atl/reference/ccomobject-class.md) in quanto implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un oggetto non aggregato; tuttavia, `CComObjectNoLock` tiene conto non incremento del blocco di modulo nel costruttore.  
+ `CComObjectNoLock` è simile a [CComObject](../../atl/reference/ccomobject-class.md) in quanto implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) per un oggetto non aggregato; tuttavia, `CComObjectNoLock` tiene conto non incremento del blocco di modulo nel costruttore.  
   
  Usa ATL `CComObjectNoLock` internamente per class factory. In generale, non utilizzare questa classe direttamente.  
   
@@ -90,8 +90,8 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- **void\***  
- [in] Questo parametro senza nome non viene utilizzato. Stato attuale per simmetria con altri **CCom * * * XXX*`Object`*XXX* costruttori.  
+ <em>void\*</em>  
+ [in] Questo parametro senza nome non viene utilizzato. Stato attuale per simmetria con altri `CComXXXObjectXXX` costruttori.  
   
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  Distruttore.  

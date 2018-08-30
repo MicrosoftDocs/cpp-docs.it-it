@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027232"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221572"
 ---
 # <a name="errorcode-class"></a>Classe error_code
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 Il primo costruttore archivia un valore del codice di errore zero e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Il secondo costruttore Archivia *val* come valore del codice di errore e un puntatore a [error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Il secondo costruttore Archivia *val* come valore del codice di errore e un puntatore a [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
 
 Il terzo costruttore archivia `(value_type)_Errcode` come valore del codice di errore e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -238,7 +238,7 @@ L'operatore membro restituisce `!(*this == right)`.
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-Verifica se l'oggetto [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) è più piccolo dell'oggetto `error_code` passato per il confronto.
+Verifica se l'oggetto [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) è più piccolo dell'oggetto `error_code` passato per il confronto.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ L'operatore membro restituisce `category() < right.category() || category() == r
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-Assegna un nuovo valore di enumerazione all'oggetto [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31).
+Assegna un nuovo valore di enumerazione all'oggetto [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31).
 
 ```cpp
 template <class _Enum>

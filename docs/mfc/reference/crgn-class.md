@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853862"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204880"
 ---
 # <a name="crgn-class"></a>CRgn (classe)
 Incapsula un'area GDI (Graphics Device Interface) di Windows.  
@@ -678,7 +678,7 @@ operator HRGN() const;
 ### <a name="remarks"></a>Note  
  Questo operatore è un operatore di cast, che supporta l'uso diretto di un oggetto di tipo HRGN.  
   
- Per altre informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [gli oggetti di grafica](http://msdn.microsoft.com/library/windows/desktop/dd144962) nel SDK di Windows.  
+ Per altre informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [gli oggetti di grafica](/windows/desktop/gdi/graphic-objects) nel SDK di Windows.  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  Controlla se il punto specificato da *x* e *y* nell'area archiviato nel `CRgn` oggetto.  

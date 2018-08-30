@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4412e30316bd2d5f43eac4dddb062adb11dc6f6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882572"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210001"
 ---
 # <a name="catlmodule-class"></a>Classe CAtlModule
 Questa classe fornisce metodi usati da diverse classi di modulo ATL.  
@@ -167,7 +167,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  Nelle build di debug, si verifica un errore di asserzione se *ppGIT* è uguale a NULL, o se non è possibile ottenere il puntatore di Global Interface Table.  
   
- Visualizzare [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) per informazioni sulla tabella di interfaccia globale.  
+ Visualizzare [IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable) per informazioni sulla tabella di interfaccia globale.  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Restituisce il conteggio dei blocchi.  

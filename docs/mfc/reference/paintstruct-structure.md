@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: dddf9c117f2366496609f8bdf4ffc2f069f66ace
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338210"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199573"
 ---
 # <a name="paintstruct-structure"></a>Struttura PAINTSTRUCT
 Il `PAINTSTRUCT` struttura contiene informazioni che possono essere utilizzate per disegnare l'area client di una finestra.  
@@ -44,7 +44,7 @@ typedef struct tagPAINTSTRUCT {
  Identifica il contesto di visualizzazione da utilizzare per il disegno.  
   
  *fErase*  
- Specifica se lo sfondo deve essere ridisegnato. Non è 0 se l'applicazione deve essere ridisegnata lo sfondo. L'applicazione è responsabile per disegnare lo sfondo se viene creata una classe di finestre Windows senza un pennello di sfondo (vedere la descrizione della `hbrBackground` membro della [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struttura nel SDK di Windows).  
+ Specifica se lo sfondo deve essere ridisegnato. Non è 0 se l'applicazione deve essere ridisegnata lo sfondo. L'applicazione è responsabile per disegnare lo sfondo se viene creata una classe di finestre Windows senza un pennello di sfondo (vedere la descrizione della `hbrBackground` membro della [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura nel SDK di Windows).  
   
  *rcPaint*  
  Specifica l'angolo superiore sinistro e inferiore destro angoli del rettangolo in cui viene richiesto il disegno.  

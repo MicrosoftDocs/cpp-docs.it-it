@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a6d1e618dc9345266cb3c0d618fda1c4f78c44
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b3a80cf072a4f95885ef0bc9a0b28a385fde085f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339462"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206083"
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 È possibile creare finestre di dialogo che utilizzano HTML anziché le risorse finestra di dialogo per implementare la propria interfaccia utente.  
@@ -171,7 +171,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Recupera la proprietà richiesta del controllo ActiveX specificato.|  
 |[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Recupera l'URL Uniform Resource Locator () associato al documento corrente.|  
 |[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Recupera l'interfaccia IHTMLDocument2 nel documento HTML attualmente caricato.|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Chiamato dal controllo WebBrowser indipendente quando utilizzato come destinazione di trascinamento per consentire la finestra di dialogo fornire un'alternativa [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Chiamato dal controllo WebBrowser indipendente quando utilizzato come destinazione di trascinamento per consentire la finestra di dialogo fornire un'alternativa [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|  
 |[CDHtmlDialog::GetElement](#getelement)|Ottiene un'interfaccia su un elemento HTML.|  
 |[CDHtmlDialog::GetElementHtml](#getelementhtml)|Recupera il `innerHTML` proprietà di un elemento HTML.|  
 |[CDHtmlDialog::GetElementInterface](#getelementinterface)|Recupera il puntatore all'interfaccia richiesta da un elemento HTML.|  
@@ -678,7 +678,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
  Un valore HRESULT standard. Restituisce S_OK se l'operazione riesce.  
   
 ##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
- Chiamato dal controllo WebBrowser indipendente quando utilizzato come destinazione di trascinamento per consentire la finestra di dialogo fornire un'alternativa [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).  
+ Chiamato dal controllo WebBrowser indipendente quando utilizzato come destinazione di trascinamento per consentire la finestra di dialogo fornire un'alternativa [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).  
   
 ```  
 STDMETHOD(GetDropTarget)(

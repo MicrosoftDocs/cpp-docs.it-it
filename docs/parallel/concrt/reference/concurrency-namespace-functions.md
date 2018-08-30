@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e385f965ab3036d6ccf2383fd4ae6f420eb548
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538283"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219579"
 ---
 # <a name="concurrency-namespace-functions"></a>funzioni dello spazio dei nomi Concurrency
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  Interfaccia di `IResourceManager`.  
   
 ### <a name="remarks"></a>Note  
- Più chiamate successive a questo metodo restituirà la stessa istanza di Resource Manager. Ogni chiamata al metodo consente di incrementare un riferimento contare su Resource Manager e deve essere associata a una chiamata per il [IResourceManager:: Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522) metodo quando viene eseguita l'utilità di pianificazione che comunicano con Gestione risorse.  
+ Più chiamate successive a questo metodo restituirà la stessa istanza di Resource Manager. Ogni chiamata al metodo consente di incrementare un riferimento contare su Resource Manager e deve essere associata a una chiamata per il [IResourceManager:: Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) metodo quando viene eseguita l'utilità di pianificazione che comunicano con Gestione risorse.  
   
  [unsupported_os](unsupported-os-class.md) viene generata un'eccezione se il sistema operativo non è supportato dal Runtime di concorrenza.  
   
 ##  <a name="create_task"></a>  create_task  
- Crea una libreria PPL [attività](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) oggetto. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.  
+ Crea una libreria PPL [attività](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) oggetto. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.  
   
 ```
 template<typename T>

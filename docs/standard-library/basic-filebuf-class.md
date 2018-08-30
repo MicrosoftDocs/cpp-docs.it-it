@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954968"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222721"
 ---
 # <a name="basicfilebuf-class"></a>Classe basic_filebuf
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parametri
 
-*Elem* l'elemento di base del buffer di file.
+*Elem*<br/>
+ L'elemento di base del buffer di file.
 
-*TR* i tratti dell'elemento di base del buffer di file (in genere `char_traits` <  `Elem`>).
+*Tr*<br/>
+ I tratti dell'elemento di base del buffer di file (in genere `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Note
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parametri
 
-*Nome file* il nome del file da aprire.
+*Nome file*<br/>
+ Nome del file da aprire.
 
-*Modalità* una delle enumerazioni nello [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modalità*<br/>
+ Una delle enumerazioni in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* protezione dati, equivalente a di apertura file predefinita di *shflag* parametri in [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+ Protezione dati, equivalente a di apertura file predefinita di *shflag* nel parametro [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* riferimento rvalue a un [basic_filebuf](../standard-library/basic-filebuf-class.md) oggetto.
+*right*<br/>
+ Riferimento rvalue a un oggetto [basic_filebuf](../standard-library/basic-filebuf-class.md).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametri
 
-*_Meta* carattere da inserire nel buffer o `traits_type::eof`.
+*_Meta*<br/>
+ Carattere da inserire nel buffer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -484,7 +491,7 @@ Se la funzione non può essere eseguita correttamente, restituisce `traits_type:
 
 ### <a name="remarks"></a>Note
 
-Se _ * *. Meta **! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la funzione membro virtuale protetta tenta di inserire l'elemento **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) nel buffer di output. Questa operazione può essere eseguita in vari modi:
+Se *_Meta* **! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la funzione membro virtuale protetta tenta di inserire l'elemento **ch = traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) nel buffer di output. Questa operazione può essere eseguita in vari modi:
 
 - Se è disponibile una posizione di scrittura, la funzione può archiviare l'elemento in tale posizione e incrementare il puntatore successivo per il buffer di output.
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametri
 
-*_Meta* carattere da inserire nel buffer, o `traits_type::eof`.
+*_Meta*<br/>
+ Carattere da inserire nel buffer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametri
 
-*Off* la posizione da cercare relativa a *Way*.
+*Off*<br/>
+ La posizione da cercare relativo alla *Way*.
 
-*Way* il punto di partenza per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
+*Way*<br/>
+ Punto iniziale per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
 
-*_Which* specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
+*_Which*<br/>
+ Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametri
 
-*_Sp* la posizione da cercare.
+*_Sp*<br/>
+ Posizione da cercare.
 
-*_Which* specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
+*_Which*<br/>
+ Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametri
 
-*_Buffer* puntatore a un buffer.
+*_Buffer*<br/>
+ Puntatore a un buffer.
 
-*conteggio* dimensione del buffer.
+*count*<br/>
+ Dimensioni del buffer.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -616,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un' `lvalue` riferimento a un altro `basic_filebuf`.
+*right*<br/>
+ Riferimento `lvalue` a un altro oggetto `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

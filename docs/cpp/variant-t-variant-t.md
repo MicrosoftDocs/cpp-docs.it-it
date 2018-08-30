@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464162"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209342"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Sezione specifica Microsoft**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **variant_t (VARIANT &***varSrc***)** costruisce un `_variant_t` da una copia dell'oggetto di `VARIANT` oggetto.     Il tipo variant viene mantenuto.  
   
--   **variant_t (VARIANT\****pVarSrc***)** costruisce un `_variant_t` da una copia dell'oggetto di `VARIANT` oggetto.     Il tipo variant viene mantenuto.  
+-   **variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** costruisce un `_variant_t` da una copia dell'oggetto di `VARIANT` oggetto.     Il tipo variant viene mantenuto.  
   
 -   **variant_t ( variant_t &***var_t_Src***)** costruisce un `_variant_t` da un altro oggetto `_variant_t` oggetto.     Il tipo variant viene mantenuto.  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **variant_t ( bstr_t &**`bstrSrc`**)** costruisce un `_variant_t` oggetto di tipo VT_BSTR da un `_bstr_t` oggetto.     Un nuovo `BSTR` viene allocato.  
   
--   **variant_t (wchar_t \***  *wstrSrc***)** costruisce un `_variant_t` oggetto di tipo VT_BSTR da una stringa Unicode.   Un nuovo `BSTR` viene allocato.  
+-   **variant_t (wchar_t** <strong>\*</strong> *wstrSrc***)** costruisce un `_variant_t` oggetto di tipo VT_BSTR da una stringa Unicode.   Un nuovo `BSTR` viene allocato.  
   
--   **variant_t (char\***`strSrc`**)** costruisce un `_variant_t` oggetto di tipo VT_BSTR da una stringa.     Un nuovo `BSTR` viene allocato.  
+-   **variant_t (char**<strong>\*</strong>`strSrc`**)** costruisce un `_variant_t` oggetto di tipo VT_BSTR da una stringa.     Un nuovo `BSTR` viene allocato.  
   
 -   **variant_t (bool**`bSrc`**)** costruisce un `_variant_t` VT_BOOL dal tipo di oggetto di un **bool** valore.      
   
--   **variant_t (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** costruisce un `_variant_t` oggetto di tipo VT_UNKNOWN da un puntatore a interfaccia COM .       Se `fAddRef` viene **true**, quindi `AddRef` viene chiamato sul puntatore a interfaccia indicato per rispondere alla chiamata a `Release` che si verificherà quando il `_variant_t` oggetto viene eliminato definitivamente. È responsabilità dell'utente per chiamare `Release` sul puntatore a interfaccia indicato. Se `fAddRef` viene **false**, questo costruttore acquisisce la proprietà del puntatore a interfaccia indicato; non chiamare `Release` sul puntatore a interfaccia indicato.  
+-   **variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef`**= true)** costruisce un `_variant_t` oggetto di tipo VT_UNKNOWN da un puntatore a interfaccia COM.       Se `fAddRef` viene **true**, quindi `AddRef` viene chiamato sul puntatore a interfaccia indicato per rispondere alla chiamata a `Release` che si verificherà quando il `_variant_t` oggetto viene eliminato definitivamente. È responsabilità dell'utente per chiamare `Release` sul puntatore a interfaccia indicato. Se `fAddRef` viene **false**, questo costruttore acquisisce la proprietà del puntatore a interfaccia indicato; non chiamare `Release` sul puntatore a interfaccia indicato.  
   
--   **variant_t (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** costruisce un `_variant_t` oggetto di tipo VT_DISPATCH da un'interfaccia COM puntatore.       Se `fAddRef` viene **true**, quindi `AddRef` viene chiamato sul puntatore a interfaccia indicato per rispondere alla chiamata a `Release` che si verificherà quando il `_variant_t` oggetto viene eliminato definitivamente. È responsabilità dell'utente per chiamare `Release` sul puntatore a interfaccia indicato. Se `fAddRef` viene **false**, questo costruttore acquisisce la proprietà del puntatore a interfaccia indicato; non chiamare `Release` sul puntatore a interfaccia indicato.  
+-   **variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** costruisce un `_variant_t` oggetto di Digitare VT_DISPATCH da un puntatore a interfaccia COM.       Se `fAddRef` viene **true**, quindi `AddRef` viene chiamato sul puntatore a interfaccia indicato per rispondere alla chiamata a `Release` che si verificherà quando il `_variant_t` oggetto viene eliminato definitivamente. È responsabilità dell'utente per chiamare `Release` sul puntatore a interfaccia indicato. Se `fAddRef` viene **false**, questo costruttore acquisisce la proprietà del puntatore a interfaccia indicato; non chiamare `Release` sul puntatore a interfaccia indicato.  
   
 -   **variant_t (DECIMAL &**`decSrc`**)** costruisce un `_variant_t` VT_DECIMAL dal tipo di oggetto di un `DECIMAL` valore.      
   

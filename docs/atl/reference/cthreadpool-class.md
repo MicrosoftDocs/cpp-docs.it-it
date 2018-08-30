@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196962"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 Questa classe fornisce un pool di thread di lavoro che elaborano una coda di elementi di lavoro.  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Note  
  Thread del pool vengono create ed eliminate quando viene inizializzato, ridimensionato o arrestare il pool. Un'istanza della classe *lavoro* verrà creato nello stack di ogni thread di lavoro nel pool. Ogni istanza verrà eseguito per la durata del thread.  
   
- Immediatamente dopo la creazione di un thread *Worker*:: `Initialize` verrà chiamato sull'oggetto associato a tale thread. Immediatamente prima dell'eliminazione di un thread *Worker*:: `Terminate` verrà chiamato. Entrambi i metodi devono accettare un **void\***  argomento. Il valore di questo argomento viene passato al pool di thread tramite il *pvWorkerParam* del parametro [CThreadPool::Initialize](#initialize).  
+ Immediatamente dopo la creazione di un thread *Worker*::`Initialize` verrà chiamato sull'oggetto associato a tale thread. Immediatamente prima dell'eliminazione di un thread *Worker*::`Terminate` verrà chiamato. Entrambi i metodi devono accettare un **void** <strong>\*</strong> argomento. Il valore di questo argomento viene passato al pool di thread tramite il *pvWorkerParam* del parametro [CThreadPool::Initialize](#initialize).  
   
- Quando sono presenti elementi di lavoro nel thread della coda e di lavoro disponibili per il lavoro, un thread di lavoro eseguirà il pull un elemento all'esterno della coda e chiamare il `Execute` metodo per il *Worker* oggetto per il thread. Tre elementi vengono quindi passati al metodo: l'elemento dalla coda, lo stesso `pvWorkerParam` passato a *Worker*:: `Initialize` e *lavoro*:: `Terminate`e un puntatore per il [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struttura utilizzata per la coda di porta di completamento i/o.  
+ Quando sono presenti elementi di lavoro nel thread della coda e di lavoro disponibili per il lavoro, un thread di lavoro eseguirà il pull un elemento all'esterno della coda e chiamare il `Execute` metodo per il *Worker* oggetto per il thread. Tre elementi vengono quindi passati al metodo: l'elemento dalla coda, lo stesso `pvWorkerParam` passato a *Worker*:: `Initialize` e *lavoro*:: `Terminate`e un puntatore per il [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) struttura utilizzata per la coda di porta di completamento i/o.  
   
  Il *Worker* classe dichiara il tipo degli elementi che verranno accodati nel pool di thread, fornendo un typedef *Worker*:: `RequestType`. Questo tipo deve essere in grado di sottoposto a cast da e verso un ULONG_PTR.  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  Il tempo massimo richiesto in millisecondi di attesa per un thread arrestare il pool di thread. Se viene fornito alcun valore o 0, questo metodo verrà utilizzato il timeout impostato [CThreadPool::SetTimeout](#settimeout).  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia una richiesta di arresto a tutti i thread nel pool. Se il timeout scade, questo metodo chiamerà [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717) in qualsiasi thread che non è stato chiuso. Questo metodo viene chiamato automaticamente dal distruttore della classe.  
+ Questo metodo invia una richiesta di arresto a tutti i thread nel pool. Se il timeout scade, questo metodo chiamerà [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) in qualsiasi thread che non è stato chiuso. Questo metodo viene chiamato automaticamente dal distruttore della classe.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   

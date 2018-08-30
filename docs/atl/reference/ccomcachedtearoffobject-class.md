@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882111"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203871"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Classe CComCachedTearOffObject
-Questa classe implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un'interfaccia tear-off.  
+Questa classe implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) per un'interfaccia tear-off.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|Oggetto `CComContainedObject` oggetto derivato dalla classe tear-off (la classe `contained`).|  
   
 ## <a name="remarks"></a>Note  
- `CComCachedTearOffObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un'interfaccia tear-off. Questa classe è diverso da `CComTearOffObject` in quanto `CComCachedTearOffObject` ha il proprio `IUnknown`, separato dell'oggetto proprietario `IUnknown` (il proprietario è l'oggetto per cui viene creata il tear-off). `CComCachedTearOffObject` mantiene la propria il conteggio dei riferimenti nel relativo `IUnknown` e si elimina automaticamente dopo che il conteggio dei riferimenti è zero. Tuttavia, se esegue una query per uno qualsiasi dei relativi a comparsa interfacce, il conteggio dei riferimenti dell'oggetto proprietario `IUnknown` verrà incrementato.  
+ `CComCachedTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) per un'interfaccia tear-off. Questa classe è diverso da `CComTearOffObject` in quanto `CComCachedTearOffObject` ha il proprio `IUnknown`, separato dell'oggetto proprietario `IUnknown` (il proprietario è l'oggetto per cui viene creata il tear-off). `CComCachedTearOffObject` mantiene la propria il conteggio dei riferimenti nel relativo `IUnknown` e si elimina automaticamente dopo che il conteggio dei riferimenti è zero. Tuttavia, se esegue una query per uno qualsiasi dei relativi a comparsa interfacce, il conteggio dei riferimenti dell'oggetto proprietario `IUnknown` verrà incrementato.  
   
  Se il `CComCachedTearOffObject` dell'oggetto che implementa il tear-off è già creata un'istanza e l'interfaccia tear-off viene eseguita una query per anche in questo caso, lo stesso `CComCachedTearOffObject` oggetto viene riutilizzato. Al contrario, se un'interfaccia tear-off implementato da una `CComTearOffObject` nuovamente richieste le tramite l'oggetto proprietario, un altro `CComTearOffObject` verrà avviata l'istanza.  
   

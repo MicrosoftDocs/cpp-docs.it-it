@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7a95327430b4d0bbfda173c83b7631af822060
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339241"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216288"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
 Estende le funzionalità del [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), una finestra cornice Windows Multiple Document Interface (MDI).  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Chiamato dal framework durante l'attivazione di un menu con barra a comparsa.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Chiamato dal framework per aggiornare il menu di frame. Esegue l'override`CMDIFrameWnd::OnUpdateFrameMenu`.|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Restituisce il riquadro di ancoraggio che contiene il punto specificato.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) .  Esegue l'override`CMDIFrameWnd::PreTranslateMessage`.|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows.  Esegue l'override`CMDIFrameWnd::PreTranslateMessage`.|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Chiamato dal framework per ricalcolare il layout della finestra cornice. (Esegue l'override [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dal gestore di ancoraggio.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Salva il layout corrente dei gruppi a schede MDI e l'elenco di documenti precedentemente aperti.|  
@@ -1341,7 +1341,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  Il pulsante della barra degli strumenti.  
   
  [out] *pTI*  
- Puntatore a un [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struttura.  
+ Puntatore a un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'applicazione si riempie il *pTI* parametro. L'implementazione predefinita restituisce FALSE.  
@@ -1790,7 +1790,7 @@ virtual void WinHelp(
  Specifica i dati necessari per il tipo di Guida specificato da *nCmd*.  
   
  [in] *nCmd*  
- Specifica il tipo di Guida richiesto. Per un elenco di valori possibili e gli effetti di *dwData* parametro, vedere la [funzione WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) nel SDK di Windows.  
+ Specifica il tipo di Guida richiesto. Per un elenco di valori possibili e gli effetti di *dwData* parametro, vedere la [funzione WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo esegue l'override [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

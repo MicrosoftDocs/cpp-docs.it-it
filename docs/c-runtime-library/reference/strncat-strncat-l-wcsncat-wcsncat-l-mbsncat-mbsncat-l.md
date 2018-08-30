@@ -67,19 +67,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417587"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202868"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 Aggiunge caratteri di una stringa. Sono disponibili versioni più sicure di queste funzioni; vedere [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md).
 
 > [!IMPORTANT]
-> **mbsncat** e **mbsncat_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsncat** e **mbsncat_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -152,14 +152,14 @@ Restituisce un puntatore alla stringa di destinazione. Nessun valore restituito 
 
 ## <a name="remarks"></a>Note
 
-Il **strncat** funzione aggiunge al massimo, il primo *conteggio* caratteri *strSource* a *strDest*. Il carattere iniziale di *strSource* sovrascrive il carattere di terminazione null di *strDest*. Se è presente un carattere null in *strSource* prima *conteggio* vengono aggiunti caratteri, **strncat** aggiunge tutti i caratteri da *strSource*, fino al carattere null. Se *conteggio* è maggiore della lunghezza di *strSource*, la lunghezza del *strSource* è usato al posto di *conteggio*. In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **strncat** funzione aggiunge al massimo i primi *conteggio* caratteri del *strSource* al *strDest*. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione del *strDest*. Se è presente un carattere null in *strSource* prima *conteggio* i caratteri vengono aggiunti, **strncat** aggiunge tutti i caratteri da *strSource*, fino al carattere null. Se *conteggio* è maggiore della lunghezza di *strSource*, la lunghezza del *strSource* viene usato al posto della *conteggio*. In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> **strncat** non verifica la presenza di spazio sufficiente *strDest*; è pertanto una causa possibile dei sovraccarichi del buffer. Tenere presente che *conteggio* limita il numero di caratteri aggiunti; non è un limite alle dimensioni dei *strDest*. Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> **strncat** verifica la presenza di spazio sufficiente *strDest*; è pertanto una causa possibile dei sovraccarichi del buffer. Tenere presente che *conteggio* limita il numero di caratteri aggiunti; non è un limite alla dimensione dei *strDest*. Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-**wcsncat** e **mbsncat** sono versioni a caratteri wide e caratteri multibyte di **strncat**. Gli argomenti di stringa e valore restituito del **wcsncat** sono caratteri wide, mentre quelli di stringhe **mbsncat** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcsncat** e **mbsncat** sono versioni a caratteri wide e caratteri multibyte di **strncat**. Gli argomenti stringa e il valore restituito di **wcsncat** sono caratteri wide, mentre quelli di stringhe **mbsncat** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ queste funzioni presentano overload dei modelli. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -171,7 +171,7 @@ In C++ queste funzioni presentano overload dei modelli. Per altre informazioni, 
 |**tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** e **_wcsncat_l** non dispone di alcuna dipendenza dalle impostazioni locali e non sono concepiti per essere chiamati direttamente. Vengono forniti per uso interno da parte **tcsncat_l**.
+> **strncat_l** e **wcsncat_l** non dipendono dalle impostazioni locali e non sono progettate per essere chiamate direttamente. Vengono forniti per uso interno da parte **tcsncat_l**.
 
 ## <a name="requirements"></a>Requisiti
 

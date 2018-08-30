@@ -1,7 +1,7 @@
 ---
-title: Progetto PRJ0004 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0004 del progetto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10246f1d01441a84947a2fa426e962d49414782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76847c0df06ec61c29f84efb46eca87683c86cb4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316293"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216066"
 ---
 # <a name="project-build-error-prj0004"></a>Errore di compilazione progetto PRJ0004
-Impossibile generare la riga di comando per lo strumento "strumento".  
-  
- Uno o più proprietà sono state specificate in modo da rendere la sintassi della chiamata a ***strumento*** non valido:  
-  
--   È stata specificata la macro non corretto o sconosciuta.  
-  
--   Il computer potrebbe essere insufficiente spazio su disco.  
-  
- Si consiglia di rivedere le impostazioni per lo strumento esaminando il [pagina delle proprietà riga di comando](../../ide/command-line-property-pages.md).
+
+> Impossibile generare la riga di comando per il '*strumento*' dello strumento.
+
+Sono state specificate una o più proprietà in modo da rendere la sintassi della chiamata a *strumento* non valido:
+
+- Era possibile specificare le macro non corretto o sconosciute.
+
+- Il computer potrebbe essere insufficiente spazio su disco.
+
+Si consiglia di rivedere le impostazioni per lo strumento, esaminare i [pagina delle proprietà della riga di comando](../../ide/command-line-property-pages.md).

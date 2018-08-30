@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab7207abac26d85faf27a0ed3d33dadadbdc9d27
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d302d625f0f87eaec39bc1de35885f6d6b6a9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583765"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198051"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -36,7 +36,7 @@ Indica che la proprietà supporta il `OnRequestEdit` notifica.
 
 ## <a name="remarks"></a>Note
 
-Il **requestedit** attributi di C++ ha la stessa funzionalità come la [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) attributo MIDL.
+Il **requestedit** attributi di C++ ha la stessa funzionalità come la [requestedit](/windows/desktop/Midl/requestedit) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

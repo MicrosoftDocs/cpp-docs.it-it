@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1fff338bfce32f8233cd58aa7c0790508ce542c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4fdf98e41b552fa759f1aed3e67d531e02bc7f58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882881"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206775"
 ---
 # <a name="category-macros"></a>Macro di categoria
 Queste macro definiscono le mappe di categoria.  
@@ -76,7 +76,7 @@ BEGIN_CATEGORY_MAP(theClass)
 > [!NOTE]
 >  ATL Usa il responsabile delle categorie componenti standard per registrare le categorie di componenti. Se il gestore non è presente nel sistema quando il modulo viene registrato, registrazione ha esito positivo, ma le categorie di componenti non verranno registrate per tale classe.  
   
- Per altre informazioni sulle categorie di componenti, vedere [quali sono le categorie di componenti e come funzionano](http://msdn.microsoft.com/library/windows/desktop/ms694322) nel SDK di Windows.  
+ Per altre informazioni sulle categorie di componenti, vedere [quali sono le categorie di componenti e come funzionano](/windows/desktop/com/component-categories-and-how-they-work) nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -107,7 +107,7 @@ IMPLEMENTED_CATEGORY(catID)
   
  I client possono usare le informazioni sulle categorie registrati per la classe per determinare le funzionalità e requisiti senza dover creare un'istanza.  
   
- Per altre informazioni sulle categorie di componenti, vedere [quali sono le categorie di componenti e come funzionano](http://msdn.microsoft.com/library/windows/desktop/ms694322) nel SDK di Windows.  
+ Per altre informazioni sulle categorie di componenti, vedere [quali sono le categorie di componenti e come funzionano](/windows/desktop/com/component-categories-and-how-they-work) nel SDK di Windows.  
   
 ### <a name="a-selection-of-stock-categories"></a>Una selezione di categorie predefinite  
   
@@ -119,7 +119,7 @@ IMPLEMENTED_CATEGORY(catID)
 |data binding semplice|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Associazione di dati avanzati|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Controlli senza finestra|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Oggetti compatibili con Internet|Visualizzare [oggetti compatibili con Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) nel SDK di Windows per un elenco di esempio.||  
+|Oggetti compatibili con Internet|Visualizzare [oggetti compatibili con Internet](/windows/desktop/com/internet-aware-objects) nel SDK di Windows per un elenco di esempio.||  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -140,7 +140,7 @@ REQUIRED_CATEGORY( catID )
   
  I client possono usare le informazioni sulle categorie registrati per la classe per determinare le funzionalità e requisiti senza dover creare un'istanza. Ad esempio, un controllo può richiedere che un contenitore supportano il data binding. Il contenitore può scoprire se ha le funzionalità necessarie per ospitare il controllo eseguendo una query di gestione delle categorie per le categorie richieste da tale controllo. Se il contenitore non supporta una funzionalità obbligatoria, può rifiutare ospitare l'oggetto COM.  
   
- Per altre informazioni sulle categorie di componenti, incluso un elenco di esempi, vedere [quali sono le categorie di componenti e come funzionano](http://msdn.microsoft.com/library/windows/desktop/ms694322) nel SDK di Windows.  
+ Per altre informazioni sulle categorie di componenti, incluso un elenco di esempi, vedere [quali sono le categorie di componenti e come funzionano](/windows/desktop/com/component-categories-and-how-they-work) nel SDK di Windows.  
   
 ### <a name="a-selection-of-stock-categories"></a>Una selezione di categorie predefinite  
   
@@ -152,7 +152,7 @@ REQUIRED_CATEGORY( catID )
 |data binding semplice|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Associazione di dati avanzati|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Controlli senza finestra|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Oggetti compatibili con Internet|Visualizzare [oggetti compatibili con Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) nel SDK di Windows per un elenco di esempio.||  
+|Oggetti compatibili con Internet|Visualizzare [oggetti compatibili con Internet](/windows/desktop/com/internet-aware-objects) nel SDK di Windows per un elenco di esempio.||  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  

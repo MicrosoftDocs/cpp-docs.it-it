@@ -1,7 +1,7 @@
 ---
-title: Progetto PRJ0020 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0020 del progetto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7ad1b3952da6282c0b9179b9fcc3dbab89cc54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d5f87dd50f52acb482a471708d1d20cc9853e02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317674"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214057"
 ---
 # <a name="project-build-error-prj0020"></a>Errore di compilazione progetto PRJ0020
-Strumento "strumento' proprietà 'property' contiene il nome di file non valido 'file'.  
-  
- Il nome del file, ***file***, specificato nella proprietà ***proprietà***, per lo strumento, ***strumento***, non è valido.  
-  
- È stata utilizzata una macro sconosciuta o non valida.  
-  
- Vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md) per informazioni su come accedere alle proprietà del progetto.
+
+> Lo strumento '*tool*', proprietà '*proprietà*'contiene il nome di file non valido'*file*'.
+
+Il nome del file *file*, specificato nella proprietà *proprietà* per lo strumento *strumento*, non è valido.
+
+È stata utilizzata una macro sconosciuta o non valida.
+
+Visualizzare [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md) per informazioni su come accedere alle proprietà del progetto.

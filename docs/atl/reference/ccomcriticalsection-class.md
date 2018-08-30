@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5926f92ae636a13c1e5241792790151ee48ceddc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b5957d55ae75723331e35984b9ab3c8e34c4fa78
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884870"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204958"
 ---
 # <a name="ccomcriticalsection-class"></a>Classe CComCriticalSection
 Questa classe fornisce metodi per ottenere e rilasciare la proprietà di un oggetto sezione critica.  
@@ -84,7 +84,7 @@ CComCriticalSection() throw();
  Imposta il [m_sec](#m_sec) membro dati su NULL.  
   
 ##  <a name="init"></a>  CComCriticalSection::Init  
- Chiama la funzione Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), che inizializza l'oggetto sezione critica contenuto nel [m_sec](#m_sec) (membro dati).  
+ Chiama la funzione Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), che inizializza l'oggetto sezione critica contenuto nel [m_sec](#m_sec) (membro dati).  
   
 ```
 HRESULT Init() throw();
@@ -94,7 +94,7 @@ HRESULT Init() throw();
  Restituisce S_OK se l'operazione riesce, E_OUTOFMEMORY o E_FAIL in caso di errore.  
   
 ##  <a name="lock"></a>  CComCriticalSection::Lock  
- Chiama la funzione Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), che attende che il thread può assumere la proprietà dell'oggetto sezione critica contenuta nel [m_sec](#m_sec) (membro dati).  
+ Chiama la funzione Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), che attende che il thread può assumere la proprietà dell'oggetto sezione critica contenuta nel [m_sec](#m_sec) (membro dati).  
   
 ```
 HRESULT Lock() throw();
@@ -114,7 +114,7 @@ CRITICAL_SECTION m_sec;
 ```  
   
 ##  <a name="term"></a>  CComCriticalSection::Term  
- Chiama la funzione Win32 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), che rilascia tutte le risorse usate dall'oggetto contenuto nella sezione critica il [m_sec](#m_sec) (membro dati).  
+ Chiama la funzione Win32 [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), che rilascia tutte le risorse usate dall'oggetto contenuto nella sezione critica il [m_sec](#m_sec) (membro dati).  
   
 ```
 HRESULT Term() throw();
@@ -127,7 +127,7 @@ HRESULT Term() throw();
  Una volta `Term` è stato chiamato il critici sezione non è più può essere usata per la sincronizzazione.  
   
 ##  <a name="unlock"></a>  CComCriticalSection::Unlock  
- Chiama la funzione Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), che rilascia la proprietà dell'oggetto contenuto nella sezione critica il [m_sec](#m_sec) (membro dati).  
+ Chiama la funzione Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), che rilascia la proprietà dell'oggetto contenuto nella sezione critica il [m_sec](#m_sec) (membro dati).  
   
 ```
 HRESULT Unlock() throw();

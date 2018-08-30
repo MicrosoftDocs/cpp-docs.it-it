@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1fa026ecb0b25c17a793c31c3f64dcd0186f0e1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880095"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208761"
 ---
 # <a name="options-atl-control-wizard"></a>Opzioni, Creazione guidata controllo ATL
 Inserisci qui "Riepilogo risultati di ricerca".  
@@ -78,7 +78,7 @@ Inserisci qui "Riepilogo risultati di ricerca".
   
 -   **Custom**: crea un'interfaccia che espone i metodi direttamente tramite un VTBL.  
   
-     Se si seleziona **Custom**, quindi è possibile specificare che il controllo è **compatibile con l'automazione**. Se si seleziona **compatibile con l'automazione**, quindi la procedura guidata aggiunge i [oleautomation](../../windows/oleautomation.md) attributo per l'interfaccia nel file IDL, e l'interfaccia può essere sottoposto a marshalling dal gestore di marshalling universale in oleaut32.dll. Visualizzare [marshalling dettagli](http://msdn.microsoft.com/library/windows/desktop/ms692621) nel SDK di Windows per altre informazioni.  
+     Se si seleziona **Custom**, quindi è possibile specificare che il controllo è **compatibile con l'automazione**. Se si seleziona **compatibile con l'automazione**, quindi la procedura guidata aggiunge i [oleautomation](../../windows/oleautomation.md) attributo per l'interfaccia nel file IDL, e l'interfaccia può essere sottoposto a marshalling dal gestore di marshalling universale in oleaut32.dll. Visualizzare [marshalling dettagli](/windows/desktop/com/marshaling-details) nel SDK di Windows per altre informazioni.  
   
      Inoltre, se si seleziona **compatibile con l'automazione**, tutti i parametri per tutti i metodi del controllo devono essere variante compatibile.  
   
@@ -87,7 +87,7 @@ Inserisci qui "Riepilogo risultati di ricerca".
   
 -   **Punti di connessione**: consente ai punti di connessione per l'oggetto mediante derivazione dalla classe dell'oggetto [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) e consentendo di esporre un'interfaccia di origine.  
   
--   **Concesso in licenza**: aggiunge il supporto per il controllo per [licensing](http://msdn.microsoft.com/library/windows/desktop/ms690543). Controlli con licenza possono essere ospitati solo se il computer client ha la licenza corretta.  
+-   **Concesso in licenza**: aggiunge il supporto per il controllo per [licensing](/windows/desktop/com/licensing). Controlli con licenza possono essere ospitati solo se il computer client ha la licenza corretta.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md)

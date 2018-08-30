@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15dc3dc2b4c1fdf549ec90ae6d782b5f8a72509
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853811"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215515"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Classe CMFCToolBarEditBoxButton
 Un pulsante della barra degli strumenti contenente un controllo di modifica ( [classe CEdit](../../mfc/reference/cedit-class.md)).  
@@ -105,7 +105,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
 |[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|Determina se viene visualizzato un bordo del pulsante quando un utente fa clic sul pulsante. (Esegue l'override [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
 |[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|Determina se i pulsanti della casella modifica hanno uno stile flat.|  
-|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Specifica se il pulsante elabora i [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messaggio. (Esegue l'override [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Specifica se il pulsante elabora i [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggio. (Esegue l'override [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|Chiamato dal framework quando il pulsante viene aggiunto a un **Personalizza** nella finestra di dialogo. (Esegue l'override [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|Chiamato dal framework per calcolare le dimensioni del pulsante per il contesto di dispositivo specificato e lo stato di ancoraggio. (Esegue l'override [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Chiamato dal framework quando il pulsante viene inserito in una nuova barra degli strumenti. (Esegue l'override [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -361,7 +361,7 @@ static BOOL __stdcall IsFlatMode();
  Per impostazione predefinita, i pulsanti della casella modifica hanno uno stile flat. Usare la [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) metodo per modificare l'aspetto bidimensionale per l'applicazione.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
- Specifica se il pulsante elabora i [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messaggio.  
+ Specifica se il pulsante elabora i [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggio.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -375,9 +375,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  TRUE se il pulsante elabora il messaggio WM_COMMAND o FALSE per indicare che il messaggio deve essere gestito dalla barra degli strumenti padre.  
   
 ### <a name="remarks"></a>Note  
- Il framework chiama questo metodo quando sta per inviare un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messaggio alla finestra padre.  
+ Il framework chiama questo metodo quando sta per inviare un [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggio alla finestra padre.  
   
- Questo metodo estende l'implementazione della classe di base ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) elaborando le [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) notifica. Per ogni casella di modifica con lo stesso ID di comando di questo oggetto, imposta l'etichetta di testo all'etichetta di testo di questo oggetto.  
+ Questo metodo estende l'implementazione della classe di base ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) elaborando le [EN_UPDATE](/windows/desktop/Controls/en-update) notifica. Per ogni casella di modifica con lo stesso ID di comando di questo oggetto, imposta l'etichetta di testo all'etichetta di testo di questo oggetto.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  Chiamato dal framework quando il pulsante viene aggiunto a un **Personalizza** nella finestra di dialogo.  

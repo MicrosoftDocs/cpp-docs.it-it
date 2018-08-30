@@ -1,5 +1,5 @@
 ---
-title: Inizializzazione di assembly misti | Documenti Microsoft
+title: Inizializzazione di assembly misti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 389246b6b002204260170fb44680c2756cd7aa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137891"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204542"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inizializzazione di assembly misti
 
-Gli sviluppatori di Windows devono essere sempre tenere conto del blocco del caricatore durante l'esecuzione di codice durante `DllMain`. Tuttavia, esistono alcune considerazioni aggiuntive che entrano in gioco quando si lavora con C + + assembly clr in modalità mista.
+Gli sviluppatori di Windows devono essere sempre diffidenti nei confronti del blocco del caricatore durante l'esecuzione di codice durante `DllMain`. Tuttavia, esistono alcune considerazioni aggiuntive che entrano in gioco quando si lavora con C + + / assembly clr in modalità mista.
 
-Il codice all'interno di [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) non deve accedere a CLR. Questo significa che `DllMain` non deve chiamare direttamente o indirettamente funzioni gestite, che nessun codice gestito deve essere dichiarato o implementato in `DllMain`e che all'interno di `DllMain`non deve avere luogo nessuna procedura di Garbage Collection o caricamento automatico di libreria.
+Il codice all'interno [DllMain](/windows/desktop/Dlls/dllmain) non deve accedere a CLR. Questo significa che `DllMain` non deve chiamare direttamente o indirettamente funzioni gestite, che nessun codice gestito deve essere dichiarato o implementato in `DllMain`e che all'interno di `DllMain`non deve avere luogo nessuna procedura di Garbage Collection o caricamento automatico di libreria.
   
 ## <a name="causes-of-loader-lock"></a>Cause del blocco del caricatore
 
@@ -97,9 +97,9 @@ Esistono numerose soluzioni per il deadlock causato dall'inizializzazione dinami
 
 ### <a name="user-supplied-functions-affecting-startup"></a>Funzioni fornite dall'utente che influiscono sull'avvio
 
-Esistono numerose funzioni fornite dall'utente da cui dipendono le librerie per l'inizializzazione durante l'avvio. Ad esempio, quando l'overload globale di operatori in C++, ad esempio il `new` e `delete` operatori, le versioni fornite dall'utente vengono usati ovunque, incluso l'inizializzazione della libreria Standard C++ e la distruzione. Di conseguenza, inizializzatori statici forniti dall'utente e la libreria Standard C++ richiameranno qualsiasi versione di fornito dall'utente di questi operatori.
+Esistono numerose funzioni fornite dall'utente da cui dipendono le librerie per l'inizializzazione durante l'avvio. Ad esempio, quando l'overload globale di operatori in C++, ad esempio la `new` e `delete` operatori, le versioni fornite dall'utente vengono usati ovunque, tra cui l'inizializzazione della libreria Standard C++ e distruzione. Di conseguenza, gli inizializzatori statici forniti dall'utente e della libreria Standard C++ richiamerà qualsiasi versioni fornite dall'utente di questi operatori.
 
-Se le versioni fornite dall'utente sono compilate in MSIL, questi inizializzatori tenteranno di eseguire le istruzioni MSIL mentre il blocco del caricatore è attivo. Fornito dall'utente `malloc` ha le stesse conseguenze. Per risolvere il problema, tutti questi overload o tutte queste definizioni fornite dall'utente devono essere implementate come codice nativo usando la direttiva il #pragma `unmanaged` .
+Se le versioni fornite dall'utente sono compilate in MSIL, questi inizializzatori tenteranno di eseguire le istruzioni MSIL mentre il blocco del caricatore è attivo. Una fornita dall'utente `malloc` ha le stesse conseguenze. Per risolvere il problema, tutti questi overload o tutte queste definizioni fornite dall'utente devono essere implementate come codice nativo usando la direttiva il #pragma `unmanaged` .
 
 Per ulteriori informazioni su questo scenario, vedere "Limiti alla diagnosi".
 
@@ -123,7 +123,7 @@ In alcuni casi è difficile individuare l'origine dei deadlock. Nelle sottosezio
 
 In certi casi, le implementazioni delle funzioni all'interno dei file di intestazione possono complicare la diagnostica. Le funzioni inline e il codice di modello richiedono entrambi la specifica di funzioni in un file di intestazione.  Il linguaggio C++ specifica la regola di definizione unica, in base alla quale tutte le implementazioni di funzioni con lo stesso nome si equivalgono a livello semantico. Di conseguenza, per il linker di C++ non sono necessarie considerazioni speciali quando si esegue l'unione di file oggetto per i quali sono disponibili implementazioni duplicate di una data funzione.
 
-Prima di Visual Studio 2005, il linker sceglie semplicemente la più grande tra le definizioni semanticamente equivalenti, da contenere scenari e dichiarazioni con prototipo quando vengono utilizzate opzioni di ottimizzazione differenti per i file di origine diversa. Tale situazione implica un problema con le DLL miste .NET e native.
+Prima di Visual Studio 2005, il linker sceglie semplicemente la più grande di queste definizioni semanticamente equivalenti, per supportare gli scenari e dichiarazioni con prototipo quando vengono utilizzate opzioni di ottimizzazione diversi per file di origine diversi. Tale situazione implica un problema con le DLL miste .NET e native.
 
 Poiché la stessa intestazione può essere inclusa da file di C++ con **/clr** abilitati e disabilitati, o un #include può essere incapsulato all'interno di # #pragma `unmanaged` blocco, è possibile avere sia versioni MSIL che native di funzioni che forniscono implementazioni nelle intestazioni. Le implementazioni MSIL e native hanno una semantica differente in relazione all'inizializzazione con il blocco del caricatore attivo. Questo viola effettivamente la regola di definizione unica. Di conseguenza, quando il linker sceglie l'implementazione più lunga, è possibile che adotti la versione MSIL di una funzione, anche se è stata compilata in modo esplicito in codice nativo in un altro punto usando la direttiva #pragma non gestita. Per assicurarsi che una versione MSIL di una funzione modello o inline non sia mai chiamata con il blocco del caricatore attivo, ciascuna definizione di questo tipo di funzione chiamata con il blocco del caricatore attivo deve essere modificata usando la direttiva #pragma `unmanaged` . Se il file di intestazione è di altri produttori, il metodo più semplice per ottenere questo risultato consiste spesso nell'inserire e visualizzare la direttiva #pragma non gestita accanto alla direttiva #include per il file di intestazione che crea il problema. (Vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md) per un esempio.) Questa strategia non è tuttavia valida nel caso di intestazioni contenenti altro codice che deve chiamare direttamente le API .NET.
 
@@ -161,29 +161,29 @@ Per identificare la funzione MSIL specifica chiamata con il blocco del caricator
 
 1. Assicurarsi che siano disponibili simboli per mscoree.dll e mscorwks.dll.
 
-   Questa operazione può essere eseguita in due modi. È innanzitutto possibile aggiungere i PDB per mscoree.dll e mscorwks.dll al percorso di ricerca dei simboli. A tale scopo, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **strumenti** menu, scegliere **opzioni**. Nel riquadro a sinistra del **opzioni** la finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere il percorso dei file PDB mscoree.dll e mscorwks.dll all'elenco di ricerca. Questi file PDB sono installati in %VSINSTALLDIR%\SDK\v2.0\symbols. Scegliere **OK**.
+   Questa operazione può essere eseguita in due modi. È innanzitutto possibile aggiungere i PDB per mscoree.dll e mscorwks.dll al percorso di ricerca dei simboli. A tale scopo, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **degli strumenti** menu, scegliere **opzioni**. Nel riquadro sinistro della finestra il **le opzioni** finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere il percorso dei file PDB mscoree.dll e mscorwks.dll all'elenco di ricerca. Questi file PDB sono installati in %VSINSTALLDIR%\SDK\v2.0\symbols. Scegliere **OK**.
 
-   È anche possibile scaricare i file PDB per mscoree.dll e mscorwks.dll da Microsoft Symbol Server. Per configurare Microsoft Symbol Server, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **strumenti** menu, scegliere **opzioni**. Nel riquadro a sinistra del **opzioni** la finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere il seguente percorso di ricerca all'elenco di ricerca: http://msdl.microsoft.com/download/symbols. Aggiungere una directory cache per i simboli nella casella di testo relativa alla cache del server di simboli. Scegliere **OK**.
+   È anche possibile scaricare i file PDB per mscoree.dll e mscorwks.dll da Microsoft Symbol Server. Per configurare Microsoft Symbol Server, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **degli strumenti** menu, scegliere **opzioni**. Nel riquadro sinistro della finestra il **le opzioni** finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere il seguente percorso di ricerca all'elenco di ricerca: http://msdl.microsoft.com/download/symbols. Aggiungere una directory cache per i simboli nella casella di testo relativa alla cache del server di simboli. Scegliere **OK**.
 
 1. Impostare la modalità del debugger sulla modalità solo nativa.
 
-   A tale scopo, aprire il **proprietà** griglia per il progetto di avvio nella soluzione. Selezionare **le proprietà di configurazione** > **debug**. Impostare il **tipo di Debugger** a **solo nativo**.
+   A tale scopo, aprire il **proprietà** griglia per il progetto di avvio nella soluzione. Selezionare **le proprietà di configurazione** > **debug**. Impostare il **tipo di Debugger** al **solo nativo**.
 
 1. Avviare il debugger (F5).
   
-1. Quando il **/clr** diagnostica viene generato, scegliere **ripetere** e quindi scegliere **interrompere**.
+1. Quando la **/clr** diagnostica viene generata, scegliere **ripetere** e quindi scegliere **Interrompi**.
   
-1. Aprire la finestra dello stack di chiamate (Sulla barra dei menu, scegliere **Debug** > **Windows** > **Stack di chiamate**.) Direttiva `DllMain` o l'inizializzatore statico viene identificato con una freccia verde. Se la funzione che crea il problema non viene identificata, è necessario eseguire la procedura riportata di seguito per trovarla.
+1. Aprire la finestra dello stack di chiamate (Nella barra dei menu, scegliere **Debug** > **Windows** > **Stack di chiamate**.) La funzione `DllMain` o inizializzatore statico viene identificato con una freccia verde. Se la funzione che crea il problema non viene identificata, è necessario eseguire la procedura riportata di seguito per trovarla.
 
-1. Aprire il **immediato** finestra (sulla barra dei menu, scegliere **Debug** > **Windows** > **immediato**.)
+1. Aprire il **controllo immediato** finestra (sulla barra dei menu, scegliere **Debug** > **Windows** > **immediato**.)
 
-1. Digitare. Load sos.dll nel **immediato** finestra per caricare il servizio di debug SOS.
+1. Digitare. Load SOS. dll nel **Immediate** finestra per caricare il servizio del debugger SOS.
   
-1. Tipo! dumpstack nella **immediato** finestra per visualizzare un elenco completo di interni **/clr** dello stack.
+1. Digitare! dumpstack nella **controllo immediato** finestra per visualizzare un elenco completo dell'interno **/clr** dello stack.
 
-1. Cercare la prima istanza (il più vicino alla fine dello stack) di entrambi CorDllMain (se `DllMain` causa il problema) o creare o GetTargetForVTableEntry (se la causa un inizializzatore statico). La voce riportata sotto questa chiamata corrisponde alla chiamata della funzione implementata MSIL che ha tentato l'esecuzione con il blocco del caricatore attivo.
+1. Cercare la prima istanza (il più vicino alla parte inferiore dello stack) di CorDllMain (se `DllMain` causa il problema) o creare o GetTargetForVTableEntry (se un inizializzatore static causa il problema). La voce riportata sotto questa chiamata corrisponde alla chiamata della funzione implementata MSIL che ha tentato l'esecuzione con il blocco del caricatore attivo.
 
-1. Passare al file di origine e riga numero identificato nel passaggio precedente e corretto il problema usando gli scenari e soluzioni descritte nella sezione scenari.
+1. Passare al file di origine e riga numero identificato nel passaggio precedente e quello corretto il problema usando gli scenari e soluzioni descritte nella sezione scenari.
 
 ## <a name="example"></a>Esempio
 

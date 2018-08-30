@@ -1,5 +1,5 @@
 ---
-title: -DELAY (ritardo carico importare le impostazioni) | Documenti Microsoft
+title: -DELAY (impostazioni di importazione di caricamento ritardato) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c898727504a8ae530bcdffb3e01bde68c31c8e87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7920c8a3fe002c0d3ef9c9a64872a07ec75ebd8b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373335"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213478"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (Impostazioni dell'importazione a caricamento ritardato)
 ```  
@@ -42,13 +42,13 @@ ms.locfileid: "32373335"
   
      Se non si seleziona UNLOAD, qualsiasi chiamata a [FUnloadDelayLoadedDLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md) avrà esito negativo.  
   
--   Il qualificatore NOBIND indica al linker di non includere una tabella di indirizzi di importazione nell'immagine finale. L'impostazione predefinita prevede la creazione della tabella di indirizzi di importazione associabile per DLL di caricamento ritardato. L'immagine risultante non può essere associata in modo statico. È possibile che le immagini con tabelle di indirizzi di importazione associabili siano associate in modo statico prima dell'esecuzione. Vedere [/Bind](../../build/reference/bind.md).  
+-   Il qualificatore NOBIND indica al linker di non includere una tabella di indirizzi di importazione nell'immagine finale. L'impostazione predefinita prevede la creazione della tabella di indirizzi di importazione associabile per DLL di caricamento ritardato. L'immagine risultante non può essere associata in modo statico. È possibile che le immagini con tabelle di indirizzi di importazione associabili siano associate in modo statico prima dell'esecuzione. Visualizzare [/Bind](../../build/reference/bind.md).  
   
-     Se la DLL è associata, la funzione di supporto tenterà di utilizzare le informazioni associate anziché chiamare [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) su ciascuna delle importazioni a cui viene fatto riferimento. Se il timestamp o l'indirizzo preferito non corrisponde ai valori presenti nel file DLL caricato, la funzione dell'helper presupporrà che la tabella di indirizzi di importazione sia obsoleta e procederà come se la tabella di indirizzi di importazione non esistesse.  
+     Se la DLL è associata, la funzione dell'helper proverà a usare le informazioni associate invece di chiamare [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) su ciascuna delle importazioni a cui viene fatto riferimento. Se il timestamp o l'indirizzo preferito non corrisponde ai valori presenti nel file DLL caricato, la funzione dell'helper presupporrà che la tabella di indirizzi di importazione sia obsoleta e procederà come se la tabella di indirizzi di importazione non esistesse.  
   
      NOBIND provoca la creazione di immagini di programma di dimensioni superiori, ma può velocizzare il tempo di caricamento del file DLL. Se non si prevede di associare il file DLL, NOBIND impedirà la generazione della tabella di indirizzi di importazione associata.  
   
- Per specificare le DLL per il caricamento ritardato, usare il [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md) opzione.  
+ Per specificare le DLL di cui ritardare il caricamento, usare il [/DELAYLOAD fa](../../build/reference/delayload-delay-load-import.md) opzione.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   

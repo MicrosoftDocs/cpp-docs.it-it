@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572655"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202475"
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
-Questa classe implementa il [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfaccia per un oggetto aggregato. Per definizione, un oggetto aggregato è contenuto all'interno di un oggetto esterno. Il `CComAggObject` classe è simile al [classe CComObject](../../atl/reference/ccomobject-class.md), ad eccezione del fatto che espone un'interfaccia che è direttamente accessibile ai client esterni.  
+Questa classe implementa il [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interfaccia per un oggetto aggregato. Per definizione, un oggetto aggregato è contenuto all'interno di un oggetto esterno. Il `CComAggObject` classe è simile al [classe CComObject](../../atl/reference/ccomobject-class.md), ad eccezione del fatto che espone un'interfaccia che è direttamente accessibile ai client esterni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|I delegati `IUnknown` chiamate a unknown esterno.|  
   
 ## <a name="remarks"></a>Note  
- `CComAggObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un oggetto aggregato. `CComAggObject` dispone di propri `IUnknown` interfaccia, distinto dall'esterno dell'oggetto `IUnknown` interfaccia e mantiene il proprio conteggio dei riferimenti.  
+ `CComAggObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) per un oggetto aggregato. `CComAggObject` dispone di propri `IUnknown` interfaccia, distinto dall'esterno dell'oggetto `IUnknown` interfaccia e mantiene il proprio conteggio dei riferimenti.  
   
  Per altre informazioni sull'aggregazione, vedere l'articolo [nozioni di base di oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parametri  
  *profilo di porta*  
- [out] Un puntatore a un **CComAggObject\<* * * contenuti* **>** puntatore. Se `CreateInstance` ha esito negativo *pp* è impostato su NULL.  
+ [out] Un puntatore a un **CComAggObject\<**<em>contenute</em> **>** puntatore. Se `CreateInstance` ha esito negativo *pp* è impostato su NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  

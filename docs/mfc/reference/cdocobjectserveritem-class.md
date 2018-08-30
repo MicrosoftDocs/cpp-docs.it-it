@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc498b96dad089276b248fbb2e420dde3c0bc514
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027138"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211805"
 ---
 # <a name="cdocobjectserveritem-class"></a>Classe CDocObjectServerItem
 Implementa i verbi del server OLE in modo specifico per i server DocObject.  
@@ -62,7 +62,7 @@ class CDocObjectServerItem : public COleServerItem
 |[CDocObjectServerItem::OnShow](#onshow)|Chiamato dal framework per rendere il DocObject elementi sul posto attivo. Se l'elemento non è un DocObject, chiama il metodo [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Note  
- `CDocObjectServerItem` definisce le funzioni membro sottoponibile a override: [OnHide](#onhide), [OnOpen](http://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), e [OnShow](#onshow).  
+ `CDocObjectServerItem` definisce le funzioni membro sottoponibile a override: [OnHide](#onhide), [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), e [OnShow](#onshow).  
   
  Per usare `CDocObjectServerItem`, assicurare che il [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) esegue l'override nel `COleServerDoc`-restituisce una nuova classe derivata `CDocObjectServerItem` oggetto. Se è necessario modificare qualsiasi funzionalità inclusi nell'elemento, è possibile creare una nuova istanza della propria `CDocObjectServerItem`-classe derivata.  
   

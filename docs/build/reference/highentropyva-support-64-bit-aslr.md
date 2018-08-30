@@ -1,7 +1,7 @@
 ---
-title: -HIGHENTROPYVA (supporto ASLR a 64 Bit) | Documenti Microsoft
+title: /HIGHENTROPYVA (supporta ASLR a 64 bit) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -12,38 +12,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2487cbeff97ded6e95a36393fbbcfbd510e6d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66fe8f20631d576264eab836f822a414c1244d5b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223413"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (supporta ASLR a 64 bit)
-Specifica che l'immagine eseguibile supporta un'entropia elevata per ASLR (Address Space Layout Randomization) a 64 bit.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/HIGHENTROPYVA[:NO]  
-```  
-  
-## <a name="remarks"></a>Note  
- Per impostazione predefinita, /HIGHENTROPYVA è attivato per le immagini eseguibili a 64 bit. Non è applicabile a immagini eseguibili a 32 bit. Per abilitare questa opzione, anche /DYNAMICBASE deve essere attivato.  
-  
- /HIGHENTROPYVA modifica l'intestazione di un file con estensione dll o exe, per indicare se ASLR con indirizzamento a 64 bit è supportato. Quando questa opzione è impostata su un eseguibile e su tutti i moduli che da esso dipendono, un sistema operativo che supporta ASLR a 64 bit può impostare i segmenti dell'immagine eseguibile in fase di caricamento tramite l'uso di indirizzi causali in uno spazio di indirizzamento virtuale a 64 bit. Questo ampio spazio di indirizzi rende più difficile a un utente non autorizzato indovinare una particolare posizione di un'area della memoria.  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per ulteriori informazioni, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Espandere il **le proprietà di configurazione** nodo.  
-  
-3.  Espandere il **Linker** nodo.  
-  
-4.  Selezionare il **riga di comando** pagina delle proprietà.  
-  
-5.  In **opzioni aggiuntive**, immettere `/HIGHENTROPYVA` o `/HIGHENTROPYVA:NO`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+Specifica se l'immagine eseguibile supporta un'entropia elevata a 64 bit per ASLR (Address Space Layout Randomization).
+
+## <a name="syntax"></a>Sintassi
+
+> **/ HIGHENTROPYVA**[**: NO**]
+
+## <a name="remarks"></a>Note
+
+**/ HIGHENTROPYVA** modifica l'intestazione di un *immagine eseguibile*, un file con estensione dll o .exe, per indicare se ASLR può usare lo spazio degli indirizzi di intero a 64 bit. Quando questa opzione è impostata su un eseguibile e su tutti i moduli che da esso dipendono, un sistema operativo che supporta ASLR a 64 bit può riassegnare i segmenti dell'immagine eseguibile in fase di caricamento tramite l'uso di indirizzi causali in uno spazio di indirizzamento virtuale a 64 bit. Questo ampio spazio di indirizzi rende più difficile a un utente non autorizzato indovinare una particolare posizione di un'area della memoria.
+
+Per impostazione predefinita **/HIGHENTROPYVA** è abilitata per le immagini eseguibili a 64 bit. Questa opzione richiede [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md), cui è abilitata per impostazione predefinita per le immagini a 64 bit. **/ HIGHENTROPYVA** non è applicabile a immagini eseguibili a 32 bit, in cui il linker ignora l'opzione. Per disabilitare in modo esplicito questa opzione, usare **/highentropyva: No**.
+
+Per la **/HIGHENTROPYVA** per avere un effetto in fase di caricamento [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) deve anche essere abilitato. **/ DYNAMICBASE** è abilitato per impostazione predefinita e deve abilitare la funzionalità ASLR in Windows Vista e sistemi operativi successivi. Le versioni precedenti di Windows ignorano questo flag.
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+
+1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
+
+1. Nelle **opzioni aggiuntive**, immettere `/HIGHENTROPYVA` o `/HIGHENTROPYVA:NO`.
+
+## <a name="see-also"></a>Vedere anche
+
+- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)
+- [Opzioni del linker](../../build/reference/linker-options.md)
+- [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
+- [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
+- [Difese di sicurezza Software ISV di Windows](https://msdn.microsoft.com/library/bb430720.aspx)

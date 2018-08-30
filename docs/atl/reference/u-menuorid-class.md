@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884737"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211187"
 ---
 # <a name="umenuorid-class"></a>Classe u_menuorid
 Questa classe fornisce wrapper `CreateWindow` e `CreateWindowEx`.  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>Note  
  Classe dell'adattatore in questo argomento consente di eseguire gli ID (UINTs) o gli handle di menu (HMENUs) deve essere passato a una funzione senza un cast esplicito da parte del chiamante.  
   
- Questa classe è progettata per l'implementazione del wrapper per l'API di Windows, in particolare [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funzioni, entrambi accettare un argomento HMENU che può essere una finestra figlio identificatore (UINT) anziché un handle di menu. Ad esempio, è possibile visualizzare questa classe in uso come parametro per [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Questa classe è progettata per l'implementazione del wrapper per l'API di Windows, in particolare [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funzioni, entrambi accettare un argomento HMENU che può essere una finestra figlio identificatore (UINT) anziché un handle di menu. Ad esempio, è possibile visualizzare questa classe in uso come parametro per [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
  La classe definisce due overload del costruttore: uno accetta un argomento UINT e l'altro accetta un argomento HMENU. L'argomento UINT è sufficiente eseguire il cast a un HMENU nel costruttore e il risultato archiviato nel membro dati della classe, [m_hMenu](#_u_menuorid__m_hmenu). L'argomento del costruttore HMENU verrà archiviato direttamente, senza conversione.  

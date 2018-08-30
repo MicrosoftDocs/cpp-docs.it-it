@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852281"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214782"
 ---
 # <a name="example-implementing-a-property-page"></a>Esempio: Implementazione di una pagina delle proprietà
 In questo esempio viene illustrato come creare una pagina delle proprietà che consente di visualizzare e consente di modificare, le proprietà del [classi documento](../mfc/document-classes.md) interfaccia.  
@@ -70,7 +70,7 @@ In questo esempio viene illustrato come creare una pagina delle proprietà che c
  Questi controlli verranno utilizzati per visualizzare il nome del file di documento e il relativo stato di sola lettura.  
   
 > [!NOTE]
->  La risorsa finestra di dialogo non include un frame o comandi di pulsanti, e non ha l'aspetto a schede che potrebbe prevedere. Queste funzionalità sono fornite da un frame della pagina di proprietà, ad esempio quello creato chiamando [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  La risorsa finestra di dialogo non include un frame o comandi di pulsanti, e non ha l'aspetto a schede che potrebbe prevedere. Queste funzionalità sono fornite da un frame della pagina di proprietà, ad esempio quello creato chiamando [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).  
   
 ##  <a name="vcconadding_message_handlers"></a> Aggiunta di gestori di messaggi  
  Con i controlli attivati, è possibile aggiungere gestori di messaggi per aggiornare lo stato della pagina dirty quando cambia il valore di uno dei controlli:  

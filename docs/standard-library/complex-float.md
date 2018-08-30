@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bf266e11f975e3ce01e5359c1dac65b46a42435a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954005"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221343"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-Descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **float * * *,* il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.
+Descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **float**, il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametri
 
-*_RealVal* il valore di tipo **float** per la parte reale del numero complesso da costruire.
+*_RealVal*<br/>
+Valore di tipo **float** per la parte reale del numero complesso che viene costruito.
 
-*_ImagVal* il valore di tipo **float** per la parte immaginaria del numero complesso da costruire.
+*_ImagVal*<br/>
+Valore di tipo **float** per la parte immaginaria del numero complesso che viene costruito.
 
-*complexNum* il numero complesso di tipo **doppie** o di tipo **long double** cui parti reale e immaginarie vengono usate per inizializzare un numero complesso di tipo **float**in fase di costruzione.
+*complexNum*<br/>
+Numero complesso di tipo **doppie** o di tipo **long double** cui parti reale e immaginarie vengono usate per inizializzare un numero complesso di tipo **float** in fase di costruzione.
 
 ## <a name="return-value"></a>Valore restituito
 

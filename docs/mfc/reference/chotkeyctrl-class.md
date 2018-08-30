@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a7f5cee986ad82790870bfa7684a99c60dc462e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337258"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206266"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 Fornisce la funzionalità del controllo tasto di scelta comune di Windows.  
@@ -75,7 +75,7 @@ class CHotKeyCtrl : public CWnd
   
  Quando l'utente ha scelto una combinazione di tasti, l'applicazione può recuperare la combinazione di chiave specificata dal controllo e utilizzare il messaggio di messaggio WM_SETHOTKEY per configurare il tasto di scelta rapida nel sistema. Ogni volta che l'utente preme il tasto di scelta rapida in seguito, da qualsiasi parte del sistema, la finestra specificata nel messaggio di messaggio WM_SETHOTKEY riceve un messaggio WM_SYSCOMMAND specificando SC_HOTKEY. Questo messaggio è attiva la finestra che lo riceve. Il tasto di scelta rapida rimane valido finché l'applicazione che ha chiamato WM_SETHOTKEY non viene chiusa.  
   
- Questo meccanismo è diverso dal supporto delle chiavi attivo che varia a seconda di Windows e il messaggio WM_HOTKEY [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) e [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funzioni.  
+ Questo meccanismo è diverso dal supporto delle chiavi attivo che varia a seconda di Windows e il messaggio WM_HOTKEY [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) e [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) funzioni.  
   
  Per altre informazioni sull'uso `CHotKeyCtrl`, vedere [controlli](../../mfc/controls-mfc.md) e [usando CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
@@ -111,7 +111,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *dwStyle*  
- Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Visualizzare [stili dei controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775498) nel SDK di Windows per altre informazioni.  
+ Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Visualizzare [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows per altre informazioni.  
   
  *Rect*  
  Specifica del controllo tasto di scelta dimensione e la posizione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [struttura RECT](../../mfc/reference/rect-structure1.md).  
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
   
  *dwStyle*  
- Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Per altre informazioni, vedere [stili dei controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775498) nel SDK di Windows.  
+ Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Per altre informazioni, vedere [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows.  
   
  *Rect*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
   
  *pParentWnd*  
  Puntatore alla finestra padre del controllo.  

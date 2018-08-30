@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7c5f66975d8d9904d1a4a8f2d26d4fe98ecfdd40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571405"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223025"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -79,7 +79,7 @@ n_sep_by_space|Impostare su 1 se il simbolo di valuta è separato con uno spazio
 p_sign_posn|Posizione del segno positivo in quantità monetarie formattata non negative.
 n_sign_posn|Posizione del segno positivo in quantità monetarie formattata negative.
 
-Fatta eccezione per quanto specificati, membri del **lconv** struttura contenenti `char *` e `wchar_t *` versioni sono puntatori alle stringhe. Uno di questi uguale a **""** (o **L ""** per **wchar_t \*** ) è di lunghezza zero oppure non è supportata nelle impostazioni locali correnti. Si noti che **decimal_point** e **_W_decimal_point** sono sempre supportati e di lunghezza diversa da zero.
+Fatta eccezione per quanto specificati, membri del **lconv** struttura contenenti `char *` e `wchar_t *` versioni sono puntatori alle stringhe. Uno di questi uguale a **""** (o **L ""** per **wchar_t** <strong>\*</strong>) è di lunghezza zero oppure non è supportata nell'attuale impostazioni locali. Si noti che **decimal_point** e **_W_decimal_point** sono sempre supportati e di lunghezza diversa da zero.
 
 Il **char** membri della struttura sono numeri non negativi piccoli, non caratteri. Qualsiasi membro tra questi uguale a **CHAR_MAX** non è supportato nelle impostazioni locali correnti.
 

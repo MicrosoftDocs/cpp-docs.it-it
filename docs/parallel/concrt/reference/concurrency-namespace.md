@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bf60ecf57a23de52575e3e2563c07e4f574194a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 324acb33998246933b0c426357368247c6689c47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538457"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211317"
 ---
 # <a name="concurrency-namespace"></a>Spazio dei nomi concurrency
 Lo spazio dei nomi `Concurrency` fornisce classi e funzioni che consentono l'accesso al runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md) (Runtime di concorrenza).  
@@ -52,7 +52,7 @@ namespace concurrency;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Concurrency::Extensibility Namespace](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
+|[Concurrency::Extensibility Namespace](https://msdn.microsoft.com/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Definizioni typedef  
   
@@ -135,7 +135,7 @@ namespace concurrency;
 |[Classe structured_task_group](structured-task-group-class.md)|La classe `structured_task_group` rappresenta una raccolta altamente strutturata di lavoro parallelo. È possibile mettere in coda attività parallele singole a un `structured_task_group` usando gli oggetti `task_handle`, e attenderne il completamento, oppure annullare il gruppo di attività prima di aver terminato l'esecuzione, interrompendo in tal modo qualsiasi attività che non abbia avviato l'esecuzione.|  
 |[Classe target_block](target-block-class.md)|La classe `target_block` corrisponde a una classe base astratta che mette a disposizione la funzionalità di gestione dei collegamenti di base e il controllo degli errori per blocchi di sola destinazione.|  
 |[Classe task (runtime di concorrenza)](task-class.md)|Classe `task` Parallel Patterns Library (PPL). Un oggetto `task` rappresenta il lavoro che può essere eseguito in modo asincrono e contemporaneamente con altre attività e il lavoro parallelo prodotto da algoritmi paralleli nel runtime di concorrenza. Produce un risultato di tipo `_ResultType` dopo il corretto completamento. Le attività di tipo `task<void>` non producono risultati. È possibile attendere il completamento di un'attività e annullarla indipendentemente da altre attività. È anche possibile comporla con altre attività usando i criteri continuations(`then`), join(`when_all`) e choice(`when_any`).|  
-|[Classe task_canceled](task-canceled-class.md)|Questa classe descrive un'eccezione generata dal livello di attività PPL per forzare l'annullamento dell'attività corrente. Viene inoltre generata per il `get()` metodo sul [attività](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), per un'attività annullata.|  
+|[Classe task_canceled](task-canceled-class.md)|Questa classe descrive un'eccezione generata dal livello di attività PPL per forzare l'annullamento dell'attività corrente. Viene inoltre generata per il `get()` metodo sul [attività](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f), per un'attività annullata.|  
 |[Classe task_completion_event](task-completion-event-class.md)|La classe `task_completion_event` consente di ritardare l'esecuzione di un'attività fino a quando non viene soddisfatta una condizione oppure di avviare un'attività in risposta a un evento esterno.|  
 |[Classe task_continuation_context](task-continuation-context-class.md)|La classe `task_continuation_context` consente di specificare dove eseguire una continuazione. È utile solo utilizzare questa classe da un'app UWP. Per le app non di Windows Runtime, il contesto di esecuzione della continuazione attività è determinato dal runtime e non è configurabile.|  
 |[Classe task_group](task-group-class.md)|La classe `task_group` rappresenta una raccolta di lavoro parallelo che può essere messa in attesa o annullata.|  
@@ -194,7 +194,7 @@ namespace concurrency;
 |[Funzione asend](concurrency-namespace-functions.md#asend)|Di overload. Un'operazione di invio asincrona che pianifica un'attività per propagare i dati nel blocco di destinazione.|  
 |[Funzione cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Annulla l'attività attualmente in esecuzione. Questa funzione può essere chiamata dal corpo di un'attività per interrompere l'esecuzione dell'attività e forzarne il passaggio allo stato `canceled`.<br /><br /> Chiamare questa funzione non è uno scenario supportato se non si è all'interno del corpo di un oggetto `task`. Questa operazione provocherà un comportamento non definito, ad esempio un arresto anomalo o un blocco nell'applicazione.|  
 |[Funzione create_async](concurrency-namespace-functions.md#create_async)|Crea un costrutto asincrono di Windows Runtime in base a un'espressione lambda o un oggetto funzione fornito dall'utente. Il tipo restituito `create_async` è uno tra `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` o `IAsyncOperationWithProgress<TResult, TProgress>^` in base alla firma dell'espressione lambda passata al metodo.|  
-|[Funzione create_task](concurrency-namespace-functions.md#create_task)|Di overload. Crea una libreria PPL [attività](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) oggetto. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.|  
+|[Funzione create_task](concurrency-namespace-functions.md#create_task)|Di overload. Crea una libreria PPL [attività](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) oggetto. `create_task` può essere usato ovunque si sarebbe usato un costruttore di attività. Viene fornito principalmente per comodità, in quanto consente l'uso della parola chiave `auto` durante la creazione delle attività.|  
 |[Funzione CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Restituisce un'interfaccia che rappresenta l'istanza singleton di Gestione risorse del runtime di concorrenza. Gestione risorse è responsabile dell'assegnazione di risorse a utilità di pianificazione che vogliono cooperare tra loro.|  
 |[Funzione DisableTracing](concurrency-namespace-functions.md#disabletracing)|Disabilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW non viene registrata per impostazione predefinita.|  
 |[Funzione EnableTracing](concurrency-namespace-functions.md#enabletracing)|Abilita la tracciatura nel runtime di concorrenza. Questa funzione è deprecata poiché la traccia ETW è ora attivata per impostazione predefinita.|  

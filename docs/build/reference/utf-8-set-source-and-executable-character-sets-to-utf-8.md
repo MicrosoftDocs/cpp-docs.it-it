@@ -1,5 +1,5 @@
 ---
-title: -utf-8 (Imposta origine e file eseguibile di set di caratteri UTF-8) | Documenti Microsoft
+title: -utf-8 (Imposta origine ed eseguibili set di caratteri UTF-8) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90520cd9ad4af484714306c37567ab041a826fcc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9002d1989d9f46de29efb7b7c9a940315a99d2b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377495"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214802"
 ---
-# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Imposta origine ed eseguibile set di caratteri UTF-8)
-Specifica il set di caratteri di origine e del set di caratteri di esecuzione come UTF-8.  
+# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (eseguibili e imposta origine set di caratteri UTF-8)
+Specifica del set di caratteri e caratteri di esecuzione impostato come UTF-8.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,23 +34,23 @@ Specifica il set di caratteri di origine e del set di caratteri di esecuzione co
 ```  
   
 ## <a name="remarks"></a>Note  
- È possibile utilizzare il **/utf-8** opzione per specificare il carattere di origine e di esecuzione imposta la codifica UTF-8. Equivale a specificare **/origine-charset:utf-/execution 8-charset:utf-8** nella riga di comando. Una di queste opzioni anche consente il **/validate-charset** opzione per impostazione predefinita. Per un elenco di identificatori di pagina di codice è supportata e i nomi del set di caratteri, vedere [codice pagina identificatori](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
+ È possibile usare la **/utf-8** opzione per specificare set di caratteri di origine e di esecuzione, come la codifica UTF-8. Equivale a specificare **/Source -charset:utf-/execution 8-charset:utf-8** nella riga di comando. Una di queste opzioni anche Abilita il **/Validate/CharSet** opzione per impostazione predefinita. Per un elenco di identificatori di pagina di codice è supportata e i nomi dei set di caratteri, vedere [identificatori di pagina codice](/windows/desktop/Intl/code-page-identifiers).  
   
- Per impostazione predefinita, Visual Studio rileva un contrassegno di ordine dei byte per determinare se il file di origine è in un formato di codifica Unicode, ad esempio UTF-16 o UTF-8. Se viene individuato alcun indicatore di ordine dei byte, si presuppone che il file di origine viene codificato utilizzando la pagina di codice utente corrente, a meno che non è specificata una tabella codici **/utf-8** o **/source-charset** opzione. Visual Studio consente di salvare il codice sorgente C++ utilizzando una delle codifiche di caratteri diversi. Per informazioni sui set di caratteri di origine e di esecuzione, vedere [set di caratteri](../../cpp/character-sets.md) nella documentazione del linguaggio.  
+ Per impostazione predefinita, Visual Studio rileva un contrassegno di ordine dei byte per determinare se il file di origine è in un formato con codifica Unicode, ad esempio UTF-16 o UTF-8. Se viene individuato alcun indicatore ordine byte, si presuppone che il file di origine viene codificato utilizzando la tabella codici utente corrente, a meno che non è stato specificato una tabella codici usando **/utf-8** o nella **/source-charset** opzione. Visual Studio consente di salvare il codice sorgente C++, utilizzando una delle diverse codifiche di caratteri. Per informazioni sui set di caratteri di origine e di esecuzione, vedere [set di caratteri](../../cpp/character-sets.md) nella documentazione del linguaggio.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per ulteriori informazioni, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Espandere il **le proprietà di configurazione**, **C/C++**, **riga di comando** cartella.  
+2.  Espandere la **le proprietà di configurazione**, **C/C++**, **riga di comando** cartella.  
   
-3.  In **opzioni avanzate**, aggiungere il **/utf-8** opzione e specificare la codifica preferita.  
+3.  Nelle **opzioni avanzate**, aggiungere il **/utf-8** opzione e specificare la codifica preferita.  
   
-4.  Scegliere **OK** per salvare le modifiche.  
+4.  Scegli **OK** per salvare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [/Execution-CharSet (impostare esecuzione Character Set)](../../build/reference/execution-charset-set-execution-character-set.md)   
- [/Source-CharSet (impostare origine Character Set)](../../build/reference/source-charset-set-source-character-set.md)   
+ [/Execution-CharSet (set esecuzione Set di caratteri)](../../build/reference/execution-charset-set-execution-character-set.md)   
+ [/Source-CharSet (Imposta origine Set di caratteri)](../../build/reference/source-charset-set-source-character-set.md)   
  [/validate/charset (convalida per i caratteri compatibili)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

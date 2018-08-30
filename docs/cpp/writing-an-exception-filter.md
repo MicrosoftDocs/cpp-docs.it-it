@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 447f843bcc8f07d76084d1db68890237474ce200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462118"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222152"
 ---
 # <a name="writing-an-exception-filter"></a>Scrittura di un filtro eccezioni
 È possibile gestire un'eccezione passando al livello del gestore eccezioni o continuando l'esecuzione. Invece di usare il codice del gestore eccezioni per gestire e passare l'eccezione, è possibile usare *filtro* per risolvere il problema e quindi, tramite la restituzione di -1, ripristinare il flusso normale senza cancellare lo stack.  
   
 > [!NOTE]
->  Non è possibile continuare l'esecuzione di alcune eccezioni. Se *filtro* valuta da -1 per tale eccezione, il sistema genera una nuova eccezione. Quando si chiama [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552), si determina se l'eccezione continuerà.  
+>  Non è possibile continuare l'esecuzione di alcune eccezioni. Se *filtro* valuta da -1 per tale eccezione, il sistema genera una nuova eccezione. Quando si chiama [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552), si determina se l'eccezione continuerà.  
   
  Ad esempio, il codice seguente usa una chiamata di funzione nel *filtro* espressione: questa funzione gestisce il problema e quindi restituisce -1 per riprendere il normale flusso di controllo:  
   
@@ -56,7 +56,7 @@ int Eval_Exception ( int n_except ) {
   
  È consigliabile usare una chiamata di funzione nel *filtro* espressione ogni volta che *filtro* deve eseguire operazioni complesse. La valutazione dell'espressione comporta l'esecuzione della funzione, in questo caso, `Eval_Exception`.  
   
- Si noti l'uso del [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) per determinare l'eccezione. È necessario chiamare questa funzione all'interno del filtro stesso. `Eval_Exception` non è possibile chiamare `GetExceptionCode`, ma deve avere il codice di eccezione passato ad esso.  
+ Si noti l'uso del [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) per determinare l'eccezione. È necessario chiamare questa funzione all'interno del filtro stesso. `Eval_Exception` non è possibile chiamare `GetExceptionCode`, ma deve avere il codice di eccezione passato ad esso.  
   
  Questo gestore passa il controllo a un altro gestore a meno che l'eccezione non sia un Integer o un overflow a virgola mobile. In tal caso, il gestore chiama una funzione (`ResetVars` è solo un esempio, non una funzione API) per reimpostare alcune variabili globali. *Statement-block-2*, che in questo esempio non è vuoto, può mai essere eseguito perché `Eval_Exception` non restituisce mai EXCEPTION_EXECUTE_HANDLER (1).  
   

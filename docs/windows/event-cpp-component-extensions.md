@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0be744b8f703bfdc6487995e4a082e5b4c1561c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606840"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206461"
 ---
 # <a name="event--c-component-extensions"></a>evento (Estensioni del componente C++)
 
@@ -85,7 +85,7 @@ Un blocco eventi consente di dichiarare in modo esplicito e personalizzare il co
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [eventi (C + c++ /CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Per altre informazioni, vedere [eventi (C + c++ /CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
 
 Se si desidera aggiungere e rimuovere un gestore eventi, è necessario salvare la struttura EventRegistrationToken restituita dall'operazione di aggiunta. Quindi, nell'operazione di rimozione è necessario usare la struttura EventRegistrationToken salvata per identificare il gestore eventi da rimuovere.
 

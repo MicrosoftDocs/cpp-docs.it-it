@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 21910a85dfecf6bd1e66b4ce0df366e3841f3c36
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575484"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204128"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl (classe)
 Fornisce l'implementazione per i set di righe dello schema.  
@@ -145,7 +145,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
   
 #### <a name="parameters"></a>Parametri  
  *pUnkOuter*  
- [in] Un outer [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) durante l'aggregazione, in caso contrario, NULL.  
+ [in] Un outer [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) durante l'aggregazione, in caso contrario, NULL.  
   
  *cRestrictions*  
  [in] Il conteggio delle limitazioni applicate al set di righe dello schema.  
@@ -279,7 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  L'implementazione di questa funzione richiede che l'utente di disporre di una mappa di schema nella classe di sessione. Usando le informazioni della mappa di schema, la funzione risponde con la matrice dei GUID per gli schemi nella mappa. Questa operazione rappresenta gli schemi supportati dal provider.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Membri IDBSchemaRowsetImpl (classe)](http://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [Membri IDBSchemaRowsetImpl (classe)](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [Classi Rowset dello schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [Supporto dei rowset dello Schema](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    

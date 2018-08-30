@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336861"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221271"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 Quando viene eseguito un programma, può verificarsi una serie di condizioni anormali ed errori delle "eccezioni". Potrebbero includere esaurimento di memoria, errori di allocazione di risorse ed errori per trovare i file.  
@@ -350,7 +350,7 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>Note  
- Chiamare questa funzione se le chiamate a allocatori di memoria di sistema sottostante (ad esempio **malloc** e il [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funzione Windows) esito negativo. Non è necessaria per chiamare **nuove** perché **nuovo** verrà generata un'eccezione di memoria automaticamente se l'allocazione di memoria ha esito negativo.  
+ Chiamare questa funzione se le chiamate a allocatori di memoria di sistema sottostante (ad esempio **malloc** e il [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) funzione Windows) esito negativo. Non è necessaria per chiamare **nuove** perché **nuovo** verrà generata un'eccezione di memoria automaticamente se l'allocazione di memoria ha esito negativo.  
   
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
@@ -444,7 +444,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  Handle per un codice di risultato che indica il motivo dell'eccezione.  
   
 ### <a name="remarks"></a>Note  
- La versione che accetta HRESULT come argomento converte tale codice di risultato nel SCODE corrispondente. Per altre informazioni sul valore HRESULT e SCODE, vedere [Structure of COM Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) nel SDK di Windows.  
+ La versione che accetta HRESULT come argomento converte tale codice di risultato nel SCODE corrispondente. Per altre informazioni sul valore HRESULT e SCODE, vedere [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes) nel SDK di Windows.  
   
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdao. h  

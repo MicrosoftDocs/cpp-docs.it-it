@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4312 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4312 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18039e44a5616330c66603e448bcafd6d18ff7aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b30d020532935c925b1ecab25d17cd43a7e8663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279675"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205902"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>Avviso del compilatore (livello 1) C4312
 'operazione': conversione da 'tipo1' a 'tipo2', di dimensioni maggiori  
@@ -30,7 +30,7 @@ ms.locfileid: "33279675"
   
  Può essere una conversione non affidabile anche per i valori dei puntatori a 32 bit quando si verifica l'estensione del segno. Se un numero intero a 32 bit negativo viene assegnato a un tipo di puntatore a 64 bit, l'estensione del segno fa in modo che il valore del puntatore faccia riferimento a un indirizzo di memoria diverso dal valore del numero intero.  
   
- Questo avviso viene generato solo per le destinazioni di compilazione a 64 bit. Per ulteriori informazioni, vedere [regole per usare i puntatori](http://msdn.microsoft.com/library/windows/desktop/aa384242).  
+ Questo avviso viene generato solo per le destinazioni di compilazione a 64 bit. Per altre informazioni, vedere [regole per usare i puntatori](/windows/desktop/WinProg64/rules-for-using-pointers).  
   
  L'esempio di codice seguente genera l'errore C4312 quando viene eseguita la compilazione per le destinazioni a 64 bit:  
   

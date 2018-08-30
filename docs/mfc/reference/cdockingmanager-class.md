@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fcaf93823e504f3631d50de4f981ae30e882e9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200270"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 Implementa la funzionalità principale che controlla il layout di ancoraggio in una finestra cornice principale.  
@@ -379,7 +379,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="parameters"></a>Parametri  
  [in] *hdwp*  
- Specifica la struttura della posizione finestra posticipata. Per altre informazioni, vedere [Tipi di dati Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Specifica la struttura della posizione finestra posticipata. Per altre informazioni, vedere [tipi di dati Windows](/windows/desktop/WinProg/windows-data-types).  
   
 ### <a name="remarks"></a>Note  
   
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore per il [gestore di ancoraggio intelligente](http://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
+ Un puntatore per il [gestore di ancoraggio intelligente](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Recupera un puntatore per il gestore di ancoraggio intelligente.  

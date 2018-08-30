@@ -1,5 +1,5 @@
 ---
-title: -constexpr (valutazione di constexpr di controllo) | Documenti Microsoft
+title: -constexpr (controlla la valutazione di constexpr) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,47 +19,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373959"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202574"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (valutazione di constexpr di controllo)  
+# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (controlla la valutazione di constexpr)  
   
-Utilizzare il **/constexpr** opzioni del compilatore per controllare i parametri per `constexpr` valutazione in fase di compilazione.  
+Usare la **/constexpr** le opzioni del compilatore per i parametri di controllo per **constexpr** valutazione in fase di compilazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-> /constexpr:Depth*N*  
-> /constexpr:BackTrace*N*  
-> /constexpr: Steps*N*  
+> **/constexpr: Depth**<em>N</em>  
+> **/constexpr: BackTrace**<em>N</em>  
+> **/constexpr: Steps**<em>N</em>  
   
 ## <a name="arguments"></a>Argomenti  
   
-**profondità * * * N*  
-Limitare la profondità della ricorsiva `constexpr` della chiamata di funzione *N* livelli. Il valore predefinito è 512.  
+**profondità**<em>N</em>  
+Limitare la profondità della ricorsiva **constexpr** alla chiamata di funzione *N* livelli. Il valore predefinito è 512.  
   
-**BackTrace * * * N*  
-Mostra fino a *N* `constexpr` valutazioni di diagnostica. Il valore predefinito è 10.  
+**BackTrace**<em>N</em>  
+Fino a mostrare *N* **constexpr** valutazioni in diagnostica. Il valore predefinito è 10.  
   
-**passaggi * * * N*  
-Terminare `constexpr` valutazione dopo *N* passaggi. Il valore predefinito è 100.000.  
+**Questa procedura**<em>N</em>  
+Terminare **constexpr** valutazione dopo *N* passaggi. Il valore predefinito è 100.000.  
   
 ## <a name="remarks"></a>Note  
   
-Il **/constexpr** opzioni del compilatore controllano in fase di compilazione di valutazione di `constexpr` espressioni. Passaggi di valutazione, i livelli di ricorsione e profondità backtrace vengono controllati per impedire al compilatore di spesa troppo tempo per `constexpr` valutazione. Per ulteriori informazioni sul `constexpr` elemento di linguaggio, vedere [constexpr (C++)](../../cpp/constexpr-cpp.md).  
+Il **/constexpr** valutazione in fase di compilazione di controllare le opzioni del compilatore **constexpr** espressioni. Passaggi per la valutazione, i livelli di ricorsione e profondità backtrace vengono controllati per impedire al compilatore di dedicare troppo tempo alla **constexpr** valutazione. Per altre informazioni sul **constexpr** elemento del linguaggio, vedere [constexpr (C++)](../../cpp/constexpr-cpp.md).  
 
 Il **/constexpr** opzioni sono disponibili a partire da Visual Studio 2015.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1. Aprire il progetto **pagine delle proprietà** la finestra di dialogo.   
+1. Aprire il progetto **pagine delle proprietà** nella finestra di dialogo.   
   
-2. In **le proprietà di configurazione**, espandere il **C/C++** cartella e scegliere il **riga di comando** pagina delle proprietà.  
+2. Sotto **le proprietà di configurazione**, espandere il **C/C++** cartella e scegliere il **riga di comando** pagina delle proprietà.  
   
-3. Immettere eventuali **/constexpr** opzioni del compilatore di **opzioni aggiuntive** casella. Scegliere **OK** o **applica** per salvare le modifiche.  
+3. Immettere qualsiasi **/constexpr** le opzioni del compilatore nel **opzioni aggiuntive** casella. Scegli **OK** oppure **applica** per salvare le modifiche.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   

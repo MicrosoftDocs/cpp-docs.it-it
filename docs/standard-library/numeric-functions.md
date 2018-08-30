@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960252"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199188"
 ---
 # <a name="ltnumericgt-functions"></a>Funzioni &lt;numeric&gt;
 
@@ -62,7 +62,7 @@ La somma dei *val* e tutti gli elementi nell'intervallo specificato per la prima
 
 ### <a name="remarks"></a>Note
 
-Il valore iniziale assicura che sia un risultato ben definito se l'intervallo è vuoto, nel qual caso *val* viene restituito. L'operazione binaria non deve essere necessariamente associativa o commutativa. Il risultato viene inizializzato sul valore iniziale *val* e quindi *risultato*  =  `binary_op` ( *risultato*, **\*** `Iter`) viene calcolato in modo iterativo attraverso l'intervallo, in cui `Iter` è un iteratore che punta all'elemento successivo nell'intervallo. L'intervallo deve essere valido e la complessità è in linea con le dimensioni dell'intervallo. Il tipo restituito dell'operatore binario deve essere convertibile in **Type** per garantire la chiusura durante l'iterazione.
+Il valore iniziale assicura che sia un risultato ben definito se l'intervallo è vuoto, nel qual caso *val* viene restituito. L'operazione binaria non deve essere necessariamente associativa o commutativa. Il risultato viene inizializzato sul valore iniziale *val* e quindi *risultato*  =  `binary_op` ( *risultato*, <strong>\*</strong> `Iter`) viene calcolato in modo iterativo attraverso l'intervallo, in cui `Iter` è un iteratore che punta all'elemento successivo nell'intervallo. L'intervallo deve essere valido e la complessità è in linea con le dimensioni dell'intervallo. Il tipo restituito dell'operatore binario deve essere convertibile in **Type** per garantire la chiusura durante l'iterazione.
 
 ### <a name="example"></a>Esempio
 

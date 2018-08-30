@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a48cb013ceb7e3269721cdef3c2f8982d98a0112
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595987"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212812"
 ---
 # <a name="property--c-component-extensions"></a>proprietà (Estensioni del componente C++)
 
@@ -96,7 +96,7 @@ Il corpo del metodo di proprietà della funzione di accesso set o get. Il *prope
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-Per altre informazioni, vedere [delle proprietà (C + c++ /CX)](http://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Per altre informazioni, vedere [delle proprietà (C + c++ /CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
 
 ### <a name="requirements"></a>Requisiti
 

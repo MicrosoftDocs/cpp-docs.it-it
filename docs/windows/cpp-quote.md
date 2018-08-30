@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1b9ba00c8728c86935b7c64105d03bb4f19b10
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da9e378ff75ec67660b0c29a5765be88a2c06496
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610600"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205666"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -47,7 +47,7 @@ Il **cpp_quote** C++ attributo è utile se si desidera inserire una direttiva de
 
 È anche possibile usare **cpp_quote** e generare un file con estensione h come parte della compilazione MIDL. Ad esempio, se si dispone di un file di intestazione C++ che utilizza attributi IDL C++, ma non è possibile usare questo file per alcune attività, quindi è possibile compilarlo per creare un file generati da MIDL. h, che dovrebbe essere possibile usare.
 
-Il **cpp_quote** attributo ha la stessa funzionalità come la [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) attributo MIDL.
+Il **cpp_quote** attributo ha la stessa funzionalità come la [cpp_quote](/windows/desktop/Midl/cpp-quote) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

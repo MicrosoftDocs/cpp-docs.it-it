@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839068647a6f4d118e1536f5fb4e0852657d963f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d67165d3869ffdd60eff86fa8c33abf275e070b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209777"
 ---
 # <a name="coledatasource-class"></a>Classe COleDataSource
 Funge da cache in cui un'applicazione inserisce i dati che fornirà durante le operazioni di trasferimento dei dati, ad esempio gli Appunti o le operazioni di trascinamento e rilascio.  
@@ -92,7 +92,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="remarks"></a>Note  
  È possibile creare origini dati OLE direttamente. In alternativa, il [COleClientItem](../../mfc/reference/coleclientitem-class.md) e [COleServerItem](../../mfc/reference/coleserveritem-class.md) classi creano origini dati OLE in risposta alla loro `CopyToClipboard` e `DoDragDrop` funzioni membro. Visualizzare [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) per una breve descrizione. Eseguire l'override di `OnGetClipboardData` la funzione membro di classe dell'elemento elemento o un server del client per aggiungere altri formati degli Appunti per i dati nell'origine dati OLE creato per il `CopyToClipboard` o `DoDragDrop` funzione membro.  
   
- Ogni volta che si vuole preparare i dati per un trasferimento, si deve creare un oggetto di questa classe e compilarlo con i dati tramite il metodo più appropriato per i dati. Il modo in cui viene inserito in un'origine dati è influenzato direttamente da fatto che i dati vengono forniti immediatamente (per il rendering immediato) oppure on demand (rendering ritardati). Per tutti i formati degli Appunti in cui vengono forniti dati passando il formato degli Appunti da usare (ed eventualmente [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura), chiamare [DelayRenderData](#delayrenderdata).  
+ Ogni volta che si vuole preparare i dati per un trasferimento, si deve creare un oggetto di questa classe e compilarlo con i dati tramite il metodo più appropriato per i dati. Il modo in cui viene inserito in un'origine dati è influenzato direttamente da fatto che i dati vengono forniti immediatamente (per il rendering immediato) oppure on demand (rendering ritardati). Per tutti i formati degli Appunti in cui vengono forniti dati passando il formato degli Appunti da usare (ed eventualmente [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura), chiamare [DelayRenderData](#delayrenderdata).  
   
  Per altre informazioni sulle origini dati e trasferimento dei dati, vedere l'articolo [oggetti dati e origini dati (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Inoltre, l'articolo [negli Appunti argomenti](../../mfc/clipboard.md) descrive il meccanismo degli Appunti OLE.  
   
@@ -118,26 +118,26 @@ void CacheData(
   
 ### <a name="parameters"></a>Parametri  
  *cfFormat*  
- Il formato degli Appunti in cui deve essere offerti i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (funzione).  
+ Il formato degli Appunti in cui deve essere offerti i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (funzione).  
   
  *lpStgMedium*  
- Punta a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura che contiene i dati nel formato specificato.  
+ Punta a un [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura che contiene i dati nel formato specificato.  
   
  *lpFormatEtc*  
- Punta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che descrive il formato in cui deve essere offerti i dati. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
+ Punta a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che descrive il formato in cui deve essere offerti i dati. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
   
 ### <a name="remarks"></a>Note  
  È necessario fornire i dati, perché questa funzione fornisce con rendering immediato. I dati viene memorizzato nella cache fino a quando necessario.  
   
- Fornire i dati usando un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura. È anche possibile usare il `CacheGlobalData` è sufficientemente piccolo da trasferire in modo efficiente utilizzando un HGLOBAL funzione membro se la quantità di dati fornito.  
+ Fornire i dati usando un [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura. È anche possibile usare il `CacheGlobalData` è sufficientemente piccolo da trasferire in modo efficiente utilizzando un HGLOBAL funzione membro se la quantità di dati fornito.  
   
  Dopo la chiamata a `CacheData` il `ptd` appartenente `lpFormatEtc` e il contenuto del *lpStgMedium* sono di proprietà dall'oggetto dati, non dal chiamante.  
   
  Per usare il rendering ritardato, chiamare il [DelayRenderData](#delayrenderdata) oppure [DelayRenderFileData](#delayrenderfiledata) funzione membro. Per altre informazioni sul rendering ritardato come gestito da MFC, vedere l'articolo [oggetti dati e origini dati: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Per altre informazioni, vedere la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) strutture nel SDK di Windows.  
+ Per altre informazioni, vedere la [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) e [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) strutture nel SDK di Windows.  
   
- Per altre informazioni, vedere [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) nel SDK di Windows.  
+ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) nel SDK di Windows.  
   
 ##  <a name="cacheglobaldata"></a>  COleDataSource:: CacheGlobalData  
  Chiamare questa funzione per specificare un formato in cui i dati sono disponibile durante i dati delle operazioni di trasferimento.  
@@ -151,22 +151,22 @@ void CacheGlobalData(
   
 ### <a name="parameters"></a>Parametri  
  *cfFormat*  
- Il formato degli Appunti in cui deve essere offerti i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (funzione).  
+ Il formato degli Appunti in cui deve essere offerti i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (funzione).  
   
  *hGlobal*  
  Handle per il blocco di memoria globale che contiene i dati nel formato specificato.  
   
  *lpFormatEtc*  
- Punta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che descrive il formato in cui deve essere offerti i dati. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
+ Punta a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che descrive il formato in cui deve essere offerti i dati. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione fornisce i dati utilizzando il rendering immediato, pertanto è necessario fornire i dati quando si chiama la funzione. i dati viene memorizzato nella cache fino a quando necessario. Usare il `CacheData` funzione membro, se si specificano una grande quantità di dati o se si necessita di un supporto di archiviazione strutturata.  
   
  Per usare il rendering ritardato, chiamare il [DelayRenderData](#delayrenderdata) oppure [DelayRenderFileData](#delayrenderfiledata) funzione membro. Per altre informazioni sul rendering ritardato come gestito da MFC, vedere l'articolo [oggetti dati e origini dati: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Per altre informazioni, vedere la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura nel SDK di Windows.  
   
- Per altre informazioni, vedere [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) nel SDK di Windows.  
+ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) nel SDK di Windows.  
   
 ##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  Costruisce un oggetto `COleDataSource`.  
@@ -186,10 +186,10 @@ void DelayRenderData(
   
 ### <a name="parameters"></a>Parametri  
  *cfFormat*  
- Il formato degli Appunti in cui deve essere offerti i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (funzione).  
+ Il formato degli Appunti in cui deve essere offerti i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (funzione).  
   
  *lpFormatEtc*  
- Punta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che descrive il formato in cui deve essere offerti i dati. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
+ Punta a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che descrive il formato in cui deve essere offerti i dati. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione fornisce i dati utilizzando il rendering posticipato, in modo che i dati non vengono forniti immediatamente. Il [routine OnRenderData](#onrenderdata) oppure [OnRenderGlobalData](#onrenderglobaldata) funzione membro viene chiamata per richiedere i dati.  
@@ -198,9 +198,9 @@ void DelayRenderData(
   
  Per usare il rendering immediato, chiamare il [CacheData](#cachedata) oppure [CacheGlobalData](#cacheglobaldata) funzione membro.  
   
- Per altre informazioni, vedere la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura nel SDK di Windows.  
   
- Per altre informazioni, vedere [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) nel SDK di Windows.  
+ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) nel SDK di Windows.  
   
 ##  <a name="delayrenderfiledata"></a>  COleDataSource:: DelayRenderFileData  
  Chiamare questa funzione per specificare un formato in cui i dati sono disponibile durante i dati delle operazioni di trasferimento.  
@@ -213,10 +213,10 @@ void DelayRenderFileData(
   
 ### <a name="parameters"></a>Parametri  
  *cfFormat*  
- Il formato degli Appunti in cui deve essere offerti i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (funzione).  
+ Il formato degli Appunti in cui deve essere offerti i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (funzione).  
   
  *lpFormatEtc*  
- Punta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che descrive il formato in cui deve essere offerti i dati. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
+ Punta a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che descrive il formato in cui deve essere offerti i dati. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione fornisce i dati utilizzando il rendering posticipato, in modo che i dati non vengono forniti immediatamente. Il [OnRenderFileData](#onrenderfiledata) funzione membro viene chiamata per richiedere i dati.  
@@ -225,9 +225,9 @@ void DelayRenderFileData(
   
  Per usare il rendering immediato, chiamare il [CacheData](#cachedata) oppure [CacheGlobalData](#cacheglobaldata) funzione membro.  
   
- Per altre informazioni, vedere la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura nel SDK di Windows.  
   
- Per altre informazioni, vedere [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) nel SDK di Windows.  
+ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) nel SDK di Windows.  
   
 ##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  Chiamare questa funzione per supportare la modifica del contenuto dell'origine dati.  
@@ -240,17 +240,17 @@ void DelaySetData(
   
 ### <a name="parameters"></a>Parametri  
  *cfFormat*  
- Il formato degli Appunti in cui si desidera salvare i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (funzione).  
+ Il formato degli Appunti in cui si desidera salvare i dati. Questo parametro può essere uno dei formati Appunti predefiniti o il valore restituito dalla finestra di Windows nativa [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) (funzione).  
   
  *lpFormatEtc*  
- Punta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che descrive il formato in cui i dati deve essere sostituito. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
+ Punta a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che descrive il formato in cui i dati deve essere sostituito. Specificare un valore per questo parametro se si desidera specificare le informazioni sul formato aggiuntive oltre il formato degli Appunti specificato da *cfFormat*. Se è NULL, vengono usati valori predefiniti per gli altri campi di `FORMATETC` struttura.  
   
 ### <a name="remarks"></a>Note  
  [OnSetData](#onsetdata) verrà chiamato dal framework quando ciò si verifica. Viene usato solo quando il framework restituisce l'origine dati dal [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Se `DelaySetData` non viene chiamato, il `OnSetData` funzione non verrà mai chiamata. `DelaySetData` deve essere chiamato per ogni negli Appunti o `FORMATETC` supporto del formato.  
   
- Per altre informazioni, vedere la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura nel SDK di Windows.  
   
- Per altre informazioni, vedere [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) nel SDK di Windows.  
+ Per altre informazioni, vedere [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) nel SDK di Windows.  
   
 ##  <a name="dodragdrop"></a>  COleDataSource:: DoDragDrop  
  Chiamare il `DoDragDrop` funzione di membro per eseguire un'operazione di trascinamento e rilascio per questa origine dati, in genere un [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) gestore.  
@@ -294,7 +294,7 @@ Punta a un'origine di trascinamento. Se NULL quindi un'implementazione predefini
   
 -   Ritarda ora di Windows 95 o 98 trascinamento viene archiviato in una versione memorizzata nella cache di WIN. INI.  
   
- Per altre informazioni su come trascinare ritardo informazioni vengono archiviate nel Registro di sistema o di. File con estensione INI, vedere [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) nel SDK di Windows.  
+ Per altre informazioni su come trascinare ritardo informazioni vengono archiviate nel Registro di sistema o di. File con estensione INI, vedere [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) nel SDK di Windows.  
   
  Per altre informazioni, vedere l'articolo [trascinamento della selezione: implementazione di un'origine Drop](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
@@ -308,7 +308,7 @@ void Empty();
 ### <a name="remarks"></a>Note  
  Entrambi memorizzati nella cache e formati di rendering ritardo vengono svuotati in modo da poter essere riutilizzati.  
   
- Per altre informazioni, vedere [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) nel SDK di Windows.  
+ Per altre informazioni, vedere [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) nel SDK di Windows.  
   
 ##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  Esegue il rendering dei dati negli Appunti e quindi consente di incollare i dati dagli Appunti dopo la chiusura dell'applicazione.  
@@ -341,10 +341,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>Parametri  
  *lpFormatEtc*  
- Punta al [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che specifica il formato in cui vengono richieste informazioni.  
+ Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.  
   
  *lpStgMedium*  
- Punta a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura in cui i dati sono da restituire.  
+ Punta a un [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura in cui i dati sono da restituire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -356,7 +356,7 @@ virtual BOOL OnRenderData(
   
  Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, è possibile eseguire l'override in una delle altre versioni di questa funzione invece. Se i dati sono piccole e ha dimensione fissa, eseguire l'override `OnRenderGlobalData`. Se i dati in un file o sono di dimensioni variabili, eseguire l'override `OnRenderFileData`.  
   
- Per altre informazioni, vedere la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) strutture, i [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) tipo di enumerazione, e [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) Nella finestra di Windows SDK.  
+ Per altre informazioni, vedere la [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) e [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) strutture, i [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) tipo di enumerazione, e [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Nella finestra di Windows SDK.  
   
 ##  <a name="onrenderfiledata"></a>  :: OnRenderFileData  
  Chiamato dal framework per recuperare i dati nel formato specificato quando il supporto di archiviazione specificato è un file.  
@@ -369,7 +369,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>Parametri  
  *lpFormatEtc*  
- Punta al [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che specifica il formato in cui vengono richieste informazioni.  
+ Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.  
   
  *pFile*  
  Punta a un [CFile](../../mfc/reference/cfile-class.md) oggetto in cui i dati da sottoporre a rendering.  
@@ -382,7 +382,7 @@ virtual BOOL OnRenderFileData(
   
  Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, si potrebbe voler eseguire l'override in una delle altre versioni di questa funzione invece. Se si desidera gestire più supporti di archiviazione, eseguire l'override [routine OnRenderData](#onrenderdata). Se i dati in un file o sono di dimensioni variabili, eseguire l'override `OnRenderFileData`. Per altre informazioni sul rendering ritardato come gestito da MFC, vedere l'articolo [oggetti dati e origini dati: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Per altre informazioni, vedere la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura e [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) nel SDK di Windows.  
+ Per altre informazioni, vedere la [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura e [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) nel SDK di Windows.  
   
 ##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  Chiamato dal framework per recuperare i dati nel formato specificato quando il supporto di archiviazione specificato è la memoria globale.  
@@ -395,7 +395,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>Parametri  
  *lpFormatEtc*  
- Punta al [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che specifica il formato in cui vengono richieste informazioni.  
+ Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.  
   
  *phGlobal*  
  Punta a un handle per la memoria globale in cui i dati sono da restituire. Se uno non è ancora stato allocato, questo parametro può essere NULL.  
@@ -410,7 +410,7 @@ virtual BOOL OnRenderGlobalData(
   
  Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, è possibile eseguire l'override in una delle altre versioni di questa funzione invece. Se si desidera gestire più supporti di archiviazione, eseguire l'override [routine OnRenderData](#onrenderdata). Se i dati in un file o sono di dimensioni variabili, eseguire l'override [OnRenderFileData](#onrenderfiledata). Per altre informazioni sul rendering ritardato come gestito da MFC, vedere l'articolo [oggetti dati e origini dati: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Per altre informazioni, vedere la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura e [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) nel SDK di Windows.  
+ Per altre informazioni, vedere la [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura e [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) nel SDK di Windows.  
   
 ##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  Chiamato dal framework per impostare o sostituire i dati nel `COleDataSource` oggetto nel formato specificato.  
@@ -424,10 +424,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>Parametri  
  *lpFormatEtc*  
- Punta al [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che specifica il formato in cui i dati viene sostituiti.  
+ Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui i dati viene sostituiti.  
   
  *lpStgMedium*  
- Punta al [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura che contiene i dati che andrà a sostituire il contenuto corrente del `COleDataSource` oggetto.  
+ Punta al [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura che contiene i dati che andrà a sostituire il contenuto corrente del `COleDataSource` oggetto.  
   
  *bRelease*  
  Indica chi ha la proprietà del supporto di archiviazione dopo il completamento della chiamata di funzione. Il chiamante decide chi è responsabile del rilascio delle risorse allocate per conto del supporto di archiviazione. Il chiamante esegue questa operazione impostando *bRelease*. Se *bRelease* è diverso da zero, l'origine dei dati acquisisce la proprietà, il rilascio del supporto quando ha finito di usarlo. Quando *bRelease* è 0, il chiamante mantiene la proprietà e l'origine dati è possibile usare il supporto di archiviazione solo per la durata della chiamata.  
@@ -436,11 +436,11 @@ virtual BOOL OnSetData(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- L'origine dati non accetta la proprietà dei dati fino a quando non lo ha ha ottenuto. Vale a dire, acquisire la proprietà non se `OnSetData` restituisce 0. Se l'origine dei dati acquisisce la proprietà, consente di liberare il supporto di archiviazione chiamando il [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) (funzione).  
+ L'origine dati non accetta la proprietà dei dati fino a quando non lo ha ha ottenuto. Vale a dire, acquisire la proprietà non se `OnSetData` restituisce 0. Se l'origine dei dati acquisisce la proprietà, consente di liberare il supporto di archiviazione chiamando il [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) (funzione).  
   
  L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per sostituire i dati nel formato specificato. Si tratta di un'avanzata sottoponibile a override.  
   
- Per altre informazioni, vedere la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) strutture e le [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) e [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) funzioni in Windows SDK.  
+ Per altre informazioni, vedere la [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) e [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) strutture e le [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) e [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) funzioni in Windows SDK.  
   
 ##  <a name="setclipboard"></a>  SetClipboard  
  Inserisce i dati contenuti nel `COleDataSource` oggetti negli Appunti dopo la chiamata a una delle seguenti funzioni: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), oppure [DelayRenderFileData](#delayrenderfiledata).  

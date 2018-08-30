@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 700e8915535a38233b1cd1e55669c1e3c5f372dd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19f49951cad65d3dbf15c406af9ac78a28408d4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591553"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221814"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -84,4 +84,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 [Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
 [Attributi di classe](../windows/class-attributes.md)  
 [Supporto del multithreading per il codice precedente (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)  
-[Apartment neutro](http://msdn.microsoft.com/library/windows/desktop/ms681813)  
+[Apartment neutro](/windows/desktop/cossdk/neutral-apartments)  

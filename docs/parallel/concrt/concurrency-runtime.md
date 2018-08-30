@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0a7a2bcabc045be7493174c8eea2362d074b221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608267"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203943"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele affidabili, scalabili ed efficienti. Innalza il livello di astrazione in modo da evitare di dover gestire i dettagli dell'infrastruttura correlati alla concorrenza. È anche possibile usarlo per specificare i criteri di pianificazione che soddisfano le richieste di qualità del servizio delle applicazioni. Queste risorse permettono di iniziare a usare il runtime di concorrenza.  
@@ -107,7 +107,7 @@ Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele af
   
 |||  
 |-|-|  
-|[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime scritte in C++ e XAML.|  
+|[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime scritte in C++ e XAML.|  
 |[Esempi di codice per il Runtime di concorrenza e la libreria PPL in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornisce le applicazioni di esempio e utilità che illustrano il runtime di concorrenza.|  
 |[Programmazione parallela nel blog del codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|  
 |[Elaborazione parallela in C++ e codice nativo forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|  

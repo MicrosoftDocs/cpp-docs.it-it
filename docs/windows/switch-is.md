@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8c92bc8a0b7ac02bae85697eae047acf117652f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2aaf38745c02c5975eb2a46f135c51b6d7247610
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604964"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213756"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -36,7 +36,7 @@ Specifica l'espressione o un identificatore che agisce come l'unione discriminan
 
 ## <a name="remarks"></a>Note
 
-Il **switch_is** attributi di C++ ha la stessa funzionalità come la [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) attributo MIDL.
+Il **switch_is** attributi di C++ ha la stessa funzionalità come la [switch_is](/windows/desktop/Midl/switch-is) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

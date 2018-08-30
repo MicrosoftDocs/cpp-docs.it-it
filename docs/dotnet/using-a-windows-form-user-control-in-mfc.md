@@ -1,5 +1,5 @@
 ---
-title: Utilizzando un Windows Form controllo utente in MFC | Documenti Microsoft
+title: Controllo di utente utilizzando un Windows Form in MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 1/08/2018
 ms.technology:
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ceb424d6c5061ac5ccafc62d8748be4de3ab3d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33174313"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222108"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Utilizzo di un controllo utente Windows Form in MFC
 
-Utilizzando le classi di supporto di Windows Form di MFC, è possibile ospitare i controlli Windows Form nelle applicazioni MFC come controllo ActiveX in finestre di dialogo MFC o visualizzazioni. Inoltre, Windows Form possono essere ospitati come finestre di dialogo MFC.
+Usa le classi di supporto di MFC Windows Form, è possibile ospitare i controlli Windows Form all'interno delle applicazioni MFC come controllo ActiveX in finestre di dialogo MFC o visualizzazioni. Inoltre, Windows Form possono essere ospitati come finestre di dialogo MFC.
 
 Le sezioni seguenti descrivono come:
 
@@ -37,19 +37,15 @@ Le sezioni seguenti descrivono come:
 
 - Ospitare un controllo utente Windows Form come visualizzazione MFC.
 
-- Ospitare un controllo Windows form come una finestra di dialogo MFC.
+- Ospitare un form di Windows Form come una finestra di dialogo MFC.
 
 > [!NOTE]
-> Integrazione di Windows Form MFC funziona solo nei progetti di collegano in modo dinamico con MFC (progetti in cui `_AFXDLL` è definito).
+> Integrazione dei moduli di Windows di MFC funziona solo nei progetti che si collegano in modo dinamico con MFC (progetti in cui `_AFXDLL` è definito).
 
 > [!NOTE]
-> Quando si compila l'applicazione utilizzando una copia privata (modificata) delle interfacce di Windows Form MFC DLL (mfcmifc80), non riuscirà installare nella Global Assembly Cache solo se si sostituisce la chiave di Microsoft con la propria chiave del fornitore. Per ulteriori informazioni sulla firma degli assembly, vedere [programmazione con assembly](/dotnet/framework/app-domains/programming-with-assemblies) e [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> Quando si compila l'applicazione usando una copia privata (modificata) delle interfacce MFC Windows Forms DLL (mfcmifc80.dll), potrà essere installato nella Global Assembly Cache solo se si sostituisce la chiave di Microsoft con la propria chiave del fornitore. Per altre informazioni sulla firma degli assembly, vedere [programmazione con assembly](/dotnet/framework/app-domains/programming-with-assemblies) e [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Per le applicazioni di esempio tramite Windows Form, vedere [esempio BirthdayPicker: illustra delle risorse di .NET Framework con Windows Form](http://msdn.microsoft.com/ac932aed-5502-4667-be29-709bca435317), [esempio Calculator: calcolatrice tascabile di Windows Form](http://msdn.microsoft.com/2283b516-3b7e-45f2-80c4-fdcfb366ce25)e [ Esempio Scribble: Applicazione di disegno MDI](http://msdn.microsoft.com/f025da3e-659b-4222-b991-554a1b8b2358).
-
-Per un'applicazione di esempio che mostra i Windows Form con MFC, vedere [MFC e integrazione con Windows Form](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
-
-Se l'applicazione MFC utilizza Windows Form, è necessario ridistribuire mfcmifc80 con l'applicazione. Per ulteriori informazioni, vedere [ridistribuzione della libreria MFC](../ide/redistributing-the-mfc-library.md).
+Se l'applicazione MFC Usa Windows Form, è necessario ridistribuire mfcmifc80.dll con l'applicazione. Per altre informazioni, vedere [ridistribuzione della libreria MFC](../ide/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>In questa sezione
 

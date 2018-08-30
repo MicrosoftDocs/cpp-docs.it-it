@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef7db05e8e8eb0a723354bcd6f53fb283aebe0c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4a2684a3aab8480738d4d64a79681f1930113c71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880885"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218927"
 ---
 # <a name="idataobjectimpl-class"></a>Classe IDataObjectImpl
 Questa classe fornisce metodi per supportare il trasferimento dei dati uniformi e la gestione delle connessioni.  
@@ -72,9 +72,9 @@ class IDataObjectImpl
 |[IDataObjectImpl::SetData](#setdata)|Trasferisce i dati dal client per l'oggetto dati. L'implementazione di ATL restituisce E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Note  
- Il [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) interfaccia fornisce metodi per supportare il trasferimento dei dati uniformi. `IDataObject` utilizza le strutture di formato standard [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) e [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) per recuperare e archiviare i dati.  
+ Il [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) interfaccia fornisce metodi per supportare il trasferimento dei dati uniformi. `IDataObject` utilizza le strutture di formato standard [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) e [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) per recuperare e archiviare i dati.  
   
- `IDataObject` gestisce inoltre le connessioni per gestire le notifiche di modifica di dati sink di notifica. Affinché il client di ricevere le notifiche di modifica dei dati dall'oggetto dati, il client deve implementare il [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) interfaccia sull'oggetto chiamato un sink di notifica. Quando il client chiama quindi `IDataObject::DAdvise`, viene stabilita una connessione tra l'oggetto dati e il sink di notifica.  
+ `IDataObject` gestisce inoltre le connessioni per gestire le notifiche di modifica di dati sink di notifica. Affinché il client di ricevere le notifiche di modifica dei dati dall'oggetto dati, il client deve implementare il [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) interfaccia sull'oggetto chiamato un sink di notifica. Quando il client chiama quindi `IDataObject::DAdvise`, viene stabilita una connessione tra l'oggetto dati e il sink di notifica.  
   
  Classe `IDataObjectImpl` fornisce un'implementazione predefinita di `IDataObject` e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
   
@@ -104,7 +104,7 @@ HRESULT DAdvise(
   
  Per terminare la connessione, chiamare [DUnadvise](#dunadvise).  
   
- Visualizzare [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) in Windows SDK.  
+ Visualizzare [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) in Windows SDK.  
   
 ##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
  Termina una connessione precedentemente stabilita tramite [DAdvise](#dadvise).  
@@ -114,7 +114,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) in Windows SDK.  
+ Visualizzare [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) in Windows SDK.  
   
 ##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
  Crea un enumeratore per scorrere le connessioni consultive correnti.  
@@ -128,7 +128,7 @@ HRESULT DAdvise(
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) in Windows SDK.  
+ Visualizzare [IDataObject::EnumDAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-enumdadvise) in Windows SDK.  
   
 ##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
  Crea un enumeratore per scorrere la `FORMATETC` strutture supportate dall'oggetto dati.  
@@ -140,7 +140,7 @@ HRESULT EnumFormatEtc(
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) in Windows SDK.  
+ Visualizzare [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) in Windows SDK.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce E_NOTIMPL.  
@@ -166,7 +166,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
  Restituisce E_NOTIMPL.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) in Windows SDK.  
+ Visualizzare [IDataObject::GetCanonicalFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) in Windows SDK.  
   
 ##  <a name="getdata"></a>  IDataObjectImpl::GetData  
  Trasferisce i dati dall'oggetto dati al client.  
@@ -180,7 +180,7 @@ HRESULT GetData(
 ### <a name="remarks"></a>Note  
  Il *pformatetcIn* parametro deve specificare un tipo di supporto di archiviazione di TYMED_MFPICT.  
   
- Visualizzare [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in Windows SDK.  
+ Visualizzare [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) in Windows SDK.  
   
 ##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
  Simile a `GetData`, tranne il client deve allocare il `STGMEDIUM` struttura.  
@@ -195,7 +195,7 @@ HRESULT GetDataHere(
  Restituisce E_NOTIMPL.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) in Windows SDK.  
+ Visualizzare [IDataObject::GetDataHere](/windows/desktop/api/objidl/nf-objidl-idataobject-getdatahere) in Windows SDK.  
   
 ##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
  Determina se l'oggetto dati supporta una particolare `FORMATETC` struttura per il trasferimento dei dati.  
@@ -208,7 +208,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
  Restituisce E_NOTIMPL.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) in Windows SDK.  
+ Visualizzare [IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) in Windows SDK.  
   
 ##  <a name="setdata"></a>  IDataObjectImpl::SetData  
  Trasferisce i dati dal client per l'oggetto dati.  
@@ -224,7 +224,7 @@ HRESULT SetData(
  Restituisce E_NOTIMPL.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) in Windows SDK.  
+ Visualizzare [IDataObject::SetData](/windows/desktop/api/objidl/nf-objidl-idataobject-setdata) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della classe](../../atl/atl-class-overview.md)

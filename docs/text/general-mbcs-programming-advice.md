@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596795"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201122"
 ---
 # <a name="general-mbcs-programming-advice"></a>Suggerimenti generali sulla programmazione MBCS
 Usare i suggerimenti seguenti:  
@@ -41,7 +41,7 @@ Usare i suggerimenti seguenti:
   
 -   Prestare attenzione quando si seleziona tipi di carattere per l'applicazione, perché alcuni tipi di carattere non sono disponibili in tutti i sistemi.  
   
--   Quando si seleziona il tipo di carattere per le finestre di dialogo, utilizzare [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) anziché Helvetica o MS Sans Serif. MS Shell Dlg viene sostituito con il tipo di carattere dal sistema prima di creare la finestra di dialogo. L'utilizzo di MS Shell Dlg assicura che tutte le modifiche nel sistema operativo per affrontare questo tipo di carattere saranno automaticamente disponibili. (MFC sostituito MS Shell Dlg DEFAULT_GUI_FONT o il carattere di sistema in Windows 95, Windows 98 e Windows NT 4 poiché tali sistemi non gestiscono correttamente MS Shell Dlg.)  
+-   Quando si seleziona il tipo di carattere per le finestre di dialogo, utilizzare [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) anziché Helvetica o MS Sans Serif. MS Shell Dlg viene sostituito con il tipo di carattere dal sistema prima di creare la finestra di dialogo. L'utilizzo di MS Shell Dlg assicura che tutte le modifiche nel sistema operativo per affrontare questo tipo di carattere saranno automaticamente disponibili. (MFC sostituito MS Shell Dlg DEFAULT_GUI_FONT o il carattere di sistema in Windows 95, Windows 98 e Windows NT 4 poiché tali sistemi non gestiscono correttamente MS Shell Dlg.)  
   
 -   Quando si progetta l'applicazione, decidere quali stringhe possono essere localizzati. In caso di dubbio, si presuppone che qualsiasi stringa specificata verrà localizzato. Di conseguenza, non combinare le stringhe che possono essere localizzate con quelli che non è possibile.  
   

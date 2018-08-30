@@ -1,7 +1,7 @@
 ---
-title: Progetto PRJ0025 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0025 del progetto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 087a5d5af8ed92bdd0446ae87af037acbfd38a95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 949e36424fc213459e56332c0802d2719581bac1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209812"
 ---
 # <a name="project-build-error-prj0025"></a>Errore di compilazione progetto PRJ0025
-Batch 'file' contenuto Unicode del file non può essere tradotto in una tabella codici ANSI dell'utente.  
-  
- ***Contenuto UNICODE del file***  
-  
- Il sistema di progetto trovata contenuto Unicode in un oggetto personalizzato regola di compilazione o compilazione evento che non è possibile convertire correttamente nella tabella codici ANSI corrente dell'utente.  
-  
- La risoluzione di questo errore è aggiornare il contenuto della regola di generazione o l'evento in modo da utilizzare ANSI o installare la tabella codici nel computer in uso e impostarlo come predefinito del sistema di compilazione.  
-  
- Per ulteriori informazioni su custom istruzioni di compilazione e gli eventi di compilazione, vedere [informazioni sulle istruzioni di compilazione personalizzate e di eventi di compilazione](../../ide/understanding-custom-build-steps-and-build-events.md).
+
+> File batch '*file*' il contenuto Unicode che non può essere tradotto in tabella codici ANSI dell'utente.
+>
+> *Contenuto UNICODE del file*
+
+Il sistema di progetto trovata contenuto Unicode in una classe personalizzata regola di compilazione o compilazione eventi che non possono essere convertiti correttamente alla tabella codici ANSI corrente dell'utente.
+
+La risoluzione di questo errore è di aggiornare il contenuto della regola di generazione evento in modo da utilizzare ANSI o installare la tabella codici nel computer e impostarlo come impostazione predefinita del sistema di compilazione.
+
+Per altre informazioni su custom istruzioni di compilazione e gli eventi di compilazione, vedere [informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](../../ide/understanding-custom-build-steps-and-build-events.md).

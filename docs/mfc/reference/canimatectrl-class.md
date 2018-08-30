@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e786dc176558900223b2b482a7161abe5e0d84d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336273"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213769"
 ---
 # <a name="canimatectrl-class"></a>Classe CAnimateCtrl
 Fornisce la funzionalità del controllo animazione comune di Windows.  
@@ -147,7 +147,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *dwStyle*  
- Specifica lo stile del controllo animazione. Applicare qualsiasi combinazione delle finestre di stili descritti nella sezione Osservazioni seguente e gli stili di controllo animazione descritto nella [stili del controllo animazione](http://msdn.microsoft.com/library/windows/desktop/bb761886) nel SDK di Windows.  
+ Specifica lo stile del controllo animazione. Applicare qualsiasi combinazione delle finestre di stili descritti nella sezione Osservazioni seguente e gli stili di controllo animazione descritto nella [stili del controllo animazione](/windows/desktop/Controls/animation-control-styles) nel SDK di Windows.  
   
  *Rect*  
  Specifica del controllo animazione posizione e dimensioni. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](../../mfc/reference/rect-structure1.md) struttura.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
   
  Se si desidera utilizzare gli stili estesi di windows con il controllo animazione, chiamare [CreateEx](#createex) invece di `Create`.  
   
- Oltre agli stili di finestra elencati in precedenza, è possibile applicare uno o più degli stili del controllo animazione a un controllo animation. Vedere il SDK di Windows per altre informazioni sul [stili del controllo animazione](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
+ Oltre agli stili di finestra elencati in precedenza, è possibile applicare uno o più degli stili del controllo animazione a un controllo animation. Vedere il SDK di Windows per altre informazioni sul [stili del controllo animazione](/windows/desktop/Controls/animation-control-styles).  
   
 ### <a name="example"></a>Esempio  
   Vedere l'esempio relativo [CAnimateCtrl:: CAnimateCtrl](#canimatectrl).  
@@ -193,13 +193,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
   
  *dwStyle*  
- Specifica lo stile del controllo animazione. Applicare qualsiasi combinazione della finestra e stili del controllo animazione descritto nella [stili del controllo animazione](http://msdn.microsoft.com/library/windows/desktop/bb761886) nel SDK di Windows.  
+ Specifica lo stile del controllo animazione. Applicare qualsiasi combinazione della finestra e stili del controllo animazione descritto nella [stili del controllo animazione](/windows/desktop/Controls/animation-control-styles) nel SDK di Windows.  
   
  *Rect*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
   
  *pParentWnd*  
  Puntatore alla finestra padre del controllo.  
@@ -224,7 +224,7 @@ BOOL IsPlaying() const;
  TRUE se viene riprodotto un clip AVI; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="open"></a>  CAnimateCtrl::Open  
  Chiamare questa funzione per aprire un clip AVI e visualizzare il primo fotogramma.  

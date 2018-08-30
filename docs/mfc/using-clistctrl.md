@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di CListCtrl | Documenti Microsoft
+title: Utilizzo di CListCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382986"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210490"
 ---
 # <a name="using-clistctrl"></a>Utilizzo di CListCtrl
-Utilizzare un controllo elenco per visualizzare qualsiasi disposizione di icone con etichette, come in Esplora file, oppure elenchi in formato colonna di testo, con o senza icone. Per una descrizione delle quattro possibili "visualizzazioni" (non devono essere confuse con le visualizzazioni MFC) è disponibile in un controllo elenco, visualizzazione con icone, visualizzazione Icone piccole, visualizzazione elenco e visualizzazione di report, vedere le visualizzazioni nel [CListCtrl](../mfc/reference/clistctrl-class.md) Cenni preliminari sulla classe.  
+Utilizzare un controllo elenco per visualizzare qualsiasi disposizione di icone con etichette, come in Esplora file, oppure elenchi in formato colonna di testo, con o senza icone. Per una descrizione delle quattro "visualizzazioni" possibili (che non devono essere confuse con le visualizzazioni MFC) è possibile avere in un controllo elenco, visualizzazione icone, visualizzazione Icone piccole, visualizzazione elenco e visualizzazione di report, vedere le visualizzazioni nel [CListCtrl](../mfc/reference/clistctrl-class.md) Cenni preliminari sulla classe.  
   
  In alcune visualizzazioni, gli utenti possono trascinare le icone in posizioni diverse o modificare le etichette delle icone. Come esempio vedere il riquadro destro di Esplora file, che utilizza un controllo elenco in una finestra non di dialogo. È possibile sperimentare le visualizzazioni disponibili nel menu Visualizza di Esplora risorse.  
   
- Per informazioni correlate, vedere [sui controlli List View](http://msdn.microsoft.com/library/windows/desktop/bb774735) in Windows SDK.  
+ Per informazioni correlate, vedere [sui controlli List View](/windows/desktop/Controls/list-view-controls-overview) nel SDK di Windows.  
   
 > [!NOTE]
->  Windows SDK fa riferimento a controlli elenco, come "controlli di visualizzazione elenco". Questo utilizzo di "visualizzazione" non si riferisce alle classi di visualizzazione MFC, in particolare `CListView`. Per ulteriori informazioni, vedere [controllo List e visualizzazione elenco](../mfc/list-control-and-list-view.md).  
+>  il SDK di Windows fa riferimento a controlli di elenco come "controlli di visualizzazione elenco". Questo utilizzo di "visualizzazione" non si riferisce alle classi di visualizzazione MFC, in particolare `CListView`. Per altre informazioni, vedere [controllo List e visualizzazione elenco](../mfc/list-control-and-list-view.md).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   

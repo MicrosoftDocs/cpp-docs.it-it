@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40774d6307eb9b423ebd4fd303a48acbd87eda24
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 213a7c32204b8f96969b4ad7a94683916b66db10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571795"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200842"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Vincoli delle DLL a caricamento ritardato
 Per il caricamento ritardato delle importazioni esistono dei vincoli.  
@@ -42,9 +42,9 @@ Per il caricamento ritardato delle importazioni esistono dei vincoli.
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)   
- [LoadLibrary (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
- [GetModuleHandle (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
- [GetProcAddress (funzione)](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
+ [LoadLibrary (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
+ [GetModuleHandle (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
+ [GetProcAddress (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
  [Funzione TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
  [TlsFree (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
  [TlsGetValue (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   

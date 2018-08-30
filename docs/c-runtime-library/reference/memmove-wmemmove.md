@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ea555d08ecb92895e170c3088332a532149ad1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11f474675d8ba5b370b1f13f048e989d9c283bde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401113"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204628"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -77,11 +77,11 @@ Il valore di *dest*.
 
 ## <a name="remarks"></a>Note
 
-Copie *conteggio* byte (**memmove**) o caratteri (**wmemmove**) da *src* a *dest*. Se alcune parti dell'area di origine e di destinazione si sovrappongono, entrambe le funzioni assicurano che i byte di origine originali nell'area sovrapposta vengono copiati prima di essere sovrascritti.
+Le copie *conteggio* byte (**memmove**) o caratteri (**wmemmove**) da *src* a *dest*. Se alcune parti dell'area di origine e di destinazione si sovrappongono, entrambe le funzioni assicurano che i byte di origine originali nell'area sovrapposta vengono copiati prima di essere sovrascritti.
 
-**Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Il **memmove** e **wmemmove** funzioni verranno deprecate solo se la costante **_CRT_SECURE_DEPRECATE_MEMORY** è definito prima dell'istruzione di inclusione in ordine per le funzioni per essere deprecate, come nell'esempio riportato di seguito:
+Il **memmove** e **wmemmove** funzioni verranno deprecate solo se la costante **_CRT_SECURE_DEPRECATE_MEMORY** è definita prima dell'istruzione di inclusione nell'ordine per le funzioni deprecate, ad esempio come illustrato nell'esempio riportato di seguito:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

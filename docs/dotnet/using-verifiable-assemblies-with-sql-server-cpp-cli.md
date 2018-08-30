@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b35675ba0081ec4ea7a1c9559f9a8fb71347cd54
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583819"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199965"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizzo di assembly verificabili con SQL Server (C++/CLI)
-Stored procedure estese, incluso nel pacchetto come librerie a collegamento dinamico (DLL), consentono di estendere le funzionalità di SQL Server tramite le funzioni sviluppate con Visual C++. Le stored procedure estese vengono implementate come funzioni nelle DLL. Oltre alle funzioni, stored procedure estese possono inoltre definire [tipi definiti dall'utente](../cpp/classes-and-structs-cpp.md) e [funzioni di aggregazione](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (ad esempio SUM o AVG).  
+Stored procedure estese, incluso nel pacchetto come librerie a collegamento dinamico (DLL), consentono di estendere le funzionalità di SQL Server tramite le funzioni sviluppate con Visual C++. Le stored procedure estese vengono implementate come funzioni nelle DLL. Oltre alle funzioni, stored procedure estese possono inoltre definire [tipi definiti dall'utente](../cpp/classes-and-structs-cpp.md) e [funzioni di aggregazione](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da) (ad esempio SUM o AVG).  
   
  Quando un client esegue una stored procedure estesa, le ricerche di SQL Server per la DLL associati con la stored procedure estesa e carica la DLL. SQL Server chiama la stored procedure estesa richiesta ed eseguita in un contesto di sicurezza specificato. La stored procedure estesa e set di risultati passate e restituisce parametri al server.  
   

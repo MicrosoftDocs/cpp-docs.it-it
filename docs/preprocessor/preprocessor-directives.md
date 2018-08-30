@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc392454a6c5b152411fe8f6a7d0c12457389794
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538270"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212221"
 ---
 # <a name="preprocessor-directives"></a>Direttive per il preprocessore
 
 Le direttive del preprocessore, ad esempio `#define` e `#ifdef`, vengono in genere usati per rendere i programmi di origine facile da modificare e compilare in ambienti di esecuzione diversi. Le direttive nel file di origine indicano al preprocessore di eseguire azioni specifiche. Ad esempio, il preprocessore può sostituire i token nel testo, inserire il contenuto di altri file nel file di origine o eliminare la compilazione di parte del file rimuovendo sezioni di testo. Le righe del preprocessore vengono riconosciute ed eseguite prima dell'espansione di una macro. Pertanto, se una macro si espande in modo da risultare simile a un comando del preprocessore, tale comando non sarà riconosciuto dal preprocessore.
 
-Le istruzioni del preprocessore utilizzano lo stesso set di caratteri delle istruzioni del file di origine, con l'eccezione che le sequenze di escape non sono supportate. Set di caratteri utilizzato nelle istruzioni del preprocessore equivale al [set di caratteri di esecuzione](http://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Il preprocessore riconosce anche i valori di carattere negativi.
+Le istruzioni del preprocessore utilizzano lo stesso set di caratteri delle istruzioni del file di origine, con l'eccezione che le sequenze di escape non sono supportate. Set di caratteri utilizzato nelle istruzioni del preprocessore equivale al [set di caratteri di esecuzione](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Il preprocessore riconosce anche i valori di carattere negativi.
 
 Il preprocessore riconosce le direttive seguenti:
 
@@ -37,7 +37,7 @@ Il preprocessore riconosce le direttive seguenti:
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-Il simbolo di cancelletto (**#**) deve essere il primo carattere diverso dallo spazio sulla riga contenente la direttiva; gli spazi vuoti possono apparire tra il simbolo di cancelletto e la prima lettera della direttiva. Alcune direttive includono argomenti o valori. Qualsiasi testo che segue una direttiva (eccetto un argomento o un valore che è parte di essa) deve essere preceduto dal delimitatore di commento a riga singola (**//**) o racchiuderlo tra delimitatori di commento ( __/ \*\*/__).   Le righe contenenti le direttive del preprocessore possono essere continuate precedendo immediatamente il marcatore di fine della riga con una barra rovesciata (**\\**).
+Il simbolo di cancelletto (**#**) deve essere il primo carattere diverso dallo spazio sulla riga contenente la direttiva; gli spazi vuoti possono apparire tra il simbolo di cancelletto e la prima lettera della direttiva. Alcune direttive includono argomenti o valori. Qualsiasi testo che segue una direttiva (eccetto un argomento o un valore che è parte di essa) deve essere preceduto dal delimitatore di commento a riga singola (**//**) o racchiuderlo tra delimitatori di commento ( __/ \*\*/__). Le righe contenenti le direttive del preprocessore possono essere continuate precedendo immediatamente il marcatore di fine della riga con una barra rovesciata (**\\**).
 
 Le direttive del preprocessore possono essere visualizzate in qualsiasi punto di un file di origine, ma si applicano solo al resto del file di origine.
 

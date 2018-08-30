@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55da0705027d6625d4140691b1b91912fb94c555
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027527"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219173"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 Questa classe fornisce metodi per la gestione di gestione di conteggio di riferimento di oggetto per gli oggetti aggregati e non aggregati.  
@@ -99,7 +99,7 @@ class CComObjectRootEx : public CComObjectRootBase
   
  Il vantaggio dell'utilizzo `CComPolyObject` non si rischia che dispone di entrambe `CComAggObject` e `CComObject` nel modulo per gestire i casi aggregati e non aggregati. Un singolo `CComPolyObject` oggetto gestisce entrambi i casi. Pertanto, solo una copia dell'oggetto vtable e una copia delle funzioni presenti in un modulo. Se la vtable è grande, questo può ridurre notevolmente le dimensioni del modulo. Tuttavia, se la vtable è piccola, usando `CComPolyObject` può comportare una dimensione modulo leggermente maggiore perché non è ottimizzato per un oggetto aggregato o aggregato, perché sono `CComAggObject` e `CComObject`.  
   
- Se l'oggetto è aggregato, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementata da `CComAggObject` o `CComPolyObject`. Queste classi delegare `QueryInterface`, `AddRef`, e `Release` le chiamate a `CComObjectRootEx`del `OuterQueryInterface`, `OuterAddRef`, e `OuterRelease` per inoltrare a unknown esterno. In genere, si esegue l'override `CComObjectRootEx::FinalConstruct` nella classe per creare eventuali oggetti aggregati ed eseguire l'override `CComObjectRootEx::FinalRelease` per liberare qualsiasi aggregati gli oggetti.  
+ Se l'oggetto è aggregato, [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) implementata da `CComAggObject` o `CComPolyObject`. Queste classi delegare `QueryInterface`, `AddRef`, e `Release` le chiamate a `CComObjectRootEx`del `OuterQueryInterface`, `OuterAddRef`, e `OuterRelease` per inoltrare a unknown esterno. In genere, si esegue l'override `CComObjectRootEx::FinalConstruct` nella classe per creare eventuali oggetti aggregati ed eseguire l'override `CComObjectRootEx::FinalRelease` per liberare qualsiasi aggregati gli oggetti.  
   
  Se l'oggetto non è aggregato, `IUnknown` implementata da `CComObject` o `CComPolyObject`. In questo caso, le chiamate a `QueryInterface`, `AddRef`, e `Release` vengono delegate `CComObjectRootEx`del `InternalQueryInterface`, `InternalAddRef`, e `InternalRelease` per eseguire le operazioni effettive.  
   
@@ -222,7 +222,7 @@ ULONG InternalRelease();
  Se il modello di thread è a thread multipli, `InterlockedDecrement` consente di impedire più di un thread di modificare il conteggio dei riferimenti allo stesso tempo.  
   
 ##  <a name="lock"></a>  CComObjectRootEx::Lock  
- Se il modello di thread è a thread multipli, questo metodo chiama la funzione API Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), quali attende che il thread può assumere la proprietà dell'oggetto sezione critica ottenuta tramite un membro dati privato.  
+ Se il modello di thread è a thread multipli, questo metodo chiama la funzione API Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), quali attende che il thread può assumere la proprietà dell'oggetto sezione critica ottenuta tramite un membro dati privato.  
   
 ```
 void Lock();
@@ -279,7 +279,7 @@ IUnknown*
  Se l'oggetto è aggregato, il puntatore al unknown esterno viene archiviato `m_pOuterUnknown`. Se l'oggetto non è aggregato, il conteggio dei riferimenti accede `AddRef` e `Release` viene archiviato in [m_dwRef](#m_dwref).  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- Per ogni classe elencata nel [mappa oggetto](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), questa funzione viene chiamata una volta quando viene inizializzato il modulo, e anche in questo caso quando viene terminato.  
+ Per ogni classe elencata nel [mappa oggetto](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), questa funzione viene chiamata una volta quando viene inizializzato il modulo, e anche in questo caso quando viene terminato.  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);
@@ -292,7 +292,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Note  
  Il valore della *bStarting* parametro indica se il modulo viene inizializzata o terminata. L'implementazione predefinita di `ObjectMain` non esegue alcuna operazione, ma è possibile eseguire l'override di questa funzione nella classe inizializzare o pulire le risorse che si desidera allocare per la classe. Si noti che `ObjectMain` viene chiamato prima che tutte le istanze della classe vengono richiesti.  
   
- `ObjectMain` viene chiamato dal punto di ingresso della DLL, in modo che il tipo di operazione che può eseguire la funzione di punto di ingresso è limitato. Per altre informazioni su queste restrizioni, vedere [DLL e Visual C++ il comportamento della libreria di runtime](../../build/run-time-library-behavior.md) e [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain` viene chiamato dal punto di ingresso della DLL, in modo che il tipo di operazione che può eseguire la funzione di punto di ingresso è limitato. Per altre informazioni su queste restrizioni, vedere [DLL e Visual C++ il comportamento della libreria di runtime](../../build/run-time-library-behavior.md) e [DllMain](/windows/desktop/Dlls/dllmain).  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
@@ -335,7 +335,7 @@ ULONG OuterRelease();
  Nelle compilazioni non di debug, restituisce sempre 0. Nelle build di debug, restituisce un valore che può essere utile per la diagnostica o di testing.  
   
 ##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
- Se il modello di thread è a thread multipli, questo metodo chiama la funzione API Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), che rilascia la proprietà dell'oggetto sezione critica ottenuta tramite un membro dati privato.  
+ Se il modello di thread è a thread multipli, questo metodo chiama la funzione API Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), che rilascia la proprietà dell'oggetto sezione critica ottenuta tramite un membro dati privato.  
   
 ```
 void Unlock();

@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf5041e6e3faa8c495d52c31d86ff25c903a174
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 50c7b6a8e62aa957c54f66ebaf87fcd86df458fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600720"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199343"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Operatore Windows::UI::Xaml::Interop::TypeName
-Consente la conversione da `Platform::Type` a [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
+Consente la conversione da `Platform::Type` al [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,10 +26,10 @@ Operator TypeName(Platform::Type^ type)
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) se è specificato `Platform::Type^`.  
+ Restituisce un [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) quando viene specificato un `Platform::Type^`.  
   
 ### <a name="remarks"></a>Note  
- `TypeName` è uno struct di Windows Runtime indipendente dal linguaggio per la rappresentazione delle informazioni sul tipo. [Platform::Type](../cppcx/platform-type-class.md) è specifico del linguaggio C++ e non può essere passato attraverso l'interfaccia applicativa binaria (ABI). Ecco un esempio di utilizzo di `TypeName`nella funzione [Navigate](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) :  
+ `TypeName` è uno struct di Windows Runtime indipendente dal linguaggio per la rappresentazione delle informazioni sul tipo. [Platform::Type](../cppcx/platform-type-class.md) è specifico del linguaggio C++ e non può essere passato attraverso l'interfaccia applicativa binaria (ABI). Ecco un uso del `TypeName`, nella [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) (funzione):  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

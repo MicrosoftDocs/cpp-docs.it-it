@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628e942ae77449f4dcd809d519da8696cd9fec6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39f169c18554aa91e3f66a3e30a62a801c9d345d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208988"
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
@@ -107,16 +107,16 @@ Per altre informazioni, vedere [Sintassi per la specifica del formato: funzioni 
 
 Numero di caratteri scritti o un valore negativo se si verifica un errore di output.
 
-Ad esempio le versioni meno sicure di queste funzioni, se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, a differenza delle versioni meno sicure di queste funzioni, se *formato* non specifica un formato valido, viene generata un'eccezione di parametro non valido. Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e set **errno** tale codice di errore. Codice di errore predefinito **EINVAL** se non si applica un valore più specifico.
+Come le versioni meno sicure di queste funzioni, se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, a differenza delle versioni meno sicure di queste funzioni, se *formato* non specifica un formato valido, viene generata un'eccezione di parametro non valido. Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e impostano **errno** a tale codice di errore. Il codice di errore predefinito è **EINVAL** se non si applica un valore più specifico.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella console. **vcwprintf_s** è la versione a caratteri "wide" di **vcprintf_s**. Accetta una stringa di caratteri wide come argomento.
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella console. **vcwprintf_s** è la versione a caratteri wide di **vcprintf_s**. Accetta una stringa di caratteri wide come argomento.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché le impostazioni locali correnti.
+Le versioni di queste funzioni che hanno le **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché quelle correnti.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

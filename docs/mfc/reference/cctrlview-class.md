@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fdcec255c7d2398e1bb0efa7f86a31fc5dd938e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336332"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210203"
 ---
 # <a name="cctrlview-class"></a>Classe CCtrlView
 Adatta l'architettura documento/visualizzazione ai controlli comuni supportati da Windows 98 e Windows NT versione 3.51 e successive.  
@@ -140,7 +140,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="parameters"></a>Parametri  
  *cs*  
- Oggetto [CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603) struttura.  
+ Oggetto [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la creazione di finestre deve continuare; 0 per indicare un errore di creazione.  

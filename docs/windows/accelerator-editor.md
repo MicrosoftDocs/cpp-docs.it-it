@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81642132272b40229437c2be8bac32d160885600
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578094"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202276"
 ---
 # <a name="accelerator-editor"></a>Editor tasti di scelta rapida
 
@@ -35,7 +35,7 @@ Una tabella di tasti di scelta rapida è una risorsa di Windows che contiene un 
 
 In genere i tasti di scelta rapida vengono usati per i comandi di programma disponibili anche in un menu o in una barra degli strumenti. Tuttavia, è possibile usare la tabella di tasti di scelta rapida per definire le combinazioni di tasti per i comandi che non hanno un oggetto dell'interfaccia utente associato.
 
-È possibile usare [Visualizzazione classi](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) per associare i comandi di tasti di scelta rapida al codice.
+È possibile usare [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) per associare i comandi di tasti di scelta rapida al codice.
 
 Con il **acceleratore** editor, è possibile:
 

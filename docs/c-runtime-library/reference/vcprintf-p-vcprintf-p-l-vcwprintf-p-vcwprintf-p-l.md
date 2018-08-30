@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03251c9f0442ffa3cda6b00b6528e424e1fe9007
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0e2271093237fbfdbc7f5e0492b1db220c469d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415634"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210361"
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
@@ -107,18 +107,18 @@ Il numero di caratteri che vengono scritti o un valore negativo se si verifica u
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti e quindi Usa la **putch** funzione da formattare e scrivere i dati specificati nella console. (**vcwprintf_p** Usa **putwch** anziché **putch**. **vcwprintf_p** è la versione a caratteri "wide" di **vcprintf_p**. Accetta una stringa di caratteri wide come argomento).
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti e quindi Usa il **putch** (funzione) per formattare e scrivere i dati specificati nella console. (**vcwprintf_p** Usa **putwch** anziché **putch**. **vcwprintf_p** è la versione a caratteri wide di **vcprintf_p**. Accetta una stringa di caratteri wide come argomento).
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché le impostazioni locali correnti.
+Le versioni di queste funzioni che hanno le **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché quelle correnti.
 
-Ogni *argomento* (se presenti) vengono convertiti ed emessi in base alla specifica del formato corrispondente in *formato*. La specifica del formato supporta i parametri posizionali in modo da poter specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Ciascuna *argomenti* (se presente) viene convertito ed emessi in base alla specifica di formato corrispondente in *formato*. La specifica del formato supporta i parametri posizionali in modo da poter specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
 Queste funzioni non convertono i caratteri di avanzamento di riga in combinazioni di caratteri di ritorno a capo ed avanzamento di riga (CR e LF) quando vengono restituiti.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Queste funzioni convalidano il puntatore di input e la stringa di formato. Se *formato* oppure *argomento* è **NULL**, o se la stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Queste funzioni convalidano il puntatore di input e la stringa di formato. Se *formato* oppure *argomento* viene **NULL**, o se la stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto nelle [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

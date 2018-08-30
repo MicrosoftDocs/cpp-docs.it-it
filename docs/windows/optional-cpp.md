@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f271bff7c9516b92961131f424c1c77be29f644c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 97bba578e2759d335c4ad51e541ef3fc336aa888
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601095"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205305"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -36,7 +36,7 @@ Specifica un parametro facoltativo per una funzione membro.
 
 ## <a name="remarks"></a>Note
 
-Il **facoltativo** attributi di C++ ha la stessa funzionalità come la [facoltativo](http://msdn.microsoft.com/library/windows/desktop/aa367132) attributo MIDL.
+Il **facoltativo** attributi di C++ ha la stessa funzionalità come la [facoltativo](/windows/desktop/Midl/optional) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

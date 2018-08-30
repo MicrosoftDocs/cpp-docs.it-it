@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e39b0b1ac94a759c4a8b30fce8c634ed49be4ff9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848337"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209479"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 Il nome della funzione identificato dal terzo parametro della macro NOTIFY_HANDLER nella mappa messaggi.  
@@ -43,7 +43,7 @@ Il nome della funzione identificato dal terzo parametro della macro NOTIFY_HANDL
  L'identificatore del controllo che invia il messaggio.  
   
  *pnmh*  
- Indirizzo di un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) struttura che contiene il codice di notifica e informazioni aggiuntive. Per alcuni messaggi di notifica, questo parametro punta a una struttura più grande che presenta il `NMHDR` struttura come il primo membro.  
+ Indirizzo di un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) struttura che contiene il codice di notifica e informazioni aggiuntive. Per alcuni messaggi di notifica, questo parametro punta a una struttura più grande che presenta il `NMHDR` struttura come il primo membro.  
   
  *bHandled*  
  Il set di mapping dei messaggi *bHandled* su TRUE prima *NotifyHandler* viene chiamato. Se *NotifyHandler* non gestisce completamente il messaggio deve essere impostato *bHandled* al **FALSE** per indicare che il messaggio richiede un'ulteriore elaborazione.  
@@ -57,5 +57,5 @@ Il nome della funzione identificato dal terzo parametro della macro NOTIFY_HANDL
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di una finestra](../atl/implementing-a-window.md)   
  [Mappe messaggi](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

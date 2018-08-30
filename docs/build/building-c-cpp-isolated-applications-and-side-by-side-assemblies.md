@@ -1,5 +1,5 @@
 ---
-title: Compilazione di C/C++ di applicazioni isolate e assembly Side-by-side | Documenti Microsoft
+title: Creazione di C/C++ applicazioni isolate e assembly Side-by-side | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ca99de7403ad56ae82fdd25af8ff22167084b91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8d806af709d6d6e2a5754bc80a34a473900177f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361284"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212912"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilazione di applicazioni isolate C/C++ e di assembly side-by-side
-Visual C++ supporta un modello di distribuzione per applicazioni client Windows basato sui concetti di [applicazioni isolate](http://msdn.microsoft.com/library/aa375190) e [assembly side-by-side](http://msdn.microsoft.com/library/ff951640). Per impostazione predefinita, Visual C++ crea tutte le applicazioni C/C++ native come applicazioni isolate che usano [manifesti](http://msdn.microsoft.com/library/aa375365) per descrivere le relative dipendenze da librerie di Visual C++.  
+Visual C++ supporta un modello di distribuzione per applicazioni client Windows basato sul concetto di [applicazioni isolate](/windows/desktop/SbsCs/isolated-applications) e [assembly side-by-side](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Per impostazione predefinita, Visual C++ crea tutte le applicazioni C/C++ native come applicazioni isolate che usano [manifesti](https://msdn.microsoft.com/library/aa375365) per descrivere le dipendenze dalle librerie di Visual C++.  
   
- La creazione di programmi C/C++ come applicazioni isolate presenta numerosi vantaggi. Ad esempio, un'applicazione isolata non è influenzata dall'installazione o disinstallazione di librerie di Visual C++ da parte di altre applicazioni C/C++. Le librerie di Visual C++ usate da applicazioni isolate possono essere comunque ridistribuite nella cartella locale dell'applicazione o tramite installazione nella cache assembly nativa (WinSxS). La manutenzione delle librerie di Visual C++ per le applicazioni già distribuite può essere tuttavia semplificata tramite un [file di configurazione dell'editore](http://msdn.microsoft.com/library/aa375680). Il modello di distribuzione basato su applicazioni isolate aiuta ad assicurare che le applicazioni C/C++ in esecuzione in un computer specifico usino la versione più recente delle librerie di Visual C++, permettendo comunque al tempo stesso agli amministratori di sistema e agli autori di applicazioni di controllare l'associazione esplicita delle versioni delle applicazioni ai rispettivi file DLL dipendenti.  
+ La creazione di programmi C/C++ come applicazioni isolate presenta numerosi vantaggi. Ad esempio, un'applicazione isolata non è influenzata dall'installazione o disinstallazione di librerie di Visual C++ da parte di altre applicazioni C/C++. Librerie Visual C++ usate da applicazioni isolate possono essere comunque ridistribuite nella cartella locale dell'applicazione o tramite installazione nella cache assembly nativa (WinSxS); Tuttavia, per la manutenzione delle librerie Visual C++ per le applicazioni già distribuite possono essere semplificate tramite un [file di configurazione server di pubblicazione](/windows/desktop/SbsCs/publisher-configuration). Il modello di distribuzione basato su applicazioni isolate aiuta ad assicurare che le applicazioni C/C++ in esecuzione in un computer specifico usino la versione più recente delle librerie di Visual C++, permettendo comunque al tempo stesso agli amministratori di sistema e agli autori di applicazioni di controllare l'associazione esplicita delle versioni delle applicazioni ai rispettivi file DLL dipendenti.  
   
  Questa sezione illustra come creare un'applicazione C/C++ come applicazione isolata e come assicurarne l'associazione alle librerie di Visual C++ tramite un manifesto. Le informazioni disponibili in questa sezione sono applicabili principalmente ad applicazioni Visual C++ native o non gestite. Per informazioni sulla distribuzione di applicazioni native create con Visual C++, vedere [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
@@ -49,6 +49,6 @@ Visual C++ supporta un modello di distribuzione per applicazioni client Windows 
  [Risoluzione dei problemi relativi alle applicazioni isolate C/C++ e agli assembly side-by-side](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Applicazioni isolate e assembly affiancati](http://msdn.microsoft.com/library/dd408052)  
+ [Applicazioni isolate e assembly Side-by-side](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)  
   
- [Distribuzione di applicazioni Desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)

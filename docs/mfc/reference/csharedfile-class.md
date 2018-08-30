@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853728"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215583"
 ---
 # <a name="csharedfile-class"></a>Classe CSharedFile
 Il [CMemFile](../../mfc/reference/cmemfile-class.md)-classe derivata che supporta file di memoria condivisi.  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Note  
  File in memoria si comportano come i file del disco, ad eccezione del fatto che il file viene archiviato nella memoria RAM, piuttosto che sul disco. Un file di memoria è utile per l'archiviazione temporanea a velocità o per il trasferimento dei byte non elaborati o oggetti serializzati tra processi indipendenti.  
   
- I file di memoria condivisa differiscono da altri file di memoria viene allocata memoria per essi con il [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funzione Windows. Il `CSharedFile` classe archivia i dati in un blocco di memoria globale allocato (creato utilizzando `GlobalAlloc`), e questo blocco di memoria può essere condivise tramite DDE, negli Appunti o altri OLE/COM uniform operazioni di trasferimento dati, ad esempio, usando `IDataObject`.  
+ I file di memoria condivisa differiscono da altri file di memoria viene allocata memoria per essi con il [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) funzione Windows. Il `CSharedFile` classe archivia i dati in un blocco di memoria globale allocato (creato utilizzando `GlobalAlloc`), e questo blocco di memoria può essere condivise tramite DDE, negli Appunti o altri OLE/COM uniform operazioni di trasferimento dati, ad esempio, usando `IDataObject`.  
   
  `GlobalAlloc` Restituisce un HGLOBAL gestire invece di un puntatore alla memoria, ad esempio il puntatore restituito da [malloc](../../c-runtime-library/reference/malloc.md). L'handle HGLOBAL è necessaria in determinate applicazioni. Per inserire dati negli Appunti, ad esempio, è necessario un handle HGLOBAL.  
   
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>Parametri  
  *nAllocFlags*  
- Flag che indica come è possibile allocare memoria. Visualizzare [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) per un elenco di valori di flag validi.  
+ Flag che indica come è possibile allocare memoria. Visualizzare [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) per un elenco di valori di flag validi.  
   
  *nGrowBytes*  
  L'incremento di allocazione di memoria in byte.  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540461"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207641"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 Il `CSplitButton` classe rappresenta un controllo pulsante di menu combinato. Il controllo pulsante di menu combinato segue un comportamento predefinito quando un utente fa clic sulla parte principale del pulsante e visualizza un menu a discesa quando l'utente fa clic sulla freccia a discesa del pulsante.  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|Gestisce la notifica BCN_DROPDOWN che viene inviato dal sistema quando l'utente seleziona la freccia di elenco a discesa del controllo pulsante di divisione corrente.|  
   
 ## <a name="remarks"></a>Note  
- Il `CSplitButton` classe è derivata dal [CButton](../../mfc/reference/cbutton-class.md) classe. Il controllo pulsante di menu combinato è un controllo pulsante di cui lo stile è BS_SPLITBUTTON. Visualizza un menu personalizzato quando un utente fa clic sulla freccia giù. Per altre informazioni, vedere gli stili BS_SPLITBUTTON e BS_DEFSPLITBUTTON [stili dei pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ Il `CSplitButton` classe è derivata dal [CButton](../../mfc/reference/cbutton-class.md) classe. Il controllo pulsante di menu combinato è un controllo pulsante di cui lo stile è BS_SPLITBUTTON. Visualizza un menu personalizzato quando un utente fa clic sulla freccia giù. Per altre informazioni, vedere gli stili BS_SPLITBUTTON e BS_DEFSPLITBUTTON [stili dei pulsanti](/windows/desktop/Controls/button-styles).  
   
  La figura seguente rappresenta una finestra di dialogo che contiene un controllo pager e un controllo pulsante di divisione (1). Freccia a discesa (2) è già stato fatto clic e viene visualizzato il sottomenu (3).  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |Parametro|Descrizione|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Una combinazione bit per bit (OR) di stili da applicare al controllo. Per altre informazioni, vedere [stili dei pulsanti](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
+|[in] *rect*|Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
 |[in] *pParentWnd*|Un puntatore non null a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo.|  
 |[in] *nID*|L'ID del controllo.|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pNMHDR viene convertito nel*|Puntatore a un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) struttura che contiene informazioni sul [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notifica.|  
-|[out] *pResult*|(Non usato, viene restituito alcun valore). Valore restituito del [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notifica.|  
+|[in] *pNMHDR viene convertito nel*|Puntatore a un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) struttura che contiene informazioni sul [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notifica.|  
+|[out] *pResult*|(Non usato, viene restituito alcun valore). Valore restituito del [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notifica.|  
   
 ### <a name="remarks"></a>Note  
  Quando l'utente fa clic sulla freccia giù in un controllo split button, sistema invia una notifica BCN_DROPDOWN dei messaggi, quali il `OnDropDown` gli handle di metodo. Tuttavia, il `CSplitButton` oggetto non inoltra la notifica BCN_DROPDOWN al controllo che contiene il controllo pulsante di menu combinato. Di conseguenza, il controllo che lo contiene non supporta un'azione personalizzata in risposta alla notifica.  

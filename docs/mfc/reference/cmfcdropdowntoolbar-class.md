@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55abed046ddf1c770271a9cc5346b70a752d81a6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b63afd3c63fbcb05c7172a30a5a23b0418269eca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540463"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201459"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 Barra degli strumenti visualizzata quando l'utente tiene premuto un pulsante della barra degli strumenti di primo livello.  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|Esegue l'override`CMFCToolBar::OnSendCommand`.|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Esegue l'override [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Esegue l'override [CMFCToolBar::OnUpdateCmdUI](https://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
   
 ### <a name="remarks"></a>Note  
  Oggetto `CMFCDropDownToolBar` oggetto combina l'aspetto visivo di una barra degli strumenti con il comportamento di un menu popup. Quando un utente preme e contiene un pulsante a discesa della barra degli strumenti (vedere [classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), viene visualizzata una barra degli strumenti elenco a discesa e l'utente può selezionare un pulsante nella barra degli strumenti elenco a discesa scorrendo ad esso e rilasciare il mouse pulsante. Dopo che l'utente seleziona un pulsante sulla barra degli strumenti elenco a discesa, tale pulsante viene visualizzato come pulsante sulla barra degli strumenti principale corrente.  

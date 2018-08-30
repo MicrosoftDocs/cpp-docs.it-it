@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027888"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196711"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 Fornisce la funzionalità dei controlli pulsante di Windows.  
@@ -360,7 +360,7 @@ BOOL GetIdealSize(SIZE* psize);
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del messaggio BCM_GETIDEALSIZE, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_GETIDEALSIZE, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
  Chiamare questo metodo per ottenere l'elenco di immagini dal controllo pulsante.  
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del messaggio BCM_GETIMAGELIST, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_GETIMAGELIST, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  Recupera il testo della nota associato al controllo di collegamento di comando corrente.  
@@ -407,7 +407,7 @@ BOOL GetNote(
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.  
   
- Questo metodo invia il [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [BCM_GETNOTE](/windows/desktop/Controls/bcm-getnote) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  Recupera la lunghezza del testo della nota per il controllo command link corrente.  
@@ -422,7 +422,7 @@ UINT GetNoteLength() const;
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.  
   
- Questo metodo invia il [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [BCM_GETNOTELENGTH](/windows/desktop/Controls/bcm-getnotelength) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  Recupera il glifo associato il controllo pulsante di menu combinato corrente.  
@@ -439,7 +439,7 @@ TCHAR GetSplitGlyph() const;
   
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_GLYPH e successivo invio che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera il glifo dal `himlGlyph` membro della struttura.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura con il flag BCSIF_GLYPH e successivo invio che la struttura nel [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera il glifo dal `himlGlyph` membro della struttura.  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  Recupera le [elenco di immagini](../../mfc/reference/cimagelist-class.md) per il controllo pulsante di menu combinato corrente.  
@@ -454,7 +454,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_IMAGE e successivo invio che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera l'elenco di immagini dal `himlGlyph` membro della struttura.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura con il flag BCSIF_IMAGE e successivo invio che la struttura nel [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera l'elenco di immagini dal `himlGlyph` membro della struttura.  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  Recupera i parametri che determinano il modo in cui Windows consente di disegnare il controllo pulsante di menu combinato corrente.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura che riceve informazioni sul controllo pulsante divisione corrente. Il chiamante è responsabile dell'allocazione della struttura.|  
+|[out] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura che riceve informazioni sul controllo pulsante divisione corrente. Il chiamante è responsabile dell'allocazione della struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -475,7 +475,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo invia il [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  Recupera il rettangolo di delimitazione del componente elenco a discesa del controllo pulsante di divisione corrente.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *pSize*|Puntatore a un [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che riceve la descrizione di un rettangolo.|  
+|[out] *pSize*|Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che riceve la descrizione di un rettangolo.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -498,7 +498,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  Quando il controllo pulsante di menu combinato viene espanso, è possibile visualizzare un elenco a discesa componente, ad esempio un controllo di elenco o un controllo pager. Questo metodo recupera il rettangolo di delimitazione che contiene il componente elenco a discesa.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_SIZE e successivo invio che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera il rettangolo di delimitazione dal `size` membro della struttura.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura con il flag BCSIF_SIZE e successivo invio che la struttura nel [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera il rettangolo di delimitazione dal `size` membro della struttura.  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  Recupera gli stili dei pulsanti di suddivisione che definiscono il controllo pulsante di menu combinato corrente.  
@@ -508,14 +508,14 @@ UINT GetSplitStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Combinazione bit per bit di stili di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.  
+ Combinazione bit per bit di stili di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
  Gli stili dei pulsanti di suddivisione specificare l'allineamento, proporzioni e formato grafico con cui Windows disegna un'icona di pulsante di divisione.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_STYLE e successivo invio che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera gli stili dei pulsanti di suddivisione dal `uSplitStyle` membro della struttura.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura con il flag BCSIF_STYLE e successivo invio che la struttura nel [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera gli stili dei pulsanti di suddivisione dal `uSplitStyle` membro della struttura.  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  Recupera lo stato di un controllo pulsante.  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del messaggio BCM_GETTEXTMARGIN, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_GETTEXTMARGIN, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ##  <a name="setbitmap"></a>  CButton:: SetBitmap  
  Chiamare questa funzione membro per associare una nuova bitmap con il pulsante.  
@@ -693,9 +693,9 @@ BOOL SetDropDownState(BOOL fDropDown);
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Un controllo pulsante di menu combinato con uno stile di BS_SPLITBUTTON o BS_DEFSPLITBUTTON ed è costituito da un pulsante e una freccia a discesa a destra. Per altre informazioni, vedere [stili dei pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775951). In genere, viene impostato lo stato di riepilogo a discesa quando l'utente fa clic sulla freccia giù. Utilizzare questo metodo per impostare a livello di codice lo stato di riepilogo a discesa del controllo. La freccia giù viene disegnata ombreggiata per indicare lo stato.  
+ Un controllo pulsante di menu combinato con uno stile di BS_SPLITBUTTON o BS_DEFSPLITBUTTON ed è costituito da un pulsante e una freccia a discesa a destra. Per altre informazioni, vedere [stili dei pulsanti](/windows/desktop/Controls/button-styles). In genere, viene impostato lo stato di riepilogo a discesa quando l'utente fa clic sulla freccia giù. Utilizzare questo metodo per impostare a livello di codice lo stato di riepilogo a discesa del controllo. La freccia giù viene disegnata ombreggiata per indicare lo stato.  
   
- Questo metodo invia il [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile *m_splitButton*, che viene usato per accedere a livello di codice il controllo pulsante di menu combinato. Questa variabile viene usata nell'esempio seguente.  
@@ -726,7 +726,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="remarks"></a>Note  
  Se un controllo di collegamento di pulsante o comando richiede l'autorizzazione di sicurezza con privilegi elevati per eseguire un'azione, impostare il controllo su `elevation required` dello stato. Successivamente, Windows visualizza l'icona dello scudo controllo Account utente (UAC) nel controllo. Per altre informazioni, vedere "Controllo dell'Account utente" all'indirizzo [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
- Questo metodo invia il [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  Chiamare questa funzione membro per associare una nuova icona con il pulsante.  
@@ -777,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del messaggio BCM_SETIMAGELIST, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_SETIMAGELIST, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
  Imposta il testo della nota per il controllo command link corrente.  
@@ -798,7 +798,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.  
   
- Questo metodo invia il [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [BCM_SETNOTE](/windows/desktop/Controls/bcm-setnote) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile *m_cmdLink*, che viene usato per accedere a livello di codice il controllo command link. Questa variabile viene usata nell'esempio seguente.  
@@ -831,7 +831,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  Un glifo è la rappresentazione fisica di un carattere in un particolare tipo di carattere. Il *chGlyph* parametro non viene utilizzato come il glifo, ma viene invece usato per selezionare un glifo da un set di glifi definito dal sistema. L'icona di freccia predefinito specificato da un carattere '6' e il carattere Unicode TRIANGOLO nero verso il basso verso l'alto (U + 25BC) è simile.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_GLYPH e il `himlGlyph` membro con il *chGlyph* parametro e che quindi invia struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel SDK di Windows.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura con il flag BCSIF_GLYPH e il `himlGlyph` membro con il *chGlyph* parametro e che quindi invia struttura nel [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio che è descritti nel SDK di Windows.  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  Associa un' [elenco di immagini](../../mfc/reference/cimagelist-class.md) con il controllo pulsante di menu combinato corrente.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_IMAGE e il `himlGlyph` membro con il *pSplitImageList* parametro e quindi invia tale struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel SDK di Windows.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura con il flag BCSIF_IMAGE e il `himlGlyph` membro con il *pSplitImageList* parametro e quindi invia tale struttura nel [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio che è descritti nel SDK di Windows.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Specifica i parametri che determinano il modo in cui Windows consente di disegnare il controllo pulsante di menu combinato corrente.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura che definisce il controllo pulsante di menu combinato corrente.|  
+|[in] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura che definisce il controllo pulsante di menu combinato corrente.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -873,7 +873,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo invia il [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) messaggio, che è descritti nel SDK di Windows.  
+ Questo metodo invia il [BCM_SETSPLITINFO](/windows/desktop/Controls/bcm-setsplitinfo) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile `m_splitButton`, che viene usato per accedere a livello di codice il controllo pulsante di menu combinato.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pSize*|Puntatore a un [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che descrive un rettangolo di delimitazione.|  
+|[in] *pSize*|Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che descrive un rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Quando il controllo pulsante di menu combinato viene espanso, è possibile visualizzare un elenco a discesa componente, ad esempio un controllo di elenco o un controllo pager. Questo metodo specifica le dimensioni del rettangolo di delimitazione che contiene il componente elenco a discesa.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_SIZE e il `size` membro con il *pSize* parametro e quindi invia che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel SDK di Windows.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura con il flag BCSIF_SIZE e il `size` membro con il *pSize* parametro e quindi invia che la struttura nel [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile `m_splitButton`, che viene usato per accedere a livello di codice il controllo pulsante di menu combinato. Questa variabile viene usata nell'esempio seguente.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Combinazione bit per bit di stili di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.|  
+|[in] *uSplitStyle*|Combinazione bit per bit di stili di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -937,9 +937,9 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="remarks"></a>Note  
  Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Gli stili dei pulsanti di suddivisione specificare l'allineamento, proporzioni e formato grafico con cui Windows disegna un'icona di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.  
+ Gli stili dei pulsanti di suddivisione specificare l'allineamento, proporzioni e formato grafico con cui Windows disegna un'icona di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_STYLE e il `uSplitStyle` membro con il *uSplitStyle* parametro e che quindi invia struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel SDK di Windows.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura con il flag BCSIF_STYLE e il `uSplitStyle` membro con il *uSplitStyle* parametro e che quindi invia struttura nel [verso](/windows/desktop/Controls/bcm-getsplitinfo) messaggio che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Esempio di codice seguente definisce la variabile `m_splitButton`, che viene usato per accedere a livello di codice il controllo pulsante di menu combinato.  
@@ -985,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del messaggio BCM_SETTEXTMARGIN, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_SETTEXTMARGIN, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CWnd](../../mfc/reference/cwnd-class.md)   

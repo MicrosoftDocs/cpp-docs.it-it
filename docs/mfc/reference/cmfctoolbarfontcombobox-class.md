@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849750"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216261"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Classe CMFCToolBarFontComboBox
 Pulsante della barra degli strumenti che contiene un controllo casella combinata che consente all'utente di selezionare un tipo di carattere da un elenco di tipi di carattere del sistema.  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  Per la sincronizzazione del tipo di carattere del documento con il tipo di carattere selezionato nella casella combinata, usare il [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) metodo per recuperare gli attributi del tipo di carattere selezionato e usare gli attributi per creare un [ Classe CFont](../../mfc/reference/cfont-class.md) oggetto.  
   
- Il pulsante della casella combinata tipo di carattere chiama la funzione Win32 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) per determinare dello schermo e della stampante tipi di carattere disponibili nel sistema.  
+ Il pulsante della casella combinata tipo di carattere chiama la funzione Win32 [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) per determinare dello schermo e della stampante tipi di carattere disponibili nel sistema.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] *nCharSet*  
- Se impostato su DEFAULT_CHARSET, la casella combinata contiene i tipi di carattere denominato tutto in modo univoco in tutti i set di caratteri. (Se sono presenti due tipi di carattere con lo stesso nome, la casella combinata contiene uno di essi). Se impostato su un valore di set di caratteri valida, la casella combinata contiene solo i tipi di carattere nel set di caratteri specificato. Visualizzare [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) per un elenco di caratteri possibili imposta.  
+ Se impostato su DEFAULT_CHARSET, la casella combinata contiene i tipi di carattere denominato tutto in modo univoco in tutti i set di caratteri. (Se sono presenti due tipi di carattere con lo stesso nome, la casella combinata contiene uno di essi). Se impostato su un valore di set di caratteri valida, la casella combinata contiene solo i tipi di carattere nel set di caratteri specificato. Visualizzare [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) per un elenco di caratteri possibili imposta.  
   
  [in] *dwStyle*  
  Lo stile della casella combinata. (vedere [stili casella combinata](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

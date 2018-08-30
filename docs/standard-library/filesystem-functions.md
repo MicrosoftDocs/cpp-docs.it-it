@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::u8path
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfe07904a8eec87fb18441b92096d8ba6b72e4e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e47339813256d189e1ce6b71506d9ae29a93f51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848661"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213465"
 ---
 # <a name="ltfilesystemgt-functions"></a>Funzioni &lt;filesystem&gt;
 
@@ -122,7 +122,7 @@ Queste funzioni disponibili nell'intestazione [\<filesystem>](../standard-librar
 |[system_complete](#system_complete)|[temp_directory_path](#temp_directory_path)|[u8path](#u8path)|
 
 
-## <a name=""></a>  <a name="absolute"></a> absolute
+## <a name="absolute"></a> assoluto
 
 ```cpp
 path absolute(const path& pval, const path& base = current_path());
@@ -230,7 +230,7 @@ if (!exists(t))
 
 In caso contrario, non eseguire alcuna azione.
 
-## <a name="opy_file"></a>  copy_file
+## <a name="copy_file"></a>  copy_file
 
 ```cpp
 bool copy_file(const path& from, const path& to);

@@ -1,5 +1,5 @@
 ---
-title: 2.4.1 costrutto for | Documenti Microsoft
+title: 2.4.1 costrutto for | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,130 +12,131 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693549"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216537"
 ---
 # <a name="241-for-construct"></a>2.4.1 Costrutto for
-Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativo che specifica che le iterazioni del ciclo associato verranno eseguite in parallelo. Le iterazioni del **per** ciclo vengono distribuite tra thread già presenti nel gruppo a cui associa un costrutto parallelo in esecuzione. La sintassi del **per** costrutto è come segue:  
-  
-```  
-#pragma omp for [clause[[,] clause] ... ] new-linefor-loop  
-```  
-  
- La clausola è uno dei valori seguenti:  
-  
- **private (** *variabile-list* **)**  
-  
- **firstprivate (** *variabile-list* **)**  
-  
- **lastprivate(** *variable-list* **)**  
-  
- **riduzione (** *operatore* **:** *variabile-elenco * * *)**  
-  
- **ordered**  
-  
- **pianificazione (** *tipo*[, *chunk_size*]**)**  
-  
- **nowait**  
-  
- Il **per** direttiva inserisce restrizioni sulla struttura dei corrispondenti **per** ciclo. In particolare, il corrispondente **per** ciclo deve avere una forma canonica:  
-  
- **per (** *init-expr* **;** *var logico op b*; */incr-expr * * *)**  
-  
- *Init-expr*  
- Uno dei seguenti:  
-  
- *var* = *lb*  
-  
- *tipo integer var* = *lb*  
-  
- *incr-expr*  
- Uno dei seguenti:  
-  
- ++*Var*  
-  
- *var* ++  
-  
- -- *Var*  
-  
- *var* --  
-  
- *var* += */incr*  
-  
- *var* -= */incr*  
-  
- *var* = *var* + */incr*  
-  
- *var* = */incr* + *var*  
-  
- *var* = *var* - */incr*  
-  
- *var*  
- Una variabile integer con segno. Se questa variabile sarebbe condivisi in caso contrario, viene implicitamente reso privato per la durata del **per**.   Questa variabile non deve essere modificata all'interno del corpo del **per** istruzione. Se non si specifica la variabile **lastprivate**, il valore dopo il ciclo è indeterminato.  
-  
- *operazione logica*  
- Uno dei seguenti:  
-  
- <  
-  
- \<=  
-  
- >  
-  
- \>=  
-  
- *lb*, *b*, e */incr*  
- Ciclo espressioni integer invariante. Vi è alcuna sincronizzazione durante la valutazione di espressioni. Di conseguenza, tutti gli effetti collaterali valutati produrre risultati imprevisti.  
-  
- Si noti che la forma canonica consente un numero di iterazioni del ciclo deve essere calcolata sulla voce per il ciclo. Questo calcolo viene eseguito con i valori nel tipo di *var*, dopo le promozioni integrali. In particolare, se valore *b* - *lb* + */incr* non può essere rappresentato in tipo, il risultato è indeterminato. Inoltre, se *logico op* è < o \<= quindi */incr expr* causano *var* per aumentare a ogni iterazione del ciclo.   Se *logico op* è > o > = quindi */incr expr* causano *var* a diminuire a ogni iterazione del ciclo.  
-  
- Il **pianificazione** clausola specifica come iterazioni del **per** ciclo sono divise tra i thread del team. La correttezza di un programma non deve dipendere quale thread viene eseguita un'iterazione specifica. Il valore di *chunk_size*, se specificato, deve essere un'espressione integer invariante ciclo con un valore positivo. Vi è alcuna sincronizzazione durante la valutazione dell'espressione. Di conseguenza, tutti gli effetti collaterali valutati produrre risultati imprevisti. La pianificazione *tipo* può essere uno dei seguenti:  
-  
- TABELLA 2-1 **pianificazione** clausola *tipo* valori  
-  
-|||  
-|-|-|  
-|statico|Quando si **pianificazione (statico,** *chunk_size * * *)** viene specificato, le iterazioni sono suddivisi in blocchi di dimensioni specificato dal *chunk_size*. I blocchi vengono assegnati in modo statico per i thread del team in uno schema round-robin, nell'ordine il numero di thread. Se non si *chunk_size* è specificato, lo spazio di iterazione è suddiviso in blocchi che sono approssimativamente in dimensioni con un blocco assegnato a ogni thread.|  
-|dynamic|Quando si **pianificazione (dinamica,** *chunk_size * * *)** viene specificato, le iterazioni sono suddivisi in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread viene eseguito il blocco di iterazioni e quindi attende la relativa assegnazione successivo, fino a quando nessun blocco rimarrà impostata per essere assegnati. Si noti che l'ultimo blocco per poter essere assegnati può avere un numero inferiore di iterazioni. Se non si *chunk_size* è specificato, l'impostazione predefinita su 1.|  
-|PGO|Quando si **pianificazione (guidati** *chunk_size * * *)** viene specificato, le iterazioni assegnate al thread in blocchi con riducendo le dimensioni. Quando un thread termina il blocco assegnato di iterazioni, in modo dinamico viene assegnato un altro blocco, fino a quando non rimane nessuna. Per un *chunk_size* pari a 1, la dimensione di ciascun blocco è approssimativamente il numero di iterazioni non assegnati diviso per il numero di thread. Queste dimensioni diminuiscono circa esponenzialmente su 1. Per un *chunk_size* con valore *k* maggiore di 1, le dimensioni di circa ridurre in modo esponenziale a *k*, ad eccezione del fatto che l'ultimo blocco potrebbe essere meno di  *k* iterazioni. Se non si *chunk_size* è specificato, l'impostazione predefinita su 1.|  
-|runtime|Quando **Schedule (Runtime)** viene specificato, le decisioni relative alla pianificazione viene posticipata fino alla fase di esecuzione. La pianificazione *tipo* e dimensione dei blocchi è possibile accedere in fase di esecuzione impostando la variabile di ambiente **OMP_SCHEDULE**. Se questa variabile di ambiente non è impostata, la pianificazione risulta è definito dall'implementazione. Quando **Schedule (Runtime)** è specificato, *chunk_size* non deve essere specificato.|  
-  
- In assenza di definite in modo esplicito **pianificazione** clausola, il valore predefinito **pianificazione** è definito dall'implementazione.  
-  
- Un programma compatibile con OpenMP non deve basarsi su una determinata pianificazione per l'esecuzione corretta. Un programma non deve basarsi su una pianificazione *tipo* conforme con precisione e la descrizione dell'indicata in precedenza, perché è possibile disporre di variazioni nelle implementazioni della stessa pianificazione *tipo* tra diversi compilatori. Le descrizioni consente di selezionare la pianificazione appropriata per una determinata situazione.  
-  
- Il **ordinati** clausola deve essere presente quando **ordinati** direttive associare il **per** costruire.  
-  
- È una barriera implicita alla fine di un **per** creare a meno che un **nowait** è specificata alcuna clausola.  
-  
- Restrizioni per il **per** direttiva sono i seguenti:  
-  
--   Il **per** ciclo deve essere un blocco strutturato e, inoltre, l'esecuzione non deve essere terminato da un **interruzione** istruzione.  
-  
--   I valori del ciclo di espressioni di controllano di **per** ciclo associata a un **per** direttiva deve essere uguale per tutti i thread del team.  
-  
--   Il **per** variabile di iterazione del ciclo deve avere un tipo integer con segno.  
-  
--   Una sola **pianificazione** clausola può essere incluso in un **per** direttiva.  
-  
--   Una sola **ordinati** clausola può essere incluso in un **per** direttiva.  
-  
--   Una sola **nowait** clausola può essere incluso in un **per** direttiva.  
-  
--   È se non specificato o la frequenza con cui eventuali effetti all'interno di *chunk_size*, *lb*, *b*, o */incr* sono presenti espressioni.  
-  
--   Il valore di *chunk_size* espressione deve essere uguale per tutti i thread del team.  
-  
-## <a name="cross-references"></a>Riferimenti:  
-  
--   **private**, **firstprivate**, **lastprivate**, e **riduzione** clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.  
-  
--   **OMP_SCHEDULE** vedere variabile di ambiente [sezione 4.1](../../parallel/openmp/4-1-omp-schedule.md) nella pagina 48.  
-  
--   **ordinati** costruire, vedere [sezione 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22.  
-  
--   [Appendice D](../../parallel/openmp/d-using-the-schedule-clause.md), pagina 93, vengono fornite ulteriori informazioni sull'utilizzo della clausola di pianificazione.
+
+Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativo che specifica che le iterazioni del ciclo associato verranno eseguite in parallelo. Le iterazioni del **per** ciclo vengono distribuite tra i thread che già esistono nel team l'esecuzione di un costrutto parallelo a cui si esegue l'associazione. La sintassi del **per** costrutto è come segue:
+
+```
+#pragma omp for [clause[[,] clause] ... ] new-line for-loop
+```
+
+La clausola è uno dei seguenti:
+
+**private (** *variabile-list* **)**
+
+**firstprivate (** *variabile-list* **)**
+
+**lastprivate(** *variable-list* **)**
+
+**Reduction (** *operator* **:** *elenco variabili* **)**
+
+**ordered**
+
+**pianificazione (** *genere* [**,** *chunk_size*] **)**
+
+**nowait**
+
+Il **per** direttiva specifica limitazioni sulla struttura dei corrispondenti **per** ciclo. In particolare, il corrispondente **per** ciclo deve avere forma canonica:
+
+**per (** *init-expr* **;** *var logico op b*; *incr-expr* **)**
+
+*Init-expr*<br/>
+Uno dei seguenti:
+
+*var* = *bilanciamento del carico*
+
+*tipo integer var* = *bilanciamento del carico*
+
+*incr-expr*<br/>
+Uno dei seguenti:
+
+++ *var*
+
+*var* ++
+
+-- *var*
+
+*var* --
+
+*var* += *incr*
+
+*var* -= *incr*
+
+*var* = *var* + *incr*
+
+*var* = *incr* + *var*
+
+*var* = *var* - *incr*
+
+*var*<br/>
+Una variabile integer con segno. Se questa variabile in caso contrario, potrebbe essere condivisi, in modo implicito renderlo privato per la durata della **per**.   Questa variabile non deve essere modificata all'interno del corpo del **per** istruzione. Se non si specifica la variabile **lastprivate**, il relativo valore dopo il ciclo è indeterminato.
+
+*operazione logica*<br/>
+Uno dei seguenti:
+
+<
+
+\<=
+
+>
+
+\>=
+
+*bilanciamento del carico*, *b*, e *incr*<br>
+Le espressioni integer invariante del ciclo. Non vi è alcuna sincronizzazione durante la valutazione di espressioni. In questo modo, tutti gli effetti collaterali valutati produrre risultati imprevisti.
+
+Si noti che la forma canonica consente il numero di iterazioni del ciclo deve essere calcolata in ingresso per il ciclo. Questo calcolo viene eseguito con i valori nel tipo di *var*, dopo le promozioni integrali. In particolare, se pari *b* - *lb* + *incr* non può essere rappresentato nel cui tipo, il risultato è indeterminato. Inoltre, se *logiche-op* è < o \<= then *incr-expr* causano *var* per aumentare a ogni iterazione del ciclo.   Se *logiche-op* è > o > = then *incr-expr* causano *var* diminuzione in ogni iterazione del ciclo.
+
+Il **pianificazione** clausola che specifica come iterazioni delle **per** ciclo sono divise tra i thread del team. La correttezza di un programma non deve dipendere thread che esegue un'iterazione specifica. Il valore di *chunk_size*, se specificato, deve essere un'espressione integer invariante ciclo con un valore positivo. Non vi è alcuna sincronizzazione durante la valutazione dell'espressione. In questo modo, tutti gli effetti collaterali valutati produrre risultati imprevisti. La pianificazione *tipo* può essere uno dei seguenti:
+
+TABELLA 2-1 **pianificazione** clausola *tipo* valori
+
+|||
+|-|-|
+|statico|Quando **pianificazione (statici** *chunk_size* **)** è specificato, le iterazioni sono suddivisi in blocchi di dimensioni specificato dalla *chunk_size*. I blocchi vengono assegnati staticamente ai thread del team in modo round robin in base all'ordine il numero di thread. Se non si specifica *chunk_size* viene specificato, lo spazio di iterazione è suddiviso in blocchi che equivalgono circa le dimensioni, con un blocco assegnato a ogni thread.|
+|dynamic|Quando **pianificazione (dinamica** *chunk_size* **)** è specificato, le iterazioni sono suddivisi in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread viene eseguito il blocco di iterazioni e quindi attende la relativa assegnazione successivo, fino a quando nessun blocco rimarrà impostata per essere assegnati. Si noti che l'ultimo blocco per l'assegnazione può avere un numero inferiore di iterazioni. Se non si specifica *chunk_size* viene specificato, l'impostazione predefinita è 1.|
+|PGO|Quando **pianificazione (guidati** *chunk_size* **)** viene specificato, le iterazioni vengono assegnate ai thread in blocchi con riducendo le dimensioni. Quando un thread termina il blocco assegnato di iterazioni, esso viene assegnato dinamicamente un altro blocco, fino a quando non rimane nessuna. Per un *chunk_size* pari a 1, la dimensione di ciascun blocco è approssimativamente il numero di iterazioni non assegnati diviso per il numero di thread. Queste dimensioni diminuiscono circa esponenzialmente su 1. Per un *chunk_size* con il valore *k* maggiore di 1, le dimensioni di circa diminuire in modo esponenziale a *k*, ad eccezione del fatto che l'ultimo blocco potrà avere meno di  *k* iterazioni. Se non si specifica *chunk_size* viene specificato, l'impostazione predefinita è 1.|
+|runtime|Quando **Schedule (Runtime)** viene specificato, la decisione relativa a pianificazione viene posticipata fino alla fase di esecuzione. La pianificazione *genere* e le dimensioni dei blocchi possono essere scelte in fase di esecuzione impostando la variabile di ambiente **OMP_SCHEDULE**. Se questa variabile di ambiente non è impostata, la pianificazione risulta viene definito dall'implementazione. Quando **Schedule (Runtime)** omette *chunk_size* non deve essere specificata.|
+
+In assenza di un controllo definito in modo esplicito **pianificazione** clausola, il valore predefinito **pianificazione** è definito dall'implementazione.
+
+Un programma OpenMP conformi necessario non affidarsi a una determinata pianificazione per l'esecuzione corretta. Un programma necessario non affidarsi a una pianificazione *genere* conformi con precisione e la descrizione specificata in precedenza, perché è possibile disporre di variazioni nelle implementazioni della pianificazione stessa *tipo* tra compilatori diversi. Le descrizioni sono utilizzabile per selezionare la pianificazione appropriata per una determinata situazione.
+
+Il **ordinati** clausola deve essere presente quando **ordinati** direttive associare al **per** costruire.
+
+È una barriera implicita alla fine di una **per** costruire, a meno che un **nowait** è specificata alcuna clausola.
+
+Restrizioni per il **per** direttiva sono i seguenti:
+
+-   Il **per** ciclo deve essere un blocco strutturato e, inoltre, l'esecuzione deve non terminare con un **interruzione** istruzione.
+
+-   I valori del ciclo controllano le espressioni del **per** ciclo associata a un **per** direttiva deve essere uguale per tutti i thread del team.
+
+-   Il **per** variabile di iterazione del ciclo deve presentare un tipo intero con segno.
+
+-   Una sola **pianificazione** clausola può apparire in un **per** direttiva.
+
+-   Una sola **ordinati** clausola può apparire in un **per** direttiva.
+
+-   Una sola **nowait** clausola può apparire in un **per** direttiva.
+
+-   È se non specificato o frequenza eventuali effetti all'interno di *chunk_size*, *lb*, *b*, oppure *incr* espressioni si verificano.
+
+-   Il valore della *chunk_size* espressione deve essere uguale per tutti i thread del team.
+
+## <a name="cross-references"></a>Tra i riferimenti:
+
+-   **privato**, **firstprivate**, **lastprivate**, e **riduzione** clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) a pagina 25.
+
+-   **OMP_SCHEDULE** vedere variabile di ambiente [sezione 4.1](../../parallel/openmp/4-1-omp-schedule.md) nella pagina 48.
+
+-   **ordinati** costruire, vedere [sezione 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22.
+
+-   [Appendice D](../../parallel/openmp/d-using-the-schedule-clause.md), pagina 93, fornisce ulteriori informazioni sull'utilizzo della clausola di pianificazione.

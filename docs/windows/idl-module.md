@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7424581c277e7b20132fd5e667acb77a4a95789e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598650"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220465"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -65,10 +65,10 @@ L'ID di un argomento della Guida in un file con estensione chm o. hlp.
 L'ID Guida per questa libreria dei tipi.
 
 *nascosto* (facoltativo)  
-Un parametro che impedisce la visualizzazione libreria. Per altre informazioni, vedere l'attributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .
+Un parametro che impedisce la visualizzazione libreria. Vedere le [nascosto](/windows/desktop/Midl/hidden) attributo MIDL per altre informazioni.
 
 *con restrizioni* (facoltativo)  
-I membri della raccolta non possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .
+I membri della raccolta non possono essere chiamati in modo arbitrario. Vedere le [limitato](/windows/desktop/Midl/restricted) attributo MIDL per altre informazioni.
 
 *dichiarazione di funzione*  
 La funzione che verrà definita.
@@ -77,7 +77,7 @@ La funzione che verrà definita.
 
 Il **idl_module** attributo C++ consente di specificare il punto di ingresso in un file con estensione dll, che consente di importare da un file con estensione dll.
 
-Il **idl_module** attributo ha funzionalità simili a quelle di [modulo](http://msdn.microsoft.com/library/windows/desktop/aa367099) attributo MIDL.
+Il **idl_module** attributo ha funzionalità simili a quelle di [modulo](/windows/desktop/Midl/module) attributo MIDL.
 
 È possibile esportare alcuna operazione da un oggetto COM che è possibile esportare da un file con estensione dll inserendo un punto di ingresso DLL nel blocco di libreria di un file con estensione idl.
 

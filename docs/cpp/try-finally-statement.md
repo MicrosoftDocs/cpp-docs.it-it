@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464860"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215531"
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
 **Sezione specifica Microsoft**  
@@ -90,7 +90,7 @@ Ordine di terminazione esecuzione del gestore
 ## <a name="abnormal-termination"></a>Terminazione anomala  
  Uscita da un **try-finally** istruzione tramite il [longjmp](../c-runtime-library/reference/longjmp.md) funzione di runtime viene considerata una terminazione anomala. Non è consentito passare a un **try** istruzione, ma uno uscire. Tutti i **finally** istruzioni attive tra il punto di partenza (terminazione normale delle **try** blocco) e la destinazione (il **except** di blocco gestisce l'eccezione) deve essere eseguito. Si tratta di una rimozione locale.  
   
- Se un **provare** blocco viene terminato in anticipo per qualsiasi motivo, includendo un salto dal blocco, il sistema esegue associato **infine** blocco come parte del processo di rimozione dello stack. In questi casi, il [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) funzione restituisce **true** se chiamato dall'interno la **infine** bloccare; in caso contrario, restituisce **false**.  
+ Se un **provare** blocco viene terminato in anticipo per qualsiasi motivo, includendo un salto dal blocco, il sistema esegue associato **infine** blocco come parte del processo di rimozione dello stack. In questi casi, il [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) funzione restituisce **true** se chiamato dall'interno la **infine** bloccare; in caso contrario, restituisce **false**.  
   
  Il gestore terminazioni non viene chiamato se un processo viene terminato nel corso dell'esecuzione di un **try-finally** istruzione.  
   
@@ -100,4 +100,4 @@ Ordine di terminazione esecuzione del gestore
  [Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)   
  [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
  [Parole chiave](../cpp/keywords-cpp.md)   
- [Sintassi del gestore di terminazione](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [Sintassi del gestore di terminazione](/windows/desktop/Debug/termination-handler-syntax)

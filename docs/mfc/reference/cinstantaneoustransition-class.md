@@ -1,5 +1,5 @@
 ---
-title: Classe CInstantaneousTransition | Documenti Microsoft
+title: Classe CInstantaneousTransition | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038406"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209214"
 ---
 # <a name="cinstantaneoustransition-class"></a>Classe CInstantaneousTransition
 Incapsula una transizione istantanea.  
@@ -56,10 +56,10 @@ class CInstantaneousTransition : public CBaseTransition;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione alla fine della transizione.|  
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione al termine della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Durante una transizione istantanea, il valore della variabile di animazione cambia immediatamente rispetto al valore corrente a un valore finale specificato. La durata di questa transizione è sempre zero. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
+ Durante una transizione istantanea, il valore della variabile di animazione modificato immediatamente dal valore corrente a un valore finale specificato. La durata di questa transizione è sempre zero. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile allocata li utilizzando l'operatore new. L'oggetto incapsulato IUIAnimationTransition COM viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -80,7 +80,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
   
 ### <a name="parameters"></a>Parametri  
  *dblFinalValue*  
- Il valore della variabile di animazione alla fine della transizione.  
+ Il valore della variabile di animazione al termine della transizione.  
   
 ##  <a name="create"></a>  CInstantaneousTransition::Create  
  Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.  
@@ -93,14 +93,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
 *pLibrary*  
- Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](https://msdn.microsoft.com/library/windows/desktop/dd371897), che definisce una raccolta di transizioni standard.  
+ Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), che definisce una raccolta di transizioni standard.  
 
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue  
- Il valore della variabile di animazione alla fine della transizione.  
+ Il valore della variabile di animazione al termine della transizione.  
   
 ```  
 DOUBLE m_dblFinalValue;  

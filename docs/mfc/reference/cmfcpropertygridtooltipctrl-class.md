@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCPropertyGridToolTipCtrl | Documenti Microsoft
+title: Classe CMFCPropertyGridToolTipCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 574da3d370a403aa74ba8c438b7c175bee19f198
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040961"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211965"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
-Implementa una descrizione comando controllare che il [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) viene usato per visualizzare le descrizioni comandi.  
+Implementa una descrizione comando del controllo che il [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) viene usato per visualizzare le descrizioni comandi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,17 +65,17 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Disattiva e nasconde il controllo tooltip.|  
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Restituisce le coordinate dell'ultima posizione del controllo tooltip.|  
 |[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Nasconde il controllo tooltip.|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Imposta la spaziatura tra il testo della descrizione comando e il bordo della finestra della descrizione comando.|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Imposta la spaziatura tra il testo della descrizione comando e il bordo di finestra della descrizione comando.|  
 |[CMFCPropertyGridToolTipCtrl::Track](#track)|Visualizza il controllo tooltip.|  
   
 ## <a name="remarks"></a>Note  
- Descrizioni comandi vengono visualizzati quando il puntatore si sofferma su un nome di proprietà. Il [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) classe visualizza una descrizione comando in modo che siano facilmente leggibile dall'utente. In genere, la posizione di una descrizione comando è determinata dalla posizione dell'indicatore di misura. Tramite questa classe, la descrizione comando visualizzata sopra il nome della proprietà, è simile all'estensione di proprietà naturale, in modo che il nome della proprietà è completamente visibile.  
+ Le descrizioni comandi vengono visualizzate quando il puntatore è posizionato su un nome di proprietà. Il [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) classe visualizza una descrizione comando in modo che risulti facilmente leggibile dall'utente. In genere, la posizione di una descrizione comandi è determinata dalla posizione del puntatore. Utilizzando questa classe, la descrizione comando viene visualizzato sopra il nome della proprietà ed è simile all'estensione di proprietà naturale, in modo che il nome della proprietà è completamente visibile.  
   
- MFC automaticamente questo controllo viene creato e utilizzato nel [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
+ MFC crea questo controllo e lo Usa nella automaticamente il [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCPropertyGridToolTipCtrl` (classe) e come visualizzare il controllo tooltip.  
+ Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCPropertyGridToolTipCtrl` classe e su come visualizzare il controllo tooltip.  
   
  [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
   
@@ -110,7 +110,7 @@ BOOL Create(CWnd* pWndParent);
  Puntatore alla finestra padre.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se la finestra è stata creata correttamente; in caso contrario, FALSE.  
+ TRUE se la finestra è stata creata con successo; in caso contrario, FALSE.  
   
 ##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
  Disattiva e nasconde il controllo tooltip.  
@@ -141,7 +141,7 @@ void Hide();
 ```  
   
 ##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
- Imposta la spaziatura tra il testo della descrizione comando e il bordo della finestra della descrizione comando.  
+ Imposta la spaziatura tra il testo della descrizione comando e il bordo di finestra della descrizione comando.  
   
 ```  
 void SetTextMargin(int nTextMargin);
@@ -149,7 +149,7 @@ void SetTextMargin(int nTextMargin);
   
 ### <a name="parameters"></a>Parametri  
  [in] *nTextMargin*  
- Specifica la spaziatura tra il testo del controllo descrizione comando e il bordo della finestra della descrizione comando. Il valore predefinito è 10 pixel.  
+ Specifica la spaziatura tra il bordo di finestra della descrizione comando e il testo del controllo tooltip. Il valore predefinito è 10 pixel.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Visualizza il controllo tooltip.  
@@ -162,13 +162,13 @@ void Track(
   
 ### <a name="parameters"></a>Parametri  
  [in] *rect*  
- Specifica la posizione e le dimensioni del controllo tooltip.  
+ Specifica la posizione e dimensioni del controllo tooltip.  
   
  [in] *strText*  
  Specifica il testo da visualizzare nella descrizione comando.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo visualizza il controllo tooltip la posizione e dimensioni specificate dal *rect*. Se la posizione, dimensione e testo non sono stati modificati dall'ultima volta che questo metodo è stato chiamato, questo metodo non ha effetto.  
+ Questo metodo visualizza il controllo tooltip in posizione e dimensioni specificato dalla *rect*. Se la posizione, dimensione e testo non sono stati modificati dall'ultima volta in che questo metodo è stato chiamato, questo metodo non ha effetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

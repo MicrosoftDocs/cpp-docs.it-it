@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4218d6c6446554d5fb45d680588127ec3e0ee
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e1ee6ee76840774fd750df95f73c105c059cae59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196521"
 ---
 # <a name="ccommodule-class"></a>CComModule (classi)
 A partire da ATL 7.0 `CComModule` è deprecato: vedere [classi di modulo ATL](../../atl/atl-module-classes.md) per altri dettagli.  
@@ -346,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Parametri  
  *dwClsContext*  
- [in] Specifica il contesto in cui l'oggetto della classe deve essere eseguito. I valori possibili sono CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Per una descrizione di questi valori, vedere [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) nel SDK di Windows.  
+ [in] Specifica il contesto in cui l'oggetto della classe deve essere eseguito. I valori possibili sono CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Per una descrizione di questi valori, vedere [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) nel SDK di Windows.  
   
  *dwFlags*  
- [in] Determina i tipi di connessione per l'oggetto della classe. I valori possibili sono REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE o REGCLS_MULTI_SEPARATE. Per una descrizione di questi valori, vedere [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) nel SDK di Windows.  
+ [in] Determina i tipi di connessione per l'oggetto della classe. I valori possibili sono REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE o REGCLS_MULTI_SEPARATE. Per una descrizione di questi valori, vedere [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  

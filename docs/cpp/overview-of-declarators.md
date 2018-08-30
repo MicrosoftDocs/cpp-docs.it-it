@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd815f1af5a6eced06eae99316b2ee137fa398c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404938"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209361"
 ---
 # <a name="overview-of-declarators"></a>Cenni preliminari sui dichiaratori
 I dichiaratori sono componenti di una dichiarazione che specifica i nomi di oggetti o funzioni. I dichiaratori specificano anche se l'oggetto denominato è un oggetto, un puntatore, un riferimento o una matrice o meno.  Mentre i dichiaratori non specificano il tipo di base, modificano tuttavia le informazioni sul tipo nel tipo di base per specificare i tipi derivati come puntatori, riferimenti e matrici.  Applicato alle funzioni, il dichiaratore funziona con l'identificatore di tipo per specificare completamente il tipo restituito di una funzione come oggetto, puntatore o riferimento. (Gli identificatori, descritti [dichiarazioni e definizioni](declarations-and-definitions-cpp.md), trasferiscono proprietà come tipo e classe di archiviazione. I modificatori, descritti in questa sezione e nella [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md), modificano i dichiaratori.) Nella figura seguente viene illustrata una dichiarazione completa di `MyFunction` e vengono indicati i componenti della dichiarazione.  
@@ -53,7 +53,7 @@ const char *pch, ch;
   
  **Dichiaratori per puntatori, riferimenti e matrici**  
   
- Gli operatori puntatore inseriti davanti al nome indicano che l'oggetto diventa un puntatore o un riferimento.  Il **\*** operatore dichiara il nome come puntatore, mentre il **&** operatore lo dichiara come riferimento.  
+ Gli operatori puntatore inseriti davanti al nome indicano che l'oggetto diventa un puntatore o un riferimento.  Il <strong>\*</strong> operatore dichiara il nome come puntatore, mentre il **&** operatore lo dichiara come riferimento.  
   
 ```cpp 
 int *i; // declarator is *i  

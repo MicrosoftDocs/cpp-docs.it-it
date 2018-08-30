@@ -1,7 +1,7 @@
 ---
-title: Progetto PRJ0024 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0024 del progetto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bf76aba80093bf9e8e653bdfb9fad49687a501
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb539a5f1ee5f1aa5f9d828d93fa6d0dc8690c22
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318347"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215598"
 ---
 # <a name="project-build-error-prj0024"></a>Errore di compilazione progetto PRJ0024
-Impossibile convertire il percorso Unicode 'path' tabella codici ANSI dell'utente.  
-  
- ***percorso*** è la versione Unicode originale della stringa di percorso. Questo errore può verificarsi nei casi in cui è presente un percorso Unicode che non può essere convertito direttamente ad ANSI per la pagina di codice di sistema corrente.  
-  
- Questo errore può verificarsi se si sta lavorando con un progetto che è stato sviluppato un sistema che utilizza una tabella codici che non è presente nel computer in uso.  
-  
- La risoluzione di questo errore consiste nell'aggiornare il percorso per utilizzare il testo ANSI oppure installare la tabella codici nel computer in uso e impostarlo come predefinito del sistema.
+
+> Percorso Unicode '*percorso*' non può essere tradotto in tabella codici ANSI dell'utente.
+
+*percorso* è la versione originale di Unicode della stringa di percorso. Questo errore può verificarsi nei casi in cui è presente un percorso di Unicode che non possa essere convertito direttamente ad ANSI per la tabella codici del sistema corrente.
+
+Questo errore può verificarsi se si lavora con un progetto che è stato sviluppato in un sistema con una tabella codici non presente nel computer in uso.
+
+La risoluzione di questo errore consiste nell'aggiornare il percorso da usare testo ANSI o per installare la tabella codici nel computer e impostarlo come impostazione predefinita del sistema.

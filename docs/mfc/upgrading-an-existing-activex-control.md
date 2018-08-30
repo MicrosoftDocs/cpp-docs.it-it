@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175b64b40ab2fd242e3e430cf99d761f577835cb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026420"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203130"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Aggiornamento di un controllo ActiveX esistente
 Controlli ActiveX esistenti (precedentemente controlli OLE) può essere usato in Internet senza alcuna modifica. È possibile tuttavia modificare i controlli per migliorare le prestazioni. Quando si usa il controllo in una pagina Web, esistono ulteriori considerazioni. Il file ocx e tutti i file di supporto devono essere nel computer di destinazione o essere scaricati da Internet. In questo modo la dimensione del codice e il download ora un aspetto importante. Download di possono essere inseriti in un file CAB con firma digitale. È possibile contrassegnare il controllo come sicuri per lo script e come sicuri per l'inizializzazione.  
@@ -89,7 +89,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  Il file CAB a cui punta `CODEBASE` deve contenere il file ocx per il controllo ActiveX e un file con estensione inf per controllarne l'installazione. Si crea il file CAB, specificando il nome del file di controllo e un file. inf. Non includono file DLL dipendenti che potrebbero già esistere nel sistema in questo file CAB. Ad esempio, le DLL MFC sono compresse in un file CAB separato e a cui fa riferimento il controllo file. inf.  
   
- Per informazioni dettagliate su come creare un file CAB, vedere [creazione di un File CAB](http://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ Per informazioni dettagliate su come creare un file CAB, vedere [creazione di un File CAB](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
   
 ### <a name="the-inf-file"></a>Il File INF  
  L'esempio seguente, spindial, gli elenchi di file di supporto e le informazioni sulla versione necessari per il Spindial MFC controllare. Si noti che il percorso per le DLL di MFC è un sito Web Microsoft. Il file Mfc42. cab viene fornito e firmato da Microsoft.  
@@ -221,7 +221,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> Firma del codice  
  La firma del codice è progettato per identificare l'origine del codice e per garantire che il codice non sia stato modificato perché è stato firmato. A seconda delle impostazioni di sicurezza del browser, gli utenti potrebbero essere avvisati prima del download di codice. Gli utenti possono scegliere di considerare attendibili alcuni proprietari di certificati o le aziende, in cui maiuscole codice firmato da quelle attendibili verranno scaricati senza alcun avviso. Codice è firmato digitalmente per evitare manomissioni.  
   
- Assicurarsi che il codice finale è firmato in modo che il controllo può essere scaricato automaticamente senza visualizzare messaggi di avviso di trust. Per informazioni dettagliate su come firmare il codice, consultare la documentazione su Authenticode nel SDK di ActiveX e vedere [firma di un File CAB](http://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Assicurarsi che il codice finale è firmato in modo che il controllo può essere scaricato automaticamente senza visualizzare messaggi di avviso di trust. Per informazioni dettagliate su come firmare il codice, consultare la documentazione su Authenticode nel SDK di ActiveX e vedere [firma di un File CAB](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
   
  A seconda della relazione di trust e del browser a livello le impostazioni di protezione, potrebbe essere visualizzato un certificato per identificare la persona o l'azienda. Se il livello di protezione è none, o se il signed proprietario del controllo certificato è attendibile, non essere visualizzato un certificato. Visualizzare [livelli di protezione di Internet Explorer del Browser e controllare il comportamento](#_core_internet_explorer_browser_safety_levels_and_control_behavior) per informazioni dettagliate sul modo in cui l'impostazione della sicurezza del browser determina se il controllo viene scaricato e visualizzata di un certificato.  
   

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c339ce6ad67186dc7a4f43d7006c5beb047c8f90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404952"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204904"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -77,19 +77,19 @@ void _wmakepath(
 
 *percorso* buffer del percorso completo.
 
-*unità* contiene una lettera (A, B e così via) corrispondente all'unità desiderata e due punti finali facoltativi. **makepath** inserisce automaticamente i due punti nel percorso composto se mancante. Se *unità* viene **NULL** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata in composita *percorso* stringa.
+*unità* contiene una lettera (A, B e così via) corrispondente all'unità desiderata e due punti finali facoltativi. **makepath** inserisce automaticamente i due punti nel percorso composto se mancante. Se *unità* viene **NULL** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella composita *percorso* stringa.
 
-*dir* contiene il percorso della directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe può essere utilizzate in una singola *dir* argomento. Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* viene **NULL** o punta a una stringa vuota, nessun percorso di directory viene inserito nella composizione *percorso* stringa.
+*dir* contiene il percorso della directory, escluso il designatore di unità o il nome file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe possono essere usate in un'unica *dir* argomento. Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* viene **NULL** o punta a una stringa vuota, nessun percorso di directory viene inserito in composita *percorso* stringa.
 
-*fname* contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* viene **NULL** o punta a una stringa vuota, nessun nome file viene inserito nella composizione *percorso* stringa.
+*fname* contiene il nome di file di base senza tutte le estensioni di file. Se *fname* viene **NULL** o punta a una stringa vuota, nessun nome file viene inserito in composita *percorso* stringa.
 
-*ext* contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). **makepath** inserisce il punto automaticamente se non viene visualizzato *ext*. Se *ext* viene **NULL** o punta a una stringa vuota, nessuna estensione viene inserita nella composizione *percorso* stringa.
+*ext* contiene l'estensione del nome file effettivo, con o senza un punto iniziale (.). **makepath** inserisce il punto automaticamente se non viene visualizzato nella *ext*. Se *ext* viene **NULL** o punta a una stringa vuota, nessuna estensione viene inserito in composita *percorso* stringa.
 
 ## <a name="remarks"></a>Note
 
-Il **makepath** funzione crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *percorso*. Il *percorso* potrebbe includere una lettera di unità, percorso della directory, filename ed estensione del nome file. **wmakepath** è una versione a caratteri wide **makepath**; gli argomenti da **wmakepath** sono stringhe a caratteri "wide". **wmakepath** e **makepath** si comportano in modo identico in caso contrario.
+Il **makepath** funzione crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *percorso*. Il *percorso* potrebbe includere una lettera di unità, percorso della directory, filename ed estensione del nome file. **wmakepath** è una versione a caratteri wide di **makepath**; gli argomenti **wmakepath** sono stringhe a caratteri wide. **wmakepath** e **makepath** hanno lo stesso comportamento in caso contrario.
 
-**Nota sulla sicurezza** Usare una stringa con terminazione Null. Per evitare sovraccarichi del buffer, la stringa con terminazione null non deve superare le dimensioni del *percorso* buffer. **makepath** non garantisce che non superi la lunghezza della stringa di percorso composita **MAX_PATH**. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Nota sulla sicurezza** Usare una stringa con terminazione Null. Per evitare sovraccarichi del buffer, la stringa con terminazione null non può superare le dimensioni dei *percorso* buffer. **makepath** non garantisce che la lunghezza della stringa di percorso composto non superi **MAX_PATH**. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -97,9 +97,9 @@ Il **makepath** funzione crea una stringa di percorso composita da singoli compo
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-Il *percorso* argomento deve puntare a un buffer vuoto sufficientemente grande da contenere il percorso completo. Composita *percorso* deve essere più grande di **MAX_PATH** costante, definita in STDLIB. h.
+Il *percorso* argomento deve puntare a un buffer vuoto sufficientemente grande da contenere il percorso completo. Composita *tracciato* deve essere superiore al **MAX_PATH** costante, definita in STDLIB. h.
 
-Se è percorso **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, **errno** è impostata su **EINVAL**. **NULL** sono consentiti valori per tutti gli altri parametri.
+Se il percorso è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). È inoltre **errno** è impostata su **EINVAL**. **NULL** valori consentiti per tutti gli altri parametri.
 
 ## <a name="requirements"></a>Requisiti
 

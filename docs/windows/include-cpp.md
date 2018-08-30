@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fe604074b843e7c0b76c2e671e0abd9e40770a7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 232dfb803e9327b857d26a4294786c2742a1143c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598460"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215968"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -45,7 +45,7 @@ Il nome di un file che si desidera incluso nel file con estensione IDL generato.
 
 Il **includono** C++ attributo causa una `#include` istruzione inserita sotto il `import "docobj.idl"` istruzione nel file IDL generato.
 
-Il **includono** attributi di C++ ha la stessa funzionalità come la [includono](http://msdn.microsoft.com/library/windows/desktop/aa367052) attributo MIDL.
+Il **includono** attributi di C++ ha la stessa funzionalità come la [includono](/windows/desktop/Midl/include) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

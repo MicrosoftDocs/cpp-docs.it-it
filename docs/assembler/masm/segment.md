@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c55416cc5a757128c9cc97b2f342953911ac2946
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f5defce11b611f23b67e5e44ac1b9d406f73c0ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058111"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210419"
 ---
 # <a name="segment"></a>SEGMENT
-Definisce un segmento di programma chiamato *nome* la presenza di attributi di segmento  
+Definisce un segmento di programma chiamato *nome* presenza di attributi di segmento  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,40 +37,40 @@ name ENDS
   
 #### <a name="parameters"></a>Parametri  
  *align*  
- L'intervallo di indirizzi di memoria da cui è possibile selezionare un indirizzo iniziale per il segmento. Il tipo di allineamento può essere una delle operazioni seguenti:  
+ L'intervallo di indirizzi di memoria da cui è possibile selezionare un indirizzo iniziale per il segmento. Il tipo di allineamento può essere uno dei seguenti:  
   
-|Allineare il testo|Indirizzo iniziale|  
+|Allinea tipo|Indirizzo iniziale|  
 |----------------|----------------------|  
-|**BYTE**|Indirizzo byte disponibile successivo.|  
-|**WORD**|Indirizzo successivo disponibile word (2 byte per word).|  
-|**DWORD**|Indirizzo successivo disponibile parola doppia (4 byte per ogni parola doppia).|  
-|**PARA**|Indirizzo successivo disponibile paragrafo (16 byte per ogni paragrafo).|  
-|**PAGE**|Indirizzo pagina disponibile successiva (256 byte per pagina).|  
-|**ALIGN**(*n*)|Successivo disponibile *n*indirizzo byte th. Per ulteriori informazioni vedere la sezione Osservazioni.|  
+|**BYTE**|Indirizzo dei byte disponibile successivo.|  
+|**WORD**|Indirizzo successivo disponibile word (2 byte per ogni parola).|  
+|**DWORD**|Indirizzo successivo disponibile valore double word (4 byte per ogni parola doppia).|  
+|**PARA**|Indirizzo disponibile paragrafo successivo (16 byte per ogni paragrafo).|  
+|**PAGE**|Indirizzo pagina disponibile successivo (256 byte per pagina).|  
+|**ALIGN**(*n*)|Successivo disponibile *n*indirizzo byte th. Per altre informazioni vedere la sezione Osservazioni.|  
   
- Se questo parametro viene omesso, **PARA** viene utilizzato per impostazione predefinita.  
+ Se questo parametro viene omesso, **PARA** viene usato per impostazione predefinita.  
   
  *combine*  
- **Pubblica**, **STACK**, **comuni**, **memoria**, **in * * * indirizzo*, **privato**  
+ **Pubblica**, **STACK**, **comuni**, **memoria**, **in**<em>indirizzo</em>, **Privata**  
   
  *use*  
  **USE16**, **USE32**, **FLAT**  
   
  `characteristics`  
- **INFO**, **leggere**, **scrivere**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, e **annullare**  
+ **INFO**, **leggere**, **scrivere**, **EXECUTE**, **condiviso**, **NOPAGE**, **NOCACHE**, e **annullare**  
   
- Questi sono supportati solo per COFF e corrispondono alle caratteristiche di un nome simile sezione COFF (ad esempio, **SHARED** corrisponde a IMAGE_SCN_MEM_SHARED). LETTURA imposta il flag IMAGE_SCN_MEM_READ. Il flag di sola lettura obsoleto ha causato la sezione cancellare il flag IMG_SCN_MEM_WRITE. Se qualsiasi `characteristics` sono impostati, non vengono utilizzate le caratteristiche predefinite e solo i flag specificati dal programmatore sono in vigore.  
+ Queste sono supportate solo per COFF e corrispondono alle caratteristiche di sezione COFF di nome simile (ad esempio, **condiviso** corrisponde a IMAGE_SCN_MEM_SHARED). LETTURA imposta il flag IMAGE_SCN_MEM_READ. Il flag di sola lettura obsoleto ha causato la sezione per cancellare il flag IMG_SCN_MEM_WRITE. Se qualsiasi `characteristics` vengono impostate, non vengono utilizzate le caratteristiche predefinite e solo i flag specificati dal programmatore restano validi.  
   
  `ALIAS(` `string` `)`  
- Questa stringa viene utilizzata come nome della sezione nell'oggetto COFF generato.  Crea più sezioni con lo stesso nome esterno, con nomi di segmento MASM distinti.  
+ Questa stringa viene utilizzata come nome della sezione nell'oggetto COFF generato.  Crea più sezioni con lo stesso nome esterno, con i nomi distinti segmento MASM.  
   
  Non supportato con **/omf**.  
   
  `class`  
- Indica come devono essere combinati e ordinati nel file assemblato segmenti. I valori tipici sono, `'DATA'`, `'CODE'`, `'CONST'` e `'STACK'`  
+ Designa come segmenti devono essere combinati e ordinati nel file assemblato. I valori tipici sono, `'DATA'`, `'CODE'`, `'CONST'` e `'STACK'`  
   
 ## <a name="remarks"></a>Note  
- Per `ALIGN(n)`, `n` può essere qualsiasi potenza di 2 da 1 a 8192; non è supportata con **/omf**.  
+ Per la `ALIGN(n)`, `n` può essere qualsiasi potenza di 2 da 1 a 8192; non è supportata con **/omf**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento a direttive](../../assembler/masm/directives-reference.md)

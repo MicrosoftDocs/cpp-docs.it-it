@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1900 | Documenti Microsoft
+title: Errore irreversibile C1900 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da7cdd5601785f43748ec87d3219f43728536855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2211b4243ddf44194959a263fd90ec1a615ea0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228987"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220281"
 ---
 # <a name="fatal-error-c1900"></a>Errore irreversibile C1900
-errata corrispondenza tra 'strumento1' versione 'numero1' e 'strumento2' versione 'numero2'  
-  
- Gli strumenti eseguiti nei vari passaggi del compilatore non corrispondono. ***number1*** e ***number2*** fare riferimento alle date nei file. Nella fase 1, ad esempio, viene eseguito il front end del compilatore (c1.dll) mentre nella fase 2 viene eseguito il back end (c2.dll). È necessario che le date dei file corrispondano.  
-  
- Per risolvere questo problema, assicurarsi che tutti gli aggiornamenti siano stati applicati a Visual Studio. Se il problema persiste, utilizzare **programmi e funzionalità** nel Pannello di controllo di Windows per ripristinare o reinstallare Visual Studio.
+
+> Errata corrispondenza tra '*tool1*'version'*number1*"e"*tool2*'version'*numero2*'
+
+Gli strumenti eseguiti nei vari passaggi del compilatore non corrispondono. *number1* e *numero2* fare riferimento alle date nei file. Nella fase 1, ad esempio, viene eseguito il front end del compilatore (c1.dll) mentre nella fase 2 viene eseguito il back end (c2.dll). È necessario che le date dei file corrispondano.
+
+Per risolvere questo problema, assicurarsi che tutti gli aggiornamenti siano stati applicati a Visual Studio. Se il problema persiste, usare **programmi e funzionalità** nel Pannello di controllo di Windows per ripristinare o reinstallare Visual Studio.

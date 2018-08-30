@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab7b12c26854903379da0b67f9f64e2158195587
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852758"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211128"
 ---
 # <a name="colestreamfile-class"></a>Classe COleStreamFile
 Rappresenta un flusso di dati (`IStream`) in un file composito come parte di un archivio strutturato OLE.  
@@ -72,7 +72,7 @@ class COleStreamFile : public CFile
   
  Per altre informazioni sulla modifica dei flussi e archivi, vedere l'articolo [contenitori: file compositi](../../mfc/containers-compound-files.md)...  
   
- Per altre informazioni, vedere [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) e [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) nel SDK di Windows.  
+ Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) e [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) nel SDK di Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -98,7 +98,7 @@ void Attach(LPSTREAM lpStream);
 ### <a name="remarks"></a>Note  
  L'oggetto non sia già associata a un flusso di OLE.  
   
- Per altre informazioni, vedere [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) nel SDK di Windows.  
+ Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) nel SDK di Windows.  
   
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  Crea un oggetto `COleStreamFile`.  
@@ -114,7 +114,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="remarks"></a>Note  
  Se *lpStream* è NULL, l'oggetto non è associato a un flusso di OLE, in caso contrario, l'oggetto viene associato al flusso fornito OLE.  
   
- Per altre informazioni, vedere [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) nel SDK di Windows.  
+ Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) nel SDK di Windows.  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  In modo sicuro crea un nuovo flusso esaurito la memoria globale e condivisa in cui un errore è una condizione normale, prevista.  
@@ -133,7 +133,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="remarks"></a>Note  
  La memoria viene allocata dal sottosistema OLE.  
   
- Per altre informazioni, vedere [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) nel SDK di Windows.  
+ Per altre informazioni, vedere [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) nel SDK di Windows.  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  Crea in modo sicuro un nuovo flusso nell'oggetto di archiviazione fornito quando un errore è una condizione normale, prevista.  
@@ -165,7 +165,7 @@ BOOL CreateStream(
 ### <a name="remarks"></a>Note  
  Verrà generata un'eccezione di file se l'apertura di ha esito negativo e *pError* non NULL.  
   
- Per altre informazioni, vedere [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) nel SDK di Windows.  
+ Per altre informazioni, vedere [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) nel SDK di Windows.  
   
 ##  <a name="detach"></a>  COleStreamFile::Detach  
  Dissocia il flusso dall'oggetto senza chiudere i flussi.  
@@ -180,7 +180,7 @@ LPSTREAM Detach();
 ### <a name="remarks"></a>Note  
  Il flusso deve essere chiuso in qualche altro modo prima che il programma termina.  
   
- Per altre informazioni, vedere [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) nel SDK di Windows.  
+ Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) nel SDK di Windows.  
   
 ##  <a name="getstream"></a>  COleStreamFile::GetStream  
  Chiamare questa funzione per restituire un puntatore al flusso corrente.  
@@ -190,7 +190,7 @@ IStream* GetStream() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore all'interfaccia di flusso corrente ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
+ Un puntatore all'interfaccia di flusso corrente ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)).  
   
 ##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  Apre un flusso esistente.  
@@ -222,7 +222,7 @@ BOOL OpenStream(
 ### <a name="remarks"></a>Note  
  Verrà generata un'eccezione di file se l'apertura di ha esito negativo e *pError* non NULL.  
   
- Per altre informazioni, vedere [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) nel SDK di Windows.  
+ Per altre informazioni, vedere [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CFile](../../mfc/reference/cfile-class.md)   

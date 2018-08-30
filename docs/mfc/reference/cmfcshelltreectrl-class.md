@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541800"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222776"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 Il `CMFCShellTreeCtrl` classe estende [classe CTreeCtrl](../../mfc/reference/ctreectrl-class.md) funzionalità visualizzando una gerarchia di elementi della Shell.  
@@ -62,7 +62,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Abilita o disabilita il menu di scelta rapida.|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Restituisce una combinazione di flag passati a [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|Restituisce una combinazione di flag passati a [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Recupera il percorso di un elemento.|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Restituisce un puntatore ai [classe CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) che viene usato insieme a questo oggetto `CMFCShellTreeCtrl` oggetto per creare una finestra simile a Esplora risorse.|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Questa funzione membro viene chiamata dalla finestra padre della finestra quando viene ricevuto un messaggio di notifica che si applica a questa finestra. (Esegue l'override [CWnd:: OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  Un valore DWORD che specifica la combinazione di flag attualmente impostato.  
   
 ### <a name="remarks"></a>Note  
- I flag impostati `CMFCShellTreeCtrl` vengono inviati al metodo [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) ogni volta che l'oggetto è aggiornato. È possibile modificare i flag con la [CMFCShellTreeCtrl::SetFlags](#setflags) (metodo).  
+ I flag impostati `CMFCShellTreeCtrl` vengono inviati al metodo [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066) ogni volta che l'oggetto è aggiornato. È possibile modificare i flag con la [CMFCShellTreeCtrl::SetFlags](#setflags) (metodo).  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  Recupera il percorso di un elemento di [classe CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) oggetto.  
@@ -254,7 +254,7 @@ void SetFlags(
  Valore booleano che specifica se il `CMFCShellTreeCtrl` che deve essere aggiornata immediatamente.  
   
 ### <a name="remarks"></a>Note  
- Il `CMFCShellTreeCtrl` tutti i flag di passa [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Per altre informazioni sui valori di flag diversa, vedere [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
+ Il `CMFCShellTreeCtrl` tutti i flag di passa [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Per altre informazioni sui valori di flag diversa, vedere [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  Associa un [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) dell'oggetto con un [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) oggetto.  

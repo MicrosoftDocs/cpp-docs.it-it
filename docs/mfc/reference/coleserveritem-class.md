@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1da24273decbee296bfa19a5c8306cb0512e3fc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b4c5dad276db338b5efa0d15786b090779fcf41a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207505"
 ---
 # <a name="coleserveritem-class"></a>Classe COleServerItem
 Fornisce l'interfaccia server agli elementi OLE.  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
   
 -   Ritarda ora di Windows 95 o 98 trascinamento viene archiviato in una versione memorizzata nella cache di WIN. INI.  
   
- Per altre informazioni su come trascinare ritardo informazioni vengono archiviate nel Registro di sistema o di. File con estensione INI, vedere [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) nel SDK di Windows.  
+ Per altre informazioni su come trascinare ritardo informazioni vengono archiviate nel Registro di sistema o di. File con estensione INI, vedere [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) nel SDK di Windows.  
   
 ##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData  
  Chiamare questa funzione per riempire l'oggetto specificato [COleDataSource](../../mfc/reference/coledatasource-class.md) oggetto con tutti i dati che possono essere copiati negli Appunti, se è stato chiamato [CopyToClipboard](#copytoclipboard) (gli stessi dati potrebbero essere trasferiti anche se si chiamato [DoDragDrop](#dodragdrop)).  
@@ -329,14 +329,14 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
   
 ### <a name="parameters"></a>Parametri  
  *lpStgMedium*  
- Puntatore per il [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura che riceverà i dati CF_OBJECTDESCRIPTOR per l'elemento OLE.  
+ Puntatore per il [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura che riceverà i dati CF_OBJECTDESCRIPTOR per l'elemento OLE.  
   
 ### <a name="remarks"></a>Note  
  Questo formato include dati nativi dell'elemento. Deve avere implementato il `Serialize` funzione membro per questa funzione per il corretto funzionamento.  
   
  Il risultato può quindi essere aggiunto a un'origine dati mediante [CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Questa funzione viene chiamata automaticamente da [COleServerItem::OnGetClipboardData](#ongetclipboarddata).  
   
- Per altre informazioni, vedere [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) nel SDK di Windows.  
+ Per altre informazioni, vedere [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) nel SDK di Windows.  
   
 ##  <a name="getitemname"></a>  COleServerItem::GetItemName  
  Chiamare questa funzione per ottenere il nome dell'elemento.  
@@ -360,7 +360,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
 ### <a name="parameters"></a>Parametri  
  *lpStgMedium*  
- Puntatore per il [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura che riceverà i dati CF_LINKSOURCE per l'elemento OLE.  
+ Puntatore per il [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura che riceverà i dati CF_LINKSOURCE per l'elemento OLE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -370,7 +370,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
  Il risultato può quindi essere aggiunte a un'origine dati con [CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Questa funzione viene chiamata automaticamente da [OnGetClipboardData](#ongetclipboarddata).  
   
- Per altre informazioni, vedere [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) nel SDK di Windows.  
+ Per altre informazioni, vedere [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) nel SDK di Windows.  
   
 ##  <a name="getobjectdescriptordata"></a>  COleServerItem::GetObjectDescriptorData  
  Chiamare questa funzione per ottenere i dati inseriti per un elemento OLE.  
@@ -390,12 +390,12 @@ void GetObjectDescriptorData(
  Dimensione dell'elemento OLE. Può essere NULL.  
   
  *lpStgMedium*  
- Puntatore per il [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura che riceverà i dati inseriti per l'elemento OLE.  
+ Puntatore per il [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura che riceverà i dati inseriti per l'elemento OLE.  
   
 ### <a name="remarks"></a>Note  
  Le informazioni vengano copiate nel `STGMEDIUM` struttura a cui punta *lpStgMedium*. Questo formato include le informazioni necessarie per la finestra di dialogo Incolla speciale.  
   
- Per altre informazioni, vedere [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) nel SDK di Windows.  
+ Per altre informazioni, vedere [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) nel SDK di Windows.  
   
 ##  <a name="isconnected"></a>  COleServerItem::IsConnected  
  Chiamare questa funzione per verificare se l'elemento OLE è connesso.  
@@ -476,14 +476,14 @@ virtual void OnDoVerb(LONG iVerb);
 |- 2|Modifica elemento nella finestra separata|OLEIVERB_OPEN|  
 |- 3|Nascondere elementi|OLEIVERB_HIDE|  
   
- Il valore-1 è in genere un alias per un altro verbo. Se Apri modifica non è supportata, -2 ha lo stesso effetto di -1. Per i valori aggiuntivi, vedere [IOleObject:: DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) nel SDK di Windows.  
+ Il valore-1 è in genere un alias per un altro verbo. Se Apri modifica non è supportata, -2 ha lo stesso effetto di -1. Per i valori aggiuntivi, vedere [IOleObject:: DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
  Se l'applicazione del contenitore è stato scritto con la libreria Microsoft Foundation Class, questa funzione viene chiamata quando il [COleClientItem::Activate](../../mfc/reference/coleclientitem-class.md#activate) funzione di membro del corrispondente `COleClientItem` viene chiamato l'oggetto. L'implementazione predefinita chiama il [OnShow](#onshow) funzione di membro se viene specificato il verbo primario o OLEIVERB_SHOW, [OnOpen](#onopen) se il verbo secondario o OLEIVERB_OPEN è specificato, e [OnHide ](#onhide) se OLEIVERB_HIDE è specificato. L'implementazione predefinita chiama `OnShow` se *iVerb* non è uno dei verbi elencati in precedenza.  
   
  Eseguire l'override di questa funzione se il verbo primario non viene visualizzato l'elemento. Ad esempio, se l'elemento è una registrazione audio e il verbo primario è Play, non dovrà visualizzare l'applicazione server per riprodurre l'elemento.  
   
- Per altre informazioni, vedere [IOleObject:: DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) nel SDK di Windows.  
+ Per altre informazioni, vedere [IOleObject:: DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) nel SDK di Windows.  
   
 ##  <a name="ondraw"></a>  COleServerItem:: OnDraw  
  Chiamato dal framework per eseguire il rendering dell'elemento OLE in un metafile.  
@@ -631,7 +631,7 @@ virtual BOOL OnInitFromData(
 ### <a name="remarks"></a>Note  
  Se *bCreation* è TRUE, questa funzione viene chiamata se un contenitore implementa Inserisci nuovo oggetto basato sulla selezione corrente. I dati selezionati vengono usati quando si crea il nuovo elemento OLE. Ad esempio, quando la selezione di un intervallo di celle in un foglio di calcolo e quindi usare il nuovo oggetto Insert per creare un grafico in base ai valori nell'intervallo selezionato. L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per scegliere quella offerta da un formato accettabile *pDataObject* e inizializzare l'elemento OLE in base ai dati forniti. Si tratta di un'avanzata sottoponibile a override.  
   
- Per altre informazioni, vedere [IOleObject:: InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) nel SDK di Windows.  
+ Per altre informazioni, vedere [IOleObject:: InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) nel SDK di Windows.  
   
 ##  <a name="onopen"></a>  COleServerItem::OnOpen  
  Chiamata eseguita dal framework per visualizzare l'elemento OLE in un'istanza separata dell'applicazione server, anziché in posizione.  
@@ -645,7 +645,7 @@ virtual void OnOpen();
   
  Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando si apre un elemento OLE. Questo è particolarmente comune con gli elementi collegati in cui si desidera impostare l'opzione per il collegamento quando viene aperto.  
   
- Per altre informazioni, vedere [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) nel SDK di Windows.  
+ Per altre informazioni, vedere [IOleClientSite::OnShowWindow](/windows/desktop/api/oleidl/nf-oleidl-ioleclientsite-onshowwindow) nel SDK di Windows.  
   
 ##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems  
  Chiamato dal framework per determinare se eventuali elementi collegati nel documento server corrente non sono aggiornati.  
@@ -671,10 +671,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>Parametri  
  *lpFormatEtc*  
- Punta al [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che specifica il formato in cui vengono richieste informazioni.  
+ Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.  
   
  *lpStgMedium*  
- Punta a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura in cui i dati sono da restituire.  
+ Punta a un [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura in cui i dati sono da restituire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -686,7 +686,7 @@ virtual BOOL OnRenderData(
   
  Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, è possibile eseguire l'override in una delle altre versioni di questa funzione invece. Se i dati sono piccole e ha dimensione fissa, eseguire l'override `OnRenderGlobalData`. Se i dati in un file o sono di dimensioni variabili, eseguire l'override `OnRenderFileData`.  
   
- Per altre informazioni, vedere [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), e [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) nel SDK di Windows.  
+ Per altre informazioni, vedere [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc), e [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) nel SDK di Windows.  
   
 ##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData  
  Chiamato dal framework per recuperare i dati nel formato specificato quando il supporto di archiviazione è un file.  
@@ -699,7 +699,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>Parametri  
  *lpFormatEtc*  
- Punta al [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che specifica il formato in cui vengono richieste informazioni.  
+ Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.  
   
  *pFile*  
  Punta a un `CFile` oggetto in cui i dati da sottoporre a rendering.  
@@ -712,7 +712,7 @@ virtual BOOL OnRenderFileData(
   
  Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, si potrebbe voler eseguire l'override in una delle altre versioni di questa funzione invece. Se si desidera gestire più supporti di archiviazione, eseguire l'override [routine OnRenderData](#onrenderdata). Se i dati in un file o sono di dimensioni variabili, eseguire l'override [OnRenderFileData](#onrenderfiledata).  
   
- Per altre informazioni, vedere [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel SDK di Windows.  
+ Per altre informazioni, vedere [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) e [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) nel SDK di Windows.  
   
 ##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData  
  Chiamato dal framework per recuperare i dati nel formato specificato quando il supporto di archiviazione specificato è la memoria globale.  
@@ -725,7 +725,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>Parametri  
  *lpFormatEtc*  
- Punta al [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che specifica il formato in cui vengono richieste informazioni.  
+ Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.  
   
  *phGlobal*  
  Punta a un handle per la memoria globale in cui i dati sono da restituire. Se non è stata allocata alcuna memoria, questo parametro può essere NULL.  
@@ -740,7 +740,7 @@ virtual BOOL OnRenderGlobalData(
   
  Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, è possibile eseguire l'override in una delle altre versioni di questa funzione invece. Se si desidera gestire più supporti di archiviazione, eseguire l'override [routine OnRenderData](#onrenderdata). Se i dati in un file o sono di dimensioni variabili, eseguire l'override [OnRenderFileData](#onrenderfiledata).  
   
- Per altre informazioni, vedere [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) e [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) nel SDK di Windows.  
+ Per altre informazioni, vedere [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) e [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) nel SDK di Windows.  
   
 ##  <a name="onsetcolorscheme"></a>  COleServerItem::OnSetColorScheme  
  Chiamato dal framework per specificare una tavolozza dei colori da utilizzare quando si modifica l'elemento OLE.  
@@ -751,15 +751,15 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
   
 ### <a name="parameters"></a>Parametri  
  *lpLogPalette*  
- Puntatore a un Windows [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struttura.  
+ Puntatore a un Windows [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se viene utilizzata la tavolozza dei colori. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Se l'applicazione contenitore è stata scritta usando la libreria Microsoft Foundation Class, questa funzione viene chiamata quando il [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) funzione corrispondente `COleClientItem` viene chiamato l'oggetto. L'implementazione predefinita restituisce FALSE. Eseguire l'override di questa funzione se si desidera utilizzare la tavolozza consigliata. Non è necessario che l'applicazione server utilizza la tavolozza suggerita.  
+ Se l'applicazione contenitore è stata scritta usando la libreria Microsoft Foundation Class, questa funzione viene chiamata quando il [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) funzione corrispondente `COleClientItem` viene chiamato l'oggetto. L'implementazione predefinita restituisce FALSE. Eseguire l'override di questa funzione se si desidera utilizzare la tavolozza consigliata. Non è necessario che l'applicazione server utilizza la tavolozza suggerita.  
   
- Per altre informazioni, vedere [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) nel SDK di Windows.  
+ Per altre informazioni, vedere [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) nel SDK di Windows.  
   
 ##  <a name="onsetdata"></a>  COleServerItem::OnSetData  
  Chiamato dal framework per sostituire i dati dell'elemento OLE con i dati specificati.  
@@ -773,10 +773,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>Parametri  
  *lpFormatEtc*  
- Puntatore a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura che specifica il formato dei dati.  
+ Puntatore a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato dei dati.  
   
  *lpStgMedium*  
- Puntatore a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struttura in cui si trovano i dati.  
+ Puntatore a un [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura in cui si trovano i dati.  
   
  *bRelease*  
  Indica chi ha la proprietà del supporto di archiviazione dopo il completamento della chiamata di funzione. Il chiamante decide chi è responsabile del rilascio delle risorse allocate per conto del supporto di archiviazione. Il chiamante esegue questa operazione impostando *bRelease*. Se *bRelease* è diverso da zero, l'elemento server acquisisce la proprietà, il rilascio del supporto quando ha finito di usarlo. Quando *bRelease* è 0, il chiamante mantiene la proprietà e l'elemento server può usare il supporto di archiviazione solo per la durata della chiamata.  
@@ -785,11 +785,11 @@ virtual BOOL OnSetData(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- L'elemento server non accetta la proprietà dei dati fino a quando non lo ha ha ottenuto. Vale a dire, non viene preso la proprietà se viene restituito 0. Se l'origine dei dati acquisisce la proprietà, consente di liberare il supporto di archiviazione chiamando il [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) (funzione).  
+ L'elemento server non accetta la proprietà dei dati fino a quando non lo ha ha ottenuto. Vale a dire, non viene preso la proprietà se viene restituito 0. Se l'origine dei dati acquisisce la proprietà, consente di liberare il supporto di archiviazione chiamando il [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) (funzione).  
   
  L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per sostituire i dati dell'elemento OLE con i dati specificati. Si tratta di un'avanzata sottoponibile a override.  
   
- Per altre informazioni, vedere [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), e [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) nel SDK di Windows.  
+ Per altre informazioni, vedere [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc), e [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) nel SDK di Windows.  
   
 ##  <a name="onsetextent"></a>  COleServerItem::OnSetExtent  
  Chiamato dal framework per indicare l'elemento OLE quantità di spazio sono disponibili nel documento contenitore.  

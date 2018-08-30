@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f759ce9a4617ab0ca8e97ef308508d836b53b742
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ede89a5290bca14c39aa16c68071edefd0ebd08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414246"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222429"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
 Trova il carattere successivo in una stringa.
 
 > [!IMPORTANT]
-> **mbsnextc** e **mbsnextc_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsnextc** e **mbsnextc_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -97,15 +97,15 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il valore intero del carattere successivo nella *str*.
+Ognuna di queste funzioni restituisce il valore intero del carattere successivo nel *str*.
 
 ## <a name="remarks"></a>Note
 
-Il **mbsnextc** funzione restituisce il valore intero del carattere multibyte successivo in *str*, senza far avanzare il puntatore di stringa. **mbsnextc** riconosce le sequenze di caratteri multibyte in base al [tabella codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso.
+Il **mbsnextc** funzione restituisce il valore intero del carattere multibyte successivo *str*, senza far avanzare il puntatore di stringa. **mbsnextc** riconosce le sequenze di caratteri multibyte in base al [tabella codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso.
 
 Se *str* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce 0.
 
-**Nota sulla sicurezza** Questa API è esposta a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Nota sulla sicurezza** Questa API è esposta a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -113,9 +113,9 @@ Se *str* viene **NULL**, viene richiamato il gestore di parametri non validi, co
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**strnextc** e **wcsnextc** sono stringhe di caratteri a byte singolo e le versioni di stringa di caratteri wide di **mbsnextc**. **wcsnextc** restituisce il valore intero del carattere "wide" successivo *str*; **strnextc** restituisce il valore intero del successivo carattere a byte singolo *str*. **strnextc** e **wcsnextc** vengono forniti solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
+**strnextc** e **wcsnextc** stringa di caratteri a byte singolo e versioni di stringa di caratteri wide di **mbsnextc**. **wcsnextc** restituisce il valore intero il successivo carattere wide *str*; **strnextc** restituisce il valore intero del carattere a byte singolo successivo in *str*. **strnextc** e **wcsnextc** sono disponibili solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 
-**mbsnextc_l** è identica ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**mbsnextc_l** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

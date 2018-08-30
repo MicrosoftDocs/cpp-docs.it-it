@@ -1,5 +1,5 @@
 ---
-title: Le notifiche inviate mediante controlli Animation | Documenti Microsoft
+title: Le notifiche inviate mediante controlli Animation | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1696389ce3dc40c5d02ec660ebaeb6bf3e6c3ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7aff43577a4b1aa55fc0725ba4753228e334000
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345247"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199661"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Notifiche inviate mediante controlli Animation
-Un controllo animation ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) invia i due diversi tipi di messaggi di notifica. Le notifiche vengono inviate sotto forma di [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messaggi.  
+Un controllo animation ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) invia due diversi tipi di messaggi di notifica. Le notifiche vengono inviate sotto forma di [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggi.  
   
- Il [messaggio ACN_START](http://msdn.microsoft.com/library/windows/desktop/bb761891) messaggio viene inviato quando il controllo animazione è stata avviata la riproduzione di un clip. Il [messaggio ACN_STOP](http://msdn.microsoft.com/library/windows/desktop/bb761893) messaggio viene inviato quando il controllo animazione terminato o interrotto un filmato.  
+ Il [messaggio ACN_START](/windows/desktop/Controls/acn-start) messaggio viene inviato quando il controllo animazione è stata avviata la riproduzione di una clip. Il [messaggio ACN_STOP](/windows/desktop/Controls/acn-stop) messaggio viene inviato quando il controllo animazione completato o interrotto un filmato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CAnimateCtrl](../mfc/using-canimatectrl.md)   

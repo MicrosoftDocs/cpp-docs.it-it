@@ -55,19 +55,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451797"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210873"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
 Trova il token successivo in una stringa, usando le impostazioni locali correnti o le impostazioni locali specificate passate. Sono disponibili versioni più sicure di queste funzioni; vedere [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **mbstok** e **mbstok_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbstok** e **mbstok_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -104,16 +104,16 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore al token successivo nel *strToken*. Restituiscono **NULL** quando non vengono trovati alcuna ulteriore token. Ogni chiamata viene modificato *strToken* sostituendo un carattere null per il primo delimitatore che si verifica dopo che il token restituito.
+Restituisce un puntatore al successivo token trovato *strToken*. Restituiscono **NULL** quando non vengono trovati più alcun token. Ogni chiamata Modifica *strToken* sostituendo un carattere null per il primo delimitatore che si verifica dopo che il token restituito.
 
 ## <a name="remarks"></a>Note
 
-Il **strtok** funzione trova il token successivo in *strToken*. Il set di caratteri *strDelimit* specifica possibili delimitatori del token da trovare nel *strToken* alla chiamata corrente. **wcstok** e **mbstok** sono versioni a caratteri wide e caratteri multibyte di **strtok**. Gli argomenti e il valore restituito di **wcstok** sono caratteri wide, mentre quelli di stringhe **mbstok** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+Il **strtok** funzione trova il token successivo nella *strToken*. Il set di caratteri in *strDelimit* specifica i possibili delimitatori del token da trovare nel *strToken* per la chiamata corrente. **wcstok** e **mbstok** sono versioni a caratteri wide e caratteri multibyte di **strtok**. Gli argomenti e il valore restituito di **wcstok** sono caratteri wide, mentre quelli di stringhe **mbstok** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 > [!IMPORTANT]
-> Queste funzioni possono incorrere in una minaccia potenziale dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Queste funzioni possono incorrere in una minaccia potenziale dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-La prima chiamata a **strtok**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token nel *strToken*, il token con un carattere null di terminazione. Più token può essere suddivisa fuori il resto della *strToken* da una serie di chiamate a **strtok**. Ogni chiamata a **strtok** modifica *strToken* inserendo un carattere null dopo la **token** restituito dalla chiamata. Per leggere il token successivo dal *strToken*, chiamare **strtok** con un **NULL** valore per il *strToken* argomento. Il **NULL** *strToken* argomento vengono illustrate le cause **strtok** per cercare il token successivo in modificato *strToken*. Il *strDelimit* argomento può accettare qualsiasi valore da una chiamata al successivo, in modo che il set di delimitatori può variare.
+La prima chiamata a **strtok**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token nel *strToken*, il token con un carattere null di terminazione. Ulteriori token può essere interrotta dal resto di *strToken* da una serie di chiamate a **strtok**. Ogni chiamata a **strtok** modificato *strToken* inserendo un carattere null dopo la **token** restituito dalla chiamata. Il token successivo da leggere *strToken*, chiamare **strtok** con un **NULL** value per il *strToken* argomento. Il **NULL** *strToken* argomento cause **strtok** per cercare il token successivo nella versione modificata *strToken*. Il *strDelimit* argomento può accettare qualsiasi valore da una chiamata a quella successiva in modo che il set di delimitatori può variare.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

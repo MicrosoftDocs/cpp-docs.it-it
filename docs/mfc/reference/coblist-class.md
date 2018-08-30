@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f816e4fd83439b528e6f2ab92212c763d769bed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bf937f11118cfbea26db11ba48ea0ed65d903af6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853056"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217155"
 ---
 # <a name="coblist-class"></a>Classe cObList
 elenchi ordinati di non univoco fSupports `CObject` puntatori accessibili in sequenza o dal puntatore il valore.  
@@ -160,8 +160,8 @@ void AddHead(CObList* pNewList);
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIZIONE AddHead (void\***  `newElement` **);**<br /><br /> **void AddHead (CPtrList\***  `pNewList` **);**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSIZIONE AddHead (CString const &** `newElement` **);**<br /><br /> **POSIZIONE AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList\***  `pNewList` **);**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIZIONE AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSIZIONE AddHead (CString const &** `newElement` **);**<br /><br /> **POSIZIONE AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|  
   
 ### <a name="remarks"></a>Note  
  L'elenco può essere vuoto prima dell'operazione.  
@@ -204,8 +204,8 @@ void AddTail(CObList* pNewList);
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIZIONE AddTail (void\***  `newElement` **);**<br /><br /> **void AddTail (CPtrList\***  `pNewList` **);**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSIZIONE AddTail (CString const &** `newElement` **);**<br /><br /> **POSIZIONE AddTail (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail (CStringList\***  `pNewList` **);**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIZIONE AddTail (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail (CPtrList** <strong>\*</strong> `pNewList` **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSIZIONE AddTail (CString const &** `newElement` **);**<br /><br /> **POSIZIONE AddTail (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail (CStringList** <strong>\*</strong> `pNewList` **);**|  
   
 ### <a name="example"></a>Esempio  
   Visualizzare [CObList:: CObList](#coblist) per un elenco del `CAge` classe.  
@@ -276,7 +276,7 @@ POSITION Find(
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Ricerca di posizione (void\***  `searchValue` **, posizione** `startAfter` **= NULL) const;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Ricerca di posizione (void** <strong>\*</strong> `searchValue` **, posizione** `startAfter` **= NULL) const;**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Ricerca di posizione (LPCTSTR** `searchValue` **, posizione** `startAfter` **= NULL) const;**|  
   
 ### <a name="example"></a>Esempio  
@@ -598,7 +598,7 @@ POSITION InsertAfter(
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIZIONE InsertAfter (posizione** *posizione* **, void\***  `newElement` **);**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIZIONE InsertAfter (posizione** *posizione* **, void** <strong>\*</strong> `newElement` **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**POSIZIONE InsertAfter (posizione** *posizione* **, CString const &** `newElement` **);**<br /><br /> **POSIZIONE InsertAfter (posizione** *posizione* **, LPCTSTR** `newElement` **);**|  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -642,7 +642,7 @@ POSITION InsertBefore(
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIZIONE InsertBefore (posizione** *posizione* **, void\***  `newElement` **);**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSIZIONE InsertBefore (posizione** *posizione* **, void** <strong>\*</strong> `newElement` **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**POSIZIONE InsertBefore (posizione** *posizione* **, CString const &** `newElement` **);**<br /><br /> **POSIZIONE InsertBefore (posizione** *posizione* **, LPCTSTR** `newElement` **);**|  
   
 ### <a name="example"></a>Esempio  

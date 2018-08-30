@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851379"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210850"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Classe CMFCToolBarButton
 Fornisce la funzionalità di pulsante alle barre degli strumenti.  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|Determina se il pulsante è il proprietario dell'handle di finestra specificato.|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|Determina se il pulsante della barra degli strumenti è visibile.|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Determina se l'handle di finestra sottostante del pulsante è visibile.|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Specifica se il pulsante elabora i [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messaggio.|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Specifica se il pulsante elabora i [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggio.|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Chiamato dal framework quando il pulsante viene aggiunto a un **Personalizza** nella finestra di dialogo.|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Specifica se il pulsante può essere trascinato.|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Specifica se un utente può trascinare il pulsante nella barra degli strumenti di destinazione.|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Chiamato dal framework per calcolare le dimensioni del pulsante per il contesto di dispositivo specificato e lo stato di ancoraggio.|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Chiamato dal framework per gestire il [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) messaggio.|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Chiamato dal framework per gestire il [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) messaggio.|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Chiamato dal framework quando il pulsante viene inserito in una nuova barra degli strumenti.|  
 |[CMFCToolBarButton::OnClick](#onclick)|Chiamato dal framework quando l'utente fa clic sul pulsante del mouse.|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Chiamato dal framework quando l'utente rilascia il pulsante del mouse.|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Chiamato dal framework quando la barra degli strumenti padre gestisce un messaggio WM_HELPHITTEST.|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Chiamato dal framework quando la barra degli strumenti padre gestisce un WM_CTLCOLOR (messaggio).|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Consente il pulsante modificare il menu di scelta specificato quando l'applicazione viene visualizzato un menu di scelta rapida nella barra degli strumenti padre.|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|Chiamato dal framework quando la barra degli strumenti padre gestisce un [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) messaggio.|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|Chiamato dal framework quando la barra degli strumenti padre gestisce un [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) messaggio.|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|Chiamato dal framework per disegnare il pulsante utilizzando gli stili specificati e le opzioni.|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Chiamato dal framework per disegnare il pulsante di **comandi** riquadro della finestra il **Personalizza** nella finestra di dialogo.|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Chiamata eseguita dal framework per recuperare il testo di descrizione comando personalizzata per il pulsante.|  
@@ -446,7 +446,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
  Impostare questo parametro su true per abilitare input o su FALSE per disattivare l'input.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo chiama il `EnableWindow` funzione per attivare o disattivare l'input. Per altre informazioni, vedere [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) nel SDK di Windows.  
+ Questo metodo chiama il `EnableWindow` funzione per attivare o disattivare l'input. Per altre informazioni, vedere [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) nel SDK di Windows.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  Copia il testo dal pulsante della barra degli strumenti a un menu.  
@@ -884,7 +884,7 @@ CString m_strText;
  Questo membro dati contiene l'etichetta di testo del pulsante. L'etichetta di testo può essere vuoto.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- Specifica se il pulsante elabora i [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messaggio.  
+ Specifica se il pulsante elabora i [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggio.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -898,7 +898,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Questo metodo restituisce FALSE.  
   
 ### <a name="remarks"></a>Note  
- Il framework chiama questo metodo quando sta per inviare un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messaggio alla finestra padre.  
+ Il framework chiama questo metodo quando sta per inviare un [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggio alla finestra padre.  
   
  Per impostazione predefinita, questo metodo restituisce FALSE. Eseguire l'override di questo metodo per restituire TRUE se si desidera elaborare il messaggio WM_COMMAND o FALSE per indicare che la barra degli strumenti padre deve gestire il messaggio.  
   
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  Eseguire l'override di questo metodo se si desidera specificare le dimensioni di un pulsante non standard (ad esempio, un pulsante casella di modifica).  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- Chiamato dal framework per gestire il [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) messaggio.  
+ Chiamato dal framework per gestire il [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) messaggio.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita di questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo se si vuole gestire il [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) messaggio.  
+ L'implementazione predefinita di questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo se si vuole gestire il [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) messaggio.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  Chiamato dal framework quando il pulsante viene inserito in una nuova barra degli strumenti.  
@@ -1104,7 +1104,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  L'implementazione predefinita non esegue alcuna operazione e restituisce FALSE. L'override del metodo e restituisce un valore diverso da zero se si desidera modificare il contenuto del menu di scelta specificato.  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- Chiamato dal framework quando la barra degli strumenti padre gestisce un [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) messaggio.  
+ Chiamato dal framework quando la barra degli strumenti padre gestisce un [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) messaggio.  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
@@ -1115,7 +1115,7 @@ virtual void OnDblClk(CWnd* pWnd);
  -   La finestra padre del pulsante.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo viene chiamato il `CMFCToolBar::OnLButtonDblClk` metodo quando la barra degli strumenti padre gestisce una [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) messaggio.  
+ Questo metodo viene chiamato il `CMFCToolBar::OnLButtonDblClk` metodo quando la barra degli strumenti padre gestisce una [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) messaggio.  
   
  L'implementazione predefinita di questo metodo non esegue alcuna operazione.  
   

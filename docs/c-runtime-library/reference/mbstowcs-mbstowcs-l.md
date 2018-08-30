@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14beb076a83952529155fa0a4b1da780efae3c7
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d179e53967817bb622074987e3309e159547e819
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451862"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218105"
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 
@@ -90,20 +90,20 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **mbstowcs** converte correttamente la stringa di origine, restituisce il numero di caratteri multibyte convertiti. Se il *wcstr* argomento **NULL**, la funzione restituisce le dimensioni necessarie (in caratteri "wide") della stringa di destinazione. Se **mbstowcs** rileva un carattere multibyte non valido, restituisce -1. Se il valore restituito sarà *conteggio*, la stringa di caratteri "wide" non è con terminazione null.
+Se **mbstowcs** converte correttamente la stringa di origine, restituisce il numero di caratteri multibyte convertiti. Se il *wcstr* l'argomento è **NULL**, la funzione restituisce le dimensioni richieste (in caratteri "wide") della stringa di destinazione. Se **mbstowcs** rileva un carattere multibyte non valido, restituisce -1. Se il valore restituito sarà *conteggio*, la stringa di caratteri "wide" non è con terminazione null.
 
 > [!IMPORTANT]
-> Assicurarsi che *wcstr* e *mbstr* si sovrappongano e che *conteggio* rispecchi correttamente il numero di caratteri multibyte da convertire.
+> Assicurarsi che *wcstr* e *mbstr* non si sovrappongano e che *conteggio* rispecchi correttamente il numero di caratteri multibyte da convertire.
 
 ## <a name="remarks"></a>Note
 
-Il **mbstowcs** funzione converte fino a un numero massimo di *conteggio* caratteri multibyte a cui punta *mbstr* in una stringa di caratteri "wide" corrispondenti che sono determinato dalle impostazioni locali correnti. Archivia la stringa di caratteri wide risultante in corrispondenza dell'indirizzo rappresentato da *wcstr*. Il risultato è simile a una serie di chiamate a [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** rileva il carattere null a un byte ('\0') prima o quando *conteggio* si verifica, converte il carattere null di un carattere null di caratteri wide (L '\0') e si arresta. Pertanto la stringa di caratteri "wide" in *wcstr* è con terminazione null solo se viene rilevato un carattere null durante la conversione. Se le sequenze a cui punta *wcstr* e *mbstr* periodo pianificato si sovrappongono, il comportamento sarà indefinito.
+Il **mbstowcs** funzione converte fino a un numero massimo di *conteggio* caratteri multibyte a cui fa riferimento *mbstr* in una stringa di caratteri wide corrispondenti che sono determinato dalle impostazioni locali correnti. Archivia la stringa di caratteri wide risultante nell'indirizzo rappresentato da *wcstr*. Il risultato è simile a una serie di chiamate a [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** rileva il carattere di null a byte singolo ('\0') prima o quando *conteggio* si verifica, la funzione converte il carattere null di un carattere null di caratteri "wide" (L '\0') e si arresta. Pertanto la stringa di caratteri wide in *wcstr* sono con terminazione null solo se viene rilevato un carattere null durante la conversione. Se le sequenze a cui punta *wcstr* e *mbstr* si sovrappongono, il comportamento sarà indefinito.
 
-Se il *wcstr* argomento **NULL**, **mbstowcs** restituisce il numero di caratteri "wide" che risultano dalla conversione, senza includere un carattere di terminazione null. La stringa di origine deve avere terminazione Null perché venga restituito il valore corretto. Se è necessario che la stringa di caratteri wide risultante abbia terminazione Null, aggiungere un carattere di terminazione Null al valore restituito.
+Se il *wcstr* l'argomento è **NULL**, **mbstowcs** restituisce il numero di caratteri wide risultanti dalla conversione, senza includere un carattere di terminazione null. La stringa di origine deve avere terminazione Null perché venga restituito il valore corretto. Se è necessario che la stringa di caratteri wide risultante abbia terminazione Null, aggiungere un carattere di terminazione Null al valore restituito.
 
-Se il *mbstr* argomento **NULL**, o se *conteggio* è > **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, errno è impostata su **EINVAL** e la funzione restituisce -1.
+Se il *mbstr* l'argomento è **NULL**, o se *count* è > **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, errno è impostato su **EINVAL** e la funzione restituisce -1.
 
-**mbstowcs** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **mbstowcs_l** è identica ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**mbstowcs** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **mbstowcs_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -220,4 +220,4 @@ Convert back to wide-character string:
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

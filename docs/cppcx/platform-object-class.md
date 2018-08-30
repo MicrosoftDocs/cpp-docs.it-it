@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601738"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216439"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 Fornisce il comportamento comune per le classi e struct di riferimento nelle app di Windows Runtime. Tutte le istanze delle classi e degli struct di riferimento sono implicitamente convertibili a Platform::Object^ e possono eseguire l'override del relativo metodo ToString virtuale.  
@@ -119,7 +119,7 @@ Object::GetType()
 ### <a name="remarks"></a>Note  
  Il metodo statico [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) può essere utilizzato per ottenere un [enumerazione platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) valore che rappresenta il tipo corrente. Questa funzionalità è particolarmente utile per i tipi predefiniti. Il codice del tipo per qualsiasi classe di riferimento oltre [platform:: String](../cppcx/platform-string-class.md) è Object (1).  
   
- Il [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe viene usata nelle API Windows come modo indipendente dal linguaggio passando informazioni sul tipo tra componenti di Windows e delle app. L'elemento T[classe platform:: Type](../cppcx/platform-type-class.md) dispone di operatori per la conversione tra `Type` e `TypeName`.  
+ Il [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe viene usata nelle API Windows come modo indipendente dal linguaggio passando informazioni sul tipo tra componenti di Windows e delle app. L'elemento T[classe platform:: Type](../cppcx/platform-type-class.md) dispone di operatori per la conversione tra `Type` e `TypeName`.  
   
  Usare la [typeid](../windows/typeid-cpp-component-extensions.md) operatore per restituire un `Platform::Type` oggetto per un nome di classe, ad esempio quando si sposti tra pagine XAML:  
   

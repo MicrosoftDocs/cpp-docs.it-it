@@ -1,5 +1,5 @@
 ---
-title: Elaborazione dei messaggi di notifica in un controllo Rebar | Documenti Microsoft
+title: Elaborazione dei messaggi di notifica in un controllo Rebar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dce09e84e9a2b5262d05847746f819a122ec36c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931827"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208975"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Elaborazione dei messaggi di notifica in un controllo Rebar
-Nella classe padre del controllo rebar, creare un `OnChildNotify` funzione del gestore con un'istruzione switch per qualsiasi controllo rebar (`CReBarCtrl`) dei messaggi di notifica che si desidera gestire. Le notifiche vengono inviate alla finestra padre quando l'utente trascina oggetti sopra il controllo rebar, modifica il layout delle bande rebar, eliminazioni bande dal controllo rebar e così via.  
+Nella classe padre del controllo rebar, creare un `OnChildNotify` funzione di gestione di un'istruzione switch per qualsiasi controllo rebar (`CReBarCtrl`) dei messaggi di notifica che si desidera gestire. Le notifiche vengono inviate alla finestra padre quando l'utente trascina gli oggetti tramite il controllo rebar, modifica il layout delle bande rebar, eliminazioni bande nel controllo rebar e così via.  
   
- I seguenti messaggi di notifica possono essere inviati dall'oggetto controllo rebar:  
+ I messaggi di notifica seguente possono essere inviati dall'oggetto controllo rebar:  
   
--   RBN_AUTOSIZE viene inviato da un controllo rebar (creato con lo stile RBS_AUTOSIZE) quando il controllo rebar viene ridimensionato automaticamente.  
+-   RBN_AUTOSIZE viene inviato da un controllo rebar (creato con lo stile RBS_AUTOSIZE) quando il controllo rebar si ridimensiona automaticamente.  
   
 -   RBN_BEGINDRAG viene inviato da un controllo rebar quando l'utente inizia a trascinare una fuori banda.  
   
@@ -41,13 +41,13 @@ Nella classe padre del controllo rebar, creare un `OnChildNotify` funzione del g
   
 -   RBN_ENDDRAG viene inviato da un controllo rebar quando l'utente smette di trascinare una fuori banda.  
   
--   RBN_GETOBJECT viene inviato da un controllo rebar (creato con lo stile RBS_REGISTERDROP) quando un oggetto viene trascinato su una banda nel controllo.  
+-   RBN_GETOBJECT viene inviato da un controllo rebar (creato con lo stile RBS_REGISTERDROP) quando un oggetto viene trascinato su una fuori banda nel controllo.  
   
 -   RBN_HEIGHTCHANGE viene inviato da un controllo rebar quando l'altezza è stato modificato.  
   
 -   RBN_LAYOUTCHANGED viene inviato da un controllo rebar quando l'utente modifica il layout delle bande del controllo.  
   
- Per ulteriori informazioni su queste notifiche, vedere [riferimento per il controllo Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774375) in Windows SDK.  
+ Per altre informazioni su queste notifiche, vedere [riferimento al controllo Rebar](https://msdn.microsoft.com/library/windows/desktop/bb774375) nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CReBarCtrl](../mfc/using-crebarctrl.md)   

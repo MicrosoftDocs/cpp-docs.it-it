@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572265"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222681"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Specifica opzioni della riga di comando MIDL)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42572265"
  dove:  
   
  `file`  
- Il nome del file che contiene [opzioni della riga di comando MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
+ Il nome del file che contiene [opzioni della riga di comando MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).  
   
 ## <a name="remarks"></a>Note  
  Tutte le opzioni per la conversione di un file IDL in un file TLB devono essere assegnate in `file`; Opzioni della riga di comando di MIDL non è possibile specificare nella riga di comando del linker. Se /MIDL non viene specificato, il compilatore MIDL verrà richiamato con solo il nome del file IDL e senza altre opzioni.  

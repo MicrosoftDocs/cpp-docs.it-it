@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6194addc8ae950cf5cdcb8b7946ab4f5f6c042
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460710"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220090"
 ---
 # <a name="scope-c"></a>Ambito (C++)
 
@@ -41,7 +41,7 @@ Sono disponibili sei tipi di ambito:
 
 - **Ambito locale** un nome dichiarato all'interno di una funzione o espressione lambda, inclusi i nomi dei parametri, hanno ambito locale. Essi sono spesso detto "variabili locali". Sono visibili solo dal relativo punto di dichiarazione alla fine del corpo della funzione o espressione lambda. Ambito locale è un tipo di ambito del blocco, che è descritti più avanti in questo articolo.
 
-- **Ambito di classe** i nomi dei membri della classe hanno un ambito di classe, che estende in tutta la definizione della classe indipendentemente dal punto di dichiarazione. Accessibilità del membro classe è controllato dall'ulteriore il **pubblici**, **privato**, e **protetti** parole chiave. I membri pubblici o protetti sono accessibili solo tramite gli operatori di selezione dei membri (**.** oppure **->**) o gli operatori puntatore a membro (**.\***  oppure **-> \***).
+- **Ambito di classe** i nomi dei membri della classe hanno un ambito di classe, che estende in tutta la definizione della classe indipendentemente dal punto di dichiarazione. Accessibilità del membro classe è controllato dall'ulteriore il **pubblici**, **privato**, e **protetti** parole chiave. I membri pubblici o protetti sono accessibili solo tramite gli operatori di selezione dei membri (**.** oppure **->**) o gli operatori puntatore a membro (**.** <strong>\*</strong> oppure **->** <strong>\*</strong>).
 
 - **Ambito dell'istruzione** i nomi dichiarati un **per**, **se**, **mentre**, o **passare** istruzione sono visibili fino alla fine del blocco di istruzioni.
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > Il riutilizzo dei nomi degli identificatori come illustrato in questo esempio viene considerato uno stile di programmazione di qualità insufficiente.
 
- Per altre informazioni sui puntatori, vedere [ai tipi derivati](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Per informazioni sulla dichiarazione e inizializzazione di oggetti di classe, vedere [classi, strutture e unioni](../cpp/classes-and-structs-cpp.md). Per informazioni sull'utilizzo il **nuove** e **eliminare** operatori free-store, vedere [nuova ed eliminare operatori](new-and-delete-operators.md).
+ Per altre informazioni sui puntatori, vedere [ai tipi derivati](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Per informazioni sulla dichiarazione e inizializzazione di oggetti di classe, vedere [classi, strutture e unioni](../cpp/classes-and-structs-cpp.md). Per informazioni sull'utilizzo il **nuove** e **eliminare** operatori free-store, vedere [nuova ed eliminare operatori](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Nascondere nomi con ambito globale
 

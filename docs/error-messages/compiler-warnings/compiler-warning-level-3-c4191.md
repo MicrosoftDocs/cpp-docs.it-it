@@ -1,5 +1,5 @@
 ---
-title: C4191 (livello 3) di avviso del compilatore | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4191 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 892bf76a8480e573a71e768fbe24778e7e66f88b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b0198971064bec114e4665a499e070ddb61501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291492"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197498"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Avviso del compilatore (livello 3) C4191
 'operator/operation': conversione non affidabile da 'type of expression' in 'type required'  
@@ -36,7 +36,7 @@ ms.locfileid: "33291492"
   
 -   Lunghezze diverse degli elenchi di argomenti (su `__cdecl`, solo sul cast da un elenco più lungo a uno più breve, anche se quest'ultimo è varargs).  
   
--   Puntatore ai dati (diverso da **void\***) con alias basato su un puntatore a funzione.  
+-   Puntatore ai dati (diverso da **void**<strong>\*</strong>) con alias basato su un puntatore a funzione.  
   
 -   Qualsiasi altra differenza di tipo che restituisce un errore o un avviso su un `reinterpret_cast`.  
   

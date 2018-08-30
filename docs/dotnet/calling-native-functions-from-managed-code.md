@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f3b8b266d44f9109a346160a1b2493f8644be839
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207598"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195688"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chiamata a funzioni native da codice gestito
 Common language runtime fornisce Platform Invocation Services, o PInvoke, che consente al codice gestito di chiamare le funzioni di tipo C in librerie native di collegamento dinamico (DLL). Ai fini dell'interoperabilità COM con il runtime e per il meccanismo "It Just Works", o IJW, viene utilizzati i marshalling dei dati stessi.  
@@ -36,7 +36,7 @@ Common language runtime fornisce Platform Invocation Services, o PInvoke, che co
   
 -   [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Informazioni dettagliate su platform invoke](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [Informazioni dettagliate su platform invoke](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  Gli esempi in questa sezione viene illustrato come `PInvoke` può essere utilizzato. `PInvoke` Consente di semplificare il marshalling di dati personalizzati in quanto vengono fornite informazioni di marshalling in modo dichiarativo negli attributi invece di scrivere codice procedurale di marshalling.  
   

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9641545721776530ccf09a5a1ea99485f510265
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572762"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196687"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Collegare un eseguibile a una DLL  
   
@@ -76,7 +76,7 @@ Ecco due rischi relativi al collegamento esplicito da tenere presenti:
   
 -   Se la DLL include un' `DllMain` funzione di punto di ingresso, il sistema operativo chiama la funzione nel contesto del thread che ha chiamato `LoadLibrary`. La funzione di punto di ingresso non viene chiamata se la DLL è già collegata al processo a causa di una chiamata precedente a `LoadLibrary` cui non è stato chiamata corrispondente per il `FreeLibrary` (funzione). Collegamento esplicito può causare problemi se la DLL Usa un' `DllMain` funzione per eseguire l'inizializzazione per ogni thread di un processo, perché i thread che già esistono quando `LoadLibrary` (o `AfxLoadLibrary`) viene chiamato non inizializzate.  
   
--   Se una DLL dichiara dati statici come `__declspec(thread)`, può provocare un errore di protezione se collegata in modo esplicito. Dopo che la DLL viene caricata da una chiamata a `LoadLibrary`, causa un errore di protezione ogni volta che il codice fa riferimento a questi dati. (I dati statici includono gli elementi statici locali e globali). Pertanto, quando si crea una DLL, si dovrebbe evitare di usare l'archiviazione thread-local o informare gli utenti DLL di potenziali problemi di in modo dinamico il caricamento della DLL. Per altre informazioni, vedere [usando l'archiviazione thread-local in una libreria a collegamento dinamico (Windows SDK)](http://msdn.microsoft.com/library/windows/desktop/ms686997).  
+-   Se una DLL dichiara dati statici come `__declspec(thread)`, può provocare un errore di protezione se collegata in modo esplicito. Dopo che la DLL viene caricata da una chiamata a `LoadLibrary`, causa un errore di protezione ogni volta che il codice fa riferimento a questi dati. (I dati statici includono gli elementi statici locali e globali). Pertanto, quando si crea una DLL, si dovrebbe evitare di usare l'archiviazione thread-local o informare gli utenti DLL di potenziali problemi di in modo dinamico il caricamento della DLL. Per altre informazioni, vedere [usando l'archiviazione thread-local in una libreria a collegamento dinamico (Windows SDK)](https://msdn.microsoft.com/library/windows/desktop/ms686997).  
   
 <a name="linking-implicitly"></a>  
   

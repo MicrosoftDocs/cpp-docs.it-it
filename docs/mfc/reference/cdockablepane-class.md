@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543173"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223065"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementa un riquadro che può essere ancorato in un sito di ancoraggio o incluso in un riquadro a schede.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Specifica se le schede si trovano nella parte superiore o inferiore del riquadro.|  
 |[CDockablePane::IsTracked](#istracked)|Specifica se un riquadro viene trascinato dall'utente.|  
 |[CDockablePane::IsVisible](#isvisible)|Determina se il riquadro corrente è visibile.|  
-|[CDockablePane:: Loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Utilizzato internamente.|  
+|[CDockablePane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Utilizzato internamente.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Chiamato dal framework quando l'elemento padre di un riquadro è stato modificato. (Esegue l'override [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Chiamato dal framework quando una barra ancorabile a virgola mobile viene ancorato in una finestra cornice.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Chiamato dal framework quando sta per modificare l'elemento padre del riquadro. (Esegue l'override [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  

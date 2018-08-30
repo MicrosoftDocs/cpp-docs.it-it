@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849737"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214152"
 ---
 # <a name="cmfccolordialog-class"></a>Classe CMFCColorDialog
 Il `CMFCColorDialog` classe rappresenta una finestra di dialogo di selezione colore.  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Restituisce il colore corrente selezionato.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Restituisce una tavolozza di colori.|  
-|`CMFCColorDialog::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Per la sintassi e altre informazioni, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override`CDialogEx::PreTranslateMessage`.|  
+|`CMFCColorDialog::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Per la sintassi e altre informazioni, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override`CDialogEx::PreTranslateMessage`.|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Deriva una tavolozza dalla tavolozza di sistema.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Imposta il colore corrente selezionato.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Imposta il colore più equivalente al valore RGB specificato.|  
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che contiene informazioni per il colore selezionato nella finestra di dialogo colore RGB.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che contiene informazioni per il colore selezionato nella finestra di dialogo colore RGB.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione dopo la chiamata di `DoModal` (metodo).  
@@ -196,7 +196,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>Parametri  
  [in] *rgb*  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) che specifica un colore RGB.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) che specifica un colore RGB.  
   
 ### <a name="remarks"></a>Note  
   

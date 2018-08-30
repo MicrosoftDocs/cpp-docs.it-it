@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880216"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214347"
 ---
 # <a name="string-data-management"></a>Gestione dei dati di tipo stringa
 Visual C++ fornisce diversi modi per gestire dati di tipo stringa:  
@@ -67,7 +67,7 @@ Visual C++ fornisce diversi modi per gestire dati di tipo stringa:
  Oggetto `CString` oggetto possibile memorizzare fino ai caratteri INT_MAX (2,147,483,647). Il tipo di dati TCHAR consente di ottenere o impostare i singoli caratteri all'interno di un `CString` oggetto. A differenza delle matrici di caratteri, di `CString` classe è una funzionalità di allocazione di memoria interna. In questo modo `CString` gli oggetti di aumentare automaticamente in base alle esigenze (vale a dire, non è necessario preoccuparsi di aumento delle dimensioni una `CString` oggetto in base alle stringhe più lunghe).  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> Oggetti CString e puntatori const char  
- Oggetto `CString` oggetto può anche agire come una valore letterale stringa in formato C (una `PCXSTR`, che è la stessa **char const\***  se non in modalità Unicode). Il [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) consente l'operatore di conversione `CString` oggetti deve essere liberamente sostituito da puntatori a caratteri nelle chiamate di funzione. Il **CString (LPCWSTR** `pszSrc` **)** costruttore consente di puntatori a caratteri deve essere sostituito da `CString` oggetti.  
+ Oggetto `CString` oggetto può anche agire come una valore letterale stringa in formato C (una `PCXSTR`, che è la stessa **char const** <strong>\*</strong> se non in modalità Unicode). Il [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) consente l'operatore di conversione `CString` oggetti deve essere liberamente sostituito da puntatori a caratteri nelle chiamate di funzione. Il **CString (LPCWSTR** `pszSrc` **)** costruttore consente di puntatori a caratteri deve essere sostituito da `CString` oggetti.  
   
  Non viene effettuato alcun tentativo di riduzione `CString` oggetti. Se si apportano due `CString` gli oggetti che contiene `Chicago`, ad esempio, i caratteri in `Chicago` vengono archiviati in due posizioni. (Ciò potrebbe non essere nelle versioni future di MFC, pertanto è consigliabile non dipendono da esso.)  
   

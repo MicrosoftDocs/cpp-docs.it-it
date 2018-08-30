@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408786"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201445"
 ---
 # <a name="member-access-operators--and--gt"></a>Operatori di accesso ai membri:. e -&gt;
 ## <a name="syntax"></a>Sintassi  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  Nel primo formato, *postfix-expression* rappresenta un valore di uno struct, classe o tipo di unione, e *nome* denomina un membro di struttura, unione o specificata classe. Il valore dell'operazione è quello di *name* ed è un l-value se *postfix-expression* è un l-value.  
   
-2.  Nel secondo formato, *postfix-expression* rappresenta un puntatore a una struttura, unione o classe, e *nome* denomina un membro di struttura, unione o specificata classe. Il valore è quello di *nome* ed è un l-value. Il **->** operatore Dereferenzia il puntatore del mouse. Di conseguenza, le espressioni * e ***->** `member` e **(\****elettronica***)**.`member` (in cui *elettronica* rappresenta un puntatore) producono risultati identici (eccetto quando gli operatori **->** oppure **\*** sono sottoposti a overload).  
+2.  Nel secondo formato, *postfix-expression* rappresenta un puntatore a una struttura, unione o classe, e *nome* denomina un membro di struttura, unione o specificata classe. Il valore è quello di *nome* ed è un l-value. Il **->** operatore Dereferenzia il puntatore del mouse. Di conseguenza, le espressioni `e->member` e `(*e).member` (in cui *elettronica* rappresenta un puntatore) producono risultati identici (eccetto quando gli operatori **->** o <strong>\*</strong> sono sottoposti a overload).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono illustrati entrambi i formati dell'operatore di accesso ai membri.  

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6fa2e03bbb7307b2bc9633c21510f3b1939d4ad9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848350"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218048"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL e il gestore del marshalling con modello di threading Free
 Pagina di attributi ATL semplice oggetto della procedura guidata offre un'opzione che consente la classe deve aggregare il marshalling a thread gratuito (FTM).  
   
- La procedura guidata genera codice per creare un'istanza del gestore di marshalling a thread libero nel `FinalConstruct` rilasciare quell'istanza in `FinalRelease`. Una macro COM_INTERFACE_ENTRY_AGGREGATE viene automaticamente aggiunto alla mappa COM per assicurarsi che `QueryInterface` le richieste relative a [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) vengono gestiti dal gestore di marshalling a thread libero.  
+ La procedura guidata genera codice per creare un'istanza del gestore di marshalling a thread libero nel `FinalConstruct` rilasciare quell'istanza in `FinalRelease`. Una macro COM_INTERFACE_ENTRY_AGGREGATE viene automaticamente aggiunto alla mappa COM per assicurarsi che `QueryInterface` le richieste relative a [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) vengono gestiti dal gestore di marshalling a thread libero.  
   
  Il gestore di marshalling a thread libero consente l'accesso diretto alle interfacce dell'oggetto da qualsiasi thread nello stesso processo, velocizzando le chiamate tra apartment. Questa opzione è destinata alle classi che usano il modello di threading entrambe.  
   
@@ -36,8 +36,8 @@ Pagina di attributi ATL semplice oggetto della procedura guidata offre un'opzion
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti](../atl/active-template-library-atl-concepts.md)   
- [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
- [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [Quando usare la tabella di interfaccia globale](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [Problemi relativi al Threading di Server in-Process](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
+ [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
+ [Quando usare la tabella di interfaccia globale](/windows/desktop/com/when-to-use-the-global-interface-table)   
+ [Problemi relativi al Threading di Server in-Process](/windows/desktop/com/in-process-server-threading-issues)
 

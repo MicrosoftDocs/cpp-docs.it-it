@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197933"
 ---
 # <a name="cstringt-class"></a>Classe CstringT
 Questa classe rappresenta un `CStringT` oggetto.  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` è stato effettuato un tentativo di allocazione della memoria di sistema per il nuovo formattata stringa. Se questo tentativo non riesce, viene automaticamente generata un'eccezione di memoria.  
   
- Ogni inserimento deve avere un parametro corrispondente visualizzato dopo il *pszFormat* oppure *nFormatID* parametro. All'interno di testo del messaggio, diverse sequenze di escape sono supportate per la formattazione in modo dinamico il messaggio. Per altre informazioni, vedere il Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) funzione nel SDK di Windows.  
+ Ogni inserimento deve avere un parametro corrispondente visualizzato dopo il *pszFormat* oppure *nFormatID* parametro. All'interno di testo del messaggio, diverse sequenze di escape sono supportate per la formattazione in modo dinamico il messaggio. Per altre informazioni, vedere il Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) funzione nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` le chiamate [CStringT::FormatMessage](#formatmessage), che tenta di allocare la memoria di sistema per il nuovo formattata stringa. Se questo tentativo non riesce, viene automaticamente generata un'eccezione di memoria.  
   
- Per altre informazioni, vedere il Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) funzione nel SDK di Windows.  
+ Per altre informazioni, vedere il Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) funzione nel SDK di Windows.  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  Formatta una stringa di messaggio utilizzando un elenco di argomenti variabili.  

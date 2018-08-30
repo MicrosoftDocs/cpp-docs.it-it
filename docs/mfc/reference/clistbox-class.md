@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b77254c78dbb84d546e080ca5bc275919aac64a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221727"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 Fornisce la funzionalità di una casella di riepilogo di Windows.  
@@ -644,7 +644,7 @@ DWORD_PTR GetItemData(int nIndex) const;
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
- Recupera il valore a 32 bit fornito dall'applicazione associato all'elemento casella di riepilogo specificata come indicatore di misura ( **void\***).  
+ Recupera il valore a 32 bit fornito dall'applicazione associato all'elemento casella di riepilogo specificata come indicatore di misura (**void** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -710,7 +710,7 @@ DWORD GetListBoxInfo() const;
  Numero di elementi per ogni colonna del `CListBox` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità dei [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) del messaggio, come descritto nel SDK di Windows.  
+ Questa funzione membro emula la funzionalità dei [LB_GETLISTBOXINFO](/windows/desktop/Controls/lb-getlistboxinfo) del messaggio, come descritto nel SDK di Windows.  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
  Recupera le impostazioni locali utilizzate per la casella di riepilogo.  
@@ -1144,7 +1144,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
- Imposta il valore a 32 bit associato con l'elemento specificato in una casella di riepilogo sia il puntatore specificato ( **void\***).  
+ Imposta il valore a 32 bit associato con l'elemento specificato in una casella di riepilogo sia il puntatore specificato ( **void** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(

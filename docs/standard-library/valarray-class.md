@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965526"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198302"
 ---
 # <a name="valarray-class"></a>Classe valarray
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Func(Type)* l'oggetto funzione da applicare a ogni elemento dell'operando valarray.
+*_Func(Type)*<br/>
+ Oggetto funzione da applicare a ogni elemento dell'operando valarray.
 
-*_Func(const Type&)* oggetto funzione per const da applicare a ogni elemento dell'operando valarray.
+*_Func(const Type&)*<br/>
+ Oggetto funzione per const da applicare a ogni elemento dell'operando valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -141,7 +143,7 @@ Oggetto valarray con l'applicazione di `_Func` agli elementi dell'operando valar
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce un oggetto di classe [valarray](../standard-library/valarray-class.md)**\<Type>**, di lunghezza [size](#size), di cui ogni elemento `I` è **func**(( **\*this**)[ `I`]).
+La funzione membro restituisce un oggetto della classe [valarray](../standard-library/valarray-class.md)**\<tipo >**, di lunghezza [dimensioni](#size), di cui ogni elemento *ho*è `_Func((*this)[I])`.
 
 ### <a name="example"></a>Esempio
 
@@ -1247,7 +1249,7 @@ Riferimento a un elemento o al relativo valore in corrispondenza di un indice o 
 
 ### <a name="remarks"></a>Note
 
-L'operatore membro è sottoposto a overload per fornire diversi modi per selezionare sequenze di elementi tra quelle controllate da *\****ciò**. Il primo gruppo di cinque operatori membro funziona insieme a diversi overload di [operator=](#op_eq) (e altri operatori di assegnazione) per consentire la sostituzione selettiva (sezionamento) della sequenza controllata. Gli elementi selezionati devono esistere.
+L'operatore membro è sottoposto a overload per fornire diversi modi per selezionare sequenze di elementi tra quelle controllate da  <strong>\*ciò</strong>. Il primo gruppo di cinque operatori membro funziona insieme a diversi overload di [operator=](#op_eq) (e altri operatori di assegnazione) per consentire la sostituzione selettiva (sezionamento) della sequenza controllata. Gli elementi selezionati devono esistere.
 
 Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento non incluso nei limiti dell'oggetto valarray.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 

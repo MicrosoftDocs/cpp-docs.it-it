@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337885"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218988"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classi di database ATL (modelli OLE DB)
 Microsoft offre varie implementazioni di OLE DB, un set di interfacce COM che consentono un accesso uniforme ai dati in formati e origini diversi.  OLE DB sia ufficialmente deprecato; Questa documentazione è per gli sviluppatori che sono la gestione del codice legacy. Nuove applicazioni devono utilizzare ODBC per connettersi a origini dati SQL.
@@ -46,4 +46,4 @@ Microsoft offre varie implementazioni di OLE DB, un set di interfacce COM che co
  [Creazione di un Provider OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
  [Riferimenti ai modelli Consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
  [Riferimenti ai modelli di Provider OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
- [Esempi di modelli OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [Esempi di modelli OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

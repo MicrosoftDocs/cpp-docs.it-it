@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c528e2a80894db1da82d7b07ba34a7c62b6237da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339306"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219019"
 ---
 # <a name="ccolordialog-class"></a>Classe CColorDialog
 Consente di incorporare nell'applicazione di una finestra di dialogo di selezione colore.  
@@ -80,13 +80,13 @@ class CColorDialog : public CCommonDialog
   
  Per costruire un `CColorDialog` dell'oggetto, usare il costruttore fornito o derivare una nuova classe e usare il proprio costruttore personalizzato.  
   
- Una volta la finestra di dialogo è stata costruita, è possibile impostare o modificare i valori di [m_cc](#m_cc) struttura per inizializzare i valori dei controlli della finestra di dialogo. Il *m_cc* struttura è di tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Una volta la finestra di dialogo è stata costruita, è possibile impostare o modificare i valori di [m_cc](#m_cc) struttura per inizializzare i valori dei controlli della finestra di dialogo. Il *m_cc* struttura è di tipo [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora).  
   
  Dopo l'inizializzazione i controlli della finestra di dialogo, chiamare il `DoModal` funzione membro per visualizzare la finestra di dialogo e consentire all'utente di selezionare un colore. `DoModal` Restituisce la selezione dell'utente del pulsante OK (IDOK) o annullare (IDCANCEL) entrambi della finestra di dialogo.  
   
  Se `DoModal` restituisce IDOK, è possibile usare uno dei `CColorDialog`di funzioni membro per recuperare le informazioni di input dall'utente.  
   
- È possibile utilizzare il Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funzione per determinare se si è verificato un errore durante l'inizializzazione della finestra di dialogo e per altre informazioni sull'errore.  
+ È possibile utilizzare il Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funzione per determinare se si è verificato un errore durante l'inizializzazione della finestra di dialogo e per altre informazioni sull'errore.  
   
  `CColorDialog` si basa sul COMMDLG. File DLL che viene fornito con Windows 3.1 e versioni successive.  
   
@@ -130,7 +130,7 @@ CColorDialog(
  La selezione di colore predefinito. Se viene specificato alcun valore, il valore predefinito è RGB(0,0,0) (nero).  
   
  *dwFlags*  
- Un set di flag che consentono di personalizzare il funzionamento e l'aspetto della finestra di dialogo. Per altre informazioni, vedere la [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) struttura nel SDK di Windows.  
+ Un set di flag che consentono di personalizzare il funzionamento e l'aspetto della finestra di dialogo. Per altre informazioni, vedere la [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora) struttura nel SDK di Windows.  
   
  *pParentWnd*  
  Puntatore alla finestra padre o proprietaria della finestra di dialogo.  
@@ -146,7 +146,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- IDOK o IDCANCEL. Se viene restituito IDCANCEL, chiamare il Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funzione per determinare se si è verificato un errore.  
+ IDOK o IDCANCEL. Se viene restituito IDCANCEL, chiamare il Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funzione per determinare se si è verificato un errore.  
   
  IDOK e IDCANCEL sono le costanti che indicano se l'utente ha selezionato il pulsante OK o Annulla.  
   
@@ -166,7 +166,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che contiene informazioni per il colore selezionato nella finestra di dialogo colore RGB.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che contiene informazioni per il colore selezionato nella finestra di dialogo colore RGB.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
@@ -190,7 +190,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- Una struttura di tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), i cui membri memorizzare le caratteristiche e i valori della finestra di dialogo.  
+ Una struttura di tipo [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora), i cui membri memorizzare le caratteristiche e i valori della finestra di dialogo.  
   
 ```  
 CHOOSECOLOR m_cc;  

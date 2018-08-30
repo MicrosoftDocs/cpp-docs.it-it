@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a5604a1b1c469272889aa7b4e283b3ee6f23bf
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c2b2f8ab8828c994b729180805be0a51a83b3487
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882796"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203626"
 ---
 # <a name="ccomenumimpl-class"></a>Classe CComEnumImpl
 Questa classe fornisce l'implementazione per un'interfaccia dell'enumeratore COM in cui sono archiviati gli elementi vengono enumerati in una matrice.  
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 #### <a name="parameters"></a>Parametri  
  *base*  
- Un enumeratore COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) dell'interfaccia.  
+ Un'interfaccia dell'enumeratore COM. Visualizzare [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) per un esempio. 
   
  *piid*  
  Un puntatore all'ID di interfaccia di interfaccia dell'enumeratore.  
@@ -72,11 +72,11 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComEnumImpl::Clone](#clone)|L'implementazione di [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[CComEnumImpl::Clone](#clone)|L'implementazione del **Clone** il metodo di interfaccia di enumerazione.|  
 |[CComEnumImpl::Init](#init)|Inizializza l'enumeratore.|  
-|[CComEnumImpl::Next](#next)|L'implementazione di [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
-|[CComEnumImpl::Reset](#reset)|L'implementazione di [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
-|[CComEnumImpl](#skip)|L'implementazione di [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
+|[CComEnumImpl::Next](#next)|L'implementazione di **successivo**.|  
+|[CComEnumImpl::Reset](#reset)|L'implementazione di **reimpostare**.|  
+|[CComEnumImpl](#skip)|L'implementazione di **Skip**.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|Il `IUnknown` puntatore dell'oggetto che fornisce la raccolta in fase di enumerazione.|  
   
 ## <a name="remarks"></a>Note  
- `CComEnumImpl` fornisce l'implementazione di un'interfaccia dell'enumeratore COM in cui sono archiviati gli elementi vengono enumerati in una matrice. Questa classe è analoga al `IEnumOnSTLImpl` (classe), che fornisce un'implementazione di un'interfaccia dell'enumeratore basato su un contenitore della libreria Standard C++.  
+Visualizzare [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) per un esempio di implementazioni del metodo. `CComEnumImpl` fornisce l'implementazione di un'interfaccia dell'enumeratore COM in cui sono archiviati gli elementi vengono enumerati in una matrice. Questa classe è analoga al `IEnumOnSTLImpl` (classe), che fornisce un'implementazione di un'interfaccia dell'enumeratore basato su un contenitore della libreria Standard C++.  
   
 > [!NOTE]
 >  Per informazioni dettagliate sulle altre differenze tra `CComEnumImpl` e `IEnumOnSTLImpl`, vedere [CComEnumImpl::Init](#init).  
@@ -175,7 +175,7 @@ enum CComEnumFlags
 >  Il prototipo di questo metodo consente di specificare gli elementi della matrice come tipo `T`, dove `T` è stato definito come parametro di modello per la classe. Questo è lo stesso tipo che viene esposta tramite il metodo di interfaccia COM [CComEnumImpl::Next](#next). L'implicazione di ciò è che, a differenza [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), questa classe non supporta l'archiviazione diversi ed esposti i tipi di dati. Il tipo di dati degli elementi nella matrice deve essere identico al tipo di dati esposto tramite l'interfaccia COM.  
   
 ##  <a name="clone"></a>  CComEnumImpl::Clone  
- Questo metodo fornisce l'implementazione del [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) metodo tramite la creazione di un oggetto di tipo `CComEnum`, inizializzandola con la stessa matrice e iteratori usati dall'oggetto corrente e la restituzione dell'interfaccia di nuovo oggetto.  
+ Questo metodo fornisce l'implementazione del **Clone** metodo tramite la creazione di un oggetto di tipo `CComEnum`, inizializzandola con la stessa matrice e iteratori usati dall'oggetto corrente e che restituisce l'interfaccia sull'oggetto appena creato oggetto.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -227,7 +227,7 @@ DWORD m_dwFlags;
 ```  
   
 ##  <a name="next"></a>  CComEnumImpl::Next  
- Questo metodo fornisce l'implementazione del [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) (metodo).  
+ Questo metodo fornisce l'implementazione del **successivo** (metodo).  
   
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,7 +247,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  Un valore HRESULT standard.  
   
 ##  <a name="reset"></a>  CComEnumImpl::Reset  
- Questo metodo fornisce l'implementazione del [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) (metodo).  
+ Questo metodo fornisce l'implementazione del **reimpostare** (metodo).  
   
 ```
 STDMETHOD(Reset)(void);
@@ -257,7 +257,7 @@ STDMETHOD(Reset)(void);
  Un valore HRESULT standard.  
   
 ##  <a name="skip"></a>  CComEnumImpl  
- Questo metodo fornisce l'implementazione del [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) (metodo).  
+ Questo metodo fornisce l'implementazione del **Skip** (metodo).  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

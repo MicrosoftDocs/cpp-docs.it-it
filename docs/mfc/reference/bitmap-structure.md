@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339347"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220761"
 ---
 # <a name="bitmap-structure"></a>Struttura BITMAP
 Il **BITMAP** struttura definisce l'altezza, larghezza, formato di colore e i valori di bit di una bitmap logica **.**  
@@ -85,7 +85,7 @@ typedef struct tagBITMAP {  /* bm */
   
  Tutti i dispositivi supportano le bitmap con il set di bit RC_BITBLT nell'indice RASTERCAPS del [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) funzione membro.  
   
- Ogni dispositivo presenta un formato di colore univoco. Per trasferire una bitmap da un dispositivo a altro, usare il [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) e [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funzioni di Windows.  
+ Ogni dispositivo presenta un formato di colore univoco. Per trasferire una bitmap da un dispositivo a altro, usare il [GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits) e [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) funzioni di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** WinGDI. h  

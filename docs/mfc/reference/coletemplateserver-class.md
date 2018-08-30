@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 424d98236b37dabe1c671a9890f049063a8e50a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212276"
 ---
 # <a name="coletemplateserver-class"></a>Classe COleTemplateServer
 Utilizzata per i server di modifica visiva OLE, i server di automazione e i contenitori di collegamento (applicazioni che supportano collegamenti a incorporamenti).  
@@ -106,7 +106,7 @@ void ConnectTemplate(
  Indica se una singola istanza dell'applicazione può supportare più creazioni di istanza. Se TRUE, più istanze dell'applicazione vengono avviate per ogni richiesta creare un oggetto.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [CLSID chiave](http://msdn.microsoft.com/library/windows/desktop/ms691424) nel SDK di Windows.  
+ Per altre informazioni, vedere [CLSID chiave](/windows/desktop/com/clsid-key-hklm) nel SDK di Windows.  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Annulla la registrazione di modello di documento associato.  

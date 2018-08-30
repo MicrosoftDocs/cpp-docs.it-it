@@ -1,7 +1,7 @@
 ---
-title: Compilatore avviso (livello 1) C4952 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4952 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42696dfae816742c958bca23e25e311e834dd62a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62f4c18380d89eb516a5fa49ef63e92ab79a6f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292142"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207151"
 ---
 # <a name="compiler-warning-level-1-c4952"></a>Avviso del compilatore (livello 1) C4952
-'function': dati di profilo non trovati nel database 'pgd_file' del programma  
-  
- Durante l'uso di [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)il compilatore ha rilevato un modulo di input ricompilato dopo `/LTCG:PGINSTRUMENT` e contenente una nuova funzione (***function***).  
-  
- Si tratta di un avviso informativo. Per risolvere il problema, eseguire `/LTCG:PGINSTRUMENT`, ripetere tutte le esecuzioni dei test ed eseguire `/LTCG:PGOPTIMIZE`.  
-  
- Se fosse stata usata `/LTCG:PGOPTIMIZE` , al posto di questo avviso sarebbe comparso un errore.
+
+> «*funzione*': nessun dato di profilo trovati nel database di programma '*pgd_file*»
+
+Quando si usa [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), il compilatore ha rilevato un modulo di input ricompilato dopo `/LTCG:PGINSTRUMENT` e dispone di una nuova funzione (*funzione*) presente.
+
+Si tratta di un avviso informativo. Per risolvere il problema, eseguire `/LTCG:PGINSTRUMENT`, ripetere tutte le esecuzioni dei test ed eseguire `/LTCG:PGOPTIMIZE`.
+
+Se fosse stata usata `/LTCG:PGOPTIMIZE` , al posto di questo avviso sarebbe comparso un errore.

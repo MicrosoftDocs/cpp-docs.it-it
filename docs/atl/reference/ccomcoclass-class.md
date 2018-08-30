@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572835"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204343"
 ---
 # <a name="ccomcoclass-class"></a>Classe CComCoClass
 Questa classe fornisce metodi per la creazione di istanze di una classe e ottenere le relative proprietà.  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Statico) Eseguire l'override per restituire la descrizione dell'oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `CComCoClass` fornisce metodi per il recupero CLSID di un oggetto, l'impostazione di informazioni sugli errori e la creazione di istanze della classe. Qualsiasi classe registrata nel [mappa di oggetti](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) deve essere derivato da `CComCoClass`.  
+ `CComCoClass` fornisce metodi per il recupero CLSID di un oggetto, l'impostazione di informazioni sugli errori e la creazione di istanze della classe. Qualsiasi classe registrata nel [mappa di oggetti](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) deve essere derivato da `CComCoClass`.  
   
  `CComCoClass` definisce anche la classe factory e l'aggregazione modello predefinito per l'oggetto. `CComCoClass` Usa le due macro seguenti:  
   

@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598077"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222808"
 ---
 # <a name="attributed-programming-concepts"></a>Concetti di programmazione con attributi
 
 Visual C++ include un'ampia gamma di materiale per poter utilizzare gli attributi nei programmi. Gli attributi, una nuova funzionalità di Visual C++, sono progettati per semplificare la programmazione COM e lo sviluppo in .NET Framework common language runtime. Quando si includono attributi nei file di origine, il compilatore funziona con librerie a collegamento dinamico (DLL) per inserire o modificare il codice nel file oggetto generati provider. Sono presenti attributi che facilitano la creazione di file con estensione idl, interfacce, le librerie dei tipi e altri elementi di COM. Nell'ambiente di sviluppo integrato (IDE), gli attributi sono supportati dalle procedure guidate e dalla finestra Proprietà.
 
-Mentre gli attributi eliminano alcuni dettagli di codice necessario per scrivere oggetti COM, è necessario un sfondo [nozioni fondamentali su COM](http://msdn.microsoft.com/library/windows/desktop/ms694363) utilizzare al meglio le loro.
+Mentre gli attributi eliminano alcuni dettagli di codice necessario per scrivere oggetti COM, è necessario un sfondo [nozioni fondamentali su COM](/windows/desktop/com/the-component-object-model) utilizzare al meglio le loro.
 
 ## <a name="in-this-section"></a>In questa sezione
 

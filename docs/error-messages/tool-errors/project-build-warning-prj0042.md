@@ -1,7 +1,7 @@
 ---
-title: Generazione avviso progetto PRJ0042 | Documenti Microsoft
+title: Avviso di compilazione PRJ0042 del progetto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0465b160615af96da8f489bbde63684598cffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 260da8ac336c640ea875610b2c62e6c42c7d335e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316829"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211350"
 ---
 # <a name="project-build-warning-prj0042"></a>Avviso di compilazione progetto PRJ0042
-**La proprietà' Outputs' per l'istruzione di compilazione personalizzata del file**   
- ***file* ' non è impostata. L'istruzione di compilazione personalizzata verrà ignorata.**  
-  
- Un'istruzione di compilazione personalizzata non è stata eseguita perché è stato specificato alcun output.  
-  
- Per correggere l'errore, effettuare una delle seguenti:  
-  
--   Escludere l'istruzione di compilazione personalizzata dalla compilazione.  
-  
--   Aggiungere un output.  
-  
--   Eliminare il contenuto del comando dell'istruzione di compilazione personalizzata.
+
+> La proprietà' Outputs' per il passaggio di compilazione personalizzato per il file*file*' non è impostata. Il passaggio di compilazione personalizzata verrà ignorato.
+
+Un'istruzione di compilazione personalizzati non è stata eseguita perché è stato specificato alcun output.
+
+Per risolvere questo errore, effettuare una delle operazioni seguenti:
+
+- Escludere il passaggio di compilazione personalizzato dalla compilazione.
+
+- Aggiungere un output.
+
+- Eliminare il contenuto del comando dell'istruzione di compilazione personalizzata.

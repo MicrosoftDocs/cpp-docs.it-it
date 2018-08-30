@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf610316c504e61d56556a20797f55d2906bca27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9d028454c408492378c345fb6d6c6d9dfc23cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406914"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199591"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -61,35 +61,48 @@ L'indirizzo della funzione che gestirà i controlli degli errori di runtime.
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione di errore definita in precedenza. o **NULL** se non è disponibile alcuna funzione definita in precedenza.
+La funzione di errore definita in precedenza. oppure **NULL** se è presente alcuna funzione definita in precedenza.
 
 ## <a name="remarks"></a>Note
 
-Nel nuovo codice, utilizzare solo **RTC_SetErrorFuncW**. **RTC_SetErrorFunc** sia incluso solo nella libreria per la compatibilità con le versioni precedenti.
+Nel nuovo codice, usare solo **RTC_SetErrorFuncW**. **RTC_SetErrorFunc** sia incluso solo nella libreria per la compatibilità con le versioni precedenti.
 
 Il **RTC_SetErrorFuncW** callback si applica solo al componente che è stato collegato, ma non a livello globale.
 
 Assicurarsi che l'indirizzo passato a **RTC_SetErrorFuncW** è quello di una funzione di gestione degli errori valida.
 
-Se un errore è stato assegnato un tipo di -1 con [RTC_SetErrorType](rtc-seterrortype.md), non viene chiamata la funzione di gestione degli errori.
+Se un errore è stato assegnato un tipo di -1 usando [RTC_SetErrorType](rtc-seterrortype.md), non viene chiamata la funzione di gestione degli errori.
 
 Prima di chiamare questa funzione, è necessario chiamare una delle funzioni di inizializzazione dei controlli degli errori di run-time. Per altre informazioni, vedere [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
 **_RTC_error_fnW** viene definito come segue:
 
-> **TypeDef int ( cdecl \*rtc_error_fnw) (int** *errorType* **, wchar_t const \***  *filename* **, int***linenumber* **, wchar_t const \***  *moduleName* **, wchar_t const \***  *formato* **,...);** 
+```cpp
+typedef int (__cdecl * _RTC_error_fnW)(
+    int errorType,
+    const wchar_t * filename,
+    int linenumber,
+    const wchar_t * moduleName,
+    const wchar_t * format,
+    ... );
+```
 
 dove:
 
-*errorType* il tipo di errore specificato da [RTC_SetErrorType](rtc-seterrortype.md).
+*ErrorType*<br/>
+Tipo di errore specificato da [_RTC_SetErrorType](rtc-seterrortype.md).
 
-*nome del file* il file di origine in cui si è verificato l'errore, o null se è disponibile alcuna informazione di debug.
+*filename*<br/>
+File di origine in cui si è verificato l'errore o Null se non sono disponibili informazioni di debug.
 
-*LineNumber* la linea nel *filename* in cui si è verificato l'errore oppure 0 se è disponibile alcuna informazione di debug.
+*linenumber*<br/>
+Riga in *filename* in cui si è verificato l'errore o 0 se non sono disponibili informazioni di debug.
 
-*moduleName* la DLL o nome del file eseguibile in cui si è verificato l'errore.
+*moduleName*<br/>
+DLL o nome dell'eseguibile in cui si è verificato l'errore.
 
-*formato* stringa di tipo printf per visualizzare un messaggio di errore, usando i parametri rimanenti. Il primo argomento di VA_ARGLIST è il numero di errore RTC che si è verificato.
+*format*<br/>
+Stringa di tipo printf per visualizzare un messaggio di errore, usando i parametri rimanenti. Il primo argomento di VA_ARGLIST è il numero di errore RTC che si è verificato.
 
 Per un esempio che illustra come usare **_RTC_error_fnW**, vedere [Personalizzazione dei controlli runtime nativi](/visualstudio/debugger/native-run-time-checks-customization).
 

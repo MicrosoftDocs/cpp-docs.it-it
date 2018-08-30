@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885273"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220649"
 ---
 # <a name="catlfile-class"></a>Classe CAtlFile
 Questa classe fornisce un wrapper sottile per i Windows API di gestione di file.  
@@ -132,7 +132,7 @@ HRESULT Create(
  Nome file.  
   
  *dwDesiredAccess*  
- L'accesso desiderato. Visualizzare *dwDesiredAccess* nelle [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) nel SDK di Windows.  
+ L'accesso desiderato. Visualizzare *dwDesiredAccess* nelle [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) nel SDK di Windows.  
   
  *dwShareMode*  
  La modalità di condivisione. Visualizzare *dwShareMode* in `CreateFile`.  
@@ -153,7 +153,7 @@ HRESULT Create(
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) per creare o aprire il file.  
+ Le chiamate [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) per creare o aprire il file.  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  Chiamare questo metodo per cancellare il buffer per il file e causare tutti i dati memorizzati nel buffer da scrivere nel file.  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) lo scaricamento di dati memorizzati nel buffer nel file.  
+ Le chiamate [FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers) lo scaricamento di dati memorizzati nel buffer nel file.  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Chiamare questo metodo per ottenere i risultati di un'operazione sovrapposta sul file.  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>Parametri  
  *pOverlapped*  
- La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) nel SDK di Windows.  
+ La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) nel SDK di Windows.  
   
  *dwBytesTransferred*  
  I byte trasferiti. Visualizzare *lpNumberOfBytesTransferred* in `GetOverlappedResult`.  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) per ottenere i risultati di un'operazione sovrapposta sul file.  
+ Le chiamate [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) per ottenere i risultati di un'operazione sovrapposta sul file.  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Chiamare questo metodo per ottenere la posizione corrente del puntatore di file.  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) per ottenere la posizione corrente del puntatore di file.  
+ Le chiamate [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) per ottenere la posizione corrente del puntatore di file.  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  Chiamare questo metodo per ottenere la dimensione in byte del file.  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) per ottenere la dimensione in byte del file.  
+ Le chiamate [GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize) per ottenere la dimensione in byte del file.  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Chiamare questo metodo per bloccare un'area nel file per impedire l'accesso di altri processi.  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [era](http://msdn.microsoft.com/library/windows/desktop/aa365202) bloccare un'area nel file. Il blocco di byte in un file impedisce l'accesso a tali byte da altri processi. È possibile bloccare più di un'area di un file, ma non le aree di sovrapposizione sono consentite. Quando si sblocca un'area, usando [CAtlFile::UnlockRange](#unlockrange), l'intervallo di byte deve corrispondere esattamente all'area in cui è stato bloccato in precedenza. `LockRange` non unisce aree adiacenti; Se due aree bloccate sono adiacenti, è necessario sbloccare ognuno separatamente.  
+ Le chiamate [era](/windows/desktop/api/fileapi/nf-fileapi-lockfile) bloccare un'area nel file. Il blocco di byte in un file impedisce l'accesso a tali byte da altri processi. È possibile bloccare più di un'area di un file, ma non le aree di sovrapposizione sono consentite. Quando si sblocca un'area, usando [CAtlFile::UnlockRange](#unlockrange), l'intervallo di byte deve corrispondere esattamente all'area in cui è stato bloccato in precedenza. `LockRange` non unisce aree adiacenti; Se due aree bloccate sono adiacenti, è necessario sbloccare ognuno separatamente.  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Puntatore a un oggetto `CAtlTransactionManager`.  
@@ -293,16 +293,16 @@ HRESULT Read(
  Numero di byte letti.  
   
  *pOverlapped*  
- La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) nel SDK di Windows.  
+ La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) nel SDK di Windows.  
   
  *pfnCompletionRoutine*  
- La routine di completamento. Visualizzare *lpCompletionRoutine* nelle [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) nel SDK di Windows.  
+ La routine di completamento. Visualizzare *lpCompletionRoutine* nelle [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Chiamare le prime tre forme [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), l'ultimo [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) per leggere i dati dal file. Uso [CAtlFile::Seek](#seek) per spostare il puntatore del file.  
+ Chiamare le prime tre forme [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile), l'ultimo [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) per leggere i dati dal file. Uso [CAtlFile::Seek](#seek) per spostare il puntatore del file.  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  Chiamare questo metodo per spostare il puntatore del file del file.  
@@ -324,7 +324,7 @@ HRESULT Seek(
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) per spostare il puntatore del file.  
+ Le chiamate [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) per spostare il puntatore del file.  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  Chiamare questo metodo per impostare le dimensioni del file.  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) e [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) per impostare le dimensioni del file. In fase di restituzione, il puntatore del file è posizionato alla fine del file.  
+ Le chiamate [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) e [SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile) per impostare le dimensioni del file. In fase di restituzione, il puntatore del file è posizionato alla fine del file.  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Chiamare questo metodo per sbloccare un'area del file.  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Le chiamate [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) per sbloccare un'area del file.  
+ Le chiamate [UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile) per sbloccare un'area del file.  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  Chiamare questo metodo per scrivere i dati del file iniziando dalla posizione indicata dal puntatore di file.  
@@ -392,10 +392,10 @@ HRESULT Write(
  Il numero di byte da trasferire dal buffer.  
   
  *pOverlapped*  
- La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) nel SDK di Windows.  
+ La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) nel SDK di Windows.  
   
  *pfnCompletionRoutine*  
- La routine di completamento. Visualizzare *lpCompletionRoutine* nelle [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) nel SDK di Windows.  
+ La routine di completamento. Visualizzare *lpCompletionRoutine* nelle [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) nel SDK di Windows.  
   
  *pnBytesWritten*  
  Byte scritti.  
@@ -404,7 +404,7 @@ HRESULT Write(
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Chiamare le prime tre forme [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), le chiamate ultimo [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) per scrivere dati nel file. Uso [CAtlFile::Seek](#seek) per spostare il puntatore del file.  
+ Chiamare le prime tre forme [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile), le chiamate ultimo [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) per scrivere dati nel file. Uso [CAtlFile::Seek](#seek) per spostare il puntatore del file.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di testo scorrevole](../../visual-cpp-samples.md)   

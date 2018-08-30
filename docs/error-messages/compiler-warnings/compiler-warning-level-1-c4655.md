@@ -1,7 +1,7 @@
 ---
-title: Compilatore avviso (livello 1) C4655 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4655 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6011bf3a2a3bf1718fc15823f2541f49306857c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9600c0fb9b4f03112ebd9cf430e3f833899c5f3c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283263"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209101"
 ---
 # <a name="compiler-warning-level-1-c4655"></a>Avviso del compilatore (livello 1) C4655
-**'**   
- ***simbolo* ': tipo di variabile nuovo rispetto all'ultima compilazione o definito diversamente altrove**  
-  
- È stato modificato o aggiunto un nuovo tipo di dati dall'ultima compilazione completata. Modifica e continuazione non supporta le modifiche ai tipi di dati.  
-  
- Questo avviso è seguito da un [Errore irreversibile C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Per altre informazioni, vedere [Modifiche al codice supportate](/visualstudio/debugger/supported-code-changes-cpp).  
-  
-### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Per rimuovere questo avviso senza terminare la sessione di debug corrente  
-  
-1.  Modificare il tipo di dati allo stato precedente all'errore.  
-  
-2.  Scegliere **Applica modifiche del codice** dal menu **Debug**.  
-  
-### <a name="to-remove-this-warning-without-changing-your-source-code"></a>Per rimuovere questo avviso senza modificare il codice sorgente  
-  
-1.  Scegliere **Arresta debug** dal menu **Debug**.  
-  
-2.  Scegliere **Compila** dal menu **Compilazione**.
+
+> «*simbolo*': tipo di variabile nuovo rispetto all'ultima compilazione o definito diversamente altrove
+
+## <a name="remarks"></a>Note
+
+È stato modificato o aggiunto un nuovo tipo di dati dall'ultima compilazione completata. Modifica e continuazione non supporta le modifiche ai tipi di dati.
+
+Questo avviso è seguito da un [Errore irreversibile C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Per altre informazioni, vedere [Modifiche al codice supportate](/visualstudio/debugger/supported-code-changes-cpp).
+
+### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Per rimuovere questo avviso senza terminare la sessione di debug corrente
+
+1. Modificare il tipo di dati allo stato precedente all'errore.
+
+2. Scegliere **Applica modifiche del codice** dal menu **Debug**.
+
+### <a name="to-remove-this-warning-without-changing-your-source-code"></a>Per rimuovere questo avviso senza modificare il codice sorgente
+
+1. Scegliere **Arresta debug** dal menu **Debug**.
+
+2. Scegliere **Compila** dal menu **Compilazione**.

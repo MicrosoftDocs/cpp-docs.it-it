@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d4e2b1fe58ab7ea408438b703b9fe803996fa791
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883788"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219038"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Classe IObjectWithSiteImpl
 Questa classe fornisce metodi di consentire a un oggetto comunicare con il relativo sito.  
@@ -60,7 +60,7 @@ template <class T>
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Gestisce il sito `IUnknown` puntatore.|  
   
 ## <a name="remarks"></a>Note  
- Il [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) interfaccia consente a un oggetto comunicare con il relativo sito. Classe `IObjectWithSiteImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
+ Il [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) interfaccia consente a un oggetto comunicare con il relativo sito. Classe `IObjectWithSiteImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
   
  `IObjectWithSiteImpl` specifica due metodi. Il client chiama prima `SetSite`, passando il sito `IUnknown` puntatore. Puntatore ' this ' viene archiviato all'interno dell'oggetto e versioni successive possono essere recuperate tramite una chiamata a `GetSite`.  
   
@@ -86,7 +86,7 @@ STDMETHOD(GetSite)(
 ### <a name="remarks"></a>Note  
  Se il sito supporta questa interfaccia, il puntatore viene restituito tramite `ppvSite`. In caso contrario, `ppvSite` è impostato su NULL.  
   
- Visualizzare [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) in Windows SDK.  
+ Visualizzare [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) in Windows SDK.  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Gestisce il sito `IUnknown` puntatore.  
@@ -120,7 +120,7 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) in Windows SDK.  
+ Visualizzare [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo del controllo barra degli strumenti | Documenti Microsoft
+title: Utilizzo del controllo della barra degli strumenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e488d4b475cbc73f57bb90ccd081b6d490221d58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385937"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202260"
 ---
 # <a name="working-with-the-toolbar-control"></a>Utilizzo del controllo Toolbar
-In questo articolo viene illustrato come accedere il [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) sottostante un [CToolBar](../mfc/reference/ctoolbar-class.md) per un maggiore controllo sulle barre degli strumenti. Questo è un argomento avanzato.  
+Questo articolo illustra come è possibile accedere la [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) oggetto sottostante una [CToolBar](../mfc/reference/ctoolbar-class.md) per un maggiore controllo sulla barra degli strumenti. Si tratta di un argomento avanzato.  
   
 ## <a name="procedures"></a>Procedure  
   
@@ -33,10 +33,10 @@ In questo articolo viene illustrato come accedere il [CToolBarCtrl](../mfc/refer
   
 1.  Chiamare [CToolBar:: GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl` Restituisce un riferimento a un [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) oggetto. È possibile utilizzare il riferimento per chiamare le funzioni membro della classe del controllo barra degli strumenti.  
+ `GetToolBarCtrl` Restituisce un riferimento a un [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) oggetto. È possibile utilizzare il riferimento per chiamare funzioni membro della classe del controllo della barra degli strumenti.  
   
 > [!CAUTION]
->  Durante la chiamata `CToolBarCtrl` **ottenere** funzioni è sicuro, prestare attenzione se si chiama il **impostare** funzioni. Questo è un argomento avanzato. Non deve in genere è necessario accedere al controllo della barra degli strumenti sottostante.  
+>  Durante la chiamata `CToolBarCtrl` **ottenere** funzioni siano al sicuro, prestare attenzione se si chiama il **impostare** funzioni. Si tratta di un argomento avanzato. In genere non è necessario accedere al controllo della barra degli strumenti sottostante.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
@@ -46,7 +46,7 @@ In questo articolo viene illustrato come accedere il [CToolBarCtrl](../mfc/refer
   
 -   [Ancoraggio e barre degli strumenti mobili](../mfc/docking-and-floating-toolbars.md)  
   
--   [Ridimensionamento dinamico barra degli strumenti](../mfc/docking-and-floating-toolbars.md)  
+-   [Ridimensionamento in modo dinamico la barra degli strumenti](../mfc/docking-and-floating-toolbars.md)  
   
 -   [Descrizioni comandi barra degli strumenti](../mfc/toolbar-tool-tips.md)  
   
@@ -60,11 +60,11 @@ In questo articolo viene illustrato come accedere il [CToolBarCtrl](../mfc/refer
   
 -   [Più barre degli strumenti](../mfc/toolbar-fundamentals.md)  
   
--   [Utilizzo delle barre degli strumenti precedente](../mfc/using-your-old-toolbars.md)  
+-   [Uso delle barre degli strumenti precedente](../mfc/using-your-old-toolbars.md)  
   
 -   [Barre di controllo](../mfc/control-bars.md)  
   
- Per informazioni generali sull'utilizzo di controlli comuni di Windows, vedere [controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Per informazioni generali sull'utilizzo dei controlli comuni di Windows, vedere [Common Controls](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione della barra degli strumenti MFC](../mfc/mfc-toolbar-implementation.md)

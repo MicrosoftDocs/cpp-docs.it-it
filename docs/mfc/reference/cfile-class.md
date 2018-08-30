@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20a254e6d5a6e3e04dfd013c1f7ae3e8e2c9100e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1d3422923075f1c9546da1f8d2430e2e2f2c4bbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337271"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203056"
 ---
 # <a name="cfile-class"></a>Classe CFile
 Classe di base per le classi di file MFC.  
@@ -363,7 +363,7 @@ virtual CString GetFileTitle() const;
  Il titolo del file sottostante.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo chiama [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) per recuperare il titolo del file. Se l'operazione riesce, il metodo restituisce la stringa che usa il sistema per visualizzare il nome del file per l'utente. In caso contrario, il metodo viene chiamato [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) per recuperare il nome di file (inclusa l'estensione file) del file sottostante. Di conseguenza, l'estensione di file non sempre essere incluso nella stringa del titolo del file restituito. Per altre informazioni, vedere [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) e [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) nel SDK di Windows.  
+ Questo metodo chiama [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) per recuperare il titolo del file. Se l'operazione riesce, il metodo restituisce la stringa che usa il sistema per visualizzare il nome del file per l'utente. In caso contrario, il metodo viene chiamato [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) per recuperare il nome di file (inclusa l'estensione file) del file sottostante. Di conseguenza, l'estensione di file non sempre essere incluso nella stringa del titolo del file restituito. Per altre informazioni, vedere [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) e [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) nel SDK di Windows.  
   
  Per restituire l'intero percorso del file, incluso il nome, chiamare [GetFilePath](#getfilepath). Per restituire solo il nome del file, chiamare [GetFileName](#getfilename).  
   
@@ -568,7 +568,7 @@ virtual BOOL Open(
  [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
 ##  <a name="operator_handle"></a>  CFile::operator HANDLE  
- Utilizzare questo operatore per passare un handle per un `CFile` dell'oggetto, ad esempio per le funzioni [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) e [GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) che prevede un `HANDLE`.  
+ Utilizzare questo operatore per passare un handle per un `CFile` dell'oggetto, ad esempio per le funzioni [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) e [GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) che prevede un `HANDLE`.  
   
 ```  
 operator HANDLE() const;  

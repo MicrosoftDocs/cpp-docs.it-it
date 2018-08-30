@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18a53f75f783f5843e3bdf603d21dbacf6746e2b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 06261ba87806bd5eada0d7daaa955b8ec395f3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222846"
 ---
 # <a name="control"></a>controllo
 
@@ -36,7 +36,7 @@ Specifica che il tipo definito dall'utente è un controllo.
 
 ## <a name="remarks"></a>Note
 
-Il **controllo** attributo implica la [coclasse](../windows/coclass.md) attributo. Il **controllo** attributi di C++ ha la stessa funzionalità come la [controllo](http://msdn.microsoft.com/library/windows/desktop/aa366764) attributo MIDL.
+Il **controllo** attributo implica la [coclasse](../windows/coclass.md) attributo. Il **controllo** attributi di C++ ha la stessa funzionalità come la [controllo](/windows/desktop/Midl/control) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

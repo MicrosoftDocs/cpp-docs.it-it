@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a8fe658776bb41d1de4e1592df7ad83299aea46
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4895491a6b697d33d3ba5c6070a75d037e894e46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587476"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219773"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -36,7 +36,7 @@ Identifica un puntatore di riferimento.
 
 ## <a name="remarks"></a>Note
 
-Il **ref** attributi di C++ ha la stessa funzionalità come la [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) attributo MIDL.
+Il **ref** attributi di C++ ha la stessa funzionalità come la [ref](/windows/desktop/Midl/ref) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

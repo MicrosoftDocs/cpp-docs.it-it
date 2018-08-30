@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd8dd32b0f805e55e17d12428c045d64820196d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff3a68e585cecb8affb0a5f4ffb7ff81929c955a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849405"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201103"
 ---
 # <a name="cpalette-class"></a>CPalette (classe)
 Incapsula una tavolozza dei colori di Windows.  
@@ -115,12 +115,12 @@ void AnimatePalette(
  Specifica il numero di voci della tavolozza da animare.  
   
  *lpPaletteColors*  
- Punta al primo membro di una matrice [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) strutture per sostituire le voci della tavolozza identificate dal *nStartIndex* e *nNumEntries*.  
+ Punta al primo membro di una matrice [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) strutture per sostituire le voci della tavolozza identificate dal *nStartIndex* e *nNumEntries*.  
   
 ### <a name="remarks"></a>Note  
  Quando un'applicazione chiama `AnimatePalette`, che è necessario aggiornare l'area client, poiché Windows mappa immediatamente le nuove voci della tavolozza di sistema.  
   
- Il `AnimatePalette` funzione cambierà solo le voci con il flag PC_RESERVED impostato nel corrispondente `palPaletteEntry` membro delle [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struttura che è collegato al `CPalette` oggetto. Vedere LOGPALETTE nel SDK di Windows per altre informazioni su questa struttura.  
+ Il `AnimatePalette` funzione cambierà solo le voci con il flag PC_RESERVED impostato nel corrispondente `palPaletteEntry` membro delle [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) struttura che è collegato al `CPalette` oggetto. Vedere LOGPALETTE nel SDK di Windows per altre informazioni su questa struttura.  
   
 ##  <a name="cpalette"></a>  CPalette::CPalette  
  Costruisce un oggetto `CPalette`.  
@@ -147,7 +147,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
  Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
   
 ### <a name="remarks"></a>Note  
- Un'applicazione deve creare una tavolozza dei mezzitoni quando la modalità di adattamento di un contesto di periferica è impostata su mezzitoni. La tavolozza dei mezzitoni logico restituito dai [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) funzione membro deve quindi essere selezionata e realizzata nel contesto di dispositivo prima del [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) o [ StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) funzione viene chiamata.  
+ Un'applicazione deve creare una tavolozza dei mezzitoni quando la modalità di adattamento di un contesto di periferica è impostata su mezzitoni. La tavolozza dei mezzitoni logico restituito dai [CreateHalftonePalette](/windows/desktop/api/wingdi/nf-wingdi-createhalftonepalette) funzione membro deve quindi essere selezionata e realizzata nel contesto di dispositivo prima del [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) o [ StretchDIBits](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits) funzione viene chiamata.  
   
  Vedere il SDK di Windows per altre informazioni `CreateHalftonePalette` e `StretchDIBits`.  
   
@@ -160,7 +160,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
   
 ### <a name="parameters"></a>Parametri  
  *lpLogPalette*  
- Punta a un [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struttura che contiene informazioni sui colori nella tavolozza logica.  
+ Punta a un [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) struttura che contiene informazioni sui colori nella tavolozza logica.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -227,7 +227,7 @@ UINT GetPaletteEntries(
  Specifica il numero di voci della tavolozza logica da recuperare.  
   
  *lpPaletteColors*  
- Punta a una matrice di [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) strutture di dati per ricevere le voci della tavolozza. La matrice deve contenere almeno un numero di strutture di dati come specificato da *nNumEntries*.  
+ Punta a una matrice di [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) strutture di dati per ricevere le voci della tavolozza. La matrice deve contenere almeno un numero di strutture di dati come specificato da *nNumEntries*.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero di voci recuperato dalla tavolozza logica; 0 se la funzione ha esito negativo.  
@@ -245,7 +245,7 @@ operator HPALETTE() const;
 ### <a name="remarks"></a>Note  
  Questo operatore è un operatore di cast, che supporta l'uso diretto di un oggetto HPALETTE.  
   
- Per altre informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [gli oggetti di grafica](http://msdn.microsoft.com/library/windows/desktop/dd144962) nel SDK di Windows.  
+ Per altre informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [gli oggetti di grafica](/windows/desktop/gdi/graphic-objects) nel SDK di Windows.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  Modifica la dimensione della tavolozza logica associata ai `CPalette` oggetto per il numero di voci specificate dal *nNumEntries*.  
@@ -264,7 +264,7 @@ BOOL ResizePalette(UINT nNumEntries);
 ### <a name="remarks"></a>Note  
  Se un'applicazione chiama `ResizePalette` per ridurre la dimensione della tavolozza, le voci rimanenti nella tavolozza ridimensionata restano invariate. Se l'applicazione chiama `ResizePalette` per ingrandire l'immagine del riquadro, le voci tavolozza aggiuntiva sono impostate su nero (i valori di colore rosso, verdi e blu sono tutti pari a 0) e i flag per tutte le voci aggiuntive vengono impostati su 0.  
   
- Per altre informazioni sull'API Windows `ResizePalette`, vedere [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) nel SDK di Windows.  
+ Per altre informazioni sull'API Windows `ResizePalette`, vedere [ResizePalette](/windows/desktop/api/wingdi/nf-wingdi-resizepalette) nel SDK di Windows.  
   
 ##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  Imposta flag e valori di colore RGB in un intervallo delle voci in una tavolozza logica.  
@@ -284,7 +284,7 @@ UINT SetPaletteEntries(
  Specifica il numero di voci della tavolozza logica da impostare.  
   
  *lpPaletteColors*  
- Punta a una matrice di [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) strutture di dati per ricevere le voci della tavolozza. La matrice deve contenere almeno un numero di strutture di dati come specificato da *nNumEntries*.  
+ Punta a una matrice di [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) strutture di dati per ricevere le voci della tavolozza. La matrice deve contenere almeno un numero di strutture di dati come specificato da *nNumEntries*.  
   
 ### <a name="return-value"></a>Valore restituito  
  Impostare il numero di voci della tavolozza logica; 0 se la funzione ha esito negativo.  
@@ -292,7 +292,7 @@ UINT SetPaletteEntries(
 ### <a name="remarks"></a>Note  
  Se la tavolozza logica sia selezionata in un contesto di dispositivo quando l'applicazione chiama `SetPaletteEntries`, le modifiche saranno effettive fino a quando l'applicazione chiama [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
   
- Per altre informazioni sulla struttura di Windows `PALETTEENTRY`, vedere [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) nel SDK di Windows.  
+ Per altre informazioni sulla struttura di Windows `PALETTEENTRY`, vedere [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio MFC immagine](../../visual-cpp-samples.md)   

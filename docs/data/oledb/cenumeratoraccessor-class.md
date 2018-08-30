@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571489"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215611"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 Utilizzato da [CEnumerator](../../data/oledb/cenumerator-class.md) per accedere ai dati dal set di righe di enumeratore.  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|Una variabile che indica se la riga descrive un'origine dati o un enumeratore.|  
 |[m_szDescription](#szdescription)|Descrizione dell'origine dati o enumeratore.|  
 |[m_szName](#szname)|Il nome dell'origine dati o enumeratore.|  
-|[m_szParseName](#szparsename)|Stringa da passare al [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) per ottenere un moniker per l'origine dati o di un enumeratore.|  
+|[m_szParseName](#szparsename)|Stringa da passare al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) per ottenere un moniker per l'origine dati o di un enumeratore.|  
   
 ## <a name="remarks"></a>Note  
  Questo set di righe è costituito da origini dati e gli enumeratori visibili dell'enumeratore corrente.  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni.  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
-Stringa da passare al [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) per ottenere un moniker per l'origine dati o di un enumeratore.  
+Stringa da passare al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) per ottenere un moniker per l'origine dati o di un enumeratore.  
   
 ### <a name="syntax"></a>Sintassi  
   

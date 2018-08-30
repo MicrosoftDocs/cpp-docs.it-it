@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d58fc816bea6672309e60a09528b0727c64c6fd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 866d556c06cc7f627c2f5108384704b737eb0330
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880024"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205212"
 ---
 # <a name="ccomclassfactory-class"></a>Classe CComClassFactory
-Questa classe implementa il [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfaccia.  
+Questa classe implementa il [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|Blocca la class factory nella memoria.|  
   
 ## <a name="remarks"></a>Note  
- `CComClassFactory` implementa il [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfaccia, che contiene metodi per la creazione di un oggetto di un particolare CLSID, nonché la class factory in memoria per consentire di creare più rapidamente nuovi oggetti di blocco. `IClassFactory` deve essere implementato per ogni classe che si registra nel Registro di sistema e a cui si assegna un CLSID.  
+ `CComClassFactory` implementa il [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfaccia, che contiene metodi per la creazione di un oggetto di un particolare CLSID, nonché la class factory in memoria per consentire di creare più rapidamente nuovi oggetti di blocco. `IClassFactory` deve essere implementato per ogni classe che si registra nel Registro di sistema e a cui si assegna un CLSID.  
   
  Gli oggetti ATL acquisire normalmente una class factory derivando da [CComCoClass](../../atl/reference/ccomcoclass-class.md). Questa classe include la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), che dichiara `CComClassFactory` come la class factory predefinita. Per eseguire l'override di questa impostazione predefinita, specificare uno dei `DECLARE_CLASSFACTORY` *XXX* macro nella definizione della classe. Ad esempio, il [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) macro Usa la classe specificata per la class factory:  
   

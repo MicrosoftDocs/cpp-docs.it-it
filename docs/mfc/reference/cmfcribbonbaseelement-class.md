@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac1ae7ba40ead2217fd2404a243f0e02664177a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028395"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213662"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 Il `CMFCRibbonBaseElement` classe è la classe base per tutti gli elementi che è possibile aggiungere a un [barra multifunzione](../../mfc/reference/cmfcribbonbar-class.md). Esempi di elementi della barra multifunzione sono i pulsanti della barra multifunzione, le caselle di controllo della barra multifunzione e le caselle combinate della barra multifunzione.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Un puntatore alla finestra padre per l'elemento della barra multifunzione, se il metodo ha esito positivo; in caso contrario, NULL.  
   
 ### <a name="remarks"></a>Note  
- La finestra padre per un elemento della barra multifunzione è un [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) o una [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ La finestra padre per un elemento della barra multifunzione è un [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) o una [CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Recupera un puntatore all'elemento della barra multifunzione se l'utente preme attualmente.  
@@ -1686,7 +1686,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo metodo consente di ricreare il rettangolo di visualizzazione per l'elemento della barra multifunzione chiamando [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) con i flag RDW_INVALIDATE RDW_ERASE e RDW_UPDATENOW impostato.  
+ Questo metodo consente di ricreare il rettangolo di visualizzazione per l'elemento della barra multifunzione chiamando [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) con i flag RDW_INVALIDATE RDW_ERASE e RDW_UPDATENOW impostato.  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbaseelement:: Setaccdata  
  Imposta i dati di accessibilità per l'elemento della barra multifunzione.  

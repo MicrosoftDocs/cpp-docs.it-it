@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848619"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201854"
 ---
 # <a name="crebar-class"></a>CReBar (classe)
 Barra di controllo che fornisce le informazioni su layout, persistenza e stato per i controlli Rebar.  
@@ -105,7 +105,7 @@ BOOL AddBar(
  Un puntatore a un `CBitmap` oggetto da visualizzare sullo sfondo del controllo rebar. NULL per impostazione predefinita.  
   
  *dwStyle*  
- Un valore DWORD contenente lo stile da applicare al controllo rebar. Vedere le `fStyle` funzione di descrizione della struttura Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) per un elenco completo degli stili fuori banda.  
+ Un valore DWORD contenente lo stile da applicare al controllo rebar. Vedere le `fStyle` funzione di descrizione della struttura Win32 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) per un elenco completo degli stili fuori banda.  
   
  *clrFore*  
  Valore COLORREF che rappresenta il colore di primo piano del controllo rebar.  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  Puntatore al `CWnd` oggetto la cui finestra di Windows è l'elemento padre della barra di stato. In genere la finestra cornice.  
   
  *dwCtrlStyle*  
- Lo stile del controllo rebar. Per impostazione predefinita, RBS_BANDBORDERS, che consente di visualizzare righe narrow per separare le bande adiacenti all'interno del controllo rebar. Visualizzare [stili del controllo Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) nel SDK di Windows per un elenco degli stili.  
+ Lo stile del controllo rebar. Per impostazione predefinita, RBS_BANDBORDERS, che consente di visualizzare righe narrow per separare le bande adiacenti all'interno del controllo rebar. Visualizzare [stili del controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nel SDK di Windows per un elenco degli stili.  
   
  *dwStyle*  
  Gli stili di finestra del controllo rebar.  

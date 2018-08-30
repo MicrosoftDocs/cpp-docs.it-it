@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451745"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203518"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Scrive dati formattati in una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -146,7 +146,7 @@ Numero massimo di caratteri da archiviare.
 *format*<br/>
 Stringa di controllo del formato.
 
-*Argomento*<br/>
+*argomento*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -156,32 +156,32 @@ Per altre informazioni, vedere [Sintassi per la specifica del formato: funzioni 
 
 ## <a name="return-value"></a>Valore restituito
 
-Let **len** sia la lunghezza della stringa di dati formattata, escluso il carattere di terminazione null. Entrambi **len** e *conteggio* sono in byte per **snprintf** e **snprintf**, caratteri wide per **snwprintf**.
+Let **len** essere la lunghezza della stringa di dati formattata, escluso il carattere di terminazione null. Entrambe **len** e *conteggio* sono in byte per **snprintf** e **snprintf**, caratteri wide per **snwprintf**.
 
-Per tutte le funzioni, se **len** < *conteggio*, **len** caratteri vengono archiviati in *buffer*, viene aggiunto un carattere di terminazione null, e **len** viene restituito.
+Per tutte le funzioni, se **len** < *conteggio*, **len** caratteri vengono archiviati nel *buffer*, viene aggiunto un carattere di terminazione null, e **len** viene restituito.
 
-Il **snprintf** funzione Tronca l'output quando **len** è maggiore o uguale a *conteggio*, inserendo un carattere di terminazione null in `buffer[count-1]`. Il valore restituito sarà **len**, il numero di caratteri che sarebbero andati output se *conteggio* sia abbastanza grande. Il **snprintf** funzione restituisce un valore negativo se si verifica un errore di codifica.
+Il **snprintf** funzione Tronca l'output quando **len** è maggiore o uguale a *count*, inserendo un carattere di terminazione null a `buffer[count-1]`. Il valore restituito è **len**, il numero di caratteri che sarebbe stato prodotto se *conteggio* sia abbastanza grande. Il **snprintf** funzione restituisce un valore negativo se si verifica un errore di codifica.
 
-Per tutte le funzioni tranne **snprintf**, se **len** = *conteggio*, **len** caratteri vengono archiviati in  *buffer*, non viene aggiunto alcun carattere di terminazione null e **len** viene restituito. Se **len** > *conteggio*, *conteggio* caratteri vengono archiviati in *buffer*, nessun carattere di terminazione null viene accodato e un valore negativo vengono restituiti valori.
+Per tutte le funzioni diverse da **snprintf**, se **len** = *conteggio*, **len** caratteri vengono archiviati in  *buffer*, non viene aggiunto alcun carattere di terminazione null e **len** viene restituito. Se **len** > *conteggio*, *conteggio* caratteri vengono archiviati nel *buffer*, nessun carattere di terminazione null viene accodato e un valore negativo valore viene restituito.
 
-Se *buffer* è un puntatore null e *conteggio* è uguale a zero, **len** viene restituito come numero di caratteri necessari per formattare l'output, escluso il carattere di terminazione null. Per eseguire correttamente una chiamata con lo stesso *argomento* e *delle impostazioni locali* parametri, allocare un buffer contenente almeno **len** + 1 carattere.
+Se *buffer* è un puntatore null e *conteggio* è zero **len** viene restituito come numero di caratteri necessari per formattare l'output, escluso il carattere di terminazione null. Per eseguire correttamente una chiamata con lo stesso *argomenti* e *delle impostazioni locali* parametri, allocare un buffer contenente almeno **len** + 1 carattere.
 
-Se *buffer* è un puntatore null e *conteggio* è diverso da zero, oppure se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Se *buffer* è un puntatore null e *conteggio* è diverso da zero, oppure se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **snprintf** funzione e il **snprintf** famiglia di funzioni formattano e archiviano *conteggio* o un numero inferiore di caratteri in *buffer*. Il **snprintf** funzione archivia sempre un carattere di terminazione null, troncando l'output, se necessario. Il **snprintf** famiglia di funzioni aggiunge un carattere di terminazione null solo se la lunghezza della stringa formattata è rigorosamente minore *conteggio* caratteri. Ogni *argomento* (se presenti) vengono convertiti ed emessi in base alla specifica del formato corrispondente in *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso modulo e funziona come le *formato* argomento per [printf](printf-printf-l-wprintf-wprintf-l.md). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **snprintf** (funzione) e il **snprintf** della famiglia di funzioni formattano e archiviano *count* o un minor numero di caratteri in *buffer*. Il **snprintf** funzione archivia sempre un carattere di terminazione null, troncando l'output, se necessario. Il **snprintf** famiglia di funzioni aggiunge un carattere di terminazione null solo se la lunghezza della stringa formattata è rigorosamente minore *conteggio* caratteri. Ciascuna *argomenti* (se presente) viene convertito ed emessi in base alla specifica di formato corrispondente in *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso formato e funzione il *formato* argomento per [printf](printf-printf-l-wprintf-wprintf-l.md). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Poiché il **snprintf** funzioni non viene garantita la terminazione null, in particolare, quando il valore restituito è *conteggio*, assicurarsi che siano seguite da un codice che aggiunge il carattere di terminazione null. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Poiché il **snprintf** funzioni non sono garantita alcuna terminazione null, in particolare, quando il valore restituito è *conteggio*, assicurarsi che siano seguite da un codice che aggiunge il carattere di terminazione null. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 A partire da UCRT in Visual Studio 2015 e Windows 10 **snprintf** non è più identico a **snprintf**. Il **snprintf** comportamento della funzione è ora conforme allo standard C99.
 
-**snwprintf** è una versione a caratteri wide **snprintf**; gli argomenti puntatori per **snwprintf** sono stringhe a caratteri "wide". Rilevamento degli errori in di codifica **snwprintf** potrebbero essere diversi da quello in **snprintf**. **snwprintf**, nello stesso modo **swprintf**, scrive l'output in una stringa anziché una destinazione di tipo **FILE**.
+**snwprintf** è una versione a caratteri wide di **snprintf**; gli argomenti puntatori per **snwprintf** sono stringhe a caratteri wide. Rilevamento degli errori in di codifica **snwprintf** potrebbe essere diverso da quello in **snprintf**. **snwprintf**, nello stesso modo **swprintf**, scrive l'output in una stringa anziché una destinazione di tipo **FILE**.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni che hanno le **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 In C++ queste funzioni presentano overload dei modelli che richiamano le relative controparti più sicure e recenti. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

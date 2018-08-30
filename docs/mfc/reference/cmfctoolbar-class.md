@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540848"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208558"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 Il `CMFCToolBar` classe simile [classe CToolBar](../../mfc/reference/ctoolbar-class.md), ma fornisce supporto aggiuntivo per le funzionalità dell'interfaccia utente. Queste includono barre degli strumenti flat, barre degli strumenti con immagini con area sensibile, icone grandi, pulsanti cercapersone, barre degli strumenti bloccate, controlli Rebar, testo sotto le immagini, immagini di sfondo e barre degli strumenti a schede. La classe `CMFCToolBar` contiene inoltre il supporto incorporato per la personalizzazione da parte dell'utente delle barre degli strumenti e dei menu, il trascinamento della selezione tra barre degli strumenti e menu, i pulsanti della casella combinata, i pulsanti della casella di modifica, le selezioni colore e i pulsanti rollup.
@@ -916,7 +916,7 @@ virtual BOOL Create(
  Puntatore alla finestra padre della barra degli strumenti.  
   
  [in] *dwStyle*  
- Lo stile della barra degli strumenti. Visualizzare [barra degli strumenti e gli stili di pulsante](http://msdn.microsoft.com/library/windows/desktop/bb760439) nel SDK di Windows per l'elenco degli stili.  
+ Lo stile della barra degli strumenti. Visualizzare [barra degli strumenti e gli stili di pulsante](/windows/desktop/Controls/toolbar-control-and-button-styles) nel SDK di Windows per l'elenco degli stili.  
   
  [in] *nID*  
  L'ID della finestra figlio della barra degli strumenti.  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  Stili aggiuntivi per la creazione dell'oggetto barra di controllo incorporato.  
   
  [in] *dwStyle*  
- Lo stile della barra degli strumenti. Visualizzare [barra degli strumenti e gli stili di pulsante](http://msdn.microsoft.com/library/windows/desktop/bb760439) per un elenco degli stili appropriati.  
+ Lo stile della barra degli strumenti. Visualizzare [barra degli strumenti e gli stili di pulsante](/windows/desktop/Controls/toolbar-control-and-button-styles) per un elenco degli stili appropriati.  
   
  [in] *rcBorders*  
  Oggetto `CRect` oggetto che specifica la larghezza dei bordi della finestra degli strumenti.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che rappresenta il colore del testo evidenziato corrente.  
+ Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che rappresenta il colore del testo evidenziato corrente.  
   
 ### <a name="remarks"></a>Note  
  Chiamare [CMFCToolBar::SetHotTextColor](#sethottextcolor) per impostare un nuovo colore di testo per i pulsanti della barra degli strumenti evidenziati.  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  TRUE se la barra degli strumenti e il relativo pari livello sono posizionati sulla stessa riga; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Il [cmfccustomizebutton:: CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) chiama questo metodo per determinare come mostrare le **Personalizza** menu a comparsa. Se questo metodo restituisce TRUE, il framework Visualizza il **Mostra pulsanti su una riga** pulsante. In caso contrario, il framework Visualizza il **Mostra pulsanti su due righe** pulsante.  
+ Il [cmfccustomizebutton:: CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) chiama questo metodo per determinare come mostrare le **Personalizza** menu a comparsa. Se questo metodo restituisce TRUE, il framework Visualizza il **Mostra pulsanti su una riga** pulsante. In caso contrario, il framework Visualizza il **Mostra pulsanti su due righe** pulsante.  
   
  In genere non è necessario usare questo metodo. Per abilitare la **Mostra pulsanti su una riga** oppure **Mostra pulsanti su due righe** pulsanti, chiamare [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).  
   

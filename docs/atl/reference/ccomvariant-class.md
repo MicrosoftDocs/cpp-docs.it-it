@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc0e098e1f3e80a80dabeda8c0a5f7a58e5e697
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0be9c390b312cdd056c51474f202637dab16b3ff
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961142"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203896"
 ---
 # <a name="ccomvariant-class"></a>Classe CComVariant
 Questa classe esegue il wrapping di tipo VARIANT, fornendo un membro che indica il tipo di dati archiviati.  
@@ -401,7 +401,7 @@ HRESULT ReadFromStream(IStream* pStream);
   
 ### <a name="parameters"></a>Parametri  
  *pStream*  
- [in] Un puntatore per il [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfaccia sulla base del flusso che contiene i dati.  
+ [in] Un puntatore per il [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfaccia sulla base del flusso che contiene i dati.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  
@@ -438,7 +438,7 @@ HRESULT WriteToStream(IStream* pStream);
   
 ### <a name="parameters"></a>Parametri  
  *pStream*  
- [in] Un puntatore per il [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfaccia in un flusso.  
+ [in] Un puntatore per il [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfaccia in un flusso.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  

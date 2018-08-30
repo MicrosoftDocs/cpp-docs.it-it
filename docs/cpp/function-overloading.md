@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406571"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221440"
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Questi sono denominati *sottoposti a overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e numero di argomenti. 
@@ -43,8 +43,9 @@ C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambit
 |**const** o **volatile**|Sì, quando applicato a una funzione intera|
 |[ref-qualifier](#ref-qualifier)|Yes|  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come è possibile usare l'overload.  
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente viene illustrato come è possibile usare l'overload.  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  Corrispondenza esatta. Una corrispondenza esatta tra i tipi con cui viene chiamata la funzione e i tipi dichiarati nel prototipo di funzione è sempre la corrispondenza ottimale. Le sequenze di conversioni semplici vengono classificate come corrispondenze esatte. Tuttavia, le sequenze che non eseguono queste conversioni vengono considerate migliori rispetto alle sequenze che eseguono la conversione:  
   
-    -   Dal puntatore, al puntatore alla **const** (`type` **\*** al **const** `type` **\*** ).  
+    -   Dal puntatore, al puntatore alla **const** (`type` <strong>\*</strong> al **const** `type` <strong>\*</strong> ).  
   
-    -   Dal puntatore, al puntatore alla **volatili** (`type` **\*** al **volatile** `type` **\***).  
+    -   Dal puntatore, al puntatore alla **volatili** (`type` <strong>\*</strong> al **volatile** `type` <strong>\*</strong>).  
   
     -   Dal riferimento al riferimento al **const** (`type` **&** al **const** `type` **&**).  
   

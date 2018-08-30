@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5de304b7a21c47af18b8b753d6de704ef2473c5f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16d78d590201ea637dd6153edb40a1c6d89a82c0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210341"
 ---
 # <a name="creating-an-ole-db-provider"></a>Creazione di un provider OLE DB
 Il metodo consigliato per creare un provider OLE DB è usare le procedure guidate per creare un progetto ATL COM e un provider e quindi modificare i file usando i modelli OLE DB. Quando si personalizza il provider, è possibile commento indesiderato delle proprietà e aggiungere le interfacce facoltative.  
@@ -36,7 +36,7 @@ Il metodo consigliato per creare un provider OLE DB è usare le procedure guidat
   
 4.  Aggiornare PROVIDER_COLUMN_MAP, che è reperibile in MyProviderRS. H. Per un esempio, vedere [memorizzazione di stringhe In un Provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
   
-5.  Quando si è pronti per testare il provider, è possibile eseguirne il test quando si tenta di trovare il provider in un'enumerazione di provider. Per esempi di codice di test che consente di trovare un provider in un'enumerazione, vedere la [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) e [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) oppure l'esempio nella [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md).  
+5.  Quando si è pronti per testare il provider, è possibile eseguirne il test quando si tenta di trovare il provider in un'enumerazione di provider. Per esempi di codice di test che consente di trovare un provider in un'enumerazione, vedere la [CATDB](https://github.com/Microsoft/VCSamples) e [DBVIEWER](https://github.com/Microsoft/VCSamples) oppure l'esempio nella [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md).  
   
 6.  Aggiungere eventuali interfacce aggiuntive desiderate. Per un esempio, vedere [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
@@ -44,5 +44,5 @@ Il metodo consigliato per creare un provider OLE DB è usare le procedure guidat
     >  Per impostazione predefinita, le procedure guidate di generano il codice al livello 0 conforme a OLE DB. Per assicurarsi che l'applicazione a livello 0 conforme, non rimuovere una delle interfacce generate dalla procedura guidata dal codice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)
+ [CATDB](https://github.com/Microsoft/VCSamples)   
+ [DBVIEWER](https://github.com/Microsoft/VCSamples)

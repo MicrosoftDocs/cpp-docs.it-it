@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338649"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204005"
 ---
 # <a name="cfindreplacedialog-class"></a>Classe CFindReplaceDialog
 Consente di implementare le finestre di dialogo Trova/Sostituisci stringhe standard nell'applicazione.  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  Una volta una `CFindReplaceDialog` oggetto è stato costruito, è necessario chiamare il [Create](#create) funzione membro per creare e visualizzare la finestra di dialogo.  
   
- Usare la [m_fr](#m_fr) struttura per inizializzare la finestra di dialogo prima di chiamare `Create`. Il `m_fr` struttura JE typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Per altre informazioni su questa struttura, vedere il SDK di Windows.  
+ Usare la [m_fr](#m_fr) struttura per inizializzare la finestra di dialogo prima di chiamare `Create`. Il `m_fr` struttura JE typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Per altre informazioni su questa struttura, vedere il SDK di Windows.  
   
- Affinché la finestra padre ricevere una notifica di richieste di ricerca e sostituzione, è necessario utilizzare il Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funzione, utilizzare il [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro della mappa messaggi nel frame finestra che gestisce il messaggio registrato.  
+ Affinché la finestra padre ricevere una notifica di richieste di ricerca e sostituzione, è necessario utilizzare il Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funzione, utilizzare il [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro della mappa messaggi nel frame finestra che gestisce il messaggio registrato.  
   
  È possibile determinare se l'utente ha deciso di terminare la finestra di dialogo con la `IsTerminating` funzione membro.  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  Puntatore alla stringa di sostituzione predefinito quando viene visualizzata la finestra di dialogo. Se NULL, la finestra di dialogo non contiene una stringa di sostituzione predefinito.  
   
  *dwFlags*  
- Uno o più flag che è possibile usare per personalizzare le impostazioni della finestra di dialogo, combinati usando l'operatore OR bit per bit. Il valore predefinito è FR_DOWN, che specifica che la ricerca deve procedere verso il basso. Vedere le [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) struttura nel SDK di Windows per altre informazioni su questi flag.  
+ Uno o più flag che è possibile usare per personalizzare le impostazioni della finestra di dialogo, combinati usando l'operatore OR bit per bit. Il valore predefinito è FR_DOWN, che specifica che la ricerca deve procedere verso il basso. Vedere le [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea) struttura nel SDK di Windows per altre informazioni su questi flag.  
   
  *pParentWnd*  
  Puntatore alla finestra padre o proprietaria della finestra di dialogo. Questa è la finestra che verrà visualizzato il messaggio speciale che indica che è richiesta un'azione Trova/Sostituisci. Se NULL, viene utilizzata la finestra principale dell'applicazione.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  Diverso da zero se l'oggetto finestra di dialogo è stato creato correttamente; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Affinché la finestra padre ricevere una notifica di richieste di ricerca e sostituzione, è necessario utilizzare il Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funzione il cui valore restituito è un numero di messaggio univoco per l'istanza dell'applicazione. La finestra cornice deve avere una voce della mappa messaggi che dichiara la funzione di callback ( `OnFindReplace` nell'esempio che segue) che gestisce il messaggio registrato. Il frammento di codice seguente è un esempio di come eseguire questa operazione per una classe della finestra cornice denominata `CMyRichEditView`:  
+ Affinché la finestra padre ricevere una notifica di richieste di ricerca e sostituzione, è necessario utilizzare il Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funzione il cui valore restituito è un numero di messaggio univoco per l'istanza dell'applicazione. La finestra cornice deve avere una voce della mappa messaggi che dichiara la funzione di callback ( `OnFindReplace` nell'esempio che segue) che gestisce il messaggio registrato. Il frammento di codice seguente è un esempio di come eseguire questa operazione per una classe della finestra cornice denominata `CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Note  
- `m_fr` è una struttura di tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). I relativi membri memorizzano le caratteristiche dell'oggetto finestra di dialogo. Dopo la costruzione di un `CFindReplaceDialog` dell'oggetto, è possibile usare `m_fr` modificare diversi valori nella finestra di dialogo.  
+ `m_fr` è una struttura di tipo [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). I relativi membri memorizzano le caratteristiche dell'oggetto finestra di dialogo. Dopo la costruzione di un `CFindReplaceDialog` dell'oggetto, è possibile usare `m_fr` modificare diversi valori nella finestra di dialogo.  
   
  Per altre informazioni su questa struttura, vedere il `FINDREPLACE` struttura nel SDK di Windows.  
   

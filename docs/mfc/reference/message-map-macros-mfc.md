@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 61599d9080bf5cdce56f30ed38e6b20064032512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338375"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216703"
 ---
 # <a name="message-map-macros-mfc"></a>Macro della mappa messaggi (MFC)
 Per supportare le mappe messaggi, MFC fornisce le seguenti macro:  
@@ -307,7 +307,7 @@ ON_MESSAGE( message, memberFxn )
  Il tipo della funzione deve essere `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
 ### <a name="remarks"></a>Note  
- I messaggi definiti dall'utente sono i messaggi che non sono messaggi WM_MESSAGE Windows standard. Quando si seleziona un ID messaggio, è necessario utilizzare valori entro l'intervallo di WM_USER (0x0400) 0x7FFF o WM_APP (0x8000) a 0xBFFF. Per altre informazioni sull'ID messaggio, vedere [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
+ I messaggi definiti dall'utente sono i messaggi che non sono messaggi WM_MESSAGE Windows standard. Quando si seleziona un ID messaggio, è necessario utilizzare valori entro l'intervallo di WM_USER (0x0400) 0x7FFF o WM_APP (0x8000) a 0xBFFF. Per altre informazioni sull'ID messaggio, vedere [WM_APP](/windows/desktop/winmsg/wm-app).  
   
  Deve esserci esattamente una istruzione di macro ON_MESSAGE nella mappa messaggi per ogni messaggio definito dall'utente che deve essere mappato a una funzione di gestore di messaggi.  
   
@@ -505,7 +505,7 @@ END_MESSAGE_MAP()
  **Intestazione:** afxmsg_.h  
   
 ### <a name="see-also"></a>Vedere anche  
- [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
+ [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Gestori definiti dall'utente](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    

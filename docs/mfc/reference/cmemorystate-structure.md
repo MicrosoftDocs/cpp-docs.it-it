@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17da583b770fcab1d682868c38c04e0aa97155dd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 348f25718fe22e056da5097bca0d67013a56c4c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026433"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203149"
 ---
 # <a name="cmemorystate-structure"></a>Struttura CMemoryState
 Fornisce un modo pratico per rilevare le perdite di memoria nel programma.  
@@ -172,7 +172,7 @@ void DumpStatistics() const;
   
 -   memoria totale attualmente utilizzata dal programma (in byte)  
   
- I blocchi liberi rappresentano il numero di blocchi se è stato ritardato cui deallocazione `afxMemDF` è stata impostata su `delayFreeMemDF`. Per altre informazioni, vedere [afxMemDF](diagnostic-services.md#afxmemdf), nella sezione "MFC macro e funzioni globali". Visualizzare [tipi di blocchi sull'Heap di Debug](http://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) per altre informazioni su questi tipi di blocco.  
+ I blocchi liberi rappresentano il numero di blocchi se è stato ritardato cui deallocazione `afxMemDF` è stata impostata su `delayFreeMemDF`. Per altre informazioni, vedere [afxMemDF](diagnostic-services.md#afxmemdf), nella sezione "MFC macro e funzioni globali". Visualizzare [tipi di blocchi sull'Heap di Debug](https://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) per altre informazioni su questi tipi di blocco.  
   
 ### <a name="example"></a>Esempio  
   Il codice seguente deve essere inserito *projname*App.cpp. Definire le variabili globali seguenti:  

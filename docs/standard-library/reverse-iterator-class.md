@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 534d2755dfb38e739234dd15eb7f04263874c59e
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: dcd141134dfef7b7044d0a4f9635ff5bcc252c93
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209024"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223364"
 ---
 # <a name="reverseiterator-class"></a>Classe reverse_iterator
 
@@ -805,7 +805,7 @@ Riferimento all'offset dell'elemento.
 
 ### <a name="remarks"></a>Note
 
-L'operatore restituisce **\***( **\*this** + `Off`).
+L'operatore restituisce <strong>\*</strong>( **\*this** + `Off`).
 
 ### <a name="example"></a>Esempio
 

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9131a1cc1f8d0c66f2eb3616f4903db74ea4bdf0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6de7ee0ede844ce05b59b13e2f8acd7e6068220b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881373"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204508"
 ---
 # <a name="iquickactivateimpl-class"></a>Classe IQuickActivateImpl
 Questa classe combina l'inizializzazione di controllo dei contenitori in un'unica chiamata.  
@@ -58,7 +58,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 |[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informa il controllo di quanto lo spazio di visualizzazione ha assegnato al contenitore.|  
   
 ## <a name="remarks"></a>Note  
- Il [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146) interfaccia aiuta i contenitori di evitare ritardi durante il caricamento dei controlli mediante la combinazione di inizializzazione in un'unica chiamata. Il `QuickActivate` metodo consente al contenitore di passare un puntatore a un [QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630) deve struttura che contiene i puntatori a tutte le interfacce al controllo. In fase di restituzione, il controllo passa nuovamente un puntatore a un [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) struttura che contiene i puntatori per le proprie interfacce, che vengono usate dal contenitore. Classe `IQuickActivateImpl` fornisce un'implementazione predefinita di `IQuickActivate` e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
+ Il [IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate) interfaccia aiuta i contenitori di evitare ritardi durante il caricamento dei controlli mediante la combinazione di inizializzazione in un'unica chiamata. Il `QuickActivate` metodo consente al contenitore di passare un puntatore a un [QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer) deve struttura che contiene i puntatori a tutte le interfacce al controllo. In fase di restituzione, il controllo passa nuovamente un puntatore a un [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) struttura che contiene i puntatori per le proprie interfacce, che vengono usate dal contenitore. Classe `IQuickActivateImpl` fornisce un'implementazione predefinita di `IQuickActivate` e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
   
  **Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [la creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -80,7 +80,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 ### <a name="remarks"></a>Note  
  La dimensione è per il rendering del controllo completo e viene specificata in unità HIMETRIC.  
   
- Visualizzare [IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) in Windows SDK.  
+ Visualizzare [IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) in Windows SDK.  
   
 ##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate  
  Esegue un'inizializzazione dei controlli in fase di caricamento rapida.  
@@ -92,9 +92,9 @@ STDMETHOD(QuickActivate)(
 ```  
   
 ### <a name="remarks"></a>Note  
- La struttura contiene i puntatori alle interfacce necessarie per il controllo e i valori di alcune proprietà di ambiente. Al momento della restituzione, il controllo passa un puntatore a un [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) struttura che contiene i puntatori per le proprie interfacce che richiede il contenitore e informazioni aggiuntive sullo stato.  
+ La struttura contiene i puntatori alle interfacce necessarie per il controllo e i valori di alcune proprietà di ambiente. Al momento della restituzione, il controllo passa un puntatore a un [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) struttura che contiene i puntatori per le proprie interfacce che richiede il contenitore e informazioni aggiuntive sullo stato.  
   
- Visualizzare [IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) in Windows SDK.  
+ Visualizzare [IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) in Windows SDK.  
   
 ##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
  Informa il controllo di quanto lo spazio di visualizzazione ha assegnato al contenitore.  
@@ -106,7 +106,7 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 ### <a name="remarks"></a>Note  
  La dimensione è specificata in unità HIMETRIC.  
   
- Visualizzare [IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) in Windows SDK.  
+ Visualizzare [IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CComControl](../../atl/reference/ccomcontrol-class.md)   

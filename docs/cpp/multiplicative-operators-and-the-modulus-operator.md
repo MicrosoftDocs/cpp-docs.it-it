@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408359"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209728"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatori di moltiplicazione e operatori modulo
 ## <a name="syntax"></a>Sintassi  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>Note  
  Gli operatori moltiplicativi sono:  
   
--   Moltiplicazione (**\***)  
+-   Moltiplicazione (<strong>\*</strong>)  
   
 -   Divisione (**/**)  
   
--   Modulo (resto della divisione) (`%`)  
+-   Modulo (resto della divisione) (**%**)  
   
  Questi operatori binari hanno un'associatività da sinistra a destra.  
   
- Gli operatori moltiplicativi accettano gli operandi di tipi aritmetici. L'operatore modulo (`%`) dispone di un requisito più rigido in quanto i propri operandi devono essere di tipo integrale. (Per ottenere il resto di una divisione a virgola mobile, utilizzare la funzione di runtime [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Le conversioni descritte in [conversioni Standard](standard-conversions.md) vengono applicate agli operandi e il risultato è di tipo convertito.  
+ Gli operatori moltiplicativi accettano gli operandi di tipi aritmetici. L'operatore modulo (**%**) è un requisito più rigido, in quanto gli operandi devono essere di tipo integrale. (Per ottenere il resto di una divisione a virgola mobile, utilizzare la funzione di runtime [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Le conversioni descritte in [conversioni Standard](standard-conversions.md) vengono applicate agli operandi e il risultato è di tipo convertito.  
   
  L'operatore di moltiplicazione produce il risultato moltiplicando il primo operando per il secondo.  
   

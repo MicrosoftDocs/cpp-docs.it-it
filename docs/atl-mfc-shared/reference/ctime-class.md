@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027673"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205987"
 ---
 # <a name="ctime-class"></a>Classe CTime
 Rappresenta una data e ora assoluto.  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|Converte un `CTime` oggetto in una stringa formattata, in base al fuso orario locale.|  
 |[CTime::FormatGmt](#formatgmt)|Converte un `CTime` oggetto in una stringa formattata, basate su UTC.|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Converte le informazioni sull'ora archiviate nel `CTime` oggetto a una struttura DBTIMESTAMP compatibile con Win32.|  
-|[CTime::GetAsSystemTime](#getassystemtime)|Converte le informazioni sull'ora archiviate nel `CTime` oggetto per uno schermo compatibile con Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struttura.|  
+|[CTime::GetAsSystemTime](#getassystemtime)|Converte le informazioni sull'ora archiviate nel `CTime` oggetto per uno schermo compatibile con Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struttura.|  
 |[CTime::GetCurrentTime](#getcurrenttime)|Crea un `CTime` oggetto che rappresenta l'ora corrente (funzione membro statica).|  
 |[CTime::GetDay](#getday)|Restituisce il giorno rappresentato dal `CTime` oggetto.|  
 |[CTime::GetDayOfWeek](#getdayofweek)|Restituisce il giorno della settimana rappresentato dal `CTime` oggetto.|  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  Il costruttore usando `DBTIMESTAMP` parametro è disponibile solo quando viene incluso OleDb.  
   
- Per altre informazioni, vedere la [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) e [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struttura nel SDK di Windows. Vedere anche il [MS-DOS data e ora](http://msdn.microsoft.com/library/windows/desktop/ms724503) voce nel SDK di Windows.  
+ Per altre informazioni, vedere la [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) e [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura nel SDK di Windows. Vedere anche il [MS-DOS data e ora](/windows/desktop/SysInfo/ms-dos-date-and-time) voce nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- Chiamare questa funzione membro per convertire le informazioni sull'ora archiviate nel `CTime` oggetto per uno schermo compatibile con Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struttura.  
+ Chiamare questa funzione membro per convertire le informazioni sull'ora archiviate nel `CTime` oggetto per uno schermo compatibile con Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struttura.  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>Parametri  
  *timeDest*  
- Un riferimento a un [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struttura che conterrà il valore di data/ora convertita del `CTime` oggetto.  
+ Un riferimento a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struttura che conterrà il valore di data/ora convertita del `CTime` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  

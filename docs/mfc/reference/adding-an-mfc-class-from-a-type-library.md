@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662754ae4f0f95160f18682f35eb2f7951e7e344
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 656d5c357874a7b470eb2fd630c91ad0aefa5a0d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026552"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205373"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Aggiunta di una classe MFC da una libreria dei tipi
 Usare questa procedura guidata per creare una classe MFC da un'interfaccia in una libreria dei tipi disponibili. È possibile aggiungere una classe MFC in un'[applicazione MFC](../../mfc/reference/creating-an-mfc-application.md), una [DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md) o un [controllo ActiveX MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -33,7 +33,7 @@ Usare questa procedura guidata per creare una classe MFC da un'interfaccia in un
   
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Per aggiungere una classe MFC da una libreria dei tipi  
   
-1.  In uno **Esplora soluzioni** oppure [Visualizzazione classi](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), fare doppio clic il nome del progetto a cui si desidera aggiungere la classe.  
+1.  In uno **Esplora soluzioni** oppure [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), fare doppio clic il nome del progetto a cui si desidera aggiungere la classe.  
   
 2.  Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.  
   

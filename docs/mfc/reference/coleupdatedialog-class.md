@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5d51bfeb18b51be5a54c51046e3cd420fb1cb8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9f522635c170af784b5bd9f2bb7011fd51e345b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852107"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211608"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 Utilizzata per un caso speciale della finestra di dialogo di modifica collegamenti OLE, che deve essere utilizzata quando è necessario aggiornare solo oggetti collegati o incorporati esistenti in un documento.  
@@ -114,7 +114,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL se nessuno degli elementi collegati o incorporati nel documento corrente devono essere aggiornati.  
   
-- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funzione nel SDK di Windows.  
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) funzione nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
  Tutti i collegamenti e/o rappresentazioni distribuite vengono aggiornati, a meno che l'utente seleziona il pulsante Annulla.  

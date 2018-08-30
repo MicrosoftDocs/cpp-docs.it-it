@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare applicazioni Console CLR (C + + CLI) | Documenti Microsoft'
+title: 'Procedura: creare applicazioni Console CLR (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211157"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Procedura: Creare applicazioni console CLR (C++/CLI)
 È possibile usare il modello di applicazione console per creare un progetto di applicazione console che dispone già dei riferimenti al progetto e dei file essenziali.  
@@ -32,7 +32,7 @@ ms.locfileid: "33132570"
   
 -   Riferimenti a questi spazi dei nomi di .NET Framework:  
   
-    -   [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx)- Contiene le classi fondamentali e le classi base che definiscono i valori usati comunemente e i tipi di dati di riferimento, gli eventi e i gestori eventi, le interfacce, le eccezioni di elaborazione e gli attributi.  
+    -   [Sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx): contiene le classi fondamentali e classi di base che definiscono in genere utilizzati i valori e tipi di dati di riferimento, eventi e gestori eventi, interfacce, attributi e le eccezioni di elaborazione.  
   
     -   mscorlib - DLL di assembly che supporta lo sviluppo in .NET Framework.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33132570"
   
     -   Console (file con estensione cpp) - File sorgente principale e punto di ingresso nell'applicazione appena creata. Identifica il file con estensione dll e lo spazio dei nomi del progetto. Fornire il proprio codice in questo file.  
   
-    -   AssemblyInfo.cpp - Contiene attributi, file, risorse, tipi, informazioni sulla versione e sulla firma e così via che è possibile usare per modificare i metadati dell'assembly del progetto. Per ulteriori informazioni, vedere [contenuto Assembly](/dotnet/framework/app-domains/assembly-contents).  
+    -   AssemblyInfo.cpp - Contiene attributi, file, risorse, tipi, informazioni sulla versione e sulla firma e così via che è possibile usare per modificare i metadati dell'assembly del progetto. Per altre informazioni, vedere [il contenuto dell'Assembly](/dotnet/framework/app-domains/assembly-contents).  
   
     -   Stdafx.cpp - Usato per compilare un file di intestazione precompilato denominato Win32.pch e un file di tipi precompilati denominato StdAfx.obj.  
   

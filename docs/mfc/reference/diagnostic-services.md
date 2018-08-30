@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545832"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214679"
 ---
 # <a name="diagnostic-services"></a>Servizi diagnostici
 La libreria Microsoft Foundation Class fornisce numerosi servizi di diagnostica che semplificano il debug dei programmi. I servizi di diagnostica includono macro e funzioni globali che consentono di tenere traccia delle allocazioni della memoria del programma, scaricare il contenuto degli oggetti in fase di esecuzione e stampare i messaggi di debug in fase di esecuzione. Le macro e funzioni globali per servizi di diagnostica sono raggruppate nelle categorie seguenti:  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  Per utilizzare correttamente questa funzione:  
   
--   Il file IMAGEHLP. DLL deve trovarsi nel percorso. Se non si dispone di tale DLL, la funzione verrà visualizzato un messaggio di errore. Visualizzare [libreria di immagini di Guida](http://msdn.microsoft.com/library/windows/desktop/ms680321) per informazioni sul set di funzioni fornite da IMAGEHLP.  
+-   Il file IMAGEHLP. DLL deve trovarsi nel percorso. Se non si dispone di tale DLL, la funzione verrà visualizzato un messaggio di errore. Visualizzare [libreria di immagini di Guida](/windows/desktop/Debug/image-help-library) per informazioni sul set di funzioni fornite da IMAGEHLP.  
   
 -   I moduli contenenti i frame nello stack devono includere le informazioni di debug. Se non contengono informazioni di debug, la funzione genererà comunque un'analisi dello stack, ma la traccia sarà meno dettagliata.  
 ### <a name="requirements"></a>Requisiti  

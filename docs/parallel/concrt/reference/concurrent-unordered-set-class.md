@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878d8a1f7f6ee313c58f92ea3f14b86265006581
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d543ca2d908f59487572f5abc68dc5b04223b88f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538450"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207615"
 ---
 # <a name="concurrentunorderedset-class"></a>Classe concurrent_unordered_set
 Il `concurrent_unordered_set` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in modo indipendente dalla concorrenza Abilita accodamento, accesso agli elementi, accesso iteratori e operazioni traversali di iterazione.  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  Il valore della chiave da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [coppia](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) dove il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
+ Oggetto [coppia](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) dove il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
   
 ### <a name="remarks"></a>Note  
  È possibile per gli inserimenti simultanei causare altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.  

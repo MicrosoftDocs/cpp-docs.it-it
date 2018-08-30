@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cdc5ea4c2cd1e02e6894d2dedf8470641021f0b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613056"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214469"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Procedura: utilizzo di eventi di compilazione in progetti MSBuild
 Un evento di compilazione è un comando che MSBuild esegue in una determinata fase del processo di compilazione. Il *pre-compilazione* evento si verifica prima dell'avvio della compilazione; gli *pre-collegamento* evento si verifica prima dell'inizio del collegamento; e il *post-compilazione* evento si verifica al termine della compilazione termina correttamente. Un evento di compilazione si verifica solo se viene eseguito il passaggio di compilazione associato. Ad esempio, l'evento di pre-collegamento non viene eseguito se non viene eseguito il passaggio di collegamento.  
   
  Ognuno dei tre eventi di compilazione è rappresentato in un gruppo di definizioni di elementi da un elemento di comando (`<Command>`) che viene eseguito e un elemento del messaggio (`<Message>`) che è visualizzato quando **MSBuild** esegue l'evento di compilazione. Ogni elemento è facoltativo e se si specifica lo stesso elemento più volte, l'ultima occorrenza ha la precedenza.  
   
- Facoltativo *Usa in compilazione* elemento (`<`* di compilazione-evento ***UseInBuild**`>`) può essere specificato in un gruppo di proprietà per indicare se l'evento di compilazione viene eseguita. Il valore del contenuto di un *Usa in compilazione* elemento può essere `true` o `false`. Per impostazione predefinita, un evento di compilazione viene eseguito solo se il corrispondente *Usa in compilazione* elemento è impostato su `false`.  
+ Facoltativo *Usa in compilazione* elemento (`<`*evento di compilazione*`UseInBuild>`) può essere specificato in un gruppo di proprietà per indicare se l'evento di compilazione viene eseguita. Il valore del contenuto di un *Usa in compilazione* elemento può essere `true` o `false`. Per impostazione predefinita, un evento di compilazione viene eseguito solo se il corrispondente *Usa in compilazione* elemento è impostato su `false`.  
   
  La tabella seguente elenca ogni elemento XML eventi di compilazione:  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f0f2a82c02bcb58f89d604978d31eb01ebd1fd
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465689"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219728"
 ---
 # <a name="single-inheritance"></a>Ereditarietà singola
 Nell'ereditarietà singola, una forma comune di ereditarietà, le classi contengono solo una classe base. Esaminare la relazione illustrata nella figura seguente.  
@@ -63,7 +63,7 @@ Esempio di grafico aciclico diretto
  Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi sono classi base per più di una classe derivata. Tuttavia, il contrario non è vero: esiste una sola classe base diretta per qualsiasi classe derivata specificata. Il grafico nella figura raffigura struttura a ereditarietà singola.  
   
 > [!NOTE]
->  I grafici aciclici diretti non sono univoci per l'ereditarietà singola. Tali grafici vengono inoltre usati per rappresentare grafici di ereditarietà multipla. Questo argomento viene descritto in [ereditarietà multipla](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  I grafici aciclici diretti non sono univoci per l'ereditarietà singola. Tali grafici vengono inoltre usati per rappresentare grafici di ereditarietà multipla. Questo argomento viene descritto in [ereditarietà multipla](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
  Nell'ereditarietà la classe derivata contiene i membri della classe base e tutti i nuovi membri aggiunti. Di conseguenza, una classe derivata può fare riferimento ai membri della classe base, a meno che i membri non vengano ridefiniti nella classe derivata. L'operatore di risoluzione dell'ambito (`::`) può essere usato per fare riferimento a membri delle classi base dirette o indirette quando tali membri sono stati ridefiniti nella classe derivata. Si consideri l'esempio seguente:  
   

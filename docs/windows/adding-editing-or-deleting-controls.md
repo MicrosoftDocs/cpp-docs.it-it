@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8b1b1452eceefbe6e04200d8aded544fdc4d1da
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590976"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219436"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Aggiunta, modifica o eliminazione di controlli
 
 Usando il **dialogo** editor, è possibile aggiungere, ridimensionare, modificare ed eliminare i controlli nelle finestre di dialogo. È anche possibile modificare le proprietà di un controllo, ad esempio il relativo ID, o se è inizialmente visibile in fase di esecuzione.
 
-È possibile usare il menu di scelta rapida nel **finestra di dialogo** registrato di editor di aggiungere rapidamente controlli ActiveX a una finestra di dialogo ed è possibile aggiungere controlli ActiveX per il **della casella degli strumenti** per l'accesso rapido (per altre informazioni, vedere [Personalizza casella degli strumenti, finestra di dialogo](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
+È possibile usare il menu di scelta rapida nel **finestra di dialogo** registrato di editor di aggiungere rapidamente controlli ActiveX a una finestra di dialogo ed è possibile aggiungere controlli ActiveX per il **della casella degli strumenti** per l'accesso rapido (per altre informazioni, vedere [Personalizza casella degli strumenti, finestra di dialogo](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
 
 - [Aggiungere un controllo a una finestra di dialogo](adding-a-control-to-a-dialog-box.md)
 

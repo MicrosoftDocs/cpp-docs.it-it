@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8acb1db66e4f6cc78ca79403aea782a936bff494
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613219"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199464"
 ---
 # <a name="non-mfc-dlls-overview"></a>DLL non MFC: cenni preliminari
 Una DLL non MFC è una DLL che non utilizza MFC internamente e le funzioni esportate della DLL possono essere chiamate da file eseguibili MFC e non MFC. Le funzioni vengono in genere esportate da una DLL non MFC usando l'interfaccia di C standard.  
   
- Per altre informazioni sulle DLL non MFC, vedere [librerie a collegamento dinamico](http://msdn.microsoft.com/library/windows/desktop/ms682589) nel SDK di Windows.  
+ Per altre informazioni sulle DLL non MFC, vedere [librerie a collegamento dinamico](https://msdn.microsoft.com/library/windows/desktop/ms682589) nel SDK di Windows.  
   
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   

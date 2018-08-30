@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 065c7296982bc715d35431a441be5b0e8506e1fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852536"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197303"
 ---
 # <a name="event-handling-principles"></a>Principi di gestione degli eventi
 Esistono tre passaggi comuni a tutti la gestione degli eventi. È necessario:  
@@ -41,13 +41,13 @@ Esistono tre passaggi comuni a tutti la gestione degli eventi. È necessario:
   
  Notifica all'origine eventi può essere suddivisi in tre passaggi:  
   
--   L'oggetto di origine per eseguire una query [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
+-   L'oggetto di origine per eseguire una query [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).  
   
--   Chiamare [IConnectionPointContainer:: FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) passando l'IID dell'interfaccia eventi che interessa. Se ha esito positivo, verrà restituito il [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interfaccia su un oggetto punto di connessione.  
+-   Chiamare [IConnectionPointContainer:: FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) passando l'IID dell'interfaccia eventi che interessa. Se ha esito positivo, verrà restituito il [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interfaccia su un oggetto punto di connessione.  
   
--   Chiamare [IConnectionPoint:: Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) passando la `IUnknown` del sink di evento. Se ha esito positivo, restituirà un `DWORD` cookie che rappresenta la connessione.  
+-   Chiamare [IConnectionPoint:: Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) passando la `IUnknown` del sink di evento. Se ha esito positivo, restituirà un `DWORD` cookie che rappresenta la connessione.  
   
- Dopo aver registrato correttamente l'interesse dimostrato nella ricezione di eventi, metodi nell'interfaccia eventi dell'oggetto verranno chiamati in base agli eventi generati dall'oggetto di origine. Quando è non necessario non è più la ricezione di eventi, è possibile passare il cookie di tornare al punto di connessione tramite [IConnectionPoint:: Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Questo verrà interrotta la connessione tra origine e sink.  
+ Dopo aver registrato correttamente l'interesse dimostrato nella ricezione di eventi, metodi nell'interfaccia eventi dell'oggetto verranno chiamati in base agli eventi generati dall'oggetto di origine. Quando è non necessario non è più la ricezione di eventi, è possibile passare il cookie di tornare al punto di connessione tramite [IConnectionPoint:: Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Questo verrà interrotta la connessione tra origine e sink.  
   
  Prestare attenzione a evitare riferimento i cicli di gestione degli eventi.  
   

@@ -1,5 +1,5 @@
 ---
-title: Oggetti grafici | Documenti Microsoft
+title: Oggetti grafici | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -51,18 +51,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930846"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197185"
 ---
 # <a name="graphic-objects"></a>Oggetti grafici
 Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dispositivo, tra cui penne per tracciare linee, pennelli per riempire le aree interne e tipi di carattere per aggiungere testo. MFC offre classi di oggetti grafici equivalenti agli strumenti di disegno di Windows. La tabella seguente mostra le classi disponibili e i tipi di handle Graphics Device Interface (GDI) di Windows equivalenti.  
   
 > [!NOTE]
->  Per altre informazioni, vedere la documentazione di GDI+ SDK all'indirizzo: [ http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Per altre informazioni, vedere la documentazione di GDI+ SDK all'indirizzo: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  Questo articolo descrive l'uso di queste classi di oggetti grafici:  
   
@@ -82,7 +82,7 @@ Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dis
   
  Ogni classe di oggetti grafici nella libreria di classi ha un costruttore che permette di creare oggetti grafici di tale classe, che è quindi necessario inizializzare con la funzione di creazione appropriata, ad esempio `CreatePen`.  
   
- Ogni classe di oggetti grafici nella libreria di classi include un operatore di cast che eseguirà il cast di un oggetto MFC all'handle di Windows associato. L'handle risultante è valido fino a quando l'oggetto associato non lo scollega. Utilizzare l'oggetto `Detach` funzione membro per scollegare l'handle.  
+ Ogni classe di oggetti grafici nella libreria di classi include un operatore di cast che eseguirà il cast di un oggetto MFC all'handle di Windows associato. L'handle risultante è valido fino a quando l'oggetto associato non lo scollega. Usare l'oggetto `Detach` funzione membro per scollegare l'handle.  
   
  Il codice seguente esegue il cast di un oggetto `CPen` a un handle di Windows:  
   
@@ -92,7 +92,7 @@ Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dis
   
 1.  Definire un oggetto grafico sullo stack frame. Inizializzare l'oggetto con la funzione di creazione specifica del tipo, ad esempio `CreatePen`. In alternativa, inizializzare l'oggetto nel costruttore. Vedere la discussione relativa [la creazione di una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md), che fornisce il codice di esempio.  
   
-2.  [Selezionare l'oggetto nel contesto di dispositivo corrente](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvare il vecchio oggetto grafico che è stata selezionata prima.  
+2.  [Selezionare l'oggetto nel contesto di dispositivo corrente](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvando il vecchio oggetto grafico che è stata selezionata prima.  
   
 3.  Al termine delle operazioni sull'oggetto grafico corrente, selezionare di nuovo il vecchio oggetto grafico nel contesto di dispositivo per ripristinarne lo stato.  
   
@@ -105,7 +105,7 @@ Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dis
   
 -   [Costruzione di oggetti grafici in una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
--   [Esempio di creazione di una penna in una e due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [Esempio di costruire una penna in una e due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
 -   [Selezione di un oggetto grafico in un contesto di dispositivo](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   

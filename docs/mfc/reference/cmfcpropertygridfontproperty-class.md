@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852981"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208866"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Classe CMFCPropertyGridFontProperty
 Il `CMFCPropertyGridFileProperty` classe supporta un elemento controllo elenco delle proprietà che verrà visualizzata una finestra di dialogo Selezione tipo di carattere.  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  Struttura logica del tipo di carattere che specifica gli attributi del tipo di carattere.  
   
  [in] *dwFontDialogFlags*  
- Stili applicati alla finestra di dialogo tipo di carattere che viene visualizzata quando si fa clic sul pulsante dell'elenco a discesa valore proprietà. Il valore predefinito è la combinazione bit per bit (OR) di CF_EFFECTS e CF_SCREENFONTS. Per altre informazioni, vedere la *Flags* parametro del [CHOOSEFONT struttura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Stili applicati alla finestra di dialogo tipo di carattere che viene visualizzata quando si fa clic sul pulsante dell'elenco a discesa valore proprietà. Il valore predefinito è la combinazione bit per bit (OR) di CF_EFFECTS e CF_SCREENFONTS. Per altre informazioni, vedere la *Flags* parametro del [CHOOSEFONT struttura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
  [in] *lpszDescr*  
  Descrizione della proprietà del tipo di carattere. Il valore predefinito è NULL.  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura che descrive il tipo di carattere selezionato.  
+ Un puntatore a un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura che descrive il tipo di carattere selezionato.  
   
 ### <a name="remarks"></a>Note  
   

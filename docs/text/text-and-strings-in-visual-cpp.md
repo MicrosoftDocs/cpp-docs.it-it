@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610714"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223295"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Testo e stringhe in Visual C++
 Un aspetto importante dello sviluppo di applicazioni per mercati internazionali è la rappresentazione adeguata di set di caratteri locali. Il set di caratteri ASCII definisce i caratteri nell'intervallo da 0x00 a 0x7F. Sono presenti altri set di caratteri, principalmente europei, che definiscono i caratteri all'interno dell'intervallo da 0x00 a 0x7F in modo identico al set di caratteri ASCII e anche definire un carattere esteso impostato da 0x80 a 0xFF. Di conseguenza, un set di 8 bit, i caratteri a byte singolo (SBCS) è sufficiente per rappresentare il set di caratteri ASCII, nonché i set di caratteri di molte lingue europee. Tuttavia, alcuni set di caratteri non europei, come il Kanji giapponese, includono molti più caratteri rispetto a un schema di codifica a byte singolo possa rappresentare e pertanto richiedono set di caratteri multibyte (MBCS), la codifica.  
@@ -64,7 +64,7 @@ Un aspetto importante dello sviluppo di applicazioni per mercati internazionali 
  [Internazionalizzazione](../c-runtime-library/internationalization.md)  
  Viene descritto il supporto internazionale della libreria di runtime C.  
   
- [Esempi internazionali](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Esempi internazionali](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  Vengono forniti collegamenti a esempi di internazionalizzazione di Visual C++.  
   
  [Stringhe relative a lingue e paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

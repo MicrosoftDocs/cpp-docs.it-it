@@ -1,5 +1,5 @@
 ---
-title: Modifica degli stili del controllo elenco | Documenti Microsoft
+title: Modifica degli stili del controllo elenco | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d54d22106742cab8d1cdfe9c32adc0a98fb41b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929543"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197994"
 ---
 # <a name="changing-list-control-styles"></a>Modifica degli stili del controllo List
-È possibile modificare lo stile della finestra di un controllo elenco ([CListCtrl](../mfc/reference/clistctrl-class.md)) in qualsiasi momento dopo averlo creato. Se si modifica lo stile della finestra, modificare il tipo di visualizzazione utilizzato dal controllo. Per emulare Esplora risorse, ad esempio, è possibile fornire voci di menu o pulsanti della barra degli strumenti per passare il controllo tra diverse visualizzazioni: visualizzazione icone, visualizzazione elenco e così via.  
+È possibile modificare lo stile della finestra di un controllo elenco ([CListCtrl](../mfc/reference/clistctrl-class.md)) in qualsiasi momento dopo averlo creato. Modificando lo stile della finestra, si modifica il tipo di visualizzazione utilizzato dal controllo. Per emulare Esplora risorse, ad esempio, è possibile fornire le voci di menu o i pulsanti della barra degli strumenti per lo spostamento del controllo tra diverse visualizzazioni: visualizzazione icone, visualizzazione elenco e così via.  
   
- Ad esempio, quando l'utente seleziona la voce di menu, è possibile apportare una chiamata a [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) per recuperare lo stile del controllo corrente e quindi chiamare [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) per reimpostare lo stile. Per altre informazioni, vedere [utilizzo dei controlli di visualizzazione elenco](http://msdn.microsoft.com/library/windows/desktop/bb774736) in Windows SDK.  
+ Ad esempio, quando l'utente seleziona la voce di menu, è Impossibile effettuare una chiamata a [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) per recuperare lo stile corrente del controllo e quindi chiamare [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) reimpostare lo stile. Per altre informazioni, vedere [usando i controlli di visualizzazione elenco](/windows/desktop/Controls/using-list-view-controls) nel SDK di Windows.  
   
- Gli stili disponibili sono elencati nel [crea](../mfc/reference/clistctrl-class.md#create). Gli stili **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, e **LVS_REPORT** designare le viste di controllo quattro elenco.  
+ Stili disponibili sono elencati nella [Create](../mfc/reference/clistctrl-class.md#create). Gli stili **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, e **LVS_REPORT** designare le viste di controllo di elenco di quattro.  
   
 ## <a name="extended-styles"></a>Stili estesi  
- Oltre a stili standard per un controllo elenco, è un altro set, detto stili estesi. Questi stili, descritti in [stili di visualizzazione elenco estesi](http://msdn.microsoft.com/library/windows/desktop/bb774732) in Windows SDK, forniscono un'ampia gamma di funzionalità utili che consentono di personalizzare il comportamento del controllo elenco. Per implementare il comportamento di un determinato stile (ad esempio la selezione), effettuare una chiamata a [CListCtrl:: SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle), passando lo stile richiesto. Nell'esempio seguente viene illustrata la chiamata di funzione:  
+ Oltre gli stili di standard per un controllo elenco, è disponibile un altro set, detto stili estesi. Questi stili, descritti in [stili di visualizzazione elenco estesa](/windows/desktop/Controls/extended-list-view-styles) nel SDK di Windows, offrono un'ampia gamma di funzionalità utili che consentono di personalizzare il comportamento del controllo elenco. Per implementare il comportamento di un determinato stile (ad esempio, la selezione al passaggio del mouse), effettuare una chiamata a [CListCtrl:: SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle), passando lo stile richiesto. L'esempio seguente illustra la chiamata di funzione:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#22](../mfc/codesnippet/cpp/changing-list-control-styles_1.cpp)]  
   
 > [!NOTE]
->  Per la selezione a funzionare, è inoltre necessario uno **lo stile LVS_EX_ONECLICKACTIVATE** oppure **LVS_EX_TWOCLICKACTIVATE** attivata.  
+>  Per la selezione al passaggio del mouse lavorare, è anche necessario **lo stile LVS_EX_ONECLICKACTIVATE** oppure **LVS_EX_TWOCLICKACTIVATE** attivata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)   

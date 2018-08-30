@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ba62d3dfc1f71ab61b5041ebbd884be8b5e39f6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78bfc20bd88aa9691c80483c8c315cd5305d7b96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592664"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216591"
 ---
 # <a name="import"></a>importazione
 
@@ -43,7 +43,7 @@ Il nome di un file con estensione idl che si desidera importare nella libreria d
 
 ## <a name="remarks"></a>Note
 
-Il **importare** C++ attributo causa una `#import` istruzione inserita sotto il `import "docobj.idl"` istruzione nel file IDL generato. Il **importare** attributo ha la stessa funzionalità come la [importare](http://msdn.microsoft.com/library/windows/desktop/aa367047) attributo MIDL.
+Il **importare** C++ attributo causa una `#import` istruzione inserita sotto il `import "docobj.idl"` istruzione nel file IDL generato. Il **importare** attributo ha la stessa funzionalità come la [importare](/windows/desktop/Midl/import) attributo MIDL.
 
 Il **importare** attributo inserisce solo il file specificato nel file con estensione idl che verrà generato dal progetto; le **importare** attributo non è possibile chiamare costrutti nel file specificato dal codice sorgente nel progetto.  Per chiamare costrutti nel file specificato dal codice sorgente nel progetto, usare [#import](../preprocessor/hash-import-directive-cpp.md) e il `embedded_idl` attributo oppure è possibile includere il file con estensione h per il *idl_file*, se esiste un file con estensione h.
 

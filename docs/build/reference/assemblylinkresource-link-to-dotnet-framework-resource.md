@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (collegamento a risorsa .NET Framework) | Documenti Microsoft
+title: -ASSEMBLYLINKRESOURCE (collegamento a risorsa .NET Framework) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374050"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206488"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Collegamento a risorse .NET Framework)
 ```  
@@ -40,15 +40,15 @@ ms.locfileid: "32374050"
 ## <a name="remarks"></a>Note  
  L'opzione /ASSEMBLYLINKRESOURCE crea un collegamento a una risorsa di .NET Framework nel file di output. il file di risorse non viene inserito nel file di output. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) incorpora un file di risorse nel file di output.  
   
- Risorse collegate sono pubbliche nell'assembly quando creato con il linker.  
+ Le risorse collegate sono pubbliche nell'assembly quando viene creato con il linker.  
   
- /ASSEMBLYLINKRESOURCE richiede che la compilazione includa [/clr](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) o [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) non è consentito con /ASSEMBLYLINKRESOURCE.  
+ /ASSEMBLYLINKRESOURCE richiede che la compilazione includa [/clr](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) oppure [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) non è consentita con /ASSEMBLYLINKRESOURCE.  
   
- Se *filename* è un file di risorse di .NET Framework creato ad esempio, dal [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi con i membri di **Resources** dello spazio dei nomi. Per ulteriori informazioni, vedere [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi di **casi** classe per accedere alla risorsa in fase di esecuzione.  
+ Se *nomefile* è un file di risorse .NET Framework creato ad esempio, dal [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di **System. Resources** dello spazio dei nomi. Per altre informazioni, vedere [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi nel **System** classe per accedere alla risorsa in fase di esecuzione.  
   
- *nome del file* può avere qualsiasi formato di file. Potrebbe ad esempio, si desidera includere una DLL nativa dell'assembly, pertanto può essere installato nella Global Assembly Cache e accedervi dal codice gestito nell'assembly.  
+ *nome del file* può avere qualsiasi formato di file. Ad esempio, è possibile apportare una DLL nativa parte dell'assembly, per cui può essere installato nella Global Assembly Cache e accedervi dal codice gestito nell'assembly.  
   
- Altre opzioni dei linker che influiscono sulla generazione di assembly sono:  
+ Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "32374050"
   
 1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic su di **Linker** cartella.  
+2.  Scegliere il **Linker** cartella.  
   
 3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   

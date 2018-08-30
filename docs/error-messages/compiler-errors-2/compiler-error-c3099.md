@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3099 | Documenti Microsoft
+title: Errore del compilatore C3099 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27059beb1cb587b9060da8c5cc5702ea966422f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea57a79fab92152824b7c9aaf0c5d50c14fee32e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249755"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211995"
 ---
 # <a name="compiler-error-c3099"></a>Errore del compilatore C3099
 'keyword': usare [System::AttributeUsageAttribute] per gli attributi gestiti; usare [Windows::Foundation::Metadata::AttributeUsageAttribute] per gli attributi WinRT  
   
- Utilizzare <xref:System.AttributeUsageAttribute> per dichiarare **/clr** attributi. Usare `Windows::Foundation::Metadata::AttributeUsageAttribute` per dichiarare gli attributi Windows Runtime.  
+ Uso <xref:System.AttributeUsageAttribute> dichiarare **/clr** attributi. Usare `Windows::Foundation::Metadata::AttributeUsageAttribute` per dichiarare gli attributi Windows Runtime.  
   
- Per ulteriori informazioni sugli attributi /CLR, vedere [attributi definiti dall'utente](../../windows/user-defined-attributes-cpp-component-extensions.md). Per gli attributi supportati in Windows Runtime, vedere [spazio dei nomi](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
+ Per altre informazioni sugli attributi /CLR, vedere [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Per gli attributi supportati in Windows Runtime, vedere [spazio dei nomi](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3099 e mostra come risolverlo.  

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203752"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array e WriteOnlyArray (C++/CX)
 È possibile usare liberamente matrici di tipo C regolari o [std:: Array](../standard-library/array-class-stl.md) in C + c++ /CX program (sebbene [std:: Vector](../standard-library/vector-class.md) è spesso una scelta migliore), ma in qualsiasi API pubblicata nei metadati, è necessario convertire una matrice di tipo C o vettoriale per una [platform:: Array](../cppcx/platform-array-class.md) oppure [platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo in base alla modalità di utilizzo. Il tipo [Platform::Array](../cppcx/platform-array-class.md) non è altrettanto efficace o potente di [std::vector](../standard-library/vector-class.md). Pertanto, come regola generale, se ne sconsiglia l'utilizzo in codice interno che esegue una grande quantità di operazioni sugli elementi di matrice.  
@@ -82,12 +82,12 @@ ms.locfileid: "42606112"
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>Utilizza ArrayReference per evitare di copiare i dati  
  In alcuni scenari in cui i dati vengono passati attraverso l'interfaccia applicativa binaria in [Platform::Array](../cppcx/platform-array-class.md)e desideri elaborare i dati in una matrice di tipo C per una maggiore efficienza, puoi usare [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) per evitare l'operazione di copia aggiuntiva. Quando passi [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) come argomento in un parametro che accetta `Platform::Array`, `ArrayReference` archivierà i dati direttamente in una matrice di tipo C specificata. Tieni presente che `ArrayReference` non ha alcun blocco sui dati di origine. Pertanto, se tali dati vengono modificati o eliminati in un altro thread prima del completamento della chiamata, i risultati saranno non definiti.  
   
- Il frammento di codice seguente mostra come copiare i risultati di un'operazione [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) in un oggetto `Platform::Array` (modello comune) e come sostituire `ArrayReference` per copiare i dati direttamente in una matrice di tipo C:  
+ Il frammento di codice seguente illustra come copiare i risultati di una [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operazione in un `Platform::Array` (modello comune) e come sostituire `ArrayReference` per copiare i dati direttamente in una matrice di tipo C:  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Evitare di esporre una matrice come proprietà  
- In generale, evita di esporre un tipo `Platform::Array` come proprietà in una classe di riferimento poiché l'intera matrice viene restituita anche quando il codice client tenta semplicemente di accedere a un singolo elemento. Per esporre un contenitore di sequenza come proprietà in una classe di riferimento pubblica, [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) rappresenta una scelta migliore. Nelle API private o interne (non pubblicate nei metadati), considera l'utilizzo di un contenitore C++ standard come [std::vector](../standard-library/vector-class.md).  
+ In generale, evita di esporre un tipo `Platform::Array` come proprietà in una classe di riferimento poiché l'intera matrice viene restituita anche quando il codice client tenta semplicemente di accedere a un singolo elemento. Quando devi esporre un contenitore di sequenza come proprietà in una classe di riferimento pubblica, [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) è una scelta migliore. Nelle API private o interne (non pubblicate nei metadati), considera l'utilizzo di un contenitore C++ standard come [std::vector](../standard-library/vector-class.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi](../cppcx/type-system-c-cx.md)   

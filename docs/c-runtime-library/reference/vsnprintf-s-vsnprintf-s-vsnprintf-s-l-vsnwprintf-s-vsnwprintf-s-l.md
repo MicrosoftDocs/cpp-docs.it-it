@@ -49,12 +49,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd7c468e516c25e2c2b408b8c1112061eeb5e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17bc6d95aae70c6297836d7353deafb6a4480407
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417942"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212969"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -122,7 +122,7 @@ int _vsnwprintf_s(
 Percorso di archiviazione per l'output.
 
 *sizeOfBuffer*<br/>
-Le dimensioni del *buffer* per l'output, come il numero di caratteri.
+Le dimensioni dei *buffer* per l'output, come il numero di caratteri.
 
 *count*<br/>
 Numero massimo di caratteri wide da scrivere, escluso il carattere Null di terminazione o [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -140,11 +140,11 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-**vsnprintf_s**, **vsnprintf_s** e **vsnwprintf_s** restituire il numero di caratteri scritti, senza includere il carattere di terminazione null o un valore negativo se si verifica un errore di output. **vsnprintf_s** è identica a **vsnprintf_s**. **vsnprintf_s** è incluso per conformità allo standard ANSI. **_vnsprintf** viene mantenuto per compatibilità con le versioni precedenti.
+**vsnprintf_s**, **vsnprintf_s** e **vsnwprintf_s** restituiscono il numero di caratteri scritti, escludendo il carattere null di terminazione o un valore negativo se si verifica un errore di output. **vsnprintf_s** è identica alla **vsnprintf_s**. **vsnprintf_s** è inclusa per conformità allo standard ANSI. **_vnsprintf** viene mantenuta per compatibilità con le versioni precedenti.
 
-Se lo spazio di archiviazione necessaria per archiviare i dati e un carattere di terminazione null supera *sizeOfBuffer*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), a meno che *conteggio*  viene [truncate](../../c-runtime-library/truncate.md), nel qual caso la maggior parte della stringa come adatteranno *buffer* viene scritto e restituito -1. Se l'esecuzione continua dopo il gestore di parametri non validi, queste funzioni impostano *buffer* su una stringa vuota, impostare **errno** al **ERANGE**e restituiscono -1.
+Se lo spazio di archiviazione necessaria per archiviare i dati e un carattere null di terminazione supera *sizeOfBuffer*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), a meno che non *conteggio*  viene [truncate](../../c-runtime-library/truncate.md), nel qual caso come parte della stringa che rientra in *buffer* viene scritto e restituito -1. Se l'esecuzione continua dopo il gestore di parametri non validi, queste funzioni impostano *buffer* su una stringa vuota, impostare **errno** al **ERANGE**e restituiscono -1.
 
-Se *buffer* oppure *formato* è un **NULL** puntatore, o se *conteggio* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1.
+Se *buffer* oppure *formato* è un **NULL** puntatore, o se *conteggio* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
@@ -159,15 +159,15 @@ Se *buffer* oppure *formato* è un **NULL** puntatore, o se *conteggio* è minor
 
 Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive fino a *conteggio* caratteri di dati specificati per la memoria a cui punta *buffer* e aggiunge un carattere di terminazione null.
 
-Se *conteggio* viene [truncate](../../c-runtime-library/truncate.md), quindi queste funzioni scrivono come gran parte della stringa può contenere *buffer* lasciando spazio per un terminazione null. Se l'intera stringa (con terminazione null) è contenuto in *buffer*, quindi queste funzioni restituiscono il numero di caratteri scritti (senza includere il carattere di terminazione null); in caso contrario, queste funzioni restituiscono -1 per indicare che il troncamento del si è verificato.
+Se *conteggio* viene [truncate](../../c-runtime-library/truncate.md), quindi queste funzioni scrivono la parte della stringa che rientra in *buffer* lasciando spazio per un carattere di terminazione null. Se l'intera stringa (con terminazione null) rientra *buffer*, quindi queste funzioni restituiscono il numero di caratteri scritti (escluso il carattere di terminazione null); in caso contrario, queste funzioni restituiscono -1 per indicare se il troncamento si è verificato.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Per garantire che ci sia spazio per il carattere di terminazione null, assicurarsi che *conteggio* è minore rispetto alla lunghezza del buffer o utilizzare **truncate**.
+> Per garantire che ci sia spazio per il carattere null di terminazione, assicurarsi che *conteggio* è minore di lunghezza del buffer oppure utilizzare **truncate**.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

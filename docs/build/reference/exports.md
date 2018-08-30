@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e6607016e2661817de04fce505bc921a3a25320a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572578"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219493"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -69,7 +69,7 @@ Per trovare i nomi decorati creati dal compilatore, usare il [DUMPBIN](../../bui
   
 È possibile usare*ordinale* per specificare che verrà inserito un numero e non il nome della funzione, la tabella di esportazione DLL. Molte DLL Windows esportano ordinali per supportare il codice legacy. In precedenza, era pratica comune usare ordinali nel codice Windows a 16 bit, perché ciò può aiutare a ridurre le dimensioni di una DLL. Si sconsiglia di esportare funzioni in base a ordinali a meno che i destinatari della DLL non necessitino di tale funzione a scopo di supporto della legacy. Dato che il file .LIB file conterrà il mapping tra l'ordinale e la funzione, è possibile usare il nome della funzione come si farebbe normalmente nei progetti che usano la DLL.  
   
-Usando la parola chiave facoltativa `NONAME`, è possibile esportare solo per ordinali riducendo la dimensione della tabella di esportazione nella DLL risultante. Tuttavia, se si desidera utilizzare [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) nella DLL, è necessario conoscere il numero ordinale perché il nome non è valido.  
+Usando la parola chiave facoltativa `NONAME`, è possibile esportare solo per ordinali riducendo la dimensione della tabella di esportazione nella DLL risultante. Tuttavia, se si desidera utilizzare [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) nella DLL, è necessario conoscere il numero ordinale perché il nome non è valido.  
   
 La parola chiave facoltativa `PRIVATE` impedisce *entryname* siano incluse nella libreria di importazione generata da LINK. Questa non ha alcun effetto sull'esportazione nell'immagine, anch'essa generata da LINK.  
   

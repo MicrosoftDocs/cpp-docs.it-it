@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de3c7fe60432acfc3096ea19fc00cf371a7c4e92
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4e3f7d59dd86aa15833134223854eb9ed01f6679
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610506"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216575"
 ---
 # <a name="hstringreference-class"></a>Classe HStringReference
 
@@ -34,7 +34,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>Note
 
-La durata del buffer nel nuovo HSTRING non è gestita dal Runtime di Windows. Il chiamante assegna una stringa di origine nello stack frame per evitare un'allocazione heap e per eliminare il rischio di perdita di memoria. Inoltre, il chiamante deve garantire che la stringa di origine rimanga invariata durante il ciclo di vita di HSTRING associato. Per altre informazioni, vedere [WindowsCreateStringReference funzione](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).
+La durata del buffer nel nuovo HSTRING non è gestita dal Runtime di Windows. Il chiamante assegna una stringa di origine nello stack frame per evitare un'allocazione heap e per eliminare il rischio di perdita di memoria. Inoltre, il chiamante deve garantire che la stringa di origine rimanga invariata durante il ciclo di vita di HSTRING associato. Per altre informazioni, vedere [WindowsCreateStringReference funzione](https://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).
 
 ## <a name="members"></a>Membri
 

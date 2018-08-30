@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c110c0addfe14ed8ba9018345eb1f4e61fd5182
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e6991d7ca545eef671720a38907088dc6a534d1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338620"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216808"
 ---
 # <a name="cfontholder-class"></a>Classe CFontHolder
 Implementa la proprietà predefinita e incapsula la funzionalità di un oggetto tipo di carattere di Windows e l'interfaccia `IFont` .  
@@ -171,7 +171,7 @@ void InitializeFont(
   
 ### <a name="parameters"></a>Parametri  
  *pFontDesc*  
- Puntatore a una struttura di descrizione del tipo di carattere ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)) che specifica le caratteristiche del tipo di carattere.  
+ Puntatore a una struttura di descrizione del tipo di carattere ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)) che specifica le caratteristiche del tipo di carattere.  
   
  *pFontDispAmbient*  
  Puntatore alla proprietà del tipo di carattere ambiente del contenitore.  
@@ -199,7 +199,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
   
 ### <a name="parameters"></a>Parametri  
  *lptm*  
- Un puntatore a un [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struttura che riceverà le informazioni.  
+ Un puntatore a un [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) struttura che riceverà le informazioni.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  Questa funzione consente di disconnettere il `CFontHolder` dall'oggetto relativo `IFont` interfaccia.  

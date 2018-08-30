@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfc0b62fd3008ae18ae82703bfb896d56dba1de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337369"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208885"
 ---
 # <a name="application-information-and-management"></a>Informazioni sull'applicazione e gestione
 Quando si scrive un'applicazione, si crea un singolo [CWinApp](../../mfc/reference/cwinapp-class.md)-oggetto derivato. In alcuni casi, è possibile ottenere informazioni su questo oggetto all'esterno di `CWinApp`-oggetto derivato. Oppure potrebbe essere necessario accedere ad altri oggetti globali "Manager".
@@ -96,7 +96,7 @@ CWinThread* AfxBeginThread(
  Parametro da passare alla funzione di controllo come illustrato nel parametro alla dichiarazione di funzione in *pfnThreadProc*.  
   
  *nPriority*  
- La priorità desiderata del thread. Per un elenco completo e una descrizione delle priorità disponibili, vedere [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) nel SDK di Windows.  
+ La priorità desiderata del thread. Per un elenco completo e una descrizione delle priorità disponibili, vedere [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) nel SDK di Windows.  
   
  *nStackSize*  
  Specifica la dimensione in byte dello stack per il nuovo thread. Se è 0, il dimensione stack del thread di creazione per impostazione predefinita la dimensione dello stack.  
@@ -109,7 +109,7 @@ CWinThread* AfxBeginThread(
 - **0** avviare il thread immediatamente dopo la creazione.  
   
  *lpSecurityAttrs*  
- Punta a un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che specifica gli attributi di sicurezza per il thread. Se NULL, verranno usati gli stessi attributi di sicurezza del thread di creazione. Per altre informazioni su questa struttura, vedere il SDK di Windows.  
+ Punta a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che specifica gli attributi di sicurezza per il thread. Se NULL, verranno usati gli stessi attributi di sicurezza del thread di creazione. Per altre informazioni su questa struttura, vedere il SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore all'oggetto thread appena creato, o NULL se si verifica un errore.  
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  *lpszName*  
  Un puntatore a una stringa contenente l'ID risorsa.    
  *lpszType*  
- Puntatore al tipo di risorsa. Per un elenco dei tipi di risorse, vedere [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) nel SDK di Windows.  
+ Puntatore al tipo di risorsa. Per un elenco dei tipi di risorse, vedere [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) nel SDK di Windows.  
    
 ### <a name="return-value"></a>Valore restituito  
  Handle per il modulo che contiene la risorsa.  
@@ -506,7 +506,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  Se la funzione ha esito positivo, il valore restituito è un handle per il modulo. Se la funzione ha esito negativo, il valore restituito è NULL.  
   
 ### <a name="remarks"></a>Note  
- Restituisce un handle che può essere usato nel [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione DLL. `AfxLoadLibrary` è anche utilizzabile per eseguire il mapping di altri moduli eseguibili.  
+ Restituisce un handle che può essere usato nel [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione DLL. `AfxLoadLibrary` è anche utilizzabile per eseguire il mapping di altri moduli eseguibili.  
   
  Ogni processo di migrazione mantiene un conteggio dei riferimenti per ogni modulo di libreria caricato. Questo conteggio dei riferimenti viene incrementato ogni volta che `AfxLoadLibrary` viene chiamato e viene decrementato ogni volta `AfxFreeLibrary` viene chiamato. Quando il conteggio dei riferimenti arriva a zero, il modulo viene disassociato dallo spazio degli indirizzi del processo chiamante e l'handle non è più valido.  
   
@@ -559,7 +559,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>Parametri  
  *lpWndClass*  
- Puntatore a un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struttura che contiene informazioni sulla classe di finestra da registrare. Per altre informazioni su questa struttura, vedere il SDK di Windows.  
+ Puntatore a un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura che contiene informazioni sulla classe di finestra da registrare. Per altre informazioni su questa struttura, vedere il SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la classe è registrata. in caso contrario, FALSE.  
@@ -588,7 +588,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>Parametri  
  *nClassStyle*  
- Specifica lo stile di classe di Windows o combinazione degli stili, creati con OR bit per bit ( **&#124;**) operatore, per la classe della finestra. Per un elenco di stili delle classi, vedere la [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struttura nel SDK di Windows. Se NULL, i valori predefiniti verranno impostati come indicato di seguito:  
+ Specifica lo stile di classe di Windows o combinazione degli stili, creati con OR bit per bit ( **&#124;**) operatore, per la classe della finestra. Per un elenco di stili delle classi, vedere la [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura nel SDK di Windows. Se NULL, i valori predefiniti verranno impostati come indicato di seguito:  
   
 -   Imposta lo stile del mouse su CS_DBLCLKS, che invia fare doppio clic su messaggi alla routine della finestra quando l'utente fa doppio clic del mouse.  
   
@@ -602,7 +602,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  Specifica un handle per la risorsa del cursore venga installato in ogni finestra creata dalla classe della finestra. Se si usa il valore predefinito **0**, si otterrà il cursore IDC_ARROW standard.  
   
  *hbrBackground*  
- Specifica un handle per la risorsa pennello venga installato in ogni finestra creata dalla classe della finestra. Se si usa il valore predefinito **0**, si disporrà di un pennello di sfondo NULL e la finestra, per impostazione predefinita, non cancellerà lo sfondo durante l'elaborazione [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055).  
+ Specifica un handle per la risorsa pennello venga installato in ogni finestra creata dalla classe della finestra. Se si usa il valore predefinito **0**, si disporrà di un pennello di sfondo NULL e la finestra, per impostazione predefinita, non cancellerà lo sfondo durante l'elaborazione [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd).  
   
  *hIcon*  
  Specifica un handle per la risorsa icona venga installato in ogni finestra creata dalla classe della finestra. Se si usa il valore predefinito **0**, si otterrà l'icona del logo Windows standard, flag salire.  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2c53ceb50057e789856aa8e7f67c9f788aa5a0a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ebbb33a4f17f5b4d458c4add4d59040d698dd4b8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222194"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilizzo degli oggetti accelerator e accelerator_view
 È possibile usare la [acceleratore](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classi per specificare un dispositivo o emulatore per eseguire il codice C++ AMP. Un sistema potrebbe avere diversi dispositivi o emulatori che differiscono per quantità di memoria, supporto della memoria condivisa, supporto per il debug o supporto a precisione doppia. C++ Accelerated Massive Parallelism (C++ AMP) fornisce API che è possibile usare per esaminare gli acceleratori disponibili, impostarne uno come predefinito, specificare più accelerator_views per più chiamate a parallel_for_each ed eseguire attività di debug speciali.  
@@ -184,7 +184,7 @@ I percorsi di dispositivo di tre acceleratori speciali sono disponibili come pro
   
 ## <a name="interoperability"></a>Interoperabilità  
  
-Il runtime C++ AMP supporta l'interoperabilità tra i `accelerator_view` classe e Direct3D [interfaccia ID3D11Device](http://go.microsoft.com/fwlink/p/?linkId=248488). Il [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metodo accetta un `IUnknown` interfaccia e restituisce un `accelerator_view` oggetto. Il [get_device](http://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) metodo accetta un `accelerator_view` oggetto e restituisce un `IUknown` interfaccia.  
+Il runtime C++ AMP supporta l'interoperabilità tra i `accelerator_view` classe e Direct3D [interfaccia ID3D11Device](http://go.microsoft.com/fwlink/p/?linkId=248488). Il [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metodo accetta un `IUnknown` interfaccia e restituisce un `accelerator_view` oggetto. Il [get_device](https://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) metodo accetta un `accelerator_view` oggetto e restituisce un `IUknown` interfaccia.  
   
 ## <a name="see-also"></a>Vedere anche  
  

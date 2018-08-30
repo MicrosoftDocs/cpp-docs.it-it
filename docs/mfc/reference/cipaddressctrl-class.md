@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c7d45c36534ab2c67765dc6e4e9ea61b79b3ea
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338032"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222338"
 ---
 # <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
 Fornisce la funzionalità del controllo indirizzo IP comune di Windows.  
@@ -76,7 +76,7 @@ class CIPAddressCtrl : public CWnd
   
  Questo controllo (e pertanto il `CIPAddressCtrl` classe) è disponibile solo per i programmi in esecuzione in Microsoft Internet Explorer 4.0 e versioni successive. Inoltre, saranno disponibili in versioni future di Windows e Windows NT.  
   
- Per ulteriori informazioni generali sul controllo indirizzo IP, vedere [controlli di indirizzi IP](http://msdn.microsoft.com/library/windows/desktop/bb761372) nel SDK di Windows.  
+ Per ulteriori informazioni generali sul controllo indirizzo IP, vedere [controlli di indirizzi IP](/windows/desktop/Controls/ip-address-controls) nel SDK di Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -105,7 +105,7 @@ void ClearAddress();
 ```  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress), come descritto nel SDK di Windows.  
   
 ##  <a name="create"></a>  CIPAddressCtrl::Create  
  Crea un controllo di indirizzo IP e lo collega a un `CIPAddressCtrl` oggetto.  
@@ -120,10 +120,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *dwStyle*  
- Stile del controllo indirizzo IP. Applicare una combinazione degli stili di finestra. È necessario includere lo stile WS_CHILD perché il controllo deve essere una finestra figlio. Visualizzare [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows per un elenco degli stili di windows.  
+ Stile del controllo indirizzo IP. Applicare una combinazione degli stili di finestra. È necessario includere lo stile WS_CHILD perché il controllo deve essere una finestra figlio. Visualizzare [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows per un elenco degli stili di windows.  
   
  *Rect*  
- Un riferimento a dimensioni e la posizione del controllo indirizzo IP. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.  
+ Un riferimento a dimensioni e la posizione del controllo indirizzo IP. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.  
   
  *pParentWnd*  
  Puntatore alla finestra padre del controllo indirizzo IP. Non deve essere NULL.  
@@ -157,13 +157,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
   
  *dwStyle*  
- Stile del controllo indirizzo IP. Applicare una combinazione degli stili di finestra. È necessario includere lo stile WS_CHILD perché il controllo deve essere una finestra figlio. Visualizzare [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows per un elenco degli stili di windows.  
+ Stile del controllo indirizzo IP. Applicare una combinazione degli stili di finestra. È necessario includere lo stile WS_CHILD perché il controllo deve essere una finestra figlio. Visualizzare [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows per un elenco degli stili di windows.  
   
  *Rect*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  
   
  *pParentWnd*  
  Puntatore alla finestra padre del controllo.  
@@ -210,7 +210,7 @@ int GetAddress(DWORD& dwAddress);
  Il numero di campi non vuoti nel controllo indirizzo IP.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), come descritto nel SDK di Windows. Nel primo prototipo riportato sopra, i numeri di campi da 0 a 3 del controllo, di lettura da sinistra a destra rispettivamente, popolare i quattro parametri. Nel secondo precedente, prototipo *dwAddress* viene popolata come segue.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress), come descritto nel SDK di Windows. Nel primo prototipo riportato sopra, i numeri di campi da 0 a 3 del controllo, di lettura da sinistra a destra rispettivamente, popolare i quattro parametri. Nel secondo precedente, prototipo *dwAddress* viene popolata come segue.  
   
 |Campo|Che contiene il valore del campo di bit|  
 |-----------|-------------------------------------|  
@@ -230,7 +230,7 @@ BOOL IsBlank() const;
  Diverso da zero se tutti i campi di controllo dell'indirizzo IP sono vuoti; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank), come descritto nel SDK di Windows.  
   
 ##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  Imposta i valori di indirizzo per tutti i quattro campi nel controllo indirizzo IP.  
@@ -262,7 +262,7 @@ void SetAddress(DWORD dwAddress);
  Un valore DWORD che contiene il nuovo indirizzo IP. Visualizzare **osservazioni** per una tabella che mostra la modalità di riempimento il valore DWORD.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), come descritto nel SDK di Windows. Nel primo prototipo riportato sopra, i numeri di campi da 0 a 3 del controllo, di lettura da sinistra a destra rispettivamente, popolare i quattro parametri. Nel secondo precedente, prototipo *dwAddress* viene popolata come segue.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress), come descritto nel SDK di Windows. Nel primo prototipo riportato sopra, i numeri di campi da 0 a 3 del controllo, di lettura da sinistra a destra rispettivamente, popolare i quattro parametri. Nel secondo precedente, prototipo *dwAddress* viene popolata come segue.  
   
 |Campo|Che contiene il valore del campo di bit|  
 |-----------|-------------------------------------|  
@@ -283,7 +283,7 @@ void SetFieldFocus(WORD nField);
  Indice del campo in base zero in cui deve essere impostato lo stato attivo. Se questo valore è maggiore del numero di campi, lo stato attivo è impostato sul primo campo vuoto. Se tutti i campi sono non vuoto, lo stato attivo viene impostato sul primo campo.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), come descritto nel SDK di Windows.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus), come descritto nel SDK di Windows.  
   
 ##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  Imposta l'intervallo del campo specificato nel controllo indirizzo IP.  
@@ -306,7 +306,7 @@ void SetFieldRange(
  Un riferimento a un integer che riceve il limite massimo del campo specificato in questo controllo indirizzo IP.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), come descritto nel SDK di Windows. I due parametri, usare *nLower* e *nUpper*, per indicare i limiti superiori e inferiori del campo, anziché il *wRange* parametro utilizzato con il messaggio Win32.  
+ Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange), come descritto nel SDK di Windows. I due parametri, usare *nLower* e *nUpper*, per indicare i limiti superiori e inferiori del campo, anziché il *wRange* parametro utilizzato con il messaggio Win32.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CWnd](../../mfc/reference/cwnd-class.md)   

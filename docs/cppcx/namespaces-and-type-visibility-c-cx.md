@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d09d2f60f237439f208601fe8385cf7125e1ac20
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219521"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Spazi dei nomi e visibilità del tipo (C++/CX)
 Uno spazio dei nomi è un costrutto C++ standard per il raggruppamento di tipi con funzionalità correlate e per la prevenzione dei conflitti di denominazione nelle librerie. Il sistema di tipi Windows Runtime richiede che tutti i tipi pubblici di Windows Runtime, inclusi quelli nel proprio codice, devono essere dichiarati in uno spazio dei nomi nell'ambito dello spazio dei nomi. I tipi pubblici dichiarati in ambito globale o annidati in un'altra classe generano un errore in fase di compilazione.  
@@ -43,7 +43,7 @@ Uno spazio dei nomi è un costrutto C++ standard per il raggruppamento di tipi c
 |`internal` o `private public`|Il membro è pubblico nell'app o nel componente, ma non è visibile nei metadati.|No|  
   
 ## <a name="windows-runtime-namespaces"></a>Spazi dei nomi di Windows Runtime  
- L'API di Windows è costituita da tipi dichiarati in di Windows::\* gli spazi dei nomi. Questi spazi dei nomi sono riservati a Windows e non è possibile aggiungere ad essi altri tipi. Il **Visualizzatore oggetti**ti consente di visualizzare questi spazi dei nomi nel file windows.winmd. Per la documentazione sugli spazi dei nomi, vedere l'articolo sulle [API di Windows](http://msdn.microsoft.com/library/windows/apps/br211377).  
+ L'API di Windows è costituita da tipi dichiarati in di Windows::\* gli spazi dei nomi. Questi spazi dei nomi sono riservati a Windows e non è possibile aggiungere ad essi altri tipi. Il **Visualizzatore oggetti**ti consente di visualizzare questi spazi dei nomi nel file windows.winmd. Per la documentazione sugli spazi dei nomi, vedere [API Windows](https://msdn.microsoft.com/library/windows/apps/br211377).  
   
 ## <a name="ccx-namespaces"></a>spazi dei nomi C++/CX  
  C + c++ /CX definiscono determinati tipi in questi spazi dei nomi come parte della proiezione del sistema di tipi Windows Runtime.  

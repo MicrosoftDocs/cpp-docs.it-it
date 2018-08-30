@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8944ecdb4f9996800264986a7a687df6020b0591
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881396"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209933"
 ---
 # <a name="device-context-global-functions"></a>Funzioni globali di contesto di dispositivo
 Questa funzione crea un contesto di dispositivo per un determinato dispositivo.  
@@ -29,7 +29,7 @@ Questa funzione crea un contesto di dispositivo per un determinato dispositivo.
 |[AtlCreateTargetDC](#atlcreatetargetdc)|Crea un contesto di dispositivo.|  
   
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- Crea un contesto di dispositivo per il dispositivo specificato nella [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struttura.  
+ Crea un contesto di dispositivo per il dispositivo specificato nella [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struttura.  
   
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406663"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208066"
 ---
 # <a name="new-and-delete-operators"></a>Operatori new e delete
 
@@ -55,7 +55,7 @@ I due ambiti delle **operatore new** funzioni sono descritte nella tabella segue
 |**:: operatore new**|Global|  
 |*nome della classe* **:: operatore new**|Classe|  
   
- Il primo argomento **operatore new** deve essere di tipo `size_t` (un tipo definito in \<STDDEF. h >), e il tipo restituito è sempre **void \*** .  
+ Il primo argomento **operatore new** deve essere di tipo `size_t` (un tipo definito in \<STDDEF. h >), e il tipo restituito è sempre **void** <strong>\*</strong>.  
   
  Globale **operatore new** funzione viene chiamata quando il **nuove** operatore viene usato per allocare oggetti di tipi incorporati, gli oggetti di tipo classe che non contengono definito dall'utente **operatore new** funzioni e le matrici di qualsiasi tipo. Quando la **nuove** operatore viene usato per allocare oggetti di un tipo di classe in cui un' **operatore new** è definito, tale classe **operatore new** viene chiamato.  
   

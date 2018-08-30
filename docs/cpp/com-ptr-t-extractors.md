@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8414fb0e3478b5aae906db3e511757d5d7df71d3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d63a09dec74fc1b7b41f8029dcff285b62b017f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404096"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203227"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t Extractors
 **Sezione specifica Microsoft**  
@@ -55,11 +55,11 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Note  
   
--   **operatore Interface\***  restituisce il puntatore a interfaccia incapsulato, che può essere NULL.  
+-   **operatore Interface** <strong>\*</strong> restituisce il puntatore a interfaccia incapsulato, che può essere NULL.  
   
 -   **operatore Interface &** restituisce un riferimento a puntatore a interfaccia incapsulato e genera un errore se il puntatore è NULL.  
   
--   **operatore\***  consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.  
+-   **operatore** <strong>\*</strong> consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.  
   
 -   **operator ->** consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.  
   

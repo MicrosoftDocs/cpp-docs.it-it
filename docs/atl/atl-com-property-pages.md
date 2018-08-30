@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdf0d53cca00424c2c933e2578fb5c70b7d07e1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ec1fb89817da663dd088dadc9b667a3ff0aef46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571413"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200978"
 ---
 # <a name="atl-com-property-pages"></a>Pagine delle proprietà COM ATL
 Pagine delle proprietà COM forniscono un'interfaccia utente per impostare le proprietà (o la chiamata ai metodi) di uno o più oggetti COM. Pagine delle proprietà sono ampiamente usati da tutti i controlli ActiveX per fornire interfacce utente avanzate che consentono di essere impostata in fase di progettazione le proprietà del controllo.  
   
- Pagine delle proprietà sono oggetti COM che implementano il [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) oppure [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interfaccia. Queste interfacce forniscono metodi che consentono alla pagina da associare a un `site` (un oggetto COM che rappresenta il contenitore della pagina) e numerosi *oggetti* (gli oggetti COM i cui metodi verranno chiamati in risposta alle modifiche apportate dall'utente della pagina delle proprietà). Il contenitore della pagina proprietà è responsabile per la chiamata a metodi nell'interfaccia di pagina di proprietà che indicano alla pagina quando per mostrare o nascondere la relativa interfaccia utente e quando applicare le modifiche apportate dall'utente per gli oggetti sottostanti.  
+ Pagine delle proprietà sono oggetti COM che implementano il [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) oppure [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) interfaccia. Queste interfacce forniscono metodi che consentono alla pagina da associare a un `site` (un oggetto COM che rappresenta il contenitore della pagina) e numerosi *oggetti* (gli oggetti COM i cui metodi verranno chiamati in risposta alle modifiche apportate dall'utente della pagina delle proprietà). Il contenitore della pagina proprietà è responsabile per la chiamata a metodi nell'interfaccia di pagina di proprietà che indicano alla pagina quando per mostrare o nascondere la relativa interfaccia utente e quando applicare le modifiche apportate dall'utente per gli oggetti sottostanti.  
   
  Ogni pagina delle proprietà può essere compilato completamente indipendente dagli oggetti la cui proprietà possono essere impostate. Una pagina delle proprietà, non richiede che per comprendere una particolare interfaccia (o set di interfacce) e per fornire un'interfaccia utente per la chiamata di metodi in quell'interfaccia.  
   
- Per altre informazioni, vedere [finestre delle proprietà e pagine delle proprietà](http://msdn.microsoft.com/library/windows/desktop/ms686577) nel SDK di Windows.  
+ Per altre informazioni, vedere [finestre delle proprietà e pagine delle proprietà](/windows/desktop/com/property-sheets-and-property-pages) nel SDK di Windows.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Specifica delle pagine delle proprietà](../atl/specifying-property-pages.md)  

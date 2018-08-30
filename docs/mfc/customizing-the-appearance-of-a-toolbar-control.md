@@ -1,5 +1,5 @@
 ---
-title: Personalizzazione dell'aspetto di un controllo Toolbar | Documenti Microsoft
+title: Personalizzazione dell'aspetto di un controllo Toolbar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 54c512bd727b7ef36ee94eb5ccaf3018be692d14
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197695"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizzazione dell'aspetto di un controllo Toolbar
-Classe `CToolBarCtrl` fornisce numerosi stili che interessano l'aspetto (e, in alcuni casi, il comportamento) dell'oggetto della barra degli strumenti. Modificare l'oggetto della barra degli strumenti impostando il `dwCtrlStyle` parametro del `CToolBarCtrl::Create` (o `CToolBar::CreateEx`) la funzione membro, al momento della creazione del controllo toolbar.  
+Classe `CToolBarCtrl` fornisce molti stili che interessano l'aspetto (e, in alcuni casi, il comportamento) dell'oggetto della barra degli strumenti. Modificare l'oggetto della barra degli strumenti, impostando il `dwCtrlStyle` parametro del `CToolBarCtrl::Create` (o `CToolBar::CreateEx`) funzione membro, al momento della creazione del controllo toolbar.  
   
- Gli stili seguenti interessano l'aspetto "3D" dei pulsanti della barra degli strumenti e la posizione del testo del pulsante:  
+ Gli stili seguenti interessano l'aspetto di "3D" dei pulsanti della barra degli strumenti e il posizionamento del testo del pulsante:  
   
--   **TBSTYLE_FLAT** crea una semplice barra degli strumenti in cui sia la barra degli strumenti e i pulsanti sono transparent. Testo del pulsante viene visualizzata sotto le bitmap dei pulsanti. Quando viene utilizzato questo stile, il pulsante sotto il cursore viene automaticamente evidenziato.  
+-   **TBSTYLE_FLAT** consente di creare una semplice barra degli strumenti in cui sia la barra degli strumenti e i pulsanti sono trasparenti. Testo del pulsante viene visualizzata sotto le bitmap dei pulsanti. Quando viene usato questo stile, il pulsante sotto il cursore viene automaticamente evidenziato.  
   
--   **TBSTYLE_TRANSPARENT** crea una barra degli strumenti trasparente. In una barra degli strumenti trasparente, la barra degli strumenti è visibile ma non sono i pulsanti. Testo del pulsante viene visualizzata sotto le bitmap dei pulsanti.  
+-   **TBSTYLE_TRANSPARENT** crea una barra degli strumenti trasparente. In una barra degli strumenti trasparente, la barra degli strumenti è trasparente, ma non sono i pulsanti. Testo del pulsante viene visualizzata sotto le bitmap dei pulsanti.  
   
 -   **TBSTYLE_LIST** posizioni pulsante testo a destra della bitmap di pulsanti.  
   
 > [!NOTE]
 >  Per evitare problemi, il **TBSTYLE_FLAT** e **TBSTYLE_TRANSPARENT** stili devono essere impostati prima che l'oggetto della barra degli strumenti è visibile.  
   
- Gli stili seguenti determinano se la barra degli strumenti consente a un utente riposizionare i singoli pulsanti all'interno di un oggetto barra degli strumenti mediante trascinamento e rilascio:  
+ Gli stili seguenti determinano se la barra degli strumenti consente all'utente di riposizionare i singoli pulsanti all'interno di un oggetto della barra degli strumenti tramite il trascinamento e rilascio:  
   
--   **TBSTYLE_ALTDRAG** consente agli utenti di modificare la posizione del pulsante della barra degli strumenti mediante il trascinamento tenendo premuto ALT. Se questo stile non è specificato, l'utente deve tenere premuto MAIUSC e trascinare un pulsante.  
+-   **TBSTYLE_ALTDRAG** consente agli utenti di modificare posizione di un pulsante barra degli strumenti, trascinarlo tenendo premuto ALT. Se questo stile non viene specificato, l'utente deve tenere premuto MAIUSC e trascinare un pulsante.  
   
     > [!NOTE]
-    >  Il **CCS_ADJUSTABLE** per abilitare i pulsanti della barra degli strumenti essere trascinato è necessario specificare lo stile.  
+    >  Il **CCS_ADJUSTABLE** lo stile deve essere specificato per abilitare i pulsanti della barra degli strumenti trascinare.  
   
--   **TBSTYLE_REGISTERDROP** genera **TBN_GETOBJECT** notifica messaggi per richiedere eliminare oggetti di destinazione quando si passa il puntatore del mouse sui pulsanti della barra degli strumenti.  
+-   **TBSTYLE_REGISTERDROP** enera **TBN_GETOBJECT** notifica i messaggi di richiesta eliminare oggetti di destinazione quando il puntatore del mouse viene spostato sopra i pulsanti della barra degli strumenti.  
   
- Gli stili rimanenti influiscono su aspetti visivi e dell'oggetto della barra degli strumenti:  
+ Gli stili rimanenti influenzare gli aspetti visivi e dell'oggetto della barra degli strumenti:  
   
--   **TBSTYLE_WRAPABLE** crea una barra degli strumenti che può avere più righe di pulsanti. Pulsanti della barra degli strumenti possono "includere" alla riga successiva quando la barra degli strumenti diventa troppo stretta per includere tutti i pulsanti sulla stessa riga. Ritorno a capo avviene nella separazione e l'invio dei limiti.  
+-   **TBSTYLE_WRAPABLE** crea una barra degli strumenti che può avere più righe di pulsanti. I pulsanti della barra degli strumenti possono "wrap" alla riga successiva quando la barra degli strumenti diventa troppo stretta per includere tutti i pulsanti sulla stessa riga. Ritorno a capo si verifica la separazione e l'invio dei limiti.  
   
--   **TBSTYLE_CUSTOMERASE** genera **NM_CUSTOMDRAW** i messaggi di notifica durante l'elaborazione **WM_ERASEBKGND** messaggi.  
+-   **TBSTYLE_CUSTOMERASE** enera **NM_CUSTOMDRAW** quando elabora i messaggi di notifica **WM_ERASEBKGND** messaggi.  
   
--   **TBSTYLE_TOOLTIPS** crea un controllo descrizione comando che un'applicazione può utilizzare per visualizzare il testo descrittivo per i pulsanti sulla barra degli strumenti.  
+-   **TBSTYLE_TOOLTIPS** crea un controllo descrizione comandi che un'applicazione può utilizzare per visualizzare il testo descrittivo per i pulsanti sulla barra degli strumenti.  
   
- Per un elenco completo degli stili della barra degli strumenti e gli stili estesi, vedere [Toolbar (controllo) e stili dei pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb760439) e [sulla barra degli strumenti stili estesi](http://msdn.microsoft.com/library/windows/desktop/bb760430) in Windows SDK.  
+ Per un elenco completo di stili della barra degli strumenti e gli stili estesi, vedere [controllo della barra degli strumenti e stili dei pulsanti](/windows/desktop/Controls/toolbar-control-and-button-styles) e [sulla barra degli strumenti stili estesi](/windows/desktop/Controls/toolbar-extended-styles) nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   

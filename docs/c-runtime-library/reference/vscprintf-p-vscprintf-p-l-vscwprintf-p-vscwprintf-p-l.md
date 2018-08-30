@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da945addb975404a5ea6d1805a8f0abf5d5b9eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49dd74c679e451a658828fcacb55146e3f8d5d17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412905"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200294"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
@@ -100,18 +100,18 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-**vscprintf_p** restituisce il numero di caratteri che verrebbero generati se la stringa puntata dall'elenco di argomenti è stato stampato o inviato a un file o codici buffer usando la formattazione specificati. Il valore restituito non include il carattere Null di terminazione. **vscwprintf_p** esegue la stessa funzione per i caratteri "wide".
+**vscprintf_p** restituisce il numero di caratteri che verrebbero generati se la stringa puntata dall'elenco di argomenti venisse stampato o inviato a un file o i codici di buffer utilizzando la formattazione specificata. Il valore restituito non include il carattere Null di terminazione. **vscwprintf_p** esegue la stessa funzione per i caratteri "wide".
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni differiscono dalle **vscprintf** e **vscwprintf** solo che supportano la possibilità di specificare l'ordine in cui gli argomenti vengono utilizzati. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Queste funzioni differiscono dalle **vscprintf** e **vscwprintf** solo il fatto che supportano la possibilità di specificare l'ordine in cui vengono usati gli argomenti. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
-Se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e impostare **errno** alla **EINVAL**.
+Se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 > [!IMPORTANT]
-> Assicurarsi che, se *formato* è una stringa definita dall'utente, terminata null ed è il numero corretto e il tipo dei parametri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assicurarsi che, se *formato* è una stringa definita dall'utente, è con terminata null e ha il numero corretto e il tipo dei parametri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

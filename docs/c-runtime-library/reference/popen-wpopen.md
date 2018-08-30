@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218386"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -80,26 +80,26 @@ Modalità del flusso restituito.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un flusso associato a un'estremità della pipe creata. L'altra estremità della pipe viene associata all'input standard o all'output standard del comando generato. Le funzioni restituiscono **NULL** in caso di errore. Se l'errore è un parametro non valido, ad esempio se *comando* oppure *modalità* è un puntatore null, o *modalità* non è una modalità valida **errno** è impostata su **EINVAL**. Per informazioni sulle modalità valide, vedere la sezione Note.
+Restituisce un flusso associato a un'estremità della pipe creata. L'altra estremità della pipe viene associata all'input standard o all'output standard del comando generato. Le funzioni restituiscono **NULL** in caso di errore. Se l'errore è un parametro non valido, ad esempio se *comandi* oppure *modalità* è un puntatore null, o *modalità* non è una modalità valida, **errno** è impostato su **EINVAL**. Per informazioni sulle modalità valide, vedere la sezione Note.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **popen** funzione crea un pipe ed esegue in modo asincrono una copia del processore dei comandi con la stringa specificata generata *comando*. La stringa di caratteri *mode* specifica il tipo di accesso richiesto, come segue.
+Il **popen** funzione crea una pipe ed esegue in modo asincrono una copia generata del processore di comando con la stringa specificata *comando*. La stringa di caratteri *mode* specifica il tipo di accesso richiesto, come segue.
 
-**"r"** processo chiamante può leggere l'output standard del comando generato utilizzando il flusso restituito.
+**"r"** il processo chiamante può leggere l'output standard del comando generato usando il flusso restituito.
 
-**"w"** il processo di chiamata può scrivere l'input standard del comando generato utilizzando il flusso restituito.
+**"w"** processo chiamante può scrivere in input standard del comando generato usando il flusso restituito.
 
 **"b"** aperto in modalità binaria.
 
 **"t"** aperto in modalità testo.
 
 > [!NOTE]
-> Se utilizzato in un programma di Windows, il **popen** funzione restituisce un puntatore a file non valido che causa il blocco del programma per un periodo illimitato. **popen** funziona correttamente in un'applicazione console. Per creare un'applicazione Windows che reindirizza l'input e output, vedere [creazione di un processo figlio con reindirizzato Input e Output](http://msdn.microsoft.com/library/windows/desktop/ms682499) in Windows SDK.
+> Se usato in un programma di Windows, il **popen** funzione restituisce un puntatore di file non valido che fa sì che il programma smette di rispondere indefinitamente. **popen** funziona correttamente in un'applicazione console. Per creare un'applicazione Windows che reindirizza input e output, vedere [creazione di un processo figlio con reindirizzato Input e Output](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) nel SDK di Windows.
 
-**wpopen** è una versione a caratteri wide **popen**; il *percorso* argomento **wpopen** è una stringa di caratteri "wide". **wpopen** e **popen** si comportano in modo identico in caso contrario.
+**wpopen** è una versione a caratteri wide di **popen**; gli *percorso* argomento **wpopen** è una stringa di caratteri "wide". **wpopen** e **popen** hanno lo stesso comportamento in caso contrario.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

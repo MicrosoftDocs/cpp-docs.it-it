@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220e2befc40dba342a7f8c2aa4c94294bc667ce0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411422"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221608"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -79,17 +79,17 @@ void _wsplitpath(
 
 *unità* lettera di unità, seguita da due punti (**:**). È possibile passare **NULL** per questo parametro se non è necessaria la lettera di unità.
 
-*dir* percorso della Directory, tra cui barra finale. Barre ( **/** ), barre rovesciate ( **\\** ), o entrambi possono essere utilizzate. È possibile passare **NULL** per questo parametro se non è necessario il percorso della directory.
+*dir* percorso della Directory, inclusa la barra finale. Barre ( **/** ), barre rovesciate ( **\\** ), o entrambi possono essere usati. È possibile passare **NULL** per questo parametro se non è necessario il percorso della directory.
 
 *fname* filename (senza estensione) di Base. È possibile passare **NULL** per questo parametro se non è necessario il nome del file.
 
-*ext* estensione di file, tra cui iniziali periodo (**.**). È possibile passare **NULL** per questo parametro se non è necessaria l'estensione del file.
+*ext* estensione di file, incluso il punto iniziale (**.**). È possibile passare **NULL** per questo parametro se non è necessaria l'estensione del file.
 
 ## <a name="remarks"></a>Note
 
-Il **splitpath** funzione suddivide un percorso nei suoi quattro componenti. **splitpath** gestisce automaticamente gli argomenti di stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **wsplitpath** è una versione a caratteri wide **splitpath**; gli argomenti da **wsplitpath** sono stringhe a caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+Il **splitpath** funzione suddivide un percorso nei suoi quattro componenti. **splitpath** gestisce automaticamente gli argomenti stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **wsplitpath** è una versione a caratteri wide di **splitpath**; gli argomenti **wsplitpath** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
-**Nota sulla sicurezza** Queste funzioni sono esposte a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795). Sono disponibili versioni più sicure di queste funzioni. Vedere [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+**Nota sulla sicurezza** Queste funzioni sono esposte a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns). Sono disponibili versioni più sicure di queste funzioni. Vedere [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -97,7 +97,7 @@ Il **splitpath** funzione suddivide un percorso nei suoi quattro componenti. **s
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Ogni componente del percorso completo è archiviata in un buffer separato; le costanti manifesto **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definita in STDLIB. H) specificare le dimensioni massime per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
+Ogni componente del percorso completo è archiviato in un buffer separato; le costanti manifeste **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definito in STDLIB. H) specificare le dimensioni massime per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
 
 Ogni buffer deve essere di dimensioni pari alla costante manifesta corrispondente per evitare potenziali sovraccarichi del buffer.
 
@@ -110,11 +110,11 @@ La tabella seguente elenca i valori delle costanti manifeste.
 |**MAX_FNAME**|256|
 |**MAX_EXT**|256|
 
-Se il percorso completo non contiene un componente (ad esempio, un nome file), **splitpath** assegna stringhe ai buffer di corrispondente vuote.
+Se il percorso completo non contiene un componente (ad esempio, un nome di file), **splitpath** assegna stringhe vuote ai buffer corrispondenti.
 
-È possibile passare **NULL** alla **splitpath** per qualsiasi parametro diverso da *percorso* che non è necessario.
+È possibile passare **NULL** al **splitpath** per qualsiasi parametro diverso da *percorso* che non è necessario.
 
-Se *percorso* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EINVAL**.
+Se *tracciato* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

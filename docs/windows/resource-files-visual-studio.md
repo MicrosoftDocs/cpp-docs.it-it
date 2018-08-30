@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e07849c151cf2e361324a83b86bf98c24525f4ce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220686"
 ---
 # <a name="resource-files-visual-studio"></a>File di risorse (Visual Studio)
 
 > [!NOTE]
-> Questo materiale si riferisce alle applicazioni desktop di Windows. Per informazioni sulle risorse nelle App della piattaforma Windows universale, vedere [definizione delle risorse dell'App](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Questo materiale si riferisce alle applicazioni desktop di Windows. Per informazioni sulle risorse nelle App della piattaforma Windows universale, vedere [definizione delle risorse dell'App](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 >
@@ -97,4 +97,4 @@ Win32
 
 [Editor di risorse](../windows/resource-editors.md)  
 [Uso di file di risorse](../windows/working-with-resource-files.md)  
-[Menu e altre risorse](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menu e altre risorse](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

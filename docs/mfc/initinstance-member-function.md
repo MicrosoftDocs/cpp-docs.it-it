@@ -1,5 +1,5 @@
 ---
-title: Funzione membro InitInstance | Documenti Microsoft
+title: Funzione membro InitInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9379fef6a1d676d6a3bc757ee51d5d27acd5f6f
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d026665a48d038092031bf4b632b7ef676124196
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930176"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198175"
 ---
 # <a name="initinstance-member-function"></a>Funzione membro InitInstance
-Il sistema operativo Windows consente di eseguire più copie, o "istanza" della stessa applicazione. `WinMain` le chiamate [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ogni volta che viene avviata una nuova istanza dell'applicazione.  
+Il sistema operativo Windows consente di eseguire più copie, o "istanza", della stessa applicazione. `WinMain` le chiamate [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ogni volta che viene avviata una nuova istanza dell'applicazione.  
   
- Lo standard `InitInstance` implementazione creato dalla creazione guidata applicazione MFC vengono eseguite le attività seguenti:  
+ Lo standard `InitInstance` implementazione creato dalla creazione guidata applicazione MFC effettua le seguenti attività:  
   
--   Come l'azione centrale, crea i modelli di documento che a sua volta creare documenti, visualizzazioni e finestre cornice. Per una descrizione di questo processo, vedere [creazione di modelli di documento](../mfc/document-template-creation.md).  
+-   Come l'azione centrale, vengono creati i modelli di documento che a sua volta creare documenti, visualizzazioni e finestre cornice. Per una descrizione di questo processo, vedere [creazione di modelli di documento](../mfc/document-template-creation.md).  
   
--   Carica le opzioni standard del file da un file. ini o del Registro di sistema Windows, inclusi i nomi dei file usati di recente.  
+-   Carica le opzioni standard di file da un file. ini o del Registro di sistema Windows, inclusi i nomi dei file utilizzati di recente.  
   
--   Consente di registrare uno o più modelli di documento.  
+-   Registra uno o più modelli di documento.  
   
 -   Per un'applicazione MDI, crea una finestra cornice principale.  
   
 -   Elabora la riga di comando per aprire un documento specificato nella riga di comando o per aprire un nuovo documento vuoto.  
   
- È possibile aggiungere il codice di inizializzazione o modificare il codice scritto dalla procedura guidata.  
+ È possibile aggiungere il proprio codice di inizializzazione o modificare il codice scritto per la procedura guidata.  
   
 > [!NOTE]
->  MFC (applicazioni) devono essere inizializzate come apartment a thread singolo (STA). Se si chiama [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) nel `InitInstance` eseguire l'override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED). Per altre informazioni, vedere PRB: applicazione MFC si blocca quando si inizializza l'applicazione come a multithreading Apartment (828643) nella [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Le applicazioni MFC devono essere inizializzate come apartment a thread singolo (STA). Se si chiama [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) nel `InitInstance` eseguire l'override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED). Per altre informazioni, vedere PRB: applicazioni MFC si blocca quando si inizializza l'applicazione come un multithreading Apartment (828643) nella [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CWinApp: classe Application](../mfc/cwinapp-the-application-class.md)

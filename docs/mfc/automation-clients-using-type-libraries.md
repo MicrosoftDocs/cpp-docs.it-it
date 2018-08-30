@@ -1,5 +1,5 @@
 ---
-title: 'Client di automazione: Utilizzo delle librerie dei tipi | Documenti Microsoft'
+title: 'Client di automazione: Utilizzo delle librerie dei tipi | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,44 +24,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fa0f5d164ae325caff576fb41695fc8689fda0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3899fd61426e9b07294f624f7f3ce68c2acc002b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342589"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198646"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Client di automazione: utilizzo delle librerie dei tipi
-I client di automazione devono disporre di informazioni sulle proprietà e metodi degli oggetti del server se i client sono di gestire gli oggetti dei server. Le proprietà dispongono di tipi di dati. metodi spesso restituiscono valori e accettano parametri. Il client richiede informazioni sui tipi di dati di tutti questi per associare in modo statico per il tipo di oggetto server.  
+I client di automazione devono avere informazioni sui metodi e proprietà degli oggetti server se i client sono modificare oggetti dei server. Le proprietà hanno tipi di dati. metodi spesso valori restituiscono e accettano parametri. Il client richiede informazioni sui tipi di dati di tutti questi elementi per associare in modo statico al tipo di oggetto server.  
   
- Questo tipo di informazioni può essere resa nota in diversi modi. Il metodo consigliato consiste nel creare una libreria dei tipi.  
+ Questo tipo di informazioni può essere resa nota in diversi modi. Il modo consigliato consiste nel creare una libreria dei tipi.  
   
- Per informazioni su [MkTypLib](http://msdn.microsoft.com/library/windows/desktop/aa366797), vedi il Windows SDK.  
+ Per informazioni sul [MkTypLib](/windows/desktop/Midl/differences-between-midl-and-mktyplib), vedi il Windows SDK.  
   
- Visual C++ può leggere un file di libreria dei tipi e creare una classe di invio derivata da [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Un oggetto di tale classe include proprietà e le operazioni di duplicazione di quelle dell'oggetto server. L'applicazione chiama operazioni e le proprietà di questo oggetto e funzionalità ereditate da `COleDispatchDriver` instrada queste chiamate al sistema OLE, che a sua volta li invia all'oggetto server.  
+ Visual C++ può leggere un file di libreria dei tipi e creare una classe di invio derivata da [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Un oggetto di tale classe dispone di proprietà e operazioni che duplicano quelli dell'oggetto server. L'applicazione chiama operazioni e proprietà di questo oggetto e funzionalità ereditata da `COleDispatchDriver` instrada le chiamate al sistema OLE, che a sua volta li invia all'oggetto server.  
   
- Se si è scelto di includere l'automazione quando è stato creato il progetto, Visual C++ gestisce automaticamente questo file della libreria dei tipi per l'utente. Come parte della compilazione, verrà generato il file con estensione tlb con MkTypLib.  
+ Se si sceglie di includere l'automazione durante la creazione del progetto, Visual C++ gestisce automaticamente questo file di libreria dei tipi per l'utente. Come parte di ogni compilazione, il file con estensione tlb verrà essere compilato con MkTypLib.  
   
 ### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>Per creare una classe di invio da un file di libreria dei tipi (tlb)  
   
-1.  In visualizzazione classi o Esplora soluzioni, fare clic sul progetto e fare clic su **Aggiungi** e quindi fare clic su **Aggiungi classe** nel menu di scelta rapida.  
+1.  In visualizzazione classi o Esplora soluzioni, fare clic sul progetto e fare clic su **Add** e quindi fare clic su **Aggiungi classe** menu di scelta rapida.  
   
-2.  Nel **Aggiungi classe** la finestra di dialogo, seleziona il **Visual c++ c++ MFC** cartella nel riquadro a sinistra. Selezionare il **MFC classe da libreria dei tipi** icona dal riquadro destro, quindi fare clic su **aprire**.  
+2.  Nel **Aggiungi classe** finestra di dialogo, seleziona la **di Visual c++ /Visual c++ /CLI MFC** cartella nel riquadro sinistro. Selezionare il **MFC classe da libreria dei tipi** icona dal riquadro destro, quindi fare clic su **Open**.  
   
-3.  Nel **Aggiunta guidata classe da libreria dei tipi** finestra di dialogo, selezionare una libreria dei tipi dal **librerie dei tipi disponibili** elenco a discesa. Il **interfacce** le interfacce disponibili per la libreria selezionata viene visualizzata.  
+3.  Nel **Aggiunta guidata classe da libreria dei tipi** finestra di dialogo, selezionare una libreria dei tipi dalle **librerie dei tipi disponibili** elenco a discesa. Il **interfacce** le interfacce disponibili per la libreria dei tipi selezionata viene visualizzata la finestra.  
   
     > [!NOTE]
     >  È possibile selezionare le interfacce da più di una libreria dei tipi.  
   
-     Per selezionare le interfacce, fare doppio clic o fare clic su di **Aggiungi** pulsante. Quando si esegue questa operazione, i nomi per le classi di recapito verranno visualizzati nel **classi generate** casella. È possibile modificare i nomi delle classi nel `Class` casella.  
+     Per selezionare le interfacce, fare doppio clic su essi oppure scegliere il **Add** pulsante. Quando si esegue questa operazione, i nomi per le classi di recapito verranno visualizzati nei **le classi generate** casella. È possibile modificare i nomi delle classi nel `Class` casella.  
   
-     Il **File** casella viene visualizzato il file in cui viene dichiarata la classe. (è possibile modificare anche il nome del file). È inoltre possibile utilizzare il pulsante Sfoglia per selezionare altri file, se si preferisce che le informazioni di intestazione e di implementazione scritte in un file esistente o in una directory diversa dalla directory del progetto.  
-  
-    > [!NOTE]
-    >  Tutte le classi di recapito per le interfacce selezionate verranno inserite nel file specificato qui. Se si desidera essere dichiarato in intestazioni separate le interfacce, è necessario eseguire questa procedura guidata per ogni file di intestazione da creare.  
+     Il **File** casella viene visualizzato il file in cui viene dichiarata la classe. (è possibile modificare anche il nome del file). È anche possibile usare il pulsante Sfoglia per selezionare altri file, se si preferisce che le informazioni di intestazione e di implementazione scritte nei file esistenti o in una directory diversa dalla directory del progetto.  
   
     > [!NOTE]
-    >  Alcune informazioni sul tipo di libreria possono essere archiviati in file con. DLL. OCX, o. Estensioni di file OLB.  
+    >  Tutte le classi di distribuzione per le interfacce selezionate verranno inserite nel file specificato qui. Se si desidera che le interfacce per essere dichiarata in intestazioni separate, è necessario eseguire questa procedura guidata per ogni file di intestazione da creare.  
+  
+    > [!NOTE]
+    >  Alcune informazioni di tipo libreria possono essere archiviati nei file con. DLL. OCX, o. Estensioni di file OLB.  
   
 4.  Scegliere **Fine**.  
   

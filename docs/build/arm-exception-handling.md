@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209118"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205703"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
@@ -25,7 +25,7 @@ Windows su architetture ARM usa lo stesso meccanismo di gestione strutturata del
 
 ## <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
-Windows su ARM Usa *codici di rimozione* per controllare la rimozione dello stack durante [gestione delle eccezioni strutturata](http://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). I codici di rimozione sono sequenze di byte memorizzate nella sezione .xdata dell'immagine eseguibile. Descrivono il funzionamento del codice di prologo ed epilogo della funzione in modo astratto, affinché sia possibile annullare gli effetti del prologo di una funzione in previsione della rimozione fino allo stack frame del chiamante.
+Windows su ARM Usa *codici di rimozione* per controllare la rimozione dello stack durante [gestione delle eccezioni strutturata](https://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). I codici di rimozione sono sequenze di byte memorizzate nella sezione .xdata dell'immagine eseguibile. Descrivono il funzionamento del codice di prologo ed epilogo della funzione in modo astratto, affinché sia possibile annullare gli effetti del prologo di una funzione in previsione della rimozione fino allo stack frame del chiamante.
 
 L'interfaccia EABI (Embedded Application Binary Interface) ARM specifica un modello di rimozione delle eccezioni che usa i codici di rimozione, ma non è sufficiente per la rimozione SEH in Windows, che deve gestire i casi asincroni in cui il processore è al centro del prologo o dell'epilogo di una funzione. Windows suddivide inoltre il controllo della rimozione in rimozione a livello di funzione e rimozione con ambito specifico del linguaggio, unificate nell'interfaccia EABI ARM. Per queste ragioni Windows su ARM specifica maggiori dettagli per i dati e la procedura di rimozione.
 

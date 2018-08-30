@@ -1,7 +1,7 @@
 ---
-title: Compilatore avviso (livello 1) C4951 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4951 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ebf012338bdf6b90cc943e754056335c6751a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e26c4bc176a54f063a3f9bce2faf451a9c0406f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290465"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204235"
 ---
 # <a name="compiler-warning-level-1-c4951"></a>Avviso del compilatore (livello 1) C4951
-'function' è stato modificato dopo la raccolta dei dati di profilo, dati di profilo della funzione non utilizzati  
-  
- Una funzione è stata modificata in un modulo di input per [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), di conseguenza, i dati del profilo non sono più validi. Il modulo di input è stato ricompilato dopo l'operazione **/LTCG:PGINSTRUMENT** e ha una funzione (***funzione***) con un flusso di controllo diverso da quello presente nel modulo al momento dell'operazione **/LTCG:PGINSTRUMENT** .  
-  
- Si tratta di un avviso informativo. Per risolvere il problema, eseguire **/LTCG:PGINSTRUMENT**, ripetere tutte le esecuzioni dei test ed eseguire **/LTCG:PGOPTIMIZE**.  
-  
- Se fosse stata usata **/LTCG:PGOPTIMIZE** , al posto di questo avviso sarebbe comparso un errore.
+
+> «*funzione*' è stato modificato dopo la raccolta dei dati, profilo dati di profilo di funzione non utilizzati
+
+Una funzione è stata modificata in un modulo di input per [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), di conseguenza, i dati del profilo non sono più validi. Il modulo di input è stato ricompilato dopo **/LTCG: PGINSTRUMENT** e ha una funzione (*funzione*) con un flusso di controllo diverso da quello presente nel modulo al momento del **/LTCG: PGINSTRUMENT**  operazione.
+
+Si tratta di un avviso informativo. Per risolvere il problema, eseguire **/LTCG:PGINSTRUMENT**, ripetere tutte le esecuzioni dei test ed eseguire **/LTCG:PGOPTIMIZE**.
+
+Se fosse stata usata **/LTCG:PGOPTIMIZE** , al posto di questo avviso sarebbe comparso un errore.

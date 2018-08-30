@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 089fe435c86b524acc41ba528452d93032d1b1a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850566"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214493"
 ---
 # <a name="colechangeicondialog-class"></a>Classe COleChangeIconDialog
 Utilizzato per la finestra di dialogo di modifica dell'icona OLE.  
@@ -67,7 +67,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="remarks"></a>Note  
  Creare un oggetto della classe `COleChangeIconDialog` quando si desidera chiamare questa finestra di dialogo. Dopo una `COleChangeIconDialog` oggetto è stato costruito, è possibile usare il [m_ci](#m_ci) struttura per inizializzare i valori o degli stati dei controlli nella finestra di dialogo. Il `m_ci` struttura è di tipo OLEUICHANGEICON. Per altre informazioni sull'uso di questa classe di finestra di dialogo, vedere la [DoModal](#domodal) funzione membro.  
   
- Per altre informazioni, vedere la [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struttura nel SDK di Windows.  
   
  Per altre informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleChangeIconDialog(
 ### <a name="remarks"></a>Note  
  Per visualizzare la finestra di dialogo, chiamare il [DoModal](#domodal) (funzione).  
   
- Per altre informazioni, vedere la [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struttura nel SDK di Windows.  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Chiamare questa funzione per modificare l'icona che rappresenta l'elemento a quello selezionato nella finestra di dialogo dopo aver [DoModal](#domodal) restituisce IDOK.  
@@ -152,7 +152,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, se l'utente ha annullato la finestra di dialogo.  
   
-- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il `COleDialog::GetLastError` funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) funzione nel SDK di Windows.  
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il `COleDialog::GetLastError` funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) funzione nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
  Se si desidera inizializzare i vari controlli di finestra di dialogo impostando i membri del [m_ci](#m_ci) struttura, è necessario eseguire questa operazione prima di chiamare `DoModal`, ma dopo che viene costruito l'oggetto finestra di dialogo.  
@@ -179,7 +179,7 @@ OLEUICHANGEICON m_ci;
 ### <a name="remarks"></a>Note  
  I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.  
   
- Per altre informazioni, vedere la [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struttura nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)   

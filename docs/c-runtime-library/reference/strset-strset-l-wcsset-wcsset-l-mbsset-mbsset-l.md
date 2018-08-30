@@ -69,19 +69,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db6c1711931e7ac017e9d55a64e317e4e4520335
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 53096465b346403d62638e6e24a1609759a78d73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414337"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206583"
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
 Imposta i caratteri di una stringa su un carattere. Sono disponibili versioni più sicure di queste funzioni; vedere [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).
 
 > [!IMPORTANT]
-> **mbsset** e **mbsset_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsset** e **mbsset_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -132,14 +132,14 @@ Restituisce un puntatore alla stringa modificata.
 
 ## <a name="remarks"></a>Note
 
-Il **strset** funzione imposta tutti i caratteri (tranne il carattere di terminazione null) di *str* al *c*, convertito in **char**. **wcsset** e **mbsset_l** sono versioni a caratteri wide e caratteri multibyte di **strset**, e i tipi di dati degli argomenti e valori restituiti variano di conseguenza. A parte ciò, queste funzioni si comportano in modo identico.
+Il **strset** funzione imposta tutti i caratteri (tranne il carattere di terminazione null) del *str* al *c*, convertita in **char**. **wcsset** e **mbsset_l** sono versioni a caratteri wide e caratteri multibyte di **strset**, e i tipi di dati degli argomenti e valori restituiti variano di conseguenza. A parte ciò, queste funzioni si comportano in modo identico.
 
-**mbsset** convalida i propri parametri. Se *str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **mbsset** restituisce **NULL** e imposta **errno** a **EINVAL**. **strset** e **wcsset** non convalidano i relativi parametri.
+**mbsset** convalida i propri parametri. Se *str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **mbsset** restituisce **NULL** e imposta **errno** al **EINVAL**. **strset** e **wcsset** non convalidano i relativi parametri.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno il **l** suffisso utilizzare le impostazioni locali correnti, mentre quelle che hanno il **l** suffisso usano il parametro delle impostazioni locali che passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali; vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno le **l** suffisso usano le impostazioni locali correnti, mentre quelle che hanno il **l** suffisso usano il parametro delle impostazioni locali di passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

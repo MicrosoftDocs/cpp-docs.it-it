@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4076 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4076 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa28469e099dbf2b6bd43213073c304d0b2894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275473"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198478"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>Avviso del compilatore (livello 1) C4076
-'typemod': non può essere utilizzato con il tipo 'typename'  
-  
- Non è possibile usare un modificatore di tipo, **signed** o `unsigned`, con un tipo non intero. ***typemod*** viene ignorato.  
+
+> «*modificatore di tipo*': non può essere utilizzato con il tipo '*nomeTipo*»
+
+## <a name="remarks"></a>Note
+
+Un modificatore di tipo, se si tratta **firmato** oppure **unsigned**, non può essere usato con un tipo non integer. *modificatore di tipo* viene ignorato.
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4076:  
-  
-```  
+
+L'esempio seguente genera l'errore C4076; Per risolvere il problema, rimuovere il **unsigned** modificatore di tipo:
+
+```cpp
 // C4076.cpp  
 // compile with: /W1 /LD  
 unsigned double x;   // C4076  

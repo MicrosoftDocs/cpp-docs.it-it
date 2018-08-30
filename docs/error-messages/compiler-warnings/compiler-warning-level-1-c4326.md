@@ -1,7 +1,7 @@
 ---
-title: Compilatore (livello 1) avviso C4326 | Documenti Microsoft
+title: Del compilatore (livello 1) avviso C4326 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 838c79d6ba897905dad18788adc5ee682ff2fa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cee18a9ccc807370cf2fb40748939f211a4ba52f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283130"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211004"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>Avviso del compilatore (livello 1) C4326
-tipo restituito di 'function' deve essere 'type1' anziché 'type2'  
-  
- Una funzione ha restituito un tipo diverso da ***type1***. Ad esempio, usando [/Za](../../build/reference/za-ze-disable-language-extensions.md), principale non ha restituito un `int`.  
-  
- L'esempio seguente genera l'errore C4326:  
-  
-```  
-// C4326.cpp  
-// compile with: /Za /W1  
-char main()  
-{   // C4326 try int main  
-}  
+
+> tipo restituito di '*funzione*'deve essere'*type1*'invece di'*type2*'
+
+## <a name="remarks"></a>Note
+
+Una funzione ha restituito un tipo diverso da *type1*. Ad esempio, usando [/Za](../../build/reference/za-ze-disable-language-extensions.md), **principale** non ha restituito un **int**.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4326 e Mostra come risolverlo:
+
+```cpp
+// C4326.cpp
+// compile with: /Za /W1
+char main()
+{
+    // C4326, instead use int main()
+}
 ```

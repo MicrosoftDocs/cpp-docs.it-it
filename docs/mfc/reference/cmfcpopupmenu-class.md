@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539449"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204212"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 Implementa la funzionalità del menu di scelta rapida di Windows e la estende aggiungendo funzionalità quali menu con barra a comparsa e descrizioni comandi.
@@ -510,7 +510,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  TRUE per abilitare il suono, FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Se si abilita il suono, il framework chiama il [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) metodo quando un utente apre un menu a comparsa o seleziona un comando di menu. Per impostazione predefinita, questa funzionalità è abilitata.  
+ Se si abilita il suono, il framework chiama il [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) metodo quando un utente apre un menu a comparsa o seleziona un comando di menu. Per impostazione predefinita, questa funzionalità è abilitata.  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 

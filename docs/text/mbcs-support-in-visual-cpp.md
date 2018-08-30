@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608680"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205196"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Supporto per MBCS in Visual C++
 Quando eseguito su una versione di Windows, il sistema di sviluppo di Visual C++ (inclusi gli strumenti dell'editor, debugger e riga di comando del codice sorgente integrato) è abilitata per MBCS, fatta eccezione per la finestra di memoria.  
@@ -47,7 +47,7 @@ Quando eseguito su una versione di Windows, il sistema di sviluppo di Visual C++
  Visual C++ accetta i caratteri a byte doppio ogni volta che è opportuno eseguire questa operazione. Nelle voci di testo nell'editor di risorse di Visual C++ (ad esempio, testo statico nell'editor finestre) e le voci di testo statico nell'editor delle icone e finestre di dialogo sono inclusi i nomi di percorso e i nomi di file. Inoltre, il preprocessore riconosce alcune direttive DBCS:, ad esempio, nomi di file nei `#include` (istruzioni) e come argomenti per il `code_seg` e `data_seg` pragma. Nell'editor del codice sorgente, vengono accettate caratteri DBCS in commenti e i valori letterali stringa, anche se non è in elementi del linguaggio C/C++ (ad esempio i nomi delle variabili).  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Supporto per l'Input Method Editor (IME)  
- Applicazioni scritte per i mercati dell'est asiatico che usano in genere MBCS (ad esempio, Giappone) supportano l'IME di Windows per l'immissione di entrambi i caratteri a byte singolo e double. L'ambiente di sviluppo di Visual C++ include il supporto completo per IME. Per altre informazioni, vedere [IME esempio: dimostrazione del controllo della modalità IME e dell'implementazione del livello IME 3](http://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
+ Applicazioni scritte per i mercati dell'est asiatico che usano in genere MBCS (ad esempio, Giappone) supportano l'IME di Windows per l'immissione di entrambi i caratteri a byte singolo e double. L'ambiente di sviluppo di Visual C++ include il supporto completo per IME. Per altre informazioni, vedere [IME esempio: dimostrazione del controllo della modalità IME e dell'implementazione del livello IME 3](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
   
  Le tastiere giapponesi non supportano direttamente i caratteri Kanji. L'IME converte una stringa fonetica, inserita in uno degli altri alfabeti giapponesi (Romaji, Katakana e Hiragana) relative rappresentazioni Kanji possibili. Se è presente l'ambiguità, è possibile selezionare tra diverse alternative. Dopo aver selezionato il carattere Kanji desiderato, l'IME passa due `WM_CHAR` messaggi all'applicazione di controllo.  
   

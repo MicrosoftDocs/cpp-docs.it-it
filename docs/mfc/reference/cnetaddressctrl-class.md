@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1d1e9a04a660da44f1c447dcd6ec388ba791958c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540617"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214921"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 La classe `CNetAddressCtrl` rappresenta il controllo indirizzo di rete, che è possibile utilizzare per immettere e convalidare il formato di indirizzi IPv4, IPv6 e DNS denominati.  
@@ -80,7 +80,7 @@ class CNetAddressCtrl : public CEdit
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio di codice seguente dal file di intestazione dialogo definisce la [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) e [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) variabili necessarie per il [CNetAddressCtrl::GetAddress](#getaddress)metodo.  
+ L'esempio di codice seguente dal file di intestazione dialogo definisce la [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) e [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) variabili necessarie per il [CNetAddressCtrl::GetAddress](#getaddress)metodo.  
   
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]  
   
@@ -128,7 +128,7 @@ virtual BOOL Create(
 |Parametro|Descrizione|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Combinazione bit per bit di stili da applicare al controllo. Per altre informazioni, vedere [modifica stili](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
+|[in] *rect*|Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
 |[in] *pParentWnd*|Un puntatore non null a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo.|  
 |[in] *nID*|L'ID del controllo.|  
   
@@ -151,9 +151,9 @@ virtual BOOL CreateEx(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Una combinazione bit per bit (OR) di stili estesi da applicare al controllo. Per altre informazioni, vedere la *dwExStyle* parametro delle [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) (funzione).|  
+|[in] *dwExStyle*|Una combinazione bit per bit (OR) di stili estesi da applicare al controllo. Per altre informazioni, vedere la *dwExStyle* parametro delle [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) (funzione).|  
 |[in] *dwStyle*|Una combinazione bit per bit (OR) di stili da applicare al controllo. Per altre informazioni, vedere [modifica stili](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
+|[in] *rect*|Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
 |[in] *pParentWnd*|Un puntatore non null a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo.|  
 |[in] *nID*|L'ID del controllo.|  
   
@@ -173,7 +173,7 @@ HRESULT DisplayErrorTip();
 ### <a name="remarks"></a>Note  
  Usare la [CNetAddressCtrl::SetAllowType](#setallowtype) metodo per specificare i tipi di indirizzi in grado di supportare il controllo di indirizzo di rete corrente. Usare la [CNetAddressCtrl::GetAddress](#getaddress) metodo per convalidare e analizzare l'indirizzo di rete immessi dall'utente. Usare la [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodo per visualizzare una finestra popup messaggio di errore se il [CNetAddressCtrl::GetAddress](#getaddress) metodo ha esito negativo.  
   
- Questo messaggio richiama il [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) (macro), che è descritti nel SDK di Windows. Invia tale macro di `NCM_DISPLAYERRORTIP` messaggio.  
+ Questo messaggio richiama il [NetAddr_DisplayErrorTip](/windows/desktop/api/shellapi/nf-shellapi-netaddr_displayerrortip) (macro), che è descritti nel SDK di Windows. Invia tale macro di `NCM_DISPLAYERRORTIP` messaggio.  
   
 ##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress  
  Recupera una rappresentazione convalidata e analizzata dell'indirizzo di rete è associato il controllo di indirizzo di rete corrente.  
@@ -186,17 +186,17 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in, out] *pAddress*|Puntatore a un [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) struttura.  Impostare il *pAddrInfo* membro della struttura all'indirizzo di un [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) struttura prima di chiamare il metodo GetAddress.|  
+|[in, out] *pAddress*|Puntatore a un [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struttura.  Impostare il *pAddrInfo* membro della struttura all'indirizzo di un [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struttura prima di chiamare il metodo GetAddress.|  
   
 ### <a name="return-value"></a>Valore restituito  
- Il valore S_OK se questo metodo ha esito positivo; in caso contrario, un codice di errore COM. Per altre informazioni sui possibili codici di errore, vedere la sezione di valore restituito del [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro.  
+ Il valore S_OK se questo metodo ha esito positivo; in caso contrario, un codice di errore COM. Per altre informazioni sui possibili codici di errore, vedere la sezione di valore restituito del [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) macro.  
   
 ### <a name="remarks"></a>Note  
- Se questo metodo ha esito positivo, il [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) struttura contiene informazioni aggiuntive sull'indirizzo di rete.  
+ Se questo metodo ha esito positivo, il [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struttura contiene informazioni aggiuntive sull'indirizzo di rete.  
   
  Usare la [CNetAddressCtrl::SetAllowType](#setallowtype) metodo per specificare i tipi di indirizzi può supportare il controllo di indirizzo di rete corrente. Usare la [CNetAddressCtrl::GetAddress](#getaddress) metodo per convalidare e analizzare l'indirizzo di rete immessi dall'utente. Usare la [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodo per visualizzare una finestra popup messaggio di errore se il [CNetAddressCtrl::GetAddress](#getaddress) metodo ha esito negativo.  
   
- Questo metodo richiama il [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) (macro), che è descritti nel SDK di Windows. Tale macro invia il messaggio NCM_GETADDRESS.  
+ Questo metodo richiama il [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) (macro), che è descritti nel SDK di Windows. Tale macro invia il messaggio NCM_GETADDRESS.  
   
 ##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType  
  Recupera il tipo di indirizzo di rete in grado di supportare il controllo di indirizzo di rete corrente.  
@@ -206,10 +206,10 @@ DWORD GetAllowType() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Una combinazione bit per bit (OR) di flag che specifica i tipi di indirizzi può supportare il controllo di indirizzo di rete. Per altre informazioni, vedere [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
+ Una combinazione bit per bit (OR) di flag che specifica i tipi di indirizzi può supportare il controllo di indirizzo di rete. Per altre informazioni, vedere [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).  
   
 ### <a name="remarks"></a>Note  
- Questo messaggio richiama il [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) (macro), che è descritti nel SDK di Windows. Tale macro invia il messaggio NCM_GETALLOWTYPE.  
+ Questo messaggio richiama il [NetAddr_GetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getallowtype) (macro), che è descritti nel SDK di Windows. Tale macro invia il messaggio NCM_GETALLOWTYPE.  
   
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  Imposta il tipo di indirizzo di rete in grado di supportare il controllo di indirizzo di rete corrente.  
@@ -222,7 +222,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *dwAddrMask*|Una combinazione bit per bit (OR) di flag che specifica i tipi di indirizzi può supportare il controllo di indirizzo di rete. Per altre informazioni, vedere [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+|[in] *dwAddrMask*|Una combinazione bit per bit (OR) di flag che specifica i tipi di indirizzi può supportare il controllo di indirizzo di rete. Per altre informazioni, vedere [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Valore restituito  
  S_OK se questo metodo ha esito positivo; in caso contrario, un codice di errore COM.  
@@ -230,7 +230,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 ### <a name="remarks"></a>Note  
  Usare la [CNetAddressCtrl::SetAllowType](#setallowtype) metodo per specificare i tipi di indirizzi in grado di supportare il controllo di indirizzo di rete corrente. Usare la [CNetAddressCtrl::GetAddress](#getaddress) metodo per convalidare e analizzare l'indirizzo di rete immessi dall'utente. Usare la [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodo per visualizzare una finestra popup messaggio di errore se il [CNetAddressCtrl::GetAddress](#getaddress) metodo ha esito negativo.  
   
- Questo messaggio richiama il [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) (macro), che è descritti nel SDK di Windows. Tale macro invia il messaggio NCM_SETALLOWTYPE.  
+ Questo messaggio richiama il [NetAddr_SetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_setallowtype) (macro), che è descritti nel SDK di Windows. Tale macro invia il messaggio NCM_SETALLOWTYPE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)   

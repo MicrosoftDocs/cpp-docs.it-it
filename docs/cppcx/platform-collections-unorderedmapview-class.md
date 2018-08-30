@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613574"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203028"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 Rappresenta una visualizzazione di sola lettura in una *mappa*, che rappresenta una raccolta di coppie chiave-valore.  
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **Spazio dei nomi:** Platform::Collections  
 
 ## <a name="first"></a>  Metodo UnorderedMapView::First
-Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento della mappa non ordinata.  
+Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento della mappa non ordinata.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  Metodo UnorderedMapView::Size
-Restituisce il numero di [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementi in UnorderedMapView.  
+Restituisce il numero di [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementi in UnorderedMapView.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  Typename dell'oggetto UnorderedMapView.  
   
  `H`  
- Oggetto funzione che può eseguire l'hash di un valore per una chiave. Per impostazione predefinita [std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) per i tipi che `std::hash` supporta.  
+ Oggetto funzione che può eseguire l'hash di un valore per una chiave. Per impostazione predefinita [std:: hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) per i tipi che `std::hash` supporta.  
   
  `P`  
  Tipo che fornisce un oggetto funzione che può confrontare due chiavi per determinare la loro uguaglianza. Per impostazione predefinita [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  

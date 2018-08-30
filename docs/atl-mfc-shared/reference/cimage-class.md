@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8217ee5bdcad15a2c0b89f95000360b979e094ea
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3443c85ce7f3f12e334e074e1ce37c9cab2ce9d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883619"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213614"
 ---
 # <a name="cimage-class"></a>CImage (classe)
 `CImage` Fornisce il supporto avanzato per le bitmap, inclusa la possibilità di caricare e salvare le immagini in formato JPEG, GIF, BMP e grafica PNG (Portable Network).  
@@ -263,7 +263,7 @@ BOOL AlphaBlend(
  La funzione di fusione alfa per origine e destinazione bitmap, un valore alfa globale da applicare per l'intera origine bitmap e informazioni sul formato di bitmap di origine. Le funzioni di blend di origine e destinazione sono attualmente limitate ai AC_SRC_OVER.  
   
  *pointDest*  
- Un riferimento a un [punto](http://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.  
+ Un riferimento a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.  
   
  *nDestWidth*  
  La larghezza, in unità logiche, del rettangolo di destinazione.  
@@ -284,7 +284,7 @@ BOOL AlphaBlend(
  Altezza, in unità logiche, del rettangolo di origine.  
   
  *rectDest*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
   
  *rectSrc*  
  Un riferimento a un `RECT` struttura, che identifica l'origine.  
@@ -363,10 +363,10 @@ BOOL BitBlt(
  La logica coordinata y dell'angolo superiore sinistro del rettangolo di destinazione.  
   
  *dwROP*  
- L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello attualmente selezionato) per formare la destinazione. Visualizzare [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) nel SDK di Windows per un elenco di altri codici di operazione raster e le relative descrizioni.  
+ L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello attualmente selezionato) per formare la destinazione. Visualizzare [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) nel SDK di Windows per un elenco di altri codici di operazione raster e le relative descrizioni.  
   
  *pointDest*  
- Oggetto [punto](http://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che indica l'angolo superiore sinistro del rettangolo di destinazione.  
+ Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che indica l'angolo superiore sinistro del rettangolo di destinazione.  
   
  *nDestWidth*  
  La larghezza, in unità logiche, del rettangolo di destinazione.  
@@ -381,7 +381,7 @@ BOOL BitBlt(
  La logica coordinata y dell'angolo superiore sinistro del rettangolo di origine.  
   
  *rectDest*  
- Oggetto [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che indica il rettangolo di destinazione.  
+ Oggetto [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che indica il rettangolo di destinazione.  
   
  *pointSrc*  
  Oggetto `POINT` struttura che indica l'angolo superiore sinistro del rettangolo di origine.  
@@ -390,7 +390,7 @@ BOOL BitBlt(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) nel SDK di Windows.  
+ Per altre informazioni, vedere [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) nel SDK di Windows.  
   
 ##  <a name="cimage"></a>  CImage::CImage  
  Costruisce un oggetto `CImage`.  
@@ -469,7 +469,7 @@ BOOL CreateEx(
 - Il formato BI_BITFIELDS sono compressi e la tabella dei colori è costituito da tre maschere di colore DWORD che specificano i componenti rossi, verdi e blu, rispettivamente, di ciascun pixel. Questo è valido se utilizzato con - 16 e 32 bpp bitmap.  
   
  *pdwBitfields*  
- Usato solo se *eCompression* è impostato per BI_BITFIELDS, in caso contrario, deve essere NULL. Un puntatore a una matrice di tre maschere di bit DWORD, che specifica quali bit di ogni pixel vengono usati per i componenti rossi, verdi e blu del colore, rispettivamente. Per informazioni sulle restrizioni per i campi di bit, vedere [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) nel SDK di Windows.  
+ Usato solo se *eCompression* è impostato per BI_BITFIELDS, in caso contrario, deve essere NULL. Un puntatore a una matrice di tre maschere di bit DWORD, che specifica quali bit di ogni pixel vengono usati per i componenti rossi, verdi e blu del colore, rispettivamente. Per informazioni sulle restrizioni per i campi di bit, vedere [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) nel SDK di Windows.  
   
  *dwFlags*  
  Specifica se l'oggetto bitmap dispone di un canale alfa. Può essere una combinazione di zero o più dei valori seguenti:  
@@ -578,13 +578,13 @@ BOOL Draw(
  Altezza, in unità logiche, del rettangolo di origine.  
   
  *rectDest*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
   
  *rectSrc*  
  Un riferimento a un `RECT` struttura, che identifica l'origine.  
   
  *pointDest*  
- Un riferimento a un [punto](http://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.  
+ Un riferimento a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -623,7 +623,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Note  
  Questo valore determina il numero di bit che definiscono ogni pixel e il numero massimo di colori della bitmap.  
   
- In genere, i bit per pixel è 1, 4, 8, 16, 24 o 32. Vedere le `biBitCount` appartenente [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) nel SDK di Windows per altre informazioni su questo valore.  
+ In genere, i bit per pixel è 1, 4, 8, 16, 24 o 32. Vedere le `biBitCount` appartenente [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) nel SDK di Windows per altre informazioni su questo valore.  
   
 ##  <a name="getcolortable"></a>  CImage::GetColorTable  
  Recupera i valori di colore rossi, verdi, blu (RGB) da un intervallo delle voci della tavolozza della sezione DIB.  
@@ -642,7 +642,7 @@ void GetColorTable(UINT iFirstColor,
  Il numero di voci tabella colori da recuperare.  
   
  *prgbColors*  
- Un puntatore alla matrice di [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) strutture per recuperare il colore di voci di tabella.  
+ Un puntatore alla matrice di [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) strutture per recuperare il colore di voci di tabella.  
   
 ##  <a name="getdc"></a>  CImage::GetDC  
  Recupera il contesto di dispositivo che ha attualmente l'immagine selezionata al suo interno.  
@@ -1179,10 +1179,10 @@ BOOL PlgBlt(
  La coordinata y dell'angolo superiore sinistro della bitmap monocromatica.  
   
  *rectSrc*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le coordinate del rettangolo di origine.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le coordinate del rettangolo di origine.  
   
  *pointMask*  
- Oggetto [punto](http://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che indica l'angolo superiore sinistro dell'immagine bitmap della maschera.  
+ Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che indica l'angolo superiore sinistro dell'immagine bitmap della maschera.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo, altrimenti 0.  
@@ -1190,7 +1190,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Note  
  Se *hbmMask* identifica una bitmap monocromatica valida, `PlgBit` Usa questa bitmap per creare una maschera di bit di dati relativi al colore dal rettangolo di origine.  
   
- Questo metodo si applica a Windows NT, le versioni 4.0 e versioni successive sola. Visualizzare [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) nel SDK di Windows per informazioni più dettagliate.  
+ Questo metodo si applica a Windows NT, le versioni 4.0 e versioni successive sola. Visualizzare [PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt) nel SDK di Windows per informazioni più dettagliate.  
   
 ##  <a name="releasedc"></a>  CImage::ReleaseDC  
  Rilascia il contesto di dispositivo.  
@@ -1268,7 +1268,7 @@ void SetColorTable(
  Il numero di voci tabella colori da impostare.  
   
  *prgbColors*  
- Un puntatore alla matrice di [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) strutture per impostare il colore delle voci di tabella.  
+ Un puntatore alla matrice di [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) strutture per impostare il colore delle voci di tabella.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo supporta solo le bitmap sezione DIB.  
@@ -1408,10 +1408,10 @@ BOOL StretchBlt(
  Altezza, in unità logiche, del rettangolo di destinazione.  
   
  *dwROP*  
- L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello attualmente selezionato) per formare la destinazione. Visualizzare [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) nel SDK di Windows per un elenco di altri codici di operazione raster e le relative descrizioni.  
+ L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello attualmente selezionato) per formare la destinazione. Visualizzare [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) nel SDK di Windows per un elenco di altri codici di operazione raster e le relative descrizioni.  
   
  *rectDest*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
   
  *xSrc*  
  La coordinata x, in unità logiche, dell'angolo superiore sinistro del rettangolo di origine.  
@@ -1432,7 +1432,7 @@ BOOL StretchBlt(
  Diverso da zero se ha esito positivo, altrimenti 0.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) nel SDK di Windows.  
+ Per altre informazioni, vedere [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) nel SDK di Windows.  
   
 ##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  Copia una bitmap dal contesto di dispositivo di origine in questo contesto di dispositivo corrente.  
@@ -1490,7 +1490,7 @@ BOOL TransparentBlt(
  Il colore nella bitmap di origine da trattare come trasparente. Per impostazione predefinita, CLR_INVALID, che indica che il colore attualmente impostato come colore trasparente dell'immagine deve essere utilizzato.  
   
  *rectDest*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
+ Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
   
  *xSrc*  
  La coordinata x, in unità logiche, dell'angolo superiore sinistro del rettangolo di origine.  
@@ -1548,10 +1548,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>Vedere anche  
  [Esempio MMXSwarm](../../visual-cpp-samples.md)   
  [Esempio SimpleImage](../../visual-cpp-samples.md)   
- [Device-Independent Bitmap](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md) [Device-Independent Bitmap](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
+ [Device-Independent Bitmap](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+ [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md) [Device-Independent Bitmap](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 
 
 

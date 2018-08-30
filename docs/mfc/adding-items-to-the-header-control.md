@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di elementi al controllo Header | Documenti Microsoft
+title: Aggiunta di elementi al controllo Header | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d64265a94df2770e3a234ab992130b4809f9e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342735"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206147"
 ---
 # <a name="adding-items-to-the-header-control"></a>Aggiunta di elementi al controllo Header
-Dopo aver creato il controllo intestazione ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) nella finestra padre, aggiungere il numero "gli"elementi intestazione è necessario: in genere uno per ogni colonna.  
+Dopo aver creato il controllo intestazione ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) nella finestra padre, aggiungere tanti "elementi di intestazione" necessari: in genere uno per ogni colonna.  
   
 ### <a name="to-add-a-header-item"></a>Per aggiungere una voce di intestazione  
   
-1.  Preparare un [HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struttura.  
+1.  Preparare un' [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struttura.  
   
 2.  Chiamare [CHeaderCtrl:: InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), passando la struttura.  
   
 3.  Ripetere i passaggi 1 e 2 per aggiungere altri elementi.  
   
- Per ulteriori informazioni, vedere [aggiunta di un elemento a un controllo intestazione](http://msdn.microsoft.com/library/windows/desktop/bb775238) in Windows SDK.  
+ Per altre informazioni, vedere [aggiunta di un elemento a un controllo intestazione](/windows/desktop/Controls/header-controls) nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CHeaderCtrl](../mfc/using-cheaderctrl.md)   

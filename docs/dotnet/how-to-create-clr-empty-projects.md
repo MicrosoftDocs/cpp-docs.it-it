@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare progetti CLR vuoti | Documenti Microsoft'
+title: 'Procedura: creare progetti CLR vuoti | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c6910d8ff234573a6cb05c68275f81641831e73b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcb104b5265d79c6eac41b7632a12d99a8ec236b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33128514"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212709"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Procedura: creare progetti CLR vuoti
-Per creare un progetto CLR vuoto, utilizzare il **progetto CLR vuoto** modello, è disponibile il **nuovo progetto** la finestra di dialogo.  
+Per creare un progetto CLR vuoto, usare il **progetto CLR vuoto** modello, che è disponibile il **nuovo progetto** nella finestra di dialogo.  
   
 > [!NOTE]
->  L'aspetto della funzionalità nell'IDE può variano a seconda delle impostazioni attive o l'edizione e potrebbero essere diversi da quelli descritti nella Guida. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  L'aspetto delle funzionalità nell'IDE possa variano a seconda delle impostazioni attive o l'edizione e potrebbero essere diversi da quelli descritti nella Guida. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-clr-empty-project"></a>Per creare un progetto CLR vuoto  
   
@@ -35,15 +35,15 @@ Per creare un progetto CLR vuoto, utilizzare il **progetto CLR vuoto** modello, 
   
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-2.  In **modelli installati**, fare clic su di **Visual C++** nodo; quindi fare clic su di **CLR** nodo. Scegliere il **progetto CLR vuoto** icona.  
+2.  Sotto **modelli installati**, fare clic sui **Visual C++** nodo; quindi fare clic sui **CLR** nodo. Scegliere il **progetto CLR vuoto** icona.  
   
 3.  Nella casella **Nome** immettere un nome univoco per l'applicazione.  
   
     > [!NOTE]
-    >  È inoltre possibile specificare altre impostazioni di progetto e soluzione dal **nuovo progetto** la finestra di dialogo, ma queste impostazioni non sono necessari.  
+    >  È anche possibile specificare altre impostazioni di progetto e soluzione dal **nuovo progetto** nella finestra di dialogo, ma queste impostazioni non sono necessarie.  
   
 4.  Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di progetto di Visual C++](../ide/visual-cpp-project-types.md)   
+ [Tipi di progetto Visual C++](../ide/visual-cpp-project-types.md)   
  [Tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

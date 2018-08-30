@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220788"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
-Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per altre informazioni sui tipi, tipi standard e i tipi derivati, vedere [tipi](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
+Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per altre informazioni sui tipi, tipi standard e i tipi derivati, vedere [tipi](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
   
  In questa sezione vengono descritte le conversioni standard seguenti:  
   
@@ -210,7 +210,7 @@ Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi 
 ||Protetta|Yes|  
 ||Public|Yes|  
   
- Il secondo caso in cui un puntatore a una classe può essere convertito in un puntatore a una classe base è quando si usa una conversione di tipo esplicita. (Vedere [espressioni con conversioni esplicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per altre informazioni sulle conversioni esplicite.)  
+ Il secondo caso in cui un puntatore a una classe può essere convertito in un puntatore a una classe base è quando si usa una conversione di tipo esplicita. (Vedere [espressioni con conversioni esplicite](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per altre informazioni sulle conversioni esplicite.)  
   
  Il risultato di tale conversione è un puntatore al "sotto-oggetto", la parte dell'oggetto descritto completamente dalla classe base.  
   
@@ -249,7 +249,7 @@ int main()
  Un puntatore a una funzione può essere convertito nel tipo `void *`, se tipo `void *` è sufficientemente grande da contenere tale puntatore.  
   
 ### <a name="pointer-to-void"></a>Puntatore a void  
- Puntatori al tipo **void** convertibili in puntatori a qualsiasi altro tipo, ma solo con un cast di tipo esplicito (diversamente da c). (Vedere [espressioni con conversioni esplicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per altre informazioni sui cast di tipo.) Un puntatore a qualsiasi tipo può essere convertito in modo implicito in un puntatore al tipo **void**. Un puntatore a un oggetto incompleto di un tipo può essere convertito in un puntatore a **void** (implicitamente) e viceversa (esplicitamente). Il risultato di tale conversione è uguale al valore del puntatore originale. Un oggetto è considerato incompleto se viene dichiarato ma le informazioni disponibili sono insufficienti per determinarne la dimensione o la classe base.  
+ Puntatori al tipo **void** convertibili in puntatori a qualsiasi altro tipo, ma solo con un cast di tipo esplicito (diversamente da c). (Vedere [espressioni con conversioni esplicite](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per altre informazioni sui cast di tipo.) Un puntatore a qualsiasi tipo può essere convertito in modo implicito in un puntatore al tipo **void**. Un puntatore a un oggetto incompleto di un tipo può essere convertito in un puntatore a **void** (implicitamente) e viceversa (esplicitamente). Il risultato di tale conversione è uguale al valore del puntatore originale. Un oggetto è considerato incompleto se viene dichiarato ma le informazioni disponibili sono insufficienti per determinarne la dimensione o la classe base.  
   
  Un puntatore a qualsiasi oggetto che non sia **const** oppure **volatile** può essere convertito in modo implicito in un puntatore di tipo `void *`.  
   

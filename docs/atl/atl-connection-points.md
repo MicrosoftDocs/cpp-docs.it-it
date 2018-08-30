@@ -1,5 +1,5 @@
 ---
-title: Punti di connessione ATL | Documenti Microsoft
+title: Punti di connessione ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179f4329d55261d71d3d122e6a2601ce7e805c0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec0e902f2b01e33ac460c6210d51c5e0637c3282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354668"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202920"
 ---
 # <a name="atl-connection-points"></a>Punti di connessione ATL
 Un oggetto collegabile è un oggetto che supporta interfacce in uscita. Un'interfaccia in uscita consente all'oggetto di comunicare con un client. Per ogni interfaccia in uscita, l'oggetto collegabile espone un punto di connessione. Ogni interfaccia viene implementata da un client in un oggetto denominato sink.  
   
  ![Punti di connessione](../atl/media/vc2zw31.gif "vc2zw31")  
   
- Ogni punto di connessione supporta il [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interfaccia. L'oggetto collegabile espone i relativi punti di connessione al client tramite il [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857) interfaccia.  
+ Ogni punto di connessione supporta le [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interfaccia. L'oggetto collegabile espone i relativi punti di connessione al client tramite il [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) interfaccia.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Classi dei punti di connessione ATL](../atl/atl-connection-point-classes.md)  

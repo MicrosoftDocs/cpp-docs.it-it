@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 37c8140d3579fc5d629b10c8e3ae5459e6492920
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573334"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198660"
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 Questa classe implementa `IUnknown` per un oggetto non aggregato.  
@@ -62,7 +62,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Decrementa il conteggio dei riferimenti nell'oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `CComObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un oggetto non aggregato. Tuttavia, le chiamate a `QueryInterface`, `AddRef`, e `Release` sono delegate a `CComObjectRootEx`.  
+ `CComObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) per un oggetto non aggregato. Tuttavia, le chiamate a `QueryInterface`, `AddRef`, e `Release` sono delegate a `CComObjectRootEx`.  
   
  Per altre informazioni sull'uso `CComObject`, vedere l'articolo [nozioni fondamentali su oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -92,8 +92,8 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- **void\***  
- [in] Questo parametro senza nome non viene utilizzato. Stato attuale per simmetria con altri **CCom * * * XXX*`Object`*XXX* costruttori.  
+ <em>void\*</em>  
+ [in] Questo parametro senza nome non viene utilizzato. Stato attuale per simmetria con altri `CComXXXObjectXXX` costruttori.  
   
 ### <a name="remarks"></a>Note  
  Il distruttore riduce lo.  

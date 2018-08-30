@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218162"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 Questa classe rappresenta un file mappato alla memoria.  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>Note  
  Mapping del file è l'associazione del contenuto di un file con una parte dello spazio indirizzi virtuali di un processo. Questa classe fornisce metodi per la creazione di oggetti di mapping dei file che consentono ai programmi di accedere facilmente a e condividere i dati.  
   
- Per altre informazioni, vedere [File di Mapping](http://msdn.microsoft.com/library/windows/desktop/aa366556) nel SDK di Windows.  
+ Per altre informazioni, vedere [File di Mapping](/windows/desktop/Memory/file-mapping) nel SDK di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  L'offset del file in cui ha inizio il mapping. Il valore di offset deve essere un multiplo della granularità di allocazione di memoria del sistema.  
   
  *dwMappingProtection*  
- La protezione desiderata per la visualizzazione del file quando viene eseguito il mapping di file. Visualizzare *flProtect* nelle [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) nel SDK di Windows.  
+ La protezione desiderata per la visualizzazione del file quando viene eseguito il mapping di file. Visualizzare *flProtect* nelle [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) nel SDK di Windows.  
   
  *dwViewDesiredAccess*  
- Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.  
+ Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Dopo aver creato un oggetto di mapping dei file, le dimensioni del file non può superare le dimensioni dell'oggetto mapping dei file. in caso affermativo, non tutto il contenuto del file sarà disponibile per la condivisione. Per altre informazioni, vedere [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) e [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.  
+ Dopo aver creato un oggetto di mapping dei file, le dimensioni del file non può superare le dimensioni dell'oggetto mapping dei file. in caso affermativo, non tutto il contenuto del file sarà disponibile per la condivisione. Per altre informazioni, vedere [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  Vedere l'esempio relativo [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  Punta a un valore booleano che è già impostata su TRUE se l'oggetto di mapping esistente.  
   
  *lpsa*  
- Il puntatore a un `SECURITY_ATTRIBUTES` struttura che determina se l'handle restituito può essere ereditato dai processi figlio. Visualizzare *lpAttributes* nelle [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) nel SDK di Windows.  
+ Il puntatore a un `SECURITY_ATTRIBUTES` struttura che determina se l'handle restituito può essere ereditato dai processi figlio. Visualizzare *lpAttributes* nelle [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) nel SDK di Windows.  
   
  *dwMappingProtection*  
  La protezione desiderata per la visualizzazione di file, quando viene eseguito il mapping di file. Visualizzare *flProtect* in `CreateFileMapping` nel SDK di Windows.  
   
  *dwViewDesiredAccess*  
- Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.  
+ Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- `MapShareMem` consente a un oggetto di mapping dei file esistente, creato [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), devono essere condivisi tra i processi.  
+ `MapShareMem` consente a un oggetto di mapping dei file esistente, creato [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga), devono essere condivisi tra i processi.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Chiamare questo metodo per aprire un oggetto di mapping dei file denominato per il file specificato.  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  L'offset del file in cui ha inizio il mapping. Il valore di offset deve essere un multiplo della granularità di allocazione di memoria del sistema.  
   
  *dwViewDesiredAccess*  
- Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.  
+ Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Visualizzare [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) nel SDK di Windows per altri dettagli.  
+ Visualizzare [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) nel SDK di Windows per altri dettagli.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)   

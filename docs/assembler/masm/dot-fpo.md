@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df5185c0dc699764427989b2f46345d90ded1729
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 234ec5bd703a390d1e2ee60e48d99d346d4aad95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055938"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203113"
 ---
 # <a name="fpo"></a>.FPO
-Il file con estensione Direttiva FPO controlla la creazione di record di debug per il segmento di debug$ F o la sezione.  
+Il file con estensione Direttiva FPO controlla la creazione di record di debug per il segmento di F $. debug o la sezione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,10 +51,10 @@ cbFrame
  Numero di variabili locali, un valore senza segno a 32 bit.  
   
  `cdwParams`  
- Dimensione dei parametri nella DWORD, un valore senza segno a 16 bit.  
+ Dimensioni dei parametri in valori DWORD, un valore senza segno a 16 bit.  
   
  *cbProlog*  
- Numero di byte nel codice di prologo di funzione, un valore senza segno a 8 bit.  
+ Numero di byte nel codice di prologo della funzione, un valore senza segno a 8 bit.  
   
  `cbRegs`  
  Numero di registri salvati.  
@@ -63,7 +63,7 @@ cbFrame
  Indica se il registro EBP è stato allocato. 0 o 1.  
   
  *cbFrame*  
- Indica il tipo di frame.  Vedere [FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352) per ulteriori informazioni.  
+ Indica il tipo di frame.  Visualizzare [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) per altre informazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento a direttive](../../assembler/masm/directives-reference.md)

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f5b99266d465629853361c07ea16f9ae620b0e24
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853069"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210828"
 ---
 # <a name="colebusydialog-class"></a>Classe COleBusyDialog
 Utilizzata per la finestra di dialogo relativa al server OLE che non risponde o al server occupato.  
@@ -67,7 +67,7 @@ class COleBusyDialog : public COleDialog
 > [!NOTE]
 >  Il codice dell'applicazione contenitore generato dalla procedura guidata Usa questa classe.  
   
- Per altre informazioni, vedere la [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) struttura nel SDK di Windows.  
   
  Per altre informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleBusyDialog(
 ### <a name="remarks"></a>Note  
  Per visualizzare la finestra di dialogo, chiamare [DoModal](#domodal).  
   
- Per altre informazioni, vedere la [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) struttura nel SDK di Windows.  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Chiamare questa funzione per visualizzare la finestra di dialogo OLE Server occupato o di Server non risponde.  
@@ -138,7 +138,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, se l'utente ha annullato la finestra di dialogo.  
   
-- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il `COleDialog::GetLastError` funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) funzione nel SDK di Windows.  
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il `COleDialog::GetLastError` funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) funzione nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
  Se si desidera inizializzare i vari controlli di finestra di dialogo impostando i membri del [m_bz](#m_bz) struttura, è necessario eseguire questa operazione prima di chiamare `DoModal`, ma dopo che viene costruito l'oggetto finestra di dialogo.  
@@ -184,7 +184,7 @@ OLEUIBUSY m_bz;
 ### <a name="remarks"></a>Note  
  I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.  
   
- Per altre informazioni, vedere la [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struttura nel SDK di Windows.  
+ Per altre informazioni, vedere la [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) struttura nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)   

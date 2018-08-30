@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592773"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222743"
 ---
 # <a name="delegates-ccx"></a>Delegati (C++/CX)
 Il `delegate` parola chiave viene usata per dichiarare un tipo di riferimento che è l'equivalente di Windows Runtime di un oggetto funzione in C++ standard. Dichiarazione di un delegato simile a una firma della funzione. Specifica il tipo restituito e i tipi di parametro per la relativa funzione di cui è stato eseguito il wrapping. Si tratta di una dichiarazione di un delegato definita dall'utente:  
@@ -29,7 +29,7 @@ Il `delegate` parola chiave viene usata per dichiarare un tipo di riferimento ch
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Quando dichiari delegati che saranno esposti ai client attraverso l'interfaccia binaria dell'applicazione di Windows Runtime, Usa [Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). I binari proxy e stub usati come prefisso per questo delegato ne permettono l'uso da parte di client Javascript.  
+ Quando dichiari delegati che saranno esposti ai client attraverso l'interfaccia binaria dell'applicazione di Windows Runtime, Usa [Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). I binari proxy e stub usati come prefisso per questo delegato ne permettono l'uso da parte di client Javascript.  
   
 ## <a name="consuming-delegates"></a>Utilizzo dei delegati  
  Quando si crea un'app Universal Windows Platform, spesso lavorano con un delegato come tipo di un evento che espone una classe di Windows Runtime. Per sottoscrivere un evento, crea un'istanza del relativo tipo di delegato specificando una funzione, o lambda, che corrisponda alla firma del delegato. Utilizza quindi l'operatore `+=` per passare l'oggetto delegato al membro dell'evento nella classe. Questo processo è noto come sottoscrizione dell'evento. Quando l'istanza della classe genera l'evento, viene chiamata la funzione insieme a tutti gli altri gestori aggiunti dal tuo oggetto o da altri oggetti.  

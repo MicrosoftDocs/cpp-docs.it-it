@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1108 | Documenti Microsoft
+title: Errore irreversibile C1108 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de8b00f61a70e7c40f442173acace2e9f186d1d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84f301669e1aeead5a8c92f59fbaaaf87167fef4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225174"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203924"
 ---
 # <a name="fatal-error-c1108"></a>Errore irreversibile C1108
-impossibile trovare la DLL: 'dll'  
-  
- Non è stato possibile individuare la DLL specificata (***dll***) nel percorso.  
-  
- Per risolvere questo errore, reinstallare Visual C++ o copiare nel computer il file DLL appropriato dal CD di installazione.
+
+> Impossibile trovare la DLL: '*nome della dll*'
+
+La DLL specificata (*nome della dll*) non è stato trovato nel percorso.
+
+Per risolvere questo errore, reinstallare Visual C++ o copiare il file DLL appropriato dall'installazione nel computer.

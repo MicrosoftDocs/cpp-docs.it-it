@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f33b6b1738e9027c88d171fc7bacc729fb507b10
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592469"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202348"
 ---
 # <a name="strings-ccx"></a>Stringhe (C++/CX)
 Viene rappresentato il testo in Windows Runtime in C + + c++ /CX per il [classe platform:: String](../cppcx/platform-string-class.md). Usare il `Platform::String Class` quando si passano le stringhe e viceversa ai metodi nelle classi di Windows Runtime o quando si interagisce con altri componenti Runtime Windows attraverso il limite dell'interfaccia binaria (ABI). L'oggetto `Platform::String Class` fornisce i metodi per numerose operazioni di stringa comuni ma non è progettato per essere una classe String completa. Nel modulo C++ utilizza i tipi di stringa C++ standard quali [wstring](../standard-library/basic-string-class.md) per l'elaborazione dei testi importanti e converti il risultato finale in [Platform::String^](../cppcx/platform-string-class.md) prima di passarlo a o da un'interfaccia pubblica. La conversione tra `wstring` o `wchar_t*` e `Platform::String`è un'operazione semplice ed efficace.  
@@ -76,4 +76,4 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi incorporati](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f)
+ [Tipi incorporati](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

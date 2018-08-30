@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6a75fe2d973b0330c66faaae6c4daede224c5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 25c9e21aa4b0f09db83632973d3a5046e3e2aa4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880505"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206120"
 ---
 # <a name="ccommultithreadmodel-class"></a>Classe CComMultiThreadModel
 `CComMultiThreadModel` fornisce metodi thread-safe per incrementare e decrementare il valore di una variabile.  
@@ -158,7 +158,7 @@ typedef CComCriticalSection CriticalSection;
  Visualizzare [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
- Questa funzione statica chiama la funzione Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), che decrementa il valore della variabile a cui punta *p*.  
+ Questa funzione statica chiama la funzione Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), che decrementa il valore della variabile a cui punta *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
  `InterlockedDecrement` impedisce che più thread contemporaneamente usando questa variabile.  
   
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment  
- Questa funzione statica chiama la funzione Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), il quale viene incrementato il valore della variabile a cui punta *p*.  
+ Questa funzione statica chiama la funzione Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), il quale viene incrementato il valore della variabile a cui punta *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

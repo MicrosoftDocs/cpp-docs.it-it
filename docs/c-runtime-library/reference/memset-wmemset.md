@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0cbc05c0e337560982f69a5ca920340bc1b0de8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b26f0c200f19cab4bb2710be686b25a9dce014
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401243"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202010"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -78,9 +78,9 @@ Il valore di *dest*.
 
 ## <a name="remarks"></a>Note
 
-Imposta il primo *conteggio* caratteri *dest* al carattere *c*.
+Imposta i primi *conteggio* caratteri di *dest* al carattere *c*.
 
-**Nota sulla sicurezza** assicurarsi che il buffer di destinazione disponga di spazio sufficiente per almeno *conteggio* caratteri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Nota sulla sicurezza** assicurarsi che il buffer di destinazione abbia spazio sufficiente per almeno *conteggio* caratteri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Requisiti
 

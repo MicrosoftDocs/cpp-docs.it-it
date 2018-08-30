@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592082"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211097"
 ---
 # <a name="working-with-resource-files"></a>Utilizzo di file di risorse
 
 > [!WARNING]
-> Questa sezione si applica ad applicazioni desktop di Windows scritte in C++. Per informazioni sulle risorse nelle App Universal Windows Platform scritte in C++, vedere [definizione delle risorse dell'App](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Questa sezione si applica ad applicazioni desktop di Windows scritte in C++. Per informazioni sulle risorse nelle App Universal Windows Platform scritte in C++, vedere [definizione delle risorse dell'App](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Per informazioni sull'aggiunta di risorse per C + + c++ /CLI, progetti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.
 
@@ -53,7 +53,7 @@ Descrive gli editor di risorse disponibili in Visual Studio e i tipi di risorse 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Vengono forniti collegamenti alla documentazione di Visual C++.
 
-[Introduzione a Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+[Introduzione a Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
 Descrive il set completo di strumenti per lo sviluppo che usano lo stesso ambiente di sviluppo integrato (IDE, Integrated Development Environment), in modo da permettere la condivisione di strumenti e semplificare la creazione di soluzioni in linguaggi misti.
 
 [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)  
@@ -62,4 +62,4 @@ Include collegamenti a informazioni sull'uso della documentazione disponibile, s
 ## <a name="see-also"></a>Vedere anche
 
 [Applicazioni Desktop di Windows](../windows/windows-desktop-applications-cpp.md)  
-[Menu e altre risorse](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menu e altre risorse](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

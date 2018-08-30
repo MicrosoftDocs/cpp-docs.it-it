@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b889a0d9be1942d2d381b0c6a85236c94f4e6ebf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210432"
 ---
 # <a name="hashmultiset-class"></a>Classe hash_multiset
 
@@ -119,11 +119,14 @@ class hash_multiset
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave* tipo di dati degli elementi da archiviare nell'oggetto hash_multiset.
+*Key*<br/>
+ Tipo di dati degli elementi da archiviare in hash_multiset.
 
-*Tratti* tipo che include due oggetti funzione, uno della classe compare, vale a dire un predicato binario in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash che rappresenta un unario predicato mapping di valori chiave del gli elementi a valori unsigned integer di tipo `size_t`. Questo argomento è facoltativo e il `hash_compare` *< chiave,* **meno * * *\<chiave >>* è il valore predefinito.
+*Tratti*<br/>
+ Tipo che include due oggetti funzione, uno della classe compare, vale a dire un predicato binario in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash che rappresenta un mapping predicato unario chiave i valori degli elementi a valori senza segno Integer di tipo `size_t`. Questo argomento è facoltativo e il valore predefinito è `hash_compare<Key, less<Key> >`.
 
-*Allocatore* il tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione dell'hash_multiset e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è **allocator * * *\<Key >.*
+*Allocatore*<br/>
+ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione dell'hash_multiset e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<Key>`.
 
 ## <a name="remarks"></a>Note
 
@@ -145,7 +148,7 @@ La scelta del tipo di contenitore deve essere basata in genere sul tipo di ricer
 
 L'hash_multiset deve essere il contenitore associativo da preferire quando le condizioni che consentono di associare i valori alle relative chiavi vengono soddisfatte dall'applicazione. Un hash_multiset può contenere più elementi che possono essere usati come chiavi di ordinamento, pertanto le chiavi non sono univoche. Un modello relativo a questo tipo di struttura è ad esempio un elenco ordinato di parole in cui tali parole possono essere presenti più volte. Se non sono consentite più occorrenze delle parole, la struttura di contenitore appropriata è rappresentata da un hash_multiset. Se le definizioni univoche sono state allegate come valori all'elenco di parole chiave univoche, un hash_map rappresenta una struttura appropriata per contenere questi dati. Se invece le definizioni non sono univoche, è opportuno scegliere come contenitore un hash_multimap.
 
-L'oggetto hash_multiset ordina la sequenza che controlla chiamando un oggetto di tratti hash archiviato di tipo [value_compare](#value_compare). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [key_comp](#key_comp). Un oggetto funzione di questo tipo deve comportarsi come un oggetto della classe `hash_compare` *< chiave* **meno * * *\<chiave >>.* In particolare, per tutti i valori *Key* typu `Key`, la chiamata **tratto**( *chiave*) produce una distribuzione di valori di tipo `size_t`.
+L'oggetto hash_multiset ordina la sequenza che controlla chiamando un oggetto di tratti hash archiviato di tipo [value_compare](#value_compare). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [key_comp](#key_comp). Un oggetto funzione di questo tipo deve comportarsi come un oggetto della classe `hash_compare<Key, less<Key> >`. In particolare, per tutti i valori *Key* typu `Key`, la chiamata `Trait(Key)` produce una distribuzione di valori di tipo `size_t`.
 
 In genere, gli elementi devono essere confrontabili come "minore di" per stabilire questo ordine: in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. A un livello più tecnico, la funzione di confronto è un predicato binario che provoca un ordinamento di tipo "strict weak" nel senso matematico standard. Un predicato binario *f*( *x*, *y*) è un oggetto funzione che dispone di due oggetti argomento x e y e di un valore restituito true o false. Un ordinamento imposto a un oggetto hash_multiset è un ordinamento di tipo "strict weak" se il predicato binario è irriflessivo, antisimmetrico e transitivo e se l'equivalenza è transitiva, in cui due oggetti x e y vengono definiti equivalenti quando sia *f*( *x*, *y*) che *f*( *y*, *x*) sono false. Se la condizione di uguaglianza più forte tra le chiavi sostituisce quella di equivalenza, l'ordinamento diventa totale, in quanto tutti gli elementi vengono ordinati l'uno rispetto all'altro e le chiavi accoppiate saranno indistinguibili l'una dall'altra.
 
@@ -551,7 +554,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* la chiave degli elementi per cui trovare un corrispondenza nell'oggetto hash_multiset.
+*key*<br/>
+ La chiave degli elementi per cui trovare un corrispondenza nell'hash_multiset.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1017,7 +1021,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_multiset da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multiset in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1105,13 +1110,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE* posizione dell'elemento da rimuovere dall'hash_multiset.
+*WHERE*<br/>
+ Posizione dell'elemento da rimuovere dall'hash_multiset.
 
-*primo* posizione del primo elemento rimosso dall'hash_multiset.
+*first*<br/>
+ Posizione del primo elemento rimosso dall'hash_multiset.
 
-*ultimo* posizione immediatamente successiva all'ultimo elemento rimosso dall'hash_multiset.
+*last*<br/>
+ Posizione oltre l'ultimo elemento rimosso dall'hash_multiset.
 
-*chiave* la chiave degli elementi da rimuovere dall'hash_multiset.
+*key*<br/>
+ La chiave degli elementi da rimuovere dall'hash_multiset.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1222,7 +1231,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multiset cercato.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza in base alla chiave di ordinamento di un elemento presente nell'oggetto hash_multiset in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1656,7 +1666,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_multiset da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multiset in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2138,7 +2149,8 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* l'argomento di tipo hash_multiset che fornisce gli elementi da scambiare con l'oggetto hash_multiset di destinazione.
+*right*<br/>
+ Argomento di tipo hash_multiset che fornisce gli elementi da scambiare con l'oggetto hash_multiset di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -2213,7 +2225,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_multiset da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multiset in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

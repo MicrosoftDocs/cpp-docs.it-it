@@ -1,5 +1,5 @@
 ---
-title: Marshalling | Documenti Microsoft
+title: Marshalling | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b8b82d5369aa536dab638efa379089325d10b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac4bb35d29d74f0e66337dc6c3999df66a63d254
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360100"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212691"
 ---
-# <a name="marshaling"></a>marshalling
-La tecnica del marshalling COM consente le interfacce esposte da un oggetto in un processo da utilizzare in un altro processo. Effettuare il marshalling, COM fornisce il codice (o utilizza codice fornito dall'implementatore interfaccia) per comprimere i parametri del metodo in un formato che può essere spostato tra processi (nonché attraverso la rete per i processi in esecuzione su altri computer) e decomprimere i parametri a altra estremità. Analogamente, COM è necessario eseguire questi stessi passaggi in restituito dalla chiamata.  
+# <a name="marshaling"></a>Marshalling
+La tecnica di COM del marshalling consente le interfacce esposte da un oggetto in un unico processo da usare in un altro processo. Effettuare il marshalling, COM fornisce il codice (o Usa il codice forniti dall'implementatore dell'interfaccia) per comprimere i parametri del metodo in un formato che può essere spostato tra processi (oltre che, attraverso la rete per i processi in esecuzione in altri computer) e la decompressione dei parametri a altra estremità. Analogamente, COM è necessario eseguire questi stessi passaggi del ritorno dalla chiamata.  
   
 > [!NOTE]
->  Effettuare il marshalling in genere quando non è necessario un'interfaccia fornita da un oggetto utilizzata nello stesso processo dell'oggetto. Tuttavia, risultare necessario tra thread.  
+>  Marshalling in genere non è necessario quando un'interfaccia fornita da un oggetto viene usata nello stesso processo dell'oggetto. Tuttavia, il marshalling potrebbe essere necessario tra thread.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a COM](../atl/introduction-to-com.md)   
- [Marshalling dei dettagli](http://msdn.microsoft.com/library/windows/desktop/ms692621)
+ [Marshalling dei dettagli](/windows/desktop/com/marshaling-details)
 

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 0d548a5cf0384a59c3fa12d88268997f1e801704
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42573047"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196661"
 ---
 # <a name="csimplestringt-class"></a>Classe CSimpleStringT
 Questa classe rappresenta un `CSimpleStringT` oggetto.  
@@ -471,11 +471,11 @@ PXSTR GetBufferSetLength(int nLength);
   
  Per altre informazioni sul conteggio dei riferimenti, vedere gli articoli seguenti:  
   
-- [La gestione della durata degli oggetti tramite il conteggio dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms687260) in Windows SDK. 
+- [La gestione della durata degli oggetti tramite il conteggio dei riferimenti](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) in Windows SDK. 
   
-- [Implementare il conteggio dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms693431) in Windows SDK.
+- [Implementare il conteggio dei riferimenti](/windows/desktop/com/implementing-reference-counting) in Windows SDK.
   
-- [Le regole per la gestione dei conteggi dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms692481) in Windows SDK.  
+- [Le regole per la gestione dei conteggi dei riferimenti](/windows/desktop/com/rules-for-managing-reference-counts) in Windows SDK.  
   
 ### <a name="example"></a>Esempio  
  L'esempio seguente illustra l'uso di `CSimpleStringT::GetBufferSetLength`.  
@@ -599,11 +599,11 @@ PXSTR LockBuffer();
   
  Per altre informazioni sul conteggio dei riferimenti, vedere gli articoli seguenti:  
   
-- [La gestione della durata degli oggetti tramite il conteggio dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms687260) in Windows SDK  
+- [La gestione della durata degli oggetti tramite il conteggio dei riferimenti](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) in Windows SDK  
   
-- [Implementare il conteggio dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms693431) in Windows SDK  
+- [Implementare il conteggio dei riferimenti](/windows/desktop/com/implementing-reference-counting) in Windows SDK  
   
-- [Le regole per la gestione dei conteggi dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms692481) in Windows SDK  
+- [Le regole per la gestione dei conteggi dei riferimenti](/windows/desktop/com/rules-for-managing-reference-counts) in Windows SDK  
   
 ### <a name="example"></a>Esempio  
  L'esempio seguente illustra l'uso di `CSimpleStringT::LockBuffer`.  

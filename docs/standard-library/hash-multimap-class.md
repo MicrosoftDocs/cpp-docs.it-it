@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efebe74f0f2735b9f32b0114a3db68d0839b90f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965009"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196305"
 ---
 # <a name="hashmultimap-class"></a>Classe hash_multimap
 
@@ -122,13 +122,17 @@ class hash_multimap
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave* i tipo di dati chiavi da archiviare in hash_multimap.
+*Key*<br/>
+ Tipo di dati relativo alle chiavi da archiviare in hash_multimap.
 
-*Tipo* tipo di dati degli elementi da archiviare in hash_multimap.
+*Type*<br/>
+ Tipo di dati degli elementi da archiviare in hash_multimap.
 
-*Tratti* il tipo che include due oggetti funzione, uno della classe *Traits* che è in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash che è una chiave di mapping del predicato unario i valori degli elementi a valori unsigned integer di tipo `size_t`. Questo argomento è facoltativo e il valore predefinito è `hash_compare<Key, less<Key>>`.
+*Tratti*<br/>
+ Tipo che include due oggetti funzione, uno della classe *tratti* che è in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash è unario predicato mapping i valori di chiave degli elementi Unsigned Integer di tipo `size_t`. Questo argomento è facoltativo e il valore predefinito è `hash_compare<Key, less<Key>>`.
 
-*Allocatore* il tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione della memoria dell'oggetto hash_multimap. Questo argomento è facoltativo e il valore predefinito è `allocator<pair <const Key, Type>>`.
+*Allocatore*<br/>
+ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di multi_map e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Note
 
@@ -474,11 +478,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.
 
-Il `const_iterator` definito da hash_multimap punta a oggetti di [value_type](#value_type), che sono di tipo `pair` *\< ***constKey, Type*** >*. Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
+Il `const_iterator` definito da hash_multimap punta a oggetti di [value_type](#value_type), che sono di tipo `pair<const Key, Type>`. Il valore della chiave è disponibile tramite il primo membro della coppia e il valore dell'elemento mappato è disponibile tramite il secondo membro della coppia.
 
 Per dereferenziare un `const_iterator` `cIter` che punta a un elemento in un oggetto hash_multimap, usare il `->` operatore.
 
-Per accedere al valore della chiave per l'elemento, usare `cIter` -> **first**, che equivale a (\* `cIter`). **first**. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `cIter` -> **second**, che equivale a (\* `cIter`). **first**.
+Per accedere al valore della chiave per l'elemento, usare `cIter->first`, che equivale a `(*cIter).first`. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `cIter->second`, che equivale a `(*cIter).second`.
 
 ### <a name="example"></a>Esempio
 
@@ -572,11 +576,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto hash_multimap in ordine inverso.
 
-Il tipo `const_reverse_iterator` definito da hash_multimap punta a oggetti di [value_type](#value_type), ovvero di tipo `pair`*\<***const Key, Type>**, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato incluso nell'elemento.
+Il `const_reverse_iterator` definito da hash_multimap punta a oggetti di [value_type](#value_type), che sono di tipo `pair<const Key, Type>`, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato nell'elemento.
 
 Per dereferenziare un `const_reverse_iterator` `crIter` che punta a un elemento in un oggetto hash_multimap, usare il `->` operatore.
 
-Per accedere al valore della chiave per l'elemento, usare `crIter` -> **first**, che equivale a (\* `crIter`). **first**. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `crIter` -> **second**, che equivale a (\* `crIter`). **first**.
+Per accedere al valore della chiave per l'elemento, usare `crIter->first`, che equivale a `(*crIter).first`. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `crIter->second`, che equivale a `(*crIter).second`.
 
 ### <a name="example"></a>Esempio
 
@@ -595,7 +599,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* la chiave degli elementi per cui trovare un corrispondenza nell'oggetto hash_multimap.
+*key*<br/>
+ La chiave degli elementi per cui trovare un corrispondenza nell'hash_multimap.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1090,7 +1095,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1180,13 +1186,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE* posizione dell'elemento da rimuovere dall'hash_multimap.
+*WHERE*<br/>
+ Posizione dell'elemento da rimuovere dall'hash_multimap.
 
-*primo* posizione del primo elemento rimosso dall'hash_multimap.
+*first*<br/>
+ Posizione del primo elemento rimosso dall'hash_multimap.
 
-*ultimo* posizione immediatamente successiva all'ultimo elemento rimosso dall'hash_multimap.
+*last*<br/>
+ Posizione oltre l'ultimo elemento rimosso dall'hash_multimap.
 
-*chiave* la chiave degli elementi da rimuovere dall'hash_multimap.
+*key*<br/>
+ La chiave degli elementi da rimuovere dall'hash_multimap.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1300,7 +1310,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* la chiave da confrontare per la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap da ricercare.
+*key*<br/>
+ Chiave per cui trovare una corrispondenza in base alla chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1750,7 +1761,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2303,7 +2315,8 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* dell'oggetto hash_multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto hash_multimap.
+*right*<br/>
+ Oggetto hash_multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto hash_multimap.
 
 ### <a name="remarks"></a>Note
 
@@ -2376,7 +2389,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* della chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap da ricercare.
+*key*<br/>
+ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

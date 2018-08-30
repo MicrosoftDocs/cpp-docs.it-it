@@ -17,35 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb3e12853d384f433674331342541b7e69241d4a
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16f4725013d11eb27e4c6669403942cf171032ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340488"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220074"
 ---
 # <a name="cdynamicstringaccessorw-class"></a>Classe CDynamicStringAccessorW
-Consente di accedere a un'origine dati quando non si dispone di alcuna conoscenza dello schema del database (struttura sottostante).  
-  
+
+Consente di accedere a un'origine dati quando non si dispone di alcuna conoscenza dello schema del database (struttura sottostante).
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;  
-```  
-  
-## <a name="remarks"></a>Note  
- Entrambi richiedono che il provider recuperi tutti i dati dall'archivio dati come dati di tipo stringa, ma `CDynamicStringAccessor` richiede i dati stringa Unicode.  
-  
- `CDynamicStringAccessorW` eredita `GetString` e `SetString` da `CDynamicStringAccessor`. Quando si utilizzano questi metodi in un `CDynamicStringAccessorW` oggetto ***BaseType*** viene **WCHAR**.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione**: atldbcli.h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Classe CAccessor](../../data/oledb/caccessor-class.md)   
- [CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)   
- [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
- [Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)
+typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;
+```
+
+## <a name="remarks"></a>Note
+
+Entrambi richiedono che il provider recuperi tutti i dati dall'archivio dati come dati di tipo stringa, ma `CDynamicStringAccessor` richiede i dati stringa Unicode.
+
+`CDynamicStringAccessorW` eredita `GetString` e `SetString` da `CDynamicStringAccessor`. Quando si utilizzano questi metodi in un `CDynamicStringAccessorW` oggetto `BaseType` viene **WCHAR**.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione**: atldbcli.h
+
+## <a name="see-also"></a>Vedere anche
+
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>
+[Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)<br/>

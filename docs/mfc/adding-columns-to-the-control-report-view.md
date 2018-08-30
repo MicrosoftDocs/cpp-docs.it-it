@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di colonne al controllo (visualizzazione dei rapporti) | Documenti Microsoft
+title: Aggiunta di colonne al controllo (visualizzazione dei Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 975d65119ba0ae24b236d96cbe67e73b70be6bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3e81de52856d67760ffe58f29e4c39ac79213c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341829"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221944"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>Aggiunta di colonne al controllo (visualizzazione dei rapporti)
 > [!NOTE]
->  La procedura seguente si applica a uno un [CListView](../mfc/reference/clistview-class.md) o [CListCtrl](../mfc/reference/clistctrl-class.md) oggetto.  
+>  La procedura seguente si applica a entrambi una [CListView](../mfc/reference/clistview-class.md) oppure [CListCtrl](../mfc/reference/clistctrl-class.md) oggetto.  
   
- Quando un controllo elenco è in visualizzazione report, le colonne vengono visualizzate, fornendo un metodo per organizzare i vari elementi secondari di ciascun elemento controllo elenco. Questa organizzazione è implementata con una corrispondenza tra una colonna nel controllo elenco e l'elemento secondario dell'elemento del controllo elenco associato. Per ulteriori informazioni sugli elementi secondari, vedere [aggiunta di elementi al controllo](../mfc/adding-items-to-the-control.md). Un esempio di un controllo elenco nella visualizzazione di report è disponibile per la visualizzazione dei dettagli in Windows 95 e Windows 98 Explorer. La prima colonna elenca cartella, le icone di file e le etichette. Nelle altre colonne sono elencate dimensioni del file, il tipo di file, data dell'ultima modificata e così via.  
+ Quando un controllo elenco è in visualizzazione report, le colonne vengono visualizzate, fornendo un metodo di organizzare i vari elementi secondari di ciascun elemento controllo elenco. Questa organizzazione viene implementata con una corrispondenza uno a uno tra una colonna nel controllo elenco e l'elemento associato secondario dell'elemento controllo elenco. Per altre informazioni sugli elementi secondari, vedere [aggiunta di elementi al controllo](../mfc/adding-items-to-the-control.md). Un esempio di un controllo elenco nella visualizzazione di report avviene tramite la visualizzazione di dettagli in Windows 95 e Windows 98 Explorer. La prima colonna elenca cartella, le icone di file e le etichette. Le altre colonne elencano le dimensioni di file, tipo di file, data dell'ultima modificata e così via.  
   
- Anche se le colonne possono essere aggiunti a un controllo elenco in qualsiasi momento, le colonne sono visibili solo quando il controllo ha il `LVS_REPORT` bit di stile acceso.  
+ Anche se le colonne possono essere aggiunti a un controllo elenco in qualsiasi momento, le colonne sono visibili solo quando il controllo ha il `LVS_REPORT` bit di stile attivata.  
   
- Ogni colonna ha un elemento di intestazione associata (vedere [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) oggetto che le etichette di colonna e consente agli utenti di ridimensionare la colonna.  
+ Ogni colonna ha un elemento di intestazione associata (vedere [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) oggetto che la colonna delle etichette e consente agli utenti di ridimensionare la colonna.  
   
- Se il controllo elenco supporta una visualizzazione di report, è necessario aggiungere una colonna per ogni eventuale elemento secondario in un elemento controllo elenco. Aggiungere una colonna preparando un [LV_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) struttura e quindi effettua una chiamata a [Inserisci colonna](../mfc/reference/clistctrl-class.md#insertcolumn). Dopo aver aggiunto le colonne necessarie (dette anche gli elementi di intestazione), è possibile riordinarle utilizzando le funzioni membro e gli stili appartenenti al controllo header incorporato. Per ulteriori informazioni, vedere [ordinamento degli elementi nel controllo Header](../mfc/ordering-items-in-the-header-control.md).  
+ Se il controllo di elenco supporta la visualizzazione di un report, è necessario aggiungere una colonna per ogni elemento secondario possibili in un elemento controllo elenco. Aggiungere una colonna per la preparazione di un' [LV_COLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) struttura e quindi effettua una chiamata a [Inserisci colonna](../mfc/reference/clistctrl-class.md#insertcolumn). Dopo aver aggiunto le colonne necessarie (talvolta dette gli elementi di intestazione), è possibile riordinarli, usando le funzioni membro e gli stili che appartengono al controllo header incorporati. Per altre informazioni, vedere [ordinamento degli elementi nel controllo Header](../mfc/ordering-items-in-the-header-control.md).  
   
 > [!NOTE]
->  Se il controllo elenco viene creato con il **LVS_NOCOLUMNHEADER** stile, qualsiasi tentativo di inserire le colonne verrà ignorato.  
+>  Se il controllo di elenco viene creato con il **LVS_NOCOLUMNHEADER** stile, qualsiasi tentativo di inserire colonne verrà ignorato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)   

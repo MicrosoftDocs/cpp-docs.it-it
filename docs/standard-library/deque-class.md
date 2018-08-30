@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed609de9d36b602bf525a9643534cf5d1d55a8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963034"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214166"
 ---
 # <a name="deque-class"></a>Classe deque
 
@@ -118,9 +118,11 @@ class deque
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo* tipo di dati degli elementi da archiviare nella deque.
+*Type*<br/>
+ Tipo di dati degli elementi da archiviare nella deque.
 
-*Allocatore* il tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione della memoria della deque. Questo argomento è facoltativo e il valore predefinito è **allocatore\<tipo > * * *.*
+*Allocatore*<br/>
+ Tipo che rappresenta l'oggetto allocatore memorizzato che incapsula i dettagli sull'allocazione e sulla deallocazione della deque e della memoria. Questo argomento è facoltativo e il valore predefinito è **allocator\<tipo >**.
 
 ## <a name="remarks"></a>Note
 
@@ -243,15 +245,20 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parametri
 
-*Primo* posizione del primo elemento nell'intervallo di elementi da copiare dalla deque degli argomenti.
+*Primo*<br/>
+ Posizione del primo elemento nell'intervallo di elementi da copiare dalla deque degli argomenti.
 
-*Ultimo* posizione del primo elemento oltre l'intervallo di elementi da copiare dalla deque degli argomenti.
+*ultimo*<br/>
+ Posizione del primo elemento oltre l'intervallo di elementi da copiare dalla deque degli argomenti.
 
-*Conteggio* il numero di copie di un elemento da inserire nella deque.
+*Conteggio*<br/>
+ Numero di copie di un elemento inserito nella deque.
 
-*Val* il valore dell'elemento da inserire nella deque.
+*Val*<br/>
+ Valore dell'elemento inserito nella deque.
 
-*IList* oggetto initializer_list da inserire nella deque.
+*IList*<br/>
+ Oggetto initializer_list da inserire nella deque.
 
 ### <a name="remarks"></a>Note
 
@@ -325,7 +332,8 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS* di pedice (o il numero di posizione) dell'elemento a cui fare riferimento nella deque.
+*POS*<br/>
+ Numero di posizione o indice dell'elemento a cui fare riferimento nella deque.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1337,11 +1345,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE* posizione dell'elemento da rimuovere dalla deque.
+*WHERE*<br/>
+ Posizione dell'elemento da rimuovere dalla deque.
 
-*primo* posizione del primo elemento rimosso dalla deque.
+*first*<br/>
+ Posizione del primo elemento rimosso dalla deque.
 
-*ultimo* posizione immediatamente successiva all'ultimo elemento rimosso dalla deque.
+*last*<br/>
+ Posizione immediatamente successiva all'ultimo elemento rimosso dalla deque.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1591,7 +1602,8 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS* la posizione dell'elemento della deque a cui fare riferimento.
+*POS*<br/>
+ Posizione dell'elemento della deque a cui fare riferimento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2086,9 +2098,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametri
 
-*_Newsize* la nuova dimensione della deque.
+*_Newsize*<br/>
+ Nuova dimensione della deque.
 
-*Val* il valore dei nuovi elementi da aggiungere alla deque se la nuova dimensione è più grande che le dimensioni originali. Se il valore viene omesso, ai nuovi elementi viene assegnato il valore predefinito per la classe.
+*Val*<br/>
+ Valore dei nuovi elementi da aggiungere alla deque se la nuova dimensione è maggiore di quella originale. Se il valore viene omesso, ai nuovi elementi viene assegnato il valore predefinito per la classe.
 
 ### <a name="remarks"></a>Note
 
@@ -2263,9 +2277,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* deque che fornisce gli elementi da scambiare o deque cui elementi devono essere scambiati con quelli della deque `left`.
+*right*<br/>
+ Deque in cui sono presenti gli elementi da scambiare o deque i cui elementi devono essere scambiati con quelli della deque `left`.
 
-*a sinistra* una deque cui elementi devono essere scambiati con quelli della deque *destro*.
+*left*<br/>
+ Una deque cui elementi devono essere scambiati con quelli della deque *a destra*.
 
 ### <a name="example"></a>Esempio
 

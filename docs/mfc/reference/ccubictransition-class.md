@@ -1,5 +1,5 @@
 ---
-title: Classe CCubicTransition | Documenti Microsoft
+title: Classe CCubicTransition | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d82d61476e4af024eff53c0943a8a9e293c8d285
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953220"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210744"
 ---
 # <a name="ccubictransition-class"></a>Classe CCubicTransition
 Incapsula una transizione cubica.  
@@ -60,12 +60,12 @@ class CCubicTransition : public CBaseTransition;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione alla fine della transizione.|  
+|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione al termine della transizione.|  
 |[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|La velocità della variabile al termine della transizione.|  
 |[CCubicTransition::m_duration](#m_duration)|La durata della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Durante una transizione cubica, il valore della variabile di animazione viene modificato dal valore iniziale a un valore finale specificato per la durata della transizione, termina con una velocità specificata. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
+ Durante una transizione cubica continua, il valore della variabile di animazione varia dal valore iniziale a un valore finale specificato per la durata della transizione, termina con una velocità specificata. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile allocata li utilizzando l'operatore new. L'oggetto incapsulato IUIAnimationTransition COM viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -92,7 +92,7 @@ CCubicTransition(
  La durata della transizione.  
   
  *finalValue*  
- Il valore della variabile di animazione alla fine della transizione.  
+ Il valore della variabile di animazione al termine della transizione.  
   
  *finalVelocity*  
  La velocità della variabile al termine della transizione.  
@@ -108,13 +108,13 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
 *pLibrary*  
- Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](https://msdn.microsoft.com/library/windows/desktop/dd371897), che definisce una raccolta di transizioni standard.  
+ Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), che definisce una raccolta di transizioni standard.  
 
 ### <a name="return-value"></a>Valore restituito  
  TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue  
- Il valore della variabile di animazione alla fine della transizione.  
+ Il valore della variabile di animazione al termine della transizione.  
   
 ```  
 DOUBLE m_dblFinalValue;  

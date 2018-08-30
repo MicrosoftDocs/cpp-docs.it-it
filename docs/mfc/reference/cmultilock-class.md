@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849873"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198112"
 ---
 # <a name="cmultilock-class"></a>Classe CMultiLock
 Rappresenta il meccanismo di controllo di accesso utilizzato per controllare l'accesso alle risorse di un programma multithread.  
@@ -128,7 +128,7 @@ DWORD Lock(
  Specifica se devono diventare segnalati tutti gli oggetti di attesa in base allo stesso tempo prima della restituzione. Se FALSE, `Lock` restituirà quando uno degli oggetti stato di attesa viene segnalato.  
   
  *dwWakeMask*  
- Specifica altre condizioni che sono autorizzati a interrompere l'attesa. Per un elenco completo delle opzioni disponibili per questo parametro, vedere [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) nel SDK di Windows.  
+ Specifica altre condizioni che sono autorizzati a interrompere l'attesa. Per un elenco completo delle opzioni disponibili per questo parametro, vedere [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se `Lock` ha esito negativo, restituisce - 1. Se ha esito positivo, verrà restituito uno dei valori seguenti:  

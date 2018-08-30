@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e566e50cc0fed4b17b085451410a1d0c3f81fb38
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5b11100ff054b9edd18fc0ba335b26fa4c1076d7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597547"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204284"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -43,7 +43,7 @@ L'ID della categoria implementata.
 
 ## <a name="remarks"></a>Note
 
-Il **implements_category** attributo C++ specifica le categorie di componenti implementate dalla classe di destinazione. Questa operazione viene eseguita creando una mappa di categoria e aggiungendo separare le voci specificate per il **implements_category** attributo. Per altre informazioni, vedere [quali sono le categorie di componenti e come eseguire operazioni They Work?](http://msdn.microsoft.com/library/windows/desktop/ms694322).
+Il **implements_category** attributo C++ specifica le categorie di componenti implementate dalla classe di destinazione. Questa operazione viene eseguita creando una mappa di categoria e aggiungendo separare le voci specificate per il **implements_category** attributo. Per altre informazioni, vedere [quali sono le categorie di componenti e come eseguire operazioni They Work?](https://msdn.microsoft.com/library/windows/desktop/ms694322).
 
 Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.
 

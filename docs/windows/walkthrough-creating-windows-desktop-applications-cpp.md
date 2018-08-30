@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590294"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204738"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procedura dettagliata: Creare un'applicazione Desktop di Windows tradizionale (C++)
 
@@ -219,7 +219,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
    }
    ```
 
-   Questa funzione restituisce un `HWND`, ovvero un handle a una finestra. Un handle è pressoché simile a un puntatore che Windows utilizza per tenere traccia delle finestre aperte. Per altre informazioni, vedere [tipi di dati Windows](https://msdn.microsoft.com/library/windows/desktop/aa383751).
+   Questa funzione restituisce un `HWND`, ovvero un handle a una finestra. Un handle è pressoché simile a un puntatore che Windows utilizza per tenere traccia delle finestre aperte. Per altre informazioni, vedere [tipi di dati Windows](/windows/desktop/WinProg/windows-data-types).
 
 1. A questo punto la finestra è stata creata, ma è comunque necessario indicare a Windows per renderla visibile. Ovvero del funzionamento di questo codice:
 
@@ -340,9 +340,9 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
 
 1. Per abilitare la funzione `WndProc` per la gestione dei messaggi ricevuti dall'applicazione, implementare un'istruzione switch.
 
-   È un importante messaggio per gestire il [WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213) messaggio. L'applicazione riceve questo messaggio quando è necessario aggiornare parte della finestra visualizzata Questo evento può verificarsi quando un utente si sposta una finestra davanti la finestra e quindi si sposta, anche in questo caso. L'applicazione non sa quando si verificano eventi simile al seguente; solo Windows sa che, in modo che una notifica con `WM_PAINT`. Quando la finestra viene visualizzata prima di tutto, è necessario aggiornare completamente.
+   È un importante messaggio per gestire il [WM_PAINT](/windows/desktop/gdi/wm-paint) messaggio. L'applicazione riceve questo messaggio quando è necessario aggiornare parte della finestra visualizzata Questo evento può verificarsi quando un utente si sposta una finestra davanti la finestra e quindi si sposta, anche in questo caso. L'applicazione non sa quando si verificano eventi simile al seguente; solo Windows sa che, in modo che una notifica con `WM_PAINT`. Quando la finestra viene visualizzata prima di tutto, è necessario aggiornare completamente.
 
-   Per gestire un `WM_PAINT` dei messaggi, prima chiamata [BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362), quindi gestire tutta la logica per il layout del testo, pulsanti e altri controlli nella finestra e quindi chiamare [EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598). Per questa applicazione, la logica tra la chiamata iniziale e la chiamata finale consiste nella visualizzazione della stringa "Hello, desktop di Windows!" nella finestra. Nel codice seguente, si noti che il [TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133) funzione viene utilizzata per visualizzare la stringa.
+   Per gestire un `WM_PAINT` dei messaggi, prima chiamata [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), quindi gestire tutta la logica per il layout del testo, pulsanti e altri controlli nella finestra e quindi chiamare [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Per questa applicazione, la logica tra la chiamata iniziale e la chiamata finale consiste nella visualizzazione della stringa "Hello, desktop di Windows!" nella finestra. Nel codice seguente, si noti che il [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funzione viene utilizzata per visualizzare la stringa.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -369,7 +369,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
 
    `HDC` In questo codice è un handle a un contesto di dispositivo, ovvero una struttura di dati che Windows usa per consentire all'applicazione di comunicare con il sottosistema di grafica. Il `BeginPaint` e `EndPaint` funzioni assicurarsi che l'applicazione si comporta come un elemento positivo e non usa il contesto di dispositivo per più lungo del necessario. Ciò consente di garantire che il sottosistema di grafica è disponibile per l'uso da altre applicazioni.
 
-1. Un'applicazione gestisce in genere molti altri messaggi, ad esempio, [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) quando viene creata una finestra, e [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) quando la finestra viene chiusa. Il codice seguente illustra una funzione `WndProc` di base, ma completa.
+1. Un'applicazione gestisce in genere molti altri messaggi, ad esempio, [WM_CREATE](/windows/desktop/winmsg/wm-create) quando viene creata una finestra, e [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) quando la finestra viene chiusa. Il codice seguente illustra una funzione `WndProc` di base, ma completa.
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

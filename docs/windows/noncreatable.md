@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a55daa9f8c742d847944ddb0459db208c7edf9cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b31ede898e2b1976bc16be7cf89c0223c3709193
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608124"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221543"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -36,7 +36,7 @@ Definisce un oggetto che non è possibile creare istanze di se stesso.
 
 ## <a name="remarks"></a>Note
 
-Il **noncreatable** attributi di C++ ha la stessa funzionalità come il [non creabile](http://msdn.microsoft.com/library/windows/desktop/aa367118) attributo MIDL e viene automaticamente passato all'oggetto generato. File IDL dal compilatore.
+Il **noncreatable** attributi di C++ ha la stessa funzionalità come il [non creabile](/windows/desktop/Midl/noncreatable) attributo MIDL e viene automaticamente passato all'oggetto generato. File IDL dal compilatore.
 
 Quando questo attributo viene usato all'interno di un progetto che usa ATL, il comportamento dell'attributo cambia. Oltre al comportamento precedente, l'attributo inserisce anche il [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro. Questa macro indica che l'oggetto non è possibile creare esternamente ad ATL.
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 663f8f3921788e64b26a57e95537ab44c757ea17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612103"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211420"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente
 Questo documento illustra come usare il Runtime di concorrenza per spostare il lavoro eseguito dal thread dell'interfaccia utente (UI) in un'applicazione di Microsoft Foundation Classes (MFC) per un thread di lavoro. Questo documento illustra anche come migliorare le prestazioni di un'operazione di disegno di lunga durata.  
@@ -40,7 +40,7 @@ Questo documento illustra come usare il Runtime di concorrenza per spostare il l
   
 -   [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)  
   
- Si consiglia inoltre di aver compreso i concetti di sviluppo di applicazioni MFC e GDI+ prima di iniziare questa procedura dettagliata. Per altre informazioni su MFC, vedere [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). Per altre informazioni su GDI+, vedere [GDI+](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
+ Si consiglia inoltre di aver compreso i concetti di sviluppo di applicazioni MFC e GDI+ prima di iniziare questa procedura dettagliata. Per altre informazioni su MFC, vedere [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). Per altre informazioni su GDI+, vedere [GDI+](https://msdn.microsoft.com/library/windows/desktop/ms533798).  
   
 ##  <a name="top"></a> Sezioni  
  Questa procedura dettagliata contiene le sezioni seguenti:  

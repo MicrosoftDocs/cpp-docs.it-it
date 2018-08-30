@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901088"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200146"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[PROPSHEETHEADER](#m_psh)|Il Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struttura. Fornisce l'accesso ai parametri di finestra delle proprietà di base.|
+|[PROPSHEETHEADER](#m_psh)|Il Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struttura. Fornisce l'accesso ai parametri di finestra delle proprietà di base.|
 
 ## <a name="remarks"></a>Note
 
 Una finestra delle proprietà è costituito da un `CPropertySheet` oggetto e uno o più [CPropertyPage](../../mfc/reference/cpropertypage-class.md) oggetti. Il framework visualizza una finestra delle proprietà come una finestra con un set di indici di scheda e un'area che contiene la pagina attualmente selezionata. L'utente passa a una pagina specifica usando la scheda appropriata.
 
-`CPropertySheet` fornisce il supporto per espanso [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struttura introdotta in Windows 98 e 2000 di Windows NT. La struttura contiene i flag aggiuntivi e i membri che supportano l'utilizzo di una bitmap di sfondo "limite".
+`CPropertySheet` fornisce il supporto per espanso [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struttura introdotta in Windows 98 e 2000 di Windows NT. La struttura contiene i flag aggiuntivi e i membri che supportano l'utilizzo di una bitmap di sfondo "limite".
 
 Per visualizzare le immagini nuove automaticamente nell'oggetto finestra delle proprietà, passare i valori validi per le immagini bitmap e tavolozza nella chiamata a [CPropertySheet::Construct](#construct) o [CPropertySheet::CPropertySheet](#cpropertysheet).
 
@@ -601,7 +601,7 @@ Chiamare questa funzione membro, ad esempio, se si desidera aggiungere bitmap pe
 
 ##  <a name="m_psh"></a>  PROPSHEETHEADER
 
-Una struttura i cui membri memorizzare le caratteristiche di [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).
+Una struttura i cui membri memorizzare le caratteristiche di [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
 
 ### <a name="remarks"></a>Note
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametri
 
 *lpRect*  
-Punta a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che contiene la finestra di dialogo coordina da convertire.
+Punta a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che contiene la finestra di dialogo coordina da convertire.
 
 ### <a name="remarks"></a>Note
 
 Finestra di dialogo unità è espresse in termini di unità di base-finestra di dialogo corrente derivato dalla media larghezza e altezza dei caratteri nel tipo di carattere utilizzato per il testo della finestra di dialogo. Un'unità orizzontale è un quarto dell'unità di base-larghezza della finestra di dialogo e un'unità verticale è un ottavo dell'unità di base altezza della finestra di dialogo.
 
-Il [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows funzione restituisce informazioni sulle dimensioni di carattere del sistema, ma è possibile specificare un carattere diverso per ogni finestra delle proprietà se si usa lo stile DS_SETFONT nel file di definizione di risorsa. Il [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) per questa finestra di dialogo funzione di Windows, descritto nel SDK di Windows, utilizza il tipo di carattere appropriato.
+Il [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows funzione restituisce informazioni sulle dimensioni di carattere del sistema, ma è possibile specificare un carattere diverso per ogni finestra delle proprietà se si usa lo stile DS_SETFONT nel file di definizione di risorsa. Il [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) per questa finestra di dialogo funzione di Windows, descritto nel SDK di Windows, utilizza il tipo di carattere appropriato.
 
 Il `MapDialogRect` funzione membro sostituisce le unità finestra di dialogo *lpRect* con schermata unità (pixel) in modo che il rettangolo può essere utilizzato per creare una finestra di dialogo o posizionare un controllo all'interno di una finestra.
 
@@ -683,9 +683,9 @@ Npulsante: identifica il pulsante ai tasti da premere. Questo parametro può ess
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) per altre informazioni sul messaggio di Windows SDK Pressbutton.
+Visualizzare [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) per altre informazioni sul messaggio di Windows SDK Pressbutton.
 
-Una chiamata a `PressButton` non verrà inviato il [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) notifica da una pagina delle proprietà per il framework. Per inviare la notifica, chiamare [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Una chiamata a `PressButton` non verrà inviato il [PSN_APPLY](/windows/desktop/Controls/psn-apply) notifica da una pagina delle proprietà per il framework. Per inviare la notifica, chiamare [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Esempio
 

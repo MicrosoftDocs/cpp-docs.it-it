@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c393489b8b4d0353ae37a21132f66e0618b3b794
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85b087d9a94905291db951e0233ba1c55fa00e6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884584"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210144"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementazione di una gestione stringhe personalizzata (metodo di base)
 Il modo più semplice per personalizzare lo schema di allocazione di memoria per i dati di stringa consiste nell'usare ATL fornito dal `CAtlStringMgr` classe ma forniscono routine di allocazione della propria memoria. Il costruttore per `CAtlStringMgr` accetta un singolo parametro: un puntatore a un `IAtlMemMgr` oggetto. `IAtlMemMgr` è una classe base astratta che fornisce un'interfaccia generica per un heap. Usando il `IAtlMemMgr` interfaccia, il `CAtlStringMgr` consente di allocare, riallocare e libera la memoria usata per archiviare dati di tipo stringa. È possibile implementare il `IAtlMemMgr` interfaccia manualmente o usare una delle classi di gestione della memoria disponibili ATL cinque. I responsabili di memoria di ATL eseguono semplicemente il wrapping di funzionalità di allocazione della memoria esistente:  
   
 -   [Su CCRTHeap](../atl/reference/ccrtheap-class.md) esegue il wrapping di funzioni di heap CRT standard ([malloc](../c-runtime-library/reference/malloc.md), [gratuito](../c-runtime-library/reference/free.md), e [realloc](../c-runtime-library/reference/realloc.md))  
   
--   [CWin32Heap](../atl/reference/cwin32heap-class.md) esegue il wrapping di gestire un heap Win32, usando [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701), e [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
+-   [CWin32Heap](../atl/reference/cwin32heap-class.md) esegue il wrapping di gestire un heap Win32, usando [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree), e [HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)  
   
--   [CLocalHeap](../atl/reference/clocalheap-class.md) include le API Win32: [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730), e [LocalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)  
+-   [CLocalHeap](../atl/reference/clocalheap-class.md) include le API Win32: [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree), e [LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)  
   
--   [CGlobalHeap](../atl/reference/cglobalheap-class.md) include le API Win32: [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574), [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579), e [GlobalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+-   [CGlobalHeap](../atl/reference/cglobalheap-class.md) include le API Win32: [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), e [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).  
   
--   [CComHeap](../atl/reference/ccomheap-class.md) esegue il wrapping di API COM dell'allocatore: [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), e [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)  
+-   [CComHeap](../atl/reference/ccomheap-class.md) esegue il wrapping di API COM dell'allocatore: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), e [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)  
   
  Ai fini della gestione della memoria, la classe più utile è `CWin32Heap` perché consente di creare più heap indipendenti. Ad esempio, se si desidera utilizzare un heap separato solo per le stringhe, è possibile eseguire le operazioni seguenti:  
   

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb157fb5c39dff7f4e06926ddd17ed38d7a5174a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027745"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218633"
 ---
 # <a name="map-class"></a>Classe map
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>Parametri
 
-*Chiave* tipo da archiviare nella mappa i dati della chiave.
+*Key*<br/>
+ Tipo di dati relativo alle chiavi da archiviare nella mappa.
 
-*Tipo* tipo di dati degli elementi da archiviare nella mappa.
+*Type*<br/>
+ Tipo di dati relativo agli elementi da archiviare nella mappa.
 
-*Tratti* il tipo che fornisce un oggetto funzione che può confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo nella mappa. Questo argomento è facoltativo e il predicato binario `less<Key>` rappresenta il valore predefinito.
+*Tratti*<br/>
+ Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nella mappa. Questo argomento è facoltativo e il predicato binario `less<Key>` rappresenta il valore predefinito.
 
 In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato std::less<> che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).
 
-*Allocatore* il tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione della memoria della mappa. Questo argomento è facoltativo e il valore predefinito è `allocator<pair<const Key, Type> >`.
+*Allocatore*<br/>
+ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione della mappa e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Note
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* il valore della chiave degli elementi per cui trovare una corrispondenza nella mappa.
+*key*<br/>
+ Valore chiave degli elementi per cui trovare un corrispondenza nella mappa.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1035,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* il valore chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento dalla mappa viene effettuata la ricerca.
+*key*<br/>
+ Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1121,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametri
 
-*In cui* posizione dell'elemento da rimuovere.
+*Where*<br/>
+ Posizione dell'elemento che deve essere rimosso.
 
-*Primo* posizione del primo elemento da rimuovere.
+*Primo*<br/>
+ Posizione del primo elemento che deve essere rimosso.
 
-*Ultimo* posizione immediatamente successiva all'ultimo elemento da rimuovere.
+*ultimo*<br/>
+ Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-*Chiave* il valore della chiave degli elementi da rimuovere.
+*Key*<br/>
+ Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1229,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* il valore della chiave da confrontare per la chiave di ordinamento di un elemento dalla mappa viene effettuata la ricerca.
+*key*<br/>
+ Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nella mappa in cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1561,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Note
 
-Il `iterator` definito da map punta a elementi che sono oggetti di [value_type](#value_type), ovvero di tipo `pair` * \< * **constKey**, * *Digitare * * * >*, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato nell'elemento.
+L'iteratore definito da map punta a elementi che sono oggetti di [value_type](#value_type), ovvero di tipo `pair<const Key, Type>`, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato nell'elemento.
 
-Per dereferenziare un **iteratore** `Iter` che punta a un elemento in una mappa, usare il `->` operatore.
+Per dereferenziare l'iteratore *Iter* che punta a un elemento in una mappa, usare il `->` operatore.
 
-Per accedere al valore della chiave per l'elemento, usare `Iter` -> **first**, che equivale a (\* `Iter`). **first**. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `Iter` -> **second**, che equivale a (\* `Iter`). **second**.
+Per accedere al valore della chiave per l'elemento, usare `Iter->first`, che equivale a `(*Iter).first`. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `Iter->second`, che equivale a `(*Iter).second`.
 
 ### <a name="example"></a>Esempio
 
@@ -1587,7 +1598,7 @@ Oggetto funzione che viene usato da un oggetto map per ordinare gli elementi.
 
 L'oggetto archiviato definisce la funzione membro
 
-**bool operator**( **constKey&**`left`, **const Key&**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 che restituisce **true** se `left` precede e non è uguale a `right` nell'ordinamento.
 
@@ -1690,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* il valore chiave dell'argomento da confrontare con la chiave di ordinamento di un elemento dalla mappa viene effettuata la ricerca.
+*key*<br/>
+ Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2402,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Un tipo `reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto map in ordine inverso.
 
-Il `reverse_iterator` definito da map punta a elementi che sono oggetti di [value_type](#value_type), ovvero di tipo `pair` * \< * **constKey**, * *Digitare * * * >*, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato nell'elemento.
+Il `reverse_iterator` definito da map punta a elementi che sono oggetti di [value_type](#value_type), ovvero di tipo `pair<const Key, Type>`, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato nell'elemento.
 
-Per dereferenziare un `reverse_iterator` `rIter` che punta a un elemento in una mappa, usare il `->` operatore.
+Per dereferenziare un `reverse_iterator` *rIter* che punta a un elemento in una mappa, usare il `->` operatore.
 
 Per accedere al valore della chiave per l'elemento, usare `rIter` -> **first**, che equivale a (\* `rIter`). **first**. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `rIter` -> **second**, che equivale a (\* `rIter`). **first**.
 
@@ -2479,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* l'argomento di tipo map che fornisce gli elementi da scambiare con l'oggetto map di destinazione.
+*right*<br/>
+ Argomento di tipo map che fornisce gli elementi da scambiare con l'oggetto map di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -2549,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametri
 
-*chiave* il valore chiave dell'argomento da confrontare con il valore di chiave di ordinamento di un elemento dalla mappa viene effettuata la ricerca.
+*key*<br/>
+ Valore della chiave dell'argomento per cui trovare una corrispondenza con il valore della chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2738,7 +2752,7 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<mappa > membri](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<mappa > membri](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Contenitori](../cpp/containers-modern-cpp.md)<br/>
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

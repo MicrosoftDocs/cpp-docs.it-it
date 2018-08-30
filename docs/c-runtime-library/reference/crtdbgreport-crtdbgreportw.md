@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572997"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204423"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -108,8 +108,8 @@ La tabella seguente elenca le scelte disponibili per la modalità di report e fi
 
 |Modalità rapporto|File di rapporto|**CrtDbgReport**, **CrtDbgReportW** comportamento|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Non applicabile|Scrive un messaggio tramite l'API [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) di Windows.|
-|**_CRTDBG_MODE_WNDW**|Non applicabile|Esegue una chiamata all'API[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) di Windows per creare la finestra in cui visualizzare il messaggio nonché i pulsanti **Interrompi**, **Riprova** e **Ignora**. Se un utente sceglie **Abort**, **CrtDbgReport** oppure **CrtDbgReport** viene immediatamente interrotto. Se un utente fa clic su **Riprova**, viene restituito 1. Se un utente sceglie **Ignore**, l'esecuzione continua e **CrtDbgReport** e **CrtDbgReportW** restituiscono 0. Si noti che quando si fa clic su **Ignora** in presenza di una condizione di errore, spesso si determina un "comportamento indefinito".|
+|**_CRTDBG_MODE_DEBUG**|Non applicabile|Scrive un messaggio tramite l'API [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) di Windows.|
+|**_CRTDBG_MODE_WNDW**|Non applicabile|Esegue una chiamata all'API[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) di Windows per creare la finestra in cui visualizzare il messaggio nonché i pulsanti **Interrompi**, **Riprova** e **Ignora**. Se un utente sceglie **Abort**, **CrtDbgReport** oppure **CrtDbgReport** viene immediatamente interrotto. Se un utente fa clic su **Riprova**, viene restituito 1. Se un utente sceglie **Ignore**, l'esecuzione continua e **CrtDbgReport** e **CrtDbgReportW** restituiscono 0. Si noti che quando si fa clic su **Ignora** in presenza di una condizione di errore, spesso si determina un "comportamento indefinito".|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|Scrive un messaggio a fornito dall'utente **GESTISCONO**, utilizzando il Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API e non verifica la validità dell'handle di file; l'applicazione è responsabile dell'apertura del file di report e il passaggio di un file valido handle.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Scrive un messaggio a **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Scrive un messaggio a **stdout**.|

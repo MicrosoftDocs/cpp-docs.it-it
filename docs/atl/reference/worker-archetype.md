@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881305"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204854"
 ---
 # <a name="worker-archetype"></a>Archetipo worker
 Classi conformi al *lavoro* archetipo forniscono il codice per gli elementi di lavoro di processo in coda nel pool di thread.  
@@ -31,8 +31,8 @@ Classi conformi al *lavoro* archetipo forniscono il codice per gli elementi di l
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Initialize](#initialize)|Chiamato per inizializzare l'oggetto ruolo di lavoro prima che tutte le richieste vengono passate al [Execute](#execute).|  
-|[Eseguire](#execute)|Chiamato per elaborare un elemento di lavoro.|  
-|[Terminare](#terminate)|Chiamato da non inizializzare l'oggetto ruolo di lavoro dopo che tutte le richieste sono state passate al [Execute](#execute).|  
+|[Execute](#execute)|Chiamato per elaborare un elemento di lavoro.|  
+|[Terminate](#terminate)|Chiamato da non inizializzare l'oggetto ruolo di lavoro dopo che tutte le richieste sono state passate al [Execute](#execute).|  
   
 |Typedef|Descrizione|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Initialize` e `Terminate`.  
   
  *pOverlapped*  
- Un puntatore per il [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struttura utilizzata per creare la coda in cui gli elementi messe in coda.  
+ Un puntatore per il [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) struttura utilizzata per creare la coda in cui gli elementi messe in coda.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 Chiamato per inizializzare l'oggetto ruolo di lavoro prima di tutte le richieste vengono passate al `WorkerArchetype::Execute`.  

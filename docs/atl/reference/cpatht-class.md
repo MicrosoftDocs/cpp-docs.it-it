@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7b19cff6e4f90485946521824bb0fd2f6358372
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a953f94e48f3093b1c61a1567252e04d98c1beb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208543"
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 Questa classe rappresenta un percorso.  
@@ -176,7 +176,7 @@ void AddBackslash();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
+ Per altre informazioni, vedere [PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).  
   
 ##  <a name="addextension"></a>  CPathT::AddExtension  
  Chiamare questo metodo per aggiungere un'estensione di file in un percorso.  
@@ -193,7 +193,7 @@ BOOL AddExtension(PCXSTR pszExtension);
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
+ Per altre informazioni, vedere [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).  
   
 ##  <a name="append"></a>  CPathT::Append  
  Chiamare questo metodo per aggiungere una stringa per il percorso corrente.  
@@ -210,7 +210,7 @@ BOOL Append(PCXSTR pszMore);
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
+ Per altre informazioni, vedere [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).  
   
 ##  <a name="buildroot"></a>  CPathT::BuildRoot  
  Chiamare questo metodo per creare un percorso radice da un numero di unità specificata.  
@@ -224,7 +224,7 @@ void BuildRoot(int iDrive);
  Il numero di unità (0 è r:, è 1, b e così via).  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
+ Per altre informazioni, vedere [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).  
   
 ##  <a name="canonicalize"></a>  CPathT::Canonicalize  
  Chiamare questo metodo per convertire il percorso in forma canonica.  
@@ -234,7 +234,7 @@ void Canonicalize();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
+ Per altre informazioni, vedere [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).  
   
 ##  <a name="combine"></a>  CPathT::Combine  
  Chiamare questo metodo per concatenare una stringa che rappresenta un nome di directory e una stringa che rappresenta un nome di percorso di file in un percorso.  
@@ -251,7 +251,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  Il percorso del file.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).  
+ Per altre informazioni, vedere [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).  
   
 ##  <a name="commonprefix"></a>  CPathT::CommonPrefix  
  Chiamare questo metodo per determinare se il percorso specificato condivide un prefisso comune con il percorso corrente.  
@@ -268,7 +268,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  Restituisce il prefisso comune.  
   
 ### <a name="remarks"></a>Note  
- Un prefisso è uno di questi tipi: "c:\\\\",".","..",".. \\\\". Per altre informazioni, vedere [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
+ Un prefisso è uno di questi tipi: "c:\\\\",".","..",".. \\\\". Per altre informazioni, vedere [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).  
   
 ##  <a name="compactpath"></a>  CPathT::CompactPath  
  Chiamare questo metodo per troncare un percorso di file per adattarsi all'interno di una larghezza in pixel specificato mediante la sostituzione di componenti del percorso con puntini di sospensione.  
@@ -288,7 +288,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
+ Per altre informazioni, vedere [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).  
   
 ##  <a name="compactpathex"></a>  CPathT::CompactPathEx  
  Chiamare questo metodo per troncare un percorso di file per adattarsi all'interno di un determinato numero di caratteri tramite la sostituzione di componenti del percorso con puntini di sospensione.  
@@ -308,7 +308,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
+ Per altre informazioni, vedere [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).  
   
 ##  <a name="cpatht"></a>  CPathT::CPathT  
  Costruttore.  
@@ -337,7 +337,7 @@ BOOL FileExists() const;
  Restituisce TRUE se il file esiste, FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
+ Per altre informazioni, vedere [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).  
   
 ##  <a name="findextension"></a>  CPathT::FindExtension  
  Chiamare questo metodo per individuare la posizione dell'estensione di file all'interno del percorso.  
@@ -350,7 +350,7 @@ int FindExtension() const;
  Restituisce la posizione del "." che precede l'estensione. Se nessuna estensione viene trovata, restituisce -1.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
+ Per altre informazioni, vedere [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).  
   
 ##  <a name="findfilename"></a>  CPathT::FindFileName  
  Chiamare questo metodo per individuare la posizione del nome del file all'interno del percorso.  
@@ -363,7 +363,7 @@ int FindFileName() const;
  Restituisce la posizione del nome del file. Se non viene trovato alcun nome file, restituisce -1.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
+ Per altre informazioni, vedere [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).  
   
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber  
  Chiamare questo metodo per cercare il percorso per una lettera di unità compreso tra 'A' a 'Z' e restituire il numero di unità corrispondente.  
@@ -376,7 +376,7 @@ int GetDriveNumber() const;
  Restituisce il numero di unità come numero intero compreso tra 0 e 25 (corrispondente a 'A' a 'Z') se il percorso è una lettera di unità, oppure -1 in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
+ Per altre informazioni, vedere [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).  
   
 ##  <a name="getextension"></a>  CPathT::GetExtension  
  Chiamare questo metodo per ottenere l'estensione di file dal percorso.  
@@ -399,7 +399,7 @@ BOOL IsDirectory() const;
  Se il percorso è una directory, in caso contrario, restituisce un valore diverso da zero (16).  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
+ Per altre informazioni, vedere [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).  
   
 ##  <a name="isfilespec"></a>  CPathT::IsFileSpec  
  Chiamare questo metodo per cercare un percorso per tutti i caratteri che delimitano percorso (ad esempio, ':' o '\\'). Se non sono presenti caratteri che delimitano percorso, il percorso viene considerato per essere un percorso di File specifiche.  
@@ -412,7 +412,7 @@ BOOL IsFileSpec() const;
  Restituisce TRUE se non sono presenti caratteri che delimitano percorso all'interno del percorso oppure FALSE se sono presenti caratteri di delimitazione di percorso.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
+ Per altre informazioni, vedere [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).  
   
 ##  <a name="isprefix"></a>  CPathT::IsPrefix  
  Chiamare questo metodo per determinare se un percorso contiene un prefisso valido del tipo passato *pszPrefix*.  
@@ -429,7 +429,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
  Restituisce TRUE se il percorso contiene il prefisso oppure FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
+ Per altre informazioni, vedere [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).  
   
 ##  <a name="isrelative"></a>  CPathT::IsRelative  
  Chiamare questo metodo per determinare se il percorso è relativo.  
@@ -442,7 +442,7 @@ BOOL IsRelative() const;
  Restituisce TRUE se il percorso è relativo, o FALSE se è assoluto.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
+ Per altre informazioni, vedere [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).  
   
 ##  <a name="isroot"></a>  CPathT::IsRoot  
  Chiamare questo metodo per determinare se il percorso è una radice di directory.  
@@ -455,7 +455,7 @@ BOOL IsRoot() const;
  Restituisce TRUE se il percorso è una radice oppure FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
+ Per altre informazioni, vedere [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).  
   
 ##  <a name="issameroot"></a>  CPathT::IsSameRoot  
  Chiamare questo metodo per determinare se un altro percorso possiede un componente radice comuni con il percorso corrente.  
@@ -472,7 +472,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  Restituisce TRUE se entrambe le stringhe hanno lo stesso componente di primo livello, o FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
+ Per altre informazioni, vedere [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).  
   
 ##  <a name="isunc"></a>  CPathT::IsUNC  
  Chiamare questo metodo per determinare se il percorso è un percorso UNC (universal convenzione di denominazione) valido per un server e condividono.  
@@ -485,7 +485,7 @@ BOOL IsUNC() const;
  Restituisce TRUE se il percorso è un percorso UNC valido o FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
+ Per altre informazioni, vedere [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).  
   
 ##  <a name="isuncserver"></a>  CPathT::IsUNCServer  
  Chiamare questo metodo per determinare se il percorso è un percorso UNC (convenzione di denominazione universali) valido per un solo server.  
@@ -498,7 +498,7 @@ BOOL IsUNCServer() const;
  Restituisce TRUE se la stringa è un percorso UNC per un solo server (Nessun nome di condivisione) valido oppure FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
+ Per altre informazioni, vedere [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).  
   
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare  
  Chiamare questo metodo per determinare se il percorso è un percorso di condivisione UNC (universal convenzione di denominazione) valido, \\ \  *server*\ *condividere*.  
@@ -511,7 +511,7 @@ BOOL IsUNCServerShare() const;
  Restituisce TRUE se il percorso è nel formato \\ \  *server*\ *condividere*, o FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
+ Per altre informazioni, vedere [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).  
   
 ##  <a name="m_strpath"></a>  CPathT::m_strPath  
  Percorso.  
@@ -534,7 +534,7 @@ BOOL MakePretty();
  In caso contrario, restituisce TRUE se il percorso è stato convertito o FALSE.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
+ Per altre informazioni, vedere [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).  
   
 ##  <a name="matchspec"></a>  CPathT::MatchSpec  
  Chiamare questo metodo per cercare il percorso per una stringa che contiene un tipo di corrispondenza con caratteri jolly.  
@@ -551,7 +551,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
  In caso contrario, restituisce TRUE se la stringa corrisponde alla, o FALSE.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
+ Per altre informazioni, vedere [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).  
   
 ##  <a name="operator_add_eq"></a>  + = CPathT::operator  
  Questo operatore aggiunge una stringa nel percorso.  
@@ -625,7 +625,7 @@ void QuoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
+ Per altre informazioni, vedere [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).  
   
 ##  <a name="relativepathto"></a>  CPathT::RelativePathTo  
  Chiamare questo metodo per creare un percorso relativo da un file o cartella a un'altra.  
@@ -655,7 +655,7 @@ BOOL RelativePathTo(
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
+ Per altre informazioni, vedere [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).  
   
 ##  <a name="removeargs"></a>  CPathT::RemoveArgs  
  Chiamare questo metodo per rimuovere eventuali argomenti della riga di comando dal percorso.  
@@ -665,7 +665,7 @@ void RemoveArgs();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
+ Per altre informazioni, vedere [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).  
   
 ##  <a name="removebackslash"></a>  CPathT::RemoveBackslash  
  Chiamare questo metodo per rimuovere la barra rovesciata finale dal percorso.  
@@ -675,7 +675,7 @@ void RemoveBackslash();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
+ Per altre informazioni, vedere [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).  
   
 ##  <a name="removeblanks"></a>  CPathT::RemoveBlanks  
  Chiamare questo metodo per rimuovere tutti gli spazi iniziali e finali dal percorso.  
@@ -685,7 +685,7 @@ void RemoveBlanks();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
+ Per altre informazioni, vedere [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).  
   
 ##  <a name="removeextension"></a>  CPathT::RemoveExtension  
  Chiamare questo metodo per rimuovere l'estensione di file dal percorso, se presente.  
@@ -695,7 +695,7 @@ void RemoveExtension();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
+ Per altre informazioni, vedere [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).  
   
 ##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec  
  Chiamare questo metodo per rimuovere il nome del file finale e barra rovesciata dal percorso, se dispone di essi.  
@@ -708,7 +708,7 @@ BOOL RemoveFileSpec();
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
+ Per altre informazioni, vedere [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).  
   
 ##  <a name="renameextension"></a>  CPathT::RenameExtension  
  Chiamare questo metodo per sostituire l'estensione del nome file nel percorso con una nuova estensione. Se il nome del file non contiene un'estensione, l'estensione verrà collegato alla fine del percorso.  
@@ -725,7 +725,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
+ Per altre informazioni, vedere [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).  
   
 ##  <a name="skiproot"></a>  CPathT::SkipRoot  
  Chiamare questo metodo per analizzare un percorso, ignorando la lettera di unità o parti del percorso server o una condivisione UNC (universal convenzione di denominazione).  
@@ -738,7 +738,7 @@ int SkipRoot() const;
  Restituisce la posizione di inizio del sottopercorso che segue la radice (lettera di unità o server o una condivisione UNC).  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
+ Per altre informazioni, vedere [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).  
   
 ##  <a name="strippath"></a>  CPathT::StripPath  
  Chiamare questo metodo per rimuovere la parte di percorso di un percorso completo e nome file.  
@@ -748,7 +748,7 @@ void StripPath();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
+ Per altre informazioni, vedere [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).  
   
 ##  <a name="striptoroot"></a>  CPathT::StripToRoot  
  Chiamare questo metodo per rimuovere tutte le parti del percorso tranne le informazioni sui principali.  
@@ -761,7 +761,7 @@ BOOL StripToRoot();
  Restituisce TRUE se una lettera di unità valido è stato trovato nel percorso, o FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
+ Per altre informazioni, vedere [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).  
   
 ##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces  
  Chiamare questo metodo per rimuovere le virgolette all'inizio e alla fine di un percorso.  
@@ -771,7 +771,7 @@ void UnquoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
+ Per altre informazioni, vedere [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).  
   
 ##  <a name="xchar"></a>  CPathT::XCHAR  
  Tipo carattere.  

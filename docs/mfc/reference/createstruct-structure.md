@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 594f71d5166261dbb1bb08422a564157bfce2721
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203661"
 ---
 # <a name="createstruct-structure"></a>Struttura CREATESTRUCT
 Il `CREATESTRUCT` struttura definisce i parametri di inizializzazione passati alla routine della finestra di un'applicazione.  
@@ -77,7 +77,7 @@ typedef struct tagCREATESTRUCT {
  Punta a una stringa con terminazione null che specifica il nome della nuova finestra.  
   
  *lpszClass*  
- Punta a una stringa con terminazione null che specifica nome della classe della finestra Nuovo Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struttura; per altre informazioni, vedere il SDK di Windows).  
+ Punta a una stringa con terminazione null che specifica nome della classe della finestra Nuovo Windows (un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura; per altre informazioni, vedere il SDK di Windows).  
   
  *dwExStyle*  
  Specifica la [stile esteso](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) per la nuova finestra.  

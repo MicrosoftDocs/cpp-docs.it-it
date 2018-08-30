@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56a57d3fe0eb1a016af9eee8539cd7f57a12ddf5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd7f2c708dd3cfe63e40b62912a775fcc120c4ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880560"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223051"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Classe CSnapInPropertyPageImpl
 Questa classe fornisce metodi per l'implementazione di un oggetto pagina delle proprietà di snap-in.  
@@ -146,7 +146,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>Note  
  Usare questa struttura per inizializzare l'aspetto di una pagina delle proprietà dopo la sua creazione.  
   
- Per altre informazioni su questa struttura, incluso un elenco dei relativi membri, vedere [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) nel SDK di Windows.  
+ Per altre informazioni su questa struttura, incluso un elenco dei relativi membri, vedere [PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) nel SDK di Windows.  
   
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  Questa funzione membro viene chiamata quando l'utente sceglie il **OK** o il **si applicano a questo punto** pulsante.  

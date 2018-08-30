@@ -1,5 +1,5 @@
 ---
-title: Problemi di migrazione a 64 bit di Visual C++ | Documenti Microsoft
+title: Problemi comuni della migrazione a 64 bit di Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fadc3d48eb6ba812415cbedc9c077e7ffc1b4016
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208158"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemi comuni relativi alla migrazione di Visual C++ a 64 bit
 
@@ -37,7 +37,7 @@ Quando si usa Visual C++ per creare applicazioni da eseguire su un sistema opera
   
 -   `size_t`, `time_t`, e `ptrdiff_t` sono valori a 64 bit nei sistemi operativi Windows a 64 bit.  
   
--   Nei sistemi operativi Windows a 32 bit, `time_t` è un valore a 32 bit nelle versioni di Visual C++ antecedenti a Visual C++ 2005. `time_t` è ora un valore Integer a 64 bit per impostazione predefinita. Per ulteriori informazioni, vedere [gestione del tempo](../c-runtime-library/time-management.md).  
+-   Nei sistemi operativi Windows a 32 bit, `time_t` è un valore a 32 bit nelle versioni di Visual C++ antecedenti a Visual C++ 2005. `time_t` è ora un valore Integer a 64 bit per impostazione predefinita. Per altre informazioni, vedere [gestione del tempo](../c-runtime-library/time-management.md).  
   
      È consigliabile controllare attentamente le parti di codice in cui un valore `int` viene elaborato come valore `size_t` o `time_t`. È possibile che il numero diventi maggiore di un numero a 32 bit e che i dati vengano troncati quando il numero viene riassegnato alla variabile `int`.   
   
@@ -53,9 +53,9 @@ Per altre informazioni, vedere:
   
 -   [Opzioni del compilatore](../build/reference/compiler-options.md)  
   
--   [Suggerimenti per la migrazione](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
+-   [Suggerimenti relativi alla migrazione](/windows/desktop/WinProg64/migration-tips)  
   
 ## <a name="see-also"></a>Vedere anche  
 
-[Visual C++ per x64 a 64 bit, configurare le destinazioni](../build/configuring-programs-for-64-bit-visual-cpp.md)   
+[Configurare Visual C++ per x64 a 64 bit, destinazioni](../build/configuring-programs-for-64-bit-visual-cpp.md)   
 [Guida al porting e aggiornamento in Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539454"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196382"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 Barra dei menu che implementa l'ancoraggio.  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
  È consigliabile usare questa funzione anziché [CMFCMenuBar::Create](#create) quando si desidera specificare gli stili oltre lo stile della barra degli strumenti. Alcuni stili aggiuntivi usati di frequente sono TBSTYLE_TRANSPARENT e CBRS_TOP.  
   
- Per un elenco di stili aggiuntivi, vedere [controllo della barra degli strumenti e stili dei pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb760439), [stili dei controlli comuni](http://msdn.microsoft.com/library/windows/desktop/bb775498), e [stili finestra comuni](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ Per un elenco di stili aggiuntivi, vedere [controllo della barra degli strumenti e stili dei pulsanti](/windows/desktop/Controls/toolbar-control-and-button-styles), [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles), e [stili finestra comuni](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
 ### <a name="example"></a>Esempio  
  L'esempio seguente illustra come usare il `CreateEx` metodo del `CMFCMenuBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>Parametri  
  [in] *lpLogFont*  
- Un puntatore a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) struttura che definisca il tipo di carattere da impostare.  
+ Un puntatore a un [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) struttura che definisca il tipo di carattere da impostare.  
   
  [in] *bHorz*  
  TRUE se si desidera che il *lpLogFont* parametro da utilizzare per il tipo di carattere verticale, FALSE se si desidera che può essere usato per tipo di carattere orizzontale.  

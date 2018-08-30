@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4300d5fdab43cf4d22cf4e1fdee790f9d06d00d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5414a59aac41bec29886b1aa83c20395b3e916
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208679"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
-Convertire una **tm** ora struttura da una stringa di caratteri. Queste funzioni sono versioni di [asctime, _wasctime](asctime-wasctime.md) con miglioramenti per la sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convertire un **tm** ora struttura da una stringa di caratteri. Queste funzioni sono versioni di [asctime, _wasctime](asctime-wasctime.md) con miglioramenti per la sicurezza come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -79,7 +79,7 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>Parametri
 
 *buffer*<br/>
-Un puntatore a un buffer per archiviare il risultato di stringa di caratteri. Questa funzione presuppone un puntatore a una posizione di memoria valido con una dimensione specificata mediante *numberOfElements*.
+Un puntatore a un buffer per archiviare il risultato di stringa di caratteri. Questa funzione presuppone un puntatore a una posizione di memoria valida con una dimensione specificata da *numberOfElements*.
 
 *numberOfElements*<br/>
 Le dimensioni del buffer utilizzato per archiviare il risultato.
@@ -93,38 +93,38 @@ Zero in caso di esito positivo. In caso di esito negativo, viene richiamato il g
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*numberOfElements*|*tmSource*|INVIO|Valore *buffer*|
+|*buffer*|*numberOfElements*|*tmSource*|INVIO|Valore in *buffer*|
 |--------------|------------------------|----------|------------|-----------------------|
 |**NULL**|Qualsiasi|Qualsiasi|**EINVAL**|Non modificato|
-|Non **NULL** (punta a valide per la memoria)|0|Qualsiasi|**EINVAL**|Non modificato|
-|non **NULL**|0< size < 26|Qualsiasi|**EINVAL**|Stringa vuota|
-|non **NULL**|>= 26|**NULL**|**EINVAL**|Stringa vuota|
-|non **NULL**|>= 26|Struttura temporale non valida o valori fuori intervallo per i componenti dell'ora|**EINVAL**|Stringa vuota|
+|Non **NULL** (punta alla memoria valida)|0|Qualsiasi|**EINVAL**|Non modificato|
+|Non **NULL**|0< size < 26|Qualsiasi|**EINVAL**|Stringa vuota|
+|Non **NULL**|>= 26|**NULL**|**EINVAL**|Stringa vuota|
+|Non **NULL**|>= 26|Struttura temporale non valida o valori fuori intervallo per i componenti dell'ora|**EINVAL**|Stringa vuota|
 
 > [!NOTE]
-> Condizioni di errore per **wasctime_s** sono simili alle **asctime_s** con l'eccezione che il limite delle dimensioni è misurato in parole.
+> Condizioni di errore per **wasctime_s** sono simili agli **asctime_s** con l'eccezione che il limite delle dimensioni è misurato in parole.
 
 ## <a name="remarks"></a>Note
 
-Il **asctime** funzione converte un'ora archiviata come una struttura a una stringa di caratteri. Il *tmSource* valore viene in genere ottenuto da una chiamata a **gmtime** oppure **localtime**. Entrambe le funzioni possono essere utilizzate per compilare un **tm** strutturare, come definito nel tempo. H.
+Il **asctime** funzione converte un'ora archiviata come una struttura di una stringa di caratteri. Il *tmSource* valore viene in genere ottenuto da una chiamata a **gmtime** oppure **localtime**. Entrambe le funzioni possono essere utilizzate per riempire un **tm** strutturare, come definito nel tempo. H.
 
 |membro timeptr|Valore|
 |--------------------|-----------|
-|**tm_hour**|Ore da mezzanotte (0-23)|
+|**tm_hour**|Ore dalla mezzanotte (0-23)|
 |**tm_isdst**|Positivo se è in vigore l'ora legale. 0 se l'ora legale non è in vigore. Negativo se lo stato dell'ora legale è sconosciuto. La libreria di runtime C presuppone le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).|
 |**tm_mday**|Giorno del mese (1-31)|
 |**tm_min**|Minuti dopo l'ora (0-59)|
-|**tm_mon**|Mese (da 0 a 11; Gennaio = 0)|
+|**tm_mon**|Mese (0-11; Gennaio = 0)|
 |**tm_sec**|Secondi dopo il minuto (0-59)|
-|**tm_wday**|Giorno della settimana (0-6. Domenica = 0)|
-|**tm_yday**|Giorno dell'anno (365-0; Il 1 ° gennaio = 0)|
+|**tm_wday**|Giorno della settimana (0-6; Domenica = 0)|
+|**tm_yday**|Giorno dell'anno (0-365; Il 1 ° gennaio = 0)|
 |**tm_year**|Anno (anno corrente meno 1900)|
 
 La stringa di caratteri convertita viene anche modificata in base alle impostazioni di fuso orario locale. Vedere le funzioni [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) per informazioni sulla configurazione dell'ora locale e la funzione [_tzset](tzset.md) per informazioni sulla definizione delle variabili di ambiente e globali del fuso orario.
 
-Il risultato di stringa prodotto da **asctime_s** contiene esattamente 26 caratteri e ha il formato `Wed Jan 02 02:03:55 1980\n\0`. Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. Il valore passato come secondo parametro deve avere una dimensione minima corrispondente. Se è minore, un codice di errore **EINVAL**, verrà restituito.
+Risultato stringa prodotto da **asctime_s** contiene esattamente 26 caratteri e ha il formato `Wed Jan 02 02:03:55 1980\n\0`. Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. Il valore passato come secondo parametro deve avere una dimensione minima corrispondente. Se è minore, un codice di errore **EINVAL**, verranno restituiti.
 
-**wasctime_s** è una versione a caratteri wide **asctime_s**. **wasctime_s** e **asctime_s** si comportano in modo identico in caso contrario.
+**wasctime_s** è una versione a caratteri wide di **asctime_s**. **wasctime_s** e **asctime_s** hanno lo stesso comportamento in caso contrario.
 
 ### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico
 
@@ -143,13 +143,13 @@ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli 
 
 ## <a name="security"></a>Sicurezza
 
-Se il puntatore al buffer non è **NULL** e il puntatore non punta a un buffer valido, la funzione sovrascriverà qualunque sia l'intervallo in corrispondenza della posizione. Questo può comportare anche una violazione di accesso.
+Se non è il puntatore del buffer **NULL** e il puntatore non punta a un buffer valido, la funzione sovrascriverà qualsiasi elemento si trova nella posizione. Questo può comportare anche una violazione di accesso.
 
-Se l'argomento di dimensione passato è maggiore della dimensione effettiva del buffer, è possibile che si verifichi un [sovraccarico del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+Se l'argomento di dimensione passato è maggiore della dimensione effettiva del buffer, è possibile che si verifichi un [sovraccarico del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="example"></a>Esempio
 
-Questo programma posiziona l'ora di sistema in long integer **aclock**, lo converte in struttura **newtime** e quindi lo converte in forma di stringa di output, tramite il **asctime_s**(funzione).
+Questo programma inserisce l'ora di sistema in long integer **aclock**, lo converte in struttura **newtime** e quindi lo converte in formato stringa di output, usando il **asctime_s**(funzione).
 
 ```C
 // crt_asctime_s.c
