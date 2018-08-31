@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1469bef0ef41c72e2ff5e59017088cd63f0f9c79
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850813"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194598"
 ---
 # <a name="reference-counting"></a>Il conteggio dei riferimenti
 In COM non automaticamente tenta di rimuovere un oggetto dalla memoria quando ritiene che l'oggetto non è più in uso. Al contrario, il compito del programmatore deve rimuovere l'oggetto inutilizzato. Il programmatore determina se un oggetto possa essere rimossi in base a un conteggio dei riferimenti.  
   
- COM Usa il `IUnknown` metodi [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versione](http://msdn.microsoft.com/library/windows/desktop/ms682317), per gestire il conteggio dei riferimenti delle interfacce in un oggetto. Le regole generali per la chiamata di questi metodi sono:  
+ COM Usa il `IUnknown` metodi [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [versione](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), per gestire il conteggio dei riferimenti delle interfacce in un oggetto. Le regole generali per la chiamata di questi metodi sono:  
   
 -   Ogni volta che un client riceve un puntatore a interfaccia `AddRef` deve essere chiamato sull'interfaccia.  
   
@@ -43,5 +43,5 @@ In COM non automaticamente tenta di rimuovere un oggetto dalla memoria quando ri
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a COM](../atl/introduction-to-com.md)   
- [La gestione della durata degli oggetti tramite il conteggio dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [La gestione della durata degli oggetti tramite il conteggio dei riferimenti](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

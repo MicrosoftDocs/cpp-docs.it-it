@@ -1,5 +1,5 @@
 ---
-title: -GA (Ottimizza per applicazione Windows) | Documenti Microsoft
+title: -GA (Ottimizza per applicazione Windows) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387732c5bde04970e3a467ca4f43f911afa7a9a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61bf8844a5471a97214ca6f3d3b5b473c9cd6217
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374258"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194663"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Ottimizza per applicazione Windows)
-Restituisce un codice più efficiente per un file .exe per l'accesso alle variabili di archiviazione locale di thread (TLS).  
+Genera codice più efficiente per un file .exe per l'accesso alle variabili di archiviazione thread-local (TLS).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +37,13 @@ Restituisce un codice più efficiente per un file .exe per l'accesso alle variab
 ```  
   
 ## <a name="remarks"></a>Note  
- **/GA** velocizza l'accesso ai dati dichiarato con [declspec](../../cpp/declspec.md) in un programma basato su Windows. Quando questa opzione è impostata, il [tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749) macro è considerato uguale a 0.  
+ **/GA** velocizza l'accesso ai dati dichiarato con [declspec](../../cpp/declspec.md) in un programma basato su Windows. Quando questa opzione è impostata, il [tls_index](/windows/desktop/ProcThread/thread-local-storage) macro viene considerato uguale a 0.  
   
- Utilizzando **/GA** per una DLL può causare la generazione di codice non valido.  
+ Usando **/GA** per una DLL può comportare la generazione di codice errato.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
   
 2.  Fare clic sulla cartella **C/C++** .  
   

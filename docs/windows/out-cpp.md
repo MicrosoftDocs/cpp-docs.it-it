@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 220adeb44e676937756cf8007647f7e381f7607f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88e5960b4f809b9c0a43e10fa8fbb69544c9d9bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597560"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194917"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,7 +36,7 @@ Identifica i parametri dei puntatori restituiti dalla routine chiamata alla rout
 
 ## <a name="remarks"></a>Note
 
-L'attributo **out** di C++ ha la stessa funzionalità dell'attributo [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) di MIDL.
+Il **out** attributi di C++ ha la stessa funzionalità come la [out](/windows/desktop/Midl/out-idl) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

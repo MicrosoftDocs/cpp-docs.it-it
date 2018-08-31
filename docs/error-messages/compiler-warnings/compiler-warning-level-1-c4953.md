@@ -1,7 +1,7 @@
 ---
-title: Compilatore avviso (livello 1) C4953 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4953 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0af5a16ebbf7851eceb2f2cd355f953b14c4bd38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e53808d4ad97bad4eccdf81b0a863277f8f7796
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293062"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194632"
 ---
 # <a name="compiler-warning-level-1-c4953"></a>Avviso del compilatore (livello 1) C4953
-'function' inline modificata dopo la raccolta dei dati di profilo. Dati di profilo non utilizzati  
-  
- Durante l'uso di [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)il compilatore ha rilevato un modulo di input che è stato ricompilato dopo `/LTCG:PGINSTRUMENT` e ha una funzione (***function***) che è stata modificata e in cui le esecuzioni di test esistenti hanno identificato la funzione come candidato per l'incorporamento. A seguito della ricompilazione del modulo, però, la funzione non sarà più un candidato per l'incorporamento.  
-  
- Si tratta di un avviso informativo. Per risolvere il problema, eseguire `/LTCG:PGINSTRUMENT`, ripetere tutte le esecuzioni dei test ed eseguire `/LTCG:PGOPTIMIZE`.  
-  
- Se fosse stata usata `/LTCG:PGOPTIMIZE` , al posto di questo avviso sarebbe comparso un errore.
+
+> Entità incorporata '*funzione*' è stato modificato dopo la raccolta dei dati, profilo dati di profilo non utilizzati
+
+Quando si usa [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), il compilatore ha rilevato un modulo di input ricompilato dopo `/LTCG:PGINSTRUMENT` e ha una funzione (*funzione*) che è stata modificata e in cui viene eseguito identificato test esistente di funzione come candidato per l'incorporamento. A seguito della ricompilazione del modulo, però, la funzione non sarà più un candidato per l'incorporamento.
+
+Si tratta di un avviso informativo. Per risolvere il problema, eseguire `/LTCG:PGINSTRUMENT`, ripetere tutte le esecuzioni dei test ed eseguire `/LTCG:PGOPTIMIZE`.
+
+Se fosse stata usata `/LTCG:PGOPTIMIZE` , al posto di questo avviso sarebbe comparso un errore.

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936d9b30f18f5ef84c68c55a1607cfcd88d45525
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 57dbb9e5ed73ce8ed85d7c90d05705cefdd4ed9b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194767"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interfaccia IDocHostUIHandlerDispatch
 Interfaccia per il motore di rendering e l'analisi HTML di Microsoft.  
@@ -45,19 +45,19 @@ interface IDocHostUIHandlerDispatch : IDispatch
   
 |||  
 |-|-|  
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115). Chiamato anche quando MSHTML Visualizza l'interfaccia utente modale.|  
+|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). Chiamato anche quando MSHTML Visualizza l'interfaccia utente modale.|  
 |[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Chiamato sull'host da MSHTML per consentire all'host di sostituire l'oggetto dati MSHTML.|  
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Chiamata eseguita dal MSHTML quando utilizzato come destinazione di trascinamento per consentire all'host di fornire un'alternativa [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Chiamata eseguita dal MSHTML quando utilizzato come destinazione di trascinamento per consentire all'host di fornire un'alternativa [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|  
 |[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Chiamata eseguita dal MSHTML per ottenere l'interfaccia IDispatch dell'host.|  
 |[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Recupera le funzionalità dell'interfaccia utente dell'host MSHTML.|  
 |[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Restituisce la chiave del Registro di sistema in cui MSHTML archivia le preferenze dell'utente.|  
 |[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Chiamata eseguita quando MSHTML rimuove i menu e barre degli strumenti.|  
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Chiamato da un'implementazione MSHTML di [OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281).|  
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject:: OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969).|  
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject:: ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053).|  
+|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Chiamato da un'implementazione MSHTML di [OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|  
+|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|  
+|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject:: ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|  
 |[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|Chiamato da MSHTML per visualizzare un menu di scelta rapida.|  
 |[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Consente all'host di sostituire MSHTML menu e barre degli strumenti.|  
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Chiamato da MSHTML quando [IOleInPlaceActiveObject:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) oppure [IOleControlSite:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) viene chiamato.|  
+|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Chiamato da MSHTML quando [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) oppure [IOleControlSite:: TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) viene chiamato.|  
 |[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Chiamata eseguita dal MSHTML per consentire all'host la possibilità di modificare l'URL da caricare.|  
 |[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|Notifica all'host che lo stato del comando è stato modificato.|  
   

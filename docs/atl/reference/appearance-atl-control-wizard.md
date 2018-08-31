@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571779"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194727"
 ---
 # <a name="appearance-atl-control-wizard"></a>Aspetto, Creazione guidata controllo ATL
 Inserisci qui "Riepilogo risultati di ricerca".  
@@ -32,7 +32,7 @@ Inserisci qui "Riepilogo risultati di ricerca".
 **Visualizza stato**  
 Imposta l'aspetto del controllo all'interno del contenitore.  
   
- -   **Opaco**: imposta il VIEWSTATUS_OPAQUE in bit nel [VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201) enumerazione e consente di disegnare l'intero controllo rettangolo passato al [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) (metodo). Il controllo viene visualizzato completamente opaco e nessuno dei contenitore Mostra dietro i limiti del controllo.      
+ -   **Opaco**: imposta il VIEWSTATUS_OPAQUE in bit nel [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) enumerazione e consente di disegnare l'intero controllo rettangolo passato al [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) (metodo). Il controllo viene visualizzato completamente opaco e nessuno dei contenitore Mostra dietro i limiti del controllo.      
       
         Questa impostazione consente il contenitore di disegnare il controllo più rapidamente. Se questa opzione non è selezionata, il controllo può contenere parti trasparenti.  
       
@@ -82,7 +82,7 @@ Imposta opzioni aggiuntive di aspetto e il comportamento del controllo.
   
  -   **Invisibili in fase di esecuzione**: imposta il controllo sia invisibile in fase di esecuzione. È possibile usare controlli invisibili per eseguire operazioni in background, ad esempio la generazione degli eventi a intervalli fissi.  
       
- -   **Funge da pulsante**: il bit in Olemisc_actslikebutton il [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) enumerazione per consentire a un controllo di agire come un pulsante. Se il contenitore è contrassegnato come sito di client del controllo come pulsante predefinito, se si seleziona questa opzione Abilita il controllo pulsante verrà visualizzato come pulsante predefinito disegnando una cornice più spessa. Visualizzare [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) per altre informazioni.  
+ -   **Funge da pulsante**: il bit in Olemisc_actslikebutton il [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) enumerazione per consentire a un controllo di agire come un pulsante. Se il contenitore è contrassegnato come sito di client del controllo come pulsante predefinito, se si seleziona questa opzione Abilita il controllo pulsante verrà visualizzato come pulsante predefinito disegnando una cornice più spessa. Visualizzare [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) per altre informazioni.  
       
   -   **Funge da etichetta**: il bit Olemisc_actslikelabel nell'enumerazione OLEMISC per attivare un controllo sostituire l'etichetta del contenitore nativa. Il contenitore determina quali azioni eseguire con questo flag, se qualsiasi elemento.  
   

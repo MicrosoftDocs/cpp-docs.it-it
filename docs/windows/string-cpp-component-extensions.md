@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b962db5477294ad36997208f59265a284680fac5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6fd13c3e94f6b42bd485c645233f84272c6eae91
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604940"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194833"
 ---
 # <a name="string--c-component-extensions"></a>Stringa (Estensioni del componente C++)
 
@@ -48,7 +48,7 @@ using namespace default;
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni ed esempi sulle stringhe, vedere [platform:: String, std:: wstring e valori letterali (piattaforma)](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)
+Per altre informazioni ed esempi sulle stringhe, vedere [platform:: String, std:: wstring e valori letterali (piattaforma)](https://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)
 
 ### <a name="requirements"></a>Requisiti
 

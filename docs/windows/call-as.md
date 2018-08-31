@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5fffe1490587e36d39a959f75796093cbc32a0f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a5e5d5ddb831c5d4025e729cb27dd3a9e11b3688
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601994"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194753"
 ---
 # <a name="callas"></a>call_as
 
@@ -43,7 +43,7 @@ La funzione locale che si desidera siano chiamati quando viene richiamata una fu
 
 ## <a name="remarks"></a>Note
 
-Il **call_as** attributi di C++ ha la stessa funzionalità come la [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) attributo MIDL.
+Il **call_as** attributi di C++ ha la stessa funzionalità come la [call_as](/windows/desktop/Midl/call-as) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 

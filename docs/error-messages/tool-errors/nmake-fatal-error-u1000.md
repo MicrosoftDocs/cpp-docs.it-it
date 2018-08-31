@@ -1,7 +1,7 @@
 ---
-title: Errore irreversibile U1000 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1000 di NMAKE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8d4e0f150d82482dd8391efa1f2251ac37bc8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69909c542a02baf8aa261c8ef78413a877a223a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325266"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194888"
 ---
 # <a name="nmake-fatal-error-u1000"></a>Errore irreversibile U1000 di NMAKE 
-Errore di sintassi: ')' mancante nella chiamata di macro  
-  
- Una parentesi, **(**, veniva visualizzato senza parentesi destra, **)**, in una chiamata di macro. Il formato corretto è **$(***nome***)**; `$` *n* è consentita per i nomi di un solo carattere.
+
+> Errore di sintassi: ')' mancante nella chiamata della macro
+
+Una parentesi, a sinistra **(**, viene visualizzata senza una corrisponda parentesi **)**, in una chiamata di macro. È il formato corretto **$(**<em>name</em>**)**; **$** <em>n</em> è consentito per i nomi di un solo carattere.
