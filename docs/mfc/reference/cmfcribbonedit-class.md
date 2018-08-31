@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850222"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216459"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
 Implementa un controllo di modifica che si trova in una barra multifunzione.  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  Un puntatore alla finestra padre del `CMFCRibbonEdit` oggetto.  
   
  [in] *dwEditStyle*  
- Specifica lo stile della casella di testo. È possibile combinare gli stili di finestra elencati nella sezione Osservazioni con i [modifica degli stili del controllo](http://msdn.microsoft.com/library/windows/desktop/bb775464) che sono descritti nel SDK di Windows.  
+ Specifica lo stile della casella di testo. È possibile combinare gli stili di finestra elencati nella sezione Osservazioni con i [modifica degli stili del controllo](/windows/desktop/Controls/edit-control-styles) che sono descritti nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore per la nuova casella di testo se il metodo ha esito positivo; in caso contrario, NULL.  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT** per l'allineamento a destra  
   
- Per altre informazioni su questi stili, vedere [modifica degli stili del controllo](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Per altre informazioni su questi stili, vedere [modifica degli stili del controllo](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  Recupera la larghezza, in pixel, del [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) controllo.  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo metodo consente di ricreare il rettangolo di visualizzazione per il `CMFCRibbonEdit` chiamando indirettamente [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) con i flag RDW_INVALIDATE RDW_ERASE e RDW_UPDATENOW impostato.  
+ Questo metodo consente di ricreare il rettangolo di visualizzazione per il `CMFCRibbonEdit` chiamando indirettamente [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) con i flag RDW_INVALIDATE RDW_ERASE e RDW_UPDATENOW impostato.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  Imposta i dati di accessibilità per il [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) oggetto.  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - ES_RIGHT per l'allineamento a destra  
   
- Per altre informazioni su questi stili, vedere [modifica degli stili del controllo](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Per altre informazioni su questi stili, vedere [modifica degli stili del controllo](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  Imposta la larghezza della casella di testo per il [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) controllo.  
