@@ -63,12 +63,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1da7c4102f15bf4a9c8ec583cf39e621d6872cb0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451524"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578385"
 ---
 # <a name="exec-wexec-functions"></a>Funzioni _exec, _wexec
 Ogni funzione in questa famiglia carica ed esegue un nuovo processo:  
@@ -90,7 +90,7 @@ Ogni funzione in questa famiglia carica ed esegue un nuovo processo:
 |`v`|`argv`, matrice di puntatori agli argomenti della riga di comando, viene passato a `_exec`. Si usa in genere quando il numero di parametri per il nuovo processo è variabile.|  
   
 ## <a name="remarks"></a>Note  
- Ogni funzione `_exec` carica ed esegue un nuovo processo. Tutte le funzioni `_exec` usano la stessa funzione di sistema operativo ([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx)). La funzione `_exec` gestisce automaticamente gli argomenti della stringa con caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. Le funzioni `_wexec` sono versioni a caratteri wide delle funzioni `_exec`. Le funzioni `_wexec` si comportano in modo identico alle corrispondenti della famiglia `_exec`, ma non gestiscono le stringhe di caratteri multibyte.  
+ Ogni funzione `_exec` carica ed esegue un nuovo processo. Tutte le funzioni `_exec` usano la stessa funzione di sistema operativo ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). La funzione `_exec` gestisce automaticamente gli argomenti della stringa con caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. Le funzioni `_wexec` sono versioni a caratteri wide delle funzioni `_exec`. Le funzioni `_wexec` si comportano in modo identico alle corrispondenti della famiglia `_exec`, ma non gestiscono le stringhe di caratteri multibyte.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -113,7 +113,7 @@ Ogni funzione in questa famiglia carica ed esegue un nuovo processo:
 >  La presenza di spazi incorporati nelle stringhe può causare comportamenti imprevisti; ad esempio, passare a `_exec` la stringa `"hi there"` comporterà la presenza nel nuovo processo di due argomenti, `"hi"` e `"there"`. Se lo scopo è quello di far aprire al nuovo processo un file denominato "hi there", il processo avrà esito negativo. Per evitarlo, racchiudere la stringa tra virgolette doppie: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Non passare input utente a `_exec` senza verificarne esplicitamente il contenuto. `_exec` determinerà una chiamata a [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.  
+>  Non passare input utente a `_exec` senza verificarne esplicitamente il contenuto. `_exec` determinerà una chiamata a [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.  
   
  Le funzioni `_exec` convalidano i propri parametri. Se i parametri previsti sono puntatori Null, stringhe vuote oppure sono omessi, le funzioni `_exec` richiamano il gestore di parametri non validi come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono -1. Non viene eseguito alcun nuovo processo.  
   

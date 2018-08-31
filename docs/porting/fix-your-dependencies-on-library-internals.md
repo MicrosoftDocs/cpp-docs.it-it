@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148db60c7a3b1ae3f71269feec8024f6ff22a118
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c80bad11a13c454d8b4025e5cc0745514696a0f7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839060"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578243"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>Correggere le dipendenze da elementi interni delle librerie
 
@@ -34,9 +34,9 @@ La funzione hash interna `std::_Hash_seq(const unsigned char *, size_t)`, usata 
   
 Per rimuovere questa dipendenza, sono disponibili due opzioni.  
 
--   Se si intende inserire una sequenza `const char *` in un contenitore non ordinato con lo stesso sistema per i codici hash di `basic_string`, è possibile farlo usando il l'overlod modello `std::hash` che accetta `std::string_view` e restituisce tale codice hash in un formato portabile. Il codice della libreria per le stringhe potrebbe basarsi o meno sull'uso di un hash FNV-1a in futuro, quindi questo è il modo migliore per evitare una dipendenza da un algoritmo hash particolare. 
+- Se si intende inserire una sequenza `const char *` in un contenitore non ordinato con lo stesso sistema per i codici hash di `basic_string`, è possibile farlo usando il l'overlod modello `std::hash` che accetta `std::string_view` e restituisce tale codice hash in un formato portabile. Il codice della libreria per le stringhe potrebbe basarsi o meno sull'uso di un hash FNV-1a in futuro, quindi questo è il modo migliore per evitare una dipendenza da un algoritmo hash particolare. 
   
--   Se l'intenzione è quella di generare un hash FNV-1a su memoria arbitraria, il codice a questo scopo è disponibile in GitHub nel repository [VCSamples]( https://github.com/Microsoft/vcsamples) in un file di intestazione autonomo, [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), con [licenza MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Una copia di questo codice è disponibile qui per comodità. È possibile copiare questo codice in un file di intestazione, aggiungere l'intestazione a qualsiasi codice interessato e quindi cercare e sostituire `_Hash_seq` con `fnv1a_hash_bytes`. Si otterrà un comportamento identico all'implementazione interna in `_Hash_seq`. 
+- Se l'intenzione è quella di generare un hash FNV-1a su memoria arbitraria, il codice a questo scopo è disponibile in GitHub nel repository [VCSamples]( https://github.com/Microsoft/vcsamples) in un file di intestazione autonomo, [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), con [licenza MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Una copia di questo codice è disponibile qui per comodità. È possibile copiare questo codice in un file di intestazione, aggiungere l'intestazione a qualsiasi codice interessato e quindi cercare e sostituire `_Hash_seq` con `fnv1a_hash_bytes`. Si otterrà un comportamento identico all'implementazione interna in `_Hash_seq`. 
 
 ```cpp  
 /*

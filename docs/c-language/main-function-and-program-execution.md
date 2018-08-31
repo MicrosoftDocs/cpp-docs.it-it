@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd6dae49eb655856247ea70e61582e16228db454
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387499"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578405"
 ---
 # <a name="main-function-and-program-execution"></a>Funzione main ed esecuzione di programmi
 Ogni programma C Ha una funzione principale che deve essere denominata **main**. Se il codice è conforme al modello di programmazione Unicode, è possibile usare la versione a caratteri wide della funzione **main**, **wmain**. La funzione **main** funge da punto iniziale per l'esecuzione del programma. Generalmente, controlla l'esecuzione del programma indirizzando le chiamate alle altre funzioni del programma. In genere, l'esecuzione del programma si interrompe alla fine della funzione **main**, anche se può terminare in altri punti per diversi motivi. Talvolta, quando viene rilevato un determinato errore, è possibile forzare la chiusura di un programma. A tale scopo, usare la funzione **exit**. Per altre informazioni su questo argomento e per vedere un esempio di uso della funzione *exit*, vedere [Informazioni di riferimento per la libreria run-time](../c-runtime-library/reference/exit-exit-exit.md).  
@@ -45,4 +45,5 @@ main( int argc, char *argv[ ], char *envp[ ] )
  Vedere [Uso di wmain](../c-language/using-wmain.md) per una descrizione della versione a caratteri wide di **main**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [main: avvio del programma](../cpp/main-program-startup.md)
+ [main: avvio del programma](../cpp/main-program-startup.md)   
+ [Analisi di argomenti della riga di comando C](../c-language/parsing-c-command-line-arguments.md)

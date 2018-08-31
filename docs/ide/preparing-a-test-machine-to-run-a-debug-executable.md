@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3600e5541c095b3879fe60404c9a5994c2a91088
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330297"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578407"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparazione di un computer per il test per l'esecuzione di un file eseguibile di debug
 Per preparare un computer per il test della versione di debug di un'applicazione compilata con Visual C++, è necessario distribuire le versioni di debug delle DDL della libreria di Visual C++ da cui dipende l'applicazione. Per identificare le DDL da distribuire, seguire i passaggi indicati nell'articolo [Informazioni sulle dipendenze di un'applicazione Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Tipicamente, i nomi delle versioni di debug delle DLL della libreria di Visual C++ terminano con la lettera d. La versione di debug di msvcr100.dll è ad esempio denominata msvcr100d.dll.  
@@ -43,5 +43,5 @@ Per preparare un computer per il test della versione di debug di un'applicazione
 ## <a name="see-also"></a>Vedere anche  
  
  [Distribuzione in Visual C++](../ide/deployment-in-visual-cpp.md)   
- [Windows Installer Command line options](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)  (Opzioni della riga di comando di Windows Installer)  
+ [Windows Installer Command line options](/windows/desktop/Msi/command-line-options)  (Opzioni della riga di comando di Windows Installer)  
  [Esempi di distribuzione](../ide/deployment-examples.md) [Debug remoto](/visualstudio/debugger/remote-debugging.md)
