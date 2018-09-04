@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216562"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Esecuzione di un'applicazione /clr C++ su una versione runtime precedente
 Se non diversamente specificato, un'applicazione C++ .NET Framework è compilata per l'esecuzione con la versione di Common Language Runtime (CLR) usata dal compilatore per compilare l'applicazione stessa. È tuttavia possibile eseguire un'applicazione con estensione exe compilata per una versione del runtime con qualsiasi altra versione che offra le funzionalità necessarie.  
@@ -37,7 +37,7 @@ Se non diversamente specificato, un'applicazione C++ .NET Framework è compilata
   
  Se si specificano più versione di runtime e l'applicazione viene eseguita in un computer in cui sono installate più versioni di runtime, l'applicazione usa la prima versione specificata nel file di configurazione e installata.  
   
- Per altre informazioni, vedere [Procedura: configurare un'app per una versione specifica di .NET Framework](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
+ Per altre informazioni, vedere [Procedura: configurare un'app per una versione specifica di .NET Framework](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
   
  Per l'esecuzione nella versione 1.0 o 1.1 di CLR, un'applicazione compilata dal compilatore di Visual C++ deve essere compilata usando [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
   

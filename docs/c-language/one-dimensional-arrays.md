@@ -20,23 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388906"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196976"
 ---
 # <a name="one-dimensional-arrays"></a>Matrici unidimensionali
 Un'espressione di suffisso seguita da un'espressione tra parentesi quadre (**[ ]**) è una rappresentazione con indice di un elemento di un oggetto matrice. Un'espressione di indice rappresenta il valore all'indirizzo che si trova a un numero di posizioni corrispondente a *expression* oltre *postfix-expression*, se espressa come  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
  In genere, il valore rappresentato da *postfix-expression* è un valore puntatore, quale un identificatore di matrice, ed *expression* è un valore integrale. Tuttavia, l'unica condizione da soddisfare dal punto di vista sintattico è che una delle espressioni sia di tipo puntatore e l'altra di tipo integrale. Pertanto, il valore integrale può trovarsi nella posizione *postfix-expression* e il valore puntatore può essere racchiuso tra parentesi quadre nella posizione di *expression*, ovvero dell'indice. Ad esempio, questo codice è valido:  
@@ -52,7 +47,7 @@ int main() {
   
  Le espressioni di indice sono in genere utilizzate per fare riferimento agli elementi di matrice, ma è possibile applicare un indice a un puntatore. Qualsiasi sia l'ordine di valori, *expression* deve essere racchiusa tra parentesi (**[ ]**).  
   
- L'espressione di indice viene valutata aggiungendo il valore integrale al valore puntatore e quindi applicando l'operatore di riferimento indiretto (**\***) al risultato. Per informazioni sull'operatore di riferimento indiretto, vedere [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md). In effetti, per una matrice unidimensionale, le quattro espressioni seguenti sono equivalenti, supponendo che `a` è un puntatore e `b` è un Integer:  
+ L'espressione di indice viene valutata aggiungendo il valore integrale al valore puntatore e quindi applicando l'operatore di riferimento indiretto (<strong>\*</strong>) al risultato. Per informazioni sull'operatore di riferimento indiretto, vedere [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md). In effetti, per una matrice unidimensionale, le quattro espressioni seguenti sono equivalenti, supponendo che `a` è un puntatore e `b` è un Integer:  
   
 ```  
 a[b]  

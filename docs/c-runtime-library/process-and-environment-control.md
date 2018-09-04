@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52284db986ec642724f97aae75a9af004339b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200963"
 ---
 # <a name="process-and-environment-control"></a>Controllo processo e ambiente
 
@@ -56,7 +56,7 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Chiama le funzioni registrate da **atexit** e **_onexit**, scarica tutti i buffer, chiude tutti i file aperti e termina il processo|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Termina il processo immediatamente, senza chiamare **atexit** o **_onexit** e senza scaricare il buffer|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ottiene il valore della variabile di ambiente|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Ottiene il numero dell'ID del processo|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Ottiene il numero dell'ID del processo|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Ripristina l'ambiente dello stack salvato; usarla per eseguire un **goto** non locale|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Pianifica le routine per l'esecuzione alla chiusura del programma; usarla per assicurare la compatibilità con Microsoft C/C++ 7.0 e versioni precedenti|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Attende un nuovo processore dei comandi e chiude il flusso sulla pipe collegata|

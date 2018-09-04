@@ -22,29 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325773"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212756"
 ---
 # <a name="midl-property-pages-output"></a>Pagine delle proprietà MIDL: Output
 La pagina delle proprietà **Output** nella cartella **MIDL** consente di specificare le opzioni seguenti del compilatore MIDL:  
   
--   Directory di output ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
+-   Directory di output ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
--   File di intestazione ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
+-   File di intestazione ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
   
--   File di dati DLL ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
+-   File di dati DLL ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
   
--   File IID ([/iid](http://msdn.microsoft.com/library/windows/desktop/aa367329))  
+-   File IID ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
   
--   File proxy ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
+-   File proxy ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   Genera libreria dei tipi ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   Genera libreria dei tipi ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
--   Libreria dei tipi ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
+-   Libreria dei tipi ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
  Per informazioni sull'accesso alla pagina delle proprietà **Output** nella cartella **MIDL**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   

@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418380"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216934"
 ---
 # <a name="vprintf-functions"></a>Funzioni vprintf
 Ognuna delle funzioni `vprintf` accetta un puntatore a un elenco di argomenti e quindi formatta e scrive i dati specificati in una destinazione particolare. Le funzioni differiscono per il tipo di convalida dei parametri eseguita, per l'uso di stringhe di caratteri di tipo wide o a byte singolo, per la destinazione di output e per il modo in cui viene specificato l'ordine in cui i parametri vengono usati nella stringa di formato.  
@@ -89,7 +89,7 @@ Ognuna delle funzioni `vprintf` accetta un puntatore a un elenco di argomenti e 
  Per **vsprintf**, `vswprintf`, `_vsnprintf` e `_vsnwprintf`, se si verifica una copia tra stringhe che si sovrappongono, il comportamento non è definito.  
   
 > [!IMPORTANT]
->  Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795). Se si usano le versioni sicure di queste funzioni, con il suffisso **_s** o **_p**, e la stringa di formato specificata dall'utente contiene caratteri di formattazione non validi, potrebbe verificarsi un'eccezione di parametro non valido.  
+>  Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns). Se si usano le versioni sicure di queste funzioni, con il suffisso **_s** o **_p**, e la stringa di formato specificata dall'utente contiene caratteri di formattazione non validi, potrebbe verificarsi un'eccezione di parametro non valido.  
   
 ## <a name="see-also"></a>Vedere anche  
  [I/O di flusso](../c-runtime-library/stream-i-o.md)   

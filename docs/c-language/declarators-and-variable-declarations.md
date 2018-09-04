@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0219c5eecda84f27411ee0dca9cc43a1b5c9148e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a5ec2cf7984940421726dd0197dff4cf6d5ea0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390606"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200359"
 ---
 # <a name="declarators-and-variable-declarations"></a>Dichiaratori e dichiarazioni di variabili
 Nel resto di questa sezione viene descritto il formato e il significato delle dichiarazioni dei tipi di variabile contenuti in questo elenco. In particolare, nelle sezioni rimanenti viene illustrato come dichiarare i seguenti elementi:  
@@ -35,7 +35,7 @@ Nel resto di questa sezione viene descritto il formato e il significato delle di
 |[Strutture](../c-language/structure-declarations.md)|Le variabili composte di una raccolta di valori che può contenere tipi differenti|  
 |[Unioni](../c-language/union-declarations.md)|Le variabili composte di diversi valori di tipi differenti che occupano lo stesso spazio di archiviazione|  
   
- Un dichiaratore è la parte di una dichiarazione che specifica il nome che deve essere introdotto nel programma. Può includere modificatori come **\*** (puntatore-a) e qualsiasi parola chiave della convenzione di chiamata Microsoft.  
+ Un dichiaratore è la parte di una dichiarazione che specifica il nome che deve essere introdotto nel programma. Può includere modificatori come <strong>\*</strong> (puntatore-a) e qualsiasi parola chiave della convenzione di chiamata Microsoft.  
   
  **Sezione specifica Microsoft**  
   
@@ -63,8 +63,8 @@ __declspec(thread) char *var;
  &nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  
   
  *pointer*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
   
  *type-qualifier-list*:  
  &nbsp;&nbsp;*type-qualifier*  
@@ -73,7 +73,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  Vedere la sintassi per *declaration* in [Cenni preliminari sulle dichiarazioni](../c-language/overview-of-declarations.md) o [Riepilogo di sintassi del linguaggio C](../c-language/c-language-syntax-summary.md) per informazioni sulla sintassi che fa riferimento a *declarator*.  
   
- Quando un dichiaratore è costituito da un identificatore non modificato, l'elemento dichiarato è un tipo di base. Se a sinistra di un identificatore è presente un asterisco (**\***), il tipo viene impostato su un tipo puntatore. Se l'identificatore è seguito da parentesi quadre (**[ ]**), il tipo viene modificato in un tipo di matrice. Se l'identificatore è seguito da parentesi tonde, il tipo viene modificato in un tipo di funzione. Per altre informazioni sull'interpretazione della precedenza all'interno delle dichiarazioni, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md).  
+ Quando un dichiaratore è costituito da un identificatore non modificato, l'elemento dichiarato è un tipo di base. Se a sinistra di un identificatore è presente un asterisco (<strong>\*</strong>), il tipo viene impostato su un tipo puntatore. Se l'identificatore è seguito da parentesi quadre (**[ ]**), il tipo viene modificato in un tipo di matrice. Se l'identificatore è seguito da parentesi tonde, il tipo viene modificato in un tipo di funzione. Per altre informazioni sull'interpretazione della precedenza all'interno delle dichiarazioni, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md).  
   
  Ogni dichiaratore dichiara almeno un identificatore. Per essere una dichiarazione completa, il dichiaratore deve includere un identificatore di tipo. L'identificatore di tipo fornisce il tipo di elementi di un tipo di matrice, il tipo di oggetto indirizzato da un tipo puntatore o il tipo restituito di una funzione.  
   

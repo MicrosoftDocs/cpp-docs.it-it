@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211212"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementazione di un'interfaccia (Visual C++)
 Per implementare un'interfaccia, è necessario avere creato un progetto come un'applicazione ATL COM o un'applicazione MFC con supporto ATL. È possibile usare la [Creazione guidata progetto ATL](../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.  
@@ -46,7 +46,7 @@ Per implementare un'interfaccia, è necessario avere creato un progetto come un'
 4.  In Visualizzazione classi espandere il nodo relativo a basi e interfacce dell'oggetto per visualizzare l'interfaccia implementata e quindi espandere il nodo dell'interfaccia per visualizzarne le proprietà, i metodi e gli eventi disponibili.  
   
     > [!NOTE]
-    >  È anche possibile usare il [Visualizzatore oggetti](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) per esaminare i membri dell'interfaccia.  
+    >  È anche possibile usare il [Visualizzatore oggetti](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) per esaminare i membri dell'interfaccia.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'interfaccia COM](../ide/creating-a-com-interface-visual-cpp.md)   

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b76235187bad83eb638588cbbd179e93523fdf2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4bc7ac76377ef59c9b1f5535f356b35d88a5e4e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409524"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220959"
 ---
 # <a name="robustness"></a>Efficienza
 
@@ -39,4 +39,4 @@ Usare le funzioni della libreria di runtime C seguenti per migliorare l'efficien
 ## <a name="see-also"></a>Vedere anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [SetUnhandledExceptionFilter](http://msdn.microsoft.com/library/windows/desktop/ms680634.aspx)<br/>
+ [SetUnhandledExceptionFilter](https://msdn.microsoft.com/library/windows/desktop/ms680634.aspx)<br/>

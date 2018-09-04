@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332582"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194964"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Creazione di un'interfaccia COM (Visual C++)
 Visual C++ offre modelli e procedure guidate che consentono di creare progetti che usano interfacce e interfacce dispatch definite con COM per gli oggetti COM e le classi di automazione.  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  Per altre informazioni, vedere [Implementazione di un'interfaccia](../ide/implementing-an-interface-visual-cpp.md) e [Aggiunta di oggetti e controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
   
- Visual C++ offre diversi modi per visualizzare e [modificare le interfacce COM](../ide/editing-a-com-interface.md) definite per i progetti. [Visualizzazione classi](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) visualizza le icone per ogni interfaccia o interfaccia dispatch definita in un file IDL del progetto C++.  
+ Visual C++ offre diversi modi per visualizzare e [modificare le interfacce COM](../ide/editing-a-com-interface.md) definite per i progetti. [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) visualizza le icone per ogni interfaccia o interfaccia dispatch definita in un file IDL del progetto C++.  
   
  Per le classi di oggetti COM basate su ATL, Visualizzazione classi legge la mappa COM nella classe ATL per visualizzare la relazione tra la classe ATL e le interfacce che implementa.  
   

@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327580"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212795"
 ---
 # <a name="adding-a-property-visual-c"></a>Aggiunta di una proprietà (Visual C++)
 È possibile usare l'[Aggiunta guidata proprietà](../ide/names-add-property-wizard.md) per aggiungere un metodo a un'interfaccia del progetto.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Per aggiungere una proprietà all'oggetto  
   
-1.  Nella [Visualizzazione classi](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) fare clic con il pulsante destro del mouse sul nome dell'interfaccia a cui si vuole aggiungere la proprietà.  
+1.  Nella [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) fare clic con il pulsante destro del mouse sul nome dell'interfaccia a cui si vuole aggiungere la proprietà.  
   
     > [!NOTE]
     >  È anche possibile aggiungere proprietà alle interfacce dispatch che, se il progetto non è attribuito, sono nidificate all'interno del nodo della libreria.  
@@ -49,5 +49,5 @@ ms.locfileid: "33327580"
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'interfaccia COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Modifica di un'interfaccia COM](../ide/editing-a-com-interface.md)   
- [Component Object Model (COM)](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Puntatori a interfaccia e interfacce](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [Component Object Model (COM)](/windows/desktop/com/the-component-object-model)   
+ [Puntatori a interfaccia e interfacce](/windows/desktop/com/interface-pointers-and-interfaces)

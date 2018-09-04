@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4c9ab0120b3aad3f4f4470ca9094f8a975dbb12d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200320"
 ---
 # <a name="add-class-dialog-box"></a>Aggiungi classe (finestra di dialogo)
 La finestra di dialogo **Aggiungi classe** contiene modelli che consentono se operazioni seguenti:  
@@ -32,7 +32,7 @@ La finestra di dialogo **Aggiungi classe** contiene modelli che consentono se op
   
 -   Creare automaticamente la nuova classe aggiungendo i file e codice sorgente appropriati al progetto.  
   
- È possibile accedere alla finestra di dialogo **Aggiungi classe** dal menu **Progetto** , da **Esplora soluzioni** o dalla [Visualizzazione classi](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ È possibile accedere alla finestra di dialogo **Aggiungi classe** dal menu **Progetto** , da **Esplora soluzioni** o dalla [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
 >  Quando si prova ad aggiungere una classe che non è adatta al progetto corrente, si riceverà un messaggio di errore. Fare clic su **OK** per tornare alla finestra di dialogo **Aggiungi classe** .  

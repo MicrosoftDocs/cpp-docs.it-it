@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8003997d82c59d42813d7852e6c3fadb8f12fb26
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208908"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Espressioni L-Value e R-Value
 Le espressioni che fanno riferimento alle posizioni di memoria vengono chiamate "espressioni l-value". Con L-value si intende un valore del "localizzatore" dell'area di archiviazione o un valore "a sinistra", vale a dire che può essere visualizzato a sinistra del segno di uguale (**=**). Le espressioni L-value sono spesso identificatori.  
@@ -39,7 +39,7 @@ Le espressioni che fanno riferimento alle posizioni di memoria vengono chiamate 
   
 -   Un'espressione di selezione dei membri (**->** o **.**)  
   
--   Un'espressione unaria di riferimento indiretto (**\***) che non si riferisce a una matrice  
+-   Un'espressione unaria di riferimento indiretto (<strong>\*</strong>) che non si riferisce a una matrice  
   
 -   Un'espressione l-value tra parentesi  
   

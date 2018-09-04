@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197903"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilizzo dei template Aggiungi nuovo elemento di Visual C++
 È possibile aggiungere facilmente gli elementi comuni nei progetti di Visual C++ tramite il comando **Aggiungi nuovo elemento**. Quando si utilizza il comando **Aggiungi nuovo elemento**, nella finestra di dialogo `Add New Item` viene visualizzato un elenco di modelli di elemento, tramite i quali è possibile aggiungere i file appropriati al progetto.  
@@ -44,7 +44,7 @@ ms.locfileid: "33332816"
 |File di intestazione (.h)|Crea un file di intestazione di C++.|  
 |Pagina HTML (.htm)|Crea un file HTML vuoto.|  
 |File icona (.ico)|Crea un file icona Win32.|  
-|Classe Installer|Aggiunge una classe che eredita dalla [classe Installer](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) tramite le funzionalità CLR.|  
+|Classe Installer|Aggiunge una classe che eredita dalla [classe Installer](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) tramite le funzionalità CLR.|  
 |File Midl (.idl)|Crea un file del linguaggio di definizione dell'interfaccia.|  
 |File di definizione moduli (.def)|Crea un file di definizione dell'esportazione della DLL.|  
 |Finestra delle proprietà (.props)|Crea un file della finestra delle proprietà di Visual C++.|  

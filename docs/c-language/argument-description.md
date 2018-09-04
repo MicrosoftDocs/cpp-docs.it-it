@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 615fc3a68153386174ce0477ee5c946f50f37d90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cecc47bc4633aa40f38bda23d1aee0007ea34ab4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385084"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201882"
 ---
 # <a name="argument-description"></a>Descrizione di argomenti
 Il parametro `argc` nelle funzioni **main** e **wmain** corrisponde a un Integer che specifica il numero degli argomenti che vengono passati al programma dalla riga di comando. Poiché il nome del programma è considerato un argomento, il valore di `argc` è almeno uno.  
@@ -31,7 +31,7 @@ Il parametro `argc` nelle funzioni **main** e **wmain** corrisponde a un Integer
 ## <a name="remarks"></a>Note  
  Il parametro `argv` è una matrice di puntatori a stringhe con terminazione null che rappresentano gli argomenti del programma. Ogni elemento della matrice punta a una rappresentazione di stringa di un argomento passato a **main** (o a **wmain**). Per altre informazioni sulle matrici, vedere [Dichiarazioni di matrice](../c-language/array-declarations.md). Il parametro `argv` può essere dichiarato sia come matrice di puntatori al tipo `char` (`char *argv[]`), che come puntatore a puntatori al tipo `char` (`char **argv`). Per **wmain** il parametro `argv` può essere dichiarato sia come matrice di puntatori al tipo `wchar_t` (`wchar_t *argv[]`) che come puntatore a puntatori al tipo `wchar_t` (`wchar_t **argv`).  
   
- Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia è possibile generare un processo usando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) e se si usa sia il primo che il secondo argomento (`lpApplicationName` e `lpCommandLine`), `argv`**[0]** non può essere il nome eseguibile; usare [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome eseguibile.  
+ Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia è possibile generare un processo usando [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) e se si usa sia il primo che il secondo argomento (`lpApplicationName` e `lpCommandLine`), `argv`**[0]** non può essere il nome eseguibile; usare [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome eseguibile.  
   
  L'ultimo puntatore (`argv[argc]`) è **NULL**. Per informazioni su un metodo alternativo per ottenere informazioni sulle variabili di ambiente, vedere [getenv](../c-runtime-library/reference/getenv-wgetenv.md) in *Riferimenti della libreria di runtime*.  
   

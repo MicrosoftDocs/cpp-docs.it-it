@@ -12,19 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b13c8ddcaed382483eb96172e93da99ad0133eac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7b1eb1b8a9bf04260a317d21df558e6f49fd78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382315"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213933"
 ---
 # <a name="filenames"></a>Nomi file
 **ANSI 4.9.3** Le regole per comporre i nomi file validi  
   
  Una specifica del file può includere una lettera di unità facoltativa (sempre seguita da due punti), una serie di nomi di directory facoltativi (separati dalle barre rovesciate) e un nome file.  
   
- Per altre informazioni, vedere [Naming a File](http://msdn.microsoft.com/library/windows/desktop/aa365247) (Denominazione di un file).  
+ Per altre informazioni, vedere [Naming a File](/windows/desktop/FileIO/naming-a-file) (Denominazione di un file).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni della libreria](../c-language/library-functions.md)

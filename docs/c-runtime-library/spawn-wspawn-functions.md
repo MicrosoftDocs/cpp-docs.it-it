@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0e5a71faae381bc17b92d6b23047b9632913c2fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451771"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201263"
 ---
 # <a name="spawn-wspawn-functions"></a>Funzioni _spawn, _wspawn
 Ognuna delle funzioni `_spawn` crea ed esegue un nuovo processo:  
@@ -134,7 +134,7 @@ Ognuna delle funzioni `_spawn` crea ed esegue un nuovo processo:
 >  La presenza di spazi incorporati nelle stringhe può causare comportamenti imprevisti; ad esempio, passare a `_spawn` la stringa `"hi there"` comporterà la presenza nel nuovo processo di due argomenti, `"hi"` e `"there"`. Se lo scopo è quello di far aprire al nuovo processo un file denominato "hi there", il processo avrà esito negativo. Per evitarlo, racchiudere la stringa tra virgolette doppie: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Non passare input utente a `_spawn` senza verificarne esplicitamente il contenuto. `_spawn` determinerà una chiamata a [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.  
+>  Non passare input utente a `_spawn` senza verificarne esplicitamente il contenuto. `_spawn` determinerà una chiamata a [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.  
   
  È possibile passare i puntatori dell'argomento come argomenti separati (in `_spawnl`, `_spawnle`, `_spawnlp` e `_spawnlpe`) o come una matrice di puntatori (in `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe`). È necessario passare almeno un argomento, `arg0` o `argv`[0], al processo generato. Per convenzione, questo argomento è il nome del programma che si digiterebbe sulla riga di comando. Un valore diverso non produce un errore.  
   
@@ -154,7 +154,7 @@ Ognuna delle funzioni `_spawn` crea ed esegue un nuovo processo:
 ## <a name="redirecting-output"></a>Reindirizzamento dell'output  
  Se si chiama `_spawn` da un'applicazione DLL o GUI e si desidera reindirizzare l'output a una pipe, sono disponibili due opzioni:  
   
--   Usare l'API Win32 per creare una pipe, quindi chiamare [AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944), impostare i valori di handle nella struttura di avvio e chiamare [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425).  
+-   Usare l'API Win32 per creare una pipe, quindi chiamare [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944), impostare i valori di handle nella struttura di avvio e chiamare [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).  
   
 -   Chiamare [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md) che creerà una pipe e richiamerà l'app con **cmd.exe /c** (o **command.exe /c**).  
   

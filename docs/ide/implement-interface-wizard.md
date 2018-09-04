@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340541"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195195"
 ---
 # <a name="implement-interface-wizard"></a>Implementazione guidata interfaccia
 Questa procedura guidata consente di implementare un'interfaccia per un oggetto COM. Nelle librerie COM disponibili con Visual Studio e Windows sono incluse implementazioni di diverse interfacce. L'implementazione dell'interfaccia è associata a un oggetto quando viene creata un'istanza di tale oggetto e vengono offerti i relativi servizi.  
   
- Per dettagli su interfacce e implementazioni, vedere [Interfaces and Interface Implementations](http://msdn.microsoft.com/library/windows/desktop/ms694356) (Interfacce e implementazioni di interfacce) in Windows SDK.  
+ Per dettagli su interfacce e implementazioni, vedere [Interfaces and Interface Implementations](/windows/desktop/com/interfaces-and-interface-implementations) (Interfacce e implementazioni di interfacce) in Windows SDK.  
   
  **Implementa interfaccia da**  
  Specifica il percorso della libreria dei tipi, da cui viene creata l'interfaccia.  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0960e94acdbe660474efbeeddd0f72fa4f0606f6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16f135011f7b67debdf51f6ddbde00a79d130602
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34257062"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199692"
 ---
 # <a name="deployment-concepts"></a>Concetti principali della distribuzione
 
@@ -61,4 +61,4 @@ Per esempi di distribuzione e suggerimenti per la risoluzione dei problemi, vede
 
 - [Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [Informazioni sulle dipendenze di un'applicazione Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-- [Distribuzione con Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
+- [Distribuzione con Windows Installer](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)

@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207760"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197960"
 ---
 # <a name="midl-property-pages-advanced"></a>Pagine delle proprietà MIDL: Avanzate
 La pagina delle proprietà **Avanzate** nella cartella **MIDL** consente di specificare le opzioni seguenti del compilatore MIDL:  
   
--   Abilita controllo errori ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Abilita controllo errori ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Controlla allocazioni ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Controlla allocazioni ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Controlla limiti ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Controlla limiti ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Controlla intervallo di enumerazione ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Controlla intervallo di enumerazione ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Controlla puntatori di riferimento ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Controlla puntatori di riferimento ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Controlla dati stub ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Controlla dati stub ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Convalida parametri ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
+-   Convalida parametri ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   Allineamento membri struct ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Allineamento membri struct ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Reindirizza output ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Reindirizza output ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   Opzioni di pre-elaborazione C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   Opzioni di pre-elaborazione C ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   Rimuovi definizioni per il preprocessore ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   Rimuovi definizioni per il preprocessore ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* /robust è applicabile solo alle compilazioni per un computer Windows 2000 o versione successiva. Se si compila un progetto ATL e si vuole usare /robust, modificare questa riga nel file dlldatax.c:  
   

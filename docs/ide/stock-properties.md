@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335440"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213793"
 ---
 # <a name="stock-properties"></a>Proprietà predefinite
 Se si aggiunge una proprietà a un'interfaccia dispatch di MFC usando l'[Aggiunta guidata proprietà](../ide/idl-attributes-add-property-wizard.md), è possibile scegliere una proprietà predefinita dall'elenco **Nome della proprietà** della pagina [Nomi](../ide/names-add-property-wizard.md) della procedura guidata. Di seguito sono riportate le proprietà:  
@@ -35,7 +35,7 @@ Se si aggiunge una proprietà a un'interfaccia dispatch di MFC usando l'[Aggiunt
 |**Tipo di carattere**|Restituisce o imposta il tipo di carattere dell'ambiente del controllo. Null se il controllo non ha alcun tipo di carattere.|  
 |`ForeColor`|Restituisce o imposta la proprietà ambientale `ForeColor` del controllo.|  
 |**hWnd**|Restituisce o imposta la proprietà **hWnd** del controllo. **hWnd** non ha alcun tipo di implementazione **Variabile membro**.|  
-|**ReadyState**|Restituisce o imposta la proprietà **ReadyState** del controllo. Un controllo può essere non inizializzato, inizializzato, in caricamento, interattivo o completo. Per altre informazioni, vedere [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) in *Internet SDK*.|  
+|**ReadyState**|Restituisce o imposta la proprietà **ReadyState** del controllo. Un controllo può essere non inizializzato, inizializzato, in caricamento, interattivo o completo. Per altre informazioni, vedere [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) in *Internet SDK*.|  
 |**per**|Restituisce o imposta il testo contenuto in un controllo. **Text** non ha alcun tipo di implementazione **Variabile membro**.|  
   
 ## <a name="see-also"></a>Vedere anche  

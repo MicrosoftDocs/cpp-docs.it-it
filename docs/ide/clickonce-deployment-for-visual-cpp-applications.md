@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332325"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213533"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Distribuzione ClickOnce per applicazioni Visual C++
-Visual Studio offre due diverse tecnologie per la distribuzione di applicazioni Windows: la distribuzione ClickOnce o la distribuzione [Windows Installer](http://msdn.microsoft.com/library/cc185688).  
+Visual Studio offre due diverse tecnologie per la distribuzione di applicazioni Windows: la distribuzione ClickOnce o la distribuzione [Windows Installer](/windows/desktop/Msi/windows-installer-portal).  
   
 ## <a name="clickonce-deployment-in-c"></a>Distribuzione ClickOnce in C++  
  L'ambiente di sviluppo di Visual C++ non supporta direttamente la distribuzione dei progetti Visual C++ con ClickOnce, ma sono disponibili strumenti che consentono di ottenere questo risultato.  
@@ -53,7 +53,7 @@ Visual Studio offre due diverse tecnologie per la distribuzione di applicazioni 
  [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/windows/desktop/aa386968)  (Makecert.exe, strumento di creazione certificati)  
  [Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Distribuzione con Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
+ [Distribuzione con Windows Installer](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Creazione di pacchetti del programma di avvio automatico](/visualstudio/deployment/creating-bootstrapper-packages)   
  [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
