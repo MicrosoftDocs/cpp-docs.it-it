@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c732bcf45f2dfbd4927366670aed6bfbdcfb4721
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213828"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679987"
 ---
 # <a name="using-manual-accessors"></a>Utilizzo delle funzioni di accesso manuali
 Esistono quattro cose da fare quando si gestisce un comando sconosciuto:  
@@ -53,7 +53,7 @@ Esistono quattro cose da fare quando si gestisce un comando sconosciuto:
   
 6.  Chiamare `GetNextResult` per determinare se sono disponibili ulteriori set di righe. Ripetere i passaggi da 2 a 5.  
   
- Per un esempio di una funzione di accesso manuali, vedere `CDBListView::CallProcedure` nella [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) esempio.  
+ Per un esempio di una funzione di accesso manuali, vedere `CDBListView::CallProcedure` nella [DBVIEWER](https://github.com/Microsoft/VCSamples) esempio.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

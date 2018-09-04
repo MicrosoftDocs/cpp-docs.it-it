@@ -1,7 +1,7 @@
 ---
-title: PAGINA | Documenti Microsoft
+title: PAGINA | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994a542b543fd58fa970c373243f18403b167c1d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cc2057a850d050795ec605eca8e31b69a0086169
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058001"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692480"
 ---
 # <a name="page"></a>PAGE
-La direttiva prima imposta riga *lunghezza* e carattere *larghezza* della voce di programma. Se viene fornito alcun argomento, viene generata un'interruzione di pagina. La seconda direttiva incrementa il numero di sezione e reimposta il numero di pagina su 1.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      PAGE [[[[length]], width]]  
-PAGE +  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+La prima direttiva imposta line *lunghezza* e il carattere *larghezza* dell'inserzione programma. Se viene fornito alcun argomento, viene generata un'interruzione di pagina. La seconda direttiva incrementa il numero di sezione e reimposta il numero di pagina su 1.
+
+## <a name="syntax"></a>Sintassi
+
+> PAGINA [[*lunghezza*]] [[, *larghezza*]]<br/><br/>
+> PAGINA +
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

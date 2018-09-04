@@ -1,7 +1,7 @@
 ---
 title: INCLUDE (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 346f076e63df7b02928b5abf49def827229bb289
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 26752dc25c30fa22a523a5c224192d2023c0b135
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054598"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685587"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
-Codice dal file di origine specificato dalla sorgente di inserimenti *filename* nel file di origine corrente durante l'assemblaggio.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-INCLUDE filename  
-```  
-  
-## <a name="remarks"></a>Note  
- Il *filename* devono essere racchiusi tra parentesi quadre se include una barra rovesciata, punto e virgola, maggiore-simbolo, meno-simbolo, virgolette singole o virgolette doppie.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Inserisce codice sorgente da file di origine specificato da *filename* nel file di origine corrente durante l'assembly.
+
+## <a name="syntax"></a>Sintassi
+
+> Includi nome file
+
+## <a name="remarks"></a>Note
+
+Il *filename* deve essere racchiuso tra parentesi angolari se include una barra rovesciata, punto e virgola, maggiore-rispetto a simbolo, meno-rispetto a simbolo, virgolette singole o virgolette doppie.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

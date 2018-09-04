@@ -1,7 +1,7 @@
 ---
-title: Direttive Macro di MASM in Assembly Inline | Documenti Microsoft
+title: Direttive Macro di MASM in Assembly Inline | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfd8e3ca5fb6bf65a288c17b1754d567b2b081a8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 35ad22a9a4b79a31665ab6b156f8174d395bb0ee
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049851"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687973"
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>Direttive macro di MASM in assembly inline
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- L'assembler inline non è un Macro Assembler. Non è possibile utilizzare direttive macro MASM (**MACRO**, `REPT`, **IRC**, `IRP`, e `ENDM`) o gli operatori di macro (**<>**, **!** , **&**, `%`, e `.TYPE`). Un blocco `__asm` può tuttavia utilizzare le direttive per il preprocessore C. Vedere [utilizzando C o C++ in blocchi ASM](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) per ulteriori informazioni.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Sezione specifica Microsoft**
+
+L'assembler inline non è un Macro Assembler. Non è possibile usare direttive macro di MASM (**MACRO**, `REPT`, **IRC**, `IRP`, e `ENDM`) o gli operatori di macro (**<>**, **!** , **&**, `%`, e `.TYPE`). Un blocco `__asm` può tuttavia utilizzare le direttive per il preprocessore C. Visualizzare [utilizzo di C o C++ in blocchi ASM](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) per altre informazioni.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

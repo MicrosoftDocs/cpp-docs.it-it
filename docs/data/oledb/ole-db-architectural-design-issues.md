@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b080945309732bec06c63eb665bbf6dd5f4acb5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b0a5c568a774d0aed05d702454664e653989401
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340563"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676836"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemi di progettazione dell'architettura OLE DB
 È necessario tenere presente quanto segue prima di avviare l'applicazione OLE DB:  
@@ -39,15 +39,9 @@ ms.locfileid: "39340563"
  **Si dispone di codice precedenti utilizzando un'altra tecnologia di accesso ai dati (ADO, ODBC o DAO)?**  
  Date le possibili combinazioni di tecnologie (ad esempio usando i componenti di ADO con i componenti OLE DB e la migrazione di codice ODBC e OLE DB), che copre tutte le situazioni esula dall'ambito della documentazione di Visual C++. Molti articoli che trattano diversi scenari, tuttavia, sono disponibili nei seguenti siti Web Microsoft:  
   
--   [Guida e supporto tecnico Microsoft](http://go.microsoft.com/fwlink/p/?linkid=148218)  
+-   [Guida e supporto tecnico Microsoft](https://support.microsoft.com/)  
   
--   [Panoramica di Microsoft Data Access articoli tecnici](http://go.microsoft.com/fwlink/p/?linkid=148217)  
-  
--   [Centro soluzioni per Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=148215)  
-  
--   [Cerca su Microsoft.com](http://search.microsoft.com/)  
-  
- Quando si esegue una ricerca, immettere una combinazione delle parole chiave che meglio si adatta allo scenario; ad esempio: se si usa gli oggetti ADO con un provider OLE DB, eseguire una ricerca booleana con **ADO e "OLE DB"**. Se si vuole eseguire la migrazione di codice meno recente di DAO a ODBC, selezionare "tutte le parole" e specificare le stringhe, ad esempio **DAO migrazione**.  
+-   [Panoramica di Microsoft Data Access articoli tecnici](https://msdn.microsoft.com/en-us/library/ms810811.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)   

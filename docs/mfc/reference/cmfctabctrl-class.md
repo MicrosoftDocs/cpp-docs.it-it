@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199846"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680104"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Il `CMFCTabCtrl` classe fornisce funzionalità per un controllo struttura a schede. Il controllo scheda visualizza una finestra ancorabile con schede flat o tridimensionali nella parte superiore o inferiore. Le schede possono visualizzare testo e un'immagine e possono cambiare colore quando sono attive.  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Chiamato dal framework quando il cursore prima di tutto viene trascinato nella finestra del controllo scheda.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Chiamato dal framework durante un'operazione di trascinamento quando il mouse viene spostato nell'intervallo di destinazione di rilascio. (Esegue l'override [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Visualizza un menu di scelta rapida di finestre a schede, attende fino a quando l'utente seleziona una scheda e rende la scheda selezionata scheda attiva.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. (Esegue l'override [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. (Esegue l'override [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Ricalcola il layout interno del controllo scheda. (Esegue l'override [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Imposta la scheda corrente di un controllo struttura a schede come scheda attiva in un gruppo di schede di interfaccia documento più.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Attiva una scheda. (Esegue l'override [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  

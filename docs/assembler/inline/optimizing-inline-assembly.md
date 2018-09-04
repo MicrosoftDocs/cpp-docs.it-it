@@ -1,7 +1,7 @@
 ---
-title: Ottimizzazione dell'Assembly Inline | Documenti Microsoft
+title: Ottimizzazione dell'Assembly Inline | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,18 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c494594e3b7c541487f34fd33359b0e31f73dd61
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 49660bdc6d2eb84e6e1bbaeb5ebf0d57e484e9e1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050558"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687876"
 ---
 # <a name="optimizing-inline-assembly"></a>Ottimizzazione dell'assembly Inline
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- La presenza di un blocco `__asm` in una funzione influisce sull'ottimizzazione in diversi modi. Innanzitutto, il compilatore non tenta di ottimizzare il blocco `__asm` stesso. Ciò che viene scritto in linguaggio assembly è esattamente il risultato che si ottiene. In secondo luogo, la presenza di un blocco `__asm` influisce sull'archiviazione della variabile registro. Il compilatore evita la registrazione delle variabili in un blocco `__asm` se il contenuto del registro deve essere modificato dal blocco `__asm`. Infine, altre ottimizzazioni a livello di funzione sono interessate dall'inclusione del linguaggio assembly in una funzione.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Assembler inline](../../assembler/inline/inline-assembler.md)
+
+**Sezione specifica Microsoft**
+
+La presenza di un blocco `__asm` in una funzione influisce sull'ottimizzazione in diversi modi. Innanzitutto, il compilatore non tenta di ottimizzare il blocco `__asm` stesso. Ciò che viene scritto in linguaggio assembly è esattamente il risultato che si ottiene. In secondo luogo, la presenza di un blocco `__asm` influisce sull'archiviazione della variabile registro. Il compilatore evita la registrazione delle variabili in un blocco `__asm` se il contenuto del registro deve essere modificato dal blocco `__asm`. Infine, altre ottimizzazioni a livello di funzione sono interessate dall'inclusione del linguaggio assembly in una funzione.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

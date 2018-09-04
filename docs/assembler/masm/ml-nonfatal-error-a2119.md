@@ -1,7 +1,7 @@
 ---
-title: ML errore non irreversibile A2119 | Documenti Microsoft
+title: Machine Learning errore non irreversibile A2119 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ea8bc44a44447e84601167d58d5434dc37aade
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c1034c91f6eebd240c746c881284bed2baf5e618
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057448"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686899"
 ---
 # <a name="ml-nonfatal-error-a2119"></a>Errore ML non irreversibile A2119
-**specificare il tipo di linguaggio**  
-  
- Un prototipo o la definizione di stored procedure non è stato specificato un tipo di linguaggio.  
-  
- Se un tipo di linguaggio predefinito non è specificato, un tipo di linguaggio deve essere dichiarato in ogni definizione della stored procedure o un prototipo. Un tipo di lingua predefinito viene impostato utilizzando il [. MODELLO](../../assembler/masm/dot-model.md) direttiva **opzione LANG**, o le opzioni della riga di comando ML **/Gc** o **/Gd**.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)
+
+**tipo di linguaggio deve essere specificato**
+
+Una definizione della stored procedure o un prototipo, è possibile che non è stato specificato un tipo di linguaggio.
+
+Un tipo di linguaggio deve essere dichiarato in ogni prototipo o definizione della stored procedure se non viene specificato un tipo di linguaggio predefinito. Un tipo di linguaggio predefinito viene impostato usando il [. MODELLO](../../assembler/masm/dot-model.md) direttiva **opzione LANG**, o le opzioni della riga di comando ML **/Gc** oppure **/Gd**.
+
+## <a name="see-also"></a>Vedere anche
+
+[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>

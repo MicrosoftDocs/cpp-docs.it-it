@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9ee25403464a13418081abc8e8e150c7e03500
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b82299db31a7452a05cdfe709221facda09c3615
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217459"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676075"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Classe ISupportErrorInfoImpl
 Questa classe fornisce un'implementazione predefinita del [ISupportErrorInfo interfaccia](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) e può essere usato quando solo una singola interfaccia genera errori in un oggetto.  
@@ -125,7 +125,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  Se *nNumThreads* è negativo, il valore assoluto corrispondente verrà moltiplicato per il numero di processori del computer per ottenere il numero totale di thread.  
   
- Se *nNumThreads* è uguale a zero, [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) verrà moltiplicata per il numero di processori del computer per ottenere il numero totale di thread.  
+ Se *nNumThreads* è uguale a zero, ATLS_DEFAULT_THREADSPERPROC verrà moltiplicata per il numero di processori del computer per ottenere il numero totale di thread.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  

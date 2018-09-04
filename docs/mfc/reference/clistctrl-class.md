@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d798f78addcc457303b42d80f79f77aef67305a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199780"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684957"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 Incapsula la funzionalità di un "controllo di visualizzazione elenco" che mostra una raccolta di elementi ciascuno costituito da un'icona (da un elenco di immagini) e da un'etichetta.  
@@ -653,7 +653,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
  Specifica lo stile del controllo elenco. Applicare qualsiasi combinazione di stili del controllo elenco per il controllo. Per un elenco completo di questi stili, vedere [stili di finestra di visualizzazione elenco](/windows/desktop/Controls/list-view-window-styles) nel SDK di Windows.  

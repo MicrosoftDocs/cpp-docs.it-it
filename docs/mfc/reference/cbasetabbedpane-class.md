@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412010f7e8599ab9a97ea5a4e5cab55fca6051a0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690434"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane (classe)
 Estende la funzionalità della [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) per supportare la creazione di finestre a schede.  
@@ -128,7 +128,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Ricalcola le informazioni sul layout per il riquadro. (Esegue l'override [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CBaseTabbedPane::RemovePane](#removepane)|Rimuove un riquadro dal riquadro a schede.|  
 |`CBaseTabbedPane::SaveSiblingBarIDs`|Utilizzato internamente durante la serializzazione.|  
-|`CBaseTabbedPane::Serialize`|(Esegue l'override [CDockablePane:: Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::Serialize`|(Esegue l'override [CDockablePane:: Serialize](cdockablepane-class.md).)|  
 |`CBaseTabbedPane::SerializeTabWindow`|Utilizzato internamente durante la serializzazione.|  
 |[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Determina se la barra di controllo a schede verrà eliminata automaticamente.|  
 |[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Gli elementi Toggle visualizzato tra il riquadro ancorato e modalità Nascondi automaticamente. (Esegue l'override [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  

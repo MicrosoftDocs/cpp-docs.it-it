@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a7f5cee986ad82790870bfa7684a99c60dc462e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206266"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681625"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 Fornisce la funzionalità del controllo tasto di scelta comune di Windows.  
@@ -144,7 +144,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
  Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Per altre informazioni, vedere [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows.  

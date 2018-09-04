@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1d82f3a6b39fb4b550b8d7f9f9bfbc689088648
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605017"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688259"
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 
@@ -37,7 +37,7 @@ In Visual Studio 2017 versione 15.4 e versioni successive, è possibile creare u
 
 - Oggetto *Win32* dell'applicazione è un'applicazione desktop in C++ consentono di utilizzare nativo di Windows [le API C di Windows e/o COM APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT e le API della libreria Standard e librerie di terze parti 3rd. Un'applicazione Win32 che viene eseguito in una finestra richiede allo sviluppatore di utilizzare in modo esplicito i messaggi di Windows all'interno di una funzione routine di Windows. Nonostante il nome, un'applicazione Win32 può essere compilata come una (x86) 32 bit o 64 bit (x64) binario. Nell'IDE di Visual Studio, i termini x86 e Win32 sono sinonimi.
 
-- Il [modello COM (Component Object)](https://msdn.microsoft.com/library/windows/desktop/ms694363\(v=vs.85\).aspx) è una specifica che consente ai programmi scritti in linguaggi diversi per comunicare tra loro. Windows molti componenti vengono implementati come oggetti COM e seguire le regole COM standard per la creazione di oggetti, la distruzione di individuazione e l'oggetto di interfaccia.  Uso di oggetti COM da applicazioni desktop C++ è relativamente semplice, ma si scrive il proprio oggetto COM è più avanzata. Il [libreria ATL (Active Template)](../atl/atl-com-desktop-components.md) fornisce le macro e funzioni di supporto che semplificano lo sviluppo COM.
+- Il [modello COM (Component Object)](/windows/desktop/com/the-component-object-model) è una specifica che consente ai programmi scritti in linguaggi diversi per comunicare tra loro. Windows molti componenti vengono implementati come oggetti COM e seguire le regole COM standard per la creazione di oggetti, la distruzione di individuazione e l'oggetto di interfaccia.  Uso di oggetti COM da applicazioni desktop C++ è relativamente semplice, ma si scrive il proprio oggetto COM è più avanzata. Il [libreria ATL (Active Template)](../atl/atl-com-desktop-components.md) fornisce le macro e funzioni di supporto che semplificano lo sviluppo COM.
 
 - Un'applicazione MFC è un'applicazione desktop di Windows che usano il [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md) per creare l'interfaccia utente. Un'applicazione MFC anche possibile usare i componenti COM e CRT e le API della libreria Standard. MFC fornisce un semplice wrapper basato sugli oggetti C++ nel ciclo di messaggi di finestra e API di Windows. MFC è la scelta predefinita per le applicazioni, soprattutto applicazioni aziendali-type, che includono molti dei controlli dell'interfaccia utente o comandi utente personalizzati. MFC fornisce classi helper utili per la gestione delle finestre, la serializzazione, modifica del testo, la stampa e gli elementi dell'interfaccia utente moderna, ad esempio la barra multifunzione. Per essere efficace con MFC è consigliabile avere familiarità con Win32.
 

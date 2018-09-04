@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ba0930d0d1441801d18152a5ece4ace70f70425
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 90b66cf87610409e171cad25d891b0ca99ecd9a2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207337"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689947"
 ---
 # <a name="creating-an-mfc-application"></a>Creazione di un'applicazione MFC
 Un'applicazione MFC rappresenta un'applicazione eseguibile per Windows basata sulla libreria MFC (Microsoft Foundation Class). Il modo più semplice per creare un'applicazione MFC consiste nell'utilizzo della Creazione guidata applicazione MFC.  
@@ -59,8 +59,7 @@ Un'applicazione MFC rappresenta un'applicazione eseguibile per Windows basata su
  Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Preparazione al debug: Applicazioni di Windows di Visual C++](https://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)   
- [Distribuzione di applicazioni](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

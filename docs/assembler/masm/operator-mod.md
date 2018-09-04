@@ -1,7 +1,7 @@
 ---
-title: operatore MOD | Documenti Microsoft
+title: operatore MOD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cd35fa3f1d136cf19a82d840b02e53f4f40abb
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f03739ab1b2b4bb931e045222b869b7aa5d7676d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054458"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680438"
 ---
 # <a name="operator-mod"></a>Operatore MOD
-Restituisce il valore intero del resto (modulo) quando si divide *expression1* da *expression2*.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-expression1 MOD expression2  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Restituisce il valore intero del resto (modulo) quando si divide *expression1* dal *expression2*.
+
+## <a name="syntax"></a>Sintassi
+
+> expression1 MOD expression2
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

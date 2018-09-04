@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f966491603ad1fda04bef34181ebb4937df6a65e
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209287"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680412"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Elenco oggetti intrinseci x64 (amd64)
 
@@ -32,13 +32,13 @@ Per informazioni sui singoli intrinseci, vedere queste risorse, in base al proce
 
 - [Guida relativa agli intrinseci di Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Usare la casella di ricerca per trovare specifici intrinseci.
 
-- [Manuali degli sviluppatori Software di Intel 64 e IA-32 architetture](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Manuali degli sviluppatori Software di Intel 64 e IA-32 architetture](https://software.intel.com/articles/intel-sdm)
 
-- [Riferimento alla programmazione delle estensioni dei Set di istruzioni di architettura Intel](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Riferimento alla programmazione delle estensioni dei Set di istruzioni di architettura Intel](https://software.intel.com/isa-extensions)
 
-- [Introduzione a Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Introduzione a Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [Guide per gli sviluppatori AMD, manuali e documenti ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [Guide per gli sviluppatori AMD, manuali e documenti ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
 La tabella seguente elenca le funzioni intrinseche disponibili per i processori x64. La colonna Tecnologia elenca il supporto del set di istruzioni richiesto. Usare la funzione intrinseca [__cpuid](../intrinsics/cpuid-cpuidex.md) per determinare il supporto del set di istruzioni al runtime. Se due voci si trovano in una sola riga, rappresentano i diversi punti di ingresso per lo stesso oggetto intrinseco. [1] indica che la funzione intrinseca è disponibile solo per i processori AMD. [2] indica che la funzione intrinseca è disponibile solo per i processori Intel. [3] indica che il prototipo è una macro. L'intestazione richiesta per il prototipo di funzione è elencata nella colonna Intestazione. Per semplicità, l'intestazione intrin.h include immintrin.h e ammintrin.h.
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3768056a240bb8ad647287b4ca2b60f8e7ede484
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681385"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Risoluzione dei problemi relativi alle applicazioni isolate C/C++ e agli assembly side-by-side
 È possibile che un'applicazione C/C++ non venga caricata se non è possibile trovare le librerie dipendenti. Questo articolo descrive alcuni motivi comuni per cui il caricamento di un'applicazione C/C++ non riesce e suggerisce i passaggi per risolvere i problemi.  
@@ -46,7 +46,7 @@ ms.locfileid: "43218669"
   
 3.  Se l'applicazione dipende da assembly side-by-side e non è presente un manifesto, è necessario assicurarsi che il linker generi un manifesto per il progetto. Selezionare l'opzione del linker **Genera manifesto** nel **proprietà progetto** finestra di dialogo per il progetto.  
   
-4.  Se il manifesto è incorporato nel file binario, assicurarsi che l'ID di RT_MANIFEST sia corretto per questo tipo di file binario. Per altre informazioni sull'ID risorsa da usare, vedere [Using Side-by-Side Assemblies come risorsa (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Se il manifesto è in un file separato, aprirlo in un editor XML o in un editor di testo. Per altre informazioni sui manifesti e sulle regole di distribuzione, vedere [manifesti](https://msdn.microsoft.com/library/aa375365).  
+4.  Se il manifesto è incorporato nel file binario, assicurarsi che l'ID di RT_MANIFEST sia corretto per questo tipo di file binario. Per altre informazioni sull'ID risorsa da usare, vedere [Using Side-by-Side Assemblies come risorsa (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Se il manifesto è in un file separato, aprirlo in un editor XML o in un editor di testo. Per altre informazioni sui manifesti e sulle regole di distribuzione, vedere [manifesti](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Se sono presenti sia un manifesto incorporato che un file manifesto separato, il caricatore del sistema operativo usa il manifesto incorporato e ignora il file separato. Tuttavia, in Windows XP accade il contrario: viene usato il file manifesto separato e viene ignorato il manifesto incorporato.  

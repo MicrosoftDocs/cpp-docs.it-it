@@ -1,7 +1,7 @@
 ---
-title: UNIONE | Documenti Microsoft
+title: UNIONE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a2d7644e14903d2c4a9c4191ce54c8fea14849
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3b2d6ea844881961bdfb4a26a5e6cf79d8308de9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682472"
 ---
 # <a name="union"></a>UNION
-Dichiara un'unione di uno o più tipi di dati. Il *fielddeclarations* deve essere definizioni di dati valido. Omettere il [termina](../../assembler/masm/ends-masm.md) *nome* etichetta sul annidati **unione** definizioni.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      name   
-      UNION [[alignment]] [[, NONUNIQUE]]  
-   fielddeclarations  
-[[name]] ENDS  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Dichiara un'unione di uno o più tipi di dati. Il *dichiarazioni di campo* devono essere le definizioni di dati validi. Omettere il [termina](../../assembler/masm/ends-masm.md) *name* annidati sull'etichetta **UNION** definizioni.
+
+## <a name="syntax"></a>Sintassi
+
+> *nome* UNION [[*allineamento*]] [[, non univoco]]<br/>
+> *dichiarazioni di campo*<br/>
+> [[*nome*]] termina
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebda52eaa4deab6ddf8535da9b4c5a94a2cbc77b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213136"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679405"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Aggiunta di funzionalità con creazioni guidate codice (C++)
 Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla funzionalità del progetto. Tali attività includono la creazione di nuove classi, l'aggiunta di nuove funzioni membro e variabili e l'aggiunta di metodi di automazione e proprietà. Le creazioni guidate codice sono progettate per consentire di effettuare tutte queste operazioni.  
@@ -56,7 +56,7 @@ Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla 
   
 -   In **Esplora soluzioni** è possibile fare clic con il pulsante destro del mouse su una cartella e fare clic su **Aggiungi** dal menu di scelta rapida per aggiungere file nuovi o esistenti, altre cartelle, elementi, classi, risorse e riferimenti Web al progetto.  
   
--   Nella [finestra Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) è possibile fare clic con il pulsante destro del mouse sul nodo appropriato e fare clic su **Aggiungi** dal menu di scelta rapida per aggiungere funzioni, variabili, classi, proprietà, metodi, eventi, interfacce, punti di connessione o altro codice al progetto.  
+-   Nella [finestra Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code) è possibile fare clic con il pulsante destro del mouse sul nodo appropriato e fare clic su **Aggiungi** dal menu di scelta rapida per aggiungere funzioni, variabili, classi, proprietà, metodi, eventi, interfacce, punti di connessione o altro codice al progetto.  
   
     > [!NOTE]
     >  In Visual Studio non è disponibile una procedura guidata per l'aggiunta di un'interfaccia a un progetto. È possibile aggiungere un'interfaccia a un progetto ATL o a un'[aggiunta del supporto ATL a un progetto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) aggiungendo un oggetto semplice con la [Creazione guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md). In alternativa, aprire il file IDL del progetto e creare l'interfaccia digitando quanto segue:  

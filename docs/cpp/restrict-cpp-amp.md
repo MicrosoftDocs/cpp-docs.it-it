@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e3385e68b7a5a112e5ff63b63afe5dd83603cf72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678197"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 L'indicatore di restrizione può essere applicato a dichiarazioni lambda e di funzione. Tale indicatore applica restrizioni sul codice della funzione e sul comportamento della funzione nelle applicazioni che utilizzano il runtime C++ AMP (Accelerated Massive Parallelism) di C++.  
@@ -87,7 +87,7 @@ L'indicatore di restrizione può essere applicato a dichiarazioni lambda e di fu
   
     -   Funzioni varargs.  
   
- Per una discussione sulle limitazioni delle funzioni, vedere [restrizioni Restrict (amp)](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
+ Per una discussione sulle limitazioni delle funzioni, vedere [limitare le restrizioni (amp)](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il `restrict(amp)`clausola.  

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4711238c45955ee7067e3e418212bcdb0fae09ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 086fbbc2a25c4af2b09f40d83ac0b20399860ca1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540443"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679806"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Sezione specifica Microsoft**  
@@ -46,7 +46,7 @@ void __svm_vmrun(
 ## <a name="remarks"></a>Note  
  Il `__svm_vmrun` funzione utilizza una quantità minima di informazioni di VMCB per avviare l'esecuzione del codice guest macchina virtuale. Usare la [__svm_vmsave](../intrinsics/svm-vmsave.md) oppure [__svm_vmload](../intrinsics/svm-vmload.md) funzionare se sono necessarie altre informazioni per la gestione di un interrupt complesso oppure passare a un altro guest.  
   
- Il `__svm_vmrun` è equivalente alla funzione il `VMRUN` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nelle [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
+ Il `__svm_vmrun` è equivalente alla funzione il `VMRUN` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nelle [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   

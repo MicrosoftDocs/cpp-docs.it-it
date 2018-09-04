@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197994"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676767"
 ---
 # <a name="changing-list-control-styles"></a>Modifica degli stili del controllo List
 È possibile modificare lo stile della finestra di un controllo elenco ([CListCtrl](../mfc/reference/clistctrl-class.md)) in qualsiasi momento dopo averlo creato. Modificando lo stile della finestra, si modifica il tipo di visualizzazione utilizzato dal controllo. Per emulare Esplora risorse, ad esempio, è possibile fornire le voci di menu o i pulsanti della barra degli strumenti per lo spostamento del controllo tra diverse visualizzazioni: visualizzazione icone, visualizzazione elenco e così via.  
   
- Ad esempio, quando l'utente seleziona la voce di menu, è Impossibile effettuare una chiamata a [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) per recuperare lo stile corrente del controllo e quindi chiamare [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) reimpostare lo stile. Per altre informazioni, vedere [usando i controlli di visualizzazione elenco](/windows/desktop/Controls/using-list-view-controls) nel SDK di Windows.  
+ Ad esempio, quando l'utente seleziona la voce di menu, è Impossibile effettuare una chiamata a [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) per recuperare lo stile corrente del controllo e quindi chiamare [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) reimpostare lo stile. Per altre informazioni, vedere [usando i controlli di visualizzazione elenco](/windows/desktop/Controls/using-list-view-controls) nel SDK di Windows.  
   
  Stili disponibili sono elencati nella [Create](../mfc/reference/clistctrl-class.md#create). Gli stili **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, e **LVS_REPORT** designare le viste di controllo di elenco di quattro.  
   

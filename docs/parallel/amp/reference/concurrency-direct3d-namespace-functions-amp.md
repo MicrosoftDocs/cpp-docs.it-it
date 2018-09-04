@@ -1,7 +1,7 @@
 ---
 title: Funzioni dello spazio dei nomi Concurrency::Direct3D (AMP) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/31/2018
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -11,6 +11,7 @@ f1_keywords:
 - amp/Concurrency::direct3d::d3d_access_unlock
 - amp/Concurrency::direct3d::firstbithigh
 - amp/Concurrency::direct3d::get_buffer
+- amp/Concurrency::direct3d::get_device
 - amp/Concurrency::direct3d::imax
 - amp/Concurrency::direct3d::is_timeout_disabled
 - amp/Concurrency::direct3d::mad
@@ -28,20 +29,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 457b2d176b518e9c846c8684b8d21b757fd81a11
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a1a4bcc194f2d762e48144be2c2bdb84376ed31b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208952"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682168"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency::Direct3D (AMP)
 ||||  
 |-|-|-|  
 |[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
-|[create_accelerator_view](#create_accelerator_view)|||
-|[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
-|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[create_accelerator_view](#create_accelerator_view)|[d3d_access_lock](#d3d_access_lock)||
+|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|  
+|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[mad](#mad)|[make_array](#make_array)|[rumore](#noise)|  
 |[radianti](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
@@ -236,10 +237,24 @@ IUnknown *get_buffer(
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a interfaccia IUnknown corrispondente al buffer Direct3D sottostante alla matrice.  
-  
+
+## <a name="a-namegetdevice-getdevice"></a><a name="get_device"> get_device
+Ottenere l'interfaccia del dispositivo D3D sottostante un accelerator_view.
+
+```
+IUnknown* get_device(const accelerator_view Av);
+```
+
+### <a name="parameters"></a>Parametri
+`Av` L'oggetto accelerator_view D3D per il quale viene restituito l'interfaccia del dispositivo D3D sottostante.
+
+
+### <a name="return-value"></a>Valore restituito
+Il `IUnknown` puntatore all'interfaccia del dispositivo D3D sottostante l'oggetto accelerator_view.
+
 ##  <a name="imax"></a>  imax  
  Determinare il valore numerico massimo degli argomenti  
-  
+
 ```  
 inline int imax(
     int _X,  

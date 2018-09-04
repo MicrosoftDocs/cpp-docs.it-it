@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69421faced2873a4083cc6edbf7dd86e15f3cd9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199083"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692302"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 Il tag \<summary> deve essere usato per descrivere un tipo o un membro del tipo. Utilizzare [ \<osservazioni >](../ide/remarks-visual-cpp.md) per aggiungere informazioni supplementari alla descrizione di un tipo.  
@@ -39,7 +39,7 @@ Il tag \<summary> deve essere usato per descrivere un tipo o un membro del tipo.
  Un riepilogo dell'oggetto.  
   
 ## <a name="remarks"></a>Note  
- Il testo del tag \<summary> rappresenta l'unica fonte di informazioni sul tipo in IntelliSense e viene visualizzato anche nella finestra [Visualizzatore oggetti](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) e nel report Web sui commenti del codice.  
+ Il testo del tag \<summary> rappresenta l'unica fonte di informazioni sul tipo in IntelliSense e viene visualizzato anche nella finestra [Visualizzatore oggetti](/visualstudio/ide/viewing-the-structure-of-code) e nel report Web sui commenti del codice.  
   
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
   

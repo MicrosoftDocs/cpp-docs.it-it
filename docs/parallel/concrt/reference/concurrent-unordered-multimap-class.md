@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9fe1bcce5290d7e977dc423f146bb3a5b66d484
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 532320e275d233181868e3ab83ab307c176de765
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216084"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690174"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>Classe concurrent_unordered_multimap
 La classe `concurrent_unordered_multimap` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const K, _Element_type>`. La sequenza viene rappresentata in un modo che abilita le operazioni di accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.  
@@ -305,7 +305,7 @@ std::pair<const_iterator,
  Il valore della chiave da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [coppia](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) dove il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
+ Oggetto [coppia](../../../standard-library/pair-structure.md) dove il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
   
 ### <a name="remarks"></a>Note  
  È possibile per gli inserimenti simultanei causare altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.  

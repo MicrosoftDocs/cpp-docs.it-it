@@ -1,7 +1,7 @@
 ---
-title: ML errore non irreversibile A2096 | Documenti Microsoft
+title: Machine Learning errore non irreversibile A2096 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e5d07afa864c9f6f4214de953aa9e03fe0e7e4f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 82f4ef76dca10b1208a931bc3e1cc09d82a639d2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053672"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679598"
 ---
 # <a name="ml-nonfatal-error-a2096"></a>Errore ML non irreversibile A2096
-**segmento, gruppo o il Registro di segmento previsto**  
-  
- Un segmento o un gruppo è previsto ma non è stato trovato.  
-  
- Si è verificata una delle operazioni seguenti:  
-  
--   L'operando di sinistra specificata con il segmento di eseguire l'override di operatore (**:**) non è un segmento register (CS, DS, SS, ES, ADFS o GS), nome del gruppo, il nome del segmento o espressione di segmento.  
-  
--   Il [PRESUPPONI](../../assembler/masm/assume.md) direttiva è stata specificata un registro del segmento senza un indirizzo valido di segmento, Registro di segmento, gruppo o speciale **FLAT** gruppo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)
+
+**segmento, gruppo o Registro di segmento previsto**
+
+Un segmento o un gruppo è previsto ma non è stato trovato.
+
+Si è verificata una delle operazioni seguenti:
+
+- L'operando di sinistra specificato con il segmento di eseguire l'override di operatore (**:**) non è un segmento register (CS, DS, SS, ES, FS o GS), nome del gruppo, il nome del segmento o espressione di segmento.
+
+- Il [PRESUPPONI](../../assembler/masm/assume.md) direttiva è stata specificata un registro del segmento senza un indirizzo valido segmento, Registro di segmento, gruppo o speciale **FLAT** gruppo.
+
+## <a name="see-also"></a>Vedere anche
+
+[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>

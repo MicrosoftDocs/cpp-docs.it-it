@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f105f41c465d2750d372a8794a9ab66fa13db466
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cefedc4b1517b242eef62192e8d03a60097700c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215982"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683172"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>Procedura: cercare simboli nelle risorse
 
@@ -29,10 +29,10 @@ ms.locfileid: "43215982"
 
 1. Dal **Edit** menu, scegliere **Trova simbolo**.
 
-2. Nel [finestra di dialogo Trova simbolo](https://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96), nella **Find What** casella, selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare il tasto di scelta rapida si desidera trovare (ad esempio ID_ACCEL1).
+2. Nel [finestra di dialogo Trova simbolo](/visualstudio/ide/go-to), nella **Find What** casella, selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare il tasto di scelta rapida si desidera trovare (ad esempio ID_ACCEL1).
 
    > [!TIP]
-   > Da utilizzare [le espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) per la ricerca, è necessario utilizzare il [comando Cerca nei file](/visualstudio/ide/reference/find-command) dal **modifica** menu anziché il **Trova simbolo**comando. Per abilitare le espressioni regolari, è necessario disporre del **utilizzo: espressioni regolari** selezionata nella casella di controllo la [nella finestra di dialogo Find](https://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600). Quindi è possibile fare clic sul pulsante freccia destra a destra del **Find What** casella per visualizzare un elenco di espressioni regolari di ricerca. Quando si seleziona un'espressione da questo elenco, viene sostituita come testo di ricerca nella **Find What** casella.
+   > Da utilizzare [le espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) per la ricerca, è necessario utilizzare il [comando Cerca nei file](/visualstudio/ide/reference/find-command) dal **modifica** menu anziché il **Trova simbolo**comando. Per abilitare le espressioni regolari, è necessario disporre del **utilizzo: espressioni regolari** selezionata nella casella di controllo la [nella finestra di dialogo Find](/visualstudio/ide/finding-and-replacing-text). Quindi è possibile fare clic sul pulsante freccia destra a destra del **Find What** casella per visualizzare un elenco di espressioni regolari di ricerca. Quando si seleziona un'espressione da questo elenco, viene sostituita come testo di ricerca nella **Find What** casella.
 
 3. Selezionare una qualsiasi delle **trovare** opzioni.
 

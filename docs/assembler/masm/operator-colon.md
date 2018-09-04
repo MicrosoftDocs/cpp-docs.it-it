@@ -1,7 +1,7 @@
 ---
-title: 'operatore: | Documenti Microsoft'
+title: 'operatore: | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,23 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6cb3a060536eb104c5dcbfe3d5b727f495e4d87
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 27bc8aff14dddcc162d3ebee316d373bdf419b2e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056239"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690407"
 ---
 # <a name="operator-"></a>Operatore :
-Sostituisce il segmento predefinito di *espressione* con `segment`. Il `segment` può essere un registro di segmento, nome del gruppo, il nome del segmento o espressione di segmento. Il *espressione* deve essere una costante.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-segment  
-: expression  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Sostituisce il segmento predefinito di *espressione* con *segmento*. Il *segmento* può essere un segmento register, nome del gruppo, il nome del segmento o espressione di segmento. Il *espressione* deve essere una costante.
+
+## <a name="syntax"></a>Sintassi
+
+> *segmento* : *espressione*
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

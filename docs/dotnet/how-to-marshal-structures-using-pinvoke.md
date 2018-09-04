@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219884"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689510"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Procedura: Effettuare il marshalling di strutture tramite PInvoke
 Questo documento illustra la modalità native funzioni che accettano le strutture di tipo C possono essere chiamate da funzioni gestite dal tramite P/Invoke. Sebbene sia consigliabile usare le funzionalità di interoperabilità C++ invece di P/Invoke perché P/Invoke fornisce la segnalazione, little errori in fase di compilazione non è indipendente dai tipi e può essere noioso da implementare, se l'API non gestita viene assemblato come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione. In caso contrario, vedere i documenti seguenti:  
@@ -34,7 +34,7 @@ Questo documento illustra la modalità native funzioni che accettano le struttur
   
  Per impostazione predefinita, le strutture native e gestite vengono disposti in modo diverso in memoria, correttamente il passaggio di strutture oltre i limiti gestiti/non gestiti richiede passaggi aggiuntivi per mantenere l'integrità dei dati.  
   
- Questo documento illustra i passaggi necessari per definire gli equivalenti gestiti delle strutture native e come strutture risultanti possono essere passate alle funzioni non gestite. Questo documento si presuppone che semplice strutture, ovvero quelle che non contengono puntatori o le stringhe, vengono usati. Per informazioni sull'interoperabilità non copiabili da blt, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke non possono avere tipi non copiabili da blt come valore restituito. Tipi copiabili da blt hanno la stessa rappresentazione nel codice gestito e non gestito. Per altre informazioni, vedere [tipi copiabili e Non copiabili da blt](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ Questo documento illustra i passaggi necessari per definire gli equivalenti gestiti delle strutture native e come strutture risultanti possono essere passate alle funzioni non gestite. Questo documento si presuppone che semplice strutture, ovvero quelle che non contengono puntatori o le stringhe, vengono usati. Per informazioni sull'interoperabilità non copiabili da blt, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke non possono avere tipi non copiabili da blt come valore restituito. Tipi copiabili da blt hanno la stessa rappresentazione nel codice gestito e non gestito. Per altre informazioni, vedere [tipi copiabili e Non copiabili da blt](/dotnet/framework/interop/blittable-and-non-blittable-types).  
   
  Marshalling semplice, strutture copiabile da blt oltre i limiti gestiti/non gestiti prima di tutto è necessario la definizione di versioni non gestite di ogni struttura nativa. Queste strutture possono avere qualsiasi nome valido. non è presente alcuna relazione tra la versione nativa e gestita delle due strutture diverso da del layout dei dati. Pertanto, è fondamentale che la versione gestita contiene campi che sono le stesse dimensioni e nello stesso ordine in cui la versione nativa. (Non è previsto alcun meccanismo per garantire che le versioni native e gestite della struttura sono equivalenti, pertanto le incompatibilità saranno visibili alla fase di esecuzione. È compito del programmatore garantire che le due strutture hanno lo stesso layout di dati).  
   

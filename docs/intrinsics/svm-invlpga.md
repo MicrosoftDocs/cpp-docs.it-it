@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656d0edf1a4f2e740599490e6ce77cbc97426850
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 77ada66d0478996eac30c8218793d962e8fcf7ca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541249"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680088"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Sezione specifica Microsoft**  
@@ -45,7 +45,7 @@ void __svm_invlpga(
 |[in] `ASID`|L'indirizzo dello spazio identificatore (ASID) della pagina da invalidare.|  
   
 ## <a name="remarks"></a>Note  
- Il `__svm_invlpga` è equivalente alla funzione il `INVLPGA` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
+ Il `__svm_invlpga` è equivalente alla funzione il `INVLPGA` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   

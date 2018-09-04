@@ -1,7 +1,7 @@
 ---
-title: CATSTR | Documenti Microsoft
+title: CATSTR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d0fbe41d81671b509eef6d0724fd8a4b6880484
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 975d3a0776a6b2228dedba54cbd47a18d363921b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049637"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689380"
 ---
 # <a name="catstr"></a>CATSTR
-Concatena gli elementi di testo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-name CATSTR [[textitem1 [[, textitem2]] ...]]  
-```  
-  
-## <a name="remarks"></a>Note  
- Ogni elemento di testo può essere una stringa letterale, una costante preceduta da un `%`, o la stringa restituita da una funzione di macro.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Concatena gli elementi di testo.
+
+## <a name="syntax"></a>Sintassi
+
+> assegnare un nome CATSTR [[textitem1 [[, textitem2]]...]]
+
+## <a name="remarks"></a>Note
+
+Ogni elemento di testo può essere una stringa letterale, una costante preceduta da un `%`, o la stringa restituita da una funzione di macro.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

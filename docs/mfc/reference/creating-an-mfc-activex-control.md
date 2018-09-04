@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c610e8dcd8cf5b06dfb22540c304e84446c75438
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198688"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687146"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Creazione di un controllo ActiveX MFC
 Programmi di controllo ActiveX sono modulare progettata per offrire un tipo specifico di funzionalità a un'applicazione padre. Ad esempio, è possibile creare un controllo, ad esempio un pulsante per l'uso in una finestra di dialogo oppure sulla barra degli strumenti per l'uso in una pagina Web.  
@@ -49,5 +49,5 @@ Programmi di controllo ActiveX sono modulare progettata per offrire un tipo spec
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)   
- [Distribuzione di applicazioni](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

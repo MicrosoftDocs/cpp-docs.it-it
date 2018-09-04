@@ -40,19 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb62c18f7508a21e24fb5628e8ac01162db1405e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a06fa858ac7d2d8458bd3adf3fb44ca7bdee929
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402712"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678154"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
 Termina il processo di chiamata. Il **uscire** funzione termina dopo la pulizia. **Exit** e **Exit** terminano immediatamente.
 
 > [!NOTE]
-> Non utilizzare questo metodo per arrestare un'app di Windows della piattaforma UWP (Universal), ad eccezione di testing o scenari di debug. Modalità a livello di codice o dell'interfaccia utente per chiudere un'app di Store non sono consentiti in base al [criteri di Microsoft Store](/legal/windows/agreements/store-policies). Per ulteriori informazioni, vedere [ciclo di vita dell'App UWP](/windows/uwp/launch-resume/app-lifecycle). Per altre informazioni sulle app di Windows 10, vedere [Guide pratiche per le app di Windows 10](http://go.microsoft.com/fwlink/p/?linkid=619133).
+> Non utilizzare questo metodo per arrestare un'app Universal Windows Platform (UWP), ad eccezione di test o gli scenari di debug. Modalità dell'interfaccia utente o a livello di codice per chiudere un'app di Store non sono consentiti in base al [i criteri di Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere [ciclo di vita App UWP](/windows/uwp/launch-resume/app-lifecycle). Per altre informazioni sulle app di Windows 10, vedere [Guide pratiche per le app di Windows 10](https://developer.microsoft.com/en-us/windows/apps).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -70,13 +70,13 @@ void _exit(
 
 ### <a name="parameters"></a>Parametri
 
-*stato* codice di stato di uscita.
+*stato* uscire dal codice di stato.
 
 ## <a name="remarks"></a>Note
 
-Il **uscire**, **Exit** e **Exit** funzioni terminano il processo di chiamata. Il **uscire** funzione chiama i distruttori per gli oggetti thread-local, quindi chiama, ovvero nell'ordine di last-in-first-out (LIFO), ovvero le funzioni registrate da **atexit** e **OnExit**e infine Scarica tutti i buffer del file prima di terminare il processo. Il **Exit** e **Exit** funzioni terminano il processo senza eliminare definitivamente gli oggetti locali del thread o l'elaborazione **atexit** o **OnExit**funzioni e senza scaricare i buffer di flusso.
+Il **uscire**, **Exit** e **Exit** funzioni terminano il processo chiama. Il **uscire** funzione chiama i distruttori per gli oggetti thread-local, quindi chiama, in ordine di last-in-first-out (LIFO), le funzioni registrate da **atexit** e **OnExit**e infine Scarica tutti i buffer di file prima di terminare il processo. Il **Exit** e **Exit** funzioni di terminano il processo senza eliminare gli oggetti locali del thread o l'elaborazione **atexit** o **OnExit**funzioni e senza scaricare i buffer del flusso.
 
-Anche se il **uscire**, **Exit** e **Exit** chiamate non restituiscono un valore, il valore nella *stato* viene reso disponibile all'ambiente host o in attesa processo di chiamata, se presente, dopo la chiusura del processo. In genere, il chiamante imposta il *stato* valore su 0 per indicare una chiusura normale o un altro valore per indicare un errore. Il *stato* valore è disponibile per il comando batch del sistema operativo **ERRORLEVEL** e viene rappresentato da uno dei due costanti: **EXIT_SUCCESS**, che rappresenta un valore pari a 0, o **EXIT_FAILURE**, che rappresenta un valore pari a 1.
+Anche se il **uscire**, **Exit** e **Exit** chiamate non restituiscono un valore, il valore nella *stato* viene resa disponibile per l'ambiente host o in attesa del processo chiamante, se presente, dopo il processo viene chiuso. In genere, il chiamante imposta il *stato* valore su 0 per indicare una chiusura normale, o un altro valore per indicare un errore. Il *lo stato* valore è disponibile per il comando batch del sistema operativo **ERRORLEVEL** ed è rappresentato da uno dei due costanti: **EXIT_SUCCESS**, che rappresenta un valore pari a 0, o **EXIT_FAILURE**, che rappresenta un valore pari a 1.
 
 Il **uscire**, **Exit**, **Exit**, **quick_exit**, **cexit**, e **c_exit** funzioni si comportano come indicato di seguito.
 
@@ -89,7 +89,7 @@ Il **uscire**, **Exit**, **Exit**, **quick_exit**, **cexit**, e **c_exit** funzi
 |**_cexit**|Esegue le procedure complete di terminazione della libreria C e torna al chiamante. Non termina il processo.|
 |**_c_exit**|Esegue le procedure minime di terminazione della libreria C e torna al chiamante. Non termina il processo.|
 
-Quando si chiama il **uscire**, **Exit** oppure **Exit** funzione, i distruttori per gli oggetti temporanei o automatici presenti al momento della chiamata non vengono chiamati. Un oggetto automatico è un oggetto locale non statico definito in una funzione. Un oggetto temporaneo è un oggetto che viene creato dal compilatore, ad esempio un valore restituito da una chiamata di funzione. Per eliminare un oggetto automatico prima di chiamare **uscire**, **Exit**, o **Exit**, in modo esplicito chiama il distruttore per l'oggetto, come illustrato di seguito:
+Quando si chiama il **uscire**, **Exit** oppure **Exit** funzione, i distruttori per gli oggetti temporanei o automatici presenti al momento della chiamata non vengono chiamati. Un oggetto automatico è un oggetto locale non statico definito in una funzione. Un oggetto temporaneo è un oggetto che viene creato dal compilatore, ad esempio un valore restituito da una chiamata di funzione. Per eliminare un oggetto automatico prima di chiamare **uscire**, **Exit**, o **Exit**, in modo esplicito chiamare il distruttore dell'oggetto, come illustrato di seguito:
 
 ```cpp
 void last_fn() {}
@@ -100,7 +100,7 @@ void last_fn() {}
 }
 ```
 
-Non usare **DLL_PROCESS_ATTACH** chiamare **uscire** dal **DllMain**. Per uscire dall'installazione di **DLLMain** funzione, restituiti **FALSE** dal **DLL_PROCESS_ATTACH**.
+Non utilizzare **DLL_PROCESS_ATTACH** chiamare **uscire** dalla **DllMain**. Per chiudere la **DLLMain** funzione, restituire **FALSE** da **DLL_PROCESS_ATTACH**.
 
 ## <a name="requirements"></a>Requisiti
 

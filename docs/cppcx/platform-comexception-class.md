@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ef60fc542b38c7619ce7b65cc7f39db79ed1b228
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597000"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679024"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 Rappresenta errori COM che si verificano durante l'esecuzione dell'applicazione. COMException è la classe di base per un set di eccezioni standard predefinite.  
@@ -113,7 +113,7 @@ public:property int HResult {    int get();}
  Valore HRESULT che specifica l'errore.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni su come interpretare il valore HRESULT, vedere [Structure of COM Error Codes](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Per altre informazioni su come interpretare il valore HRESULT, vedere [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes).  
 
 ## <a name="message"></a> Proprietà COMException:: Message
 Messaggio in cui viene descritta l'eccezione.  

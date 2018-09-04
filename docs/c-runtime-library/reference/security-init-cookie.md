@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6bfafa1322d9730923867c86f754153f641460
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84edc9fb461a6f0721abb648a88e1d81a4a19d07
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678957"
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 
@@ -55,9 +55,9 @@ void __security_init_cookie(void);
 
 Il cookie di sicurezza globale viene usato per la protezione da sovraccarico del buffer nel codice compilato con [/GS (Controllo sicurezza buffer)](../../build/reference/gs-buffer-security-check.md) e nel codice che usa la gestione delle eccezioni. All'ingresso in una funzione protetta da sovraccarico, il cookie viene inserito nello stack e, all'uscita, il valore presente nello stack viene confrontato con il cookie globale. Eventuali differenze tra di essi indicano che si è verificato un sovraccarico del buffer causando l'interruzione immediata del programma.
 
-In genere **security_init_cookie** viene chiamato da CRT durante l'inizializzazione. Se si ignora l'inizializzazione CRT, ad esempio, se si utilizza [/ENTRY](../../build/reference/entry-entry-point-symbol.md) per specificare un punto di ingresso, sarà necessario chiamare **security_init_cookie** manualmente. Se **security_init_cookie** non viene chiamato, globale cookie di sicurezza è impostata su un valore predefinito e protezione di sovraccarico del buffer è compromesso. Poiché un utente malintenzionato può sfruttare questo valore del cookie predefinito per aggirare i controlli di sovraccarico del buffer, è consigliabile chiamare sempre **security_init_cookie** quando si definisce un punto di ingresso.
+In genere **security_init_cookie** viene chiamato da CRT quando viene inizializzato. Se si ignora l'inizializzazione di CRT, ad esempio, se si usa [/ENTRY](../../build/reference/entry-entry-point-symbol.md) per specificare un punto di ingresso, sarà necessario chiamare **security_init_cookie** manualmente. Se **security_init_cookie** non viene chiamato, globale cookie di sicurezza è impostata su un valore predefinito e protezione da sovraccarico del buffer è compromesso. Poiché un utente malintenzionato può sfruttare questo valore di cookie predefinito per aggirare i controlli di sovraccarico del buffer, è consigliabile chiamare sempre **security_init_cookie** quando si definisce un punto di ingresso.
 
-La chiamata a **security_init_cookie** devono essere eseguite prima di qualsiasi protetta da sovraccarico inserimento della funzione; in caso contrario, verrà rilevato un sovraccarico del buffer non corretto. Per altre informazioni, vedere [Errore di run-time C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+La chiamata a **security_init_cookie** deve essere effettuata prima di qualsiasi protetta da sovraccarico (funzione) viene immesso; in caso contrario, verrà rilevato un sovraccarico del buffer non corretto. Per altre informazioni, vedere [Errore di run-time C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Esempio
 
@@ -73,4 +73,4 @@ Vedere gli esempi in [Errore di run-time C R6035](../../error-messages/tool-erro
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli di sicurezza del compilatore in dettaglio](http://go.microsoft.com/fwlink/p/?linkid=7260)<br/>
+[Microsoft Security Response Center](https://www.microsoft.com/en-us/msrc?rtc=1)

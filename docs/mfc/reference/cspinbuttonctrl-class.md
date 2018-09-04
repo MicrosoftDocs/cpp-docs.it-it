@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c229a07d7d8dbf8d74e487c99e6f79b8203f04f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202645"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688000"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 Fornisce la funzionalità del controllo pulsante di selezione comune di Windows.  
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco degli stili estesi di windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco degli stili estesi di windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
  Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili del controllo pulsante di selezione al controllo. Questi stili sono descritte nel [stili del controllo di scorrimento](/windows/desktop/Controls/up-down-control-styles) nel SDK di Windows.  

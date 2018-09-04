@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221356"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677745"
 ---
 # <a name="cstatusbarctrl-class"></a>Classe CStatusBarCtrl
 Fornisce la funzionalità del controllo barra di stato comune di Windows.  
@@ -171,7 +171,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
  Specifica lo stile del controllo barra di stato. Applicare qualsiasi combinazione di stato della barra degli stili del controllo indicato nel [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows. Questo parametro deve includere lo stile WS_CHILD. Deve includere inoltre lo stile WS_VISIBLE.  

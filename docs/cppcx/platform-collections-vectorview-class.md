@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 598b5f6fcfefa03fe733ac7b6e5a8417278e6f01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584106"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690607"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 Rappresenta una visualizzazione in sola lettura di una raccolta sequenziale di oggetti a cui è possibile accedere singolarmente attraverso l'indice. Il tipo di ciascun oggetto nella raccolta è specificato dal parametro del modello.  
@@ -45,7 +45,7 @@ template <typename T, typename E>
  Specifica un predicato binario per verificare l'uguaglianza con valori di tipo `T`. Il valore predefinito è `std::equal_to<T>`.  
   
 ### <a name="remarks"></a>Note  
- Il `VectorView` classe implementa le [ivectorview\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) interfaccia e il supporto per gli iteratori della libreria di modelli Standard.  
+ Il `VectorView` classe implementa le [ivectorview\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) interfaccia e il supporto per gli iteratori della libreria di modelli Standard.  
   
 ### <a name="members"></a>Membri  
   

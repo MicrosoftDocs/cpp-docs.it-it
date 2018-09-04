@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 046ce538dafe90b172096eb37bf2309f8c75db1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e6b8922ea176619764308122867c4d2ebfcfe449
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206251"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676809"
 ---
 # <a name="editing-a-message-handler"></a>Modifica di un gestore messaggi
 Dopo aver definito un gestore di messaggi, è possibile passare alla definizione della funzione membro per aggiungere o modificare il codice.  
   
  Per passare a una definizione di funzione membro dal [editor finestre](../../windows/dialog-editor.md), fare doppio clic su un controllo per cui un gestore di è già definito. Ciò consente al file in cui è definito il gestore di messaggi del controllo selezionato.  
   
- Per passare a una definizione di funzione membro dal [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), fare doppio clic sul nome della funzione in visualizzazione classi.  
+ Per passare a una definizione di funzione membro dal [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare doppio clic sul nome della funzione in visualizzazione classi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di messaggi a funzioni](../../mfc/reference/mapping-messages-to-functions.md)   

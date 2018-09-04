@@ -1,7 +1,7 @@
 ---
-title: operatore = = (Runtime MASM) | Documenti Microsoft
+title: operatore = = (MASM Run Time) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae63aa45a83488f574eace4e35e44d4434eb1ba
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6874e38d8cda3ef8989f1350dc7106d428c62f99
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056272"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676333"
 ---
 # <a name="operator--masm-run-time"></a>Operatore == (runtime MASM)
-È uguale a. Utilizzato solo in [. Se](../../assembler/masm/dot-if.md), [. MENTRE](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-expression1 == expression2  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+È uguale a. Utilizzato solo all'interno [. IF](../../assembler/masm/dot-if.md), [. Sebbene](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.
+
+## <a name="syntax"></a>Sintassi
+
+> expression1 = = expression2
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

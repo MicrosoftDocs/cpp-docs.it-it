@@ -1,7 +1,7 @@
 ---
-title: operatore PTR | Documenti Microsoft
+title: operatore PTR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cedfe542228edbe4367f98b169b4562a2ca2cc81
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 07fcb86eb6b1a9a084f985cb5192491a7c487703
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055378"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692790"
 ---
 # <a name="operator-ptr"></a>Operatore PTR
-Forza l'operatore prima di *espressione* per essere considerata come se presentasse specificato `type`. Il secondo operatore specifica un puntatore a `type`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      type PTR expression  
-[[distance]] PTR type  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Forza l'operatore prima la *espressione* per essere considerata come se presentasse specificato *tipo*. Il secondo operatore specifica un puntatore alla *tipo*.
+
+## <a name="syntax"></a>Sintassi
+
+> *tipo di* PTR *espressione*
+
+> [[*distanza*]] PTR *tipo*
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

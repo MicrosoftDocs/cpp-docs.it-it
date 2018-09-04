@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ac4213587137552fa51505b73edd7387a98c5cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545810"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687553"
 ---
 # <a name="ud2"></a>__ud2
 **Sezione specifica Microsoft**  
@@ -38,7 +38,7 @@ void __ud2();
 ## <a name="remarks"></a>Note  
  L'elaboratore genera un'eccezione opcode non è valido se si esegue un'istruzione non definita.  
   
- Il `__ud2` è equivalente alla funzione il `UD2` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__ud2` è equivalente alla funzione il `UD2` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   

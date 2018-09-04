@@ -1,7 +1,7 @@
 ---
-title: ASM | Documenti Microsoft
+title: ASM | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,82 +18,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e09f6af92839c6113c9c5ba375a1583bcf7149
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bfe0cac0a35c821f3275ec323181f04c1ab982c4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052677"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693003"
 ---
 # <a name="asm"></a>__asm
-**Sezione specifica Microsoft**  
-  
- La parola chiave `__asm` consente di richiamare l'assembler inline e può essere visualizzata ovunque un'istruzione C o C++ sia valida. Non può essere visualizzata da sola. Deve essere seguita da un'istruzione dell'assembly, da un gruppo di istruzioni racchiuse tra parentesi graffe o almeno da una coppia di parentesi graffe vuote. Il termine "`__asm` block" qui si riferisce a qualsiasi istruzione o gruppo di istruzioni, racchiuso o meno tra parentesi graffe.  
-  
+
+**Sezione specifica Microsoft**
+
+La parola chiave `__asm` consente di richiamare l'assembler inline e può essere visualizzata ovunque un'istruzione C o C++ sia valida. Non può essere visualizzata da sola. Deve essere seguita da un'istruzione dell'assembly, da un gruppo di istruzioni racchiuse tra parentesi graffe o almeno da una coppia di parentesi graffe vuote. Il termine "`__asm` block" qui si riferisce a qualsiasi istruzione o gruppo di istruzioni, racchiuso o meno tra parentesi graffe.
+
 > [!NOTE]
->  Il supporto di Visual C++ della parola chiave `asm` di C++ standard è limitato al fatto che il compilatore non genererà un errore sulla parola chiave. Tuttavia, un blocco `asm` non genererà alcun codice significativo. Usare `__asm` anziché `asm`.  
-  
- Sintassi:  
-  
- ASM *istruzione assembly* [;]  
-  
- ASM { *elenco di istruzioni di assembly* } [;]  
-  
-## <a name="grammar"></a>Grammatica  
- `__asm`  `assembly-instruction`  `;`consenso esplicito  
-  
- `__asm {`  `assembly-instruction-list`  `};`consenso esplicito  
-  
- *elenco di istruzioni di assembly*:  
- `assembly-instruction` `;`consenso esplicito  
-  
- `assembly-instruction` `;` `assembly-instruction-list` `;`consenso esplicito  
-  
- Se utilizzata senza parentesi graffe, la parola chiave `__asm` indica che il resto della riga è un'istruzione del linguaggio assembly. Se utilizzata con le parentesi graffe, significa che ogni riga tra parentesi graffe è un'istruzione del linguaggio assembly. Per la compatibilità con le versioni precedenti, `_asm` è un sinonimo di `__asm`.  
-  
- Poiché la parola chiave `__asm` è un separatore di istruzione, è possibile inserire le istruzioni di assembly nella stessa riga.  
-  
- Prima di Visual C++ 2005, l'istruzione  
-  
-```  
-__asm int 3  
-```  
-  
- generato quando viene compilato con del codice nativo non comportava **/clr**; il compilatore ha convertito l'istruzione a un'istruzione di interruzione CLR.  
-  
- `__asm int 3` determina ora la generazione del codice nativo della funzione. Se si desidera che una funzione a causa di un punto di interruzione nel codice e se si desidera che tale funzione compilata in MSIL, utilizzare [DebugBreak](../../intrinsics/debugbreak.md).  
-  
-## <a name="example"></a>Esempio  
- Il frammento di codice seguente è un blocco `__asm` semplice racchiuso tra parentesi graffe:  
-  
-```  
-__asm {  
-   mov al, 2  
-   mov dx, 0xD007  
-   out dx, al  
-}  
-```  
-  
- In alternativa, è possibile inserire `__asm` davanti a ogni istruzione dell'assembly:  
-  
-```  
-__asm mov al, 2  
-__asm mov dx, 0xD007  
-__asm out dx, al  
-```  
-  
- Poiché la parola chiave `__asm` è un separatore di istruzione, è anche possibile inserire le istruzioni di assembly nella stessa riga:  
-  
-```  
-__asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al  
-```  
-  
- Tutti e tre gli esempi generano lo stesso codice, ma il primo stile, che racchiude il blocco `__asm` tra parentesi graffe, presenta alcuni vantaggi. Le parentesi graffe separano chiaramente il codice dell'assembly dal codice C o C++ ed evitano la ripetizione inutile della parola chiave `__asm`. Le parentesi graffe possono anche impedire le ambiguità. Se si desidera inserire l'istruzione C o C++ sulla stessa riga come blocco `__asm`, è necessario racchiudere il blocco tra parentesi graffe. Senza parentesi graffe, il compilatore non è in grado di riconoscere dove termina l'esecuzione del codice assembly e dove iniziano le istruzioni C o C++. Infine, poiché il testo tra parentesi graffe ha lo stesso formato del testo MASM ordinario, è possibile tagliarlo e incollarlo facilmente dai file di origine MASM esistenti.  
-  
- A differenza delle parentesi graffe in C e C++, le parentesi graffe che racchiudono un blocco `__asm` non influiscono sull'ambito della variabile. È inoltre possibile annidare i blocchi `__asm`; l'annidamento non influisce sull'ambito della variabile.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave](../../cpp/keywords-cpp.md)   
- [Assembler inline](../../assembler/inline/inline-assembler.md)
+> Il supporto di Visual C++ della parola chiave `asm` di C++ standard è limitato al fatto che il compilatore non genererà un errore sulla parola chiave. Tuttavia, un blocco `asm` non genererà alcun codice significativo. Usare `__asm` anziché `asm`.
+
+## <a name="grammar"></a>Grammatica
+
+*blocco di ASM*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ASM** *un'istruzione di assembly* **;** <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ASM {** *elenco di istruzioni di assembly* **}** **;** <sub>opt</sub>
+
+*elenco di istruzioni di assembly*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*un'istruzione di assembly* **;** <sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*un'istruzione di assembly* **;** *elenco di istruzioni di assembly* **;** <sub>opt</sub>
+
+## <a name="remarks"></a>Note
+
+Se utilizzata senza parentesi graffe, la parola chiave `__asm` indica che il resto della riga è un'istruzione del linguaggio assembly. Se utilizzata con le parentesi graffe, significa che ogni riga tra parentesi graffe è un'istruzione del linguaggio assembly. Per la compatibilità con le versioni precedenti, `_asm` è un sinonimo di `__asm`.
+
+Poiché la parola chiave `__asm` è un separatore di istruzione, è possibile inserire le istruzioni di assembly nella stessa riga.
+
+Prima di Visual C++ 2005, l'istruzione
+
+```cpp
+__asm int 3
+```
+
+non ha provocato il codice nativo da generare quando viene compilato con **/clr**; il compilatore convertito l'istruzione in un'istruzione di interruzione CLR.
+
+`__asm int 3` determina ora la generazione del codice nativo della funzione. Se si desidera che una funzione a causa di un punto di interruzione nel codice e se si vuole che la funzione compilata in MSIL, utilizzare [DebugBreak](../../intrinsics/debugbreak.md).
+
+## <a name="example"></a>Esempio
+
+Il frammento di codice seguente è un blocco `__asm` semplice racchiuso tra parentesi graffe:
+
+```cpp
+__asm {
+   mov al, 2
+   mov dx, 0xD007
+   out dx, al
+}
+```
+
+In alternativa, è possibile inserire `__asm` davanti a ogni istruzione dell'assembly:
+
+```cpp
+__asm mov al, 2
+__asm mov dx, 0xD007
+__asm out dx, al
+```
+
+Poiché la parola chiave `__asm` è un separatore di istruzione, è anche possibile inserire le istruzioni di assembly nella stessa riga:
+
+```cpp
+__asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
+```
+
+Tutti e tre gli esempi generano lo stesso codice, ma il primo stile, che racchiude il blocco `__asm` tra parentesi graffe, presenta alcuni vantaggi. Le parentesi graffe separano chiaramente il codice dell'assembly dal codice C o C++ ed evitano la ripetizione inutile della parola chiave `__asm`. Le parentesi graffe possono anche impedire le ambiguità. Se si desidera inserire l'istruzione C o C++ sulla stessa riga come blocco `__asm`, è necessario racchiudere il blocco tra parentesi graffe. Senza parentesi graffe, il compilatore non è in grado di riconoscere dove termina l'esecuzione del codice assembly e dove iniziano le istruzioni C o C++. Infine, poiché il testo tra parentesi graffe ha lo stesso formato del testo MASM ordinario, è possibile tagliarlo e incollarlo facilmente dai file di origine MASM esistenti.
+
+A differenza delle parentesi graffe in C e C++, le parentesi graffe che racchiudono un blocco `__asm` non influiscono sull'ambito della variabile. È inoltre possibile annidare i blocchi `__asm`; l'annidamento non influisce sull'ambito della variabile.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Parole chiave](../../cpp/keywords-cpp.md)<br/>
+[Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

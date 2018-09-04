@@ -1,7 +1,7 @@
 ---
-title: Chiamata di funzioni C++ in Assembly Inline | Documenti Microsoft
+title: Chiamata di funzioni C++ in Assembly Inline | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,20 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbd8038d240bc2ab0240d172d914790b6ca02ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4717ae24dc1a0b6f51f7a00f68f6569c2f988c65
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049623"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678944"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Chiamare le funzioni C++ nell'assembly inline
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Un blocco `__asm` può chiamare solo le funzioni globali C++ non in overload. Se si chiama una funzione globale C++ in overload o una funzione membro C++, il compilatore genera un errore.  
-  
- È inoltre possibile chiamare qualsiasi funzione dichiarata con **extern "C"** collegamento. In questo modo un `__asm` blocco all'interno di un programma C++ di chiamare le funzioni della libreria C, poiché tutti i file di intestazione standard dichiarano le funzioni della libreria abbiano **extern "C"** collegamento.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Assembler inline](../../assembler/inline/inline-assembler.md)
+
+**Sezione specifica Microsoft**
+
+Un blocco `__asm` può chiamare solo le funzioni globali C++ non in overload. Se si chiama una funzione globale C++ in overload o una funzione membro C++, il compilatore genera un errore.
+
+È anche possibile chiamare qualsiasi funzione dichiarata con **extern "C"** un collegamento. In questo modo un' `__asm` blocco all'interno di un programma C++ può chiamare le funzioni della libreria C, perché tutti i file di intestazione standard dichiarano le funzioni della libreria abbiano **extern "C"** un collegamento.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218683"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683752"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 Classe di base per tutti i riquadri in MFC.  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` usare questo metodo.|  
 |`CBasePane::OnUpdateCmdUI`|Utilizzato internamente.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Restituisce il riquadro che contiene il punto specificato.|  
-|`CBasePane::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CBasePane::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` usare questo metodo.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dall'elenco nel gestore di ancoraggio.|  
 |[CBasePane::SaveState](#savestate)|Salva lo stato del riquadro nel Registro di sistema.|  

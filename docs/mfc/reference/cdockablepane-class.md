@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223065"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679464"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementa un riquadro che può essere ancorato in un sito di ancoraggio o incluso in un riquadro a schede.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Specifica se le schede si trovano nella parte superiore o inferiore del riquadro.|  
 |[CDockablePane::IsTracked](#istracked)|Specifica se un riquadro viene trascinato dall'utente.|  
 |[CDockablePane::IsVisible](#isvisible)|Determina se il riquadro corrente è visibile.|  
-|[CDockablePane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Utilizzato internamente.|  
+|[CDockablePane:: Loadstate](#loadstate)|Utilizzato internamente.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Chiamato dal framework quando l'elemento padre di un riquadro è stato modificato. (Esegue l'override [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Chiamato dal framework quando una barra ancorabile a virgola mobile viene ancorato in una finestra cornice.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Chiamato dal framework quando sta per modificare l'elemento padre del riquadro. (Esegue l'override [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  Se il riquadro ancorato è in modalità Nascondi automaticamente e `IsHideInAutoHideMode` restituisce TRUE lo stato di visibilità dipende lo stato di visibilità della barra degli strumenti correlati che si nascondono automaticamente.  
   
  Se il riquadro ancorato non è in modalità Nascondi automaticamente, lo stato di visibilità è determinato dal [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) (metodo).  
-  
+
+## ##  <a name="loadstate"></a>  CDockablePane:: Loadstate  
+Solo per uso interno. Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella VC\atlmfc\src\mfc dell'installazione di Visual Studio.
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Specifica se l'animazione Nascondi automaticamente del riquadro ancorato è disabilitato.  
   

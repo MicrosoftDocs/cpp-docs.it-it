@@ -12,19 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b74909e048789662800569f8d996747fb8cadf
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 84ea10c87e463e797b4c35b1f94843228c4cb063
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403043"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681502"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Procedura: creare e utilizzare istanze shared_ptr
 Il tipo `shared_ptr` è un puntatore intelligente nella libreria C++ standard progettato per scenari in cui più proprietari potrebbero dover gestire la durata dell'oggetto in memoria. Dopo avere inizializzato un oggetto `shared_ptr`, è possibile copiarlo, passarlo come valore negli argomenti di funzione e assegnarlo ad altre istanze di `shared_ptr`. Tutte le istanze puntano allo stesso oggetto e condividono l'accesso a un "blocco di controllo" che incrementa e decrementa il conteggio dei riferimenti ogni qualvolta un nuovo oggetto `shared_ptr` viene aggiunto, esce dall'ambito o viene reimpostato. Quando il conteggio dei riferimenti arriva a zero, il blocco di controllo elimina la risorsa di memoria e se stesso.  
   
  Nella figura che segue vengono mostrate diverse istanze di `shared_ptr` che puntano a una posizione di memoria.  
   
- [![Puntatore condiviso](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![Puntatore condiviso](../cpp/media/shared_ptr.png "shared_ptr")]  
   
 ## <a name="example"></a>Esempio  
  Se possibile, usare il [make_shared](../standard-library/memory-functions.md#make_shared) funzione per creare un `shared_ptr` quando viene creata la risorsa di memoria per la prima volta. `make_shared` è indipendente dalle eccezioni. Utilizza la stessa chiamata per allocare memoria per un blocco di controllo e la risorsa e quindi riduce l'overhead della costruzione. Se non si utilizza `make_shared`, è necessario utilizzare una nuova espressione esplicita per creare l'oggetto prima di passarlo al costruttore `shared_ptr`. Nell'esempio seguente vengono mostrati vari modi per dichiarare e inizializzare `shared_ptr` con un nuovo oggetto.  

@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f5b415aac2a59eeae45720944a03251b0faa5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: db5fac0bc8900d15968639e8ed3909417353d596
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210697"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690747"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC
 Questa procedura dettagliata illustra come usare il **Creazione guidata applicazione MFC** per creare un'applicazione con una barra multifunzione per impostazione predefinita. È quindi possibile espandere la barra multifunzione aggiungendo un **personalizzato** categoria della barra multifunzione con un **Preferiti** sulla barra multifunzione pannello e l'aggiunta di alcuni comandi al pannello di utilizzati frequentemente.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questa procedura dettagliata si presuppone di aver impostato Visual Studio per utilizzare **delle impostazioni di sviluppo generale**. Se utilizzi impostazioni diverse, è possibile che alcuni elementi dell'interfaccia utente a cui viene fatto riferimento nelle istruzioni seguenti non vengano visualizzati. Per informazioni su come modificare le impostazioni, vedere [procedura: reimpostare le impostazioni](https://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
+ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per utilizzare **delle impostazioni di sviluppo generale**. Se utilizzi impostazioni diverse, è possibile che alcuni elementi dell'interfaccia utente a cui viene fatto riferimento nelle istruzioni seguenti non vengano visualizzati.  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Per creare un'applicazione MFC con una barra multifunzione  
   

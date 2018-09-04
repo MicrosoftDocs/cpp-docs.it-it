@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a990acd8f27be476ce35d682a19912dcc85bbeed
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 340a21a3bbcb1853d66de01bddf9425fed0c8183
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541791"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689844"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 C++ AMP (C++ Accelerated Massive Parallelism) accelera l'esecuzione del codice C++ sfruttando il parallelismo dell'hardware che è in genere presente come un'unità di elaborazione grafica (GPU) in una scheda grafica discreta. Il modello di programmazione C++ AMP include il supporto per le matrici multidimensionali, indicizzazione, trasferimento di memoria e l'affiancamento. Include inoltre una libreria di funzioni matematiche. È possibile usare le estensioni del linguaggio C++ AMP per controllare come i dati vengono spostati dalla CPU alla GPU e il backup.  
@@ -48,4 +48,4 @@ C++ AMP (C++ Accelerated Massive Parallelism) accelera l'esecuzione del codice C
  
 [Programmazione parallela nel Blog del codice nativo](http://go.microsoft.com/fwlink/p/?linkid=238472)  
 [Progetti di esempio di C++ AMP per il download](http://go.microsoft.com/fwlink/p/?linkid=248508)  
-[Analisi del codice AMP C++ con il Visualizzatore di concorrenza](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[Analisi del codice AMP C++ con il Visualizzatore di concorrenza](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

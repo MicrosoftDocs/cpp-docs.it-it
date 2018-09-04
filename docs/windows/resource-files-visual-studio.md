@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5bb14f9581a521345772cd72348b40db3f80496a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220686"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678371"
 ---
 # <a name="resource-files-visual-studio"></a>File di risorse (Visual Studio)
 
 > [!NOTE]
-> Questo materiale si riferisce alle applicazioni desktop di Windows. Per informazioni sulle risorse nelle App della piattaforma Windows universale, vedere [definizione delle risorse dell'App](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Questo materiale si riferisce alle applicazioni desktop di Windows. Per informazioni sulle risorse nelle App della piattaforma Windows universale, vedere [definizione delle risorse dell'App](/windows/uwp/app-resources/).
 >
 > Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 >

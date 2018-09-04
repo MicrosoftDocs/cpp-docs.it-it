@@ -1,5 +1,5 @@
 ---
-title: -/Qpar-report (livello di segnalazione parallelizzazione automatica) | Documenti Microsoft
+title: -Qvec-report (livello di segnalazione parallelizzazione automatica) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a9db6d02b9233c51a49cf506a664c9be0f821e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70ac8433b4692586880648d6c5d5d83f1cbb15fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376014"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681695"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qvec-report (livello di segnalazione parallelizzazione automatica)
 Abilita la funzionalità di reporting del compilatore [parallelizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) e specifica il livello dei messaggi informativi per l'output durante la compilazione.  
@@ -32,18 +32,18 @@ Abilita la funzionalità di reporting del compilatore [parallelizzazione automat
  **/Qpar-report:1**  
  Invia all'output un messaggio informativo per i cicli parallelizzati.  
   
- **/Qpar-report: 2**  
+ **/Qpar-report:2**  
  Invia un messaggio informativo per i cicli parallelizzati e per i cicli non parallelizzati, insieme a un codice motivo.  
   
- I messaggi vengono inviati a stdout. Se non viene segnalato alcun messaggio informativo, il codice non contiene cicli oppure il livello di segnalazione non è stato impostato per la segnalazione di cicli non parallelizzati. Per ulteriori informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+ I messaggi vengono inviati a stdout. Se non viene segnalato alcun messaggio informativo, il codice non contiene cicli oppure il livello di segnalazione non è stato impostato per la segnalazione di cicli non parallelizzati. Per altre informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
 ### <a name="to-set-the-qpar-report-compiler-option-in-visual-studio"></a>Per impostare l'opzione del compilatore /Qpar-report in Visual Studio  
   
 1.  In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.  
   
-2.  Nel **pagine delle proprietà** nella finestra di dialogo **C/C++** selezionare **riga di comando**.  
+2.  Nel **pagine delle proprietà** nella finestra di dialogo **C/C++**, selezionare **riga di comando**.  
   
-3.  Nel **opzioni aggiuntive** immettere `/Qpar-report:1` o `/Qpar-report:2`.  
+3.  Nel **opzioni aggiuntive** casella, immettere `/Qpar-report:1` o `/Qpar-report:2`.  
   
 ### <a name="to-set-the-qpar-report-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore /Qpar a livello di codice  
   
@@ -53,4 +53,4 @@ Abilita la funzionalità di reporting del compilatore [parallelizzazione automat
  [Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)   
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [Programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Programmazione parallela in codice nativo](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

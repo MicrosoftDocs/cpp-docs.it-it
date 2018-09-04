@@ -1,7 +1,7 @@
 ---
-title: operatore SIZE | Documenti Microsoft
+title: operatore SIZE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f365c0c4154f7f85f5bbd176a1a2c3c70bf1a7b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 537271f9964ff567744aa83dca2a497b0fe07f4d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057585"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679932"
 ---
 # <a name="operator-size"></a>Operatore SIZE
-Restituisce il numero di byte in *variabile* allocata dall'inizializzatore di primo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-SIZE variable  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Restituisce il numero di byte in *variabile* allocato dall'inizializzatore di prima.
+
+## <a name="syntax"></a>Sintassi
+
+> Variabile della dimensione
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

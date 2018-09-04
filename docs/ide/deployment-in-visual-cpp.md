@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7e82a384e3b2e8ca446843c91984e78754d6cc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 468ce7d65e31a70192e1a48bf21126dd96a1936e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204060"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678912"
 ---
 # <a name="deployment-in-visual-c"></a>Distribuzione in Visual C++
 
@@ -58,7 +58,7 @@ Oltre alle librerie a collegamento dinamico, Visual Studio fornisce la maggior p
 
 ## <a name="troubleshooting-deployment-issues"></a>Risoluzione dei problemi relativi alla distribuzione
 
-L'ordine di caricamento delle librerie di Visual C++ è dipendente dal sistema. Per diagnosticare problemi relativi al caricatore, utilizzare depends.exe o where.exe. Per altre informazioni, vedere [Dynamic-Link Library Search Order (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx) Ordine di ricerca delle librerie a collegamento dinamico (Windows).
+L'ordine di caricamento delle librerie di Visual C++ è dipendente dal sistema. Per diagnosticare problemi relativi al caricatore, utilizzare depends.exe o where.exe. Per altre informazioni, vedere [Dynamic-Link Library Search Order (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order) Ordine di ricerca delle librerie a collegamento dinamico (Windows).
 
 ## <a name="see-also"></a>Vedere anche
 

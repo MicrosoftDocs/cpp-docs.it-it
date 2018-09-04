@@ -1,7 +1,7 @@
 ---
-title: END (MASM) | Documenti Microsoft
+title: END (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c8712ef0c5820e91f3050d6ea1ed5fa861550a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5a198a3577769699ddae4a320429844ef7d46f3a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050285"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692921"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
-Contrassegna la fine del segmento, struttura o unione *nome* avviata in precedenza con [segmento](../../assembler/masm/segment.md), [STRUCT](../../assembler/masm/struct-masm.md), [unione](../../assembler/masm/union.md), o su un segmento semplificato direttiva.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-name ENDS  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Contrassegna la fine del segmento, struttura o unione *name* iniziata in precedenza con [segmento](../../assembler/masm/segment.md), [STRUCT](../../assembler/masm/struct-masm.md), [unione](../../assembler/masm/union.md), oppure un segmento semplificato direttiva.
+
+## <a name="syntax"></a>Sintassi
+
+> nome termina con
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

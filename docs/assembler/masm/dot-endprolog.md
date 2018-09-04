@@ -1,7 +1,7 @@
 ---
-title: . ENDPROLOG | Documenti Microsoft
+title: . ENDPROLOG | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa74b469dba3bee1b4fa0a5c1e066f93826c3477
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 370db59c6be4b3f53c9596c1ca443374acd2d2c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051651"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685422"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
-Segnala la fine delle dichiarazioni di prologo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-.ENDPROLOG  
-```  
-  
-## <a name="remarks"></a>Note  
- È possibile utilizzare le dichiarazioni del prologo all'esterno l'area tra [PROC](../../assembler/masm/proc.md) FRAME e. ENDPROLOG.  
-  
- Per ulteriori informazioni, vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Segnala la fine delle dichiarazioni di prologo.
+
+## <a name="syntax"></a>Sintassi
+
+> .ENDPROLOG
+
+## <a name="remarks"></a>Note
+
+È possibile usare una delle dichiarazioni del prologo all'esterno dell'area tra [PROC](../../assembler/masm/proc.md) FRAME e. ENDPROLOG.
+
+Per altre informazioni, vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

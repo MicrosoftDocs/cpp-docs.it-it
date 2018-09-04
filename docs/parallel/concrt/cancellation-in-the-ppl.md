@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221755"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690449"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annullamento nella libreria PPL
 In questo documento viene illustrato il ruolo dell'annullamento nella libreria PPL (Parallel Patterns Library), come annullare un lavoro parallelo e come determinare quando un lavoro parallelo è annullato.  
@@ -150,7 +150,7 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Token di annullamento e composizione di attività  
 
- Il [concorrenza:: collegamento ipertestuale "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all](reference/concurrency-namespace-functions.md#when_all) e [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) le funzioni consentono di creare più attività per implementare modelli comuni. In questa sezione viene descritto il funzionamento di queste funzioni con i token di annullamento.  
+ Il [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) e [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) le funzioni consentono di creare più attività per implementare modelli comuni. In questa sezione viene descritto il funzionamento di queste funzioni con i token di annullamento.  
   
  Quando si fornisce un token di annullamento alla funzione `when_all` o a `when_any`, quella funzione si annulla solo quando il token di annullamento viene annullato o quando una delle attività partecipanti termina in uno stato annullato oppure genera un'eccezione.  
   

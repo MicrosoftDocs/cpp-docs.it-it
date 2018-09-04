@@ -1,7 +1,7 @@
 ---
-title: Riferimento della riga di comando di Assembler ARM | Documenti Microsoft
+title: Riferimento della riga di comando dell'Assembler ARM | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,85 +12,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f196b4aad76c72233c179249386dbb42960b31a6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e88f35035944ee24bed0bef8733db0e2c0139c83
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685341"
 ---
 # <a name="arm-assembler-command-line-reference"></a>Riferimenti alla riga di comando dell'assembler ARM
-Questo articolo fornisce informazioni della riga di comando dell'assembler ARM Microsoft, *armasm*, che consente di compilare in linguaggio assembly ARMv7 Thumb nell'implementazione Microsoft del comune oggetto formato COFF (File). Il linker può collegare il codice COFF con codice oggetto a cui viene generato dall'assembler ARM o dal compilatore C, insieme alle librerie di oggetti creati da Gestione librerie.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-armasm [[options]] sourcefile objectfile  
-```  
-  
-```  
-armasm [[options]] -o objectfile sourcefile  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `options`  
- -errori `filename`  
- Reindirizzare i messaggi di errore e avviso per `filename`.  
-  
- -i `dir[;dir]`  
- Aggiungere la directory specificata per il percorso di ricerca.  
-  
- -predefinire `directive`  
- Specificare una direttiva SETA, SETL o set predefinire un simbolo. Esempio: **armasm.exe-predefinire "Conteggio SETA 150" source.asm**. Per ulteriori informazioni, vedere il [Guida degli strumenti dell'assembler ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
-  
- -nowarn  
- Disabilitare tutti i messaggi di avviso.  
-  
- -ignorare `warning`  
- Disabilitare l'avviso specificato. Per i valori possibili, vedere la sezione informazioni sugli avvisi.  
-  
- -Guida in linea  
- Stampa il messaggio della Guida della riga di comando.  
-  
- -computer `machine`  
- Specificare il tipo di computer per impostare nell'intestazione PE.  I valori possibili per `machine` sono:  
-**ARM**: imposta il tipo di computer per IMAGE_FILE_MACHINE_ARMNT. Questa è l'impostazione predefinita.   
-**THUMB**: imposta il tipo di computer per IMAGE_FILE_MACHINE_THUMB.  
-  
- -oldit  
- Generare stile ARMv7 blocchi IT.  Per impostazione predefinita, compatibile con ARMv8 vengono generati blocchi IT.  
-  
- -via `filename`  
- Leggere altri argomenti della riga di comando da `filename`.  
-  
- -16  
- Assemblare origine come istruzioni Thumb a 16 bit.  Questa è l'impostazione predefinita.  
-  
- -32  
- Assemblare origine come istruzioni ARM a 32 bit.  
-  
- -g  
- Genera informazioni di debug.  
-  
- -errorReport: `option`  
- Specificare come interno dell'assembler gli errori vengono segnalati a Microsoft.  I valori possibili per `option` sono:   
-**Nessuna**: non inviare rapporti.   
-**prompt dei comandi**, richiedere all'utente di inviare report immediatamente.   
-**coda**, richiedere all'utente di inviare report al successivo accesso di amministratore. Questa è l'impostazione predefinita.   
-**inviare**, inviare report automaticamente.  
-  
- `sourcefile`  
- Il nome del file di origine.  
-  
- `objectfile`  
- Il nome del file oggetto (output).  
-  
- Nell'esempio seguente viene illustrato come utilizzare armasm in uno scenario tipico. Innanzitutto, utilizzare armasm per creare un file di origine (asm) in linguaggio assembly in un file oggetto (obj). Quindi, utilizza il compilatore C della riga di comando di CL per compilare un file di origine (c) e anche specificare l'opzione del linker per collegare il file oggetto ARM.  
-  
- **armasm myasmcode.asm -o myasmcode.obj**  
-  
- **CL myccode.c /link myasmcode.obj**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Messaggi di diagnostica Assembler ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)   
- [Direttive assembly ARM](../../assembler/arm/arm-assembler-directives.md)
+
+Questo articolo fornisce informazioni della riga di comando dell'assembler ARM Microsoft, *armasm*, che viene compilato in linguaggio assembly ARMv7 Thumb nell'implementazione Microsoft del File di formato COFF (Common Object). Il linker può collegare codice COFF con codice oggetto generato dall'assembler ARM o dal compilatore C, insieme alle librerie di oggetti creati da Gestione librerie.
+
+## <a name="syntax"></a>Sintassi
+
+> **armasm** [*opzioni*] *sourcefile* *oggetto estratto sovrascriverà*
+> **armasm** [*opzioni *] **-o** *oggetto estratto sovrascriverà* *sourcefile*
+
+### <a name="parameters"></a>Parametri
+
+*Opzioni*<br/>
+Una combinazione di zero o più delle operazioni seguenti:
+
+- **-errori** *nomefile*<br/>
+   Reindirizzare i messaggi di errore e avviso per *filename*.
+
+- **-i** *dir*[**;** <em>dir</em>]<br/>
+   Aggiungere la directory specificata al percorso di ricerca di inclusione.
+
+- **-predefinire** *(direttiva)*<br/>
+   Specificare una direttiva di impostare, SETL o set di predefinire un simbolo.<br/>
+   Esempio: **armasm.exe-predefinire source.asm "Impostare 150 conteggio"**<br/>
+   Per altre informazioni, vedere la [del compilatore ARM armasm Guida di riferimento](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+
+- **-nowarn**<br/>
+   Disabilitare tutti i messaggi di avviso.
+
+- **-ignorare** *avviso*<br/>
+   Disabilitare l'avviso specificato. Per i valori possibili, vedere la sezione sugli avvisi.
+
+- **-help**<br/>
+   Stampa il messaggio della Guida della riga di comando.
+
+- **-machine** *macchina*<br/>
+   Specificare il tipo di computer da impostare nell'intestazione del PE.  I possibili valori per *machine* sono:<br/>
+   **ARM**: imposta il tipo di computer su IMAGE_FILE_MACHINE_ARMNT. Questa è l'impostazione predefinita.<br/>
+   **THUMB**: imposta il tipo di computer su IMAGE_FILE_MACHINE_THUMB.
+
+- **-oldit**<br/>
+   Genera stile ARMv7 blocchi IT.  Per impostazione predefinita, compatibile con ARMv8 vengono generati blocchi IT.
+
+- **-tramite** *nomefile*<br/>
+   Argomenti della riga di comando aggiuntivi da leggere *filename*.
+
+- **-16**<br/>
+   Assemblare origine come istruzioni Thumb 16 bit.  Questa è l'impostazione predefinita.
+
+- **-32**<br/>
+   Assemblare origine come istruzioni ARM a 32 bit.
+
+- **-g**<br/>
+   Genera informazioni di debug.
+
+- **-errorReport:** *opzione*<br/>
+   Specificare la modalità interna dell'assembler gli errori vengono segnalati a Microsoft.  I possibili valori per *opzione* sono:<br/>
+   **Nessuno**: non inviare rapporti.<br/>
+   **prompt dei comandi**, richiedere all'utente per inviarle immediatamente.<br/>
+   **coda**, richiedere all'utente di inviare segnalazioni al successivo accesso amministratore. Questa è l'impostazione predefinita.<br/>
+   **inviare**: inviare automaticamente report.
+
+*SourceFile*<br/>
+Il nome del file di origine.
+
+*oggetto estratto sovrascriverà*<br/>
+Il nome del file oggetto (output).
+
+## <a name="remarks"></a>Note
+
+Nell'esempio seguente viene illustrato come utilizzare armasm in uno scenario tipico. Prima di tutto usare armasm per creare un file di origine (asm) in linguaggio assembly in un file oggetto (obj). Quindi, usare il compilatore C della riga di comando di CL per compilare un file di origine (c) e anche specificare l'opzione del linker di collegare file oggetto ARM.
+
+**armasm myasmcode.asm -o myasmcode.obj**
+
+**CL myccode.c /link myasmcode.obj**
+
+## <a name="see-also"></a>Vedere anche
+
+[Messaggi di diagnostica assembler ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>
+[Direttive assembly ARM](../../assembler/arm/arm-assembler-directives.md)<br/>

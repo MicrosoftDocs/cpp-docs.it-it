@@ -1,7 +1,7 @@
 ---
-title: operatore NOT | Documenti Microsoft
+title: operatore NOT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce90658ceea3505dde2bbb328d9a69c43020b0c7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8c3b812a5917acd83cb1e72ca4eeacd2b603bef3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050935"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680343"
 ---
 # <a name="operator-not"></a>Operatore NOT
-Restituisce *espressione* con tutti i bit invertiti.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-NOT expression  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Restituisce *espressione* con tutti i bit invertiti.
+
+## <a name="syntax"></a>Sintassi
+
+> Espressione non
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

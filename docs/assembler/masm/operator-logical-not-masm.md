@@ -1,7 +1,7 @@
 ---
 title: operatore ! (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,24 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09461b37d3ab2883a41e9ffc8d39a9fdd9b88d2
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 782cf50220e694b0a148aa8b97b3ceed60925eca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055365"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693049"
 ---
 # <a name="operator--masm"></a>operatore ! (MASM)
-Considera `character` come carattere letterale anziché come un operatore o un simbolo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-!  
-character  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Considera `character` come carattere letterale anziché come un operatore o un simbolo.
+
+## <a name="syntax"></a>Sintassi
+
+> ! *character*
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

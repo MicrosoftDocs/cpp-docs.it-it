@@ -1,7 +1,7 @@
 ---
 title: Operatore SIGN? | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa7aac72687201771001c93698d78f5ffe6489d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1ffbf6443e10a15cb0a7f29bb3ed36cc9b50d714
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057695"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683987"
 ---
 # <a name="operator-sign"></a>Operatore SIGN?
-Stato del flag di accesso. Utilizzato solo in [. Se](../../assembler/masm/dot-if.md), [. MENTRE](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-SIGN?  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Stato del flag di accesso. Utilizzato solo all'interno [. IF](../../assembler/masm/dot-if.md), [. Sebbene](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.
+
+## <a name="syntax"></a>Sintassi
+
+> L'ACCESSO?
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

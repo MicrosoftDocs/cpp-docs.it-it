@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e2456eed4f55fe5a5f68552cfe91e5785fc99cf5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2728c88e320fab192563f21ebcdde934be9da84
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687112"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macro per i modelli di provider OLE DB
 Le macro di Provider OLE DB per i modelli offrono funzionalità nelle categorie seguenti:  
@@ -231,7 +231,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
  [in] Oggetto [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) valore che può essere usato in combinazione con la proprietà GUID per identificare una proprietà del set.  
   
 #### <a name="remarks"></a>Note  
- La macro imposta il valore della proprietà di tipo `DWORD` su un valore predefinito definito in ATLDB. H. Per impostare la proprietà su un valore di propria scelta, usare [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Per impostare il [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) per la proprietà nello stesso momento, utilizzare [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ La macro imposta il valore della proprietà di tipo `DWORD` su un valore predefinito definito in ATLDB. H. Per impostare la proprietà su un valore di propria scelta, usare [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Per impostare il `VARTYPE` e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) per la proprietà nello stesso momento, usare [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Esempio  
  Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -250,7 +250,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
  [in] Oggetto [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) valore che può essere usato in combinazione con la proprietà GUID per identificare una proprietà del set.  
   
  *vt*  
- [in] Il [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) di questa voce di proprietà.  
+ [in] Il `VARTYPE` di questa voce di proprietà. (Definito in Wtypes. h)  
   
  *dwFlags*  
  [in] Oggetto [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) che descrive questa voce di proprietà.  

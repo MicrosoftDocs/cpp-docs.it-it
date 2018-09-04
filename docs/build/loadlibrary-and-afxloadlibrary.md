@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687935"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 
-Elabora chiamata [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) per il collegamento esplicito a una DLL. Se la funzione ha esito positivo, associa la DLL specificata nello spazio degli indirizzi del processo chiamante e restituisce un handle alla DLL che può essere utilizzata con altre funzioni impiegate nel collegamento esplicito, ad esempio, `GetProcAddress` e `FreeLibrary`.
+Elabora chiamata [LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) oppure [LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) per il collegamento esplicito a una DLL. Se la funzione ha esito positivo, associa la DLL specificata nello spazio degli indirizzi del processo chiamante e restituisce un handle alla DLL che può essere utilizzata con altre funzioni impiegate nel collegamento esplicito, ad esempio, `GetProcAddress` e `FreeLibrary`.
 
 `LoadLibrary` tenta di individuare la DLL usando la stessa sequenza di ricerca che viene usata per il collegamento implicito. Se il sistema non è possibile trovare il file DLL o se la funzione di punto di ingresso restituisce FALSE, `LoadLibrary` restituisce NULL. Se la chiamata a `LoadLibrary` specifica un modulo DLL già associato allo spazio degli indirizzi del processo chiamante, la funzione restituisce un handle della DLL e incrementa il conteggio dei riferimenti del modulo.
 
@@ -59,5 +59,3 @@ Se Windows non è possibile caricare la DLL, il processo può tentare la correzi
 ## <a name="see-also"></a>Vedere anche
 
 - [DLL in Visual C++](../build/dlls-in-visual-cpp.md)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

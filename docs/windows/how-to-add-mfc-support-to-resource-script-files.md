@@ -20,18 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f84f343a5a742e37deb776f20c9038ea7f90576e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 194f2b4f2e6659412c9c2b5f688e0b73eea3bba5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198435"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692028"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Procedura: aggiungere supporto MFC ai file script di risorsa
 
 In genere, quando si compila un'applicazione MFC per Windows utilizzando il [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la procedura guidata genera un set base di file (incluso un file di risorse (RC)) che contiene le caratteristiche principali di Microsoft Foundation classi (MFC). Tuttavia, se si modifica un file RC per un'applicazione Windows che non è basata su MFC, non sono disponibili le seguenti funzionalità specifiche del framework MFC:
 
-- Creazioni guidate codice MFC (precedentemente denominato "[ClassWizard MFC](https://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")
+- Creazioni guidate codice MFC
 
 - Stringhe di richiesta di menu
 

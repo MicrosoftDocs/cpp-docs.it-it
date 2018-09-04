@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 782e0789268f55e254535434e39c3aeb9b0532cb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afa5d7e3297cd77d1c5d8362d005bd2a48aee4d5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201928"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690197"
 ---
 # <a name="c-attributes-reference"></a>Riferimenti relativi agli attributi di C++
 
@@ -47,9 +47,3 @@ Vengono forniti collegamenti a tutti gli argomenti di riferimento di attributo.
 
 [Programmazione con attributi](../windows/attributed-programming-concepts.md)  
 Fornisce una panoramica concettuale di attributi.
-
-[Riferimento](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
-Contiene collegamenti ad argomenti in cui sono descritti i riferimenti ai linguaggi C e C++, le librerie fornite con Visual C++, il modello a oggetti estensibilità di Visual C++ e Microsoft Macro Assembler (MASM).
-
-[Esempi di Visual C++](../visual-cpp-samples.md)  
-Fornisce i collegamenti a codice di esempio che illustra le funzionalità di Visual C++ e le librerie e le tecnologie supportate.

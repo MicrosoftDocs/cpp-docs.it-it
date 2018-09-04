@@ -1,7 +1,7 @@
 ---
-title: . PUSHREG | Documenti Microsoft
+title: . PUSHREG | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,53 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b9f4a7189d2dbe3717535a95a1816e5fd0de3b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 11d0e0456621dd77e1545e2e8a16662556bed944
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055147"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676039"
 ---
 # <a name="pushreg"></a>.PUSHREG
-Genera un `UWOP_PUSH_NONVOL` di ingresso del codice di rimozione per numero utilizzando l'offset nel prologo corrente del registro specificato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-.PUSHREG register  
-```  
-  
-## <a name="remarks"></a>Note  
- . PUSHREG consente di specificare come rimuove una funzione di frame e viene consentita solo all'interno di prologo, che si estende dal ml64.exe il [PROC](../../assembler/masm/proc.md) dichiarazione FRAME per il [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva. Queste direttive non generano codice. vengono generati solo `.xdata` e `.pdata`. . PUSHREG deve essere preceduto da istruzioni che implementano le azioni per essere rimosso. È consigliabile eseguire il wrapping di direttive di rimozione sia il codice di che rimozione in una macro deve garantire l'accordo.  
-  
- Per ulteriori informazioni, vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="sample"></a>Esempio  
-  
-### <a name="description"></a>Descrizione  
- L'esempio seguente viene illustrato come effettuare il push tegisters non volatili.  
-  
-### <a name="code"></a>Codice  
-  
-```  
-; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
-_text SEGMENT  
-Example1 PROC FRAME  
-   push r10  
-.pushreg r10  
-   push r15  
-.pushreg r15  
-   push rbx  
-.pushreg rbx  
-   push rsi  
-.pushreg rsi  
-.endprolog  
-   ; rest of function ...  
-   ret  
-Example1 ENDP  
-_text ENDS  
-END  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Genera un `UWOP_PUSH_NONVOL` di ingresso del codice di rimozione per numero utilizzando l'offset nel prologo corrente del registro specificato.
+
+## <a name="syntax"></a>Sintassi
+
+> . Register PUSHREG
+
+## <a name="remarks"></a>Note
+
+. PUSHREG ml64.exe gli utenti possono specificare come una funzione di frame viene rimosso e viene consentita solo all'interno di prologo, che si estende dal [PROC](../../assembler/masm/proc.md) dichiarazione FRAME per il [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva. Queste direttive non generano codice. solo generano `.xdata` e `.pdata`. . PUSHREG deve essere preceduto da istruzioni che implementano effettivamente le azioni per essere rimosso. È consigliabile eseguire il wrapping di direttive di rimozione sia il codice che dalla necessità di rimozione in una macro per garantire l'accordo.
+
+Per altre informazioni, vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="sample"></a>Esempio
+
+### <a name="description"></a>Descrizione
+
+L'esempio seguente viene illustrato come eseguire il push tegisters non volatili.
+
+### <a name="code"></a>Codice
+
+```asm
+; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE
+_text SEGMENT
+Example1 PROC FRAME
+   push r10
+.pushreg r10
+   push r15
+.pushreg r15
+   push rbx
+.pushreg rbx
+   push rsi
+.pushreg rsi
+.endprolog
+   ; rest of function ...
+   ret
+Example1 ENDP
+_text ENDS
+END
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

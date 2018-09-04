@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c174c904dfb43ff3fa3c032bae30da8c1e139c3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0be29ed74b2c5abf8bc3c781900caa61ada3713f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693078"
 ---
 # <a name="collections-ccx"></a>Raccolte (C++/CX)
 In C + c++ /CX program, è possibile utilizzare in modo gratuito di contenitori di libreria di modelli standard (STL, Standard Template Library) o qualsiasi altro tipo di raccolta definito dall'utente. Tuttavia, quando si passano le raccolte e viceversa attraverso l'interfaccia di Windows Runtime applicativa binaria (ABI), ad esempio, per un controllo XAML o a un client JavaScript, è necessario usare i tipi di raccolta di Windows Runtime.  
@@ -145,6 +145,5 @@ void FindButton(UIElementCollection^ col)
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi](../cppcx/type-system-c-cx.md)   
- [Tipi incorporati](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

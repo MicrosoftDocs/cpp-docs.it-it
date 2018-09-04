@@ -1,7 +1,7 @@
 ---
-title: BYTE (MASM) | Documenti Microsoft
+title: BYTE (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597a8c326006ede766d1150db91b8612463c3800
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e70879d89630321e50d0f4fd1966abf3e7de9c45
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677238"
 ---
 # <a name="byte-masm"></a>BYTE (MASM)
-Alloca e, facoltativamente, consente di inizializzare un byte di spazio di archiviazione per ogni `initializer`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-[[name]] BYTEinitializer [[, initializer]] ...  
-```  
-  
-## <a name="remarks"></a>Note  
- Può anche essere utilizzato come identificatore di tipo in qualsiasi punto un tipo è valido.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)   
- [DB](../../assembler/masm/db.md)   
- [SBYTE](../../assembler/masm/sbyte-masm.md)
+
+Alloca e inizializza facoltativamente un byte di spazio di archiviazione per ogni `initializer`.
+
+## <a name="syntax"></a>Sintassi
+
+> [[nome]] BYTEinitializer [[, inizializzatore]]...
+
+## <a name="remarks"></a>Note
+
+Può anche essere utilizzato come identificatore di tipo ovunque un tipo è consentito.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[DB](../../assembler/masm/db.md)<br/>
+[SBYTE](../../assembler/masm/sbyte-masm.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: '@FileName | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0f3ab0a3276d0d1b647c0904f60953b67e5cd08
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d1904e7c9a8a0a24a6150903a653f2eaf4f98648
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049310"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685168"
 ---
 # <a name="filename"></a>@FileName
-Il nome base del file principale in fase di assemblaggio (macro di testo).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-@FileName  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)
+
+Il nome base del file principale in corso l'assemblaggio (macro di testo).
+
+## <a name="syntax"></a>Sintassi
+
+> @FileName
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)<br/>

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55ce0fc38c5633e334211a1c4985de65aa4dc8ad
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c8bbd345e2d3fe0c5571407d41f590c6cc8d7ba
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197776"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676823"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>Creazione di un'applicazione desktop di Windows vuota
 
@@ -42,7 +42,3 @@ ms.locfileid: "43197776"
 Il progetto viene visualizzato **Esplora soluzioni** con tre directory per i file di origine, i file di intestazione e i file di risorse.
 
 Ora è possibile [aggiungere i file al progetto vuoto di Visual C++](../windows/adding-files-to-an-empty-win32-applications.md).
-
-## <a name="see-also"></a>Vedere anche
-
-[Distribuzione di applicazioni](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f12ff4f0f109ac97f9e9e2e4f8d800455159a10b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fd04350df17b6d2dfed65526d0f7681c314f07f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541426"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682620"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Sezione specifica Microsoft**  
@@ -54,7 +54,7 @@ int __vmx_vmptrld(
 ## <a name="remarks"></a>Note  
  Il puntatore VMCS è un indirizzo fisico a 64 bit.  
   
- Il `__vmx_vmptrld` è equivalente alla funzione il `VMPTRLD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__vmx_vmptrld` è equivalente alla funzione il `VMPTRLD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   

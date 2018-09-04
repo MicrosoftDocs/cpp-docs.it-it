@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209433"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680195"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 Fornisce un indice in una [tiled_extent](tiled-extent-class.md) oggetto. Questa classe dispone di proprietà per accedere agli elementi di origine locale della sezione e relativo all'origine globale. Per altre informazioni sugli elementi affiancati, vedere [usando i riquadri](../../../parallel/amp/using-tiles.md).  
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[Barrier (costante)](#tiled_index__barrier)|Archivia un [tile_barrier](tile-barrier-class.md) oggetto che rappresenta una barriera nella sezione del thread corrente.|  
 |||  
-|[(costante globale)](#tiled_index__global)|Archivia un' [indice](index-class.md) oggetto dell'indice di rango 1, 2 o 3, che rappresenta il globale in un [griglia](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) oggetto.|  
+|[(costante globale)](#tiled_index__global)|Archivia un' [indice](index-class.md) oggetto di rango 1, 2 o 3, che rappresenta l'indice globale in un oggetto della griglia.|  
 |[Costante locale](#tiled_index__local)|Archivia un' `index` oggetto di rango 1, 2 o 3 che rappresenta il relativo indice nella sezione corrente di un [tiled_extent](tiled-extent-class.md) oggetto.|  
 |[Rank (costante)](#tiled_index__rank)|Memorizza il rango del `tiled_index` oggetto.|  
 |[Tile (costante)](#tiled_index__tile)|Archivia un' `index` oggetto di dimensioni pari a 1, 2 o 3 che rappresenta le coordinate della sezione corrente di un `tiled_extent` oggetto.|  

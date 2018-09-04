@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b352d3f99ccee103f7f08e54fb96634bad4a32a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c66ca089a54f00148cf683612e529f1cd0505445
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216487"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685406"
 ---
 # <a name="mfc-dll-wizard"></a>Procedura guidata DLL MFC
 Quando si usa la procedura guidata DLL MFC per creare un progetto DLL MFC, otterrai un'applicazione con funzionalità incorporate che, durante la compilazione verrà implementata la funzionalità di base di un [DLL](../../build/dlls-in-visual-cpp.md). Il programma di avvio MFC include i file di origine (. cpp) di C++, i file di risorse (RC) e un file di progetto (vcxproj). Il codice generato in questi file di avvio è basato su MFC. Per informazioni più dettagliate, vedere i dettagli del file Readme. txt viene generato per il progetto in Visual Studio e [classi e funzioni generate dalla creazione guidata DLL MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,6 @@ Quando si usa la procedura guidata DLL MFC per creare un progetto DLL MFC, otter
  [Creazione e gestione di progetti Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)   
  [Utilizzo di proprietà del progetto](../../ide/working-with-project-properties.md)   
- [Distribuzione di applicazioni](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Aggiunta di una funzione membro](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implementazione di un'interfaccia](../../ide/implementing-an-interface-visual-cpp.md)   

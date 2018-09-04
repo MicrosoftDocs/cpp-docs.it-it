@@ -1,7 +1,7 @@
 ---
 title: .586P | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53014bedb3a7af77d48aaf9aea5d022b06678947
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12fc62d712fdcc17a36e08befbbceece28b6fd08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049239"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682314"
 ---
 # <a name="586p"></a>.586P
-Consente di assembly di tutte le istruzioni (inclusi i privilegi) per il processore Pentium.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-.586P  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Abilita l'assembly di tutte le istruzioni (incluso con privilegi) per il processore Pentium.
+
+## <a name="syntax"></a>Sintassi
+
+> .586P
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

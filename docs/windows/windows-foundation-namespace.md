@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b9fff04f20a1b77acb1ca18cb80891ec3ef124d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e1b5445b36fa0e1527fbd228ff7ce1929266b30
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212061"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685363"
 ---
 # <a name="windowsfoundation-namespace"></a>Spazio dei nomi Windows::Foundation
 
@@ -52,4 +52,4 @@ namespace Windows::Foundation;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Windows Namespace](https://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)
+[Spazi dei nomi UWP di Windows](/uwp/api/)

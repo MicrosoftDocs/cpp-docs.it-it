@@ -1,7 +1,7 @@
 ---
-title: LOCALE (MASM) | Documenti Microsoft
+title: LOCALE (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed9926d23f2e1e8636f31a6f586609ae22d38acd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e8105bc8168ce28d468a1378c5cf7889907a7c9f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053571"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685063"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
-Nella direttiva prima, all'interno di una macro, **locale** definisce le etichette che sono univoche per ogni istanza della macro.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      LOCAL localname [[, localname]]...  
-LOCAL label [[ [count ] ]] [[:type]] [[, label [[ [count] ]] [[type]]]]...  
-```  
-  
-## <a name="remarks"></a>Note  
- Nella seconda direttiva, all'interno di una definizione della stored procedure (**PROC**), **locale** crea variabili basata su stack che esistono per la durata della procedura. Il *etichetta* può essere una variabile semplice o una matrice contenente *conteggio* elementi.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Nella prima direttiva, all'interno di una macro **locale** definisce le etichette che sono univoche per ogni istanza della macro.
+
+## <a name="syntax"></a>Sintassi
+
+> LOCALE *localname* [[, *localname*]]...
+
+> LOCALE *label* [[[*conteggio*]]] [[:*tipo*]] [[, *etichetta* [[[*conteggio*]]] [[ *tipo*]]]]...
+
+## <a name="remarks"></a>Note
+
+Nella seconda direttiva, all'interno di una definizione di procedura (**PROC**), **locale** crea variabili basato su stack che esistono per la durata della procedura. Il *label* può essere una variabile semplice o una matrice contenente *conteggio* elementi.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

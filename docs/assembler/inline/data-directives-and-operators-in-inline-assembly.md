@@ -1,7 +1,7 @@
 ---
-title: Operatori e direttive dati in Assembly Inline | Documenti Microsoft
+title: Operatori e direttive dati in Assembly Inline | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -23,18 +23,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bd3bc686cc8cee1a02e9df936f80f542bec26bd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6aff2f4c5ce5e7f5592aa9ec707d002c57f0eac0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051385"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678737"
 ---
 # <a name="data-directives-and-operators-in-inline-assembly"></a>Operatori e direttive dati in assembly inline
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Sebbene un blocco `__asm` possa fare riferimento a oggetti e tipi di dati C o C++, non può definire gli oggetti dati con le direttive o gli operatori di MASM. In particolare, non è possibile utilizzare le direttive definizione **DB**, `DW`, **gg**, `DQ`, `DT`, e `DF`, o gli operatori `DUP` o  **QUESTO**. Anche le strutture e i record di MASM non sono disponibili. L'assembler inline non accetta le direttive `STRUC`, `RECORD`, **larghezza**, o **MASK**.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Sezione specifica Microsoft**
+
+Sebbene un blocco `__asm` possa fare riferimento a oggetti e tipi di dati C o C++, non può definire gli oggetti dati con le direttive o gli operatori di MASM. In particolare, non è possibile utilizzare le direttive definition **DB**, `DW`, **gg**, `DQ`, `DT`, e `DF`, o gli operatori `DUP` o **Ciò**. Anche le strutture e i record di MASM non sono disponibili. L'assembler inline non accetta le direttive `STRUC`, `RECORD`, **larghezza**, o **maschera**.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

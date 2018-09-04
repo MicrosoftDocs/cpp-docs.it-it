@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1dfbcff7e9e470992b0799aac1c87984b52ed50
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605471"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689471"
 ---
 # <a name="platformcollectionsmapview-class"></a>Classe Platform::Collections::MapView
 Rappresenta una visualizzazione di sola lettura in una *mappa*, che rappresenta una raccolta di coppie chiave-valore.  
@@ -51,7 +51,7 @@ ref class MapView sealed;
  Tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinare l'ordine relativo in MapView. Per impostazione predefinita [std:: less\<K >](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Note  
- MapView è un'implementazione concreta di C++ del [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) passata attraverso l'interfaccia applicativa binaria (ABI). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).  
+ MapView è un'implementazione concreta di C++ del [Windows::Foundation::Collections::IMapView \<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) passata attraverso l'interfaccia applicativa binaria (ABI). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Membri  
   

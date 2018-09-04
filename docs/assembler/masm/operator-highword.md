@@ -1,7 +1,7 @@
 ---
-title: operatore HIGHWORD | Documenti Microsoft
+title: operatore HIGHWORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4c0904d3c7ad8156ae8e978bcfc73a236b949e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5810ee5751d4f4ea4101bef3e294921f1f0078e3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057864"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677534"
 ---
 # <a name="operator-highword"></a>Operatore HIGHWORD
-Restituisce i 16 bit alti di 32 bit bassi di *espressione*. Espressioni MASM sono valori a 64 bit.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-HIGHWORD expression  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Restituisce i 16 bit alti di 32 bit bassi della *espressione*. Espressioni MASM sono valori a 64 bit.
+
+## <a name="syntax"></a>Sintassi
+
+> Espressione HIGHWORD
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

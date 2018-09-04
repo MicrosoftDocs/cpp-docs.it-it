@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678098"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 Il `CMFCRibbonBaseElement` classe è la classe base per tutti gli elementi che è possibile aggiungere a un [barra multifunzione](../../mfc/reference/cmfcribbonbar-class.md). Esempi di elementi della barra multifunzione sono i pulsanti della barra multifunzione, le caselle di controllo della barra multifunzione e le caselle combinate della barra multifunzione.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Un puntatore alla finestra padre per l'elemento della barra multifunzione, se il metodo ha esito positivo; in caso contrario, NULL.  
   
 ### <a name="remarks"></a>Note  
- La finestra padre per un elemento della barra multifunzione è un [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) o una [CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ La finestra padre per un elemento della barra multifunzione è un [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) o una [CMFCRibbonPanelMenuBar](internal-classes.md).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Recupera un puntatore all'elemento della barra multifunzione se l'utente preme attualmente.  

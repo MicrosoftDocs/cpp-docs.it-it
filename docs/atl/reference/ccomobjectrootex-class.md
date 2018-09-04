@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9ada8396f9d5473213f726acd27691a97a59847
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219173"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684793"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 Questa classe fornisce metodi per la gestione di gestione di conteggio di riferimento di oggetto per gli oggetti aggregati e non aggregati.  
@@ -279,7 +279,7 @@ IUnknown*
  Se l'oggetto è aggregato, il puntatore al unknown esterno viene archiviato `m_pOuterUnknown`. Se l'oggetto non è aggregato, il conteggio dei riferimenti accede `AddRef` e `Release` viene archiviato in [m_dwRef](#m_dwref).  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- Per ogni classe elencata nel [mappa oggetto](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), questa funzione viene chiamata una volta quando viene inizializzato il modulo, e anche in questo caso quando viene terminato.  
+ Per ogni classe elencato nella mappa oggetto, questa funzione viene chiamata una volta quando viene inizializzato il modulo, e anche in questo caso quando viene terminato.  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);

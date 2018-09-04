@@ -1,7 +1,7 @@
 ---
-title: operatore &quot; &quot; | Documenti Microsoft
+title: operatore &quot; &quot; | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,21 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86dcc43547c883dcef69a0c370d3598b6683fc80
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e020fc90209908030aebb779c27fb933a8b139b3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057630"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684550"
 ---
-# <a name="operator-quot-quot"></a>(operatore) &quot; &quot;
-Considera "*testo*" come stringa.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-"text"  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+# <a name="operator-quot-quot"></a>Operatore &quot; &quot;
+
+Considera "*testo*" sotto forma di stringa.
+
+## <a name="syntax"></a>Sintassi
+
+> "text"
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

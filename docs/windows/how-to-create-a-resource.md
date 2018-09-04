@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7c82a55d2cbfba20b80a02dbcf000c85ed10e83
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679793"
 ---
 # <a name="how-to-create-a-resource"></a>Procedura: creare una risorsa
 
@@ -48,7 +48,7 @@ ms.locfileid: "43221020"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Per creare una nuova risorsa in Visualizzazione classi
 
-1. Nelle [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), fare doppio clic su classe e scegliere **Add**, quindi fare clic su **Aggiungi risorsa** dal menu di scelta rapida.
+1. Nelle [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare doppio clic su classe e scegliere **Add**, quindi fare clic su **Aggiungi risorsa** dal menu di scelta rapida.
 
 2. Nella [finestra di dialogo Aggiungi risorsa](../windows/add-resource-dialog-box.md)scegliere il tipo di risorsa che si vuole aggiungere al progetto.
 

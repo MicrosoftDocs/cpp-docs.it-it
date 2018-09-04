@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c824dd4ae174a4418c6744e592dd62dc54b9595
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a2e0309c420754c0da8f09bb38e088e473362de0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326384"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676749"
 ---
 # <a name="redistributing-an-atl-application"></a>Ridistribuzione di un'applicazione ATL
 Iniziando da Visual Studio 2012, Active Template Library (ATL) è una libreria di sola intestazione. I progetti ATL non presentano un'opzione di collegamento dinamico ad ATL. Non è necessaria alcuna libreria ATL ridistribuibile.  
@@ -50,8 +50,6 @@ filename /regserver
 ```  
   
  dove `filename` è il nome del file eseguibile.  
-  
- Per le applicazioni di modelli OLE DB, assicurarsi che nel computer di destinazione siano installate le versioni più recenti dei file Microsoft Data Access Components (MDAC). Per altre informazioni, vedere [Ridistribuzione dei file di supporto del database](../ide/redistributing-database-support-files.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ridistribuzione di file Visual C++](../ide/redistributing-visual-cpp-files.md)

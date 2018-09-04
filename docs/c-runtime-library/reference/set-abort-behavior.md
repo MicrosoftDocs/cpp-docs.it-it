@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb308e527cc955d91af0b12547d52aa5e6316af5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 299801cc4276118fc73a4be625a3df8cc84d58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407275"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692934"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Specifica l'azione da eseguire quando un programma viene terminato in modo anomalo.
 
 > [!NOTE]
-> Non usare la [abort](abort.md) funzione per arrestare un'app di Microsoft Store, ad eccezione di testing o gli scenari di debug. Modalità a livello di codice o dell'interfaccia utente per chiudere un'app di Store non sono consentiti in base al [criteri di Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Per ulteriori informazioni, vedere [ciclo di vita app UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Non usare la [abort](abort.md) funzione per arrestare un'app di Microsoft Store, ad eccezione di test o gli scenari di debug. Modalità dell'interfaccia utente o a livello di codice per chiudere un'app di Store non sono consentiti in base al [i criteri di Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere [ciclo di vita app UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,7 +62,7 @@ unsigned int _set_abort_behavior(
 Nuovo valore della [abort](abort.md) flag.
 
 *Maschera*<br/>
-Maschera per i [abort](abort.md) i flag di bit da impostare.
+Maschera per la [abort](abort.md) flag di bit da impostare.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -70,7 +70,7 @@ Valore precedente dei flag.
 
 ## <a name="remarks"></a>Note
 
-Esistono due [abort](abort.md) flags: **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se viene stampato un messaggio di testo utile quando un programma viene terminato in modo anomalo. Il messaggio indica che l'applicazione ha chiamato la [abort](abort.md) (funzione). Il comportamento predefinito prevede la stampa del messaggio. **_CALL_REPORTFAULT**, se impostato, specifica che un dump di arresto anomalo del sistema di Dr. Watson viene generato e segnalato quando [abort](abort.md) viene chiamato. Per impostazione predefinita, la segnalazione di dump di arresto anomalo del sistema è abilitata per le compilazioni non di debug.
+Esistono due [abort](abort.md) flag: **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se viene stampato un messaggio di testo utile quando un programma viene terminato in modo anomalo. Il messaggio indica che l'applicazione ha chiamato la [abort](abort.md) (funzione). Il comportamento predefinito prevede la stampa del messaggio. **_CALL_REPORTFAULT**, se impostato, specifica che un dump di arresto anomalo del sistema Watson viene generato e segnalato [abort](abort.md) viene chiamato. Per impostazione predefinita, la segnalazione di dump di arresto anomalo del sistema è abilitata per le compilazioni non di debug.
 
 ## <a name="requirements"></a>Requisiti
 

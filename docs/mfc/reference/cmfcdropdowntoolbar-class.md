@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63afd3c63fbcb05c7172a30a5a23b0418269eca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201459"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692383"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 Barra degli strumenti visualizzata quando l'utente tiene premuto un pulsante della barra degli strumenti di primo livello.  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|Esegue l'override`CMFCToolBar::OnSendCommand`.|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Esegue l'override [CMFCToolBar::OnUpdateCmdUI](https://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Esegue l'override [CMFCToolBar::OnUpdateCmdUI](cmfctoolbar-class.md).|  
   
 ### <a name="remarks"></a>Note  
  Oggetto `CMFCDropDownToolBar` oggetto combina l'aspetto visivo di una barra degli strumenti con il comportamento di un menu popup. Quando un utente preme e contiene un pulsante a discesa della barra degli strumenti (vedere [classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), viene visualizzata una barra degli strumenti elenco a discesa e l'utente può selezionare un pulsante nella barra degli strumenti elenco a discesa scorrendo ad esso e rilasciare il mouse pulsante. Dopo che l'utente seleziona un pulsante sulla barra degli strumenti elenco a discesa, tale pulsante viene visualizzato come pulsante sulla barra degli strumenti principale corrente.  

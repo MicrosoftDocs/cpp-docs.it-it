@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c9ea52115cf5921aab4cc7f6cefb939f3e6e461
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207180"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690471"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 Fornisce la funzionalità del controllo scheda comune di Windows.  
@@ -240,7 +240,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
  Specifica lo stile del controllo scheda. Applicare qualsiasi combinazione di [scheda stili del controllo](/windows/desktop/Controls/tab-control-styles), come descritto nel SDK di Windows. Visualizzare **osservazioni** nelle [crea](#create) per un elenco degli stili finestra è anche possibile applicare al controllo.  

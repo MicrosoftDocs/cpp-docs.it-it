@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8256a6d49166b5a002a400892f0808706c66eba9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212462"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692289"
 ---
 # <a name="parallel-containers-and-objects"></a>Contenitori e oggetti paralleli
 Parallel Patterns Library (PPL) include numerosi contenitori e oggetti che forniscono l'accesso thread-safe ai relativi elementi.  
@@ -186,14 +186,14 @@ Parallel Patterns Library (PPL) include numerosi contenitori e oggetti che forni
   
 |Operatore|Descrizione|  
 |--------------|-----------------|  
-|[operator++](https://msdn.microsoft.com/4cfdd07e-927a-42f8-aaa0-d6881687f413)|Passa all'elemento successivo nella coda. Questo operatore viene sottoposto a overload per fornire la semantica di pre-incremento e post-incremento.|  
-|[operator*](https://msdn.microsoft.com/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|Recupera un riferimento all'elemento corrente.|  
-|[operator->](https://msdn.microsoft.com/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|Recupera un puntatore all'elemento corrente.|  
+|`operator++`|Passa all'elemento successivo nella coda. Questo operatore viene sottoposto a overload per fornire la semantica di pre-incremento e post-incremento.|  
+|`operator*`|Recupera un riferimento all'elemento corrente.|  
+|`operator->`|Recupera un puntatore all'elemento corrente.|  
   
  [[Torna all'inizio](#top)]  
   
 ##  <a name="unordered_map"></a> Classe concurrent_unordered_map  
- Il [HYPERLINK "file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default \\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622 "Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) classe è un classe contenitore associativo da preferire che, esattamente come le [std:: unordered_map](../../standard-library/unordered-map-class.md) classi, controlla una sequenza di lunghezza variabile di elementi di tipo [std:: Pair\<const Key, Ty >](../../standard-library/pair-structure.md). Pensare a una mappa non ordinata di un dizionario e che è possibile aggiungere una coppia chiave / valore a o cercare un valore dalla chiave. Questa classe è utile quando si dispone di più thread o attività che devono accedere a un contenitore condiviso, inserirvi o eseguirne l'aggiornamento contemporaneamente.  
+ Il [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) è una classe contenitore associativo da preferire che, esattamente come le [std:: unordered_map](../../standard-library/unordered-map-class.md) di classi, controlla una sequenza di lunghezza variabile di elementi di tipo [std:: Pair\<const Key, Ty >](../../standard-library/pair-structure.md). Pensare a una mappa non ordinata di un dizionario e che è possibile aggiungere una coppia chiave / valore a o cercare un valore dalla chiave. Questa classe è utile quando si dispone di più thread o attività che devono accedere a un contenitore condiviso, inserirvi o eseguirne l'aggiornamento contemporaneamente.  
   
  L'esempio seguente mostra la struttura di base per l'uso di `concurrent_unordered_map`. In questo esempio inserisce le chiavi di caratteri nell'intervallo ['a', ' i']. Poiché non è possibile stabilire l'ordine delle operazioni, anche il valore finale per ogni chiave è indeterminato. Tuttavia, è sicuro eseguire le operazioni di inserimento in parallelo.  
   

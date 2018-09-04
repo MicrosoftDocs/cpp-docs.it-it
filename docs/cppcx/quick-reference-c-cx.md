@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608333"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692588"
 ---
 # <a name="quick-reference-ccx"></a>Riferimento rapido (C++/CX)
-Il Runtime di Windows supporta le app Universal Windows Platform (UWP) eseguite solo in un ambiente di sistema operativo attendibile, utilizzano funzioni autorizzate, tipi di dati e dispositivi e vengono distribuite tramite il Microsoft Store. C + c++ /CX semplifica lo sviluppo di App per Windows Runtime. Questo articolo è un riferimento rapido. Per informazioni più complete, vedere [sistema di tipi](../cppcx/type-system-c-cx.md) e [Component Extensions for Runtime Platforms](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+Il Runtime di Windows supporta le app Universal Windows Platform (UWP) eseguite solo in un ambiente di sistema operativo attendibile, utilizzano funzioni autorizzate, tipi di dati e dispositivi e vengono distribuite tramite il Microsoft Store. C + c++ /CX semplifica lo sviluppo di App per Windows Runtime. Questo articolo è un riferimento rapido. Per informazioni più complete, vedere [sistema di tipi](../cppcx/type-system-c-cx.md).  
   
  Quando si compila dalla riga di comando, usare il **/ZW** opzione del compilatore per compilare un'app UWP o un componente Windows Runtime. Per accedere alle dichiarazioni di Windows Runtime, che sono definite nei file di metadati (con estensione winmd) di Windows Runtime, specificare il `#using` direttiva o il **/FU** opzione del compilatore. Quando si crea un progetto per un'app UWP, Visual Studio per impostazione predefinita imposta queste opzioni e aggiunge i riferimenti a tutte le librerie di Runtime di Windows.  
   

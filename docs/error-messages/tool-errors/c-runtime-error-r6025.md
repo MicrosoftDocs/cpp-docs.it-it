@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220632"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680555"
 ---
 # <a name="c-runtime-error-r6025"></a>R6025 di errore di Runtime C
 chiamata di funzione virtuale pura  
@@ -41,4 +41,3 @@ chiamata di funzione virtuale pura
   
  Questo errore è causato dalla chiamata di funzione virtuale in una classe base astratta tramite un puntatore che viene creato da un cast nel tipo della classe derivata, ma è un puntatore alla classe di base. Ciò può verificarsi quando si esegue il cast da un **void** <strong>\*</strong> a un puntatore a una classe quando il **void** <strong>\*</strong> era creato durante la costruzione della classe di base.  
   
- Per altre informazioni, vedere la [supporto tecnico Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) sito Web.

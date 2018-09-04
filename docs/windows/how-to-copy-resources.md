@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 20abc194f1286e47477c4510f9ceef6250b9b3f7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214391"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687219"
 ---
 # <a name="how-to-copy-resources"></a>Procedura: copiare risorse
 
@@ -37,7 +37,7 @@ ms.locfileid: "43214391"
 È possibile copiare facilmente le risorse da una risorsa esistente o un file eseguibile al file di risorse corrente. A tale scopo aprire entrambi i file che contiene risorse nello stesso momento e trascinare elementi da un file a un altro oppure copiare e incollare tra i due file. Questo metodo funziona per i file di script (RC) delle risorse e i file di risorse modello (con estensione rct), nonché i file eseguibili (.exe).
 
 > [!NOTE]
-> Visual C++ include file di risorse di esempio che è possibile usare nell'applicazione. Per altre informazioni, vedere [CLIPART: risorse comuni](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
+> Visual C++ include file di risorse di esempio che è possibile usare nell'applicazione. Per altre informazioni, vedere [CLIPART: risorse comuni](https://github.com/Microsoft/VCSamples).
 
 È possibile utilizzare il metodo di trascinamento e rilascio tra i file con estensione RC aperti [all'esterno del progetto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 

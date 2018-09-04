@@ -1,7 +1,7 @@
 ---
 title: REPT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bac814e42d0ceb6e329d4c38590d460e3a74338e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1bfcb970c904f226f11b3596c442748053f74d35
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053324"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684418"
 ---
 # <a name="rept"></a>REPT
-Vedere [ripetere](../../assembler/masm/repeat.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-REPT  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Visualizzare [ripetere](../../assembler/masm/repeat.md).
+
+## <a name="syntax"></a>Sintassi
+
+> REPT
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

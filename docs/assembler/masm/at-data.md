@@ -1,7 +1,7 @@
 ---
 title: '@data | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91da35eafb019d1067106c2d6057754ed6c4ae89
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3da3ffc3f6668b0b79d5604d4e010205b4b93aac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681533"
 ---
 # <a name="data"></a>@data
-Il nome del gruppo di dati predefinito. Restituisce DGROUP per tutti i modelli eccetto **FLAT**. Restituisce **FLAT** sotto il **FLAT** il modello di memoria (macro di testo).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-@data  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)
+
+Il nome del gruppo di dati predefinito. Restituisce tutti i modelli, ad eccezione DGROUP **FLAT**. Viene valutata **FLAT** sotto il **FLAT** il modello di memoria (macro di testo).
+
+## <a name="syntax"></a>Sintassi
+
+> @data
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)<br/>

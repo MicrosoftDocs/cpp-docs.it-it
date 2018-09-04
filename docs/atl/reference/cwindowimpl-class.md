@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27ce284bee21d17101c9e93627841f2dcd6c00d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197201"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678628"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 Fornisce metodi per la creazione di una finestra o di una sottoclasse di finestra.  
@@ -156,16 +156,16 @@ HWND Create(
  [in] Specifica il nome della finestra. Il valore predefinito è NULL.  
   
  *dwStyle*  
- [in] Lo stile della finestra. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows.  
+ [in] Lo stile della finestra. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows.  
   
  *dwExStyle*  
- [in] Lo stile della finestra estesi. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ [in] Lo stile della finestra estesi. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *MenuOrID*  
  [in] Per una finestra figlio, l'identificatore di finestra. Per una finestra di primo livello, un handle di menu per la finestra. Il valore predefinito è **0U**.  
   
  *lpCreateParam*  
- [in] Un puntatore ai dati di creazione della finestra. Per una descrizione completa, vedere la descrizione per il parametro finale [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Un puntatore ai dati di creazione della finestra. Per una descrizione completa, vedere la descrizione per il parametro finale [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Valore restituito  
  Se l'operazione riesce, l'handle della finestra appena creata. In caso contrario, NULL.  
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Tipo di finestra|Procedura di finestra|  
 |--------------------|----------------------|  
-|Una finestra basata su una nuova classe di finestra, specificata tramite il [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|Il [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) funzione Win32.|  
+|Una finestra basata su una nuova classe di finestra, specificata tramite il [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|Il [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) funzione Win32.|  
 |Una finestra basata su una classe della finestra che consente di modificare una classe esistente, specificata tramite il [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro.|Routine di finestra della classe finestra esistente.|  
 |Una finestra sottoclassata.|La sottoclasse routine della finestra originale.|  
   

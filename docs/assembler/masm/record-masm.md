@@ -1,7 +1,7 @@
 ---
-title: RECORD (MASM) | Documenti Microsoft
+title: RECORD (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e726053a9146cf88ed4e84045118d19b7094ed37
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d08f4abbdaba59969c85bd0e9907e80014033b4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057264"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687160"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
-Dichiara un tipo di record con i campi specificati. *FieldName* i nomi di campo, *larghezza* specifica il numero di bit, e *espressione* fornisce il valore iniziale.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-   recordname RECORD fieldname:width [[= expression]]   
-[[, fieldname:width [[= expression]]]]...  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Dichiara un tipo di record con i campi specificati. *FieldName* denomina il campo *larghezza* specifica il numero di bit, e *espressione* offre il valore iniziale.
+
+## <a name="syntax"></a>Sintassi
+
+> *NomeRecord* RECORD *fieldname*:*larghezza* [[= *espressione*]] [[, *fieldname*:*larghezza* [[= *espressione*]]]]...
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d6f03ea1ea39b9202d4bb7b850bb81354a4a47f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540016"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677380"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Sezione specifica Microsoft**  
@@ -54,7 +54,7 @@ unsigned char __vmx_vmread(
 |2|Operazione non riuscita senza stato disponibile.|  
   
 ## <a name="remarks"></a>Note  
- Il `__vmx_vmread` è equivalente alla funzione il `VMREAD` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) del sito, quindi vedere Appendice C di documento .  
+ Il `__vmx_vmread` è equivalente alla funzione il `VMREAD` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) del sito, quindi vedere Appendice C di documento .  
   
 ## <a name="requirements"></a>Requisiti  
   

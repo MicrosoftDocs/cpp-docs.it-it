@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e85fc8207e9700f35b59bfaba62dcd699ee37dd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195031"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676924"
 ---
 # <a name="summary-of-scope-rules"></a>Riepilogo delle regole di ambito
 L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (fino al punto in cui viene determinata l'esecuzione dell'overload). Se il nome indica una funzione, quest'ultima deve essere non ambigua rispetto al numero e al tipo di parametri. Se il nome è ambiguo, [accesso ai membri](../cpp/member-access-control-cpp.md) vengono applicate le regole.  
   
 ## <a name="constructor-initializers"></a>Inizializzatori del costruttore  
- Inizializzatori del costruttore (descritti in [inizializzazione di basi e membri](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) vengono valutati nell'ambito del blocco più esterno del costruttore per il quale vengono specificate. Di conseguenza, possono usare i nomi dei parametri del costruttore.  
+ [Inizializzatori del costruttore](constructors-cpp.md#member_init_list) vengono valutati nell'ambito del blocco più esterno del costruttore per il quale vengono specificate. Di conseguenza, possono usare i nomi dei parametri del costruttore.  
   
 ## <a name="global-names"></a>Nomi globali  
  Un nome di un oggetto, funzione o enumeratore è globale se viene introdotto al di fuori di qualsiasi funzione o classe o se è preceduto dall'operatore unario di ambito globale (`::`) e se non viene usato insieme a uno degli operatori binari seguenti:  

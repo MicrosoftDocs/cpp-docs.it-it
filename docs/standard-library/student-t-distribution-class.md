@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc995da6ce25aaed35e4e3fac04c08f37acaea7a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961012"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676144"
 ---
 # <a name="studenttdistribution-class"></a>Classe student_t_distribution
 
@@ -89,7 +89,7 @@ La funzione di proprietà `n()` restituisce il valore per il parametro di distri
 
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
 
-Per informazioni dettagliate sulla distribuzione Student-*t*, vedere l'articolo di Wolfram MathWorld [Students t-Distribution](http://go.microsoft.com/fwlink/p/?linkid=401094) (Distribuzione Student-t).
+Per informazioni dettagliate sulla distribuzione Student-*t*, vedere l'articolo di Wolfram MathWorld [Students t-Distribution](http://mathworld.wolfram.com/Studentst-Distribution.html) (Distribuzione Student-t).
 
 ## <a name="example"></a>Esempio
 

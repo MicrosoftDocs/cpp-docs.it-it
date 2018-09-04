@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53d87c6f0109708023f57e2d30ae38fa4f4f574b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222660"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677328"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto makefile
 Specificare le informazioni per il progetto. Le opzioni specificate si riflettono nella [pagina Proprietà](../ide/working-with-project-properties.md) del progetto. Dopo aver creato il progetto, è possibile visualizzare e modificare ognuna delle opzioni seguenti nella pagina **Nmake** della pagina delle proprietà del progetto.  
@@ -44,4 +44,4 @@ Specificare le informazioni per il progetto. Le opzioni specificate si rifletton
  [Tipi di progetto Visual C++](../ide/visual-cpp-project-types.md)   
  [Creazione di progetti desktop tramite le creazioni guidate applicazioni](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
- [Distribuzione di applicazioni](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ 

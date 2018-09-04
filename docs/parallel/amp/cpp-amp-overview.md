@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df69423e635a76d82ad8a2539c6fd92054f24964
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219383"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677669"
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) accelera l'esecuzione del codice C++ sfruttando hardware parallelo, ad esempio un'unità di elaborazione grafica (GPU) in una scheda grafica discreta. Tramite AMP C++, è possibile codificare algoritmi di dati multidimensionali in modo che sia possibile accelerare l'esecuzione tramite il parallelismo su hardware eterogeneo. Il modello di programmazione C++ AMP include le matrici multidimensionali, l'indicizzazione, il trasferimento di memoria, l'affiancamento e una libreria di funzioni matematiche. È possibile usare le estensioni del linguaggio C++ AMP per controllare il modo in cui i dati vengono spostati dalla CPU alla GPU e viceversa, in modo che sia possibile migliorare le prestazioni.  
@@ -464,7 +464,7 @@ AMP C++ include una libreria grafica progettata per la programmazione grafica ac
   
 - [Classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): fornisce l'accesso in sola lettura a qualsiasi trama.  
   
-- [Breve vettore di libreria](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f): definisce un set di tipi vettore short di lunghezza 2, 3 e 4 basati sul **int**, `uint`, **float**, **double**, [norm](../../parallel/amp/reference/norm-class.md), o [unorm](../../parallel/amp/reference/unorm-class.md).  
+- Libreria short Vector: Definisce un set di tipi vettore short di lunghezza 2, 3 e 4 basati su **int**, `uint`, **float**, **double**, [norm ](../../parallel/amp/reference/norm-class.md), oppure [unorm](../../parallel/amp/reference/unorm-class.md).  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>App di Universal Windows Platform (UWP)  
  
@@ -496,7 +496,7 @@ Il Visualizzatore di concorrenze include il supporto per l'analisi delle prestaz
   
 - [Canali (visualizzazione Thread)](/visualstudio/profiling/channels-threads-view)  
   
-- [Analisi del codice AMP C++ con il Visualizzatore di concorrenza](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
+- [Analisi del codice AMP C++ con il Visualizzatore di concorrenza](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)  
   
 ## <a name="performance-recommendations"></a>Raccomandazioni sulle prestazioni  
  

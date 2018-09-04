@@ -1,7 +1,7 @@
 ---
-title: . ERRDIF [[I]] | Documenti Microsoft
+title: . ERRDIF [[I]] | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3b70adb5ddf2ad1b8dd92b133780bdd82e36b6d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2315c33e96c1343a0cfd9a4a8e2a06b5af3d42ba
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054930"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676171"
 ---
 # <a name="errdifi"></a>. ERRDIF [[I]]
-Genera un errore se gli elementi di testo sono diversi.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-.ERRDIF[[I]] <textitem1>, <textitem2> [[, message]]  
-```  
-  
-## <a name="remarks"></a>Note  
- Se **si** è specificato, il confronto viene fatta distinzione tra maiuscole e minuscole.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Genera un errore se gli elementi di testo sono diversi.
+
+## <a name="syntax"></a>Sintassi
+
+> . ERRDIF [[I]] <textitem1>, <textitem2> [[, messaggio]]
+
+## <a name="remarks"></a>Note
+
+Se **ho** è specificato, il confronto viene operata la distinzione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

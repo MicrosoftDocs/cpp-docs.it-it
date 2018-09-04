@@ -1,7 +1,7 @@
 ---
 title: IFDEF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57cb3180b881e1e72fecd5e0baa8ea076b0c192e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: fb5ca4854805de010b4e7d032bfa861b2e01f81d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055681"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685194"
 ---
 # <a name="ifdef"></a>IFDEF
-Concede assembly se *nome* è un'etichetta definita in precedenza, una variabile o un simbolo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-IFDEF name  
-```  
-  
-## <a name="remarks"></a>Note  
- Vedere [se](../../assembler/masm/if-masm.md) per la sintassi completa.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Concede l'assembly se *nome* è un'etichetta definita in precedenza, una variabile o un simbolo.
+
+## <a name="syntax"></a>Sintassi
+
+> Nome IFDEF
+
+## <a name="remarks"></a>Note
+
+Visualizzare [IF](../../assembler/masm/if-masm.md) per la sintassi completa.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214991"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682856"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Chiamata eseguita dal framework quando un riquadro nella finestra con mini-cornice è nascosto o visualizzato.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Restituisce un riquadro contenente un punto fornito dall'utente all'interno di una finestra con mini-cornice.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Ridisegna tutte le finestre con mini-cornice.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Chiamata eseguita dal framework per rimuovere i riquadri non validi.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Rimuove un riquadro dalla finestra con mini-cornice.|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  Altezza, in pixel, della finestra con mini-cornice.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo per determinare l'altezza di una finestra con mini-cornice. Per impostazione predefinita, l'altezza viene impostata su SM_CYSMCAPTION. Per altre informazioni, vedere [funzione GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Chiamare questo metodo per determinare l'altezza di una finestra con mini-cornice. Per impostazione predefinita, l'altezza viene impostata su SM_CYSMCAPTION. Per altre informazioni, vedere [funzione GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Calcola il rettangolo delimitatore di un titolo di finestra con mini-cornice.  

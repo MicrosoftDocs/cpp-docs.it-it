@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203716"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677848"
 ---
 # <a name="composite-control-global-functions"></a>Funzioni globali di controllo composito
 Queste funzioni forniscono il supporto per la creazione di finestre di dialogo e per la creazione, hosting e gestione delle licenze dei controlli ActiveX.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Diverso da zero se l'inizializzazione del controllo codice di hosting ha avuto esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione deve essere chiamata prima di usare l'API di hosting del controllo ATL. Segue una chiamata a questa funzione, il **"AtlAxWin"** classe finestra può essere utilizzata nelle chiamate a [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) oppure [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), come descritto nel SDK di Windows.  
+ Questa funzione deve essere chiamata prima di usare l'API di hosting del controllo ATL. Segue una chiamata a questa funzione, il **"AtlAxWin"** classe finestra può essere utilizzata nelle chiamate a [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) oppure [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), come descritto nel SDK di Windows.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Questa funzione Annulla l'inizializzazione del controllo ATL codice di hosting annullando il **"Atlaxwinlic80"** e **"Atlaxwin80"** classi di finestra.  

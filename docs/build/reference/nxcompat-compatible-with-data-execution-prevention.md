@@ -1,5 +1,5 @@
 ---
-title: /NXCOMPAT (compatibile con protezione esecuzione programmi) | Documenti Microsoft
+title: /NXCOMPAT (compatibile con protezione esecuzione programmi) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4f8a91545a196bc92fdc0ec44e89a7d5680185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374804"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690319"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatibile con Protezione esecuzione programmi)
 
-Indica che un file eseguibile è compatibile con la funzionalità Protezione esecuzione programmi di Windows.
+Indica che un file eseguibile è compatibile con la funzionalità Protezione esecuzione programmi Windows.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,25 +34,25 @@ Indica che un file eseguibile è compatibile con la funzionalità Protezione ese
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita, **/NXCOMPAT** si trova in.
+Per impostazione predefinita **/NXCOMPAT** si trova in.
 
-**/NXCOMPAT: No** può essere utilizzato per specificare in modo esplicito un eseguibile non è compatibile con protezione esecuzione programmi.
+**/NXCOMPAT: No** può essere utilizzato per specificare in modo esplicito un file eseguibile è compatibile con protezione esecuzione programmi.
 
-Per ulteriori informazioni sulla protezione esecuzione programmi, vedere i seguenti articoli:
+Per altre informazioni sulla protezione esecuzione programmi, vedere questi articoli:
 
-- [Una descrizione dettagliata della funzionalità (Protezione esecuzione programmi)](http://go.microsoft.com/fwlink/p/?linkid=157771)
+- [Una descrizione dettagliata della funzionalità di dati esecuzione programmi (DEP)](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [Protezione esecuzione programmi](http://go.microsoft.com/fwlink/p/?linkid=157770)
+- [Protezione esecuzione programmi](/windows/desktop/Memory/data-execution-prevention)
 
-- [Protezione esecuzione programmi (Windows incorporato)](http://go.microsoft.com/fwlink/p/?linkid=157768)
+- [Protezione esecuzione programmi (Windows incorporato)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Scegliere il **le proprietà di configurazione** > **Linker** > **riga di comando** pagina delle proprietà.
+1. Scegliere il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
-1. Immettere l'opzione di **opzioni aggiuntive** casella. Scegliere **OK** o **applica** per applicare la modifica.
+1. Immettere l'opzione nel **opzioni aggiuntive** casella. Scegli **OK** oppure **applica** per applicare la modifica.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

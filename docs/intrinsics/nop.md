@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa38ddcd5b68c2f64e5c6d401ab0812406b51c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 507f00b82a407b84d374d5f7b9fad8d29101a848
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539820"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682098"
 ---
 # <a name="nop"></a>__nop
 **Sezione specifica Microsoft**  
@@ -46,7 +46,7 @@ void __nop();
 **Fine sezione specifica Microsoft**  
   
 ## <a name="remarks"></a>Note  
- Il `__nop` è equivalente alla funzione il `NOP` istruzioni in linguaggio macchina. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__nop` è equivalente alla funzione il `NOP` istruzioni in linguaggio macchina. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   

@@ -1,7 +1,7 @@
 ---
 title: DD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff556b6ba25743df05073b56b57611346d316cb4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f8095700d3e1f54b4909c779563d8d67337dc326
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050675"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692661"
 ---
 # <a name="dd"></a>DD
-Alloca e, facoltativamente, consente di inizializzare una parola doppia (4 byte) di spazio di archiviazione per ogni `initializer`. `DD` è un sinonimo di [DWORD](../../assembler/masm/dword.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-[[name]] DD initializer [[, initializer]]...  
-```  
-  
-## <a name="remarks"></a>Note  
- Può anche essere utilizzato come identificatore di tipo in qualsiasi punto un tipo è valido.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Alloca e, facoltativamente, consente di inizializzare una parola doppia (4 byte) di spazio di archiviazione per ogni `initializer`. `DD` è un sinonimo di [DWORD](../../assembler/masm/dword.md).
+
+## <a name="syntax"></a>Sintassi
+
+> [[nome]] Inizializzatore gg [[, inizializzatore]]...
+
+## <a name="remarks"></a>Note
+
+Può anche essere utilizzato come identificatore di tipo ovunque un tipo è consentito.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

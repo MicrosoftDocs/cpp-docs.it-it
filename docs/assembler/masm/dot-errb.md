@@ -1,7 +1,7 @@
 ---
 title: .ERRB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18b3bc1706d420c6624e0194a045cc116c39b9e5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1b6bc42590b23492d1935ab6f6489a3afbf8a5f6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050828"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676560"
 ---
 # <a name="errb"></a>.ERRB
-Genera un errore se *textitem* è vuoto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-.ERRB <textitem> [[, message]]  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Genera un errore se *textitem* è vuoto.
+
+## <a name="syntax"></a>Sintassi
+
+> . ERRB <textitem> [[, messaggio]]
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

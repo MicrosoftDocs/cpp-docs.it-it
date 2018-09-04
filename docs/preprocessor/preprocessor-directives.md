@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212221"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678800"
 ---
 # <a name="preprocessor-directives"></a>Direttive per il preprocessore
 
 Le direttive del preprocessore, ad esempio `#define` e `#ifdef`, vengono in genere usati per rendere i programmi di origine facile da modificare e compilare in ambienti di esecuzione diversi. Le direttive nel file di origine indicano al preprocessore di eseguire azioni specifiche. Ad esempio, il preprocessore può sostituire i token nel testo, inserire il contenuto di altri file nel file di origine o eliminare la compilazione di parte del file rimuovendo sezioni di testo. Le righe del preprocessore vengono riconosciute ed eseguite prima dell'espansione di una macro. Pertanto, se una macro si espande in modo da risultare simile a un comando del preprocessore, tale comando non sarà riconosciuto dal preprocessore.
 
-Le istruzioni del preprocessore utilizzano lo stesso set di caratteri delle istruzioni del file di origine, con l'eccezione che le sequenze di escape non sono supportate. Set di caratteri utilizzato nelle istruzioni del preprocessore equivale al [set di caratteri di esecuzione](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Il preprocessore riconosce anche i valori di carattere negativi.
+Le istruzioni del preprocessore utilizzano lo stesso set di caratteri delle istruzioni del file di origine, con l'eccezione che le sequenze di escape non sono supportate. Il set di caratteri utilizzati nelle istruzioni del preprocessore equivale al set di caratteri di esecuzione. Il preprocessore riconosce anche i valori di carattere negativi.
 
 Il preprocessore riconosce le direttive seguenti:
 

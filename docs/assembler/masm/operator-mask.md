@@ -1,7 +1,7 @@
 ---
-title: operatore MASK | Documenti Microsoft
+title: operatore MASK | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6e7fe7b71fbb28be7cd99dc6fc7a6d437a4253c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 22d1133257db825ac36beb8b83d5f170664472c2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057926"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689692"
 ---
 # <a name="operator-mask"></a>Operatore MASK
-Restituisce una maschera di bit in cui i bit nel *recordfieldname* o *record* vengono impostati e che tutti gli altri bit siano deselezionate.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-MASK {recordfieldname | record}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Restituisce una maschera di bit in cui i bit nel *recordfieldname* oppure *record* vengono impostate e tutti gli altri bit vengono cancellate.
+
+## <a name="syntax"></a>Sintassi
+
+> MASCHERA {recordfieldname | record}
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

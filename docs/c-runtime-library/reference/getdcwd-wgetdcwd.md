@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0ccc526b196982402ca3b795276df8c790ad35a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404256"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689715"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -79,30 +79,30 @@ Se l'unità specificata non è disponibile o il tipo di unità (ad esempio disco
 *buffer*<br/>
 Posizione di archiviazione per il percorso o **NULL**.
 
-Se **NULL** è specificato, questa funzione alloca un buffer di almeno *maxlen* dimensioni utilizzando **malloc**e il valore restituito di **getdcwd**è un puntatore al buffer allocato. Il buffer può essere liberato chiamando **libero** e passandola al puntatore.
+Se **NULL** è specificato, questa funzione alloca un buffer di almeno *maxlen* dimensione usando **malloc**e il valore restituito di **getdcwd**è un puntatore al buffer allocato. Il buffer possa essere liberato chiamando **gratuita** e passandola al puntatore.
 
 *maxlen*<br/>
 Numero intero positivo diverso da zero che specifica la lunghezza massima del percorso, in caratteri: **char** per **getdcwd** e **wchar_t** per **wgetdcwd**.
 
-Se *maxlen* non è maggiore di zero, il gestore di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), viene richiamato.
+Se *maxlen* non è maggiore di zero, il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), viene richiamato.
 
 ## <a name="return-value"></a>Valore restituito
 
-Puntatore a una stringa che rappresenta il percorso completo della directory di lavoro corrente nell'unità specificata, o **NULL**, che indica un errore.
+Puntatore a una stringa che rappresenta il percorso completo della directory di lavoro corrente nell'unità specificata, oppure **NULL**, che indica un errore.
 
-Se *buffer* è specificato come **NULL** e vi è memoria sufficiente per allocare *maxlen* caratteri, si verifica un errore e **errno** è impostato su **ENOMEM**. Se la lunghezza del percorso, che include il carattere null di terminazione, supera *maxlen*, si verifica un errore e **errno** è impostato su **ERANGE**. Per altre informazioni su questi codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se *buffer* è specificato come **NULL** ed è presente memoria sufficiente per allocare *maxlen* vuoti, si verifica un errore e **errno** è Impostare su **ENOMEM**. Se la lunghezza del percorso, che include il carattere null di terminazione, supera *maxlen*, si verifica un errore e **errno** è impostata su **ERANGE**. Per altre informazioni su questi codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
 Il **getdcwd** funzione Ottiene il percorso completo della directory di lavoro corrente nell'unità specificata e lo archivia in *buffer*. Se la directory di lavoro corrente è impostata sulla radice, la stringa termina con una barra rovesciata (\\). Se la directory di lavoro corrente è impostata su una directory diversa dalla quella radice, la stringa termina con il nome della directory e non con una barra rovesciata.
 
-**wgetdcwd** è una versione a caratteri wide **getdcwd**e il relativo *buffer* parametro e il valore restituito sono stringhe a caratteri "wide". In caso contrario, **wgetdcwd** e **getdcwd** si comportano in modo identico.
+**wgetdcwd** è una versione a caratteri wide di **getdcwd**e la relativa *buffer* parametro e il valore restituito sono stringhe a caratteri wide. In caso contrario, **wgetdcwd** e **getdcwd** si comportano in modo identico.
 
-Questa funzione è comunque thread-safe anche se dipende da **GetFullPathName**, che è non thread-safe. Tuttavia, è possibile violare la thread safety se le applicazioni multithread chiamano sia questa funzione che **GetFullPathName**. Per altre informazioni, visitare [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) , quindi cercare **GetFullPathName**.
+Questa funzione è comunque thread-safe anche se dipende da **GetFullPathName**, che è non thread-safe. Tuttavia, è possibile violare la thread safety se le applicazioni multithread chiamano sia questa funzione e [GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-La versione di questa funzione con il **NOLOCK** suffisso si comporta in modo identico a questa funzione di ad eccezione del fatto che non è thread-safe e non è protetta da interferenze da altri thread. Per altre informazioni, vedere [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
+La versione di questa funzione che ha il **NOLOCK** suffisso comportamento è identico a questa funzione, ad eccezione del fatto che non è thread-safe e non è protetta da interferenze da altri thread. Per altre informazioni, vedere [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Quando si **debug** e **CRTDBG_MAP_ALLOC** sono definiti, le chiamate a **getdcwd** e **wgetdcwd** vengono sostituiti dalle chiamate a **getdcwd_dbg** e **wgetdcwd_dbg** in modo che è possibile eseguire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+Quando **debug** e **CRTDBG_MAP_ALLOC** definiti, le chiamate a **getdcwd** e **wgetdcwd** vengono sostituite da chiamate agli **getdcwd_dbg** e **wgetdcwd_dbg** in modo che è possibile eseguire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

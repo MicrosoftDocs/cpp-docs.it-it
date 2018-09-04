@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210251"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679247"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Fornisce la funzionalità del controllo di visualizzazione albero comune di Windows.  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *dwStyle*  
- Specifica lo stile del controllo di visualizzazione albero. Applicare stili di finestra, descritto nella [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)e qualsiasi combinazione delle [stili di visualizzazione del controllo albero](/windows/desktop/Controls/tree-view-control-window-styles) come descritto nel SDK di Windows.  
+ Specifica lo stile del controllo di visualizzazione albero. Applicare stili di finestra, descritto nella [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualsiasi combinazione delle [stili di visualizzazione del controllo albero](/windows/desktop/Controls/tree-view-control-window-styles) come descritto nel SDK di Windows.  
   
  *Rect*  
  Specifica le dimensioni e la posizione del controllo di visualizzazione albero. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
- Specifica lo stile del controllo di visualizzazione albero. Applicare stili di finestra, descritto nella [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)e qualsiasi combinazione delle [stili di visualizzazione del controllo albero](/windows/desktop/Controls/tree-view-control-window-styles) come descritto nel SDK di Windows.  
+ Specifica lo stile del controllo di visualizzazione albero. Applicare stili di finestra, descritto nella [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualsiasi combinazione delle [stili di visualizzazione del controllo albero](/windows/desktop/Controls/tree-view-control-window-styles) come descritto nel SDK di Windows.  
   
  *Rect*  
  Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  

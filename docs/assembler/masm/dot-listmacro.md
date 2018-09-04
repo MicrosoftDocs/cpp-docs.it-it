@@ -1,7 +1,7 @@
 ---
 title: .LISTMACRO | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74228abccf70b969c0d1feed6a987baf35c8171
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4df49ef00b07f3e95b9acbcd02aa4ae023a1ea87
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676482"
 ---
 # <a name="listmacro"></a>.LISTMACRO
-Avvia l'elenco di istruzioni di espansione di macro che generano il codice o dati.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-.LISTMACRO  
-  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa è l'impostazione predefinita. Uguale a [. XALL](../../assembler/masm/dot-xall.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Comincia a elencare delle istruzioni di espansione di macro che generano codice o dati.
+
+## <a name="syntax"></a>Sintassi
+
+> .LISTMACRO
+
+## <a name="remarks"></a>Note
+
+Questa è l'impostazione predefinita. Uguale allo [. XALL](../../assembler/masm/dot-xall.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: RICHIAMARE | Documenti Microsoft
+title: RICHIAMARE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c18c83b623ce1a22ffcb5e1a9f1ce98ee6eb20
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3e5698acf9986903a1d6d731c1047484a0ce6904
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055170"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676517"
 ---
 # <a name="invoke"></a>INVOKE
-Chiama la routine in corrispondenza dell'indirizzo specificato da *espressione*, passando gli argomenti nello stack o nei registri in base alle convenzioni di chiamata standard del tipo di linguaggio.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-INVOKE   
-expression [[, arguments]]  
-```  
-  
-## <a name="remarks"></a>Note  
- Ogni argomento passato alla routine può essere un'espressione, una coppia di registro o un'espressione di indirizzo (preceduto da un'espressione da `ADDR`).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+La routine viene chiamata in corrispondenza dell'indirizzo specificato da *espressione*, passando gli argomenti nello stack o nei registri in base alle convenzioni di chiamata standard del tipo di linguaggio.
+
+## <a name="syntax"></a>Sintassi
+
+> INVOKE *espressione* [[, *argomenti*]]
+
+## <a name="remarks"></a>Note
+
+Ogni argomento passato alla routine può essere un'espressione, una coppia di registro o un'espressione di indirizzo (l'espressione preceduta da `ADDR`).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

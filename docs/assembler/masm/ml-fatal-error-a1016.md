@@ -1,7 +1,7 @@
 ---
-title: Errore ML irreversibile A1016 | Documenti Microsoft
+title: Errore ML irreversibile A1016 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a597f738d00e73c28141f1c1d9dc8c463110bdb9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 056e4f96c42e1a100b2aab623cba31f709f270a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053643"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683785"
 ---
 # <a name="ml-fatal-error-a1016"></a>Errore ML irreversibile A1016
-**Errore interno dell'Assembler**  
-  
- Il driver MASM, denominato ML.exe, generato un errore di sistema.  
-  
- Prendere nota delle circostanze dell'errore e contattare Microsoft Corporation. Servizio supporto tecnico è disponibile all'indirizzo [ http://support.microsoft.com/ ](http://support.microsoft.com/).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)
+
+**Errore interno dell'Assembler**
+
+Il driver MASM, chiamato ML.exe, generato un errore di sistema.
+
+Prendere nota delle circostanze dell'errore e contattare Microsoft Corporation. Il servizio supporto tecnico è disponibile all'indirizzo [ http://support.microsoft.com/ ](http://support.microsoft.com/).
+
+## <a name="see-also"></a>Vedere anche
+
+[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>

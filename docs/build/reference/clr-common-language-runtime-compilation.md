@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606863"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676985"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilazione Common Language Runtime)
 Consente alle applicazioni e ai componenti di usare le funzionalità di Common Language Runtime (CLR).  
@@ -68,9 +68,7 @@ Consente alle applicazioni e ai componenti di usare le funzionalità di Common L
  Nelle versioni precedenti a Visual C++ 2005 **/clr:noAssembly** richiede **/LD**. **/LD** è ora implicito quando si specifica **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Consente a un'applicazione Visual C++ per l'esecuzione nella versione 1 di CLR. Se si usa **initialAppDomain**, quindi è probabile che alcuni dei problemi discussi sono trattati nella [BUG: eccezione AppDomainUnloaded quando usano estensioni gestite per componenti Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) su Microsoft Sito Web del supporto.  
-  
- Un'applicazione compilata usando **initialAppDomain** non deve essere usata da un'applicazione che usa ASP.NET, perché questo non è supportato nella versione 1 di CLR.  
+ Consente a un'applicazione Visual C++ per l'esecuzione nella versione 1 di CLR.  Un'applicazione compilata usando **initialAppDomain** non deve essere usata da un'applicazione che usa ASP.NET, perché questo non è supportato nella versione 1 di CLR.  
   
  **/clr:nostdlib**  
  Indica al compilatore di ignorare la directory \clr predefinita. Il compilatore produce errori se si includono più versioni di una DLL, ad esempio System.dll. Questa opzione consente di specificare il framework specifico da usare durante la compilazione.  

@@ -1,7 +1,7 @@
 ---
-title: ML errore non irreversibile A2054 | Documenti Microsoft
+title: Machine Learning errore non irreversibile A2054 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a9c754cdd1ea33c004f5dea431829bea5532cd0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 026699a1ce41681fc10a7fbc37a76b86c7caef4c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054341"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688244"
 ---
 # <a name="ml-nonfatal-error-a2054"></a>Errore ML non irreversibile A2054
-**forzare l'errore: valore non è uguale a 0**  
-  
- La direttiva condizionale errore [. ERRNZ](../../assembler/masm/dot-errnz.md) utilizzato per generare questo errore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)
+
+**forzato errore: valore non è uguale a 0**
+
+La direttiva condizionale-error [. ERRNZ](../../assembler/masm/dot-errnz.md) usata per generare questo errore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>

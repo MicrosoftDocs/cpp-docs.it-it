@@ -1,7 +1,7 @@
 ---
-title: Errore ML irreversibile A1010 | Documenti Microsoft
+title: Errore ML irreversibile A1010 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b622595b6994c4c4eaa74ed8f824f28dffe89b1a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12b7e8698951e8ef59e0433134ec992af5d5f77f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057682"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676297"
 ---
 # <a name="ml-fatal-error-a1010"></a>Errore ML irreversibile A1010
-**nidificazione di blocco non corrispondenti:**  
-  
- Inizio un blocco non disponeva di un'entità finale corrispondente, o una fine del blocco non conteneva un inizio corrispondente. Potrebbe essere coinvolto uno dei valori seguenti:  
-  
--   Una direttiva di alto livello, ad esempio [. Se](../../assembler/masm/dot-if.md), [. Ripetere](../../assembler/masm/dot-repeat.md), o [. MENTRE](../../assembler/masm/dot-while.md).  
-  
--   Una direttiva assembly condizionale, ad esempio [se](../../assembler/masm/if-masm.md), [ripetere](../../assembler/masm/repeat.md), o **mentre**.  
-  
--   Una definizione di struttura o unione.  
-  
--   Una definizione della procedura.  
-  
--   Definizione di un segmento.  
-  
--   Oggetto [POPCONTEXT](../../assembler/masm/popcontext.md) direttiva.  
-  
--   Un assembly di condizionale direttiva, ad esempio un [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), o **ENDIF** senza un corrispondente [se](../../assembler/masm/if-masm.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)
+
+**annidamento di blocco senza corrispondenza:**
+
+Un inizio blocco non è corrispondente end oppure una fine del blocco non è un inizio corrisponda. Uno dei seguenti potrebbe essere interessato:
+
+- Una direttiva di alto livello, ad esempio [. IF](../../assembler/masm/dot-if.md), [. Ripetere](../../assembler/masm/dot-repeat.md), o [. MENTRE](../../assembler/masm/dot-while.md).
+
+- Una direttiva condizionale, assembly, ad esempio [IF](../../assembler/masm/if-masm.md), [ripetere](../../assembler/masm/repeat.md), o **mentre**.
+
+- Una definizione di struttura o unione.
+
+- Una definizione della procedura.
+
+- Una definizione del segmento.
+
+- Oggetto [POPCONTEXT](../../assembler/masm/popcontext.md) direttiva.
+
+- Un assembly di condizionale direttiva, ad esempio un [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), o **ENDIF** senza il corrispondente [IF](../../assembler/masm/if-masm.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>

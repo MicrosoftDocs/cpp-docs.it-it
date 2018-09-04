@@ -1,7 +1,7 @@
 ---
-title: PUSHCONTEXT | Documenti Microsoft
+title: PUSHCONTEXT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056379"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677428"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-Salva in parte o interamente corrente `context`: Registro di segmento presuppone il valore di base, i flag di elenco e cref o valori di processore/coprocessore. Il `context` può essere **PRESUPPONE**, `RADIX`, **elenco**, **CPU**, o **tutti**.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Salva parzialmente o totalmente corrente `context`: register segmento presuppone, valore della radice, i flag di elenco e cref o valori di processore/coprocessore. Il `context` può essere **ASSUMES**, `RADIX`, **listato**, **CPU**, o **tutti**.
+
+## <a name="syntax"></a>Sintassi
+
+> Contesto PUSHCONTEXT
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

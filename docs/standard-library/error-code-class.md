@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea90d30a492fc19020a3309a994f885ab5916be2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221572"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690547"
 ---
 # <a name="errorcode-class"></a>Classe error_code
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 Il primo costruttore archivia un valore del codice di errore zero e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Il secondo costruttore Archivia *val* come valore del codice di errore e un puntatore a [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Il secondo costruttore Archivia *val* come valore del codice di errore e un puntatore a [error_category](../standard-library/error-category-class.md).
 
 Il terzo costruttore archivia `(value_type)_Errcode` come valore del codice di errore e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -238,7 +238,7 @@ L'operatore membro restituisce `!(*this == right)`.
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-Verifica se l'oggetto [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) è più piccolo dell'oggetto `error_code` passato per il confronto.
+Verifica se l'oggetto `error_code` è più piccolo dell'oggetto `error_code` passato per il confronto.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ L'operatore membro restituisce `category() < right.category() || category() == r
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-Assegna un nuovo valore di enumerazione all'oggetto [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31).
+Assegna un nuovo valore di enumerazione all'oggetto `error_code`.
 
 ```cpp
 template <class _Enum>

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213150"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682327"
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
 Il `CPaneDialog` classe supporta una finestra di dialogo non modale e ancorabile.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Gestisce il [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) messaggio. (Ridefinisce [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Gestisce il [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) messaggio. (Ridefinisce [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Gestisce il [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown) messaggio. (Ridefinisce [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Chiamato dal framework per aggiornare la finestra di dialogo. (Esegue l'override [CDockablePane:: OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Chiamato dal framework per aggiornare la finestra di dialogo. (Esegue l'override [CDockablePane:: OnUpdateCmdUI](cdockablepane-class.md).)|  
 |`CPaneDialog::OnWindowPosChanging`|Gestisce il [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging) messaggio. (Ridefinisce [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Specifica il modello per una finestra di dialogo che è un contenitore di controlli OLE.|  
   

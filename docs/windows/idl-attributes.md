@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a5fcfe550fbcab7ffc872cd2a802906e1416a24
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5b4207549a5b9992f3c9ac4f99c0b0cac0275772
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196634"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679895"
 ---
 # <a name="idl-attributes"></a>Attributi IDL
 
@@ -126,4 +126,3 @@ Si noti che [idl_quote](../windows/idl-quote.md) consente di usare costrutti MID
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi per gruppo](../windows/attributes-by-group.md)  
-[Limitazioni degli attributi](https://msdn.microsoft.com/6e6c4329-f667-4869-b991-cbe9cb7a8f61)

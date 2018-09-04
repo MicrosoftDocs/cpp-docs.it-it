@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467839"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685076"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Sezione specifica Microsoft**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Note  
- Il **/GS** opzione del compilatore indica al compilatore di test per i sovraccarichi del buffer inserendo i controlli di sicurezza nello stack. I tipi di strutture di dati che sono idonei per i controlli di sicurezza sono descritti [/GS (controllo sicurezza Buffer)](../build/reference/gs-buffer-security-check.md). Per altre informazioni sul rilevamento di sovraccarichi del buffer, vedere [del compilatore controlli di sicurezza In dettaglio](http://go.microsoft.com/fwlink/p/?linkid=7260) sul sito Web MSDN.  
+ Il **/GS** opzione del compilatore indica al compilatore di test per i sovraccarichi del buffer inserendo i controlli di sicurezza nello stack. I tipi di strutture di dati che sono idonei per i controlli di sicurezza sono descritti [/GS (controllo sicurezza Buffer)](../build/reference/gs-buffer-security-check.md). Per altre informazioni sul rilevamento di sovraccarichi del buffer, vedere [funzionalità di sicurezza in MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).  
   
  Una revisione del codice manuale esperta o un'analisi esterna potrebbe determinare che una funzione è protetta da un sovraccarico del buffer. In tal caso, è possibile eliminare i controlli di sicurezza per una funzione applicando la **__declspec(safebuffers)** una parola chiave per la dichiarazione di funzione.  
   

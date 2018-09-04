@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f0a812ff5304288a2a7c25edeb07d76a4d06ded8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539437"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683015"
 ---
 # <a name="ribbon-designer-mfc"></a>Finestra di progettazione della barra multifunzione (MFC)
-La finestra di progettazione della barra multifunzione permette di creare e personalizzare barre multifunzione in applicazioni MFC. Una barra multifunzione è un elemento dell'interfaccia utente che organizza i comandi in gruppi logici. Questi gruppi sono visualizzati in schede separate in una striscia che occupa tutta la parte superiore della finestra. La barra multifunzione sostituisce la barra dei menu e le barre degli strumenti. Una barra multifunzione può migliorare significativamente l'usabilità delle applicazioni. Per altre informazioni, vedere [barre multifunzione](http://go.microsoft.com/fwlink/p/?linkid=129233). La figura seguente mostra una barra multifunzione.  
+La finestra di progettazione della barra multifunzione permette di creare e personalizzare barre multifunzione in applicazioni MFC. Una barra multifunzione è un elemento dell'interfaccia utente che organizza i comandi in gruppi logici. Questi gruppi sono visualizzati in schede separate in una striscia che occupa tutta la parte superiore della finestra. La barra multifunzione sostituisce la barra dei menu e le barre degli strumenti. Una barra multifunzione può migliorare significativamente l'usabilità delle applicazioni. Per altre informazioni, vedere [barre multifunzione](/windows/desktop/uxguide/cmd-ribbons). La figura seguente mostra una barra multifunzione.  
   
  ![Controllo delle risorse della barra multifunzione MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   

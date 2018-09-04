@@ -1,7 +1,7 @@
 ---
-title: INCLUDELIB (MASM) | Documenti Microsoft
+title: INCLUDELIB (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69b241723c7c2c7bb0eb5c87835f3c3463ec664
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: aabceb1e30013052184ca4654df1fa5b19fd1412
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050997"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687602"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
-Indica al linker che il modulo corrente deve essere collegato con *NomeLibreria*.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-INCLUDELIB libraryname  
-```  
-  
-## <a name="remarks"></a>Note  
- Il *NomeLibreria* devono essere racchiusi tra parentesi quadre se include una barra rovesciata, punto e virgola, maggiore-simbolo, meno-simbolo, virgolette singole o virgolette doppie.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Indica al linker che il modulo corrente deve essere collegato a *NomeLibreria*.
+
+## <a name="syntax"></a>Sintassi
+
+> INCLUDELIB NomeLibreria
+
+## <a name="remarks"></a>Note
+
+Il *NomeLibreria* deve essere racchiuso tra parentesi angolari se include una barra rovesciata, punto e virgola, maggiore-rispetto a simbolo, meno-rispetto a simbolo, virgolette singole o virgolette doppie.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

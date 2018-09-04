@@ -1,7 +1,7 @@
 ---
 title: '@Time | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09f2ee96a59e9a94c5fd3f9344fdc258f4a410c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 34028f5f95cb54acc7fa25786614d67d921d8191
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693100"
 ---
 # <a name="time"></a>@Time
-L'ora di sistema nel formato hh: mm: 24 ore (macro di testo).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-@Time  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)
+
+L'ora di sistema nel formato hh: mm: 24 ore (macro di testo).
+
+## <a name="syntax"></a>Sintassi
+
+> @Time
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)<br/>

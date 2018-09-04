@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196190"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690152"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 Fornisce la funzionalità del controllo indicatore di stato comune di Windows.  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *dwStyle*  
- Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione di finestra stylesdescribed nelle [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows, oltre a indicatore degli stili del controllo, al controllo di stato seguente:  
+ Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione di finestra stylesdescribed nelle [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows, oltre a indicatore degli stili del controllo, al controllo di stato seguente:  
   
 - PBS_VERTICAL consente di visualizzare informazioni di stato verticalmente, dall'alto verso il basso. Senza questo flag, controllo indicatore di stato vengono visualizzati orizzontalmente, da sinistra a destra.  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
- Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione degli stili finestra descritto nella [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows.  
+ Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione degli stili finestra descritto nella [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows.  
   
  *Rect*  
  Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.  

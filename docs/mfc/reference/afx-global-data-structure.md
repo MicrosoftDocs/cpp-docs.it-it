@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d762aef0dd48f3eac8eaeeddee558c4f237b29f
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352739"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677457"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (struttura)
 La struttura `AFX_GLOBAL_DATA` contiene i campi e i metodi usati per gestire il framework o per personalizzare l'aspetto e il comportamento dell'applicazione.  
@@ -118,7 +118,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Registra la classe di finestre MFC specificata.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Rilascia le interfacce ottenute tramite i metodi GetITaskbarList e GetITaskbarList3.|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|Reinizializza i puntatori a funzione interna che accedono ai metodi che supportano Windows [temi e stili](/windows/desktop/Controls/visual-styles-overview).|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Fornisce un modo semplice per chiamare il Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) (metodo).|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Fornisce un modo semplice per chiamare il Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) (metodo).|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Crea il tipo di carattere logico specificato.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Crea e inizializza un oggetto Shell da un nome di analisi.|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Reinizializza i tipi di carattere logici usati dal framework.|  
@@ -371,7 +371,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>Parametri   
  [in] *nColor*  
- Valore che specifica un elemento dell'interfaccia utente il cui colore viene recuperato. Per un elenco di valori validi, vedere la *nIndex* parametro delle [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) (metodo).  
+ Valore che specifica un elemento dell'interfaccia utente il cui colore viene recuperato. Per un elenco di valori validi, vedere la *nIndex* parametro delle [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) (metodo).  
   
 ### <a name="return-value"></a>Valore restituito  
  Valore di colore RGB dell'elemento dell'interfaccia utente specificato. Per altre informazioni, vedere la sezione Note.  
@@ -381,7 +381,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="see-also"></a>Vedere anche  
 
- [Funzione GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [Funzione GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)   
  [COLORREF](/windows/desktop/gdi/colorref)   
  [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
@@ -697,7 +697,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  Il nome della classe della finestra da registrare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il nome completo della classe registrato se questo metodo ha esito positivo; in caso contrario, un [eccezione risorse](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
+ Il nome completo della classe registrato se questo metodo ha esito positivo; in caso contrario, un [eccezione risorse](exception-processing.md#afxthrowresourceexception).  
   
 ### <a name="remarks"></a>Note  
  Il valore restituito è un elenco delimitato da punti del *lpszClassNamePrefix* parametro stringa e le rappresentazioni di testo esadecimale dei quadratini di ridimensionamento dell'istanza di applicazione corrente; il cursore dell'applicazione, ovvero la freccia cursore il cui identificatore è IDC_ARROW; e il pennello di sfondo. Per altre informazioni sulla registrazione di classi di finestre MFC, vedere [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
@@ -721,7 +721,7 @@ BOOL Resume();
  Questo metodo viene chiamato quando il framework riceve la [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) messaggio.  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-Fornisce un modo semplice per chiamare il Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) (metodo).  
+Fornisce un modo semplice per chiamare il Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) (metodo).  
   
   
 ```  
@@ -750,7 +750,7 @@ BOOL SetLayeredAttrib(
  
 ### <a name="see-also"></a>Vedere anche   
  [COLORREF](/windows/desktop/gdi/colorref)   
- [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 Crea il tipo di carattere logico specificato.  

@@ -1,7 +1,7 @@
 ---
-title: Utilizzo di C o C++ in blocchi asm | Documenti Microsoft
+title: Utilizzo di C o C++ in blocchi asm | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -24,16 +24,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ed46cdf44ccacee806dd03bf7eacca26eec32d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 14b91a7925089f6a6ab747a9fd6a5813f9a14693
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37120950"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687099"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Utilizzo di C o C++ in blocchi __asm
 
-* * Sezione specifica Microsoft * *
+* * Specifica di Microsoft * *
 
 Poiché le istruzioni assembly inline possono essere combinate con le istruzioni C++ o C, le stesse possono riferirsi alle variabili C++ o C indicandole per nome e utilizzare molti altri elementi di tali linguaggi.
 
@@ -45,11 +45,11 @@ Un blocco `__asm` può utilizzare i seguenti elementi di linguaggio:
 
 - Direttive per il preprocessore e macro
 
-- Commenti (entrambi __/ \* \* /__ e __//__ )
+- Commenti (entrambe __/ \* \* /__ e __//__ )
 
 - Nomi dei tipi (laddove sia possibile utilizzare i tipi MASM)
 
-- `typedef` i nomi, in genere utilizzati con gli operatori, ad esempio **PTR** e **tipo** o per specificare i membri di struttura o unione
+- `typedef` i nomi, in genere usati con gli operatori, ad esempio **PTR** e **tipo** oppure per specificare i membri di struttura o unione
 
 All'interno di un blocco `__asm` è possibile specificare le costanti Integer sia con la notazione C che con la notazione base dell'assembler (ad esempio, 0x100 e 100h sono equivalenti). Ciò consente di definire (utilizzando `#define`) una costante in C e utilizzarla in seguito nelle parti dell'assembly del programma C o C++. È inoltre possibile specificare le costanti nel formato ottale precedendole con 0. Ad esempio, 0777 specifica una costante ottale.
 
@@ -67,4 +67,4 @@ All'interno di un blocco `__asm` è possibile specificare le costanti Integer si
 
 ## <a name="see-also"></a>Vedere anche
 
-[Assembler inline](../../assembler/inline/inline-assembler.md)
+[Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

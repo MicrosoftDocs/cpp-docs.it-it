@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678009"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 Fornisce supporto per le interfacce dei controlli sul lato client personalizzate.  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Gli stili di essere aggiunti dagli stili di finestra corrente.  
   
  *nFlags*  
- Flag di posizionamento delle finestre. Per un elenco di valori possibili, vedere la [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funzione nel SDK di Windows.  
+ Flag di posizionamento delle finestre. Per un elenco di valori possibili, vedere la [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funzione nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se gli stili vengono modificati, in caso contrario, zero.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Note  
  Verrà modificato per corrispondere all'impostazione per WS_DISABLED stock del controllo proprietà Enabled. Proprietà di stile del bordo predefinite del controllo verrà modificata in modo che corrisponda all'impostazione richiesta per WS_BORDER. Tutti gli altri stili vengono applicati direttamente all'handle di finestra del controllo, se presente.  
   
- Modifica degli stili di finestra di controllo. Stili per aggiunte o rimosse possono essere combinati utilizzando l'operatore OR bit per bit ( &#124; ) operatore. Vedere le [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) funzione nel SDK di Windows per informazioni sugli stili di finestra disponibili.  
+ Modifica degli stili di finestra di controllo. Stili per aggiunte o rimosse possono essere combinati utilizzando l'operatore OR bit per bit ( &#124; ) operatore. Vedere le [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) funzione nel SDK di Windows per informazioni sugli stili di finestra disponibili.  
   
  Se *nFlags* è diverso da zero, `ModifyStyle` chiama la funzione Win32 `SetWindowPos`e lo ridisegna la finestra dalla combinazione *nFlags* con i flag di quattro seguenti:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Gli stili estesi da aggiungere dagli stili di finestra corrente.  
   
  *nFlags*  
- Flag di posizionamento delle finestre. Per un elenco di valori possibili, vedere la [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funzione nel SDK di Windows.  
+ Flag di posizionamento delle finestre. Per un elenco di valori possibili, vedere la [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funzione nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se gli stili vengono modificati, in caso contrario, zero.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Note  
  Titolo del controllo proprietà Appearance verrà modificato per corrispondere all'impostazione per WS_EX_CLIENTEDGE. Tutti gli altri stili finestra estesi vengono applicate direttamente a handle della finestra del controllo, se presente.  
   
- Modifica la finestra stili dell'oggetto sito controllo estesi. Stili per aggiunte o rimosse possono essere combinati utilizzando l'operatore OR bit per bit ( &#124; ) operatore. Vedere le [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funzione nel SDK di Windows per informazioni sugli stili di finestra disponibili.  
+ Modifica la finestra stili dell'oggetto sito controllo estesi. Stili per aggiunte o rimosse possono essere combinati utilizzando l'operatore OR bit per bit ( &#124; ) operatore. Vedere le [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funzione nel SDK di Windows per informazioni sugli stili di finestra disponibili.  
   
  Se *nFlags* è diverso da zero, `ModifyStyleEx` chiama la funzione Win32 `SetWindowPos`e lo ridisegna la finestra dalla combinazione *nFlags* con i flag di quattro seguenti:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  La nuova altezza della finestra.  
   
  *nFlags*  
- Specifica l'intervallo di ridimensionamento e il flag di posizionamento. Per i valori possibili, vedere la sezione relativa alle osservazioni [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) nel SDK di Windows.  
+ Specifica l'intervallo di ridimensionamento e il flag di posizionamento. Per i valori possibili, vedere la sezione relativa alle osservazioni [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo, in caso contrario, zero.  

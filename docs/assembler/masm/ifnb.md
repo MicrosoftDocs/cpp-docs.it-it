@@ -1,7 +1,7 @@
 ---
-title: IFNB | Documenti Microsoft
+title: IFNB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2546bd0c299129047aa7cb575fd90ff66d6b04
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 19142b4d00ed78aaef7a23ae681e3e3bdaa5a7a7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053974"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690655"
 ---
 # <a name="ifnb"></a>IFNB
-Concede assembly se *textitem* non è vuota.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-IFNB textitem  
-```  
-  
-## <a name="remarks"></a>Note  
- Vedere [se](../../assembler/masm/if-masm.md) per la sintassi completa.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Concede l'assembly se *textitem* non vuote.
+
+## <a name="syntax"></a>Sintassi
+
+> IFNB textitem
+
+## <a name="remarks"></a>Note
+
+Visualizzare [IF](../../assembler/masm/if-masm.md) per la sintassi completa.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

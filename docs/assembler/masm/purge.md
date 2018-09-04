@@ -1,7 +1,7 @@
 ---
-title: RIPULIRE | Documenti Microsoft
+title: RIPULIRE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7db2fb8eb52575892510d9286dca0a01c719c5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ee00632561ce58ef9585a71f31cebfb3e406f1b3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053038"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689632"
 ---
 # <a name="purge"></a>PURGE
-Elimina le macro specificate dalla memoria.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-PURGE macroname [[, macroname]]...  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Elimina le macro specificate dalla memoria.
+
+## <a name="syntax"></a>Sintassi
+
+> RIPULITURA nomemacro [[, nomemacro]]...
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

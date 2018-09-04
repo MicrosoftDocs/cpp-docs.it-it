@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1225ab62dfd64a991ba5ff680e86b62e7d48f8ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200074"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684807"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 Incapsula la funzionalità di un "controllo descrizione comando", una piccola finestra popup in cui viene visualizzata una riga di testo singola che descrive lo scopo di uno strumento in un'applicazione.  
@@ -309,7 +309,7 @@ virtual BOOL CreateEx(
  Specifica lo stile del controllo descrizione comandi. Vedere le **osservazioni** sezione [crea](#create) per altre informazioni.  
   
  *dwStyleEx*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo in caso contrario 0.  

@@ -1,7 +1,7 @@
 ---
-title: UGUALE A | Documenti Microsoft
+title: EQU | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7678cac4c480934fe9f6dd9816e636481c2d64
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 37509a39d2247649c2971932f402a18f3ac667d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050750"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681307"
 ---
 # <a name="equ"></a>EQU
-La direttiva prima assegna un valore numerico di *espressione* a *nome*.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      name EQU expression  
-name EQU <text>  
-```  
-  
-## <a name="remarks"></a>Note  
- Il *nome* non può essere ridefinita in un secondo momento.  
-  
- Il secondo assegna direttiva specificata *testo* a *nome*. Il *nome* può essere assegnato un altro *testo* in un secondo momento. Vedere [TEXTEQU](../../assembler/masm/textequ.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+La prima direttiva assegna un valore numerico della *espressione* al *nome*.
+
+## <a name="syntax"></a>Sintassi
+
+> *nome* EQU *espressione*
+
+> *nome* EQU \< *testo*>
+
+## <a name="remarks"></a>Note
+
+Il *nome* non possono essere ridefinite in un secondo momento.
+
+La seconda assegna la direttiva specificata *testo* al *nome*. Il *name* può essere assegnato un altro *testo* in un secondo momento. Visualizzare [TEXTEQU](../../assembler/masm/textequ.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

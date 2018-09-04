@@ -1,7 +1,7 @@
 ---
 title: DQ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9ba5f5fe944964c365a071cda37f5e7bdc35e1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd13549977edb2b0c80673cc8cb7b6279985b67f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051143"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687486"
 ---
 # <a name="dq"></a>DQ
-Alloca e, facoltativamente, inizializza 8 byte di spazio di archiviazione per ogni `initializer`. Può essere utilizzata anche come un identificatore di tipo in qualsiasi punto un tipo è valido. `DQ` è un sinonimo di [QWORD](../../assembler/masm/qword.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-[[name]] DQ initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)   
- [QWORD](../../assembler/masm/qword.md)
+
+Alloca e inizializza facoltativamente 8 byte di spazio di archiviazione per ogni `initializer`. Inoltre, può essere utilizzato come identificatore di tipo ovunque un tipo è consentito. `DQ` è un sinonimo di [QWORD](../../assembler/masm/qword.md).
+
+## <a name="syntax"></a>Sintassi
+
+> [[nome]] Inizializzatore DQ [[, inizializzatore]]...
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[QWORD](../../assembler/masm/qword.md)<br/>

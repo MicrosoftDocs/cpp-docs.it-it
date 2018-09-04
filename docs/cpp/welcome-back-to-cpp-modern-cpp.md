@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4c659262d11d929e94958cee687103648270db23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571631"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679281"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ (C++ moderno)
 C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I programmi in C++ ben scritti sono veloci ed efficienti. Il linguaggio è più flessibile di altri linguaggi, in quanto è possibile utilizzarlo per creare un'ampia gamma di applicazioni: da giochi divertenti ed emozionanti, a software scientifico a elevate prestazioni, fino a driver di dispositivo, programmi incorporati e applicazioni client Windows. Per più di 20 anni C++ è stato utilizzato per risolvere problemi come questi e molti altri. Molti non sanno che un numero sempre maggiore di programmatori in C++ ha abbandonato la vecchia programmazione di tipo C per ripiegare sul moderno C++.  
@@ -133,7 +133,7 @@ void f()
   
 -   [Portabilità in base ai limiti ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Per altre informazioni, vedere l'articolo di StackOverflow [idiomatiche di C++ sono deprecate in c++11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Per altre informazioni, vedere l'articolo di StackOverflow [idiomatiche di C++ sono deprecate in c++11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   

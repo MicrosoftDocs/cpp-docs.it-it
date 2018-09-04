@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211762"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692448"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapping di handle di finestre a oggetti
 Questa nota descrive le MFC le routine che supportano il mapping di Windows dell'oggetto handle di oggetti C++.  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- In questo modo una voce di associazione delle mappa permanente *myWnd* e *hWnd*. La chiamata `CWnd::FromHandle(hWnd)` ora restituisce un puntatore a *myWnd*. Quando *myWnd* viene eliminata, il distruttore automaticamente eliminerà *hWnd* chiamando il Windows [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) (funzione). Se non si desidera, *hWnd* deve essere disconnesso da *myWnd* prima *myWnd* viene eliminato definitivamente (in genere all'uscita dall'ambito in corrispondenza del quale *myWnd*è stata definita). Il `Detach` esegue questa operazione (metodo).  
+ In questo modo una voce di associazione delle mappa permanente *myWnd* e *hWnd*. La chiamata `CWnd::FromHandle(hWnd)` ora restituisce un puntatore a *myWnd*. Quando *myWnd* viene eliminata, il distruttore automaticamente eliminerà *hWnd* chiamando il Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) (funzione). Se non si desidera, *hWnd* deve essere disconnesso da *myWnd* prima *myWnd* viene eliminato definitivamente (in genere all'uscita dall'ambito in corrispondenza del quale *myWnd*è stata definita). Il `Detach` esegue questa operazione (metodo).  
   
 ```  
 myWnd.Detach();

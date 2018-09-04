@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 299ade4aa557a40331fb983f645aa2764c3bf9d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462388"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679772"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento rvalue: &amp;&amp;
 Contiene un riferimento a un'espressione rvalue.  
@@ -60,7 +60,7 @@ int main()
   
  Prima di Visual C++ 2010, con ogni chiamata a **operatore +** alloca e restituisce un nuovo elemento temporaneo `string` oggetto (rvalue). **operatore +** non è possibile aggiungere una stringa a altra perché non conoscere se le stringhe di origine sono lvalue o rvalue. Se le stringhe di origine sono entrambe lvalue, è possibile che a esse venga fatto riferimento in un altro punto del programma e pertanto non devono essere modificate. Utilizzando i riferimenti rvalue **operatore +** possono essere modificate per accettare i valori rvalue, non è possibile farvi riferimento in un punto del programma. Pertanto **operatore +** possono ora aggiungere una stringa a un altro. Ciò può ridurre notevolmente il numero delle allocazioni di memoria dinamica che devono essere eseguite dalla classe `string`. Per altre informazioni sul `string` classe, vedere [classe basic_string](../standard-library/basic-string-class.md).  
   
- La semantica di spostamento è utile anche quando il compilatore non può utilizzare l'ottimizzazione del valore restituito (RVO) o l'ottimizzazione del valore restituito denominato (NRVO). In questi casi, il compilatore chiama il costruttore di spostamento se è definito dal tipo. Per altre informazioni sull'ottimizzazione valore restituito denominato, vedere [ottimizzazione del valore restituito denominato in Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
+ La semantica di spostamento è utile anche quando il compilatore non può utilizzare l'ottimizzazione del valore restituito (RVO) o l'ottimizzazione del valore restituito denominato (NRVO). In questi casi, il compilatore chiama il costruttore di spostamento se è definito dal tipo. Per altre informazioni sull'ottimizzazione valore restituito denominato, vedere [ottimizzazione del valore restituito denominato in Visual C++ 2005](https://msdn.microsoft.com/en-us/library/ms364057.aspx).  
   
  Per comprendere meglio la semantica di spostamento, si consideri l'esempio dell'inserimento di un elemento in un oggetto `vector`. Se la capacità dell'oggetto `vector` viene superata, tale oggetto `vector` dovrà allocare di nuovo la memoria per i relativi elementi, quindi copiare ogni elemento in un'altra posizione di memoria per creare spazio per l'elemento inserito. Quando viene eseguita la copia di un elemento tramite un'operazione di inserimento, viene creato un nuovo elemento, viene chiamato il costruttore di copia per copiare i dati dall'elemento precedente nel nuovo elemento, quindi viene eliminato definitivamente l'elemento precedente. La semantica di spostamento consente di spostare gli oggetti direttamente senza dover effettuare le dispendiose operazioni di allocazione della memoria e di copia.  
   

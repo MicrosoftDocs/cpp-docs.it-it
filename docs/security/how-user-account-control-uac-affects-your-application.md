@@ -17,21 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23266ca4b4d32146ed8627c6ce3ab1cc878d59cd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c313a72a3c76b65476659e463076d61383dd43a5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600652"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682083"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Effetti del Controllo dell'account utente sull'applicazione
 Il Controllo dell'account utente è una funzionalità di Windows Vista in cui gli account utente dispongono di privilegi limitati. Per informazioni dettagliate sul Controllo dell'account utente, visitare i siti seguenti:  
   
--   [Passo a passo Guida per il controllo di Account utente di Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
-  
--   [Developer Best Practices and Guidelines for Applications in un ambiente con privilegiato minimi](http://go.microsoft.com/fwlink/p/?linkid=82444)  
-  
--   [Comprensione e configurazione di controllo dell'Account utente in Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
+-   [Developer Best Practices and Guidelines for Applications in un ambiente con privilegiato minimi](/windows/desktop/uxguide/winenv-uac)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Compilazione di progetti dopo aver attivato il Controllo dell'account utente  
  Se si compila un progetto Visual C++ in Windows Vista con il controllo dell'account utente disabilitato, e si decide di attivare la funzionalità in un secondo momento, è necessario cancellare i dati e ricompilare il progetto per far sì che funzioni correttamente.  

@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216288"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678814"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
 Estende le funzionalità del [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), una finestra cornice Windows Multiple Document Interface (MDI).  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Chiamato dal framework durante l'attivazione di un menu con barra a comparsa.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Chiamato dal framework per aggiornare il menu di frame. Esegue l'override`CMDIFrameWnd::OnUpdateFrameMenu`.|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Restituisce il riquadro di ancoraggio che contiene il punto specificato.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows.  Esegue l'override`CMDIFrameWnd::PreTranslateMessage`.|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows.  Esegue l'override`CMDIFrameWnd::PreTranslateMessage`.|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Chiamato dal framework per ricalcolare il layout della finestra cornice. (Esegue l'override [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dal gestore di ancoraggio.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Salva il layout corrente dei gruppi a schede MDI e l'elenco di documenti precedentemente aperti.|  

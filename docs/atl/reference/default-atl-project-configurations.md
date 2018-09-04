@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6a7b077c66940f98ce37c0d4b07bbab3dfd9ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 617f4703b72ff2a077a20b61fe17851144672ef7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201941"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687298"
 ---
 # <a name="default-atl-project-configurations"></a>Configurazioni progetto ATL predefinite
 Per impostazione predefinita, la creazione guidata progetto ATL crea due configurazioni di progetto:  
@@ -35,6 +35,6 @@ Per impostazione predefinita, la creazione guidata progetto ATL crea due configu
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione con codice di runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Utilizzo di proprietà del progetto](../../ide/working-with-project-properties.md)   
- [Finestra di dialogo di Configuration Manager](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Finestra di dialogo di Configuration Manager](/visualstudio/ide/understanding-build-configurations)   
  [Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio) (Compilazione e creazione)
 
