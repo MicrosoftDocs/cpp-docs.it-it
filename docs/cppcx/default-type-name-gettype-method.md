@@ -14,11 +14,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597768"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761768"
 ---
 # <a name="defaulttypenamegettype-method"></a>Metodo default::(type_name)::GetType
 Restituisce Platform::Type^ che rappresenta il tipo corrente.  

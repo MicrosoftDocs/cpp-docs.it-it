@@ -16,30 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0863e00d95c4056d988198b4978eb16597111f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 50a174f4ee85b84451673b56139b9968c796464f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222550"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761836"
 ---
 # <a name="introduction-to-com-and-atl"></a>Introduzione a COM e ATL
-In questa sezione fornisce una breve introduzione a COM e ATL.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Introduzione a COM](../atl/introduction-to-com.md)  
- Viene fornita una panoramica di Component Object Model (COM) i concetti fondamentali, incluse le interfacce `IUnknown`, il conteggio dei riferimenti, `QueryInterface`, marshalling e l'aggregazione.  
-  
- [Introduzione a ATL](../atl/introduction-to-atl.md)  
- Descritto brevemente, quali la libreria ATL (Active Template) è stato progettato per le librerie di modelli e i numeri di versione ATL. Include suggerimenti per la scelta tra ATL e MFC.  
-  
-## <a name="related-sections"></a>Sezioni correlate  
- [Modello a oggetti del componente](/windows/desktop/com/the-component-object-model)  
- Il materiale di Windows SDK in COM.  
-  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.  
-  
- [Panoramica sulle classi ATL](../atl/atl-class-overview.md)  
- Fornisce informazioni di riferimento e i collegamenti alle classi ATL.
+
+In questa sezione fornisce una breve introduzione a COM e ATL.
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Introduzione a COM](../atl/introduction-to-com.md)  
+Viene fornita una panoramica di Component Object Model (COM) i concetti fondamentali, incluse le interfacce `IUnknown`, il conteggio dei riferimenti, `QueryInterface`, marshalling e l'aggregazione.
+
+[Introduzione a ATL](../atl/introduction-to-atl.md)  
+Descritto brevemente, quali la libreria ATL (Active Template) è stato progettato per le librerie di modelli e i numeri di versione ATL. Include suggerimenti per la scelta tra ATL e MFC.
+
+## <a name="related-sections"></a>Sezioni correlate
+
+[Modello a oggetti del componente](/windows/desktop/com/the-component-object-model)  
+Il materiale di Windows SDK in COM.
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
+
+[Panoramica sulle classi ATL](../atl/atl-class-overview.md)  
+Fornisce informazioni di riferimento e i collegamenti alle classi ATL.
 

@@ -19,47 +19,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fddd187dd6df58c4013b9c1fc7a08d5f644a0db
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ab7e3731132e1b9ed9381a7b97347406b620df70
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203163"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759665"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Classe IPropertyNotifySinkCP
-Questa classe espone [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfaccia come interfaccia in uscita su un oggetto collegabile.  
-  
+
+Questa classe espone [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfaccia come interfaccia in uscita su un oggetto collegabile.
+
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 template<class T, class CDV = CComDynamicUnkArray>  
 class IPropertyNotifySinkCP 
    : public IConnectionPointImpl<T, &IID_IPropertyNotifySink, CDV>
-```    
-  
-#### <a name="parameters"></a>Parametri  
- *T*  
- La classe, derivata da `IPropertyNotifySinkCP`.  
-  
- *CDV*  
- Una classe che gestisce le connessioni tra un punto di connessione e il sink. Il valore predefinito è [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), che consente un numero illimitato di connessioni. È anche possibile usare [CComUnkArray](../../atl/reference/ccomunkarray-class.md), che consente di specificare un numero fisso di connessioni.  
-  
-## <a name="remarks"></a>Note  
- `IPropertyNotifySinkCP` tutti i metodi tramite la relativa classe base, eredita [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
-  
- Il [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfaccia consente a un oggetto sink ricevere notifiche sulle modifiche delle proprietà. Classe `IPropertyNotifySinkCP` espone questa interfaccia come un'interfaccia in uscita su un oggetto collegabile. Il client deve implementare il `IPropertyNotifySink` metodi nel sink.  
-  
- Derivare la classe da `IPropertyNotifySinkCP` quando si desidera creare un punto di connessione che rappresenta il `IPropertyNotifySink` interfaccia.  
-  
- Per altre informazioni sull'uso di punti di connessione in ATL, vedere l'articolo [punti di connessione](../../atl/atl-connection-points.md).  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlctl. h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)   
- [Classe IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
- [Panoramica della classe](../../atl/atl-class-overview.md)
+```
+
+#### <a name="parameters"></a>Parametri
+
+*T*  
+La classe, derivata da `IPropertyNotifySinkCP`.
+
+*CDV*  
+Una classe che gestisce le connessioni tra un punto di connessione e il sink. Il valore predefinito è [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), che consente un numero illimitato di connessioni. È anche possibile usare [CComUnkArray](../../atl/reference/ccomunkarray-class.md), che consente di specificare un numero fisso di connessioni.
+
+## <a name="remarks"></a>Note
+
+`IPropertyNotifySinkCP` tutti i metodi tramite la relativa classe base, eredita [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
+
+Il [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfaccia consente a un oggetto sink ricevere notifiche sulle modifiche delle proprietà. Classe `IPropertyNotifySinkCP` espone questa interfaccia come un'interfaccia in uscita su un oggetto collegabile. Il client deve implementare il `IPropertyNotifySink` metodi nel sink.
+
+Derivare la classe da `IPropertyNotifySinkCP` quando si desidera creare un punto di connessione che rappresenta il `IPropertyNotifySink` interfaccia.
+
+Per altre informazioni sull'uso di punti di connessione in ATL, vedere l'articolo [punti di connessione](../../atl/atl-connection-points.md).
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlctl. h
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)   
+[Classe IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)

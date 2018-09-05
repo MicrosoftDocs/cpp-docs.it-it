@@ -19,79 +19,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fed15dc2348fa540c1f33e7742c5cbcda96b5846
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 338943e2168930bc48f02ef9ddbf36f738965078
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882533"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763373"
 ---
 # <a name="catlexception-class"></a>Classe CAtlException
-Questa classe definisce un'eccezione di ATL.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Questa classe definisce un'eccezione di ATL.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 class CAtlException
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CAtlException::CAtlException](#catlexception)|Costruttore.|  
-  
-### <a name="public-operators"></a>Operatori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CAtlException::operator HRESULT](#operator_hresult)|Esegue il cast l'oggetto corrente e un valore HRESULT.|  
-  
-### <a name="public-data-members"></a>Membri dati pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CAtlException::m_hr](#m_hr)|La variabile di tipo HRESULT creato dall'oggetto e usato per archiviare la condizione di errore.|  
-  
-## <a name="remarks"></a>Note  
- Oggetto `CAtlException` oggetto rappresenta una condizione di eccezione correlata a un'operazione di ATL. Il `CAtlException` classe include un membro dati pubblico che archivia il codice di stato che indica il motivo dell'eccezione e un operatore di cast che consente di trattare l'eccezione come se fosse un HRESULT.  
-  
- In generale, si chiamerà `AtlThrow` invece di creare un `CAtlException` direttamente l'oggetto.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlexcept.h  
-  
-##  <a name="catlexception"></a>  CAtlException::CAtlException  
- Costruttore.  
-  
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CAtlException::CAtlException](#catlexception)|Costruttore.|
+
+### <a name="public-operators"></a>Operatori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CAtlException::operator HRESULT](#operator_hresult)|Esegue il cast l'oggetto corrente e un valore HRESULT.|
+
+### <a name="public-data-members"></a>Membri dati pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CAtlException::m_hr](#m_hr)|La variabile di tipo HRESULT creato dall'oggetto e usato per archiviare la condizione di errore.|
+
+## <a name="remarks"></a>Note
+
+Oggetto `CAtlException` oggetto rappresenta una condizione di eccezione correlata a un'operazione di ATL. Il `CAtlException` classe include un membro dati pubblico che archivia il codice di stato che indica il motivo dell'eccezione e un operatore di cast che consente di trattare l'eccezione come se fosse un HRESULT.
+
+In generale, si chiamerà `AtlThrow` invece di creare un `CAtlException` direttamente l'oggetto.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlexcept.h
+
+##  <a name="catlexception"></a>  CAtlException::CAtlException
+
+Costruttore.
+
 ```
 CAtlException(HRESULT hr) throw();
 CAtlException() throw();
-```  
-  
-### <a name="parameters"></a>Parametri  
- *risorse umane*  
- Il codice di errore HRESULT.  
-  
-##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT 
- Esegue il cast l'oggetto corrente e un valore HRESULT.  
-  
+```
+
+### <a name="parameters"></a>Parametri
+
+*risorse umane*  
+Il codice di errore HRESULT.
+
+##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT
+
+Esegue il cast l'oggetto corrente e un valore HRESULT.
+
 ```  
 operator HRESULT() const throw ();
-```  
-  
-##  <a name="m_hr"></a>  CAtlException::m_hr  
- Membro dati HRESULT.  
-  
+```
+
+##  <a name="m_hr"></a>  CAtlException::m_hr
+
+Membro dati HRESULT.
+
 ```
 HRESULT m_hr;
-```  
-  
-### <a name="remarks"></a>Note  
- Membro dati che archivia la condizione di errore. Il valore HRESULT è impostato dal costruttore [CAtlException::CAtlException](#catlexception).  
-  
-## <a name="see-also"></a>Vedere anche  
- [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
- [Panoramica della classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Note
+
+Membro dati che archivia la condizione di errore. Il valore HRESULT è impostato dal costruttore [CAtlException::CAtlException](#catlexception).
+
+## <a name="see-also"></a>Vedere anche
+
+[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
+[Panoramica della classe](../../atl/atl-class-overview.md)

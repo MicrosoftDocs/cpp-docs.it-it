@@ -15,11 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d83afb854aaa400a02f9de95e269f85cfeba1a96
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586872"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761512"
 ---
 # <a name="platformibox-interface"></a>Interfaccia Platform::IBox
 L'interfaccia [Platform::IBox](../cppcx/platform-ibox-interface.md) è il nome C++ per l'interfaccia `Windows::Foundation::IReference` .  

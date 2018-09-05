@@ -19,79 +19,90 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d629806582d7ad9902ef5ca0d9425d6f1ecd7d7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1670ff7ed53d05b1dfc09e6953650892b0335f61
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879695"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761469"
 ---
 # <a name="csimplemapequalhelper-class"></a>Classe CSimpleMapEqualHelper
-Questa classe è un supporto per la [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Questa classe è un supporto per la [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 template <class TKey, class TVal>  
 class CSimpleMapEqualHelper
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *TKey*  
- L'elemento principale.  
-  
- *TVal*  
- L'elemento di valore.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statico) Verifica l'uguaglianza delle due chiavi.|  
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statico) Verifica l'uguaglianza di due valori.|  
-  
-## <a name="remarks"></a>Note  
- Questa classe traits costituisce un'integrazione di `CSimpleMap` classe. Fornisce metodi per confrontare due `CSimpleMap` eguaglianza degli elementi (in particolare, i componenti chiave / valore) dell'oggetto. Per impostazione predefinita, le chiavi e valori vengono confrontati usando **operator==()**, ma se la mappa contiene tipi di dati complessi che non dispongono di propri operatore di uguaglianza, è possibile eseguire l'override di questa classe per fornire le funzionalità aggiuntive richieste.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlsimpcoll. h  
-  
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey  
- Verifica l'uguaglianza delle due chiavi.  
-  
+```
+
+#### <a name="parameters"></a>Parametri
+
+*TKey*  
+L'elemento principale.
+
+*TVal*  
+L'elemento di valore.
+
+## <a name="members"></a>Membri
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statico) Verifica l'uguaglianza delle due chiavi.|
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statico) Verifica l'uguaglianza di due valori.|
+
+## <a name="remarks"></a>Note
+
+Questa classe traits costituisce un'integrazione di `CSimpleMap` classe. Fornisce metodi per confrontare due `CSimpleMap` eguaglianza degli elementi (in particolare, i componenti chiave / valore) dell'oggetto. Per impostazione predefinita, le chiavi e valori vengono confrontati usando **operator==()**, ma se la mappa contiene tipi di dati complessi che non dispongono di propri operatore di uguaglianza, è possibile eseguire l'override di questa classe per fornire le funzionalità aggiuntive richieste.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlsimpcoll. h
+
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey
+
+Verifica l'uguaglianza delle due chiavi.
+
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *K1*  
- La prima chiave.  
-  
- *K2*  
- La seconda chiave.  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce true se le chiavi sono uguali e false in caso contrario.  
-  
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
- Verifica l'uguaglianza di due valori.  
-  
+```
+
+### <a name="parameters"></a>Parametri
+
+*K1*  
+La prima chiave.
+
+*K2*  
+La seconda chiave.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce true se le chiavi sono uguali e false in caso contrario.
+
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue
+
+Verifica l'uguaglianza di due valori.
+
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *V1*  
- Primo valore.  
-  
- *v2*  
- Secondo valore.  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce true se i valori sono uguali e false in caso contrario.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)   
- [Panoramica della classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*V1*  
+Primo valore.
+
+*v2*  
+Secondo valore.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce true se i valori sono uguali e false in caso contrario.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)

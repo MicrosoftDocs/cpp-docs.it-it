@@ -1,5 +1,5 @@
 ---
-title: Prevenzione dei conflitti nell'Heap | Documenti Microsoft
+title: Prevenzione dei conflitti dell'Heap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,30 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731fcb2328f789e5c487dc56510bbd6f7ec049ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4f01bdbbc14e09fe8f9823eed738556ee876376
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358085"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762251"
 ---
-# <a name="avoidance-of-heap-contention"></a>Prevenzione dei conflitti nell'Heap
-I gestori di stringa predefinita forniti da MFC e ATL sono semplici wrapper su un heap globale. Questo heap globale è completamente thread-safe, vale a dire che più thread può allocare e liberare memoria da esso contemporaneamente senza danneggiare l'heap. Per facilitare la protezione dei thread, l'heap deve serializzare l'accesso a se stessa. Questa operazione viene in genere eseguita con una sezione critica o un meccanismo di blocco simile. Ogni volta che due thread tentano di accedere all'heap simultaneamente, un thread viene bloccato fino al termine di richiesta del thread. Per molte applicazioni, questa situazione si verifica raramente e l'impatto sulle prestazioni del meccanismo di blocco dell'heap è irrilevante. Tuttavia, per le applicazioni che si accedono di frequente l'heap da più thread contesa di blocco dell'heap può provocare l'esecuzione più lenta rispetto a quello a thread singolo (anche in computer con più CPU) dell'applicazione.  
-  
- Le applicazioni che utilizzano [CStringT](../atl-mfc-shared/reference/cstringt-class.md) sono particolarmente sensibili a una contesa di heap perché le operazioni su `CStringT` oggetti richiedono spesso riassegnazione del buffer di stringa.  
-  
- Un modo per risolvere i conflitti nell'heap tra thread è allocare stringhe da un heap privato e locale di thread per ogni thread. Purché le stringhe allocate con allocatore di un determinato thread vengono usati solo in tale thread, l'allocatore non deve essere thread-safe.  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una procedura thread che consente di allocare il proprio heap privato non thread-safe da usare per le stringhe su tale thread:  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#182](../atl-mfc-shared/codesnippet/cpp/avoidance-of-heap-contention_1.cpp)]  
-  
-## <a name="comments"></a>Commenti  
- Più thread potrebbero essere in esecuzione utilizzando la stessa procedura di thread, ma poiché ogni thread ha il proprio heap non vi è alcun conflitto tra thread. Inoltre, il fatto che ogni heap non è thread-safe fornisce un sensibile miglioramento delle prestazioni anche se solo una copia del thread è in esecuzione. Questo è il risultato dell'heap non utilizza le operazioni interlocked costose per proteggere l'accesso simultaneo.  
-  
- Per una procedura thread più complessa, potrebbe risultare utile archiviare un puntatore al gestore di stringhe del thread in uno slot di thread (TLS) di archiviazione locale. In questo modo di altre funzioni chiamate dalla routine del thread di accedere a gestione di stringa del thread.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione della memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+# <a name="avoidance-of-heap-contention"></a>Prevenzione dei conflitti dell'Heap
+
+I gestori di stringa predefinita forniti da MFC e ATL sono semplici wrapper per un heap globale. In questo heap globale è completamente thread-safe, vale a dire che più thread può allocare e liberare la memoria da quest'ultimo contemporaneamente senza danneggiare l'heap. Per offrire la sicurezza dei thread, deve serializzare l'accesso a se stesso heap. Questa operazione viene in genere eseguita con una sezione critica o simile meccanismo di blocco. Ogni volta che due thread tenta di accedere contemporaneamente l'heap, un thread è bloccato finché non viene completata la richiesta di altro. Per molte applicazioni, questa situazione si verifica raramente e l'impatto sulle prestazioni del meccanismo di blocco dell'heap è trascurabile. Tuttavia, per le applicazioni che accedono di frequente l'heap da più thread contesa di blocco dell'heap può provocare l'esecuzione più lenta rispetto a quello a thread singolo (anche su computer con più CPU) dell'applicazione.
+
+Le applicazioni che usano [CStringT](../atl-mfc-shared/reference/cstringt-class.md) sono particolarmente soggetti a conflitti dell'heap perché le operazioni su `CStringT` oggetti richiedono spesso la riallocazione di buffer di stringa.
+
+Per tentare di risolvere conflitti dell'heap tra i thread è che ogni thread di allocare le stringhe da un heap privato, thread-local. Purché le stringhe allocato con allocator un determinato thread vengono usati solo in tale thread, l'allocatore non deve essere thread-safe.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente illustra una procedura thread che alloca il proprio heap privato non thread-safe da usare per le stringhe in tale thread:
+
+[!code-cpp[NVC_ATLMFC_Utilities#182](../atl-mfc-shared/codesnippet/cpp/avoidance-of-heap-contention_1.cpp)]
+
+## <a name="comments"></a>Commenti
+
+Più thread potrebbero essere in esecuzione usando la stessa procedura di thread, ma poiché ogni thread ha il proprio heap non verifica alcun conflitto tra thread. Inoltre, il fatto che ogni heap non è thread-safe che offre un notevole miglioramento delle prestazioni anche se solo una copia del thread è in esecuzione. Questo è il risultato dell'heap non tramite operazioni interlock costosa per la protezione da accesso simultaneo.
+
+Per una procedura thread più complicata, potrebbe risultare utile archiviare un puntatore al gestore di stringa del thread in uno slot di archiviazione-local (TLS) thread. In questo modo di altre funzioni chiamate dalla routine del thread per accedere al gestore di stringa del thread.
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione della memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 

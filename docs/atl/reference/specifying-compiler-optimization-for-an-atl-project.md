@@ -1,5 +1,5 @@
 ---
-title: Impostazione dell'ottimizzazione del compilatore per un progetto ATL | Documenti Microsoft
+title: Impostazione dell'ottimizzazione del compilatore per un progetto ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,54 +19,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0060437613bcdd6281ce5cceb112f5fd7f470bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95df1e21bee99914d2f20f194d68e5bfae29e203
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361970"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763555"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Impostazione dell'ottimizzazione del compilatore per un progetto ATL
-Per impostazione predefinita, il [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md) genera nuove classi con la macro ATL_NO_VTABLE, come indicato di seguito:  
-  
+
+Per impostazione predefinita, il [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md) genera nuove classi con la macro ATL_NO_VTABLE, come indicato di seguito:
+
 ```  
 class ATL_NO_VTABLE CProjName  
 {  
- ...  
+...  
 };  
-```  
-  
- Viene quindi definita la macro ATL_NO_VTABLE come indicato di seguito:  
-  
+```
+
+Viene quindi definita la macro ATL_NO_VTABLE come indicato di seguito:
+
 ```  
 #ifdef _ATL_DISABLE_NO_VTABLE  
- #define ATL_NO_VTABLE  
+#define ATL_NO_VTABLE  
 #else  
- #define ATL_NO_VTABLE __declspec(novtable)  
+#define ATL_NO_VTABLE __declspec(novtable)  
 #endif  
-```  
-  
- Se non si definisce ATL_DISABLE_NO_VTABLE, la macro ATL_NO_VTABLE si espande in `declspec(novtable)`. Utilizzando `declspec(novtable)`in una classe dichiarazione impedisce il puntatore vtable inizializzazione nel costruttore della classe e un distruttore. Quando si compila il progetto, il linker Elimina vtable e tutte le funzioni a cui fa riferimento.  
-  
- È necessario utilizzare ATL_NO_VTABLE e di conseguenza `declspec(novtable)`, con solo le classi base non creabili direttamente. Non è necessario utilizzare `declspec(novtable)` con la classe più derivata nel progetto, poiché questa classe (in genere [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), o [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) Inizializza il puntatore vtable per il progetto.  
-  
- È necessario chiamare non funzioni virtuali dal costruttore di qualsiasi oggetto che utilizza `declspec(novtable)`. È consigliabile spostare tali chiamate per il [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) metodo.  
+```
 
-  
- Se si è certi se è necessario utilizzare il `declspec(novtable)` modificatore, è possibile rimuovere la macro ATL_NO_VTABLE da qualsiasi definizione di classe, oppure è possibile disattivare a livello globale specificando  
-  
+Se non si definisce ATL_DISABLE_NO_VTABLE, si espande la macro ATL_NO_VTABLE in `declspec(novtable)`. Usando `declspec(novtable)`in una classe dichiarazione impedisce che il puntatore vtable inizializzato nel costruttore di classe e del distruttore. Quando si compila il progetto, il linker Elimina vtable e tutte le funzioni a cui fa riferimento.
+
+È necessario usare ATL_NO_VTABLE e, di conseguenza `declspec(novtable)`, con solo le classi base che non sono direttamente generabile. Non è necessario usare `declspec(novtable)` con la classe più derivata nel progetto, poiché questa classe (in genere [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), oppure [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) Inizializza il puntatore di vtable per il progetto.
+
+Non è necessario chiamare le funzioni virtuali dal costruttore di qualsiasi oggetto che usa `declspec(novtable)`. È necessario spostare tali chiamate per il [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) (metodo).  
+
+Se si è certi se sia necessario utilizzare il `declspec(novtable)` modificatore, è possibile rimuovere la macro ATL_NO_VTABLE da qualsiasi definizione di classe, oppure è possibile disabilitare a livello globale, specificando
+
 ```  
 #define _ATL_DISABLE_NO_VTABLE  
-```  
-  
- in stdafx h prima di tutti gli altri ATL file di intestazione sono inclusi.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)   
- [Tipi di progetto di Visual C++](../../ide/visual-cpp-project-types.md)   
- [Creazione di progetti Desktop mediante creazioni guidate applicazione](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Programmazione con codice di runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Nozioni di base di oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [novtable](../../cpp/novtable.md)   
- [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
+```
+
+in stdafx. h, prima di tutte le altre ATL i file di intestazione sono inclusi.
+
+## <a name="see-also"></a>Vedere anche
+
+[Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)   
+[Tipi di progetto Visual C++](../../ide/visual-cpp-project-types.md)   
+[Creazione di progetti desktop tramite le creazioni guidate applicazioni](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[Programmazione con codice di runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Nozioni fondamentali su oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+[novtable](../../cpp/novtable.md)   
+[Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
 

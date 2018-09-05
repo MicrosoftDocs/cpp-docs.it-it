@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4c8edc5dd90fb4209ecf6dc227208a7375fd8ce1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589911"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762648"
 ---
 # <a name="platformclassnotregisteredexception-class"></a>Classe Platform::ClassNotRegisteredException
 Generata quando una classe COM non è stata registrata.  

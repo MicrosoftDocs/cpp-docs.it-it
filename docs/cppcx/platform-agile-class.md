@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596602"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763432"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 Rappresenta un oggetto con MashalingBehavior=Standard come oggetto Agile, che riduce fortemente le probabilità che si verifichino eccezioni di threading di runtime. `Agile<T>` consente all'oggetto non Agile di chiamare o essere chiamato dallo stesso thread o da un thread differente. Per altre informazioni, vedere [Threading e marshalling](../cppcx/threading-and-marshaling-c-cx.md).  

@@ -16,32 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64a2f9d5d296e28b4b773e072edc90e1b339feae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c1d338851a6480014e1f7a48f848f95439d9311a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571859"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762112"
 ---
 # <a name="using-contained-windows"></a>Utilizzando Windows indipendente
-Implementate in windows indipendente con ATL [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Una finestra contenuta rappresenta una finestra che delega i messaggi a un oggetto contenitore invece di gestirli nella sua classe personale.  
-  
+
+Implementate in windows indipendente con ATL [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Una finestra contenuta rappresenta una finestra che delega i messaggi a un oggetto contenitore invece di gestirli nella sua classe personale.
+
 > [!NOTE]
->  Non è necessario derivare una classe da `CContainedWindowT` per poter usare finestre contenute.  
-  
- Con windows indipendente, è possibile creare una superclasse una classe di Windows esistente o una sottoclasse una finestra esistente. Per creare una finestra che crea un Windows esistente una superclasse di classi, innanzitutto specificare il nome esistente della classe nel costruttore per la `CContainedWindowT` oggetto. Chiamare quindi `CContainedWindowT::Create`. Per creare una sottoclasse di una finestra esistente, non devi specificare un nome di classe di Windows (passare NULL per il costruttore). È sufficiente chiamare il `CContainedWindowT::SubclassWindow` metodo con l'handle della finestra da una sottoclasse.  
-  
- In genere si usa windows indipendente come membri di dati di una classe contenitore. Il contenitore non deve essere una finestra. Tuttavia, deve derivare da [CMessageMap](../atl/reference/cmessagemap-class.md).  
-  
- Una finestra contenuta usare le mappe messaggi alternativa per la gestione dei messaggi. Se si dispone di più di una finestra contenuta, è necessario dichiarare che varie mappe messaggi, ognuno corrispondente a una finestra separata indipendente alternative.  
-  
-## <a name="example"></a>Esempio  
- Ecco un esempio di una classe di contenitore con due finestre contenute:  
-  
- [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]  
-  
- Per altre informazioni sulle finestre contenute, vedere la [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) esempio.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi di finestre](../atl/atl-window-classes.md)
+>  Non è necessario derivare una classe da `CContainedWindowT` per poter usare finestre contenute.
+
+Con windows indipendente, è possibile creare una superclasse una classe di Windows esistente o una sottoclasse una finestra esistente. Per creare una finestra che crea un Windows esistente una superclasse di classi, innanzitutto specificare il nome esistente della classe nel costruttore per la `CContainedWindowT` oggetto. Chiamare quindi `CContainedWindowT::Create`. Per creare una sottoclasse di una finestra esistente, non devi specificare un nome di classe di Windows (passare NULL per il costruttore). È sufficiente chiamare il `CContainedWindowT::SubclassWindow` metodo con l'handle della finestra da una sottoclasse.
+
+In genere si usa windows indipendente come membri di dati di una classe contenitore. Il contenitore non deve essere una finestra. Tuttavia, deve derivare da [CMessageMap](../atl/reference/cmessagemap-class.md).
+
+Una finestra contenuta usare le mappe messaggi alternativa per la gestione dei messaggi. Se si dispone di più di una finestra contenuta, è necessario dichiarare che varie mappe messaggi, ognuno corrispondente a una finestra separata indipendente alternative.
+
+## <a name="example"></a>Esempio
+
+Ecco un esempio di una classe di contenitore con due finestre contenute:
+
+[!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]
+
+Per altre informazioni sulle finestre contenute, vedere la [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) esempio.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi di finestre](../atl/atl-window-classes.md)
 

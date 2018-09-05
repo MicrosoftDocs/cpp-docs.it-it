@@ -1,5 +1,5 @@
 ---
-title: Modifica il progetto ATL | Documenti Microsoft
+title: Modifica del progetto ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a8594c2d98b05750d6e43138101894fb8fc4b72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f94a698d9e23d0481daf940fc55fa99616104aa
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355033"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763458"
 ---
-# <a name="modifying-the-atl-project"></a>Modifica il progetto ATL
-A questo punto, il progetto di controllo composito implementa gli oggetti necessari per il controllo composito. Il passaggio successivo consiste nell'aggiungere tutti i controlli che conterrà il controllo composito e gestire gli eventi necessari.  
-  
- Per aggiungere ulteriori controlli ActiveX o Windows, aggiungere un nuovo script di risorsa e quindi utilizzare l'editor della finestra di dialogo. Per ulteriori informazioni sull'aggiunta di controlli (e correlate), vedere [finestra di dialogo Editor](../windows/dialog-editor.md).  
-  
- Per gestire gli eventi necessari dai controlli ActiveX, vedere [funzionalità aggiunta al controllo composito](../atl/adding-functionality-to-the-composite-control.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali sul controllo composito](../atl/atl-composite-control-fundamentals.md)   
- [Procedura: Creare un file script di risorsa](../windows/how-to-create-a-resource-script-file.md)
+# <a name="modifying-the-atl-project"></a>Modifica del progetto ATL
+
+A questo punto, il progetto del controllo composito implementa gli oggetti necessari per il controllo composito. Il passaggio successivo consiste nell'aggiungere tutti i controlli che conterrà il controllo composito e gestire gli eventi necessari.
+
+Per aggiungere ulteriori controlli ActiveX o Windows, aggiungere un nuovo script di risorsa e quindi usare l'editor finestre. Per altre informazioni sull'aggiunta di controlli (e le attività correlate), vedere [finestra di dialogo Editor](../windows/dialog-editor.md).
+
+Per gestire gli eventi necessari dai controlli ActiveX, vedere [aggiunta di funzionalità al controllo composito](../atl/adding-functionality-to-the-composite-control.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Nozioni fondamentali sul controllo composito](../atl/atl-composite-control-fundamentals.md)   
+[Procedura: Creare un file script di risorsa](../windows/how-to-create-a-resource-script-file.md)
 

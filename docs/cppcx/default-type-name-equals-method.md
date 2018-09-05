@@ -14,11 +14,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 36bd6e933d4e7bb1563ec6738c7ba3ed314c1cfd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612385"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763913"
 ---
 # <a name="defaulttypenameequals-method"></a>Metodo default::(type_name)::Equals
 Determina se l'oggetto specificato è uguale all'oggetto corrente.  

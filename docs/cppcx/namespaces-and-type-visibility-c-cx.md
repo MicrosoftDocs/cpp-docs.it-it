@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219521"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758794"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Spazi dei nomi e visibilità del tipo (C++/CX)
 Uno spazio dei nomi è un costrutto C++ standard per il raggruppamento di tipi con funzionalità correlate e per la prevenzione dei conflitti di denominazione nelle librerie. Il sistema di tipi Windows Runtime richiede che tutti i tipi pubblici di Windows Runtime, inclusi quelli nel proprio codice, devono essere dichiarati in uno spazio dei nomi nell'ambito dello spazio dei nomi. I tipi pubblici dichiarati in ambito globale o annidati in un'altra classe generano un errore in fase di compilazione.  

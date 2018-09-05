@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5bb69b65d78b6369d872fd6f953f6ddde382c21b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602289"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759444"
 ---
 # <a name="static-libraries-ccx"></a>Librerie statiche (C++/CX)
 Una libreria statica che viene usata in un'app Universal Windows Platform (UWP) può contenere codice C++ conforme allo standard ISO, inclusi i tipi STL, nonché le chiamate alle API Win32 che non sono escluse dalla piattaforma di app di Windows Runtime. Una libreria statica utilizza i componenti Windows Runtime e può creare i componenti Windows Runtime con determinate restrizioni.  

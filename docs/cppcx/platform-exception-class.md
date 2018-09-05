@@ -19,11 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586635"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758768"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 Rappresenta gli errori che si verificano durante l'esecuzione dell'applicazione. Le classi di eccezione personalizzate non possono essere derivate da `Platform::Exception`. Se devi utilizzare un'eccezione personalizzata, puoi utilizzare `Platform::COMException` e specificare un valore HRESULT specifico dell'applicazione.  

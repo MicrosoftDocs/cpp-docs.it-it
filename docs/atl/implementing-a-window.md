@@ -1,5 +1,5 @@
 ---
-title: Implementazione di una finestra (ATL) | Documenti Microsoft
+title: Implementazione di una finestra (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f3e2663fa2e8c39bbd8b618d279a49b7eb29233
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8712f5ab169838e94aa743a29dd4b73e5b0979f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357013"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762756"
 ---
 # <a name="implementing-a-window"></a>Implementazione di una finestra
-Classe [CWindowImpl](../atl/reference/cwindowimpl-class.md) consente di implementare una finestra e la gestione dei messaggi. Gestione in ATL dei messaggi si basano su una mappa messaggi. Questa sezione viene illustrato:  
-  
--   Come [aggiungere un gestore messaggi](../atl/adding-an-atl-message-handler.md) a un controllo.  
-  
--   Cosa [mappe messaggi](../atl/message-maps-atl.md) sono e come utilizzarle.  
-  
--   La sintassi per [funzioni del gestore di messaggi](../atl/message-handler-functions.md).  
-  
--   Come [implementare una finestra con CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi di finestra](../atl/atl-window-classes.md)
+
+Classe [CWindowImpl](../atl/reference/cwindowimpl-class.md) consente di implementare una finestra e la gestione dei messaggi. Gestione in ATL dei messaggi si basano su una mappa messaggi. Questa sezione viene illustrato:
+
+- Saper [aggiungere un gestore di messaggi](../atl/adding-an-atl-message-handler.md) a un controllo.
+
+- Che cosa [mappe messaggi](../atl/message-maps-atl.md) sono e come usarli.
+
+- La sintassi [funzioni del gestore dei messaggi](../atl/message-handler-functions.md).
+
+- Saper [implementare una finestra con CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi di finestre](../atl/atl-window-classes.md)
 

@@ -25,124 +25,129 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
-ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
+ms.openlocfilehash: 9b445a0e1a2668047d34f18424f44b0dc7cc55f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993568"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760919"
 ---
 # <a name="iregistrar-interface"></a>Interfaccia IRegistrar
-Questa interfaccia è definita in atliface.h e viene usata internamente dalle funzioni membro CAtlModule, ad esempio [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Questa interfaccia è definita in atliface.h e viene usata internamente dalle funzioni membro CAtlModule, ad esempio [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).
+
+## <a name="syntax"></a>Sintassi
+
 ```
 typedef interface IRegistrar IRegistrar;
-```  
+```
+
 ## <a name="remarks"></a>Note
-Vedere l'argomento [usando parametri sostituibili (preprocessore del Registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) per altri dettagli.  
 
-## <a name="members"></a>Membri  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registra la risorsa. |  
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Annulla la registrazione della risorsa.|  
-|[IRegistrar::FileRegister](#fileregister)|Registra il file.|  
-|[IRegistrar::FileUnregister](#fileunregister)|Annulla la registrazione del file.|  
-|[IRegistrar::StringRegister](#stringregister)|Registra la stringa.|  
-|[IRegistrar::StringUnregister](#stringunregister)|Annulla la registrazione della stringa|  
-|[IRegistrar::ResourceRegister](#resourceregister)|Registra la risorsa.|  
-|[IRegistrar::ResourceUnregister](#resourceunregister)|Annulla la registrazione della risorsa.| 
-  
+Vedere l'argomento [usando parametri sostituibili (preprocessore del Registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) per altri dettagli.
 
- 
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlifase.h  
-  
-##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz 
- Registra la risorsa.  
-  
+## <a name="members"></a>Membri
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registra la risorsa. |
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Annulla la registrazione della risorsa.|
+|[IRegistrar::FileRegister](#fileregister)|Registra il file.|
+|[IRegistrar::FileUnregister](#fileunregister)|Annulla la registrazione del file.|
+|[IRegistrar::StringRegister](#stringregister)|Registra la stringa.|
+|[IRegistrar::StringUnregister](#stringunregister)|Annulla la registrazione della stringa|
+|[IRegistrar::ResourceRegister](#resourceregister)|Registra la risorsa.|
+|[IRegistrar::ResourceUnregister](#resourceunregister)|Annulla la registrazione della risorsa.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlifase.h
+
+##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
+
+Registra la risorsa.
+
 ```
-virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz( 
+virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
     /* [in] */ _In_z_ LPCOLESTR resFileName,
     /* [in] */ _In_z_ LPCOLESTR szID,
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
-```  
-  
- 
-  
-##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz  
- Annulla la registrazione della risorsa.
-  
 ```
-virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz( 
+
+##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz
+
+Annulla la registrazione della risorsa.
+
+```
+virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
     /* [in] */ _In_z_ LPCOLESTR resFileName,
     /* [in] */ _In_z_ LPCOLESTR szID,
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
-```  
-  
-  
-##  <a name="fileregister"></a>  IRegistrar::FileRegister  
+```
+
+##  <a name="fileregister"></a>  IRegistrar::FileRegister
+
 Registra il file.
-  
+
 ```
-virtual HRESULT STDMETHODCALLTYPE FileRegister( 
+virtual HRESULT STDMETHODCALLTYPE FileRegister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
-```  
-  
-  
-##  <a name="fileunregister"></a>  IRegistrar::FileUnregister  
+```
+
+##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
+
 Annulla la registrazione del file.
 
 ```
-virtual HRESULT STDMETHODCALLTYPE FileUnregister( 
-    */ _In_z_ LPCOLESTR fileName) = 0;
-```  
-  
- 
-##  <a name="stringregister"></a>  IRegistrar::StringRegister  
-  Registra i dati di stringa specificata.
+virtual HRESULT STDMETHODCALLTYPE FileUnregister(
+    /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
-virtual HRESULT STDMETHODCALLTYPE StringRegister( 
-    /* [in] */ _In_z_ LPCOLESTR data) = 0;
-```  
-  
-##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
- Annulla la registrazione di dati della stringa specificata.  
-  
-```
-virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
-    /* [in] */ _In_z_ LPCOLESTR data) = 0;
-```  
 
-  
-##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister  
- Registra la risorsa.  
-  
+##  <a name="stringregister"></a>  IRegistrar::StringRegister
+
+Registra i dati di stringa specificata.
+
 ```
-virtual HRESULT STDMETHODCALLTYPE ResourceRegister( 
+virtual HRESULT STDMETHODCALLTYPE StringRegister(
+    /* [in] */ _In_z_ LPCOLESTR data) = 0;
+```
+
+##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
+
+Annulla la registrazione di dati della stringa specificata.
+
+```
+virtualHRESULT STDMETHODCALLTYPE StringUnregister(
+    /* [in] */ _In_z_ LPCOLESTR data) = 0;
+```
+
+##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister
+
+Registra la risorsa.
+
+```
+virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
     /* [in] */ _In_z_ LPCOLESTR resFileName,
     /* [in] */ _In_ UINT nID,
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
-```  
-   
-  
-##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister  
- Annulla la registrazione della risorsa.  
-  
 ```
-virtualHRESULT STDMETHODCALLTYPE ResourceUnregister( 
+
+##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
+
+Annulla la registrazione della risorsa.
+
+```
+virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR resFileName,
     /* [in] */ _In_ UINT nID,
-    /* [in] */ _In_z_ LPCOLESTR szType) = 0; 
-```  
- 
-## <a name="see-also"></a>Vedere anche  
- [Uso dei parametri sostituibili (preprocessore del registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
- [Panoramica della classe](../../atl/atl-class-overview.md)   
- [Classi di modulo](../../atl/atl-module-classes.md)   
- [Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md)  
+    /* [in] */ _In_z_ LPCOLESTR szType) = 0;
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso dei parametri sostituibili (preprocessore del Registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)   
+[Classi di modulo](../../atl/atl-module-classes.md)   
+[Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md)
