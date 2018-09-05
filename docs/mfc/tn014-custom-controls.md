@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693588"
 ---
 # <a name="tn014-custom-controls"></a>TN014: controlli personalizzati
 
@@ -122,7 +122,7 @@ L'esempio più comune di un pulsante di disegno automatico è un pulsante bitmap
 
 Talvolta è preferibile modificare la funzionalità di un oggetto già esistente. Negli esempi precedenti è stato necessario personalizzare i controlli prima che venissero creati. La creazione di una sottoclasse dinamica consente di personalizzare un controllo che è già stato creato.
 
-Creazione di una sottoclasse è il termine di Windows per la sostituzione di [WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) di una finestra con un oggetto personalizzato `WndProc` e la chiamata precedente `WndProc` per funzionalità predefinite.
+Creazione di una sottoclasse è il termine di Windows per la sostituzione di <xref:System.Windows.Forms.Control.WndProc%2A> di una finestra con un oggetto personalizzato `WndProc` e la chiamata precedente `WndProc` per funzionalità predefinite.
 
 Questa operazione non deve essere confusa con la derivazione di classi di C++. Per maggiore chiarezza, le condizioni di C++ *classe di base* e *classe derivata* sono analoghe alle *superclasse* e *sottoclasse* in di Windows modello a oggetti. La derivazione di C++ con MFC e la creazione di una sottoclasse di Windows sono simili a livello funzionale, ad eccezione del fatto che C++ non supporta la creazione di una sottoclasse dinamica.
 

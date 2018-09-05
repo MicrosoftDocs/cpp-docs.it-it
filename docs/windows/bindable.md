@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ace2b62197b652baeb7e287a582b521252270f6d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214852"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691236"
 ---
 # <a name="bindable"></a>bindable
 
@@ -40,11 +40,11 @@ Il **associabile** attributi di C++ ha la stessa funzionalità come la [associab
 
 L'uso di mostrato nei seguenti esempi MFC **associabile**:
 
-- [Esempi di controlli: I controlli ActiveX, basata su MFC](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [Esempi di controlli: I controlli ActiveX, basata su MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Esempio CIRC: Controllo ActiveX](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [Esempio CIRC: Controllo ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Esempio: TESTHELP controllo ActiveX con le descrizioni comandi e la Guida](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [Esempio: TESTHELP controllo ActiveX con le descrizioni comandi e la Guida](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Esempio
 

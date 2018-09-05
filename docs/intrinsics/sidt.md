@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96d20916210b0fe55817dceb86d388a33f8e238b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 202e982d30fd0877814fa0c0fe967091057f920f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541602"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685977"
 ---
 # <a name="sidt"></a>__sidt
 **Sezione specifica Microsoft**  
@@ -51,7 +51,7 @@ void __sidt(
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Il `__sidt` è equivalente alla funzione il `SIDT` istruzioni in linguaggio macchina. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__sidt` è equivalente alla funzione il `SIDT` istruzioni in linguaggio macchina. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
   
 **Fine sezione specifica Microsoft**  
   

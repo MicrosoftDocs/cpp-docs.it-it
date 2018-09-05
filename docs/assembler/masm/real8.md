@@ -1,7 +1,7 @@
 ---
-title: REAL8 | Documenti Microsoft
+title: REAL8 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19613b2ae5e5c45509a2424569c765342e1233e8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dfd151f36de52509ac17883b0a43dbde45e6caf3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050896"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688449"
 ---
 # <a name="real8"></a>REAL8
-Alloca e, facoltativamente, consente di inizializzare un numero a virgola mobile a precisione doppia (8 byte) per ogni *inizializzatore*.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-name REAL8 initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Alloca e inizializza facoltativamente un numero a virgola mobile a precisione doppia (8 byte) per ciascuno *inizializzatore*.
+
+## <a name="syntax"></a>Sintassi
+
+> inizializzatore REAL8 nome [[, inizializzatore]]...
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

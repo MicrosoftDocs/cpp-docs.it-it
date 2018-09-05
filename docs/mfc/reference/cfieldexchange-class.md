@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76167793f7252540dbe9feedbb2d83678ebdcacb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336507"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688386"
 ---
 # <a name="cfieldexchange-class"></a>Classe CFieldExchange
 Supporta le routine RFX (record field exchange) e RFX di massa (bulk record field exchange) utilizzate dalle classi di database.  
@@ -117,7 +117,7 @@ void SetFieldType(UINT nFieldType);
 |Valore del parametro SetFieldType|Tipo di membro dati di parametro|  
 |----------------------------------|-----------------------------------|  
 |`CFieldExchange::inputParam`|Parametro di input. Un valore che viene passato nella query o stored procedure del recordset.|  
-|' ieldExchange::param * *`ame as **CFieldExchange::inputParam`.|  
+|`CFieldExchange::param` | Uguale allo `CFieldExchange::inputParam`.|  
 |`CFieldExchange::outputParam`|Parametro di output. Valore restituito della stored procedure del recordset.|  
 |`CFieldExchange::inoutParam`|Parametro di input/output. Un valore che viene passato e restituito dalla stored procedure del recordset.|  
   

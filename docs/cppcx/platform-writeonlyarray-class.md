@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603346"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680925"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 Rappresenta una matrice unidimensionale usata come parametro di input quando il chiamante passa una matrice che verrà riempita dal metodo.  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni su come interpretare il valore HRESULT, vedere [Structure of COM Error Codes](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Per altre informazioni su come interpretare il valore HRESULT, vedere [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes).  
   
   
 ## <a name="see-also"></a>Vedere anche  

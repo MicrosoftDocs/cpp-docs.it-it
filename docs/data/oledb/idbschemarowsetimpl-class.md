@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6780927732d0f555cc5778fe9564c9225a50aa80
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204128"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691807"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl (classe)
 Fornisce l'implementazione per i set di righe dello schema.  
@@ -279,8 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  L'implementazione di questa funzione richiede che l'utente di disporre di una mappa di schema nella classe di sessione. Usando le informazioni della mappa di schema, la funzione risponde con la matrice dei GUID per gli schemi nella mappa. Questa operazione rappresenta gli schemi supportati dal provider.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Membri IDBSchemaRowsetImpl (classe)](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [Classi Rowset dello schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [Supporto dei rowset dello Schema](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    
- [UpdatePV](../../visual-cpp-samples.md)
+ [UpdatePV](https://github.com/Microsoft/VCSamples)

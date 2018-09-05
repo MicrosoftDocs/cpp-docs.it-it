@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4f6a71770afdb541efa76f85464d9aeef7b2fb91
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957672"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681008"
 ---
 # <a name="weibulldistribution-class"></a>Classe weibull_distribution
 
@@ -103,7 +103,7 @@ Le funzioni membro `operator()` restituiscono il successivo valore generato basa
 
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
 
-Per informazioni dettagliate sulla distribuzione di Weibull, vedere l'articolo di Wolfram MathWorld [Weibull Distribution](http://go.microsoft.com/fwlink/p/?linkid=401115) (Distribuzione Weibull).
+Per informazioni dettagliate sulla distribuzione di Weibull, vedere l'articolo di Wolfram MathWorld [Weibull Distribution](http://mathworld.wolfram.com/WeibullDistribution.html) (Distribuzione Weibull).
 
 ## <a name="example"></a>Esempio
 

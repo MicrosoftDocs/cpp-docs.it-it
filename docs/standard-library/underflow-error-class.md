@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d5dcf640e46bfb3a0ac6e9b29dbaff36f4b868
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 03d5b9396d6bc1cd73bfdda0c55312e728cfd9e2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204407"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689276"
 ---
 # <a name="underflowerror-class"></a>Classe underflow_error
 
@@ -77,6 +77,5 @@ Type: class std::underflow_error
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<stdexcept > membri](https://msdn.microsoft.com/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)<br/>
 [Classe runtime_error](../standard-library/runtime-error-class.md)<br/>
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

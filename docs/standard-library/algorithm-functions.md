@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f51bac0f5865a6f985436f3713d3a81abd44cddb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 334702a2c3e9a86becfb5a653b22154b5a4e197a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203964"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691717"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
@@ -2645,7 +2645,7 @@ bool is_sorted(
 
 ### <a name="remarks"></a>Note
 
-La prima funzione modello restituisce [is_sorted_until](https://msdn.microsoft.com/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. Il `operator<` funzione esegue il confronto dell'ordine.
+La prima funzione modello restituisce [is_sorted_until](#is_sorted_until)`( first, last ) == last`. Il `operator<` funzione esegue il confronto dell'ordine.
 
 La seconda funzione modello restituisce `is_sorted_until( first, last , comp ) == last`. Il *comp* funzione di predicato esegue il confronto dell'ordine.
 

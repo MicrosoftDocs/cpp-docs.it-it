@@ -1,7 +1,7 @@
 ---
-title: POPCONTEXT | Documenti Microsoft
+title: POPCONTEXT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb33ef4415dc6c60f675aa72c6fea9deb69c287
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 40263316747030baeba703c78c2d8fc9abccd504
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055300"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691078"
 ---
 # <a name="popcontext"></a>POPCONTEXT
-Ripristina in parte o interamente corrente `context` (salvato per il [PUSHCONTEXT](../../assembler/masm/pushcontext.md) (direttiva)). Il `context` può essere **PRESUPPONE**, `RADIX`, **elenco**, **CPU**, o **tutti**.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-POPCONTEXT context  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Ripristina o parte dell'oggetto corrente `context` (salvati per il [PUSHCONTEXT](../../assembler/masm/pushcontext.md) (direttiva)). Il `context` può essere **ASSUMES**, `RADIX`, **listato**, **CPU**, o **tutti**.
+
+## <a name="syntax"></a>Sintassi
+
+> Contesto POPCONTEXT
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

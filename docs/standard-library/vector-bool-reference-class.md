@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05486e4b75e631dcdc77855e850fe48c08d77326
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 798c65764ce49e795d3a6220803d51c72411ca79
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203851"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686408"
 ---
 # <a name="vectorltboolgtreference-class"></a>Classe vector&lt;bool&gt;::reference
 
@@ -29,7 +29,7 @@ La classe `vector<bool>::reference` è una classe proxy fornita dalla [classe ve
 
 ## <a name="remarks"></a>Note
 
-È necessario un riferimento simulato perché C++ non consente riferimenti diretti ai bit a livello nativo. `vector<bool>` utilizza un solo bit per elemento, a cui è possibile fare riferimento tramite questa classe proxy. Tuttavia, la simulazione dei riferimenti non è completata perché alcune assegnazioni non sono valide. Ad esempio, poiché l'indirizzo dell'oggetto `vector<bool>::reference` non può essere accettato, il codice seguente che usa [vector\<bool>::operator&#91;&#93;](https://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) non è corretto:
+È necessario un riferimento simulato perché C++ non consente riferimenti diretti ai bit a livello nativo. `vector<bool>` utilizza un solo bit per elemento, a cui è possibile fare riferimento tramite questa classe proxy. Tuttavia, la simulazione dei riferimenti non è completata perché alcune assegnazioni non sono valide. Ad esempio, perché l'indirizzo del `vector<bool>::reference` oggetto non è possibile eseguire, il codice seguente che prova a usare `vector<bool>::operator&` non è corretto:
 
 ```cpp
 vector<bool> vb;

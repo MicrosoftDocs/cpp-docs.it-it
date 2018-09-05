@@ -1,5 +1,5 @@
 ---
-title: -APPCONTAINER | Documenti Microsoft
+title: -APPCONTAINER | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c47154d7a5eddd26573612708462c0352da30ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686253"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Contrassegna un eseguibile che deve essere eseguito in un contenitore di app, ad esempio, un'app di Microsoft Store o di Windows universale.  
+Contrassegna un eseguibile che deve essere eseguito in un contenitore di app, ad esempio, un'app di Microsoft Store o Windows universale.  
   
 ```  
   
@@ -34,8 +34,8 @@ Contrassegna un eseguibile che deve essere eseguito in un contenitore di app, ad
 ```  
   
 ## <a name="remarks"></a>Note  
- Un file eseguibile per cui è impostata l'opzione **/APPCONTAINER** può essere eseguito solo in un contenitore di app, l'ambiente di isolamento dei processi introdotto in Windows 8. Per le app di Microsoft Store e universali di Windows, è necessario impostare questa opzione.  
+ Un file eseguibile per cui è impostata l'opzione **/APPCONTAINER** può essere eseguito solo in un contenitore di app, l'ambiente di isolamento dei processi introdotto in Windows 8. Per le app di Microsoft Store e Windows universale, è necessario impostare questa opzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni di EDITBIN](../../build/reference/editbin-options.md)   
- [Che cos'è un'App di Windows universale?](http://go.microsoft.com/fwlink/p/?LinkID=522074)
+ [Che cos'è un'App Windows universali?](/windows/uwp/get-started/universal-application-platform-guide)

@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208558"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689232"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 Il `CMFCToolBar` classe simile [classe CToolBar](../../mfc/reference/ctoolbar-class.md), ma fornisce supporto aggiuntivo per le funzionalità dell'interfaccia utente. Queste includono barre degli strumenti flat, barre degli strumenti con immagini con area sensibile, icone grandi, pulsanti cercapersone, barre degli strumenti bloccate, controlli Rebar, testo sotto le immagini, immagini di sfondo e barre degli strumenti a schede. La classe `CMFCToolBar` contiene inoltre il supporto incorporato per la personalizzazione da parte dell'utente delle barre degli strumenti e dei menu, il trascinamento della selezione tra barre degli strumenti e menu, i pulsanti della casella combinata, i pulsanti della casella di modifica, le selezioni colore e i pulsanti rollup.
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  TRUE se la barra degli strumenti e il relativo pari livello sono posizionati sulla stessa riga; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Il [cmfccustomizebutton:: CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) chiama questo metodo per determinare come mostrare le **Personalizza** menu a comparsa. Se questo metodo restituisce TRUE, il framework Visualizza il **Mostra pulsanti su una riga** pulsante. In caso contrario, il framework Visualizza il **Mostra pulsanti su due righe** pulsante.  
+ Il [cmfccustomizebutton:: CreatePopupMenu](internal-classes.md) chiama questo metodo per determinare come mostrare le **Personalizza** menu a comparsa. Se questo metodo restituisce TRUE, il framework Visualizza il **Mostra pulsanti su una riga** pulsante. In caso contrario, il framework Visualizza il **Mostra pulsanti su due righe** pulsante.  
   
  In genere non è necessario usare questo metodo. Per abilitare la **Mostra pulsanti su una riga** oppure **Mostra pulsanti su due righe** pulsanti, chiamare [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).  
   

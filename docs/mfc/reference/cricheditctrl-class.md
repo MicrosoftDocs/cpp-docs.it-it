@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2847bf32a51a63e39d80839fed1b46fac18f29dc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ad17396a9c82532d46ea04f88b637828fe6f460
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215791"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678497"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 Fornisce la funzionalità del controllo Rich Edit.  
@@ -443,7 +443,7 @@ virtual BOOL Create(
   
 - WS_TABSTOP per includere controllo di modifica nell'ordine di tabulazione.  
   
- Per altre informazioni sugli stili di finestra, vedere [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows.  
+ Per altre informazioni sugli stili di finestra, vedere [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
@@ -462,7 +462,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
  Specifica lo stile del controllo di modifica. Applicare una combinazione degli stili finestra elencati nella **osservazioni** sezione del [Create](#create) e [modifica degli stili del controllo](/windows/desktop/Controls/edit-control-styles), come descritto nel SDK di Windows.  

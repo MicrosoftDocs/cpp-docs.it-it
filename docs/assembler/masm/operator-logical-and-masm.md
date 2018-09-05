@@ -1,7 +1,7 @@
 ---
-title: operatore &amp; &amp; (MASM) | Documenti Microsoft
+title: Operatore di sostituzione (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,25 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e285e5b691b2fdd24216a1156e8fe3708afe23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a5af8bbb4f01e31493ebeb73c425b1ace031ddf1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055755"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683470"
 ---
-# <a name="operator-ampamp-masm"></a>operatore &amp; &amp; (MASM)
-Sostituisce `parameter` con il valore dell'argomento corrispondente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-&  
-parameter  
-&  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+# <a name="substitution-operator-masm"></a>Operatore di sostituzione (MASM)
+
+Sostituisce *parametro* con il valore dell'argomento corrispondente.
+
+## <a name="syntax"></a>Sintassi
+
+> &*Parametro*&
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

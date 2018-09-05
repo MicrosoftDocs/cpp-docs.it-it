@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061bfc2f083061d352fa7f93bb572456a5a23451
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a63caaa23fa59356a5904740cf03b8c36a909930
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218372"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688572"
 ---
 # <a name="atl-text-encoding-functions"></a>Funzioni di codifica del testo ATL
 Queste funzioni supportano testo la codifica e decodifica.
@@ -451,7 +451,7 @@ inline BOOL QPDecode(
  Puntatore a una variabile che contiene la lunghezza in byte del *szDest*. Se la funzione ha esito positivo, la variabile riceve il numero di byte scritti nel buffer. Se la funzione ha esito negativo, la variabile riceve la lunghezza richiesta in byte del buffer.  
   
  [in] *dwFlags*  
- Flag che descrivono come viene eseguita la conversione da eseguire. Visualizzare [ATLSMTP_QPENCODE flag](https://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4).  
+ ATLSMTP_QPENCODE flag che descrivono come viene eseguita la conversione da eseguire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  

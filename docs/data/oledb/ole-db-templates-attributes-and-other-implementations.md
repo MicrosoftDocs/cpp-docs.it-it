@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a775370228691e47b1b9becca8e0769ea0f7367
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7338f513754722bc00a96f5ee71cce06591f031d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221878"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685990"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modelli, attributi e altre implementazioni OLE DB
 ## <a name="atl-ole-db-templates"></a>Modelli OLE DB ATL  
@@ -44,7 +44,7 @@ ms.locfileid: "43221878"
   
 -   Visualizzare l'elenco delle [classi consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) oppure [classi del provider OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).  
   
--   Visualizzare l'elenco delle [esempi di modelli OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
+-   Visualizzare l'elenco delle [esempi di modelli OLE DB](https://github.com/Microsoft/VCSamples).  
   
 -   Visualizzare [riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (nel Windows SDK).  
   

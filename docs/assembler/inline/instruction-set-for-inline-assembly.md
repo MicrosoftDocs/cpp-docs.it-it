@@ -1,7 +1,7 @@
 ---
-title: Set di istruzioni per Assembly Inline | Documenti Microsoft
+title: Set di istruzioni per Assembly Inline | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f5aea757506dd3bf48056a139f381e9d8a883
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02fe69fad2e1ef9fb8aa0c5aa23913ccf403e15a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051117"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693995"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Set di istruzioni per assembly inline
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Il compilatore Visual C++ supporta tutti i codici operativi fino a Pentium 4 e AMD Athlon. È possibile creare istruzioni aggiuntive supportate dal processore di destinazione con il [pseudoistruzione Emit](../../assembler/inline/emit-pseudoinstruction.md).  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Sezione specifica Microsoft**
+
+Il compilatore Visual C++ supporta tutti i codici operativi fino a Pentium 4 e AMD Athlon. È possibile creare istruzioni aggiuntive supportate dal processore di destinazione con il [pseudoistruzione Emit](../../assembler/inline/emit-pseudoinstruction.md).
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

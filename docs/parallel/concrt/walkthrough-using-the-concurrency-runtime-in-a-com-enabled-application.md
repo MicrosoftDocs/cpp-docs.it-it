@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220229"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691835"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Procedura dettagliata: Uso del runtime di concorrenza in un'applicazione abilitata COM
 Questo documento illustra come usare il Runtime di concorrenza in un'applicazione che usa il modello COM (Component Object).  
@@ -36,7 +36,7 @@ Questo documento illustra come usare il Runtime di concorrenza in un'applicazion
   
 - [Gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- Per altre informazioni su COM, vedere [modello COM (Component Object)](https://msdn.microsoft.com/library/windows/desktop/ms680573).  
+ Per altre informazioni su COM, vedere [modello COM (Component Object)](/windows/desktop/com/component-object-model--com--portal).  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>Gestione della durata della libreria COM  
  Sebbene l'uso di COM con il Runtime di concorrenza segue gli stessi principi come qualsiasi altro meccanismo di concorrenza, le linee guida seguenti consentono di usare queste librerie tra loro in modo efficace.  

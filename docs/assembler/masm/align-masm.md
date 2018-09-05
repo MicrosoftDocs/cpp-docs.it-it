@@ -1,7 +1,7 @@
 ---
 title: ALIGN (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66a9e29b99786cd83d8994ed2da77ac2f3e48ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 52d539cba3f6e00b76b36c1793f383d0615263c3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32048748"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691667"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
-Allinea la variabile o l'istruzione in un byte che è un multiplo di Avanti `number`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-ALIGN [[  
-number  
-]]  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Allinea la variabile o istruzioni sui byte che è un multiplo di prossima *numero*.
+
+## <a name="syntax"></a>Sintassi
+
+> ALIGN [[*numero*]]
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

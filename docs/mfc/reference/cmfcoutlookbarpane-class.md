@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96219173186b578e2469c769ade62c388d8c3c07
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84f62346d12c978a466de14357352f78345e99f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201476"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691108"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Classe CMFCOutlookBarPane
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  Colore del testo corrente come valore di colore RGB.  
   
 ### <a name="remarks"></a>Note  
- Uso [CMFCOutlookBarPane::SetTextColor](#settextcolor) per impostare il colore del testo (normali e selezionato) corrente della barra di Outlook. È possibile ottenere il colore del testo predefinito chiamando il [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) canonica con l'indice COLOR_WINDOW.  
+ Uso [CMFCOutlookBarPane::SetTextColor](#settextcolor) per impostare il colore del testo (normali e selezionato) corrente della barra di Outlook. È possibile ottenere il colore del testo predefinito chiamando il [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) canonica con l'indice COLOR_WINDOW.  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Determina se è presente un'immagine di sfondo caricata per il riquadro della barra di Outlook.  

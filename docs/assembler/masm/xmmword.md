@@ -1,7 +1,7 @@
 ---
-title: XMMWORD | Documenti Microsoft
+title: XMMWORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8fd8e6c82a3275161e519eeead490473e8d64ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7fbb578c5e168f53bc1b4e217713efa1ea329743
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056418"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689214"
 ---
 # <a name="xmmword"></a>XMMWORD
-Utilizzato per gli operandi multimediali 128 bit con istruzioni MMX e SSE (XMM).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-XMMWORD  
-```  
-  
-## <a name="remarks"></a>Note  
- `XMMWORD` rappresenta lo stesso tipo [m128](../../cpp/m128.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-movdqa   xmm0, xmmword ptr [ebx]  
+
+Usato per gli operandi multimediali a 128 bit con le istruzioni MMX e SSE (XMM).
+
+## <a name="syntax"></a>Sintassi
+
+> XMMWORD
+
+## <a name="remarks"></a>Note
+
+`XMMWORD` è lo scopo di rappresentare lo stesso tipo [__m128](../../cpp/m128.md).
+
+## <a name="example"></a>Esempio
+
+```asm
+    movdqa   xmm0, xmmword ptr [ebx]
 ```

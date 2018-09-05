@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214152"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680610"
 ---
 # <a name="cmfccolordialog-class"></a>Classe CMFCColorDialog
 Il `CMFCColorDialog` classe rappresenta una finestra di dialogo di selezione colore.  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Restituisce il colore corrente selezionato.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Restituisce una tavolozza di colori.|  
-|`CMFCColorDialog::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Per la sintassi e altre informazioni, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override`CDialogEx::PreTranslateMessage`.|  
+|`CMFCColorDialog::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Per la sintassi e altre informazioni, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override`CDialogEx::PreTranslateMessage`.|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Deriva una tavolozza dalla tavolozza di sistema.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Imposta il colore corrente selezionato.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Imposta il colore più equivalente al valore RGB specificato.|  

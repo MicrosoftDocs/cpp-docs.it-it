@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db05d1b19a67fc54a148d407fd90992a6d37c4c6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25ec172fb38fb3b200086c5f9317ccd8e5e54281
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213587"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691480"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -45,7 +45,7 @@ Includere l'intestazione standard \<streambuf> per definire la classe modello [b
 
 |Classe|Descrizione|
 |-|-|
-|[Classe basic_streambuf](https://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|La classe modello descrive una classe base astratta per la derivazione di un buffer di flusso, che controlla la trasmissione di elementi verso e da una rappresentazione specifica di un flusso.|
+|[Classe basic_streambuf](basic-streambuf-class.md)|La classe modello descrive una classe base astratta per la derivazione di un buffer di flusso, che controlla la trasmissione di elementi verso e da una rappresentazione specifica di un flusso.|
 
 ## <a name="see-also"></a>Vedere anche
 

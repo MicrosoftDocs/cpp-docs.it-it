@@ -1,5 +1,5 @@
 ---
-title: Errori matematici da M6101 a M6205 | Documenti Microsoft
+title: Errori matematici da M6101 a M6205 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -12,17 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980facfddffb9a7c55854e05e42e7e7c5ec4c889
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0f4796b7c3d6cdc4a44326d9b4db388a12ce5a3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683499"
 ---
 # <a name="math-errors-m6101-through-m6205"></a>Errori matematici da M6101 a M6205
 
 In questa sezione è un riferimento per gli errori generati dalla libreria matematica a virgola mobile di runtime.
 
-È possibile trovare ulteriore assistenza per errori e avvisi nei forum pubblici di Microsoft. È possibile cercare per numero di errore o avviso di [Community di sviluppatori](https://go.microsoft.com/fwlink/p/?linkid=820594) sito. Il [del linguaggio Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158195) forum è a domande e discussioni sulla sintassi del linguaggio C++ e il compilatore opzioni: MSVC. Il [generali di Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158194) forum è per domande su Visual C++ che non sono trattate in altri forum. È anche possibile eseguire la ricerca di errori e avvisi e porre domande su [Overflow dello Stack](http://stackoverflow.com/) per trovare soluzioni.
+È possibile trovare ulteriore assistenza per errori e avvisi nei forum pubblici di Microsoft. È possibile cercare l'errore o un numero di avviso sul [Community degli sviluppatori](https://developercommunity.visualstudio.com) sito. Il [generali su Visual C++](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) forum è dedicato alle domande su Visual C++ che non vengono trattate in altri forum. È anche possibile eseguire la ricerca di errori e avvisi e porre domande nel [Stack Overflow](http://stackoverflow.com/) per trovare le soluzioni.
 
-Per collegamenti a ulteriori informazioni e risorse della community, vedere [della Guida di Visual C++ e Community](../../visual-cpp-help-and-community.md).
+Per collegamenti a informazioni aggiuntive e risorse della community, vedere [della Guida di Visual C++ e Community](../../visual-cpp-help-and-community.md).

@@ -1,7 +1,7 @@
 ---
-title: . SAVEREG | Documenti Microsoft
+title: . SAVEREG | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50b7a91efd7069e148222d3e3da44178974d6ba
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e7010664cd2e80841d9e35d8fcf72d195cecf796
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055206"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688989"
 ---
 # <a name="savereg"></a>.SAVEREG
-Genera uno un `UWOP_SAVE_NONVOL` o `UWOP_SAVE_NONVOL_FAR` rimozione di ingresso del codice per il registro specificato (`reg`) e di offset (`offset`) utilizzando l'offset corrente di prologo. MASM sceglierà la codifica più efficiente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-.SAVEREG reg, offset  
-```  
-  
-## <a name="remarks"></a>Note  
- . SAVEREG consente di specificare come una funzione frame rimuove ml64.exe ed è consentita solo all'interno di prologo, che si estende dal [PROC](../../assembler/masm/proc.md) dichiarazione FRAME per il [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva. Queste direttive non generano codice. vengono generati solo `.xdata` e `.pdata`. . SAVEREG deve essere preceduto da istruzioni che implementano le azioni per essere rimosso. È consigliabile eseguire il wrapping di direttive di rimozione sia il codice di che rimozione in una macro deve garantire l'accordo.  
-  
- Per ulteriori informazioni, vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Genera una un' `UWOP_SAVE_NONVOL` o un `UWOP_SAVE_NONVOL_FAR` rimozione di ingresso del codice per il registro specificato (`reg`) e l'offset (`offset`) utilizzando l'offset corrente di prologo. MASM sceglierà la codifica più efficiente.
+
+## <a name="syntax"></a>Sintassi
+
+> . Reg SAVEREG, offset
+
+## <a name="remarks"></a>Note
+
+. SAVEREG ml64.exe gli utenti possono specificare come una funzione di frame viene rimosso ed è consentita solo all'interno di prologo, che si estende dal [PROC](../../assembler/masm/proc.md) dichiarazione FRAME per il [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva. Queste direttive non generano codice. solo generano `.xdata` e `.pdata`. . SAVEREG deve essere preceduto da istruzioni che implementano effettivamente le azioni per essere rimosso. È consigliabile eseguire il wrapping di direttive di rimozione sia il codice che dalla necessità di rimozione in una macro per garantire l'accordo.
+
+Per altre informazioni, vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

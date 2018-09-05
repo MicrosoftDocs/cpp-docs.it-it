@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a448d76236c3467228b2aa57cd71284274687ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b6f3f28bbc2a69a5ad5c4fe9910d8312b236c34f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200431"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686498"
 ---
 # <a name="tree-control-styles"></a>Stili del controllo Tree
-Controllo struttura ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) stili determinano gli aspetti dell'aspetto di un controllo struttura ad albero. Impostare gli stili iniziali quando si crea il controllo struttura ad albero. È possibile recuperare e modificare gli stili dopo aver creato il controllo albero utilizzando il [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) e [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funzioni di Windows, specificare **GWL_STYLE** per il *nIndex* parametro. Per un elenco completo degli stili, vedere [stili finestra del controllo Tree View](/windows/desktop/Controls/tree-view-control-window-styles) nel SDK di Windows.  
+Controllo struttura ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) stili determinano gli aspetti dell'aspetto di un controllo struttura ad albero. Impostare gli stili iniziali quando si crea il controllo struttura ad albero. È possibile recuperare e modificare gli stili dopo aver creato il controllo albero utilizzando il [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) e [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funzioni di Windows, specificare **GWL_STYLE** per il *nIndex* parametro. Per un elenco completo degli stili, vedere [stili finestra del controllo Tree View](/windows/desktop/Controls/tree-view-control-window-styles) nel SDK di Windows.  
   
  Il **TVS_HASLINES** stile migliora la rappresentazione grafica della gerarchia di un controllo albero disegnando linee che collegano gli elementi figlio al relativo elemento padre corrispondente. Questo stile non collegare gli elementi in corrispondenza della radice della gerarchia. A tale scopo, è necessario combinare le **TVS_HASLINES** e **TVS_LINESATROOT** stili.  
   

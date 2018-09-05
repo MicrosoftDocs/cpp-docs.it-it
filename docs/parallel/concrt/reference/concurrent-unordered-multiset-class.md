@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c60db67450c3a3f46b8d434b7a8416ce85161c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 32f71ea2536c4cb9b2c9c42f5625a64c986497bb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211458"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678510"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Classe concurrent_unordered_multiset
 Il `concurrent_unordered_multiset` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in modo indipendente dalla concorrenza Abilita accodamento, accesso agli elementi, accesso iteratori e operazioni traversali di iterazione.  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  Il valore della chiave da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [coppia](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) dove il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
+ Oggetto [coppia](../../../standard-library/pair-structure.md) dove il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
   
 ### <a name="remarks"></a>Note  
  È possibile per gli inserimenti simultanei causare altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.  

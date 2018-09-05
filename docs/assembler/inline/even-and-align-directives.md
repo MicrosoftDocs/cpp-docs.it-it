@@ -1,7 +1,7 @@
 ---
-title: Direttive EVEN e ALIGN | Documenti Microsoft
+title: Direttive EVEN e ALIGN | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -21,18 +21,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a43425a4038ffb140eeaa0a9d111a39fc5c11ff0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 06a1007c50e3490e5b14e4da886494557be0d37e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057955"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688301"
 ---
 # <a name="even-and-align-directives"></a>Direttive EVEN e ALIGN
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Sebbene l'assembler inline non supporta la maggior parte delle direttive di MASM, supporta `EVEN` e **ALIGN**. Inseriscono queste direttive **NOP** (nessuna operazione) le istruzioni nel codice dell'assembly in base alle necessità per allineare le etichette ai limiti specifici. Ciò rende le operazioni instruction-fetch più efficienti per alcuni processori.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Sezione specifica Microsoft**
+
+Sebbene l'assembler inline non supporta la maggior parte delle direttive di MASM, supporta infatti `EVEN` e **ALIGN**. Queste istruzioni inseriscono **NOP** (nessuna operazione) le istruzioni nel codice dell'assembly in base alle necessità per allineare le etichette ai limiti specifici. Ciò rende le operazioni instruction-fetch più efficienti per alcuni processori.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

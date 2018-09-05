@@ -1,7 +1,7 @@
 ---
-title: . LISTMACROALL | Documenti Microsoft
+title: . LISTMACROALL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 027e95431a1e81ae05ef8ac4b949059eb8256db0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 11aee7bacca77ac0838956c18acc8a8a0598ed02
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690986"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
-Avvia l'elenco di tutte le istruzioni nelle macro.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-.LISTMACROALL  
-  
-```  
-  
-## <a name="remarks"></a>Note  
- Uguale a [. LALL](../../assembler/masm/dot-lall.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Comincia a elencare di tutte le istruzioni nelle macro.
+
+## <a name="syntax"></a>Sintassi
+
+> .LISTMACROALL
+
+## <a name="remarks"></a>Note
+
+Uguale allo [. LALL](../../assembler/masm/dot-lall.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

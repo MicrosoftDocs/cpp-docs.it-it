@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0827aa34a0812281b3aa4f70b78a14a0336b8921
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68920a47971f260cbdd11224edd5d8e8b70a0f07
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686322"
 ---
 # <a name="types-of-expressions"></a>Tipi di espressioni
 Le espressioni C++ sono suddivise in diverse categorie:  
@@ -36,7 +36,7 @@ Le espressioni C++ sono suddivise in diverse categorie:
   
 -   [Espressioni costanti](../cpp/cpp-constant-expressions.md). Le espressioni costanti sono formate interamente da dati costanti.  
   
--   [Espressioni con conversioni esplicite](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Le conversioni del tipo esplicito, denominate anche cast, possono essere utilizzate nelle espressioni.  
+-   [Espressioni con conversioni esplicite](explicit-type-conversion-operator-parens.md). Le conversioni del tipo esplicito, denominate anche cast, possono essere utilizzate nelle espressioni.  
   
 -   [Espressioni con operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
   

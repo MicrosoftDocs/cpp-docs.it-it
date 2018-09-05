@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae7d672cf592514d60c9ec68bbf4464507b94ff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 924cd8f502b6fe41aa4733df3dc59a372c27e6cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539243"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683635"
 ---
 # <a name="vmxoff"></a>__vmx_off
 **Sezione specifica Microsoft**  
@@ -36,7 +36,7 @@ void __vmx_off();
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `__vmx_off` è equivalente alla funzione il `VMXOFF` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
+ Il `__vmx_off` è equivalente alla funzione il `VMXOFF` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   

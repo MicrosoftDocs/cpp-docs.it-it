@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 258d8f10238db58be26743694943ae3bd6abc20e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199264"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693575"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procedura dettagliata: inserimento di controlli nelle barre degli strumenti
 In questo argomento viene descritto come aggiungere un pulsante contenente un controllo Windows a una barra degli strumenti. In MFC un pulsante della barra degli strumenti deve essere un [classe CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-derivato (classe), ad esempio [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [classe CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Classe CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), o [classe CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -73,7 +73,7 @@ In questo argomento viene descritto come aggiungere un pulsante contenente un co
   
     1.  Passare `ID_EDIT_FIND_COMBO` come ID di comando.  
   
-    2.  Uso [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) con `ID_EDIT_FIND` per ottenere l'indice dell'immagine.  
+    2.  Uso [CCommandManager::GetCmdImage](reference/internal-classes.md) con `ID_EDIT_FIND` per ottenere l'indice dell'immagine.  
   
     3.  Per un elenco di stili delle caselle combinate disponibili, vedere [stili casella combinata](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

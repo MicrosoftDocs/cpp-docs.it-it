@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a41f88bc6883af1db4bbde8729a3638ded64a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1bc3f52b97159a9caba6f80b4798d9588ec341d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405796"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685908"
 ---
 # <a name="raise"></a>raise
 
 Invia un segnale al programma in esecuzione.
 
 > [!NOTE]
-> Non utilizzare questo metodo per arrestare un'app Store di Microsoft, ad eccezione di testing o scenari di debug. Modalità a livello di codice o dell'interfaccia utente per chiudere un'app di Store non sono consentiti in base al [criteri di Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Per ulteriori informazioni, vedere [ciclo di vita app UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Non utilizzare questo metodo per arrestare un'app di Microsoft Store, ad eccezione di test o gli scenari di debug. Modalità dell'interfaccia utente o a livello di codice per chiudere un'app di Store non sono consentiti in base al [i criteri di Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere [ciclo di vita app UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -77,7 +77,7 @@ La funzione **raise** invia *sig* al programma in esecuzione. Se una chiamata pr
 |**SIGSEGV**|Accesso all'archiviazione non valido|Termina il programma chiamante|
 |**SIGTERM**|Richiesta di terminazione inviata al programma|Ignora il segnale|
 
-Se l'argomento non è un segnale valido come sopra specificato, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se non gestita, la funzione imposta **errno** alla **EINVAL** e restituisce un valore diverso da zero.
+Se l'argomento non è un segnale valido come sopra specificato, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se non gestita, la funzione imposterà **errno** al **EINVAL** e restituisce un valore diverso da zero.
 
 ## <a name="requirements"></a>Requisiti
 

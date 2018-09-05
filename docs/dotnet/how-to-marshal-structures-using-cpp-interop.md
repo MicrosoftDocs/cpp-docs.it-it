@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bbf85f8da0477de2483ee2ce4b981d832421da95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215120"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680902"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Procedura: Effettuare il marshalling di strutture utilizzando l'interoperabilità C++
 In questo argomento viene illustrato un facet di interoperabilità di Visual C++. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -32,7 +32,7 @@ In questo argomento viene illustrato un facet di interoperabilità di Visual C++
  Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/managed-unmanaged.md) #pragma direttive per implementare funzioni gestite e nello stesso file, ma queste funzioni interagiscono nello stesso modo se definiti in file separati. Non è necessario essere compilato con file contenenti solo funzioni non gestite [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato il passaggio di una struttura da una funzione gestita a una funzione non gestita, sia per valore e per riferimento. Poiché la struttura in questo esempio contiene solo semplici tipi di dati intrinseci (vedere [tipi copiabili e Non copiabili da blt](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), non è necessario Nessun marshalling speciale. Per effettuare il marshalling di strutture non copiabili da blt, ad esempio quelle che contengono puntatori, vedere [procedura: effettuare il marshalling incorporate puntatori usando funzionalità di interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ Nell'esempio seguente viene illustrato il passaggio di una struttura da una funzione gestita a una funzione non gestita, sia per valore e per riferimento. Poiché la struttura in questo esempio contiene solo semplici tipi di dati intrinseci (vedere [tipi copiabili e Non copiabili da blt](/dotnet/framework/interop/blittable-and-non-blittable-types)), non è necessario Nessun marshalling speciale. Per effettuare il marshalling di strutture non copiabili da blt, ad esempio quelle che contengono puntatori, vedere [procedura: effettuare il marshalling incorporate puntatori usando funzionalità di interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato il passaggio di una struttura da una funzione non gestita a una funzione non gestita, sia per valore e per riferimento. Poiché la struttura in questo esempio contiene solo semplici tipi di dati intrinseci (vedere [tipi copiabili e Non copiabili da blt](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), non è necessario Nessun marshalling speciale. Per effettuare il marshalling di strutture non copiabili da blt, ad esempio quelle che contengono puntatori, vedere [procedura: effettuare il marshalling incorporate puntatori usando funzionalità di interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ Nell'esempio seguente viene illustrato il passaggio di una struttura da una funzione non gestita a una funzione non gestita, sia per valore e per riferimento. Poiché la struttura in questo esempio contiene solo semplici tipi di dati intrinseci (vedere [tipi copiabili e Non copiabili da blt](/dotnet/framework/interop/blittable-and-non-blittable-types)), non è necessario Nessun marshalling speciale. Per effettuare il marshalling di strutture non copiabili da blt, ad esempio quelle che contengono puntatori, vedere [procedura: effettuare il marshalling incorporate puntatori usando funzionalità di interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  

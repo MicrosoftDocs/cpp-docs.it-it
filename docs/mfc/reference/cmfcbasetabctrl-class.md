@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198568"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693926"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementa la funzionalità di base per le finestre a schede.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Ricalcola il layout interno di una finestra a schede.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Rimuove tutte le schede dalla finestra a schede.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Rimuove una scheda dalla finestra a schede.|  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Specifica il nuovo colore di sfondo.  
   
 ### <a name="remarks"></a>Note  
- Il framework Ottiene il colore di sfondo predefinito per le schede attive dal [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)(metodo).  
+ Il framework Ottiene il colore di sfondo predefinito per le schede attive dal [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)(metodo).  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Imposta il colore del testo per le schede attive.  
@@ -1858,7 +1858,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
  Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che specifica il nuovo colore del testo.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, il framework Ottiene il colore del testo dal [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Eseguire l'override di questo colore predefinito tramite la `SetActiveTabTextColor` (metodo).  
+ Per impostazione predefinita, il framework Ottiene il colore del testo dal [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Eseguire l'override di questo colore predefinito tramite la `SetActiveTabTextColor` (metodo).  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Imposta i colori del controllo struttura a schede che usa il framework in modalità colore automatica.  

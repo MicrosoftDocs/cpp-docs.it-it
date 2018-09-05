@@ -1,7 +1,7 @@
 ---
-title: Passaggio alle etichette in Assembly Inline | Documenti Microsoft
+title: Passaggio alle etichette in Assembly Inline | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,76 +19,78 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a96bd532b5b4f03cb2040dd3157a6224ccf5029
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e697df32218c3e2bcdeb03cde44b7b5d854cb7b0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052239"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693624"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Passaggio a etichette nell'assembly inline
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Come un'etichetta C o C++ comune, un'etichetta in un blocco `__asm` ha un ambito nella funzione in cui è definita (non solo nel blocco). Sia le istruzioni di assembly che le istruzioni `goto` possono passare alle etichette all'interno o all'esterno del blocco `__asm`.  
-  
- Nelle etichette definite in blocchi `__asm` non viene fatta distinzione tra maiuscole e minuscole; sia le istruzioni `goto` che le istruzioni di assembly possono fare riferimento a tali etichette senza tale distinzione. Nelle etichette C++ e C viene fatta distinzione tra maiuscole e minuscole solo se utilizzate dalle istruzioni `goto`. Le istruzioni di assembly possono passare a un'etichetta C o C++ senza fare distinzione tra maiuscole e minuscole.  
-  
- Il codice seguente illustra tutte le permutazioni:  
-  
-```  
-void func( void )  
-{  
-   goto C_Dest;  /* Legal: correct case   */  
-   goto c_dest;  /* Error: incorrect case */  
-  
-   goto A_Dest;  /* Legal: correct case   */  
-   goto a_dest;  /* Legal: incorrect case */  
-  
-   __asm  
-   {  
-      jmp C_Dest ; Legal: correct case  
-      jmp c_dest ; Legal: incorrect case  
-  
-      jmp A_Dest ; Legal: correct case  
-      jmp a_dest ; Legal: incorrect case  
-  
-      a_dest:    ; __asm label  
-   }  
-  
-   C_Dest:       /* C label */   
-   return;  
-}  
-int main()  
-{  
-}  
-```  
-  
- Non utilizzare nomi delle funzioni della libreria C come etichette in blocchi `__asm`. Ad esempio, si potrebbe essere tentati di utilizzare `exit` come etichetta, come segue:  
-  
-```  
-; BAD TECHNIQUE: using library function name as label  
-jne exit  
-   .  
-   .  
-   .  
-exit:  
-   ; More __asm code follows  
-```  
-  
- Poiché **uscire** è il nome di una funzione di libreria C, questo codice potrebbe causare un salto al **uscire** funzione anziché nella posizione desiderata.  
-  
- Come nei programmi MASM, il simbolo di dollaro (`$`) serve come contatore di posizione corrente. È un'etichetta per l'istruzione al momento assemblata. Nei blocchi `__asm`, l'uso principale è di eseguire passaggi condizionali lunghi:  
-  
-```  
-jne $+5 ; next instruction is 5 bytes long  
-jmp farlabel  
-; $+5  
-   .  
-   .  
-   .  
-farlabel:  
-```  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Assembler inline](../../assembler/inline/inline-assembler.md)
+
+**Sezione specifica Microsoft**
+
+Come un'etichetta C o C++ comune, un'etichetta in un blocco `__asm` ha un ambito nella funzione in cui è definita (non solo nel blocco). Sia le istruzioni di assembly che le istruzioni `goto` possono passare alle etichette all'interno o all'esterno del blocco `__asm`.
+
+Nelle etichette definite in blocchi `__asm` non viene fatta distinzione tra maiuscole e minuscole; sia le istruzioni `goto` che le istruzioni di assembly possono fare riferimento a tali etichette senza tale distinzione. Nelle etichette C++ e C viene fatta distinzione tra maiuscole e minuscole solo se utilizzate dalle istruzioni `goto`. Le istruzioni di assembly possono passare a un'etichetta C o C++ senza fare distinzione tra maiuscole e minuscole.
+
+Il codice seguente illustra tutte le permutazioni:
+
+```cpp
+void func( void )
+{
+   goto C_Dest;  /* Legal: correct case   */
+   goto c_dest;  /* Error: incorrect case */
+
+   goto A_Dest;  /* Legal: correct case   */
+   goto a_dest;  /* Legal: incorrect case */
+
+   __asm
+   {
+      jmp C_Dest ; Legal: correct case
+      jmp c_dest ; Legal: incorrect case
+
+      jmp A_Dest ; Legal: correct case
+      jmp a_dest ; Legal: incorrect case
+
+      a_dest:    ; __asm label
+   }
+
+   C_Dest:       /* C label */
+   return;
+}
+int main()
+{
+}
+```
+
+Non utilizzare nomi delle funzioni della libreria C come etichette in blocchi `__asm`. Ad esempio, si potrebbe essere tentati di utilizzare `exit` come etichetta, come segue:
+
+```cpp
+; BAD TECHNIQUE: using library function name as label
+   jne exit
+   .
+   .
+   .
+exit:
+   ; More __asm code follows
+```
+
+Perché **uscire** è il nome di una funzione di libreria C, questo codice potrebbe causare un passaggio per il **uscire** funzione anziché nella posizione desiderata.
+
+Come nei programmi MASM, il simbolo di dollaro (`$`) serve come contatore di posizione corrente. È un'etichetta per l'istruzione al momento assemblata. Nei blocchi `__asm`, l'uso principale è di eseguire passaggi condizionali lunghi:
+
+```cpp
+   jne $+5 ; next instruction is 5 bytes long
+   jmp farlabel ; $+5
+   .
+   .
+   .
+farlabel:
+```
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b28736e4e9c4b4f327f80a97b5b7ed3b6d1c7c40
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219436"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686272"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Aggiunta, modifica o eliminazione di controlli
 
 Usando il **dialogo** editor, è possibile aggiungere, ridimensionare, modificare ed eliminare i controlli nelle finestre di dialogo. È anche possibile modificare le proprietà di un controllo, ad esempio il relativo ID, o se è inizialmente visibile in fase di esecuzione.
 
-È possibile usare il menu di scelta rapida nel **finestra di dialogo** registrato di editor di aggiungere rapidamente controlli ActiveX a una finestra di dialogo ed è possibile aggiungere controlli ActiveX per il **della casella degli strumenti** per l'accesso rapido (per altre informazioni, vedere [Personalizza casella degli strumenti, finestra di dialogo](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
+È possibile usare il menu di scelta rapida nel **finestra di dialogo** registrato di editor di aggiungere rapidamente controlli ActiveX a una finestra di dialogo ed è possibile aggiungere controlli ActiveX per il **della casella degli strumenti** per l'accesso rapido (per altre informazioni, vedere [Casella degli strumenti](/visualstudio/ide/reference/toolbox)).
 
 - [Aggiungere un controllo a una finestra di dialogo](adding-a-control-to-a-dialog-box.md)
 

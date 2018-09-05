@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cecde0bfd829cd55fb15e53fb07aa8b6645fce0e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218339"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678407"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1234,8 +1234,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|Chiamata eseguita quando cambiano le dimensioni dell'area client della finestra del visualizzatore degli Appunti.|
 |[CWnd::OnSizing](#onsizing)|Indica che l'utente sta ridimensionando il rettangolo.|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|Chiamata eseguita da Print Manager ogni volta che un processo viene aggiunto o rimosso dalla coda di Print Manager.|
-|[CWnd::OnStyleChanged](#onstylechanged)|Indica che il [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funzione Windows è stato modificato uno o più stili della finestra.|
-|[CWnd::OnStyleChanging](#onstylechanging)|Indica che il [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funzione Windows sta per modificare uno o più stili della finestra.|
+|[CWnd::OnStyleChanged](#onstylechanged)|Indica che il [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funzione Windows è stato modificato uno o più stili della finestra.|
+|[CWnd::OnStyleChanging](#onstylechanging)|Indica che il [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funzione Windows sta per modificare uno o più stili della finestra.|
 |[CWnd::OnSysChar](#onsyschar)|Chiamata eseguita quando una sequenza di tasti viene convertita in un carattere di sistema.|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|Chiamata eseguita per tutte le finestre di primo livello in seguito alla modifica delle impostazioni di colore del sistema.|
 |[CWnd::OnSysCommand](#onsyscommand)|Chiamata eseguita quando l'utente seleziona un comando dal menu di controllo o quando l'utente seleziona il pulsante di ingrandimento o riduzione a icona.|
@@ -1247,7 +1247,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|Chiamata eseguita dopo ogni intervallo specificato nella [SetTimer](#settimer).|
 |[CWnd::OnTouchInput](#ontouchinput)|Consente di elaborare singoli input tramite tocco di Windows.|
 |[CWnd::OnTouchInputs](#ontouchinputs)|Consente di elaborare input tramite tocco di Windows.|
-|[CWnd::OnUniChar](#onunichar)|Chiamata eseguita alla pressione di un tasto. Vale a dire, la finestra corrente ha lo stato attivo della tastiera e un [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) messaggio viene convertito dalle [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) (funzione).|
+|[CWnd::OnUniChar](#onunichar)|Chiamata eseguita alla pressione di un tasto. Vale a dire, la finestra corrente ha lo stato attivo della tastiera e un [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) messaggio viene convertito dalle [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) (funzione).|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|Chiamata eseguita quando un menu a discesa o un sottomenu viene eliminato definitivamente.|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|Chiamata eseguita per cambiare lo stato dell'interfaccia utente per la finestra specificata e tutte le finestre figlio.|
 |[CWnd::OnUserChanged](#onuserchanged)|Chiamata eseguita dopo che l'utente ha effettuato l'accesso o la disconnessione.|
@@ -2244,7 +2244,7 @@ La forma di punto di inserimento può essere una riga o un blocco.
 
 I parametri *nWidth* e *nHeight* specificare la larghezza e altezza (espressa in unità logiche) del punto di inserimento; esatta larghezza e altezza (espressa in pixel) variano a seconda della modalità di mapping.
 
-Spessore del bordo di finestra o l'altezza del sistema può essere recuperato tramite il [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funzione Windows con gli indici SM_CXBORDER e SM_CYBORDER. Utilizzando la larghezza del bordo di finestra o l'altezza garantisce che il punto di inserimento sarà visibile in un display ad alta risoluzione.
+Spessore del bordo di finestra o l'altezza del sistema può essere recuperato tramite il [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funzione Windows con gli indici SM_CXBORDER e SM_CYBORDER. Utilizzando la larghezza del bordo di finestra o l'altezza garantisce che il punto di inserimento sarà visibile in un display ad alta risoluzione.
 
 Il `CreateGrayCaret` funzione membro distrugge automaticamente la forma di punto di inserimento precedenti, se presente, indipendentemente dal quale finestra possiede il punto di inserimento. Una volta creato, il punto di inserimento è inizialmente nascosto. Per visualizzare il punto di inserimento, il [ShowCaret](#showcaret) funzione membro deve essere chiamata.
 
@@ -2278,7 +2278,7 @@ La forma di punto di inserimento può essere una riga o un blocco.
 
 I parametri *nWidth* e *nHeight* specificare la larghezza e altezza (espressa in unità logiche) del punto di inserimento; esatta larghezza e altezza (espressa in pixel) variano a seconda della modalità di mapping.
 
-Spessore del bordo di finestra o l'altezza del sistema può essere recuperato tramite il [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funzione Windows con gli indici SM_CXBORDER e SM_CYBORDER. Utilizzando la larghezza del bordo di finestra o l'altezza garantisce che il punto di inserimento sarà visibile in un display ad alta risoluzione.
+Spessore del bordo di finestra o l'altezza del sistema può essere recuperato tramite il [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funzione Windows con gli indici SM_CXBORDER e SM_CYBORDER. Utilizzando la larghezza del bordo di finestra o l'altezza garantisce che il punto di inserimento sarà visibile in un display ad alta risoluzione.
 
 Il `CreateSolidCaret` funzione membro distrugge automaticamente la forma di punto di inserimento precedenti, se presente, indipendentemente dal quale finestra possiede il punto di inserimento. Una volta creato, il punto di inserimento è inizialmente nascosto. Per visualizzare il punto di inserimento, il [ShowCaret](#showcaret) funzione membro deve essere chiamata.
 
@@ -2767,7 +2767,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Note
 
-Supporto Active Accessibility predefiniti di MFC è sufficiente per windows standard e controlli, inclusi i controlli ActiveX. Tuttavia, se il `CWnd`-classe derivata contiene gli elementi dell'interfaccia utente privi, MFC non ha modo di loro ne sia informata. In tal caso, è necessario eseguire l'override appropriato [funzioni membro Active Accessibility](https://msdn.microsoft.com/68af04ac-4eb9-4b7d-b33f-c45512097a74) della classe, ed è necessario chiamare `EnableActiveAccessibility` nel costruttore della classe.
+Supporto Active Accessibility predefiniti di MFC è sufficiente per windows standard e controlli, inclusi i controlli ActiveX. Tuttavia, se il `CWnd`-classe derivata contiene gli elementi dell'interfaccia utente privi, MFC non ha modo di loro ne sia informata. In tal caso, è necessario eseguire l'override appropriato [funzioni membro Active Accessibility](/windows/desktop/winauto/sdk-components) della classe, ed è necessario chiamare `EnableActiveAccessibility` nel costruttore della classe.
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -5011,7 +5011,7 @@ Ogni volta che recupera il contesto, gli attributi predefiniti vengono assegnati
 
 `GetWindowDC` dovrà essere utilizzato per gli effetti di disegno speciali all'interno di `CWnd` area non client. Disegno in aree non client di tutte le finestre non è consigliato.
 
-Il [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funzione Windows può essere utilizzata per recuperare le dimensioni delle varie parti dell'area non client, ad esempio la barra del titolo, menu e barre di scorrimento.
+Il [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funzione Windows può essere utilizzata per recuperare le dimensioni delle varie parti dell'area non client, ad esempio la barra del titolo, menu e barre di scorrimento.
 
 Al termine il disegno, la [ReleaseDC](#releasedc) funzione membro deve essere chiamata per rilasciare il contesto di visualizzazione. Il mancato rilascio il contesto di visualizzazione influirà sul serio disegno richiesto dalle applicazioni a causa delle limitazioni al numero di contesti di dispositivo che possono essere aperte contemporaneamente.
 
@@ -5441,7 +5441,7 @@ Specifica se la funzione membro ha elaborato il messaggio specificato. È divers
 
 Quando il `IsDialogMessage` funzione elabora un messaggio, verifica la presenza di messaggi di tastiera e li converte i comandi di selezione per la finestra di dialogo corrispondente. Ad esempio, il tasto TAB consente di selezionare il successivo controllo o gruppo di controlli e il tasto freccia giù consente di selezionare il controllo successivo in un gruppo.
 
-Non è necessario passare un messaggio elaborato da `IsDialogMessage` per il [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) oppure [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows, perché è già stata elaborata.
+Non è necessario passare un messaggio elaborato da `IsDialogMessage` per il [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) oppure [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows, perché è già stata elaborata.
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5738,9 +5738,9 @@ Diverso da zero se style è stato modificato. in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Stili per aggiunte o rimosse possono essere combinati utilizzando l'operatore OR bit per bit (&#124;) operatore. Vedere gli argomenti [stili Window](https://msdn.microsoft.com/library/windows/desktop/ms632600) e [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows per informazioni sugli stili di finestra disponibili.
+Stili per aggiunte o rimosse possono essere combinati utilizzando l'operatore OR bit per bit (&#124;) operatore. Vedere gli argomenti [stili Window](https://msdn.microsoft.com/library/windows/desktop/ms632600) e [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows per informazioni sugli stili di finestra disponibili.
 
-Se *nFlags* è diverso da zero, `ModifyStyle` chiama la funzione API di Windows [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) e lo ridisegna la finestra dalla combinazione *nFlags* con i seguenti quattro set di impostazioni flag:
+Se *nFlags* è diverso da zero, `ModifyStyle` chiama la funzione API di Windows [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) e lo ridisegna la finestra dalla combinazione *nFlags* con i seguenti quattro set di impostazioni flag:
 
 - SWP_NOSIZE mantiene le dimensioni correnti.
 
@@ -5787,9 +5787,9 @@ Diverso da zero se style è stato modificato. in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Stili per aggiunte o rimosse possono essere combinati utilizzando l'operatore OR bit per bit (&#124;) operatore. Vedere gli argomenti [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) in questo libro e [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows per informazioni sui contatori stili estesi
+Stili per aggiunte o rimosse possono essere combinati utilizzando l'operatore OR bit per bit (&#124;) operatore. Vedere gli argomenti [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) in questo libro e [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows per informazioni sui contatori stili estesi
 
-Se *nFlags* è diverso da zero, `ModifyStyleEx` chiama la funzione API di Windows [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) e lo ridisegna la finestra dalla combinazione *nFlags* con i seguenti quattro set di impostazioni flag:
+Se *nFlags* è diverso da zero, `ModifyStyleEx` chiama la funzione API di Windows [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) e lo ridisegna la finestra dalla combinazione *nFlags* con i seguenti quattro set di impostazioni flag:
 
 - SWP_NOSIZE mantiene le dimensioni correnti.
 
@@ -8113,7 +8113,7 @@ Diverso da zero se è abilitato lo scorrimento della rotellina del mouse. in cas
 
 ### <a name="remarks"></a>Note
 
-A meno che non viene sottoposto a override, `OnMouseWheel` chiama il valore predefinito [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel). Windows instrada automaticamente il messaggio alla finestra di controllo o elemento figlio con lo stato attivo. La funzione Win32 [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) propaga il messaggio fino alla catena padre alla finestra che lo elabora.
+A meno che non viene sottoposto a override, `OnMouseWheel` chiama il valore predefinito [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel). Windows instrada automaticamente il messaggio alla finestra di controllo o elemento figlio con lo stato attivo. La funzione Win32 [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) propaga il messaggio fino alla catena padre alla finestra che lo elabora.
 
 Il *zDelta* parametro è un multiplo di WHEEL_DELTA, che è impostato su 120. Questo valore è la soglia per un'azione da intraprendere e un tale azione (ad esempio, scorrimento in avanti corrispondente a uno scatto) deve essere eseguita ogni delta.
 
@@ -9464,7 +9464,7 @@ Questa chiamata è solo a scopo informativo.
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-Il framework chiama questa funzione dopo le [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funzione è stato modificato uno o più stili della finestra.
+Il framework chiama questa funzione dopo le [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funzione è stato modificato uno o più stili della finestra.
 
 ```
 afx_msg void OnStyleChanged(
@@ -9491,7 +9491,7 @@ Punta a un [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms63
 
 ##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging
 
-Il framework chiama questa funzione membro quando le [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funzione sta per modificare uno o più stili della finestra.
+Il framework chiama questa funzione membro quando le [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funzione sta per modificare uno o più stili della finestra.
 
 ```
 afx_msg void OnStyleChanging(
@@ -9853,7 +9853,7 @@ Specifica l'identificatore del timer.
 
 ### <a name="remarks"></a>Note
 
-Il [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzione di Windows invia una [WM_TIMER](/windows/desktop/winmsg/wm-timer) dei messaggi quando nessun altro messaggio presenti nella coda di messaggi dell'applicazione.
+Il [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzione di Windows invia una [WM_TIMER](/windows/desktop/winmsg/wm-timer) dei messaggi quando nessun altro messaggio presenti nella coda di messaggi dell'applicazione.
 
 > [!NOTE]
 > Questa funzione membro viene chiamata dal framework per consentire all'applicazione di gestire un messaggio di Windows. I parametri passati alla funzione riflettono i parametri ricevuti dal framework quando è stato ricevuto il messaggio. Se si chiama l'implementazione della classe di base di questa funzione, questa userà i parametri passati in origine con il messaggio e non i parametri che si forniscono alla funzione.
@@ -9960,7 +9960,7 @@ TRUE se l'applicazione dei processi Windows touch invio degli input. in caso con
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-Il framework chiama questa funzione membro quando viene premuto un tasto. Vale a dire, la finestra corrente ha lo stato attivo della tastiera e un [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) messaggio viene convertito dalle [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) (funzione).
+Il framework chiama questa funzione membro quando viene premuto un tasto. Vale a dire, la finestra corrente ha lo stato attivo della tastiera e un [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) messaggio viene convertito dalle [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) (funzione).
 
 ```
 afx_msg void OnUniChar(
@@ -10207,7 +10207,7 @@ Questo metodo riceve la [WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/desktop/dwm/wm-dw
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-Il framework chiama questa funzione membro quando le dimensioni, posizione o ordine Z è cambiato in conseguenza di una chiamata per il [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funzione membro o un'altra funzione di gestione delle finestre.
+Il framework chiama questa funzione membro quando le dimensioni, posizione o ordine Z è cambiato in conseguenza di una chiamata per il [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funzione membro o un'altra funzione di gestione delle finestre.
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10227,7 +10227,7 @@ Invia l'implementazione predefinita di [WM_SIZE](/windows/desktop/winmsg/wm-size
 
 ##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging
 
-Il framework chiama questa funzione membro quando le dimensioni, posizione o ordine Z sta per essere modificata in seguito a una chiamata per il [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funzione membro o un'altra funzione di gestione delle finestre.
+Il framework chiama questa funzione membro quando le dimensioni, posizione o ordine Z sta per essere modificata in seguito a una chiamata per il [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funzione membro o un'altra funzione di gestione delle finestre.
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10602,7 +10602,7 @@ Ignorando questa funzione membro è per la creazione di una sottoclasse dinamica
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows.
+Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11056,7 +11056,7 @@ Questa funzione è simile al [ScrollWindow](/windows/desktop/api/winuser/nf-winu
 
 Se [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) e [SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) non vengono specificati, il `ScrollWindowEx` funzione membro non invalida l'area di scorrimento lontani. Se uno di questi flag è impostato, `ScrollWindowEx` invalida quest'area. L'area non viene aggiornata finché l'applicazione chiama il [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) funzione membro, viene chiamato il [RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) funzione membro (specificando [RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow) o[ RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)), o recupera il [WM_PAINT](/windows/desktop/gdi/wm-paint) messaggio dalla coda dell'applicazione.
 
-Se la finestra ha il [WS_CLIPCHILDREN](https://msdn.microsoft.com/library/windows/desktop/ms632679) lo stile, le aree restituite specificate da *prgnUpdate* e *lpRectUpdate* rappresentano l'area totale della finestra a scorrimento che è necessario essere aggiornati, tra cui tutte le aree in finestre figlio che devono essere aggiornati.
+Se la finestra ha il [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) lo stile, le aree restituite specificate da *prgnUpdate* e *lpRectUpdate* rappresentano l'area totale della finestra a scorrimento che è necessario essere aggiornati, tra cui tutte le aree in finestre figlio che devono essere aggiornati.
 
 Se il [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) flag è specificato, Windows non aggiornerà correttamente la schermata se parte di una finestra figlio viene eseguito lo scorrimento. La parte della finestra a scorrimento figlio che si trova all'esterno del rettangolo di origine non verranno cancellata e non verrà ridisegnata correttamente nella nuova destinazione. Usare la [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) funzione di Windows alle finestre figlio move che si trova completamente all'interno di *lpRectScroll* rettangolo. Il cursore viene riposizionato in riferimento se è impostato il flag SW_SCROLLCHILDREN e il rettangolo di accento circonflesso interseca il rettangolo di scorrimento.
 
@@ -11497,7 +11497,7 @@ Puntatore a un valore COLORREF che specifica la chiave di colore di trasparenza 
 Valore alfa utilizzato per descrivere l'opacità della finestra sovrapposta. Per altre informazioni, vedere la `SourceConstantAlpha` membro della [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) struttura. Quando *bAlpha* è 0, la finestra è completamente trasparente. Quando *bAlpha* più di 255 caratteri, la finestra è opaca.
 
 *dwFlags*  
-Specifica un'azione da intraprendere. Questo parametro può essere uno o più dei valori seguenti. Per un elenco di valori possibili, vedere [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540).
+Specifica un'azione da intraprendere. Questo parametro può essere uno o più dei valori seguenti. Per un elenco di valori possibili, vedere [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -11505,7 +11505,7 @@ Viene restituito un valore diverso da zero se la funzione viene eseguita corrett
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità della funzione [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540), come descritto nel SDK di Windows.
+Questa funzione membro emula la funzionalità della funzione [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes), come descritto nel SDK di Windows.
 
 ##  <a name="setmenu"></a>  CWnd::SetMenu
 

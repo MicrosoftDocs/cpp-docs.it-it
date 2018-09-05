@@ -1,5 +1,5 @@
 ---
-title: Errori di Runtime C da R6002 a R6035 | Documenti Microsoft
+title: Errori Runtime di C da R6002 a R6035 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -14,20 +14,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d856fef8e8915683b77ada2bb8f669e303f1b5a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e7a8c7c544ef89f1b54459a7f02b90424e6c7c5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693561"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>Errori Runtime di C da R6002 a R6035
 
-Questa sezione offre un riferimento per gli errori che possono essere generati dalla libreria di Runtime C (CRT) quando l'app viene caricata o è in esecuzione. Anche se il messaggio fa riferimento al runtime di Microsoft Visual C++, questi errori indicano un bug nel codice dell'applicazione o una condizione che non può gestire la libreria di runtime, ad esempio memoria insufficiente. Gli utenti finali dell'app può visualizzare questi errori se non si esegue codice dell'app per evitare che le condizioni che ne provocano l'o scrivere codice per acquisire gli errori e presentare un messaggio descrittivo agli utenti.
+Questa sezione offre un riferimento per gli errori che possono essere generati dalla libreria di Runtime C (CRT) quando l'app viene caricata o è in esecuzione. Anche se il messaggio fa riferimento al runtime di Microsoft Visual C++, questi errori indicano un bug nel codice dell'app o una condizione che non può gestire la libreria di runtime, ad esempio memoria insufficiente. Gli utenti finali dell'app possono incontrare questi errori se non si codice dell'app per evitare le condizioni che causano i problemi, o scrivere codice per intercettare questi errori e presentare un messaggio descrittivo agli utenti.
 
-È possibile trovare ulteriore assistenza per errori e avvisi nei forum pubblici di Microsoft. È possibile cercare per numero di errore o avviso di [Community di sviluppatori](https://go.microsoft.com/fwlink/p/?linkid=820594) sito. Il [del linguaggio Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158195) forum è a domande e discussioni sulla sintassi del linguaggio C++ e il compilatore opzioni: MSVC. Il [generali di Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158194) forum è per domande su Visual C++ che non sono trattate in altri forum. È anche possibile eseguire la ricerca di errori e avvisi e porre domande su [Overflow dello Stack](http://stackoverflow.com/) per trovare soluzioni.
+È possibile trovare ulteriore assistenza per errori e avvisi nei forum pubblici di Microsoft. È possibile cercare l'errore o un numero di avviso sul [Community degli sviluppatori](https://developercommunity.visualstudio.com) sito. Il [generali su Visual C++](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) forum è dedicato alle domande su Visual C++ che non vengono trattate in altri forum. È anche possibile eseguire la ricerca di errori e avvisi e porre domande nel [Stack Overflow](http://stackoverflow.com/) per trovare le soluzioni.
 
-Per collegamenti a ulteriori informazioni e risorse della community, vedere [della Guida di Visual C++ e Community](../../visual-cpp-help-and-community.md).
+Per collegamenti a informazioni aggiuntive e risorse della community, vedere [della Guida di Visual C++ e Community](../../visual-cpp-help-and-community.md).
 
 ## <a name="c-runtime-errors"></a>Errori di Runtime C
 

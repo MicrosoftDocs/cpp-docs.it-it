@@ -1,7 +1,7 @@
 ---
 title: MACRO | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b7469314bc1b65f960df1ca582acb6dbb4624e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d957935c9ca91d2d09a093350c8d23a848e58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054445"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688868"
 ---
 # <a name="macro"></a>MACRO
-Contrassegna un blocco di macro chiamato *nome* e stabilisce *parametro* segnaposto per gli argomenti passati quando viene chiamata la macro.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-   name MACRO [[parameter [[:REQ | :=default | :VARARG]]]]...  
-statements  
-ENDM [[value]]  
-```  
-  
-## <a name="remarks"></a>Note  
- Restituisce una funzione macro *valore* all'istruzione chiamante.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Contrassegna un blocco di macro chiamato *name* e stabilisce *parametro* segnaposto per gli argomenti passati quando viene chiamata la macro.
+
+## <a name="syntax"></a>Sintassi
+
+> *nome* MACRO [[*parametro* [[: REQ |: =*predefinita* |: VARARG]]]]...<br/>
+> *Istruzioni*<br/>
+> ENDM [[*valore*]]
+
+## <a name="remarks"></a>Note
+
+Restituisce una funzione di macro *valore* all'istruzione di chiamata.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: operatore IMAGEREL | Documenti Microsoft
+title: operatore IMAGEREL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,26 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4c22c1e12ff2850c61cb1b0aea7fe89eca5ca4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3293f78151ae9bc5a8de47c4083d3e896027815c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055112"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691408"
 ---
 # <a name="operator-imagerel"></a>Operatore IMAGEREL
-Restituisce l'offset relativo dell'immagine di `expression`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-IMAGEREL expression  
-```  
-  
-## <a name="remarks"></a>Note  
- Il valore risultante è noto anche come un indirizzo virtuale relativo RVA.  
-  
- IMAGEREL è disponibile solo con le emissioni di oggetto COFF.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Restituisce l'offset relativo dell'immagine di `expression`.
+
+## <a name="syntax"></a>Sintassi
+
+> Espressione IMAGEREL
+
+## <a name="remarks"></a>Note
+
+Il valore risultante è noto anche come un RVA o un indirizzo virtuale relativo.
+
+IMAGEREL è disponibile solo con le emissioni di oggetto COFF.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

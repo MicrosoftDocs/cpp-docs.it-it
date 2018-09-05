@@ -1,5 +1,5 @@
 ---
-title: -/Qvec-report (livello di segnalazione vettorizzazione automatica) | Documenti Microsoft
+title: -Qvec-report (livello di segnalazione vettorizzazione automatica) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddbb68c20ade9f66215d3a60f2db7ea545409a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85f9d1c63f41b28982018bbe4507ff6bf87158fb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377484"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685853"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (livello di segnalazione vettorizzazione automatica)
-Abilita la funzionalità di reporting del compilatore [vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) e specifica il livello dei messaggi informativi per l'output durante la compilazione.  
+Abilita la funzionalità di segnalazione del compilatore [vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) e specifica il livello dei messaggi informativi per l'output durante la compilazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,11 +29,11 @@ Abilita la funzionalità di reporting del compilatore [vettorizzazione automatic
 ```  
   
 ## <a name="remarks"></a>Note  
- **/Qvec--report:1**  
- Genera un messaggio informativo per i cicli sono vettorizzato.  
+ **/ Qvec-report: 1**  
+ Invia un messaggio informativo per i cicli sono vettorizzati.  
   
- **/Qvec--report: 2**  
- Genera un messaggio informativo per i cicli sono vettorizzati e per i cicli non vettorizzati, insieme a un codice motivo.  
+ **/ Qvec-report: 2**  
+ Invia un messaggio informativo per i cicli sono vettorizzati e per i cicli non vettorizzati, insieme a un codice motivo.  
   
  Per informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
@@ -41,9 +41,9 @@ Abilita la funzionalità di reporting del compilatore [vettorizzazione automatic
   
 1.  In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.  
   
-2.  Nel **pagine delle proprietà** nella finestra di dialogo **C/C++** selezionare **riga di comando**.  
+2.  Nel **pagine delle proprietà** nella finestra di dialogo **C/C++**, selezionare **riga di comando**.  
   
-3.  Nel **opzioni aggiuntive** immettere `/Qvec-report:1` o `/Qvec-report:2`.  
+3.  Nel **opzioni aggiuntive** casella, immettere `/Qvec-report:1` o `/Qvec-report:2`.  
   
 ### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore /Qvec-report a livello di codice  
   
@@ -53,4 +53,4 @@ Abilita la funzionalità di reporting del compilatore [vettorizzazione automatic
  [Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)   
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [Programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Programmazione parallela in codice nativo](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d1e9a04a660da44f1c447dcd6ec388ba791958c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 07581805edd92e5b577889c8dfb12c5cf08ac20b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214921"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680759"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 La classe `CNetAddressCtrl` rappresenta il controllo indirizzo di rete, che è possibile utilizzare per immettere e convalidare il formato di indirizzi IPv4, IPv6 e DNS denominati.  
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Una combinazione bit per bit (OR) di stili estesi da applicare al controllo. Per altre informazioni, vedere la *dwExStyle* parametro delle [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) (funzione).|  
+|[in] *dwExStyle*|Una combinazione bit per bit (OR) di stili estesi da applicare al controllo. Per altre informazioni, vedere la *dwExStyle* parametro delle [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (funzione).|  
 |[in] *dwStyle*|Una combinazione bit per bit (OR) di stili da applicare al controllo. Per altre informazioni, vedere [modifica stili](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
 |[in] *rect*|Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
 |[in] *pParentWnd*|Un puntatore non null a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo.|  

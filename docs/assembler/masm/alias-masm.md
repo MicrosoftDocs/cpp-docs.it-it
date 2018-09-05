@@ -1,7 +1,7 @@
 ---
-title: ALIAS (MASM) | Documenti Microsoft
+title: ALIAS (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,34 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b14e1c41a448d0cb7014dabc50a42305249938f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c6a977d35040d8ca25cd3bd4ae4def233092b37a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049167"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691062"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
-Il **ALIAS** direttiva crea un nome alternativo per una funzione.  Consente di creare più nomi per una funzione o creare librerie che consentono il linker (LINK.exe) per eseguire il mapping di una funzione precedente a una nuova funzione.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-ALIAS  <  
-alias  
-> = <  
-actual-name  
->  
-  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `actual-name`  
- Il nome effettivo della funzione o procedura.  Le parentesi uncinate sono necessari.  
-  
- `alias`  
- Il nome alternativo o alias.  Le parentesi uncinate sono necessari.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Il **ALIAS** direttiva crea un nome alternativo per una funzione.  Ciò consente di creare più nomi per una funzione, oppure crea librerie che consentono il linker (LINK.exe) eseguire il mapping di una funzione precedente a una nuova funzione.
+
+## <a name="syntax"></a>Sintassi
+
+> ALIAS \< *alias*> = \< *nome effettivo*>
+
+#### <a name="parameters"></a>Parametri
+
+*nome effettivo*<br/>
+Il nome effettivo della funzione o procedura.  Sono necessarie le parentesi acute.
+
+*alias*<br/>
+Il nome alternativo o alias.  Sono necessarie le parentesi acute.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196591"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686085"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 Fornisce la funzionalità del controllo barra degli strumenti comune di Windows.  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED raramente  
   
- Visualizzare [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows per una descrizione degli stili di finestra.  
+ Visualizzare [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows per una descrizione degli stili di finestra.  
   
  Facoltativamente, applicare una combinazione di [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles), come descritto nel SDK di Windows.  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametri  
  *dwExStyle*  
- Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi di Windows, vedere la *dwExStyle* parametro per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *dwStyle*  
  Specifica lo stile del controllo della barra degli strumenti. Le barre degli strumenti deve sempre avere lo stile WS_CHILD. Inoltre, è possibile specificare qualsiasi combinazione di stili della barra degli strumenti e gli stili di finestra come descritto nel **osservazioni** sezione [crea](#create).  

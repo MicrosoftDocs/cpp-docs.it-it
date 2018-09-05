@@ -1,7 +1,7 @@
 ---
-title: . XALL | Documenti Microsoft
+title: . XALL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35a8403b61a9c55fd1430d4e7003a4f1a4632f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3a6c0e389b5292fdf7b258134e7e44ae946115b8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051531"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693903"
 ---
 # <a name="xall"></a>.XALL
-Vedere [. LISTMACRO](../../assembler/masm/dot-listmacro.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-.XALL  
-  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a direttive](../../assembler/masm/directives-reference.md)
+
+Vedere [. LISTMACRO](../../assembler/masm/dot-listmacro.md).
+
+## <a name="syntax"></a>Sintassi
+
+> .XALL
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>

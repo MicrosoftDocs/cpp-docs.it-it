@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8f06ae0021a95e9b4ae40506cfc91d6a8ae99b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0898d8a787c6d2c14f341a31e202738d666cdf86
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200814"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678464"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Modifica del tipo di carattere del testo in un'immagine (Editor di immagini per le icone)
 
@@ -32,7 +32,7 @@ La procedura seguente è riportato un esempio di come:
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Per modificare il tipo di carattere del testo in un'immagine
 
-1. Creare un'applicazione di moduli di Windows C++. Per informazioni dettagliate, vedere [creazione di un progetto di applicazione Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). Il [modello di applicazione Windows Forms](https://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) aggiunge un file denominato `app.ico` al progetto per impostazione predefinita.
+1. Creare un'applicazione di moduli di Windows C++. Per informazioni dettagliate, vedere [creazione di un progetto di applicazione Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). Un `app.ico` file viene aggiunto al progetto per impostazione predefinita.
 
 2. Nelle **Esplora soluzioni**, fare doppio clic il file app. ico. Il [Editor di immagini](../windows/image-editor-for-icons.md) verrà aperto.
 

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78867405627a870f68e5411b7e577b563a605c75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207196"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690946"
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 Questa classe implementa una finestra contenuta all'interno di un altro oggetto.  
@@ -220,16 +220,16 @@ HWND Create(
  [in] Specifica il nome della finestra. Il valore predefinito è NULL.  
   
  *dwStyle*  
- [in] Lo stile della finestra. Il valore predefinito è WS_CHILD &#124; WS_VISIBLE. Per un elenco di valori possibili, vedere [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) nel SDK di Windows.  
+ [in] Lo stile della finestra. Il valore predefinito è WS_CHILD &#124; WS_VISIBLE. Per un elenco di valori possibili, vedere [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows.  
   
  *dwExStyle*  
- [in] Lo stile della finestra estesi. Il valore predefinito è 0, vale a dire nessuno stile esteso. Per un elenco di valori possibili, vedere [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) nel SDK di Windows.  
+ [in] Lo stile della finestra estesi. Il valore predefinito è 0, vale a dire nessuno stile esteso. Per un elenco di valori possibili, vedere [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.  
   
  *MenuOrID*  
  [in] Per una finestra figlio, l'identificatore di finestra. Per una finestra di primo livello, un handle di menu per la finestra. Il valore predefinito è **0U**.  
   
  *lpCreateParam*  
- [in] Un puntatore ai dati di creazione della finestra. Per una descrizione completa, vedere la descrizione per il parametro finale [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Un puntatore ai dati di creazione della finestra. Per una descrizione completa, vedere la descrizione per il parametro finale [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Valore restituito  
  Se l'operazione riesce, l'handle alla finestra appena creato. in caso contrario, NULL.  

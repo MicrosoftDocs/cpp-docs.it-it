@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e66254e9e2e0090fafb1a1c0d2aa061d6e70806
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205196"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680859"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Supporto per MBCS in Visual C++
 Quando eseguito su una versione di Windows, il sistema di sviluppo di Visual C++ (inclusi gli strumenti dell'editor, debugger e riga di comando del codice sorgente integrato) è abilitata per MBCS, fatta eccezione per la finestra di memoria.  
@@ -47,13 +47,13 @@ Quando eseguito su una versione di Windows, il sistema di sviluppo di Visual C++
  Visual C++ accetta i caratteri a byte doppio ogni volta che è opportuno eseguire questa operazione. Nelle voci di testo nell'editor di risorse di Visual C++ (ad esempio, testo statico nell'editor finestre) e le voci di testo statico nell'editor delle icone e finestre di dialogo sono inclusi i nomi di percorso e i nomi di file. Inoltre, il preprocessore riconosce alcune direttive DBCS:, ad esempio, nomi di file nei `#include` (istruzioni) e come argomenti per il `code_seg` e `data_seg` pragma. Nell'editor del codice sorgente, vengono accettate caratteri DBCS in commenti e i valori letterali stringa, anche se non è in elementi del linguaggio C/C++ (ad esempio i nomi delle variabili).  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Supporto per l'Input Method Editor (IME)  
- Applicazioni scritte per i mercati dell'est asiatico che usano in genere MBCS (ad esempio, Giappone) supportano l'IME di Windows per l'immissione di entrambi i caratteri a byte singolo e double. L'ambiente di sviluppo di Visual C++ include il supporto completo per IME. Per altre informazioni, vedere [IME esempio: dimostrazione del controllo della modalità IME e dell'implementazione del livello IME 3](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
+ Applicazioni scritte per i mercati dell'est asiatico che usano in genere MBCS (ad esempio, Giappone) supportano l'IME di Windows per l'immissione di entrambi i caratteri a byte singolo e double. L'ambiente di sviluppo di Visual C++ include il supporto completo per IME.
   
  Le tastiere giapponesi non supportano direttamente i caratteri Kanji. L'IME converte una stringa fonetica, inserita in uno degli altri alfabeti giapponesi (Romaji, Katakana e Hiragana) relative rappresentazioni Kanji possibili. Se è presente l'ambiguità, è possibile selezionare tra diverse alternative. Dopo aver selezionato il carattere Kanji desiderato, l'IME passa due `WM_CHAR` messaggi all'applicazione di controllo.  
   
  L'IME, attivata da ALT +\` combinazione di tasti, viene visualizzata come un set di pulsanti (un indicatore) e una finestra di conversione. L'applicazione consente di posizionare la finestra nel punto di inserimento di testo. L'applicazione deve gestire `WM_MOVE` e `WM_SIZE` messaggi riposizionando la finestra di conversione di conformarsi al nuovo percorso o alla dimensione della finestra di destinazione.  
   
- Se si desidera che gli utenti dell'applicazione per avere la possibilità di immettere caratteri Kanji, l'applicazione deve gestire i messaggi IME di Windows. Per altre informazioni sulla programmazione di IME, vedere [Input Method Editor](/previous-versions/windows/desktop/ms776145\(v=vs.85\)).  
+ Se si desidera che gli utenti dell'applicazione per avere la possibilità di immettere caratteri Kanji, l'applicazione deve gestire i messaggi IME di Windows. Per altre informazioni sulla programmazione di IME, vedere [Input Method Manager](/windows/desktop/intl/input-method-manager).  
   
 ## <a name="visual-c-debugger"></a>Debugger di Visual C++  
  Il debugger di Visual C++ offre la possibilità di impostare i punti di interruzione per i messaggi IME. Inoltre, la finestra memoria può visualizzare caratteri a byte doppio.  
