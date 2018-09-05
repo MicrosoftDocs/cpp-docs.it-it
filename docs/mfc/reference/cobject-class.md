@@ -31,11 +31,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ccbfc00af51c3327b86386905fb7571f5cbf41fc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852055"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757907"
 ---
 # <a name="cobject-class"></a>Classe CObject
 Classe base principale per la libreria Microsoft Foundation Class.  

@@ -21,17 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e3c07522ead22467455ce2d601270e7b624be0
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: ff07c1b26649ffd591bcab9917cf45fa4c67f30a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131614"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756516"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>Tempo trascorso: Classi generiche
-La procedura seguente illustra come calcolare la differenza tra due `CTime` gli oggetti e ottenere un `CTimeSpan` risultato. Usare la `CTime` e `CTimeSpan` oggetti per la quale calcolare il tempo trascorso, come indicato di seguito:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
-  
+
+La procedura seguente illustra come calcolare la differenza tra due `CTime` gli oggetti e ottenere un `CTimeSpan` risultato. Usare la `CTime` e `CTimeSpan` oggetti per la quale calcolare il tempo trascorso, come indicato di seguito:
+
+   [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]
+
 Dopo aver calcolato `elapsedTime`, è possibile usare le funzioni membro di `CTimeSpan` per estrarre i componenti del valore del tempo trascorso.  
 

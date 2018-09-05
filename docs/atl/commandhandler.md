@@ -16,50 +16,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ad124f0819dbfd9cfd0117cb91fbcffba05a400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201276"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752815"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` la funzione è identificata dal terzo parametro della macro COMMAND_HANDLER nella mappa messaggi.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+`CommandHandler` la funzione è identificata dal terzo parametro della macro COMMAND_HANDLER nella mappa messaggi.
+
+## <a name="syntax"></a>Sintassi
+
 ```  
- 
-    LRESULT 
-    CommandHandler 
- (
+LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
     HWND hWndCtl,  
     BOOL& bHandled);
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *wNotifyCode*  
- Il codice di notifica.  
-  
- *wID*  
- Identificatore della voce di menu, controllo o tasto di scelta rapida.  
-  
- *hWndCtl*  
- Handle per un controllo di finestra.  
-  
- *bHandled*  
- Il set di mapping dei messaggi *bHandled* su TRUE prima `CommandHandler` viene chiamato. Se `CommandHandler` non gestisce completamente il messaggio deve essere impostato *bHandled* su FALSE per indicare che il messaggio richiede un'ulteriore elaborazione.  
-  
-## <a name="return-value"></a>Valore restituito  
- Il risultato dell'elaborazione del messaggio. 0 se ha esito positivo.  
-  
-## <a name="remarks"></a>Note  
- Per un esempio dell'uso di questo gestore di messaggi in una mappa dei messaggi, vedere [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Implementazione di una finestra](../atl/implementing-a-window.md)   
- [Mappe messaggi](../atl/message-maps-atl.md)   
- [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+```
+
+#### <a name="parameters"></a>Parametri
+
+*wNotifyCode*  
+Il codice di notifica.
+
+*wID*  
+Identificatore della voce di menu, controllo o tasto di scelta rapida.
+
+*hWndCtl*  
+Handle per un controllo di finestra.
+
+*bHandled*  
+Il set di mapping dei messaggi *bHandled* su TRUE prima `CommandHandler` viene chiamato. Se `CommandHandler` non gestisce completamente il messaggio deve essere impostato *bHandled* su FALSE per indicare che il messaggio richiede un'ulteriore elaborazione.
+
+## <a name="return-value"></a>Valore restituito
+
+Il risultato dell'elaborazione del messaggio. 0 se ha esito positivo.
+
+## <a name="remarks"></a>Note
+
+Per un esempio dell'uso di questo gestore di messaggi in una mappa dei messaggi, vedere [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).
+
+## <a name="see-also"></a>Vedere anche
+
+[Implementazione di una finestra](../atl/implementing-a-window.md)   
+[Mappe messaggi](../atl/message-maps-atl.md)   
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

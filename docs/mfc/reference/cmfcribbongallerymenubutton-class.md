@@ -29,11 +29,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540828"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751695"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe CMFCRibbonGalleryMenuButton
 Implementa un pulsante di menu della barra multifunzione contenente raccolte della barra multifunzione.  

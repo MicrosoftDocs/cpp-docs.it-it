@@ -51,11 +51,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203403"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757510"
 ---
 # <a name="cpropertypage-class"></a>Classe CPropertyPage
 Rappresenta singole pagine di una finestra delle proprietà, altrimenti nota come finestra di dialogo a schede.  

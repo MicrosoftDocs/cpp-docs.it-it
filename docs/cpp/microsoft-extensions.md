@@ -14,44 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5699ce82a6e8537f12da50fdcb8288da167ecca3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408375"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752239"
 ---
 # <a name="microsoft-extensions"></a>Estensioni Microsoft
-*istruzione di ASM*:  
- **ASM***un'istruzione di assembly* **;** consenso esplicito    
-  
- **ASM {***elenco di istruzioni di assembly***};** consenso esplicito      
-  
- *elenco di istruzioni di assembly*:  
- *un'istruzione di assembly* **;** consenso esplicito  
-  
- *un'istruzione di assembly* **;** *elenco di istruzioni di assembly* **;** consenso esplicito  
-  
- *MS-modificatore-list*:  
- *MS-modifier ms-modificatore-list*opt  
-  
- *MS-modifier*:  
- **__cdecl**  
-  
- **__fastcall**  
-  
- **__stdcall**  
-  
- **syscall** (riservato per le implementazioni future)  
-  
- **oldcall** (riservato per le implementazioni future)  
-  
- **unaligned** (riservato per le implementazioni future)  
-  
- *modificatore di base*  
-  
- *modificatore basato*:  
- **based (** *tipo di base* **)**  
-  
- *tipo basato su*:  
- *name*  
+
+*istruzione di ASM*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ASM***un'istruzione di assembly* **;** <sub>opt  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ASM {***elenco di istruzioni di assembly***};** <sub>opt    </sub>
+
+*elenco di istruzioni di assembly*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*un'istruzione di assembly* **;** <sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*un'istruzione di assembly* **;** *elenco di istruzioni di assembly* **;** <sub>opt</sub>
+
+*MS-modificatore-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*MS-modifier* *ms-modificatore-list*<sub>opt</sub>
+
+*MS-modifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**syscall** (riservato per le implementazioni future)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**oldcall** (riservato per le implementazioni future)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**unaligned** (riservato per le implementazioni future)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*modificatore di base*
+
+*modificatore basato*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**based (** *tipo di base* **)**
+
+*tipo basato su*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Nome*

@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5ded5bb355b961e7d271fdb51d2cf6aac9a134f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612194"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753480"
 ---
 # <a name="platformoutofmemoryexception-class"></a>Classe Platform::OutOfMemoryException
 Generata quando la memoria disponibile non è sufficiente per completare l'operazione.  

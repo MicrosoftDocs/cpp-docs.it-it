@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 92076ac919664fb8ebf6a01513b9382ade52f2a5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598297"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754120"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Riferimenti deboli e cicli di interruzione (C++/CX)
 In qualsiasi sistema di tipi basato su conteggio dei riferimenti, i riferimenti ai tipi possono costituire *cicli*, ossia un oggetto fa riferimento a un altro oggetto, il secondo oggetto fa riferimento a un terzo oggetto e così via finché un determinato oggetto finale non fa riferimento al primo oggetto. In un ciclo, gli oggetti non possono essere eliminati correttamente quando il conteggio dei riferimenti di un oggetto diventa zero. Per risolvere questo problema, C + + c++ /CX fornisce il [classe platform:: WeakReference](../cppcx/platform-weakreference-class.md) classe. Un oggetto `WeakReference` supporta il metodo [Resolve](../cppcx/platform-weakreference-class.md#resolve) , che restituisce null se l'oggetto non esiste più oppure genera [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) se l'oggetto è attivo ma non è di tipo `T`.  

@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883713"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755073"
 ---
 # <a name="atlcommodule70-structure"></a>Struttura _ATL_COM_MODULE70
-Utilizzato dal codice correlato a COM in ATL.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Utilizzato dal codice correlato a COM in ATL.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
@@ -39,34 +40,34 @@ struct _ATL_COM_MODULE70 {
     _ATL_OBJMAP_ENTRY** m_ppAutoObjMapLast;
     CRITICAL_SECTION m_csObjMap;
 };
-```  
-  
-## <a name="members"></a>Membri  
- `cbSize`  
- Le dimensioni della struttura, usata per il controllo delle versioni.  
-  
- `m_hInstTypeLib`  
- L'handle di istanza alla libreria dei tipi per questo modulo.  
-  
- `m_ppAutoObjMapFirst`  
- Indirizzo dell'elemento della matrice che indica l'inizio delle voci della mappa oggetti per questo modulo.  
-  
- `m_ppAutoObjMapLast`  
- Indirizzo dell'elemento della matrice che indica la fine delle voci della mappa oggetti per questo modulo.  
-  
- `m_csObjMap`  
- Sezione critica per serializzare l'accesso alle voci della mappa oggetto. Usato internamente da ATL.  
-  
-## <a name="remarks"></a>Note  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) viene definito come un typedef di _ATL_COM_MODULE70.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlbase. h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi e struct](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Membri
 
+`cbSize`  
+Le dimensioni della struttura, usata per il controllo delle versioni.
 
+`m_hInstTypeLib`  
+L'handle di istanza alla libreria dei tipi per questo modulo.
 
+`m_ppAutoObjMapFirst`  
+Indirizzo dell'elemento della matrice che indica l'inizio delle voci della mappa oggetti per questo modulo.
+
+`m_ppAutoObjMapLast`  
+Indirizzo dell'elemento della matrice che indica la fine delle voci della mappa oggetti per questo modulo.
+
+`m_csObjMap`  
+Sezione critica per serializzare l'accesso alle voci della mappa oggetto. Usato internamente da ATL.
+
+## <a name="remarks"></a>Note
+
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) viene definito come un typedef di _ATL_COM_MODULE70.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlbase. h
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi e struct](../../atl/reference/atl-classes.md)
 

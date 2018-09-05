@@ -14,11 +14,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d74eb59fa1c8c8f53591c8452cb6940bc9ae1743
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601270"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753110"
 ---
 # <a name="namespaces-reference-ccx"></a>Riferimenti a spazi dei nomi (C++/CX)
 Gli articoli in questa sezione della documentazione vengono descritti gli spazi dei nomi che supportano il compilatore per C + + c++ /CX.  

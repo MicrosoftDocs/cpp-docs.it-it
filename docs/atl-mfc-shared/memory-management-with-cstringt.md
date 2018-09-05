@@ -24,24 +24,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73651aa4696425750fea728a5e66ca727e742b9a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8676626c47471c2d1702d49df3069b618cc3ff4f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886193"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752206"
 ---
 # <a name="memory-management-with-cstringt"></a>Gestione della memoria con CStringT
-Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) è una classe di modello utilizzata per modificare le stringhe di caratteri di lunghezza variabile. La memoria per contenere queste stringhe viene allocata e rilasciata tramite un oggetto di gestione di stringa, associato a ogni istanza di `CStringT`. MFC e ATL fornisce creazioni di istanze predefinite di `CStringT`, denominato `CString`, `CStringA`, e `CStringW`, la quale modificare le stringhe di diversi tipi di carattere. Questi tipi di carattere sono di tipo, TCHAR **char**, e `wchar_t`, rispettivamente. Questi tipi di stringa predefinita usano una gestione stringhe che alloca la memoria dall'heap del processo (in ATL) o nell'heap CRT (in MFC). Per le applicazioni tipiche, questo schema di allocazione della memoria è sufficiente. Tuttavia, per la creazione con utilizzo intensivo del codice usano di stringhe (o codice multithreading) i gestori di memoria predefinita non è possono eseguire in modo ottimale. In questo argomento descrive come sostituire il comportamento di gestione della memoria predefinito di `CStringT`, creando in modo specifico gli allocatori ottimizzato per l'attività in questione.  
-  
--   [Implementazione di una gestione stringhe personalizzata (metodo di base)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
-  
--   [Prevenzione dei conflitti dell'Heap](../atl-mfc-shared/avoidance-of-heap-contention.md)  
-  
--   [Implementazione di una gestione stringhe personalizzata (metodo avanzato)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
-  
--   [CFixedStringT: Esempio di una gestione stringhe personalizzata](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Esempio CustomString](../visual-cpp-samples.md)
+
+Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) è una classe di modello utilizzata per modificare le stringhe di caratteri di lunghezza variabile. La memoria per contenere queste stringhe viene allocata e rilasciata tramite un oggetto di gestione di stringa, associato a ogni istanza di `CStringT`. MFC e ATL fornisce creazioni di istanze predefinite di `CStringT`, denominato `CString`, `CStringA`, e `CStringW`, la quale modificare le stringhe di diversi tipi di carattere. Questi tipi di carattere sono di tipo, TCHAR **char**, e `wchar_t`, rispettivamente. Questi tipi di stringa predefinita usano una gestione stringhe che alloca la memoria dall'heap del processo (in ATL) o nell'heap CRT (in MFC). Per le applicazioni tipiche, questo schema di allocazione della memoria è sufficiente. Tuttavia, per la creazione con utilizzo intensivo del codice usano di stringhe (o codice multithreading) i gestori di memoria predefinita non è possono eseguire in modo ottimale. In questo argomento descrive come sostituire il comportamento di gestione della memoria predefinito di `CStringT`, creando in modo specifico gli allocatori ottimizzato per l'attività in questione.
+
+- [Implementazione di una gestione stringhe personalizzata (metodo di base)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)
+
+- [Prevenzione dei conflitti dell'Heap](../atl-mfc-shared/avoidance-of-heap-contention.md)
+
+- [Implementazione di una gestione stringhe personalizzata (metodo avanzato)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)
+
+- [CFixedStringT: Esempio di una gestione stringhe personalizzata](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Esempio CustomString](../visual-cpp-samples.md)
 

@@ -18,65 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882720"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751423"
 ---
 # <a name="cinterfacearray-class"></a>Classe CInterfaceArray
-Questa classe fornisce metodi utili quando si crea una matrice di puntatori a interfaccia COM.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Questa classe fornisce metodi utili quando si crea una matrice di puntatori a interfaccia COM.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 template <class I, const IID* piid=& __uuidof(I)>  
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *I*  
- Un'interfaccia COM che specifica il tipo di puntatore da archiviare.  
-  
- *piid*  
- Un puntatore all'IID del *ho*.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Il costruttore per la matrice di interfacce.|  
-  
-## <a name="remarks"></a>Note  
- Questa classe fornisce un costruttore e i metodi derivati per la creazione di una matrice di puntatori a interfaccia COM. Uso [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quando è necessario un elenco.  
-  
- Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `CAtlArray`  
-  
- `CInterfaceArray`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlcoll. h  
-  
-##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray  
- Costruttore.  
-  
+```
+
+#### <a name="parameters"></a>Parametri
+
+*I*  
+Un'interfaccia COM che specifica il tipo di puntatore da archiviare.
+
+*piid*  
+Un puntatore all'IID del *ho*.
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Il costruttore per la matrice di interfacce.|
+
+## <a name="remarks"></a>Note
+
+Questa classe fornisce un costruttore e i metodi derivati per la creazione di una matrice di puntatori a interfaccia COM. Uso [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quando è necessario un elenco.
+
+Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`CAtlArray`
+
+`CInterfaceArray`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlcoll. h
+
+##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray
+
+Costruttore.
+
 ```
 CInterfaceArray() throw();
-```  
-  
-### <a name="remarks"></a>Note  
- Consente di inizializzare la matrice di puntatore intelligente.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe CAtlArray](../../atl/reference/catlarray-class.md)   
- [Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
- [Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Panoramica della classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Note
+
+Consente di inizializzare la matrice di puntatore intelligente.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe CAtlArray](../../atl/reference/catlarray-class.md)   
+[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
+[Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)

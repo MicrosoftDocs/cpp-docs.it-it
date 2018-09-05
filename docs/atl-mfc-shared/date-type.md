@@ -21,59 +21,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 314b943b171d43f8b1723321ac3a942ed33fd100
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d5a6ade991e3a2def588bdd3139cbea8089d3124
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883466"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758011"
 ---
 # <a name="date-type"></a>Tipo DATE
-Il tipo data viene implementato usando un numero a virgola mobile a 8 byte. Giorni sono rappresentati da incrementi di numero intero a partire dal 30 dicembre 1899, mezzanotte all'ora zero. I valori delle ore sono espresse come valore assoluto della parte frazionaria del numero. Nella tabella seguente illustra le diverse date insieme ai relativi equivalenti numerici di tipo Data:  
-  
-|Data e ora|Rappresentazione|  
-|-------------------|--------------------|  
-|30 dicembre 1899, mezzanotte|0,00|  
-|Mezzanotte del 1 gennaio 1900|2.00|  
-|La mezzanotte del 4 gennaio 1900|5.00|  
-|4 gennaio 1900 e 6 del mattino.|5.25|  
-|4 gennaio 1900 e mezzogiorno|5.50|  
-|4 gennaio 1900, alle 21.00|5.875|  
-  
- Il tipo di date, DATE, nonché `COleDateTime` classe rappresenta le date e ore come una linea numerica classica. Il `COleDateTime` classe contiene diversi metodi per la modifica dei valori di data, tra cui la conversione da e verso altri formati data comuni.  
-  
- Sottolineare i seguenti punti quando si lavora con questi formati di data e ora in automazione:  
-  
--   Le date vengono specificate in ora locale. la sincronizzazione deve essere eseguita manualmente quando si lavora con le date in fusi orari diversi.  
-  
--   I tipi di data non tengono conto per l'ora legale.  
-  
--   La sequenza temporale data diventa discontinua per valori di data minore di 0 (prima di 30 dicembre 1899). Infatti, la parte di numero intero del valore date viene considerata con segno, mentre la parte frazionaria viene considerata come senza segno. In altre parole, la parte di numero intero del valore date può essere positivo o negativo, mentre la parte frazionaria del valore date viene sempre aggiunta sulla data logica complessiva. Nella tabella seguente illustra alcuni esempi:  
-  
-|Data e ora|Rappresentazione|  
-|-------------------|--------------------|  
-|27 dicembre 1899, mezzanotte|-3.00|  
-|28 dicembre 1899, mezzogiorno|-2.50|  
-|28 dicembre 1899, mezzanotte|-2.00|  
-|29 dicembre 1899, mezzanotte|-1.00|  
-|30 dicembre 1899, 18.00.|-0.75|  
-|30 dicembre 1899, mezzogiorno|-0.50|  
-|30 dicembre 1899, 6 del mattino.|-0.25|  
-|30 dicembre 1899, mezzanotte|0,00|  
-|30 dicembre 1899, 6 del mattino.|0.25|  
-|30 dicembre 1899, mezzogiorno|0.50|  
-|30 dicembre 1899, 18.00.|0.75|  
-|Mezzanotte del 31 dicembre 1899|1.00|  
-|Mezzanotte del 1 gennaio 1900|2.00|  
-|1 gennaio 1900 e mezzogiorno|2.50|  
-|2 ° gennaio 1900, mezzanotte|3.00|  
-  
+
+Il tipo data viene implementato usando un numero a virgola mobile a 8 byte. Giorni sono rappresentati da incrementi di numero intero a partire dal 30 dicembre 1899, mezzanotte all'ora zero. I valori delle ore sono espresse come valore assoluto della parte frazionaria del numero. Nella tabella seguente illustra le diverse date insieme ai relativi equivalenti numerici di tipo Data:
+
+|Data e ora|Rappresentazione|
+|-------------------|--------------------|
+|30 dicembre 1899, mezzanotte|0,00|
+|Mezzanotte del 1 gennaio 1900|2.00|
+|La mezzanotte del 4 gennaio 1900|5.00|
+|4 gennaio 1900 e 6 del mattino.|5.25|
+|4 gennaio 1900 e mezzogiorno|5.50|
+|4 gennaio 1900, alle 21.00|5.875|
+
+Il tipo di date, DATE, nonché `COleDateTime` classe rappresenta le date e ore come una linea numerica classica. Il `COleDateTime` classe contiene diversi metodi per la modifica dei valori di data, tra cui la conversione da e verso altri formati data comuni.
+
+Sottolineare i seguenti punti quando si lavora con questi formati di data e ora in automazione:
+
+- Le date vengono specificate in ora locale. la sincronizzazione deve essere eseguita manualmente quando si lavora con le date in fusi orari diversi.
+
+- I tipi di data non tengono conto per l'ora legale.
+
+- La sequenza temporale data diventa discontinua per valori di data minore di 0 (prima di 30 dicembre 1899). Infatti, la parte di numero intero del valore date viene considerata con segno, mentre la parte frazionaria viene considerata come senza segno. In altre parole, la parte di numero intero del valore date può essere positivo o negativo, mentre la parte frazionaria del valore date viene sempre aggiunta sulla data logica complessiva. Nella tabella seguente illustra alcuni esempi:
+
+|Data e ora|Rappresentazione|
+|-------------------|--------------------|
+|27 dicembre 1899, mezzanotte|-3.00|
+|28 dicembre 1899, mezzogiorno|-2.50|
+|28 dicembre 1899, mezzanotte|-2.00|
+|29 dicembre 1899, mezzanotte|-1.00|
+|30 dicembre 1899, 18.00.|-0.75|
+|30 dicembre 1899, mezzogiorno|-0.50|
+|30 dicembre 1899, 6 del mattino.|-0.25|
+|30 dicembre 1899, mezzanotte|0,00|
+|30 dicembre 1899, 6 del mattino.|0.25|
+|30 dicembre 1899, mezzogiorno|0.50|
+|30 dicembre 1899, 18.00.|0.75|
+|Mezzanotte del 31 dicembre 1899|1.00|
+|Mezzanotte del 1 gennaio 1900|2.00|
+|1 gennaio 1900 e mezzogiorno|2.50|
+|2 ° gennaio 1900, mezzanotte|3.00|
+
 > [!CAUTION]
->  Si noti che poiché 6:00 viene sempre rappresentata da un valore frazionario 0,25 indipendentemente dal fatto che l'intero che rappresenta il giorno è un valore positivo (dopo il 30 dicembre 1899) o negativo (prima dal 30 dicembre 1899), un semplice confronto punto a virgola mobile viene erroneamente ordinare qualsiasi data che rappresenta le 6.00 nel giorno precedente a 12/30/1899 come *in un secondo momento* rispetto a una data che rappresentano 7:00 nello stesso giorno.  
-  
- Altre informazioni sui problemi relativi alla data e `COleDateTime` i tipi sono disponibili in [classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [data e ora: supporto di automazione](../atl-mfc-shared/date-and-time-automation-support.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Data e ora](../atl-mfc-shared/date-and-time.md)   
- [Classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)
+>  Si noti che poiché 6:00 viene sempre rappresentata da un valore frazionario 0,25 indipendentemente dal fatto che l'intero che rappresenta il giorno è un valore positivo (dopo il 30 dicembre 1899) o negativo (prima dal 30 dicembre 1899), un semplice confronto punto a virgola mobile viene erroneamente ordinare qualsiasi data che rappresenta le 6.00 nel giorno precedente a 12/30/1899 come *in un secondo momento* rispetto a una data che rappresentano 7:00 nello stesso giorno.
+
+Altre informazioni sui problemi relativi alla data e `COleDateTime` i tipi sono disponibili in [classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [data e ora: supporto di automazione](../atl-mfc-shared/date-and-time-automation-support.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Data e ora](../atl-mfc-shared/date-and-time.md)   
+[Classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)
 

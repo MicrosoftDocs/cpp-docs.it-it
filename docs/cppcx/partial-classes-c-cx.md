@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dd1d5f7559b88505929153ae1852fc42171e5208
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593026"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756847"
 ---
 # <a name="partial-classes-ccx"></a>Classi parziali (C++/CX)
 Una classe parziale è un costrutto che supporta scenari in cui tu effettui la modifica di una parte di una definizione di classe e il software che genera codice automaticamente, ad esempio la finestra di progettazione XAML, modifica il codice nella stessa classe. Utilizzando una classe parziale, puoi impedire alla finestra di progettazione di sovrascrivere il tuo codice. In un progetto di Visual Studio, il modificatore `partial` viene applicato automaticamente al file generato.  

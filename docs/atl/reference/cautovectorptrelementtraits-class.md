@@ -1,5 +1,5 @@
 ---
-title: Classe CAutoVectorPtrElementTraits | Documenti Microsoft
+title: Classe CAutoVectorPtrElementTraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,72 +19,80 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52c450a1a261224cf87ea125a6f01259da0e9f1b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd39f56d69aef836714d70b50f6e2c882cad9448
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357883"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754826"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>Classe CAutoVectorPtrElementTraits
-Questa classe fornisce metodi e funzioni statiche typedef utile durante la creazione di raccolte di puntatori intelligenti usando il vettore di nuovi operatori e delete.  
-  
+
+Questa classe fornisce metodi e funzioni statiche typedef utili durante la creazione di raccolte di puntatori intelligenti utilizzando il vettore di nuovo ed eliminare gli operatori.
+
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 template <typename T>  
 class CAutoVectorPtrElementTraits : 
    public CDefaultElementTraits<ATL::CAutoVectorPtr<T>>
-```    
-  
-#### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di puntatore.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-typedefs"></a>Typedef pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.|  
-  
-## <a name="remarks"></a>Note  
- Questa classe fornisce metodi e funzioni statiche TypeDef per consentire la creazione di oggetti di classe di raccolta che contiene i puntatori intelligenti. A differenza di [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), questa classe utilizza vector nuovi ed eliminare gli operatori.  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
-  
- [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
-  
- [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)  
-  
- [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)  
-  
- `CAutoVectorPtrElementTraits`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlcoll. h  
-  
-##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE  
- Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.  
-  
+```
+
+#### <a name="parameters"></a>Parametri
+
+`T`  
+Il tipo di puntatore.
+
+## <a name="members"></a>Membri
+
+### <a name="public-typedefs"></a>Typedef pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.|
+
+## <a name="remarks"></a>Note
+
+Questa classe fornisce metodi e funzioni statiche TypeDef per la creazione di oggetti di classe di raccolta che contiene i puntatori intelligenti. A differenza [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), questa classe Usa vettoriale nuovi ed eliminare gli operatori.
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+
+`CAutoVectorPtrElementTraits`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlcoll. h
+
+##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE
+
+Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.
+
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
-```  
-  
-##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE  
- Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.  
-  
+```
+
+##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE
+
+Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.
+
 ```
 typedef T*& OUTARGTYPE;
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Classe CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Classe CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)

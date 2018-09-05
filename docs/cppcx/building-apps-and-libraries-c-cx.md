@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ec156489b08d9f640187148b6284b5fd4763e6eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583999"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751606"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Compilazione di applicazioni e librerie (C++/CX)
 Gli argomenti in questa sezione forniscono alcune informazioni sull'uso del sistema di compilazione per produrre un'app della piattaforma Windows universale o un componente Windows Runtime.  

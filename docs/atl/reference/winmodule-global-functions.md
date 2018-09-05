@@ -15,66 +15,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ac96acaf337ad3ee73f0b6f93ae6893632962e9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 08cfa128ecb598d4960c0d5527e66a9cb81266c2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884563"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752443"
 ---
 # <a name="winmodule-global-functions"></a>Funzioni globali WinModule
-Queste funzioni forniscono il supporto per `_AtlCreateWndData` strutturare le operazioni.  
-  
-> [!IMPORTANT]
->  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite nel Runtime di Windows.  
-  
-|||  
-|-|-|  
-|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|Questa funzione viene utilizzata per inizializzare e aggiungere una struttura `_AtlCreateWndData`.|  
-|[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|Chiamare questa funzione per estrarre una struttura esistente `_AtlCreateWndData`.|  
 
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlbase. h  
-  `            
-##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData  
- Questa funzione viene utilizzata per inizializzare e aggiungere una struttura `_AtlCreateWndData`.  
-   
+Queste funzioni forniscono il supporto per `_AtlCreateWndData` strutturare le operazioni.
+
+> [!IMPORTANT]
+> Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite nel Runtime di Windows.
+
+|||
+|-|-|
+|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|Questa funzione viene utilizzata per inizializzare e aggiungere una struttura `_AtlCreateWndData`.|
+|[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|Chiamare questa funzione per estrarre una struttura esistente `_AtlCreateWndData`.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlbase. h
+
+##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData
+
+Questa funzione viene utilizzata per inizializzare e aggiungere una struttura `_AtlCreateWndData`.
+
 ```
 ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
     _ATL_WIN_MODULE* pWinModule,
     _AtlCreateWndData* pData,
     void* pObject);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pWinModule*  
- Puntatore a un modulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) struttura.  
-  
- *pData*  
- Puntatore per il [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) struttura deve essere inizializzato e aggiunto al modulo corrente.  
-  
- *pObject*  
- Puntatore a un oggetto **ciò** puntatore.  
-  
-### <a name="remarks"></a>Note  
- Inizializza un `_AtlCreateWndData` struttura, che viene usato per archiviare le **ciò** puntatore utilizzato per fare riferimento alle istanze di classe e lo aggiunge all'elenco di cui viene fatto riferimento da un modulo `_ATL_WIN_MODULE70` struttura. Chiamata eseguita dal [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
-  
-##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData  
- Chiamare questa funzione per estrarre una struttura esistente `_AtlCreateWndData`.  
- 
+```
+
+### <a name="parameters"></a>Parametri
+
+*pWinModule*  
+Puntatore a un modulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) struttura.
+
+*pData*  
+Puntatore per il [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) struttura deve essere inizializzato e aggiunto al modulo corrente.
+
+*pObject*  
+Puntatore a un oggetto **ciò** puntatore.
+
+### <a name="remarks"></a>Note
+
+Inizializza un `_AtlCreateWndData` struttura, che viene usato per archiviare le **ciò** puntatore utilizzato per fare riferimento alle istanze di classe e lo aggiunge all'elenco di cui viene fatto riferimento da un modulo `_ATL_WIN_MODULE70` struttura. Chiamata eseguita dal [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
+
+##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData
+
+Chiamare questa funzione per estrarre una struttura esistente `_AtlCreateWndData`.
+
 ```
 ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinModule);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pWinModule*  
- Puntatore a un modulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) struttura.  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore per il [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) struttura.  
-  
-### <a name="remarks"></a>Note  
- Questa funzione estrae un oggetto esistente `_AtlCreateWndData` struttura dall'elenco a cui viene fatto riferimento da un modulo `_ATL_WIN_MODULE70` struttura.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni](../../atl/reference/atl-functions.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*pWinModule*  
+Puntatore a un modulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) struttura.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce un puntatore per il [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) struttura.
+
+### <a name="remarks"></a>Note
+
+Questa funzione estrae un oggetto esistente `_AtlCreateWndData` struttura dall'elenco a cui viene fatto riferimento da un modulo `_ATL_WIN_MODULE70` struttura.
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni](../../atl/reference/atl-functions.md)

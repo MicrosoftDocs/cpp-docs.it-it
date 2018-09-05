@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4cf37857e12eb795ebfa4c5c115bc80a1688d69e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677152"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756213"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshalling (C++/CX)
 Nella maggior parte dei casi, le istanze di classi di Windows Runtime, come oggetti C++ standard, è possibile accedere da qualsiasi thread. Tali classi sono indicate come "Agile". Tuttavia, un numero ridotto di classi di Windows Runtime fornite con Windows non è agile e deve essere utilizzato come oggetti COM piuttosto oggetti C++ standard. Non occorre essere un esperto di COM per usare le classi non Agile, ma è importante tenere in considerazione il modello di threading della classe e il relativo comportamento di marshalling. Questo articolo illustra i rari scenari in cui è necessario utilizzare un'istanza di una classe non Agile e fornisce indicazioni in merito.  

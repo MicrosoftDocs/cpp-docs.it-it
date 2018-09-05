@@ -23,71 +23,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a279dac7e2a9f4e58954ac6637eaf2b56ad801b2
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884142"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754813"
 ---
 # <a name="cdynamicchain-class"></a>Classe CDynamicChain
-Questa classe fornisce metodi che supportano la concatenazione dinamica di mappe messaggi.  
-  
+
+Questa classe fornisce metodi che supportano la concatenazione dinamica di mappe messaggi.
+
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 class CDynamicChain
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CDynamicChain::CDynamicChain](#cdynamicchain)|Costruttore.|  
-|[CDynamicChain:: ~ CDynamicChain](#dtor)|Distruttore.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CDynamicChain::CallChain](#callchain)|Indirizza un messaggio di Windows alla mappa messaggi di un altro oggetto.|  
-|[CDynamicChain::RemoveChainEntry](#removechainentry)|Rimuove una voce della mappa messaggi dalla raccolta.|  
-|[CDynamicChain::](#setchainentry)|Aggiunge una voce della mappa messaggi per la raccolta o modifica una voce esistente.|  
-  
-## <a name="remarks"></a>Note  
- `CDynamicChain` gestisce una raccolta di mappe messaggi, l'abilitazione di un messaggio di Windows essere reindirizzati in fase di esecuzione alla mappa messaggi di un altro oggetto.  
-  
- Per aggiungere supporto per la concatenazione dinamica di mappe messaggi, eseguire le operazioni seguenti:  
-  
--   Derivare la classe da `CDynamicChain`. Nella mappa messaggi, specificare il [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro concatenarsi a mappa dei messaggi predefinita di un altro oggetto.  
-  
--   Ogni classe di cui si vuole concatenare a da derivare [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` consente a un oggetto di esporre le mappe messaggi ad altri oggetti.  
-  
--   Chiamare `CDynamicChain::SetChainEntry` per identificare quale oggetto ed eseguire il mapping che si desidera catena.  
-  
- Si supponga, ad esempio, che la classe viene definita come segue:  
-  
- [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
-  
- Il client chiama quindi `CMyWindow::SetChainEntry`:  
-  
- [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
-  
- in cui `chainedObj` è l'oggetto concatenata e un'istanza di una classe derivata da `CMessageMap`. A questo punto, se `myCtl` riceve un messaggio che non viene gestito da `OnPaint` o `OnSetFocus`, la procedura della finestra indirizza il messaggio `chainedObj`della mappa del messaggio predefinito.  
-  
- Per altre informazioni sul concatenamento di mapping dei messaggi, vedere [mappe messaggi](../../atl/message-maps-atl.md) nell'articolo "Classi di finestra ATL".  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlwin. h  
-  
-##  <a name="callchain"></a>  CDynamicChain::CallChain  
- Indirizza il messaggio di Windows alla mappa messaggi di un altro oggetto.  
-  
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CDynamicChain::CDynamicChain](#cdynamicchain)|Costruttore.|
+|[CDynamicChain:: ~ CDynamicChain](#dtor)|Distruttore.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CDynamicChain::CallChain](#callchain)|Indirizza un messaggio di Windows alla mappa messaggi di un altro oggetto.|
+|[CDynamicChain::RemoveChainEntry](#removechainentry)|Rimuove una voce della mappa messaggi dalla raccolta.|
+|[CDynamicChain::](#setchainentry)|Aggiunge una voce della mappa messaggi per la raccolta o modifica una voce esistente.|
+
+## <a name="remarks"></a>Note
+
+`CDynamicChain` gestisce una raccolta di mappe messaggi, l'abilitazione di un messaggio di Windows essere reindirizzati in fase di esecuzione alla mappa messaggi di un altro oggetto.
+
+Per aggiungere supporto per la concatenazione dinamica di mappe messaggi, eseguire le operazioni seguenti:
+
+- Derivare la classe da `CDynamicChain`. Nella mappa messaggi, specificare il [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro concatenarsi a mappa dei messaggi predefinita di un altro oggetto.
+
+- Ogni classe di cui si vuole concatenare a da derivare [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` consente a un oggetto di esporre le mappe messaggi ad altri oggetti.
+
+- Chiamare `CDynamicChain::SetChainEntry` per identificare quale oggetto ed eseguire il mapping che si desidera catena.
+
+Si supponga, ad esempio, che la classe viene definita come segue:
+
+[!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]
+
+Il client chiama quindi `CMyWindow::SetChainEntry`:
+
+[!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]
+
+in cui `chainedObj` è l'oggetto concatenata e un'istanza di una classe derivata da `CMessageMap`. A questo punto, se `myCtl` riceve un messaggio che non viene gestito da `OnPaint` o `OnSetFocus`, la procedura della finestra indirizza il messaggio `chainedObj`della mappa del messaggio predefinito.
+
+Per altre informazioni sul concatenamento di mapping dei messaggi, vedere [mappe messaggi](../../atl/message-maps-atl.md) nell'articolo "Classi di finestra ATL".
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlwin. h
+
+##  <a name="callchain"></a>  CDynamicChain::CallChain
+
+Indirizza il messaggio di Windows alla mappa messaggi di un altro oggetto.
+
 ```
 BOOL CallChain(  
     DWORD dwChainID,
@@ -96,92 +100,106 @@ BOOL CallChain(
     WPARAM wParam,
     LPARAM lParam,
     LRESULT& lResult);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *dwChainID*  
- [in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi.  
-  
- *hWnd*  
- [in] Handle alla finestra di ricezione del messaggio.  
-  
- *uMsg*  
- [in] Il messaggio inviato alla finestra.  
-  
- *wParam*  
- [in] Informazioni aggiuntive specifiche del messaggio.  
-  
- *lParam*  
- [in] Informazioni aggiuntive specifiche del messaggio.  
-  
- *lResult*  
- [out] Il risultato dell'elaborazione del messaggio.  
-  
-### <a name="return-value"></a>Valore restituito  
- TRUE se il messaggio viene elaborato completamente; in caso contrario, FALSE.  
-  
-### <a name="remarks"></a>Note  
- Per la procedura di finestra per richiamare `CallChain`, è necessario specificare il [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro della mappa del messaggio. Per un esempio, vedere la [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Panoramica.  
-  
- `CallChain` richiede una chiamata precedente a [SetChainEntry](#setchainentry) per associare le *dwChainID* valore con un oggetto e propria mappa messaggi.  
-  
-##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
- Costruttore.  
-  
+```
+
+### <a name="parameters"></a>Parametri
+
+*dwChainID*  
+[in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi.
+
+*hWnd*  
+[in] Handle alla finestra di ricezione del messaggio.
+
+*uMsg*  
+[in] Il messaggio inviato alla finestra.
+
+*wParam*  
+[in] Informazioni aggiuntive specifiche del messaggio.
+
+*lParam*  
+[in] Informazioni aggiuntive specifiche del messaggio.
+
+*lResult*  
+[out] Il risultato dell'elaborazione del messaggio.
+
+### <a name="return-value"></a>Valore restituito
+
+TRUE se il messaggio viene elaborato completamente; in caso contrario, FALSE.
+
+### <a name="remarks"></a>Note
+
+Per la procedura di finestra per richiamare `CallChain`, è necessario specificare il [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro della mappa del messaggio. Per un esempio, vedere la [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Panoramica.
+
+`CallChain` richiede una chiamata precedente a [SetChainEntry](#setchainentry) per associare le *dwChainID* valore con un oggetto e propria mappa messaggi.
+
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain
+
+Costruttore.
+
 ```
 CDynamicChain();
-```  
-  
-##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
- Distruttore.  
-  
+```
+
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain
+
+Distruttore.
+
 ```
 ~CDynamicChain();
-```  
-  
-### <a name="remarks"></a>Note  
- Libera tutte le risorse allocate.  
-  
-##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
- Rimuove la mappa dei messaggi specificato dalla raccolta.  
-  
+```
+
+### <a name="remarks"></a>Note
+
+Libera tutte le risorse allocate.
+
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry
+
+Rimuove la mappa dei messaggi specificato dalla raccolta.
+
 ```
 BOOL RemoveChainEntry(DWORD dwChainID);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *dwChainID*  
- [in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi. Si definisce inizialmente questo valore tramite una chiamata a [SetChainEntry](#setchainentry).  
-  
-### <a name="return-value"></a>Valore restituito  
- TRUE se la mappa dei messaggi viene rimosso correttamente dalla raccolta. In caso contrario, FALSE.  
-  
-##  <a name="setchainentry"></a>  CDynamicChain::  
- Aggiunge la mappa dei messaggi specificato alla raccolta.  
-  
+```
+
+### <a name="parameters"></a>Parametri
+
+*dwChainID*  
+[in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi. Si definisce inizialmente questo valore tramite una chiamata a [SetChainEntry](#setchainentry).
+
+### <a name="return-value"></a>Valore restituito
+
+TRUE se la mappa dei messaggi viene rimosso correttamente dalla raccolta. In caso contrario, FALSE.
+
+##  <a name="setchainentry"></a>  CDynamicChain::
+
+Aggiunge la mappa dei messaggi specificato alla raccolta.
+
 ```
 BOOL SetChainEntry(  
     DWORD dwChainID,
     CMessageMap* pObject,
     DWORD dwMsgMapID = 0);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *dwChainID*  
- [in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi.  
-  
- *pObject*  
- [in] Un puntatore all'oggetto concatenata dichiarando la mappa dei messaggi. Questo oggetto deve derivare da [CMessageMap](../../atl/reference/cmessagemap-class.md).  
-  
- *dwMsgMapID*  
- [in] L'identificatore della mappa del messaggio nell'oggetto concatenata. Il valore predefinito è 0, che identifica la mappa dei messaggi predefinito dichiarata con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Per specificare una mappa messaggi alternativa dichiarato con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passare `msgMapID`.  
-  
-### <a name="return-value"></a>Valore restituito  
- TRUE se la mappa dei messaggi viene aggiunto correttamente alla raccolta. In caso contrario, FALSE.  
-  
-### <a name="remarks"></a>Note  
- Se il *dwChainID* valore esiste già nella raccolta, il suo oggetto associato e mappa dei messaggi vengono sostituite da *pObject* e *dwMsgMapID*, rispettivamente. In caso contrario, viene aggiunta una nuova voce.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
- [Panoramica della classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*dwChainID*  
+[in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi.
+
+*pObject*  
+[in] Un puntatore all'oggetto concatenata dichiarando la mappa dei messaggi. Questo oggetto deve derivare da [CMessageMap](../../atl/reference/cmessagemap-class.md).
+
+*dwMsgMapID*  
+[in] L'identificatore della mappa del messaggio nell'oggetto concatenata. Il valore predefinito è 0, che identifica la mappa dei messaggi predefinito dichiarata con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Per specificare una mappa messaggi alternativa dichiarato con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passare `msgMapID`.
+
+### <a name="return-value"></a>Valore restituito
+
+TRUE se la mappa dei messaggi viene aggiunto correttamente alla raccolta. In caso contrario, FALSE.
+
+### <a name="remarks"></a>Note
+
+Se il *dwChainID* valore esiste già nella raccolta, il suo oggetto associato e mappa dei messaggi vengono sostituite da *pObject* e *dwMsgMapID*, rispettivamente. In caso contrario, viene aggiunta una nuova voce.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)

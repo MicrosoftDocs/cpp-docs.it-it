@@ -1,5 +1,5 @@
 ---
-title: Applicazioni Desktop MFC | Documenti Microsoft
+title: Applicazioni Desktop MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350235"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754995"
 ---
 # <a name="mfc-desktop-applications"></a>Applicazioni desktop MFC
 La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a oggetti su molte delle API Win32 e COM. Sebbene possa essere utilizzata anche per creare applicazioni desktop molto semplici, risulta maggiormente utile quando è necessario compilare interfacce utente più complesse che includono più controlli. È possibile usare MFC per creare applicazioni con interfacce utente in stile Office.  
@@ -38,9 +38,9 @@ La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a ogg
  I membri della classe pubblici e protetti sono documentati solo quando vengono utilizzati normalmente nei programmi di applicazioni o in classi derivate. Vedere i file di intestazione delle classi per un elenco completo di membri delle classi.  
   
 > [!IMPORTANT]
->  Le classi MFC e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nell'ambiente di Runtime di Windows.  
+>  Le classi MFC e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nell'ambiente di Windows Runtime.  
 >   
->  Le librerie MFC (DLL) per la codifica di caratteri multibyte (MBCS) non sono più inclusi in Visual Studio, ma sono disponibili come componente aggiuntivo di Visual Studio. Per ulteriori informazioni, vedere [componente aggiuntivo DLL MBCS di MFC](mfc-mbcs-dll-add-on.md).  
+>  Le librerie MFC (DLL) per la codifica di caratteri multibyte (MBCS) non sono più inclusi in Visual Studio, ma sono disponibili come componente aggiuntivo di Visual Studio. Per altre informazioni, vedere [componente aggiuntivo DLL MBCS MFC](mfc-mbcs-dll-add-on.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Concetti](mfc-concepts.md)  
@@ -49,7 +49,7 @@ La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a ogg
  [Grafico della gerarchia](hierarchy-chart.md)  
  Rileva visivamente i dettagli delle relazioni tra classi nella libreria delle classi.  
   
- [Cenni preliminari sulla classe](class-library-overview.md)  
+ [Panoramica della classe](class-library-overview.md)  
  Elenca le classi nella libreria MFC in base alla categoria.  
   
  [Procedure dettagliate](walkthroughs-mfc.md)  
@@ -86,7 +86,7 @@ La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a ogg
  [Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)  
  Fornisce collegamenti alle classi condivise da MFC e ATL.  
   
- [Esempi relativi a MFC](../visual-cpp-samples.md)  
+ [Esempi di MFC](../visual-cpp-samples.md)  
  Fornisce collegamenti a esempi che dimostrano come utilizzare MFC.  
   
  [Riferimento alle librerie di Visual C++](../standard-library/cpp-standard-library-reference.md)  

@@ -21,115 +21,135 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f23e46f2ef8de61e6dccc16a24e8c4bcfaa8f2e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677084"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754618"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interfaccia IThreadPoolConfig
-Questa interfaccia fornisce metodi per la configurazione di un pool di thread.  
-  
+
+Questa interfaccia fornisce metodi per la configurazione di un pool di thread.
+
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 __interface
     __declspec(uuid("B1F64757-6E88-4fa2-8886-7848B0D7E660")) IThreadPoolConfig : public IUnknown
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="methods"></a>Metodi  
-  
-|||  
-|-|-|  
-|[GetSize](#getsize)|Chiamare questo metodo per ottenere il numero di thread nel pool.|  
-|[GetTimeout](#gettimeout)|Chiamare questo metodo per ottenere il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.|  
-|[SetSize](#setsize)|Chiamare questo metodo per impostare il numero di thread nel pool.|  
-|[SetTimeout](#settimeout)|Chiamare questo metodo per impostare il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.|  
-  
-## <a name="remarks"></a>Note  
- Questa interfaccia viene implementata da [CThreadPool](../../atl/reference/cthreadpool-class.md).  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlutil. h  
-  
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
- Chiamare questo metodo per ottenere il numero di thread nel pool.  
-  
+```
+
+## <a name="members"></a>Membri
+
+### <a name="methods"></a>Metodi
+
+|||
+|-|-|
+|[GetSize](#getsize)|Chiamare questo metodo per ottenere il numero di thread nel pool.|
+|[GetTimeout](#gettimeout)|Chiamare questo metodo per ottenere il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.|
+|[SetSize](#setsize)|Chiamare questo metodo per impostare il numero di thread nel pool.|
+|[SetTimeout](#settimeout)|Chiamare questo metodo per impostare il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.|
+
+## <a name="remarks"></a>Note
+
+Questa interfaccia viene implementata da [CThreadPool](../../atl/reference/cthreadpool-class.md).
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlutil. h
+
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
+
+Chiamare questo metodo per ottenere il numero di thread nel pool.
+
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pnNumThreads*  
- [out] Indirizzo della variabile che, in caso di esito positivo riceve il numero di thread nel pool.  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
-  
-### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
-  
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- Chiamare questo metodo per ottenere il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.  
-  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pnNumThreads*  
+[out] Indirizzo della variabile che, in caso di esito positivo riceve il numero di thread nel pool.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
+
+### <a name="example"></a>Esempio
+
+[!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]
+
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
+
+Chiamare questo metodo per ottenere il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.
+
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pdwMaxWait*  
- [out] Indirizzo della variabile che, in caso di esito positivo riceve il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
-  
-### <a name="example"></a>Esempio  
- Visualizzare [IThreadPoolConfig::GetSize](#getsize).  
-  
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
- Chiamare questo metodo per impostare il numero di thread nel pool.  
-  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pdwMaxWait*  
+[out] Indirizzo della variabile che, in caso di esito positivo riceve il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
+
+### <a name="example"></a>Esempio
+
+Visualizzare [IThreadPoolConfig::GetSize](#getsize).
+
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
+
+Chiamare questo metodo per impostare il numero di thread nel pool.
+
 ```
 STDMETHOD(SetSize)int nNumThreads);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *nNumThreads*  
- Il numero richiesto di thread nel pool.  
-  
- Se *nNumThreads* è negativo, il valore assoluto corrispondente verrà moltiplicato per il numero di processori del computer per ottenere il numero totale di thread.  
-  
- Se *nNumThreads* è uguale a zero, ATLS_DEFAULT_THREADSPERPROC verrà moltiplicata per il numero di processori del computer per ottenere il numero totale di thread.  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
-  
-### <a name="example"></a>Esempio  
- Visualizzare [IThreadPoolConfig::GetSize](#getsize).  
-  
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- Chiamare questo metodo per impostare il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.  
-  
+```
+
+### <a name="parameters"></a>Parametri
+
+*nNumThreads*  
+Il numero richiesto di thread nel pool.
+
+Se *nNumThreads* è negativo, il valore assoluto corrispondente verrà moltiplicato per il numero di processori del computer per ottenere il numero totale di thread.
+
+Se *nNumThreads* è uguale a zero, ATLS_DEFAULT_THREADSPERPROC verrà moltiplicata per il numero di processori del computer per ottenere il numero totale di thread.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
+
+### <a name="example"></a>Esempio
+
+Visualizzare [IThreadPoolConfig::GetSize](#getsize).
+
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
+
+Chiamare questo metodo per impostare il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.
+
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *dwMaxWait*  
- Il tempo massimo richiesto in millisecondi di attesa per un thread arrestare il pool di thread.  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
-  
-### <a name="example"></a>Esempio  
- Visualizzare [IThreadPoolConfig::GetSize](#getsize).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../atl/reference/atl-classes.md)   
- [Classe CThreadPool](../../atl/reference/cthreadpool-class.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*dwMaxWait*  
+Il tempo massimo richiesto in millisecondi di attesa per un thread arrestare il pool di thread.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
+
+### <a name="example"></a>Esempio
+
+Visualizzare [IThreadPoolConfig::GetSize](#getsize).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi](../../atl/reference/atl-classes.md)   
+[Classe CThreadPool](../../atl/reference/cthreadpool-class.md)

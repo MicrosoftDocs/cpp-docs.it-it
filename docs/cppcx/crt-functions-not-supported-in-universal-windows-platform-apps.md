@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4ef64ac81e36a298d89078997992343d92b7dbdc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609185"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756870"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)
 Molte funzioni di runtime C (CRT) non sono disponibili per lo sviluppo di app della piattaforma UWP (Universal Windows Platform). In alcuni casi, sono disponibili soluzioni alternative, ovvero-ad esempio, è possibile usare Windows Runtime o le API Win32. Tuttavia, in altri casi, le funzioni CRT sono state escluse perché le funzionalità corrispondenti o le API di supporto non sono applicabili alle app UWP. Per cercare un metodo alternativo supportato per il Runtime di Windows, vedere [alternative alle API di Windows nelle App UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  

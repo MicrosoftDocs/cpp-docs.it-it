@@ -1,5 +1,5 @@
 ---
-title: Supporto di IDispatch e IErrorInfo | Documenti Microsoft
+title: Supporto di IDispatch e IErrorInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f4c99da3989cce84bd5b6bd3bbfee8df97ff43
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d9c27dfe81c3bbd2978f418c8e942ac20190b30
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360949"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753608"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Supporto di IDispatch e IErrorInfo
-È possibile utilizzare la classe modello [IDispatchImpl](../atl/reference/idispatchimpl-class.md) per fornire un'implementazione predefinita del `IDispatch Interface` parte delle interfacce duali sull'oggetto.  
-  
- Se viene utilizzata la `IErrorInfo` interfaccia per segnalare gli errori al client, quindi l'oggetto deve supportare il `ISupportErrorInfo Interface` interfaccia. La classe modello [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) fornisce un modo semplice per implementare questa se si dispone solo un'unica interfaccia che genera errori sull'oggetto.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali sugli oggetti COM ATL](../atl/fundamentals-of-atl-com-objects.md)
+
+È possibile usare la classe modello [IDispatchImpl](../atl/reference/idispatchimpl-class.md) per fornire un'implementazione predefinita del `IDispatch Interface` parte di tutte le interfacce duali sull'oggetto.
+
+Se l'oggetto utilizza il `IErrorInfo` interfaccia per segnalare gli errori al client, quindi l'oggetto deve supportare il `ISupportErrorInfo Interface` interfaccia. La classe modello [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) fornisce un modo semplice per implementare questa se si dispone solo un'unica interfaccia che genera errori sull'oggetto.
+
+## <a name="see-also"></a>Vedere anche
+
+[Nozioni fondamentali sugli oggetti COM ATL](../atl/fundamentals-of-atl-com-objects.md)
 

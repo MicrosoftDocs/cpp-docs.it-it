@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222743"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756977"
 ---
 # <a name="delegates-ccx"></a>Delegati (C++/CX)
 Il `delegate` parola chiave viene usata per dichiarare un tipo di riferimento che è l'equivalente di Windows Runtime di un oggetto funzione in C++ standard. Dichiarazione di un delegato simile a una firma della funzione. Specifica il tipo restituito e i tipi di parametro per la relativa funzione di cui è stato eseguito il wrapping. Si tratta di una dichiarazione di un delegato definita dall'utente:  
