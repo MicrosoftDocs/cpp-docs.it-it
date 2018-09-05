@@ -18,59 +18,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87ecddfff7cb3096ae30d9da5d9e5b6913adcbd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2143b84a8a8906643b9fc8befd49ffd244aa9625
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886245"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764992"
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
-Questa classe fornisce una funzione statica per il calcolo dei valori hash.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Questa classe fornisce una funzione statica per il calcolo dei valori hash.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 template<typename T>  
 class CDefaultHashTraits
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *T*  
- Il tipo di dati da archiviare nella raccolta.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CDefaultHashTraits::Hash](#hash)|(Statico) Chiamare questa funzione per calcolare un valore hash per un determinato elemento.|  
-  
-## <a name="remarks"></a>Note  
- Questa classe contiene una singola funzione statica che restituisce un valore hash per un determinato elemento. Questa classe viene utilizzata per la [classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).  
-  
- Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlcoll. h  
-  
-##  <a name="hash"></a>  CDefaultHashTraits::Hash  
- Chiamare questa funzione per calcolare un valore hash per un determinato elemento.  
-  
+```
+
+#### <a name="parameters"></a>Parametri
+
+*T*  
+Il tipo di dati da archiviare nella raccolta.
+
+## <a name="members"></a>Membri
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CDefaultHashTraits::Hash](#hash)|(Statico) Chiamare questa funzione per calcolare un valore hash per un determinato elemento.|
+
+## <a name="remarks"></a>Note
+
+Questa classe contiene una singola funzione statica che restituisce un valore hash per un determinato elemento. Questa classe viene utilizzata per la [classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
+
+Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlcoll. h
+
+##  <a name="hash"></a>  CDefaultHashTraits::Hash
+
+Chiamare questa funzione per calcolare un valore hash per un determinato elemento.
+
 ```
 static ULONG Hash(const T& element) throw();
-```  
-  
-### <a name="parameters"></a>Parametri  
- *Elemento*  
- Elemento.  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce il valore hash.  
-  
-### <a name="remarks"></a>Note  
- L'algoritmo hash predefinito è molto semplice: il valore restituito è il numero di elementi. Eseguire l'override di questa funzione se è richiesto un algoritmo più complesso.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica della classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*Elemento*  
+Elemento.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce il valore hash.
+
+### <a name="remarks"></a>Note
+
+L'algoritmo hash predefinito è molto semplice: il valore restituito è il numero di elementi. Eseguire l'override di questa funzione se è richiesto un algoritmo più complesso.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../../atl/atl-class-overview.md)

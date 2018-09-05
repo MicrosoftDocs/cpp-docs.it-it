@@ -1,5 +1,5 @@
 ---
-title: Classe CNonStatelessWorker | Documenti Microsoft
+title: Classe CNonStatelessWorker | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,103 +21,115 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de03ded4bc0021a8884f608d10368e3d09c11cf8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb3b6411e9ce34ba0196d25c8a63f3f066d78549
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359607"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765122"
 ---
 # <a name="cnonstatelessworker-class"></a>Classe CNonStatelessWorker
-Riceve richieste da un pool di thread e li passa un oggetto di lavoro che viene creato ed eliminato in ogni richiesta.  
-  
+
+Riceve le richieste da un pool di thread e li passa ad un oggetto di lavoro che verrà creato ed eliminato a ogni richiesta.
+
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 template <class Worker>  
 class CNonStatelessWorker
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *Lavoro*  
- Una classe di thread di lavoro conforme al [sistema per lavoro](../../atl/reference/worker-archetype.md) adatto per la gestione delle richieste in coda in [CThreadPool](../../atl/reference/cthreadpool-class.md).  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-typedefs"></a>Typedef pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CNonStatelessWorker::RequestType](#requesttype)|Implementazione di [WorkerArchetype::RequestType](worker-archetype.md#requesttype).|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CNonStatelessWorker::Execute](#execute)|Implementazione di [WorkerArchetype::Execute](worker-archetype.md#execute).|  
-|[CNonStatelessWorker::Initialize](#initialize)|Implementazione di [WorkerArchetype::Initialize](worker-archetype.md#initialize).|  
-|[CNonStatelessWorker::Terminate](#terminate)|Implementazione di [WorkerArchetype::Terminate](worker-archetype.md#terminate).|  
-  
-## <a name="remarks"></a>Note  
- Questa classe è un thread di lavoro semplice per l'utilizzo con [CThreadPool](../../atl/reference/cthreadpool-class.md). Questa classe non fornisce tutte le funzionalità della propria gestione delle richieste. Al contrario, viene creata un'istanza di un'istanza di *lavoro* per ogni richiesta e delegati di implementazione dei metodi a tale istanza.  
-  
- Il vantaggio di questa classe è che fornisce un modo pratico per modificare il modello di stato per le classi di thread di lavoro esistenti. `CThreadPool` verrà creato un singolo lavoro per la durata del thread, pertanto se la classe di lavoro contiene stato, che esso può contenere più richieste. Eseguendo semplicemente il wrapping di tale classe nel `CNonStatelessWorker` modello prima di utilizzarlo con `CThreadPool`, la durata del thread di lavoro e lo stato, contiene è limitato a una singola richiesta.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlutil. h  
-  
-##  <a name="execute"></a>  CNonStatelessWorker::Execute  
- Implementazione di [WorkerArchetype::Execute](worker-archetype.md#execute).  
+```
 
-  
+#### <a name="parameters"></a>Parametri
+
+*Ruolo di lavoro*  
+Una classe di thread di lavoro conforme al [archetipo worker](../../atl/reference/worker-archetype.md) adatto per la gestione delle richieste in coda sul [CThreadPool](../../atl/reference/cthreadpool-class.md).
+
+## <a name="members"></a>Membri
+
+### <a name="public-typedefs"></a>Typedef pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CNonStatelessWorker::RequestType](#requesttype)|Implementazione di [WorkerArchetype::RequestType](worker-archetype.md#requesttype).|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CNonStatelessWorker::Execute](#execute)|Implementazione di [WorkerArchetype::Execute](worker-archetype.md#execute).|
+|[CNonStatelessWorker::Initialize](#initialize)|Implementazione di [WorkerArchetype::Initialize](worker-archetype.md#initialize).|
+|[CNonStatelessWorker::Terminate](#terminate)|Implementazione di [WorkerArchetype::Terminate](worker-archetype.md#terminate).|
+
+## <a name="remarks"></a>Note
+
+Questa classe è un thread di lavoro semplice per l'uso con [CThreadPool](../../atl/reference/cthreadpool-class.md). Questa classe non include funzionalità di gestione delle richieste di un proprio. Al contrario, viene creata un'istanza di un'istanza di *lavoro* per ogni richiesta e delega l'implementazione dei metodi a tale istanza.
+
+Il vantaggio di questa classe è che offre un modo pratico per modificare il modello di stato per le classi di thread di lavoro esistenti. `CThreadPool` verrà creato un singolo lavoro per la durata del thread, in modo che se la classe ruolo di lavoro mantiene lo stato, che dovrà contenere tra più richieste. Eseguendo semplicemente il wrapping di tale classe nel `CNonStatelessWorker` modello prima di utilizzarlo con `CThreadPool`, la durata del ruolo di lavoro e lo stato, contiene è limitato a una singola richiesta.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlutil. h
+
+##  <a name="execute"></a>  CNonStatelessWorker::Execute
+
+Implementazione di [WorkerArchetype::Execute](worker-archetype.md#execute).  
+
 ```
 void Execute(
     Worker::RequestType request,
     void* pvWorkerParam,
     OVERLAPPED* pOverlapped);
-```  
-  
-### <a name="remarks"></a>Note  
- Questo metodo crea un'istanza di *lavoro* classe stack e chiamate [inizializzare](worker-archetype.md#initialize) su tale oggetto. Se l'inizializzazione ha esito positivo, questo metodo chiama anche [Execute](worker-archetype.md#execute) e [Terminate](worker-archetype.md#terminate) sullo stesso oggetto.  
+```
 
-  
-##  <a name="initialize"></a>  CNonStatelessWorker::Initialize  
- Implementazione di [WorkerArchetype::Initialize](worker-archetype.md#initialize).  
-  
+### <a name="remarks"></a>Note
+
+Questo metodo crea un'istanza del *Worker* classe su stack e chiamate [inizializzare](worker-archetype.md#initialize) su tale oggetto. Se l'inizializzazione ha esito positivo, questo metodo chiama anche [Execute](worker-archetype.md#execute) e [Terminate](worker-archetype.md#terminate) sullo stesso oggetto.  
+
+##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
+
+Implementazione di [WorkerArchetype::Initialize](worker-archetype.md#initialize).
+
 ```
 BOOL Initialize(void* /* pvParam */) throw();
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce sempre TRUE.  
-  
-### <a name="remarks"></a>Note  
- Questa classe non esegue le operazioni di inizializzazione `Initialize`.  
-  
-##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType  
- Implementazione di [WorkerArchetype::RequestType](worker-archetype.md#requesttype).  
-  
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce sempre TRUE.
+
+### <a name="remarks"></a>Note
+
+Questa classe non esegue qualsiasi inizializzazione `Initialize`.
+
+##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType
+
+Implementazione di [WorkerArchetype::RequestType](worker-archetype.md#requesttype).
+
 ```
 typedef Worker::RequestType RequestType;
-```  
-  
-### <a name="remarks"></a>Note  
- Questa classe gestisce lo stesso tipo di elemento di lavoro utilizzata per la *lavoro* parametro di modello. Vedere [CNonStatelessWorker Panoramica](../../atl/reference/cnonstatelessworker-class.md) per informazioni dettagliate.  
-  
-##  <a name="terminate"></a>  CNonStatelessWorker::Terminate  
- Implementazione di [WorkerArchetype::Terminate](worker-archetype.md#terminate).  
-  
+```
+
+### <a name="remarks"></a>Note
+
+Questa classe gestisce lo stesso tipo di elemento di lavoro come la classe utilizzata per la *lavoro* parametro di modello. Visualizzare [CNonStatelessWorker Panoramica](../../atl/reference/cnonstatelessworker-class.md) per informazioni dettagliate.
+
+##  <a name="terminate"></a>  CNonStatelessWorker::Terminate
+
+Implementazione di [WorkerArchetype::Terminate](worker-archetype.md#terminate).
+
 ```
 void Terminate(void* /* pvParam */) throw();
-```  
-  
-### <a name="remarks"></a>Note  
- Questa classe non esegue le operazioni di pulitura `Terminate`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [CThreadPool (classe)](../../atl/reference/cthreadpool-class.md)   
- [Sistema di rilevazione di lavoro](../../atl/reference/worker-archetype.md)   
- [Classi](../../atl/reference/atl-classes.md)
+```
+
+### <a name="remarks"></a>Note
+
+Questa classe non esegue le operazioni di pulitura `Terminate`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe CThreadPool](../../atl/reference/cthreadpool-class.md)   
+[Archetipo worker](../../atl/reference/worker-archetype.md)   
+[Classi](../../atl/reference/atl-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Concetti relativi a MFC di ATL | Documenti Microsoft
+title: Concetti ATL-MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e278dd7d261ae3470981207f55b3696c475b1d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0132cdfb291c7c8691a6b31f00de125cb08b702d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354541"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764646"
 ---
-# <a name="atlmfc-concepts"></a>Concetti relativi a ATL/MFC
-In questa sezione sono inclusi argomenti concettuali e basato su attività che consentono la programmazione usando le classi condivise tra Active Template Library (ATL) e la libreria di classe MFC (Microsoft Foundation).  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
- Viene descritto come gestire i dati di tipo stringa nelle applicazioni.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
+# <a name="atlmfc-concepts"></a>Concetti ATL/MFC
+
+In questa sezione vengono forniti argomenti concettuali e basato su attività che consentono di programmare usando le classi condivise tra libreria ATL (Active Template) e libreria di classi MFC (Microsoft Foundation).
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+Viene descritto come gestire i dati stringa nelle applicazioni.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
 

@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590783"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767891"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute (classe)
 Indica che il modello di threading per un'applicazione è di tipo apartment a thread singolo (STA, Single-Threaded Apartment).  

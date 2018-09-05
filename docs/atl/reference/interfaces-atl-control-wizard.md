@@ -1,5 +1,5 @@
 ---
-title: Interfacce, creazione guidata controllo ATL | Documenti Microsoft
+title: Creazione guidata controllo ATL, interfacce | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 745e8ee1074af6b4126a2123acafdc821906d24c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3629b65b8f6373b20fc35dd6d90133d7377e674
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362352"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766561"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfacce, Creazione guidata controllo ATL
-Questa pagina della procedura guidata identifica le interfacce che supporta il controllo. Per impostazione predefinita, le interfacce supportate sono quelle utilizzate in genere dalla maggior parte dei contenitori.  
-  
+
+Questa pagina della procedura guidata identifica le interfacce che supporta il controllo. Per impostazione predefinita, le interfacce supportate sono quelle utilizzate in genere dalla maggior parte dei contenitori.
+
 > [!NOTE]
->  Se si seleziona **controllo minimo** sul [opzioni](../../atl/reference/options-atl-control-wizard.md) viene visualizzata alcuna interfaccia per impostazione predefinita nella scheda il **supportati** casella di riepilogo.  
-  
- **Non è supportato**  
- Indica le interfacce disponibili che non sono attualmente supportate per il controllo.  
-  
- **Supportato**  
- Indica le interfacce che sono attualmente supportate per il controllo.  
-  
-|Pulsante di trasferimento|Descrizione|  
-|---------------------|-----------------|  
-|**>**|Aggiunge il **supportati** il nome dell'interfaccia attualmente selezionato nell'elenco il **non supportato** elenco.|  
-|**>>**|Aggiunge il **supportati** elenco i nomi di tutte le interfacce disponibili nel **non supportato** elenco.|  
-|**<**|Rimuove il nome dell'interfaccia attualmente selezionato nel **supportati** elenco.|  
-|**<<**|Rimuove tutti i nomi attualmente nell'interfaccia di **supportati** elenco.|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md)
+>  Se è stato selezionato **controllo minimo** nel [opzioni](../../atl/reference/options-atl-control-wizard.md) scheda, viene visualizzata alcuna interfaccia per impostazione predefinita nel **Supported** casella di riepilogo.
+
+**Non è supportato**  
+Indica le interfacce disponibili che non sono attualmente supportate per il controllo.
+
+**Supportato**  
+Indica le interfacce che sono attualmente supportate per il controllo.
+
+|Pulsante Trasferimento|Descrizione|
+|---------------------|-----------------|
+|**>**|Aggiunge al **supportati** il nome dell'interfaccia attualmente selezionato nell'elenco il **non è supportato** elenco.|
+|**>>**|Aggiunge il **supportati** elencare tutti i nomi delle interfacce disponibili nel **non supportato** elenco.|
+|**<**|Rimuove il nome dell'interfaccia attualmente selezionato nel **Supported** elenco.|
+|**<<**|Rimuove tutti i nomi attualmente presenti nell'interfaccia di **Supported** elenco.|
+
+## <a name="see-also"></a>Vedere anche
+
+[Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md)
 

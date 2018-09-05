@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlDebugInterfacesModule | Documenti Microsoft
+title: Classe CAtlDebugInterfacesModule | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265bc9c59e240dc11ecf71b67719fc8dd1ea5ad4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dbac5c07f04725400423e72d1cc38eb0f25e48f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359222"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755526"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>Classe CAtlDebugInterfacesModule
-Questa classe fornisce supporto per interfacce di debug.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Questa classe offre supporto per interfacce di debug.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 class CAtlDebugInterfacesModule
-```  
-  
-## <a name="remarks"></a>Note  
- `CAtlDebugInterfacesModule` fornisce il supporto richiesto per interfacce di debug. È incluso in un progetto che definisce il simbolo [ad](debugging-and-error-reporting-macros.md#_atl_debug_qi).  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlbase. h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
- [Classi Module](../../atl/atl-module-classes.md)
+```
+
+## <a name="remarks"></a>Note
+
+`CAtlDebugInterfacesModule` fornisce il supporto richiesto per interfacce di debug. È incluso in qualsiasi progetto che definisce il simbolo [ad](debugging-and-error-reporting-macros.md#_atl_debug_qi).
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlbase. h
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../../atl/atl-class-overview.md)   
+[Classi di modulo](../../atl/atl-module-classes.md)

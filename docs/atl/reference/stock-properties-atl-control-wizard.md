@@ -1,5 +1,5 @@
 ---
-title: Proprietà predefinite, ATL controllo Creazione guidata | Documenti Microsoft
+title: Proprietà predefinite, ATL controllo Creazione guidata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6ba488e2cb498aa3d130a8525f1438adc6d406
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b84563c2576f4969acb4162bcaa92d6f62f97c72
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358899"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767465"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Proprietà predefinite, Creazione guidata controllo ATL
-Questa pagina della procedura guidata identifica le proprietà predefinite supportate per il controllo. Per impostazione predefinita, viene identificata alcuna proprietà.  
-  
- **Non è supportato**  
- Indica le proprietà che non sono attualmente supportate per il controllo.  
-  
- **Supportato**  
- Indica le proprietà che sono attualmente supportate per il controllo.  
-  
-|Pulsante di trasferimento|Descrizione|  
-|---------------------|-----------------|  
-|**>**|Aggiunge il **supportati** il nome della proprietà attualmente selezionato nell'elenco di **non supportato** elenco.|  
-|**>>**|Aggiunge il **supportati** tutti i nomi delle proprietà disponibili nell'elenco il **non supportato** elenco.|  
-|**<**|Rimuove il nome della proprietà attualmente selezionato nella **supportati** elenco.|  
-|**<<**|Rimuove tutti i nomi di proprietà non è elencati nel **supportati** elenco.|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md)
+
+Questa pagina della procedura guidata identifica le proprietà predefinite supportate per il controllo. Per impostazione predefinita, viene identificata alcuna proprietà.
+
+**Non è supportato**  
+Indica le proprietà che non sono attualmente supportate per il controllo.
+
+**Supportato**  
+Indica le proprietà che sono attualmente supportate per il controllo.
+
+|Pulsante Trasferimento|Descrizione|
+|---------------------|-----------------|
+|**>**|Aggiunge al **supportati** il nome della proprietà attualmente selezionato nell'elenco il **non è supportato** elenco.|
+|**>>**|Aggiunge il **supportati** elencare tutti i nomi di proprietà disponibili nel **non supportato** elenco.|
+|**<**|Rimuove il nome della proprietà attualmente selezionato nel **Supported** elenco.|
+|**<<**|Rimuove tutti i nomi di proprietà attualmente presenti nel **Supported** elenco.|
+
+## <a name="see-also"></a>Vedere anche
+
+[Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md)
 

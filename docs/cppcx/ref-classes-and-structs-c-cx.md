@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584120"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767607"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classi e struct di riferimento (C++/CX)
 C + c++ /CLI supporta CX definito dall'utente *le classi di riferimento* e *ref struct*e definiti dall'utente *classi value* e *struct di valore*. Queste strutture di dati sono contenitori primari tramite i quali C + + c++ /CX supporta il sistema di tipi Windows Runtime. I relativi contenuti vengono emessi nei metadati in base a determinate regole specifiche e ciò consente loro di essere passati tra i componenti Windows Runtime e App Universal Windows Platform che vengono scritti in C++ o altri linguaggi.  

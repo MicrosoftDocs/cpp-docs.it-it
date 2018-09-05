@@ -1,5 +1,5 @@
 ---
-title: Interfacce duali e ATL | Documenti Microsoft
+title: Interfacce duali e ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9212662d419f5750d6a8037b73a58fd58c4c858f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355046"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765135"
 ---
 # <a name="dual-interfaces-and-atl"></a>Interfacce duali e ATL
-Un'interfaccia duale consente ai metodi a cui accedere come metodi di interfaccia dispatch o vtable. In questa sezione vengono illustrate alcune delle funzionalità di interfacce duali dal punto di vista ATL.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Implementazione di un'interfaccia duale](../atl/implementing-a-dual-interface.md)  
- Illustra le classi e le procedure guidate coinvolte nell'implementazione di un'interfaccia duale.  
-  
- [Interfacce duali multiple](../atl/multiple-dual-interfaces.md)  
- Viene illustrato come esporre più interfacce duali in un singolo oggetto.  
-  
- [Il nonextensible (attributo)](../atl/nonextensible-attribute.md)  
- Viene illustrato quando utilizzare il **nonextensible** attributo nella definizione di interfaccia.  
-  
- [Interfacce duali e eventi](../atl/dual-interfaces-and-events.md)  
- Vengono illustrati motivi legati alla progettazione per non apportare a un evento di interfaccia duale.  
-  
-## <a name="related-sections"></a>Sezioni correlate  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Concetti](../atl/active-template-library-atl-concepts.md)
+
+Un'interfaccia duale consente ai metodi di accedervi come metodi di interfaccia dispatch o come metodi vtable. Questa sezione descrive alcune delle funzionalità di interfacce duali dal punto di vista ATL.
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Implementazione di un'interfaccia duale](../atl/implementing-a-dual-interface.md)  
+Vengono illustrate le classi e le procedure guidate coinvolte nell'implementazione di un'interfaccia duale.
+
+[Interfacce duali multiple](../atl/multiple-dual-interfaces.md)  
+Viene illustrato come esporre interfacce duali multiple in un singolo oggetto.
+
+[L'attributo nonextensible](../atl/nonextensible-attribute.md)  
+Illustra quando usare le **nonextensible** attributo sulla tua definizione di interfaccia.
+
+[Interfacce duali e eventi](../atl/dual-interfaces-and-events.md)  
+Vengono illustrati motivi legati alla progettazione per non rendere un evento di interfaccia duale.
+
+## <a name="related-sections"></a>Sezioni correlate
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
+
+## <a name="see-also"></a>Vedere anche
+
+[Concetti](../atl/active-template-library-atl-concepts.md)
 

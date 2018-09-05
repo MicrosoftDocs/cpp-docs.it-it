@@ -1,7 +1,7 @@
 ---
 title: Grammatica del preprocessore | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/04/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,98 +16,86 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541414"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766116"
 ---
 # <a name="preprocessor-grammar"></a>Grammatica del preprocessore
-**#define***identificatore* *token-string*opt    
-  
-*#* **definire***identificatore*[**(** *identificatore*opt **,** *...*  **,** *identificatore*opt **)**] *token-string*opt    
-  
-**definita (***identificatore* **)**   
-  
-**definite***identificatore*   
-  
-`#include` **"***path-spec***"**  
-  
-`#include` **\<***Path-spec***>**  
-  
-**#line***digit-sequence***"** *filename* **"** opt      
-  
-*#* **undef***identificatore*   
-  
-**#error***token-string*   
-  
-**#pragma**  *token-string*  
-  
-*condizionale* :  
-*Se parti elif-part*opt*parte else*opt*endif-line*  
-  
-*Se parti* :  
-*if-linetext*  
-  
-*Se-line* :  
-**#if**  *constant-expression*  
-  
-**#ifdef***identificatore*   
-  
-**#ifndef***identificatore*   
-  
-*elif parti* :  
-*testo a riga singola elif*  
-  
-*testo a riga singola elif elif parti*  
-  
-*elif-line* :  
-**#elif**  *constant-expression*  
-  
-*parte else* :  
-*else-linetext*  
-  
-*Else-line* :  
-`#else`  
-  
-*endif-line* :  
-`#endif`  
-  
-*Digit-sequence* :  
-*digit*  
-  
-*digit-sequence digit*  
-  
-*cifra* : uno dei  
-**0 1 2 3 4 5 6 7 8 9**  
-  
-*token-string* :  
-Stringa di token  
-  
-*token* :  
-*keyword*  
-  
-*identifier*  
-  
-*constant*  
-  
-*operator*  
-  
-`punctuator`  
-  
-*nome del file* :  
-Nome file del sistema operativo valido  
-  
-*Path-spec* :  
-Percorso file valido  
-  
-*testo* :  
-Qualsiasi sequenza di testo  
-  
+
+*controllo linea*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identificatore* *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identificatore</em>**(** *identificatore*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence***"** *filename* **"**<sub>opt  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
+
+*constant-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**definita (** *identificatore* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**definite** *identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;qualsiasi altra espressione costante
+
+*condizionale* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Se parti* *elif parti*<sub>opt</sub> *parte else*<sub>opt</sub> *endif inline*
+
+*Se parti* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Se-line* *testo*
+
+*Se-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *espressione costante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identificatore*
+
+*elif parti* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *testo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parti di elif* *elif-line* *testo*
+
+*elif-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *espressione costante*
+
+*parte else* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Else-line* *testo*
+
+*Else-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+
+*endif-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+
+*Digit-sequence* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cifra*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sequenza di cifre* *cifra*
+
+*cifra* : uno dei<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
+
+*token-string* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Stringa di token
+
+*token* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parola chiave*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Costante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Operatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*segno di punteggiatura*
+
+*nome del file* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Nome file del sistema operativo legale
+
+*Path-spec* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso file valido
+
+*testo* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Qualsiasi sequenza di testo
+
 > [!NOTE]
-> I non terminal seguenti vengono espanse nel [convenzioni lessicali](../cpp/lexical-conventions.md) sezione il *riferimenti al linguaggio C++*: `constant`, `constant` - *espressione* , *identificatore*, *parola chiave*, `operator`, e `punctuator`.  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+> I non terminal seguenti vengono espanse nel [convenzioni lessicali](../cpp/lexical-conventions.md) sezione il *riferimenti al linguaggio C++*: *costante*, *espressione costante* , *identificatore*, *parola chiave*, *operatore*, e *segno di punteggiatura*.
+
+## <a name="see-also"></a>Vedere anche
+
 [Riepilogo grammatica (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

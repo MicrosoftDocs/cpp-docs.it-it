@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886219"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764891"
 ---
 # <a name="atlmodule70-structure"></a>Struttura _ATL_MODULE70
-Contiene i dati usati da ogni modulo ATL.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Contiene i dati usati da ogni modulo ATL.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 struct _ATL_MODULE70 {
     UINT cbSize;
@@ -38,33 +39,31 @@ struct _ATL_MODULE70 {
     _ATL_TERMFUNC_ELEM* m_pTermFuncs;
     CComCriticalSection m_csStaticDataInitAndTypeInfo;
 };
-```  
-  
-## <a name="members"></a>Membri  
- `cbSize`  
- Le dimensioni della struttura, usata per il controllo delle versioni.  
-  
- `m_nLockCnt`  
- Conteggio dei riferimenti per determinare quanto tempo il modulo deve rimanere attivo.  
-  
- `m_pTermFuncs`  
- Funzioni tracce registrate da chiamare quando ATL viene arrestato.  
-  
- `m_csStaticDataInitAndTypeInfo`  
- Consente di coordinare l'accesso ai dati interni in situazioni multithread.  
-  
-## <a name="remarks"></a>Note  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) viene definito come un typedef di `_ATL_MODULE70`.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlbase. h  
-  
-## <a name="see-also"></a>Vedere anche  
-  [Classi e struct](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Membri
 
+`cbSize`  
+Le dimensioni della struttura, usata per il controllo delle versioni.
 
+`m_nLockCnt`  
+Conteggio dei riferimenti per determinare quanto tempo il modulo deve rimanere attivo.
 
+`m_pTermFuncs`  
+Funzioni tracce registrate da chiamare quando ATL viene arrestato.
 
+`m_csStaticDataInitAndTypeInfo`  
+Consente di coordinare l'accesso ai dati interni in situazioni multithread.
 
+## <a name="remarks"></a>Note
+
+[_ATL_MODULE](atl-typedefs.md#_atl_module) viene definito come un typedef di `_ATL_MODULE70`.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlbase. h
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi e struct](../../atl/reference/atl-classes.md)
 

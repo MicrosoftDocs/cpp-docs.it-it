@@ -117,11 +117,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678009"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766165"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 Fornisce supporto per le interfacce dei controlli sul lato client personalizzate.  

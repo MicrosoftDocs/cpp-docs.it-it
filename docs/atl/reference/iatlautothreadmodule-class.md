@@ -1,5 +1,5 @@
 ---
-title: Classe IAtlAutoThreadModule | Documenti Microsoft
+title: Classe IAtlAutoThreadModule | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8793c3bf1bceae03f08293dec2144e749505f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c5d92eb693a73aff20ff8869be4412574a15cbe
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358782"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764361"
 ---
 # <a name="iatlautothreadmodule-class"></a>Classe IAtlAutoThreadModule
-Questa classe rappresenta un'interfaccia per un `CreateInstance` metodo.  
-  
+
+Questa classe rappresenta un'interfaccia per un `CreateInstance` (metodo).
+
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 __interface IAtlAutoThreadModule
-```  
-  
-## <a name="remarks"></a>Note  
- La classe [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) deriva da `IAtlAutoThreadModule`, utilizzarlo per fornire codice per la creazione di un oggetto e il recupero di un puntatore a interfaccia.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlbase. h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+```
+
+## <a name="remarks"></a>Note
+
+La classe [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) deriva da `IAtlAutoThreadModule`, usarlo per fornire codice per creare un oggetto e recuperare un puntatore a interfaccia.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atlbase. h
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../../atl/atl-class-overview.md)

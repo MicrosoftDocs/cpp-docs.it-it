@@ -17,26 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9bf2ede32583715a19840ce861aa3ed6445fd7cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963654"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766405"
 ---
 # <a name="persistence-classes"></a>Classi di persistenza
-Le seguenti classi implementano la persistenza degli oggetti:  
-  
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) consente a un client caricare e salvare le proprietà di un oggetto in un contenitore di proprietà.  
-  
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) consente a un client caricare e salvare i dati persistenti di un oggetto in un flusso.  
-  
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) consente a un client caricare e salvare i dati persistenti di un oggetto a una risorsa di archiviazione.  
-  
-## <a name="related-articles"></a>Articoli correlati  
- [Esercitazione ATL](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica della classe](../atl/atl-class-overview.md)   
- [Macro della mappa proprietà](../atl/reference/property-map-macros.md)
+
+Le seguenti classi implementano la persistenza degli oggetti:
+
+- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) consente a un client caricare e salvare le proprietà di un oggetto in un contenitore di proprietà.
+
+- [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) consente a un client caricare e salvare i dati persistenti di un oggetto in un flusso.
+
+- [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) consente a un client caricare e salvare i dati persistenti di un oggetto a una risorsa di archiviazione.
+
+## <a name="related-articles"></a>Articoli correlati
+
+[Esercitazione ATL](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../atl/atl-class-overview.md)   
+[Macro della mappa proprietà](../atl/reference/property-map-macros.md)
 

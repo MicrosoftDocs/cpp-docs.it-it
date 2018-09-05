@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d7576b5e8914148a8c67d8df82573c1f379e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1128834e49de75feba37409101a9ffe2a3e2ece2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394694"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764787"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -74,11 +74,11 @@ Funzione di callback che confronta due elementi. Il primo è un puntatore alla c
 
 ## <a name="return-value"></a>Valore restituito
 
-**bsearch** restituisce un puntatore a un'occorrenza di *chiave* nella matrice a cui puntata *base*. Se *chiave* non viene trovato, la funzione restituisce **NULL**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
+**bsearch** restituisce un puntatore a un'occorrenza di *chiave* nella matrice a cui punta *base*. Se *key* non viene trovato, la funzione restituisce **NULL**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
 
 ## <a name="remarks"></a>Note
 
-Il **bsearch** funzione esegue una ricerca binaria di una matrice ordinata di *numero* elementi, ognuno dei *larghezza* byte. Il *base* valore è un puntatore alla base della matrice da cercare, e *chiave* è il valore cercato. Il *confrontare* parametro è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta a un elemento di matrice e restituisce uno dei valori seguenti che specifica la relazione:
+Il **bsearch** funzione esegue una ricerca binaria di una matrice ordinata di *numero* elementi, ognuno dei *larghezza* byte le dimensioni. Il *base* valore è un puntatore alla base della matrice da cercare, e *chiave* è il valore cercato. Il *confrontare* parametro è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta a un elemento della matrice e restituisce uno dei valori seguenti che specifica la relazione:
 
 |Valore restituito da *confrontare* routine|Descrizione|
 |-----------------------------------------|-----------------|
@@ -86,7 +86,7 @@ Il **bsearch** funzione esegue una ricerca binaria di una matrice ordinata di *n
 |0|La chiave è uguale all'elemento della matrice.|
 |> 0|La chiave è maggiore dell'elemento della matrice.|
 
-Questa funzione convalida i relativi parametri. Se *confrontare*, *chiave* oppure *numero* è **NULL**, o se *base* è **NULL**e **numero* è diverso da zero, oppure se *larghezza* è uguale a zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**.
+Questa funzione convalida i relativi parametri. Se *confrontare*, *chiave* oppure *numero* è **NULL**, o se *base* è **NULL**e *numero* è diverso da zero, oppure se *larghezza* è uguale a zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su `EINVAL` e la funzione restituisce **NULL**.
 
 ## <a name="requirements"></a>Requisiti
 

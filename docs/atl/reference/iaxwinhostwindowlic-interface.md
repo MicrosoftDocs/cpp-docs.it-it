@@ -19,70 +19,78 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d97aa0de61697e31c424c8185c71b06c7dd0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 849f5269a715013431da2d8b91997c577008bf68
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885581"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767085"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>Interfaccia IAxWinHostWindowLic
-Questa interfaccia fornisce metodi per la modifica di un controllo con licenza e il relativo oggetto host.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Questa interfaccia fornisce metodi per la modifica di un controllo con licenza e il relativo oggetto host.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 interface IAxWinHostWindowLic : IAxWinHostWindow
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="methods"></a>Metodi  
-  
-|||  
-|-|-|  
-|[CreateControlLic](#createcontrollic)|Crea un controllo con licenza e la collega all'oggetto host.|  
-|[CreateControlLicEx](#createcontrollicex)|Crea un controllo con licenza, lo collega all'oggetto host e, facoltativamente, imposta un gestore eventi.|  
-  
-## <a name="remarks"></a>Note  
- `IAxWinHostWindowLic` eredita da [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) e aggiunge i metodi che supportano la creazione di controlli con licenza.  
-  
- Visualizzare [Hosting ActiveX controlli tramite AXHost di ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che usa i membri di questa interfaccia.  
-  
-## <a name="requirements"></a>Requisiti  
- La definizione di questa interfaccia è disponibile come file IDL o C++, come illustrato di seguito.  
-  
-|Tipo definizione|File|  
-|---------------------|----------|  
-|IDL|ATLIFace.idl|  
-|C++|ATLIFace.h (incluso anche in atlbase. H)|  
-  
-##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic  
- Crea un controllo con licenza, lo inizializza e lo ospita nella finestra identificata da `hWnd`.  
-  
+```
+
+## <a name="members"></a>Membri
+
+### <a name="methods"></a>Metodi
+
+|||
+|-|-|
+|[CreateControlLic](#createcontrollic)|Crea un controllo con licenza e la collega all'oggetto host.|
+|[CreateControlLicEx](#createcontrollicex)|Crea un controllo con licenza, lo collega all'oggetto host e, facoltativamente, imposta un gestore eventi.|
+
+## <a name="remarks"></a>Note
+
+`IAxWinHostWindowLic` eredita da [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) e aggiunge i metodi che supportano la creazione di controlli con licenza.
+
+Visualizzare [Hosting ActiveX controlli tramite AXHost di ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che usa i membri di questa interfaccia.
+
+## <a name="requirements"></a>Requisiti
+
+La definizione di questa interfaccia è disponibile come file IDL o C++, come illustrato di seguito.
+
+|Tipo definizione|File|
+|---------------------|----------|
+|IDL|ATLIFace.idl|
+|C++|ATLIFace.h (incluso anche in atlbase. H)|
+
+##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic
+
+Crea un controllo con licenza, lo inizializza e lo ospita nella finestra identificata da `hWnd`.
+
 ```
 STDMETHOD(CreateControlLic)(
     LPCOLESTR lpTricsData,
     HWND hWnd,
     IStream* pStream,
     BSTR bstrLic);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *bstrLic*  
- [in] La stringa BSTR che contiene la chiave di licenza per il controllo.  
-  
-### <a name="remarks"></a>Note  
- Visualizzare [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) per una descrizione dei parametri restanti e il valore restituito.  
-  
- Chiamare questo metodo è equivalente alla chiamata [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
-  
-### <a name="example"></a>Esempio  
- Visualizzare [Hosting ActiveX controlli tramite AXHost di ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che usa `IAxWinHostWindowLic::CreateControlLic`.  
-  
-##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx  
- Crea un controllo ActiveX con licenza, lo inizializza e lo ospita nella finestra specificata, simile a [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).  
-  
+```
+
+### <a name="parameters"></a>Parametri
+
+*bstrLic*  
+[in] La stringa BSTR che contiene la chiave di licenza per il controllo.
+
+### <a name="remarks"></a>Note
+
+Visualizzare [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) per una descrizione dei parametri restanti e il valore restituito.
+
+Chiamare questo metodo è equivalente alla chiamata [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)
+
+### <a name="example"></a>Esempio
+
+Visualizzare [Hosting ActiveX controlli tramite AXHost di ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che usa `IAxWinHostWindowLic::CreateControlLic`.
+
+##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx
+
+Crea un controllo ActiveX con licenza, lo inizializza e lo ospita nella finestra specificata, simile a [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).
+
 ```
 STDMETHOD(CreateControlLicEx)(
     LPCOLESTR lpszTricsData,
@@ -92,23 +100,18 @@ STDMETHOD(CreateControlLicEx)(
     REFIID riidAdvise,
     IUnknown* punkAdvise,
     BSTR bstrLic);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *bstrLic*  
- [in] La stringa BSTR che contiene la chiave di licenza per il controllo.  
-  
-### <a name="remarks"></a>Note  
- Visualizzare [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) per una descrizione dei parametri restanti e il valore restituito.  
-  
-### <a name="example"></a>Esempio  
- Visualizzare [Hosting ActiveX controlli tramite AXHost di ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che usa `IAxWinHostWindowLic::CreateControlLicEx`.
+```
 
+### <a name="parameters"></a>Parametri
 
+*bstrLic*  
+[in] La stringa BSTR che contiene la chiave di licenza per il controllo.
 
+### <a name="remarks"></a>Note
 
+Visualizzare [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) per una descrizione dei parametri restanti e il valore restituito.
 
+### <a name="example"></a>Esempio
 
-
-
+Visualizzare [Hosting ActiveX controlli tramite AXHost di ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che usa `IAxWinHostWindowLic::CreateControlLicEx`.
 

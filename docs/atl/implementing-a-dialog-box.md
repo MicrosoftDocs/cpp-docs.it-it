@@ -17,41 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c5133960cca3aab3d4bf526179fd9c825c41a20
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848457"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764293"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementazione di una finestra di dialogo
-Esistono due modi per aggiungere una finestra di dialogo per il progetto ATL: usare la creazione guidata finestra di dialogo ATL o aggiungerla manualmente.  
-  
-## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Aggiunta di una finestra di dialogo con la creazione guidata finestra di dialogo ATL  
- Nel [finestra di dialogo Aggiungi classe](../ide/add-class-dialog-box.md), selezionare l'oggetto finestra di dialogo ATL per una finestra di dialogo Aggiungi al progetto ATL. Compilare la creazione guidata finestra di dialogo ATL come appropriato, quindi fare clic su **fine**. La procedura guidata aggiunge una classe derivata da [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) al progetto. Aprire la visualizzazione di risorse dal **vista** menu, individuare la finestra di dialogo e fare doppio clic su esso per aprirlo nell'editor di risorse.  
-  
+
+Esistono due modi per aggiungere una finestra di dialogo per il progetto ATL: usare la creazione guidata finestra di dialogo ATL o aggiungerla manualmente.
+
+## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Aggiunta di una finestra di dialogo con la creazione guidata finestra di dialogo ATL
+
+Nel [finestra di dialogo Aggiungi classe](../ide/add-class-dialog-box.md), selezionare l'oggetto finestra di dialogo ATL per una finestra di dialogo Aggiungi al progetto ATL. Compilare la creazione guidata finestra di dialogo ATL come appropriato, quindi fare clic su **fine**. La procedura guidata aggiunge una classe derivata da [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) al progetto. Aprire la visualizzazione di risorse dal **vista** menu, individuare la finestra di dialogo e fare doppio clic su esso per aprirlo nell'editor di risorse.
+
 > [!NOTE]
->  Se la finestra di dialogo è derivata da `CAxDialogImpl`, possa ospitare entrambi ActiveX e controlli di Windows. Se non si desidera il sovraccarico di supporto per il controllo ActiveX nella classe finestra di dialogo, utilizzare [CSimpleDialog](../atl/reference/csimpledialog-class.md) oppure [CDialogImpl](../atl/reference/cdialogimpl-class.md) invece.  
-  
- Gestori eventi e messaggi possono essere aggiunti alla classe della finestra dalla visualizzazione classi. Per altre informazioni, vedere [aggiunta di un gestore di messaggi ATL](../atl/adding-an-atl-message-handler.md).  
-  
-## <a name="adding-a-dialog-box-manually"></a>Aggiunta manuale di una finestra di dialogo  
- Implementazione di una finestra di dialogo è simile all'implementazione di una finestra. Si deriva una classe da una [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), [CDialogImpl](../atl/reference/cdialogimpl-class.md), o [CSimpleDialog](../atl/reference/csimpledialog-class.md) e dichiarare un [mappa messaggi](../atl/message-maps-atl.md) per gestire i messaggi. Tuttavia, è necessario specificare anche un ID di risorsa modello di finestra di dialogo nella classe derivata. La classe deve avere un membro dati denominato `IDD` per contenere tale valore.  
-  
+>  Se la finestra di dialogo è derivata da `CAxDialogImpl`, possa ospitare entrambi ActiveX e controlli di Windows. Se non si desidera il sovraccarico di supporto per il controllo ActiveX nella classe finestra di dialogo, utilizzare [CSimpleDialog](../atl/reference/csimpledialog-class.md) oppure [CDialogImpl](../atl/reference/cdialogimpl-class.md) invece.
+
+Gestori eventi e messaggi possono essere aggiunti alla classe della finestra dalla visualizzazione classi. Per altre informazioni, vedere [aggiunta di un gestore di messaggi ATL](../atl/adding-an-atl-message-handler.md).
+
+## <a name="adding-a-dialog-box-manually"></a>Aggiunta manuale di una finestra di dialogo
+
+Implementazione di una finestra di dialogo è simile all'implementazione di una finestra. Si deriva una classe da una [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), [CDialogImpl](../atl/reference/cdialogimpl-class.md), o [CSimpleDialog](../atl/reference/csimpledialog-class.md) e dichiarare un [mappa messaggi](../atl/message-maps-atl.md) per gestire i messaggi. Tuttavia, è necessario specificare anche un ID di risorsa modello di finestra di dialogo nella classe derivata. La classe deve avere un membro dati denominato `IDD` per contenere tale valore.
+
 > [!NOTE]
->  Quando si crea una finestra di dialogo mediante la creazione guidata finestra di dialogo ATL, la procedura guidata aggiunge automaticamente il `IDD` membro come un **enum** tipo.  
-  
- `CDialogImpl` Consente di implementare una finestra modale o una finestra di dialogo non modale che ospita i controlli di Windows. `CAxDialogImpl` Consente di implementare una finestra modale o una finestra di dialogo non modale che ospita i controlli ActiveX sia Windows.  
-  
- Per creare una finestra di dialogo modale, creare un'istanza del `CDialogImpl`-derivato (o `CAxDialogImpl`-derivato) di classi e quindi chiamare il [DoModal](../atl/reference/cdialogimpl-class.md#domodal) (metodo). Per chiudere una finestra di dialogo modale, chiamare il [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) metodo da un gestore di messaggi. Per creare una finestra di dialogo non modale, chiamare il [Create](../atl/reference/cdialogimpl-class.md#create) invece del metodo `DoModal`. Per eliminare una finestra di dialogo non modale, chiamare [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
-  
- Il sink degli eventi viene eseguito automaticamente [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md). Implementare i gestori di messaggi della finestra di dialogo come gestori in un `CWindowImpl`-classe derivata. Se non esiste un valore restituito di un messaggio specifico, restituito come un `LRESULT`. L'oggetto restituito `LRESULT` vengono eseguito il mapping di valori da ATL per la gestione appropriata dal gestore di finestra di dialogo di Windows. Per informazioni dettagliate, vedere il codice sorgente [CDialogImplBaseT:: DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) in atlwin. h.  
-  
-## <a name="example"></a>Esempio  
- La classe seguente implementa una finestra di dialogo:  
-  
- [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi di finestre](../atl/atl-window-classes.md)
+>  Quando si crea una finestra di dialogo mediante la creazione guidata finestra di dialogo ATL, la procedura guidata aggiunge automaticamente il `IDD` membro come un **enum** tipo.
+
+`CDialogImpl` Consente di implementare una finestra modale o una finestra di dialogo non modale che ospita i controlli di Windows. `CAxDialogImpl` Consente di implementare una finestra modale o una finestra di dialogo non modale che ospita i controlli ActiveX sia Windows.
+
+Per creare una finestra di dialogo modale, creare un'istanza del `CDialogImpl`-derivato (o `CAxDialogImpl`-derivato) di classi e quindi chiamare il [DoModal](../atl/reference/cdialogimpl-class.md#domodal) (metodo). Per chiudere una finestra di dialogo modale, chiamare il [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) metodo da un gestore di messaggi. Per creare una finestra di dialogo non modale, chiamare il [Create](../atl/reference/cdialogimpl-class.md#create) invece del metodo `DoModal`. Per eliminare una finestra di dialogo non modale, chiamare [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).
+
+Il sink degli eventi viene eseguito automaticamente [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md). Implementare i gestori di messaggi della finestra di dialogo come gestori in un `CWindowImpl`-classe derivata. Se non esiste un valore restituito di un messaggio specifico, restituito come un `LRESULT`. L'oggetto restituito `LRESULT` vengono eseguito il mapping di valori da ATL per la gestione appropriata dal gestore di finestra di dialogo di Windows. Per informazioni dettagliate, vedere il codice sorgente [CDialogImplBaseT:: DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) in atlwin. h.
+
+## <a name="example"></a>Esempio
+
+La classe seguente implementa una finestra di dialogo:
+
+[!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi di finestre](../atl/atl-window-classes.md)
 

@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 40b7fe1d4ef032b8895cfe9095a9c5b9a6bd32df
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603017"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765148"
 ---
 # <a name="platformdetailsiprintable-interface"></a>Platform::Details::IPrintable (interfaccia)
 Questa interfaccia è solo per uso interno e non deve essere usata per lo sviluppo.  
