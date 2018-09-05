@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f56ee748738cd67199348c93272a9cd2ed564e2c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222243"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685699"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Creazione e gestione di progetti Visual C++ basati su MSBuild
 MSBuild è il sistema di compilazione nativo per Visual C++ ed è in genere il sistema migliore per compilare le app della piattaforma UWP, nonché le applicazioni Desktop che usano le librerie MFC o ATL. MSBuild è strettamente integrato con l'IDE e il sistema di progetto di Visual Studio, ma si può usare anche dalla riga di comando. A partire da Visual Studio 2017, Visual C++ supporta [CMake e altri sistemi non MSBuild usando la funzionalità Apri cartella](non-msbuild-projects.md).
@@ -67,9 +67,6 @@ Per creare progetti in Visual C++, è possibile scegliere **File &#124; Nuovo &#
 ## <a name="related-sections"></a>Sezioni correlate  
  [Compilazione di programmi C/C++](../build/building-c-cpp-programs.md)  
  Fornisce i collegamenti ad argomenti che illustrano come compilare un programma dalla riga di comando o dall'ambiente di sviluppo integrato (IDE) di Visual Studio.  
-  
- [Riferimenti a Visual C++](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- Contiene collegamenti ad argomenti in cui sono descritti i riferimenti ai linguaggi C e C++, le librerie fornite con Visual C++, il modello a oggetti estensibilità di Visual C++ e Microsoft Macro Assembler (MASM).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

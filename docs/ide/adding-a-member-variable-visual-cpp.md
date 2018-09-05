@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dade9987358c1c160dffd0221b0421b4fab92c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207298"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687642"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Aggiunta di una variabile membro (Visual C++)
-È possibile aggiungere una variabile membro in una classe usando la Visualizzazione classi. Le variabili membro possono essere per [lo scambio di dati e la convalida di dati](../mfc/dialog-data-exchange-and-validation.md) oppure possono essere generiche. L'Aggiunta guidata variabile membro è specificatamente progettata per ottenere le informazioni rilevanti e usarle per l'inserimento di elementi nei file origine nei percorsi appropriati. È possibile aggiungere una variabile membro dall'[Editor di finestre](../windows/dialog-editor.md) nella [Visualizzazione risorse](../windows/resource-view-window.md) o dalla [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+È possibile aggiungere una variabile membro in una classe usando la Visualizzazione classi. Le variabili membro possono essere per [lo scambio di dati e la convalida di dati](../mfc/dialog-data-exchange-and-validation.md) oppure possono essere generiche. L'Aggiunta guidata variabile membro è specificatamente progettata per ottenere le informazioni rilevanti e usarle per l'inserimento di elementi nei file origine nei percorsi appropriati. È possibile aggiungere una variabile membro dall'[Editor di finestre](../windows/dialog-editor.md) nella [Visualizzazione risorse](../windows/resource-view-window.md) o dalla [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Quando si progetta e implementa una finestra di dialogo, può essere utile usare l'Editor di finestre per aggiungere i controlli delle finestre di dialogo e quindi implementare le variabili membro dei controlli.  
@@ -49,7 +49,7 @@ ms.locfileid: "43207298"
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>Per aggiungere una variabile membro dalla Visualizzazione classi usando l'Aggiunta guidata variabile membro  
   
-1.  Nella [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) espandere il nodo del progetto per visualizzare le classi nel progetto.  
+1.  Nella [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code) espandere il nodo del progetto per visualizzare le classi nel progetto.  
   
 2.  Fare clic con il pulsante destro del mouse sulla classe in cui si vuole aggiungere una variabile.  
   

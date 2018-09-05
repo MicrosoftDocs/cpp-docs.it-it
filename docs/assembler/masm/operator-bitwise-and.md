@@ -1,7 +1,7 @@
 ---
-title: operatore &amp; | Documenti Microsoft
+title: operatore &amp; | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -19,22 +19,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a6a0b3188fcbbaf17036c88f6efa3e757ef65c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 03d8425b1ad0a2407e523a3b4039401d45442e8e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057084"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693453"
 ---
-# <a name="operator-amp"></a>(operatore) &amp;
-Bit per bit **AND**. Utilizzato solo in [. Se](../../assembler/masm/dot-if.md), [. MENTRE](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-expression1 & expression2  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+# <a name="operator-amp"></a>Operatore &amp;
+
+OR bit per bit **AND**. Utilizzato solo all'interno [. IF](../../assembler/masm/dot-if.md), [. Sebbene](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.
+
+## <a name="syntax"></a>Sintassi
+
+> expression1 ed expression2
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

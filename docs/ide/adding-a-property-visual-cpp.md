@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685326"
 ---
 # <a name="adding-a-property-visual-c"></a>Aggiunta di una proprietà (Visual C++)
 È possibile usare l'[Aggiunta guidata proprietà](../ide/names-add-property-wizard.md) per aggiungere un metodo a un'interfaccia del progetto.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Per aggiungere una proprietà all'oggetto  
   
-1.  Nella [Visualizzazione classi](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) fare clic con il pulsante destro del mouse sul nome dell'interfaccia a cui si vuole aggiungere la proprietà.  
+1.  Nella [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code) fare clic con il pulsante destro del mouse sul nome dell'interfaccia a cui si vuole aggiungere la proprietà.  
   
     > [!NOTE]
     >  È anche possibile aggiungere proprietà alle interfacce dispatch che, se il progetto non è attribuito, sono nidificate all'interno del nodo della libreria.  

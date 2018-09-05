@@ -1,7 +1,7 @@
 ---
-title: operatore SHL | Documenti Microsoft
+title: operatore SHL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b09d3a8704dcd1772dc6f0f48c2908101f8b43f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 31f7c8dadd9f619ebdb53cd6279c4da68bc8af18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693380"
 ---
 # <a name="operator-shl"></a>Operatore SHL
-Restituisce il risultato di spostamento di bit di *espressione* sinistro *conteggio* numero di bit.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-expression SHL count  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a operatori](../../assembler/masm/operators-reference.md)
+
+Restituisce il risultato dello spostamento dei bit del *espressione* a sinistra *conteggio* numero di bit.
+
+## <a name="syntax"></a>Sintassi
+
+> espressione conteggio SHL
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>

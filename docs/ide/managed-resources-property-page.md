@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2fe0896a8fbd8b8c0a8f68847ee138017eaa36b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e88f7ccf6f510ad5bcc7178af87714ca22a97252
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215501"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688611"
 ---
 # <a name="managed-resources-property-page"></a>pagina delle proprietà Risorse gestite
 Abilita le impostazioni per il compilatore di risorse.  
@@ -42,6 +42,6 @@ Abilita le impostazioni per il compilatore di risorse.
  Per informazioni sull'accesso alla pagina delle proprietà **Risorse gestite**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Using RC (The RC Command Line)](https://msdn.microsoft.com/library/windows/desktop/aa381055)  (Uso di RC (riga di comando RC))  
+ [Using RC (The RC Command Line)](/windows/desktop/menurc/using-rc-the-rc-command-line-)  (Uso di RC (riga di comando RC))  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (incorpora una risorsa gestita)](../build/reference/assemblyresource-embed-a-managed-resource.md)

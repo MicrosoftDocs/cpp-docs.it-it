@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff94cddb6c286fa651b1ba728238e0d38ab3b17
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4d3f82633c9bd48ede71853dbe383352b0b3d6f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539451"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692864"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Sezione specifica Microsoft**  
@@ -44,7 +44,7 @@ void __svm_vmload(
 |[in] `VmcbPhysicalAddress`|L'indirizzo fisico del VMCB.|  
   
 ## <a name="remarks"></a>Note  
- Il `__svm_vmload` è equivalente alla funzione il `VMLOAD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
+ Il `__svm_vmload` è equivalente alla funzione il `VMLOAD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   
