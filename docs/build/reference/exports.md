@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6607016e2661817de04fce505bc921a3a25320a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219493"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894551"
 ---
 # <a name="exports"></a>EXPORTS
 
-Introduce una sezione di una o più definizioni di esportazione che specificano i nomi o gli ordinali esportati di funzioni o dati. Ogni definizione deve essere riportata in una riga separata.  
-  
-```DEF  
-EXPORTS  
-   definition  
-```  
-  
-## <a name="remarks"></a>Note  
+Introduce una sezione di una o più definizioni di esportazione che specificano i nomi o gli ordinali esportati di funzioni o dati. Ogni definizione deve essere riportata in una riga separata.
 
-Il primo *definition* può essere sulla stessa riga come la `EXPORTS` parola chiave o in una riga successiva. Il file con estensione DEF può contenere una o più istruzioni `EXPORTS`.  
-  
-La sintassi per un'esportazione *definizione* è:  
-  
+```DEF
+EXPORTS
+   definition
+```  
+
+## <a name="remarks"></a>Note
+
+Il primo *definition* può essere sulla stessa riga come la `EXPORTS` parola chiave o in una riga successiva. Il file con estensione DEF può contenere una o più istruzioni `EXPORTS`.
+
+La sintassi per un'esportazione *definizione* è:
+
 ```DEF
 entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
 ```
@@ -63,48 +63,48 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Poiché il compilatore Visual C++ Usa la decorazione per le funzioni C++, è necessario usare il nome decorato internal_name o definire le funzioni esportate mediante l'uso di extern "C" nel codice sorgente. Il compilatore decora anche le funzioni C che usano il [stdcall](../../cpp/stdcall.md) con un prefisso un carattere di sottolineatura (_) e un suffisso composto convenzione di chiamata il simbolo di chiocciola (@) seguita dal numero di byte (in decimali) nell'elenco di argomenti.  
-  
-Per trovare i nomi decorati creati dal compilatore, usare il [DUMPBIN](../../build/reference/dumpbin-reference.md) dello strumento o il linker [/Map](../../build/reference/map-generate-mapfile.md) opzione. I nomi decorati sono specifici del compilatore. Se si esportano i nomi decorati nel file .DEF, gli eseguibili che si collegano alla DLL devono essere anch'essi compilati usando la stessa versione del compilatore. Questo garantisce che i nomi decorati nel chiamante corrispondano ai nomi esportati nel file .DEF.  
-  
-È possibile usare*ordinale* per specificare che verrà inserito un numero e non il nome della funzione, la tabella di esportazione DLL. Molte DLL Windows esportano ordinali per supportare il codice legacy. In precedenza, era pratica comune usare ordinali nel codice Windows a 16 bit, perché ciò può aiutare a ridurre le dimensioni di una DLL. Si sconsiglia di esportare funzioni in base a ordinali a meno che i destinatari della DLL non necessitino di tale funzione a scopo di supporto della legacy. Dato che il file .LIB file conterrà il mapping tra l'ordinale e la funzione, è possibile usare il nome della funzione come si farebbe normalmente nei progetti che usano la DLL.  
-  
-Usando la parola chiave facoltativa `NONAME`, è possibile esportare solo per ordinali riducendo la dimensione della tabella di esportazione nella DLL risultante. Tuttavia, se si desidera utilizzare [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) nella DLL, è necessario conoscere il numero ordinale perché il nome non è valido.  
-  
-La parola chiave facoltativa `PRIVATE` impedisce *entryname* siano incluse nella libreria di importazione generata da LINK. Questa non ha alcun effetto sull'esportazione nell'immagine, anch'essa generata da LINK.  
-  
-La parola chiave facoltativa `DATA` specifica che un'esportazione consiste in dati e non in codice. L'esempio seguente illustra come esportare una variabile dati denominata `exported_global`:  
-  
-```DEF  
-EXPORTS  
-   exported_global DATA  
+Poiché il compilatore Visual C++ Usa la decorazione per le funzioni C++, è necessario usare il nome decorato internal_name o definire le funzioni esportate mediante l'uso di extern "C" nel codice sorgente. Il compilatore decora anche le funzioni C che usano il [stdcall](../../cpp/stdcall.md) con un carattere di sottolineatura convenzione di chiamata (\_) prefisso e un suffisso composto il simbolo di chiocciola (\@) seguito dal numero di byte (in decimali) nel elenco di argomenti.
+
+Per trovare i nomi decorati creati dal compilatore, usare il [DUMPBIN](../../build/reference/dumpbin-reference.md) dello strumento o il linker [/Map](../../build/reference/map-generate-mapfile.md) opzione. I nomi decorati sono specifici del compilatore. Se si esportano i nomi decorati nel file .DEF, gli eseguibili che si collegano alla DLL devono essere anch'essi compilati usando la stessa versione del compilatore. Questo garantisce che i nomi decorati nel chiamante corrispondano ai nomi esportati nel file .DEF.
+
+È possibile usare \@ *ordinale* per specificare che verrà inserito un numero e non il nome della funzione, la tabella di esportazione DLL. Molte DLL Windows esportano ordinali per supportare il codice legacy. In precedenza, era pratica comune usare ordinali nel codice Windows a 16 bit, perché ciò può aiutare a ridurre le dimensioni di una DLL. Si sconsiglia di esportare funzioni in base a ordinali a meno che i destinatari della DLL non necessitino di tale funzione a scopo di supporto della legacy. Dato che il file .LIB file conterrà il mapping tra l'ordinale e la funzione, è possibile usare il nome della funzione come si farebbe normalmente nei progetti che usano la DLL.
+
+Usando l'opzione facoltativa **NONAME** (parola chiave), è possibile esportare solo per ordinali e ridurre le dimensioni della tabella di esportazione nella DLL risultante. Tuttavia, se si desidera utilizzare [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) nella DLL, è necessario conoscere il numero ordinale perché il nome non è valido.
+
+La parola chiave facoltativa **privati** impedisce *entryname* siano incluse nella libreria di importazione generata da LINK. Questa non ha alcun effetto sull'esportazione nell'immagine, anch'essa generata da LINK.
+
+La parola chiave facoltativa **dati** specifica che un'esportazione dei dati, non nel codice. L'esempio seguente illustra come esportare una variabile dati denominata `exported_global`:
+
+```DEF
+EXPORTS
+   exported_global DATA
 ```  
-  
-Vi sono quattro metodi per esportare una definizione, elencati di seguito in ordine di preferenza.  
-  
-1.  Il [dllexport](../../cpp/dllexport-dllimport.md) parola chiave nel codice sorgente  
-  
-2.  Un'istruzione `EXPORTS` in un file .DEF  
-  
-3.  Un' [/Export](../../build/reference/export-exports-a-function.md) specifica in un comando LINK  
-  
-4.  Oggetto [commento](../../preprocessor/comment-c-cpp.md) direttiva nel codice sorgente, del form `#pragma comment(linker, "/export: definition ")`  
-  
-Tutti e quattro i metodi possono essere usati nello stesso programma. Quando LINK compila un programma che contiene esportazioni, crea anche una libreria di importazione, a meno che non venga usato un file .EXP nella compilazione.  
-  
-Di seguito è riportato un esempio di sezione EXPORTS:  
-  
-```DEF  
-EXPORTS  
-   DllCanUnloadNow      @1          PRIVATE  
-   DllWindowName = WindowName       DATA  
-   DllGetClassObject    @4 NONAME   PRIVATE  
-   DllRegisterServer    @7  
-   DllUnregisterServer  
+
+Vi sono quattro metodi per esportare una definizione, elencati di seguito in ordine di preferenza.
+
+1. Il [dllexport](../../cpp/dllexport-dllimport.md) parola chiave nel codice sorgente
+
+2. Un'istruzione `EXPORTS` in un file .DEF
+
+3. Un' [/Export](../../build/reference/export-exports-a-function.md) specifica in un comando LINK
+
+4. Oggetto [commento](../../preprocessor/comment-c-cpp.md) direttiva nel codice sorgente, del form `#pragma comment(linker, "/export: definition ")`  
+
+Tutti e quattro i metodi possono essere usati nello stesso programma. Quando LINK compila un programma che contiene esportazioni, crea anche una libreria di importazione, a meno che non venga usato un file .EXP nella compilazione.
+
+Di seguito è riportato un esempio di sezione EXPORTS:
+
+```DEF
+EXPORTS
+   DllCanUnloadNow      @1          PRIVATE
+   DllWindowName = WindowName       DATA
+   DllGetClassObject    @4 NONAME   PRIVATE
+   DllRegisterServer    @7
+   DllUnregisterServer
 ```  
-  
-Quando si esporta una variabile da una DLL usando un file .DEF, non è necessario specificare `__declspec(dllexport)` nella variabile. In qualsiasi file che usa la DLL, tuttavia, è comunque necessario usare `__declspec(dllimport)` nella dichiarazione dei dati.  
-  
+
+Quando si esporta una variabile da una DLL usando un file .DEF, non è necessario specificare `__declspec(dllexport)` nella variabile. In qualsiasi file che usa la DLL, tuttavia, è comunque necessario usare `__declspec(dllimport)` nella dichiarazione dei dati.
+
 ## <a name="see-also"></a>Vedere anche
 
 [Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)

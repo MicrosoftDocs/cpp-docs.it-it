@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753730"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895292"
 ---
 # <a name="curl-class"></a>Classe cUrl
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` Consente di modificare i campi di un URL, ad esempio il numero di porta o percorso. `CUrl` riconosce gli URL nel formato seguente:
 
-\<Schema > ://\<UserName >:\<Password > @\<HostName >:\<NumeroPorta > /\<UrlPath >\<ExtraInfo >
+\<Schema > ://\<UserName >:\<Password >\@\<nome host >:\<NumeroPorta > /\<UrlPath >\<ExtraInfo >
 
 (Alcuni campi sono facoltativi). Si consideri, ad esempio, questo URL:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl) analizza come indicato di seguito:
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - Password: "segreto"
 
-- Nome host: "www.microsoft.com"
+- Nome host: "`www.microsoft.com`"
 
 - Numero di porta: 80
 
@@ -235,7 +235,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 Questo metodo aggiunge i singoli campi per costruire la stringa URL completata nel formato seguente:
 
-**\<schema > ://\<utente >:\<passare > @\<dominio >:\<porta >\<path >\<aggiuntivi >**
+**\<schema > ://\<utente >:\<passare >\@\<dominio >:\<porta >\<percorso >\<aggiuntivi >**
 
 Quando si chiama questo metodo, il *pdwMaxLength* il parametro inizialmente deve contenere la lunghezza massima del buffer di stringa a cui fanno riferimento le *lpszUrl* parametro. Il valore della *pdwMaxLength* parametro verrà aggiornato con la lunghezza effettiva della stringa dell'URL.
 

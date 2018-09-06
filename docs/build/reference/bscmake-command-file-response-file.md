@@ -1,5 +1,5 @@
 ---
-title: File di comando BSCMAKE (File di risposta) | Documenti Microsoft
+title: File di comando di BSCMAKE (File di risposta) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,38 +19,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a879306078c52e0ad11d29f1786a2e55c2480d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a14e0ba315820eec0dd2fe17823f2c5c656fd87
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369565"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895110"
 ---
 # <a name="bscmake-command-file-response-file"></a>File di comando di BSCMAKE (file di risposta)
-È possibile fornire parzialmente o totalmente l'input della riga di comando in un file di comando. Specificare il file di comando utilizzando la sintassi seguente:  
-  
+
+È possibile specificare parzialmente o totalmente l'input della riga di comando in un file di comando. Specificare il file di comando usando la sintassi seguente:
+
 ```  
-BSCMAKE @filename  
+BSCMAKE @filename
 ```  
-  
- File di un solo comando è consentito. È possibile specificare un percorso con *filename*. Anteporre *filename* con un simbolo di chiocciola (@). BSCMAKE non dispone di un'estensione. È possibile specificare ulteriori *sbrfiles è possibile* nella riga di comando dopo *filename*. Il file di comando è un file di testo contenente l'input BSCMAKE nello stesso ordine si specificherà nella riga di comando. Separare gli argomenti della riga di comando con uno o più spazi, tabulazioni o caratteri di nuova riga.  
-  
- BSCMAKE utilizzando un file di comando viene chiamato il comando seguente:  
-  
+
+Viene accettato un solo comando file. È possibile specificare un percorso con *filename*. Anteporre *nomefile* con un simbolo di chiocciola (**\@**). BSCMAKE non dispone di un'estensione. È possibile specificare ulteriori *sbrfiles è possibile* nella riga di comando dopo *filename*. Il file di comando è un file di testo che contiene l'input a BSCMAKE nello stesso ordine, come verrebbe specificato nella riga di comando. Separare gli argomenti della riga di comando con uno o più spazi, tabulazioni o caratteri di nuova riga.
+
+Il comando seguente viene chiamato utilizzando un file di comando BSCMAKE:
+
 ```  
-BSCMAKE @prog1.txt  
+BSCMAKE @prog1.txt
 ```  
-  
- Di seguito è un file di comando di esempio:  
-  
+
+Di seguito è riportato un file di comando di esempio:
+
 ```  
-/n /v /o main.bsc /El  
+/n /v /o main.bsc /El
 /S (  
-toolbox.h  
-verdate.h c:\src\inc\screen.h  
-)  
-file1.sbr file2.sbr file3.sbr file4.sbr  
+toolbox.h
+verdate.h c:\src\inc\screen.h
+)
+file1.sbr file2.sbr file3.sbr file4.sbr
 ```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)

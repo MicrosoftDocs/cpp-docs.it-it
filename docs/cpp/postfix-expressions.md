@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403141"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895162"
 ---
 # <a name="postfix-expressions"></a>Espressioni in forma suffissa
 Le espressioni di suffisso sono costituite da espressioni primarie o da espressioni in cui gli operatori di suffisso seguono un'espressione primaria. Nella tabella riportata di seguito vengono elencati gli operatori di suffisso.  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- Nell'espressione precedente, `func` è un'espressione primaria `func(1)` è un'espressione di suffisso di funzione, `func(1)->GetData` è un'espressione di suffisso che specifica un membro della classe, `func(1)->GetData()` è un'altra espressione di suffisso di funzione e l'intero espressione è un'espressione di suffisso incrementa il valore restituito di GetData.  Il significato dell'intera espressione è "chiamare func passando 1 come argomento e ottenere un puntatore a una classe come valore restituito.  Chiamare quindi `GetValue()` su tale classe, quindi incrementare il valore restituito.  
+ Nell'espressione precedente, `func` è un'espressione primaria `func(1)` è un'espressione di suffisso di funzione, `func(1)->GetValue` è un'espressione di suffisso che specifica un membro della classe, `func(1)->GetValue()` è un'altra espressione di suffisso di funzione e l'intero espressione è un'espressione di suffisso incrementa il valore restituito di GetValue.  Il significato dell'intera espressione è "chiamare func passando 1 come argomento e ottenere un puntatore a una classe come valore restituito.  Chiamare quindi `GetValue()` su tale classe, quindi incrementare il valore restituito.  
   
  Le espressioni sopra elencate sono espressioni di assegnazione, pertanto il loro risultato deve essere un r-value.  
   

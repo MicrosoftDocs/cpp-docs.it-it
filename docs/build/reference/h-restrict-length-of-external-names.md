@@ -1,7 +1,7 @@
 ---
-title: -H (limita la lunghezza dei nomi esterni) | Documenti Microsoft
+title: -H (limita la lunghezza dei nomi esterni) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,81 +20,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0859c6770da56023df7ba7ba24094bea2e889319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8d178fcd62c39c65d9f4f8958fde3b178a074671
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377561"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895318"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Limita la lunghezza dei nomi esterni)
-Deprecato. Limita la lunghezza dei nomi esterni.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/Hnumber  
-```  
-  
-## <a name="arguments"></a>Argomenti  
- `number`  
- Specifica la lunghezza massima dei nomi esterni consentiti in un programma.  
-  
-## <a name="remarks"></a>Note  
- Per impostazione predefinita, la lunghezza dei nomi esterni (pubblici) è 2.047 caratteri. Questo vale per i programmi C e C++. Utilizzando **/H** possibile diminuire solo la lunghezza massima consentita di identificatori, non aumentare il valore. Uno spazio tra **/H** e `number` è facoltativo.  
-  
- Se un programma contiene nomi esterni più lunghi `number`, i caratteri aggiuntivi vengono ignorati. Se si compila un programma senza **/H** e se un identificatore contiene più di 2.047 caratteri, il compilatore genererà [irreversibile C1064 errore](../../error-messages/compiler-errors-1/fatal-error-c1064.md).  
-  
- Il limite di lunghezza include qualsiasi creato dal compilatore carattere di sottolineatura (_) o simbolo di chiocciola (@). Questi caratteri fanno parte dell'identificatore e richiedere un percorso significativo.  
-  
--   Il compilatore aggiunge un carattere di sottolineatura (_) ai nomi modificati dal `__cdecl` (impostazione predefinita) e `__stdcall` convenzioni di chiamata e un carattere simbolo di chiocciola (@) ai nomi modificati dal `__fastcall` convenzione di chiamata.  
-  
--   Il compilatore aggiunge informazioni sulle dimensioni di argomento ai nomi modificati dal `__fastcall` e `__stdcall` convenzioni di chiamata e aggiunge informazioni sul tipo per i nomi di C++.  
-  
- È possibile **/H** utile:  
-  
--   Quando si creano i programmi con linguaggio misto o portatili.  
-  
--   Quando si utilizzano strumenti che impongono dei limiti di lunghezza degli identificatori esterni.  
-  
--   Quando si desidera limitare la quantità di spazio utilizzata dai simboli in una build di debug.  
-  
- Nell'esempio seguente usa **/H** può comportare errori se le lunghezze degli identificatori sono troppo limitati:  
-  
-```cpp  
-// compiler_option_H.cpp  
-// compile with: /H5  
-// processor: x86  
-// LNK2005 expected  
-void func1(void);  
-void func2(void);  
-  
-int main() { func1(); }  
-  
-void func1(void) {}  
-void func2(void) {}  
-```  
-  
- È inoltre necessario fare attenzione quando si utilizza il **/H** opzione a causa degli identificatori del compilatore predefiniti. Se la lunghezza massima dell'identificatore è troppo piccola, alcuni identificatori predefiniti saranno libreria non risolte, nonché alcune chiamate di funzione. Ad esempio, se il `printf` funzione viene utilizzata e l'opzione **/H5** è specificato in fase di compilazione, il simbolo **prin** verrà creata per fare riferimento a `printf`, e questo non verrà trovato nella libreria.  
-  
- Utilizzo di **/H** non è compatibile con [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md).  
-  
- Il **/H** opzione è deprecata a partire da Visual Studio 2005; sono stati aumentati i limiti di lunghezza massima e **/H** non è più necessario. Per un elenco di opzioni del compilatore obsolete, vedere **deprecate o rimosse le opzioni del compilatore** in [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
-  
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+Deprecato. Limita la lunghezza dei nomi esterni.
+
+## <a name="syntax"></a>Sintassi
+
+> **/H**<em>numero</em>
+
+## <a name="arguments"></a>Argomenti
+
+*Numero*  
+Specifica la lunghezza massima dei nomi esterni consentiti in un programma.
+
+## <a name="remarks"></a>Note
+
+Per impostazione predefinita, la lunghezza dei nomi esterni (pubblici) è 2.047 caratteri. Questo vale per i programmi C e C++. Usando **/H** possibile diminuire solo la lunghezza massima consentita di identificatori, non aumentare il valore. Uno spazio tra **/H** e *numero* è facoltativo.
+
+Se un programma contiene più di nomi esterni *numero*, i caratteri aggiuntivi vengono ignorati. Se si compila un programma senza **/H** e se un identificatore contiene più di 2.047 caratteri, il compilatore genererà [errore irreversibile C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md).
+
+Il limite di lunghezza incluso qualsiasi carattere di sottolineatura iniziale creato dal compilatore (**\_**) o simbolo di chiocciola (**\@**). Questi caratteri sono parte dell'identificatore e richiedono un percorso significativo.
+
+- Il compilatore aggiunge un carattere di sottolineatura (**\_**) ai nomi modificati il `__cdecl` (predefinito) e `__stdcall` convenzioni di chiamata e leader di un simbolo di chiocciola (**\@** ) per i nomi modificati dal `__fastcall` convenzione di chiamata.
+
+- Il compilatore aggiunge le informazioni sulle dimensioni argomento ai nomi modificati la `__fastcall` e `__stdcall` convenzioni di chiamata e aggiunge le informazioni sul tipo per i nomi di C++.
+
+Può risultare **/H** utili:
+
+- Quando si creano programmi portabili o linguaggi misti.
+
+- Quando si usano gli strumenti che prevedono limiti per la lunghezza degli identificatori esterni.
+
+- Quando si desidera limitare la quantità di spazio utilizzata dai simboli in una build di debug.
+
+L'esempio seguente mostra come l'uso **/H** può comportare errori se le lunghezze degli identificatori sono troppo limitati:
+
+```cpp
+// compiler_option_H.cpp
+// compile with: /H5
+// processor: x86
+// LNK2005 expected
+void func1(void);
+void func2(void);
+
+int main() { func1(); }
+
+void func1(void) {}
+void func2(void) {}
+```
+
+È anche necessario prestare attenzione quando si usa la **/H** opzione a causa degli identificatori predefiniti del compilatore. Se la lunghezza massima dell'identificatore è troppo piccola, alcuni identificatori predefiniti saranno libreria non risolte, nonché determinate chiamate di funzione. Ad esempio, se il `printf` viene usata la funzione e l'opzione **/H5** viene specificato in fase di compilazione, il simbolo **prin** verrà creato per fare riferimento a `printf`, e questo non verrà trovato nella libreria.
+
+Sfrutta **/H** non è compatibile con [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md).
+
+Il **/H** opzione è deprecata a partire da Visual Studio 2005; sono stati aumentati i limiti di lunghezza massima e **/H** non è più necessario. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+2. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
+
+3. Immettere l'opzione del compilatore nel **opzioni aggiuntive** casella.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)   
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

@@ -18,38 +18,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6aa18936497f0415da331697aceb26f26345500
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: d86c49c8d7d0cda91ba2415167cc79c810a96b3d
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541230"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895305"
 ---
 # <a name="charizing-operator-"></a>Operatore charizing (#@)
-**Sezione specifica Microsoft**  
-  
-L'operatore per la creazione di caratteri può essere utilizzato solo con argomenti di macro. Se `#@` precede un parametro formale nella definizione della macro, l'argomento effettivo è racchiuso tra virgolette singole e considerato come un carattere quando la macro viene espansa. Ad esempio:  
-  
-```  
-#define makechar(x)  #@x  
-```  
-  
-fa sì che l'istruzione  
-  
-```  
-a = makechar(b);  
-```  
-  
-venga espansa a  
-  
-```  
-a = 'b';  
-```  
-  
-Il carattere della virgoletta singola non può essere utilizzato con l'operatore per la creazione di caratteri.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+**Sezione specifica Microsoft**
+
+L'operatore per la creazione di caratteri può essere utilizzato solo con argomenti di macro. Se `#@` precede un parametro formale nella definizione della macro, l'argomento effettivo è racchiuso tra virgolette singole e considerato come un carattere quando la macro viene espansa. Ad esempio:
+
+```
+#define makechar(x)  #@x
+```
+
+fa sì che l'istruzione
+
+```
+a = makechar(b);
+```
+
+venga espansa a
+
+```
+a = 'b';
+```
+
+Il carattere della virgoletta singola non può essere utilizzato con l'operatore per la creazione di caratteri.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
 [Operatori del preprocessore](../preprocessor/preprocessor-operators.md)

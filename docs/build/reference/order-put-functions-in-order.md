@@ -1,7 +1,7 @@
 ---
-title: -ORDINE (inserisce le funzioni in ordine) | Documenti Microsoft
+title: -ORDER (inserisce le funzioni in ordine) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de9b0fb629a1bf984929ec170f05e25e740e9cd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378483"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894512"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Inserisce le funzioni in ordine)
 
@@ -35,7 +35,7 @@ Specificare l'ordine dei collegamenti per le funzioni di separatamente nel pacch
 
 ## <a name="syntax"></a>Sintassi
 
->/ ORDINARE: @*filename*
+> **/Order:\@**<em>nomefile</em>
 
 ### <a name="parameters"></a>Parametri
 
@@ -44,13 +44,13 @@ Un file di testo che specifica l'ordine dei collegamenti per le funzioni COMDAT.
 
 ## <a name="remarks"></a>Note
 
-Il **/ORDER** l'opzione del compilatore consente di ottimizzare il comportamento di paging del programma mediante il raggruppamento di una funzione con le funzioni da essa chiamate. È anche possibile raggruppare insieme le funzioni di chiamata di frequente. Queste tecniche, note come *ottimizzazione dello swap* o *ottimizzazione paging*, aumentare la probabilità che una funzione chiamata è in memoria quando è necessaria e non dispone di paging dal disco.
+Il **/ORDER** opzione del compilatore consente di ottimizzare il comportamento di paging del programma mediante il raggruppamento di una funzione con le funzioni da essa chiamate. È anche possibile raggruppare insieme le funzioni chiamate con maggiore frequenza. Queste tecniche, note come *ottimizzazione dello swap* oppure *ottimizzazione paging*, aumentano le probabilità che una funzione chiamata è in memoria quando è necessaria e non è necessario chiamarla dal disco.
 
-Quando si compila il codice sorgente in un file oggetto, è possibile indicare al compilatore di inserire ogni funzione nella relativa sezione, chiamata un *COMDAT*, utilizzando il [/Gy (Attiva collegamento a livello di funzione)](../../build/reference/gy-enable-function-level-linking.md) compilatore opzione. Il **/ORDER** l'opzione del linker indica al linker di inserire dati COMDAT nell'immagine eseguibile, nell'ordine specificato.
+Quando si compila il codice sorgente in un file di oggetto, è possibile indicare al compilatore di inserire ogni funzione nella relativa sezione, chiamata un' *COMDAT*, usando la [/Gy (Attiva collegamento a livello di funzione)](../../build/reference/gy-enable-function-level-linking.md) compilatore opzione. Il **/ORDER** l'opzione del linker indica al linker di inserire dati COMDAT nell'immagine eseguibile in ordine sono state specificate.
 
-Per specificare l'ordine COMDAT, creare un *file di risposta*, un file di testo che elenca ogni COMDAT per nome, uno per ogni riga, l'ordine in cui si desidera possano essere effettuate dal linker. Passare il nome di questo file come il *filename* parametro il **/ORDER** opzione. Per le funzioni C++, il nome di COMDAT è la forma decorata del nome della funzione. Utilizzare il nome non decorato per le funzioni C, `main`, e per le funzioni C++ dichiarate come `extern "C"`. I nomi delle funzioni e i nomi decorati sono tra maiuscole e minuscole. Per ulteriori informazioni sui nomi decorati, vedere [nomi decorati](../../build/reference/decorated-names.md). 
+Per specificare l'ordine COMDAT, creare un *file di risposta*, un file di testo che elenca ogni COMDAT in base al nome, uno per riga, nell'ordine di volerle inserire dal linker. Passare il nome di questo file come le *nomefile* parametro delle **/ORDER** opzione. Per le funzioni C++, il nome di COMDAT è la forma decorata del nome della funzione. Usare il nome non decorato per le funzioni C `main`, e per le funzioni C++ dichiarate come `extern "C"`. I nomi delle funzioni e i nomi decorati sono tra maiuscole e minuscole. Per altre informazioni sui nomi decorati, vedere [nomi decorati](../../build/reference/decorated-names.md).
 
-Per trovare i nomi decorati del COMDAT, utilizzare il [DUMPBIN](../../build/reference/dumpbin-reference.md) dello strumento [/simboli](../../build/reference/symbols.md) opzione nel file oggetto. Il linker viene automaticamente anteposto un carattere di sottolineatura (\_) alla funzione nomi nella risposta di file, a meno che il nome inizia con un punto interrogativo (?) o simbolo di chiocciola (@). Ad esempio, se un file di origine, example.cpp, contiene le funzioni `int cpp_func(int)`, `extern "C" int c_func(int)` e `int main(void)`, il comando `DUMPBIN /SYMBOLS example.obj` sono elencati i seguenti nomi decorati:
+Per trovare i nomi decorati di COMDAT, utilizzare il [DUMPBIN](../../build/reference/dumpbin-reference.md) dello strumento [/simboli](../../build/reference/symbols.md) opzione nel file oggetto. Il linker viene automaticamente anteposto un carattere di sottolineatura (**\_**) alla funzione nomi nella risposta del file, a meno che il nome inizia con un punto interrogativo (**?**) o simbolo di chiocciola ( **\@**). Ad esempio, se un file di origine, cpp, contiene le funzioni `int cpp_func(int)`, `extern "C" int c_func(int)` e `int main(void)`, il comando `DUMPBIN /SYMBOLS example.obj` Elenca i nomi decorati:
 
 ```Output
 ...
@@ -62,18 +62,18 @@ Per trovare i nomi decorati del COMDAT, utilizzare il [DUMPBIN](../../build/refe
 
 In questo caso, specificare i nomi come `?cpp_func@@YAHH@Z`, `c_func`, e `main` nel file di risposta.
 
-Se più oggetti **/ORDER** opzione viene visualizzata nelle opzioni del linker, il penultimo specificato ha effetto.
+Se più oggetti **/ORDER** opzione viene visualizzata nelle opzioni del linker, l'ultimo metodo specificato ha effetto.
 
-Il **/ORDER** disabilita il collegamento incrementale. È possibile visualizzare l'avviso del linker [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) quando si specifica questa opzione se il collegamento incrementale è abilitato o se è stato specificato il [/ZI (incrementale PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) l'opzione del compilatore. Per disattiva questo avviso, è possibile utilizzare il [/INCREMENTAL: No](../../build/reference/incremental-link-incrementally.md) per disattivare il collegamento incrementale e utilizzare l'opzione del linker di [/Zi (generare PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) l'opzione del compilatore di generare un file PDB senza collegamento incrementale.
+Il **/ORDER** disabilita il collegamento incrementale. È possibile visualizzare l'avviso del linker [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) quando si specifica questa opzione se il collegamento incrementale è abilitato o se è stato specificato il [/ZI (PDB incrementale)](../../build/reference/z7-zi-zi-debug-information-format.md) opzione del compilatore. Per ignorare questo avviso, è possibile usare la [/INCREMENTAL: No](../../build/reference/incremental-link-incrementally.md) l'opzione del linker per disattivare il collegamento incrementale e utilizzare il [/Zi (generare PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) opzione del compilatore per generare un file PDB senza collegamento incrementale.
 
 > [!NOTE]
-> COLLEGAMENTO non è possibile ordinare funzioni statiche poiché i nomi delle funzioni statiche non sono nomi di simboli pubblici. Quando **/ORDER** è specificato, avviso del linker [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) viene generato per ogni simbolo nel file di risposta ordine che è statico o non è stato trovato.
+> COLLEGAMENTO non è possibile ordinare le funzioni statiche poiché i nomi delle funzioni statiche non sono i nomi dei simboli pubblici. Quando **/ORDER** è specificato, avviso del linker [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) viene generato per ogni simbolo nel file di risposta dell'ordine che è statico o non è stato trovato.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
 
-1. In **le proprietà di configurazione**aprire **Linker** e quindi scegliere il **ottimizzazione** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **Linker** > **ottimizzazione** pagina delle proprietà.
 
 1. Modificare il **ordine funzioni** proprietà per contenere il nome del file di risposta.
 
