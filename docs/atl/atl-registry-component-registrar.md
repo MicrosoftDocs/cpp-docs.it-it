@@ -1,5 +1,5 @@
 ---
-title: Componente del Registro di sistema ATL (Registrar) | Documenti Microsoft
+title: Componente del Registro di sistema ATL (Registrar) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c1aafdfd118a78aefff4fa32ac67f4e290596b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354900"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759431"
 ---
 # <a name="atl-registry-component-registrar"></a>Componente del Registro di sistema ATL (Registrar)
-ATL (Registrar) fornisce un accesso ottimizzato nel Registro di sistema tramite un'interfaccia personalizzata. Il programma di registrazione è a thread libero e consente il collegamento statico del codice per i client di C++.  
-  
+
+ATL (Registrar) fornisce l'accesso ottimizzato nel Registro di sistema tramite un'interfaccia personalizzata. Il programma di registrazione è a thread libero e consentono il collegamento statico di codice per i client di C++.
+
 > [!NOTE]
->  Il codice sorgente per ATL (Registrar) è reperibile in atlmfc\include\atliface.h.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Creazione degli script del Registro di sistema](../atl/creating-registrar-scripts.md)  
- Guida alla creazione di script di registrazione. Contiene argomenti relativi a sintassi BNF, strutture di analisi, esempi di utilizzo dei parametri sostituibili e richiamare gli script di creazione di script del Registro di sistema.  
-  
- [Impostazione di un collegamento statico per il codice di registrazione (solo C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- Elenca i passaggi per impostare il collegamento statico per il programma di registrazione.  
-  
-## <a name="related-sections"></a>Sezioni correlate  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
+>  Il codice sorgente per ATL (Registrar) è reperibile in atlmfc\include\atliface.h.
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Creazione degli script del Registro di sistema](../atl/creating-registrar-scripts.md)  
+Guida alla creazione di script di registrazione. Contiene argomenti relativi a sintassi BNF, gli alberi di analisi, lo scripting di esempi, utilizzo dei parametri sostituibili e richiamare gli script del Registro di sistema.
+
+[Impostazione di un collegamento statico al codice di Registrar (solo C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+Elenca i passaggi per configurare il collegamento statico per il Registrar.
+
+## <a name="related-sections"></a>Sezioni correlate
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 
