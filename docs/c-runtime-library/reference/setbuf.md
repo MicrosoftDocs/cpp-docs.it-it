@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8592e8008fa78402ced307b60188ea8610960a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea1c979b261b81f80d95e4219f948dd2a3f5849e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407314"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100353"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -54,15 +54,17 @@ void setbuf(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso* puntatore **FILE** struttura.
+*flusso*<br/>
+Puntatore alla struttura **FILE**.
 
-*buffer* buffer allocato dall'utente.
+*buffer*<br/>
+Buffer allocato dall'utente.
 
 ## <a name="remarks"></a>Note
 
-Il **setbuf** funzione memorizzazione nel buffer per i controlli *flusso*. Il *flusso* argomento deve fare riferimento a un file aperto che non è stato letto o scritto. Se il *buffer* argomento **NULL**, il flusso è non memorizzato nel buffer. Se non, il buffer deve puntare a una matrice di caratteri di lunghezza **BUFSIZ**, dove **BUFSIZ** è la dimensione del buffer, come definito in STDIO. H. Per il buffering di I/O viene usato il buffer specificato dall'utente, invece del buffer allocato dal sistema predefinito per il flusso specificato. Il **stderr** flusso è non memorizzato nel buffer per impostazione predefinita, ma è possibile utilizzare **setbuf** assegnare buffer **stderr**.
+Il **setbuf** controlla il buffering per funzionare *stream*. Il *flusso* argomento deve fare riferimento a un file aperto che non è stato letto o scritto. Se il *buffer* l'argomento è **NULL**, il flusso è non memorizzato nel buffer. Se non, il buffer deve puntare a una matrice di caratteri di lunghezza **BUFSIZ**, dove **BUFSIZ** è la dimensione del buffer come definita in STDIO. H. Per il buffering di I/O viene usato il buffer specificato dall'utente, invece del buffer allocato dal sistema predefinito per il flusso specificato. Il **stderr** flusso è non memorizzato nel buffer per impostazione predefinita, ma è possibile usare **setbuf** per assegnare buffer a **stderr**.
 
-**setbuf** è stata sostituita da [setvbuf](setvbuf.md), ovvero la routine preferita per il nuovo codice. **setbuf** viene mantenuto per compatibilità con il codice esistente.
+**setbuf** è stato sostituito da [setvbuf](setvbuf.md), ovvero la routine preferita per il nuovo codice. **setbuf** viene mantenuta per compatibilità con il codice esistente.
 
 ## <a name="requirements"></a>Requisiti
 

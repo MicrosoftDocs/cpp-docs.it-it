@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108182e7f54453bb88d9ea6e001f672c0c214a2c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 93b020dcdf9dd7db11be0a578885cee28e667534
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961626"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100395"
 ---
 # <a name="poissondistribution-class"></a>Classe poisson_distribution
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType* il tipo di risultato integer, valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*IntType*<br/>
+Il tipo di risultato integer, valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -217,9 +218,11 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*significa* il `mean` parametro di distribuzione.
+*mean*<br/>
+Parametro di distribuzione `mean`.
 
-*Parm* la struttura di parametri utilizzata per costruire la distribuzione.
+*parm*<br/>
+Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18332f0c5d452c04079ff68bebbbdae19c4ed0d5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e3af150fc4b7af05f9650906d6b6596e8f9661cc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953879"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108377"
 ---
 # <a name="removeallextents-class"></a>Classe remove_all_extents
 
@@ -40,7 +40,8 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*T* tipo da modificare.
+*T*<br/>
+Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 

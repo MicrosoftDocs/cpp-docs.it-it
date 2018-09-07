@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 264f61ede0fb47e198459593b2eea154846cc7b9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962556"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108291"
 ---
 # <a name="regexiterator-class"></a>Classe regex_iterator
 
@@ -75,11 +75,14 @@ private:
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt* il tipo di iteratore per le sottocorrispondenze.
+*BidIt*<br/>
+Tipo di iteratore per le sottocorrispondenze.
 
-*Elem* il tipo di elementi in modo che corrispondano.
+*Elem*<br/>
+Tipo di elementi di cui trovare una corrispondenza.
 
-*RXtraits* classe Traits per gli elementi.
+*RXtraits*<br/>
+Classe traits per gli elementi.
 
 ## <a name="remarks"></a>Note
 
@@ -223,7 +226,8 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* l'iteratore da confrontare.
+*right*<br/>
+Iteratore per il confronto.
 
 ### <a name="remarks"></a>Note
 
@@ -395,7 +399,8 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* l'iteratore da confrontare.
+*right*<br/>
+Iteratore per il confronto.
 
 ### <a name="remarks"></a>Note
 
@@ -625,13 +630,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* inizio della sequenza in modo che corrispondano.
+*first*<br/>
+Inizio della sequenza per cui cercare una corrispondenza.
 
-*ultimo* fine della sequenza in modo che corrispondano.
+*last*<br/>
+Fine della sequenza per cui cercare una corrispondenza.
 
-*Re* espressione regolare per le corrispondenze.
+*Re*<br/>
+Espressione regolare per le corrispondenze.
 
-*f* flag per le corrispondenze.
+*f*<br/>
+Flag per le corrispondenze.
 
 ### <a name="remarks"></a>Note
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de5d24c0763e731b3123778e74b22c20798b729
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a767b7744f775a04f73777a21eba7bb6ef1d796d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966537"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102655"
 ---
 # <a name="isnullpointer-class"></a>Classe is_null_pointer
 
@@ -37,7 +37,8 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>Parametri
 
-*T* il tipo di query.
+*T*<br/>
+Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 

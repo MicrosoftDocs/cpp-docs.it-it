@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963794"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100754"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Loc* impostazioni locali contenenti il facet da inserire nelle impostazioni locali di destinazione.
+*Loc*<br/>
+Impostazioni locali contenenti il facet da inserire nelle impostazioni locali di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parametri
 
-*Loc* le impostazioni locali da utilizzare come le impostazioni locali predefinite dal programma.
+*Loc*<br/>
+Impostazioni locali che devono essere usate come predefinite dal programma.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parametri
 
-*Locname* nome delle impostazioni locali.
+*Locname*<br/>
+Nome delle impostazioni locali.
 
-*Loc* delle impostazioni locali che devono essere copiati nella costruzione delle nuove impostazioni locali.
+*Loc*<br/>
+Impostazioni locali che devono essere copiate per la costruzione delle nuove impostazioni locali.
 
-*Altri* delle impostazioni locali da cui selezionare una categoria.
+*Altro*<br/>
+Impostazioni locali da cui selezionare una categoria.
 
-*Cat* la categoria da sostituire nelle impostazioni locali costruite.
+*Cat*<br/>
+Categoria da sostituire nelle impostazioni locali costruite.
 
-*FAc* il facet da sostituire nelle impostazioni locali costruite.
+*FAc*<br/>
+Facet da sostituire nelle impostazioni locali costruite.
 
 ### <a name="remarks"></a>Note
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* una delle impostazioni locali di cui verificare la disuguaglianza.
+*right*<br/>
+Una delle impostazioni locali di cui verificare la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>  locale::operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* la stringa a sinistra.
+*left*<br/>
+Stringa sinistra.
 
-*a destra* la stringa a destra.
+*right*<br/>
+Stringa destra.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* una delle impostazioni locali di cui verificare l'uguaglianza.
+*right*<br/>
+Una delle impostazioni locali di cui verificare l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -734,14 +745,14 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>Vedere anche
 
 [\<locale>](../standard-library/locale.md)<br/>
 [Tabelle codici](../c-runtime-library/code-pages.md)<br/>
-[Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

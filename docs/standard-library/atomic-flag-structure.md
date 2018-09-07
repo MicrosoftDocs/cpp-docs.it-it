@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6a5162057944ac3d91d2465cfefe99c68dd5fb3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f763181424bafc4b8b3af41c135753dbe2f2577b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961415"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110318"
 ---
 # <a name="atomicflag-structure"></a>Struttura atomic_flag
 
@@ -63,7 +63,8 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Ordine* un' [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Ordine*<br/>
+Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
@@ -76,7 +77,8 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Parametri
 
-*Ordine* un' [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Ordine*<br/>
+Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
 

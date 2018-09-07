@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 673289f5ac8b739dfe7c1a4de446a37d85763452
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208832"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108409"
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
 
@@ -55,9 +55,11 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parametri
 
-*Quantità _* valore monetario estratto.
+*Quantità _*<br/>
+Valore monetario estratto.
 
-*_Intl* se **true**, usare il formato internazionale. Il valore predefinito è **false**.
+*_Intl*<br/>
+Se **true**, usare il formato internazionale. Il valore predefinito è **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -76,9 +78,11 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>Parametri
 
-*_Tptr* l'ora sotto forma di una struttura temporale.
+*_Tptr*<br/>
+Ora nella forma di una struttura temporale.
 
-*_Fmt* il formato desiderato da usare per ottenere il valore di ora.
+*_Fmt*<br/>
+Formato desiderato da usare per ottenere il valore di ora.
 
 ### <a name="remarks"></a>Note
 
@@ -95,9 +99,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parametri
 
-*Quantità _* importo monetario da inserire nel flusso.
+*Quantità _*<br/>
+Importo monetario da inserire nel flusso.
 
-*_Intl* impostata su **true** se il manipolatore deve usare il formato internazionale, **false** in caso contrario.
+*_Intl*<br/>
+Impostare su **true** se manipolatore deve usare il formato internazionale **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -120,9 +126,11 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>Parametri
 
-*_Tptr* il valore di ora da scrivere nel flusso, fornito in una struttura temporale.
+*_Tptr*<br/>
+Valore di ora da scrivere nel flusso, fornito in una struttura temporale.
 
-*_Fmt* il formato in cui scrivere il valore di ora.
+*_Fmt*<br/>
+Formato in cui scrivere il valore di ora.
 
 ### <a name="remarks"></a>Note
 
@@ -141,11 +149,14 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parametri
 
-*str* un oggetto std:: String, char\*, stringa di valore letterale stringa letterale o non elaborato oppure versione estesa di uno di questi (ad esempio std:: wstring, wchar_t\*).
+*str*<br/>
+Un oggetto std:: String, char\*, stringa di valore letterale stringa letterale o non elaborato oppure versione estesa di uno di questi (ad esempio std:: wstring, wchar_t\*).
 
-*delimitatore* un carattere specificato dall'utente o carattere wide da usare come delimitatore per l'inizio e fine della stringa.
+*Delimitatore*<br/>
+Carattere specificato dall'utente o carattere wide da usare come delimitatore per l'inizio e la fine della stringa.
 
-*escape* un carattere specificato dall'utente o carattere wide da usare come carattere di escape per le sequenze di escape all'interno della stringa.
+*escape*<br/>
+Carattere specificato dall'utente o carattere wide da usare come carattere di escape per le sequenze di escape all'interno della stringa.
 
 ### <a name="remarks"></a>Note
 
@@ -303,7 +314,8 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Parametri
 
-*Maschera* flag da cancellare.
+*Maschera*<br/>
+Flag da cancellare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -323,7 +335,8 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>Parametri
 
-*Base* base numerica.
+*Base*<br/>
+Base numerica.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -352,7 +365,8 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH* il carattere che verrà usato per riempire gli spazi in una visualizzazione giustificata a destra.
+*CH*<br/>
+Carattere che verrà usato per riempire gli spazi in una visualizzazione giustificata a destra.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -372,7 +386,8 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Parametri
 
-*Maschera* i flag da impostare.
+*Maschera*<br/>
+Flag da impostare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -392,7 +407,8 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>Parametri
 
-*Prec* la precisione per i valori a virgola mobile.
+*Prec*<br/>
+Precisione per i valori a virgola mobile.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -412,7 +428,8 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parametri
 
-*Ampia* la larghezza del campo di visualizzazione.
+*Ampia*<br/>
+Larghezza del campo di visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 

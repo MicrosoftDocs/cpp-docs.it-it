@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b60e5aebcab11e839b6b1e6168aaac55a0202b7c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964912"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110240"
 ---
 # <a name="collatebyname-class"></a>Classe collate_byname
 
@@ -49,9 +49,11 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*_Locname* impostazioni locali denominate.
+*_Locname*<br/>
+Impostazioni locali denominate.
 
-*_Refs* conteggio di riferimento iniziale.
+*_Refs*<br/>
+Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
 

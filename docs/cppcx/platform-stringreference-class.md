@@ -17,188 +17,190 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1b177cf30b4eee49d144ddf3516a4bbf3da91c85
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767699"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105796"
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
-Tipo di ottimizzazione che puoi usare per passare dati in formato stringa dai parametri di input di `Platform::String^` ad altri metodi con un minimo di operazioni di copia.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-class StringReference  
-```  
-  
-### <a name="remarks"></a>Note  
-  
-### <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Stringreference:: Stringreference](#ctor)|Due costruttori per creare istanze di `StringReference`.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Stringreference:: data](#data)|Restituisce i dati in formato stringa come matrice di valori char16.|  
-|[Stringreference:: Length](#length)|Restituisce il numero di caratteri della stringa.|  
-|[Stringreference:: Gethstring](#gethstring)|Restituisce i dati in formato stringa come HSTRING.|  
-|[Stringreference:: GetString](#getstring)|Restituisce i dati in formato stringa come `Platform::String^`.|  
-  
-### <a name="public-operators"></a>Operatori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[StringReference::operator=](#operator-assign)|Assegna `StringReference` a una nuova istanza di `StringReference` .|  
-|[StringReference::operator()](#operator-call)|Converte `StringReference` in `Platform::String^`.|  
-  
-### <a name="requirements"></a>Requisiti  
- **Client minimo supportato:** Windows 8  
-  
- **Server minimo supportato:** Windows Server 2012  
-  
- **Spazio dei nomi:** Platform  
-  
- **Intestazione:** vccorlib.h  
+
+Tipo di ottimizzazione che puoi usare per passare dati in formato stringa dai parametri di input di `Platform::String^` ad altri metodi con un minimo di operazioni di copia.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+class StringReference
+```
+
+### <a name="remarks"></a>Note
+
+### <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Stringreference:: Stringreference](#ctor)|Due costruttori per creare istanze di `StringReference`.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Stringreference:: data](#data)|Restituisce i dati in formato stringa come matrice di valori char16.|
+|[Stringreference:: Length](#length)|Restituisce il numero di caratteri della stringa.|
+|[Stringreference:: Gethstring](#gethstring)|Restituisce i dati in formato stringa come HSTRING.|
+|[Stringreference:: GetString](#getstring)|Restituisce i dati in formato stringa come `Platform::String^`.|
+
+### <a name="public-operators"></a>Operatori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[StringReference::operator=](#operator-assign)|Assegna `StringReference` a una nuova istanza di `StringReference` .|
+|[StringReference::operator()](#operator-call)|Converte `StringReference` in `Platform::String^`.|
+
+### <a name="requirements"></a>Requisiti
+
+**Client minimo supportato:** Windows 8
+
+**Server minimo supportato:** Windows Server 2012
+
+**Spazio dei nomi:** Platform
+
+**Intestazione:** vccorlib.h
 
 ## <a name="data"></a>  Metodo stringreference:: data
-Restituisce il contenuto di questo `StringReference` sotto forma di matrice di valori char16.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-const ::default::char16 * Data() const  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Matrice di caratteri di testo UNICODE char16.  
-  
 
+Restituisce il contenuto di questo `StringReference` sotto forma di matrice di valori char16.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+const ::default::char16 * Data() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Matrice di caratteri di testo UNICODE char16.
 
 ## <a name="gethstring"></a>  Metodo stringreference:: Gethstring
-Restituisce il contenuto della stringa come `__abi_HSTRING`.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-__abi_HSTRING GetHSTRING() const  
-  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Oggetto `__abi_HSTRING` contenente i dati in formato stringa.  
-  
-### <a name="remarks"></a>Note  
-  
 
+Restituisce il contenuto della stringa come `__abi_HSTRING`.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+__abi_HSTRING GetHSTRING() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Oggetto `__abi_HSTRING` contenente i dati in formato stringa.
+
+### <a name="remarks"></a>Note
 
 ## <a name="getstring"></a>  Metodo stringreference:: GetString
-Restituisce il contenuto della stringa come `Platform::String^`.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-__declspec(no_release_return) __declspec(no_refcount)  
-    ::Platform::String^ GetString() const  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Oggetto `Platform::String^` contenente i dati in formato stringa.  
+
+Restituisce il contenuto della stringa come `Platform::String^`.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+__declspec(no_release_return) __declspec(no_refcount)
+    ::Platform::String^ GetString() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Oggetto `Platform::String^` contenente i dati in formato stringa.
 
 ## <a name="length"></a>  Metodo stringreference:: Length
-Restituisce il numero di caratteri della stringa.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-unsigned int Length() const  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Intero senza segno che specifica il numero di caratteri nella stringa.  
-  
-### <a name="remarks"></a>Note  
-  
 
+Restituisce il numero di caratteri della stringa.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+unsigned int Length() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Intero senza segno che specifica il numero di caratteri nella stringa.
+
+### <a name="remarks"></a>Note
 
 ## <a name="operator-assign"></a>  Stringreference:: operator = (operatore)
-Assegna l'oggetto specificato all'oggetto `StringReference` corrente.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-StringReference& operator=(const StringReference& __fstrArg);  
-StringReference& operator=(const ::default::char16* __strArg);    
-```  
-  
-### <a name="parameters"></a>Parametri  
- `__fstrArg`  
- Indirizzo di un oggetto `StringReference` utilizzato per inizializzare l'oggetto `StringReference` corrente.  
-  
- `__strArg`  
- Puntatore a una matrice di valori char16 utilizzata per inizializzare l'oggetto `StringReference` corrente.  
-  
-### <a name="return-value"></a>Valore restituito  
- Riferimento a un oggetto di tipo `StringReference`.  
-  
-### <a name="remarks"></a>Note  
- In quanto `StringReference` è una classe C++ standard e non una classe di riferimento, non viene visualizzato nei **Visualizzatore oggetti**.  
-  
 
+Assegna l'oggetto specificato all'oggetto `StringReference` corrente.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+StringReference& operator=(const StringReference& __fstrArg);
+StringReference& operator=(const ::default::char16* __strArg);
+```
+
+### <a name="parameters"></a>Parametri
+
+*__fstrArg*<br/>
+Indirizzo di un oggetto `StringReference` utilizzato per inizializzare l'oggetto `StringReference` corrente.
+
+*__strArg*<br/>
+Puntatore a una matrice di valori char16 utilizzata per inizializzare l'oggetto `StringReference` corrente.
+
+### <a name="return-value"></a>Valore restituito
+
+Riferimento a un oggetto di tipo `StringReference`.
+
+### <a name="remarks"></a>Note
+
+In quanto `StringReference` è una classe C++ standard e non una classe di riferimento, non viene visualizzato nei **Visualizzatore oggetti**.
 
 ## <a name="operator-call"></a>  StringReference::operator()  Operator
-Converte un oggetto `StringReference` in un oggetto `Platform::String^`.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-  
-__declspec(no_release_return) __declspec(no_refcount)  
-         operator ::Platform::String^() const  
-  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Handle a un oggetto di tipo `Platform::String`.  
+
+Converte un oggetto `StringReference` in un oggetto `Platform::String^`.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+__declspec(no_release_return) __declspec(no_refcount)
+         operator ::Platform::String^() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Handle a un oggetto di tipo `Platform::String`.
 
 ## <a name="ctor"></a>  Costruttore StringReference::StringReference
-Inizializza una nuova istanza della classe `StringReference`.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-  
-    StringReference();  
-  
-   StringReference(const StringReference& __fstrArg)  
-  
-StringReference(const ::default::char16* __strArg)  
-  
-StringReference(const ::default::char16* __strArg, size_t __lenArg)  
-```  
-  
-### <a name="parameters"></a>Parametri  
- `__fstrArg`  
- `StringReference` i cui dati vengono utilizzati per inizializzare la nuova istanza.  
-  
- `__strArg`  
- Puntatore a una matrice di valori char16 utilizzata per inizializzare la nuova istanza.  
-  
- `__lenArg`  
- Numero di elementi in `__strArg`.  
-  
-### <a name="remarks"></a>Note  
- La prima versione di questo costruttore rappresenta il costruttore predefinito. La seconda versione inizializza la nuova classe `StringReference` dell'istanza dall'oggetto specificato dal parametro `__fstrArg`. Il terzo e quarto overload Inizializza una nuova `StringReference` istanza da una matrice di valori char16. char16 rappresenta un carattere di testo UNICODE a 16 bit.  
-  
 
+Inizializza una nuova istanza della classe `StringReference`.
 
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe Platform::StringReference](../cppcx/platform-stringreference-class.md)
+### <a name="syntax"></a>Sintassi
+
+```cpp
+StringReference();
+StringReference(const StringReference& __fstrArg);
+StringReference(const ::default::char16* __strArg);
+StringReference(const ::default::char16* __strArg, size_t __lenArg);
+```
+
+### <a name="parameters"></a>Parametri
+
+*__fstrArg*<br/>
+`StringReference` i cui dati vengono utilizzati per inizializzare la nuova istanza.
+
+*__strArg*<br/>
+Puntatore a una matrice di valori char16 utilizzata per inizializzare la nuova istanza.
+
+*__lenArg*<br/>
+Numero di elementi in `__strArg`.
+
+### <a name="remarks"></a>Note
+
+La prima versione di questo costruttore rappresenta il costruttore predefinito. La seconda versione inizializza la nuova classe `StringReference` dell'istanza dall'oggetto specificato dal parametro `__fstrArg`. Il terzo e quarto overload Inizializza una nuova `StringReference` istanza da una matrice di valori char16. char16 rappresenta un carattere di testo UNICODE a 16 bit.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe Platform::StringReference](../cppcx/platform-stringreference-class.md)

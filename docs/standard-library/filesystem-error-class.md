@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1acf34f8478bc075b53780f1e48df125c22608b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ec0a30a8ee193db362efa375f6e9d0f5746a56f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845492"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105302"
 ---
 # <a name="filesystemerror-class"></a>Classe filesystem_error
 
@@ -33,9 +33,31 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Note
 
-La classe funge da classe base per tutte le eccezioni generate per segnalare un errore nelle funzioni \<filesystem>. Archivia un oggetto di tipo String, denominato mymesg in questo esempio a scopo illustrativo. Archivia anche due oggetti di tipo path, denominati mypval1 e mypval2.
+La classe funge da classe base per tutte le eccezioni generate per segnalare un errore nelle funzioni \<filesystem>. Archivia un oggetto di tipo `string`, denominato `mymesg` qui come a scopo illustrativo. Archivia anche due oggetti di tipo `path`, denominato `mypval1` e `mypval2`.
 
-## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error
+### <a name="constructors"></a>Costruttori
+
+|Costruttore|Descrizione|
+|-|-|
+|[filesystem_error](#filesystem_error)|Costruisce un `filesystem_error` messaggio.|
+
+### <a name="member-functions"></a>Funzioni membro
+
+|Funzione membro|Descrizione|
+|-|-|
+|[percorso 1](#path1)|Restituisce `mypval1`.|
+|[path2](#path2)|Restituisce `mypval2`.|
+|[Novità](#what)|Rappresenta un puntatore a un oggetto `NTBS`.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** \<filesystem >
+
+**Spazio nomi:** std::experimental::filesystem
+
+## <a name="filesystem_error"></a> filesystem_error:: filesystem_error
+
+Il primo costruttore crea il messaggio da *what_arg* e *ec*. Il secondo costruttore crea anche il messaggio dal *pval1*, che viene archiviato in `mypval1`. Il terzo costruttore crea anche il messaggio dal *pval1*, che viene archiviato in `mypval1`e dal *pval2*, che viene archiviato in `mypval2`.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -51,37 +73,43 @@ filesystem_error(const string& what_arg,
     error_code ec);
 ```
 
-Il primo costruttore crea il messaggio da what_arg ed ec. Il secondo costruttore crea anche il messaggio da pval1, che viene archiviato in mypval1. Il terzo costruttore crea anche il messaggio da pval1, che viene archiviato in mypval1 e da pval2, che viene archiviato in mypval2.
+### <a name="parameters"></a>Parametri
 
-## <a name="filesystemerrorpath1"></a>filesystem_error::path1
+*what_arg*<br/>
+Messaggio specificato.
+
+*CE*<br/>
+Codice di errore specificato.
+
+*mypval1*<br/>
+Un'ulteriore parametro del messaggio specificato.
+
+*mypval2*<br/>
+Un'ulteriore parametro del messaggio specificato.
+
+## <a name="path1"></a> filesystem_error::path1
+
+La funzione membro restituisce `mypval1`
 
 ```cpp
 const path& path1() const noexcept;
 ```
 
-La funzione membro restituisce mypval1
+## <a name="path2"></a> filesystem_error::path2
 
-## <a name="filesystemerrorpath2"></a>filesystem_error::path2
+La funzione membro restituisce `mypval2`
 
 ```cpp
 const path& path2() const noexcept;
 ```
 
-La funzione membro restituisce mypval2
+## <a name="what"></a> filesystem_error::What
 
-## <a name="filesystemerrorwhat"></a>filesystem_error::what
+La funzione membro restituisce un puntatore a un `NTBS`, preferibilmente composto da `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, e `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-La funzione membro restituisce un puntatore a NTBS, preferibilmente composto da runtime_error::what(), system_error::what(), mymesg, mypval1.native_string() e mypval2.native_string().
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<filesystem >
-
-**Spazio nomi:** std::experimental::filesystem
 
 ## <a name="see-also"></a>Vedere anche
 
