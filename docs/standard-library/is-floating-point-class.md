@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6410cf6a6f3496daad7aebeb352b3a37497b821
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957005"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110253"
 ---
 # <a name="isfloatingpoint-class"></a>Classe is_floating_point
 
@@ -37,7 +37,8 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty* il tipo di query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 

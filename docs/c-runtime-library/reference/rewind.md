@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406833"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100287"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,17 +55,18 @@ void rewind(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso* puntatore **FILE** struttura.
+*flusso*<br/>
+Puntatore alla struttura **FILE**.
 
 ## <a name="remarks"></a>Note
 
-Il **rewind** funzione Riposiziona il puntatore del file associato *flusso* all'inizio del file. Una chiamata a **rewind** è simile a
+Il **rewind** funzione Riposiziona il puntatore del file associato *stream* all'inizio del file. Una chiamata a **rewind** è simile a
 
-**fseek (void) (** _flusso_**, G 0, SEEK_SET);**
+**fseek (void) (** _stream_**, 0 L, SEEK_SET);**
 
-Tuttavia, a differenza [fseek](fseek-fseeki64.md), **rewind** Cancella gli indicatori di errore per il flusso, nonché l'indicatore di fine del file. Inoltre, a differenza [fseek](fseek-fseeki64.md), **rewind** non restituisce un valore per indicare se l'indicatore di misura è stata spostata.
+Tuttavia, a differenza [fseek](fseek-fseeki64.md), **rewind** Cancella gli indicatori di errore per il flusso, nonché l'indicatore di fine del file. Inoltre, a differenza [fseek](fseek-fseeki64.md), **rewind** non restituisce un valore che indica se il puntatore è stato spostato correttamente.
 
-Per cancellare il buffer della tastiera, utilizzare **rewind** con il flusso **stdin**, cui è associato con la tastiera per impostazione predefinita.
+Per cancellare il buffer della tastiera, usare **rewind** con il flusso **stdin**, cui è associato con la tastiera per impostazione predefinita.
 
 Se il flusso è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce e **errno** è impostata su **EINVAL**.
 

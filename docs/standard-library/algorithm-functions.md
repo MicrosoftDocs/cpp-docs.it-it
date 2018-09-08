@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334702a2c3e9a86becfb5a653b22154b5a4e197a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691717"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101677"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
@@ -268,11 +268,14 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*comp* il predicato binario che fornisce la condizione deve essere soddisfatta dai valori degli elementi adiacenti nell'intervallo da ricercare.
+*comp*<br/>
+Predicato binario che fornisce la condizione che deve essere soddisfatta dai valori degli elementi adiacenti nell'intervallo in cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -341,9 +344,9 @@ int main()
 ```Output
 L = ( 50 40 10 20 20 )
 There are two adjacent elements that are equal.
- They have a value of 20.
+They have a value of 20.
 There are two adjacent elements where the second is twice the first.
- They have values of 10 & 20.
+They have values of 10 & 20.
 ```
 
 ## <a name="all_of"></a>  all_of
@@ -360,11 +363,14 @@ bool all_of(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che indica dove iniziare a cercare una condizione. L'iteratore indica l'inizio di un intervallo di elementi.
+*first*<br/>
+Iteratore di input che indica dove iniziare a cercare una condizione. L'iteratore indica l'inizio di un intervallo di elementi.
 
-*ultimo* un iteratore di input che indica la fine dell'intervallo di elementi in cui verificare una condizione.
+*last*<br/>
+Iteratore di input che indica la fine dell'intervallo di elementi in cui verificare una condizione.
 
-*comp* una condizione da verificare. Si tratta di un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*comp*<br/>
+Condizione da verificare. Si tratta di un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -388,11 +394,14 @@ bool any_of(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che indica dove iniziare a verificare un intervallo di elementi per una condizione.
+*first*<br/>
+Iteratore di input che indica dove inizia l'intervallo di elementi in cui verificare una condizione.
 
-*ultimo* un iteratore di input che indica la fine dell'intervallo di elementi in cui verificare una condizione.
+*last*<br/>
+Iteratore di input che indica la fine dell'intervallo di elementi in cui verificare una condizione.
 
-*comp* una condizione da verificare. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Il predicato definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*comp*<br/>
+Condizione da verificare. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Il predicato definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -426,13 +435,17 @@ bool binary_search(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*valore* il valore deve corrispondere il valore dell'elemento o che deve soddisfare la condizione con il valore dell'elemento specificato dal predicato binario.
+*valore*<br/>
+Il valore a cui deve corrispondere il valore dell'elemento o che deve soddisfare la condizione con il valore di elemento specificato dal predicato binario.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -546,11 +559,14 @@ OutputIterator copy(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo di origine.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo di origine.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di origine.
+*last*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di origine.
 
-*destBeg* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
+*destBeg*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -636,11 +652,14 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo di origine.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento dell'intervallo di origine.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di origine.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di origine.
 
-*destEnd* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione.
+*destEnd*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -724,13 +743,17 @@ OutputIterator copy_if(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che indica l'inizio di un intervallo di cui verificare la condizione.
+*first*<br/>
+Iteratore di input che indica l'inizio di un intervallo in cui verificare la condizione.
 
-*ultimo* un iteratore di input che indica la fine dell'intervallo.
+*last*<br/>
+Iteratore di input che indica la fine dell'intervallo.
 
-*dest* iteratore di output che indica la destinazione per gli elementi copiati.
+*dest*<br/>
+Iteratore di output che indica la destinazione per gli elementi copiati.
 
-*Pred* la condizione in cui viene testata ogni elemento nell'intervallo. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Un predicato accetta un argomento e restituisce **true** oppure **false**.
+*Pred*<br/>
+Condizione verificata in ogni elemento dell'intervallo. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Un predicato accetta un argomento e restituisce **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -758,11 +781,14 @@ OutputIterator copy_n(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che indica la posizione in cui copiare gli elementi.
+*first*<br/>
+Iteratore di input che indica da dove copiare gli elementi.
 
-*conteggio* A signed o unsigned di tipo integer che specifica il numero di elementi da copiare.
+*count*<br/>
+Tipo Signed Integer o Unsigned Integer che specifica il numero di elementi da copiare.
 
-*dest* un iteratore di output che indica la posizione in cui copiare gli elementi.
+*dest*<br/>
+Iteratore di output che indica dove copiare gli elementi.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -786,11 +812,14 @@ typename iterator_traits<InputIterator>::difference_type count(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da attraversare.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo da attraversare.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da attraversare.
+*last*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da attraversare.
 
-*Val* il valore degli elementi da contare.
+*Val*<br/>
+Valore degli elementi da conteggiare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -853,11 +882,14 @@ typename iterator_traits<InputIterator>::difference_type count_if(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Pred* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se un elemento è da contare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da conteggiare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -950,15 +982,20 @@ bool equal(
 
 ### <a name="parameters"></a>Parametri
 
-*First1* iteratore di input che punta alla posizione del primo elemento nel primo intervallo da testare.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo intervallo da testare.
 
-*Last1* iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo da testare.
+*last1*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo intervallo da testare.
 
-*First2* iteratore di input che punta alla posizione del primo elemento nel secondo intervallo da testare.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo da testare.
 
-*First2* iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo intervallo da testare.
+*first2*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo intervallo da testare.
 
-*Comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se due elementi vengono considerati come equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1027,13 +1064,17 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Val* il valore da ricercare nell'intervallo ordinato.
+*Val*<br/>
+Il valore da ricercare nell'intervallo ordinato.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è minore di un altro.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1183,11 +1224,14 @@ void fill(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da attraversare.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da attraversare.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da attraversare.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da attraversare.
 
-*Val* il valore da assegnare agli elementi nell'intervallo [ *primo*, *ultimo*).
+*Val*<br/>
+Il valore da assegnare agli elementi nell'intervallo [ *primo*, *ultima*).
 
 ### <a name="remarks"></a>Note
 
@@ -1248,11 +1292,14 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo* iteratore di output che punta alla posizione del primo elemento nell'intervallo a cui assegnare il valore *Val*.
+*Primo*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo a cui assegnare il valore *Val*.
 
-*Conteggio* A signed o unsigned di tipo integer che specifica il numero di elementi a cui assegnare il valore.
+*Conteggio*<br/>
+Tipo integer con o senza segno che specifica il numero di elementi a cui assegnare il valore.
 
-*Val* il valore da assegnare agli elementi nell'intervallo [ *primo*, *First + Count*).
+*Val*<br/>
+Il valore da assegnare agli elementi nell'intervallo [ *primo*, *First + Count*).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1325,11 +1372,14 @@ InputIterator find(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui cercare il valore specificato.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca del valore specificato.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui cercare il valore specificato.
+*last*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca del valore specificato.
 
-*Val* il valore da cercare.
+*Val*<br/>
+Valore da ricercare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1364,15 +1414,20 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>Parametri
 
-*First1* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first1*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Last1* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last1*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*First2* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first2*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
 
-*Last2* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*Last2*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
 
-*Comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se due elementi vengono considerati come equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1477,7 +1532,7 @@ List L1 = ( 5 10 15 20 )
 Vector v2 = ( 20 30 40 )
 There is a match of L1 in v1 that begins at position 7.
 There is a sequence of elements in v1 that are equivalent to those
- in v2 under the binary predicate twice and that begins at position 8.
+in v2 under the binary predicate twice and that begins at position 8.
 ```
 
 ## <a name="find_first_of"></a>  find_first_of
@@ -1503,15 +1558,20 @@ ForwardIterator1 find_first_of(
 
 ### <a name="parameters"></a>Parametri
 
-*First1* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first1*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*last1* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last1*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*first2* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da confrontare.
+*first2*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*last2* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da confrontare.
+*last2*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*Comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se due elementi vengono considerati come equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1616,10 +1676,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 15 20 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 3.
+and the first one begins at position 3.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="find_if"></a>  find_if
@@ -1636,11 +1696,14 @@ InputIterator find_if(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*pred* oggetto funzione predicato definito dall'utente oppure [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** (soddisfatto) o **false** (non soddisfatto). La firma dei *pred* deve essere efficacemente `bool pred(const T& arg);`, dove `T` è un tipo a cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. Il **const** (parola chiave) viene visualizzata solo per illustrare che l'oggetto funzione o espressione lambda non deve modificare l'argomento.
+*Pred*<br/>
+Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** (soddisfatto) o **false** (non soddisfatto). La firma dei *pred* deve essere efficacemente `bool pred(const T& arg);`, dove `T` è un tipo a cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. Il **const** (parola chiave) viene visualizzata solo per illustrare che l'oggetto funzione o espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1750,11 +1813,14 @@ InputIterator find_if_not(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*pred* oggetto funzione predicato definito dall'utente oppure [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione non deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** (soddisfatto) o **false** (non soddisfatto). La firma dei *pred* deve essere efficacemente `bool pred(const T& arg);`, dove `T` è un tipo a cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. Il **const** (parola chiave) viene visualizzata solo per illustrare che l'oggetto funzione o espressione lambda non deve modificare l'argomento.
+*Pred*<br/>
+Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che non deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** (soddisfatto) o **false** (non soddisfatto). La firma dei *pred* deve essere efficacemente `bool pred(const T& arg);`, dove `T` è un tipo a cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. Il **const** (parola chiave) viene visualizzata solo per illustrare che l'oggetto funzione o espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1780,11 +1846,14 @@ Function for_each(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da utilizzare.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo che deve essere usato.
 
-*ultimo* opera un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo.
+*last*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo che deve essere usato.
 
-*Func* oggetto funzione definita dall'utente che viene applicato a ogni elemento nell'intervallo.
+*Func*<br/>
+Oggetto funzione definito dall'utente che viene applicato a ogni elemento nell'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1902,13 +1971,13 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 Multiplying the elements of the vector v1
- by the factor -2 gives:
- v1mod1 = ( 8 6 4 2 0 -2 -4 ).
+by the factor -2 gives:
+v1mod1 = ( 8 6 4 2 0 -2 -4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 gives:
- v1mod2 = ( 40 30 20 10 0 -10 -20 ).
+by the factor 5 gives:
+v1mod2 = ( 40 30 20 10 0 -10 -20 ).
 The average of the elements of v1 is:
- Average ( v1mod2 ) = 10.
+Average ( v1mod2 ) = 10.
 ```
 
 ## <a name="generate"></a>  generate
@@ -1925,11 +1994,14 @@ void generate(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo a cui devono essere assegnati i valori.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui devono essere assegnati i valori.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo a cui devono essere assegnati i valori.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui devono essere assegnati i valori.
 
-*_Gen* un oggetto funzione che viene chiamato senza argomenti utilizzato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
+*_Gen*<br/>
+Oggetto funzione chiamato senza argomenti e usato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
 
 ### <a name="remarks"></a>Note
 
@@ -1996,11 +2068,14 @@ void generate_n(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo* un iteratore di output che punta alla posizione del primo elemento nell'intervallo a cui devono essere assegnati i valori.
+*Primo*<br/>
+Iteratore di output che punta al primo elemento nell'intervallo in cui devono essere assegnati i valori.
 
-*Conteggio* A signed o unsigned di tipo integer che specifica il numero di elementi a cui assegnare un valore dalla funzione generatore.
+*Conteggio*<br/>
+Tipo Signed Integer o Unsigned Integer che specifica il numero di elementi a cui verrà assegnato un valore dalla funzione del generatore.
 
-*Generazione* un oggetto funzione che viene chiamato senza argomenti utilizzato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
+*Generazione*<br/>
+Oggetto funzione chiamato senza argomenti e usato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
 
 ### <a name="remarks"></a>Note
 
@@ -2077,15 +2152,20 @@ bool includes(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* un iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
-*last1* iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
+*last1*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
-*first2* iteratore di input che punta alla posizione degli intervalli di origine elemento nel secondo dei due consecutivi ordinato prima in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine ordinati consecutivi in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
-*last2* un iteratore di input che punta alla posizione immediatamente successiva gli intervalli di origine ultimo elemento nel secondo dei due consecutivi ordinato da testare per verificare se tutti gli elementi del secondo sono contenuti nel primo.
+*last2*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo dei due intervalli di origine ordinati consecutivi in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2238,17 +2318,17 @@ int main()
 
 ```Output
 Original vector v1a with range sorted by the
- binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
+binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
 Original vector v1b with range sorted by the
- binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
+binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
 Original vector v2a with range sorted by the
- binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
+binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
 Original vector v2b with range sorted by the
- binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
+binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
 Original vector v3a with range sorted by the
- binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
+binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
 Original vector v3b with range sorted by the
- binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
+binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
 All the elements in vector v1b are contained in vector v1a.
 At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
@@ -2275,13 +2355,17 @@ void inplace_merge(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione degli intervalli di primo elemento nel primo dei due consecutivi ordinato da combinare e ordinare in un singolo intervallo.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento nel primo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*intermedio* un iteratore bidirezionale che punta alla posizione degli intervalli di primo elemento nel secondo dei due consecutivi ordinato da combinare e ordinare in un singolo intervallo.
+*intermedio*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento nel secondo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva gli intervalli ultimo elemento nel secondo dei due consecutivi ordinato da combinare e ordinare in un singolo intervallo.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*comp*<br/>
+Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -2389,17 +2473,17 @@ int main()
 
 ```Output
 Original vector v1 with subranges sorted by the
- binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
+binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
 Original vector v2 with subranges sorted by the
- binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Original vector v3 with subranges sorted by the
- binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
+binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
 Merged inplace with default order,
- vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
+vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
 Merged inplace with binary predicate greater specified,
- vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Merged inplace with binary predicate mod_lesser specified,
- vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
+vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
 ## <a name="is_heap"></a>  is_heap
@@ -2421,11 +2505,14 @@ bool is_heap(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore ad accesso casuale che indica l'inizio di un intervallo in cui verificare la presenza di un heap.
+*first*<br/>
+Iteratore di accesso casuale che indica l'inizio di un intervallo in cui cercare un heap.
 
-*ultimo* un iteratore ad accesso casuale che indica la fine di un intervallo.
+*last*<br/>
+Iteratore di accesso casuale che indica la fine di un intervallo.
 
-*comp* condizione da verificare per ordinare gli elementi. Un predicato binario accetta un solo argomento e restituisce **true** oppure **false**.
+*comp*<br/>
+Condizione da verificare per ordinare gli elementi. Un predicato binario accetta un solo argomento e restituisce **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2458,11 +2545,14 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="parameters"></a>Parametri
 
-*iniziare* un iteratore ad accesso casuale che specifica il primo elemento di un intervallo in cui verificare la presenza di un heap.
+*begin*<br/>
+Iteratore ad accesso casuale che specifica il primo elemento di un intervallo per il controllo di un heap.
 
-*Fine* un iteratore ad accesso casuale che specifica la fine dell'intervallo da controllare per un heap.
+*end*<br/>
+Iteratore ad accesso casuale che specifica la fine di un intervallo per il controllo di un heap.
 
-*confrontare* un predicato binario che specifica il "strict Weak" condizione che definisce un heap di ordinamento. Il predicato predefinito quando *confrontare* non viene specificato è `std::less<>`.
+*compare*<br/>
+Predicato binario che specifica una condizione di ordinamento di tipo "strict weak" che definisce un heap. Il predicato predefinito quando *confrontare* non viene specificato è `std::less<>`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2488,11 +2578,14 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che indica il punto iniziale di un intervallo di cui verificare una condizione.
+*first*<br/>
+Iteratore di input che indica l'inizio di un intervallo in cui cercare una condizione.
 
-*ultimo* un iteratore di input che indica la fine di un intervallo.
+*last*<br/>
+Iteratore di input che indica la fine di un intervallo.
 
-*comp* la condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*comp*<br/>
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2539,15 +2632,20 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Parametri
 
-*First1* iteratore in avanti che fa riferimento al primo elemento dell'intervallo.
+*first1*<br/>
+Iteratore in avanti che fa riferimento al primo elemento dell'intervallo.
 
-*Last1* iteratore in avanti che fa riferimento a un elemento successivo all'ultimo elemento dell'intervallo.
+*last1*<br/>
+Iteratore in avanti che fa riferimento all'elemento successivo all'ultimo elemento dell'intervallo.
 
-*First2* iteratore in avanti che fa riferimento al primo elemento del secondo intervallo, usato per il confronto.
+*first2*<br/>
+Iteratore in avanti che fa riferimento al primo elemento del secondo intervallo, usato per il confronto.
 
-*Last2* iteratore in avanti che fa riferimento alla posizione immediatamente successiva all'ultimo elemento del secondo intervallo, usato per il confronto.
+*Last2*<br/>
+Iteratore in avanti che fa riferimento all'elemento successivo all'ultimo elemento del secondo intervallo, usato per il confronto.
 
-*Pred* un predicato che verifica l'equivalenza e restituisce un **bool**.
+*Pred*<br/>
+Un predicato che verifica l'equivalenza e restituisce un **bool**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2637,11 +2735,14 @@ bool is_sorted(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che indica dove inizia l'intervallo da controllare.
+*first*<br/>
+Iteratore in avanti che indica il punto in cui inizia l'intervallo da controllare.
 
-*ultimo* iteratore in avanti che indica la fine di un intervallo.
+*last*<br/>
+Iteratore in avanti che indica la fine di un intervallo.
 
-*comp* la condizione da testare per determinare un ordine tra due elementi. Un predicato accetta un solo argomento e restituisce **true** o **false**. Viene eseguita la stessa attività di `operator<`.
+*comp*<br/>
+La condizione da testare per determinare un ordine tra due elementi. Un predicato accetta un solo argomento e restituisce **true** o **false**. Viene eseguita la stessa attività di `operator<`.
 
 ### <a name="remarks"></a>Note
 
@@ -2659,21 +2760,24 @@ La seconda versione consente di fornire una `BinaryPredicate` funzione che resti
 template<class ForwardIterator>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
-    ForwardIterator last); 
+    ForwardIterator last);
 template<class ForwardIterator, class BinaryPredicate>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che indica dove inizia l'intervallo da controllare.
+*first*<br/>
+Iteratore in avanti che indica il punto in cui inizia l'intervallo da controllare.
 
-*ultimo* iteratore in avanti che indica la fine di un intervallo.
+*last*<br/>
+Iteratore in avanti che indica la fine di un intervallo.
 
-*comp* la condizione da testare per determinare un ordine tra due elementi. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*comp*<br/>
+La condizione da testare per determinare un ordine tra due elementi. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2697,9 +2801,11 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* uno degli iteratori in avanti il cui valore è lo scambio.
+*left*<br/>
+Uno degli iteratori in avanti il cui valore deve essere scambiato.
 
-*a destra* secondo degli iteratori in avanti il cui valore è lo scambio.
+*right*<br/>
+Il secondo iteratore in avanti il cui valore deve essere scambiato.
 
 ### <a name="remarks"></a>Note
 
@@ -2830,14 +2936,14 @@ int main()
 ```Output
 The original deque of CInts is deq1 = ( CInt(5), CInt(1), CInt(10) ).
 The deque of CInts with first & last elements swapped is:
- deq1 = ( CInt(10), CInt(1), CInt(5) ).
+deq1 = ( CInt(10), CInt(1), CInt(5) ).
 The deque of CInts with first & last elements swapped back is:
- deq1 = ( CInt(5), CInt(1), CInt(10) ).
+deq1 = ( CInt(5), CInt(1), CInt(10) ).
 Vector v1 is ( 0 1 2 3 ).
 Deque deq2 is ( 4 5 ).
 After exchanging first elements,
- vector v1 is: v1 = ( 4 1 2 3 ).
- & deque deq2 is: deq2 = ( 0 5 ).
+vector v1 is: v1 = ( 4 1 2 3 ).
+& deque deq2 is: deq2 = ( 0 5 ).
 ```
 
 ## <a name="lexicographical_compare"></a>  lexicographical_compare
@@ -2864,15 +2970,20 @@ bool lexicographical_compare(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* iteratore di input che punta alla posizione del primo elemento nel primo intervallo da confrontare.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo intervallo da confrontare.
 
-*last1* iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo da confrontare.
+*last1*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo da confrontare.
 
-*first2* iteratore di input che punta alla posizione del primo elemento nel secondo intervallo da confrontare.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo da confrontare.
 
-*last2* iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo intervallo da confrontare.
+*Last2*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo intervallo da confrontare.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3005,13 +3116,17 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*valore* il valore di cui prima posizione o possibile prima posizione è da ricercare nell'intervallo ordinato.
+*valore*<br/>
+Valore la cui prima posizione o possibile prima posizione è da ricercare nell'intervallo ordinato.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3140,11 +3255,14 @@ void make_heap(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da convertire in heap.
+*first*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da convertire in heap.
 
-*ultimo* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da convertire in heap.
+*last*<br/>
+Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da convertire in heap.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
@@ -3208,30 +3326,34 @@ Confronta due oggetti e restituisce il maggiore dei due in cui il criterio di or
 template<class Type>
 constexpr Type& max(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr Type& max(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type& max (
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type& max(
     initializer_list<Type> ,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo dei due oggetti confrontati.
+*left*<br/>
+Primo dei due oggetti confrontati.
 
-*a destra* il secondo dei due oggetti confrontati.
+*right*<br/>
+Secondo dei due oggetti confrontati.
 
-*comp* un predicato binario usato per confrontare i due oggetti.
+*comp*<br/>
+Predicato binario usato per confrontare i due oggetti.
 
-*_IList* oggetto initializer list che contiene gli oggetti da confrontare.
+*_IList*<br/>
+Oggetto initializer list che contiene gli oggetti da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3424,11 +3546,14 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui cercare l'elemento più grande.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca dell'elemento più grande.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui cercare l'elemento più grande.
+*last*<br/>
+Iteratore in avanti che punta alla prima posizione dopo l'elemento finale nell'intervallo in cui eseguire la ricerca dell'elemento più grande.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*comp*<br/>
+Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3566,17 +3691,23 @@ OutputIterator merge(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* un iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da combinare e ordinare in un singolo intervallo.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da combinare e ordinare in un singolo intervallo.
 
-*last1* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da combinare e ordinare in un singolo intervallo.
+*last1*<br/>
+Iteratore di input che punta alla posizione dell'ultimo elemento nel primo dei due intervalli di origine ordinati da combinare e ordinare in un singolo intervallo.
 
-*first2* un iteratore di input che punta alla posizione degli intervalli di origine primo elemento nel secondo dei due consecutivi ordinato da combinare e ordinare in un singolo intervallo.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*last2* un iteratore di input che punta alla posizione immediatamente successiva l'ultimo elemento nel secondo dei due consecutivi ordinati in intervalli di origine da combinare e ordinare in un singolo intervallo.
+*Last2*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere combinati in un singolo intervallo ordinato.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine da combinare e ordinare in un singolo intervallo.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*comp*<br/>
+Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3716,31 +3847,35 @@ Confronta due oggetti e restituisce il minore dei due in cui il criterio di ordi
 template<class Type>
 constexpr const Type& min(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr const Type& min(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type min( 
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo dei due oggetti confrontati.
+*left*<br/>
+Primo dei due oggetti confrontati.
 
-*a destra* il secondo dei due oggetti confrontati.
+*right*<br/>
+Secondo dei due oggetti confrontati.
 
-*comp* un predicato binario usato per confrontare i due oggetti.
+*comp*<br/>
+Predicato binario usato per confrontare i due oggetti.
 
-*_IList* initializer_list che contiene i membri da confrontare.
+*_IList*<br/>
+initializer_list contenente i membri da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3935,11 +4070,14 @@ constexpr ForwardIterator min_element(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui cercare l'elemento più piccolo.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca dell'elemento più piccolo.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui cercare l'elemento più piccolo.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca dell'elemento più piccolo.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*comp*<br/>
+Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4058,7 +4196,7 @@ The smallest element in s1 is: CInt( -3 )
 Vector v1 is ( 0 1 2 3 -2 -4 -6 -8 ).
 The smallest element in v1 is: -8
 The smallest element in v1 under the mod_lesser
- binary predicate is: 0
+binary predicate is: 0
 ```
 
 ## <a name="minmax_element"></a>  minmax_element
@@ -4069,21 +4207,24 @@ Esegue le operazioni eseguite da `min_element` e `max_element` in un'unica chiam
 template<class ForwardIterator>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator first,
-    ForwardIterator Last); 
+    ForwardIterator Last);
 template<class ForwardIterator, class BinaryPredicate>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
-    BinaryPredicate  comp); 
+    BinaryPredicate  comp);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che indica l'inizio di un intervallo.
+*first*<br/>
+Iteratore in avanti che indica l'inizio di un intervallo.
 
-*ultimo* iteratore in avanti che indica la fine di un intervallo.
+*last*<br/>
+Iteratore in avanti che indica la fine di un intervallo.
 
-*comp* un test facoltativo usato per ordinare gli elementi.
+*comp*<br/>
+Un test facoltativo usato per ordinare gli elementi.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4113,31 +4254,35 @@ Confronta due parametri di input e li restituisce come coppia, in ordine crescen
 template<class Type>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class BinaryPredicate>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
- constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type> ); 
+constexpr pair<Type&, Type&> minmax(
+    initializer_list<Type> );
 template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo dei due oggetti confrontati.
+*left*<br/>
+Primo dei due oggetti confrontati.
 
-*a destra* il secondo dei due oggetti confrontati.
+*right*<br/>
+Secondo dei due oggetti confrontati.
 
-*comp* un predicato binario usato per confrontare i due oggetti.
+*comp*<br/>
+Predicato binario usato per confrontare i due oggetti.
 
-*_IList* initializer_list che contiene i membri da confrontare.
+*_IList*<br/>
+initializer_list contenente i membri da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -4190,15 +4335,20 @@ mismatch(
 
 ### <a name="parameters"></a>Parametri
 
-*First1* iteratore di input che punta alla posizione del primo elemento nel primo intervallo da testare.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo intervallo da testare.
 
-*Last1* iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo da testare.
+*last1*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo intervallo da testare.
 
-*First2* iteratore di input che punta alla posizione del primo elemento nel secondo intervallo da testare.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo da testare.
 
-*Last2* iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo intervallo da testare.
+*Last2*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo intervallo da testare.
 
-*Comp* oggetto funzione predicato definito dall'utente che confronta gli elementi correnti in ogni intervallo e determina se sono equivalenti. Restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Comp*<br/>
+Oggetto funzione predicato definito dall'utente che confronta gli elementi correnti in ogni intervallo e ne determina l'equivalenza. Restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4320,16 +4470,19 @@ template<class InputIterator, class OutputIterator>
 OutputIterator move(
     InputIterator first,
     InputIterator last,
-    OutputIterator dest); 
+    OutputIterator dest);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che indica dove inizia l'intervallo di elementi da spostare.
+*first*<br/>
+Iteratore di input che indica dove inizia l'intervallo di elementi da spostare.
 
-*ultimo* un iteratore di input che indica la fine di un intervallo di elementi da spostare.
+*last*<br/>
+Iteratore di input che indica dove termina l'intervallo di elementi da spostare.
 
-*dest* l'iteratore di output che conterrà gli elementi spostati.
+*dest*<br/>
+Iteratore di output che conterrà gli elementi spostati.
 
 ### <a name="remarks"></a>Note
 
@@ -4350,11 +4503,14 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore che indica l'inizio di un intervallo in cui spostare gli elementi.
+*first*<br/>
+Iteratore che indica l'inizio di un intervallo dal quale spostare gli elementi.
 
-*ultimo* un iteratore che indica la fine di un intervallo in cui spostare gli elementi. Questo elemento non viene spostato.
+*last*<br/>
+Iteratore che indica la fine di un intervallo dal quale spostare gli elementi. Questo elemento non viene spostato.
 
-*destEnd* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione.
+*destEnd*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -4377,11 +4533,14 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da permutare.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento dell'intervallo da permutare.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da permutare.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo da permutare.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce i criteri di confronto devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4517,21 +4676,21 @@ The original deque of CInts is deq1 = ( CInt( 5 ), CInt( 1 ), CInt( 10 ) ).
 The lexicographically next permutation exists and has
 replaced the original ordering of the sequence in deq1.
 After one application of next_permutation,
- deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
+deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first next_permutation, vector v1 is:
- v1 = ( -3 -2 -1 0 1 3 2 ).
+v1 = ( -3 -2 -1 0 1 3 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 1 3 ).
+v1 =   ( -3 -2 -1 0 2 1 3 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 3 1 ).
+v1 =   ( -3 -2 -1 0 2 3 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 1 2 ).
+v1 =   ( -3 -2 -1 0 3 1 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 2 1 ).
+v1 =   ( -3 -2 -1 0 3 2 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 1 0 2 3 ).
+v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
 ## <a name="nth_element"></a>  nth_element
@@ -4543,19 +4702,23 @@ template<class RandomAccessIterator>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
- void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da partizionare.
+*first*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da partizionare.
 
-*_Nth* un iteratore ad accesso casuale che punta alla posizione dell'elemento da ordinare correttamente sul limite della partizione.
+*_Nth*<br/>
+Iteratore ad accesso casuale che punta alla posizione dell'elemento da ordinare correttamente sul limite della partizione.
 
-*ultimo* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
+*last*<br/>
+Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce i criteri di confronto devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
@@ -4644,11 +4807,14 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che indica dove iniziare a controllare un intervallo di elementi per una condizione.
+*first*<br/>
+Iteratore di input che indica dove inizia l'intervallo di elementi in cui verificare una condizione.
 
-*ultimo* un iteratore di input che indica la fine di un intervallo di elementi.
+*last*<br/>
+Iteratore di input che indica dove termina un intervallo di elementi.
 
-*comp* la condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*comp*<br/>
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4680,13 +4846,17 @@ void partial_sort(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.
+*first*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.
 
-*sortEnd* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo secondario da ordinare.
+*sortEnd*<br/>
+Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo secondario da ordinare.
 
-*ultimo* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare parzialmente.
+*last*<br/>
+Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare parzialmente.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce i criteri di confronto devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
@@ -4750,7 +4920,7 @@ int main()
 
    // A user-defined (UD) binary predicate can also be used
    partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ),
- UDgreater );
+UDgreater );
    cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
       cout << *Iter1 << " ";
@@ -4760,13 +4930,13 @@ int main()
 
 ```Output
 Original vector:
- v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
+v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
 Partially sorted vector:
- v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
+v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
 Partially resorted (greater) vector:
- v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
+v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
 Partially resorted (UDgreater) vector:
- v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
+v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
 ## <a name="partial_sort_copy"></a>  partial_sort_copy
@@ -4792,15 +4962,20 @@ RandomAccessIterator partial_sort_copy(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* un iteratore di input che punta alla posizione del primo elemento nell'intervallo di origine.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo di origine.
 
-*last1* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di origine.
+*last1*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di origine.
 
-*first2* un iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo di destinazione ordinato.
+*first2*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo di destinazione ordinato.
 
-*last2* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione ordinato.
+*Last2*<br/>
+Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione ordinato.
 
-*Comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se due elementi vengono considerati come equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4903,11 +5078,14 @@ BidirectionalIterator partition(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da partizionare.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da partizionare.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se un elemento deve essere classificato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4972,20 +5150,25 @@ pair<OutputIterator1, OutputIterator2>
     InputIterator last,
     OutputIterator1 dest1,
     OutputIterator2 dest2,
-    Predicate pred); 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che indica l'inizio di un intervallo di cui verificare una condizione.
+*first*<br/>
+Iteratore di input che indica l'inizio di un intervallo in cui verificare una condizione.
 
-*ultimo* un iteratore di input che indica la fine di un intervallo.
+*last*<br/>
+Iteratore di input che indica la fine di un intervallo.
 
-*eventdestination="dest1* iteratore di output usato per copiare gli elementi che restituiscono true per una condizione verificata usando *pred*.
+*eventdestination="dest1*<br/>
+Iteratore di output usato per copiare gli elementi che restituiscono true per una condizione verificata usando *pred*.
 
-*dest2* iteratore di output usato per copiare gli elementi che restituiscono false per una condizione verificata usando *pred*.
+*dest2*<br/>
+Iteratore di output usato per copiare gli elementi che restituiscono false per una condizione verificata usando *pred*.
 
-*Pred* la condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*<br/>
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -5000,16 +5183,19 @@ template<class ForwardIterator, class Predicate>
 ForwardIterator partition_point(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate comp); 
+    Predicate comp);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*primo* oggetto `ForwardIterator` che indica l'inizio di un intervallo di cui verificare una condizione.
+*first*<br/>
+`ForwardIterator` che indica l'inizio di un intervallo in cui verificare una condizione.
 
-*ultima* oggetto `ForwardIterator` che indica la fine di un intervallo.
+*last*<br/>
+`ForwardIterator` che indica la fine di un intervallo.
 
-*comp* la condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*comp*<br/>
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5034,11 +5220,14 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap.
+*first*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap.
 
-*ultimo* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'heap.
+*last*<br/>
+Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'heap.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
@@ -5140,11 +5329,14 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da permutare.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento dell'intervallo da permutare.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da permutare.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo da permutare.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce i criteri di confronto devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5272,24 +5464,24 @@ int main() {
 ```Output
 The original deque of CInts is deq1 = ( CInt( 1 ), CInt( 5 ), CInt( 10 ) ).
 The lexicographically previous permutation doesn't exist
- and the lexicographically smallest permutation
- has replaced the original ordering of the sequence in deq1.
+and the lexicographically smallest permutation
+has replaced the original ordering of the sequence in deq1.
 After one application of prev_permutation,
- deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
+deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first prev_permutation, vector v1 is:
- v1 = ( -3 -2 0 3 2 1 -1 ).
+v1 = ( -3 -2 0 3 2 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 2 1 ).
+v1 =   ( -3 -2 0 3 -1 2 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 1 2 ).
+v1 =   ( -3 -2 0 3 -1 1 2 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 3 1 -1 ).
+v1 =   ( -3 -2 0 2 3 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 3 1 ).
+v1 =   ( -3 -2 0 2 -1 3 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 1 3 ).
+v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
 ## <a name="push_heap"></a>  push_heap
@@ -5307,11 +5499,14 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap.
+*first*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap.
 
-*ultimo* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da convertire in heap.
+*last*<br/>
+Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da convertire in heap.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
@@ -5408,17 +5603,20 @@ Elimina un valore specificato da un intervallo specificato senza alterare l'ordi
 
 ```cpp
 template<class ForwardIterator, class Type>
- ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
+*first*<br/>
+Iteratore in avanti che indirizza la posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
+*last*<br/>
+Iteratore in avanti che indirizza la posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Val* il valore che deve essere rimossa dall'intervallo.
+*Val*<br/>
+Il valore da rimuovere dall'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5488,19 +5686,23 @@ Copia gli elementi di un intervallo di origine in un intervallo di destinazione,
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
- OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
+*last*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono rimossi elementi.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione da cui rimuovere gli elementi.
 
-*Val* il valore che deve essere rimossa dall'intervallo.
+*Val*<br/>
+Il valore da rimuovere dall'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5573,13 +5775,17 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
+*last*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono rimossi elementi.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione da cui rimuovere gli elementi.
 
-*Pred* il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento è da sostituire.
+*Pred*<br/>
+Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5664,11 +5870,14 @@ ForwardIterator remove_if(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Pred* il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento è da sostituire.
+*Pred*<br/>
+Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5751,13 +5960,17 @@ void replace(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cui sostituire gli elementi.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo di cui sostituire gli elementi.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di cui sostituire gli elementi.
 
-*_OldVal* il precedente valore degli elementi da sostituire.
+*_OldVal*<br/>
+Valore precedente dell'elemento associato da sostituire.
 
-*_NewVal* il nuovo valore assegnato agli elementi con il valore precedente.
+*_NewVal*<br/>
+Il nuovo valore assegnato agli elementi con il valore precedente.
 
 ### <a name="remarks"></a>Note
 
@@ -5823,15 +6036,20 @@ OutputIterator replace_copy(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui sostituire gli elementi.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui sostituire gli elementi.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
+*last*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
-*risultato* un iteratore di output che punta al primo elemento nell'intervallo di destinazione a cui viene copiata la sequenza di elementi modificata.
+*Risultato*<br/>
+Iteratore di output che punta al primo elemento dell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
-*_OldVal* il precedente valore degli elementi da sostituire.
+*_OldVal*<br/>
+Valore precedente dell'elemento associato da sostituire.
 
-*_NewVal* il nuovo valore assegnato agli elementi con il valore precedente.
+*_NewVal*<br/>
+Il nuovo valore assegnato agli elementi con il valore precedente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5921,15 +6139,20 @@ OutputIterator replace_copy_if(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui sostituire gli elementi.
+*first*<br/>
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui sostituire gli elementi.
 
-*ultimo* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
+*last*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono copiati gli elementi.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono copiati gli elementi.
 
-*Pred* il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento è da sostituire.
+*Pred*<br/>
+Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
-*Val* il nuovo valore assegnato agli elementi il cui valore precedente soddisfa il predicato.
+*Val*<br/>
+Nuovo valore da assegnare agli elementi il cui valore precedente soddisfa il predicato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6025,13 +6248,17 @@ void replace_if(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cui sostituire gli elementi.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo di cui sostituire gli elementi.
 
-*ultimo* un iteratore che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
+*last*<br/>
+Iteratore che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
-*Pred* il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento è da sostituire.
+*Pred*<br/>
+Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
-*Val* il nuovo valore assegnato agli elementi il cui valore precedente soddisfa il predicato.
+*Val*<br/>
+Nuovo valore da assegnare agli elementi il cui valore precedente soddisfa il predicato.
 
 ### <a name="remarks"></a>Note
 
@@ -6101,9 +6328,11 @@ void reverse(BidirectionalIterator first, BidirectionalIterator last);
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo nel quale gli elementi vengono permutati.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo nel quale gli elementi vengono permutati.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo nel quale gli elementi vengono permutati.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo nel quale gli elementi vengono permutati.
 
 ### <a name="remarks"></a>Note
 
@@ -6146,9 +6375,9 @@ int main() {
 
 ```Output
 The original vector v1 is:
- ( 0 1 2 3 4 5 6 7 8 9 ).
+( 0 1 2 3 4 5 6 7 8 9 ).
 The modified vector v1 with values reversed is:
- ( 9 8 7 6 5 4 3 2 1 0 ).
+( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
 ## <a name="reverse_copy"></a>  reverse_copy
@@ -6166,11 +6395,14 @@ OutputIterator reverse_copy(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo di origine nel quale gli elementi vengono permutati.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo di origine nel quale gli elementi vengono permutati.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di origine nel quale gli elementi vengono permutati.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione successiva all'ultimo elemento nell'intervallo di origine nel quale gli elementi vengono permutati.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono copiati gli elementi.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono copiati gli elementi.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6226,7 +6458,7 @@ Scambia gli elementi di due intervalli adiacenti.
 
 ```cpp
 template<class ForwardIterator>
- void rotate(
+void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
@@ -6235,11 +6467,14 @@ template<class ForwardIterator>
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da ruotare.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da ruotare.
 
-*intermedio* iteratore in avanti che definisce il limite all'interno dell'intervallo che punta alla posizione del primo elemento nella seconda parte dell'intervallo di cui elementi devono essere scambiati con quelli nella prima parte dell'intervallo.
+*intermedio*<br/>
+Iteratore in avanti che definisce il limite all'interno dell'intervallo che punta alla posizione del primo elemento nella seconda parte dell'intervallo i cui elementi devono essere sostituiti con gli elementi della prima parte dell'intervallo.
 
-*Ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ruotare.
+*ultimo*<br/>
+Iteratore in avanti che punta alla posizione successiva all'ultimo elemento nell'intervallo da ruotare.
 
 ### <a name="remarks"></a>Note
 
@@ -6309,17 +6544,17 @@ Vector v1 is ( -3 -2 -1 0 1 2 3 4 5 ).
 After rotating, vector v1 is ( 0 1 2 3 4 5 -3 -2 -1 ).
 The original deque d1 is ( 0 1 2 3 4 5 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 1 2 3 4 5 0 ).
+d1 is   ( 1 2 3 4 5 0 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 2 3 4 5 0 1 ).
+d1 is   ( 2 3 4 5 0 1 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 3 4 5 0 1 2 ).
+d1 is   ( 3 4 5 0 1 2 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 4 5 0 1 2 3 ).
+d1 is   ( 4 5 0 1 2 3 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 5 0 1 2 3 4 ).
+d1 is   ( 5 0 1 2 3 4 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 0 1 2 3 4 5 ).
+d1 is   ( 0 1 2 3 4 5 ).
 ```
 
 ## <a name="rotate_copy"></a>  rotate_copy
@@ -6338,13 +6573,16 @@ OutputIterator rotate_copy(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da ruotare.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da ruotare.
 
-*intermedio* iteratore in avanti che definisce il limite all'interno dell'intervallo che punta alla posizione del primo elemento nella seconda parte dell'intervallo di cui elementi devono essere scambiati con quelli nella prima parte dell'intervallo.
+*intermedio*<br/>
+Iteratore in avanti che definisce il limite all'interno dell'intervallo che punta alla posizione del primo elemento nella seconda parte dell'intervallo i cui elementi devono essere sostituiti con gli elementi della prima parte dell'intervallo.
 
 _ *Ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ruotare.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6439,15 +6677,20 @@ ForwardIterator1 search(
 
 ### <a name="parameters"></a>Parametri
 
-*First1* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first1*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*last1* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last1*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*first2* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da confrontare.
+*first2*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*last2* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da confrontare.
+*Last2*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*Comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se due elementi vengono considerati come equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6553,10 +6796,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 20 25 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 4.
+and the first one begins at position 4.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="search_n"></a>  search_n
@@ -6583,15 +6826,20 @@ ForwardIterator1 search_n(
 
 ### <a name="parameters"></a>Parametri
 
-*First1* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cercare.
+*first1*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*last1* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last1*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*conteggio* le dimensioni della sottosequenza cercata.
+*count*<br/>
+Le dimensioni della sottosequenza cercata.
 
-*Val* il valore degli elementi nella sequenza da cercare.
+*Val*<br/>
+Il valore degli elementi nella sequenza cercata.
 
-*Comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se due elementi vengono considerati come equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6683,9 +6931,9 @@ int main()
 ```Output
 Vector v1 = ( 0 5 10 15 20 25 5 5 5 0 5 10 15 20 25 10 10 10 )
 There is at least one match of a sequence ( 5 5 5 )
- in v1 and the first one begins at position 6.
+in v1 and the first one begins at position 6.
 There is a match of a sequence ( 5 5 5 ) under the equivalence
- predicate one_half in v1 and the first one begins at position 15.
+predicate one_half in v1 and the first one begins at position 15.
 ```
 
 ## <a name="set_difference"></a>  set_difference
@@ -6713,17 +6961,23 @@ OutputIterator set_difference(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* un iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*last1* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
+*last1*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*first2* un iteratore di input agli intervalli di origine la posizione del primo elemento nel secondo dei due consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*last2* un iteratore di input agli intervalli di origine la posizione immediatamente successiva all'ultimo elemento nel secondo dei due consecutivi ordinata da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
+*Last2*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un unico intervallo ordinato che rappresenta la differenza dei due intervalli di origine.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti e ordinati in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*comp*<br/>
+Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6887,17 +7141,22 @@ OutputIterator set_intersection(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* un iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo di due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
-*last1* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
+*last1*<br/>
+Iteratore di input che punta alla posizione successiva a quella dell'ultimo elemento nel primo di due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
-*first2* un iteratore di input agli intervalli di origine la posizione del primo elemento nel secondo dei due consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo di due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
-*last2* un iteratore di input agli intervalli di origine la posizione immediatamente successiva all'ultimo elemento nel secondo dei due consecutivi ordinata da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
+*Last2*<br/>
+Iteratore di input che punta alla posizione successiva a quella dell'ultimo elemento nel secondo di due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
 **_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un singolo intervallo ordinato che rappresenta l'intersezione di due origine intervalli.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*comp*<br/>
+Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7036,7 +7295,7 @@ Unisce tutti gli elementi appartenenti a uno degli intervalli di origine ordinat
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class OutputIterator>
- OutputIterator set_symmetric_difference(
+OutputIterator set_symmetric_difference(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
@@ -7056,17 +7315,22 @@ OutputIterator set_symmetric_difference(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* un iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-*last1* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
+*last1*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-*first2* un iteratore di input agli intervalli di origine la posizione del primo elemento nel secondo dei due consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-*last2* un iteratore di input agli intervalli di origine la posizione immediatamente successiva all'ultimo elemento nel secondo dei due consecutivi ordinata da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
+*Last2*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
 **_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un unico intervallo ordinato che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*comp*<br/>
+Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7230,17 +7494,22 @@ OutputIterator set_union(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* un iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta l'unione di due intervalli di origine.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
-*last1* un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta l'unione di due intervalli di origine.
+*last1*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
-*first2* un iteratore di input agli intervalli di origine la posizione del primo elemento nel secondo dei due consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta l'unione di due intervalli di origine.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine consecutivi ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
-*last2* un iteratore di input agli intervalli di origine la posizione immediatamente successiva all'ultimo elemento nel secondo dei due consecutivi ordinata da unire e ordinare in un singolo intervallo che rappresenta l'unione di due intervalli di origine.
+*Last2*<br/>
+Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
 **_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un unico intervallo ordinato che rappresenta l'unione di due intervalli di origine.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*comp*<br/>
+Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7392,11 +7661,14 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore al primo elemento nell'intervallo da riprodurre con sequenza casuale, inclusivo. Deve soddisfare i requisiti di `RandomAccessIterator` e `ValueSwappable`.
+*first*<br/>
+Iteratore del primo elemento dell'intervallo da riprodurre con sequenza casuale, inclusivo. Deve soddisfare i requisiti di `RandomAccessIterator` e `ValueSwappable`.
 
-*ultimo* iteratore all'ultimo elemento nell'intervallo da riprodurre con sequenza casuale, esclusivo. Deve soddisfare i requisiti di `RandomAccessIterator` e `ValueSwappable`.
+*last*<br/>
+Iteratore dell'ultimo elemento dell'intervallo da riprodurre con sequenza casuale, esclusivo. Deve soddisfare i requisiti di `RandomAccessIterator` e `ValueSwappable`.
 
-*Gen* generatore di numeri casuali che il `shuffle()` funzione utilizzerà per l'operazione. Deve soddisfare i requisiti di `UniformRandomNumberGenerator`.
+*Generazione*<br/>
+Generatore di numeri casuali usato dalla funzione `shuffle()` per l'operazione. Deve soddisfare i requisiti di `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Note
 
@@ -7422,11 +7694,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.
+*first*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.
 
-*ultimo* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare.
+*last*<br/>
+Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce i criteri di confronto devono essere soddisfatti dagli elementi successivi nell'ordinamento. Il predicato binario accetta due argomenti e restituisce **true** se i due argomenti sono in ordine e **false** in caso contrario. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza. Per altre informazioni, vedere [Algoritmi](../standard-library/algorithms.md).
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Il predicato binario accetta due argomenti e restituisce **true** se i due argomenti sono in ordine e **false** in caso contrario. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza. Per altre informazioni, vedere [Algoritmi](../standard-library/algorithms.md).
 
 ### <a name="remarks"></a>Note
 
@@ -7523,11 +7798,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap di destinazione.
+*first*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap di destinazione.
 
-*ultimo* un iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'heap di destinazione.
+*last*<br/>
+Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'heap di destinazione.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
@@ -7612,11 +7890,14 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da partizionare.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da partizionare.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
-*Pred* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se un elemento deve essere classificato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7679,7 +7960,7 @@ Dispone gli elementi di un intervallo specificato in un ordine non decrescente o
 
 ```cpp
 template<class BidirectionalIterator>
- void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
+void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
 
 template<class BidirectionalIterator, class BinaryPredicate>
 void stable_sort(
@@ -7691,11 +7972,14 @@ void stable_sort(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da ordinare.
+*first*<br/>
+Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da ordinare.
 
-*ultimo* un iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare.
+*last*<br/>
+Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce i criteri di confronto devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
@@ -7790,9 +8074,11 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* per il primo override, il primo oggetto da scambiato il contenuto. Per il secondo override, la prima matrice di oggetti di cui viene scambiato il contenuto.
+*left*<br/>
+Per il primo override, il primo oggetto di cui viene scambiato il contenuto. Per il secondo override, la prima matrice di oggetti di cui viene scambiato il contenuto.
 
-*a destra* per il primo override, il secondo oggetto da scambiato il contenuto. Per il secondo override, la seconda matrice di oggetti di cui viene scambiato il contenuto.
+*right*<br/>
+Per il primo override, il secondo oggetto di cui viene scambiato il contenuto. Per il secondo override, la seconda matrice di oggetti di cui viene scambiato il contenuto.
 
 ### <a name="remarks"></a>Note
 
@@ -7869,11 +8155,14 @@ ForwardIterator2 swap_ranges(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* iteratore in avanti che punta alla prima posizione del primo intervallo i cui elementi sono da scambiare.
+*first1*<br/>
+Iteratore in avanti che punta alla prima posizione del primo intervallo i cui elementi sono da scambiare.
 
-*last1* iteratore in avanti che punta alla posizione immediatamente successiva all'ultima posizione del primo intervallo i cui elementi sono da scambiare.
+*last1*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultima posizione del primo intervallo i cui elementi sono da scambiare.
 
-*first2* iteratore in avanti che punta alla prima posizione del secondo intervallo i cui elementi sono da scambiare.
+*first2*<br/>
+Iteratore in avanti che punta alla prima posizione del secondo intervallo i cui elementi sono da scambiare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7969,15 +8258,20 @@ OutputIterator transform(
 
 ### <a name="parameters"></a>Parametri
 
-*first1* un iteratore di input che punta alla posizione del primo elemento nel primo intervallo di origine da utilizzare.
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo intervallo di origine da usare.
 
-*last1* opera un iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo di origine.
+*last1*<br/>
+Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo di origine da usare.
 
-*first2* un iteratore di input che punta alla posizione del primo elemento nel secondo intervallo di origine da utilizzare.
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo di origine da utilizzare.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
 
-*Func* oggetto funzione unario definito dall'utente utilizzato nella prima versione dell'algoritmo che viene applicato a ogni elemento nel primo intervallo di origine o definite dall'utente (UD) oggetto funzione binaria utilizzata nella seconda versione dell'algoritmo applicato a livello pairwise, ordinato in avanti, per due intervalli di origine.
+*Func*<br/>
+Oggetto funzione unario definito dall'utente usato nella prima versione dell'algoritmo applicato a ogni elemento nel primo intervallo di origine oppure oggetto funzione binario definito dall'utente usato nella seconda versione dell'algoritmo ordinato in avanti applicato a coppie ai due intervalli di origine.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8070,12 +8364,12 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 The elements of the vector v1 multiplied by 2 in place gives:
- v1mod = ( -8 -6 -4 -2 0 2 4 ).
+v1mod = ( -8 -6 -4 -2 0 2 4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 & copying to v2 gives:
- v2 = ( -40 -30 -20 -10 0 10 20 ).
+by the factor 5 & copying to v2 gives:
+v2 = ( -40 -30 -20 -10 0 10 20 ).
 Multiplying elements of the vectors v1mod and v2 pairwise gives:
- v3 = ( 320 180 80 20 0 20 80 ).
+v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
 ## <a name="unique"></a>  unique
@@ -8098,11 +8392,14 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da analizzare per la rimozione di duplicati.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da analizzare per la rimozione di duplicati.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da analizzare per la rimozione di duplicati.
+*last*<br/>
+Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da analizzare per la rimozione di duplicati.
 
-*Comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se due elementi vengono considerati come equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8201,10 +8498,10 @@ int main()
 ```Output
 Vector v1 is ( 5 -5 5 -5 5 -5 5 -5 4 4 4 4 7 ).
 Removing adjacent duplicates from vector v1 gives
- ( 5 -5 5 -5 5 -5 5 -5 4 7 ).
+( 5 -5 5 -5 5 -5 5 -5 4 7 ).
 Removing adjacent duplicates from vector v1 under the
   binary predicate mod_equal gives
- ( 5 4 7 ).
+( 5 4 7 ).
 Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
@@ -8228,13 +8525,17 @@ OutputIterator unique_copy( InputIterator first,
 
 ### <a name="parameters"></a>Parametri
 
-*primo* iteratore in avanti che punta alla posizione del primo elemento nell'intervallo di origine da copiare.
+*first*<br/>
+Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo di origine da copiare.
 
-*ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di origine da copiare.
+*last*<br/>
+Iteratore in avanti che punta alla posizione successiva all'ultimo elemento nell'intervallo di origine da copiare.
 
-*risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione che riceve la copia con duplicati consecutivi rimossi.
+*Risultato*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione che riceve la copia con duplicati consecutivi rimossi.
 
-*Comp* oggetto funzione predicato definito dall'utente che definisce la condizione deve essere soddisfatta se due elementi vengono considerati come equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8344,13 +8645,17 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>Parametri
 
-*primo* la posizione del primo elemento nell'intervallo da cercare.
+*first*<br/>
+Posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo* alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
+*last*<br/>
+Posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*valore* il valore nell'intervallo ordinato che deve essere superato dal valore dell'elemento a cui punta l'iteratore restituito.
+*valore*<br/>
+Valore nell'intervallo ordinato che deve essere superato dal valore dell'elemento a cui punta l'iteratore restituito.
 
-*comp* oggetto funzione predicato definito dall'utente che definisce rilevare in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*comp*<br/>
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f4aec5796db6a277b6bfb1edecdcd2e7f5c455
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6085624ca80fa676da89e10686b84323e1a7db89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954617"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110279"
 ---
 # <a name="isbaseof-class"></a>Classe is_base_of
 
@@ -37,9 +37,11 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parametri
 
-*Base* da testare per la classe di base.
+*base*<br/>
+Classe di base per cui eseguire la verifica.
 
-*Derivato* il tipo derivato da verificare per.
+*Derivati*<br/>
+Tipo derivato per cui eseguire la verifica.
 
 ## <a name="remarks"></a>Note
 

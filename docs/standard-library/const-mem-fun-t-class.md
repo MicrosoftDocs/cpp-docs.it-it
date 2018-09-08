@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc28cdb34148a525b193a93bec8d881bbbeb43f8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3b813128f07376d017a3ea76d6bb359db437f6f3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963001"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100196"
 ---
 # <a name="constmemfunt-class"></a>Classe const_mem_fun_t
 
@@ -35,14 +35,16 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
     Result operator()(const Type* Pleft) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*PM* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
+*PM*<br/>
+Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-*Pleft* dell'oggetto che il *Pm* funzione membro viene chiamata su.
+*Pleft*<br/>
+L'oggetto che il *Pm* funzione membro viene chiamata su.
 
 ## <a name="return-value"></a>Valore restituito
 

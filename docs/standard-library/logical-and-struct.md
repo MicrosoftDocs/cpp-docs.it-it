@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df2f932290caac5253da3cc859abda9a05f8a41
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cab2335a8e9adb3e4f68f8576df466be45f01504
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964860"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100793"
 ---
 # <a name="logicaland-struct"></a>logical_and (struct)
 
@@ -44,16 +44,18 @@ struct logical_and<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) && std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator&&` che accetta gli operandi dei tipi specificati o dedotti.
 
-*Sinistra* l'operando sinistro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*A sinistra*<br/>
+Operando sinistro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-*Destra* operando destro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+*A destra*<br/>
+Operando destro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -127,12 +129,12 @@ int main( )
 
 /* Output:
 Original deque:
- d1 = ( true true true true true false false )
+d1 = ( true true true true true false false )
 Original deque:
- d2 = ( true false true true false true false )
+d2 = ( true false true true false true false )
 The deque which is the conjuction of d1 & d2 is:
- d3 = ( true false true true false false false )
- */
+d3 = ( true false true true false false false )
+*/
 ```
 
 ## <a name="requirements"></a>Requisiti

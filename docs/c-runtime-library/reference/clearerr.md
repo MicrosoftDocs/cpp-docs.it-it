@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395302"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105276"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,13 +54,14 @@ void clearerr(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso* puntatore **FILE** struttura.
+*flusso*<br/>
+Puntatore alla struttura **FILE**.
 
 ## <a name="remarks"></a>Note
 
-Il **clearerr** funzione Reimposta l'indicatore di errore e l'indicatore di fine del file per *flusso*. Gli indicatori di errore non vengono automaticamente cancellati; Dopo aver impostato l'indicatore di errore per un flusso specificato, le operazioni su tale flusso continuano restituire un valore di errore finché **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rewind](rewind.md) viene chiamato.
+Il **clearerr** funzione Reimposta l'indicatore di errore e l'indicatore di fine del file per *stream*. Gli indicatori di errore non vengono automaticamente cancellati; Dopo aver impostato l'indicatore di errore per un flusso specificato, le operazioni su tale flusso continuano a restituire un valore di errore finché **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, oppure [rewind](rewind.md) viene chiamato.
 
-Se *flusso* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce. Per ulteriori informazioni sul **errno** e codici di errore, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
+Se *stream* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce. Per ulteriori informazioni sul **errno** e i codici di errore, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
 
 È disponibile una versione più sicura di questa funzione, vedere [clearerr_s](clearerr-s.md).
 

@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4937676b085988153b9b36875ae6bed4762d271c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954643"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102473"
 ---
 # <a name="referencewrapper-class"></a>Classe reference_wrapper
 
@@ -186,9 +186,11 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parametri
 
-*Tipi* i tipi di elenco di argomenti.
+*Tipi*<br/>
+Tipi dell'elenco di argomenti.
 
-*args* l'elenco di argomenti.
+*args*<br/>
+Elenco di argomenti.
 
 ### <a name="remarks"></a>Note
 
@@ -229,9 +231,11 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty* il tipo di cui eseguire il wrapping.
+*Ty*<br/>
+Tipo di cui eseguire il wrapping.
 
-*Val* il valore per eseguire il wrapping.
+*Val*<br/>
+Valore di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
 

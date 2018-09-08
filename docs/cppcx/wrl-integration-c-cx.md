@@ -9,17 +9,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1bd61fd12c555c42f3226d523a519c29f1d09c10
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760978"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102694"
 ---
 # <a name="wrl-integration-ccx"></a>Integrazione WRL (C++/CX)
 
 È possibile combinare liberamente il codice WRL con codice di libreria modelli C++ (WRL) di Windows Runtime. Nella stessa unità di conversione, è possibile utilizzare oggetti dichiarati con WRL handle a oggetto (`^`) la notazione e WRL smart puntatore (`ComPtr<T>`) notation. Tuttavia, è necessario gestire manualmente i valori restituiti e i codici di errore WRL HRESULT ed eccezioni WRL.
-  
+
 ## <a name="wrl-development"></a>Sviluppo di WRL
 
 Per altre informazioni sulla creazione e l'utilizzo dei componenti WRL, vedere [libreria modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).
@@ -115,9 +115,8 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
     }
     return retVal;
 }
-
 ```
 
 ## <a name="see-also"></a>Vedere anche
 
-[Interoperabilità con altri linguaggi](interoperating-with-other-languages-c-cx.md)  
+[Interoperabilità con altri linguaggi](interoperating-with-other-languages-c-cx.md)

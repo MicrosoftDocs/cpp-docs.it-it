@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3ab2994359e99e490422fbb2f11cf28a05d6e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7adf4c285646e6a3f4706a9a56995f4440cc1e8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395660"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103815"
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 
@@ -54,9 +54,11 @@ extern "C" void __stdcall _CxxThrowException(
 
 ### <a name="parameters"></a>Parametri
 
-*pExceptionObject* l'oggetto che ha generato l'eccezione.
+*pExceptionObject*<br/>
+L'oggetto che ha generato l'eccezione.
 
-*pThrowInfo* le informazioni necessarie per elaborare l'eccezione.
+*pThrowInfo*<br/>
+Le informazioni necessarie per elaborare l'eccezione.
 
 ## <a name="remarks"></a>Note
 

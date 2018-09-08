@@ -1,5 +1,5 @@
 ---
-title: -F (imposta la dimensione dello Stack) | Documenti Microsoft
+title: -F (imposta la dimensione dello Stack) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,51 +20,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0ad03d18493cc5618f9aad2a16b07e4a01717f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373140"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103775"
 ---
 # <a name="f-set-stack-size"></a>/F (Imposta la dimensione dello stack)
-Imposta la dimensione dello stack di programma in byte.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/F number  
-```  
-  
-## <a name="arguments"></a>Argomenti  
- `number`  
- La dimensione dello stack in byte.  
-  
-## <a name="remarks"></a>Note  
- Senza questa opzione la dimensione predefinita è pari a 1 MB. Il `number` argomento può essere in notazione decimale o in linguaggio C. L'argomento può variare da 1 per la dimensione massima dello stack accettata dal linker. Il linker arrotonda per eccesso il valore specificato per i più vicino 4 byte. Lo spazio tra **/F** e `number` è facoltativo.  
-  
- Si potrebbe essere necessario aumentare la dimensione dello stack, se il programma riceve i messaggi di overflow dello stack.  
-  
- È inoltre possibile impostare la dimensione dello stack:  
-  
--   Utilizzo di **/STACK** l'opzione del linker. Per ulteriori informazioni, vedere [/STACK](../../build/reference/stack.md).  
-  
--   Utilizzo di EDITBIN sul file .exe. Per ulteriori informazioni, vedere [riferimenti a EDITBIN](../../build/reference/editbin-reference.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
-  
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+Imposta la dimensione dello stack di programma in byte.
+
+## <a name="syntax"></a>Sintassi
+
+> **/F** *numero*
+
+## <a name="arguments"></a>Argomenti
+
+*Numero*<br/>
+La dimensione dello stack in byte.
+
+## <a name="remarks"></a>Note
+
+Senza questa opzione la dimensione predefinita è pari a 1 MB. Il *numero* argomento può essere nella notazione decimale o del linguaggio C. L'argomento è compresa tra 1 e la dimensione massima dello stack accettata dal linker. Il linker viene arrotondato per eccesso il valore specificato per i più vicini 4 byte. Lo spazio tra **/F** e *numero* è facoltativo.
+
+Potrebbe essere necessario aumentare la dimensione dello stack se il programma riceve i messaggi di overflow dello stack.
+
+È anche possibile impostare la dimensione dello stack:
+
+-   Usando il **/stack** l'opzione del linker. Per altre informazioni, vedere [/stack](../../build/reference/stack.md).
+
+-   Utilizzo di EDITBIN sul file .exe. Per altre informazioni, vedere [riferimenti a EDITBIN](../../build/reference/editbin-reference.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
+
+1. Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)   
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

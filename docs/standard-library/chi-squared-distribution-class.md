@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5092107cc1af6327c5ab7d6e08f373f88dd56711
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 74b230aca540f03bf8c9e94fe65ede3ac4ae8681
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959245"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102785"
 ---
 # <a name="chisquareddistribution-class"></a>Classe chi_squared_distribution
 
@@ -76,9 +76,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*URNG* Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*<br/>
+L'uniform generatore motore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -243,9 +245,11 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*n* il `n` parametro di distribuzione.
+*n*<br/>
+Parametro di distribuzione `n`.
 
-*Parm* la struttura di parametri utilizzata per costruire la distribuzione.
+*parm*<br/>
+Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
@@ -272,9 +276,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*n* il `n` parametro di distribuzione.
+*n*<br/>
+Parametro di distribuzione `n`.
 
-*a destra* il `param_type` oggetto da confrontare con questa istanza.
+*right*<br/>
+Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959271"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100222"
 ---
 # <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*UIntType* il tipo di risultato integer senza segno. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*W* **dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **dimensione stato**. Numero di elementi (valori) nella sequenza di stato.
+*N*<br/>
+**Dimensione stato**. Numero di elementi (valori) nella sequenza di stato.
 
-*M* **dimensione spostamento**. Numero di elementi da ignorare durante ogni twist. **Precondizione:** `0 < M ≤ N`
+*M*<br/>
+**Dimensione spostamento**. Numero di elementi da ignorare durante ogni twist. **Precondizione:** `0 < M ≤ N`
 
-*R* **bit di maschera**. **Precondizione:** `R ≤ W`
+*R*<br/>
+**Bit di maschera**. **Precondizione:** `R ≤ W`
 
-*Oggetto* **maschera XOR**. **Precondizione:** `A ≤ (1u<<W) - 1u`
+*A*<br/>
+**Maschera XOR**. **Precondizione:** `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *g* **parametri MAIUSC Tempering**. Usati come valori di spostamento durante la crittografia. Precondizione: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L*<br/>
+**Parametri di spostamento per la crittografia**. Usati come valori di spostamento durante la crittografia. Precondizione: `U,S,T,L ≤ W`
 
-*1!d*, *B*, *C* **parametri maschera di bit Tempering**. Usati come valori di maschera di bit durante la crittografia. Precondizione: `D,B,C ≤ (1u<<W) - 1u`
+*1!D*, *B*, *C*<br/>
+**Parametri maschera di bit crittografia**. Usati come valori di maschera di bit durante la crittografia. Precondizione: `D,B,C ≤ (1u<<W) - 1u`
 
-*F* **moltiplicatore inizializzazione**. Usato per l'inizializzazione della sequenza. Precondizione: `F ≤ (1u<<W) - 1u`
+*F*<br/>
+**Moltiplicatore inizializzazione**. Usato per l'inizializzazione della sequenza. Precondizione: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Membri
 

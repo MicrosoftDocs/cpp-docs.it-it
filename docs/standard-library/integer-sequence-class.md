@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be1d3c6d583783c391321555ae52077fba4bee3a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 909bcb8446c7d876828a6d020cd20a7398ec04d5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960739"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108746"
 ---
 # <a name="integersequence-class"></a>Classe integer_sequence
 
@@ -44,9 +44,11 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Parametri
 
-*T* il tipo di valori; deve essere un tipo integrale: bool, char, char16_t, char32_t, wchar_t, o con o senza segno tipi integer.
+*T*<br/>
+Tipo di valori. Deve essere un tipo integrale: bool, char, char16_t, char32_t, wchar_t o tipi Signed Integer o Unsigned Integer.
 
-*Vals* un pacchetto di parametri non di tipo che rappresenta una sequenza di valori di tipo integrale T.
+*Vals*<br/>
+Un pacchetto di parametri non di tipo che rappresenta una sequenza di valori di tipo integrale T.
 
 ## <a name="members"></a>Membri
 
@@ -129,7 +131,7 @@ Per creare un oggetto `index_sequence` per un pacchetto di parametri, usare `ind
 
 ## <a name="requirements"></a>Requisiti
 
-Intestazione: <type_traits>
+Intestazione: \<type_traits\>
 
 Spazio dei nomi: std
 

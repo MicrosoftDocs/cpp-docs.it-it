@@ -90,12 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954955"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102577"
 ---
 # <a name="forwardlist-class"></a>Classe forward_list
 
@@ -881,15 +881,20 @@ void splice_after(
 
 ### <a name="parameters"></a>Parametri
 
-*In cui* la posizione nell'elenco forward_list di destinazione dopo cui inserire.
+*Where*<br/>
+Posizione nell'elenco forward_list di destinazione prima dopo cui effettuare l'inserimento.
 
-*Origine* elenco forward_list di origine che deve essere inserito nell'elenco forward_list di destinazione.
+*Source*<br/>
+Elenco forward_list di origine da inserire nell'elenco forward_list di destinazione.
 
-*Iter* l'elemento da inserire dall'elenco forward_list di origine.
+*Iter*<br/>
+Elemento da inserire dall'elenco forward_list di origine.
 
-*Primo* il primo elemento nell'intervallo da inserire dall'elenco forward_list di origine.
+*Primo*<br/>
+Primo elemento dell'intervallo da inserire dall'elenco forward_list di origine.
 
-*Ultimo* alla prima posizione oltre l'intervallo da inserire dall'elenco forward_list di origine.
+*ultimo*<br/>
+Prima posizione oltre l'intervallo da inserire dall'elenco forward_list di origine.
 
 ### <a name="remarks"></a>Note
 

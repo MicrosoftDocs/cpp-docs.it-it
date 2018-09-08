@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 101d987574ca789ce674c7ed01726847a66a4747
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 016ad1c5017635000f17b8852f7ebdb8e2f62e4a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962013"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108694"
 ---
 # <a name="isfinal-class"></a>Classe is_final
 
@@ -37,7 +37,8 @@ struct is_final;
 
 ### <a name="parameters"></a>Parametri
 
-*T* il tipo di query.
+*T*<br/>
+Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 

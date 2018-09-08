@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 05442a0c590bcb66449aeae72d54cc6e988421bc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962426"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099896"
 ---
 # <a name="gammadistribution-class"></a>Classe gamma_distribution
 
@@ -80,9 +80,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*URNG* Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*<br/>
+L'uniform generatore motore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -207,11 +209,14 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*Alpha* il `alpha` parametro di distribuzione.
+*alpha*<br/>
+Parametro di distribuzione `alpha`.
 
-*versione Beta* il `beta` parametro di distribuzione.
+*beta*<br/>
+Parametro di distribuzione `beta`.
 
-*Parm* la struttura di parametri utilizzata per costruire la distribuzione.
+*parm*<br/>
+Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
@@ -239,11 +244,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*Alpha* il `alpha` parametro di distribuzione.
+*alpha*<br/>
+Parametro di distribuzione `alpha`.
 
-*versione Beta* il `beta` parametro di distribuzione.
+*beta*<br/>
+Parametro di distribuzione `beta`.
 
-*a destra* il `param_type` istanza per eseguire il confronto.
+*right*<br/>
+Istanza `param_type` con cui eseguire il confronto.
 
 ### <a name="remarks"></a>Note
 

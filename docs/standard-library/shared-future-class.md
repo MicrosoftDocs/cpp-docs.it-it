@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954994"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100780"
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametri
 
-*A destra* oggetto `shared_future` oggetto.
+*A destra*<br/>
+Oggetto `shared_future`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametri
 
-*A destra* un' [futuri](../standard-library/future-class.md) o `shared_future` oggetto.
+*A destra*<br/>
+Oggetto [future](../standard-library/future-class.md) o `shared_future`.
 
 ### <a name="remarks"></a>Note
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parametri
 
-*Rel_time* un' [chrono:: Duration](../standard-library/duration-class.md) che specifica un intervallo di tempo massimo che il thread si blocca.
+*Rel_time*<br/>
+Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica un intervallo di tempo massimo per il blocco del thread.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parametri
 
-*Abs_time* un' [chrono:: time_point](../standard-library/time-point-class.md) oggetto che specifica un'ora dopo il quale è possibile sbloccare il thread.
+*Abs_time*<br/>
+Oggetto [chrono::time_point](../standard-library/time-point-class.md) che specifica un momento dopo il quale il thread può essere sbloccato.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959867"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099590"
 ---
 # <a name="istreamiterator-class"></a>Classe istream_iterator
 
@@ -38,7 +38,7 @@ Descrive un oggetto iteratore di input. Estrae gli oggetti della classe `Type` d
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,13 +46,17 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo* il tipo di oggetto da estrarre dal flusso di input.
+*Type*<br/>
+Tipo di oggetto da estrarre dal flusso di input.
 
-*CharType* il tipo che rappresenta il tipo di carattere per il `istream_iterator`. Questo argomento è facoltativo e il valore predefinito è **char**.
+*CharType*<br/>
+Tipo che rappresenta il tipo di carattere per `istream_iterator`. Questo argomento è facoltativo e il valore predefinito è **char**.
 
-*Tratti* il tipo che rappresenta il tipo di carattere per il `istream_iterator`. Questo argomento è facoltativo e il valore predefinito è `char_traits`< `CharType`>.
+*Tratti*<br/>
+Tipo che rappresenta il tipo di carattere per `istream_iterator`. Questo argomento è facoltativo e il valore predefinito è `char_traits`< `CharType`>.
 
-*Distanza* firmato tipo integrale che rappresenta il tipo di differenza per le `istream_iterator`. Questo argomento è facoltativo e il valore predefinito è `ptrdiff_t`.
+*Distanza*<br/>
+Tipo integrale con segno che rappresenta il tipo di differenza per `istream_iterator`. Questo argomento è facoltativo e il valore predefinito è `ptrdiff_t`.
 
 Dopo la costruzione o l'incrementazione di un oggetto della classe istream_iterator con un puntatore archiviato diverso da Null, l'oggetto tenta di estrarre e archiviare un oggetto di tipo `Type` dal flusso di input associato. Se l'estrazione ha esito negativo, l'oggetto sostituisce il puntatore archiviato con un puntatore Null, creando così un indicatore di fine della sequenza.
 
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parametri
 
-*_Istr* flusso di input da leggere usato per inizializzare il `istream_iterator`.
+*_Istr*<br/>
+Flusso di input da leggere usato per inizializzare l'oggetto `istream_iterator`.
 
 ### <a name="remarks"></a>Note
 

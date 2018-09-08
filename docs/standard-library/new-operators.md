@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 31db26453efbecceb136b614b8eabf178a0cdfea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216188"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100366"
 ---
 # <a name="ltnewgt-operators"></a>Operatori &lt;new&gt;
 
@@ -39,7 +39,8 @@ void operator delete(void* ptr,
 
 ### <a name="parameters"></a>Parametri
 
-*PTR* il puntatore il cui valore deve essere reso non valido dall'eliminazione.
+*ptr*<br/>
+Puntatore il cui valore deve essere reso non valido dall'eliminazione.
 
 ### <a name="remarks"></a>Note
 
@@ -71,7 +72,8 @@ void operator delete[](void* ptr,
 
 ### <a name="parameters"></a>Parametri
 
-*PTR* il puntatore il cui valore deve essere reso non valido dall'eliminazione.
+*ptr*<br/>
+Puntatore il cui valore deve essere reso non valido dall'eliminazione.
 
 ### <a name="remarks"></a>Note
 
@@ -101,9 +103,11 @@ void* operator new(std::size_t count,
 
 ### <a name="parameters"></a>Parametri
 
-*conteggio* il numero di byte di memoria da allocare.
+*count*<br/>
+Numero di byte di memoria da allocare.
 
-*PTR* il puntatore da restituire.
+*ptr*<br/>
+Puntatore da restituire.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -198,9 +202,11 @@ void* operator new[](std::size_t count,
 
 ### <a name="parameters"></a>Parametri
 
-*conteggio* il numero di byte di memoria da allocare per l'oggetto matrice.
+*count*<br/>
+Numero di byte di memoria da allocare per l'oggetto matrice.
 
-*PTR* il puntatore da restituire.
+*ptr*<br/>
+Puntatore da restituire.
 
 ### <a name="return-value"></a>Valore restituito
 

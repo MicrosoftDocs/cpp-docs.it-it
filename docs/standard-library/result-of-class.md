@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 95ac984ad164c242dcd470ed4d31f3921fa7ec56
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953049"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103266"
 ---
 # <a name="resultof-class"></a>Classe result_of
 
@@ -48,9 +48,11 @@ template<class T>
 
 ### <a name="parameters"></a>Parametri
 
-*Fn* tipo chiamabile su query.
+*Fn*<br/>
+Tipo chiamabile su cui eseguire una query.
 
-*ArgTypes* i tipi dell'elenco di argomenti al tipo chiamabile su query.
+*ArgTypes*<br/>
+Tipi dell'elenco di argomenti al tipo chiamabile su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 

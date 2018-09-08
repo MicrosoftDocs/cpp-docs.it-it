@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b527561e312ce9c50dce106a243d7e49a1d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406888"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107550"
 ---
 # <a name="srand"></a>srand
 
@@ -59,11 +59,12 @@ void srand(
 
 ### <a name="parameters"></a>Parametri
 
-*valore di inizializzazione* valore di inizializzazione per la generazione di numeri pseudocasuale
+*seed*<br/>
+Valore di inizializzazione per la generazione di numeri pseudocasuali
 
 ## <a name="remarks"></a>Note
 
-Il **srand** funzione imposta il punto di partenza per la generazione di una serie di valori integer pseudocasuale nel thread corrente. Per reinizializzare il generatore per creare la stessa sequenza di risultati, chiamare il **srand** funzione e utilizzano la stessa *seme* nuovo argomento. Qualsiasi altro valore per *valore di inizializzazione* imposta il generatore in un altro punto di partenza nella sequenza pseudocasuale. **rand** recupera i numeri pseudocasuali che vengono generati. La chiamata **rand** prima di qualsiasi chiamata a **srand** genera la stessa sequenza di chiamata **srand** con *valore di inizializzazione* passato come 1.
+Il **srand** funzione imposta il punto di partenza per la generazione di una serie di interi pseudocasuali nel thread corrente. Per reinizializzare il generatore per creare la stessa sequenza di risultati, chiamare il **srand** funzione, usare lo stesso *seed* nuovo argomento. Qualsiasi altro valore per *seed* imposta il generatore in un altro punto di partenza nella sequenza di numeri pseudocasuale. **la funzione RAND** recupera i numeri pseudocasuali generati. La chiamata **rand** prima di qualsiasi chiamata a **srand** genera la stessa sequenza della chiamata **srand** con *seed* passato come 1.
 
 ## <a name="requirements"></a>Requisiti
 

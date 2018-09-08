@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 6fd1712cb5d6c565b5ccea90050d2d4be6a1f7b0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12dd6d48b8d0e2012273ad122708d9a0d7ea11cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959992"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110175"
 ---
 # <a name="ltcomplexgt-functions"></a>Funzioni &lt;complex&gt;
 
@@ -73,7 +73,8 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui modulo deve essere determinato.
+*complexNum*<br/>
+Numero complesso di cui deve essere determinato il modulo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -141,10 +142,10 @@ c2 = polar ( 5.0 , pi / 6 ) = (4.33013,2.5)
 c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The modulus of c1 is recovered from c1 using: abs ( c1 ) = 5
 Argument of c1 is recovered from c1 using:
- arg ( c1 ) = 0 radians, which is 0 degrees.
+arg ( c1 ) = 0 radians, which is 0 degrees.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
@@ -159,7 +160,8 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui argomento deve essere determinato.
+*complexNum*<br/>
+Numero complesso di cui deve essere determinato l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -227,10 +229,10 @@ c2 = polar ( 5.0 , pi / 6 ) = (4.33013,2.5)
 c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The modulus of c1 is recovered from c1 using: abs ( c1 ) = 5
 Argument of c1 is recovered from c1 using:
- arg ( c1 ) = 0 radians, which is 0 degrees.
+arg ( c1 ) = 0 radians, which is 0 degrees.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
@@ -245,7 +247,8 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* numero complesso di cui complesso coniugato viene restituita.
+*complexNum*<br/>
+Numero complesso di cui deve essere restituito il complesso coniugato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -319,7 +322,8 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* numero complesso di cui determinare il coseno.
+*complexNum*<br/>
+Numero complesso di cui determinare il coseno.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -409,7 +413,8 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* numero complesso di cui determinare il coseno iperbolico.
+*complexNum*<br/>
+Numero complesso di cui determinare il coseno iperbolico.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -499,7 +504,8 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* numero complesso di cui determinare l'esponenziale.
+*complexNum*<br/>
+Numero complesso di cui determinare l'esponenziale.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -569,7 +575,8 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui parte reale da estrarre.
+*complexNum*<br/>
+Numero complesso di cui estrarre la parte reale.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -620,7 +627,8 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui calcolare il logaritmo naturale è.
+*complexNum*<br/>
+Numero complesso di cui determinare il logaritmo naturale.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -689,7 +697,8 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui calcolare il logaritmo base 10 è.
+*complexNum*<br/>
+Numero complesso di cui determinare il logaritmo in base 10.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -758,7 +767,8 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui norm deve essere determinato.
+*complexNum*<br/>
+Numero complesso di cui determinare la norma.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -824,7 +834,7 @@ c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The complex numbers c2 & c3 have the same principal arguments.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
@@ -840,9 +850,11 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Modulus* il modulo del numero complesso di input.
+*_Modulus*<br/>
+Modulo del numero complesso di input.
 
-*_Argument* l'argomento del numero complesso di input.
+*_Argument*<br/>
+Argomento del numero complesso di input.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -901,7 +913,7 @@ c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The complex numbers c2 & c3 have the same principal arguments.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 ```
 
 ## <a name="pow"></a>  pow
@@ -924,9 +936,11 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parametri
 
-*Base* numero complesso o numero del tipo di parametro per il numero complesso che costituisce la base da elevare a potenza con la funzione membro.
+*Base*<br/>
+Numero complesso o numero del tipo di parametro per il numero complesso che costituisce la base da elevare a potenza con la funzione membro.
 
-*Risparmio energia* intero o numero complesso o numero del tipo di parametro per il numero complesso che costituisce la potenza la base da elevare a usando la funzione membro.
+*_Power*<br/>
+Numero intero, numero complesso o numero del tipo di parametro per il numero complesso che costituisce la base da elevare a potenza con la funzione membro.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1021,28 +1035,28 @@ int main( )
 Complex number for base cb1 = (3,4)
 Integer for power = 2
 Complex number returned from complex base and integer power:
- ce1 = cb1 ^ cp1 = (-7,24)
+ce1 = cb1 ^ cp1 = (-7,24)
 The modulus of ce1 is: 25
 The argument of ce1 is: 1.85459 radians, which is 106.26 degrees.
 
 Complex number for base cb2 = (3,4)
 Type double for power cp2 = pi = 3.14159
 Complex number returned from complex base and double power:
- ce2 = cb2 ^ cp2 = (-152.915,35.5475)
+ce2 = cb2 ^ cp2 = (-152.915,35.5475)
 The modulus of ce2 is: 156.993
 The argument of ce2 is: 2.91318 radians, which is 166.913 degrees.
 
 Complex number for base cb3 = (3,4)
 Complex number for power cp3= (-2,1)
 Complex number returned from complex base and complex power:
- ce3 = cb3 ^ cp3 = (0.0153517,-0.00384077)
+ce3 = cb3 ^ cp3 = (0.0153517,-0.00384077)
 The modulus of ce3 is: 0.0158249
 The argument of ce3 is: -0.245153 radians, which is -14.0462 degrees.
 
 Type double for base cb4 = pi = 3.14159
 Complex number for power cp4 = (2,-1)
 Complex number returned from double base and complex power:
- ce4 = cb4 ^ cp4 = (4.07903,-8.98725)
+ce4 = cb4 ^ cp4 = (4.07903,-8.98725)
 The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```
@@ -1058,7 +1072,8 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui parte reale da estrarre.
+*complexNum*<br/>
+Numero complesso di cui estrarre la parte reale.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1109,7 +1124,8 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui seno è.
+*complexNum*<br/>
+Numero complesso di cui determinare il seno.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1199,7 +1215,8 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* numero complesso di cui determinare il seno iperbolico.
+*complexNum*<br/>
+Numero complesso di cui determinare il seno iperbolico.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1289,7 +1306,8 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* il numero complesso di cui calcolare la radice quadrata da trovare.
+*complexNum*<br/>
+Numero complesso di cui trovare la radice quadrata.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1348,10 +1366,10 @@ c1 = polar ( 5.0 ) = (-2.58529e-012,25)
 c2 = sqrt ( c1 ) = (3.53553,3.53553)
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.785398 radians, which is 45 degrees.
+arg ( c2 ) = 0.785398 radians, which is 45 degrees.
 The modulus of c2 = sqrt( abs ( c1 ) ) =5
 The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
- which is 45 degrees.
+which is 45 degrees.
 ```
 
 ## <a name="tan"></a> tan
@@ -1365,7 +1383,8 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* numero complesso di cui determinare la tangente.
+*complexNum*<br/>
+Numero complesso di cui determinare la tangente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1453,7 +1472,8 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* numero complesso di cui determinare la tangente iperbolica.
+*complexNum*<br/>
+Numero complesso di cui determinare la tangente iperbolica.
 
 ### <a name="return-value"></a>Valore restituito
 

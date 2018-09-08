@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5ea50f3e8ad70de8473df88bde60673f7b5caa35
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961639"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108707"
 ---
 # <a name="logicalnot-struct"></a>logical_not (struct)
 
@@ -44,14 +44,16 @@ struct logical_not<void>
   template <class Type>
   auto operator()(Type&& Left) const`
      -> decltype(!std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di* qualsiasi tipo che supporta un `operator!` che accetta un operando del tipo specificato o dedotto.
+*Type*<br/>
+Tipo che supporta un `operator!` che accetta un operando del tipo specificato o dedotto.
 
-*Sinistra* l'operando di logico non operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *tipo*.
+*A sinistra*<br/>
+L'operando sinistro dell'operazione di not logico. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *tipo*.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -96,10 +98,10 @@ int main( )
 }
 /* Output:
 Original deque:
- d1 = ( false true false true false true false )
+d1 = ( false true false true false true false )
 The deque with its values negated is:
- d2 = ( true false true false true false true )
- */
+d2 = ( true false true false true false true )
+*/
 ```
 
 ## <a name="requirements"></a>Requisiti

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 78ee4e040bc70b3ababe357fea2c6a279fb1b09a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961652"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105434"
 ---
 # <a name="equalto-struct"></a>equal_to (struct)
 
@@ -33,27 +33,29 @@ Un predicato binario che esegue l'operazione di uguaglianza (`operator==`) sui r
 ```cpp
 template <class Type = void>
 struct equal_to : public binary_function<Type, Type, bool>
- {
+{
     bool operator()(const Type& Left, const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator==
 template <>
 struct equal_to<void>
- {
+{
     template <class T, class U>
     auto operator()(T&& Left, U&& Right) const
       ->  decltype(std::forward<T>(Left) == std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator==` che accetta gli operandi dei tipi specificati o dedotti.
 
-*Sinistra* l'operando sinistro dell'operazione di uguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*A sinistra*<br/>
+L'operando sinistro dell'operatore di uguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-*Destra* operando destro dell'operazione di uguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+*A destra*<br/>
+L'operando destro dell'operatore di uguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
 

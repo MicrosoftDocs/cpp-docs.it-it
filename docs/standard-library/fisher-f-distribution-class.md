@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab5c5c790813f57da483878cb6a86fcf2ab0f04
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 51d8a4656cac15da170d221c784105ff939983a5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959651"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108798"
 ---
 # <a name="fisherfdistribution-class"></a>Classe fisher_f_distribution
 
@@ -79,9 +79,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*URNG* Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*<br/>
+L'uniform generatore motore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -257,11 +259,14 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*m* il `m` parametro di distribuzione.
+*m*<br/>
+Parametro di distribuzione `m`.
 
-*n* il `n` parametro di distribuzione.
+*n*<br/>
+Parametro di distribuzione `n`.
 
-*Parm* il `param_type` struttura usata per costruire la distribuzione.
+*parm*<br/>
+Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
@@ -289,11 +294,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*m* il `m` parametro di distribuzione.
+*m*<br/>
+Parametro di distribuzione `m`.
 
-*n* il `n` parametro di distribuzione.
+*n*<br/>
+Parametro di distribuzione `n`.
 
-*a destra* il `param_type` oggetto da confrontare con questa istanza.
+*right*<br/>
+Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
 

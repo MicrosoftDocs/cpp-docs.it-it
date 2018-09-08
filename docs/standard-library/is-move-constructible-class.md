@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979e726e1374ac37844472d9e2f9ae8ddd5ddf4d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6f9c0b381cfbf32327eef4b29a9dbe23f1d991f1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965802"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108772"
 ---
 # <a name="ismoveconstructible-class"></a>Classe is_move_constructible
 
@@ -36,7 +36,8 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T* il tipo da valutare
+*T*<br/>
+Il tipo da valutare
 
 ## <a name="remarks"></a>Note
 

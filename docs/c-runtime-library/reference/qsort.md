@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac444680a22a99f292b1728181103789435a150
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404708"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110201"
 ---
 # <a name="qsort"></a>qsort
 
@@ -59,17 +59,21 @@ void qsort(
 
 ### <a name="parameters"></a>Parametri
 
-*base* inizio della matrice di destinazione.
+<br/>
+Inizio della matrice di destinazione.
 
-*numero* dimensioni negli elementi della matrice.
+*Numero*<br/>
+Dimensione della matrice in elementi.
 
-*Larghezza* dimensioni in byte dell'elemento.
+*width*<br/>
+Dimensione dell'elemento in byte.
 
-*confrontare* puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che specifica la relazione.
+*compare*<br/>
+Puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che ne specifica la relazione.
 
 ## <a name="remarks"></a>Note
 
-Il **qsort** funzione implementa un algoritmo di ordinamento rapido per ordinare una matrice di *numero* elementi, ognuno dei *larghezza* byte. L'argomento *base* è un puntatore alla base della matrice da ordinare. **qsort** sovrascrive questa matrice mediante gli elementi ordinati.
+Il **qsort** funzione implementa un algoritmo di ordinamento rapido per ordinare una matrice di *numero* elementi, ognuno dei *larghezza* byte. L'argomento *base* è un puntatore alla base della matrice da ordinare. **qsort** sovrascrive questa matrice con gli elementi ordinati.
 
 **qsort** chiama il *confrontare* routine uno o più volte durante l'ordinamento e passa i puntatori a due elementi di matrice per ogni chiamata.
 
@@ -81,13 +85,13 @@ La routine confronta gli elementi e restituisce uno dei valori seguenti.
 
 |Valore restituito dalla funzione compare|Descrizione|
 |-----------------------------------|-----------------|
-|< 0|**elem1** minore **elem2**|
+|< 0|**elem1** minore di **elem2**|
 |0|**elem1** equivalente a **elem2**|
 |> 0|**elem1** maggiore **elem2**|
 
 La matrice viene ordinata in ordine crescente, come definito dalla funzione di confronto. Per ordinare una matrice in ordine decrescente, invertire il senso di "maggiore di" e "minore di" nella funzione di confronto.
 
-Questa funzione convalida i relativi parametri. Se *confrontare* oppure *numero* è **NULL**, oppure se *base* è **NULL** e **numero* è diverso da zero, oppure se *larghezza* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce e **errno** è impostata su **EINVAL**.
+Questa funzione convalida i relativi parametri. Se *confrontare* oppure *numero* viene **NULL**, oppure se *base* è **NULL** e **numero* è diverso da zero, oppure se *larghezza* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce e **errno** è impostata su **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

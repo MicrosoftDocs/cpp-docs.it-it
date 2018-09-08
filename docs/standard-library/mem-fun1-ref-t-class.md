@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8b50f703dde69669c57e0f639e748ee596a3f1ab
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960830"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106587"
 ---
 # <a name="memfun1reft-class"></a>Classe mem_fun1_ref_t
 
@@ -44,11 +44,14 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>Parametri
 
-*_Pm* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
+*_Pm*<br/>
+Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-*a sinistra* dell'oggetto che il *_Pm* funzione membro viene chiamata su.
+*left*<br/>
+L'oggetto che il *_Pm* funzione membro viene chiamata su.
 
-*a destra* l'argomento che viene assegnato a *_Pm*.
+*right*<br/>
+L'argomento che viene assegnato a *_Pm*.
 
 ## <a name="return-value"></a>Valore restituito
 

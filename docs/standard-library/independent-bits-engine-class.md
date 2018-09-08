@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eb76c477c54192dc6b6b969ecd4cdd32850c015f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964223"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110305"
 ---
 # <a name="independentbitsengine-class"></a>Classe independent_bits_engine
 
@@ -36,11 +36,14 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*Motore* il tipo di motore di base.
+*Motore*<br/>
+Tipo del motore di base.
 
-*W* **dimensione parola**. Dimensione, in bit, di ogni numero generato. **Precondizione:** `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Dimensione parola**. Dimensione, in bit, di ogni numero generato. **Precondizione:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType* il tipo di risultato integer senza segno. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Membri
 
