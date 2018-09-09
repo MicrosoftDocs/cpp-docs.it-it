@@ -1,7 +1,7 @@
 ---
-title: Compilatore avviso (livello 1) C4627 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4627 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284186"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249620"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Avviso del compilatore (livello 1) C4627
-'\<identificatore >': ignorato durante la ricerca dell'utilizzo di intestazione precompilata  
+
+> «*header_file*': ignorato durante la ricerca utilizzo di intestazione precompilata
+
+Se il file di origine corrente ha il [/Yu \(utilizzare file di intestazione precompilato)](../../build/reference/yu-use-precompiled-header-file.md) opzione set, il compilatore ignora tutti gli elementi nel file prima che l'intestazione precompilata è incluso. Avviso **C4627** se viene generato in Visual Studio 2015 e versioni precedenti *header_file* prima il file di intestazione precompilata, e se l'intestazione precompilata non include inoltre *header_file*.
+
+## <a name="example"></a>Esempio
+
+Questo esempio viene illustrato come può verificarsi l'errore e Mostra come risolverlo:
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- Durante la ricerca del percorso in cui viene utilizzata un'intestazione precompilata, il compilatore ha rilevato un `#include` direttiva per il  *\<identificatore >* file di inclusione. Il compilatore ignora la `#include` direttiva, ma genera l'avviso **C4627** se l'intestazione precompilata non contiene già il  *\<identificatore >* file di inclusione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>Vedere anche
+
+[Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
