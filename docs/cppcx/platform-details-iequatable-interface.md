@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3475eeadef19ee74fdafb7da758c79556f42ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 927b04cb661a63ccdce321af2cdd63b666d4c5b2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765190"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102015"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable (interfaccia)
-Questa interfaccia è solo per uso interno e non deve essere usata per lo sviluppo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-  
-interface class IEquatable;  
-```  
-  
-### <a name="remarks"></a>Note  
- Questa interfaccia viene fornita unicamente per completezza, perché può essere controllata con i browser.  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `Platform`  
-  
-### <a name="requirements"></a>Requisiti  
- **Metadati:** platform.winmd  
-  
- **Spazio dei nomi:** Platform::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Platform Namespace](platform-namespace-c-cx.md)
+
+Questa interfaccia è solo per uso interno e non deve essere usata per lo sviluppo.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+interface class IEquatable;
+```
+
+### <a name="remarks"></a>Note
+
+Questa interfaccia viene fornita unicamente per completezza, perché può essere controllata con i browser.
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`Platform`
+
+### <a name="requirements"></a>Requisiti
+
+**Metadati:** platform.winmd
+
+**Spazio dei nomi:** Platform::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Platform Namespace](platform-namespace-c-cx.md)

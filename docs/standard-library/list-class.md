@@ -108,12 +108,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31f1562e5db85f0638dfd32ba6e2db0f6f70fea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962917"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107487"
 ---
 # <a name="list-class"></a>Classe list
 
@@ -128,9 +128,11 @@ class list
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo* tipo di dati degli elementi da archiviare nell'elenco.
+*Type*<br/>
+Tipo di dati degli elementi da archiviare nell'elenco.
 
-*Allocatore* il tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione della memoria dell'elenco. Questo argomento è facoltativo e il valore predefinito è **allocator**\<*tipo*>.
+*Allocatore*<br/>
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione e alla deallocazione di memoria dell'elenco. Questo argomento è facoltativo e il valore predefinito è **allocator**\<*tipo*>.
 
 ## <a name="remarks"></a>Note
 
@@ -250,15 +252,20 @@ void assign(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo* posizione del primo elemento nell'intervallo di elementi da copiare dall'elenco di argomenti.
+*Primo*<br/>
+Posizione del primo elemento nell'intervallo di elementi da copiare dall'elenco degli argomenti.
 
-*Ultimo* posizione del primo elemento oltre l'intervallo di elementi da copiare dall'elenco di argomenti.
+*ultimo*<br/>
+Posizione del primo elemento immediatamente successivo all'intervallo di elementi da copiare dall'elenco degli argomenti.
 
-*Conteggio* il numero di copie di un elemento da inserire nell'elenco.
+*Conteggio*<br/>
+Numero di copie di un elemento inserito nell'elenco.
 
-*Val* il valore dell'elemento da inserire nell'elenco.
+*Val*<br/>
+Valore dell'elemento inserito nell'elenco.
 
-*IList* initializer_list contenente gli elementi da inserire.
+*IList*<br/>
+Oggetto initializer_list che contiene gli elementi da inserire.
 
 ### <a name="remarks"></a>Note
 
@@ -952,7 +959,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+*c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is "
         << *c1_Iter << endl;
 
@@ -983,11 +990,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametri
 
-*In cui* posizione dell'elemento da rimuovere dall'elenco.
+*Where*<br/>
+Posizione dell'elemento da rimuovere dall'elenco.
 
-*primo* posizione del primo elemento rimosso dall'elenco.
+*first*<br/>
+Posizione del primo elemento rimosso dall'elenco.
 
-*ultimo* posizione immediatamente successiva all'ultimo elemento rimosso dall'elenco.
+*last*<br/>
+Posizione immediatamente successiva all'ultimo elemento rimosso dall'elenco.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1437,9 +1447,11 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* l'elenco di argomenti da unire all'elenco di destinazione.
+*right*<br/>
+Elenco di argomenti da unire all'elenco di destinazione.
 
-*comp* l'operatore di confronto usato per ordinare gli elementi dell'elenco di destinazione.
+*comp*<br/>
+Operatore di confronto usato per ordinare gli elementi dell'elenco di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -1834,7 +1846,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;
+*c1_rIter = 40;
    cout << "The last element in the list is now " << *c1_rIter << "." << endl;
 }
 ```
@@ -1892,7 +1904,8 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-*Val* il valore che, se un elemento, comporterà la rimozione dell'elemento dall'elenco.
+*Val*<br/>
+Valore che, se contenuto da un elemento, comporterà la rimozione dell'elemento dall'elenco.
 
 ### <a name="remarks"></a>Note
 
@@ -1949,7 +1962,8 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parametri
 
-*pred* predicato unario che, se soddisfatto da un elemento, comporta l'eliminazione di tale elemento dall'elenco.
+*Pred*<br/>
+Predicato unario che, se soddisfatto da un elemento, comporta l'eliminazione di tale elemento dall'elenco.
 
 ### <a name="example"></a>Esempio
 
@@ -2099,9 +2113,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametri
 
-*_Newsize* le nuove dimensioni dell'elenco.
+*_Newsize*<br/>
+Nuova dimensione della stringa.
 
-*Val* il valore dei nuovi elementi da aggiungere all'elenco, se la nuova dimensione è più grande che le dimensioni originali. Se il valore viene omesso, ai nuovi elementi viene assegnato il valore predefinito per la classe.
+*Val*<br/>
+Valore dei nuovi elementi da aggiungere all'elenco se la nuova dimensione è maggiore di quella originale. Se il valore viene omesso, ai nuovi elementi viene assegnato il valore predefinito per la classe.
 
 ### <a name="remarks"></a>Note
 
@@ -2279,7 +2295,8 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>Parametri
 
-*comp* l'operatore di confronto usato per ordinare gli elementi successivi.
+*comp*<br/>
+Operatore di confronto utilizzato per ordinare gli elementi successivi.
 
 ### <a name="remarks"></a>Note
 
@@ -2350,15 +2367,20 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Parametri
 
-*In cui* la posizione nell'elenco di destinazione prima della quale inserire.
+*Where*<br/>
+Posizione nell'elenco di destinazione prima della quale occorre effettuare l'inserimento.
 
-*Origine* l'elenco di origine che deve essere inserito nell'elenco di destinazione.
+*Source*<br/>
+Elenco di origine da inserire nell'elenco di destinazione.
 
-*Iter* l'elemento da inserire dall'elenco di origine.
+*Iter*<br/>
+Elemento da inserire dall'elenco di origine.
 
-*Primo* il primo elemento nell'intervallo da inserire dall'elenco di origine.
+*Primo*<br/>
+Primo elemento dell'intervallo da inserire dall'elenco di origine.
 
-*Ultimo* la prima posizione oltre l'ultimo elemento nell'intervallo da inserire dall'elenco di origine.
+*ultimo*<br/>
+Prima posizione dopo l'ultimo elemento dell'intervallo da inserire dall'elenco di origine.
 
 ### <a name="remarks"></a>Note
 
@@ -2460,9 +2482,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* nell'elenco che fornisce gli elementi da scambiare o l'elenco cui elementi devono essere scambiati con quelli dell'elenco *sinistro*.
+*right*<br/>
+L'elenco che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'elenco di elenco *sinistro*.
 
-*a sinistra* un elenco di cui elementi devono essere scambiati con quelli dell'elenco *destro*.
+*left*<br/>
+Un elenco di cui elementi devono essere scambiati con quelli dell'elenco *a destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -2525,7 +2549,8 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parametri
 
-*pred* il predicato binario usato per confrontare gli elementi successivi.
+*Pred*<br/>
+Predicato binario usato per confrontare gli elementi successivi.
 
 ### <a name="remarks"></a>Note
 

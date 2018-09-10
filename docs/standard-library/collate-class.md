@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966459"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110373"
 ---
 # <a name="collate-class"></a>Classe collate
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri.
+*CharType*<br/>
+Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
 ## <a name="remarks"></a>Note
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs*<br/>
+Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-*_Locname* il nome delle impostazioni locali.
+*_Locname*<br/>
+Nome delle impostazioni locali.
 
 ### <a name="remarks"></a>Note
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametri
 
-*first1* puntatore al primo elemento nella prima sequenza da confrontare.
+*first1*<br/>
+Puntatore al primo elemento nella prima sequenza da confrontare.
 
-*last1* puntatore all'ultimo elemento nella prima sequenza da confrontare.
+*last1*<br/>
+Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 
-*first2* puntatore al primo elemento nella seconda sequenza da confrontare.
+*first2*<br/>
+Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-*last2* puntatore all'ultimo elemento nella seconda sequenza da confrontare.
+*Last2*<br/>
+Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametri
 
-*first1* puntatore al primo elemento nella prima sequenza da confrontare.
+*first1*<br/>
+Puntatore al primo elemento nella prima sequenza da confrontare.
 
-*last1* puntatore all'ultimo elemento nella prima sequenza da confrontare.
+*last1*<br/>
+Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 
-*first2* puntatore al primo elemento nella seconda sequenza da confrontare.
+*first2*<br/>
+Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-*last2* puntatore all'ultimo elemento nella seconda sequenza da confrontare.
+*Last2*<br/>
+Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* è un puntatore al primo carattere nella sequenza cui valore deve essere determinato.
+*first*<br/>
+Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*ultimo* è un puntatore all'ultimo carattere nella sequenza cui valore deve essere determinato.
+*last*<br/>
+Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un puntatore al primo carattere nella sequenza da convertire.
+*first*<br/>
+Puntatore al primo carattere nella sequenza da convertire.
 
-*ultimo* un puntatore all'ultimo carattere nella sequenza da convertire.
+*last*<br/>
+Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* è un puntatore al primo carattere nella sequenza cui valore deve essere determinato.
+*first*<br/>
+Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*ultimo* è un puntatore all'ultimo carattere nella sequenza cui valore deve essere determinato.
+*last*<br/>
+Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* un puntatore al primo carattere nella sequenza da convertire.
+*first*<br/>
+Puntatore al primo carattere nella sequenza da convertire.
 
-*ultimo* un puntatore all'ultimo carattere nella sequenza da convertire.
+*last*<br/>
+Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 

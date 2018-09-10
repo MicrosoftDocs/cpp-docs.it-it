@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca83a9b9b48302e9ff4974d083d0a95796a1ef3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395513"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107570"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Ottiene lo stato corrente dell'heap di debug e lo memorizza in fornita dall'applicazione **CrtMemState** struttura (solo versione debug).
+Ottiene lo stato corrente dell'heap di debug e lo archivia in una fornita dall'applicazione **CrtMemState** struttura (solo versione di debug).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -54,17 +54,18 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Parametri
 
-*lo stato* puntatore **CrtMemState** struttura da riempire con il checkpoint di memoria.
+*state*<br/>
+Puntatore alla **CrtMemState** struttura da riempire con il checkpoint di memoria.
 
 ## <a name="remarks"></a>Note
 
-Il **CrtMemCheckpoint** funzione crea uno snapshot dello stato corrente dell'heap di debug in qualsiasi momento. Questo snapshot potrà essere usato da altre funzioni dello stato dell'heap, ad esempio [_CrtMemDifference](crtmemdifference.md), per rilevare perdite di memoria e altri problemi. Quando si [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtMemState** vengono rimosse durante la pre-elaborazione.
+Il **CrtMemCheckpoint** funzione crea uno snapshot dello stato corrente dell'heap di debug in qualsiasi momento. Questo snapshot potrà essere usato da altre funzioni dello stato dell'heap, ad esempio [_CrtMemDifference](crtmemdifference.md), per rilevare perdite di memoria e altri problemi. Quando [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtMemState** vengono rimosse durante la pre-elaborazione.
 
-L'applicazione deve passare un puntatore a un'istanza precedentemente allocata della **CrtMemState** struttura, definita in CRTDBG. h, nel *stato* parametro. Se **CrtMemCheckpoint** incontra un errore durante la creazione del checkpoint, la funzione genera un **CRT_WARN** report che descrive il problema di debug.
+L'applicazione deve passare un puntatore a un'istanza precedentemente allocata della **CrtMemState** struttura, definita in CRTDBG. h, nelle *stato* parametro. Se **CrtMemCheckpoint** rileva un errore durante la creazione di checkpoint, la funzione genera un **CRT_WARN** report che descrive il problema di debug.
 
-Per ulteriori informazioni sulle funzioni dello stato dell'heap e il **CrtMemState** struttura, vedere [funzioni segnalazione dello stato dell'Heap](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Per altre informazioni sulle funzioni dello stato dell'heap e la **CrtMemState** struttura, vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Se *stato* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) è impostata su **EINVAL** e restituisce la funzione.
+Se *lo stato* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) è impostata su **EINVAL** e restituisce la funzione.
 
 ## <a name="requirements"></a>Requisiti
 

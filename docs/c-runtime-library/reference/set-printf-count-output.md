@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406641"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108319"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-Abilitare o disabilitare il supporto per la **%n** formattare nel [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-famiglia di funzioni.
+Abilitare o disabilitare il supporto per la **%n** formattare nel [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-funzioni della famiglia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,15 +55,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Parametri
 
-*abilitare* un valore diverso da zero per abilitare **%n** supportare, 0 per disattivare **%n** supportano.
+*abilitare*<br/>
+Un valore diverso da zero per abilitare **%n** supportare, 0 per disabilitare **%n** supportano.
 
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito
 
-Lo stato della **%n** supportare prima di chiamare questa funzione: diverso da zero se **%n** supporto è stato abilitato, 0 se è stato disabilitato.
+Lo stato del **%n** supportare prima di chiamare questa funzione: diverso da zero se **%n** supporto è stato abilitato, 0 se è stata disabilitata.
 
 ## <a name="remarks"></a>Note
 
-A causa di motivi di sicurezza, il supporto per la **%n** identificatore di formato è disabilitata per impostazione predefinita in **printf** e tutte le sue varianti. Se **%n** rilevato in un **printf** specifica di formato, il comportamento predefinito consiste nel richiamare il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). La chiamata **set_printf_count_output** con un argomento diverso da zero causerà **printf**-famiglia di funzioni per interpretare **%n** come descritto in [formato Sintassi per la specifica: funzioni di printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+A causa di motivi di sicurezza, supporto per la **%n** identificatore di formato è disabilitata per impostazione predefinita nella **printf** e tutte le relative varianti. Se **%n** viene rilevata in un **printf** specifica di formato, il comportamento predefinito consiste nel richiamare il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). La chiamata **set_printf_count_output** con un argomento diverso da zero causerà **printf**-interpretare le funzioni della famiglia **%n** come descritto in [formato Sintassi per la specifica: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Requisiti
 

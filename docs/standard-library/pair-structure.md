@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcee56d93059e30bc07e3f964b581624f0bb555d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955332"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108825"
 ---
 # <a name="pair-structure"></a>Struttura pair
 
@@ -54,11 +54,14 @@ struct pair
 
 ### <a name="parameters"></a>Parametri
 
-*Val1* Inizializza il primo elemento di valore `pair`.
+*Val1*<br/>
+Valore che inizializza il primo elemento di `pair`.
 
-*Val2* Inizializza il secondo elemento di valore `pair`.
+*Val2*<br/>
+Valore che inizializza il secondo elemento di `pair`.
 
-*Destra* una coppia i cui valori devono essere utilizzati per inizializzare gli elementi di un'altra coppia.
+*A destra*<br/>
+Coppia i cui valori devono essere usati per inizializzare gli elementi di un'altra coppia.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -158,8 +161,8 @@ The pair p3 is: ( 10, 0.011 ).
 The element pairs of the map m1 are: ( 1, 10 ) ( 2, 20 ) ( 3, 30 ).
 The element (4,40) was inserted successfully in m1.
 The element with a key value of
- ( (pr2.first) -> first ) = 1 is already in m1,
- so the insertion failed.
+( (pr2.first) -> first ) = 1 is already in m1,
+so the insertion failed.
 *\
 ```
 

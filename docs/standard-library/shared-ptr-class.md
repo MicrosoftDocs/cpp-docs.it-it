@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957522"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109875"
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parametri
 
-*SP* puntatore condiviso da copiare.
+*SP*<br/>
+Puntatore condiviso da copiare.
 
-*Asia Pacifico* puntatore automatico da copiare.
+*Asia Pacifico*<br/>
+Puntatore automatico da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parametri
 
-*PTR* un' `lvalue` riferimento a una delle due una `shared_ptr` o un `weak_ptr`.
+*ptr*<br/>
+Riferimento `lvalue` a `shared_ptr` o `weak_ptr`.
 
 ### <a name="remarks"></a>Note
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parametri
 
-*Altri* tipo controllato dal puntatore argomento.
+*Altro*<br/>
+Tipo controllato dal puntatore argomento.
 
-*1!d* il tipo del metodo deleter.
+*D*<br/>
+Tipo del metodo Deleter.
 
-*PTR* puntatore da copiare.
+*ptr*<br/>
+Puntatore da copiare.
 
-*DTOR* metodo deleter da copiare.
+*DTOR*<br/>
+Metodo Deleter da copiare.
 
-*Oggetto* il tipo di allocatore.
+*A*<br/>
+Tipo dell'allocatore.
 
-*Alloc* allocatore da copiare.
+*Alloc*<br/>
+Allocatore da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parametri
 
-*Altri* tipo controllato dal puntatore argomento.
+*Altro*<br/>
+Tipo controllato dal puntatore argomento.
 
-*PTR* puntatore da copiare.
+*ptr*<br/>
+Puntatore da copiare.
 
-*1!d* il tipo del metodo deleter.
+*D*<br/>
+Tipo del metodo Deleter.
 
-*Oggetto* il tipo di allocatore.
+*A*<br/>
+Tipo dell'allocatore.
 
-*DTOR* metodo deleter.
+*DTOR*<br/>
+Metodo Deleter.
 
-*Accelerator* allocatore.
+*Accelerator*<br/>
+Allocatore.
 
-*SP* puntatore intelligente da copiare.
+*SP*<br/>
+Puntatore intelligente da copiare.
 
-*WP* puntatore debole.
+*Windows Phone*<br/>
+Puntatore debole.
 
-*Asia Pacifico* puntatore automatico da copiare.
+*Asia Pacifico*<br/>
+Puntatore automatico da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parametri
 
-*SP* puntatore condiviso da scambiare.
+*SP*<br/>
+Puntatore condiviso con cui effettuare lo scambio.
 
 ### <a name="remarks"></a>Note
 

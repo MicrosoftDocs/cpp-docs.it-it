@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 710d7c154477320f7fb65f52f430f4c0666762c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 46ca75850aede04d54dc659e3f29166ab91abdbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956947"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102629"
 ---
 # <a name="addlvaluereference-class"></a>Classe add_lvalue_reference
 
@@ -39,7 +39,8 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*T* tipo da modificare.
+*T*<br/>
+Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 

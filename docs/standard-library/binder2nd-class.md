@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 040687a4218f24bb57f20ea3307dbf69ffa3f37d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962724"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108397"
 ---
 # <a name="binder2nd-class"></a>Classe binder2nd
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*Func* oggetto funzione binaria da convertire in un oggetto funzione unaria.
+*Func*<br/>
+Oggetto funzione binaria da convertire in un oggetto funzione unaria.
 
-*a destra* il valore a cui è necessario associare il secondo argomento dell'oggetto funzione binaria.
+*right*<br/>
+Valore a cui deve essere associato il secondo argomento dell'oggetto funzione binaria.
 
-*a sinistra* il valore dell'argomento che l'oggetto binario adattato confronta con il valore predefinito del secondo argomento.
+*left*<br/>
+Valore dell'argomento che l'oggetto binario adattato confronta con il valore predefinito del secondo argomento.
 
 ## <a name="return-value"></a>Valore restituito
 

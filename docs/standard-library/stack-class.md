@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963225"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110412"
 ---
 # <a name="stack-class"></a>Classe stack
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo* tipo di dati degli elementi da archiviare nello stack.
+*Type*<br/>
+Tipo di dati degli elementi da archiviare nello stack.
 
-*Contenitore* il tipo di contenitore sottostante usato per implementare lo stack. Il valore predefinito è la classe `deque`*\<Type>*.
+*Contenitore*<br/>
+Tipo del contenitore sottostante usato per implementare lo stack. Il valore predefinito è la classe `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Note
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-*Val* elemento aggiunto all'inizio dello stack.
+*Val*<br/>
+Elemento aggiunto all'inizio dello stack.
 
 ### <a name="remarks"></a>Note
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* il contenitore di cui lo stack costruito deve essere una copia.
+*right*<br/>
+Contenitore di cui lo stack costruito deve essere una copia.
 
 ### <a name="example"></a>Esempio
 

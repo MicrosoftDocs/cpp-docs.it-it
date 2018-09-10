@@ -15,30 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec2651ae44955a4adfa1319e5528b7fe948a15bf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 197f43a8b5a9485642aca16c25cb35515cabe020
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759403"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109992"
 ---
 # <a name="platformuintptr-value-class"></a>Classe di valori Platform::UIntPtr
-Rappresenta un puntatore senza segno con dimensioni appropriate per la piattaforma (32 bit o 64 bit).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-public value struct UintPtr  
-```  
-  
-### <a name="requirements"></a>Requisiti  
- **Client minimo supportato:** Windows 8  
-  
- **Server minimo supportato:** Windows Server 2012  
-  
- **Spazio dei nomi:** Platform  
-  
- **Metadati:** platform.winmd  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)
+
+Rappresenta un puntatore senza segno con dimensioni appropriate per la piattaforma (32 bit o 64 bit).
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+public value struct UintPtr
+```
+
+### <a name="requirements"></a>Requisiti
+
+**Client minimo supportato:** Windows 8
+
+**Server minimo supportato:** Windows Server 2012
+
+**Spazio dei nomi:** Platform
+
+**Metadati:** platform.winmd
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

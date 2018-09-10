@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761111"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103932"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -49,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Tipo degli elementi contenuti nell'oggetto Vector.
 
-*E*  
+*E*<br/>
 Specifica un predicato binario per verificare l'uguaglianza con valori di tipo *T*. Il valore predefinito è `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Note
@@ -128,7 +128,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parametri
 
-*index*  
+*index*<br/>
 Elemento da inserire nel vettore. Il tipo di *articoli* è definito dalle *T* typename.
 
 ## <a name="clear"></a>  Metodo Vector:: Clear
@@ -173,7 +173,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametri
 
-*index*  
+*index*<br/>
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 ### <a name="return-value"></a>Valore restituito
@@ -194,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parametri
 
-*startIndex*  
+*startIndex*<br/>
 Indice a base zero dell'inizio degli elementi da recuperare.
 
-*dest*  
+*dest*<br/>
 Una matrice allocata dal chiamante di elementi che iniziano in corrispondenza dell'elemento specificato da *startIndex* e terminano all'ultimo elemento nel vettore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -234,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parametri
 
-*valore*  
+*valore*<br/>
 Elemento da cercare.
 
-*index*  
+*index*<br/>
 Indice a base zero dell'elemento se parametro *valore* viene trovato; in caso contrario, 0.
 
 Il *indice* parametro è 0 se l'elemento è il primo elemento del vettore o se l'elemento non è stato trovato. Se il valore restituito è `true`, l'elemento è stato trovato ed è il primo elemento; in caso contrario, l'elemento non è stato trovato.
@@ -262,10 +262,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parametri
 
-*index*  
+*index*<br/>
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
-*item*  
+*item*<br/>
 Un elemento da inserire in Vector dopo l'elemento specificato da *indice*. Il tipo di *articoli* è definito dalle *T* typename.
 
 ## <a name="removeat"></a>  Metodo Vector:: RemoveAt
@@ -280,7 +280,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametri
 
-*index*  
+*index*<br/>
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 ## <a name="removeatend"></a>  Metodo Vector:: removeatend
@@ -305,7 +305,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Parametri
 
-*arr*  
+*arr*<br/>
 Una matrice di oggetti il cui tipo è definito per il *T* typename.
 
 ## <a name="setat"></a>  Metodo Vector:: SetAt
@@ -320,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parametri
 
-*index*  
+*index*<br/>
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
-*item*  
+*item*<br/>
 Valore da assegnare all'elemento specificato. Il tipo di *articoli* è definito dalle *T* typename.
 
 ## <a name="size"></a>  Metodo Vector:: Size
@@ -365,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>Parametri
 
-*a*  
+*a*<br/>
 Oggetto [std:: Array](../standard-library/array-class-stl.md) che verrà utilizzato per inizializzare l'oggetto Vector.
 
-*arr*  
+*arr*<br/>
 Oggetto [platform:: Array](../cppcx/platform-array-class.md) che verrà utilizzato per inizializzare l'oggetto Vector.
 
-*InIt*  
+*InIt*<br/>
 Tipo di una raccolta di oggetti utilizzati per inizializzare l'oggetto Vector corrente.
 
-*il*  
+*il*<br/>
 Oggetto [std:: initializer_list](../standard-library/initializer-list-class.md) degli oggetti di tipo *T* che verrà utilizzato per inizializzare l'oggetto Vector.
 
-*N*  
+*N*<br/>
 Numero di elementi in una raccolta di oggetti utilizzati per inizializzare l'oggetto Vector corrente.
 
-*size*  
+*size*<br/>
 Numero di elementi nell'oggetto Vector.
 
-*valore*  
+*valore*<br/>
 Valore utilizzato per inizializzare ciascun elemento nell'oggetto Vector corrente.
 
-*v*  
+*v*<br/>
 Un' [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std:: Vector](../standard-library/vector-class.md) che viene usato per inizializzare l'oggetto Vector corrente.
 
-*ptr*  
+*ptr*<br/>
 Puntatore a `std::vector` utilizzato per inizializzare l'oggetto Vector corrente.
 
-*first*  
+*first*<br/>
 Primo elemento di una sequenza di oggetti utilizzati per inizializzare l'oggetto Vector corrente. Il tipo della *primo* viene passato per mezzo della *inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*last*  
+*last*<br/>
 Ultimo elemento di una sequenza di oggetti utilizzati per inizializzare l'oggetto Vector corrente. Il tipo della *ultima* viene passato per mezzo della *inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Platform Namespace](platform-namespace-c-cx.md)  
-[Creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Platform Namespace](platform-namespace-c-cx.md)<br/>
+[Creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2ccd6a2ac0b47db7d808f3f90a228ecf497e95be
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761381"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101860"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Classe Platform::InvalidArgumentException
-Generata quando uno degli argomenti forniti a un metodo non è valido.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedi la classe [COMException](../cppcx/platform-comexception-class.md) .  
-  
-### <a name="requirements"></a>Requisiti  
- **Client minimo supportato:** Windows 8  
-  
- **Server minimo supportato:** Windows Server 2012  
-  
- **Spazio dei nomi:** Platform  
-  
- **Metadati:** platform.winmd  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe Platform::COMException](../cppcx/platform-comexception-class.md)
+
+Generata quando uno degli argomenti forniti a un metodo non è valido.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Note
+
+Per ulteriori informazioni, vedi la classe [COMException](../cppcx/platform-comexception-class.md) .
+
+### <a name="requirements"></a>Requisiti
+
+**Client minimo supportato:** Windows 8
+
+**Server minimo supportato:** Windows Server 2012
+
+**Spazio dei nomi:** Platform
+
+**Metadati:** platform.winmd
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe Platform::COMException](../cppcx/platform-comexception-class.md)

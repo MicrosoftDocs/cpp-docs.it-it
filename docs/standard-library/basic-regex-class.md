@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959748"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100885"
 ---
 # <a name="basicregex-class"></a>Classe basic_regex
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>Parametri
 
-*Elem* il tipo di elementi in modo che corrispondano.
+*Elem*<br/>
+Tipo di elementi di cui trovare una corrispondenza.
 
-*RXtraits* classe Traits per gli elementi.
+*RXtraits*<br/>
+Classe traits per gli elementi.
 
 ## <a name="remarks"></a>Note
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parametri
 
-*STtraits* classe Traits per un'origine di stringa.
+*STtraits*<br/>
+Classe traits per un'origine di stringa.
 
-*STalloc* classe Allocator per un'origine di stringa.
+*STalloc*<br/>
+Classe allocator per un'origine di stringa.
 
-*InIt* tipo di iteratore per un'origine di intervallo di Input.
+*InIt*<br/>
+Tipo di iteratore di input per un'origine di intervallo.
 
-*a destra* origine Regex da copiare.
+*right*<br/>
+Origine regex da copiare.
 
-*PTR* puntatore all'inizio della sequenza da copiare.
+*ptr*<br/>
+Puntatore all'inizio della sequenza da copiare.
 
-*flag* flag di opzione sintassi da aggiungere durante la copia.
+*flags*<br/>
+Flag di opzione sintassi da aggiungere durante la copia.
 
 *Len/TD >* lunghezza della sequenza da copiare.
 
-*str* stringa da copiare.
+*str*<br/>
+Stringa da copiare.
 
-*primo* inizio della sequenza da copiare.
+*first*<br/>
+Inizio della sequenza da copiare.
 
-*ultimo* fine della sequenza da copiare.
+*last*<br/>
+Fine della sequenza da copiare.
 
-*IList* initializer_list da copiare.
+*IList*<br/>
+Initializer_list da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parametri
 
-*STtraits* classe Traits per un'origine di stringa.
+*STtraits*<br/>
+Classe traits per un'origine di stringa.
 
-*STalloc* classe Allocator per un'origine di stringa.
+*STalloc*<br/>
+Classe allocator per un'origine di stringa.
 
-*InIt* tipo di iteratore per un'origine di intervallo di Input.
+*InIt*<br/>
+Tipo di iteratore di input per un'origine di intervallo.
 
-*a destra* origine Regex da copiare.
+*right*<br/>
+Origine regex da copiare.
 
-*PTR* puntatore all'inizio della sequenza da copiare.
+*ptr*<br/>
+Puntatore all'inizio della sequenza da copiare.
 
-*flag* flag di opzione sintassi da aggiungere durante la copia.
+*flags*<br/>
+Flag di opzione sintassi da aggiungere durante la copia.
 
 *Len/TD >* lunghezza della sequenza da copiare.
 
-*str* stringa da copiare.
+*str*<br/>
+Stringa da copiare.
 
-*primo* inizio della sequenza da copiare.
+*first*<br/>
+Inizio della sequenza da copiare.
 
-*ultimo* fine della sequenza da copiare.
+*last*<br/>
+Fine della sequenza da copiare.
 
-*IList* initializer_list da copiare.
+*IList*<br/>
+Initializer_list da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametri
 
-*loc* oggetto delle impostazioni locali da archiviare.
+*Loc*<br/>
+Oggetto impostazioni locali da archiviare.
 
 ### <a name="remarks"></a>Note
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parametri
 
-*STtraits* classe Traits per un'origine di stringa.
+*STtraits*<br/>
+Classe traits per un'origine di stringa.
 
-*STalloc* classe Allocator per un'origine di stringa.
+*STalloc*<br/>
+Classe allocator per un'origine di stringa.
 
-*a destra* origine Regex da copiare.
+*right*<br/>
+Origine regex da copiare.
 
-*str* stringa da copiare.
+*str*<br/>
+Stringa da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* l'oggetto di espressione regolare da scambiare.
+*right*<br/>
+L'oggetto di espressione regolare con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
 

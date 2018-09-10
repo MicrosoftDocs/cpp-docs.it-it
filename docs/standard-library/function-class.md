@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959933"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104134"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -89,9 +89,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*Fty* il tipo di funzione per eseguire il wrapping.
+*Fty*<br/>
+Tipo di funzione di cui eseguire il wrapping.
 
-*AX* funzione allocatore.
+*AX*<br/>
+Funzione allocatore.
 
 ## <a name="remarks"></a>Note
 
@@ -164,11 +166,14 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-*Func* un oggetto chiamabile.
+*Func*<br/>
+Oggetto chiamabile.
 
-*_Fnref* un wrapper di riferimento che contiene un oggetto chiamabile.
+*_Fnref*<br/>
+Wrapper di riferimento che contiene un oggetto chiamabile.
 
-*AX* un oggetto allocatore.
+*AX*<br/>
+Un oggetto allocatore.
 
 ### <a name="remarks"></a>Note
 
@@ -199,17 +204,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* oggetto funzione in cui copiare.
+*right*<br/>
+Oggetto funzione da copiare.
 
-*FX* il tipo di oggetto chiamabile.
+*Fx*<br/>
+Tipo di oggetto chiamabile.
 
-*Func* oggetto chiamabile di cui eseguire il wrapping.
+*Func*<br/>
+Oggetto chiamabile di cui eseguire il wrapping.
 
-*Alloc* il tipo di allocatore.
+*Alloc*<br/>
+Tipo di allocatore.
 
-*AX* allocatore.
+*AX*<br/>
+Allocatore.
 
-*_Fnref* il riferimento all'oggetto chiamabile per eseguire il wrapping.
+*_Fnref*<br/>
+Riferimento all'oggetto chiamabile di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
 
@@ -340,9 +351,11 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametri
 
-*TN* il tipo dell'ennesimo argomento di chiamata.
+*TN*<br/>
+Tipo dell'ennesimo argomento di chiamata.
 
-*tN* l'ennesimo argomento di chiamata.
+*TN*<br/>
+Ennesimo argomento di chiamata.
 
 ### <a name="remarks"></a>Note
 
@@ -391,13 +404,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametri
 
-*NPC* una costante puntatore null.
+*NPC*<br/>
+Costante puntatore Null.
 
-*a destra* oggetto funzione in cui copiare.
+*right*<br/>
+Oggetto funzione da copiare.
 
-*Fn* oggetto chiamabile di cui eseguire il wrapping.
+*Fn*<br/>
+Oggetto chiamabile di cui eseguire il wrapping.
 
-*fnref* il riferimento all'oggetto chiamabile per eseguire il wrapping.
+*fnref*<br/>
+Riferimento all'oggetto chiamabile di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
 
@@ -506,7 +523,8 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* da scambiare con l'oggetto function.
+*right*<br/>
+Oggetto funzione con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
 
@@ -567,7 +585,8 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametri
 
-*Fty2* il tipo di oggetto chiamabile di destinazione per eseguire il test.
+*Fty2*<br/>
+Tipo di oggetto chiamabile di destinazione da verificare.
 
 ### <a name="remarks"></a>Note
 

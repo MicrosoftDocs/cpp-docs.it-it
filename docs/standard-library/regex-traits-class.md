@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960931"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106470"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*Elem* il tipo di elemento di carattere da descrivere.
+*Elem*<br/>
+Il tipo di elemento di carattere da descrivere.
 
 ## <a name="remarks"></a>Note
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametri
 
-*loc* oggetto delle impostazioni locali da archiviare.
+*Loc*<br/>
+Oggetto impostazioni locali da archiviare.
 
 ### <a name="remarks"></a>Note
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parametri
 
-*CH* l'elemento da verificare.
+*ch*<br/>
+Elemento su cui eseguire il test.
 
-*CLS* le classi da testare.
+*a CLS*<br/>
+Classi da testare.
 
 ### <a name="remarks"></a>Note
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parametri
 
-*str*
+*str*<br/>
 
 La sequenza con terminazione null.
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* inizio della sequenza da cercare.
+*first*<br/>
+Inizio della sequenza da cercare.
 
-*ultimo* fine della sequenza da cercare.
+*last*<br/>
+Fine della sequenza da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* inizio della sequenza da cercare.
+*first*<br/>
+Inizio della sequenza da cercare.
 
-*ultimo* fine della sequenza da cercare.
+*last*<br/>
+Fine della sequenza da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* inizio della sequenza da trasformare.
+*first*<br/>
+Inizio della sequenza da trasformare.
 
-*ultimo* fine della sequenza da trasformare.
+*last*<br/>
+Fine della sequenza da trasformare.
 
 ### <a name="remarks"></a>Note
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*primo* inizio della sequenza da trasformare.
+*first*<br/>
+Inizio della sequenza da trasformare.
 
-*ultimo* fine della sequenza da trasformare.
+*last*<br/>
+Fine della sequenza da trasformare.
 
 ### <a name="remarks"></a>Note
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parametri
 
-*CH* elemento da convertire.
+*ch*<br/>
+Elemento da convertire.
 
 ### <a name="remarks"></a>Note
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parametri
 
-*CH* elemento da convertire.
+*ch*<br/>
+Elemento da convertire.
 
 ### <a name="remarks"></a>Note
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parametri
 
-*CH* elemento da convertire.
+*ch*<br/>
+Elemento da convertire.
 
-*radice* base aritmetica da usare.
+*radix*<br/>
+Base aritmetica da usare.
 
 ### <a name="remarks"></a>Note
 

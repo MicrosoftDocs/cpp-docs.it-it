@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954812"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108902"
 ---
 # <a name="moneyput-class"></a>Classe money_put
 
@@ -47,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+*CharType*<br/>
+Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
-*OutputIterator* il tipo di iteratore in cui le funzioni put monetarie scrivono il proprio output.
+*OutputIterator*<br/>
+Tipo di iteratore in cui le funzioni Put monetarie scrivono il proprio output.
 
 ## <a name="remarks"></a>Note
 
@@ -117,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametri
 
-*Avanti* un iteratore che punta al primo elemento della stringa inserita.
+*next*<br/>
+Iteratore che punta al primo elemento della stringa inserita.
 
-*_Intl* valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
+*_Intl*<br/>
+Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-*In_losbase* flag di formato che, quando impostato indica che il simbolo di valuta è facoltativo; in caso contrario, è necessario
+*In_losbase*<br/>
+Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
 
-*_Fill* un carattere utilizzato per la spaziatura.
+*_Fill*<br/>
+Carattere usato per la spaziatura.
 
-*Val* un oggetto stringa da convertire.
+*Val*<br/>
+Oggetto stringa da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -195,7 +202,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs*<br/>
+Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
@@ -234,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametri
 
-*Avanti* un iteratore che punta al primo elemento della stringa inserita.
+*next*<br/>
+Iteratore che punta al primo elemento della stringa inserita.
 
-*_Intl* valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
+*_Intl*<br/>
+Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-*In_losbase* flag di formato che, quando impostato indica che il simbolo di valuta è facoltativo; in caso contrario, è necessario
+*In_losbase*<br/>
+Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
 
-*_Fill* un carattere utilizzato per la spaziatura.
+*_Fill*<br/>
+Carattere usato per la spaziatura.
 
-*Val* un oggetto stringa da convertire.
+*Val*<br/>
+Oggetto stringa da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 

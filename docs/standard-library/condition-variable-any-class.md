@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9acd5abc941c3cc3ab2f1c22486298d7cc7da16c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959232"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106964"
 ---
 # <a name="conditionvariableany-class"></a>Classe condition_variable_any
 
@@ -111,9 +111,11 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametri
 
-*Lck* oggetto `mutex` oggetto di qualsiasi tipo.
+*Lck*<br/>
+Un oggetto `mutex` di qualsiasi tipo.
 
-*Pred* qualsiasi espressione che restituisca **true** oppure **false**.
+*Pred*<br/>
+Qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -140,11 +142,14 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parametri
 
-*Lck* oggetto `mutex` oggetto di qualsiasi tipo.
+*Lck*<br/>
+Un oggetto `mutex` di qualsiasi tipo.
 
-*Rel_time* oggetto `chrono::duration` oggetto che specifica la quantità di tempo prima che il thread viene attivato.
+*Rel_time*<br/>
+Un oggetto `chrono::duration` che specifica la quantità di tempo prima che il thread venga riattivato.
 
-*Pred* qualsiasi espressione che restituisca **true** oppure **false**.
+*Pred*<br/>
+Qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -192,11 +197,14 @@ void wait_until(
 
 ### <a name="parameters"></a>Parametri
 
-*Lck* un oggetto mutex.
+*Lck*<br/>
+Un oggetto mutex.
 
-*Abs_time* un' [chrono:: time_point](../standard-library/time-point-class.md) oggetto.
+*Abs_time*<br/>
+Un oggetto [chrono:: time_point](../standard-library/time-point-class.md).
 
-*Pred* qualsiasi espressione che restituisca **true** oppure **false**.
+*Pred*<br/>
+Qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
 

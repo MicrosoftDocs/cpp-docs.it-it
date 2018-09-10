@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956866"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100911"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-*Rep2* un tipo aritmetico per rappresentare il numero di segni di graduazione.
+*Rep2*<br/>
+Tipo aritmetico per rappresentare il numero di tick.
 
-*Period2* oggetto `std::ratio` specializzazione di modello per rappresentare il periodo di tick in unità di secondi.
+*Period2*<br/>
+Specializzazione modello `std::ratio` per rappresentare il periodo di tick in unità di secondi.
 
-*R* il numero di tick del periodo predefinito.
+*R*<br/>
+Numero di tick del periodo predefinito.
 
-*Rim* il numero di tick del periodo specificato da *Period2*.
+*Rim*<br/>
+Il numero di tick del periodo specificato da *Period2*.
 
 ### <a name="remarks"></a>Note
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametri
 
-*Div* per il primo metodo, *Div* rappresenta un conteggio dei tick. Per il secondo metodo, *Div* è un `duration` oggetto che contiene un conteggio dei tick.
+*Div*<br/>
+Per il primo metodo, *Div* rappresenta un conteggio dei tick. Per il secondo metodo, *Div* è un `duration` oggetto che contiene un conteggio dei tick.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parametri
 
-*Mult* un valore del tipo specificato dal `duration::rep`.
+*Mult*<br/>
+Valore del tipo specificato da `duration::rep`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parametri
 
-*Div* un valore del tipo specificato dal `duration::rep`.
+*Div*<br/>
+Valore del tipo specificato da `duration::rep`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-*Rim* oggetto `duration` oggetto.
+*Rim*<br/>
+Oggetto `duration`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-*Rim* oggetto `duration` oggetto.
+*Rim*<br/>
+Oggetto `duration`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametri
 
-*Div* il divisore, che può essere un oggetto durata o un valore che rappresenta i conteggi dei tick.
+*Div*<br/>
+Divisore, che può essere un oggetto durata o un valore che rappresenta i conteggi dei tick.
 
 ### <a name="remarks"></a>Note
 

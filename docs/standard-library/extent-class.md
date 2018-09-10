@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 156ae11bcc63e5d19b816580bfce7bb24cfbc3d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964310"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106678"
 ---
 # <a name="extent-class"></a>Classe extent
 
@@ -37,9 +37,11 @@ struct extent;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty* il tipo di query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
-*Ho* matrice associata alla query.
+*I*<br/>
+La matrice associata alla query.
 
 ## <a name="remarks"></a>Note
 

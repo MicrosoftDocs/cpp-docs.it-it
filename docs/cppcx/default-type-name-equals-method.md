@@ -13,40 +13,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36bd6e933d4e7bb1563ec6738c7ba3ed314c1cfd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 127f5ee876790fa3cfb8a052c2db6c41cc00f332
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763913"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109019"
 ---
 # <a name="defaulttypenameequals-method"></a>Metodo default::(type_name)::Equals
-Determina se l'oggetto specificato è uguale all'oggetto corrente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-  
-bool Equals(  
-    Object^ obj  
-)  
-```  
-  
-### <a name="parameters"></a>Parametri  
- obj  
- Oggetto da confrontare.  
-  
-### <a name="return-value"></a>Valore restituito  
- `true` se gli oggetti sono uguali; in caso contrario, `false`.  
-  
-### <a name="requirements"></a>Requisiti  
- **Client minimo supportato:** Windows 8  
-  
- **Server minimo supportato:** Windows Server 2012  
-  
- **Spazio dei nomi:** predefinito  
-  
- **Intestazione:** vccorlib.h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi predefinito](../cppcx/default-namespace.md)
+
+Determina se l'oggetto specificato è uguale all'oggetto corrente.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+bool Equals(
+    Object^ obj
+)
+```
+
+### <a name="parameters"></a>Parametri
+
+*obj*<br/>
+Oggetto da confrontare.
+
+### <a name="return-value"></a>Valore restituito
+
+`true` se gli oggetti sono uguali; in caso contrario, `false`.
+
+### <a name="requirements"></a>Requisiti
+
+**Client minimo supportato:** Windows 8
+
+**Server minimo supportato:** Windows Server 2012
+
+**Spazio dei nomi:** predefinito
+
+**Intestazione:** vccorlib.h
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi predefinito](../cppcx/default-namespace.md)

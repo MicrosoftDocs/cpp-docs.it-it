@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1193e7ab65c49f0f79aeae52ca6563310296116d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 305b7c40e6fd6bc7b185854fedd0df81cf84ccbd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953648"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101885"
 ---
 # <a name="ltistreamgt-functions"></a>Funzioni &lt;istream&gt;
 
@@ -42,9 +42,11 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* un flusso.
+*left*<br/>
+Flusso.
 
-*a destra* un flusso.
+*right*<br/>
+Flusso.
 
 ## <a name="ws"></a>  ws
 
@@ -56,7 +58,8 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parametri
 
-*_Istr* un flusso.
+*_Istr*<br/>
+Flusso.
 
 ### <a name="return-value"></a>Valore restituito
 

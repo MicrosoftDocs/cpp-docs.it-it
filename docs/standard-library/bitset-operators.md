@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955020"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107655"
 ---
 # <a name="ltbitsetgt-operators"></a>Operatori &lt;bitset&gt;
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo dei due BitSet i cui rispettivi elementi devono essere combinati con i bit per bit `AND`.
+*left*<br/>
+Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `AND` bit per bit.
 
-*a destra* secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con i bit per bit `AND`.
+*right*<br/>
+La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `AND` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un oggetto di tipo **bitset\<N >** che deve essere inserito nel flusso di output come stringa.
+*right*<br/>
+Un oggetto di tipo **bitset\<N>** che deve essere inserito nel flusso di output come stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>Parametri
 
-*_Istr* la stringa immessa nel flusso di input da inserire nel bitset.
+*_Istr*<br/>
+La immessa nel flusso di input da inserire nel bitset.
 
-*a destra* il bitset che riceve i bit dal flusso di input.
+*right*<br/>
+Il bitset che riceve i bit dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo dei due BitSet i cui rispettivi elementi devono essere combinati con i bit per bit `EXCLUSIVE-OR`.
+*left*<br/>
+Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `EXCLUSIVE-OR` bit per bit.
 
-*a destra* secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con i bit per bit `EXCLUSIVE-OR`.
+*right*<br/>
+La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `EXCLUSIVE-OR` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo dei due BitSet i cui rispettivi elementi devono essere combinati con i bit per bit `OR`.
+*left*<br/>
+Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `OR` bit per bit.
 
-*a destra* secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con i bit per bit `OR`.
+*right*<br/>
+La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `OR` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5051fe82a4d197a1518ccf9c0f3c797108c665e0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 99f9219c8f22cf0050c667eac679070151b82ef6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961249"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100333"
 ---
 # <a name="constmemfunreft-class"></a>Classe const_mem_fun_ref_t
 
@@ -32,18 +32,20 @@ Classe di adattatori che consente a una funzione membro **const** che non accett
 ```cpp
 template <class Result, class Type>
 class const_mem_fun_ref_t
- : public unary_function<Type, Result>
+: public unary_function<Type, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
     Result operator()(const Type& left) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*PM* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
+*PM*<br/>
+Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-*a sinistra* dell'oggetto che il *Pm* funzione membro viene chiamata su.
+*left*<br/>
+L'oggetto che il *Pm* funzione membro viene chiamata su.
 
 ## <a name="return-value"></a>Valore restituito
 

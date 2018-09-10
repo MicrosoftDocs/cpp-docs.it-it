@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202792"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100963"
 ---
 # <a name="basicstreambuf-class"></a>Classe basic_streambuf
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parametri
 
-*Elem* un' [char_type](#char_type).
+*Elem*<br/>
+Un [char_type](#char_type).
 
-*TR* il carattere [traits_type](#traits_type).
+*Tr*<br/>
+Il carattere [traits_type](#traits_type).
 
 ## <a name="remarks"></a>Note
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un riferimento lvalue al `basic_streambuf` utilizzato per impostare i valori per questo oggetto `basic_streambuf` oggetto.
+*right*<br/>
+Un riferimento lvalue all'oggetto `basic_streambuf` usato per impostare i valori per questo oggetto `basic_streambuf`.
 
 ### <a name="remarks"></a>Note
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parametri
 
-*conteggio* quantità dalla quale per far avanzare il puntatore del mouse.
+*count*<br/>
+Quantità di avanzamento del puntatore.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametri
 
-*_Loc* un riferimento a delle impostazioni locali.
+*_Loc*<br/>
+Un riferimento a impostazioni locali.
 
 ### <a name="remarks"></a>Note
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un riferimento lvalue al `basic_streambuf` oggetto usato per assegnare valori a questo oggetto.
+*right*<br/>
+Un riferimento lvalue all'oggetto l`basic_streambuf` usato per assegnare valori a questo oggetto.
 
 ### <a name="remarks"></a>Note
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametri
 
-*_Meta* carattere da inserire nel buffer, o **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Carattere da inserire nel buffer o **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametri
 
-*_Meta* carattere da inserire nel buffer, o **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Carattere da inserire nel buffer o **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parametri
 
-*conteggio* il numero di caratteri da cui spostare l'operazione di scrittura posiziona in avanti.
+*count*<br/>
+Il numero di caratteri per i quali spostare in avanti la posizione di scrittura.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametri
 
-*_Loc* un riferimento a delle impostazioni locali.
+*_Loc*<br/>
+Un riferimento a impostazioni locali.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametri
 
-*Off* la posizione da cercare relativa a *Way*.
+*Off*<br/>
+La posizione da cercare relativo alla *Way*.
 
-*Way* il punto di partenza per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
+*Way*<br/>
+Punto iniziale per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
 
-*_Which* specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
+*_Which*<br/>
+Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parametri
 
-*_Sp* la posizione da cercare.
+*_Sp*<br/>
+Posizione da cercare.
 
-*_Which* specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
+*_Which*<br/>
+Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parametri
 
-*_Buffer* un puntatore a `char_type` per la creazione di istanze.
+*_Buffer*<br/>
+Un puntatore a `char_type` per la creazione dell'istanza.
 
-*conteggio* le dimensioni del buffer.
+*count*<br/>
+Dimensione del buffer.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametri
 
-*Off* la posizione da cercare relativa a *Way*.
+*Off*<br/>
+La posizione da cercare relativo alla *Way*.
 
-*Way* il punto di partenza per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
+*Way*<br/>
+Punto iniziale per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
 
-*_Which* specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
+*_Which*<br/>
+Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametri
 
-*_Sp* la posizione da cercare.
+*_Sp*<br/>
+Posizione da cercare.
 
-*_Which* specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
+*_Which*<br/>
+Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametri
 
-*_Buffer* puntatore a un buffer.
+*_Buffer*<br/>
+Puntatore a un buffer.
 
-*conteggio* dimensione del buffer.
+*count*<br/>
+Dimensioni del buffer.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Parametri
 
-*_Gbeg* un puntatore all'inizio del buffer.
+*_Gbeg*<br/>
+Puntatore all'inizio del buffer.
 
-*_Gnext* puntatore a una posizione centrale del buffer.
+*_Gnext*<br/>
+Puntatore a una posizione centrale del buffer.
 
-*_Gend* un puntatore alla fine del buffer.
+*_Gend*<br/>
+Puntatore alla fine del buffer.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parametri
 
-*_Pbeg* un puntatore all'inizio del buffer.
+*_Pbeg*<br/>
+Puntatore all'inizio del buffer.
 
-*_Pend* un puntatore alla fine del buffer.
+*_Pend*<br/>
+Puntatore alla fine del buffer.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parametri
 
-*PTR* buffer che deve contenere i caratteri estratti.
+*ptr*<br/>
+Buffer che deve contenere i caratteri estratti.
 
-*conteggio* il numero di elementi da leggere.
+*count*<br/>
+Numero di elementi da leggere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH* il carattere.
+*CH*<br/>
+Il carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH* il carattere.
+*CH*<br/>
+Il carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parametri
 
-*PTR* la stringa di caratteri.
+*ptr*<br/>
+La stringa di caratteri.
 
-*conteggio* il conteggio dei caratteri.
+*count*<br/>
+Il numero di caratteri.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parametri
 
-*PTR* buffer che deve contenere i caratteri estratti.
+*ptr*<br/>
+Buffer che deve contenere i caratteri estratti.
 
-*conteggio* il numero di elementi da estrarre.
+*count*<br/>
+Numero di elementi da estrarre.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parametri
 
-*PTR* puntatore agli elementi da inserire.
+*ptr*<br/>
+Puntatore agli elementi da inserire.
 
-*conteggio* numero di elementi da inserire.
+*count*<br/>
+Numero di elementi da inserire.
 
 ### <a name="return-value"></a>Valore restituito
 

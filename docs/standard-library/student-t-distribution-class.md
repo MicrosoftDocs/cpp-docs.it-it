@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc995da6ce25aaed35e4e3fac04c08f37acaea7a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2ef525ee1b000c7f374260961de17076eb4734e7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676144"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108850"
 ---
 # <a name="studenttdistribution-class"></a>Classe student_t_distribution
 
@@ -74,7 +74,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -184,9 +185,10 @@ explicit student_t_distribution(const param_type& parm);
 ### <a name="parameters"></a>Parametri
 
 *n*  
- Parametro di distribuzione `n`.
+Parametro di distribuzione `n`.
 
-*Parm* il pacchetto di parametri utilizzato per costruire la distribuzione.
+*parm*<br/>
+Pacchetto di parametri usato per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 

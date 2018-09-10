@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3855da95342098c9ae260dc1d238c77f0fe69b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 756fbf28a73314ad4e335f658a48527f90975e55
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752502"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108572"
 ---
 # <a name="defaulttypenametostring-method"></a>Metodo default::(type_name)::ToString
-Restituisce una stringa che rappresenta il tipo corrente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-  
-String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Stringa che rappresenta l'oggetto corrente.  
-  
-### <a name="requirements"></a>Requisiti  
- **Client minimo supportato:** Windows 8  
-  
- **Server minimo supportato:** Windows Server 2012  
-  
- **Spazio dei nomi:** predefinito  
-  
- **Intestazione:** vccorlib.h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi predefinito](../cppcx/default-namespace.md)
+
+Restituisce una stringa che rappresenta il tipo corrente.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+String^ ToString();
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Stringa che rappresenta l'oggetto corrente.
+
+### <a name="requirements"></a>Requisiti
+
+**Client minimo supportato:** Windows 8
+
+**Server minimo supportato:** Windows Server 2012
+
+**Spazio dei nomi:** predefinito
+
+**Intestazione:** vccorlib.h
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi predefinito](../cppcx/default-namespace.md)

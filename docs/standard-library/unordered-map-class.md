@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954721"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107464"
 ---
 # <a name="unorderedmap-class"></a>Classe unordered_map
 
@@ -417,7 +417,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval* il valore della chiave per eseguire il mapping.
+*Keyval*<br/>
+Valore della chiave da mappare.
 
 ### <a name="remarks"></a>Note
 
@@ -457,7 +458,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -561,7 +562,7 @@ size_type bucket_size(size_type nbucket) const;
 ### <a name="parameters"></a>Parametri
 
 *nbucket*  
- Numero di bucket.
+Numero di bucket.
 
 ### <a name="remarks"></a>Note
 
@@ -601,7 +602,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -718,7 +719,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -925,7 +926,7 @@ size_type count(const Key& keyval) const;
 ### <a name="parameters"></a>Parametri
 
 *Keyval*  
- Valore della chiave da cercare.
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -964,7 +965,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -1024,7 +1025,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1148,7 +1149,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1190,7 +1191,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 ### <a name="parameters"></a>Parametri
 
 *Keyval*  
- Valore della chiave da cercare.
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1242,7 +1243,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1260,16 +1261,16 @@ size_type erase(const key_type& Key);
 ### <a name="parameters"></a>Parametri
 
 *Where*  
- Posizione dell'elemento che deve essere rimosso.
+Posizione dell'elemento che deve essere rimosso.
 
 *Primo*  
- Posizione del primo elemento che deve essere rimosso.
+Posizione del primo elemento che deve essere rimosso.
 
 *ultimo*  
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
+Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
 *Key*  
- Valore della chiave dell'elemento che deve essere rimosso.
+Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1292,7 +1293,7 @@ const_iterator find(const Key& keyval) const;
 ### <a name="parameters"></a>Parametri
 
 *Keyval*  
- Valore della chiave da cercare.
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1337,7 +1338,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1784,7 +1785,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -1977,7 +1978,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2009,7 +2010,7 @@ void max_load_factor(float factor);
 ### <a name="parameters"></a>Parametri
 
 *factor*  
- Nuovo fattore di carico massimo.
+Nuovo fattore di carico massimo.
 
 ### <a name="remarks"></a>Note
 
@@ -2073,7 +2074,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2203,10 +2204,10 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 c1['A'] == 0
 c1['a'] == 1
- [c, 3] [b, 2] [A, 0] [a, 1]
+[c, 3] [b, 2] [A, 0] [a, 1]
 c2[move(str)] == 0
 c2["abc"] == 1
 ```
@@ -2381,7 +2382,7 @@ void rehash(size_type nbuckets);
 ### <a name="parameters"></a>Parametri
 
 *nbuckets*  
- Numero di bucket richiesto.
+Numero di bucket richiesto.
 
 ### <a name="remarks"></a>Note
 
@@ -2435,7 +2436,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2508,7 +2509,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2565,7 +2566,7 @@ void swap(unordered_map& right);
 ### <a name="parameters"></a>Parametri
 
 *right*  
- Contenitore con cui eseguire lo scambio.
+Contenitore con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
 
@@ -2664,7 +2665,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
- InputIterator First,
+InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
@@ -2679,7 +2680,7 @@ unordered_map(
 |*Al*|Oggetto allocatore da archiviare.|
 |*Comp*|Oggetto della funzione di confronto da archiviare.|
 |*hash*|Oggetto della funzione hash da archiviare.|
-|*valore di bucket_count*|Numero minimo di bucket.|
+|*Valore di Bucket_count*|Numero minimo di bucket.|
 |*A destra*|Contenitore da copiare.|
 |*Primo*||
 |*ultimo*||
@@ -2820,18 +2821,18 @@ int main()
 ```
 
 ```Output
- [a, 1] [b, 2] [c, 3]
- [d, 4] [e, 5] [f, 6]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+[d, 4] [e, 5] [f, 6]
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [5, g] [6, h] [7, i] [8, j]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- ```
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+```
 
 ## <a name="value_type"></a>  unordered_map::value_type
 

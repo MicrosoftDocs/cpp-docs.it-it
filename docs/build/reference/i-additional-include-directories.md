@@ -1,5 +1,5 @@
 ---
-title: -I (altre directory di inclusione) | Documenti Microsoft
+title: -I (altre directory di inclusione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,60 +24,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 435714d72eeabe74f0cd85509d74dff5d541b019
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 506f0900cfc7ef5f84e11b2c76d4b593f81d10ba
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373127"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109084"
 ---
 # <a name="i-additional-include-directories"></a>/I (Directory di inclusione aggiuntive)
-Aggiunge una directory all'elenco delle directory ricercato i file di inclusione.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+Aggiunge una directory all'elenco delle directory cercati i file di inclusione.
+
+## <a name="syntax"></a>Sintassi
+
 ```  
-/I[ ]directory  
+/I[ ]directory
 ```  
-  
-## <a name="arguments"></a>Argomenti  
- `directory`  
- La directory da aggiungere all'elenco delle directory ricerca i file di inclusione.  
-  
-## <a name="remarks"></a>Note  
- Per aggiungere più di una directory, utilizzare questa opzione più volte. La ricerca di directory vengono eseguite solo fino a quando non viene trovato il file di inclusione specificato.  
-  
- È possibile utilizzare questa opzione con le Ignora percorsi di inclusione Standard ([/X (Ignora a percorsi di inclusione Standard)](../../build/reference/x-ignore-standard-include-paths.md)) opzione.  
-  
- Il compilatore cerca per le directory nell'ordine seguente:  
-  
-1.  Directory contenente il file di origine.  
-  
-2.  Directory specificate con il **/I** opzione, nell'ordine che vengono rilevate da CL.  
-  
-3.  Directory specificate nel **INCLUDE** variabile di ambiente.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic su di **generale** pagina delle proprietà.  
-  
-4.  Modificare il **directory di inclusione aggiuntive** proprietà.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>.  
-  
-## <a name="example"></a>Esempio  
- Il comando seguente esegue la ricerca di file di inclusione richiesti da Main. c nell'ordine seguente: prima nella directory contenente Main. c, quindi nella directory \INCLUDE, quindi nella directory \MY\INCLUDE e infine nelle directory assegnato a di inclusione variabile di ambiente.  
-  
+
+## <a name="arguments"></a>Argomenti
+*Directory*<br/>
+La directory da aggiungere all'elenco delle directory cercati i file di inclusione.
+
+## <a name="remarks"></a>Note
+Per aggiungere più di una directory, usare questa opzione più volte. Le directory vengono cercate solo fino a quando non viene trovato il file di inclusione specificato.
+
+È possibile usare questa opzione con l'Ignora percorso di inclusione Standard ([/X (Ignora a percorsi di inclusione Standard)](../../build/reference/x-ignore-standard-include-paths.md)) opzione.
+
+Il compilatore cerca le directory nell'ordine seguente:
+
+1.  Directory contenenti file di origine.
+
+2.  Directory specificate con il **/I** opzione nell'ordine che vengono rilevate da CL.
+
+3.  Directory specificate nella **inclusione** variabile di ambiente.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+2.  Fare clic sulla cartella **C/C++** .
+
+3.  Scegliere il **generale** pagina delle proprietà.
+
+4.  Modificare il **directory di inclusione aggiuntive** proprietà.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+-   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>.
+
+## <a name="example"></a>Esempio
+Il comando seguente cerca i file di inclusione richiesti da Main. c nell'ordine seguente: prima nella directory che contiene Main. c, quindi nella directory \INCLUDE, quindi nella directory \MY\INCLUDE e infine nelle directory assegnato a di inclusione variabile di ambiente.
+
 ```  
-CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
+CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 ```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+## <a name="see-also"></a>Vedere anche
+[Opzioni del compilatore](../../build/reference/compiler-options.md)   
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

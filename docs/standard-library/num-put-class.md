@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965990"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100924"
 ---
 # <a name="numput-class"></a>Classe num_put
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+*CharType*<br/>
+Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
-*OutputIterator* il tipo di iteratore in cui le funzioni put numeriche scrivono il proprio output.
+*OutputIterator*<br/>
+Tipo di iteratore in cui le funzioni Put numeriche scrivono il proprio output.
 
 ## <a name="remarks"></a>Note
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametri
 
-*Avanti* un iteratore che punta al primo elemento della stringa inserita.
+*next*<br/>
+Iteratore che punta al primo elemento della stringa inserita.
 
-*In_losbase* specificato nel flusso che contiene le impostazioni locali con il facet numpunct usato per creare la punteggiatura output e i flag per la formattazione dell'output.
+*In_losbase*<br/>
+Specifica il flusso contenente le impostazioni locali con il facet numpunct usato per creare la punteggiatura dell'output e i flag per la formattazione dell'output.
 
-*_Fill* un carattere utilizzato per la spaziatura.
+*_Fill*<br/>
+Carattere usato per la spaziatura.
 
-*Val* il numero o tipo booleano da restituire.
+*Val*<br/>
+Numero o tipo booleano che deve essere incluso nell'output.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs*<br/>
+Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametri
 
-*dest* un iteratore che punta al primo elemento della stringa inserita.
+*dest*<br/>
+Iteratore che punta al primo elemento della stringa inserita.
 
-*In_losbase* specificato nel flusso che contiene le impostazioni locali con il facet numpunct usato per creare la punteggiatura output e i flag per la formattazione dell'output.
+*In_losbase*<br/>
+Specifica il flusso contenente le impostazioni locali con il facet numpunct usato per creare la punteggiatura dell'output e i flag per la formattazione dell'output.
 
-*_Fill* un carattere utilizzato per la spaziatura.
+*_Fill*<br/>
+Carattere usato per la spaziatura.
 
-*Val* il numero o tipo booleano da restituire.
+*Val*<br/>
+Numero o tipo booleano che deve essere incluso nell'output.
 
 ### <a name="return-value"></a>Valore restituito
 

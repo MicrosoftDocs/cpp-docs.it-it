@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef4b993ec628771666ac3773b575ee518c18173
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954708"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106438"
 ---
 # <a name="basiciostream-class"></a>Classe basic_iostream
 
@@ -85,9 +85,11 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parametri
 
-*strbuf* esistente `basic_streambuf` oggetto.
+*strbuf*<br/>
+Oggetto `basic_streambuf` esistente.
 
-*a destra* sprovvisti `basic_iostream` oggetto utilizzato per costruire un nuovo `basic_iostream`.
+*right*<br/>
+Un oggetto `basic_iostream` esistente usato per costruire una nuova classe `basic_iostream`.
 
 ### <a name="remarks"></a>Note
 
@@ -105,7 +107,8 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un' `rvalue` fanno riferimento a un `basic_iostream` oggetto da assegnare.
+*right*<br/>
+Riferimento `rvalue` a un oggetto `basic_iostream` dal quale effettuare l'assegnazione.
 
 ### <a name="remarks"></a>Note
 
@@ -121,7 +124,8 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* il `basic_iostream` oggetto da scambiare.
+*right*<br/>
+L'oggetto `basic_iostream` da scambiare.
 
 ### <a name="remarks"></a>Note
 

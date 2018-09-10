@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: aabd4a68e4ec9d9da96eff14dcf69c5bd667cc06
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958874"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107505"
 ---
 # <a name="alignedstorage-class"></a>Classe aligned_storage
 
@@ -40,9 +40,11 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*Len* le dimensioni dell'oggetto.
+*Len*<br/>
+Dimensioni dell'oggetto.
 
-*Allinea* allineamento dell'oggetto.
+*Allinea*<br/>
+Allineamento dell'oggetto.
 
 ## <a name="remarks"></a>Note
 

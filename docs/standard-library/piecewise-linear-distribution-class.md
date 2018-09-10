@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5efee5c6c867cf7b9b58e94f7475f365dee580ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959472"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102590"
 ---
 # <a name="piecewiselineardistribution-class"></a>Classe piecewise_linear_distribution
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* tipo di risultato, il valore predefinito è a virgola mobile **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Tipo di risultato, il valore predefinito è a virgola mobile **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -258,23 +259,32 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*firstI* un iteratore di input del primo elemento dell'intervallo di distribuzioni.
+*firstI*<br/>
+Iteratore di input del primo elemento dell'intervallo di distribuzioni.
 
-*lastI* un iteratore di input dell'ultimo elemento dell'intervallo di distribuzioni.
+*lastI*<br/>
+Iteratore di input dell'ultimo elemento dell'intervallo di distribuzioni.
 
-*firstW* un iteratore di input del primo elemento dell'intervallo di pesi.
+*firstW*<br/>
+Iteratore di input del primo elemento dell'intervallo di pesi.
 
-*intervalli* un' [initializer_list](../cpp/initializers.md) con gli intervalli della distribuzione.
+*intervals*<br/>
+Oggetto [initializer_list](../cpp/initializers.md) con gli intervalli della distribuzione.
 
-*conteggio* il numero di elementi dell'intervallo di distribuzioni.
+*count*<br/>
+Numero di elementi nell'intervallo di distribuzioni.
 
-*xmin* il valore minimo dell'intervallo di distribuzioni.
+*xmin*<br/>
+Valore minimo dell'intervallo di distribuzioni.
 
-*xmax* il valore massimo dell'intervallo di distribuzioni. Deve essere maggiore di *xmin*.
+*xmax*<br/>
+Valore massimo dell'intervallo di distribuzioni. Deve essere maggiore di *xmin*.
 
-*weightfunc* l'oggetto che rappresenta la funzione di probabilità per la distribuzione. Il valore restituito sia il parametro deve essere convertibile in **doppie**.
+*weightfunc*<br/>
+Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il valore restituito sia il parametro deve essere convertibile in **doppie**.
 
-*Parm* la struttura di parametri utilizzata per costruire la distribuzione.
+*parm*<br/>
+Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 

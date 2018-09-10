@@ -22,54 +22,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c307617ca342331bdeaf68773bc7fd3f0f96b665
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573145"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104108"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Verifica le chiamate ai controlli di stack)
-Controlla le ricerche dello stack.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+Controlla le ricerche dello stack.
+
+## <a name="syntax"></a>Sintassi
+
 ```  
-/Gs[size]  
+/Gs[size]
 ```  
-  
-## <a name="arguments"></a>Argomenti  
- `size`  
- Facoltativo. Numero di byte che le variabili locali possono occupare prima che venga avviato un probe dello stack. Se il **/Gs** opzione viene specificata senza un `size` argomento, è lo stesso effetto **/Gs0**,  
-  
-## <a name="remarks"></a>Note  
- Un probe dello stack è una sequenza di codice inserito dal compilatore in ogni chiamata di funzione. Dopo l'avvio, un probe dello stack verifica in modo non invasivo nella memoria la quantità di spazio che sarà necessaria per l'archiviazione delle variabili locali della funzione.  
-  
- Se per una funzione sono necessari più di `size` byte di spazio dello stack per le variabili locali, viene avviato il relativo probe dello stack. Per impostazione predefinita, il compilatore genera del codice che avvia un probe dello stack quando una funzione richiede più di una pagina di spazio dello stack. Ciò equivale a un'opzione del compilatore **/Gs4096** per piattaforme ARM, x64 e x86. Questo valore consente a un'applicazione e al gestore della memoria di Windows di aumentare la quantità di memoria allocata per lo stack del programma dinamicamente e in fase di esecuzione.  
-  
+
+## <a name="arguments"></a>Argomenti
+*size*<br/>
+Facoltativo. Numero di byte che le variabili locali possono occupare prima che venga avviato un probe dello stack. Se il **/Gs** opzione viene specificata senza un `size` argomento, è lo stesso effetto **/Gs0**,
+
+## <a name="remarks"></a>Note
+Un probe dello stack è una sequenza di codice inserito dal compilatore in ogni chiamata di funzione. Dopo l'avvio, un probe dello stack verifica in modo non invasivo nella memoria la quantità di spazio che sarà necessaria per l'archiviazione delle variabili locali della funzione.
+
+Se per una funzione sono necessari più di `size` byte di spazio dello stack per le variabili locali, viene avviato il relativo probe dello stack. Per impostazione predefinita, il compilatore genera del codice che avvia un probe dello stack quando una funzione richiede più di una pagina di spazio dello stack. Ciò equivale a un'opzione del compilatore **/Gs4096** per piattaforme ARM, x64 e x86. Questo valore consente a un'applicazione e al gestore della memoria di Windows di aumentare la quantità di memoria allocata per lo stack del programma dinamicamente e in fase di esecuzione.
+
 > [!NOTE]
->  Il valore predefinito **/Gs4096** consente allo stack di programma di applicazioni per Windows a crescere in modo corretto in fase di esecuzione. Non modificare l'impostazione predefinita se non si conoscono con esattezza i motivi dell'eventuale modifica.  
-  
- Alcuni programmi, quali i driver di dispositivo virtuali, non necessitano di questo meccanismo di aumento delle dimensioni dello stack. In questi casi, i probe dello stack non sono necessari. È possibile interrompere la generazione dei probe dello stack da parte del compilatore impostando `size` su un valore maggiore di quanto qualsiasi funzione richiederà per l'archiviazione delle variabili locali. È consentito alcuno spazio tra **/Gs** e `size`.  
-  
- **/Gs0** attiva ricerche dello stack per ogni chiamata di funzione che richiede l'archiviazione per le variabili locali. Ciò può influire in modo negativo sulle prestazioni.  
-  
- È possibile attivare o disattivare i probe di stack usando [check_stack](../../preprocessor/check-stack.md). **/GS** e il `check_stack` pragma non hanno alcun effetto sulle routine di libreria C standard, ma influiscono sul solo le funzioni si esegue la compilazione.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Selezionare il **C/C++** cartella.  
-  
-3.  Selezionare il **riga di comando** pagina delle proprietà.  
-  
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+>  Il valore predefinito **/Gs4096** consente allo stack di programma di applicazioni per Windows a crescere in modo corretto in fase di esecuzione. Non modificare l'impostazione predefinita se non si conoscono con esattezza i motivi dell'eventuale modifica.
+
+Alcuni programmi, quali i driver di dispositivo virtuali, non necessitano di questo meccanismo di aumento delle dimensioni dello stack. In questi casi, i probe dello stack non sono necessari. È possibile interrompere la generazione dei probe dello stack da parte del compilatore impostando `size` su un valore maggiore di quanto qualsiasi funzione richiederà per l'archiviazione delle variabili locali. È consentito alcuno spazio tra **/Gs** e `size`.
+
+**/Gs0** attiva ricerche dello stack per ogni chiamata di funzione che richiede l'archiviazione per le variabili locali. Ciò può influire in modo negativo sulle prestazioni.
+
+È possibile attivare o disattivare i probe di stack usando [check_stack](../../preprocessor/check-stack.md). **/GS** e il `check_stack` pragma non hanno alcun effetto sulle routine di libreria C standard, ma influiscono sul solo le funzioni si esegue la compilazione.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+2.  Selezionare il **C/C++** cartella.
+
+3.  Selezionare il **riga di comando** pagina delle proprietà.
+
+4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+-   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vedere anche
+[Opzioni del compilatore](../../build/reference/compiler-options.md)   
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

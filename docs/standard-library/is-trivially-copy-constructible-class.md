@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1924b82f7c3035ea2aecb463199558c9ead45c91
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963667"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102065"
 ---
 # <a name="istriviallycopyconstructible-class"></a>Classe is_trivially_copy_constructible
 
@@ -36,7 +36,8 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T* il tipo di query.
+*T*<br/>
+Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 

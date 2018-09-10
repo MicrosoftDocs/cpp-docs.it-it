@@ -16,111 +16,118 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ea0723d1dfa3c278ab385e393cd0f3b0d9f633f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596701"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109058"
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
-Contiene le informazioni di runtime su un tipo, in particolare un nome di stringa e un codice del tipo. Ottenuto chiamando [Object:: GetType](../cppcx/platform-object-class.md#gettype) a tutti gli oggetti o tramite il [typeid](../windows/typeid-cpp-component-extensions.md) operatore su un nome di classe o struct.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-public ref class Platform::Type :      
+
+Contiene le informazioni di runtime su un tipo, in particolare un nome di stringa e un codice del tipo. Ottenuto chiamando [Object:: GetType](../cppcx/platform-object-class.md#gettype) a tutti gli oggetti o tramite il [typeid](../windows/typeid-cpp-component-extensions.md) operatore su un nome di classe o struct.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+public ref class Platform::Type :
     Platform::Object, Platform::Details::IEquatable,
-    Platform::Details::IPrintable  
-```  
-  
-### <a name="remarks"></a>Note  
- La classe `Type` è utile nelle applicazioni che richiedono l'elaborazione diretta usando un'istruzione `if` o `switch` che si dirama in base al tipo di runtime di un oggetto. Il codice del tipo che descrive la categoria di un tipo viene recuperato utilizzando il [Type:: GetTypeCode](#gettypecode) funzione membro.  
-  
-## <a name="public-methods"></a>Metodi pubblici  
-  
-|||  
-|-|-|  
-|[metodo Type::GetTypeCode](#gettypecode)|Restituisce un valore dell'enumerazione [Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) per l'oggetto.| 
-|[Metodo Type::ToString](#tostring)|Restituisce il nome del tipo come specificato nei metadati.| 
+    Platform::Details::IPrintable
+```
 
- 
-## <a name="public-properties"></a>Proprietà pubbliche  
-  
-|||  
-|-|-|  
-|[Type:: FullName](#fullname)|Restituisce una classe [Platform::String](../cppcx/platform-string-class.md)^ che rappresenta il nome completo del tipo e usa il punto (punto) come separatore, non:: (doppio carattere due punti), ad esempio, `MyNamespace.MyClass`.|  
-  
-## <a name="conversion-operators"></a>Operatori di conversione  
-  
-|||  
-|-|-|  
-|[Operatore Type^](../cppcx/operator-type-hat.md)|Consente la conversione da `Windows::UI::Xaml::Interop::TypeName` a `Platform::Type`.|  
-|[Operatore Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Consente la conversione da `Platform::Type` a `Windows::UI::Xaml::Interop::TypeName`.|  
-  
-### <a name="requirements"></a>Requisiti  
- **Client minimo supportato:** Windows 8  
-  
- **Server minimo supportato:** Windows Server 2012  
-  
- **Spazio dei nomi:** Platform  
-  
- **Metadati:** platform.winmd  
+### <a name="remarks"></a>Note
 
- 
+La classe `Type` è utile nelle applicazioni che richiedono l'elaborazione diretta usando un'istruzione `if` o `switch` che si dirama in base al tipo di runtime di un oggetto. Il codice del tipo che descrive la categoria di un tipo viene recuperato utilizzando il [Type:: GetTypeCode](#gettypecode) funzione membro.
+
+## <a name="public-methods"></a>Metodi pubblici
+
+|||
+|-|-|
+|[metodo Type::GetTypeCode](#gettypecode)|Restituisce un valore dell'enumerazione [Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) per l'oggetto.|
+|[Metodo Type::ToString](#tostring)|Restituisce il nome del tipo come specificato nei metadati.|
+
+## <a name="public-properties"></a>Proprietà pubbliche
+
+|||
+|-|-|
+|[Type:: FullName](#fullname)|Restituisce una classe [Platform::String](../cppcx/platform-string-class.md)^ che rappresenta il nome completo del tipo e usa il punto (punto) come separatore, non:: (doppio carattere due punti), ad esempio, `MyNamespace.MyClass`.|
+
+## <a name="conversion-operators"></a>Operatori di conversione
+
+|||
+|-|-|
+|[Operatore Type^](../cppcx/operator-type-hat.md)|Consente la conversione da `Windows::UI::Xaml::Interop::TypeName` a `Platform::Type`.|
+|[Operatore Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Consente la conversione da `Platform::Type` a `Windows::UI::Xaml::Interop::TypeName`.|
+
+### <a name="requirements"></a>Requisiti
+
+**Client minimo supportato:** Windows 8
+
+**Server minimo supportato:** Windows Server 2012
+
+**Spazio dei nomi:** Platform
+
+**Metadati:** platform.winmd
+
 ## <a name="fullname"></a> Proprietà Type::FullName
-Recupera il nome completo del tipo corrente nel formato `Namespace.Type`.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-String^ FullName();  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Nome del tipo.  
-### <a name="example"></a>Esempio  
-  
-```  
-  
-//  namespace is TestApp  
-MainPage::MainPage()  
-{  
-    InitializeComponent();  
-    Type^ t = this->GetType();  
-    auto s = t->FullName; // returns "TestApp.MainPage"  
-    auto s2 = t->ToString(); //also returns "TestApp.MainPage"  
-}  
-```  
-  
 
+Recupera il nome completo del tipo corrente nel formato `Namespace.Type`.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+String^ FullName();
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Nome del tipo.
+### <a name="example"></a>Esempio
+
+```
+
+//  namespace is TestApp
+MainPage::MainPage()
+{
+    InitializeComponent();
+    Type^ t = this->GetType();
+    auto s = t->FullName; // returns "TestApp.MainPage"
+    auto s2 = t->ToString(); //also returns "TestApp.MainPage"
+}
+```
 
 ## <a name="gettypecode"></a> metodo Type::GetTypeCode
-Recupera una categoria di tipo numerico dei tipi incorporati.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-Platform::TypeCode GetTypeCode();  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Uno dei valori enumerati di Platform::TypeCode.  
-  
-### <a name="remarks"></a>Note  
- L'equivalente del metodo membro GetTypeCode () è il `typeid` proprietà.
+
+Recupera una categoria di tipo numerico dei tipi incorporati.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+Platform::TypeCode GetTypeCode();
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Uno dei valori enumerati di Platform::TypeCode.
+
+### <a name="remarks"></a>Note
+
+L'equivalente del metodo membro GetTypeCode () è il `typeid` proprietà.
 
 ## <a name="tostring"></a> Metodo Type::ToString
-Recupera un nome del tipo.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-Platform::String^ ToString();  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Nome del tipo come specificato nei metadati.    
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)
+
+Recupera un nome del tipo.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+Platform::String^ ToString();
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Nome del tipo come specificato nei metadati.
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

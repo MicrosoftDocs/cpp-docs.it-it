@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9b4a8b148dc8b72c7dcc1931802c503be783e9ea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027397"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108603"
 ---
 # <a name="ltfuturegt-functions"></a>Funzioni &lt;future&gt;
 
@@ -46,7 +46,8 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parametri
 
-*criterio* un' [avviare](../standard-library/future-enums.md#launch) valore.
+*criteri*<br/>
+Valore [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Note
 
@@ -93,7 +94,8 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Errno* un' [future_errc](../standard-library/future-enums.md#future_errc) valore che identifica l'errore segnalato.
+*errno*<br/>
+Valore [future_errc](../standard-library/future-enums.md#future_errc) che identifica l'errore segnalato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -109,7 +111,8 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Errno* un' [future_errc](../standard-library/future-enums.md#future_errc) valore che identifica l'errore segnalato.
+*errno*<br/>
+Valore [future_errc](../standard-library/future-enums.md#future_errc) che identifica l'errore segnalato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -129,9 +132,11 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra* sinistra `promise` oggetto.
+*A sinistra*<br/>
+L'oggetto `promise` a sinistra.
 
-*A destra* destra `promise` oggetto.
+*A destra*<br/>
+L'oggetto `promise` corretto.
 
 ## <a name="see-also"></a>Vedere anche
 

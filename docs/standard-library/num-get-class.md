@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb6364a9f1cb74f9a002e37c278f3686b9916ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959820"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110123"
 ---
 # <a name="numget-class"></a>Classe num_get
 
@@ -44,9 +44,11 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+*CharType*<br/>
+Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
-*InputIterator* il tipo di iteratore da cui le funzioni get numeric leggono il relativo input.
+*InputIterator*<br/>
+Tipo di iteratore da cui le funzioni get numeric leggono il relativo input.
 
 ## <a name="remarks"></a>Note
 
@@ -175,15 +177,20 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* l'inizio dell'intervallo di caratteri da cui leggere il numero.
+*first*<br/>
+Inizio dell'intervallo di caratteri da cui leggere il numero.
 
-*ultimo* la fine dell'intervallo di caratteri da cui leggere il numero.
+*last*<br/>
+Fine dell'intervallo di caratteri da cui leggere il numero.
 
-*In_losbase* il [ios_base](../standard-library/ios-base-class.md) cui flag vengono usati per la conversione.
+*In_losbase*<br/>
+[ios_base](../standard-library/ios-base-class.md) i cui flag vengono usati per la conversione.
 
-*Stato* lo stato su cui failbit (vedere [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) viene aggiunto in caso di errore.
+*Stato*<br/>
+Lo stato a cui viene aggiunto failbit (vedere [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) in caso di errore.
 
-*Val* il valore letto.
+*Val*<br/>
+Valore letto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -417,15 +424,20 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*primo* l'inizio dell'intervallo di caratteri da cui leggere il numero.
+*first*<br/>
+Inizio dell'intervallo di caratteri da cui leggere il numero.
 
-*ultimo* la fine dell'intervallo di caratteri da cui leggere il numero.
+*last*<br/>
+Fine dell'intervallo di caratteri da cui leggere il numero.
 
-*In_losbase* il [ios_base](../standard-library/ios-base-class.md) cui flag vengono usati per la conversione.
+*In_losbase*<br/>
+[ios_base](../standard-library/ios-base-class.md) i cui flag vengono usati per la conversione.
 
-*Stato* lo stato su cui failbit (vedere [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) viene aggiunto in caso di errore.
+*Stato*<br/>
+Lo stato a cui viene aggiunto failbit (vedere [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) in caso di errore.
 
-*Val* il valore letto.
+*Val*<br/>
+Valore letto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -571,7 +583,8 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs*<br/>
+Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 

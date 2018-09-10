@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954903"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106743"
 ---
 # <a name="ltstringgt-functions"></a>Funzioni &lt;string&gt;
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>Parametri
 
-*è* il flusso di input da cui è possibile estrarre una stringa.
+*is*<br/>
+Flusso di input da cui estrarre una stringa.
 
-*str* la stringa in cui vengono letti i caratteri dal flusso di input.
+*str*<br/>
+Stringa in cui vengono letti i caratteri dal flusso di input.
 
-*Delim* il delimitatore di riga.
+*Delim*<br/>
+Delimitatore di riga.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* un'unica stringa cui elementi sono da scambiare con quelli di un'altra stringa.
+*left*<br/>
+Stringa di cui scambiare gli elementi con quelli di un'altra stringa.
 
-*a destra* la stringa di cui elementi sono da scambiare con la prima stringa.
+*right*<br/>
+Altra stringa di cui scambiare gli elementi con quelli della prima stringa.
 
 ### <a name="remarks"></a>Note
 

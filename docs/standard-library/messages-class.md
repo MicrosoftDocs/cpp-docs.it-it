@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954890"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106451"
 ---
 # <a name="messages-class"></a>Classe messages
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+*CharType*<br/>
+Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 ## <a name="remarks"></a>Note
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Catval* il catalogo da chiudere.
+*Catval*<br/>
+Catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Catval* il catalogo da chiudere.
+*Catval*<br/>
+Catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametri
 
-*Catval* il valore di identificazione che specifica il catalogo dei messaggi da cercare.
+*Catval*<br/>
+Valore di identificazione che specifica il catalogo dei messaggi in cui eseguire ricerche.
 
-*Imposta* il primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
+*Imposta*<br/>
+Primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*Messaggio* secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
+*Messaggio*<br/>
+Secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*_Dfault* la stringa da restituire in caso di errore.
+*_Dfault*<br/>
+Stringa da restituire in caso di esito negativo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catname* il nome del catalogo in cui cercare.
+*_Catname*<br/>
+Nome del catalogo in cui eseguire ricerche.
 
-*_Loc* le impostazioni locali da ricercare nel catalogo.
+*_Loc*<br/>
+Impostazioni locali da ricercare nel catalogo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*Catval* il valore di identificazione che specifica il catalogo dei messaggi da cercare.
+*Catval*<br/>
+Valore di identificazione che specifica il catalogo dei messaggi in cui eseguire ricerche.
 
-*Imposta* il primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
+*Imposta*<br/>
+Primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*Messaggio* secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
+*Messaggio*<br/>
+Secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*_Dfault* la stringa da restituire in caso di errore.
+*_Dfault*<br/>
+Stringa da restituire in caso di esito negativo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs*<br/>
+Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-*_Locname* il nome delle impostazioni locali.
+*_Locname*<br/>
+Nome delle impostazioni locali.
 
 ### <a name="remarks"></a>Note
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catname* il nome del catalogo in cui cercare.
+*_Catname*<br/>
+Nome del catalogo in cui eseguire ricerche.
 
-*_Loc* le impostazioni locali da ricercare nel catalogo.
+*_Loc*<br/>
+Impostazioni locali da ricercare nel catalogo.
 
 ### <a name="return-value"></a>Valore restituito
 

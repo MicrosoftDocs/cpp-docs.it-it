@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960069"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109889"
 ---
 # <a name="basicistringstream-class"></a>Classe basic_istringstream
 
@@ -44,11 +44,14 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametri
 
-*Alloc* la classe allocator.
+*Alloc*<br/>
+Classe Allocator.
 
-*Elem* il tipo di elemento di base della stringa.
+*Elem*<br/>
+Tipo di elemento di base della stringa.
 
-*TR* tratti di carattere specializzati sull'elemento di base della stringa.
+*Tr*<br/>
+Tratti di carattere specializzati sull'elemento di base della stringa.
 
 ## <a name="remarks"></a>Note
 
@@ -112,11 +115,14 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parametri
 
-*Modalità* una delle enumerazioni nello [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modalità*<br/>
+Una delle enumerazioni in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str* un oggetto di tipo `basic_string`.
+*str*<br/>
+Oggetto di tipo `basic_string`.
 
-*a destra* riferimento rvalue di un `basic_istringstream` oggetto.
+*right*<br/>
+Riferimento rvalue di un oggetto `basic_istringstream`.
 
 ### <a name="remarks"></a>Note
 
@@ -136,7 +142,8 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* riferimento rvalue a un `basic_istringstream` oggetto.
+*right*<br/>
+Riferimento rvalue a un oggetto `basic_istringstream`.
 
 ### <a name="remarks"></a>Note
 
@@ -172,7 +179,8 @@ void str(
 
 ### <a name="parameters"></a>Parametri
 
-*_Newstr* la nuova stringa.
+*_Newstr*<br/>
+La nuova stringa.
 
 ### <a name="return-value"></a>Valore restituito
 

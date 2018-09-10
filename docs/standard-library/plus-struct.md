@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c7faa1146c7784076c75a468e87a717a8d03da
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 81dee8442d38a4436b503da83f2853c030b652da
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965730"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103214"
 ---
 # <a name="plus-struct"></a>Struct plus
 
@@ -44,16 +44,18 @@ struct plus<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) + std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *Tipo di*, *T*, *U* un tipo che supporta un file binario `operator+` che accetta gli operandi dei tipi specificati o dedotti.
 
-*Sinistra* l'operando sinistro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*A sinistra*<br/>
+Operando sinistro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-*Destra* l'operando destro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+*A destra*<br/>
+Operando destro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
 

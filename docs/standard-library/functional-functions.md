@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2b776fb155d8927b610de38bdd79370f4c0803
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208650"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107411"
 ---
 # <a name="ltfunctionalgt-functions"></a>Funzioni &lt;functional&gt;
 
@@ -70,13 +70,17 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>Parametri
 
-*Fty* il tipo di oggetto da chiamare.
+*Fty*<br/>
+Tipo di oggetto da chiamare.
 
-*TN* il tipo dell'ennesimo argomento di chiamata.
+*TN*<br/>
+Tipo dell'ennesimo argomento di chiamata.
 
-*Fn* oggetto da chiamare.
+*Fn*<br/>
+Oggetto da chiamare.
 
-*tN* l'ennesimo argomento di chiamata.
+*TN*<br/>
+Ennesimo argomento di chiamata.
 
 ### <a name="remarks"></a>Note
 
@@ -165,9 +169,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Parametri
 
-*Func* oggetto funzione binaria da convertire in un oggetto funzione unaria.
+*func*<br/>
+Oggetto funzione binaria da convertire in un oggetto funzione unaria.
 
-*a sinistra* valore a cui deve essere associato il primo argomento dell'oggetto funzione binaria.
+*left*<br/>
+Valore a cui deve essere associato il primo argomento dell'oggetto funzione binaria.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -257,9 +263,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Func* oggetto funzione binaria da convertire in un oggetto funzione unaria.
+*func*<br/>
+Oggetto funzione binaria da convertire in un oggetto funzione unaria.
 
-*a destra* il valore a cui è necessario associare il secondo argomento dell'oggetto funzione binaria.
+*right*<br/>
+Valore a cui deve essere associato il secondo argomento dell'oggetto funzione binaria.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -348,7 +356,7 @@ struct bit_and : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator&
 template <>
@@ -364,9 +372,11 @@ struct bit_and<void>
 
 *Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator&` che accetta gli operandi dei tipi specificati o dedotti.
 
-*Sinistra* l'operando sinistro dell'operazione AND bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*A sinistra*<br/>
+Operando sinistro dell'operazione AND bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-*Destra* l'operando destro dell'operazione AND bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+*A destra*<br/>
+Operando destro dell'operazione AND bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -383,24 +393,26 @@ Oggetto funzione predefinito che esegue l'operazione di complemento (NOT) bit pe
 ```cpp
 template <class Type = void>
 struct bit_not : public unary_function<Type, Type>
- {
+{
     Type operator()(const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator~
 template <>
 struct bit_not<void>
- {
+{
     template <class Type>
     auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di* un tipo che supporta unario `operator~`.
+*Type*<br/>
+Tipo che supporta un oggetto `operator~` unario.
 
-*Destra* l'operando dell'operazione di complemento bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di un argomento di riferimento lvalue o rvalue del tipo dedotto perfetto *tipo*.
+*A destra*<br/>
+Operando dell'operazione di complemento bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di un argomento di riferimento lvalue o rvalue del tipo dedotto perfetto *tipo*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -420,7 +432,7 @@ struct bit_or : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator|
 template <>
@@ -436,9 +448,11 @@ struct bit_or<void>
 
 *Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator|` che accetta gli operandi dei tipi specificati o dedotti.
 
-*Sinistra* l'operando sinistro dell'operazione OR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*A sinistra*<br/>
+Operando sinistro dell'operazione OR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-*Destra* l'operando destro dell'operazione OR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+*A destra*<br/>
+Operando destro dell'operazione OR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -458,7 +472,7 @@ struct bit_xor : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator^
 template <>
@@ -474,9 +488,11 @@ struct bit_xor<void>
 
 *Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator^` che accetta gli operandi dei tipi specificati o dedotti.
 
-*Sinistra* l'operando sinistro dell'operazione XOR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*A sinistra*<br/>
+Operando sinistro dell'operazione XOR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-*Destra* l'operando destro dell'operazione XOR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+*A destra*<br/>
+Operando destro dell'operazione XOR bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -500,9 +516,11 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>Parametri
 
-*Ty* il tipo dell'argomento per eseguire il wrapping.
+*Ty*<br/>
+Tipo di argomento di cui eseguire il wrapping.
 
-*arg* l'argomento per eseguire il wrapping.
+*arg*<br/>
+Argomento di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
 
@@ -552,9 +570,11 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>Parametri
 
-*RET* il tipo restituito della funzione con wrapping.
+*RET*<br/>
+Tipo restituito della funzione di cui è stato eseguito il wrapping.
 
-*Ty* il tipo di puntatore a funzione membro.
+*Ty*<br/>
+Tipo di puntatore a funzione membro.
 
 ### <a name="remarks"></a>Note
 
@@ -623,7 +643,8 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>Parametri
 
-*pMem* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
+*pMem*<br/>
+Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -709,7 +730,8 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>Parametri
 
-*pMem* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
+*pMem*<br/>
+Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -804,7 +826,8 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>Parametri
 
-*pred* predicato unario da negare.
+*Pred*<br/>
+Predicato unario da negare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -875,7 +898,8 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parametri
 
-*Func* il predicato binario da negare.
+*func*<br/>
+Predicato binario da negare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -953,7 +977,8 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>Parametri
 
-*pfunc* il puntatore a funzione unaria o binaria da convertire in una funzione adattabile.
+*pfunc*<br/>
+Puntatore a funzione unaria o binaria da convertire in una funzione adattabile.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1072,11 +1097,14 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>Parametri
 
-*Fty* tipo controllato dagli oggetti funzione.
+*Fty*<br/>
+Tipo controllato dagli oggetti funzione.
 
-*F1* il primo oggetto funzione.
+*F1*<br/>
+Primo oggetto funzione.
 
-*F2* secondo oggetto funzione.
+*F2*<br/>
+Secondo oggetto funzione.
 
 ### <a name="remarks"></a>Note
 

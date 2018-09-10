@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 669e6f8d26b8ce6255d1c8195a089d07ff028b64
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 07957ded8b8b53ef06f684ad7b9901ed7071490d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965779"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106665"
 ---
 # <a name="ismemberfunctionpointer-class"></a>Classe is_member_function_pointer
 
@@ -37,7 +37,8 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty* il tipo di query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 

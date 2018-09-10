@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956843"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110018"
 ---
 # <a name="basicios-class"></a>Classe basic_ios
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parametri
 
-*Elem* un tipo.
+*Elem*<br/>
+Tipo.
 
-*Tratti* una variabile di tipo `char_traits`.
+*Tratti*<br/>
+Variabile di tipo `char_traits`.
 
 ## <a name="remarks"></a>Note
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>Parametri
 
-*Service bus* buffer Standard per archiviare gli elementi di input o outpui.
+*Service bus*<br/>
+Buffer standard in cui archiviare gli elementi di input o output.
 
 ### <a name="remarks"></a>Note
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* flusso cui flag si desidera copiare.
+*right*<br/>
+Flusso di cui si vuole copiare i flag.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parametri
 
-*Newexcept* i flag che si desidera generare un'eccezione.
+*Newexcept*<br/>
+Flag che si vuole generino un'eccezione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parametri
 
-*Char* il carattere desiderato come carattere di riempimento.
+*Char*<br/>
+Il carattere che si vuole usare come carattere di riempimento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parametri
 
-*Loc* stringa delle impostazioni locali.
+*Loc*<br/>
+Stringa delle impostazioni locali.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parametri
 
-*SB* buffer standard per archiviare gli elementi di input o outpui.
+*SB*<br/>
+Buffer standard in cui archiviare gli elementi di input o output.
 
-*_Isstd* consente di specificare se si tratta di un flusso standard.
+*_Isstd*<br/>
+Specifica se si tratta di un flusso standard.
 
 ### <a name="remarks"></a>Note
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* il `ios_base` oggetto per spostare i valori.
+*right*<br/>
+L'oggetto `ios_base` da cui spostare i valori.
 
 ### <a name="remarks"></a>Note
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parametri
 
-*Char* il **char** da convertire.
+*Char*<br/>
+Il **char** da convertire.
 
-*Default* il **char** che si vuole restituire se viene trovato alcun equivalente.
+*Default*<br/>
+Il **char** che si vuole restituire se viene trovato alcun equivalente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parametri
 
-*SB* un flusso.
+*SB*<br/>
+Flusso.
 
 ### <a name="remarks"></a>Note
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parametri
 
-*Stato* flag aggiuntivi da impostare.
+*Stato*<br/>
+Flag aggiuntivi da impostare.
 
 ### <a name="remarks"></a>Note
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parametri
 
-*strbuf* il buffer del flusso per diventare il buffer di lettura.
+*strbuf*<br/>
+Buffer del flusso che deve diventare il buffer di lettura.
 
 ### <a name="remarks"></a>Note
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parametri
 
-*str* un flusso.
+*str*<br/>
+Flusso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Char* carattere da convertire.
+*Char*<br/>
+Carattere da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* il `basic_ios` oggetto utilizzato per scambiare valori.
+*right*<br/>
+Oggetto `basic_ios` usato per lo scambio dei valori.
 
 ### <a name="remarks"></a>Note
 

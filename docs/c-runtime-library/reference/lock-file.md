@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400658"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107491"
 ---
 # <a name="lockfile"></a>_lock_file
 
-Blocca un **FILE** oggetto per garantire la coerenza per thread che accedono al **FILE** oggetto contemporaneamente.
+Blocca un' **FILE** oggetto per garantire la coerenza per i thread che accedono al **FILE** oggetto contemporaneamente.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -53,11 +53,12 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parametri
 
-*file* handle di File.
+*file*<br/>
+Handle di file.
 
 ## <a name="remarks"></a>Note
 
-Il **lock_file** funzione blocchi il **FILE** oggetto specificato dal *file*. Il file sottostante non sia bloccato da **lock_file**. Usare [unlock_file](unlock-file.md) per rilasciare il blocco sul file. Le chiamate a **lock_file** e **unlock_file** deve corrispondere in un thread.
+Il **lock_file** funzione blocchi il **FILE** specificato dall'oggetto *file*. Il file sottostante non sia bloccato da **lock_file**. Usare [unlock_file](unlock-file.md) per rilasciare il blocco sul file. Le chiamate a **lock_file** e **unlock_file** devono corrispondere in un thread.
 
 ## <a name="requirements"></a>Requisiti
 

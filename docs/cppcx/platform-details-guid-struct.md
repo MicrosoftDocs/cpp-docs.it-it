@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0aaaffb4254fc676e95f6c6bb315d5f257d64e48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 984af1944a6181382207d33a8ee60799cfcee634
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754904"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101834"
 ---
 # <a name="platformdetailsguid-struct"></a>Struct Platform::Details::__GUID
-Questo struct è solo per uso interno e non deve essere usato per lo sviluppo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-  
-ref struct __GUID;  
-```  
-  
-### <a name="remarks"></a>Note  
- Questo struct viene fornito unicamente per completezza, perché può essere controllato con i browser.  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `Platform`  
-  
-### <a name="requirements"></a>Requisiti  
- **Metadati:** platform.winmd  
-  
- **Spazio dei nomi:** Platform::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Platform Namespace](platform-namespace-c-cx.md)
+
+Questo struct è solo per uso interno e non deve essere usato per lo sviluppo.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+ref struct __GUID;
+```
+
+### <a name="remarks"></a>Note
+
+Questo struct viene fornito unicamente per completezza, perché può essere controllato con i browser.
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`Platform`
+
+### <a name="requirements"></a>Requisiti
+
+**Metadati:** platform.winmd
+
+**Spazio dei nomi:** Platform::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Platform Namespace](platform-namespace-c-cx.md)

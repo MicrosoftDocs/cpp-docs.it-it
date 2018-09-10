@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 526ed4340446e78a723af97f43fbed401f574764
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966582"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106044"
 ---
 # <a name="ostrstream-class"></a>Classe ostrstream
 
@@ -77,7 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametri
 
-*_Freezeit* un' **bool** che indica se si desidera che il flusso per essere bloccato.
+*_Freezeit*<br/>
+Oggetto **bool** che indica se si desidera che il flusso per essere bloccato.
 
 ### <a name="remarks"></a>Note
 
@@ -101,11 +102,14 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parametri
 
-*PTR* nel buffer.
+*ptr*<br/>
+Buffer.
 
-*conteggio* le dimensioni del buffer in byte.
+*count*<br/>
+Dimensioni del buffer in byte.
 
-*Modalità* la modalità di input e output del buffer. Per altre informazioni, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Modalità*<br/>
+Modalità di input e output del buffer. Per altre informazioni, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Note
 

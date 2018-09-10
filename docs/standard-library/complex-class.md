@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a76266714a462837ce8c919392abde8293af8d86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684721"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103252"
 ---
 # <a name="complex-class"></a>Classe complex
 
@@ -108,11 +108,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametri
 
-*_RealVal* il valore della parte reale usata per inizializzare il numero complesso da costruire.
+*_RealVal*<br/>
+Valore della parte reale usata per inizializzare il numero complesso da costruire.
 
-*_ImagVal* il valore della parte immaginaria usata per inizializzare il numero complesso da costruire.
+*_ImagVal*<br/>
+Valore della parte immaginaria usata per inizializzare il numero complesso da costruire.
 
-*complexNum* numero complesso le cui parti reale e immaginarie vengono utilizzati per inizializzare il numero complesso da costruire.
+*complexNum*<br/>
+Numero complesso le cui parti reale e immaginaria vengono usate per inizializzare il numero complesso da costruire.
 
 ### <a name="remarks"></a>Note
 
@@ -187,7 +190,8 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un numero complesso di cui il valore immaginario da estrarre.
+*right*<br/>
+Numero complesso di cui estrarre il valore immaginario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -243,7 +247,8 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
+*right*<br/>
+Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -326,7 +331,8 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
+*right*<br/>
+Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -400,7 +406,7 @@ The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)
 The complex number cr1 added to the complex number cl1 is:
- cl1 += cr1 = (5,3)
+cl1 += cr1 = (5,3)
 The modulus of cl1 is: 5.83095
 The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.
 
@@ -408,7 +414,7 @@ The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)
 The complex number cr2 added to the complex number cl2 is:
- cl2 += cr2 = (3,4)
+cl2 += cr2 = (3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -428,9 +434,11 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* un numero complesso da sottrarre dal numero complesso di destinazione.
+*complexNum*<br/>
+Numero complesso da sottrarre dal numero complesso di destinazione.
 
-*_RealPart* un numero reale da sottrarre dal numero complesso di destinazione.
+*_RealPart*<br/>
+Numero reale da sottrarre dal numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -503,18 +511,18 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The difference between the two complex numbers is:
- cs1 = cl1 - cr1 = (1,5)
+cs1 = cl1 - cr1 = (1,5)
 Complex number cr1 subtracted from complex number cl1 is:
- cl1 -= cr1 = (1,5)
+cl1 -= cr1 = (1,5)
 The modulus of cl1 is: 5.09902
 The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.
 
 The left-side complex number is cl2 = (2,4)
 The right-side complex number is cr2 = 5
 The difference between the two complex numbers is:
- cs2 = cl2 - cr2 = (-3,4)
+cs2 = cl2 - cr2 = (-3,4)
 Complex number cr2 subtracted from complex number cl2 is:
- cl2 -= cr2 = (-3,4)
+cl2 -= cr2 = (-3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
@@ -534,9 +542,11 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum* un numero complesso da sottrarre dal numero complesso di destinazione.
+*complexNum*<br/>
+Numero complesso da sottrarre dal numero complesso di destinazione.
 
-*_RealPart* un numero reale da sottrarre dal numero complesso di destinazione.
+*_RealPart*<br/>
+Numero reale da sottrarre dal numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -634,7 +644,8 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
+*right*<br/>
+Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -666,7 +677,7 @@ int main( )
 
    cl1  = cr1;
    cout << "The complex number cr1 assigned to the complex number cl1 is:"
-        << "\n cl1 = cr1 = " << cl1 << endl;
+        << "\ncl1 = cr1 = " << cl1 << endl;
 
    // Example of the second member function
    // type double assigned to type complex<double>
@@ -677,11 +688,11 @@ int main( )
 
    cl2 = cr2;
    cout << "The complex number cr2 assigned to the complex number cl2 is:"
-        << "\n cl2 = cr2 = " << cl2 << endl;
+        << "\ncl2 = cr2 = " << cl2 << endl;
 
    cl2 = complex<double>(3.0, 4.0);
    cout << "The complex number (3, 4) assigned to the complex number cl2 is:"
-        << "\n cl2 = " << cl2 << endl;
+        << "\ncl2 = " << cl2 << endl;
 }
 ```
 
@@ -689,13 +700,13 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The complex number cr1 assigned to the complex number cl1 is:
- cl1 = cr1 = (2,-1)
+cl1 = cr1 = (2,-1)
 The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The complex number cr2 assigned to the complex number cl2 is:
- cl2 = cr2 = (5,0)
+cl2 = cr2 = (5,0)
 The complex number (3, 4) assigned to the complex number cl2 is:
- cl2 = (3,4)
+cl2 = (3,4)
 ```
 
 ## <a name="real"></a>  complex::real
@@ -711,7 +722,8 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un numero complesso da estrarre il cui valore reale.
+*right*<br/>
+Numero complesso di cui estrarre il valore reale.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966626"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101809"
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
+*left*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
-*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
+*right*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*left*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*right*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*left*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*right*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*left*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*right*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*left*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*right*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*_Ostr* il flusso di output su cui scritto.
+*_Ostr*<br/>
+Flusso di output in cui scrivere.
 
-*str* la stringa deve essere immesso nel flusso di output.
+*str*<br/>
+Stringa da immettere nel flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*left*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*right*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*left*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*right*<br/>
+Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-*_Istr* il flusso di input utilizzato per estrarre la sequenza
+*_Istr*<br/>
+Flusso di input usato per estrarre la sequenza
 
-*a destra* la stringa da cui vengono estratti dal flusso di input.
+*right*<br/>
+Stringa da estrarre dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 

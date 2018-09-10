@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cea2bfd33e1f777f2c9dfcbb59897ebd72c7633
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965591"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107136"
 ---
 # <a name="isobject-class"></a>Classe is_object
 
@@ -37,7 +37,8 @@ struct is_object;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty* il tipo di query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 

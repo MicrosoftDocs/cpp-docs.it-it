@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa485eea6f0ffda05b0ef33a808d5ec837255514
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b68404df0f56a4a75c89b5f3a44ff8c853c5cef4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400044"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103905"
 ---
 # <a name="freedbg"></a>_free_dbg
 
@@ -56,15 +56,17 @@ void _free_dbg(
 
 ### <a name="parameters"></a>Parametri
 
-*userData* puntatore al blocco di memoria allocata da liberare.
+*userData*<br/>
+Puntatore al blocco di memoria precedentemente allocata da liberare.
 
-*blockType* tipo di blocco di memoria allocata da liberare: **CLIENT_BLOCK**, **NORMAL_BLOCK**, o **IGNORE_BLOCK**.
+*blockType*<br/>
+Tipo di blocco di memoria allocata da liberare: **CLIENT_BLOCK**, **NORMAL_BLOCK**, o **IGNORE_BLOCK**.
 
 ## <a name="remarks"></a>Note
 
-Il **free_dbg** funzione è una versione di debug di [libero](free.md) (funzione). Quando si [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **free_dbg** viene ridotta a una chiamata a **libero**. Entrambi **gratuita** e **free_dbg** liberano un blocco di memoria nell'heap di base, ma **free_dbg** contiene due funzionalità di debug: la possibilità di mantenere liberato blocchi dell'heap elenco collegato per simulare condizioni di memoria insufficiente e un parametro di tipo blocco per liberare tipi specifici di allocazioni.
+Il **free_dbg** funzione è una versione di debug di [gratuita](free.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **free_dbg** viene ridotta a una chiamata a **gratuito**. Entrambe **gratuito** e **free_dbg** liberano un blocco di memoria nell'heap di base, ma **free_dbg** contiene due funzionalità di debug: la possibilità di mantenere liberati i blocchi dell'heap elenco collegato per simulare condizioni di memoria insufficiente e un parametro di tipo blocco per liberare tipi specifici di allocazioni.
 
-**free_dbg** esegue un controllo di validità su tutti i file specificati e i percorsi di blocco prima di eseguire l'operazione disponibile. Non è previsto che l'applicazione fornisca queste informazioni. Quando un blocco di memoria viene liberato, il gestore dell'heap di debug controlla automaticamente l'integrità dei buffer a ogni lato della porzione utente e genera un rapporto errori se si sono verificate sovrascritture. Se il **CRTDBG_DELAY_FREE_MEM_DF** campo di bit del [crtDbgFlag](../../c-runtime-library/crtdbgflag.md) flag è impostato, il blocco liberato viene riempito con il valore 0xDD, viene assegnato il **FREE_BLOCK** , tipo di blocco e mantenuti nell'elenco collegato dell'heap di blocchi di memoria.
+**free_dbg** esegue un controllo di validità su tutti i file specificati e i percorsi di blocco prima di eseguire l'operazione gratuito. Non è previsto che l'applicazione fornisca queste informazioni. Quando un blocco di memoria viene liberato, il gestore dell'heap di debug controlla automaticamente l'integrità dei buffer a ogni lato della porzione utente e genera un rapporto errori se si sono verificate sovrascritture. Se il **CRTDBG_DELAY_FREE_MEM_DF** campo di bit delle [crtDbgFlag](../../c-runtime-library/crtdbgflag.md) flag è impostato, il blocco liberato viene riempito con il valore 0xDD, viene assegnato il **FREE_BLOCK** , tipo di blocco e mantenuto nell'elenco collegato dell'heap di blocchi di memoria.
 
 Se si verifica un errore nel liberare la memoria **errno** viene impostato con informazioni dal sistema operativo sulla natura dell'errore. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
@@ -80,7 +82,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di utilizzo **free_dbg**, vedere [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Per un esempio d'uso **free_dbg**, vedere [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
 ## <a name="see-also"></a>Vedere anche
 

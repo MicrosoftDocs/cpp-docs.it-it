@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963716"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100976"
 ---
 # <a name="basicostream-class"></a>Classe basic_ostream
 
@@ -50,9 +50,11 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Parametri
 
-*Elem* oggetto `char_type`.
+*Elem*<br/>
+Oggetto `char_type`.
 
-*TR* carattere `traits_type`.
+*Tr*<br/>
+Il carattere `traits_type`.
 
 ## <a name="remarks"></a>Note
 
@@ -63,16 +65,16 @@ iostate state = goodbit;
 const sentry ok(*this);
 
 if (ok)
- {try
- {<convert and insert elements
+{try
+{<convert and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 width(0);
@@ -91,16 +93,16 @@ const sentry ok(*this);
 if (!ok)
     state |= badbit;
 else
- {try
- {<obtain and insert elements
+{try
+{<obtain and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 setstate(state);
@@ -161,11 +163,14 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parametri
 
-*strbuf* un oggetto di tipo [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Un oggetto di tipo [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** se si tratta di un flusso standard; in caso contrario, **false**.
+*_Isstd*<br/>
+**true** se si tratta di un flusso standard; in caso contrario, **false**.
 
-*a destra* riferimento rvalue a un oggetto di tipo `basic_ostream`.
+*right*<br/>
+Riferimento rvalue a un oggetto di tipo `basic_ostream`.
 
 ### <a name="remarks"></a>Note
 
@@ -242,11 +247,14 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parametri
 
-*Pfn* un puntatore a funzione.
+*pfn*<br/>
+Un puntatore di funzione.
 
-*strbuf* un puntatore a un `stream_buf` oggetto.
+*strbuf*<br/>
+Un puntatore a un `stream_buf` oggetto.
 
-*Val* un elemento da scrivere nel flusso.
+*Val*<br/>
+Un elemento da scrivere nel flusso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -360,7 +368,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un' `rvalue` fanno riferimento a un `basic_ostream` oggetto.
+*right*<br/>
+Riferimento `rvalue` a un oggetto `basic_ostream`.
 
 ### <a name="remarks"></a>Note
 
@@ -376,7 +385,8 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH* un carattere.
+*CH*<br/>
+Carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -419,11 +429,14 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Parametri
 
-*POS* la posizione nel flusso.
+*POS*<br/>
+La posizione all'interno del flusso.
 
-*Off* offset relativo alla *Way*.
+*Off*<br/>
+L'offset relativo alla *Way*.
 
-*Way* tra il [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) enumerazioni.
+*Way*<br/>
+Una delle enumerazioni [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -485,7 +498,8 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>Parametri
 
-*a destra* un riferimento a un `basic_ostream` oggetto.
+*right*<br/>
+Riferimento a un oggetto `basic_ostream`.
 
 ### <a name="remarks"></a>Note
 
@@ -521,9 +535,11 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Parametri
 
-*conteggio* numero di caratteri da inserire nel flusso.
+*count*<br/>
+Numero di caratteri da inserire nel flusso.
 
-*str* caratteri da inserire nel flusso.
+*str*<br/>
+Caratteri da inserire nel flusso.
 
 ### <a name="return-value"></a>Valore restituito
 

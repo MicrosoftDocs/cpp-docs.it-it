@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200667"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101937"
 ---
 # <a name="assert-macro-assert-wassert"></a>Macro assert, _assert, _wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>Parametri
 
-*espressione* un'espressione scalare (incluse le espressioni puntatore) che corrisponde a diverso da zero (**true**) oppure 0 (**false**).
+*Espressione*<br/>
+Un'espressione scalare (incluse le espressioni puntatore) che corrisponde a diverso da zero (**true**) oppure 0 (**false**).
 
-*messaggio* il messaggio da visualizzare.
+*message*<br/>
+Messaggio da visualizzare.
 
-*nome del file* il nome dell'origine file l'asserzione non è riuscita.
+*filename*<br/>
+Nome del file di origine in cui l'asserzione non è riuscita.
 
-*riga* il numero di riga nel file di origine dell'asserzione non riuscita.
+*Riga*<br/>
+Numero di riga nel file di origine dell'asserzione non riuscita.
 
 ## <a name="remarks"></a>Note
 

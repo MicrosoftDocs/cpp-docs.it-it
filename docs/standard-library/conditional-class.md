@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7a553c2975dd5a58673bd4caa6e7c9ba25d33183
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962400"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106613"
 ---
 # <a name="conditional-class"></a>Classe conditional
 
@@ -40,11 +40,14 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*B* il valore che determina il tipo selezionato.
+*B*<br/>
+Valore che determina il tipo selezionato.
 
-*T1* il risultato di tipo quando B è true.
+*T1*<br/>
+Il risultato di tipo quando B è true.
 
-*T2* il risultato di tipo quando B è false.
+*T2*<br/>
+Il risultato di tipo quando B è false.
 
 ## <a name="remarks"></a>Note
 

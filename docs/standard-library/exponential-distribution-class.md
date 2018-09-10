@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 018af5d544e38485dc38608f280d57ce595db49c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960196"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103279"
 ---
 # <a name="exponentialdistribution-class"></a>Classe exponential_distribution
 
@@ -77,9 +77,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*<br/>
+Il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*URNG* Motore di generazione di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*<br/>
+Motore del generatore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -191,9 +193,11 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*espressione lambda* il `lambda` parametro di distribuzione.
+*lambda*<br/>
+Parametro di distribuzione `lambda`.
 
-*Parm* il pacchetto di parametri utilizzato per costruire la distribuzione.
+*parm*<br/>
+Pacchetto di parametri usato per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
@@ -220,9 +224,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*espressione lambda* il `lambda` parametro di distribuzione.
+*lambda*<br/>
+Parametro di distribuzione `lambda`.
 
-*a destra* il `param_type` oggetto da confrontare con questa istanza.
+*right*<br/>
+Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
 

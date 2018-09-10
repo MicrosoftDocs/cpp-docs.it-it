@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c60732a374c7458cc9acedc8a8e5a880ebacbc1f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964255"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102668"
 ---
 # <a name="isdefaultconstructible-class"></a>Classe is_default_constructible
 
@@ -36,7 +36,8 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T* il tipo di query.
+*T*<br/>
+Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 

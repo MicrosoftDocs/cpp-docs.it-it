@@ -9,50 +9,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50c7b6a8e62aa957c54f66ebaf87fcd86df458fb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 262fb9d08da72201db041eff1a510a598851e3e2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199343"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105965"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Operatore Windows::UI::Xaml::Interop::TypeName
-Consente la conversione da `Platform::Type` al [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-Operator TypeName(Platform::Type^ type)  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce un [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) quando viene specificato un `Platform::Type^`.  
-  
-### <a name="remarks"></a>Note  
- `TypeName` è uno struct di Windows Runtime indipendente dal linguaggio per la rappresentazione delle informazioni sul tipo. [Platform::Type](../cppcx/platform-type-class.md) è specifico del linguaggio C++ e non può essere passato attraverso l'interfaccia applicativa binaria (ABI). Ecco un uso del `TypeName`, nella [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) (funzione):  
-  
-```  
-rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
-```  
-  
-### <a name="example"></a>Esempio  
- L'esempio seguente mostra come eseguire la conversione tra `TypeName` e `Type`.  
-  
-```  
-  
-// Convert from Type to TypeName  
-Windows::UI::Xaml::Interop::TypeName tn = TypeName(MainPage::typeid);  
-  
-// Convert back from TypeName to Type  
-Type^ tx2 = (Type^)(tn);  
-  
-```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente .NET Framework  
- I programmi .NET Framework proiettano `TypeName` come [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True).  
-  
-### <a name="requirements"></a>Requisiti  
-  
-## <a name="see-also"></a>Vedere anche  
- [operatore Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)   
- [Classe Platform::Type](../cppcx/platform-type-class.md)
+
+Consente la conversione da `Platform::Type` al [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+Operator TypeName(Platform::Type^ type);
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce un [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) quando viene specificato un `Platform::Type^`.
+
+### <a name="remarks"></a>Note
+
+`TypeName` è uno struct di Windows Runtime indipendente dal linguaggio per la rappresentazione delle informazioni sul tipo. [Platform::Type](../cppcx/platform-type-class.md) è specifico del linguaggio C++ e non può essere passato attraverso l'interfaccia applicativa binaria (ABI). Ecco un uso del `TypeName`, nella [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) (funzione):
+
+```
+rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
+```
+
+### <a name="example"></a>Esempio
+
+L'esempio seguente mostra come eseguire la conversione tra `TypeName` e `Type`.
+
+```
+
+// Convert from Type to TypeName
+Windows::UI::Xaml::Interop::TypeName tn = TypeName(MainPage::typeid);
+
+// Convert back from TypeName to Type
+Type^ tx2 = (Type^)(tn);
+```
+
+## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
+
+I programmi .NET Framework proiettano `TypeName` come [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True).
+
+### <a name="requirements"></a>Requisiti
+
+## <a name="see-also"></a>Vedere anche
+
+[Operatore Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)<br/>
+[Classe Platform::Type](../cppcx/platform-type-class.md)

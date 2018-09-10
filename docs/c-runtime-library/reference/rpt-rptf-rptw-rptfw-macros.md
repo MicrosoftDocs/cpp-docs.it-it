@@ -96,16 +96,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53a069138b4e54988be008917e5ca2b24fa0a6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69347ab698661346b8d598dda1bb007d071a21f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411884"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104147"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW Macros
 
-Tiene traccia dello stato di un'applicazione mediante la generazione di un report di debug (solo versione di debug). Si noti che *n* specifica il numero di argomenti *args* e può essere 0, 1, 2, 3, 4 o 5.
+Tiene traccia dello stato di un'applicazione mediante la generazione di un report di debug (solo versione di debug). Si noti che *n* specifica il numero di argomenti nella *args* e può essere 0, 1, 2, 3, 4 o 5.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -136,41 +136,44 @@ _RPTFWn(
 
 ### <a name="parameters"></a>Parametri
 
-*reportType* tipo di Report: **CRT_WARN**, **CRT_ERROR**, o **CRT_ASSERT**.
+*reportType*<br/>
+Tipo di report: **CRT_WARN**, **CRT_ERROR**, o **CRT_ASSERT**.
 
-*formato* stringa di controllo del formato utilizzato per creare il messaggio utente.
+*format*<br/>
+Stringa di controllo del formato usata per creare il messaggio utente.
 
-*args* argomenti di sostituzione usati dal *formato*.
+*args*<br/>
+Argomenti di sostituzione usati da *formato*.
 
 ## <a name="remarks"></a>Note
 
-Tutte queste macro richiedono la *reportType* e *formato* parametri. Potrebbero anche accettare fino a quattro argomenti aggiuntivi, indicati dal numero aggiunto al nome della macro. Ad esempio **_RPT0** e **_RPTF0** non accettano alcun argomento aggiuntivo **_RPT1** e **_RPTF1** richiedere *arg1*, **_RPT2** e **_RPTF2** accettano *arg1* e **arg2**e così via.
+Tutte queste macro accettano i *reportType* e *formato* parametri. Potrebbero anche accettare fino a quattro argomenti aggiuntivi, indicati dal numero aggiunto al nome della macro. Ad esempio, **_RPT0** e **_RPTF0** non accettano altri argomenti, **_RPT1** e **_RPTF1** richiedere *arg1*, **_RPT2** e **_RPTF2** accettano *arg1* e **arg2**e così via.
 
-Il **rpt** e **rptf** sono simili alle macro il [printf](printf-printf-l-wprintf-wprintf-l.md) funziona, poiché possono essere utilizzati per rilevare lo stato di avanzamento di un'applicazione durante il processo di debug. Tuttavia, queste macro sono più flessibili **printf** perché non dovranno essere racchiusi tra parentesi **#ifdef** le istruzioni per evitare che vengano definite in una build finale di un'applicazione. Questa flessibilità viene raggiunta tramite il [debug](../../c-runtime-library/debug.md) macro; il **rpt** e **rptf** macro sono disponibili solo quando il **debug** flag è definito. Quando si **debug** non è definito, le chiamate a queste macro vengono rimosse durante la pre-elaborazione.
+Il **macro rpt** e **rptf** macro sono simili per il [printf](printf-printf-l-wprintf-wprintf-l.md) funzionare, perché possono essere usati per tenere traccia dello stato di un'applicazione durante il processo di debug. Tuttavia, queste macro sono più flessibili **printf** perché non devono essere racchiusi tra **#ifdef** le istruzioni per evitare che vengano definite in una build finale di un'applicazione. Questa flessibilità viene raggiunta tramite il [debug](../../c-runtime-library/debug.md) macro; gli **macro rpt** e **rptf** macro sono disponibili solo quando il **debug** flag è definito. Quando **debug** non è definito, le chiamate a queste macro vengono rimosse durante la pre-elaborazione.
 
-Il **rptw** e **rptfw** macro sono versioni a caratteri wide di queste macro. Sono ad esempio **wprintf** e intraprendere le stringhe di caratteri wide come argomenti.
+Il **rptw** e **rptfw** macro sono versioni a caratteri wide di queste macro. Ruoli sono analoghi ai **wprintf** e accettano stringhe di caratteri wide come argomenti.
 
-Il **rpt** chiamata di macro il [CrtDbgReport](crtdbgreport-crtdbgreportw.md) funzione per generare un report di debug con un messaggio utente. Il **rptw** chiamata di macro il **CrtDbgReportW** funzione per generare il report stesso con caratteri "wide". Il **rptf** e **rptfw** macro di creano un report di debug con il numero di riga e file di origine in cui è stata chiamata la macro di report, inoltre per il messaggio utente. Il messaggio utente viene creato tramite la sostituzione il **arg**[*n*] argomenti al *formato* stringa, usando le stesse regole definite per il [printf](printf-printf-l-wprintf-wprintf-l.md)(funzione).
+Il **macro rpt** chiamata di macro le [CrtDbgReport](crtdbgreport-crtdbgreportw.md) funzione per generare un report di debug con un messaggio utente. Il **rptw** chiamata di macro le **CrtDbgReportW** funzione per generare lo stesso report con caratteri "wide". Il **rptf** e **rptfw** macro di creano un report di debug con il numero di riga e file di origine in cui è stata chiamata la macro di report, anche per il messaggio utente. Il messaggio utente viene creato tramite la sostituzione il **arg**[*n*] gli argomenti in di *formato* stringa, usando le stesse regole definite dal [printf](printf-printf-l-wprintf-wprintf-l.md)(funzione).
 
-**CrtDbgReport** oppure **CrtDbgReportW** genera il rapporto di debug e determina il destinazioni in base alle modalità rapporto correnti e definiti per il file *reportType*. Le funzioni [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
+**CrtDbgReport** oppure **CrtDbgReportW** genera il report di debug e ne determina le destinazioni in base a modalità rapporto correnti e file definito per *reportType*. Le funzioni [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
 
-Se un **rpt** macro viene chiamata e né **CrtSetReportMode** né **crtsetreportfile** è stato chiamato, i messaggi vengono visualizzati come indicato di seguito.
+Se un' **macro rpt** macro viene chiamata e né **CrtSetReportMode** né **crtsetreportfile** è stato chiamato, i messaggi vengono visualizzati come indicato di seguito.
 
 |Tipo di report|Destinazione di output|
 |-----------------|------------------------|
 |**CRT_WARN**|Il testo dell'avviso non viene visualizzato.|
 |**CRT_ERROR**|Finestra popup. Come se fosse stato specificato `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);`.|
-|**CRT_ASSERT**|Uguale a **CRT_ERROR**.|
+|**CRT_ASSERT**|Uguale allo **CRT_ERROR**.|
 
-Quando la destinazione è una finestra di messaggio di debug e l'utente sceglie il **ripetere** pulsante **CrtDbgReport** oppure **CrtDbgReportW** restituisce 1, causando queste macro avviare il debugger, purché debug just-in-time (JIT) è abilitato. Per altre informazioni sull'uso di queste macro come meccanismo di gestione degli errori di debug, vedere [Using Macros for Verification and Reporting](/visualstudio/debugger/macros-for-reporting) (Uso delle macro per verifiche e report).
+Quando la destinazione è una finestra di messaggio di debug e l'utente sceglie il **ripetere** sul pulsante **CrtDbgReport** o **CrtDbgReportW** restituisce 1, inducendo le macro ad avviare il il debugger fornito il cui debug just-in-time (JIT) è abilitato. Per altre informazioni sull'uso di queste macro come meccanismo di gestione degli errori di debug, vedere [Using Macros for Verification and Reporting](/visualstudio/debugger/macros-for-reporting) (Uso delle macro per verifiche e report).
 
-Sono disponibili altre due macro che generano un report di debug. La macro [_ASSERT](assert-asserte-assert-expr-macros.md) genera un report, ma solo quando il relativo argomento espressione restituisce FALSE. [ASSERTE](assert-asserte-assert-expr-macros.md) è esattamente like **macro Assert**, ma include l'espressione non riuscita nel report generato.
+Sono disponibili altre due macro che generano un report di debug. La macro [_ASSERT](assert-asserte-assert-expr-macros.md) genera un report, ma solo quando il relativo argomento espressione restituisce FALSE. [ASSERTE](assert-asserte-assert-expr-macros.md) è identica a **macro Assert**, ma include l'espressione non riuscita nel report generato.
 
 ## <a name="requirements"></a>Requisiti
 
 |Macro|Intestazione obbligatoria|
 |-----------|---------------------|
-|**Rpt** macro|\<crtdbg.h>|
+|**Macro rpt** macro|\<crtdbg.h>|
 |**Rptf** macro|\<crtdbg.h>|
 |**Rptw** macro|\<crtdbg.h>|
 |**Rptfw** macro|\<crtdbg.h>|

@@ -15,51 +15,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12766e81ddd90b257830b6bf5adefd2562781d9e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae1cab3d5cde3bc39f131acd1b01976dcb6d522b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767764"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105107"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType (classe)
-Classe di base per istanze di tipi di valore.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-public ref class ValueType : Object  
-```  
-  
-## <a name="public-methods"></a>Metodi pubblici  
-  
-|||  
-|-|-|  
-|[ValueType::ToString](#tostring)|Restituisce una rappresentazione di stringa dell'oggetto. Ereditato da [platform:: Object](../cppcx/platform-object-class.md).|  
-  
-### <a name="remarks"></a>Note  
- La classe ValueType viene usata per costruire i tipi valore. ValueType è derivato da Object, che contiene i membri di base. Tuttavia, il compilatore consente di scollegare i membri di base dai tipi valore derivati dalla classe ValueType. Il compilatore ricollega questi membri di base quando un tipo valore è di tipo boxed.  
-  
-### <a name="requirements"></a>Requisiti  
- **Client minimo supportato:** Windows 8  
-  
- **Server minimo supportato:** Windows Server 2012  
-  
- **Spazio dei nomi:** Platform  
-  
- **Metadati:** platform.winmd  
+
+Classe di base per istanze di tipi di valore.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+public ref class ValueType : Object
+```
+
+## <a name="public-methods"></a>Metodi pubblici
+
+|||
+|-|-|
+|[ValueType::ToString](#tostring)|Restituisce una rappresentazione di stringa dell'oggetto. Ereditato da [platform:: Object](../cppcx/platform-object-class.md).|
+
+### <a name="remarks"></a>Note
+
+La classe ValueType viene usata per costruire i tipi valore. ValueType è derivato da Object, che contiene i membri di base. Tuttavia, il compilatore consente di scollegare i membri di base dai tipi valore derivati dalla classe ValueType. Il compilatore ricollega questi membri di base quando un tipo valore è di tipo boxed.
+
+### <a name="requirements"></a>Requisiti
+
+**Client minimo supportato:** Windows 8
+
+**Server minimo supportato:** Windows Server 2012
+
+**Spazio dei nomi:** Platform
+
+**Metadati:** platform.winmd
 
 ## <a name="tostring"></a> Metodo ValueType:: ToString
-Restituisce una rappresentazione di stringa dell'oggetto.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp  
-Platform::String ToString();  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Platform:: String che rappresenta il valore.  
-    
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)
+
+Restituisce una rappresentazione di stringa dell'oggetto.
+
+### <a name="syntax"></a>Sintassi
+
+```cpp
+Platform::String ToString();
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Platform:: String che rappresenta il valore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

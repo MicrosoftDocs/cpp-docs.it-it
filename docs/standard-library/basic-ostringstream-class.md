@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fb0027ba6afbceed8cc5f1daafef8cb183759ce
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 623e1df599f3d1e0e2011f2cea3c7f9422516c67
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955234"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108863"
 ---
 # <a name="basicostringstream-class"></a>Classe basic_ostringstream
 
@@ -42,11 +42,14 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametri
 
-*Alloc* la classe allocator.
+*Alloc*<br/>
+Classe Allocator.
 
-*Elem* il tipo di elemento di base della stringa.
+*Elem*<br/>
+Tipo di elemento di base della stringa.
 
-*TR* tratti di carattere specializzati sull'elemento di base della stringa.
+*Tr*<br/>
+Tratti di carattere specializzati sull'elemento di base della stringa.
 
 ## <a name="remarks"></a>Note
 
@@ -97,9 +100,11 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>Parametri
 
-*Modalità* una delle enumerazioni nello [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modalità*<br/>
+Una delle enumerazioni in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str* un oggetto di tipo `basic_string`.
+*str*<br/>
+Oggetto di tipo `basic_string`.
 
 ### <a name="remarks"></a>Note
 
@@ -141,7 +146,8 @@ void str(
 
 ### <a name="parameters"></a>Parametri
 
-*_Newstr* la nuova stringa.
+*_Newstr*<br/>
+La nuova stringa.
 
 ### <a name="return-value"></a>Valore restituito
 

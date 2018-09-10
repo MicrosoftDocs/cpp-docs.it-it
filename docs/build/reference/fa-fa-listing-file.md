@@ -1,5 +1,5 @@
 ---
-title: /FA, /Fa (File di listato) | Documenti Microsoft
+title: /FA, /Fa (File di listato) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,80 +26,87 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378951"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101729"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (File di listato)
-Crea un file di listato contenente codice assembler.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-> **/FA**[**c**\][**s**\][**u**]  
-> **/Fa**_pathname_  
-  
-## <a name="remarks"></a>Note  
-Il `/FA` l'opzione del compilatore genera un file di listato dell'assembler per ogni unità di conversione nella compilazione, che corrisponde in genere a un file di origine C o C++. Per impostazione predefinita, solo assembler è incluso nel file di elenco, viene codificato come ANSI. Facoltativo `c`, `s`, e `u` argomenti `/FA` controllo computer se codice o codice sorgente vengono restituiti con l'elenco di assembler e indica se l'elenco è codificato come UTF-8.  
-  
-Per impostazione predefinita, ogni file di listato Ottiene lo stesso nome di base del file di origine e presenta un'estensione di asm. Quando il codice macchina è incluso con il `c` opzione, il file di listato con estensione Cod. È possibile modificare il nome e l'estensione del file di listato e la directory in cui viene creato utilizzando il `/Fa` opzione.  
 
-### <a name="fa-arguments"></a>/FA argomenti  
+Crea un file di listato contenente codice assembler.
+
+## <a name="syntax"></a>Sintassi
+
+> **/FA**[**c**\][**s**\][**u**] **/Fa**_pathname_
+
+## <a name="remarks"></a>Note
+
+Il **/FA** opzione del compilatore genera un file di listato dell'assembler per ogni unità di conversione nella compilazione, che corrisponde in genere a un file di origine C o C++. Per impostazione predefinita, solo assembler è incluso nel file di listato, che viene codificato come ANSI. L'opzione facoltativa **c**, **s**, e **u** argomenti **/FA** controllo del computer se codice o codice sorgente vengono restituiti con l'assembler inclusione in elenco, e indica se l'elenco viene codificato come UTF-8.
+
+Per impostazione predefinita, ogni file di listato Ottiene lo stesso nome di base del file di origine e presenta un'estensione asm. Quando è incluso codice macchina tramite il **c** opzione, il file di listato ha un'estensione Cod. È possibile modificare il nome e l'estensione di file di listato e la directory in cui è stato creato utilizzando il **/Fa** opzione.
+
+### <a name="fa-arguments"></a>/FA argomenti
+
 none  
-Solo la lingua dell'assembler è incluso nell'elenco.  
-  
-`c`  
-Facoltativo. Include codice macchina nell'elenco.  
-  
-`s`  
-Facoltativo. Contiene il codice sorgente nell'elenco.  
-  
-`u` Parametro facoltativo. Consente di codificare il file di elenco in formato UTF-8 e include un indicatore dell'ordine di byte. Per impostazione predefinita, il file è codificato in formato ANSI. Utilizzare `u` per creare un file di listato che venga visualizzato correttamente in qualsiasi sistema, o se si utilizza Unicode file di codice sorgente come input per il compilatore.  
-  
-Se entrambi `s` e `u` vengono specificati e, se un'origine dei file di codice Usa una codifica Unicode diversa da UTF-8, quindi le righe di codice nel file di ASM non vengano visualizzati correttamente.  
-  
-### <a name="fa-argument"></a>/Fa argomento  
+Solo la lingua dell'assembler è incluso nell'elenco.
+
+**c**  
+Facoltativo. Include il codice macchina nell'elenco.
+
+**s**  
+Facoltativo. Include il codice sorgente nell'elenco.
+
+**u**  
+Facoltativo. Consente di codificare il file di elenco in formato UTF-8 e include un indicatore dell'ordine dei byte. Per impostazione predefinita, il file è codificato in formato ANSI. Usare `u` per creare un file di elenco che consente di visualizzare correttamente in qualsiasi sistema, o se si usa Unicode file del codice sorgente come input al compilatore.
+
+Se entrambe **s** e **u** vengono specificate e, se un'origine di file di codice Usa una codifica Unicode diverse da UTF-8, quindi le righe di codice nel file con estensione asm non vengano visualizzati correttamente.
+
+### <a name="fa-argument"></a>/Fa argomento
+
 none  
-Un *origine*ASM file viene creato per ogni file di codice sorgente nella compilazione.  
-  
-*filename* un file di listato denominato *filename*asm viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice sorgente singolo.  
-  
+Uno *origine*ASM file viene creato per ogni file di codice sorgente nella compilazione.
+
+*filename*  
+Un file di listato denominato *filename*asm viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice di origine singolo.
+
 *nome file. estensione*  
-Un file di listato denominato *nome file. estensione* viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice sorgente singolo.  
-  
-*Directory*\  
-Un *file_di*file ASM viene creato e inserito nell'oggetto specificato *directory* per ogni file di codice sorgente nella compilazione. Si noti la barra rovesciata finale obbligatoria. Sono consentiti solo percorsi sul disco corrente.  
-  
-*directory*\\*filename* un file di listato denominato *filename*asm viene inserito nell'oggetto specificato *directory*. Ciò è valido solo durante la compilazione di un file di codice sorgente singolo.  
-  
-*directory*\\*nome file. estensione*  
-Un file di listato denominato *nome file. estensione* viene inserito nell'oggetto specificato *directory*. Ciò è valido solo durante la compilazione di un file di codice sorgente singolo.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Aprire il **C/C++** cartella e selezionare il **i file di Output** pagina delle proprietà.  
-  
-3.  Modificare il **Output Assembler** proprietà per impostare il `/FAc` e `/FAs` le opzioni per l'assembler macchina e codice sorgente. Modificare il **utilizzare Unicode per Assembler elenco** proprietà per impostare il `/FAu` opzione per l'output di ANSI o UTF-8. Modificare il **posizione elenco ASM** per impostare il `/Fa` opzione per elencare il nome di file e il percorso.  
-  
-Si noti che l'impostazione entrambi **Output Assembler** e **utilizzare Unicode per Assembler elenco** possono causare proprietà [avviso della riga di comando D9025](../../error-messages/tool-errors/command-line-warning-d9025.md). Per combinare queste opzioni nell'IDE, utilizzare il **opzioni aggiuntive** campo il **riga di comando** invece pagina delle proprietà.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> o <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Per specificare `/FAu`, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="example"></a>Esempio  
-La seguente riga di comando produce un'origine combinata e il listato di codice macchina denominato Hello. Cod:  
-  
-```  
-CL /FAcs HELLO.CPP  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [File di output (/ F) opzioni](../../build/reference/output-file-f-options.md)   
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)
+Un file di listato denominato *nome file. estensione* viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice di origine singolo.
+
+*Directory*__\\__  
+Uno *source_file*viene creato e inserito nell'oggetto specificato nel file ASM *directory* per ogni file di codice sorgente nella compilazione. Si noti la barra rovesciata finale obbligatoria. Sono consentiti solo i percorsi sul disco corrente.
+
+*directory*__\\__*nomefile*  
+Un file di listato denominato *nomefile*asm viene inserito nell'oggetto specificato *directory*. Ciò è valido solo durante la compilazione di un file di codice di origine singolo.
+
+*directory*__\\__*filename. Extension*  
+Un file di listato denominato *filename. Extension* viene inserito nell'oggetto specificato *directory*. Ciò è valido solo durante la compilazione di un file di codice di origine singolo.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+2. Selezionare il **le proprietà di configurazione** > **C/C++** > **i file di Output** pagina delle proprietà.
+
+3. Modificare il **Output Assembler** per impostare il **/FAc** e **/FAs** opzioni per l'assembler, macchina e codice sorgente. Modificare il **Usa Unicode per Assembler listato** proprietà da impostare il **l'opzione /FAu** opzione per l'output UTF-8 o ANSI. Modificare il **percorso elenco ASM** per impostare le **/Fa** opzione per elencare il nome di file e percorso.
+
+Si noti che l'impostazione entrambi **Output Assembler** e **utilizzare Unicode per Assembler listato** le proprietà possono causare [avviso della riga di comando D9025](../../error-messages/tool-errors/command-line-warning-d9025.md). Per combinare queste opzioni nell'IDE, usare il **opzioni aggiuntive** campo le **della riga di comando** invece pagina delle proprietà.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> o <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Per specificare **l'opzione /FAu**, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="example"></a>Esempio
+Riga di comando seguente produce un'origine combinata e listato di codice macchina denominato Hello. Cod:
+
+```cmd
+CL /FAcs HELLO.CPP
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[File di output (/ F) le opzioni](../../build/reference/output-file-f-options.md)   
+[Opzioni del compilatore](../../build/reference/compiler-options.md)   
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
+[Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)

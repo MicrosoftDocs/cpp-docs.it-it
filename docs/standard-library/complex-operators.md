@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208676"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110192"
 ---
 # <a name="ltcomplexgt-operators"></a>Operatori &lt;complex&gt;
 
@@ -58,9 +58,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* un numero complesso o un oggetto del relativo tipo di parametro per cui verificare la disuguaglianza.
+*left*<br/>
+Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la disuguaglianza.
 
-*a destra* un numero complesso o un oggetto del relativo tipo di parametro per cui verificare la disuguaglianza.
+*right*<br/>
+Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -196,9 +198,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere moltiplicato con il \* operazione.
+*left*<br/>
+Il primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere moltiplicato con il \* operazione.
 
-*a destra* secondo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere moltiplicato con il \* operazione.
+*right*<br/>
+Il secondo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere moltiplicato con il \* operazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -295,9 +299,11 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere aggiunto con l'operazione +.
+*left*<br/>
+Primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere aggiunto con l'operazione +.
 
-*a destra* secondo dei due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere aggiunto con l'operazione +.
+*right*<br/>
+Secondo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere aggiunto con l'operazione +.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -402,7 +408,7 @@ The argument of cs3 is: 0.463648 radians, which is 26.5651 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of + to the right-side
- complex number is: cs4 = (3,4)
+complex number is: cs4 = (3,4)
 The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -433,9 +439,11 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* il primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere sottratto con l'operazione -.
+*left*<br/>
+Primo di due numeri complessi o numero del tipo parametro per un numero complesso che deve essere sottratto con l'operazione -.
 
-*a destra* secondo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere sottratto con l'operazione -.
+*right*<br/>
+Secondo di due numeri complessi o numero del tipo parametro per un numero complesso che deve essere sottratto con l'operazione -.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -542,7 +550,7 @@ The argument of cs3 is: -1.10715 radians, which is -63.4349 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of - to the right-side
- complex number is: cs4 = (-3,-4)
+complex number is: cs4 = (-3,-4)
 The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
@@ -570,9 +578,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* un numero complesso o numero del tipo di parametro per un numero complesso che rappresenta il numeratore da dividere per il denominatore con il / operazione.
+*left*<br/>
+Numero complesso o numero del tipo parametro per un numero complesso che rappresenta il numeratore da dividere per il denominatore con l'operazione /.
 
-*a destra* un numero complesso o numero del tipo di parametro per un numero complesso che rappresenta il denominatore per essere usato per dividere il numeratore con il / operazione.
+*right*<br/>
+Numero complesso o numero del tipo parametro per un numero complesso che rappresenta il numeratore da usare per dividere il denominatore con l'operazione /.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -678,9 +688,11 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*Ostr* nel flusso di output in cui viene inserito il numero complesso.
+*Ostr*<br/>
+Flusso di output in cui immettere il numero complesso.
 
-*a destra* numero complesso da immettere nel flusso di output
+*right*<br/>
+Numero complesso da immettere nel flusso di output
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -749,9 +761,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra* un numero complesso o un oggetto del relativo tipo di parametro per cui verificare la disuguaglianza.
+*left*<br/>
+Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la disuguaglianza.
 
-*a destra* un numero complesso o un oggetto del relativo tipo di parametro per cui verificare la disuguaglianza.
+*right*<br/>
+Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -877,9 +891,11 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-*Istr* il flusso di input da cui si sta estraendo il numero complesso.
+*Istr*<br/>
+Flusso di output da cui estrarre il numero complesso.
 
-*a destra* numero complesso da cui vengono estratti dal flusso di input.
+*right*<br/>
+Numero complesso da estrarre dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 

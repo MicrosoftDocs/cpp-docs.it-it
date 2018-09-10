@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d80a91c8dcca5b2b66f0225a39c3cb208656b46c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ec5b9d2bcad76e220b94da53d517523e62121325
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766503"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104238"
 ---
 # <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::Details::HeapAllocationTrackingLevel (enumerazione)
-Questa enumerazione è solo per uso interno e non deve essere usata per lo sviluppo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-  
-enumm class HeapAllocationTrackingLevel;  
-```  
-  
-### <a name="remarks"></a>Note  
- Questa enumerazione viene fornita unicamente per completezza, perché può essere controllata con i browser.  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `Platform`  
-  
-### <a name="requirements"></a>Requisiti  
- **Metadati:** platform.winmd  
-  
- **Spazio dei nomi:** Platform::Details  
-  
-## <a name="see-also"></a>Vedere anche  
- [Platform Namespace](platform-namespace-c-cx.md)
+
+Questa enumerazione è solo per uso interno e non deve essere usata per lo sviluppo.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+enumm class HeapAllocationTrackingLevel;
+```
+
+### <a name="remarks"></a>Note
+
+Questa enumerazione viene fornita unicamente per completezza, perché può essere controllata con i browser.
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`Platform`
+
+### <a name="requirements"></a>Requisiti
+
+**Metadati:** platform.winmd
+
+**Spazio dei nomi:** Platform::Details
+
+## <a name="see-also"></a>Vedere anche
+
+[Platform Namespace](platform-namespace-c-cx.md)

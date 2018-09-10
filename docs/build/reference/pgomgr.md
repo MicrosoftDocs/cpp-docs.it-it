@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198315"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105315"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -32,7 +32,7 @@ Aggiunge i dati del profilo da uno o più file. pgc per il file pgd.
 
 ### <a name="parameters"></a>Parametri
 
-*Opzioni*<br/>
+*options*<br/>
 Le opzioni seguenti possono essere specificate da **pgomgr**:
 
 - **/Help** o **/?** Consente di visualizzare disponibili **pgomgr** opzioni.
@@ -50,7 +50,8 @@ Le opzioni seguenti possono essere specificate da **pgomgr**:
 *pgcfiles*<br/>
 Uno o più file pgc cui dati di profilo che si desidera unire il file pgd. È possibile specificare un file pgc singolo o più file. pgc. Se non si specifica tutti i file. pgc **pgomgr** unisce tutti i file. pgc cui nomi sono gli stessi file pgd.
 
-*pgdFile* il file pgd in cui vengono uniti i dati dal file. pgc o dei file.
+*pgdFile*<br/>
+Il file pgd in cui vengono uniti i dati dal file. pgc o dei file.
 
 ## <a name="remarks"></a>Note
 

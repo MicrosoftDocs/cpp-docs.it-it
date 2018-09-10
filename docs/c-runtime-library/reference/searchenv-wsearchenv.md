@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e0fea9154801f850640234355af53dc1154160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afcd461446f98024e04e44e28facae4fba65b0aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408915"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100405"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -87,27 +87,30 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Parametri
 
-*nome del file* nome del file da cercare.
+*filename*<br/>
+Nome del file di cui eseguire la ricerca.
 
-*VarName* ambiente per la ricerca.
+*varname*<br/>
+Ambiente per la ricerca.
 
-*PathName* Buffer per archiviare il percorso completo.
+*nome del percorso*<br/>
+Buffer per l'archiviazione del percorso completo.
 
 ## <a name="remarks"></a>Note
 
-Il **SEARCHENV** routine cerca il file di destinazione nel dominio specificato. Il *varname* variabile può essere qualsiasi ambiente o variabile definita dall'utente, ad esempio, **percorso**, **LIB**, o **inclusione**, che specifica un elenco dei percorsi di directory. Poiché **SEARCHENV** tra maiuscole e minuscole, *varname* deve corrispondere al caso della variabile di ambiente.
+Il **SEARCHENV** routine cerca il file di destinazione nel dominio specificato. Il *varname* variabile può essere qualsiasi ambiente o variabile definita dall'utente, ad esempio, **percorso**, **LIB**, o **inclusione**, che specifica un elenco dei percorsi di directory. In quanto **SEARCHENV** tra maiuscole e minuscole, *varname* deve corrispondere al caso della variabile di ambiente.
 
-La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione è in una di queste directory, il percorso appena creato viene copiato in *pathname*. Se il *filename* non viene trovato alcun file, *pathname* contiene una stringa vuota con terminazione null.
+La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione è in una di queste directory, il percorso appena creato viene copiato nel *pathname*. Se il *nomefile* non viene trovato alcun file, *pathname* contiene una stringa vuota con terminazione null.
 
-Il *pathname* buffer deve essere almeno **MAX_PATH** caratteri per consentire la lunghezza del nome del percorso costruito completo. In caso contrario, **SEARCHENV** potrebbe causare un sovraccarico di *pathname* nel buffer e causare un comportamento imprevisto.
+Il *pathname* buffer deve essere almeno **MAX_PATH** caratteri per consentire la lunghezza totale del nome del percorso costruito. In caso contrario, **SEARCHENV** potrebbe sovraccaricare la *pathname* nel buffer e causare un comportamento imprevisto.
 
-**wsearchenv** è una versione a caratteri wide **SEARCHENV**e gli argomenti **wsearchenv** sono stringhe a caratteri "wide". **wsearchenv** e **SEARCHENV** si comportano in modo identico in caso contrario.
+**wsearchenv** è una versione a caratteri wide di **SEARCHENV**e gli argomenti **wsearchenv** sono stringhe a caratteri wide. **wsearchenv** e **SEARCHENV** hanno lo stesso comportamento in caso contrario.
 
-Se *filename* è una stringa vuota, queste funzioni restituiscono **ENOENT**.
+Se *nomefile* è una stringa vuota, queste funzioni restituiscono **ENOENT**.
 
-Se *filename* oppure *pathname* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Se *nomefile* oppure *pathname* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
-Per ulteriori informazioni **errno** e codici di errore, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
+Per altre informazioni sulle **errno** e i codici di errore, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
 
 In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure e più recenti. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

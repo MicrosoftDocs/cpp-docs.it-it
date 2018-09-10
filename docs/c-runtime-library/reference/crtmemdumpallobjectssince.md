@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cf01facaba326c36454ea5410da8dbb05848f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92d6148f6cbe49799a122d1745a6a6cde4c8be30
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396869"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100379"
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 
@@ -53,17 +53,18 @@ void _CrtMemDumpAllObjectsSince(
 
 ### <a name="parameters"></a>Parametri
 
-*lo stato* puntatore allo stato dell'heap per iniziare il dump da o **NULL**.
+*state*<br/>
+Puntatore allo stato dell'heap da cui iniziare il dump o **NULL**.
 
 ## <a name="remarks"></a>Note
 
-Il **CrtMemDumpAllObjectsSince** funzione trasferisce le informazioni di intestazione di debug di oggetti allocati nell'heap in un form leggibile dall'utente. Le informazioni di dump possono essere usate dall'applicazione per tenere traccia delle allocazioni e per rilevare problemi di memoria. Quando si [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtMemDumpAllObjectsSince** vengono rimosse durante la pre-elaborazione.
+Il **CrtMemDumpAllObjectsSince** funzione trasferisce le informazioni di intestazione di debug di oggetti allocati nell'heap in un form leggibile dall'utente. Le informazioni di dump possono essere usate dall'applicazione per tenere traccia delle allocazioni e per rilevare problemi di memoria. Quando [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtMemDumpAllObjectsSince** vengono rimosse durante la pre-elaborazione.
 
-**CrtMemDumpAllObjectsSince** utilizza il valore della *stato* parametro per determinare la posizione in cui avviare l'operazione di dump. Per iniziare il dump da uno stato dell'heap specificato, il *stato* parametro deve essere un puntatore a un **CrtMemState** struttura che è stato compilato da [CrtMemCheckpoint](crtmemcheckpoint.md) prima **CrtMemDumpAllObjectsSince** è stato chiamato. Quando si *stato* viene **NULL**, la funzione avvia il dump dall'inizio dell'esecuzione del programma.
+**CrtMemDumpAllObjectsSince** Usa il valore della *stato* parametro per determinare la posizione in cui avviare l'operazione di dump. Per iniziare il dump da uno stato di heap specificato, il *lo stato* parametro deve essere un puntatore a un **CrtMemState** struttura che è stato compilato da [CrtMemCheckpoint](crtmemcheckpoint.md) prima **CrtMemDumpAllObjectsSince** è stato chiamato. Quando *lo stato* viene **NULL**, la funzione inizia il dump dall'inizio dell'esecuzione del programma.
 
-Se l'applicazione è installata una funzione hook di dump chiamando [CrtSetDumpClient](crtsetdumpclient.md), quindi ogni volta che **CrtMemDumpAllObjectsSince** trasferisce le informazioni su un **CLIENT_BLOCK** tipo di blocco, viene chiamato anche la funzione di dump fornita dall'applicazione. Per impostazione predefinita, i blocchi di runtime C interni (**CRT_BLOCK**) non sono inclusi nelle operazioni di dump di memoria. Il [CrtSetDbgFlag](crtsetdbgflag.md) funzione può essere utilizzata per attivare il **crtdbg_check_crt_df** bit di **crtDbgFlag** per includere questi blocchi. I blocchi contrassegnati come liberati o ignorati (**FREE_BLOCK**, **IGNORE_BLOCK**) non sono inclusi nel dump della memoria.
+Se l'applicazione è installata una funzione di hook di dump chiamando [CrtSetDumpClient](crtsetdumpclient.md), volta ogni **CrtMemDumpAllObjectsSince** trasferisce le informazioni su un **CLIENT_BLOCK** tipo di blocco, chiama anche la funzione di dump fornita dall'applicazione. Per impostazione predefinita, i blocchi di runtime C interni (**CRT_BLOCK**) non sono inclusi nelle operazioni di dump di memoria. Il [CrtSetDbgFlag](crtsetdbgflag.md) funzione può essere utilizzata per attivare il **_CRTDBG_CHECK_CRT_DF** di tipo bit **crtDbgFlag** per includere questi blocchi. I blocchi contrassegnati come liberati o ignorati (**FREE_BLOCK**, **IGNORE_BLOCK**) non sono inclusi nel dump della memoria.
 
-Per ulteriori informazioni sulle funzioni dello stato dell'heap e il **CrtMemState** struttura, vedere [funzioni segnalazione dello stato dell'Heap](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Per altre informazioni sulle funzioni dello stato dell'heap e la **CrtMemState** struttura, vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -79,7 +80,7 @@ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-libra
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di utilizzo **CrtMemDumpAllObjectsSince**, vedere [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Per un esempio d'uso **CrtMemDumpAllObjectsSince**, vedere [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
 ## <a name="see-also"></a>Vedere anche
 

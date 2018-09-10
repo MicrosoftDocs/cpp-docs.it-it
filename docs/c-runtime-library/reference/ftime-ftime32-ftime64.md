@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fd388e2963a0e28389fbf7cc2c4bd146ac9b61e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8942dbaddcc1f4ab1ec5d571d08d95d8669d302d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401438"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107055"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -66,24 +66,25 @@ void _ftime64( struct __timeb64 *timeptr );
 
 ### <a name="parameters"></a>Parametri
 
-*timeptr* puntatore a un **timeb**, **__timeb32**, o **__timeb64** struttura.
+*timeptr*<br/>
+Puntatore a un **timeb**, **__timeb32**, o **__timeb64** struttura.
 
 ## <a name="remarks"></a>Note
 
-Il **ftime** funzione Ottiene l'ora locale corrente e lo archivia nella struttura a cui puntata *timeptr*. Il **timeb**, **__timeb32**, e **__timeb64** strutture vengono definite \<sys\\timeb.h >. Le strutture contengono quattro valori, elencati nella tabella seguente.
+Il **ftime** funzione Ottiene l'ora locale corrente e lo archivia nella struttura a cui punta *timeptr*. Il **timeb**, **__timeb32**, e **__timeb64** strutture sono definite nel \<sys\\timeb.h >. Le strutture contengono quattro valori, elencati nella tabella seguente.
 
 |Campo|Descrizione|
 |-|-|
 |**dstflag**|Diverso da zero se l'ora legale è in vigore per il fuso orario locale. (Vedere [tzset](tzset.md) per una spiegazione del modo in cui viene determinata l'ora legale.)|
 |**millitm**|Frazione di secondo in millisecondi.|
 |**time**|Ora in secondi trascorsi dalla mezzanotte (00.00.00) del 1 gennaio 1970 nel formato UTC (Coordinated Universal Time).|
-|**timezone**|La differenza in minuti, in direzione ovest, tra l'ora UTC e l'ora locale. Il valore di **fuso orario** è impostato il valore della variabile globale **TimeZone** (vedere **tzset**).|
+|**timezone**|La differenza in minuti, in direzione ovest, tra l'ora UTC e l'ora locale. Il valore di **timezone** viene impostato dal valore della variabile globale **TimeZone** (vedere **tzset**).|
 
-Il **_ftime64** funzione, che usa il **__timeb64** struttura, consente le date di creazione di file relativamente a 23:59:59, 31 dicembre 3000 UTC; mentre **_ftime32**rappresenta solo le date a 23:59:59 18 gennaio 2038, ore UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
+Il **_ftime64** funzione, che usa le **__timeb64** struttura, consente di esprimere backup tramite 23:59:59, 31 dicembre 3000 UTC, le date di creazione di file mentre **_ftime32**rappresenta solo le date fino: 23.59.59 del 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
 
-Il **ftime** funzione equivale a **_ftime64**, e **timeb** contiene un'ora a 64 bit, a meno che non **_USE_32BIT_TIME_T** è definito, in qual caso il comportamento precedente è attiva; **ftime** utilizza un tempo a 32 bit e **timeb** contiene un'ora a 32 bit.
+Il **ftime** è equivalente alla funzione **_ftime64**, e **timeb** contiene un'ora a 64 bit, a meno che non **_USE_32BIT_TIME_T** è definito, in questo caso il comportamento precedente è attivo. **ftime** Usa un'ora a 32 bit e **timeb** contiene un'ora a 32 bit.
 
-**ftime** convalida i propri parametri. Se passato come un puntatore null *timeptr*, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL**.
+**ftime** convalida i propri parametri. Se viene passato un puntatore null come *timeptr*, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposterà **errno** al **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

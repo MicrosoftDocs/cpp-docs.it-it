@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce945499505b7efcaaf010585f27fbfaf42a06b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397132"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103319"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -57,7 +57,8 @@ void _free_locale(
 
 ### <a name="parameters"></a>Parametri
 
-*impostazioni locali* oggetto impostazioni locali da liberare.
+*locale*<br/>
+L'oggetto delle impostazioni locali da liberare.
 
 ## <a name="remarks"></a>Note
 
