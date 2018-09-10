@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: usare i modelli di risorse | Microsoft Docs'
+title: 'Procedura: usare i modelli di risorse (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,27 +8,27 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- language-specific template files
+- language-specific template files [C++]
 - resource templates
-- resources [Visual Studio], creating
-- rct files
+- resources [C++], creating
+- rct files [C++]
 - templates, resource templates
-- resources [Visual Studio], templates
-- .rct files
+- resources [C++], templates
+- .rct files [C++]
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bd85dd5c5b6468ca8246fdf11f4068eae928107
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90c94e87693929c2ae33d65fe3f3a4b2dd55d48b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602440"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313975"
 ---
-# <a name="how-to-use-resource-templates"></a>Procedura: utilizzare modelli di risorse
+# <a name="how-to-use-resource-templates-c"></a>Procedura: usare i modelli di risorse (C++)
 
 Un modello di risorsa è una risorsa personalizzata salvata come un file con estensione RCT. È quindi possibile usare un modello di risorsa come punto iniziale per la creazione di altre risorse. I modelli di risorsa garantiscono un risparmio di tempo nello sviluppo di risorse o gruppi di risorse aggiuntivi che condividono alcune funzionalità, quali controlli standard e altri elementi ripetuti. Se, ad esempio, si vuole includere un pulsante ? e un'icona di un logo aziendale in più finestre di dialogo, è possibile creare un nuovo modello di finestra di dialogo e personalizzarlo con il logo e il pulsante ?.
 

@@ -1,5 +1,5 @@
 ---
-title: Specifica la posizione e dimensione di una finestra di dialogo | Microsoft Docs
+title: Specifica la posizione e dimensione di una finestra di dialogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, size
-- dialog boxes, positioning
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be3db9c689b79edd17af567831d62071d79cad2d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 854e4df84bfc5f75eda8f98fa117c199ba054b3a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604619"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316575"
 ---
-# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Impostazione della posizione e della dimensione di una finestra di dialogo
+# <a name="specifying-the-location-and-size-of-a-dialog-box-c"></a>Specifica la posizione e dimensione di una finestra di dialogo (C++)
 
-La posizione e dimensioni di una finestra di dialogo, nonché la posizione e dimensioni dei controlli in essa contenuti vengono misurati in unità di misura della finestra. I valori per i singoli controlli e la finestra di dialogo vengono visualizzati in basso a destra della barra quando si seleziona di stato di Visual Studio.
+La posizione e dimensioni di una finestra di dialogo di C++, nonché la posizione e dimensioni dei controlli in essa contenuti vengono misurati in unità di misura della finestra. I valori per i singoli controlli e la finestra di dialogo vengono visualizzati in basso a destra della barra quando si seleziona di stato di Visual Studio.
 
 Esistono tre proprietà che è possibile impostare nella [finestra proprietà](/visualstudio/ide/reference/properties-window) per specificare in una finestra di dialogo verrà visualizzata sullo schermo. Il **centro** proprietà è un valore booleano; se si imposta il valore su **True**, la finestra di dialogo verrà sempre visualizzato al centro della schermata. Se viene impostata su **False**, quindi è possibile impostare il **XPos** e **YPos** proprietà da definire in modo esplicito in cui sullo schermo verrà visualizzata la finestra di dialogo. Le proprietà di posizione sono valori di offset dall'angolo superiore sinistro dell'area di visualizzazione, che è definita come `{X=0, Y=0}`. È anche in base alla posizione di **Absolute Align** proprietà: se **True**, le coordinate sono relative schermo; se **False**, le coordinate sono relative la finestra di dialogo finestra del proprietario.
 

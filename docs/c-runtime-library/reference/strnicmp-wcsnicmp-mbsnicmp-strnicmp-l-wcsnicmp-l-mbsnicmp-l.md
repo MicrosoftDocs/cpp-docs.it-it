@@ -76,18 +76,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba97d3bcd356a044245e7613470bead1cc42eb25
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0da454b2b980be3565ee27fde4ee14d7eadd42fb
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417129"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313630"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 Confronta il numero specificato di caratteri di due stringhe senza fare distinzione tra maiuscole e minuscole.
 
 > [!IMPORTANT]
-> **mbsnicmp** e **mbsnicmp_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsnicmp** e **mbsnicmp_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -144,21 +144,21 @@ Indica la relazione tra le sottostringhe, come indicato di seguito.
 
 |Valore restituito|Descrizione|
 |------------------|-----------------|
-|< 0|*String1* sottostringa è inferiore a *string2* sottostringa.|
+|< 0|*String1* sottostringa è minore di *string2* sottostringa.|
 |0|*String1* è identica alla sottostringa *string2* sottostringa.|
-|> 0|*String1* è maggiore della sottostringa *string2* sottostringa.|
+|> 0|*String1* è maggiore di sottostringa *string2* sottostringa.|
 
-Un errore di convalida del parametro, queste funzioni restituiscono **_NLSCMPERROR**, definito in \<String. h > e \<Mbstring. h >.
+Errore di convalida dei parametri, queste funzioni restituiscono **_NLSCMPERROR**, che è definito nel \<String. h > e \<Mbstring. h >.
 
 ## <a name="remarks"></a>Note
 
-Il **strnicmp** funzione esegue un confronto ordinale al massimo i primi *conteggio* caratteri *string1* e *string2*. Il confronto viene eseguito senza fare distinzione tra maiuscole e minuscole convertendo ogni carattere in minuscolo. **strnicmp** è una versione di distinzione **strncmp**. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima *conteggio* i caratteri vengono confrontati. Se le stringhe sono uguali quando un carattere di terminazione null viene raggiunto in entrambe le stringhe prima *conteggio* i caratteri vengono confrontati, la stringa più corta sarà la minore.
+Il **strnicmp** funzione esegue un confronto ordinale al massimo i primi *conteggio* caratteri del *string1* e *string2*. Il confronto viene eseguito senza fare distinzione tra maiuscole e minuscole convertendo ogni carattere in minuscolo. **strnicmp** è una versione di maiuscole e minuscole **strncmp**. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima *conteggio* i caratteri vengono confrontati. Se le stringhe sono uguali quando un carattere di terminazione null viene raggiunta in entrambe le stringhe prima *conteggio* i caratteri vengono confrontati, la stringa più corta sarà minore.
 
-I caratteri da 91 a 96 nella tabella ASCII ('[', '\\', ']', '^', '_' e '\`') sono considerati minori rispetto a qualsiasi carattere alfabetico. Questo ordinamento è identico a quello della **stricmp**.
+I caratteri da 91 a 96 nella tabella ASCII ('[', '\\', ']', '^', '_' e '\`') sono considerati minori rispetto a qualsiasi carattere alfabetico. Questo ordinamento è identico a quello del **stricmp**.
 
-**wcsnicmp** e **mbsnicmp** sono versioni a caratteri wide e caratteri multibyte di **strnicmp**. Gli argomenti di **wcsnicmp** sono caratteri wide, mentre quelli di stringhe **mbsnicmp** sono stringhe a caratteri multibyte. **mbsnicmp** riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte corrente e restituisce **_NLSCMPERROR** in caso di errore. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md). A parte ciò, queste tre funzioni si comportano in modo identico. Queste funzioni vengono influenzate dalle impostazioni locali, ovvero le versioni che non hanno il **l** suffisso utilizzare le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni che hanno il **l** suffisso In alternativa, usare il *delle impostazioni locali* che viene passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**wcsnicmp** e **mbsnicmp** sono versioni a caratteri wide e caratteri multibyte di **strnicmp**. Gli argomenti di **wcsnicmp** sono caratteri wide, mentre quelli di stringhe **mbsnicmp** sono stringhe a caratteri multibyte. **mbsnicmp** riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte corrente e restituisce **_NLSCMPERROR** in caso di errore. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md). A parte ciò, queste tre funzioni si comportano in modo identico. Queste funzioni vengono influenzate dalle impostazioni locali, ovvero le versioni che non hanno le **l** suffisso usano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni che hanno il **l** suffisso Usare invece i *delle impostazioni locali* che viene passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Tutte queste funzioni convalidano i relativi parametri. Se entrambi *string1* oppure *string2* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostare **errno** al **EINVAL**.
+Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1* oppure *string2* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostare **errno** al **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -172,8 +172,8 @@ Tutte queste funzioni convalidano i relativi parametri. Se entrambi *string1* op
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strnicmp**, **strnicmp_l**|<string.h>|
-|**wcsnicmp**, **wcsnicmp_l**|<string.h> o <wchar.h>|
+|**strnicmp**, **strnicmp_l**|\<string.h>|
+|**wcsnicmp**, **wcsnicmp_l**|\<string.h> o \<wchar.h>|
 |**mbsnicmp**, **mbsnicmp_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).

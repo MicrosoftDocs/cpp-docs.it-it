@@ -1,5 +1,5 @@
 ---
-title: Risorse per la creazione di un gioco con DirectX | Microsoft Docs
+title: Risorse per la creazione di un gioco di C++ con DirectX | Microsoft Docs
 ms.custom: ''
 ms.date: 06/08/2018
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99c2671874823ee13164b2cfd226b6ef3c35bbb7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 414074c6cbc7945573409923da8070eac218c91a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221768"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315650"
 ---
-# <a name="resources-for-creating-a-game-using-directx"></a>Risorse per la creazione di un gioco con DirectX
+# <a name="resources-for-creating-a-c-game-using-directx"></a>Risorse per la creazione di un gioco di C++ con DirectX
 
 Per creare giochi desktop veramente coinvolgenti, utilizzare insieme Visual C++ e DirectX.
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef090aec97308a6d423c18daab5ee540efdd8a1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959774"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316321"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -32,7 +32,7 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 
 ## <a name="syntax"></a>Sintassi
 
-> #<a name="include-hashmap"></a>includere < hash_map >
+> #<a name="include-hashmap"></a>includere \<hash_map >
 
 ### <a name="operators"></a>Operatori
 
@@ -64,6 +64,6 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](cpp-standard-library-header-files.md)
-[Thread Safety nella libreria Standard C++](thread-safety-in-the-cpp-standard-library.md)
-[riferimenti alla libreria Standard C++](cpp-standard-library-reference.md)
+[Riferimento file di intestazione](cpp-standard-library-header-files.md)<br/>
+[Thread Safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento per la libreria standard C++](cpp-standard-library-reference.md)

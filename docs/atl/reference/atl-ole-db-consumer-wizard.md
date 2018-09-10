@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83e644d8544b7919c0f61199197574d03b13ff8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763068"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315373"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -106,23 +106,23 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
    Dopo aver selezionato un'origine dati, questa casella viene popolata con un nome predefinito della classe basato la tabella o una stored procedure che è stato selezionato (vedere **Vybrat zdroj** sotto). È possibile modificare il nome della classe.
 
-- **File con estensione h**  
+- **File con estensione h**
 
    Dopo aver selezionato un'origine dati, questa casella viene popolata con un nome di classe intestazione predefinito basato sulla tabella o sulla stored procedure che è stato selezionato (vedere **Vybrat zdroj** sotto). È possibile modificare il nome del file di intestazione o selezionare un file di intestazione esistente.
 
-- **Con attributi**  
+- **Con attributi**
 
    Questa opzione specifica se la procedura guidata creerà le classi di consumer usando gli attributi o le dichiarazioni di template. Quando si seleziona questa opzione, verranno utilizzati attributi invece delle dichiarazioni di modello (questo è l'opzione predefinita). Quando si deseleziona questa opzione, la procedura guidata utilizza le dichiarazioni di template anziché agli attributi.
 
    - Se si seleziona un consumer **tipo** dei **tabella**, la procedura guidata Usa la `db_source` e `db_table` attributi per creare la tabella e la funzione di accesso nella tabella delle dichiarazioni di classe e Usa `db_column` a creare la mappa delle colonne. Ad esempio, crea questa mappa:
 
         ```cpp
-        // Inject table class and table accessor class declarations  
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]  
-        ... 
-        // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+        // Inject table class and table accessor class declarations
+        [db_source("<initialization_string>"), db_table("dbo.Orders")]
+        ...
+        // Column map
+        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
         ...
         ```
 
@@ -133,20 +133,20 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
             class COrdersAccessor; // Table class
             class COrders : public CTable<CAccessor<COrdersAccessor>>;
         // ...
-        // Column map  
+        // Column map
             BEGIN_COLUMN_MAP(COrderDetailsAccessor)
                 COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
                 COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...  
+                // ...
             END_COLUMN_MAP()
         ```
 
    - Se si seleziona un consumer **tipo** dei **comando**, la procedura guidata Usa i `db_source` e `db_command` gli attributi e Usa `db_column` per creare la mappa delle colonne. Ad esempio, crea questa mappa:
 
         ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]  
-        ... 
-        // Column map using db_column is the same as for consumer type of 'table'  
+        [db_source("<initialization_string>"), db_command("SQL_command")]
+        ...
+        // Column map using db_column is the same as for consumer type of 'table'
         ```
 
       invece di usare il comando e le dichiarazioni di classe di comando della funzione di accesso nel file con estensione h della classe di comando, ad esempio:
@@ -193,6 +193,6 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
 ## <a name="see-also"></a>Vedere anche
 
-[Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)  
-[Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Stringhe di connessione e i collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)
+[aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)
+[stringhe di connessione e i collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

@@ -1,5 +1,5 @@
 ---
-title: Ricerca di una stringa | Microsoft Docs
+title: Ricerca di una risorsa di tipo stringa (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e04caa4aa927bd24bc1a5cd86f5d390e1c376b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e331401a3a2a789b13bc21b76c9b1cbfcb30e33
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197535"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318500"
 ---
-# <a name="finding-a-string"></a>Ricerca di una stringa
+# <a name="finding-a-string-resource-c"></a>Ricerca di una risorsa di tipo stringa (C++)
 
 È possibile eseguire la ricerca di una o più stringhe nella tabella di stringhe e usare [le espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) con il **Cerca nei file** comando (**Edit** menu) per individuare tutte le istanze di stringhe che corrispondono a un criterio.
 

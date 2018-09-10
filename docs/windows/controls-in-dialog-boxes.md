@@ -1,5 +1,5 @@
 ---
-title: I controlli nelle finestre di dialogo | Microsoft Docs
+title: I controlli nelle finestre di dialogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591958"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317108"
 ---
-# <a name="controls-in-dialog-boxes"></a>Controlli delle finestre di dialogo
+# <a name="controls-in-dialog-box-ces"></a>Controlli nella finestra di dialogo (C++) es
 
 È possibile aggiungere controlli a una finestra di dialogo tramite il [scheda Editor finestre](../windows/dialog-editor-tab-toolbox.md) nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), che consente di scegliere il controllo desiderato e trascinarlo nella finestra di dialogo. Per impostazione predefinita, la finestra Casella degli strumenti è impostata per l'opzione Nascondi automaticamente. Viene visualizzata come scheda sul margine sinistro della soluzione quando l'editor finestre è aperta. Tuttavia, è possibile aggiungere il **della casella degli strumenti** finestra nella posizione desiderata, fare clic il **Nascondi automaticamente** pulsante nell'angolo superiore destro della finestra. Per altre informazioni su come controllare il comportamento di questa finestra, vedere [gestione delle finestre](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 

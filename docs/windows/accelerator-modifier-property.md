@@ -1,5 +1,5 @@
 ---
-title: Proprietà Modifier tasti di scelta rapida | Microsoft Docs
+title: Proprietà Modifier tasti di scelta rapida (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6750bfc0195eaaa350b829d1d899f648e9fe0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 793e02b4ac083d6fe84ba2cc76ee340bcf2484e9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592636"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316055"
 ---
-# <a name="accelerator-modifier-property"></a>Proprietà Modifier dei tasti di scelta rapida
+# <a name="accelerator-modifier-property-c"></a>Proprietà Modifier tasti di scelta rapida (C++)
 
 Di seguito sono le voci legali per la proprietà modificatore della tabella di tasti di scelta rapida.
 

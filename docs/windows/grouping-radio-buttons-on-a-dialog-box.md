@@ -1,5 +1,5 @@
 ---
-title: Raggruppamento di pulsanti di opzione in una finestra di dialogo | Microsoft Docs
+title: Raggruppamento di pulsanti di opzione in una finestra di dialogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,23 @@ dev_langs:
 helpviewer_keywords:
 - member variables, adding to radio button groups
 - variables, dialog box control member variables
-- dialog box controls, grouping radio buttons
+- dialog box controls [C++], grouping radio buttons
 - grouping controls
-- radio buttons, grouping on dialog boxes
+- radio buttons [C++], grouping on dialog boxes
 ms.assetid: 3cc43f9e-56c8-4faa-9930-ce81733c69de
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d0846d87273920f72598a1ea5bc4bd83d4c952d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599885"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315392"
 ---
-# <a name="grouping-radio-buttons-on-a-dialog-box"></a>Raggruppamento di pulsanti di opzione in una finestra di dialogo
+# <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>Raggruppamento di pulsanti di opzione in una finestra di dialogo (C++)
 
 Quando si aggiungono pulsanti di opzione per una finestra di dialogo, è possibile gestirli come un gruppo impostando una **gruppo** proprietà nel **proprietà** finestra per il primo pulsante del gruppo. Nell' [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md)viene quindi visualizzato un ID di controllo per tale pulsante di opzione, consentendo di aggiungere una variabile membro per il gruppo di pulsanti di opzione.
 

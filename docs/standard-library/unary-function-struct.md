@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629c7fa0a113f0db279403fcfbcc82b6c0a0571b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff8e486be6e28de313a8e1a20634af4c50c350e8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854249"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313858"
 ---
 # <a name="unaryfunction-struct"></a>Struct unary_function
 
@@ -86,10 +86,10 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "
          << result1 << "." << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisiti

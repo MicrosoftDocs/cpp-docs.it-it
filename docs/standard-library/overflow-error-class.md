@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3bf0073c5f6f1acc574ca49b116513046337aaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 17a8c5b1a95d133f66c729ae6736a8726f8a2a3f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853047"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317524"
 ---
 # <a name="overflowerror-class"></a>Classe overflow_error
 
@@ -68,10 +68,10 @@ int main( )
       cerr << "Type " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught bitset<N> overflow
 Type class std::overflow_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Requisiti

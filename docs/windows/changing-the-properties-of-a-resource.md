@@ -1,5 +1,5 @@
 ---
-title: Modifica delle proprietà di una risorsa | Microsoft Docs
+title: Modifica delle proprietà di una risorsa (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,22 +8,22 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- properties [Visual Studio], resources
-- resources [Visual Studio], properties
+- properties [C++], resources
+- resources [C++], properties
 ms.assetid: c4373b36-2651-4954-afa6-3f66300673d4
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5d0e2e086d35d775509160edcd32c76c3ec3cab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c777f2800d16775ccb9a6ba51baa708d861e0d68
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596356"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313351"
 ---
-# <a name="changing-the-properties-of-a-resource"></a>Modifica delle proprietà di una risorsa
+# <a name="changing-the-properties-of-a-resource-c"></a>Modifica delle proprietà di una risorsa (C++)
 
 ### <a name="to-edit-the-properties-of-a-resource"></a>Per modificare le proprietà di una risorsa
 

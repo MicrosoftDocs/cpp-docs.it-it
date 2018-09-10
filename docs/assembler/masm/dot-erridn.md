@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd21d6a17052cd30c8ad1ef3f35e0c7282da332
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 74145f45a171ab1aee10bb773fb03970842cc339
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685791"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318876"
 ---
 # <a name="erridn"></a>.ERRIDN]
 
@@ -29,7 +29,7 @@ Genera un errore se gli elementi di testo sono identici.
 
 ## <a name="syntax"></a>Sintassi
 
-> . ERRIDN [[I]] <textitem1>, <textitem2> [[, messaggio]]
+> . ERRIDN [[I]] *textitem1*, *textitem2* [[, *messaggio*]]
 
 ## <a name="remarks"></a>Note
 

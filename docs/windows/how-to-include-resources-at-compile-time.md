@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: includere risorse in fase di compilazione | Microsoft Docs'
+title: 'Procedura: includere risorse in fase di compilazione (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,9 +11,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- compiling source code, including resources
 - comments [C++], compiled files
-- resources [Visual Studio], including at compile time
+- resources [C++], including at compile time
 - projects [C++], including resources
 - '#include directive'
 - include directive (#include)
@@ -23,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 394025224171c3407ac7c4e9973018d3ca932175
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 81f5136ab18143f91a94525f6797e7711abc426a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590850"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318109"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Procedura: includere risorse in fase di compilazione
 

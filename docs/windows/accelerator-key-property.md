@@ -1,5 +1,5 @@
 ---
-title: Proprietà chiave di tasti di scelta rapida | Microsoft Docs
+title: Tasti di scelta rapida proprietà chiave (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162cb774e985d490385c68bebab01f48222b3616
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fecfd06e26d9c49c3442e5b8011f6183a96cec0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598317"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314638"
 ---
-# <a name="accelerator-key-property"></a>Proprietà Key dei tasti di scelta rapida
+# <a name="accelerator-key-property-c"></a>Tasti di scelta rapida proprietà chiave (C++)
 
 Di seguito sono le voci legali per la proprietà chiave della tabella di tasti di scelta rapida:
 

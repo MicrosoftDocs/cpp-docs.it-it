@@ -1,5 +1,5 @@
 ---
-title: Test di una finestra di dialogo | Microsoft Docs
+title: Test di una finestra di dialogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,21 +10,21 @@ dev_langs:
 helpviewer_keywords:
 - Test Dialog command
 - testing, dialog boxes
-- dialog boxes, testing
+- dialog boxes [C++], testing
 ms.assetid: 45034ee9-c554-4f4b-8c46-6ddefdee8951
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94d08cc865b6388010dc07ef965f60edbf6796ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f0680ac7b926e3956efdadfa9342cfc5cd5f1239
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587520"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314612"
 ---
-# <a name="testing-a-dialog-box"></a>Verifica di una finestra di dialogo
+# <a name="testing-a-dialog-box-c"></a>Test di una finestra di dialogo (C++)
 
 Quando si progetta una finestra di dialogo, è possibile simularne e verificarne il comportamento in fase di esecuzione senza compilare il programma. In questo modo è possibile:
 

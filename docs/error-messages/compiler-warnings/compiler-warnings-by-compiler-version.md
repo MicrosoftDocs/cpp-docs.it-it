@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850420"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319084"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore dalla versione del compilatore
 
@@ -404,7 +404,7 @@ C4694|«*tipo*': una classe astratta sealed non può avere una classe di base*ti
 C4720|rapporto assembler inline: '*descrizione*'
 C4721|«*descrizione*': non disponibile come intrinseco
 C4722|«*descrizione*': il distruttore non restituisce mai un valore, potenziale perdita di memoria
-C4726|ARM arch4/4T supporta solo ' < cpsr_f > o < spsr_f >' con valore immediato
+C4726|ARM arch4/4T supporta solo '\<cpsr_f > o \<spsr_f >' con valore immediato
 C4727|PCH denominato *name* con lo stesso timestamp trovato *name* e *nome*.  Tramite il primo PCH.
 C4729|funzione troppo grande per avvisi basati su grafico del flusso
 C4730|«*descrizione*': miste _m64 e a virgola mobile le espressioni possono generare codice non corretto

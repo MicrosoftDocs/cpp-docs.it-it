@@ -1,5 +1,5 @@
 ---
-title: Finestra Visualizzazione risorse | Microsoft Docs
+title: Finestra Visualizzazione risorse (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,7 +10,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], viewing
+- resources [C++], viewing
 - Resource View window
 ms.assetid: 10be7ff6-195f-4783-9ec5-87e5e06a7369
 author: mikeblome
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b941013e2acfcee7a0f6fec16410ae7e200e56e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 00834e089ab3ee4342861fb0a388e7b705d94055
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578654"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313286"
 ---
-# <a name="resource-view-window"></a>Finestra Visualizzazione risorse
+# <a name="resource-view-window-c"></a>Finestra Visualizzazione risorse (C++)
 
 > [!NOTE]
 > Non supportato nelle edizioni Express.

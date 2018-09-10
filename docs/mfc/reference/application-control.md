@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 538a376dd14eae32864b494b7e79db1c89686b84
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338721"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315015"
 ---
 # <a name="application-control"></a>Controllo Application
 OLE richiede un maggiore controllo delle applicazioni e i relativi oggetti. DLL del sistema OL deve essere in grado di avviare e rilascia automaticamente le applicazioni, coordinare la produzione e la modifica degli oggetti e così via. Le funzioni in questo argomento soddisfano tali requisiti. Oltre a essere chiamato da DLL del sistema ol, queste funzioni devono essere chiamate a volte anche applicazioni. 
@@ -186,7 +186,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Requisiti  
- **Intestazione:** < AFXWIN. h >  
+ **Intestazione:** afxwin.h  
    
 ### <a name="see-also"></a>Vedere anche  
  [Macro e funzioni globali](mfc-macros-and-globals.md)   
@@ -332,7 +332,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Requisiti  
- **Intestazione:** < AFXWIN. h >  
+ **Intestazione:** afxwin.h  
    
 ### <a name="see-also"></a>Vedere anche  
  [Macro e funzioni globali](mfc-macros-and-globals.md)  

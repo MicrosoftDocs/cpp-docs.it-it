@@ -1,5 +1,5 @@
 ---
-title: Conversione di bitmap in barre degli strumenti | Microsoft Docs
+title: Conversione di bitmap in barre degli strumenti (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
-- Toolbar editor, converting bitmaps
+- Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
 author: mikeblome
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5524b1d5ecb3fa4de38f46706f26d2a318fe5ef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602400"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317228"
 ---
-# <a name="converting-bitmaps-to-toolbars"></a>Conversione di bitmap in barre degli strumenti
+# <a name="converting-bitmaps-to-toolbars-c"></a>Conversione di bitmap in barre degli strumenti (C++)
 
-È possibile creare una nuova barra degli strumenti mediante la conversione di una bitmap. L'immagine di bitmap converte le immagini del pulsante per una barra degli strumenti. La mappa di bit contiene in genere numerose immagini pulsante su una singola bitmap, con una sola immagine per ogni pulsante. Le immagini possono essere di qualsiasi dimensione. il valore predefinito è 16 pixel di larghezza e l'altezza dell'immagine. È possibile specificare le dimensioni delle immagini pulsante nel [finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md) quando si sceglie **Editor barra degli strumenti** dal **immagine** menu mentre nell'editor di immagini.
+È possibile creare una nuova barra degli strumenti in un progetto C++ mediante la conversione di una bitmap. L'immagine di bitmap converte le immagini del pulsante per una barra degli strumenti. La mappa di bit contiene in genere numerose immagini pulsante su una singola bitmap, con una sola immagine per ogni pulsante. Le immagini possono essere di qualsiasi dimensione. il valore predefinito è 16 pixel di larghezza e l'altezza dell'immagine. È possibile specificare le dimensioni delle immagini pulsante nel [finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md) quando si sceglie **Editor barra degli strumenti** dal **immagine** menu mentre nell'editor di immagini.
 
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>Per convertire le bitmap in una barra degli strumenti
 

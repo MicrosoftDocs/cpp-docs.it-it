@@ -1,5 +1,5 @@
 ---
-title: Creazione di un sottomenu | Microsoft Docs
+title: Creazione di un sottomenu (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,22 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - submenus
-- submenus, creating
-- menus, creating
+- submenus [C++], creating
+- menus [C++], creating
 ms.assetid: fb95fdfd-0a80-459d-8c5c-a4e8bac9f56a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 832f044cf644bd3dac30c745e13dad7d5a6fc4d1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aea96d49e656805f6df158dc8dd646baa1a9eed5
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591246"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317199"
 ---
-# <a name="creating-a-submenu"></a>Creazione di un sottomenu
+# <a name="creating-a-submenu-c"></a>Creazione di un sottomenu (C++)
 
 ### <a name="to-create-a-submenu"></a>Per creare un sottomenu
 

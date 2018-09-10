@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- status bars, associating menu items
-- menus, status bar text
+- status bars [C++], associating menu items
+- menus [C++], status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d9cb5e57d6c7020e0b89104dac87fa3cd08ea023
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 16de276478485cb52b11b3f1bbb869c5b75d05a4
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583701"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316757"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Associazione dei comandi di menu a testo della barra di stato in applicazioni MFC
 
-L'applicazione può visualizzare testo descrittivo per ogni comando di menu se potrebbe selezionare un utente. Eseguire questa operazione assegnando una stringa di testo per ogni comando di menu usando la **dei messaggi di richiesta** proprietà nel **proprietà** finestra. Se si dispone di una stringa nella [tabella stringhe](../windows/string-editor.md) il cui ID è uguale al comando, un'applicazione MFC visualizzerà automaticamente questa risorsa stringa nella barra di stato dell'applicazione in esecuzione quando un utente si posiziona su una voce di menu.
+L'applicazione MFC può visualizzare un testo descrittivo per ogni utente può selezionare i comandi di menu. Eseguire questa operazione assegnando una stringa di testo per ogni comando di menu usando la **dei messaggi di richiesta** proprietà nel **proprietà** finestra. Se si dispone di una stringa nella [tabella stringhe](../windows/string-editor.md) il cui ID è uguale al comando, un'applicazione MFC visualizzerà automaticamente questa risorsa stringa nella barra di stato dell'applicazione in esecuzione quando un utente si posiziona su una voce di menu.
 
 ### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>Per associare un comando di menu con un stringa di testo della barra di stato
 

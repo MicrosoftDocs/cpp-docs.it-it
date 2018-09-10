@@ -1,5 +1,5 @@
 ---
-title: Proprietà dei comandi di menu | Microsoft Docs
+title: Proprietà dei comandi di menu (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34fa9944d1daa443850454560f8e5741e881f6f8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598711"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317919"
 ---
-# <a name="menu-command-properties"></a>Proprietà dei comandi di menu
+# <a name="menu-command-properties-c"></a>Proprietà dei comandi di menu (C++)
 
 Le informazioni seguenti sono organizzate in base al **dal Menu** le proprietà visualizzate nel [finestra proprietà](/visualstudio/ide/reference/properties-window) quando si seleziona un comando di menu. Queste limitazioni sono elencate in ordine alfabetico anche se il **proprietà** finestra consente inoltre di visualizzare queste proprietà per categoria.
 

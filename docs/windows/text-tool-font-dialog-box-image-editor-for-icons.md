@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Carattere strumento testo (Editor di immagini per le icone) | Microsoft Docs
+title: Finestra di dialogo Carattere strumento testo (C++) (Editor di immagini per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,7 +8,7 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Text Tool Font dialog box
+- Text Tool Font dialog box [C++]
 - fonts, changing on an image
 - text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78c65c5830bf75f1dd2bf4165d3d5271cb8a2e48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603246"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315808"
 ---
-# <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Carattere strumento Testo (Editor di immagini per le icone)
+# <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>Finestra di dialogo Carattere strumento testo (C++) (Editor di immagini per le icone)
 
 Specifica le impostazioni del carattere quando si usa la [finestra di dialogo dello strumento di testo](../windows/text-tool-dialog-box-image-editor-for-icons.md) del [Editor di immagini](../windows/image-editor-for-icons.md).
 

@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545795"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319071"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Del compilatore errori C3500 a C3999
 
@@ -496,7 +496,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3721](compiler-error-c3721.md)|«*firma*': firma non compatibile per l'evento|
 |[Errore del compilatore C3722](compiler-error-c3722.md)|un evento generico non è consentito|
 |[Errore del compilatore C3723](compiler-error-c3723.md)|«*funzione*': Impossibile risolvere l'evento|
-|[Errore del compilatore C3724](compiler-error-c3724.md)|per utilizzare il multithreading con gli eventi, aggiungere #include <windows.h>|
+|[Errore del compilatore C3724](compiler-error-c3724.md)|è necessario #include \<Windows. h > per usare multithreading con gli eventi|
 |Errore del compilatore C3725|Obsoleta.|
 |C3726 errore del compilatore|Obsoleta.|
 |[Errore del compilatore C3727](compiler-error-c3727.md)|«*evento*': un evento gestito deve essere una funzione membro o un membro dati che è un puntatore a un delegato|

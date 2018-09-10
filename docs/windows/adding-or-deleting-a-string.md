@@ -1,5 +1,5 @@
 ---
-title: Aggiunta o eliminazione di una stringa | Microsoft Docs
+title: Aggiunta o eliminazione di una risorsa di tipo stringa (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - strings [C++], adding to string tables
-- string tables, deleting strings
+- string tables [C++], deleting strings
 - strings [C++], deleting in string tables
-- string tables, adding strings
+- string tables [C++], adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 952531a846fe48e9f093f016efd67d73c386d82c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c22990c504700ab82ae0d7542420a3f82db4d73
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204487"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314040"
 ---
-# <a name="adding-or-deleting-a-string"></a>Aggiunta o eliminazione di una stringa
+# <a name="adding-or-deleting-a-string-resource-c"></a>Aggiunta o eliminazione di una risorsa di tipo stringa (C++)
 
 È possibile inserire rapidamente le nuove voci nella tabella stringa tramite il **stringa** editor. Nuove stringhe vengono posizionate alla fine della tabella e vengono assegnate l'identificatore successivo disponibile. È quindi possibile modificare il **ID**, **valore**, o **didascalia** le proprietà nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in base alle esigenze.
 

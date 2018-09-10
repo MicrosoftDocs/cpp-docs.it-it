@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di una voce a una tabella di tasti di scelta rapida | Microsoft Docs
+title: Aggiunta di una voce a una tabella di tasti di scelta rapida (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d463dc59e88dbd5c302de632d5261f29d8a4aab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595567"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315580"
 ---
-# <a name="adding-an-entry-to-an-accelerator-table"></a>Aggiunta di una voce a una tabella dei tasti di scelta rapida
+# <a name="adding-an-entry-to-an-accelerator-table-c"></a>Aggiunta di una voce a una tabella di tasti di scelta rapida (C++)
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Per aggiungere una voce a una tabella dei tasti di scelta rapida
 
-1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
+1. In un progetto C++, aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
 
    > [!NOTE]
    > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).

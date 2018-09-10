@@ -1,5 +1,5 @@
 ---
-title: Visualizzare o nascondere la barra degli strumenti (Editor di immagini per le icone) | Microsoft Docs
+title: Visualizzare o nascondere la barra degli strumenti (Editor di immagini di C++ per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df6adfb026c9bfeab715e617dae64a25e993e868
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602612"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318928"
 ---
-# <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Attivazione o disattivazione della barra degli strumenti (Editor di immagini per le icone)
+# <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>Visualizzare o nascondere la barra degli strumenti (Editor di immagini di C++ per le icone)
 
 Poiché molti degli strumenti di disegno sono disponibili dal [tastiera](../windows/accelerator-keys-image-editor-for-icons.md), è talvolta utile nascondere il **Editor di immagini** sulla barra degli strumenti.
 

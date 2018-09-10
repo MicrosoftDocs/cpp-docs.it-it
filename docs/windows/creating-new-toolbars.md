@@ -1,5 +1,5 @@
 ---
-title: Creazione di nuove barre degli strumenti | Microsoft Docs
+title: Creazione di nuove barre degli strumenti (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,7 +11,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - toolbars [C++], creating
-- Toolbar editor, creating new toolbars
+- Toolbar editor [C++], creating new toolbars
 - Insert Resource
 ms.assetid: 1b28264b-0718-4df8-9f65-979805d2efef
 author: mikeblome
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c737d048289074bcac948ad5eb5b27fac515b042
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9456f63d86952e21487da7a9458ce3e6a31d5a47
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596573"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317082"
 ---
-# <a name="creating-new-toolbars"></a>Creazione di nuove barre degli strumenti
+# <a name="creating-new-toolbars-c"></a>Creazione di nuove barre degli strumenti (C++)
 
 ### <a name="to-create-a-new-toolbar"></a>Per creare una nuova barra degli strumenti
 

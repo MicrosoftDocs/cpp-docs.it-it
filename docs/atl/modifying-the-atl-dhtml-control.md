@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764550"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314235"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>La modifica del controllo DHTML ATL
 
@@ -51,7 +51,7 @@ La creazione guidata controllo ATL fornisce codice di avvio è possibile compila
 
    È possibile usare la **IWebBrowser2** metodi perché ATL fornisce un puntatore a interfaccia per l'utente nel file con estensione h.
 
-Successivamente, modificare la risorsa HTML per richiamare i metodi che è stato creato. Si aggiungeranno tre pulsanti per richiamare tali metodi.  
+Successivamente, modificare la risorsa HTML per richiamare i metodi che è stato creato. Si aggiungeranno tre pulsanti per richiamare tali metodi.
 
 #### <a name="to-modify-the-html-resource"></a>Per modificare la risorsa HTML
 
@@ -72,9 +72,9 @@ Successivamente, modificare la risorsa HTML per richiamare i metodi che è stato
 3. Aggiungere la chiamata al `HelloHTML` metodo creato. Ad esempio:
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    Questo metodo creerà un pulsante, etichettato **HelloHTML**, che l'utente può fare clic per visualizzare il `HelloHTML` finestra di messaggio.

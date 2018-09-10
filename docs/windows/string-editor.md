@@ -1,5 +1,5 @@
 ---
-title: Editor stringhe | Microsoft Docs
+title: Editor stringhe (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,10 +12,10 @@ dev_langs:
 helpviewer_keywords:
 - String editor
 - string tables
-- string tables, String editor
+- string tables [C++], String editor
 - string editing
 - string editing, string tables
-- resource editors, String editor
+- resource editors [C++], String editor
 - strings [C++], editing
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
 author: mikeblome
@@ -23,14 +23,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 903c477117162dde1d0becc6e2196e683ea189f1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 94f4aaeae3acb225c2fdc457af135e3534f8d381
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196810"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313260"
 ---
-# <a name="string-editor"></a>Editor stringhe
+# <a name="string-editor-c"></a>Editor stringhe (C++)
 
 Una tabella di stringhe è una risorsa di Windows che contiene un elenco di ID, valori e didascalie per tutte le stringhe dell'applicazione. Ad esempio, nella tabella di stringhe sono contenuti i prompt della barra di stato.
 

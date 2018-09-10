@@ -1,5 +1,5 @@
 ---
-title: Lo spostamento di un pulsante della barra degli strumenti | Microsoft Docs
+title: Lo spostamento di un pulsante della barra degli strumenti (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- toolbar buttons (in Toolbar editor), moving
-- Toolbar editor, moving buttons
+- toolbar buttons [C++], moving
+- Toolbar editor [C++], moving buttons
 ms.assetid: 7625f2ce-8ac4-4428-a3f8-a95bfdf6f95f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf80c1cae57b46b1de57b8f1d2adf62df1a89b81
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bf8cec4505c7b981920ed8af946e668d3d0f16ca
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611767"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315717"
 ---
 # <a name="moving-a-toolbar-button"></a>Spostamento di un pulsante di una barra degli strumenti
 
-### <a name="to-move-a-toolbar-button"></a>Per spostare un pulsante della barra degli strumenti
+### <a name="to-move-a-toolbar-button-c"></a>Per spostare un pulsante della barra degli strumenti (C++)
 
 1. Nel **sulla barra degli strumenti visualizzazione** riquadro, trascinare il pulsante che si desidera spostare nella nuova posizione sulla barra degli strumenti.
 

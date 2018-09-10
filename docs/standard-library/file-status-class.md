@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::permissions
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8f85041099d76a4bbb492aa55c5fb73d870589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dc955aa615deadb6e99cfdbb8d72513cc93ced8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842534"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314560"
 ---
 # <a name="filestatus-class"></a>Classe file_status
 
@@ -39,7 +39,34 @@ Esegue il wrapping di [file_type](../standard-library/filesystem-enumerations.md
 class file_status;
 ```
 
-## <a name="filestatusfilestatus"></a>file_status::file_status
+### <a name="constructors"></a>Costruttori
+
+|Costruttore|Descrizione|
+|-|-|
+|[file_status](#file_status)|Costruisce un wrapper per [file_type](../standard-library/filesystem-enumerations.md#file_type) e il file [perms](../standard-library/filesystem-enumerations.md#perms).|
+
+### <a name="member-functions"></a>Funzioni membro
+
+|Funzione membro|Descrizione|
+|-|-|
+|[type](#type)|Ottiene o imposta `file_type`.|
+|[permissions](#permissions)|Ottiene o imposta le autorizzazioni del file.|
+
+### <a name="operators"></a>Operatori
+
+|Operatore|Descrizione|
+|-|-|
+|[operator=](#op_as)|Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** \<filesystem >
+
+**Namespace:** std::experimental::filesystem, std::experimental::filesystem
+
+## <a name="file_status"></a> file_status:: file_status
+
+Costruisce un wrapper per [file_type](../standard-library/filesystem-enumerations.md#file_type) e il file [perms](../standard-library/filesystem-enumerations.md#perms).
 
 ```cpp
 explicit file_status(
@@ -53,40 +80,60 @@ file_status(file_status&&) noexcept = default;
 ~file_status() noexcept = default;
 ```
 
-## <a name="filestatusoperator"></a>file_status::operator=
+### <a name="parameters"></a>Parametri
+
+*ftype*<br/>
+Specificato `file_type`, per impostazione predefinita `file_type::none`.
+
+*Maschera*<br/>
+File specificato `perms`, per impostazione predefinita `perms::unknown`.
+
+*file_status*<br/>
+L'oggetto archiviato.
+
+## <a name="op_as"></a> file_status::operator =
+
+Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.
 
 ```cpp
 file_status& operator=(const file_status&) noexcept = default;
 file_status& operator=(file_status&&) nexcept = default;
 ```
 
-Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.
+### <a name="parameters"></a>Parametri
 
-## <a name="type"></a>tipo
+*file_status*<br/>
+Il [file_status](../standard-library/file-status-class.md) copiata nel `file_status`.
+
+## <a name="type"></a> Tipo
+
+Ottiene o imposta `file_type`.
 
 ```cpp
 file_type type() const noexcept
 void type(file_type ftype) noexcept
 ```
 
-Ottiene o imposta file_type.
+### <a name="parameters"></a>Parametri
 
-## <a name="permissions"></a>permissions
+*ftype*<br/>
+`file_type`specificato.
+
+## <a name="permissions"></a> Autorizzazioni
+
+Ottiene o imposta le autorizzazioni del file.
+
+Usare il metodo di impostazione per rendere un file `readonly` o rimuovere il `readonly` attributo.
 
 ```cpp
 perms permissions() const noexcept
 void permissions(perms mask) noexcept
 ```
 
-Ottiene o imposta le autorizzazioni del file.
+### <a name="parameters"></a>Parametri
 
-Usare il metodo di impostazione per rendere un file readonly o rimuovere l'attributo readonly.
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<filesystem >
-
-**Namespace:** std::experimental::filesystem, std::experimental::filesystem
+*Maschera*<br/>
+`perms`specificato.
 
 ## <a name="see-also"></a>Vedere anche
 

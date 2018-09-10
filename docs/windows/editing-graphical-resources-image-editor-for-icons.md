@@ -1,5 +1,5 @@
 ---
-title: Modifica delle risorse grafiche (Editor di immagini per le icone) | Microsoft Docs
+title: Modifica delle risorse grafiche (Editor di immagini di C++ per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608861"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312636"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>Modifica delle risorse grafiche (Editor di immagini per le icone)
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Modifica delle risorse grafiche (Editor di immagini di C++ per le icone)
 
 Le risorse grafiche sono le immagini definite per l'applicazione. È possibile disegno a mano libera o disegnare utilizzando forme. È possibile selezionare parti di un'immagine per la modifica, l'inversione o ridimensionamento, oppure è possibile creare un pennello personalizzato da una parte selezionata di un'immagine e disegno con pennello. È possibile definire le proprietà dell'immagine, salvare immagini in formati diversi e convertire immagini in un formato a altro.
 

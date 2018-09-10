@@ -1,5 +1,5 @@
 ---
-title: Sulla barra degli strumenti (Editor di immagini per le icone) | Microsoft Docs
+title: Sulla barra degli strumenti (Editor di immagini di C++ per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604136"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314404"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>Barra degli strumenti (Editor di immagini per le icone)
+# <a name="toolbar-c-image-editor-for-icons"></a>Sulla barra degli strumenti (Editor di immagini di C++ per le icone)
 
 Il **Editor di immagini** sulla barra degli strumenti contiene gli strumenti di disegno, disegno, immettendo il testo, la cancellazione e la modifica delle visualizzazioni. Contiene inoltre un selettore di opzioni con cui è possibile selezionare le opzioni per l'utilizzo di ogni strumento. Ad esempio, è possibile scegliere da vari larghezze di pennello, fattori di ingrandimento e gli stili di riga.
 
