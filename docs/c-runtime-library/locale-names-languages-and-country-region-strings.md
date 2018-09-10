@@ -1,7 +1,7 @@
 ---
 title: Nomi di impostazioni locali, lingue e stringhe relative a paese/area geografica | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606735"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578168"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nomi delle impostazioni locali, lingue e stringhe relative a paesi
 
@@ -44,9 +44,9 @@ Il formato *language*[*_country_region*[.*code_page*]] viene archiviato nell'imp
 
 La tabella codici è la tabella codici ANSI/OEM associata alle impostazioni locali. La tabella codici viene determinata automaticamente quando le impostazioni locali vengono specificate in base alla lingua o alla lingua e al paese. Il valore speciale `.ACP` specifica la tabella codici ANSI per il paese/regione. Il valore speciale `.OCP` specifica la tabella codici OEM per il paese/regione. Se ad esempio si specifica `"Greek_Greece.ACP"` come valore delle impostazioni locali, queste ultime vengono archiviate come `Greek_Greece.1253` , vale a dire la tabella codici ANSI per la lingua greca. Se invece si specifica `"Greek_Greece.OCP"` , le impostazioni locali vengono archiviate come `Greek_Greece.737` , vale a dire la tabella codici OEM per la lingua greca. Per altre informazioni sulle tabelle codici, vedere [Code Pages](../c-runtime-library/code-pages.md). Per un elenco delle tabelle codici supportate in Windows, vedere l'articolo relativo agli [identificatori delle tabelle codici](/windows/desktop/Intl/code-page-identifiers).
 
-Se si utilizza esclusivamente la tabella codici per specificare le impostazioni locali, vengono utilizzati il paese e la lingua predefinita del sistema. Se ad esempio si specifica `".1254"` (ANSI - Turco) come valore delle impostazioni locali in un sistema configurato per la lingua Inglese (Stati Uniti), le impostazioni locali vengono archiviate come `English_United States.1254`. Questo formato non è consigliabile perché potrebbe generare un comportamento non coerente.
+Se si usa esclusivamente la tabella codici per specificare le impostazioni locali, vengono usati paese/area e lingua predefiniti dell'utente indicati da [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename). Se ad esempio si specifica `".1254"` (ANSI - Turco) come valore delle impostazioni locali per un utente configurato per la lingua inglese (Stati Uniti), le impostazioni locali archiviate sono `English_United States.1254`. Questo formato non è consigliabile perché potrebbe generare un comportamento non coerente.
 
-Il valore `C` per l'argomento *locale* specifica l'ambiente ANSI minimo per la conversione C. Le impostazioni locali di `C` presuppongono che ogni tipo di dati `char` sia 1 byte e il relativo valore sia sempre minore di 256. Se *locale* punta a una stringa vuota, le impostazioni locali corrispondono all'ambiente nativo definito in fase di implementazione.
+Il valore `C` per l'argomento *locale* specifica l'ambiente ANSI minimo per la conversione C. Le impostazioni locali `C` presuppongono che ogni tipo di dati **char** sia 1 byte e il relativo valore sia sempre minore di 256. Se *locale* punta a una stringa vuota, le impostazioni locali corrispondono all'ambiente nativo definito in fase di implementazione.
 
 È possibile specificare contemporaneamente tutte le categorie di impostazioni locali per le funzioni `setlocale` e `_wsetlocale` utilizzando la categoria `LC_ALL` . È possibile impostare le categorie sulle stesse impostazioni locali oppure impostare singolarmente ogni categoria utilizzando un argomento delle impostazioni locali con il formato seguente:
 

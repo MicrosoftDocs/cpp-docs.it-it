@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55fbe59128aef6fbc7df20dd14afd102b493f2fd
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322498"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578314"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Trasferimento alla piattaforma UWP (Universal Windows Platform) (C++)
 
@@ -27,9 +27,9 @@ La documentazione di Windows Developer Center contiene una guida al trasferiment
 
 Questo argomento contiene le procedure seguenti per convertire il codice per la piattaforma UWP.
 
-1. [Porting di un'app di Windows Store 8.1 alla piattaforma UWP](#BK_81StoreApp)
+- [Porting di un'app di Windows Store 8.1 alla piattaforma UWP](#BK_81StoreApp)
 
-2. [Porting di un componente Runtime di Windows 8.1 per il UWP](#BK_81Component)
+- [Porting di un componente Runtime di Windows 8.1 per il UWP](#BK_81Component)
 
 Se si ha a disposizione una DLL Win32 per desktop classico e la si vuole chiamare da un'applicazione UWP, è anche possibile eseguire queste operazioni. Usando queste procedure, è possibile creare un livello dell'interfaccia utente UWP per un'applicazione C++ per desktop Windows classico esistente oppure un codice C++ multipiattaforma standard. Vedere [Procedura: usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
@@ -41,9 +41,9 @@ Se è disponibile un'app di Windows 8.1 Store, è possibile usare questa procedu
 
 1. Se necessario, aprire il progetto di app Windows 8.1 in Visual Studio 2017 e seguire le istruzioni per aggiornare il file di progetto.
 
-   È necessario aver installato gli strumenti di Windows 8.1 nel programma di installazione di Visual Studio. Se questi strumenti installati non sono disponibili, avviare l'installazione di Visual Studio dalla finestra Programmi e funzionalità, scegliere Visual Studio 2017 e nella finestra di dialogo del programma di installazione scegliere **Modifica**. Individuare gli strumenti di Windows 8.1, assicurarsi che l'opzione è selezionata e scegliere OK.
+   È necessario aver installato la configurazione degli **strumenti di Windows 8.1 in Visual Studio**. Se non sono stati installati questi strumenti, avviare la configurazione di **Visual Studio** nella finestra **Programs and Features** (Programmi e funzionalità), scegliere **Visual Studio 2017** e nella finestra di dialogo di configurazione scegliere **Modifica**. Individuare **Windows 8.1 Tools** (Strumenti di Windows 8.1), assicurarsi che l'opzione sia selezionata e scegliere **OK**.
 
-2. Aprire la finestra Proprietà progetto e in C++, Generale, impostare il set di strumenti della piattaforma su v141, il set di strumenti per Visual Studio 2017.
+2. Aprire la finestra **Proprietà progetto** e in **C++** > **Generale** impostare **Set di strumenti piattaforma** su **v141**, il set di strumenti per Visual Studio 2017.
 
 3. Compilare il progetto come progetto di Windows 8.1 e risolvere gli eventuali errori di compilazione. Eventuali errori in questa fase sono probabilmente a causa di modifiche importanti nelle librerie e strumenti di compilazione. Vedere [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](../porting/visual-cpp-change-history-2003-2015.md) per la spiegazione dettagliata delle modifiche che potrebbero influire sul codice.
 
@@ -51,21 +51,21 @@ Se è disponibile un'app di Windows 8.1 Store, è possibile usare questa procedu
 
 4. Creare un nuovo progetto di App Windows universale usando il modello vuoto. È possibile assegnare lo stesso nome del progetto esistente, anche se a tale scopo, i progetti deve essere in directory diverse.
 
-5. Chiudere la soluzione e quindi usando Esplora risorse o la riga di comando, è possibile copiare i file di codice (con estensioni cpp, h e con estensione XAML) dal progetto Windows 8.1 nella stessa cartella del file di progetto (vcxproj) per il progetto creato nel passaggio 1. Non copiare il file package appxmanifest e se si dispone di codice separato per desktop di Windows 8.1 e telefono, scegliere uno di essi alla porta prima (sarà necessario eseguire alcune operazioni in un secondo momento per adattarsi a altro). Assicurarsi di copia e le sottocartelle e il relativo contenuto. Se richiesto, scegliere di sostituire tutti i file con nomi duplicati.
+5. Chiudere la soluzione e quindi usando **Esplora risorse** o la riga di comando, è possibile copiare i file di codice con estensioni CPP, H e XAML, dal progetto Windows 8.1 nella stessa cartella del file di progetto con estensione VCXPROJ per il progetto creato nel passaggio 1. Non copiare il file package appxmanifest e se si dispone di codice separato per desktop di Windows 8.1 e telefono, scegliere uno di essi alla porta prima (sarà necessario eseguire alcune operazioni in un secondo momento per adattarsi a altro). Assicurarsi di copia e le sottocartelle e il relativo contenuto. Se richiesto, scegliere di sostituire tutti i file con nomi duplicati.
 
-6. Riaprire la soluzione e scegliere **Aggiungi, Elemento esistente** dal menu di scelta rapida per il nodo progetto. Selezionare tutti i file copiati, ad eccezione di quelle che fanno già parte del progetto.
+6. Riaprire la soluzione e scegliere **Aggiungi** > **Elemento esistente** nel menu di scelta rapida per il nodo del progetto. Selezionare tutti i file copiati, ad eccezione di quelle che fanno già parte del progetto.
 
    Controllare eventuali sottocartelle e assicurarsi di aggiungere anche i file in esse.
 
-7. Se non si usa lo stesso nome del progetto precedente, aprire il file package appxmanifest e aggiornare il punto di ingresso per riflettere il nome dello spazio dei nomi per la classe App.
+7. Se non si usa lo stesso nome del progetto precedente, aprire il file Package.appxmanifest e aggiornare il **Punto di ingresso** affinché rifletta il nome dello spazio dei nomi per la classe `App`.
 
-   Il campo **Punto di ingresso** nel file Package.appxmanifest contiene un nome con ambito per la classe App, che include lo spazio dei nomi contenente la classe App. Quando si crea un progetto Windows universale, lo spazio dei nomi viene impostato sul nome del progetto. Se questa è diversa da quella i file copiati dal progetto precedente, è necessario aggiornare uno o l'altro in modo adeguato.
+   Il campo **Punto di ingresso** nel file Package.appxmanifest contiene un nome con ambito per la classe `App`, che include lo spazio dei nomi contenente la classe `App`. Quando si crea un progetto Windows universale, lo spazio dei nomi viene impostato sul nome del progetto. Se questa è diversa da quella i file copiati dal progetto precedente, è necessario aggiornare uno o l'altro in modo adeguato.
 
 8. Compilare il progetto e risolvere gli eventuali errori di compilazione a causa di modifiche importanti tra le diverse versioni di Windows SDK.
 
 9. Eseguire il progetto sul Desktop locale. Verificare che non siano presenti errori di distribuzione e che il layout dell'applicazione è ragionevole e che funzioni correttamente sul desktop.
 
-10. Se si dispone di file di codice separati e XAML per un altro dispositivo, ad esempio Windows Phone 8.1, esaminare il codice e identificare dove è diversa dal dispositivo standard. Se la differenza è solo nel layout, è possibile usare un gestore dello stato di visualizzazione nel codice xaml per personalizzare la visualizzazione a seconda delle dimensioni dello schermo. Per altre differenze è possibile usare le sezioni di condizioni nel codice usando le istruzioni #if seguenti.
+10. Se si dispone di file di codice separati e XAML per un altro dispositivo, ad esempio Windows Phone 8.1, esaminare il codice e identificare dove è diversa dal dispositivo standard. Se la differenza è solo nel layout, è possibile usare **Visual State Manager** nel codice xaml per personalizzare la visualizzazione a seconda delle dimensioni dello schermo. Per altre differenze è possibile usare le sezioni di condizioni nel codice usando le istruzioni #if seguenti.
 
     ```cpp
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)

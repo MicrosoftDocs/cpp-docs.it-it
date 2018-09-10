@@ -8,12 +8,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2057f3dc8abc3f661010300671b67ad5c37a87d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1091a28448aa6531aa909117e0284e19bbcc7cd8
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850600"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578245"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Aggiornare il codice a Universal CRT
 
@@ -35,7 +35,7 @@ Le DLL UCRT di debug e della versione finale si trovano in percorsi separati. Le
 
 La libreria di supporto runtime specifica del compilatore C e C++, **vcruntime**, contiene il codice necessario per supportare l'avvio del programma e funzionalità come la gestione delle eccezioni e gli intrinseci. La libreria e i relativi file di intestazione sono ancora disponibili nella cartella specifica della versione di Microsoft Visual Studio nella directory Programmi o Programmi (x86). In Visual Studio 2017 le intestazioni si trovano in Microsoft Visual Studio\\2017\\_versione_\\VC\\Tools\\MSVC\\_versione-lib_\\include e le librerie di collegamento sono disponibili in Microsoft Visual Studio\\2017\\_versione_\\VC\\Tools\\MSVC\\_versione-lib_\\lib\\_architettura_, dove _versione_ è la versione di Visual Studio installata, _versione-lib_ è la versione delle librerie e _architettura_ è l'architettura del processore. Anche le librerie di collegamento per OneCore e archivio si trovano nella cartella delle librerie. Le versioni di debug e per la versione finale della libreria statica sono libvcruntime.lib e libvcruntimed.lib. Le librerie stub a collegamento dinamico di debug e della versione finale sono rispettivamente vcruntime.lib e vcruntimed.lib.  
   
-Quando si aggiornano i progetti Visual C++, se è stata impostata la proprietà **Linker** del progetto **Ignora tutte le librerie predefinite** su **Sì** o si usa l'opzione del linker /NODEFAULTLIB sulla riga di comando, è necessario aggiornare l'elenco delle librerie per includere le nuove librerie di refactoring. Sostituire la libreria CRT precedente, ad esempio libcmt.lib, libcmtd.lib, msvcrt.lib o msvcrtd.lib, con le librerie di refactoring equivalenti. Per informazioni sulle librerie specifiche da usare, vedere [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md).  
+Quando si aggiornano i progetti Visual C++, se è stata impostata la proprietà **Linker** del progetto **Ignora tutte le librerie predefinite** su **Sì** o si usa l'opzione del linker `/NODEFAULTLIB` sulla riga di comando, è necessario aggiornare l'elenco delle librerie per includere le nuove librerie di refactoring. Sostituire la libreria CRT precedente, ad esempio libcmt.lib, libcmtd.lib, msvcrt.lib o msvcrtd.lib, con le librerie di refactoring equivalenti. Per informazioni sulle librerie specifiche da usare, vedere [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md).  
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Distribuzione e ridistribuzione della libreria Universal CRT
   

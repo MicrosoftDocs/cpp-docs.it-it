@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 36aad914fc9552cea06eabd0898fe33b9b09481e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332780"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605831"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Procedura dettagliata: distribuire un'applicazione Visual C++ tramite un progetto di installazione
 Descrive come usare un progetto di installazione per distribuire un'applicazione Visual C++.  
@@ -27,9 +27,9 @@ Descrive come usare un progetto di installazione per distribuire un'applicazione
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
--   Un computer in cui è installato [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)].  
+-   Un computer con Visual Studio 2012 installato.  
   
--   Un altro computer che non dispone delle librerie Visual C++.  
+-   Un altro computer che non dispone delle librerie di Visual C++.  
   
 ### <a name="to-deploy-an-application-by-using-a-setup-project"></a>Per distribuire un'applicazione tramite un progetto di installazione  
   

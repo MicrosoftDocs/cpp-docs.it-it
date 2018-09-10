@@ -14,27 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcd315631d74c652177dba99cbe533ad91f68474
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7f96206288828a3e38422786585b3d66787860d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33838982"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578538"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Problemi di compatibilità C++ tra Visual Studio 2015 e Visual Studio 2017
-
 
 Nelle versioni precedenti di Visual Studio, la compatibilità binaria tra file oggetto (OBJ), librerie statiche (LIB), librerie dinamiche (DLL) ed eseguibili (EXE) compilati usando versioni diverse del set di strumenti del compilatore e delle librerie di runtime non era garantita. In Visual Studio 2017 non è più così. In Visual Studio 2015 e Visual Studio 2017 il numero principale del set di strumenti C++ è 14 (v140 per Visual Studio 2015 e v141 per Visual Studio 2017). Ciò rispecchia il fatto che sia le librarie di runtime che le applicazioni compilate con una delle due versioni del compilatore presentano per lo più la compatibilità binaria. È quindi possibile, ad esempio, creare una DLL in Visual Studio 2017 e utilizzarla da un'applicazione compilata con Visual Studio 2015 o usare le librerie ridistribuibili di Visual Studio 2017 con l'applicazione compilata usando il set di strumenti 2015.  
 
 Esistono due eccezioni a questa regola. In questi casi non è garantita la compatibilità binaria:  
 
-1) Quando le librerie statiche o i file oggetto vengono compilati con l'opzione del compilatore /GL.  
+1. Quando le librerie statiche o i file oggetto vengono compilati con l'opzione del compilatore `/GL`.  
 
-2) Quando si utilizzano librerie create con un set di strumenti la cui versione è successiva a quella del set di strumenti usato per compilare e collegare l'applicazione. Ad esempio, un programma compilato e collegato con il set di strumenti 19.12 può utilizzare librerie compilate con le versioni da 19.0 a 19.12. Il collegamento di programmi 19.x con librerie prodotte da Visual Studio 2013 o versione precedente non è supportato.
-
+2. Quando si utilizzano librerie create con un set di strumenti la cui versione è successiva a quella del set di strumenti usato per compilare e collegare l'applicazione. Ad esempio, un programma compilato e collegato con il set di strumenti 19.12 può utilizzare librerie compilate con le versioni da 19.0 a 19.12. Il collegamento di programmi 19.x con librerie prodotte da Visual Studio 2013 o versione precedente non è supportato.
 
 ## <a name="see-also"></a>Vedere anche  
 
 [Cronologia delle modifiche di Visual C++](..\porting\visual-cpp-change-history-2003-2015.md)
-
-

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238565"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900667"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Progetti CMake in Visual C++
 
@@ -221,6 +221,8 @@ Per specificare un generatore Visual Studio, aprire CMakeSettings.json dal menu 
 1. **variabili**: contiene una coppia nome-valore delle variabili di CMake che verrà trasferita come **-D**_nome_**=**_valore_ a CMake. Se le istruzioni per la compilazione del progetto CMake specificano l'aggiunta di qualsiasi variabile direttamente al file di cache di CMake, si consiglia di aggiungerle qui.
 1. **cmakeCommandArgs**: specifica gli eventuali switch aggiuntivi che si desidera trasferire a CMake.exe.
 1. **configurationType**: definisce il tipo di configurazione di compilazione per il generatore selezionato. I valori attualmente supportati sono "Debug", "MinSizeRel", "Release" e "RelWithDebInfo".
+1. **ctestCommandArgs**: specifica le opzioni aggiuntive da passare a CTest durante l'esecuzione di test.
+1. **buildCommandArgs**: specifica le opzioni aggiuntive da passare al sistema di compilazione sottostante. Ad esempio, il passaggio di -v quando si usa il generatore Ninja forza Ninja a restituire le righe di comando.
 
 ### <a name="environment-variables"></a>Variabili di ambiente
 

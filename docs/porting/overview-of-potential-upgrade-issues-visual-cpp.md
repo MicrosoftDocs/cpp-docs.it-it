@@ -8,18 +8,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cdded022a495b85570ba7f1ad86179b6210356
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2411c5deb3a14ee3eaebb76fc69b6f36fa3bed42
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848515"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578255"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
 Nel corso degli anni il compilatore Microsoft Visual C++ ha subito molte modifiche, che si aggiungono alle modifiche apportate al linguaggio C++, alla libreria standard C++, al runtime C (CRT) e ad altre librerie come MFC e ATL. Di conseguenza, quando si aggiorna un'applicazione da una versione precedente di Visual Studio è possibile che il codice che prima veniva compilato correttamente mostri errori e avvisi del compilatore e del linker. Più la base di codice è vecchia, maggiore è la possibilità di tali errori. Questa panoramica riepiloga i tipi di problemi più comuni che possono verificarsi e offre collegamenti a informazioni più dettagliate.
 
-Nota: In passato si consigliava di eseguire in modo incrementale, una versione alla volta, gli aggiornamenti che includevano più versioni. Questo approccio non è più consigliato. Si è constatato che è quasi sempre più semplice eseguire l'aggiornamento diretto alla versione più recente di Visual Studio, indipendentemente dalla versione della base di codice.
+> [!NOTE] 
+> In passato si consigliava di eseguire in modo incrementale, una versione alla volta, gli aggiornamenti che includevano più versioni di Visual Studio. Questo approccio non è più consigliato. Si è constatato che è quasi sempre più semplice eseguire l'aggiornamento diretto alla versione più recente di Visual Studio, indipendentemente dalla versione della base di codice.
 
 È possibile inviare domande o commenti sul processo di aggiornamento all'indirizzo vcupgrade@microsoft.com.
 
@@ -29,7 +30,7 @@ Quando si aggiorna un'applicazione a una nuova versione di Visual Studio, è viv
 
 ### <a name="toolset"></a>Set di strumenti
 
-I formati di file obj e lib sono definiti in modo completo e vengono modificati di rado. Talvolta vengono eseguite aggiunte a questi formati di file, ma tali aggiunte in genere non influenzano la capacità dei set di strumenti più recenti di usare file oggetto e librerie prodotte da set di strumenti meno recenti. L'unica eccezione importante è la compilazione con [/GL (Ottimizzazione intero programma)](../build/reference/gl-whole-program-optimization.md). Se si esegue la compilazione usando **/GL**, il file oggetto risultante può essere collegato solo mediante lo stesso set di strumenti usato per la sua creazione. Pertanto, se si genera un file oggetto con **/GL** e si usa il compilatore di Visual Studio 2017 (v141), è necessario collegare il file oggetto mediante il linker di Visual Studio 2017 (v141). Il motivo è il fatto che le strutture dati interne dei file oggetto non sono stabili tra diverse versioni principali del set di strumenti e i set più recenti non supportano i formati di dati meno recenti.
+I formati di file obj e lib sono definiti in modo completo e vengono modificati di rado. Talvolta vengono eseguite aggiunte a questi formati di file, ma tali aggiunte in genere non influenzano la capacità dei set di strumenti più recenti di usare file oggetto e librerie prodotte da set di strumenti meno recenti. L'unica eccezione importante è la compilazione con [/GL (Ottimizzazione intero programma)](../build/reference/gl-whole-program-optimization.md). Se si esegue la compilazione usando `/GL`, il file oggetto risultante può essere collegato solo mediante lo stesso set di strumenti usato per la sua creazione. Pertanto, se si genera un file oggetto con `/GL` e si usa il compilatore di Visual Studio 2017 (v141), è necessario collegare il file oggetto mediante il linker di Visual Studio 2017 (v141). Il motivo è il fatto che le strutture dati interne dei file oggetto non sono stabili tra diverse versioni principali del set di strumenti e i set più recenti non supportano i formati di dati meno recenti.
 
 C++ non dispone di un'interfaccia binaria dell'applicazione (ABI) stabile. Visual Studio gestisce un'ABI C++ stabile per tutte le versioni secondarie di una versione principale. Ad esempio, Visual Studio 2017 e tutti i relativi aggiornamenti sono compatibili a livello binario. Tuttavia l'ABI non è necessariamente compatibile tra versioni principali di Visual Studio (ad eccezione delle versioni 2015 e 2017, che _sono_ compatibili a livello binario). In altri termini è possibile che vengano apportate modifiche di rilievo al layout di tipo, alla decorazione dei nomi, alla gestione delle eccezioni e ad altre parti dell'ABI C++. Pertanto, se è presente un file oggetto che include simboli esterni con collegamento a C++, tale file oggetto potrebbe non collegarsi correttamente con file oggetto creati con un'altra versione principale del set di strumenti. In questo caso, "potrebbe non collegarsi" può dare risultati diversi: il collegamento può non riuscire affatto (ad esempio in caso di modifica della decorazione dei nomi), il collegamento può riuscire e possono verificarsi errori in fase di runtime (ad esempio in caso di modifica del layout di tipo) o come accade in molti casi il collegamento può funzionare e non originare alcun errore. Si noti anche che sebbene l'ABI C++ non sia stabile, l'ABI C e il subset dell'ABI C++ necessaria per COM sono stabili.
 
@@ -88,11 +89,11 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (Tipo nativo wchar_t)
 
-In Microsoft Visual C++ 6.0 e versioni precedenti, `wchar_t` non è implementato come tipo incorporato, ma è dichiarato in wchar.h come typedef per unsigned short. Lo standard C++ richiede che `wchar_t` sia un tipo incorporato. L'uso della versione typedef può causare problemi di portabilità. Se si esegue l'aggiornamento da versioni precedenti di Visual Studio e si verifica l'errore del compilatore C2664 perché il codice sta cercando di convertire in modo implicito `wchar_t` in `unsigned short`, è consigliabile modificare il codice per risolvere l'errore, anziché impostare **/Zc:wchar_t-**. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+In Microsoft Visual C++ 6.0 e versioni precedenti, **wchar_t** non è implementato come tipo incorporato, ma è dichiarato in wchar.h come typedef per unsigned short. Lo standard C++ richiede che **wchar_t** sia un tipo incorporato. L'uso della versione typedef può causare problemi di portabilità. Se si esegue l'aggiornamento da versioni precedenti di Visual Studio e si verifica l'errore del compilatore C2664 perché il codice sta cercando di convertire in modo implicito **wchar_t** in **unsigned short**, è consigliabile modificare il codice per risolvere l'errore anziché impostare `/Zc:wchar_t-`. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Aggiornare con le opzioni del linker /NODEFAULTLIB, /ENTRY e /NOENTRY
 
-L'opzione del linker **/NODEFAULTLIB** (o la proprietà del linker Ignora tutte le librerie predefinite) indica al linker di non collegare automaticamente le librerie predefinite, ad esempio la libreria CRT. Ciò significa che ogni libreria deve essere elencata come input singolarmente. Questo elenco di librerie è disponibile nella proprietà **Dipendenze aggiuntive**, nella sezione **Linker** della finestra di dialogo **Proprietà progetto**.
+L'opzione del linker `/NODEFAULTLIB`, o la proprietà del linker Ignora tutte le librerie predefinite, indica al linker di non collegare automaticamente le librerie predefinite, ad esempio la libreria CRT. Ciò significa che ogni libreria deve essere elencata come input singolarmente. Questo elenco di librerie è disponibile nella proprietà **Dipendenze aggiuntive**, nella sezione **Linker** della finestra di dialogo **Proprietà progetto**.
 
 I progetti che usano questa opzione rappresentano un problema durante l'aggiornamento, perché i nomi di alcune librerie predefinite sono cambiati. Dato che ogni singola libreria va elencata nella proprietà **Dipendenze aggiuntive** o nella riga di comando del linker, è necessario aggiornare l'elenco di librerie in modo che usi i nomi correnti.
 
@@ -106,13 +107,13 @@ La tabella seguente visualizza le librerie delle quali è stato cambiato il nome
 |msvcrt.lib|ucrt.lib, vcruntime.lib|
 |msvcrtd.lib|ucrtd.lib, vcruntimed.lib|
 
-Lo stesso vale se si usa l'opzione **/ENTRY** o l'opzione **/NOENTRY**, che hanno anche l'effetto di ignorare le librerie predefinite.
+Lo stesso vale se si usa l'opzione `/ENTRY` o l'opzione `/NOENTRY`, che hanno anche l'effetto di ignorare le librerie predefinite.
 
 ## <a name="errors-due-to-improved-language-conformance"></a>Errori causati dal miglioramento della conformità al linguaggio
 
 Nel corso degli anni è stata migliorata in modo continuativo la conformità del compilatore Microsoft Visual C++ allo standard C++. Il codice che veniva compilato correttamente con versioni precedenti potrebbe non essere compilato in Visual Studio 2017, perché ora il compilatore segnala correttamente un errore che in precedenza ignorava o autorizzava in modo esplicito.
 
-Ad esempio, l'opzione **/Zc:forScope** è stata introdotta nelle prime versioni di MSVC. L'opzione consente un comportamento non conforme per le variabili di ciclo. Questa opzione ora è deprecata e potrebbe essere rimossa nelle versioni future. L'uso dell'opzione quando si aggiorna il codice è sconsigliato. Per altre informazioni, vedere [/Zc:forScope- è deprecata](porting-guide-spy-increment.md#deprecated_forscope).
+Ad esempio, l'opzione `/Zc:forScope` è stata introdotta nella cronologia di MSVC. L'opzione consente un comportamento non conforme per le variabili di ciclo. Questa opzione ora è deprecata e potrebbe essere rimossa nelle versioni future. L'uso dell'opzione quando si aggiorna il codice è sconsigliato. Per altre informazioni, vedere [/Zc:forScope- è deprecata](porting-guide-spy-increment.md#deprecated_forscope).
 
 Un esempio di errore comune durante l'aggiornamento si verifica quando un argomento non const viene passato a un parametro const. Le versioni meno recenti del compilatore non segnalavano sempre questa operazione come errore. Per altre informazioni, vedere [Conversioni più rigorose del compilatore](porting-guide-spy-increment.md#stricter_conversions).
 
@@ -122,17 +123,17 @@ Per altre informazioni sui miglioramenti specifici della conformità, vedere [Cr
 
 L'intestazione \<stdint.h> definisce typedef e macro che, a differenza dei tipi integrali incorporati, hanno necessariamente una lunghezza specifica in tutte le piattaforme. Alcuni esempi sono `uint32_t` e `int64_t`. L'intestazione \<stdint.h> è stata aggiunta in Visual Studio 2010. È possibile che il codice scritto con versioni precedenti alla 2010 offra definizioni private per questi tipi e che tali definizioni non siano sempre coerenti con quelle di \<stdint.h>.
 
-Se l'errore è C2371 e riguarda un tipo stdint, è probabile che il tipo sia definito in un'intestazione nel proprio codice o in un file lib di terze parti. Durante l'aggiornamento è necessario eliminare eventuali definizioni personalizzate di tipi \<stdint.h>, ma prima confrontare le definizioni personalizzate con le definizioni standard correnti, per assicurarsi di non introdurre nuovi problemi.
+Se l'errore è C2371 e riguarda un tipo `stdint`, è probabile che il tipo sia definito in un'intestazione nel proprio codice o in un file lib di terze parti. Durante l'aggiornamento è necessario eliminare eventuali definizioni personalizzate di tipi \<stdint.h>, ma prima confrontare le definizioni personalizzate con le definizioni standard correnti, per assicurarsi di non introdurre nuovi problemi.
 
-È possibile premere F12 **Vai a definizione** per visualizzare la posizione in cui è definito il tipo in questione.
+È possibile premere **F12**, ovvero **Vai a definizione**, per visualizzare la posizione in cui è definito il tipo in questione.
 
-L'opzione del compilatore [/showIncludes](../build/reference/showincludes-list-include-files.md) può essere utile in questo contesto. Nella finestra di dialogo **Pagine delle proprietà** per il progetto aprire la pagina **C/C++** > **Avanzate** e impostare **Mostra inclusioni** su **Sì**. Ricompilare il progetto e visualizzare l'elenco di #include (inclusioni) nella finestra di output. Ogni intestazione è provvista di un rientro sotto l'intestazione che la include.
+L'opzione del compilatore [/showIncludes](../build/reference/showincludes-list-include-files.md) può essere utile in questo contesto. Nella finestra di dialogo **Pagine delle proprietà** per il progetto aprire la pagina **C/C++** > **Avanzate** e impostare **Mostra inclusioni** su **Sì**. Ricompilare il progetto e visualizzare l'elenco di `#include` nella finestra di output. Ogni intestazione è provvista di un rientro sotto l'intestazione che la include.
 
 ## <a name="errors-involving-crt-functions"></a>Errori relativi alle funzioni CRT
 
 Nel corso degli anni sono state apportate numerose modifiche al runtime C. Sono state aggiunte molte versioni sicure delle funzioni e alcune sono state rimosse. Come già descritto in precedenza in questo articolo, l'implementazione Microsoft della libreria CRT è stata sottoposta a refactoring in Visual Studio 2015, con nuovi file binari e file .lib associati.
 
-Se un errore riguarda una funzione CRT, cercare altre informazioni in [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md) o in [Miglioramenti della conformità di C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). Se l'errore è LNK2019, simbolo esterno non risolto, assicurarsi che la funzione non sia stata rimossa. In alternativa, se si è certi che la funzione esiste ancora e che il codice chiamante è corretto, verificare se il progetto usa **/NODEFAULTLIB**. In tal caso è necessario aggiornare l'elenco delle librerie, in modo che il progetto usi le nuove librerie universali (UCRT). Per altre informazioni, vedere la sezione precedente relativa alla libreria e alle dipendenze.
+Se un errore riguarda una funzione CRT, cercare altre informazioni in [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md) o in [Miglioramenti della conformità di C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). Se l'errore è LNK2019, simbolo esterno non risolto, assicurarsi che la funzione non sia stata rimossa. In alternativa, se si è certi che la funzione esiste ancora e che il codice chiamante è corretto, verificare se il progetto usa `/NODEFAULTLIB`. In tal caso è necessario aggiornare l'elenco delle librerie, in modo che il progetto usi le nuove librerie universali (UCRT). Per altre informazioni, vedere la sezione precedente relativa alla libreria e alle dipendenze.
 
 Se l'errore riguarda `printf` o `scanf`, assicurarsi che nessuna delle due funzioni sia definita privatamente senza l'inclusione di stdio.h. Se così fosse, rimuovere le definizioni private o definire il collegamento con legacy\_stdio\_definitions.lib. È possibile impostare questo valore nella finestra di dialogo **Pagine delle proprietà** in **Proprietà di configurazione** > **Linker** > **Input** nella proprietà **Dipendenze aggiuntive**. Se si esegue il collegamento con Windows SDK 8.1 o versione precedente, aggiungere legacy\_stdio\_definitions.lib.
 
@@ -160,7 +161,7 @@ Per altre informazioni sul set di API corrente e sul sistema operativo minimo su
 
 ### <a name="windows-version"></a>Versione di Windows
 
-Quando si aggiorna un programma che usa direttamente o indirettamente l'API di Windows, è necessario scegliere la versione minima di Windows da supportare. Nella maggior parte dei casi Windows 7 è una scelta ottimale. Per altre informazioni, vedere [Problemi del file di intestazione](porting-guide-spy-increment.md#header_file_problems). La macro WINVER definisce la versione più vecchia di Windows nella quale è possibile eseguire il programma. Se il programma MFC imposta WINVER su 0x0501 (Windows XP) verrà visualizzato un avviso, perché MFC non supporta più XP anche se il compilatore dispone di una modalità XP.  
+Quando si aggiorna un programma che usa direttamente o indirettamente l'API di Windows, è necessario scegliere la versione minima di Windows da supportare. Nella maggior parte dei casi Windows 7 è una scelta ottimale. Per altre informazioni, vedere [Problemi del file di intestazione](porting-guide-spy-increment.md#header_file_problems). La macro `WINVER` definisce la versione meno recente di Windows nella quale è possibile eseguire il programma. Se il programma MFC imposta WINVER su 0x0501 (Windows XP) verrà visualizzato un avviso, perché MFC non supporta più XP anche se il compilatore dispone di una modalità XP.  
 
 Per altre informazioni, vedere [Aggiornamento della versione di Windows di destinazione](porting-guide-spy-increment.md#updating_winver) e [Altri file di intestazione obsoleti](porting-guide-spy-increment.md#outdated_header_files).
 
@@ -170,13 +171,13 @@ ATL e MFC sono API relativamente stabili, ma anch'esse vengono modificate occasi
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 già definito in MSVCRTD.lib
 
-Questo errore può verificarsi nelle applicazioni MFC. Indica un problema di ordinamento tra la libreria CRT e la libreria MFC. La libreria MFC deve essere collegata per prima, in modo che renda disponibili gli operatori new e delete. Per correggere l'errore, usare l'opzione /NODEFAULTLIB per ignorare le librerie predefinite MSVCRTD.lib e mfcs140d.lib. Quindi aggiungere queste librerie come dipendenze aggiuntive.
+Questo errore può verificarsi nelle applicazioni MFC. Indica un problema di ordinamento tra la libreria CRT e la libreria MFC. La libreria MFC deve essere collegata per prima, in modo che renda disponibili gli operatori new e delete. Per correggere l'errore, usare l'opzione `/NODEFAULTLIB` per ignorare le librerie predefinite MSVCRTD.lib e mfcs140d.lib. Quindi aggiungere queste librerie come dipendenze aggiuntive.
 
 ## <a name="32-vs-64-bit"></a>32 bit e 64 bit
 
 Se il codice originale viene compilato per sistemi a 32 bit, è possibile scegliere di creare una versione a 64 bit in sostituzione o in aggiunta a una nuova applicazione a 32 bit. In genere è consigliabile completare la compilazione del programma in modalità a 32 bit, quindi provare a eseguire la compilazione a 64 bit. La compilazione in modalità a 64 bit è semplice, ma in alcuni casi evidenzia bug che non apparivano nelle build a 32 bit.
 
-È anche necessario tenere presenti possibili problemi in fase di compilazione e runtime relativi a dimensioni del puntatore, valori di ora e dimensioni e identificatori di formato nelle funzioni printf e scanf. Per altre informazioni, vedere [Configurare Visual C++ per destinazioni x64 a 64 bit](../build/configuring-programs-for-64-bit-visual-cpp.md) e [Problemi comuni relativi alla migrazione di Visual C++ a 64 bit](../build/common-visual-cpp-64-bit-migration-issues.md). Per altri suggerimenti relativi alla migrazione, vedere [Guida alla programmazione per Windows a 64 bit](https://msdn.microsoft.com/library/windows/desktop/bb427430\(v=vs.85\).aspx).
+È anche necessario tenere presenti possibili problemi in fase di compilazione e runtime relativi a dimensioni del puntatore, valori di ora e dimensioni e identificatori di formato nelle funzioni printf e scanf. Per altre informazioni, vedere [Configurare Visual C++ per destinazioni x64 a 64 bit](../build/configuring-programs-for-64-bit-visual-cpp.md) e [Problemi comuni relativi alla migrazione di Visual C++ a 64 bit](../build/common-visual-cpp-64-bit-migration-issues.md). Per altri suggerimenti relativi alla migrazione, vedere [Guida alla programmazione per Windows a 64 bit](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows).
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode e MBCS/ASCII
 

@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327229"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578616"
 ---
 # <a name="project-files"></a>File di progetto
 Un file di progetto Visual C++ è un file basato su XML che ha estensione vcxproj e contiene le informazioni necessarie per compilare un progetto Visual C++.  
   
 ## <a name="example"></a>Esempio  
- L'esempio di file con estensione vcxproj seguente è stato generato specificando **Progetto console Win32** nella finestra di dialogo **Nuovo progetto**. Per elaborare un file di progetto usare lo strumento msbuild.exe dalla riga di comando, o il comando **Genera** nell'[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. Questo esempio non può essere elaborato perché i file di origine e di intestazione richiesti non sono stati specificati. Per altre informazioni sugli elementi XML di un file di progetto, vedere [Riferimenti dello schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ L'esempio di file con estensione vcxproj seguente è stato generato specificando **Progetto console Win32** nella finestra di dialogo **Nuovo progetto**. Per elaborare un file di progetto usare lo strumento msbuild.exe dalla riga di comando, o il comando **Build** nell'IDE. Questo esempio non può essere elaborato perché i file di origine e di intestazione richiesti non sono stati specificati. Per altre informazioni sugli elementi XML di un file di progetto, vedere [Riferimenti dello schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

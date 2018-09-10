@@ -12,12 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 55f07d8903d8110410648e352d364151bf6d2a73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df57a884186fe33d91de78647cc225f3a63a6f9f
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331100"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578158"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Proprietà di debug C++ (Linux C++)
 
@@ -29,7 +29,7 @@ Argomenti del programma | Argomenti della riga di comando da passare al programm
 Directory di lavoro | Directory di lavoro dell'applicazione remota. Per impostazione predefinita, è la home directory dell'utente.
 Comandi aggiuntivi del debugger | Comandi GDB aggiuntivi per il debugger da eseguire prima di avviare il debug.
 Numero di porta del debugger | Numero di porta per le comunicazioni del debugger con il debugger remoto. La porta non deve essere in uso in locale. Questo valore deve essere positivo e compreso tra 1 e 65535. Se non viene specificato, verrà usato un numero di porta disponibile.
-Numero di porta del debugger remoto | Numero di porta su cui il server del debugger remoto (GDBSERVER) è in ascolto nel sistema remoto. La porta non deve essere in uso nel sistema remoto. Questo valore deve essere positivo e compreso tra 1 e 65535. Se non viene specificato, verrà usato un numero di porta disponibile a partire da 4444.
+Numero di porta del debugger remoto | Numero di porta su cui il server del debugger remoto (gdbserver) è in ascolto sul sistema remoto. La porta non deve essere in uso nel sistema remoto. Questo valore deve essere positivo e compreso tra 1 e 65535. Se non viene specificato, verrà usato un numero di porta disponibile a partire da 4444.
 Modalità di debug | Consente di specificare in che modo il debugger si interfaccia con GDB. Nella modalità GDB il debugger passa GDB alla shell nel sistema remoto. Nella modalità GDBSERVER GDB viene eseguito in locale e si connette a GDBSERVER eseguito in remoto. | **gdbserver**<br>**gdb**<br>
 Percorsi aggiuntivi di ricerca dei simboli | Percorso di ricerca aggiuntivo per i simboli di debug (solib-search-path).
 Esegui debug di processi figlio | Specifica se abilitare il debug dei processi figlio.

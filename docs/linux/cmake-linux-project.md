@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269540"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900512"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurare un progetto CMake per Linux
 
@@ -30,7 +30,7 @@ Quando si installa il carico di lavoro Linux C++ per Visual Studio, il supporto 
 Questo argomento presuppone una familiarità di base con il supporto CMake in Visual Studio. Per altre informazioni, vedere [CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md) (Strumenti CMake per Visual C++). Per altre informazioni su CMake, vedere [Build, Test and Package Your Software With CMake](https://cmake.org/) (Compilare e testare il software e includerlo in un pacchetto con CMake).
 
 > [!NOTE]  
-> Il supporto CMake in Visual Studio richiede il supporto della modalità server introdotta in CMake 3.8. Se la gestione pacchetti fornisce una versione meno recente di CMake, è possibile ovviare al problema [compilando CMake dall'origine](#build-a-supported-cmake release-from-source) o scaricandolo dalla [pagina di download di CMake](https://cmake.org/download/) ufficiale. Per una variante di CMake fornita da Microsoft che supporta il riquadro [Visualizzazione destinazioni CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) in Visual Studio, scaricare la versione più recente dei file binari all'indirizzo [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+> Il supporto CMake in Visual Studio richiede il supporto della modalità server introdotta in CMake 3.8. Per una variante di CMake fornita da Microsoft che supporta il riquadro [Visualizzazione destinazioni CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) in Visual Studio, scaricare la versione più recente dei file binari all'indirizzo [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). Se la gestione pacchetti fornisce una versione meno recente di CMake 3.8, è possibile ovviare al problema [compilando CMake dall'origine](#build-a-supported-cmake-release-from-source) o, se si preferisce usare CMake standard è possibile scaricarlo dalla [pagina di download di CMake](https://cmake.org/download/) ufficiale. 
 
 ## <a name="open-a-folder"></a>Aprire una cartella
 
@@ -87,10 +87,16 @@ Per modificare le impostazioni di CMake predefinite, scegliere **CMake | Modific
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -98,7 +104,19 @@ Per modificare le impostazioni di CMake predefinite, scegliere **CMake | Modific
 }
 ```
 
-Per `name` è possibile usare qualsiasi valore. Il valore `remoteMachineName` specifica il sistema remoto di destinazione, nel caso se ne abbia più di uno. Per poter selezionare il sistema appropriato, per questo campo è abilitato IntelliSense. Il campo `remoteCMakeListsRoot` specifica dove verranno copiate le origini del progetto nel sistema remoto. Il campo `remoteBuildRoot` indica dove verrà generato l'output di compilazione nel sistema remoto. Tale output viene copiato anche in locale nel percorso specificato da `buildRoot`.
+Per `name` è possibile usare qualsiasi valore. Il valore `remoteMachineName` specifica il sistema remoto di destinazione, nel caso se ne abbia più di uno. Per poter selezionare il sistema appropriato, per questo campo è abilitato IntelliSense. Il campo `remoteCMakeListsRoot` specifica dove verranno copiate le origini del progetto nel sistema remoto. Il campo `remoteBuildRoot` indica dove verrà generato l'output di compilazione nel sistema remoto. Tale output viene copiato anche in locale nel percorso specificato da `buildRoot`. I campi `remoteInstallRoot` e `installRoot` sono simili a `remoteBuildRoot` e `buildRoot`, ad eccezione del fatto che si applicano quando si esegue un'installazione di CMake. La voce `remoteCopySources` controlla se le origini locali vengono copiate nel computer remoto. È possibile impostarla su falso se l'utente ha molti file e sta già sincronizzano le origini in modo autonomo. Il valore `remoteCopyOutputVerbosity` controlla il livello di dettaglio della fase di copia nel caso in cui sia necessario diagnosticare gli errori. La voce `remoteCopySourcesConcurrentCopies` controlla il numero di processi generati per l'esecuzione della copia. Il valore `remoteCopySourcesMethod` può essere uno tra rsync o sftp. Il campo `remoteCopySourcesExclusionList` consente di controllare gli elementi copiati nel computer remoto. Il valore `rsyncCommandArgs` consente di controllare il metodo rsync di copia. Il campo `remoteCopyBuildOutput` consente di controllare se l'output di compilazione remota viene copiato nella cartella di compilazione locale.
+
+Esistono anche alcune impostazioni facoltative che è possibile usare per un maggiore controllo:
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+Queste opzioni consentono di eseguire comandi nella casella remota prima e dopo la compilazione e prima della generazione di CMake. Può trattarsi di qualsiasi comando valido nella casella remota. L'output viene restituito con pipe a Visual Studio.
 
 ## <a name="build-a-supported-cmake-release-from-source"></a>Compilare una versione di CMake supportata dall'origine
 

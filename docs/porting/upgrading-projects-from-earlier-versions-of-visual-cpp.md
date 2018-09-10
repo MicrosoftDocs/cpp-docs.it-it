@@ -15,34 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c503a2feae728c67507bf80db6eb2c5dabc3252f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed8a8ab088f3fbb10b5f477d125dbf3f2a7ac932
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849730"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578492"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Aggiornamento di progetti da versioni precedenti di Visual C++
 Nella maggior parte dei casi, è possibile aprire un progetto creato in una versione precedente di Visual Studio. A questo scopo, tuttavia, Visual Studio aggiorna il progetto. Se il progetto aggiornato viene salvato, non potrà più essere aperto nella versione precedente.  
   
 > [!IMPORTANT]
->  Se si tenta di convertire un progetto già convertito, Visual Studio chiede conferma perché la riconversione comporta l'eliminazione dei file esistenti.  
+> Se si tenta di convertire un progetto già convertito, Visual Studio chiede conferma perché la riconversione comporta l'eliminazione dei file esistenti.  
   
- Molti progetti e soluzioni aggiornati possono essere compilati correttamente senza modifiche. È tuttavia possibile che alcuni progetti richiedano modifiche alle impostazioni, al codice sorgente o a entrambi. È consigliabile usare le linee guida seguenti per risolvere innanzitutto i problemi relativi alle impostazioni, dopodiché, se il progetto continua a non venire compilato, sarà possibile procedere alla risoluzione dei problemi relativi al codice. Per altre informazioni, vedere la [panoramica sui potenziali problemi di aggiornamento](../porting/overview-of-potential-upgrade-issues-visual-cpp.md).  
+Molti progetti e soluzioni aggiornati possono essere compilati correttamente senza modifiche. È tuttavia possibile che alcuni progetti richiedano modifiche alle impostazioni, al codice sorgente o a entrambi. È consigliabile usare le linee guida seguenti per risolvere innanzitutto i problemi relativi alle impostazioni, dopodiché, se il progetto continua a non venire compilato, sarà possibile procedere alla risoluzione dei problemi relativi al codice. Per altre informazioni, vedere la [panoramica sui potenziali problemi di aggiornamento](../porting/overview-of-potential-upgrade-issues-visual-cpp.md).  
   
-1.  Eseguire una copia del progetto esistente e dei file di soluzione. Eseguire l'installazione side-by-side della versione corrente e della versione precedente di Visual Studio in modo da poter confrontare, se lo si desidera, le versioni dei file.  
+1. Eseguire una copia del progetto esistente e dei file di soluzione. Eseguire l'installazione side-by-side della versione corrente e della versione precedente di Visual Studio in modo da poter confrontare, se lo si desidera, le versioni dei file.  
   
-2.  Nella versione corrente di Visual Studio, aprire e aggiornare la copia del progetto o della soluzione, quindi salvarla.  
+2. Nella versione corrente di Visual Studio, aprire e aggiornare la copia del progetto o della soluzione, quindi salvarla.  
   
-3.  Per ogni progetto convertito, aprire il menu di scelta rapida e scegliere **Proprietà**. In **Proprietà di configurazione**selezionare **Generale** , quindi per **Set strumenti della piattaforma**selezionare la versione corrente. Ad esempio, per Visual Studio 2017 selezionare v141.  
+3. Per ogni progetto convertito, aprire il menu di scelta rapida e scegliere **Proprietà**. In **Proprietà di configurazione**selezionare **Generale** , quindi per **Set strumenti della piattaforma**selezionare la versione corrente. Ad esempio, per Visual Studio 2017 selezionare **v141**.  
   
-4.  Compilare la soluzione. Se la compilazione non riesce, modificare le impostazioni e ripetere l'operazione.  
+4. Compilare la soluzione. Se la compilazione non riesce, modificare le impostazioni e ripetere l'operazione.  
   
- Le origini dati sono contenute in un progetto di database separato in modo da poter eseguire il debug delle stored procedure e di modificarle più facilmente in tali origini. Se si aggiorna un progetto C++ che contiene origini dati, viene automaticamente creato un progetto di database separato.  
+Le origini dati sono contenute in un progetto di database separato in modo da poter eseguire il debug delle stored procedure e di modificarle più facilmente in tali origini. Se si aggiorna un progetto C++ che contiene origini dati, viene automaticamente creato un progetto di database separato.  
   
- Per informazioni su come aggiornare le versioni di Windows di destinazione, vedere [Modifica di WINVER e _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).  
+Per informazioni su come aggiornare le versioni di Windows di destinazione, vedere [Modifica di WINVER e _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifiche al sistema di compilazione](../build/build-system-changes.md)  
- [Novità di Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](../porting/visual-cpp-change-history-2003-2015.md)   
- [Comportamento non standard](../cpp/nonstandard-behavior.md)
+
+[Modifiche al sistema di compilazione](../build/build-system-changes.md)  
+[Novità di Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) 
+[Cronologia delle modifiche di Visual C++ dal 2003 al 2015](../porting/visual-cpp-change-history-2003-2015.md)   
+[Comportamento non standard](../cpp/nonstandard-behavior.md)

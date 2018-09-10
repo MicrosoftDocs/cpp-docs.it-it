@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900700"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220216"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Miglioramenti della conformità C++ in Visual Studio 2017 versioni 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) e [15.8](#update_158)
 
@@ -55,19 +55,19 @@ I cicli range-based for non richiedono più che begin() ed end() restituiscano o
 
 ### <a name="constexpr-lambdas"></a>Espressioni lambda di constexpr
 
-È ora possibile usare espressioni lambda nelle espressioni costanti. Per altre informazioni, vedere [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf) (Espressione lambda constexpr).
+È ora possibile usare espressioni lambda nelle espressioni costanti. Per altre informazioni, vedere [constexpr lambda expressions in C++](cpp/lambda-expressions-constexpr.md) (Espressione lambda constexpr in C++).
 
 ### <a name="if-constexpr-in-function-templates"></a>if constexpr nei modelli di funzione
 
-Un modello di funzione può contenere istruzioni `if constexpr` per abilitare il branching in fase di compilazione. Per altre informazioni, vedere [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html).
+Un modello di funzione può contenere istruzioni `if constexpr` per abilitare il branching in fase di compilazione. Per altre informazioni, vedere [if constexpr statements](cpp/if-else-statement-cpp.md#if_constexpr) (Istruzioni if constexpr).
 
 ### <a name="selection-statements-with-initializers"></a>Istruzioni di selezione con inizializzatori
 
-Un'istruzione `if` può includere un inizializzatore che introduce una variabile nell'ambito del blocco all'interno dell'istruzione stessa. Per altre informazioni, vedere [Selection statements with initializer](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html) (Istruzioni di selezione con inizializzatore).
+Un'istruzione `if` può includere un inizializzatore che introduce una variabile nell'ambito del blocco all'interno dell'istruzione stessa. Per altre informazioni, vedere [if statements with initializer](cpp/if-else-statement-cpp.md#if_with_init) (Istruzioni if con inizializzatore).
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>Attributi [[maybe_unused]] e [[nodiscard]]
 
-Nuovi attributi per ignorare gli avvisi quando non viene usata un'entità oppure per creare un avviso se il valore restituito di una chiamata di funzione viene rimosso. Per altre informazioni, vedere [Wording for maybe_unused attribute](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) (Formulazione per l'attributo maybe_unused) e [Proposal of unused,nodiscard and fallthrough attributes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) (Proposta per gli attributi unused, nodiscard e fallthrough).
+Nuovi attributi per ignorare gli avvisi quando non viene usata un'entità oppure per creare un avviso se il valore restituito di una chiamata di funzione viene rimosso. Per altre informazioni, vedere [Attributes in C++](cpp/attributes.md) (Attributi in C++).
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>Uso degli spazi dei nomi degli attributi senza ripetizione
 
@@ -75,11 +75,11 @@ Nuova sintassi per consentire un solo identificatore dello spazio dei nomi in un
 
 ### <a name="structured-bindings"></a>Binding strutturati
 
-In una singola dichiarazione è ora possibile archiviare un valore con i nomi singoli dei relativi componenti, quando il valore è una matrice, std::tuple o std::pair oppure tutti i membri dati sono non statici e pubblici. Per altre informazioni, vedere [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) (Binding strutturati).
+In una singola dichiarazione è ora possibile archiviare un valore con i nomi singoli dei relativi componenti, quando il valore è una matrice, std::tuple o std::pair oppure tutti i membri dati sono non statici e pubblici. Per altre informazioni, vedere [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) (Binding strutturati) e [Returning multiple values from a function](cpp/functions-cpp.md#multi_val) (Restituzione di più valori da una funzione).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Regole di costruzione per i valori di classi di enumerazione
 
-È ora disponibile una conversione implicita (non verso un tipo di dati più piccolo) dal tipo sottostante di un'enumerazione con ambito all'enumerazione stessa, quando la definizione dell'enumerazione non introduce alcun enumeratore e l'origine usa la sintassi di inizializzazione elenco. Per altre informazioni, vedere [Regole di costruzione per i valori di classi di enumerazione](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
+È ora disponibile una conversione implicita (non verso un tipo di dati più piccolo) dal tipo sottostante di un'enumerazione con ambito all'enumerazione stessa, quando la definizione dell'enumerazione non introduce alcun enumeratore e l'origine usa la sintassi di inizializzazione elenco. Per altre informazioni, vedere [Construction Rules for enum class Values](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) (Regole di costruzione per i valori di classi di enumerazione) ed [Enumerazioni](cpp/enumerations-cpp.md#no_enumerators).
 
 ### <a name="capturing-this-by-value"></a>Acquisizione di \*this per valore
 
@@ -93,7 +93,7 @@ L'oggetto `*this` in un'espressione lambda può ora essere acquisito per valore.
 
 La parola chiave `register`, precedentemente deprecata e ignorata dal compilatore, è stata ora rimossa dal linguaggio. Per altre informazioni, vedere [Remove Deprecated Use of the register Keyword](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) (Rimozione della parola chiave register per uso deprecato).
 
-Per l'elenco completo dei miglioramenti apportati alla conformità fino a Visual Studio 2015 Update 3, vedere [Visual C++: novità dalla versione 2003 alla 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx).
+Per l'elenco completo dei miglioramenti apportati alla conformità fino a Visual Studio 2015 Update 3, vedere [Visual C++: novità dalla versione 2003 alla 2015](https://msdn.microsoft.com/library/mt723604.aspx).
 
 ## <a name="improvements_155"></a> Miglioramenti in Visual Studio 2017 versione 15.5
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+Per altre informazioni, vedere [Costruttori](cpp/constructors-cpp.md#inheriting_constructors).
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17 Inizializzazione delle aggregazioni estesa
 

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e6578486ada758482b270cd5505338e2acf3eb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841902"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578280"
 ---
 # <a name="floating-point-migration-issues"></a>Problemi relativi alla migrazione dei valori a virgola mobile  
   
@@ -33,7 +33,7 @@ Quando le funzioni matematiche sono state spostate nella libreria Universal CRT 
   
 Molte delle funzioni della libreria delle operazioni matematiche a virgola mobile hanno implementazioni diverse per architetture della CPU differenti. La versione di CRT x86 a 32 bit, ad esempio, può avere un'implementazione diversa di CRT x64 a 64 bit. Alcune funzioni potrebbero inoltre avere più implementazioni per una particolare architettura della CPU. L'implementazione più efficiente viene selezionata in modo dinamico in fase di esecuzione a seconda del set di istruzioni supportate dalla CPU. Ad esempio, in CRT x86 a 32 bit alcune funzioni hanno sia un'implementazione x87 che un'implementazione SSE2. In caso di esecuzione su una CPU che supporta SSE2, viene usata l'implementazione SSE2 più veloce. Per l'esecuzione su una CPU che non supporta SSE2 viene usata l'implementazione x87 più lenta. Questo può apparire quando si esegue la migrazione di codice più datato, poiché l'opzione di architettura predefinita del compilatore x86 è diventata [/arch: SSE2](../build/reference/arch-x86.md) in Visual Studio 2012. Dato che implementazioni diverse delle funzioni della libreria delle operazioni matematiche possono usare istruzioni diverse della CPU e algoritmi differenti per produrre i risultati, le funzioni possono produrre risultati diversi su piattaforme differenti. Nella maggior parte dei casi, i risultati sono compresi entro +/-1 ulp rispetto al risultato arrotondato correttamente, ma i risultati effettivi possono variare tra CPU diverse.  
   
-I miglioramenti della correttezza della generazione di codice in diverse modalità a virgola mobile in Visual Studio possono influenzare i risultati delle operazioni a virgola mobile anche quando il codice più datato viene confrontato con il nuovo codice, anche se si usano gli stessi flag del compilatore. Ad esempio, il codice generato da Visual Studio 2010 se è stato specificato [/fp: precise](../build/reference/fp-specify-floating-point-behavior.md) (predefinito) o **/fp: strict** può non aver propagato correttamente i valori intermedi non-numerici (NaN) attraverso le espressioni. Di conseguenza, alcune espressioni che restituivano un risultato numerico nei compilatori precedenti ora possono restituire correttamente un risultato NaN. È anche possibile rilevare delle differenze perché le ottimizzazioni del codice abilitate per **/fp: fast** ora sfruttano un maggior numero di funzionalità del processore. Tali ottimizzazioni possono usare un numero inferiore di istruzioni, ma possono influire sui risultati generati perché alcune operazioni intermedie che in precedenza erano visibili sono state rimosse.  
+I miglioramenti della correttezza della generazione di codice in diverse modalità a virgola mobile in Visual Studio possono influenzare i risultati delle operazioni a virgola mobile anche quando il codice più datato viene confrontato con il nuovo codice, anche se si usano gli stessi flag del compilatore. Ad esempio, il codice generato da Visual Studio 2010 se è stato specificato [/fp: precise](../build/reference/fp-specify-floating-point-behavior.md) (predefinito) o `/fp:strict` può non aver propagato correttamente i valori intermedi non un numero attraverso le espressioni. Di conseguenza, alcune espressioni che restituivano un risultato numerico nei compilatori precedenti ora possono restituire correttamente un risultato NaN. È anche possibile rilevare delle differenze perché le ottimizzazioni del codice abilitate per `/fp:fast` ora sfruttano un maggior numero di funzionalità del processore. Tali ottimizzazioni possono usare un numero inferiore di istruzioni, ma possono influire sui risultati generati perché alcune operazioni intermedie che in precedenza erano visibili sono state rimosse.  
   
 ## <a name="how-to-get-identical-results"></a>Come ottenere risultati identici  
   
