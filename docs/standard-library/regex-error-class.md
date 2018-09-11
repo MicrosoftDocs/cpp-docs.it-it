@@ -1,7 +1,7 @@
 ---
 title: Classe regex_error | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cdf1f5a3a8477e0af7d6bb04426599df590fffa
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7358af41e1a7172daec619bec3e701ff4541fd0c
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102681"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384982"
 ---
 # <a name="regexerror-class"></a>Classe regex_error
 
@@ -32,19 +32,24 @@ Segnala un oggetto basic_regex non valido.
 
 ```cpp
 class regex_error
-: public std::runtime_error {
-public:
-    explicit regex_error(regex_constants::error_code error);
-
-    regex_constants::error_code code() const;
-
-
-};
+: public std::runtime_error
 ```
 
 ## <a name="remarks"></a>Note
 
 La classe descrive un oggetto eccezione generato per segnalare un errore nella costruzione o nell'uso di un oggetto `basic_regex` .
+
+### <a name="constructors"></a>Costruttori
+
+|Costruttore|Descrizione|
+|-|-|
+|[regex_error](#regex_error)|Costruisce l'oggetto.|
+
+### <a name="member-functions"></a>Funzioni membro
+
+|Funzione membro|Descrizione|
+|-|-|
+|[Codice](#code)|Restituisce il codice di errore.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -52,22 +57,10 @@ La classe descrive un oggetto eccezione generato per segnalare un errore nella c
 
 **Spazio dei nomi:** std
 
-## <a name="code"></a>  regex_error::code
-
-Restituisce il codice di errore.
+## <a name="example"></a>Esempio
 
 ```cpp
-regex_constants::error_code code() const;
-```
-
-### <a name="remarks"></a>Note
-
-La funzione membro restituisce il valore passato al costruttore dell'oggetto.
-
-### <a name="example"></a>Esempio
-
-```cpp
-// std__regex__regex_error_code.cpp
+// std__regex__regex_error.cpp
 // compile with: /EHsc
 #include <regex>
 #include <iostream>
@@ -83,8 +76,7 @@ int main()
     catch (const std::regex_error& rerr)
         {
         std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
+            << (rerr.code() == paren.code() ? "unbalanced parentheses" : "")
             << std::endl;
         }
     catch (...)
@@ -94,12 +86,23 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
 regex error: unbalanced parentheses
 ```
+
+## <a name="code"></a>  regex_error::code
+
+Restituisce il codice di errore.
+
+```cpp
+regex_constants::error_code code() const;
+```
+
+### <a name="remarks"></a>Note
+
+La funzione membro restituisce il valore passato al costruttore dell'oggetto.
 
 ## <a name="regex_error"></a>  regex_error::regex_error
 
@@ -117,43 +120,6 @@ Codice di errore.
 ### <a name="remarks"></a>Note
 
 Il costruttore crea un oggetto che contiene il valore *errore*.
-
-### <a name="example"></a>Esempio
-
-```cpp
-// std__regex__regex_error_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex_error paren(std::regex_constants::error_paren);
-
-    try
-        {
-        std::regex rx("(a");
-        }
-    catch (const std::regex_error& rerr)
-        {
-        std::cout << "regex error: "
-            << (rerr.code() == paren.code()
-                 "unbalanced parentheses" : "")
-            << std::endl;
-        }
-    catch (...)
-        {
-        std::cout << "unknown exception" << std::endl;
-        }
-
-    return (0);
-    }
-
-```
-
-```Output
-regex error: unbalanced parentheses
-```
 
 ## <a name="see-also"></a>Vedere anche
 

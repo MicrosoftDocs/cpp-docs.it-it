@@ -1,7 +1,7 @@
 ---
 title: Classe regex_constants | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,14 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107525"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384995"
 ---
-# <a name="regexconstants-class"></a>Classe regex_constants
+# <a name="regexconstants-namespace"></a>spazio dei nomi regex_constants
 
 Spazio dei nomi per i flag dell'espressione regolare.
 
@@ -116,6 +116,12 @@ namespace regex_constants {
 ## <a name="remarks"></a>Note
 
 Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei relativi flag associati.
+
+|||
+|-|-|
+|[error_type](#error_type)|Indicatori per segnalare errori di sintassi di espressione regolare.|
+|[match_flag_type](#match_flag_type)|Flag per opzioni di corrispondenza delle espressioni regolari.|
+|[syntax_option_type](#syntax_option_type)|Flag per selezionare le opzioni di sintassi.|
 
 ## <a name="requirements"></a>Requisiti
 
