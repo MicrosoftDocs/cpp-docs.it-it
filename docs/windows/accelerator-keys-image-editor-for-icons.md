@@ -1,5 +1,5 @@
 ---
-title: Tasti di scelta rapida (Editor di immagini per le icone) | Microsoft Docs
+title: Tasti di scelta rapida (Editor di immagini di C++ per le icone) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f211b15134ad292c9e7e4d3ed92d81ea59dd3b86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683300"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317745"
 ---
-# <a name="accelerator-keys-image-editor-for-icons"></a>Tasti di scelta rapida (Editor di immagini per le icone)
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>Tasti di scelta rapida (Editor di immagini di C++ per le icone)
 
 Di seguito sono i tasti di scelta rapida per i comandi dell'editor di immagini che sono associati alle chiavi per impostazione predefinita. Per modificare i tasti di scelta rapida, fare clic su **opzioni** nel **Tools** dal menu e quindi scegliere **tastiera** sotto il **ambiente** cartella. Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
