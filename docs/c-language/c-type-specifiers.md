@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197228"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764264"
 ---
 # <a name="c-type-specifiers"></a>Identificatori di tipi C
 
@@ -29,18 +29,18 @@ Gli identificatori di tipo nelle dichiarazioni definiscono il tipo di una dichia
 ## <a name="syntax"></a>Sintassi
 
 *type-specifier*:  
-&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;*typedef-name*  
+&nbsp;&nbsp;&nbsp;&nbsp;**void**  
+&nbsp;&nbsp;&nbsp;&nbsp;**char**  
+&nbsp;&nbsp;&nbsp;&nbsp;**short**  
+&nbsp;&nbsp;&nbsp;&nbsp;**int**  
+&nbsp;&nbsp;&nbsp;&nbsp;**long**  
+&nbsp;&nbsp;&nbsp;&nbsp;**float**  
+&nbsp;&nbsp;&nbsp;&nbsp;**double**  
+&nbsp;&nbsp;&nbsp;&nbsp;**signed**  
+&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**  
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*  
 
 I tipi **signed char**, **signed int**, **signed short int** e **signed long int** insieme alle relative controparti **unsigned** e a **enum** vengono denominati tipi *integrali*. Gli identificatori di tipo **float**, **double** e **long double** vengono denominati tipi *mobili* o *a virgola mobile*. È possibile utilizzare qualsiasi identificatore di tipo a virgola mobile o integrale in una dichiarazione di funzione o variabile. Se un *type-specifier* non viene specificato in una dichiarazione, si presuppone che sia **int**.
 
