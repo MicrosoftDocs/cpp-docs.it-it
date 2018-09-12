@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388383"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197228"
 ---
 # <a name="c-type-specifiers"></a>Identificatori di tipi C
 
@@ -79,7 +79,7 @@ pi = pu;  /* Now generates warning */
 
 Le espressioni di tipo **void** vengono valutate per gli effetti collaterali. Non è possibile usare il valore (inesistente) di un'espressione con tipo **void** in nessun modo, né convertire un'espressione **void** (mediante conversione implicita o esplicita) in un qualsiasi tipo eccetto **void**. Se si usa un'espressione di qualsiasi altro tipo in un contesto in cui viene richiesta un'espressione **void**, il valore viene rimosso.
 
-Per essere conforme alla specifica ANSI, **void\*\*** non può essere usato come **int\*\***. Solo **void\*** può essere usato come puntatore a un tipo non specificato.
+Per essere conforme alla specifica ANSI, <strong>void\*\*</strong> non può essere usato come <strong>int\*\*</strong>. Solo **void**<strong>\*</strong> può essere usato come puntatore a un tipo non specificato.
 
 **Fine sezione specifica Microsoft**
 

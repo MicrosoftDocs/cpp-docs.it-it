@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391961"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206133"
 ---
 # <a name="is-isw-routines"></a>is, isw Routines
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391961"
  `__iscsymf`  
  Lettera o carattere di sottolineatura.  
   
- **isdigit**  
+ `isdigit`  
  Cifra decimale (0 - 9).  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391961"
  `iswcntrl`  
  Carattere di controllo wide.  
   
- **__iswcsym**  
- Qualsiasi carattere wide per il quale la funzione **isalnum** è vera, o il carattere "_".  
+ `__iswcsym`  
+ Qualsiasi carattere wide per il quale `isalnum` è vera, o il carattere "_".  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  Qualsiasi carattere wide per il quale `iswalpha` è vera, o il carattere "_".  
   
  `iswctype`  
  Il carattere ha una proprietà specificata dall'argomento `desc`. Per ogni valore valido dell'argomento `desc` della funzione `iswctype`, esiste un'equivalente routine di classificazione a caratteri wide, come illustrato nella tabella seguente:  
   
- **Equivalenza di iswctype (**   
- ***c, desc* ) ad altre routine di test isw**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Equivalenza di iswctype(c, desc) ad altre routine di test isw
   
 |Valore dell'argomento *desc*|Equivalente di iswctype( *c, desc*)|  
 |------------------------------|----------------------------------------|  

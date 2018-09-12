@@ -17,49 +17,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 74e2fdd2f970ca3c1f177dd8d7ea565757a03a4b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329258"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313000"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
-Il tag \<c> indica che il testo all'interno di una descrizione deve essere contrassegnato come codice. Usare [\<code>](../ide/code-visual-cpp.md) per indicare più righe come codice.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-<c>text</c>  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `text`  
- Testo che si vuole indicare come codice.  
-  
-## <a name="remarks"></a>Note  
- Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// xml_c_tag.cpp  
-// compile with: /doc /LD  
-// post-build command: xdcmake xml_c_tag.xdc  
-  
-/// Text for class MyClass.  
-class MyClass {  
-public:  
-   int m_i;  
-   MyClass() : m_i(0) {}  
-  
-   /// <summary><c>MyMethod</c> is a method in the <c>MyClass</c> class.  
-   /// </summary>  
-   int MyMethod(MyClass * a) {  
-      return a -> m_i;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Documentazione di XML](../ide/xml-documentation-visual-cpp.md)
+
+Il tag \<c> indica che il testo all'interno di una descrizione deve essere contrassegnato come codice. Usare [\<code>](../ide/code-visual-cpp.md) per indicare più righe come codice.
+
+## <a name="syntax"></a>Sintassi
+
+```
+<c>text</c>
+```
+
+#### <a name="parameters"></a>Parametri
+
+*testo*<br/>
+Testo che si vuole indicare come codice.
+
+## <a name="remarks"></a>Note
+
+Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// xml_c_tag.cpp
+// compile with: /doc /LD
+// post-build command: xdcmake xml_c_tag.xdc
+
+/// Text for class MyClass.
+class MyClass {
+public:
+   int m_i;
+   MyClass() : m_i(0) {}
+
+   /// <summary><c>MyMethod</c> is a method in the <c>MyClass</c> class.
+   /// </summary>
+   int MyMethod(MyClass * a) {
+      return a -> m_i;
+   }
+};
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Documentazione di XML](../ide/xml-documentation-visual-cpp.md)

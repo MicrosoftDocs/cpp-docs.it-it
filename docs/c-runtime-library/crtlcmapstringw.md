@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 163d6f90d31e27cc4d8a616074f7f4153ab58876
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451953"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685495"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Esegue il mapping di una stringa di caratteri a un'altra, eseguendo una trasformazione specificata dipendente dalle impostazioni locali. Questa funzione può essere anche utilizzata per generare una chiave di ordinamento per la stringa di input.  
@@ -78,7 +78,7 @@ int __crtLCMapStringW(
  Zero indica un errore. Per ottenere informazioni estese sull'errore, chiamare la funzione `GetLastError` .  
   
 ## <a name="remarks"></a>Note  
- Se `cchSrc` è maggiore di zero e `lpSrcStr` è una stringa con terminazione null, `__crtLCMapStringW` imposta `cchSrc` sulla lunghezza della stringa. Quindi `__crtLCMapStringW` chiama la versione di stringa a caratteri wide (Unicode) della funzione `LCMapString` con i parametri specificati. Per altre informazioni sui parametri e sul valore restituito di questa funzione, vedere la funzione `LCMapString` in [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542).  
+ Se `cchSrc` è maggiore di zero e `lpSrcStr` è una stringa con terminazione null, `__crtLCMapStringW` imposta `cchSrc` sulla lunghezza della stringa. Quindi `__crtLCMapStringW` chiama la versione di stringa a caratteri wide (Unicode) della funzione `LCMapString` con i parametri specificati. Per altre informazioni sui parametri e sul valore restituito di questa funzione, vedere [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa).  
   
 ## <a name="requirements"></a>Requisiti  
   

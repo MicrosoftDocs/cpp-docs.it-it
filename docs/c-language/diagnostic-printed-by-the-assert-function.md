@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c219669d018dc8c4cb038e90dffd1137877f422
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e824e94f79aa01ab3a82675fb3e8f76059c567d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382877"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195552"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnostica visualizzata dalla funzione di asserzione
 **ANSI 4.2** Diagnostica stampata dalla funzione **assert** e relativo comportamento di terminazione  
   
- La funzione **assert** stampa un messaggio di diagnostica e chiama la routine **abort** se l'espressione è false (0). Il messaggio di diagnostica presenta la forma seguente:  
-  
- **Asserzione non riuscita**: *expression***, file** *filename***, line** *linenumber*  
-  
- in cui filename è il nome del file di origine e linenumber è il numero di riga dell'asserzione non riuscita nel file di origine. Se l'espressione è true (diversa da zero), non viene intrapresa alcuna azione.  
+La funzione **assert** stampa un messaggio di diagnostica e chiama la routine **abort** se l'espressione è false (0). Il messaggio di diagnostica presenta la forma seguente:  
+
+> **Asserzione non riuscita**: <em>expression</em>**, file** <em>filename</em>**, line** *linenumber*  
+
+in cui *filename* è il nome del file di origine e *linenumber* è il numero di riga dell'asserzione non riuscita nel file di origine. Se l'*espressione* è true (diversa da zero), non viene intrapresa alcuna azione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni della libreria](../c-language/library-functions.md)

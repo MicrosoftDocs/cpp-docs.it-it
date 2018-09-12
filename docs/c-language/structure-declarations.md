@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391900"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207270"
 ---
 # <a name="structure-declarations"></a>Dichiarazioni di struttura
 Una "dichiarazione di struttura" denomina un tipo e specifica una sequenza di valori variabili (denominati "membri" o " campi" della struttura) con tipi differenti. Un identificatore facoltativo, denominato "tag," fornisce il nome del tipo di struttura e può essere utilizzato nei riferimenti successivi a tale tipo. Una variabile del tipo di struttura contiene l'intera sequenza definita dal tipo specificato. Le strutture in C sono simili ai tipi noti come "record" in altri linguaggi.  
@@ -163,7 +163,7 @@ struct somestruct
   
  Il compilatore consente l'utilizzo di una matrice senza dimensione o di dimensione pari a zero come ultimo membro di una struttura. Questa operazione può risultare utile se la dimensione di una matrice costante è diversa quando viene utilizzata in situazioni differenti. La dichiarazione di una struttura è simile alla seguente:  
   
- `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
  Le matrici senza dimensione possono apparire solo come ultimo membro di una struttura. Le strutture contenenti le dichiarazioni di matrice senza dimensione possono essere annidate in altre strutture purché nelle strutture di inclusione non siano dichiarati altri membri. Le matrici di queste strutture non sono consentite. L'operatore `sizeof`, applicato a una variabile di questo tipo o al tipo stesso, presuppone il valore 0 per la dimensione della matrice.  
   

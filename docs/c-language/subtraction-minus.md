@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295c6bc33b42ed34fd476dbc72bec9dd398efa14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b27eead70963665e1dd3079cf5c2b49bcfda863
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386946"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751631"
 ---
 # <a name="subtraction--"></a>Sottrazione (-)
 L’operatore di sottrazione (**-**) sottrae il secondo operando dal primo. Entrambi gli operandi possono essere sia tipi integrali che a virgola mobile, oppure un operando può essere un puntatore e l'altro un Integer.  
   
- Quando vengono sottratti due puntatori, la differenza viene convertita in un valore integrale con segno, dividendo la differenza per la dimensione di un valore del tipo a cui sono indirizzati i puntatori. La dimensione del valore integrale viene definita dal tipo **ptrdiff_t** nel file di inclusione standard STDDEF.H. Il risultato rappresenta il numero di posizioni di memoria di tale tipo presenti tra i due indirizzi. Solo nel caso di due elementi della stessa matrice, si può essere certi che il risultato sia significativo, come illustrato in [Puntatore aritmetico](../c-language/pointer-arithmetic.md).  
+Quando vengono sottratti due puntatori, la differenza viene convertita in un valore integrale con segno, dividendo la differenza per la dimensione di un valore del tipo a cui sono indirizzati i puntatori. La dimensione del valore integrale viene definita dal tipo **ptrdiff_t** nel file di inclusione standard STDDEF.H. Il risultato rappresenta il numero di posizioni di memoria di tale tipo presenti tra i due indirizzi. Solo nel caso di due elementi della stessa matrice, si può essere certi che il risultato sia significativo, come illustrato in [Puntatore aritmetico](../c-language/pointer-arithmetic.md).  
   
- Quando un valore intero viene sottratto da un valore puntatore, l'operatore di sottrazione converte il valore intero (*i*), moltiplicandolo per la dimensione del valore a cui è indirizzato il puntatore. Dopo la conversione, il valore intero rappresenta le posizioni di memoria *i*, dove ogni posizione ha la lunghezza specificata dal tipo di puntatore. Quando il valore intero convertito viene sottratto dal valore puntatore, il risultato corrisponde ai percorsi dell'indirizzo di memoria *i* precedenti all'indirizzo originale. Il nuovo puntatore punta a un valore del tipo a cui è indirizzato il valore di puntatore originale.  
+Quando un valore intero viene sottratto da un valore puntatore, l'operatore di sottrazione converte il valore intero (*i*), moltiplicandolo per la dimensione del valore a cui è indirizzato il puntatore. Dopo la conversione, il valore intero rappresenta le posizioni di memoria *i*, dove ogni posizione ha la lunghezza specificata dal tipo di puntatore. Quando il valore intero convertito viene sottratto dal valore puntatore, il risultato corrisponde ai percorsi dell'indirizzo di memoria *i* precedenti all'indirizzo originale. Il nuovo puntatore punta a un valore del tipo a cui è indirizzato il valore di puntatore originale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operatori di addizione C](../c-language/c-additive-operators.md)
+[Operatori di addizione C](../c-language/c-additive-operators.md)

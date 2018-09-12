@@ -17,44 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9600c27f40a43105ae9a8fc2fd1579907891cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f7e5f8933aabe36362938a23c28ed1cd562a579
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391913"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205393"
 ---
 # <a name="pointer-declarations"></a>Dichiarazioni di puntatori
 Una "dichiarazione di puntatore" denomina una variabile puntatore e specifica il tipo dell'oggetto a cui fa riferimento la variabile. Una variabile dichiarata come puntatore contiene un indirizzo di memoria.  
   
-## <a name="syntax"></a>Sintassi  
- *declarator*:  
- &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
-  
- *direct-declarator*:  
- &nbsp;&nbsp;*identifier*  
-  
- &nbsp;&nbsp;**(** *declarator* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
-  
- *pointer*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
-  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
-  
- *type-qualifier-list*:  
- &nbsp;&nbsp;*type-qualifier*  
-  
- &nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
+## <a name="syntax"></a>Sintassi
+
+*declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
+
+*direct-declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
+
+*pointer*:  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
+
+*type-qualifier-list*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
   
  *type-specifier* specifica il tipo dell'oggetto, che può essere qualsiasi tipo di base, struttura o unione. Le variabili puntatore possono inoltre fare riferimento a funzioni, matrici e altri puntatori. Per informazioni sulla dichiarazione e l'interpretazione di tipi di puntatore più complessi, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md).  
   
- Rendendo *type-specifier* **void**, è possibile ritardare la specifica del tipo a cui fa riferimento il puntatore. Tale elemento viene definito "puntatore a **void**" e viene scritto come `void *`. Una variabile dichiarata come puntatore a *void* può essere usata per fare riferimento a un oggetto di qualsiasi tipo. Tuttavia, per eseguire la maggior parte delle operazioni sul puntatore o sull'oggetto ai quali fa riferimento, il tipo a cui fa riferimento deve essere specificato in modo esplicito per ogni operazione. Le variabili di tipo **char\*** e di tipo **void \*** sono compatibili con l'assegnazione senza un cast di tipo. Tale conversione può essere eseguita tramite un cast di tipo. Per altre informazioni, vedere [Conversioni di cast di tipo](../c-language/type-cast-conversions.md).  
+ Rendendo *type-specifier* **void**, è possibile ritardare la specifica del tipo a cui fa riferimento il puntatore. Tale elemento viene definito "puntatore a **void**" e viene scritto come `void *`. Una variabile dichiarata come puntatore a *void* può essere usata per fare riferimento a un oggetto di qualsiasi tipo. Tuttavia, per eseguire la maggior parte delle operazioni sul puntatore o sull'oggetto ai quali fa riferimento, il tipo a cui fa riferimento deve essere specificato in modo esplicito per ogni operazione. Le variabili di tipo **char** <strong>\*</strong> e di tipo **void** <strong>\*</strong> sono compatibili con l'assegnazione senza un cast di tipo. Tale conversione può essere eseguita tramite un cast di tipo. Per altre informazioni, vedere [Conversioni di cast di tipo](../c-language/type-cast-conversions.md).  
   
  *type-qualifier* può essere **const** o **volatile**, oppure entrambi. Tali qualificatori specificano rispettivamente che il puntatore non può essere modificato dal programma stesso (**const**) o che il puntatore può essere modificato in modo legittimo da un processo che esula dal controllo del programma (**volatile**). Vedere [Qualificatori di tipo](../c-language/type-qualifiers.md) per altre informazioni su **const** e **volatile**.  
   

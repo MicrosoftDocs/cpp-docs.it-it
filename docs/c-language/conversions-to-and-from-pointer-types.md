@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8ddcaa55e3b88e715428ea8fa44c897ab5f8b4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384296"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216098"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversioni da e verso tipi di puntatore
 Un puntatore a un tipo di valore può essere convertito in un puntatore a un tipo diverso. Tuttavia, il risultato può essere non definito a causa dei requisiti di allineamento e delle dimensioni dei diversi tipi in archivio. Un puntatore a un oggetto può essere convertito in un puntatore a un oggetto il cui tipo richiede un allineamento di archiviazione ugualmente o meno rigido e nuovamente senza modifiche.  
@@ -43,7 +43,7 @@ Un puntatore a un tipo di valore può essere convertito in un puntatore a un tip
   
 -   Se la dimensione del tipo integrale è diversa dalla dimensione del tipo di puntatore, il tipo integrale viene prima convertito nella dimensione del puntatore usando i percorsi di conversione specificati nelle tabelle [Conversione dai tipi integrali con segno](../c-language/conversions-from-signed-integral-types.md) e [Conversione dai tipi integrali senza segno](../c-language/conversions-from-unsigned-integral-types.md). Viene quindi utilizzato come valore del puntatore.  
   
- Un'espressione costante integrale con valore 0 o la stessa espressione trasmessa al tipo **void \*** può essere convertita con un cast di tipo, un'assegnazione o un confronto in un puntatore di qualsiasi tipo. Questa operazione produce un puntatore null equivalente a un altro puntatore null dello stesso tipo, ma questo puntatore null non corrisponde a nessun puntatore a una funzione o un oggetto. I numeri interi diversi dalla costante 0 possono essere convertiti in un tipo di puntatore, ma il risultato non è portabile.  
+ Un'espressione costante integrale con valore 0 o la stessa espressione trasmessa al tipo **void**  <strong>\*</strong> può essere convertita con un cast di tipo, un'assegnazione o un confronto in un puntatore di qualsiasi tipo. Questa operazione produce un puntatore null equivalente a un altro puntatore null dello stesso tipo, ma questo puntatore null non corrisponde a nessun puntatore a una funzione o un oggetto. I numeri interi diversi dalla costante 0 possono essere convertiti in un tipo di puntatore, ma il risultato non è portabile.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Conversioni di assegnazione](../c-language/assignment-conversions.md)

@@ -18,103 +18,108 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330427"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894450"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
-Il tag \<include> consente di fare riferimento ai commenti di un altro file per la descrizione dei tipi e dei membri del codice sorgente, eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  Ad esempio, è possibile usare \<include> per inserire commenti "boilerplate" standard che vengono usati in tutto il team o la società.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Il tag \<include> consente di fare riferimento ai commenti di un altro file per la descrizione dei tipi e dei membri del codice sorgente, eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  Ad esempio, è possibile usare \<include> per inserire commenti "boilerplate" standard che vengono usati in tutto il team o la società.
+
+## <a name="syntax"></a>Sintassi
+
 ```  
-<include file='filename' path='tagpath' />  
+<include file='filename' path='tagpath' />
 ```  
-  
-#### <a name="parameters"></a>Parametri  
- `filename`  
- Nome del file che contiene la documentazione. È possibile qualificare il nome del file con un percorso.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `filename`.  
-  
- `tagpath`  
- Espressione XPath valida che consente di selezionare il set di nodi necessario contenuto nel file.  
-  
- `name`  
- Identificatore del nome contenuto nel tag che precede i commenti. `name` ha sempre un `id`.  
-  
- `id`  
- ID del tag che precede i commenti.  Racchiudere il nome tra virgolette singole o doppie.  
-  
-## <a name="remarks"></a>Note  
- Il tag \<include> usa la sintassi XML XPath. Per informazioni sulla personalizzazione dell'uso di \<include>, vedere la documentazione relativa a XPath.  
-  
- Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
-  
-## <a name="example"></a>Esempio  
- In questo esempio vengono presi in considerazione più file. Il primo file, che usa \<include>, contiene i commenti alla documentazione seguenti:  
-  
+
+#### <a name="parameters"></a>Parametri
+
+`filename`  
+Nome del file che contiene la documentazione. È possibile qualificare il nome del file con un percorso.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `filename`.
+
+`tagpath`  
+Espressione XPath valida che consente di selezionare il set di nodi necessario contenuto nel file.
+
+`name`  
+Identificatore del nome contenuto nel tag che precede i commenti. `name` ha sempre un `id`.
+
+`id`  
+ID del tag che precede i commenti.  Racchiudere il nome tra virgolette singole o doppie.
+
+## <a name="remarks"></a>Note
+
+Il tag \<include> usa la sintassi XML XPath. Per informazioni sulla personalizzazione dell'uso di \<include>, vedere la documentazione relativa a XPath.
+
+Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
+
+## <a name="example"></a>Esempio
+
+In questo esempio vengono presi in considerazione più file. Il primo file, che usa \<include>, contiene i commenti alla documentazione seguenti:
+
+```cpp
+// xml_include_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_include_tag.dll
+
+/// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test"]/*' />
+public ref class Test {
+   void TestMethod() {
+   }
+};
+
+/// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test2"]/*' />
+public ref class Test2 {
+   void Test() {
+   }
+};
 ```  
-// xml_include_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_include_tag.dll  
-  
-/// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test"]/*' />  
-public ref class Test {  
-   void TestMethod() {  
-   }  
-};  
-  
-/// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test2"]/*' />  
-public ref class Test2 {  
-   void Test() {  
-   }  
-};  
+
+Il secondo file, xml_include_tag.doc, contiene i commenti alla documentazione seguenti:
+
+```xml
+<MyDocs>
+
+<MyMembers name="test">
+<summary>
+The summary for this type.
+</summary>
+</MyMembers>
+
+<MyMembers name="test2">
+<summary>
+The summary for this other type.
+</summary>
+</MyMembers>
+
+</MyDocs>
 ```  
-  
- Il secondo file, xml_include_tag.doc, contiene i commenti alla documentazione seguenti:  
-  
-```  
-<MyDocs>  
-  
-<MyMembers name="test">  
-<summary>  
-The summary for this type.  
-</summary>  
-</MyMembers>  
-  
-<MyMembers name="test2">  
-<summary>  
-The summary for this other type.  
-</summary>  
-</MyMembers>  
-  
-</MyDocs>  
-```  
-  
-## <a name="program-output"></a>Output di programma  
-  
-```  
-<?xml version="1.0"?>  
-<doc>  
-    <assembly>  
-        <name>t2</name>  
-    </assembly>  
-    <members>  
-        <member name="T:Test">  
-            <summary>  
-The summary for this type.  
-</summary>  
-        </member>  
-        <member name="T:Test2">  
-            <summary>  
-The summary for this other type.  
-</summary>  
-        </member>  
-    </members>  
-</doc>  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Documentazione di XML](../ide/xml-documentation-visual-cpp.md)
+
+## <a name="program-output"></a>Output di programma
+
+```xml
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>t2</name>
+    </assembly>
+    <members>
+        <member name="T:Test">
+            <summary>
+The summary for this type.
+</summary>
+        </member>
+        <member name="T:Test2">
+            <summary>
+The summary for this other type.
+</summary>
+        </member>
+    </members>
+</doc>
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Documentazione di XML](../ide/xml-documentation-visual-cpp.md)

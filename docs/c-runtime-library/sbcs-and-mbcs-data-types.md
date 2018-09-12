@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409277"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205260"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Tipi di dati SBCS e MBCS
 
@@ -34,7 +34,7 @@ Qualsiasi routine della libreria di runtime Microsoft MBCS che gestisce un solo 
 
 Pertanto è consigliabile rappresentare un byte di un carattere multibyte come un `unsigned char` a 8 bit. In alternativa, per evitare un risultato negativo, convertire semplicemente un carattere a byte singolo di tipo **char** in un `unsigned char` prima di convertirlo in un **int** o in un **long**.
 
-Poiché alcune funzioni di gestione delle stringhe SBCS usano parametri **char\*** (con segno), quando **_MBCS** viene definito, il compilatore genera un avviso di mancata corrispondenza di tipo. Esistono tre modi per evitare questo problema, elencati in ordine di efficienza:
+Poiché alcune funzioni di gestione delle stringhe SBCS usano parametri **char**<strong>\*</strong> (con segno), quando **_MBCS** viene definito, il compilatore genera un avviso di mancata corrispondenza di tipo. Esistono tre modi per evitare questo problema, elencati in ordine di efficienza:
 
 1. Usare le funzioni inline indipendenti dai tipi in TCHAR.H. Comportamento predefinito.
 

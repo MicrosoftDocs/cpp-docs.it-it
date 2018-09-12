@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c2bff6aa96ad5c2eea127fa643641d268e3cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4aaf456e83968cf47573a9ea2e765f9e7d552625
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392575"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760250"
 ---
 # <a name="ismbc-routines"></a>Routines _ismbc
 Ogni test della routine **_ismbc** verifica un carattere multibyte `c` per una determinata condizione.  
@@ -43,9 +43,9 @@ Ogni test della routine **_ismbc** verifica un carattere multibyte `c` per una d
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
   
 ## <a name="remarks"></a>Note  
- Il risultato del test di ogni routine **_ismbc** dipende dalla tabella codici multibyte attiva. Le tabelle codici multibyte contengono caratteri alfabetici a un byte. Per impostazione predefinita, la tabella codici multibyte viene impostata sulla tabella codici ANSI predefinita del sistema, ottenuta dal sistema operativo all'avvio del programma. È possibile eseguire una query o modificare la tabella codici multibyte in uso, rispettivamente con [_getmbcp](../c-runtime-library/reference/getmbcp.md) o [_setmbcp](../c-runtime-library/reference/setmbcp.md).  
+Il risultato del test di ogni routine **_ismbc** dipende dalla tabella codici multibyte attiva. Le tabelle codici multibyte contengono caratteri alfabetici a un byte. Per impostazione predefinita, la tabella codici multibyte viene impostata sulla tabella codici ANSI predefinita del sistema, ottenuta dal sistema operativo all'avvio del programma. È possibile eseguire una query o modificare la tabella codici multibyte in uso, rispettivamente con [_getmbcp](../c-runtime-library/reference/getmbcp.md) o [_setmbcp](../c-runtime-library/reference/setmbcp.md).  
   
- Il valore di output è interessato dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali.  
+Il valore di output è interessato dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali.  
   
 |Routine|Condizione di test|Esempio della tabella codici 932|  
 |-------------|--------------------|---------------------------|  
@@ -62,9 +62,9 @@ Ogni test della routine **_ismbc** verifica un carattere multibyte `c` per una d
 |[_ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Simbolo multibyte|Restituisce un valore diverso se e solo se 0x8141<=`c`<=0x81AC.|  
 |[_ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Carattere alfabetico maiuscolo|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera in inglese maiuscola ASCII: 0x41<=`c`<=0x5A.|  
   
- **Specifiche per la tabella codici 932**  
+**Specifiche per la tabella codici 932**  
   
- Le routine seguenti sono specifiche per la tabella codici 932.  
+Le routine seguenti sono specifiche per la tabella codici 932.  
   
 |Routine|Condizione di test (solo per la tabella codici 932)|  
 |-------------|-------------------------------------------|  
@@ -74,11 +74,11 @@ Ogni test della routine **_ismbc** verifica un carattere multibyte `c` per una d
 |[_ismbcl1, _ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS livello 1: 0x889F<=`c`<=0x9872.|  
 |[_ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS livello 2: 0x989F<=`c`<=0xEA9E.|  
   
- `_ismbcl0`, `_ismbcl1` e `_ismbcl2` verificano che il valore `c` specificato corrisponda alle condizioni di test descritte nella tabella precedente, ma non verifica se `c` è un carattere multibyte valido. Se il byte più basso è compreso tra 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, queste funzioni restituiscono un valore diverso da zero, indicando che il carattere soddisfa la condizione di test. Usare [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) per verificare se il carattere multibyte è definito.  
+`_ismbcl0`, `_ismbcl1` e `_ismbcl2` verificano che il valore `c` specificato corrisponda alle condizioni di test descritte nella tabella precedente, ma non verifica se `c` è un carattere multibyte valido. Se il byte più basso è compreso tra 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, queste funzioni restituiscono un valore diverso da zero, indicando che il carattere soddisfa la condizione di test. Usare [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) per verificare se il carattere multibyte è definito.  
   
- **Specifiche per la tabella codici 932 END**  
+**Specifiche per la tabella codici 932 END**  
   
 ## <a name="see-also"></a>Vedere anche  
- [Classificazione di caratteri](../c-runtime-library/character-classification.md)   
- [Routine is, isw](../c-runtime-library/is-isw-routines.md)   
- [Routine _ismbb](../c-runtime-library/ismbb-routines.md)
+[Classificazione di caratteri](../c-runtime-library/character-classification.md)   
+[Routine is, isw](../c-runtime-library/is-isw-routines.md)   
+[Routine _ismbb](../c-runtime-library/ismbb-routines.md)

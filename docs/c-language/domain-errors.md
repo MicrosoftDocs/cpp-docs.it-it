@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0443822a7b25c71f48446cf7250b4d33bf7377c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c4af90ddd3f8a166f63c8866dfcfc82bc8d02ed
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381733"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751104"
 ---
 # <a name="domain-errors"></a>Errori di dominio
 **ANSI 4.5.1** I valori restituiti da funzioni matematiche sugli errori di dominio  
   
- Il file ERRNO.H definisce la costante dell'errore del dominio `EDOM` come 33.  Per informazioni sul valore restituito, vedere l'argomento della Guida per la funzione specifica che ha causato l'errore.  
+Il file ERRNO.H definisce la costante dell'errore del dominio `EDOM` come 33.  Per informazioni sul valore restituito, vedere l'argomento della Guida per la funzione specifica che ha causato l'errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni della libreria](../c-language/library-functions.md)
+[Funzioni della libreria](../c-language/library-functions.md)
