@@ -1,7 +1,7 @@
 ---
 title: Classe recursive_directory_iterator | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82df045c5a41767093e690ec35ffeb3d81032474
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0d3765f57ee299a70a54e3b69dbaee0e0687a64c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110656"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691653"
 ---
 # <a name="recursivedirectoryiterator-class"></a>Classe recursive_directory_iterator
 
@@ -41,7 +41,7 @@ La classe modello archivia:
 
 1. un oggetto di tipo `directory_entry` chiamato `myentry` qui, che rappresenta il nome del file corrente nella sequenza di directory
 
-1. un oggetto di tipo `bool`, denominato `no_push` qui, che registra se la discesa ricorsiva nelle sottodirectory è disabilitata
+1. un oggetto di tipo **bool**, denominato `no_push` qui, che registra se la discesa ricorsiva nelle sottodirectory è disabilitata
 
 1. un oggetto di tipo `directory_options`, denominato `myoptions` qui, che registra le opzioni stabilite in fase di costruzione
 

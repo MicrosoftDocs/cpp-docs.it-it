@@ -1,7 +1,7 @@
 ---
 title: Classe directory_iterator | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105212"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691588"
 ---
 # <a name="directoryiterator-class"></a>Classe directory_iterator
 
-Descrive un iteratore di input sequenziato attraverso i nomi file in una directory. Per un iteratore X, l'espressione *X restituisce un oggetto della classe directory_entry che esegue il wrapping di un nome file e tutto ciò che si conosce sul relativo stato.
+Descrive un iteratore di input sequenziato attraverso i nomi file in una directory. Per un iteratore `X`, l'espressione `*X` restituisce un oggetto della classe `directory_entry` che include il nome del file e qualsiasi valore conosce sul relativo stato.
 
-La classe archivia un oggetto di tipo path, denominati `mydir` qui ai fini dell'esempio a scopo illustrativo, che rappresenta il nome della directory da sequenziare e un oggetto di tipo directory_entry denominato `myentry` qui, che rappresenta il nome del file corrente nella sequenza di directory. Un oggetto costruito predefinito di tipo directory_entry ha un oggetto vuoto `mydir` pathname e rappresenta l'iteratore di fine sequenza.
+La classe archivia un oggetto di tipo `path`, denominato `mydir` qui per a scopo illustrativo, che rappresenta il nome della directory da sequenziare, e un oggetto di tipo `directory_entry` chiamato `myentry` qui, che rappresenta l'oggetto corrente nome del file nella sequenza di directory. Un oggetto costruito predefinito di tipo `directory_entry` dispone di un oggetto vuoto `mydir` pathname e rappresenta l'iteratore di fine sequenza.
 
-Ad esempio, data la directory abc con le voci def e ghi, il codice:
+Si consideri ad esempio la directory `abc` con le voci `def` e `ghi`, il codice:
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-chiamerà `visit` con gli argomenti path("abc/def") path("abc/ghi").
+chiamerà `visit` con gli argomenti `path("abc/def")` e `path("abc/ghi")`.
 
 Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)](../standard-library/file-system-navigation.md) (Esplorazione del file system (C++)).
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |Funzione membro|Descrizione|
 |-|-|
-|[Incremento](#increment)|La funzione prova a avanzare al nome file successivo nella directory.|
+|[Incremento](#increment)|Prova ad avanzare al nome file successivo nella directory.|
 
 ### <a name="operators"></a>Operatori
 

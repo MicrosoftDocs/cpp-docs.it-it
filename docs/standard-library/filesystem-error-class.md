@@ -1,7 +1,7 @@
 ---
 title: Classe filesystem_error | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec0a30a8ee193db362efa375f6e9d0f5746a56f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a5756c01969dba0773e0327e1a34a0c7492b972a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105302"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691523"
 ---
 # <a name="filesystemerror-class"></a>Classe filesystem_error
 
