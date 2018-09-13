@@ -51,9 +51,9 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
   
     -   Tipi intrinseci (ad esempio, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF ed ELEMENT_TYPE_VOID) vengono rappresentati come nome completo del tipo completo corrispondente, come ad esempio **System.Int32** o **System.TypedReference**.  
   
-    -   ELEMENT_TYPE_PTR viene rappresentato con '*' dopo il tipo modificato.  
+    -   ELEMENT_TYPE_PTR viene rappresentato con '\*' dopo il tipo modificato.  
   
-    -   ELEMENT_TYPE_BYREF viene rappresentato con '@' dopo il tipo modificato.  
+    -   ELEMENT_TYPE_BYREF viene rappresentato con '\@' dopo il tipo modificato.  
   
     -   ELEMENT_TYPE_PINNED viene rappresentato con '^' dopo il tipo modificato. Il compilatore di Visual C++ non lo genera mai.  
   

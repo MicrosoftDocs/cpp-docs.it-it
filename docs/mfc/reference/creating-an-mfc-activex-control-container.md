@@ -1,7 +1,7 @@
 ---
-title: Creazione di un contenitore di controlli ActiveX MFC | Documenti Microsoft
+title: Creazione di un contenitore di controlli ActiveX MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,23 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 322e7feba87b83802299a99ad36b16e35704f2ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7167f00e3abf74d4638bc79615d68ed81fafabf9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372482"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535119"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Creazione di un contenitore di controlli ActiveX MFC
-Un contenitore di controlli ActiveX è un programma principale che fornisce l'ambiente per un controllo ActiveX (precedentemente OLE) per l'esecuzione. È possibile creare un'applicazione in grado di contenere i controlli ActiveX con o senza MFC, ma è molto più semplice da eseguire con MFC.  
+Un contenitore di controlli ActiveX è un programma principale che fornisce l'ambiente per un controllo ActiveX (precedentemente OLE) per l'esecuzione. È possibile creare un'applicazione in grado di contenere i controlli ActiveX con o senza MFC, ma è molto più semplice a che fare con MFC.
+
+>[!IMPORTANT]
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](../activex-controls.md).  
   
- Creazione di un programma contenitore MFC mediante la [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md) consente di accedere a molte funzionalità che vengono implementate dalle classi MFC e ActiveX dei controlli ActiveX e automazione. Queste funzionalità includono la modifica visiva, automazione, creazione di file compositi e il supportano per i controlli. Opzioni di modifica visiva per la creazione guidata applicazione MFC che supporterà il programma padre includono la creazione di un contenitore, un server ridotto, un server completo e un programma che è un contenitore sia un server.  
+ Creazione di un programma MFC di contenitori tramite il [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md) consente di accedere a molte funzionalità implementate dalle classi MFC e ActiveX dei controlli ActiveX e automazione. Queste funzionalità includono la modifica visiva, automazione, i file compositi, creazione e il supportano per i controlli. Opzioni di modifica visiva la creazione guidata applicazione MFC che supporterà il programma padre includono la creazione di un contenitore, un server ridotto, un server completo e un programma che corrisponde a un contenitore e un server.  
   
--   **Nuova applicazione MFC**. Per creare un nuovo programma MFC che include l'automazione, la modifica visiva, file compositi o controllo supportano, utilizzare la creazione guidata applicazione MFC e scegliere le opzioni appropriate di automazione.  
+-   **Nuova applicazione MFC**. Per creare un nuovo programma MFC che include l'automazione, modifica visiva, file compositi o controllare il supporto, utilizzare la creazione guidata applicazione MFC e scegliere le opzioni appropriate di automazione.  
   
--   **Applicazione MFC esistente**. Se si aggiunge il contenimento di controlli a un'applicazione MFC esistente, vedere [contenitori di controlli OLE: attivazione manuale del contenimento dei controlli OLE](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).  
+-   **Applicazione MFC esistente**. Se si aggiunge il contenimento dei controlli a un'applicazione MFC esistente, vedere [contenitori di controlli OLE: attivazione manuale del contenimento dei controlli OLE](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).  
   
-### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Per creare un contenitore ActiveX per uno qualsiasi dei seguenti tipi di applicazioni  
+### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Per creare un contenitore ActiveX per uno dei seguenti tipi di applicazioni  
   
 1.  [Contenitori](../../mfc/containers.md)  
   

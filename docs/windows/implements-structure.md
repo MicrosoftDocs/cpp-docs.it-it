@@ -1,28 +1,36 @@
 ---
 title: Implementa struttura | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
+- implements/Microsoft::WRL::Implements::CanCastTo
+- implements/Microsoft::WRL::Implements::CastToUnknown
+- implements/Microsoft::WRL::Implements::FillArrayWithIid
+- implements/Microsoft::WRL::Implements::IidCount
 dev_langs:
 - C++
 helpviewer_keywords:
-- Implements structure
+- Microsoft::WRL::Implements structure
+- Microsoft::WRL::Implements::CanCastTo method
+- Microsoft::WRL::Implements::CastToUnknown method
+- Microsoft::WRL::Implements::FillArrayWithIid method
+- Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603288"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535353"
 ---
 # <a name="implements-structure"></a>Implementa la struttura
 
@@ -104,23 +112,23 @@ Ogni *I0* attraverso *I9* parametro di interfaccia deve derivare da `IUnknown`, 
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
-|----------|-----------------|
-|`ClassFlags`|Sinonimo di `RuntimeClassFlags<WinRt>`.|
+| Nome        | Descrizione                               |
+| ----------- | ----------------------------------------- |
+| `ClassFlags`| Sinonimo di `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
-|----------|-----------------|
-|[Metodo Implements::CanCastTo](../windows/implements-cancastto-method.md)|Ottiene un puntatore all'interfaccia specificata.|
-|[Metodo Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Ottiene un puntatore sottostante `IUnknown` interfaccia.|
-|[Metodo Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Inserisce l'ID di interfaccia specificato dal parametro di modello iniziale corrente nell'elemento di matrice specificato.|
+| Nome                                              | Descrizione                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Implements:: cancastto](#cancastto)               | Ottiene un puntatore all'interfaccia specificata.                                                                    |
+| [Implements:: casttounknown](#casttounknown)       | Ottiene un puntatore sottostante `IUnknown` interfaccia.                                                        |
+| [Implements:: fillarraywithiid](#fillarraywithiid) | Inserisce l'ID di interfaccia specificato dal parametro di modello iniziale corrente nell'elemento di matrice specificato. |
 
 ### <a name="protected-constants"></a>Costanti protette
 
-|nome|Descrizione|
-|----------|-----------------|
-|[Costante Implements::IidCount](../windows/implements-iidcount-constant.md)|Contiene il numero di ID di interfaccia implementata.|
+| nome                              | Descrizione                                    |
+| --------------------------------- | ---------------------------------------------- |
+| [Implements:: iidcount](#iidcount) | Contiene il numero di ID di interfaccia implementata. |
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -142,6 +150,76 @@ Ogni *I0* attraverso *I9* parametro di interfaccia deve derivare da `IUnknown`, 
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="cancastto"></a>Implements:: cancastto
 
-[Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Ottiene un puntatore all'interfaccia specificata.
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*riid*  
+Un riferimento all'ID di interfaccia.
+
+*ppv*  
+Se ha esito positivo, un puntatore all'interfaccia specificata da *riid*.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario, HRESULT che indica l'errore, ad esempio E_NOINTERFACE.
+
+### <a name="remarks"></a>Note
+
+Si tratta di una funzione helper interna che esegue un'operazione QueryInterface.
+
+## <a name="casttounknown"></a>Implements:: casttounknown
+
+Ottiene un puntatore sottostante `IUnknown` interfaccia.
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Questa operazione ha esito positivo e restituisce sempre il `IUnknown` puntatore.
+
+### <a name="remarks"></a>Note
+
+Funzione di supporto interno.
+
+## <a name="fillarraywithiid"></a>Implements:: fillarraywithiid
+
+Inserisce l'ID di interfaccia specificato dal parametro di modello iniziale corrente nell'elemento di matrice specificato.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*index*  
+Indice in base zero che indica l'elemento di matrice iniziale per questa operazione. Al termine, questa operazione *indice* viene incrementato di 1.
+
+*IID*  
+Matrice di tipo IID.
+
+### <a name="remarks"></a>Note
+
+Funzione di supporto interno.
+
+## <a name="iidcount"></a>Implements:: iidcount
+
+Contiene il numero di ID di interfaccia implementata.
+
+```cpp
+static const unsigned long IidCount;
+```
