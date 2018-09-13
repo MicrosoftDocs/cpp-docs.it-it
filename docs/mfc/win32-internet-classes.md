@@ -1,7 +1,7 @@
 ---
-title: Classi Internet Win32 | Documenti Microsoft
+title: Classi Internet Win32 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,18 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1fa996ad36970faa97c9c6d248060a8121680a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e93c2c3ea9efeb8be6ec5d79b9f2ef7729b9e9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383224"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534937"
 ---
 # <a name="win32-internet-classes"></a>Classi Internet Win32
-MFC esegue il wrapping di Internet Win32 (WinInet) e la tecnologia ActiveX per semplificare la programmazione Internet.  
+MFC esegue il wrapping della Internet Win32 (WinInet) e della tecnologia di ActiveX per semplificare la programmazione Internet.
+
+>[!IMPORTANT]
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+  
   
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- Crea e Inizializza una o più sessioni Internet simultanee e, se necessario, descrive la connessione a un server proxy.  
+ Crea e Inizializza una o più sessioni Internet simultanee e, se necessario, viene descritta la connessione a un server proxy.  
   
  [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
  Gestisce la connessione a un server Internet.  
@@ -42,7 +46,7 @@ MFC esegue il wrapping di Internet Win32 (WinInet) e la tecnologia ActiveX per s
  Gestisce la connessione a un server HTTP.  
   
  [CHttpFile](../mfc/reference/chttpfile-class.md)  
- Fornisce la funzionalità per individuare e leggere file in un server HTTP.  
+ Fornisce la funzionalità per individuare e leggere i file in un server HTTP.  
   
  [CGopherFile](../mfc/reference/cgopherfile-class.md)  
  Fornisce la funzionalità per individuare e leggere file in un server gopher.  
@@ -54,20 +58,20 @@ MFC esegue il wrapping di Internet Win32 (WinInet) e la tecnologia ActiveX per s
  Gestisce la connessione a un server gopher.  
   
  [CFileFind](../mfc/reference/cfilefind-class.md)  
- Esegue ricerche di file di Internet e locale.  
+ Esegue ricerche di file su Internet e locali.  
   
- [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)  
+ [Classe CFtpFileFind](../mfc/reference/cftpfilefind-class.md)  
  Facilita le ricerche di file su Internet dei server FTP.  
   
  [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)  
  Facilita le ricerche di file su Internet dei server gopher.  
   
- [Oggetto CGopherLocator](../mfc/reference/cgopherlocator-class.md)  
+ [CGopherLocator](../mfc/reference/cgopherlocator-class.md)  
  Ottiene un "localizzatore" gopher da un server gopher, determina il tipo di localizzatore e lo rende disponibile per `CGopherFileFind`.  
   
- [CInternetException](../mfc/reference/cinternetexception-class.md)  
+ [Classe CInternetException](../mfc/reference/cinternetexception-class.md)  
  Rappresenta una condizione di eccezione correlata a un'operazione su Internet.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../mfc/class-library-overview.md)
+ [Panoramica della classe](../mfc/class-library-overview.md)
 
