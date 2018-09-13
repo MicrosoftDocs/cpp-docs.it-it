@@ -15,53 +15,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bbda7ff9a22a42ce4a6b8c3de10d0d6f0d03f77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7216a4a470b6293a31d6f364626188e41351b5cb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389767"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763139"
 ---
 # <a name="simple-variable-declarations"></a>Dichiarazioni di variabili semplici
-La dichiarazione di una variabile semplice, il formato più semplice di un dichiaratore diretto, specifica il nome e il tipo della variabile. Specifica inoltre la classe di archiviazione e il tipo di dati della variabile.  
-  
- Le classi o i tipi di archiviazione (o entrambi) sono necessari nelle dichiarazioni delle variabili. Le variabili non tipizzate (ad esempio `var;`) generano avvisi.  
-  
-## <a name="syntax"></a>Sintassi  
- `declarator`:  
- *pointer* opt  
-  
- *direct-declarator*  
-  
- *direct-declarator*:  
- *identifier*  
-  
- *identifier*:  
- *nondigit*  
-  
- *identifier nondigit*  
-  
- *identifier digit*  
-  
- Per i tipi aritmetici, struttura, unione, enumerazione e void e per i tipi rappresentati dai nomi `typedef`, i dichiaratori semplici possono essere utilizzati in una dichiarazione poiché l'identificatore di tipo fornisce tutte le informazioni sull'immissione. I tipi puntatore, matrice e funzione richiedono i dichiaratori più complessi.  
-  
- È possibile usare un elenco di identificatori delimitati da virgole (**,**) per specificare più variabili nella stessa dichiarazione. Tutte le variabili definite nella dichiarazione hanno lo stesso tipo base. Ad esempio:  
-  
-```  
-int x, y;        /* Declares two simple variables of type int */  
-int const z = 1; /* Declares a constant value of type int */  
-```  
-  
- Le variabili `x` e `y` possono contenere qualsiasi valore nel set definito dal tipo `int` per una determinata implementazione. L'oggetto semplice `z` viene inizializzato con il valore 1 e non è modificabile.  
-  
- Se la dichiarazione di `z` fosse per una variabile statica non inizializzata o fosse nell'ambito file, riceverebbe un valore iniziale pari a 0 e il valore non sarebbe modificabile.  
-  
-```  
-unsigned long reply, flag; /* Declares two variables  
-                              named reply and flag     */  
-```  
-  
- In questo esempio, entrambe le variabili, `reply` e `flag`, dispongono del tipo `unsigned long` e contengono valori integrali senza segno.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)
+
+La dichiarazione di una variabile semplice, il formato più semplice di un dichiaratore diretto, specifica il nome e il tipo della variabile. Specifica inoltre la classe di archiviazione e il tipo di dati della variabile.
+
+Le classi o i tipi di archiviazione (o entrambi) sono necessari nelle dichiarazioni delle variabili. Le variabili non tipizzate (ad esempio `var;`) generano avvisi.
+
+## <a name="syntax"></a>Sintassi
+
+*declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+
+*direct-declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
+
+*identifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
+
+Per i tipi aritmetici, struttura, unione, enumerazione e void e per i tipi rappresentati dai nomi `typedef`, i dichiaratori semplici possono essere utilizzati in una dichiarazione poiché l'identificatore di tipo fornisce tutte le informazioni sull'immissione. I tipi puntatore, matrice e funzione richiedono i dichiaratori più complessi.
+
+È possibile usare un elenco di identificatori delimitati da virgole (**,**) per specificare più variabili nella stessa dichiarazione. Tutte le variabili definite nella dichiarazione hanno lo stesso tipo base. Ad esempio:
+
+```C
+int x, y;        /* Declares two simple variables of type int */
+int const z = 1; /* Declares a constant value of type int */
+```
+
+Le variabili `x` e `y` possono contenere qualsiasi valore nel set definito dal tipo `int` per una determinata implementazione. L'oggetto semplice `z` viene inizializzato con il valore 1 e non è modificabile.
+
+Se la dichiarazione di `z` fosse per una variabile statica non inizializzata o fosse nell'ambito file, riceverebbe un valore iniziale pari a 0 e il valore non sarebbe modificabile.
+
+```C
+unsigned long reply, flag; /* Declares two variables
+                              named reply and flag     */
+```
+
+In questo esempio, entrambe le variabili, `reply` e `flag`, dispongono del tipo `unsigned long` e contengono valori integrali senza segno.
+
+## <a name="see-also"></a>Vedere anche
+
+[Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)

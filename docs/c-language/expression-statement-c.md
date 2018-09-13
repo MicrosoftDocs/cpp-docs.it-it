@@ -15,33 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d28cdc695ae600616d63575328eeaf171bc28c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73071e5cc3eef20895e4eff3bade8e37066dfd71
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385897"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765957"
 ---
 # <a name="expression-statement-c"></a>Istruzione di espressione (C)
-Quando un'istruzione di espressione viene eseguita, l'espressione viene valutata in base alle regole descritte in [Espressioni e assegnazioni](../c-language/expressions-and-assignments.md).  
-  
-## <a name="syntax"></a>Sintassi  
- *expression-statement*:  
- *expression* opt **;**  
-  
- Tutti gli effetti collaterali derivanti dalla valutazione delle espressioni vengono completati prima che venga eseguita l'istruzione successiva. Un'istruzione di espressione vuota viene definita un'istruzione null. Per altre informazioni, vedere [Istruzione Null](../c-language/null-statement-c.md).  
-  
- In questi esempi vengono illustrate le istruzioni di espressione.  
-  
-```  
-x = ( y + 3 );            /* x is assigned the value of y + 3  */  
-x++;                      /* x is incremented                  */  
-x = y = 0;                /* Both x and y are initialized to 0 */  
-proc( arg1, arg2 );       /* Function call returning void      */  
-y = z = ( f( x ) + 3 );   /* A function-call expression        */  
-```  
-  
- Nell'ultima istruzione l'espressione di chiamata di funzione, ovvero il valore dell'espressione, che include qualsiasi valore restituito dalla funzione, viene incrementato di 3 e viene quindi assegnato a entrambe le variabili `y` e `z`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Istruzioni](../c-language/statements-c.md)
+
+Quando un'istruzione di espressione viene eseguita, l'espressione viene valutata in base alle regole descritte in [Espressioni e assegnazioni](../c-language/expressions-and-assignments.md).
+
+## <a name="syntax"></a>Sintassi
+
+*expression-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
+
+Tutti gli effetti collaterali derivanti dalla valutazione delle espressioni vengono completati prima che venga eseguita l'istruzione successiva. Un'istruzione di espressione vuota viene definita un'istruzione null. Per altre informazioni, vedere [Istruzione Null](../c-language/null-statement-c.md).
+
+In questi esempi vengono illustrate le istruzioni di espressione.
+
+```C
+x = ( y + 3 );            /* x is assigned the value of y + 3  */
+x++;                      /* x is incremented                  */
+x = y = 0;                /* Both x and y are initialized to 0 */
+proc( arg1, arg2 );       /* Function call returning void      */
+y = z = ( f( x ) + 3 );   /* A function-call expression        */
+```
+
+Nell'ultima istruzione l'espressione di chiamata di funzione, ovvero il valore dell'espressione, che include qualsiasi valore restituito dalla funzione, viene incrementato di 3 e viene quindi assegnato a entrambe le variabili `y` e `z`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Istruzioni](../c-language/statements-c.md)

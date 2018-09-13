@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a9465a51646dae16ae2a487a77206c712fef681
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78c369665d398d4b326cf8d27ad0944a594fe1a4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204450"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758937"
 ---
 # <a name="default-signals"></a>Segnali predefiniti
-**ANSI 4.7.1.1** Se l'equivalente di **signal** (<em>sig</em>, **SIG_DFL**) non viene eseguito prima della chiamata di un gestore del segnale, il blocco del segnale che viene eseguito  
+
+**ANSI 4.7.1.1** Se l'equivalente di `signal(sig, SIG_DFL)` non viene eseguito prima della chiamata di un gestore del segnale, il blocco del segnale che viene eseguito
+
+I segnali vengono impostati nello stato predefinito quando un programma inizia l'esecuzione.  
   
- I segnali vengono impostati nello stato predefinito quando un programma inizia l'esecuzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni della libreria](../c-language/library-functions.md)
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni della libreria](../c-language/library-functions.md)

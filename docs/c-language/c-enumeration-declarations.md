@@ -19,61 +19,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 697e4f37c8a59c40df80e29ff89f2021f61fb468
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f93a129c44716d92341709af02c89cb7a79be8d6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389741"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765609"
 ---
 # <a name="c-enumeration-declarations"></a>Dichiarazioni di enumerazioni C
 Un'enumerazione è un set di costanti di tipo Integer denominate. Una dichiarazione del tipo di enumerazione fornisce il nome del tag (facoltativo) di enumerazione e definisce il set di identificatori Integer denominati (denominati "set di enumerazione", "costanti di enumeratore", "enumeratori" o "membri"). Una variabile con tipo di enumerazione archivia uno dei valori del set di enumerazione definiti da quel tipo.  
   
- Le variabili di tipo `enum` possono essere utilizzate nelle espressioni di indicizzazione e come operandi di tutti gli operatori aritmetici e relazionali. Le enumerazioni forniscono un'alternativa alla direttiva per il preprocessore `#define` con il vantaggio che i valori possono essere generati automaticamente e sono conformi alle normali regole di ambito.  
+Le variabili di tipo `enum` possono essere utilizzate nelle espressioni di indicizzazione e come operandi di tutti gli operatori aritmetici e relazionali. Le enumerazioni forniscono un'alternativa alla direttiva per il preprocessore `#define` con il vantaggio che i valori possono essere generati automaticamente e sono conformi alle normali regole di ambito.  
   
- In ANSI C, le espressioni che definiscono il valore di una costante di enumeratore presentano sempre il tipo `int`; pertanto, lo spazio di archiviazione associato a una variabile di enumerazione è quello necessario per un singolo valore `int`. Una costante di enumerazione o un valore di tipo enumerato può essere utilizzato ovunque il linguaggio C consenta un'espressione Integer.  
+In ANSI C, le espressioni che definiscono il valore di una costante di enumeratore presentano sempre il tipo `int`; pertanto, lo spazio di archiviazione associato a una variabile di enumerazione è quello necessario per un singolo valore `int`. Una costante di enumerazione o un valore di tipo enumerato può essere utilizzato ovunque il linguaggio C consenta un'espressione Integer.  
   
-## <a name="syntax"></a>Sintassi  
- *enum-specifier*:  
- **enum**  *identifier* opt **{** *enumerator-list* **}**  
+## <a name="syntax"></a>Sintassi
+
+*enum-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*<sub>opt</sub> **{** *enumerator-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*
+
+L'elemento *identifier* facoltativo assegna un nome al tipo di enumerazione definito da *enumerator-list*. Questo identificatore è spesso definito il "tag" dell'enumerazione specificata dall'elenco. Un identificatore di tipo del formato  
   
- **enum**  *identifier*  
-  
- L'elemento *identifier* facoltativo assegna un nome al tipo di enumerazione definito da *enumerator-list*. Questo identificatore è spesso definito il "tag" dell'enumerazione specificata dall'elenco. Un identificatore di tipo del formato  
-  
+```
+enum identifier
+{
+    enumerator-list
+}
 ```  
   
-enum  
-identifier  
-{  
-enumerator-list  
-}  
+dichiara che *identifier* è il tag dell'enumerazione specificata da *enumerator-list* non terminale. L'elemento *enumerator-list* definisce il "contenuto dell'enumeratore". I dettagli di *enumerator-list* sono riportati di seguito.  
   
-```  
+Se la dichiarazione di un tag è visibile, le dichiarazioni successive che usano il tag ma omettono *enumerator-list* specificano il tipo enumerato dichiarato in precedenza. Il tag deve fare riferimento a un tipo di enumerazione definito e tale tipo di enumerazione deve trovarsi nell'ambito corrente. Poiché il tipo di enumerazione viene definito altrove, *enumerator-list* non viene visualizzato nella dichiarazione. Le dichiarazioni dei tipi derivati da enumerazioni e da dichiarazioni `typedef` per i tipi di enumerazione possono utilizzare il tag di enumerazione prima che sia definito il tipo di enumerazione.  
   
- dichiara che *identifier* è il tag dell'enumerazione specificata da *enumerator-list* non terminale. L'elemento *enumerator-list* definisce il "contenuto dell'enumeratore". I dettagli di *enumerator-list* sono riportati di seguito.  
+## <a name="syntax"></a>Sintassi
+
+*enumerator-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumerator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumerator-list* **,** *enumerator*
+
+*enumerator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant* **=** *constant-expression*
+
+*enumeration-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
   
- Se la dichiarazione di un tag è visibile, le dichiarazioni successive che usano il tag ma omettono *enumerator-list* specificano il tipo enumerato dichiarato in precedenza. Il tag deve fare riferimento a un tipo di enumerazione definito e tale tipo di enumerazione deve trovarsi nell'ambito corrente. Poiché il tipo di enumerazione viene definito altrove, *enumerator-list* non viene visualizzato nella dichiarazione. Le dichiarazioni dei tipi derivati da enumerazioni e da dichiarazioni `typedef` per i tipi di enumerazione possono utilizzare il tag di enumerazione prima che sia definito il tipo di enumerazione.  
+Ogni elemento *enumeration-constant* in un elenco *enumeration-list* assegna un nome a un valore del set di enumerazione. Per impostazione predefinita, il primo elemento *enumeration-constant* viene associato al valore 0. Il successivo elemento *enumeration-constant* nell'elenco viene associato al valore di (*constant-expression* + 1), a meno che non lo si associ in modo esplicito a un altro valore. Il nome di un elemento *enumeration-constant* è equivalente al relativo valore.  
   
-## <a name="syntax"></a>Sintassi  
- *enumerator-list*:  
- *enumerator*  
+È possibile usare *enumeration-constant = constant-expression* per eseguire l'override della sequenza di valori predefinita. Pertanto se *enumeration-constant = constant-expression* appare in *enumerator-list*, *enumeration-constant* è associato al valore specificato da *constant-expression*. *constant-expression* deve essere di tipo `int` e può essere negativo.  
   
- *enumerator-list* **,**  `enumerator`  
-  
- `enumerator`:  
- *enumeration-constant*  
-  
- *enumeration-constant*  **=**  *constant-expression*  
-  
- *enumeration-constant*:  
- *identifier*  
-  
- Ogni elemento *enumeration-constant* in un elenco *enumeration-list* assegna un nome a un valore del set di enumerazione. Per impostazione predefinita, il primo elemento *enumeration-constant* viene associato al valore 0. Il successivo elemento *enumeration-constant* nell'elenco viene associato al valore di (*constant-expression* + 1), a meno che non lo si associ in modo esplicito a un altro valore. Il nome di un elemento *enumeration-constant* è equivalente al relativo valore.  
-  
- È possibile usare *enumeration-constant = constant-expression* per eseguire l'override della sequenza di valori predefinita. Pertanto se *enumeration-constant = constant-expression* appare in *enumerator-list*, *enumeration-constant* è associato al valore specificato da *constant-expression*. *constant-expression* deve essere di tipo `int` e può essere negativo.  
-  
- Le regole seguenti vengono applicate ai membri di un set di enumerazione:  
+Le regole seguenti vengono applicate ai membri di un set di enumerazione:  
   
 -   Un set di enumerazione può contenere valori costanti duplicati. Ad esempio, è possibile associare il valore 0 a due identificatori diversi, talvolta denominato `null` e `zero`, nello stesso set.  
   
@@ -82,7 +78,7 @@ enumerator-list
 -   I tag di enumerazione sono conformi alle normali regole di ambito. Devono essere differenti da altri tag di enumerazione, struttura e unione con la stessa visibilità.  
   
 ## <a name="examples"></a>Esempi  
- In questi esempi vengono illustrate le dichiarazioni di enumerazione:  
+In questi esempi vengono illustrate le dichiarazioni di enumerazione:  
   
 ```  
 enum DAY            /* Defines an enumeration type    */  
@@ -97,23 +93,23 @@ enum DAY            /* Defines an enumeration type    */
 } workday;  
 ```  
   
- Il valore 0 è associato a `saturday` per impostazione predefinita. L'identificatore `sunday` è impostato in modo esplicito su 0. Agli identificatori restanti vengono forniti i valori da 1 a 5 per impostazione predefinita.  
+Il valore 0 è associato a `saturday` per impostazione predefinita. L'identificatore `sunday` è impostato in modo esplicito su 0. Agli identificatori restanti vengono forniti i valori da 1 a 5 per impostazione predefinita.  
   
- In questo esempio, un valore del set `DAY` viene assegnato alla variabile `today`.  
+In questo esempio, un valore del set `DAY` viene assegnato alla variabile `today`.  
   
 ```  
 enum DAY today = wednesday;  
 ```  
   
- Si noti che il nome della costante di enumerazione viene utilizzato per assegnare il valore. Poiché il tipo di enumerazione `DAY` era dichiarato in precedenza, è necessario solo il tag `DAY` di enumerazione.  
+Si noti che il nome della costante di enumerazione viene utilizzato per assegnare il valore. Poiché il tipo di enumerazione `DAY` era dichiarato in precedenza, è necessario solo il tag `DAY` di enumerazione.  
   
- Per assegnare in modo esplicito un Integer a una variabile di un tipo di dati enumerato, utilizzare un cast di tipo:  
+Per assegnare in modo esplicito un Integer a una variabile di un tipo di dati enumerato, utilizzare un cast di tipo:  
   
 ```  
 workday = ( enum DAY ) ( day_value - 1 );  
 ```  
   
- Questo cast è consigliato nel linguaggio C ma non è obbligatorio.  
+Questo cast è consigliato nel linguaggio C ma non è obbligatorio.  
   
 ```  
 enum BOOLEAN  /* Declares an enumeration data type called BOOLEAN */  
@@ -125,20 +121,20 @@ enum BOOLEAN  /* Declares an enumeration data type called BOOLEAN */
 enum BOOLEAN end_flag, match_flag; /* Two variables of type BOOLEAN */  
 ```  
   
- Questa dichiarazione può essere specificata come  
+Questa dichiarazione può essere specificata come  
   
 ```  
 enum BOOLEAN { false, true } end_flag, match_flag;\  
 ```  
   
- o come  
+o come  
   
 ```  
 enum BOOLEAN { false, true } end_flag;  
 enum BOOLEAN match_flag;  
 ```  
   
- Un esempio che utilizza queste variabili potrebbe essere simile al seguente:  
+Un esempio che utilizza queste variabili potrebbe essere simile al seguente:  
   
 ```  
 if ( match_flag == false )  
@@ -150,11 +146,11 @@ if ( match_flag == false )
     end_flag = true;  
 ```  
   
- I tipi di dati senza nome dell'enumeratore possono anche essere dichiarati. Il nome del tipo di dati viene omesso, ma le variabili possono essere dichiarate. La variabile `response` è una variabile del tipo definito:  
+I tipi di dati senza nome dell'enumeratore possono anche essere dichiarati. Il nome del tipo di dati viene omesso, ma le variabili possono essere dichiarate. La variabile `response` è una variabile del tipo definito:  
   
 ```  
 enum { yes, no } response;  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Enumerazioni](../cpp/enumerations-cpp.md)
+[Enumerazioni](../cpp/enumerations-cpp.md)

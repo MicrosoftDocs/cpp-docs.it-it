@@ -16,65 +16,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f3bead2a40e38698534e433d8e4289eb8da4dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386917"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751774"
 ---
 # <a name="conditional-expression-operator"></a>Operatore di espressione condizionale
-Il linguaggio C dispone di un operatore ternario: l'operatore di espressione condizionale (**? :**).  
-  
-## <a name="syntax"></a>Sintassi  
- *conditional-expression*:  
- *logical-OR-expression*  
-  
- *logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*  
-  
- *logical-OR-expression* deve essere di tipo integrale, a virgola mobile o puntatore. Viene valutata in termini di equivalenza relativa a 0. *logical-OR-expression* è seguita da un punto di sequenza. La valutazione degli operandi prosegue nel modo seguente:  
-  
--   Se *logical-OR-expression* non è uguale a 0, *expression* viene valutato. Il risultato della valutazione dell'espressione è dato da *expression* non terminale. Ciò significa che *expression* viene valutato solo se *logical-OR-expression* è true.  
-  
--   Se *logical-OR-expression* è uguale a 0, *conditional-expression* viene valutato. Il risultato dell'espressione è il valore di *conditional-expression*. Ciò significa che *conditional-expression* viene valutato solo se *logical-OR-expression* è false.  
-  
- Si noti che viene valutato *expression* o *conditional-expression*, ma non entrambi.  
-  
- Il tipo del risultato di un'operazione condizionale dipende dal tipo dell'operando *expression* o *conditional-expression* come segue:  
-  
--   Se *expression* o *conditional-expression* è di tipo integrale o a virgola mobile (i tipi possono essere diversi), l'operatore esegue le conversioni aritmetiche comuni. Il tipo del risultato è il tipo degli operandi in seguito alla conversione.  
-  
--   Se *expression* e *conditional-expression* hanno lo stesso tipo struttura, unione o puntatore, il tipo del risultato è lo stesso tipo struttura, unione o puntatore.  
-  
--   Se entrambi gli operandi possiedono il tipo `void`, il risultato è di tipo `void`.  
-  
--   Se uno degli operandi è un puntatore a un oggetto di qualsiasi tipo e l'altro operando è un puntatore a `void`, il puntatore all'oggetto viene convertito in un puntatore a `void` e il risultato è un puntatore a `void`.  
-  
--   Se *expression* o *conditional-expression* è un puntatore e l'altro operando è un'espressione costante con valore 0, il tipo del risultato è il tipo puntatore.  
-  
- Nel confronto dei tipi tra i puntatori qualsiasi qualificatore di tipo (**const** o `volatile`) nel tipo a cui punta il puntatore non è significativo, ma il tipo del risultato eredita i qualificatori da entrambi i componenti dell'espressione condizionale.  
-  
-## <a name="examples"></a>Esempi  
- Negli esempi seguenti vengono illustrati gli utilizzi dell'operatore condizionale.  
-  
-```  
-j = ( i < 0 ) ? ( -i ) : ( i );  
-```  
-  
- In questo esempio viene assegnato il valore assoluto `i` a `j`. Se `i` è minore di 0, `-i` è assegnato a `j`. Se `i` è maggiore o uguale a 0, `i` è assegnato a `j`.  
-  
-```  
-void f1( void );  
-void f2( void );  
-int x;  
-int y;  
-    .  
-    .  
-    .  
-( x == y ) ? ( f1() ) : ( f2() );  
-```  
-  
- In questo esempio le due funzioni `f1` e `f2` e le due variabili `x` e `y` vengono dichiarate. Più avanti nel programma, se le due variabili presentano lo stesso valore, viene chiamata la funzione `f1`. In caso contrario, viene chiamato `f2`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Operatore condizionale: ? :](../cpp/conditional-operator-q.md)
+Il linguaggio C dispone di un operatore ternario: l'operatore di espressione condizionale (**? :**).
+
+## <a name="syntax"></a>Sintassi
+
+*conditional-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*
+
+*logical-OR-expression* deve essere di tipo integrale, a virgola mobile o puntatore. Viene valutata in termini di equivalenza relativa a 0. *logical-OR-expression* è seguita da un punto di sequenza. La valutazione degli operandi prosegue nel modo seguente:
+
+-   Se *logical-OR-expression* non è uguale a 0, *expression* viene valutato. Il risultato della valutazione dell'espressione è dato da *expression* non terminale. Ciò significa che *expression* viene valutato solo se *logical-OR-expression* è true.
+
+-   Se *logical-OR-expression* è uguale a 0, *conditional-expression* viene valutato. Il risultato dell'espressione è il valore di *conditional-expression*. Ciò significa che *conditional-expression* viene valutato solo se *logical-OR-expression* è false.
+
+Si noti che viene valutato *expression* o *conditional-expression*, ma non entrambi.
+
+Il tipo del risultato di un'operazione condizionale dipende dal tipo dell'operando *expression* o *conditional-expression* come segue:
+
+-   Se *expression* o *conditional-expression* è di tipo integrale o a virgola mobile (i tipi possono essere diversi), l'operatore esegue le conversioni aritmetiche comuni. Il tipo del risultato è il tipo degli operandi in seguito alla conversione.
+
+-   Se *expression* e *conditional-expression* hanno lo stesso tipo struttura, unione o puntatore, il tipo del risultato è lo stesso tipo struttura, unione o puntatore.
+
+-   Se entrambi gli operandi possiedono il tipo `void`, il risultato è di tipo `void`.
+
+-   Se uno degli operandi è un puntatore a un oggetto di qualsiasi tipo e l'altro operando è un puntatore a `void`, il puntatore all'oggetto viene convertito in un puntatore a `void` e il risultato è un puntatore a `void`.
+
+-   Se *expression* o *conditional-expression* è un puntatore e l'altro operando è un'espressione costante con valore 0, il tipo del risultato è il tipo puntatore.
+
+Nel confronto dei tipi tra i puntatori qualsiasi qualificatore di tipo (**const** o `volatile`) nel tipo a cui punta il puntatore non è significativo, ma il tipo del risultato eredita i qualificatori da entrambi i componenti dell'espressione condizionale.
+
+## <a name="examples"></a>Esempi
+
+Negli esempi seguenti vengono illustrati gli utilizzi dell'operatore condizionale.
+
+```
+j = ( i < 0 ) ? ( -i ) : ( i );
+```
+
+In questo esempio viene assegnato il valore assoluto `i` a `j`. Se `i` è minore di 0, `-i` è assegnato a `j`. Se `i` è maggiore o uguale a 0, `i` è assegnato a `j`.
+
+```
+void f1( void );
+void f2( void );
+int x;
+int y;
+    .
+    .
+    .
+( x == y ) ? ( f1() ) : ( f2() );
+```
+
+In questo esempio le due funzioni `f1` e `f2` e le due variabili `x` e `y` vengono dichiarate. Più avanti nel programma, se le due variabili presentano lo stesso valore, viene chiamata la funzione `f1`. In caso contrario, viene chiamato `f2`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Operatore condizionale: ? :](../cpp/conditional-operator-q.md)

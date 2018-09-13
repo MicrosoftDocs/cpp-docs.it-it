@@ -12,86 +12,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b2d3b27149344151f891e23c39bbecb8e4c1102
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18fdc129bd2aadd45ebaa13510e6029dba9a07df
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391350"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766857"
 ---
 # <a name="summary-of-statements"></a>Riepilogo di istruzioni
-*istruzione*:  
- *labeled-statement*  
+
+*istruzione*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*compound-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* Specifico di Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* Specifico di Microsoft \*/
+
+*jump-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**continue ;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**break ;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
+
+*compound-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+
+*declaration-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
+
+*statement-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
+
+*expression-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**  
   
- *compound-statement*  
+*iteration-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**for (**  *expression*<sub>opt</sub> **;** *expression*<sub>opt</sub> **;** *expression*<sub>opt</sub> **)** *statement*
+
+*selection-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *expression*  **)**  *statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *expression*  **)**  *statement*  **else**  *statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**switch (**  *expression*  **)**  *statement*
+
+*labeled-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
+
+*try-except-statement*:   /\* Specifico di Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*  
   
- *expression-statement*  
-  
- *selection-statement*  
-  
- *iteration-statement*  
-  
- *jump-statement*  
-  
- *try-except-statement* /* Specifica di Microsoft \*/  
-  
- *try-finally-statement* /* Specifica di Microsoft \*/  
-  
- *jump-statement*:  
- **goto**  *identificatore*  **;**  
-  
- **continue ;**  
-  
- **break ;**  
-  
- **return**  *espressione*opt **;**  
-  
- *compound-statement*:  
- **{**  *declaration-list*opt*statement-list*opt **}**  
-  
- *declaration-list*:  
- *declaration*  
-  
- *declaration-list dichiarazione*  
-  
- *statement-list*:  
- *istruzione*  
-  
- *statement-list statement*  
-  
- *expression-statement*:  
- *espressione*opt **;**  
-  
- *iteration-statement*:  
- **while (**  *espressione*  **)**  *istruzione*  
-  
- **do**  *istruzione*  **while (**  *espressione*  **) ;**  
-  
- **for (**  *espressione*opt **;** *espressione*opt **;** *espressione*opt **)** *istruzione*  
-  
- *selection-statement*:  
- **if (**  *espressione*  **)**  *istruzione*  
-  
- **if (**  *espressione*  **)**  *istruzione*  **else**  *istruzione*  
-  
- **switch (**  *espressione*  **)**  *istruzione*  
-  
- *labeled-statement*:  
- *identificatore*  **:**  *istruzione*  
-  
- **case**  *constant-expression*  **:**  *statement*  
-  
- **default :**  *statement*  
-  
- *try-except-statement*:   /\* Specifico di Microsoft \*/  
- **__try**  *compound-statement*  
-  
- **__except (**  *espressione*  **)**  *compound-statement*  
-  
- *try-finally-statement*:   /\* Specifico di Microsoft \*/  
- **__try**  *compound-statement*  
-  
- **__finally**  *compound-statement*  
-  
+*try-finally-statement*:   /\* Specifico di Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
+
 ## <a name="see-also"></a>Vedere anche  
- [Grammatica di struttura della frase](../c-language/phrase-structure-grammar.md)
+[Grammatica di struttura della frase](../c-language/phrase-structure-grammar.md)

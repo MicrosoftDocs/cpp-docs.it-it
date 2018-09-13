@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab516edc5cb30d777eb42cc96e2932e526f20772
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a94d575ee36f38b56f64fb6298eb6f6f6e43567e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385819"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762743"
 ---
 # <a name="summary-of-string-literals"></a>Riepilogo di valori letterali stringa
-*string-literal*:  
- **"** *s-char-sequence* opt **"**  
+
+*string-literal*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**'** *s-char-sequence*<sub>opt</sub> **'**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L'** *s-char-sequence*sub>opt</sub> **'**  
   
- **L"** *s-char-sequence* opt **"**  
+*s-char-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*  
   
- *s-char-sequence*:  
- *s-char*  
-  
- *s-char-sequence s-char*  
-  
- *s-char*:  
- qualsiasi membro del set di caratteri di origine eccetto le virgolette doppie ("), la barra rovesciata (\\) o la sequenza *escape-sequence* del carattere di nuova riga  
-  
-## <a name="see-also"></a>Vedere anche  
- [Grammatica lessicale](../c-language/lexical-grammar.md)
+*s-char*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;qualsiasi membro del set di caratteri di origine eccetto le virgolette doppie ("), la barra rovesciata (\\) o la sequenza escape-sequence del carattere di nuova riga  
+
+## <a name="see-also"></a>Vedere anche
+
+[Grammatica lessicale](../c-language/lexical-grammar.md)
