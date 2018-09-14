@@ -1,7 +1,7 @@
 ---
 title: Supporto degli iteratori di debug | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959592"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601470"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -38,7 +38,7 @@ Lo standard C++ descrive in che modo le funzioni membro possono far diventare no
 
 - L'aumento delle dimensioni di un [vettore](../standard-library/vector.md) eseguendo il push o l'inserimento fa sì che gli iteratori nel `vector` non siano più validi.
 
-## <a name="example"></a>Esempio
+## <a name="invalid-iterators"></a>Iteratori non validi
 
 Se si compila il programma di esempio in modalità di debug, in fase di esecuzione esegue un'asserzione e viene terminato.
 
@@ -49,12 +49,7 @@ Se si compila il programma di esempio in modalità di debug, in fase di esecuzio
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="using-iteratordebuglevel"></a>Con ITERATOR_DEBUG_LEVEL
 
 È possibile usare la macro del preprocessore [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) per disattivare la funzionalità di debug dell'iteratore in una build di debug. Questo programma non esegue asserzioni, ma attiva un comportamento non definito.
 
@@ -81,11 +76,7 @@ int main() {
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>Esempio
+## <a name="unitialized-iterators"></a>Iteratori non inizializzati
 
 Un'asserzione si verifica anche se si tenta di usare un iteratore prima che sia inizializzato, come illustrato di seguito:
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="incompatible-iterators"></a>Iteratori incompatibili
 
 L'esempio di codice seguente genera un'asserzione poiché i due iteratori per l'algoritmo [for_each](../standard-library/algorithm-functions.md#for_each) sono incompatibili. Gli algoritmi tentano di verificare se gli iteratori specificati fanno riferimento allo stesso contenitore.
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 Si noti che in questo esempio si usa l'espressione lambda `[] (int& elem) { elem *= 2; }` anziché un funtore. Sebbene questa scelta non influisca sull'errore di asserzione (un funtore simile causerebbe lo stesso errore), le espressioni lambda sono un modo molto utile per eseguire attività degli oggetti funzione Compact. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="example"></a>Esempio
+## <a name="iterators-going-out-of-scope"></a>Iteratori usciti fuori ambito
 
 Controlli degli iteratori di debug causano anche una variabile di iteratore dichiarata in un **per** ciclo fuori ambito quando il **per** termina l'ambito del ciclo.
 
@@ -163,11 +148,7 @@ Controlli degli iteratori di debug causano anche una variabile di iteratore dich
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Esempio
+## <a name="destructors-for-debug-iterators"></a>Distruttori per gli iteratori di debug
 
-Gli iteratori di debug hanno distruttori non semplici. Se un distruttore per qualsiasi motivo non viene eseguito, possono verificarsi violazioni di accesso e danneggiamento dei dati. Si consideri l'esempio seguente:
+Gli iteratori di debug hanno distruttori non semplici. Se un distruttore non viene eseguito, ma viene liberata la memoria dell'oggetto, potrebbe verificarsi danneggiamento dei dati e le violazioni di accesso. Si consideri l'esempio seguente:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>Vedere anche
