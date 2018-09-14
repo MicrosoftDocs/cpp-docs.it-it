@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597573"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556754"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Disabilita estensioni linguaggio)
 Il **/Za** opzione del compilatore genera un errore per i costrutti di linguaggio che non sono compatibili con ANSI C89 o ISO c++11. Il **/Ze** opzione del compilatore, che è attivata per impostazione predefinita, abilita le estensioni Microsoft.  
@@ -54,8 +54,8 @@ Il **/Za** opzione del compilatore genera un errore per i costrutti di linguaggi
   
  È consigliabile disabilitare le estensioni del linguaggio, specificando il **/Za** opzione se si prevede di portare il proprio programma in altri ambienti. Quando **/Za** è specificato, il compilatore considera Microsoft estesi parole chiave come identificatori semplici, disabilita le altre estensioni di Microsoft e viene definito automaticamente il `__STDC__` la macro predefinita per i programmi C.  
   
- Altre opzioni del compilatore abbinate **/Za** può influire sul modo in cui il compilatore garantisce conformità agli standard. Ad esempio, **/Za** e [/fp (specifica il comportamento della virgola mobile)](../../build/reference/fp-specify-floating-point-behavior.md) potrebbe causare il comportamento di promozione tipo a virgola mobile che non è conforme a ISO C99 o C gli c++11 standard.  
-  
+ Altre opzioni del compilatore abbinate **/Za** può influire sul modo in cui il compilatore garantisce conformità agli standard.
+
  Per informazioni su modi specificare le impostazioni del comportamento specifico conformi agli standard, vedere la [/Zc](../../build/reference/zc-conformance.md) opzione del compilatore.  
   
  Per altre informazioni sui problemi di conformità in Visual C++, vedere [comportamento non standard](../../cpp/nonstandard-behavior.md).  
