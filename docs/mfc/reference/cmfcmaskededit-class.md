@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717431"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
 Il `CMFCMaskedEdit` classe supporta un controllo di modifica mascherato, che convalida l'input utente rispetto a una maschera e visualizza i risultati convalidati in base a un modello.  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per specificare che il [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodo retrieve mascherato solo caratteri. FALSE per specificare che il metodo di recuperare l'intero testo. Il valore predefinito è TRUE.  
+*bAttivare il*<br/>
+[in] TRUE per specificare che il [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodo retrieve mascherato solo caratteri. FALSE per specificare che il metodo di recuperare l'intero testo. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per abilitare il recupero dei caratteri mascherati. Creare quindi un controllo di modifica mascherato che corrisponde al numero di telefono, ad esempio (425) 555-0187. Se si chiama il `GetWindowText` (metodo), restituisce "4255550187". Se si disabilita il recupero di caratteri mascherati, il `GetWindowText` metodo restituisce il testo che viene visualizzato nel controllo di modifica, ad esempio "(425) 555-0187".  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszMask*  
- Una stringa della maschera che specifica il tipo di carattere che può essere visualizzati in ogni posizione nell'input dell'utente. La lunghezza del *lpszInputTemplate* e *lpszMask* stringhe dei parametri devono essere lo stesso. Vedere la sezione Osservazioni per informazioni più dettagliate sulle mascherare i caratteri.  
+*lpszMask*<br/>
+[in] Una stringa della maschera che specifica il tipo di carattere che può essere visualizzati in ogni posizione nell'input dell'utente. La lunghezza del *lpszInputTemplate* e *lpszMask* stringhe dei parametri devono essere lo stesso. Vedere la sezione Osservazioni per informazioni più dettagliate sulle mascherare i caratteri.  
   
- [in] *lpszInputTemplate*  
- Una stringa di modello di maschera che specifica che il valore letterale di caratteri che possa apparire in ogni posizione nell'input dell'utente. Usare il carattere di sottolineatura ('_') come segnaposto carattere. La lunghezza del *lpszInputTemplate* e *lpszMask* stringhe dei parametri devono essere lo stesso.  
+*lpszInputTemplate*<br/>
+[in] Una stringa di modello di maschera che specifica che il valore letterale di caratteri che possa apparire in ogni posizione nell'input dell'utente. Usare il carattere di sottolineatura ('_') come segnaposto carattere. La lunghezza del *lpszInputTemplate* e *lpszMask* stringhe dei parametri devono essere lo stesso.  
   
- [in] *chMaskInputTemplate*  
- Un carattere predefinito che sostituisce con il framework per ogni carattere non valido nell'input dell'utente. Il valore predefinito di questo parametro è un carattere di sottolineatura ('_').  
+*chMaskInputTemplate*<br/>
+[in] Un carattere predefinito che sostituisce con il framework per ogni carattere non valido nell'input dell'utente. Il valore predefinito di questo parametro è un carattere di sottolineatura ('_').  
   
- [in] *lpszValid*  
- Stringa che contiene un set di caratteri validi. NULL indica che tutti i caratteri sono validi. Il valore predefinito di questo parametro è NULL.  
+*lpszValid*<br/>
+[in] Stringa che contiene un set di caratteri validi. NULL indica che tutti i caratteri sono validi. Il valore predefinito di questo parametro è NULL.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per creare la maschera per il controllo di modifica mascherato. Derivare una classe dal `CMFCMaskedEdit` classe ed eseguire l'override di [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) metodo da usare il proprio codice per l'elaborazione di maschera personalizzati.  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per selezionare solo i gruppi; FALSE per selezionare l'intero testo. Il valore predefinito è TRUE.  
+*bAttivare il*<br/>
+[in] TRUE per selezionare solo i gruppi; FALSE per selezionare l'intero testo. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per specificare se il controllo MaskedEdit consente all'utente di selezionare per gruppo o l'intero testo.  
@@ -218,8 +218,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per convalidare l'input su solo mascherato caratteri; dell'utente FALSE per la convalida l'intera maschera. Il valore predefinito è TRUE.  
+*bAttivare il*<br/>
+[in] TRUE per convalidare l'input su solo mascherato caratteri; dell'utente FALSE per la convalida l'intera maschera. Il valore predefinito è TRUE.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Recupera convalidato il testo dal controllo di modifica mascherato.  
@@ -233,14 +233,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *lpszStringBuf*  
- Puntatore a un buffer che riceve il testo dal controllo di modifica.  
+*lpszStringBuf*<br/>
+[out] Puntatore a un buffer che riceve il testo dal controllo di modifica.  
   
- [in] *nMaxCount*  
- Il numero massimo di caratteri per la ricezione.  
+*nMaxCount*<br/>
+[in] Il numero massimo di caratteri per la ricezione.  
   
- [out] *rstrString*  
- Un riferimento all'oggetto stringa che riceve il testo dal controllo di modifica.  
+*rstrString*<br/>
+[out] Un riferimento all'oggetto stringa che riceve il testo dal controllo di modifica.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il primo overload di metodo restituisce il numero di byte della stringa che viene copiato il *lpszStringBuf* buffer del parametro; 0 se il controllo di modifica mascherato non dispone di alcun testo.  
@@ -260,11 +260,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *chChar*  
- Carattere da convalidare.  
+*chChar*<br/>
+[in] Carattere da convalidare.  
   
- [in] *chMaskChar*  
- Il carattere corrispondente dalla stringa della maschera.  
+*chMaskChar*<br/>
+[in] Il carattere corrispondente dalla stringa della maschera.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il *chChar* parametro è il tipo di carattere consentito per il *chMaskChar* parametro; in caso contrario, FALSE.  
@@ -280,8 +280,8 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszValid*  
- Stringa che contiene il set di caratteri di input validi. NULL significa che tutti i caratteri sono validi. Il valore predefinito di questo parametro è NULL.  
+*lpszValid*<br/>
+[in] Stringa che contiene il set di caratteri di input validi. NULL significa che tutti i caratteri sono validi. Il valore predefinito di questo parametro è NULL.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per definire un elenco di caratteri validi. Se un carattere di input non è inclusa nell'elenco, controllo di modifica mascherato non lo accetta.  
@@ -298,8 +298,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszString*  
- Punta a una stringa con terminazione null che verrà usato come un prompt dei comandi.  
+*lpszString*<br/>
+[in] Punta a una stringa con terminazione null che verrà usato come un prompt dei comandi.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo imposta il testo del controllo.  

@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719101"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 Incapsula la funzionalità di un controllo calendario mensile.  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *pmcGridInfo*|Puntatore a un [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) struttura che riceve informazioni relative al controllo di calendario del mese corrente. Il chiamante è responsabile dell'allocazione e l'inizializzazione di questa struttura.|  
+|*pmcGridInfo*|[out] Puntatore a un [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) struttura che riceve informazioni relative al controllo di calendario del mese corrente. Il chiamante è responsabile dell'allocazione e l'inizializzazione di questa struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -733,7 +733,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *cxyBorder*|La larghezza del bordo, in pixel.|  
+|*cxyBorder*|[in] La larghezza del bordo, in pixel.|  
   
 ### <a name="remarks"></a>Note  
  Se questo metodo ha esito positivo, lo spessore del bordo è impostato il *cxyBorder* parametro. In caso contrario, lo spessore del bordo viene reimpostato sul valore predefinito specificato dall'oggetto corrente [tema](/windows/desktop/Controls/visual-styles-overview), oppure zero se non vengono usati i temi.  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *calid*|Uno dei [identificatore di calendario](/windows/desktop/Intl/calendar-identifiers) costanti.|  
+|*calID*|[in] Uno dei [identificatore di calendario](/windows/desktop/Intl/calendar-identifiers) costanti.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *dwNewView*|Uno dei valori seguenti che specifica una frequenza mensile, annuale, dieci anni o vista secolo.<br /><br /> MCMV_MONTH: Visualizzazione mensile<br /><br /> MCMV_YEAR: Visualizzazione annuale<br /><br /> MCMV_DECADE: Visualizzazione di dieci anni<br /><br /> MCMV_CENTURY: Visualizzazione secolo|  
+|*dwNewView*|[in] Uno dei valori seguenti che specifica una frequenza mensile, annuale, dieci anni o vista secolo.<br /><br /> MCMV_MONTH: Visualizzazione mensile<br /><br /> MCMV_YEAR: Visualizzazione annuale<br /><br /> MCMV_DECADE: Visualizzazione di dieci anni<br /><br /> MCMV_CENTURY: Visualizzazione secolo|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1137,7 +1137,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *lpRect*|Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che definisce un rettangolo che contiene il numero desiderato di calendari.|  
+|*lpRect*|[in] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che definisce un rettangolo che contiene il numero desiderato di calendari.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che definisce un rettangolo la cui dimensione è minore o uguale al rettangolo definito dalle *lpRect* parametro.  

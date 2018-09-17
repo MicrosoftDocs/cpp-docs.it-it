@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965487"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725909"
 ---
 # <a name="unorderedmultiset-class"></a>Classe unordered_multiset
 
@@ -363,7 +363,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-Keyval il valore della chiave per eseguire il mapping.
+*Keyval*<br/>
+Valore della chiave da mappare.
 
 ### <a name="remarks"></a>Note
 
@@ -507,8 +508,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nbucket*  
- Numero di bucket.
+*nbucket*<br/>
+Numero di bucket.
 
 ### <a name="remarks"></a>Note
 
@@ -873,8 +874,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
- Valore della chiave da cercare.
+*Keyval*<br/>
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1119,8 +1120,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nbucket*  
- Numero di bucket.
+*nbucket*<br/>
+Numero di bucket.
 
 ### <a name="remarks"></a>Note
 
@@ -1187,8 +1188,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
- Valore della chiave da cercare.
+*Keyval*<br/>
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1261,17 +1262,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametri
 
-*Where*  
- Posizione dell'elemento che deve essere rimosso.
+*Where*<br/>
+Posizione dell'elemento che deve essere rimosso.
 
-*Primo*  
- Posizione del primo elemento che deve essere rimosso.
+*Primo*<br/>
+Posizione del primo elemento che deve essere rimosso.
 
-*ultimo*  
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
+*ultimo*<br/>
+Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-*Key*  
- Valore della chiave dell'elemento che deve essere rimosso.
+*Key*<br/>
+Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1293,8 +1294,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
- Valore della chiave da cercare.
+*Keyval*<br/>
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1906,8 +1907,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametri
 
-*factor*  
- Nuovo fattore di carico massimo.
+*factor*<br/>
+Nuovo fattore di carico massimo.
 
 ### <a name="remarks"></a>Note
 
@@ -2188,8 +2189,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametri
 
-*nbuckets*  
- Numero di bucket richiesto.
+*nbuckets*<br/>
+Numero di bucket richiesto.
 
 ### <a name="remarks"></a>Note
 
@@ -2372,8 +2373,8 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*  
- Contenitore con cui eseguire lo scambio.
+*right*<br/>
+Contenitore con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
 
@@ -2495,7 +2496,7 @@ unordered_multiset(
 |*Al*|Oggetto allocatore da archiviare.|
 |*Comp*|Oggetto della funzione di confronto da archiviare.|
 |*hash*|Oggetto della funzione hash da archiviare.|
-|*valore di bucket_count*|Numero minimo di bucket.|
+|*Valore di Bucket_count*|Numero minimo di bucket.|
 |*A destra*|Contenitore da copiare.|
 |*IList*|Oggetto initializer_list da cui copiare gli elementi.|
 
@@ -2505,7 +2506,7 @@ Il primo costruttore specifica una copia della sequenza controllata da *destra*.
 
 Tutti i costruttori inizializzano inoltre diversi valori archiviati. Per il costruttore di copia, i valori vengono ottenuti dal *destra*. In caso contrario:
 
-il numero minimo di bucket è l'argomento *Bucket_count*, se presente; in caso contrario è un valore predefinito descritto qui come il valore definito dall'implementazione `N0`.
+Il numero minimo di bucket è l'argomento *Bucket_count*, se presente; in caso contrario è un valore predefinito descritto qui come il valore definito dall'implementazione `N0`.
 
 L'oggetto della funzione hash è l'argomento *Hash*, se presente; in caso contrario, è `Hash()`.
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197397"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719290"
 ---
 # <a name="hook"></a>__hook
 
@@ -75,8 +75,8 @@ Puntatore al metodo del gestore eventi da associare a un evento. Il gestore di �
 
 - Eventi gestiti: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.
 
-*ricevitore* (facoltativo)<br/>
-Puntatore a un'istanza della classe del ricevitore di eventi. Se non si specifica un ricevitore, il valore predefinito è la classe del ricevitore o la struttura in cui **hook** viene chiamato.
+*Ricevitore*<br/>
+(Facoltativo) Un puntatore a un'istanza della classe del ricevitore di eventi. Se non si specifica un ricevitore, il valore predefinito è la classe del ricevitore o la struttura in cui **hook** viene chiamato.
 
 ## <a name="usage"></a>Utilizzo
 

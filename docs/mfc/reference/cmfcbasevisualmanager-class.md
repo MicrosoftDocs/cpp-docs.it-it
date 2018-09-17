@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b21651bdab6bf2e4603a8fa012480a6201e34b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db5c1ee0a381d45ce951c627d5f59bfb6eb97ea3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336223"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724828"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe CMFCBaseVisualManager
 Un livello tra derivate gestori visualizzazione e l'API di tema di Windows.  
@@ -136,25 +136,25 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Un puntatore a un contesto di dispositivo  
+*pDC*<br/>
+[in] Un puntatore a un contesto di dispositivo  
   
- [in] *rect*  
- Il rettangolo di delimitazione della casella di controllo.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione della casella di controllo.  
   
- [in] *bHighlighted*  
- Specifica se la casella di controllo è evidenziata.  
+*bHighlighted*<br/>
+[in] Specifica se la casella di controllo è evidenziata.  
   
- [in] *nState*  
- 0 per non è selezionata, 1 per normale controllato,  
+*nState*<br/>
+[in] 0 per non è selezionata, 1 per normale controllato,  
   
  2 per normale misto.  
   
- [in] *bEnabled*  
- Specifica se la casella di controllo è abilitata.  
+*bEnabled*<br/>
+[in] Specifica se la casella di controllo è abilitata.  
   
- [in] *bPressed*  
- Specifica se la casella di controllo è premuta.  
+*bPressed*<br/>
+[in] Specifica se la casella di controllo è premuta.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è abilitata l'API di tema. in caso contrario, FALSE.  
@@ -181,20 +181,20 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Rettangolo di delimitazione del bordo della casella combinata.  
+*Rect*<br/>
+[in] Rettangolo di delimitazione del bordo della casella combinata.  
   
- [in] *bDisattivato*  
- Specifica se il bordo della casella combinata è disabilitato.  
+*bDisattivato*<br/>
+[in] Specifica se il bordo della casella combinata è disabilitato.  
   
- [in] *bIsDropped*  
- Specifica se viene eliminato il bordo della casella combinata a discesa.  
+*bIsDropped*<br/>
+[in] Specifica se viene eliminato il bordo della casella combinata a discesa.  
   
- [in] *bIsHighlighted*  
- Specifica se il bordo della casella combinata è evidenziato.  
+*bIsHighlighted*<br/>
+[in] Specifica se il bordo della casella combinata è evidenziato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è abilitata l'API di tema. in caso contrario, FALSE.  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pDC*|Puntatore a un contesto di dispositivo.|  
-|[in] *rect*|Il rettangolo di delimitazione del pulsante elenco a discesa della casella combinata.|  
-|[in] *bDisattivato*|Specifica se il pulsante elenco a discesa della casella combinata è disabilitato.|  
-|[in] *bIsDropped*|Specifica se viene eliminato il pulsante elenco a discesa della casella combinata a discesa.|  
-|[in] *bIsHighlighted*|Specifica se il pulsante elenco a discesa della casella combinata è evidenziato.|  
+|*pDC*|[in] Puntatore a un contesto di dispositivo.|  
+|*Rect*|[in] Il rettangolo di delimitazione del pulsante elenco a discesa della casella combinata.|  
+|*bDisattivato*|[in] Specifica se il pulsante elenco a discesa della casella combinata è disabilitato.|  
+|*bIsDropped*|[in] Specifica se viene eliminato il pulsante elenco a discesa della casella combinata a discesa.|  
+|*bIsHighlighted*|[in] Specifica se il pulsante elenco a discesa della casella combinata è evidenziato.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è abilitata l'API di tema. in caso contrario, FALSE.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Il rettangolo di delimitazione del pulsante push.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione del pulsante push.  
   
- [in] *pButton*  
- Un puntatore per il [classe CMFCButton](../../mfc/reference/cmfcbutton-class.md) oggetto su cui disegnare.  
+*pButton*<br/>
+[in] Un puntatore per il [classe CMFCButton](../../mfc/reference/cmfcbutton-class.md) oggetto su cui disegnare.  
   
- [in] *uiState*  
- Ignorato. Lo stato è tratto dal *pButton*.  
+*uiState*<br/>
+[in] Ignorato. Lo stato è tratto dal *pButton*.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è abilitata l'API di tema. in caso contrario, FALSE.  
@@ -265,23 +265,23 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Il rettangolo di delimitazione del pulsante di opzione.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione del pulsante di opzione.  
   
- [in] *bHighlighted*  
- Specifica se il pulsante di opzione è evidenziato.  
+*bHighlighted*<br/>
+[in] Specifica se il pulsante di opzione è evidenziato.  
   
- [in] *bChecked*  
- Specifica se il pulsante di opzione è selezionato.  
+*bChecked*<br/>
+[in] Specifica se il pulsante di opzione è selezionato.  
   
- [in] *bEnabled*  
- Specifica se il pulsante di opzione è abilitato.  
+*bEnabled*<br/>
+[in] Specifica se il pulsante di opzione è abilitato.  
   
- [in] *bPressed*  
- Specifica se viene premuto il pulsante di opzione.  
+*bPressed*<br/>
+[in] Specifica se viene premuto il pulsante di opzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è abilitata l'API di tema. in caso contrario, FALSE.  
@@ -303,32 +303,32 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *pStatusBar*  
- Puntatore alla barra di stato. Questo valore viene ignorato.  
+*pStatusBar*<br/>
+[in] Puntatore alla barra di stato. Questo valore viene ignorato.  
   
- [in] *rectProgress*  
- Il rettangolo di delimitazione dell'indicatore di stato nelle *pDC* coordinate.  
+*rectProgress*<br/>
+[in] Il rettangolo di delimitazione dell'indicatore di stato nelle *pDC* coordinate.  
   
- [in] *nProgressTotal*  
- Il valore dello stato complessivo.  
+*nProgressTotal*<br/>
+[in] Il valore dello stato complessivo.  
   
- [in] *nProgressCurr*  
- Il valore di stato di avanzamento corrente.  
+*nProgressCurr*<br/>
+[in] Il valore di stato di avanzamento corrente.  
   
- [in] *clrBar*  
- Il colore iniziale. `CMFCBaseVisualManager` Ignora questo. Le classi derivate possono usarlo per le sfumature di colore.  
+*clrBar*<br/>
+[in] Il colore iniziale. `CMFCBaseVisualManager` Ignora questo. Le classi derivate possono usarlo per le sfumature di colore.  
   
- [in] *clrProgressBarDest*  
- Colore finale. `CMFCBaseVisualManager` Ignora questo. Le classi derivate possono usarlo per le sfumature di colore.  
+*clrProgressBarDest*<br/>
+[in] Colore finale. `CMFCBaseVisualManager` Ignora questo. Le classi derivate possono usarlo per le sfumature di colore.  
   
- [in] *clrProgressText*  
- Colore del testo di stato di avanzamento. `CMFCBaseVisualManager` Ignora questo. Il colore del testo è definito da `afxGlobalData.clrBtnText`.  
+*clrProgressText*<br/>
+[in] Colore del testo di stato di avanzamento. `CMFCBaseVisualManager` Ignora questo. Il colore del testo è definito da `afxGlobalData.clrBtnText`.  
   
- [in] *bProgressText*  
- Specifica se visualizzare il testo di stato di avanzamento.  
+*bProgressText*<br/>
+[in] Specifica se visualizzare il testo di stato di avanzamento.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è abilitata l'API di tema. in caso contrario, FALSE.  
@@ -344,14 +344,14 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *pBar*  
- Un puntatore a un riquadro con sfondo deve essere disegnato.  
+*pBar*<br/>
+[in] Un puntatore a un riquadro con sfondo deve essere disegnato.  
   
- [in] *rectClient*  
- Il rettangolo di delimitazione dell'area da riempire.  
+*rectClient*<br/>
+[in] Il rettangolo di delimitazione dell'area da riempire.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è abilitata l'API di tema. in caso contrario, FALSE.  

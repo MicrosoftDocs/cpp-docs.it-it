@@ -1,5 +1,5 @@
 ---
-title: Riferimento (Runtime di concorrenza) | Documenti Microsoft
+title: Riferimenti (Runtime di concorrenza) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693452"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723229"
 ---
 # <a name="reference-concurrency-runtime"></a>Riferimento (runtime di concorrenza)
 In questa sezione contiene informazioni di riferimento per il Runtime di concorrenza.
-**Nota** l'utilizzo di identificatori che iniziano con un carattere di sottolineatura (_) per le implementazioni, ad esempio librerie riservate dal linguaggio di C++ standard. Non usare questi nomi nel codice. Il comportamento degli elementi di codice i cui nomi seguono questa convenzione non è garantito ed è soggetto a modifiche nelle future versioni. Per questi motivi, tali elementi di codice vengono omessi dalla documentazione di Runtime di concorrenza.
+
+> [!Note]
+> Lo standard del linguaggio C++ si riserva l'uso di identificatori che iniziano con un carattere di sottolineatura (_) per le implementazioni come le librerie. Non usare questi nomi nel codice. Il comportamento degli elementi di codice i cui nomi seguono questa convenzione non è garantito ed è soggetto a modifiche nelle future versioni. Per questi motivi, tali elementi di codice vengono omessi dalla documentazione di Runtime di concorrenza.
 
 ## <a name="in-this-section"></a>In questa sezione
-[concorrenza Namespace](concurrency-namespace.md) lo spazio dei nomi di concorrenza fornisce le classi e funzioni che consentono l'accesso al Runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../concurrency-runtime.md) (Runtime di concorrenza).
+
+[concorrenza Namespace](concurrency-namespace.md) lo spazio dei nomi di concorrenza fornisce le classi e funzioni che consentono di accedono al Runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../concurrency-runtime.md) (Runtime di concorrenza).
 
 [spazio dei nomi std](std-namespace.md)
-[dello spazio dei nomi stdx](stdx-namespace.md)
 
-
+[spazio dei nomi spazio stdx](stdx-namespace.md)

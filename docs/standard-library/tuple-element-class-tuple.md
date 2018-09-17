@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959069"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716190"
 ---
 # <a name="tupleelement-class"></a>Classe tuple_element
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parametri
 
-*Index*  
+*Index*<br/>
 Indice dell'elemento designato.
 
-*Tuple*  
+*Tuple*<br/>
 Tipo della tupla.
 
-*Elem*  
+*Elem*<br/>
 Tipo di un elemento della matrice.
 
-*Dimensione*  
+*Dimensione*<br/>
 Dimensione della matrice.
 
-*T1*  
+*T1*<br/>
 Il tipo del primo elemento in una coppia.
 
-*T2*  
+*T2*<br/>
 Tipo del secondo elemento di una coppia.
 
 ## <a name="remarks"></a>Note
@@ -184,7 +184,13 @@ int main() {
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<tuple > **intestazione:** \<array > (per la specializzazione di matrice) **intestazione:** \<utility > (per le specializzazioni di coppia)  **Namespace:** std
+**Intestazione:** \<tuple>
+
+**Intestazione:** \<array> (per la specializzazione di matrice)
+
+**Intestazione:** \<utility > (per le specializzazioni di coppia)
+
+**Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 

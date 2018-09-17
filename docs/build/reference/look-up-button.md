@@ -1,5 +1,5 @@
 ---
-title: Pulsante Cerca | Documenti Microsoft
+title: Pulsante di ricerca | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74a8ab3259560cbc99a509f3b7cf6075aacc7036
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7dc18065499773d0646bde2bc63cb5c8e1d6076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371447"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717951"
 ---
 # <a name="look-up-button"></a>pulsante di ricerca
-Fare clic su **Cerca** per recuperare il messaggio di errore che corrisponde al valore di sistema o il modulo specificato. I valori possono essere immessi in formato decimale o esadecimale (inclusi i valori decimali negativo). I moduli elencati nella **moduli aggiuntivi per la ricerca di errori** vengono cercati anche finestra di dialogo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controllo Value Edit](../../build/reference/value-edit-control.md)
+
+Fare clic su **Cerca** per recuperare il messaggio di errore che corrisponde al valore di sistema o del modulo inserito. È possibile immettere valori in formato decimale o esadecimale (inclusi valori decimali negativi). I moduli elencati nel **moduli aggiuntivi per la ricerca di errori** finestra di dialogo viene inoltre eseguita la ricerca.
+
+## <a name="see-also"></a>Vedere anche
+
+[Controllo Value Edit](../../build/reference/value-edit-control.md)

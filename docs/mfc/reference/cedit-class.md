@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535405"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726635"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fornisce la funzionalità di un controllo di modifica di Windows.  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *lpszText*  
- Un puntatore a una stringa che contiene il testo della segnalazione.  
+*lpszText*<br/>
+[out] Un puntatore a una stringa che contiene il testo della segnalazione.  
   
- [in] *cchText*  
- Il numero di caratteri che può essere ricevuto. Questo numero include il carattere di terminazione NULL.  
+*cchText*<br/>
+[in] Il numero di caratteri che può essere ricevuto. Questo numero include il carattere di terminazione NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
  Per il primo overload, TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *pichStart*|Indice in base zero del primo carattere dell'intervallo di testo evidenziato.|  
-|[out] *pichEnd*|Indice in base zero dell'ultimo carattere dell'intervallo di testo evidenziato.|  
+|*pichStart*|[out] Indice in base zero del primo carattere dell'intervallo di testo evidenziato.|  
+|*pichEnd*|[out] Indice in base zero dell'ultimo carattere dell'intervallo di testo evidenziato.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszText*  
- Puntatore a una stringa che contiene il segnale da visualizzare nel controllo di modifica.  
+*lpszText*<br/>
+[in] Puntatore a una stringa che contiene il segnale da visualizzare nel controllo di modifica.  
   
- [in] *fDrawWhenFocused*  
- Se FALSE, l'intestazione della segnalazione non viene disegnato quando l'utente fa clic nel controllo di modifica e assegna il controllo lo stato attivo.  
+*fDrawWhenFocused*<br/>
+[in] Se FALSE, l'intestazione della segnalazione non viene disegnato quando l'utente fa clic nel controllo di modifica e assegna il controllo lo stato attivo.  
   
  Se TRUE, l'intestazione della segnalazione viene disegnato anche quando il controllo ha lo stato attivo. L'intestazione della segnalazione scomparirà quando l'utente inizia a digitare nel controllo.  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *ichStart*|Indice in base zero del primo carattere dell'intervallo di testo da evidenziare.|  
-|[in] *ichEnd*|Indice in base zero dell'ultimo carattere dell'intervallo di testo da evidenziare.|  
+|*ichStart*|[in] Indice in base zero del primo carattere dell'intervallo di testo da evidenziare.|  
+|*ichEnd*|[in] Indice in base zero dell'ultimo carattere dell'intervallo di testo da evidenziare.|  
   
 ### <a name="remarks"></a>Note  
  Questo metodo invia il [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) messaggio, che è descritti nel SDK di Windows.  Questo metodo invia il [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) messaggio, che è descritti nel SDK di Windows. Entrambe `SetHighlight` e `GetHighlight` sono abilitate per solo le compilazioni UNICODE. 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Puntatore a un [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struttura che descrive il fumetto suggerimento.|  
-|[in] *lpszTitle*|Puntatore a una stringa Unicode che contiene il titolo del fumetto suggerimento.|  
-|[in] *lpszText*|Puntatore a una stringa Unicode che contiene il testo del fumetto suggerimento.|  
-|[in] *ttiIcon*|Un' **INT** che specifica il tipo di icona da associare il fumetto suggerimento. Il valore predefinito è TTI_NONE. Per altre informazioni, vedere la `ttiIcon` membro della [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struttura.|  
+|*pEditBalloonTip*|[in] Puntatore a un [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struttura che descrive il fumetto suggerimento.|  
+|*lpszTitle*|[in] Puntatore a una stringa Unicode che contiene il titolo del fumetto suggerimento.|  
+|*lpszText*|[in] Puntatore a una stringa Unicode che contiene il testo del fumetto suggerimento.|  
+|*ttiIcon*|[in] Un' **INT** che specifica il tipo di icona da associare il fumetto suggerimento. Il valore predefinito è TTI_NONE. Per altre informazioni, vedere la `ttiIcon` membro della [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  

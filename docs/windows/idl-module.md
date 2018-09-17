@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220465"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715533"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -49,26 +49,26 @@ function declaration
 *name*  
 Un nome definito dall'utente per il blocco di codice che verrà visualizzato nel file IDL.
 
-*dllname* (facoltativo)  
-Il file con estensione dll che contiene l'esportazione.
+*dllname*  
+(Facoltativo) Il file con estensione dll che contiene l'esportazione.
 
-*UUID* (facoltativo)  
-ID univoco.
+*uuid*  
+(Facoltativo) Un ID univoco.
 
-*HelpString* (facoltativo)  
-Una stringa di caratteri utilizzata per descrivere la libreria dei tipi.
+*helpstring*  
+(Facoltativo) Una stringa di caratteri utilizzata per descrivere la libreria dei tipi.
 
-*helpstringcontext* (facoltativo)  
-L'ID di un argomento della Guida in un file con estensione chm o. hlp.
+*helpstringcontext*  
+(Facoltativo) L'ID di un argomento della Guida in un file con estensione chm o. hlp.
 
-*HelpContext* (facoltativo)  
-L'ID Guida per questa libreria dei tipi.
+*helpcontext*  
+(Facoltativo) L'ID della Guida per questa libreria dei tipi.
 
-*nascosto* (facoltativo)  
-Un parametro che impedisce la visualizzazione libreria. Vedere le [nascosto](/windows/desktop/Midl/hidden) attributo MIDL per altre informazioni.
+*hidden*  
+(Facoltativo) Un parametro che impedisce la visualizzazione libreria. Vedere le [nascosto](/windows/desktop/Midl/hidden) attributo MIDL per altre informazioni.
 
-*con restrizioni* (facoltativo)  
-I membri della raccolta non possono essere chiamati in modo arbitrario. Vedere le [limitato](/windows/desktop/Midl/restricted) attributo MIDL per altre informazioni.
+*restricted*  
+(Facoltativo) I membri della raccolta non possono essere chiamati in modo arbitrario. Vedere le [limitato](/windows/desktop/Midl/restricted) attributo MIDL per altre informazioni.
 
 *dichiarazione di funzione*  
 La funzione che verrà definita.

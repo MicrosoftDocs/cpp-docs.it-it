@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 126e23064bdc599ba230efc5dde472cd05a1aa69
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760845"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720746"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 Il `CMFCShellTreeCtrl` classe estende [classe CTreeCtrl](../../mfc/reference/ctreectrl-class.md) funzionalità visualizzando una gerarchia di elementi della Shell.  
@@ -104,8 +104,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Valore booleano che specifica se abilitare il menu di scelta rapida.  
+*bAttivare il*<br/>
+[in] Valore booleano che specifica se abilitare il menu di scelta rapida.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
  Restituisce i flag impostati per il [classe CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) oggetto.  
@@ -130,11 +130,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *strPath*  
- Un riferimento a un parametro di stringa. Il metodo scrive il percorso dell'elemento per questo parametro.  
+*strPath*<br/>
+[out] Un riferimento a un parametro di stringa. Il metodo scrive il percorso dell'elemento per questo parametro.  
   
- [in] *htreeItem*  
- Il metodo recupera il percorso per questo elemento di controllo struttura ad albero.  
+*htreeItem*<br/>
+[in] Il metodo recupera il percorso per questo elemento di controllo struttura ad albero.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *messaggio*  
- [in] *wParam*  
- [in] *lParam*  
- [in] *pLResult*  
+*message*<br/>
+[in] [in] *wParam*  
+*lParam*<br/>
+[in] [in] *pLResult*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pItem*  
- [in] *bSelected*  
+*pItem*<br/>
+[in] [in] *bSelected*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -228,11 +228,11 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszPath*  
- Stringa che specifica il percorso di un elemento.  
+*lpszPath*<br/>
+[in] Stringa che specifica il percorso di un elemento.  
   
- [in] *lpidl*  
- Un PIDL che specifica l'elemento  
+*lpidl*<br/>
+[in] Un PIDL che specifica l'elemento  
   
 ### <a name="return-value"></a>Valore restituito  
  S_OK se l'esito positivo. In caso contrario, E_FAIL.  
@@ -247,11 +247,11 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwFlags*  
- Flag da impostare.  
+*dwFlags*<br/>
+[in] I flag da impostare.  
   
- [in] *bRefresh*  
- Valore booleano che specifica se il `CMFCShellTreeCtrl` che deve essere aggiornata immediatamente.  
+*bRefresh*<br/>
+[in] Valore booleano che specifica se il `CMFCShellTreeCtrl` che deve essere aggiornata immediatamente.  
   
 ### <a name="remarks"></a>Note  
  Il `CMFCShellTreeCtrl` tutti i flag di passa [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Per altre informazioni sui valori di flag diversa, vedere [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
@@ -264,8 +264,8 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pShellList*  
- Un puntatore a un `CMFCShellListCtrl` oggetto.  
+*pShellList*<br/>
+[in] Un puntatore a un `CMFCShellListCtrl` oggetto.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo associa un `CMFCShellListCtrl` con un `CMFCShellTreeCtrl`. Questi oggetti possano essere visualizzati come una finestra simile a Esplora risorse: se l'utente seleziona un oggetto nel `CMFCShellTreeCtrl`, l'elementi in associati il `CMFCShellListCtrl` verranno aggiornate automaticamente.  

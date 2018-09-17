@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a5b97912843f14c9bc73307145bd0e1542d2c01b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200654"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726583"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Classe CMFCDropDownToolbarButton
 Tipo di pulsante della barra degli strumenti che, quando viene selezionato, si comporta come un pulsante normale. Tuttavia, visualizzata una barra degli strumenti elenco a discesa ( [classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) se l'utente preme e premuto il pulsante della barra degli strumenti.  
@@ -132,8 +132,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *src*  
- Un riferimento al pulsante di origine da cui copiare.  
+*src*<br/>
+[in] Un riferimento al pulsante di origine da cui copiare.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per copiare un altro pulsante della barra degli strumenti per questo pulsante sulla barra degli strumenti. *src* deve essere di tipo `CMFCDropDownToolbarButton`.  
@@ -151,11 +151,11 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszName*  
- Testo del pulsante predefinito.  
+*lpszName*<br/>
+[in] Testo del pulsante predefinito.  
   
- [in] *pToolBar*  
- Un puntatore al `CMFCDropDownToolBar` oggetto che viene visualizzato quando l'utente preme il pulsante.  
+*pToolBar*<br/>
+[in] Un puntatore al `CMFCDropDownToolBar` oggetto che viene visualizzato quando l'utente preme il pulsante.  
   
 ### <a name="remarks"></a>Note  
  Il secondo overload del costruttore di copia al pulsante a discesa scegliere il primo pulsante nella barra degli strumenti che *pToolBar* specifica.  
@@ -175,8 +175,8 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- La finestra padre il frame di riepilogo a discesa, oppure NULL per usare la finestra padre del pulsante della barra degli strumenti elenco a discesa.  
+*pWnd*<br/>
+[in] La finestra padre il frame di riepilogo a discesa, oppure NULL per usare la finestra padre del pulsante della barra degli strumenti elenco a discesa.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo. in caso contrario 0.  
@@ -196,8 +196,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *menuButton*  
- Un riferimento al pulsante di menu della destinazione.  
+*MenuButton*<br/>
+[in] Un riferimento al pulsante di menu della destinazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -267,14 +267,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Il contesto di dispositivo che visualizza il pulsante.  
+*pDC*<br/>
+[in] Il contesto di dispositivo che visualizza il pulsante.  
   
- [in] *sizeDefault*  
- La dimensione predefinita del pulsante.  
+*sizeDefault*<br/>
+[in] La dimensione predefinita del pulsante.  
   
- [in] *bHorz*  
- Lo stato di ancoraggio della barra degli strumenti padre. Questo parametro è TRUE se la barra degli strumenti è mobile o ancorato orizzontalmente, o FALSE se la barra degli strumenti è ancorato in verticale.  
+*bHorz*<br/>
+[in] Lo stato di ancoraggio della barra degli strumenti padre. Questo parametro è TRUE se la barra degli strumenti è mobile o ancorato orizzontalmente, o FALSE se la barra degli strumenti è ancorato in verticale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `SIZE` struttura che contiene le dimensioni del pulsante, in pixel.  
@@ -290,8 +290,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndParent*  
- La nuova finestra padre.  
+*pWndParent*<br/>
+[in] La nuova finestra padre.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo esegue l'override dell'implementazione della classe di base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)), deselezionando l'etichetta di testo ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) e impostando il [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) e [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) membri dati su FALSE.  
@@ -306,11 +306,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- La finestra padre del pulsante della barra degli strumenti.  
+*pWnd*<br/>
+[in] La finestra padre del pulsante della barra degli strumenti.  
   
- [in] *bDelay*  
- TRUE se il messaggio deve essere gestito con un ritardo.  
+*bDelay*<br/>
+[in] TRUE se il messaggio deve essere gestito con un ritardo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il pulsante elabora il messaggio; fare clic su in caso contrario 0.  
@@ -345,8 +345,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- La finestra padre del pulsante della barra degli strumenti.  
+*pWnd*<br/>
+[in] La finestra padre del pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il pulsante elabora il messaggio della Guida; in caso contrario 0.  
@@ -364,8 +364,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMenu*  
- Il menu di personalizzazione.  
+*pMenu*<br/>
+[in] Il menu di personalizzazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce TRUE.  
@@ -401,29 +401,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Il contesto di dispositivo che visualizza il pulsante.  
+*pDC*<br/>
+[in] Il contesto di dispositivo che visualizza il pulsante.  
   
- [in] *rect*  
- Il rettangolo di delimitazione del pulsante.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione del pulsante.  
   
- [in] *pImages*  
- La raccolta di immagini della barra degli strumenti che è associata al pulsante.  
+*pImages*<br/>
+[in] La raccolta di immagini della barra degli strumenti che è associata al pulsante.  
   
- [in] *bHorz*  
- Lo stato di ancoraggio della barra degli strumenti padre. Questo parametro è TRUE quando il pulsante è ancorato in orizzontale e FALSE quando il pulsante è ancorato in verticale.  
+*bHorz*<br/>
+[in] Lo stato di ancoraggio della barra degli strumenti padre. Questo parametro è TRUE quando il pulsante è ancorato in orizzontale e FALSE quando il pulsante è ancorato in verticale.  
   
- [in] *bCustomizeMode*  
- Specifica se la barra degli strumenti è in modalità di personalizzazione. Questo parametro è TRUE se la barra degli strumenti è in modalità di personalizzazione e FALSE quando la barra degli strumenti non è in modalità di personalizzazione.  
+*bCustomizeMode*<br/>
+[in] Specifica se la barra degli strumenti è in modalità di personalizzazione. Questo parametro è TRUE se la barra degli strumenti è in modalità di personalizzazione e FALSE quando la barra degli strumenti non è in modalità di personalizzazione.  
   
- [in] *bHighlight*  
- Specifica se il pulsante è evidenziato. Questo parametro è TRUE quando il pulsante è evidenziato e FALSE quando il pulsante non sia più evidenziato.  
+*bHighlight*<br/>
+[in] Specifica se il pulsante è evidenziato. Questo parametro è TRUE quando il pulsante è evidenziato e FALSE quando il pulsante non sia più evidenziato.  
   
- [in] *bDrawBorder*  
- Specifica se il pulsante deve visualizzare il bordo. Questo parametro è TRUE quando il pulsante dovrebbe visualizzare il bordo e FALSE quando il pulsante non dovrebbe visualizzare il bordo.  
+*bDrawBorder*<br/>
+[in] Specifica se il pulsante deve visualizzare il bordo. Questo parametro è TRUE quando il pulsante dovrebbe visualizzare il bordo e FALSE quando il pulsante non dovrebbe visualizzare il bordo.  
   
- [in] *bGrayDisabledButtons*  
- Specifica se i pulsanti disabilitati, ombreggiate o utilizzare la raccolta di immagini disabilitato. Questo parametro è TRUE quando i pulsanti disabilitati sarà ombreggiata e FALSE quando questo metodo deve usare la raccolta di immagini disabilitato.  
+*bGrayDisabledButtons*<br/>
+[in] Specifica se i pulsanti disabilitati, ombreggiate o utilizzare la raccolta di immagini disabilitato. Questo parametro è TRUE quando i pulsanti disabilitati sarà ombreggiata e FALSE quando questo metodo deve usare la raccolta di immagini disabilitato.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per personalizzare il disegno di pulsante della barra degli strumenti.  
@@ -439,14 +439,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Il contesto di dispositivo che visualizza il pulsante.  
+*pDC*<br/>
+[in] Il contesto di dispositivo che visualizza il pulsante.  
   
- [in] *rect*  
- Il rettangolo di delimitazione del pulsante.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione del pulsante.  
   
- [in] *bSelected*  
- Se si seleziona il pulsante. Se questo parametro è TRUE, il pulsante è selezionato. Se questo parametro è FALSE, il pulsante non è selezionato.  
+*bSelected*<br/>
+[in] Se si seleziona il pulsante. Se questo parametro è TRUE, il pulsante è selezionato. Se questo parametro è FALSE, il pulsante non è selezionato.  
   
 ### <a name="return-value"></a>Valore restituito  
  La larghezza in pixel, del pulsante nel contesto di dispositivo specificato.  
@@ -464,8 +464,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *ar*  
- Il `CArchive` oggetto da cui o in cui serializzare.  
+*ar*<br/>
+[in] Il `CArchive` oggetto da cui o in cui serializzare.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo estende l'implementazione della classe di base ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) serializzando l'ID risorsa della barra degli strumenti padre. Quando il caricamento dell'archivio ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) restituisce un valore diverso da zero), questo metodo imposta il `m_pToolBar` membro dati alla barra degli strumenti che contiene l'ID risorsa serializzata.  
@@ -478,8 +478,8 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- L'ID del comando predefinito.  
+*uiCmd*<br/>
+[in] L'ID del comando predefinito.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per specificare un comando predefinito eseguito dal framework quando l'utente fa clic sul pulsante. Un elemento con l'ID di comando specificato da *uiCmd* deve trovarsi nella barra degli strumenti elenco a discesa padre.  

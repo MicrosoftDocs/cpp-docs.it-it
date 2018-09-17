@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104290"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714525"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -30,7 +30,7 @@ Introduce una sezione di una o più definizioni di esportazione che specificano 
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>Note
 
@@ -76,7 +76,7 @@ La parola chiave facoltativa **dati** specifica che un'esportazione dei dati, no
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 Vi sono quattro metodi per esportare una definizione, elencati di seguito in ordine di preferenza.
 
@@ -95,7 +95,7 @@ Vi sono quattro metodi per esportare una definizione, elencati di seguito in ord
 
 La direttiva #pragma è utile se è necessario esportare un nome di funzione non decorati e avere esportazioni diversi a seconda della configurazione di compilazione (ad esempio, in compilazioni a 32 o 64 bit).
 
-Tutti e quattro i metodi possono essere usati nello stesso programma. Quando LINK compila un programma che contiene esportazioni, crea anche una libreria di importazione, a meno che non venga usato un file .EXP nella compilazione. 
+Tutti e quattro i metodi possono essere usati nello stesso programma. Quando LINK compila un programma che contiene esportazioni, crea anche una libreria di importazione, a meno che non venga usato un file .EXP nella compilazione.
 
 Di seguito è riportato un esempio di sezione EXPORTS:
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 Quando si esporta una variabile da una DLL usando un file .DEF, non è necessario specificare `__declspec(dllexport)` nella variabile. In qualsiasi file che usa la DLL, tuttavia, è comunque necessario usare `__declspec(dllimport)` nella dichiarazione dei dati.
 

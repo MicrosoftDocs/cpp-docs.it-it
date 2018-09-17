@@ -1,5 +1,5 @@
 ---
-title: -Ob (espansione funzioni Inline) | Documenti Microsoft
+title: -Ob (espansione funzioni Inline) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6755025ff07d79b7e6086fc8c8a59a3bdebdb777
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377832"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725257"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Espansione funzioni inline)
 
@@ -51,31 +51,31 @@ Controlla l'espansione inline delle funzioni.
 
 ## <a name="arguments"></a>Argomenti
 
-**0**  
-Disabilita le espansioni inline. Per impostazione predefinita, espansione viene eseguita a discrezione del compilatore in tutte le funzioni, noto anche come *auto-inlining*.
+**0**<br/>
+Disabilita le espansioni inline. Per impostazione predefinita, espansione viene eseguita a discrezione del compilatore in tutte le funzioni, anche detti *auto-inlining*.
 
-**1**  
-Consente l'espansione solo delle funzioni contrassegnate come [inline](../../cpp/inline-functions-cpp.md), `__inline`, o `__forceinline`, o in una funzione membro C++ definita in una dichiarazione di classe.
+**1**<br/>
+Consente l'espansione solo delle funzioni contrassegnate [inline](../../cpp/inline-functions-cpp.md), `__inline`, o `__forceinline`, o in una funzione membro C++ definita in una dichiarazione di classe.
 
-**2**  
+**2**<br/>
 Il valore predefinito. Consente l'espansione delle funzioni contrassegnate come `inline`, `__inline`, o `__forceinline` e di qualsiasi altra funzione scelta dal compilatore.
 
-**/ Ob2** è attiva quando [/O1, / O2 (Riduci dimensione, Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/Ox (abilitare più velocità ottimizzazioni)](../../build/reference/ox-full-optimization.md) viene utilizzato.
+**/ Ob2** è attiva quando [/O1, / O2 (riduce dimensione, Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oppure [/Ox (Abilita più ottimizzazioni della velocità)](../../build/reference/ox-full-optimization.md) viene usato.
 
-Questa opzione richiede l'abilitazione delle ottimizzazioni mediante **/O1**, **/O2**, **/Ox**, o **/Og**.  
+Questa opzione richiede l'abilitazione delle ottimizzazioni mediante **/O1**, **/O2**, **/Ox**, oppure **/Og**.
 
 ## <a name="remarks"></a>Note
 
 Il compilatore considera come suggerimenti le opzioni di espansione inline e le parole chiave. Non vi è alcuna garanzia che una funzione verrà espansa inline. È possibile disabilitare le espansioni inline, ma non è possibile forzare il compilatore ad applicare l'inline a una funzione specifica, anche quando si usa la parola chiave `__forceinline`.
 
-È possibile utilizzare il `#pragma` [auto_inline](../../preprocessor/auto-inline.md) direttiva escludere funzioni dalla considerazione come candidati per l'espansione inline. Vedere anche il `#pragma` [intrinseco](../../preprocessor/intrinsic.md) direttiva.
+È possibile usare la `#pragma` [auto_inline](../../preprocessor/auto-inline.md) direttiva per escludere funzioni dalla considerazione come candidati per l'espansione inline. Vedere anche il `#pragma` [intrinseco](../../preprocessor/intrinsic.md) direttiva.
 
 > [!NOTE]
-> Le informazioni raccolte durante le esecuzioni dei test di profilatura sostituiscono le ottimizzazioni che verrebbero altrimenti applicate se si specifica **/Ob**, **/Os**, o **/Ot**. Per ulteriori informazioni, vedere [ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md).
+> Informazioni raccolte dalle esecuzioni dei test di profilatura sostituiscono le ottimizzazioni che verrebbero altrimenti effetto se si specifica **/Ob**, **/Os**, o **/Ot**. Per altre informazioni, vedere [le ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
 1. Espandere **le proprietà di configurazione**, **C/C++** e selezionare **ottimizzazione**.
 
@@ -87,6 +87,6 @@ Il compilatore considera come suggerimenti le opzioni di espansione inline e le 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)  
-[Opzioni del compilatore](../../build/reference/compiler-options.md)  
+[Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)
+[opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

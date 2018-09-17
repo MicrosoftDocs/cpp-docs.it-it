@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339488"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714389"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
 **Sezione specifica Microsoft**  
   
- Scrive dati a 32 bit in una posizione di memoria senza accedere le cache.  
+ Scrive i dati a 32 bit in una posizione di memoria senza inquinare le cache.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>Parametri  
   
- [out] `Dest`  
- Un puntatore alla posizione in cui vengono scritti i dati di origine.  
+*dest*<br/>
+[out] Un puntatore alla posizione in cui vengono scritti i dati di origine.  
   
- [in] `Source`  
- Un numero a 128 bit che contiene il `float` valore deve essere scritto in inferiore 32 bit...  
+*Source*<br/>
+[in] Un numero a 128 bit che contiene il `float` valore da scrivere in inferiore 32 bit...  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -61,9 +61,9 @@ void _mm_stream_ss(
   
 ## <a name="remarks"></a>Note  
   
-Questo intrinseco genera il `movntss` istruzione. Per determinare il supporto hardware per questa istruzione, chiamare il `__cpuid` intrinseco con `InfoType=0x80000001` e i bit di controllo 6 di `CPUInfo[2] (ECX)`. Questo bit è 1 quando l'istruzione è supportata e 0 in caso contrario.  
+Questa funzione intrinseca genera il `movntss` (istruzione). Per determinare il supporto hardware per questa istruzione, chiama il `__cpuid` intrinseco con `InfoType=0x80000001` e controllare bit 6 di `CPUInfo[2] (ECX)`. Questo bit è 1 quando l'istruzione è supportata e 0 in caso contrario.  
   
-Se si esegue il codice che utilizza il `_mm_stream_ss` intrinseci su hardware che non supporta il `movntss` (istruzione), i risultati sono imprevedibili.  
+Se si esegue codice che usa il `_mm_stream_ss` intrinseci su hardware che non supporta il `movntss` (istruzione), i risultati sono imprevedibili.  
   
 ## <a name="example"></a>Esempio  
   

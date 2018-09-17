@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fa9af83ce4f18f4e4f2e916c5d9bacf724720814
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690434"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718445"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane (classe)
 Estende la funzionalità della [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) per supportare la creazione di finestre a schede.  
@@ -176,14 +176,14 @@ virtual BOOL AddTab(
  [in] [out] *pNewBar*  
  Puntatore al riquadro da aggiungere. Puntatore ' this ' potrebbero diventare non valide dopo aver chiamato questo metodo. Per altre informazioni, vedere la sezione Osservazioni.  
   
- [in] *bVisible*  
- TRUE per visualizzare la scheda; in caso contrario, FALSE.  
+*bVisible*<br/>
+[in] TRUE per visualizzare la scheda; in caso contrario, FALSE.  
   
- [in] *bSetActive*  
- TRUE per rendere la scheda nella scheda attiva; in caso contrario, FALSE.  
+*bSetActive*<br/>
+[in] TRUE per rendere la scheda nella scheda attiva; in caso contrario, FALSE.  
   
- [in] *bDetachable*  
- True per rendere la scheda rimovibile; in caso contrario, FALSE.  
+*bDetachable*<br/>
+[in] True per rendere la scheda rimovibile; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro è stato aggiunto correttamente come una scheda e non è stato eliminato durante il processo. FALSE se il riquadro da aggiungere è un oggetto di tipo `CBaseTabbedPane`. Per altre informazioni, vedere la sezione Osservazioni.  
@@ -212,8 +212,8 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bUseTabIndexes*  
- Questo parametro viene utilizzato internamente dal framework.  
+*bUseTabIndexes*<br/>
+[in] Questo parametro viene utilizzato internamente dal framework.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework quando Ricarica ancoraggio le informazioni sullo stato dal Registro di sistema. Il metodo ottiene informazioni sull'ordine di tabulazione e i nomi delle schede per un riquadro a schede.  
@@ -249,8 +249,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bActiveTabOnly*  
- Quando si converte un riquadro a schede, specificare TRUE per convertire solo la scheda attiva. Specificare FALSE per convertire tutte le schede nel riquadro.  
+*bActiveTabOnly*<br/>
+[in] Quando si converte un riquadro a schede, specificare TRUE per convertire solo la scheda attiva. Specificare FALSE per convertire tutte le schede nel riquadro.  
   
 ##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane  
  Scollega un riquadro dal riquadro a schede.  
@@ -262,11 +262,11 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore al riquadro e quindi scollegare.  
+*pBar*<br/>
+[in] Puntatore al riquadro e quindi scollegare.  
   
- [in] *bHide*  
- Parametro booleano che specifica se il framework nasconde il riquadro dopo viene scollegato.  
+*bHide*<br/>
+[in] Parametro booleano che specifica se il framework nasconde il riquadro dopo viene scollegato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il framework correttamente scollega il riquadro attività. FALSE se *pBar* è NULL o fa riferimento a un riquadro in cui non si trova nel riquadro a schede.  
@@ -282,8 +282,8 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per sincronizzare la didascalia del riquadro a schede con una didascalia per la scheda attiva in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per sincronizzare la didascalia del riquadro a schede con una didascalia per la scheda attiva in caso contrario, FALSE.  
   
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
  Consente di ripristinare l'ordine di tabulazione interni in uno stato predefinito.  
@@ -303,8 +303,8 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uBarID*  
- Specifica l'ID del riquadro da trovare.  
+*uBarID*<br/>
+[in] Specifica l'ID del riquadro da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al riquadro se è stato trovato; in caso contrario, NULL.  
@@ -322,11 +322,11 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTabNum*  
- Specifica l'indice in base zero della scheda da recuperare.  
+*nTabNum*<br/>
+[in] Specifica l'indice in base zero della scheda da recuperare.  
   
- [in] *bGetWrappedBar*  
- TRUE per restituire la finestra sottostante (sottoposta a wrapping) del riquadro invece il riquadro stesso. in caso contrario, FALSE. Ciò vale solo per i riquadri derivati da [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
+*bGetWrappedBar*<br/>
+[in] TRUE per restituire la finestra sottostante (sottoposta a wrapping) del riquadro invece il riquadro stesso. in caso contrario, FALSE. Ciò vale solo per i riquadri derivati da [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
 ### <a name="return-value"></a>Valore restituito  
  Se viene trovato nel riquadro, viene restituito un puntatore valido per il riquadro viene eseguita la ricerca; in caso contrario, NULL.  
@@ -349,14 +349,14 @@ virtual BOOL FloatTab(
  [in] [out] *pBar*  
  Puntatore al riquadro e float.  
   
- [in] *nTabID*  
- Specifica l'indice in base zero della scheda a float.  
+*nTabID*<br/>
+[in] Specifica l'indice in base zero della scheda a float.  
   
- [in] *dockMethod*  
- Specifica il metodo da usare per spostare il riquadro. Per altre informazioni, vedere la sezione Osservazioni.  
+*dockMethod*<br/>
+[in] Specifica il metodo da usare per spostare il riquadro. Per altre informazioni, vedere la sezione Osservazioni.  
   
- [in] *bHide*  
- TRUE per nascondere il riquadro prima mobile. in caso contrario, FALSE.  
+*bHide*<br/>
+[in] TRUE per nascondere il riquadro prima mobile. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro resa; in caso contrario, FALSE.  
@@ -387,8 +387,8 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTabNum*  
- Un riferimento a un numero intero. Questo metodo scrive l'indice in base zero della prima scheda visualizzata da questo parametro, oppure -1 se non è visualizzata alcuna scheda viene trovata.  
+*iTabNum*<br/>
+[in] Un riferimento a un numero intero. Questo metodo scrive l'indice in base zero della prima scheda visualizzata da questo parametro, oppure -1 se non è visualizzata alcuna scheda viene trovata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se ha esito positivo, un puntatore alla prima scheda visualizzato; in caso contrario, NULL.  
@@ -401,8 +401,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *dimensioni*  
- Oggetto `CSize` oggetto che viene riempito con il valore minimo le dimensioni massime consentito.  
+*size*<br/>
+[out] Oggetto `CSize` oggetto che viene riempito con il valore minimo le dimensioni massime consentito.  
   
 ### <a name="remarks"></a>Note  
  Se una gestione coerente delle dimensioni riquadro minimo è attiva ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *dimensioni* viene riempita con il valore minimo consentito di dimensioni per la scheda attiva. In caso contrario, *dimensioni* viene riempita con il valore restituito [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
@@ -415,8 +415,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *dimensioni*  
- Oggetto `CSize` oggetto che viene riempito con il valore minimo le dimensioni massime consentito.  
+*size*<br/>
+[out] Oggetto `CSize` oggetto che viene riempito con il valore minimo le dimensioni massime consentito.  
   
 ### <a name="remarks"></a>Note  
  Se una gestione coerente delle dimensioni riquadro minimo è attiva ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *dimensioni* viene riempita con il valore minimo consentito di dimensioni per la scheda attiva. In caso contrario, *dimensioni* viene riempita con il valore restituito [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
@@ -431,11 +431,11 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *lst*  
- Oggetto `CObList` compilato con i riquadri contenuti nel riquadro a schede.  
+*lst*<br/>
+[out] Oggetto `CObList` compilato con i riquadri contenuti nel riquadro a schede.  
   
- [in] *pRTCFilter*  
- Se non è NULL, l'elenco restituito contiene solo i riquadri che appartengono alla classe di runtime specificato.  
+*pRTCFilter*<br/>
+[in] Se non è NULL, l'elenco restituito contiene solo i riquadri che appartengono alla classe di runtime specificato.  
   
 ##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
  Restituisce i rettangoli di delimitazione per le aree di scheda superiore e inferiore.  
@@ -447,11 +447,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rectTabAreaTop*  
- Riceve le coordinate dello schermo dell'area della scheda superiore.  
+*rectTabAreaTop*<br/>
+[out] Riceve le coordinate dello schermo dell'area della scheda superiore.  
   
- [out] *rectTabAreaBottom*  
- Riceve le coordinate dello schermo dell'area della scheda inferiore.  
+*rectTabAreaBottom*<br/>
+[out] Riceve le coordinate dello schermo dell'area della scheda inferiore.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per determinare i rettangoli di delimitazione, nelle coordinate dello schermo, per le aree della scheda superiore e inferiore.  
@@ -540,8 +540,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *il flag bAutoDestroy*  
- TRUE se il riquadro a schede che è stato creato in modo dinamico e non si controlla la sua durata; in caso contrario, FALSE.  
+*flag bAutoDestroy*<br/>
+[in] TRUE se il riquadro a schede che è stato creato in modo dinamico e non si controlla la sua durata; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Impostare l'auto-eliminare definitivamente la modalità su TRUE se si crea un riquadro a schede in modo dinamico e se non si controlla la durata. Se Elimina automaticamente la modalità è TRUE, il riquadro a schede viene distrutto automaticamente dal framework.  
@@ -558,17 +558,17 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore al riquadro per mostrare o nascondere.  
+*pBar*<br/>
+[in] Puntatore al riquadro per mostrare o nascondere.  
   
- [in] *bMostra*  
- TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.  
+*bMostra*<br/>
+[in] TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.  
   
- [in] *bDelay*  
- TRUE per ritardare la regolazione del layout della scheda; in caso contrario, FALSE.  
+*bDelay*<br/>
+[in] TRUE per ritardare la regolazione del layout della scheda; in caso contrario, FALSE.  
   
- [in] *bActivate*  
- TRUE per rendere la scheda nella scheda attiva; in caso contrario, FALSE.  
+*bActivate*<br/>
+[in] TRUE per rendere la scheda nella scheda attiva; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la scheda è stata sia visualizzata o nascosta correttamente. in caso contrario, FALSE.  
@@ -600,17 +600,17 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMode*  
- TRUE per abilitare la modalità Nascondi automaticamente. FALSE per abilitare la modalità di ancoraggio standard.  
+*bMode*<br/>
+[in] TRUE per abilitare la modalità Nascondi automaticamente. FALSE per abilitare la modalità di ancoraggio standard.  
   
- [in] *dwAlignment*  
- Specifica l'allineamento del riquadro Nascondi automaticamente che deve essere creato. Per un elenco di valori possibili, vedere [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
+*dwAlignment*<br/>
+[in] Specifica l'allineamento del riquadro Nascondi automaticamente che deve essere creato. Per un elenco di valori possibili, vedere [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
  [in] [out] *pCurrAutoHideBar*  
  Puntatore a barra Nascondi automaticamente corrente. Può essere NULL.  
   
- [in] *bUseTimer*  
- Specifica se utilizzare l'effetto di Nascondi automaticamente quando l'utente attiva il riquadro di modalità Nascondi automaticamente o per nascondere il riquadro immediatamente.  
+*bUseTimer*<br/>
+[in] Specifica se utilizzare l'effetto di Nascondi automaticamente quando l'utente attiva il riquadro di modalità Nascondi automaticamente o per nascondere il riquadro immediatamente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a barra Nascondi automaticamente che viene creato quando si passa alla modalità Nascondi automaticamente, oppure NULL se nessuna barra degli strumenti viene creata.  

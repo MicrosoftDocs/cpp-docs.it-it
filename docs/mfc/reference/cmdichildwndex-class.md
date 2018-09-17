@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677691"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726713"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
 Il `CMDIChildWndEx` classe fornisce la funzionalità di un Windows finestra figlio MDI (interfaccia) a documenti multipli. Estende la funzionalità del [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Il framework richiede questa classe quando un'applicazione MDI utilizza determinate classi MFC.  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Puntatore al riquadro.  
+*pControlBar*<br/>
+[in] Puntatore al riquadro.  
   
- [in] *bTail*  
- TRUE per aggiungere il riquadro alla fine dell'elenco di riquadri per il gestore di ancoraggio; in caso contrario, FALSE.  
+*bTail*<br/>
+[in] TRUE per aggiungere il riquadro alla fine dell'elenco di riquadri per il gestore di ancoraggio; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro è stato registrato correttamente con il gestore di ancoraggio; in caso contrario, FALSE.  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Puntatore al riquadro.  
+*pControlBar*<br/>
+[in] Puntatore al riquadro.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Regola il layout di ancoraggio.  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hdwp*  
- Handle per una struttura di posizione finestra posticipata.  
+*hdwp*<br/>
+[in] Handle per una struttura di posizione finestra posticipata.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore al riquadro.  
+*pBar*<br/>
+[in] Puntatore al riquadro.  
   
- [in] *nDockBarID*  
- L'ID del riquadro.  
+*nDockBarID*<br/>
+[in] L'ID del riquadro.  
   
- [in] *lpRect*  
- Un puntatore a un rettangolo.  
+*lpRect*<br/>
+[in] Un puntatore a un rettangolo.  
   
 ### <a name="remarks"></a>Note  
  Il *lpRect* parametro non viene utilizzato.  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwDockStyle*  
- Specifica i lati della finestra cornice principale che è abilitato. Usare uno o più dei flag seguenti.  
+*dwDockStyle*<br/>
+[in] Specifica i lati della finestra cornice principale che è abilitato. Usare uno o più dei flag seguenti.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwDockStyle*  
- Specifica l'allineamento di ancoraggio da abilitare.  
+*dwDockStyle*<br/>
+[in] Specifica l'allineamento di ancoraggio da abilitare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo; in caso contrario, FALSE.  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- L'ID del controllo del riquadro da trovare.  
+*nID*<br/>
+[in] L'ID del controllo del riquadro da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al riquadro, se trovato, in caso contrario, NULL.  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Puntatore al riquadro da inserire.  
+*pControlBar*<br/>
+[in] Puntatore al riquadro da inserire.  
   
- [in] *pTarget*  
- Puntatore al riquadro adiacente.  
+*pTarget*<br/>
+[in] Puntatore al riquadro adiacente.  
   
- [in] *bDopo*  
- Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.  
+*bDopo*<br/>
+[in] Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo, FALSE in caso contrario.  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Il punto specificato.  
+*punto*<br/>
+[in] Il punto specificato.  
   
- [in] *dwBarAlignment*  
- Specifica il bordo punto si avvicina. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Specifica il bordo punto si avvicina. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- TRUE se il punto è quasi il bordo esterno del sito di ancoraggio; FALSE in caso contrario.  
+*bOuterEdge*<br/>
+[in] TRUE se il punto è quasi il bordo esterno del sito di ancoraggio; FALSE in caso contrario.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il punto è quasi del sito di ancoraggio. in caso contrario, FALSE.  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pFrame*  
- Un puntatore a una finestra con mini-cornice.  
+*pFrame*<br/>
+[in] Un puntatore a una finestra con mini-cornice.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo, in caso contrario FALSE.  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bPreview*  
- Se TRUE, passare alla modalità di anteprima di stampa. Se FALSE, uscire dalla modalità di anteprima di stampa.  
+*bPreview*<br/>
+[in] Se TRUE, passare alla modalità di anteprima di stampa. Se FALSE, uscire dalla modalità di anteprima di stampa.  
   
- [in] *pState*  
- Puntatore alla struttura di stato di anteprima di stampa.  
+*pState*<br/>
+[in] Puntatore alla struttura di stato di anteprima di stampa.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Chiamato dal framework per aggiornare il titolo del frame.  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAddToTitle*  
- Se TRUE, aggiungere il nome del documento al titolo.  
+*bAddToTitle*<br/>
+[in] Se TRUE, aggiungere il nome del documento al titolo.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Restituisce il riquadro che contiene il punto specificato.  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Specifica il punto, nelle coordinate dello schermo, da controllare.  
+*punto*<br/>
+[in] Specifica il punto, nelle coordinate dello schermo, da controllare.  
   
- [in] *nSensitivity*  
- Aumentare l'area di ricerca di questo importo. Se il punto specificato cade nell'area di maggiore, un riquadro soddisfa i criteri di ricerca.  
+*nSensitivity*<br/>
+[in] Aumentare l'area di ricerca di questo importo. Se il punto specificato cade nell'area di maggiore, un riquadro soddisfa i criteri di ricerca.  
   
- [in] *bExactBar*  
- TRUE per ignorare la *nSensitivity* parametro; in caso contrario, FALSE.  
+*bExactBar*<br/>
+[in] TRUE per ignorare la *nSensitivity* parametro; in caso contrario, FALSE.  
   
- [in] *pRTCBarType*  
- Se non è NULL, il metodo cerca solo i riquadri del tipo specificato.  
+*pRTCBarType*<br/>
+[in] Se non è NULL, il metodo cerca solo i riquadri del tipo specificato.  
   
- [in] *dwAlignment*  
- Se viene trovato un riquadro in un momento specificato, questo parametro contiene il lato del riquadro che è stato più vicino al punto specificato. Per altre informazioni, vedere la sezione Osservazioni.  
+*dwAlignment*<br/>
+[in] Se viene trovato un riquadro in un momento specificato, questo parametro contiene il lato del riquadro che è stato più vicino al punto specificato. Per altre informazioni, vedere la sezione Osservazioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al `CBasePane`-oggetto derivato che contiene il punto specificato o NULL se è stato trovato alcun riquadro.  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bNotify*  
- Se TRUE, l'elemento sul posto attivo per la finestra riceve la notifica di modifica del layout.  
+*bNotify*<br/>
+[in] Se TRUE, l'elemento sul posto attivo per la finestra riceve la notifica di modifica del layout.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Rimuove un riquadro dal gestore di ancoraggio.  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Puntatore al riquadro da rimuovere.  
+*pControlBar*<br/>
+[in] Puntatore al riquadro da rimuovere.  
   
- [in] *bDestroy*  
- Se TRUE, il riquadro rimosso viene eliminato definitivamente.  
+*bDestroy*<br/>
+[in] Se TRUE, il riquadro rimosso viene eliminato definitivamente.  
   
- [in] *bAdjustLayout*  
- Se TRUE, modificare il layout di ancoraggio immediatamente.  
+*bAdjustLayout*<br/>
+[in] Se TRUE, modificare il layout di ancoraggio immediatamente.  
   
- [in] *bAutoHide*  
- Se TRUE, il layout di ancoraggio è correlato all'elenco di barre Nascondi automaticamente. Se FALSE, il layout di ancoraggio è correlato all'elenco di riquadri regolari.  
+*bAutoHide*<br/>
+[in] Se TRUE, il layout di ancoraggio è correlato all'elenco di barre Nascondi automaticamente. Se FALSE, il layout di ancoraggio è correlato all'elenco di riquadri regolari.  
   
- [in] *pBarReplacement*  
- Puntatore a un riquadro che sostituisce il riquadro rimosso.  
+*pBarReplacement*<br/>
+[in] Puntatore a un riquadro che sostituisce il riquadro rimosso.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- [in] *bMostra*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bMostra*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Note  
   

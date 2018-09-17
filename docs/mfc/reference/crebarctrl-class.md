@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717587"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 Incapsula la funzionalità di un controllo Rebar, ovvero un contenitore per una finestra figlio.  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *uBand*|Indice in base zero di un controllo rebar band.|  
-|[in] *cxWidth*|Nuova larghezza del controllo rebar band, in pixel.|  
+|*uBand*|[in] Indice in base zero di un controllo rebar band.|  
+|*cxWidth*|[in] Nuova larghezza del controllo rebar band, in pixel.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *dwMask*|Una combinazione bit per bit (OR) di flag che specificano quali flag nel *dwStyleEx* parametro applicabile. Usare uno o più dei valori seguenti:<br /><br /> RBS_EX_SPLITTER: Per impostazione predefinita, visualizzare la barra di divisione nella parte inferiore in modalità orizzontale e a destra in modalità verticale.<br /><br /> RBS_EX_TRANSPARENT: Inoltrare il [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) messaggio alla finestra padre.|  
-|[in] *dwStyleEx*|Una combinazione bit per bit (OR) di flag che specifica lo stile da applicare. Per impostare uno stile, specificare il flag stesso che viene utilizzato per la *dwMask* parametro. Per reimpostare uno stile, specificare zero binario.|  
+|*dwMask*|[in] Una combinazione bit per bit (OR) di flag che specificano quali flag nel *dwStyleEx* parametro applicabile. Usare uno o più dei valori seguenti:<br /><br /> RBS_EX_SPLITTER: Per impostazione predefinita, visualizzare la barra di divisione nella parte inferiore in modalità orizzontale e a destra in modalità verticale.<br /><br /> RBS_EX_TRANSPARENT: Inoltrare il [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) messaggio alla finestra padre.|  
+|*dwStyleEx*|[in] Una combinazione bit per bit (OR) di flag che specifica lo stile da applicare. Per impostare uno stile, specificare il flag stesso che viene utilizzato per la *dwMask* parametro. Per reimpostare uno stile, specificare zero binario.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Lo stile esteso precedente.  

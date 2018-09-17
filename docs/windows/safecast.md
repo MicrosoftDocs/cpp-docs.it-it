@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27c049b57d51f173e2a388e48f24d9b9674ae46b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2872f1639a11d537dd79b878a166a3afb5fd8667
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606097"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719169"
 ---
 # <a name="safecast"></a>SafeCast
 
@@ -40,11 +40,11 @@ inline bool SafeCast (
 
 ### <a name="parameters"></a>Parametri
 
-[in] *Da*  
-Il numero di origine da convertire. Deve essere di tipo `T`.
+*From*<br/>
+[in] Il numero di origine da convertire. Deve essere di tipo `T`.
 
-[out] *a*  
-Riferimento per il nuovo tipo di numero. Deve essere di tipo `U`.
+*Per*<br/>
+[out] Riferimento per il nuovo tipo di numero. Deve essere di tipo `U`.
 
 ## <a name="return-value"></a>Valore restituito
 

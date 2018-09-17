@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961555"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725192"
 ---
 # <a name="uniqueptr-class"></a>Classe unique_ptr
 
@@ -104,17 +104,17 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*A destra*  
- Oggetto `unique_ptr`.
+*A destra*<br/>
+Oggetto `unique_ptr`.
 
-*Nptr*  
- Oggetto `rvalue` di tipo `std::nullptr_t`.
+*Nptr*<br/>
+Oggetto `rvalue` di tipo `std::nullptr_t`.
 
-*PTR*  
- Oggetto `pointer`.
+*PTR*<br/>
+Oggetto `pointer`.
 
-*Metodo Deleter*  
- Funzione di `deleter` associata a un `unique_ptr`.
+*Metodo Deleter*<br/>
+Funzione di `deleter` associata a un `unique_ptr`.
 
 ## <a name="exceptions"></a>Eccezioni
 
@@ -348,8 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*  
- `unique_ptr` usato a puntatori swap.
+*right*<br/>
+`unique_ptr` usato a puntatori swap.
 
 ### <a name="remarks"></a>Note
 

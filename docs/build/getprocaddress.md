@@ -18,63 +18,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91fd6b983d648b682cbd60fa6126189e102b9f1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194359"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713725"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-I processi in modo esplicito il collegamento a una chiamata DLL [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione esportata nella DLL. Utilizzare il puntatore di funzione restituita per chiamare la funzione DLL. **GetProcAddress** accetta come parametri l'handle del modulo DLL (restituito da **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) e il nome della funzione da a chiamata o un numero ordinale di esportazione della funzione.  
-  
- Poiché si sta chiamando la funzione DLL tramite un puntatore ed è presente alcun controllo del tipo in fase di compilazione, assicurarsi che i parametri della funzione siano corretti in modo che non si oltrepassati la memoria allocata nello stack e provoca una violazione di accesso. Un modo per garantire l'indipendenza dai tipi è Esaminiamo i prototipi delle funzioni esportate e creare oggetti typedef corrispondenti per i puntatori a funzione. Ad esempio:  
-  
-```  
-typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);  
-...  
-  
-HINSTANCE hDLL;               // Handle to DLL  
-LPFNDLLFUNC1 lpfnDllFunc1;    // Function pointer  
-DWORD dwParam1;  
-UINT  uParam2, uReturnVal;  
-  
-hDLL = LoadLibrary("MyDLL");  
-if (hDLL != NULL)  
-{  
-   lpfnDllFunc1 = (LPFNDLLFUNC1)GetProcAddress(hDLL,  
-                                           "DLLFunc1");  
-   if (!lpfnDllFunc1)  
-   {  
-      // handle the error  
-      FreeLibrary(hDLL);  
-      return SOME_ERROR_CODE;  
-   }  
-   else  
-   {  
-      // call the function  
-      uReturnVal = lpfnDllFunc1(dwParam1, uParam2);  
-   }  
-}  
-```  
-  
- Come si specifica la funzione desiderata quando si chiama **GetProcAddress** dipende dal modo in cui è stata compilata la DLL.  
-  
- È possibile ottenere l'ordinale di esportazione solo se la DLL si collega a è compilata con un file di definizione (con estensione def) del modulo e se gli ordinali sono elencati con le funzioni nel **esportazioni** sezione del file def della DLL. La chiamata **GetProcAddress** con un'esportazione ordinale, anziché il nome della funzione, è leggermente più veloce se la DLL ha molte funzioni esportate, poiché gli ordinali di esportazione funzionano come indici della DLL di esportare una tabella. Con un ordinale di esportazione **GetProcAddress** può individuare la funzione direttamente anziché confrontare il nome specificato per i nomi delle funzioni nella tabella di esportazione della DLL. Tuttavia, è necessario chiamare **GetProcAddress** con un ordinale di esportazione solo se si dispone di controllare l'assegnazione degli ordinali alle funzioni esportate nel file def.  
-  
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
-  
--   [Come collegare in modo implicito in una DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
-  
--   [Determinare quale metodo di collegamento da utilizzare](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
-  
--   [LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
-  
--   [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)  
-  
--   [Esportazione da una DLL tramite i file DEF](../build/exporting-from-a-dll-using-def-files.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [DLL in Visual C++](../build/dlls-in-visual-cpp.md)
+
+I processi in modo esplicito il collegamento a una chiamata DLL [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione esportata nella DLL. Utilizzare il puntatore di funzione restituita per chiamare la funzione DLL. **GetProcAddress** accetta come parametri l'handle del modulo DLL (restituito da **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) e il nome della funzione da a chiamata o un numero ordinale di esportazione della funzione.
+
+Poiché si sta chiamando la funzione DLL tramite un puntatore ed è presente alcun controllo del tipo in fase di compilazione, assicurarsi che i parametri della funzione siano corretti in modo che non si oltrepassati la memoria allocata nello stack e provoca una violazione di accesso. Un modo per garantire l'indipendenza dai tipi è Esaminiamo i prototipi delle funzioni esportate e creare oggetti typedef corrispondenti per i puntatori a funzione. Ad esempio:
+
+```
+typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
+...
+
+HINSTANCE hDLL;               // Handle to DLL
+LPFNDLLFUNC1 lpfnDllFunc1;    // Function pointer
+DWORD dwParam1;
+UINT  uParam2, uReturnVal;
+
+hDLL = LoadLibrary("MyDLL");
+if (hDLL != NULL)
+{
+   lpfnDllFunc1 = (LPFNDLLFUNC1)GetProcAddress(hDLL,
+                                           "DLLFunc1");
+   if (!lpfnDllFunc1)
+   {
+      // handle the error
+      FreeLibrary(hDLL);
+      return SOME_ERROR_CODE;
+   }
+   else
+   {
+      // call the function
+      uReturnVal = lpfnDllFunc1(dwParam1, uParam2);
+   }
+}
+```
+
+Come si specifica la funzione desiderata quando si chiama **GetProcAddress** dipende dal modo in cui è stata compilata la DLL.
+
+È possibile ottenere l'ordinale di esportazione solo se la DLL si collega a è compilata con un file di definizione (con estensione def) del modulo e se gli ordinali sono elencati con le funzioni nel **esportazioni** sezione del file def della DLL. La chiamata **GetProcAddress** con un'esportazione ordinale, anziché il nome della funzione, è leggermente più veloce se la DLL ha molte funzioni esportate, poiché gli ordinali di esportazione funzionano come indici della DLL di esportare una tabella. Con un ordinale di esportazione **GetProcAddress** può individuare la funzione direttamente anziché confrontare il nome specificato per i nomi delle funzioni nella tabella di esportazione della DLL. Tuttavia, è necessario chiamare **GetProcAddress** con un ordinale di esportazione solo se si dispone di controllare l'assegnazione degli ordinali alle funzioni esportate nel file def.
+
+## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+
+- [Come collegare in modo implicito in una DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+
+- [Determinare quale metodo di collegamento da utilizzare](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
+
+- [LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+
+- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+
+- [Esportazione da una DLL tramite i file DEF](../build/exporting-from-a-dll-using-def-files.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[DLL in Visual C++](../build/dlls-in-visual-cpp.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540449"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714207"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Sezione specifica Microsoft**  
@@ -39,14 +39,14 @@ unsigned __int64 __shiftright128(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `LowPart`  
- I 64 bit meno significativi della quantità di 128 bit da spostare.  
+*ParteBassa*<br/>
+[in] 64 bit meno significativi della quantità di 128 bit da spostare.  
   
- [in] `HighPart`  
- I 64 bit più significativi della quantità di 128 bit da spostare.  
+*HighPart*<br/>
+[in] I 64 bit alti della quantità di 128 bit da spostare.  
   
- [in] `Shift`  
- Numero di bit da spostare.  
+*MAIUSC*<br/>
+[in] Il numero di bit da spostare.  
   
 ## <a name="return-value"></a>Valore restituito  
  I 64 bit meno significativi del risultato.  

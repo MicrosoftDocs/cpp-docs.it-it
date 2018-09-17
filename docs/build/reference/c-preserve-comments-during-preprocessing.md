@@ -1,5 +1,5 @@
 ---
-title: -C (conserva i commenti durante la pre-elaborazione) | Documenti Microsoft
+title: -C (conserva i commenti durante la pre-elaborazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,57 +22,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 350addc63807a338eb451c14e52340ef67998f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20973969385d0b5c61872a12f4d0168420bc2eef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371255"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713182"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Conserva i commenti durante la pre-elaborazione)
-Conserva i commenti durante la pre-elaborazione.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/C  
-```  
-  
-## <a name="remarks"></a>Note  
- L'opzione del compilatore richiede la **/E**, **/p**, o **/EP** opzione.  
-  
- Esempio di codice seguente verrà visualizzato il commento del codice sorgente.  
-  
-```  
-// C_compiler_option.cpp  
-// compile with: /E /C /c  
-int i;   // a variable  
-```  
-  
- In questo esempio verrà generato l'output seguente.  
-  
-```  
-#line 1 "C_compiler_option.cpp"  
-int i;   // a variable  
-```  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic su di **preprocessore** pagina delle proprietà.  
-  
-4.  Modificare il **Mantieni commenti** proprietà.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [/E (pre-elabora in stdout)](../../build/reference/e-preprocess-to-stdout.md)   
- [/P (pre-elaborazione in un File)](../../build/reference/p-preprocess-to-a-file.md)   
- [/EP (pre-elabora in stdout senza direttive #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+
+Conserva i commenti durante la pre-elaborazione.
+
+## <a name="syntax"></a>Sintassi
+
+```
+/C
+```
+
+## <a name="remarks"></a>Note
+
+Questa opzione del compilatore richiede la **/E**, **/P**, o **/EP** opzione.
+
+Esempio di codice seguente visualizzerà il commento del codice sorgente.
+
+```
+// C_compiler_option.cpp
+// compile with: /E /C /c
+int i;   // a variable
+```
+
+In questo esempio verrà generato l'output seguente.
+
+```
+#line 1 "C_compiler_option.cpp"
+int i;   // a variable
+```
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Fare clic sulla cartella **C/C++** .
+
+1. Scegliere il **preprocessore** pagina delle proprietà.
+
+1. Modificare il **Mantieni commenti** proprietà.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[/E (pre-elabora in stdout)](../../build/reference/e-preprocess-to-stdout.md)
+[/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md)
+[/EP (pre-elabora in stdout senza direttive #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

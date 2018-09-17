@@ -1,5 +1,5 @@
 ---
-title: -ERRORREPORT (editbin.exe) | Documenti Microsoft
+title: -ERRORREPORT (editbin.exe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61113d7260c11b3eb73db1f25445a6a0050c52d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b38171db494a0d90bdb46491451dd1e7216d729d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372295"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718354"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
-```  
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]  
-```  
-  
-## <a name="remarks"></a>Note  
- Se editbin.exe non riesce in fase di esecuzione, è possibile utilizzare **/ERRORREPORT** per inviare informazioni a Microsoft informazioni su questi errori interni.  
-  
- Per ulteriori informazioni su **/ERRORREPORT**, vedere [/errorReport (segnala interni del compilatore gli errori)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
+```
+
+## <a name="remarks"></a>Note
+
+Se editbin.exe ha esito negativo in fase di esecuzione, è possibile usare **/ERRORREPORT** per inviare informazioni a Microsoft informazioni su questi errori interni.
+
+Per altre informazioni sulle **/ERRORREPORT**, vedere [/errorReport (segnala interni del compilatore gli errori)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni di EDITBIN](../../build/reference/editbin-options.md)

@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: afd9c9e8069d6140b66a38f4686f562533dd5c21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761017"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722709"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (classe)
 Incapsula la finestra di dialogo comune che viene usato per i file aperti o le operazioni di salvataggio.  
@@ -522,29 +522,29 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bOpenFileDialog*  
- Il parametro che specifica il tipo di finestra di dialogo per creare. Impostarla su TRUE per costruire una **Apri File** nella finestra di dialogo. Impostarla su FALSE per costruire una **Salva con nome File** nella finestra di dialogo.  
+*bOpenFileDialog*<br/>
+[in] Il parametro che specifica il tipo di finestra di dialogo per creare. Impostarla su TRUE per costruire una **Apri File** nella finestra di dialogo. Impostarla su FALSE per costruire una **Salva con nome File** nella finestra di dialogo.  
   
- [in] *lpszDefExt*  
- Estensione di file predefinita. Se l'utente non include un'estensione nota (uno che dispone di un'associazione nel computer dell'utente) nella casella Nome file, l'estensione specificata da *lpszDefExt* viene automaticamente aggiunto al nome del file. Se questo parametro è NULL, non viene aggiunto estensione.  
+*lpszDefExt*<br/>
+[in] L'estensione file predefinita. Se l'utente non include un'estensione nota (uno che dispone di un'associazione nel computer dell'utente) nella casella Nome file, l'estensione specificata da *lpszDefExt* viene automaticamente aggiunto al nome del file. Se questo parametro è NULL, non viene aggiunto estensione.  
   
- [in] *lpszFileName*  
- Nome file iniziale che viene visualizzato nella casella Nome file. Se NULL, viene visualizzato alcun nome file iniziale.  
+*lpszFileName*<br/>
+[in] Nome file iniziale che viene visualizzato nella casella Nome file. Se NULL, viene visualizzato alcun nome file iniziale.  
   
- [in] *dwFlags*  
- Una combinazione di uno o più flag utilizzabili per personalizzare la finestra di dialogo. Per una descrizione di questi flag, vedere la [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struttura nel SDK di Windows. Se si modifica il `m_ofn.Flags` struttura membro, usare un operatore OR bit per bit delle modifiche per mantenere intatte le impostazioni predefinite.  
+*dwFlags*<br/>
+[in] Una combinazione di uno o più flag utilizzabili per personalizzare la finestra di dialogo. Per una descrizione di questi flag, vedere la [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struttura nel SDK di Windows. Se si modifica il `m_ofn.Flags` struttura membro, usare un operatore OR bit per bit delle modifiche per mantenere intatte le impostazioni predefinite.  
   
- [in] *lpszFilter*  
- Una serie di coppie di stringhe che specificano i filtri è possibile applicare al file. Se si specificano i filtri dei file, verranno visualizzati solo i file che corrispondono ai criteri di filtro nell'elenco dei file. Vedere la sezione Osservazioni per altre informazioni su come usare i filtri di file.  
+*lpszFilter*<br/>
+[in] Una serie di coppie di stringhe che specificano i filtri è possibile applicare al file. Se si specificano i filtri dei file, verranno visualizzati solo i file che corrispondono ai criteri di filtro nell'elenco dei file. Vedere la sezione Osservazioni per altre informazioni su come usare i filtri di file.  
   
- [in] *pParentWnd*  
- Puntatore alla finestra padre o proprietaria della finestra di dialogo file.  
+*pParentWnd*<br/>
+[in] Puntatore alla finestra padre o proprietaria della finestra di dialogo file.  
   
- [in] *dwSize diverso da*  
- Le dimensioni del `OPENFILENAME` struttura. Questo valore dipende dalla versione del sistema operativo. MFC usato questo parametro per determinare il tipo di finestra di dialogo per creare appropriato. Le dimensioni predefinite pari a 0 indica che il codice MFC determinano le dimensioni di finestra dialogo corretto da usare in base alla versione del sistema operativo in cui viene eseguito il programma.  
+*dwSize diverso da*<br/>
+[in] Le dimensioni del `OPENFILENAME` struttura. Questo valore dipende dalla versione del sistema operativo. MFC usato questo parametro per determinare il tipo di finestra di dialogo per creare appropriato. Le dimensioni predefinite pari a 0 indica che il codice MFC determinano le dimensioni di finestra dialogo corretto da usare in base alla versione del sistema operativo in cui viene eseguito il programma.  
   
- [in] *bVistaStyle*  
- **Nota** questo parametro è disponibile in Visual Studio 2008 e versioni successive e sarà essere utilizzata solo se si eseguono in Windows Vista o versioni successive la finestra di dialogo Nuovo stile.  
+*bVistaStyle*<br/>
+[in] **Nota** questo parametro è disponibile in Visual Studio 2008 e versioni successive e sarà essere utilizzata solo se si eseguono in Windows Vista o versioni successive la finestra di dialogo Nuovo stile.  
   
  Il parametro che specifica lo stile della finestra di dialogo file. Impostarla su true per usare il nuovo stile Vista finestre di dialogo file. In caso contrario, verrà utilizzato il vecchio stile delle finestre di dialogo. Vedere la sezione Osservazioni per altre informazioni in esecuzione in Vista.  
   
@@ -1346,11 +1346,11 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- L'ID del controllo per cui impostare il testo.  
+*nID*<br/>
+[in] L'ID del controllo per cui impostare il testo.  
   
- [in] *lpsz*  
- Un puntatore a una stringa che contiene il testo da impostare per il controllo.  
+*lpsz*<br/>
+[in] Un puntatore a una stringa che contiene il testo da impostare per il controllo.  
   
 ### <a name="remarks"></a>Note  
  Entrambe le versioni di questa funzione sono valide per le applicazioni che utilizzano la codifica Unicode. Tuttavia, solo la versione con il tipo LPCSTR è valida per le applicazioni che utilizzano ANSI.  
@@ -1435,17 +1435,17 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nWin3ID*  
- Contiene il numero di ID della risorsa modello per il non-Explorer `CFileDialog` oggetto. Questo modello viene utilizzato solo in Windows NT 3.51 o quando lo stile OFN_EXPLORER non è presente.  
+*nWin3ID*<br/>
+[in] Contiene il numero di ID della risorsa modello per il non-Explorer `CFileDialog` oggetto. Questo modello viene utilizzato solo in Windows NT 3.51 o quando lo stile OFN_EXPLORER non è presente.  
   
- [in] *nWin4ID*  
- Contiene il numero di ID di risorsa modello per Esplora `CFileDialog` oggetto. Questo modello viene utilizzato solo in Windows NT 4.0 e versioni successive, Windows 95 e versioni successive, o quando lo stile OFN_EXPLORER è presente.  
+*nWin4ID*<br/>
+[in] Contiene il numero di ID di risorsa modello per Esplora `CFileDialog` oggetto. Questo modello viene utilizzato solo in Windows NT 4.0 e versioni successive, Windows 95 e versioni successive, o quando lo stile OFN_EXPLORER è presente.  
   
- [in] *lpWin3ID*  
- Contiene il nome della risorsa modello per il non-Explorer `CFileDialog` oggetto. Questo modello viene utilizzato solo in Windows NT 3.51 o quando lo stile OFN_EXPLORER non è presente.  
+*lpWin3ID*<br/>
+[in] Contiene il nome della risorsa modello per il non-Explorer `CFileDialog` oggetto. Questo modello viene utilizzato solo in Windows NT 3.51 o quando lo stile OFN_EXPLORER non è presente.  
   
- [in] *lpWin4ID*  
- Contiene il nome della risorsa modello di Esplora `CFileDialog` oggetto. Questo modello viene utilizzato solo in Windows NT 4.0 e versioni successive, Windows 95 e versioni successive, o quando lo stile OFN_EXPLORER è presente.  
+*lpWin4ID*<br/>
+[in] Contiene il nome della risorsa modello di Esplora `CFileDialog` oggetto. Questo modello viene utilizzato solo in Windows NT 4.0 e versioni successive, Windows 95 e versioni successive, o quando lo stile OFN_EXPLORER è presente.  
   
 ### <a name="remarks"></a>Note  
  Il sistema userà solo uno dei modelli specificati. Il sistema determina il modello da usare in base alla presenza di stile OFN_EXPLORER e il sistema operativo in esecuzione l'applicazione in. Se si specifica sia un non-Explorer e un modello di tipo Esplora risorse, è facile supportare Windows NT 3.51, Windows NT 4.0 e versioni successive e Windows 95 e versioni successive.  

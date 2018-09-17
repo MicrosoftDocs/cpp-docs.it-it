@@ -1,5 +1,5 @@
 ---
-title: -Y (intestazioni precompilate) | Documenti Microsoft
+title: -Y (intestazioni precompilate) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4b4a7dc2d20442bacc34c7af0a9341e601b3da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e82d880dbb523a37c34e4b42d223345121e8b9a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377538"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715354"
 ---
 # <a name="y-precompiled-headers"></a>/Y (Intestazioni precompilate)
-Le seguenti opzioni del compilatore influenzano la generazione e l'utilizzo delle intestazioni precompilate:  
-  
--   [/Y/ (ignora le opzioni dell'intestazione precompilata)](../../build/reference/y-ignore-precompiled-header-options.md)  
-  
--   [/Yc (crea il file di intestazione precompilato)](../../build/reference/yc-create-precompiled-header-file.md)  
-  
--   [/Yd (inserisce le informazioni di debug nel file oggetto)](../../build/reference/yd-place-debug-information-in-object-file.md)  
-  
--   [/Yl (inserisce il riferimento PCH per la libreria di debug)](../../build/reference/yl-inject-pch-reference-for-debug-library.md)  
-  
--   [/Yu (usa il file di intestazione precompilato)](../../build/reference/yu-use-precompiled-header-file.md)  
-  
- Per informazioni dettagliate sull'uso di intestazioni precompilate, vedere [creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+Le seguenti opzioni del compilatore influenzano la generazione e l'utilizzo delle intestazioni precompilate:
+
+- [/Y/ (ignora le opzioni dell'intestazione precompilata)](../../build/reference/y-ignore-precompiled-header-options.md)
+
+- [/Yc (crea il file di intestazione precompilato)](../../build/reference/yc-create-precompiled-header-file.md)
+
+- [/Yd (inserisce le informazioni di debug nel file oggetto)](../../build/reference/yd-place-debug-information-in-object-file.md)
+
+- [/Yl (inserisce il riferimento PCH per la libreria di debug)](../../build/reference/yl-inject-pch-reference-for-debug-library.md)
+
+- [/Yu (usa il file di intestazione precompilato)](../../build/reference/yu-use-precompiled-header-file.md)
+
+Per informazioni dettagliate sull'uso di intestazioni precompilate, vedere [creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

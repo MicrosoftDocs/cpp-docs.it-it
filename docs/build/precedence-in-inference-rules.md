@@ -1,5 +1,5 @@
 ---
-title: Precedenza nelle regole di inferenza | Documenti Microsoft
+title: Precedenza nelle regole di inferenza | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d462d4222cbfc143dd7487d4cb6b1b8bb3ba3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4f2e7ff55e935b7e425b552ba85f47f134c6b80
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368486"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725231"
 ---
 # <a name="precedence-in-inference-rules"></a>Precedenza nelle regole di inferenza
-Se una regola di inferenza non è stata definita più volte, viene utilizzata la definizione di precedenza più alta. Nell'elenco seguente viene illustrato l'ordine di precedenza dalla più alta alla più bassa:  
-  
-1.  Una regola di inferenza definita in un makefile. le definizioni più recenti hanno la precedenza.  
-  
-2.  Una regola di inferenza definita in Tools.ini; le definizioni più recenti hanno la precedenza.  
-  
-3.  Una regola di inferenza predefiniti.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Regole di inferenza](../build/inference-rules.md)
+
+Se è definita più volte una regola di inferenza, NMAKE Usa la definizione di precedenza più alta. L'elenco seguente mostra l'ordine di precedenza dalla più alta alla più bassa:
+
+1. Una regola di inferenza dei tipi definita in un makefile. le definizioni più recenti hanno la precedenza.
+
+1. Una regola di inferenza dei tipi definita in Tools; ini. le definizioni più recenti hanno la precedenza.
+
+1. Una regola di inferenza predefinite.
+
+## <a name="see-also"></a>Vedere anche
+
+[Regole di inferenza](../build/inference-rules.md)

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eef400f13e36ac543fbcd73ccb7aedf4bc053037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222094"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718094"
 ---
 # <a name="cmfcfontinfo-class"></a>Classe CMFCFontInfo
 Il `CMFCFontInfo` classe descrive il nome e altri attributi di un tipo di carattere.  
@@ -94,23 +94,23 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszName*  
- Il nome del tipo di carattere. Per altre informazioni, vedere la `lfFaceName` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
+*lpszName*<br/>
+[in] Il nome del tipo di carattere. Per altre informazioni, vedere la `lfFaceName` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
   
- [in] *lpszScript*  
- Il nome dello script (set di caratteri) del tipo di carattere.  
+*lpszScript*<br/>
+[in] Il nome dello script (set di caratteri) del tipo di carattere.  
   
- [in] *nCharSet*  
- Un valore che specifica il set di caratteri (script) del tipo di carattere. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
+*nCharSet*<br/>
+[in] Un valore che specifica il set di caratteri (script) del tipo di carattere. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
   
- [in] *nPitchAndFamily*  
- Un valore che specifica passo e famiglia del tipo di carattere. Per altre informazioni, vedere la `lfPitchAndFamily` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
+*nPitchAndFamily*<br/>
+[in] Un valore che specifica passo e famiglia del tipo di carattere. Per altre informazioni, vedere la `lfPitchAndFamily` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
   
- [in] *NLE*  
- Un valore che specifica il tipo di carattere. Questo parametro può essere una combinazione bit per bit (OR) di DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
+*NLE*<br/>
+[in] Un valore che specifica il tipo di carattere. Questo parametro può essere una combinazione bit per bit (OR) di DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
   
- [in] *src*  
- Un oggetto esistente `CMFCFontInfo` i cui membri vengono usati per costruire l'oggetto `CMFCFontInfo` oggetto.  
+*src*<br/>
+[in] Un oggetto esistente `CMFCFontInfo` i cui membri vengono usati per costruire l'oggetto `CMFCFontInfo` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
   

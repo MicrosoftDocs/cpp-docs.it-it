@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545801"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719121"
 ---
 # <a name="codeseg"></a>code_seg
 Specifica il segmento di testo in cui le funzioni vengono archiviate nel file OBJ.  
@@ -34,6 +34,25 @@ Specifica il segmento di testo in cui le funzioni vengono archiviate nel file OB
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="paramters"></a>Parametri
+  
+**push**<br/>
+(Facoltativo) Inserisce un record nello stack del compilatore interno. Oggetto **push** può avere un *identifier* e *nome segmento*.  
+  
+**pop**<br/>
+(Facoltativo) Rimuove un record dall'inizio dello stack del compilatore interno.  
+  
+*identifier*<br/>
+(Facoltativo) Quando abbinata **push**, assegna un nome al record nello stack del compilatore interno. Quando abbinata **pop**, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
+  
+*Identificatore* consente di visualizzare con un solo record più **pop** comando.  
+  
+"*-nome del segmento*"<br/>  
+(Facoltativo) Il nome di un segmento. Quando abbinata **pop**, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento di testo attivo.  
+  
+"*-classe di segmento*"<br/>
+(Facoltativo) Ignorato, ma incluso per compatibilità con le versioni di C++ precedenti alla versione 2.0.  
+  
 ## <a name="remarks"></a>Note  
  
 Il **code_seg** direttiva pragma non controlla il posizionamento del codice oggetto generato per istanziati modelli, né il codice generato in modo implicito dal compilatore, ad esempio, le funzioni membro speciali. È consigliabile usare il [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) attributo poiché consente il controllo di selezione host di tutto il codice oggetto. È incluso il codice generato dal compilatore.  
@@ -43,24 +62,7 @@ Oggetto *segmento* in obj un file è un blocco denominato di dati che viene cari
 Il **code_seg** direttiva pragma indica al compilatore di inserire tutto il codice oggetto successivo dall'unità di conversione in un segmento di testo denominato *-nome del segmento*. Per impostazione predefinita, il segmento di testo utilizzato per le funzioni in un file OBJ viene denominato .text.  
   
 Oggetto **code_seg** direttiva pragma senza parametri Reimposta il nome del segmento di testo per il codice oggetto successivo su. Text.  
-  
-*push* (facoltativo)  
-Inserisce un record nello stack interno del compilatore. Oggetto *push* può avere un *identifier* e *nome segmento*.  
-  
-*POP* (facoltativo)  
-Rimuove un record dall'inizio dello stack interno del compilatore.  
-  
-*Identificatore* (facoltativo)  
-Quando abbinata *push*, assegna un nome al record nello stack del compilatore interno. Quando abbinata *pop*, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
-  
-*Identificatore* consente di visualizzare con un solo record più *pop* comando.  
-  
-"*-nome del segmento*" (facoltativo)  
-Nome di un segmento. Quando abbinata *pop*, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento di testo attivo.  
-  
-"*-classe di segmento*" (facoltativo)  
-Ignorato, ma incluso per compatibilità con le versioni di C++ precedenti alla versione 2.0.  
-  
+
 È possibile usare il [DUMPBIN. File EXE](../build/reference/dumpbin-command-line.md) dell'applicazione per visualizzare i file con estensione obj. Versioni di DUMPBIN per ogni architettura di destinazione supportati sono incluse con Visual Studio.  
   
 ## <a name="example"></a>Esempio  

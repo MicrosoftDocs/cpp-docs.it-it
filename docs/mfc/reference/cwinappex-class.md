@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538475"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720070"
 ---
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 `CWinAppEx` Gestisce lo stato dell'applicazione, Salva lo stato nel Registro di sistema, carica lo stato dal Registro di sistema, inizializza i gestori applicazione e vengono forniti collegamenti a tali gestori.  
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSectionName*  
- Stringa che contiene un percorso di una chiave del Registro di sistema.  
+*lpszSectionName*<br/>
+[in] Stringa che contiene un percorso di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bResourceSmartUpdate*  
- Un parametro booleano che specifica se l'oggetto dell'area di lavoro deve rilevare e gestire gli aggiornamenti delle risorse.  
+*bResourceSmartUpdate*<br/>
+[in] Un parametro booleano che specifica se l'oggetto dell'area di lavoro deve rilevare e gestire gli aggiornamenti delle risorse.  
   
 ### <a name="remarks"></a>Note  
  Il `CWinAppEx` classe dispone di metodi di inizializzazione, fornisce funzionalità per il salvataggio e caricamento delle informazioni dell'applicazione nel Registro di sistema e controlla le impostazioni globali dell'applicazione. Permette inoltre di utilizzare gestori globali, ad esempio la [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) e il [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md). Ogni applicazione può avere solo un'istanza del `CWinAppEx` classe.  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Specifica se l'applicazione carica le dimensioni iniziali e la posizione della finestra cornice principale dal Registro di sistema.  
+*bAttivare il*<br/>
+[in] Specifica se l'applicazione carica le dimensioni iniziali e la posizione della finestra cornice principale dal Registro di sistema.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, le dimensioni e la posizione del frame principale viene caricato dal Registro di sistema e le altre impostazioni dell'applicazione. Questo rientra [CWinAppEx::LoadState](#loadstate). Se non vuoi caricare il posizionamento della finestra iniziale dal Registro di sistema, chiamare questo metodo con *bAttivare il* impostato su FALSE.  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszRegEntry*  
- Stringa che contiene il percorso di una chiave del Registro di sistema. L'applicazione usa questa chiave del Registro di sistema per archiviare le informazioni per i menu a comparsa.  
+*lpszRegEntry*<br/>
+[in] Stringa che contiene il percorso di una chiave del Registro di sistema. L'applicazione usa questa chiave del Registro di sistema per archiviare le informazioni per i menu a comparsa.  
   
- [in] *uiCmdFirst*  
- Il primo tear menu ID.  
+*uiCmdFirst*<br/>
+[in] Il primo tear menu ID.  
   
- [in] *uiCmdLast*  
- L'ultimo tear menu ID.  
+*uiCmdLast*<br/>
+[in] L'ultimo tear menu ID.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il `CMenuTearOffManager` viene creato e inizializzato correttamente. FALSE se si verifica un errore o se il `CMenuTearOffManager` esiste già.  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdToolsDummy*  
- Intero senza segno che il framework utilizza come segnaposto per l'ID di comando del menu Strumenti utente.  
+*uiCmdToolsDummy*<br/>
+[in] Intero senza segno che il framework utilizza come segnaposto per l'ID di comando del menu Strumenti utente.  
   
- [in] *uiCmdFirst*  
- ID comando per il primo comando dello strumento di utente.  
+*uiCmdFirst*<br/>
+[in] ID comando per il primo comando dello strumento di utente.  
   
- [in] *uiCmdLast*  
- ID comando per l'ultimo comando dello strumento di utente.  
+*uiCmdLast*<br/>
+[in] ID comando per l'ultimo comando dello strumento di utente.  
   
- [in] *pToolRTC*  
- Classe che il `CUserToolsManager` oggetto utilizzato per creare nuovi strumenti utente.  
+*pToolRTC*<br/>
+[in] Classe che il `CUserToolsManager` oggetto utilizzato per creare nuovi strumenti utente.  
   
- [in] *uArgMenuID*  
- L'ID del menu di argomento.  
+*uArgMenuID*<br/>
+[in] L'ID del menu di argomento.  
   
- [in] *uInitDirMenuID*  
- L'ID del menu per la directory iniziale dello strumento.  
+*uInitDirMenuID*<br/>
+[in] L'ID del menu per la directory iniziale dello strumento.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo crea e Inizializza un `CUserToolsManager` ; dell'oggetto FALSE se il metodo ha esito negativo o se un `CUserToolsManager` oggetto esiste già.  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszEntry*  
- Stringa che contiene il nome di una chiave del Registro di sistema.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il nome di una chiave del Registro di sistema.  
   
- [out] *ppData*  
- Puntatore al buffer che il metodo viene compilato con i dati binari.  
+*ppData*<br/>
+[out] Puntatore al buffer che il metodo viene compilato con i dati binari.  
   
- [out] *pBytes*  
- Puntatore a un intero senza segno che il metodo utilizzato per scrivere il numero di byte letti.  
+*pBytes*<br/>
+[out] Puntatore a un intero senza segno che il metodo utilizzato per scrivere il numero di byte letti.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo. FALSE in caso contrario.  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszEntry*  
- Stringa che contiene il nome di una voce del Registro di sistema.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il nome di una voce del Registro di sistema.  
   
- [in] *nDefault*  
- Il valore predefinito che il metodo viene restituito se la voce del Registro di sistema specificato non esiste.  
+*nDefault*<br/>
+[in] Il valore predefinito che il metodo viene restituito se la voce del Registro di sistema specificato non esiste.  
   
 ### <a name="return-value"></a>Valore restituito  
  I dati del Registro di sistema se il metodo ha esito positivo; in caso contrario *nDefault*.  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszEntry*  
- Stringa che contiene il percorso relativo di una voce del Registro di sistema.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il percorso relativo di una voce del Registro di sistema.  
   
- [out] *obj*  
- Un riferimento a un `CObject`. Il metodo utilizza questo riferimento per archiviare i dati del Registro di sistema.  
+*obj*<br/>
+[out] Un riferimento a un `CObject`. Il metodo utilizza questo riferimento per archiviare i dati del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *szSectionAdd*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*szSectionAdd*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CString` che contiene il percorso assoluto di una chiave del Registro di sistema.  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSubSection*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszSubSection*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
- [in] *lpszEntry*  
- Stringa che contiene il valore da leggere.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il valore da leggere.  
   
- [out] *ppData*  
- Un puntatore al buffer in cui il metodo archivia i dati.  
+*ppData*<br/>
+[out] Un puntatore al buffer in cui il metodo archivia i dati.  
   
- [out] *pBytes*  
- Puntatore a un intero senza segno. Il metodo scrive il valore pari *ppData* per questo parametro.  
+*pBytes*<br/>
+[out] Puntatore a un intero senza segno. Il metodo scrive il valore pari *ppData* per questo parametro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSubSection*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszSubSection*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
- [in] *lpszEntry*  
- Stringa che contiene il valore da leggere.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il valore da leggere.  
   
- [in] *nDefault*  
- Il valore predefinito da restituire se il valore specificato non esiste.  
+*nDefault*<br/>
+[in] Il valore predefinito da restituire se il valore specificato non esiste.  
   
 ### <a name="return-value"></a>Valore restituito  
  I dati integer che viene archiviati nel valore del Registro di sistema. *nDefault* se i dati non esiste.  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSubSection*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszSubSection*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
- [in] *lpszEntry*  
- Stringa che contiene il valore da leggere.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il valore da leggere.  
   
- [out] *obj*  
- Un riferimento a un `CObject`. Il metodo Usa questo `CObject` per archiviare i dati del Registro di sistema.  
+*obj*<br/>
+[out] Un riferimento a un `CObject`. Il metodo Usa questo `CObject` per archiviare i dati del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSubSection*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszSubSection*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
- [in] *lpszEntry*  
- Stringa che contiene il valore da leggere.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il valore da leggere.  
   
- [in] *lpszDefault*  
- Il valore predefinito da restituire se il valore specificato non esiste.  
+*lpszDefault*<br/>
+[in] Il valore predefinito da restituire se il valore specificato non esiste.  
   
 ### <a name="return-value"></a>Valore restituito  
  I dati della stringa archiviati nel valore del Registro di sistema se i dati è presente. in caso contrario *lpszDefault*.  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszEntry*  
- Stringa che contiene il nome di una chiave del Registro di sistema  
+*lpszEntry*<br/>
+[in] Stringa che contiene il nome di una chiave del Registro di sistema  
   
- [in] *lpzDefault*  
- Il valore predefinito che il metodo viene restituito se la voce del Registro di sistema specificato non esiste.  
+*lpzDefault*<br/>
+[in] Il valore predefinito che il metodo viene restituito se la voce del Registro di sistema specificato non esiste.  
   
 ### <a name="return-value"></a>Valore restituito  
  I dati della stringa memorizzati nel Registro di sistema se ha esito positivo. *lpszDefault* in caso contrario.  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSectionName*  
- Stringa che contiene un percorso di una chiave del Registro di sistema.  
+*lpszSectionName*<br/>
+[in] Stringa che contiene un percorso di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la chiave nel Registro di sistema. in caso contrario 0.  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pFrame*  
- Puntatore a un oggetto finestra cornice. Il metodo si applica le informazioni sullo stato nel Registro di sistema a questa finestra cornice.  
+*pFrame*<br/>
+[in] Puntatore a un oggetto finestra cornice. Il metodo si applica le informazioni sullo stato nel Registro di sistema a questa finestra cornice.  
   
- [in] *lpszSectionName*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszSectionName*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
- [in] *pFrameImpl*  
- Un puntatore a un `CFrameImpl` oggetto. Il metodo si applica le informazioni sullo stato nel Registro di sistema a questa finestra cornice.  
+*pFrameImpl*<br/>
+[in] Un puntatore a un `CFrameImpl` oggetto. Il metodo si applica le informazioni sullo stato nel Registro di sistema a questa finestra cornice.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rectNormalPosition*  
- Rettangolo che contiene le coordinate della finestra cornice principale quando è nella posizione ripristinata.  
+*rectNormalPosition*<br/>
+[out] Rettangolo che contiene le coordinate della finestra cornice principale quando è nella posizione ripristinata.  
   
- [out] *nFlags*  
- Flag che controllano la posizione della finestra ridotta a icona e modo in cui il sistema operativo passa da una finestra ridotta a icona e una finestra ripristinata.  
+*nFlags*<br/>
+[out] Flag che controllano la posizione della finestra ridotta a icona e modo in cui il sistema operativo passa da una finestra ridotta a icona e una finestra ripristinata.  
   
- [out] *nShowCmd*  
- Valore intero che specifica lo stato di visualizzazione della finestra. Per altre informazioni sui possibili valori, vedere [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[out] Valore intero che specifica lo stato di visualizzazione della finestra. Per altre informazioni sui possibili valori, vedere [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndControl*  
- Puntatore a un oggetto finestra per cui l'utente richiamata Guida sensibile al contesto.  
+*pWndControl*<br/>
+[in] Puntatore a un oggetto finestra per cui l'utente richiamata Guida sensibile al contesto.  
   
- [in] *dwHelpIDArray]*  
- Un valore riservato.  
+*[] dwHelpIDArray*<br/>
+[in] Un valore riservato.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo è attualmente riservato per utilizzi futuri. L'implementazione predefinita non esegue alcuna operazione e attualmente non viene chiamato dal framework.  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pFrameImpl*  
- Un puntatore a un `CFrameImpl` oggetto.  
+*pFrameImpl*<br/>
+[in] Un puntatore a un `CFrameImpl` oggetto.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questo metodo salva lo stato del *pFrameImpl*.  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Un puntatore a un oggetto derivato dal [classe CView](../../mfc/reference/cview-class.md).  
+*pWnd*<br/>
+[in] Un puntatore a un oggetto derivato dal [classe CView](../../mfc/reference/cview-class.md).  
   
- [in] *iViewId*  
- L'ID di vista.  
+*iViewId*<br/>
+[in] L'ID di vista.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il framework rileva che un comando; in caso contrario, FALSE.  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pFrame*  
- Puntatore a una finestra cornice.  
+*pFrame*<br/>
+[in] Puntatore a una finestra cornice.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; 0 se il caricamento non riuscito o non vi è dati da caricare.  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSectionName*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszSectionName*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
- [in] *pFrameImpl*  
- Un puntatore a un `CFrameImpl` oggetto. Il frame viene salvato nel Registro di sistema di Windows.  
+*pFrameImpl*<br/>
+[in] Un puntatore a un `CFrameImpl` oggetto. Il frame viene salvato nel Registro di sistema di Windows.  
   
- [in] *pFrame*  
- Puntatore a un oggetto finestra cornice. Il frame viene salvato nel Registro di sistema di Windows.  
+*pFrame*<br/>
+[in] Puntatore a un oggetto finestra cornice. Il frame viene salvato nel Registro di sistema di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo. FALSE in caso contrario.  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSectionName*  
- Stringa che contiene il percorso di una chiave del Registro di sistema.  
+*lpszSectionName*<br/>
+[in] Stringa che contiene il percorso di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Stringa che contiene il percorso della posizione del Registro di sistema predefinito.  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiMenuResId*  
- Un ID di risorsa di menu.  
+*uiMenuResId*<br/>
+[in] Un ID di risorsa di menu.  
   
- [in] *punto*  
- Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica la posizione del menu di scelta in coordinate dello schermo.  
+*punto*<br/>
+[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica la posizione del menu di scelta in coordinate dello schermo.  
   
- [in] *pWnd*  
- Puntatore alla finestra proprietaria di menu di scelta rapida.  
+*pWnd*<br/>
+[in] Puntatore alla finestra proprietaria di menu di scelta rapida.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il menu di scelta rapida viene visualizzata correttamente. in caso contrario 0.  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nFlags*  
- Flag che controllano la posizione della finestra ridotta a icona e modo in cui il sistema operativo passa da una finestra ridotta a icona e una finestra ripristinata.  
+*nFlags*<br/>
+[in] Flag che controllano la posizione della finestra ridotta a icona e modo in cui il sistema operativo passa da una finestra ridotta a icona e una finestra ripristinata.  
   
- [in] *nShowCmd*  
- Valore intero che specifica lo stato di visualizzazione della finestra. Per altre informazioni sui possibili valori, vedere [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[in] Valore intero che specifica lo stato di visualizzazione della finestra. Per altre informazioni sui possibili valori, vedere [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [in] *rectNormalPosition*  
- Rettangolo che contiene le coordinate della finestra cornice principale quando è stato ripristinato.  
+*rectNormalPosition*<br/>
+[in] Rettangolo che contiene le coordinate della finestra cornice principale quando è stato ripristinato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszEntry*  
- Stringa che contiene il nome di una chiave del Registro di sistema.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il nome di una chiave del Registro di sistema.  
   
- [in] *pData*  
- I dati da archiviare.  
+*pData*<br/>
+[in] I dati da archiviare.  
   
- [in] *nBytes*  
- Il valore pari *pData* in byte.  
+*nBytes*<br/>
+[in] Il valore pari *pData* in byte.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszEntry*  
- Stringa che contiene il nome di una chiave del Registro di sistema.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il nome di una chiave del Registro di sistema.  
   
- [in] *nValore*  
- I dati da archiviare.  
+*nValore*<br/>
+[in] I dati da archiviare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszEntry*  
- Stringa che contiene il valore da impostare.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il valore da impostare.  
   
- [in] *obj*  
- Un riferimento a `CObject` data in cui verrà archiviato il metodo.  
+*obj*<br/>
+[in] Un riferimento a `CObject` data in cui verrà archiviato il metodo.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSubSection*  
- Stringa che contiene il nome di una chiave del Registro di sistema  
+*lpszSubSection*<br/>
+[in] Stringa che contiene il nome di una chiave del Registro di sistema  
   
- [in] *lpszEntry*  
- Stringa che contiene il valore da impostare.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il valore da impostare.  
   
- [in] *pData*  
- I dati da scrivere nel Registro di sistema.  
+*pData*<br/>
+[in] I dati da scrivere nel Registro di sistema.  
   
- [in] *nBytes*  
- Il valore pari *pData* in byte.  
+*nBytes*<br/>
+[in] Il valore pari *pData* in byte.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSubSection*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszSubSection*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
- [in] *lpszEntry*  
- Stringa che contiene il valore da impostare.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il valore da impostare.  
   
- [in] *nValore*  
- I dati da scrivere nel Registro di sistema.  
+*nValore*<br/>
+[in] I dati da scrivere nel Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSubSection*  
- Stringa che contiene il nome di una chiave del Registro di sistema.  
+*lpszSubSection*<br/>
+[in] Stringa che contiene il nome di una chiave del Registro di sistema.  
   
- [in] *lpszEntry*  
- Stringa che contiene il nome del valore da impostare.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il nome del valore da impostare.  
   
- [in] *obj*  
- I dati da archiviare.  
+*obj*<br/>
+[in] I dati da archiviare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszSubSection*  
- Stringa che contiene il nome di una chiave del Registro di sistema.  
+*lpszSubSection*<br/>
+[in] Stringa che contiene il nome di una chiave del Registro di sistema.  
   
- [in] *lpszEntry*  
- Stringa che contiene il valore da impostare.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il valore da impostare.  
   
- [in] *lpszValue*  
- I dati di stringa da scrivere nel Registro di sistema.  
+*lpszValue*<br/>
+[in] I dati di stringa da scrivere nel Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszEntry*  
- Stringa che contiene il nome di una chiave del Registro di sistema.  
+*lpszEntry*<br/>
+[in] Stringa che contiene il nome di una chiave del Registro di sistema.  
   
- [in] *lpszValue*  
- I dati da archiviare.  
+*lpszValue*<br/>
+[in] I dati da archiviare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  

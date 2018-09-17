@@ -1,5 +1,5 @@
 ---
-title: -analyze (Code Analysis) | Documenti Microsoft
+title: -analyze (analisi codice) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/26/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4893f30bae3b29538c8bead637cb4d083087a57b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89f0402eedbe6e49d6ce4095dc8c91ec69e15447
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376585"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723606"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (Analisi codice)
 
@@ -40,33 +40,25 @@ Abilita le opzioni di controllo e analisi del codice.
 
 ## <a name="arguments"></a>Argomenti
 
- /analyze  
- Abilita l'analisi nella modalità predefinita. Output di analisi viene il **Output** finestra come gli altri messaggi di errore. Utilizzare **/ANALYZE -** per disabilitare in modo esplicito l'analisi.
+/analyze Turns analisi nella modalità predefinita. Output di analisi viene il **Output** finestra come gli altri messaggi di errore. Uso **/ANALYZE -** disattivare in modo esplicito l'analisi.
 
- /analyze:WX-  
- Specifica di **/analyze: WX -** significa che gli avvisi di analisi del codice non viene considerati errori quando esegue la compilazione con **/WX**. Per altre informazioni, vedere [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Livello di avviso)](../../build/reference/compiler-option-warning-level.md).
+/analyze: WX-se si specifica **/analyze: WX -** significa che gli avvisi dell'analisi del codice non viene considerati come errori quando esegue la compilazione usando **/WX**. Per altre informazioni, vedere [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Livello di avviso)](../../build/reference/compiler-option-warning-level.md).
 
- /analyze:log `filename`  
- I risultati dettagliati dell'analizzatore vengono scritti in formato XML nel file specificato da `filename`.
+/analyze: log `filename` risultati dettagliati dell'analizzatore vengono scritti come XML nel file specificato da `filename`.
 
- /analyze:quiet  
- Disattiva l'output dell'analizzatore di **Output** finestra.
+/analyze: quiet Turns off output analyzer per il **Output** finestra.
 
- /analyze:stacksize `number`  
- Il `number` parametro utilizzato con questa opzione specifica la dimensione, in byte, del frame dello stack per il tipo di avviso [C6262](/visualstudio/code-quality/c6262) viene generato. Se questo parametro non viene specificato, le dimensioni dello stack frame sono 16 KB per impostazione predefinita.
+/analyze: stacksize `number` il `number` parametro che viene usato con questa opzione specifica la dimensione, espressa in byte, del frame dello stack per quali avviso [C6262](/visualstudio/code-quality/c6262) viene generato. Se questo parametro non viene specificato, le dimensioni dello stack frame sono 16 KB per impostazione predefinita.
 
- /analyze:max_paths `number`  
- Il parametro `number` utilizzato con questa opzione consente di specificare il numero massimo di percorsi di codice da analizzare. Se questo parametro non viene specificato, il numero è 256 per impostazione predefinita. Valore maggiori consentono di eseguire un controllo più accurato, ma l'analisi potrebbe richiedere più tempo.
+/analyze: max_paths `number` il `number` parametro che viene usato con questa opzione specifica il numero massimo di percorsi del codice da analizzare. Se questo parametro non viene specificato, il numero è 256 per impostazione predefinita. Valore maggiori consentono di eseguire un controllo più accurato, ma l'analisi potrebbe richiedere più tempo.
 
- /analyze:only  
- In genere, il compilatore genera codice ed esegue un controllo più accurato della sintassi dopo aver eseguito l'analizzatore. Il **/analyze: solo** opzione disattiva questo passaggio di generazione del codice; in questo modo, l'analisi più velocemente, ma non verranno generati errori di compilazione e gli avvisi che potrebbero essere rilevati dal passaggio di generazione di codice del compilatore. Se il programma non è privo di errori di generazione del codice, i risultati dell'analisi potrebbero essere inaffidabili. È pertanto consigliabile utilizzare questa opzione solo se il codice ha già superato il controllo della sintassi di generazione del codice senza errori.
+/analyze: only in genere, il compilatore genera il codice e viene ulteriori informazioni sulla sintassi verifica al termine dell'esecuzione dell'analizzatore. Il **/analyze: solo** opzione si disattiva questo passaggio di generazione del codice; in questo modo, l'analisi più velocemente, ma non vengono generati errori di compilazione e avvisi che potrebbero essere rilevati durante il passaggio di generazione di codice del compilatore. Se il programma non è privo di errori di generazione del codice, i risultati dell'analisi potrebbero essere inaffidabili. È pertanto consigliabile utilizzare questa opzione solo se il codice ha già superato il controllo della sintassi di generazione del codice senza errori.
 
- /analyze: set di regole `<file_path>.ruleset`  
-Consente di specificare quale regola imposta da analizzare, inclusi i set di regole personalizzate che è possibile creare personalmente. Quando questa opzione è impostata, il motore regole di business è più efficiente poiché vengono esclusi non membri del set prima dell'esecuzione di regole specificato. Quando l'opzione non è impostata, il motore controlla tutte le regole.
+/analyze: ruleset `<file_path>.ruleset` consente di specificare quale regola imposta da analizzare, compresi i set di regole personalizzate che è possibile creare personalmente. Quando questa opzione è impostata, il motore regole è più efficiente poiché vengono esclusi gli utenti non membri del set prima dell'esecuzione di regole specificato. Quando l'opzione non è impostata, il motore controlla tutte le regole.
 
-Sono inclusi gli oggetti ruleSet forniti con Visual Studio **%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule set.**
+Il set di regole forniti con Visual Studio si trovano nella **%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule set.**
 
-Il set di regole personalizzato di esempio seguente indica al motore regole di verificare la presenza di C6001 e C26494. È possibile posizionare questo file in un punto qualsiasi, purché ha un `.ruleset` estensione e si fornisce il percorso completo nell'argomento.
+Il set di regole personalizzate di esempio seguente indica al motore di regole per verificare la presenza C6001 e C26494. È possibile inserire questo file in un punto qualsiasi, purché abbia un `.ruleset` estensione e specifica il percorso completo nell'argomento.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -78,34 +70,34 @@ Il set di regole personalizzato di esempio seguente indica al motore regole di v
 </RuleSet>
 ```
 
-/analyze: plug-in  
-Consente i plug-in PREfast specificato come parte di analisi del codice viene eseguita. LocalEspC.dll è il plug-in che implementa l'analisi del codice correlato alla concorrenza controlla l'intervallo di C261XX avvisi. Ad esempio [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
+/analyze: plug-in consente il plug-in di PREfast specificato come parte dell'analisi codice viene eseguita.
+LocalEspC.dll è il plug-in che implementa l'analisi del codice correlati alla concorrenza controlla l'intervallo di C261XX avvisi. Ad esempio, [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
 
 Per eseguire LocalEspC.dll, usare l'opzione del compilatore: **/analyze: plug-in LocalEspC.dll**
 
-Per eseguire CppCoreCheck.dll, eseguire questo comando al prompt dei comandi per sviluppatori:
+Per eseguire CppCoreCheck.dll, eseguire questo comando da un prompt dei comandi per gli sviluppatori:
 
 ```cmd
 set Esp.Extensions=CppCoreCheck.dll
 ```
 
-Quindi utilizzare l'opzione del compilatore: **/analyze: plug-in EspXEngine.dll**.
+Quindi usare questa opzione del compilatore: **/analyze: plug-in EspXEngine.dll**.
 
 ## <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [analisi del codice per C/C++ Panoramica](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) e [analisi del codice per C/C++ avvisi](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).
+Per altre informazioni, vedere [analisi del codice per C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) e [analisi del codice per C/C++ avvisi](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Espandere il **le proprietà di configurazione** nodo.
+1. Espandere il nodo **Proprietà di configurazione**.
 
-1. Espandere il **analisi del codice** nodo.
+1. Espandere la **analisi del codice** nodo.
 
 1. Selezionare la pagina delle proprietà **Generale** .
 
-1. Modificare uno o più di **analisi del codice** proprietà.
+1. Modificare uno o più i **analisi del codice** proprietà.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 

@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765931"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721721"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 Pulsante della barra degli strumenti contenente un menu di scelta rapida.  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *src*  
- Un oggetto esistente `CMFCToolBarMenuButton` oggetto deve essere copiato `CMFCToolBarMenuButton` oggetto.  
+*src*<br/>
+[in] Un oggetto esistente `CMFCToolBarMenuButton` oggetto deve essere copiato `CMFCToolBarMenuButton` oggetto.  
   
- [in] *uiID*  
- L'ID del comando da eseguire quando un utente fa clic sul pulsante; o (UINT) -1 per un pulsante di menu che non esegue direttamente un comando.  
+*uiID*<br/>
+[in] L'ID del comando da eseguire quando un utente fa clic sul pulsante; o (UINT) -1 per un pulsante di menu che non esegue direttamente un comando.  
   
- [in] *hMenu*  
- Un handle a un menu. o NULL se il pulsante non ha un menu.  
+*hMenu*<br/>
+[in] Un handle a un menu. o NULL se il pulsante non ha un menu.  
   
- [in] *iImage*  
- Indice dell'immagine del pulsante; oppure -1 se questo pulsante non ha un'icona o si usa l'icona per il comando specificato dalla *uiID*. L'indice è la stessa per ogni `CMFCToolBarImages` oggetto nell'applicazione.  
+*iImage*<br/>
+[in] Indice dell'immagine del pulsante; oppure -1 se questo pulsante non ha un'icona o si usa l'icona per il comando specificato dalla *uiID*. L'indice è la stessa per ogni `CMFCToolBarImages` oggetto nell'applicazione.  
   
- [in] *lpszText*  
- Il testo del pulsante di menu della barra degli strumenti.  
+*lpszText*<br/>
+[in] Il testo del pulsante di menu della barra degli strumenti.  
   
- [in] *bUserButton*  
- TRUE se il pulsante Visualizza un'immagine definita dall'utente; FALSE se il pulsante Visualizza un'immagine predefinita associata al comando specificato da *uiID*.  
+*bUserButton*<br/>
+[in] TRUE se il pulsante Visualizza un'immagine definita dall'utente; FALSE se il pulsante Visualizza un'immagine predefinita associata al comando specificato da *uiID*.  
   
 ### <a name="remarks"></a>Note  
  Se *uiID* valido ID di comando, il pulsante esegue questo comando quando viene selezionato dall'utente. Se *hMenu* è un handle di menu validi, il pulsante fornisce un menu a discesa quando viene visualizzata una barra degli strumenti o un sottomenu quando viene visualizzato in un menu. Se entrambe *uiID* e *hMenu* validi, il pulsante è un pulsante di menu combinato con una parte che eseguirà il comando quando l'utente fa clic su di esso e una parte con una freccia verso il basso che verrà elenco a discesa un menu quando l'utente clic del mouse su di esso. Tuttavia, se *hMenu* valido, un utente non sarà in grado di fare clic sul pulsante per eseguire un comando quando il pulsante viene inserito in un menu.  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hMenu*  
- Handle a un menu.  
+*hMenu*<br/>
+[in] Handle a un menu.  
   
 ### <a name="remarks"></a>Note  
  Un pulsante di menu della barra degli strumenti è possibile visualizzare un sottomenu elenco a discesa.  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore al contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore al contesto di dispositivo.  
   
- [in] *rectImage*  
- Coordinate dell'immagine del rettangolo di delimitazione.  
+*rectImage*<br/>
+[in] Coordinate dell'immagine del rettangolo di delimitazione.  
   
- [in] *hIcon*  
- Handle dell'icona.  
+*hIcon*<br/>
+[in] Handle dell'icona.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo accetta l'icona del documento e lo disegna nel pulsante di menu, centrato nell'area specificata da *rectImage*.  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rectImage*  
- Un riferimento a un `CRect` oggetto che riceve le coordinate dell'immagine del rettangolo di delimitazione.  
+*rectImage*<br/>
+[out] Un riferimento a un `CRect` oggetto che riceve le coordinate dell'immagine del rettangolo di delimitazione.  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  Restituisce il numero di righe nel menu a discesa quando il menu di scelta è in modalità tavolozza.  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *sizeDefault*  
+*pDC*<br/>
+[in] [in] *sizeDefault*  
  [in] *bHorz*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- [in] *bDelay*  
+*pWnd*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rect*  
- [in] *pImages*  
- [in] *bHorz*  
- [in] *bCustomizeMode*  
- [in] *bHighlight*  
- [in] *bDrawBorder*  
- [in] *bGrayDisabledButtons*  
+*pDC*<br/>
+[in] [in] *rect*  
+*pImages*<br/>
+[in] [in] *bHorz*  
+*bCustomizeMode*<br/>
+[in] [in] *bHighlight*  
+*bDrawBorder*<br/>
+[in] [in] *bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Note  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rect*  
+*pDC*<br/>
+[in] [in] *rect*  
  [in] *bSelected*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Specifica la finestra che riceve i comandi di menu a discesa. Può essere NULL solo se il pulsante di menu della barra degli strumenti dispone di una finestra padre.  
+*pWnd*<br/>
+[in] Specifica la finestra che riceve i comandi di menu a discesa. Può essere NULL solo se il pulsante di menu della barra degli strumenti dispone di una finestra padre.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE quando un [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) oggetto è stato creato e aperto correttamente; in caso contrario, FALSE.  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMenuOnly*  
- TRUE per mostrare questo pulsante come un pulsante di menu quando ha un ID di comando valido e un sottomenu, FALSE per mostrare questo pulsante come un pulsante di menu combinato, quando ha un ID di comando valido e un sottomenu.  
+*bMenuOnly*<br/>
+[in] TRUE per mostrare questo pulsante come un pulsante di menu quando ha un ID di comando valido e un sottomenu, FALSE per mostrare questo pulsante come un pulsante di menu combinato, quando ha un ID di comando valido e un sottomenu.  
   
 ### <a name="remarks"></a>Note  
  In genere, quando un pulsante di menu della barra degli strumenti dispone di un sottomenu sia un ID di comando, il menu di scelta sembra essere un pulsante di menu combinato con un pulsante principale e un oggetto associato pulsante freccia giù. Se si chiama questo metodo e *bMenuOnly* è TRUE, il pulsante viene invece visualizzato come pulsante singolo menu con una freccia verso il basso del pulsante. Quando l'utente fa clic sulla freccia in entrambe le modalità, viene visualizzato il sottomenu e quando l'utente seleziona la parte non freccia del pulsante in entrambe le modalità il framework esegue il comando.  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMenuPaletteMode*  
- Specifica se il menu di scelta rapida è in modalità tavolozza.  
+*bMenuPaletteMode*<br/>
+[in] Specifica se il menu di scelta rapida è in modalità tavolozza.  
   
- [in] *nPaletteRows*  
- Numero di righe nella tavolozza.  
+*nPaletteRows*<br/>
+[in] Numero di righe nella tavolozza.  
   
 ### <a name="remarks"></a>Note  
  Nella modalità tavolozza, tutte le voci di menu vengono visualizzate come una tavolozza a più colonne. Specificare il numero di righe utilizzando *nPaletteRows*.  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiBarID*  
- Specifica un tear-off nuova barra ID.  
+*uiBarID*<br/>
+[in] Specifica un tear-off nuova barra ID.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per specificare l'ID per la barra a comparsa che viene creata quando l'utente trascina il pulsante di menu di fuori di una barra dei menu. Se il *uiBarID* parametro è 0, l'utente non può far scomparire il pulsante di menu.  

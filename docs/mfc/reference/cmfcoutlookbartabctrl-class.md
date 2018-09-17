@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541018"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718263"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Controllo Struttura a schede che presenta l'aspetto visivo del **Riquadro di navigazione** in Microsoft Outlook.  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndCtrl*  
- Puntatore a un controllo da aggiungere.  
+*pWndCtrl*<br/>
+[in] Puntatore a un controllo da aggiungere.  
   
- [in] *lpszName*  
- Specifica il nome della scheda.  
+*lpszName*<br/>
+[in] Specifica il nome della scheda.  
   
- [in] *bDetachable*  
- Se TRUE, la pagina verrà creata come rimovibile.  
+*bDetachable*<br/>
+[in] Se TRUE, la pagina verrà creata come rimovibile.  
   
- [in] *nImageID*  
- Indice dell'immagine nell'elenco immagini interno per l'immagine da visualizzare in una nuova scheda.  
+*nImageID*<br/>
+[in] Indice dell'immagine nell'elenco immagini interno per l'immagine da visualizzare in una nuova scheda.  
   
- [in] *dwControlBarStyle*  
- Specifica lo stile AFX _ CBRS _ * per i riquadri di ancoraggio con wrapping.  
+*dwControlBarStyle*<br/>
+[in] Specifica lo stile AFX _ CBRS _ * per i riquadri di ancoraggio con wrapping.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per aggiungere un controllo come una nuova pagina di una barra di outlook.  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Specifica le dimensioni iniziali e la posizione, espressa in pixel.  
+*Rect*<br/>
+[in] Specifica le dimensioni iniziali e la posizione, espressa in pixel.  
   
- [in] *pParentWnd*  
- Punta alla finestra padre. Non deve essere NULL.  
+*pParentWnd*<br/>
+[in] Punta alla finestra padre. Non deve essere NULL.  
   
- [in] *nID*  
- ID del controllo.  
+*nID*<br/>
+[in] ID del controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il controllo è stato creato correttamente. in caso contrario 0.  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Specifica se l'animazione deve essere abilitata o disabilitata.  
+*bAttivare il*<br/>
+[in] Specifica se l'animazione deve essere abilitata o disabilitata.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per attivare e disattivare l'animazione. Quando l'utente apre una pagina a schede, il titolo della pagina scorre verso l'alto o verso il basso se l'animazione è abilitata. Se l'animazione è disabilitata, la pagina diventa attiva immediatamente.  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Determina se vengono visualizzati i pulsanti di scorrimento.  
+*bAttivare il*<br/>
+[in] Determina se vengono visualizzati i pulsanti di scorrimento.  
   
- [in] *bIsUp*  
- Determina se viene visualizzata la barra di scorrimento principale.  
+*bIsUp*<br/>
+[in] Determina se viene visualizzata la barra di scorrimento principale.  
   
- [in] *bIsDown*  
- Determina se viene visualizzata la barra di scorrimento nella parte inferiore.  
+*bIsDown*<br/>
+[in] Determina se viene visualizzata la barra di scorrimento nella parte inferiore.  
   
 ### <a name="remarks"></a>Note  
  Consente di visualizzare i pulsanti di scorrimento. Questo metodo viene chiamato dal framework quando viene modificata la scheda attiva per ripristinare i pulsanti di scorrimento.  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda da aprire.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda da aprire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la scheda specificata è stata aperta correttamente. in caso contrario 0.  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nBorderSize*  
- Specifica la nuova dimensione del bordo espressa in pixel.  
+*nBorderSize*<br/>
+[in] Specifica la nuova dimensione del bordo espressa in pixel.  
   
 ### <a name="remarks"></a>Note  
  Imposta la nuova dimensione bordo e ricalcola il layout di finestra di outlook.  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiAlign*  
- Specifica l'allineamento del testo.  
+*uiAlign*<br/>
+[in] Specifica l'allineamento del testo.  
   
- [in] *bRedraw*  
- Se TRUE, la finestra di outlook viene ridisegnata.  
+*bRedraw*<br/>
+[in] Se TRUE, la finestra di outlook viene ridisegnata.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per modificare l'allineamento del testo per pulsanti pagina.  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- Specifica l'ID risorsa dell'immagine da caricare.  
+*uiID*<br/>
+[in] Specifica l'ID risorsa dell'immagine da caricare.  
   
- [in] *cx*  
- Specifica la larghezza di un'immagine nell'elenco delle immagini, in pixel.  
+*CX*<br/>
+[in] Specifica la larghezza di un'immagine nell'elenco delle immagini, in pixel.  
   
- [in] *clrTransp*  
- Un valore RGB che specifica il colore trasparente.  
+*clrTransp*<br/>
+[in] Un valore RGB che specifica il colore trasparente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se ha esito positivo. in caso contrario, restituisce FALSE.  

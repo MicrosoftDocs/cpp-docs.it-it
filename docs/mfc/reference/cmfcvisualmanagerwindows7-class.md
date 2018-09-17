@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538854"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720551"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe CMFCVisualManagerWindows7
 Il `CMFCVisualManagerWindows7` fornisce a un'applicazione l'aspetto di un'applicazione di Windows 7.  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pEdit*  
- Puntatore al controllo di modifica. Questo valore non può essere NULL.  
+*pEdit*<br/>
+[in] Puntatore al controllo di modifica. Questo valore non può essere NULL.  
   
- [out] *bIsHighlighted*  
- Restituisce se la casella della barra multifunzione è evidenziata.  
+*bIsHighlighted*<br/>
+[out] Restituisce se la casella della barra multifunzione è evidenziata.  
   
- [out] *bIsPaneHighlighted*  
- Restituisce TRUE se la barra multifunzione pannello che contiene *pEdit* è evidenziato.  
+*bIsPaneHighlighted*<br/>
+[out] Restituisce TRUE se la barra multifunzione pannello che contiene *pEdit* è evidenziato.  
   
- [out] *bIsDisabled*  
- Restituisce se *pEdit* è disabilitato.  
+*bIsDisabled*<br/>
+[out] Restituisce se *pEdit* è disabilitato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il colore di sfondo della casella di modifica *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore al contesto di dispositivo di un pulsante di menu.  
+*pDC*<br/>
+[in] Puntatore al contesto di dispositivo di un pulsante di menu.  
   
- [in] *pButton*  
- Un puntatore a un `CMFCToolBarButton`. Il framework riempie lo sfondo di questo pulsante.  
+*pButton*<br/>
+[in] Un puntatore a un `CMFCToolBarButton`. Il framework riempie lo sfondo di questo pulsante.  
   
- [in] *rect*  
- Un rettangolo che specifica i limiti dell'area del menu pulsante immagine.  
+*Rect*<br/>
+[in] Un rettangolo che specifica i limiti dell'area del menu pulsante immagine.  
   
- [in] *dello stato*  
- Lo stato del pulsante.  
+*state*<br/>
+[in] Lo stato del pulsante.  
   
 ### <a name="remarks"></a>Note  
   

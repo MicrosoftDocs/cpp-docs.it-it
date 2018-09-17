@@ -1,5 +1,5 @@
 ---
-title: Dump delle importazioni a caricamento ritardato | Documenti Microsoft
+title: Dump delle importazioni a caricamento ritardato | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f832f0ea7aaf7b766141ce7df4f83f21e1cdca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29f2faecb29da93729b0be0f40c00c18b82f6344
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372867"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720876"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Dump delle importazioni a caricamento ritardato
-Importazioni a caricamento ritardato possono essere eseguite utilizzando [dumpbin /imports](../../build/reference/imports-dumpbin.md) e comprende informazioni leggermente diverse rispetto a importazioni standard. Essi vengono separate in una sezione del dump /imports e sono etichettate in modo esplicito come importazioni a caricamento ritardato. Se non vi è scaricare informazioni presenti nell'immagine, che viene registrato. Se sono presenti informazioni di associazione presenti, l'indicatore di data e ora della DLL di destinazione viene indicato con gli indirizzi associati delle importazioni.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Importazioni a caricamento ritardato possono essere eseguite utilizzando [/imports dumpbin](../../build/reference/imports-dumpbin.md) e vengono visualizzati con informazioni leggermente diverse rispetto a importazioni standard. Essi vengono separate in relativa sezione del dump /imports e in modo esplicito sono contrassegnati come importazioni a caricamento ritardato. Se è presente scaricare informazioni presenti nell'immagine, che viene indicato. Se sono presenti informazioni di associazione presenti, l'indicatore di data e ora della DLL di destinazione viene indicata con gli indirizzi associati di importazioni.
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)

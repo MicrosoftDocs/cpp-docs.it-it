@@ -16,25 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f65b75ff7ad5af4f3552cec594497616922bd048
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 27a67430b82e1badc2beb5fecd72c55802e690cd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753750"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724360"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Stringhe, Creazione guidata pagina delle proprietà ATL
 
 Fornisce il testo associato alla proprietà pagina.
 
-**Titolo**  
-Imposta il testo visualizzato nella scheda della pagina delle proprietà.
+- **Titolo**
 
-**Stringa doc**  
-Imposta una stringa di testo che descrive la pagina. Questa stringa può essere visualizzata nella finestra di dialogo Proprietà finestra. Il frame di proprietà è stato possibile utilizzare la descrizione in una riga o una descrizione comandi di stato. Finestra delle proprietà standard attualmente non usa questa stringa.
+   Imposta il testo visualizzato nella scheda della pagina delle proprietà.
 
-**File della Guida**  
-Imposta il nome del file della Guida che descrive come usare la pagina delle proprietà. Questo nome non deve includere un percorso. Quando l'utente preme **aiutare**, il frame verrà aperto il file della Guida nella directory specificata nel valore della chiave HelpDir in voci del Registro di sistema della pagina delle proprietà del valore CLSID corrispondente.
+- **Stringa doc**
+
+   Imposta una stringa di testo che descrive la pagina. Questa stringa può essere visualizzata nella finestra di dialogo Proprietà finestra. Il frame di proprietà è stato possibile utilizzare la descrizione in una riga o una descrizione comandi di stato. Finestra delle proprietà standard attualmente non usa questa stringa.
+
+- **File della Guida**
+
+   Imposta il nome del file della Guida che descrive come usare la pagina delle proprietà. Questo nome non deve includere un percorso. Quando l'utente preme **aiutare**, il frame verrà aperto il file della Guida nella directory specificata nel valore della chiave HelpDir in voci del Registro di sistema della pagina delle proprietà del valore CLSID corrispondente.
 
 ## <a name="see-also"></a>Vedere anche
 

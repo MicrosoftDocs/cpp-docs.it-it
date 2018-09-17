@@ -1,5 +1,5 @@
 ---
-title: Le espressioni nella pre-elaborazione di Makefile | Documenti Microsoft
+title: Le espressioni nella pre-elaborazione di Makefile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a53e5e6fe45c2c846cae3fb9e973fe1c712107
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1070eb01802bd4b39f62ae24519ad6dabca7eb90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367268"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719005"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Espressioni nella pre-elaborazione di makefile
-Il **! Se** o **! ELSE IF** `constantexpression` composta costanti integer (in notazione decimale o in linguaggio C), le costanti di stringa o comandi. Utilizzare le parentesi per raggruppare le espressioni. Le espressioni utilizzano tipo C unsigned long integer aritmetici; i numeri sono nel formato a 32 bit in complemento a due nell'intervallo - 2147483648 e 2147483647.  
-  
- Le espressioni possono usare operatori che agiscono sui valori delle costanti, codici di uscita dei comandi, stringhe, macro e percorsi del file system.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
- [Operatori di pre-elaborazione di makefile](../build/makefile-preprocessing-operators.md)  
-  
- [L'esecuzione di un programma nella pre-elaborazione](../build/executing-a-program-in-preprocessing.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Pre-elaborazione di makefile](../build/makefile-preprocessing.md)
+
+Il **! IF** o **! Se INVECE** `constantexpression` consiste di costanti integer (in notazione decimale o del linguaggio C), le costanti di stringa o i comandi. Utilizzare le parentesi per raggruppare le espressioni. Le espressioni usare tipo C unsigned long integer aritmetico; i numeri sono in forma di 32 bit in complemento a due nell'intervallo - 2147483648 e 2147483647.
+
+Le espressioni possono usare operatori che agiscono sui valori delle costanti, i codici di uscita dai comandi, le stringhe, macro e percorsi del file system.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
+
+[Operatori di pre-elaborazione di makefile](../build/makefile-preprocessing-operators.md)
+
+[Esecuzione di un programma di pre-elaborazione](../build/executing-a-program-in-preprocessing.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Pre-elaborazione di makefile](../build/makefile-preprocessing.md)

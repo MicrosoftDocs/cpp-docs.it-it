@@ -18,28 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52f6aea7bb934f3dd7b3c42c2c13ff7939a8b168
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 17f44f972482aefda0c65c7599fa6a83b49c36fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316224"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723247"
 ---
 # <a name="grid-settings-dialog-box-c-image-editor-for-icons"></a>Finestra di dialogo Impostazioni griglia (Editor di immagini per le icone) (C++)
 
 Consente di specificare le impostazioni della griglia per l'immagine e visualizza le linee della griglia sull'immagine modificata. Le righe sono utili per la modifica dell'immagine, ma non vengono salvate come parte dell'immagine stessa.
 
-**Griglia in pixel**  
-Se selezionata, viene visualizzata una griglia attorno a ogni pixel nell'editor di immagini. La griglia viene visualizzata solo in 4 × e risoluzioni più alte.
+- **Griglia in pixel**
 
-**Griglia affiancata**  
-Se selezionata, viene visualizzata una griglia attorno a blocchi di pixel nell'editor di immagini, specificato dai valori di spaziatura della griglia.
+   Se selezionata, viene visualizzata una griglia attorno a ogni pixel nell'editor di immagini. La griglia viene visualizzata solo in 4 × e risoluzioni più alte.
 
-**Larghezza**  
-Specifica la larghezza di ogni blocco di riquadro. Ciò è utile quando si disegnano le bitmap che contiene più immagini disposti a intervalli regolari.
+- **Griglia affiancata**
 
-**Altezza**  
-Specifica l'altezza di ogni blocco di riquadro. Ciò è utile quando si disegnano le bitmap che contiene più immagini disposti a intervalli regolari.
+   Se selezionata, viene visualizzata una griglia attorno a blocchi di pixel nell'editor di immagini, specificato dai valori di spaziatura della griglia.
+
+- **Larghezza**
+
+   Specifica la larghezza di ogni blocco di riquadro. Ciò è utile quando si disegnano le bitmap che contiene più immagini disposti a intervalli regolari.
+
+- **Altezza**
+
+   Specifica l'altezza di ogni blocco di riquadro. Ciò è utile quando si disegnano le bitmap che contiene più immagini disposti a intervalli regolari.
 
 ## <a name="requirements"></a>Requisiti
 

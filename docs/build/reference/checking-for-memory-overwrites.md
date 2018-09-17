@@ -1,5 +1,5 @@
 ---
-title: Verificare la presenza di sovrascrittura di memoria | Documenti Microsoft
+title: Controllo della sovrascrittura di memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 258aa6ae01d48df6717135f7dc8b73fc3f9e697a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 246f625e899016080662f27a5901962c1c62f1a8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369851"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718648"
 ---
 # <a name="checking-for-memory-overwrites"></a>Controllo delle sovrascritture di memoria
-Se si verifica una violazione di accesso in una chiamata a una funzione di modifica di heap, è possibile che il programma ha danneggiato l'heap. Potrebbe essere un sintomo comune di questa situazione:  
-  
-```  
-Access Violation in _searchseg  
-```  
-  
- Il [heapchk](../../c-runtime-library/reference/heapchk.md) funzione è disponibile in entrambe le modalità di debug e di build di rilascio (solo Windows NT) per verificare l'integrità dell'heap della libreria di runtime. È possibile utilizzare `_heapchk` in modo analogo a come il `AfxCheckMemory` funzione per isolare la sovrascrittura di un heap, ad esempio:  
-  
-```  
-if(_heapchk()!=_HEAPOK)  
-   DebugBreak();  
-```  
-  
- Se questa funzione non viene eseguita correttamente, è necessario isolare a quel punto è stato danneggiato l'heap.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Correzione dei problemi della build di versione](../../build/reference/fixing-release-build-problems.md)
+
+Se si verifica una violazione di accesso in una chiamata a una funzione di manipolazione dell'heap, è possibile che il programma ha danneggiato l'heap. Potrebbe essere un sintomo di questa situazione comune:
+
+```
+Access Violation in _searchseg
+```
+
+Il [heapchk](../../c-runtime-library/reference/heapchk.md) funzione è disponibile in entrambe le modalità di debug e build di rilascio (solo Windows NT) per verificare l'integrità dell'heap della libreria di runtime. È possibile usare `_heapchk` in modo analogo a come il `AfxCheckMemory` funzione per isolare la sovrascrittura di un heap, ad esempio:
+
+```
+if(_heapchk()!=_HEAPOK)
+   DebugBreak();
+```
+
+Se questa funzione non viene eseguita correttamente, è necessario isolare a quel punto l'heap è danneggiato.
+
+## <a name="see-also"></a>Vedere anche
+
+[Correzione dei problemi della build di versione](../../build/reference/fixing-release-build-problems.md)

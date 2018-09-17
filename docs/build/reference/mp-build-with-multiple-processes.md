@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573240"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713427"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (compilazione con più processi)
 
@@ -127,7 +127,7 @@ Visual Studio Usa la [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) stru
 
 Il tempo di compilazione della soluzione dipende in parte dal numero di processi che eseguono la compilazione. Il *numero* argomento delle [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) opzione di MSBuild specifica il numero massimo di progetti da compilare contemporaneamente. Analogamente, il *processMax* argomento del **/MP** opzione del compilatore specifica il numero massimo di unità di compilazione per compilare contemporaneamente. Se il **/maxcpucount** opzione specifica *P* progetti e le **/MP** opzione specifica *C* processi, un massimo di *P*  x *C* eseguano i processi nello stesso momento.
 
- Le indicazioni per decidere se usare MSBuild o **/MP** tecnologia è come segue:
+Le indicazioni per decidere se usare MSBuild o **/MP** tecnologia è come segue:
 
 - Se sono presenti numerosi progetti con pochi file in ogni progetto, usare lo strumento MSBuild.
 

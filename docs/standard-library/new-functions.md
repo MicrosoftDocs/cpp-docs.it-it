@@ -7,12 +7,12 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: f930fb43ea554e1dd445dabb382adecc6f67e35f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6192805f0f427f86267a646b11d9f1d3365a1d57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964964"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716040"
 ---
 # <a name="ltnewgt-functions"></a>Funzioni &lt;new&gt;
 
@@ -46,7 +46,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Pnew*  
+*Pnew*<br/>
 Il `new_handler` da installare.
 
 ### <a name="return-value"></a>Valore restituito

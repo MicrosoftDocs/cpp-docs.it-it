@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724766"
 ---
 # <a name="event--c-component-extensions"></a>evento (Estensioni del componente C++)
 
@@ -157,7 +157,7 @@ Per creare e usare gli eventi in Visual C++, è necessario eseguire i passaggi s
 
    - Un evento creato dal delegato.
 
-   - (facoltativo) Un metodo che verifica che un'istanza del delegato dichiarata con la **evento** parola chiave è presente. In caso contrario, questa logica deve essere inserita nel codice che genera l'evento.
+   - (Facoltativo) Un metodo che verifica che un'istanza del delegato dichiarata con la **evento** parola chiave è presente. In caso contrario, questa logica deve essere inserita nel codice che genera l'evento.
 
    - Metodi che chiamano l'evento. Questi metodi possono essere override di alcune funzionalità della classe di base.
 

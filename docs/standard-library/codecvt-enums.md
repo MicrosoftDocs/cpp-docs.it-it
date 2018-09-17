@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: 033bf0393ba5f71ec4712eaa98164c269430dbc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 612570680bfacb2bc9c237c60b3e9f6c4f8266a8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850281"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725335"
 ---
 # <a name="ltcodecvtgt-enums"></a>Enumerazioni &lt;codecvt&gt;
 
@@ -26,7 +26,7 @@ enum codecvt_mode {
     consume_header = 4,
     generate_header = 2,
     little_endian = 1
- };
+};
 ```
 
 ### <a name="remarks"></a>Note

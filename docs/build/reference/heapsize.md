@@ -1,5 +1,5 @@
 ---
-title: HEAPSIZE | Documenti Microsoft
+title: HEAPSIZE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7fd45584cc83a1b5fbfc593959e04304c5aaeb3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5939828dbcd735e80535192687b91c22b06fd50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370947"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717665"
 ---
 # <a name="heapsize"></a>HEAPSIZE
-Espone la stessa funzionalità come il [/HEAP](../../build/reference/heap-set-heap-size.md) l'opzione del linker.  
-  
-```  
-/HEAP:reserve[,commit]  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)
+
+Espone la stessa funzionalità come la [/heap](../../build/reference/heap-set-heap-size.md) l'opzione del linker.
+
+```
+/HEAP:reserve[,commit]
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)

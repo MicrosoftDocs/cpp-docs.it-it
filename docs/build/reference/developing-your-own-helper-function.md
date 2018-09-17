@@ -1,5 +1,5 @@
 ---
-title: Funzione di supporto di sviluppo | Documenti Microsoft
+title: Sviluppo di una funzione Helper | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6b8e397fecc8f14140cd7c86217421d5aa1a749
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d95434c51bdfca07e48714c8c1e13bcdb64dc02f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371398"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716001"
 ---
 # <a name="developing-your-own-helper-function"></a>Sviluppo di una funzione di supporto personalizzata
-È possibile fornire la propria versione della routine per eseguire un'elaborazione specifica in base ai nomi delle DLL o importazioni. Esistono due metodi di questa operazione: codifica personalizzata, eventualmente in base al codice fornito, oppure l'associazione della versione fornita con gli hook di notifica dettagliati in precedenza.  
-  
- Codice personalizzati  
- Si tratta piuttosto semplice, poiché in pratica, è possibile utilizzare il codice fornito come linee guida per una nuova. Naturalmente, deve rispettare le convenzioni di chiamata e se viene restituito per il thunk generate dal linker, deve restituire un puntatore a funzione corretto. Una volta nel codice, è possibile eseguire praticamente desiderato per soddisfare la chiamata o ottenere dalla chiamata.  
-  
- Utilizzare l'inizio l'elaborazione di Hook di notifica  
- Probabilmente sarà più semplice fornire un nuovo puntatore a una funzione hook di notifica fornito dall'utente che riceve gli stessi valori di supporto predefinito nella notifica dliStartProcessing. A questo punto, la funzione hook può diventare essenzialmente la nuova funzione di supporto, come una restituzione ha esito positivo al supporto predefinito Ignora ulteriori attività di elaborazione nel supporto predefinito.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+È possibile fornire la propria versione della routine per eseguire elaborazioni specifiche in base ai nomi delle DLL o importazioni. Esistono due metodi di questa operazione: scrittura di codice personalizzata, eventualmente in base il codice fornito, oppure l'associazione della versione fornita con gli hook di notifica dettagliati in precedenza.
+
+## <a name="code-your-own"></a>Codice personalizzati
+
+Ciò è abbastanza semplice, poiché è possibile utilizzare il codice fornito essenzialmente come linea guida per quella nuova. Naturalmente, è necessario rispettare le convenzioni di chiamata e se viene restituito per il thunk generato dal linker, deve restituire un puntatore a funzione appropriata. Una volta nel codice, è possibile eseguire praticamente valore desiderato per soddisfare la chiamata o l'uscita da essa.
+
+## <a name="use-the-start-processing-notification-hook"></a>Usare l'inizio l'elaborazione di Hook di notifica
+
+Probabilmente sarà più semplice limitarsi a fornire un nuovo puntatore a una funzione di hook di notifica fornito dall'utente che riceve gli stessi valori di supporto predefinito su dliStartProcessing la notifica. A questo punto, la funzione hook essenzialmente può diventare la nuova funzione di supporto, come un caso di esito positivo al supporto predefinito possono ignorare ulteriori attività di elaborazione nell'helper predefinite.
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)

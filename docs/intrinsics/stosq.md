@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332026"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715507"
 ---
 # <a name="stosq"></a>__stosq
 **Sezione specifica Microsoft**  
@@ -41,14 +41,14 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [out] `Dest`  
- La destinazione dell'operazione.  
+*dest*<br/>
+[out] La destinazione dell'operazione.  
   
- [in] `Data`  
- I dati da archiviare.  
+*Dati*<br/>
+[in] I dati da archiviare.  
   
- [in] `Count`  
- La lunghezza del blocco di parole quadruple da scrivere.  
+*Conteggio*<br/>
+[in] La lunghezza del blocco di parole quadruple da scrivere.  
   
 ## <a name="requirements"></a>Requisiti  
   

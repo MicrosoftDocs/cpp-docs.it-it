@@ -1,5 +1,5 @@
 ---
-title: -SWAPRUN | Documenti Microsoft
+title: -SWAPRUN | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e8af5b23d2e6cd0759f75c4054e0a811f687e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a93b854dba2855fa68bb3be163cecdcd3570df0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375048"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723099"
 ---
 # <a name="swaprun"></a>/SWAPRUN
-```  
-/SWAPRUN:{[!]NET|[!]CD}  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa opzione consente di modificare l'immagine per indicare al sistema operativo di copiare l'immagine in un file di scambio ed eseguirlo da tale posizione. Utilizzare questa opzione per le immagini che si trovano su un supporto rimovibile o reti.  
-  
- È possibile aggiungere o rimuovere i qualificatori NET o CD:  
-  
--   NET indica che l'immagine si trova in una rete.  
-  
--   CD indica che si trova l'immagine in un CD-ROM o un supporto rimovibile simile.  
-  
--   Utilizzare! NET e! CD per invertire gli effetti del CD e NET.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/SWAPRUN:{[!]NET|[!]CD}
+```
+
+## <a name="remarks"></a>Note
+
+Questa opzione Modifica l'immagine per indicare al sistema operativo di copiare l'immagine in un file di scambio ed eseguirlo da tale posizione. Usare questa opzione per le immagini che si trovano in reti o su supporti rimovibili.
+
+È possibile aggiungere o rimuovere i qualificatori di rete o CD:
+
+- NET indica che l'immagine si trova in una rete.
+
+- CD indica che si trova l'immagine su CD-ROM o supporto rimovibile simile.
+
+- Usare! NET e! Distribuzione continua per ripristinare gli effetti del CD e NET.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni di EDITBIN](../../build/reference/editbin-options.md)

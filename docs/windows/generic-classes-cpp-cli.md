@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716781"
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 
@@ -47,8 +47,8 @@ class-body
 
 Nella sintassi riportata sopra, vengono usati i termini seguenti:
 
-*gli attributi* (facoltativo)  
-Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.
+*Attributi*  
+(Facoltativo) Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.
 
 *chiave di classi*  
 Entrambi **classe** o **typename**
@@ -58,7 +58,7 @@ Entrambi **classe** o **typename**
 *clausole di vincolo*  
 Un elenco (non virgole) di **in cui** clausole che specifica i vincoli per i parametri di tipo. Assume il formato:
 
-`where`  *il parametro-Type-identifier*`:`*-elenco di vincoli*  `...`
+> **in cui** *il parametro-type-identifier* **:** *dall'elenco di vincoli***...** 
 
 *elenco di vincoli*  
 *o-interfaccia della classe*[`,` *...* ]
@@ -69,8 +69,8 @@ Modificatori di accessibilità per la classe generica. Per il Runtime di Windows
 *identifier*  
 Il nome della classe generica, qualsiasi identificatore C++ valido.
 
-*modificatori* (facoltativo)  
-È consentito includono modificatori **sealed** e **astratta**.
+*Modificatori*  
+(Facoltativo) È consentito includono modificatori **sealed** e **astratta**.
 
 *base-list*  
 Un elenco che contiene la classe base ed eventuali interfacce implementate, tutti separate da virgole.

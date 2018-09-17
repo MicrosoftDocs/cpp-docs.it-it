@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965669"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726700"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -54,11 +54,7 @@ L'insieme di numeri complessi con operazioni di addizione complessa e moltiplica
 
 Con la rappresentazione di un numero complesso *z* = (*una*, *b*) nel formato *z* = *un*  +  *Business Intelligence*, dove *ho*<sup>2</sup> = -1, le regole per il calcolo algebrico dell'insieme di numeri reali può essere applicato al set di numeri complessi e ai rispettivi componenti. Ad esempio:
 
-   (1 + 2*i*) \* (2 + 3*i*)  
-   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
-   = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
-   = (2 - 6) + (3 + 4)*i*  
-   = -4 + 7*i*
+   (1 + 2*ho*) \* (2 + 3*posso*) = 1 \* (2 + 3*ho*) + 2*ho* \* (2 + 3*i*) = (2 + 3*ho*) + (4*ho* + 6*ho*<sup>2</sup>) = (2 a 6) + (3 + 4)*ho* = -4 + 7*ho*
 
 Il sistema di numeri complessi è un campo, ma non è un campo ordinato. Non vi è alcun ordine dei numeri complessi, di quanto accade per il campo di numeri reali e i relativi sottoinsiemi, in modo disuguaglianza non è possibile applicare a un numero complesso così come sono numeri reali.
 

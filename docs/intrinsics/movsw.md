@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f25cea28d18f8377def35959be573c1a41f9098b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb716f69a38b779c686bb07ac2af6240286b4a09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721587"
 ---
 # <a name="movsw"></a>__movsw
 **Sezione specifica Microsoft**  
@@ -41,14 +41,14 @@ void __movsw(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [out] `Dest`  
- La destinazione dell'operazione.  
+*dest*<br/>
+[out] La destinazione dell'operazione.  
   
- [in] `Source`  
- L'origine dell'operazione.  
+*Source*<br/>
+[in] L'origine dell'operazione.  
   
- [in] `Count`  
- Il numero di parole da copiare.  
+*Conteggio*<br/>
+[in] Il numero di parole da copiare.  
   
 ## <a name="requirements"></a>Requisiti  
   

@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954838"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726687"
 ---
 # <a name="unorderedset-class"></a>Classe unordered_set
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
- Valore della chiave da mappare.
+*Keyval*<br/>
+Valore della chiave da mappare.
 
 ### <a name="remarks"></a>Note
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nbucket*  
- Numero di bucket.
+*nbucket*<br/>
+Numero di bucket.
 
 ### <a name="remarks"></a>Note
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
- Valore della chiave da cercare.
+*Keyval*<br/>
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
- Valore della chiave da cercare.
+*Keyval*<br/>
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametri
 
-*Where*  
- Posizione dell'elemento che deve essere rimosso.
+*Where*<br/>
+Posizione dell'elemento che deve essere rimosso.
 
-*Primo*  
- Posizione del primo elemento che deve essere rimosso.
+*Primo*<br/>
+Posizione del primo elemento che deve essere rimosso.
 
-*ultimo*  
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
+*ultimo*<br/>
+Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-*Key*  
- Valore della chiave dell'elemento che deve essere rimosso.
+*Key*<br/>
+Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
- Valore della chiave da cercare.
+*Keyval*<br/>
+Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametri
 
-*factor*  
- Nuovo fattore di carico massimo.
+*factor*<br/>
+Nuovo fattore di carico massimo.
 
 ### <a name="remarks"></a>Note
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametri
 
-*nbuckets*  
- Numero di bucket richiesto.
+*nbuckets*<br/>
+Numero di bucket richiesto.
 
 ### <a name="remarks"></a>Note
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*  
- Contenitore con cui eseguire lo scambio.
+*right*<br/>
+Contenitore con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
 

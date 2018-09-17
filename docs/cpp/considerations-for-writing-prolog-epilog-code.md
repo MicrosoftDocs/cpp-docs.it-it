@@ -18,15 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b581a57db7e66d1547ffd90509c62353d78d478b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 063bbb74f0cb1b0a6396448ba7d6be7bf91dab85
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464120"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720421"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerazioni per la scrittura di codice di prologo e di epilogo
- **Sezione specifica Microsoft**  
+ **Sezione specifica Microsoft**
+ 
  Prima di scrivere le proprie sequenze di codice di prologo ed epilogo, è importante comprendere il layout dello stack frame. È anche utile sapere come usare il `__LOCAL_SIZE` simbolo.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Layout dello stack Frame  

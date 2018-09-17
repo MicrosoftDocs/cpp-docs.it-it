@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ab174484cb305e26c23d1c1d6b5e573341c9035c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539642"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716966"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 **Sezione specifica Microsoft**  
@@ -47,18 +47,18 @@ unsigned char _BitScanReverse64(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [out] `Index`  
- Caricato con la posizione di bit del primo bit impostato (1) trovato.  
+*Index*<br/>
+[out] Caricato con la posizione del bit del primo bit impostato (1) trovata.  
   
- [in] `Mask`  
- Il valore a 32 bit o a 64 bit da cercare.  
+*Maschera*<br/>
+[in] Il valore a 32 o 64 bit da cercare.  
   
 ## <a name="return-value"></a>Valore restituito  
  Diverso da zero se `Index` è stato impostato oppure 0 se non vengono trovati bit impostati.  
   
 ## <a name="requirements"></a>Requisiti  
   
-|Funzione intrinseca|Architettura|Header|  
+|Funzione intrinseca|Architettura|Intestazione|  
 |---------------|------------------|------------|  
 |`_BitScanReverse`|x86, ARM, x64|\<intrin.h>|  
 |`_BitScanReverse64`|ARM, x64||  

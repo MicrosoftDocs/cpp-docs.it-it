@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540012"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719979"
 ---
 # <a name="cmfcautohidebar-class"></a>Classe CMFCAutoHideBar
 La classe `CMFCAutoHideBar` è una classe della barra degli strumenti speciale che implementa la funzionalità Nascondi automaticamente.  
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pAutoHideWnd*  
- Finestra che si vuole nascondere.  
+*pAutoHideWnd*<br/>
+[in] Finestra che si desidera nascondere.  
   
- [in] *dwAlignment*  
- Valore che specifica l'allineamento del pulsante Nascondi automaticamente con la finestra dell'applicazione.  
+*dwAlignment*<br/>
+[in] Un valore che specifica l'allineamento del pulsante Nascondi automaticamente con la finestra dell'applicazione.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszClassName*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *nID*  
- [in] *dwControlBarStyle*  
+*lpszClassName*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *dwControlBarStyle*  
  [in] *pContext*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nLength*  
- Il valore non è usato nell'implementazione di base. In implementazioni derivate, usare questo valore per indicare la lunghezza del riquadro ridimensionato.  
+*nLength*<br/>
+[in] Il valore viene utilizzato nell'implementazione di base. In implementazioni derivate, usare questo valore per indicare la lunghezza del riquadro ridimensionato.  
   
- [in] *bVert*  
- Il valore non è usato nell'implementazione di base. In implementazioni derivate, usare true per l'handle nel caso in cui la barra Nascondi automaticamente è compressa in verticale e FALSE per il caso in cui la barra Nascondi automaticamente è compressa in orizzontale.  
+*bVert*<br/>
+[in] Il valore viene utilizzato nell'implementazione di base. In implementazioni derivate, usare true per l'handle nel caso in cui la barra Nascondi automaticamente è compressa in verticale e FALSE per il caso in cui la barra Nascondi automaticamente è compressa in orizzontale.  
   
 ### <a name="return-value"></a>Valore restituito  
  La dimensione risultante del riquadro ridimensionato.  

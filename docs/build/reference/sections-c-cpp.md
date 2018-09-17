@@ -1,5 +1,5 @@
 ---
-title: NELLE SEZIONI (C/C++) | Documenti Microsoft
+title: LE SEZIONI (C/C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,57 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c433bf49ee4c56833ac7291bcc4a0f90e32f4e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ecd8d6050df7a4d30b0a37cad28e030d1cd63cf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377300"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722897"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
-Introduce una sezione di uno o più `definitions` che sono identificatori di accesso per sezioni nel file di output del progetto.  
-  
-```  
-SECTIONS  
-definitions  
-```  
-  
-## <a name="remarks"></a>Note  
- Ogni definizione deve essere riportata in una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga della prima definizione o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni.  
-  
- Questo `SECTIONS` istruzione imposta gli attributi per uno o più sezioni nel file di immagine e può essere utilizzato per eseguire l'override gli attributi predefiniti per ogni tipo di sezione.  
-  
- Il formato per `definitions` è:  
-  
- `.section_name specifier`  
-  
- dove `.section_name` è il nome di una sezione dell'immagine del programma e `specifier` è uno o più dei seguenti modificatori di accesso:  
-  
-|Modificatore|Descrizione|  
-|--------------|-----------------|  
-|`EXECUTE`|La sezione è eseguibile|  
-|`READ`|Consente operazioni di lettura sui dati|  
-|`SHARED`|Condivide la sezione tra tutti i processi che caricano l'immagine|  
-|`WRITE`|Consente operazioni di scrittura sui dati|  
-  
- Separare i nomi degli identificatori con uno spazio. Ad esempio:  
-  
-```  
-SECTIONS  
-.rdata READ WRITE  
-```  
-  
- `SECTIONS` Contrassegna l'inizio di un elenco di sezione `definitions`. Ogni `definition` deve essere su una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga del primo `definition` o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni. Il `SEGMENTS` (parola chiave) è supportato come sinonimo di `SECTIONS`.  
-  
- Le versioni precedenti di Visual C++ supportate:  
-  
-```  
-section [CLASS 'classname'] specifier  
-```  
-  
- Il `CLASS` (parola chiave) è supportato per compatibilità, ma viene ignorato.  
-  
- È un metodo equivalente per specificare gli attributi di sezione con il [/sezione](../../build/reference/section-specify-section-attributes.md) opzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)
+
+Introduce una sezione di uno o più `definitions` che sono identificatori di accesso sulle sezioni nel file di output del progetto.
+
+```
+SECTIONS
+definitions
+```
+
+## <a name="remarks"></a>Note
+
+Ogni definizione deve essere riportata in una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga della prima definizione o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni.
+
+Ciò `SECTIONS` istruzione imposta gli attributi per uno o più sezioni nel file di immagine e può essere utilizzato per eseguire l'override gli attributi predefiniti per ogni tipo di sezione.
+
+Il formato per `definitions` è:
+
+`.section_name specifier`
+
+in cui `.section_name` è il nome di una sezione dell'immagine del programma e `specifier` corrisponde a uno o più dei seguenti modificatori di accesso:
+
+|Modificatore|Descrizione|
+|--------------|-----------------|
+|`EXECUTE`|La sezione non eseguibile|
+|`READ`|Consente operazioni di lettura sui dati|
+|`SHARED`|Condivide la sezione tra tutti i processi che caricano l'immagine|
+|`WRITE`|Consente operazioni di scrittura sui dati|
+
+Separare i nomi degli identificatori con uno spazio. Ad esempio:
+
+```
+SECTIONS
+.rdata READ WRITE
+```
+
+`SECTIONS` Contrassegna l'inizio di un elenco di sezione `definitions`. Ogni `definition` deve essere su una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga del primo `definition` o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni. Il `SEGMENTS` parola chiave viene supportata come un sinonimo `SECTIONS`.
+
+Versioni precedenti di Visual C++ supportano:
+
+```
+section [CLASS 'classname'] specifier
+```
+
+Il `CLASS` (parola chiave) è supportato per la compatibilità, ma viene ignorato.
+
+È un modo equivalente per specificare gli attributi di sezione con il [/Section](../../build/reference/section-specify-section-attributes.md) opzione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)

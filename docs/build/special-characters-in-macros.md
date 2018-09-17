@@ -1,5 +1,5 @@
 ---
-title: Caratteri speciali nelle macro | Documenti Microsoft
+title: Caratteri speciali nelle macro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c271d2f39a4d81776c06a107616170192e82d40d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55a94001e2f912049518120911c25ae64afa24da
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380173"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721428"
 ---
 # <a name="special-characters-in-macros"></a>Caratteri speciali nelle macro
-Un simbolo cancelletto (#) dopo la definizione specifica un commento. Per specificare un simbolo di cancelletto in una macro, utilizzare un accento circonflesso (^), come in ^ #.  
-  
- Un segno di dollaro ($) specifica una chiamata di macro. Per specificare un valore letterale $, utilizzare $$.  
-  
- Per estendere una definizione di una nuova riga, terminare la riga con una barra rovesciata (\\). Quando la macro viene richiamata, il carattere barra rovesciata e carattere di nuova riga viene sostituito con uno spazio. Per specificare una barra rovesciata alla fine della riga, anteporvi un accento circonflesso (^) o seguito da un identificatore di commento (#).  
-  
- Per specificare un valore letterale di carattere, terminare la riga con un accento circonflesso (^), come in:  
-  
-```  
-CMDS = cls^  
-dir  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Definizione di una macro di NMAKE](../build/defining-an-nmake-macro.md)
+
+Un simbolo cancelletto (#) dopo la definizione specifica un commento. Per specificare un simbolo di cancelletto letterale in una macro, utilizzare un accento circonflesso (^), come in ^ &.
+
+Un segno di dollaro ($) specifica una chiamata di macro. Per specificare un valore letterale $, usare $$.
+
+Per estendere una definizione in una nuova riga, terminare la riga con una barra rovesciata (\\). Quando viene richiamata la macro, il carattere barra rovesciata e nuova riga viene sostituito con uno spazio. Per specificare una barra rovesciata alla fine della riga, anteporvi un accento circonflesso (^) oppure continuare quindi con un identificatore di commento (#).
+
+Per specificare un valore letterale carattere, terminare la riga con un accento circonflesso (^), come in:
+
+```
+CMDS = cls^
+dir
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Definizione di una macro di NMAKE](../build/defining-an-nmake-macro.md)

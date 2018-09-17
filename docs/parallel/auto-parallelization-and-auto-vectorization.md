@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539231"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720400"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallelizzazione automatica e vettorizzazione automatica
 Le funzioni di parallelizzazione automatica e vettorizzazione automatica sono progettate per fornire miglioramenti automatici nelle prestazioni per i cicli nel codice.  
@@ -75,8 +75,10 @@ La compilazione con il seguente comando:
   
  restituisce questo output:  
   
-**---Funzione di analisi: cdecl test(void) void**   
-**d:\myproject\mytest.cpp(4): ciclo parallelizzato**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 La compilazione con il seguente comando:  
   
@@ -84,9 +86,11 @@ La compilazione con il seguente comando:
   
 restituisce questo output:  
   
-**---Funzione di analisi: cdecl test(void) void**   
-**d:\myproject\mytest.cpp(4): ciclo parallelizzato**   
-**d:\myproject\mytest.cpp(4): ciclo non parallelizzato a causa del motivo '1008'**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 Si noti la differenza nell'output tra le due diverse [/Qpar-report (livello di segnalazione parallelizzazione automatica)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opzioni. `/Qpar-report:1` restituisce i messaggi di parallelizzazione solo per i cicli correttamente parallelizzati. `/Qpar-report:2` restituisce i messaggi di parallelizzazione sia per le parallelizzazioni dei cicli riuscite che per quelle non riuscite.  
   

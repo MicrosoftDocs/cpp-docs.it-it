@@ -1,5 +1,5 @@
 ---
-title: __incfsbyte __incfsword, __incfsdword | Documenti Microsoft
+title: __incfsbyte, __incfsword, __incfsdword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330983"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719355"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 **Sezione specifica Microsoft**  
   
- Aggiungere 1 al valore in una posizione di memoria specificata da un offset relativo all'inizio del `FS` segmento.  
+ Aggiungerne uno per il valore in una posizione di memoria specificata da un offset rispetto all'inizio del `FS` segmento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,8 +50,8 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Offset`  
- L'offset dall'inizio del `FS`.  
+*Offset*<br/>
+[in] L'offset dall'inizio del `FS`.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -62,7 +62,7 @@ void __incfsdword(
 |`__incfsdword`|x86|  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come funzioni intrinseche.  
+ Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  
   
 **Fine sezione specifica Microsoft**  
   

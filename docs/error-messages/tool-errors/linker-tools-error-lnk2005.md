@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK2005 errore | Documenti Microsoft
+title: Strumenti del linker LNK2005 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f853bec220c7d46ed2a0c44ac1e1d45fbca8318f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b20d3037649e99419250f1b3ec4255f2e87e31e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301242"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718822"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Errore degli strumenti del linker LNK2005
-*simbolo* già definito nell'oggetto  
+
+> *simbolo* già definito nell'oggetto  
   
-Il simbolo *simbolo* è stato definito più volte.   
+Il simbolo *simbolo* è stato definito più volte.
   
 Questo errore è seguito dall'errore irreversibile [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).  
   
 ### <a name="possible-causes-and-solutions"></a>Possibili cause e soluzioni  
   
-In genere, questo errore indica che è stato interrotto il *regola di unica definizione*, che consente una sola definizione per il modello utilizzato, funzione, tipo o oggetto in un file oggetto specificato e una sola definizione tra l'eseguibile per intero oggetti visibili esternamente o funzioni.  
+In genere, questo errore indica che è stato interrotto il *regola di unica definizione*, che consente una sola definizione per qualsiasi modello scelto, funzione, tipo o oggetto in un file oggetto specificato e una sola definizione per l'intero eseguibile per oggetti visibili esternamente o funzioni.  
   
-Ecco alcune cause comuni di questo errore.  
+Di seguito sono riportate alcune cause comuni per correggere l'errore.  
   
--   Questo errore può verificarsi quando un file di intestazione definisce una variabile. Ad esempio, se si include questo file di intestazione in più di un file di origine nel progetto, viene generato un errore:  
+-   Questo errore può verificarsi quando un file di intestazione definisce una variabile. Ad esempio, se si include questo file di intestazione in più di un file di origine nel progetto, verrà generato un errore:  
   
     ```h  
     // LNK2005_global.h  
@@ -45,13 +46,13 @@ Ecco alcune cause comuni di questo errore.
   
     Tra le possibili soluzioni vi sono le seguenti:  
   
-    -   Dichiarare la variabile `extern` nel file di intestazione: `extern int global_int;`, quindi definirlo e, facoltativamente, inizializzarla in un unico file di origine: `int global_int = 17;`. Questa variabile è globale che è possibile utilizzare qualsiasi file di origine dichiarandola `extern`, ad esempio, includendo il file di intestazione. Si consiglia di questa soluzione per le variabili che devono essere globali, ma le variabili globali riduce la pratica di progettazione del software.  
+    -   Dichiarare la variabile `extern` nel file di intestazione: `extern int global_int;`, quindi definirlo e, facoltativamente, inizializzarlo in un unico file di origine: `int global_int = 17;`. Questa variabile è ora globale che è possibile usare qualsiasi file di origine dichiarandolo `extern`, ad esempio, includendo il file di intestazione. Si consiglia di questa soluzione per le variabili che devono essere globale, ma pratica di progettazione del software riduce al minimo le variabili globali.  
     
-    -   Dichiarare la variabile [statico](../../cpp/storage-classes-cpp.md#static): `static int static_int = 17;`. Questo limita l'ambito della definizione di file oggetto corrente e consente più file oggetto dispone di una copia della variabile. Non è consigliabile che definire le variabili statiche nei file di intestazione a causa la possibile confusione con le variabili globali. Se si preferisce spostare le definizioni di variabili statiche nei file di origine che li utilizzano.  
+    -   Dichiarare la variabile [statici](../../cpp/storage-classes-cpp.md#static): `static int static_int = 17;`. Questo limita l'ambito della definizione del file oggetto corrente e consente a più file oggetto avere la propria copia della variabile. Non è consigliabile che definire le variabili statiche nei file di intestazione a causa la possibile confusione con le variabili globali. Preferisce spostarvi i file di origine che li utilizzano definizioni di variabili statiche.  
   
-    -   Dichiarare la variabile [selectany](../../cpp/selectany.md): `__declspec(selectany) int global_int = 17;`. Ciò indica al linker di selezionare una definizione per l'utilizzo da tutti i riferimenti esterni e di annullare il resto. Questa soluzione è talvolta utile quando si combinano le librerie di importazione. In caso contrario, non è consigliabile come un modo per evitare errori del linker.  
+    -   Dichiarare la variabile [selectany](../../cpp/selectany.md): `__declspec(selectany) int global_int = 17;`. Ciò indica al linker per selezionare una definizione per l'utilizzo da tutti i riferimenti esterni e ignorare il resto. Questa soluzione è talvolta utile quando si combinano le librerie di importazione. In caso contrario, non è consigliabile come un modo per evitare gli errori del linker.  
   
--   Questo errore può verificarsi quando un file di intestazione definisce una funzione che non è `inline`. Se si include questo file di intestazione in più di un file di origine, si ottengono più definizioni di funzione nel file eseguibile.  
+-   Questo errore può verificarsi quando un file di intestazione definisce una funzione che non sia `inline`. Se si include questo file di intestazione in più di un file di origine, si ottengono più definizioni di funzione nel file eseguibile.  
     
     ```h  
     // LNK2005_func.h  
@@ -89,7 +90,7 @@ Ecco alcune cause comuni di questo errore.
     int Sample::sample_function(int k) { return 42 * (k % 167); }  // LNK2005
     ```  
   
-    Per risolvere questo problema, spostare le definizioni di funzione membro all'interno della classe. Le funzioni membro definite all'interno di una dichiarazione di classe vengono implicitamente impostati come inline.  
+    Per risolvere questo problema, spostare le definizioni di funzione membro all'interno della classe. Le funzioni membro definite all'interno di una dichiarazione di classe vengono inserite in modo implicito.  
   
     ```h  
     // LNK2005_member_inline.h  
@@ -99,34 +100,34 @@ Ecco alcune cause comuni di questo errore.
     };
     ```  
   
--   Questo errore può verificarsi se si collega più di una versione della libreria standard o CRT. Ad esempio, se si tenta di collegare il file eseguibile sia di vendita al dettaglio e librerie di debug CRT o entrambe le versioni statiche e dinamiche di una libreria o due versioni diverse di una libreria standard, questo errore potrebbe risultare più volte. Per risolvere questo problema, rimuovere il comando di collegamento tutte tranne una copia di ogni raccolta. Non è consigliabile si combinare delle vendite al dettaglio e il debug di librerie o versioni diverse di una libreria, nello stesso eseguibile.  
+-   Questo errore può verificarsi se si collega più di una versione della libreria standard o CRT. Ad esempio, se si prova a collegare il file eseguibile sia della vendita al dettaglio e librerie di debug CRT o entrambe le versioni statiche e dinamiche di una libreria o due versioni diverse di una libreria standard, questo errore sono segnalato più volte. Per risolvere questo problema, rimuovere tutti tranne una copia di ogni libreria dal comando del collegamento. Non è consigliabile si combinano delle vendite al dettaglio ed eseguire il debug di librerie o versioni diverse di una libreria, nello stesso eseguibile.  
   
-    Per indicare al linker di utilizzare librerie diverse dalle impostazioni predefinite, nella riga di comando, specificare le librerie per utilizzare e il [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) possibile disabilitare le librerie predefinite. Nell'IDE, aggiungere i riferimenti al progetto per specificare le librerie da utilizzare e quindi aprire il **pagine delle proprietà** per il progetto e nella finestra di dialogo di **Linker**, **Input** proprietà impostare uno **ignorare tutte le librerie predefinite**, o **Ignora librerie predefinite specifiche** proprietà per disabilitare le librerie predefinite.   
+    Per indicare al linker di utilizzare librerie diverse dalle impostazioni predefinite, nella riga di comando, specificare le librerie da usare e usare la [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) possibilità di disabilitare le librerie predefinite. Nell'IDE, aggiungere i riferimenti al progetto specificare le librerie da usare e quindi aprire il **pagine delle proprietà** per il progetto e nella finestra di dialogo il **Linker**, **Input** proprietà pagina, impostare **ignorare tutte le librerie predefinite**, o **Ignora librerie predefinite specifiche** le proprietà per disabilitare le librerie predefinite.   
   
--   Questo errore può verificarsi se si combina l'uso di librerie statiche e dinamiche quando si utilizza il [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opzione. Ad esempio, questo errore può verificarsi se si compila una DLL da utilizzare nell'eseguibile che si collega nella libreria CRT statica. Per risolvere questo problema, utilizzare solo le librerie statiche o solo le raccolte dinamiche per l'intero file eseguibile e per tutte le librerie create per l'utilizzo del file eseguibile.  
+-   Questo errore può verificarsi se si combinazione l'uso di librerie statiche e dinamiche quando si usa la [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opzione. Ad esempio, questo errore può verificarsi se si compila una DLL da utilizzare nell'eseguibile che si collega nella libreria CRT statica. Per risolvere questo problema, usare solo le librerie statiche o solo le raccolte dinamiche per l'intero eseguibile e per tutte le librerie create per l'utilizzo del file eseguibile.  
   
--   Questo errore può verificarsi se il simbolo è una funzione di package (creata dalla compilazione con [/Gy](../../build/reference/gy-enable-function-level-linking.md)) e è stato incluso in più di un file, ma è stato modificato tra compilazioni. Per risolvere questo problema, ricompilare tutti i file che includono la funzione nel pacchetto.  
+-   Questo errore può verificarsi se il simbolo è una funzione inclusa nel pacchetto (creati mediante la compilazione con [/Gy](../../build/reference/gy-enable-function-level-linking.md)) e è stato incluso in più di un file, ma è stato modificato tra compilazioni. Per risolvere questo problema, ricompilare tutti i file che includono la funzione inclusa nel pacchetto.  
   
--   Questo errore può verificarsi se il simbolo è definito in modo diverso in due oggetti membro in librerie diverse e vengono utilizzati entrambi gli oggetti. Un modo per risolvere questo problema, quando le librerie collegate staticamente è usare l'oggetto membro da un solo catalogo multimediale e includere tale libreria prima della riga di comando del linker. Per usare entrambi i simboli, è necessario creare un modo per distinguerli. Ad esempio, se è possibile compilare le librerie di origine, è possibile eseguire il wrapping ogni libreria in uno spazio dei nomi univoco. In alternativa, è possibile creare una nuova libreria di wrapper che utilizza nomi univoci per eseguire il wrapping di riferimenti a una delle librerie di originale, nella nuova libreria di collegamento per la libreria originale, quindi collegare il file eseguibile per la nuova libreria anziché la libreria originale.  
+-   Questo errore può verificarsi se il simbolo è definito in modo diverso in due oggetti membro in librerie diverse e vengono usati entrambi gli oggetti membro. Un modo per risolvere questo problema quando le librerie collegate staticamente è usare l'oggetto membro da sola libreria e includere tale libreria prima di tutto nella riga di comando del linker. Per usare entrambi i simboli, è necessario creare un modo per distinguerli. Ad esempio, se è possibile compilare le librerie di origine, è possibile eseguire il wrapping di ogni libreria in uno spazio dei nomi univoco. In alternativa, è possibile creare una nuova libreria di wrapper che Usa nomi univoci per eseguire il wrapping di riferimenti a una delle librerie di originale, collegare la nuova libreria per la libreria originale e quindi collegare il file eseguibile per la nuova libreria anziché la libreria originale.  
   
--   Questo errore può verificarsi se un `extern const` variabile è definita due volte e ha un valore diverso in ogni definizione. Per risolvere questo problema, definire la costante solo una volta oppure utilizzare gli spazi dei nomi o `enum class` le definizioni per distinguere le costanti.  
+-   Questo errore può verificarsi se un `extern const` variabile è definito due volte e ha un valore diverso in ogni definizione. Per risolvere questo problema, definire la costante solo una volta oppure usare gli spazi dei nomi o `enum class` definizioni per distinguere le costanti.  
   
--   Questo errore può verificarsi se si usa uuid.lib con altri file. lib che definiscono GUID (ad esempio, come oledb.lib e adsiid.lib). Ad esempio:  
+-   Questo errore può verificarsi se si usa UUID. lib in combinazione con altri file con estensione LIB che definiscono GUID (ad esempio, OLEDB e adsiid). Ad esempio:  
   
     ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  
     already defined in uuid.lib(go7.obj)  
     ```  
   
-     Per risolvere questo problema, aggiungere [/FORCE](../../build/reference/force-force-file-output.md) per le opzioni della riga di comando del linker e accertarsi che uuid.lib sia la prima libreria a cui fa riferimento.
+     Per risolvere questo problema, aggiungere [/Force: multiple](../../build/reference/force-force-file-output.md) alle opzioni della riga di comando del linker e assicurarsi che UUID. lib è la prima libreria a cui viene fatto riferimento.
   
 ## <a name="additional-information"></a>Informazioni aggiuntive  
   
-Se si utilizza una versione precedente del set di strumenti, vedere gli articoli della Knowledge Base per ulteriori informazioni sulle cause dell'errore specifiche:  
+Se si usa una versione precedente del set di strumenti, vedere questi articoli della Knowledge Base per altre informazioni sulle cause specifiche per questo errore:  
   
--   [Si verifica un errore LNK2005 quando la libreria CRT e librerie MFC sono collegate in ordine errato in Visual C++](https://support.microsoft.com/kb/148652)  
+-   [Si verifica un errore LNK2005 quando la libreria CRT e le librerie MFC sono collegate in ordine errato in Visual C++](https://support.microsoft.com/kb/148652)  
   
--   [Correzione: Delete overload globale operatore vengono illustrate le cause LNK2005](https://support.microsoft.com/kb/140440)  
+-   [Correzione: Delete in overload globale operatore cause LNK2005](https://support.microsoft.com/kb/140440)  
   
--   [Si ricevono errori LNK2005 quando si compila un progetto di .exe eseguibile ATL in Visual C++](https://support.microsoft.com/kb/184235).  
+-   [Si ricevono errori LNK2005 quando si compila un progetto eseguibile (.exe) ATL Visual c++](https://support.microsoft.com/kb/184235).  
   

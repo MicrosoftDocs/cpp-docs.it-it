@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b7f38926ad3e76de7e5e9bc36425ef77c42d4f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5131479af7f34f1cc43cf91adfd0bd3ac52a594b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338463"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722982"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (classe)
 Oggetto `CMFCCaptionBar` oggetto è una barra di controllo che è possibile visualizzare tre elementi: un pulsante, un'etichetta di testo e una bitmap. Può essere visualizzato un solo elemento di ogni tipo alla volta. È possibile allineare ciascun elemento ai margini sinistro o destro del controllo o al centro. È inoltre possibile applicare uno stile Flat o 3D ai bordi superiore e inferiore della barra del titolo.  
@@ -230,8 +230,8 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- True per abilitare il pulsante, FALSE per disabilitare il pulsante.  
+*bAttivare il*<br/>
+[in] True per abilitare il pulsante, FALSE per disabilitare il pulsante.  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  Restituisce l'allineamento dell'elemento specificato.  
@@ -241,8 +241,8 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *elem*  
- Un elemento della barra di didascalia per il quale recuperare l'allineamento.  
+*Elem*<br/>
+[in] Un elemento della barra di didascalia per il quale recuperare l'allineamento.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'allineamento di un elemento, ad esempio un pulsante, una bitmap, testo o un'icona.  
@@ -332,11 +332,11 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore al contesto di dispositivo della barra del titolo.  
+*pDC*<br/>
+[in] Puntatore al contesto di dispositivo della barra del titolo.  
   
- [in] *rect*  
- Per riempire il rettangolo di delimitazione.  
+*Rect*<br/>
+[in] Per riempire il rettangolo di delimitazione.  
   
 ### <a name="remarks"></a>Note  
  Il `OnDrawBackground` metodo viene chiamato quando sta per essere riempito lo sfondo della barra del titolo. L'implementazione predefinita riempie lo sfondo usando il [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) colore.  
@@ -353,11 +353,11 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Un contesto di dispositivo che consente di visualizzare i bordi.  
+*pDC*<br/>
+[in] Un contesto di dispositivo che consente di visualizzare i bordi.  
   
- [in] *rect*  
- Rettangolo di delimitazione.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, i bordi sono applicato lo stile flat.  
@@ -376,17 +376,17 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo che consente di visualizzare il pulsante.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo che consente di visualizzare il pulsante.  
   
- [in] *rect*  
- Il rettangolo di delimitazione del pulsante.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione del pulsante.  
   
- [in] *strButton*  
- Etichetta di testo del pulsante.  
+*strButton*<br/>
+[in] Etichetta di testo del pulsante.  
   
- [in] *bEnabled*  
- TRUE se il pulsante è abilitato; FALSE in caso contrario.  
+*bEnabled*<br/>
+[in] TRUE se il pulsante è abilitato; FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto del pulsante della barra del titolo.  
@@ -401,11 +401,11 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo che consente di visualizzare l'immagine.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo che consente di visualizzare l'immagine.  
   
- [in] *rect*  
- Specifica il rettangolo di delimitazione dell'immagine.  
+*Rect*<br/>
+[in] Specifica il rettangolo di delimitazione dell'immagine.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto dell'immagine.  
@@ -421,14 +421,14 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo che consente di visualizzare il pulsante.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo che consente di visualizzare il pulsante.  
   
- [in] *rect*  
- Il rettangolo di delimitazione del testo.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione del testo.  
   
- [in] *strText*  
- La stringa di testo da visualizzare.  
+*strText*<br/>
+[in] La stringa di testo da visualizzare.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita viene visualizzato il testo usando `CDC::DrawText` e [CMFCCaptionBar::m_clrBarText](#m_clrbartext) colore.  
@@ -485,17 +485,17 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hBitmap*  
- Handle per la mappa di bit da impostare.  
+*hBitmap*<br/>
+[in] Handle per la mappa di bit da impostare.  
   
- [in] *clrTransparent*  
- Un valore RGB che specifica il colore trasparente dell'immagine bitmap.  
+*clrTransparent*<br/>
+[in] Un valore RGB che specifica il colore trasparente dell'immagine bitmap.  
   
- [in] *bStretch*  
- Se TRUE, la bitmap viene adattata se non si adatta all'immagine del rettangolo di delimitazione. In caso contrario, la bitmap non è estesa.  
+*bStretch*<br/>
+[in] Se TRUE, la bitmap viene adattata se non si adatta all'immagine del rettangolo di delimitazione. In caso contrario, la bitmap non è estesa.  
   
- [in] *bmpAlignment*  
- L'allineamento dell'immagine bitmap.  
+*bmpAlignment*<br/>
+[in] L'allineamento dell'immagine bitmap.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per impostare una bitmap in una barra del titolo.  
@@ -520,8 +520,8 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nSize*  
- La nuova dimensione, in pixel, del bordo barra del titolo.  
+*nSize*<br/>
+[in] La nuova dimensione, in pixel, del bordo barra del titolo.  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
  Imposta il pulsante per la barra del titolo.  
@@ -568,11 +568,11 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszToolTip*  
- La didascalia della descrizione comando.  
+*lpszToolTip*<br/>
+[in] La didascalia della descrizione comando.  
   
- [in] *lpszDescription*  
- La descrizione comando.  
+*lpszDescription*<br/>
+[in] La descrizione comando.  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
  Imposta lo stile del bordo della barra del titolo.  
@@ -582,8 +582,8 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bFlat*  
- TRUE se il bordo di una barra del titolo è flat. FALSE se il bordo 3D.  
+*bFlat*<br/>
+[in] TRUE se il bordo di una barra del titolo è flat. FALSE se il bordo 3D.  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
  Imposta l'icona per una barra del titolo.  
@@ -595,11 +595,11 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hIcon*  
- L'handle dell'icona da impostare.  
+*hIcon*<br/>
+[in] L'handle dell'icona da impostare.  
   
- [in] *iconAlignment*  
- L'allineamento dell'icona.  
+*iconAlignment*<br/>
+[in] L'allineamento dell'icona.  
   
 ### <a name="remarks"></a>Note  
  Barre del titolo possono visualizzare icone o bitmap. Visualizzare [CMFCCaptionBar::SetBitmap](#setbitmap) per scoprire come fare visualizzare una bitmap. Se si imposta un'icona sia una bitmap, l'icona viene visualizzata sempre. Chiamare [CMFCCaptionBar::RemoveIcon](#removeicon) per rimuovere un'icona nella barra del titolo.  
@@ -624,11 +624,11 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszToolTip*  
- Il testo della descrizione comando.  
+*lpszToolTip*<br/>
+[in] Il testo della descrizione comando.  
   
- [in] *lpszDescription*  
- La descrizione comando.  
+*lpszDescription*<br/>
+[in] La descrizione comando.  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
  Imposta la distanza tra il bordo dell'elemento barra didascalia e il bordo del controllo indicatore di didascalia.  
@@ -638,8 +638,8 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nMargin*  
- Distanza, espressa in pixel, tra il bordo degli elementi barra didascalia e il bordo del controllo indicatore di didascalia.  
+*nMargin*<br/>
+[in] Distanza, espressa in pixel, tra il bordo degli elementi barra didascalia e il bordo del controllo indicatore di didascalia.  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
  Imposta l'etichetta di testo per la barra del titolo.  
@@ -651,11 +651,11 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *strText*  
- La stringa di testo da impostare.  
+*strText*<br/>
+[in] La stringa di testo da impostare.  
   
- [in] *TextAlignment =*  
- L'allineamento del testo.  
+*TextAlignment =*<br/>
+[in] L'allineamento del testo.  
   
 ### <a name="remarks"></a>Note  
  L'etichetta di testo è allineato come specificato dal *textAlignment* parametro. Può essere uno dei seguenti `BarElementAlignment` valori:  

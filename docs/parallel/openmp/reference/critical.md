@@ -1,5 +1,5 @@
 ---
-title: critico | Documenti Microsoft
+title: critico | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691300"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716950"
 ---
 # <a name="critical"></a>critical
-Specifica che è solo essere eseguito codice in un solo thread alla volta.  
+Specifica che codice è possibile eseguire solo in un unico thread alla volta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +35,15 @@ Specifica che è solo essere eseguito codice in un solo thread alla volta.
 }  
 ```  
   
+## <a name="arguments"></a>Argomenti
+
+*name*<br/>
+(Facoltativo) Un nome per identificare il codice critico. Si noti che il nome deve essere racchiuso tra parentesi.  
+  
 ## <a name="remarks"></a>Note  
- dove  
+ Il **critici** direttiva non supporta nessuna clausole OpenMP.  
   
- (`name`) (facoltativo)  
- Un nome per identificare il codice critico. Si noti che il nome deve essere racchiuso tra parentesi.  
-  
-## <a name="remarks"></a>Note  
- Il **critico** direttiva non supporta clausole OpenMP.  
-  
- Per ulteriori informazioni, vedere [critici 2.6.2 costrutto](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Per altre informazioni, vedere [critici 2.6.2 costrutto](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
 ## <a name="example"></a>Esempio  
   

@@ -1,5 +1,5 @@
 ---
-title: I commenti in un Makefile | Documenti Microsoft
+title: Commenti in un Makefile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,39 +14,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e404f3fffd0176e63a2df89d4d879bfba07f7093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0bff732a0e9becc9b6c829c70a1bc6701e6031bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366783"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723957"
 ---
 # <a name="comments-in-a-makefile"></a>Commenti in un makefile
-Anteporre un commento con un simbolo di cancelletto (#). NMAKE ignora il testo compreso il simbolo di numero e il successivo carattere di nuova riga. Esempi:  
-  
-```  
-# Comment on line by itself  
-OPTIONS = /MAP  # Comment on macro definition line  
-  
-all.exe : one.obj two.obj  # Comment on dependency line  
-    link one.obj two.obj  
-# Comment in commands block  
-#   copy *.obj \objects  # Command turned into comment  
-    copy one.exe \release  
-  
-.obj.exe:  # Comment on inference rule line  
-    link $<  
-  
-my.exe : my.obj ; link my.obj  # Err: cannot comment this  
- # Error: # must be the first character  
-.obj.exe: ; link $<  # Error: cannot comment this  
-```  
-  
- Per specificare un simbolo di cancelletto, anteporvi un accento circonflesso (**^**), come segue:  
-  
-```  
-DEF = ^#define  #Macro for a C preprocessing directive  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Contenuto di un makefile](../build/contents-of-a-makefile.md)
+
+Anteporre un commento con un simbolo di cancelletto (#). NMAKE ignora il testo compreso il simbolo di cancelletto e il successivo carattere di nuova riga. Esempi:
+
+```
+# Comment on line by itself
+OPTIONS = /MAP  # Comment on macro definition line
+
+all.exe : one.obj two.obj  # Comment on dependency line
+    link one.obj two.obj
+# Comment in commands block
+#   copy *.obj \objects  # Command turned into comment
+    copy one.exe \release
+
+.obj.exe:  # Comment on inference rule line
+    link $<
+
+my.exe : my.obj ; link my.obj  # Err: cannot comment this
+# Error: # must be the first character
+.obj.exe: ; link $<  # Error: cannot comment this
+```
+
+Per specificare un valore letterale cancelletto, anteporvi un accento circonflesso (**^**), come indicato di seguito:
+
+```
+DEF = ^#define  #Macro for a C preprocessing directive
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Contenuto di un makefile](../build/contents-of-a-makefile.md)

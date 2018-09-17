@@ -1,5 +1,5 @@
 ---
-title: '/Zc: forScope (Imponi conformità nel for Loop Scope) | Documenti Microsoft'
+title: '/Zc: forScope (Imponi conformità nel for Loop Scope) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378613"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723593"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Imponi conformità nell'ambito di un ciclo For)
 
@@ -40,7 +40,7 @@ Permette di implementare il comportamento C++ standard per cicli [for](../../cpp
 
 Il comportamento standard permette all'inizializzatore del ciclo **for** di uscire dall'ambito dopo il ciclo **for** . In **/Zc:forScope-** e [/Ze](../../build/reference/za-ze-disable-language-extensions.md)l'inizializzatore del ciclo **for** rimane nell'ambito fino al termine dell'ambito locale.
 
-Il **/Zc: forScope** opzione è attivata per impostazione predefinita. **/Zc: forScope** non è interessata quando le [/ permissiva-](permissive-standards-conformance.md) opzione specificata.
+Il **/Zc: forScope** opzione è attivata per impostazione predefinita. **/Zc: forScope** non influisce quando i [/PERMISSIVE--](permissive-standards-conformance.md) opzione specificata.
 
 L'opzione **/Zc:forScope-** è deprecata e verrà rimossa in una futura versione. L'uso di **/Zc:forScope-** genera l'avviso di deprecazione D9035.
 
@@ -49,7 +49,7 @@ Il codice seguente viene compilato in **/Ze** ma non in **/Za**:
 ```cpp
 // zc_forScope.cpp
 // compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
-// C2065, D9035 expected  
+// C2065, D9035 expected
 int main() {
     // Compile by using cl /Zc:forScope- zc_forScope.cpp
     // to compile this non-standard code as-is.
@@ -65,15 +65,15 @@ Se si usa **/Zc:forScope-**, viene visualizzato l'avviso C4288 (disattivato per 
 
 È possibile modificare il comportamento di runtime di **/Zc:forScope** con il pragma [conform](../../preprocessor/conform.md) .
 
-Se si usa **/Zc:forScope-** in un progetto con un file PCH esistente, viene generato un avviso, **/Zc:forScope-** viene ignorato e la compilazione continua con i file PCH esistenti. Se si desidera che venga generato un nuovo file pch, usare [/Yc (Crea precompilata File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md).
+Se si usa **/Zc:forScope-** in un progetto con un file PCH esistente, viene generato un avviso, **/Zc:forScope-** viene ignorato e la compilazione continua con i file PCH esistenti. Se si vuole che venga generato un nuovo file pch, usare [/Yc (Crea precompilati o meno File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md).
 
 Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Selezionare il **proprietà di configurazione** > **C/C++** > **Language** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **lingua** pagina delle proprietà.
 
 1. Modificare la proprietà **Imponi conformità nell'ambito di un ciclo For** .
 

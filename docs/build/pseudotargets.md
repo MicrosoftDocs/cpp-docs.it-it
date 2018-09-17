@@ -1,5 +1,5 @@
 ---
-title: Pseudodestinazioni | Documenti Microsoft
+title: Pseudodestinazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dbc6ae3ad331ab3297b62d00044c3edf679994
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56c0c0c93163759b604352a6e623f15726b8e7ec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368408"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715832"
 ---
 # <a name="pseudotargets"></a>Pseudo-destinazioni
-Pseudo è un'etichetta utilizzata al posto di un nome di file in una riga di dipendenza. Viene interpretato come un file che non esiste e pertanto non è aggiornata. In NMAKE che timestamp della pseudo è la più recente di tutti i relativi dipendenti. Se non sono presenti dipendenti, viene utilizzata l'ora corrente. Se una pseudo-destinazione viene usata come destinazione, i comandi vengono sempre eseguiti. Pseudo utilizzata come dipendente deve comparire anche come destinazione in un'altra dipendenza. Tuttavia, tale dipendenza non è necessario disporre di un blocco di comandi.  
-  
- I nomi di pseudo seguono le regole di sintassi nome file per le destinazioni. Tuttavia, se il nome non ha un'estensione (ovvero, non contiene un punto), è possibile superare il limite di 8 caratteri per i nomi di file e può contenere fino a 256 caratteri.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Destinazioni](../build/targets.md)
+
+Pseudo è un'etichetta usata al posto di un nome di file in una riga di dipendenza. Viene interpretato come un file che non esiste e pertanto non è aggiornata. NMAKE presuppone che il timestamp del pseudo è la più recente di tutti i relativi dipendenti. Se non sono presenti dipendenti, verrà utilizzata l'ora corrente. Se viene usato pseudo come destinazione, vengono sempre eseguiti i relativi comandi. Pseudo utilizzata come dipendente deve comparire anche come destinazione in un'altra dipendenza. Tuttavia, tale dipendenza non dovrà avere un blocco di comandi.
+
+I nomi di pseudo seguono le regole di sintassi nome file per le destinazioni. Tuttavia, se il nome non ha un'estensione (vale a dire, non contiene un punto), è possibile superare il limite di 8 caratteri per i nomi di file e può essere fino a 256 caratteri.
+
+## <a name="see-also"></a>Vedere anche
+
+[Destinazioni](../build/targets.md)

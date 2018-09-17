@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 423cd4585fa6e9ae5a5fbb16cf7d5c43aaf7c152
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605927"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719720"
 ---
 # <a name="rdx"></a>rdx
 
@@ -43,8 +43,8 @@ Crea una chiave del Registro di sistema o modifica una chiave del Registro di si
 *key*  
 Il nome della chiave può essere creato o aperto.
 
-*VALUENAME* (facoltativo)  
-Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.
+*valueName*  
+(Facoltativo) Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.
 
 *regtype*  
 Il tipo di chiave del Registro di sistema da aggiungere. Può essere uno dei seguenti: `text`, `dword`, `binary`, o `CString`.

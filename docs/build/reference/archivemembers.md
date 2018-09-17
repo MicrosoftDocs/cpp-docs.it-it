@@ -1,5 +1,5 @@
 ---
-title: -ARCHIVEMEMBERS | Documenti Microsoft
+title: -ARCHIVEMEMBERS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c63d50364e761b7c0f10c3ce713e2d502bf6356
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1923dc5fd5f9188f71d37ab2417746f71cdb6c1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369019"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719668"
 ---
 # <a name="archivemembers"></a>/ARCHIVEMEMBERS
-```  
-/ARCHIVEMEMBERS  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa opzione Visualizza le informazioni minime sugli oggetti membro in una libreria.  
-  
- Solo il [/HEADERS](../../build/reference/headers.md) (opzione DUMPBIN) è disponibile per l'utilizzo con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/ARCHIVEMEMBERS
+```
+
+## <a name="remarks"></a>Note
+
+Questa opzione consente di visualizzare informazioni minime sulle oggetti membro in una libreria.
+
+Solo le [/HEADERS](../../build/reference/headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) opzione del compilatore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)

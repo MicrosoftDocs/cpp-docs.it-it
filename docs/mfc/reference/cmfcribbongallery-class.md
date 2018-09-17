@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: de624d9775160d1cbe7f048baf2dd83a592cfbe3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538752"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724795"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 Implementa raccolte della barra multifunzione di tipo Office 2007.  
@@ -195,20 +195,20 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszGroupName*  
- Specifica il nome del gruppo.  
+*lpszGroupName*<br/>
+[in] Specifica il nome del gruppo.  
   
- [in] *uiImagesPaletteResID*  
- Specifica l'ID risorsa dell'elenco immagini che contiene le immagini per il gruppo.  
+*uiImagesPaletteResID*<br/>
+[in] Specifica l'ID risorsa dell'elenco immagini che contiene le immagini per il gruppo.  
   
- [in] *cxPaletteImage*  
- Specifica la larghezza in pixel di un'immagine.  
+*cxPaletteImage*<br/>
+[in] Specifica la larghezza in pixel di un'immagine.  
   
- [in] *imagesGroup*  
- Riferimento all'elenco di immagini che contiene le immagini di gruppo.  
+*imagesGroup*<br/>
+[in] Riferimento all'elenco di immagini che contiene le immagini di gruppo.  
   
- [in] *nIconsNum*  
- Specifica il numero di icone nel gruppo. Questo parametro deve essere specificato solo per l'installazione personalizzata (proprietario) i gruppi.  
+*nIconsNum*<br/>
+[in] Specifica il numero di icone nel gruppo. Questo parametro deve essere specificato solo per l'installazione personalizzata (proprietario) i gruppi.  
   
 ### <a name="remarks"></a>Note  
  Chiamando questo metodo, è possibile dividere gli elementi in una raccolta della barra multifunzione in più gruppi. Ogni gruppo può avere una didascalia.  
@@ -224,14 +224,14 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pSubItem*  
- Un puntatore all'elemento da aggiungere al menu.  
+*pSubItem*<br/>
+[in] Un puntatore all'elemento da aggiungere al menu.  
   
- [in] *nIndex*  
- Specifica l'indice in base zero di una posizione in cui inserire l'elemento.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero di una posizione in cui inserire l'elemento.  
   
- [in] *bOnTop*  
- TRUE per specificare che l'elemento deve essere inserito prima della raccolta della barra multifunzione; in caso contrario, FALSE.  
+*bOnTop*<br/>
+[in] TRUE per specificare che l'elemento deve essere inserito prima della raccolta della barra multifunzione; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  È possibile combinare le raccolte di popup con le voci di menu popup chiamando questo metodo. Voci di menu possono essere inserite prima o dopo la raccolta.  
@@ -325,11 +325,11 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- True per abilitare il ridimensionamento di menu. in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] True per abilitare il ridimensionamento di menu. in caso contrario, FALSE.  
   
- [in] *bVertcalOnly*  
- TRUE per specificare che la raccolta è possibile ridimensionare solo verticalmente; FALSE per specificare che è possibile ridimensionare la raccolta sia verticalmente che orizzontalmente.  
+*bVertcalOnly*<br/>
+[in] TRUE per specificare che la raccolta è possibile ridimensionare solo verticalmente; FALSE per specificare che è possibile ridimensionare la raccolta sia verticalmente che orizzontalmente.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per abilitare o disabilitare il ridimensionamento di raccolta della barra multifunzione. Quando è abilitato il ridimensionamento, la raccolta della barra multifunzione Visualizza un barra gripper che un utente può usare per modificarne le dimensioni.  
@@ -342,8 +342,8 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per specificare che la barra laterale è abilitata; in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per specificare che la barra laterale è abilitata; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per abilitare o disabilitare la barra laterale di stile di Office XP sul lato sinistro del menu.  
@@ -381,8 +381,8 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nGroupIndex*  
- Specifica l'indice in base zero per il gruppo il cui nome si desidera recuperare.  
+*nGroupIndex*<br/>
+[in] Specifica l'indice in base zero per il gruppo il cui nome si desidera recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il nome del gruppo che si trova in corrispondenza dell'indice specificato. Il passaggio di un indice non valido comporterà un'asserzione non riuscita.  
@@ -420,8 +420,8 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nItemIndex*  
- Specifica l'indice in base zero dell'elemento per cui recuperare il testo della descrizione comando.  
+*nItemIndex*<br/>
+[in] Specifica l'indice in base zero dell'elemento per cui recuperare il testo della descrizione comando.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore alla stringa di descrizione comando assegnato a un elemento nella raccolta della barra multifunzione. Se nessuna descrizione comando viene assegnata a tale elemento può essere NULL.  
@@ -436,8 +436,8 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- Specifica l'ID di comando della voce di menu che aperti raccolta della barra multifunzione.  
+*uiCmdID*<br/>
+[in] Specifica l'ID di comando della voce di menu che aperti raccolta della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Quando l'utente seleziona un elemento nella raccolta della barra multifunzione, la libreria invia il messaggio WM_COMMAND insieme all'ID di comando del pulsante di menu che aperti raccolta della barra multifunzione.  
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore al contesto di dispositivo che viene usato per il disegno.  
+*pDC*<br/>
+[in] Puntatore al contesto di dispositivo che viene usato per il disegno.  
   
- [in] *rectIcon*  
- Specifica il rettangolo di delimitazione dell'icona da disegnare.  
+*rectIcon*<br/>
+[in] Specifica il rettangolo di delimitazione dell'icona da disegnare.  
   
- [in] *nIconIndex*  
- Specifica l'indice in base zero nell'elenco delle immagini delle icone di raccolta dell'icona da disegnare.  
+*nIconIndex*<br/>
+[in] Specifica l'indice in base zero nell'elenco delle immagini delle icone di raccolta dell'icona da disegnare.  
   
- [in] *pIcon*  
- Un puntatore per l'icona da disegnare.  
+*pIcon*<br/>
+[in] Un puntatore per l'icona da disegnare.  
   
- [in] *clrText*  
- Specifica il colore del testo dell'elemento da disegnare.  
+*clrText*<br/>
+[in] Specifica il colore del testo dell'elemento da disegnare.  
   
 ### <a name="remarks"></a>Note  
  È possibile eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto di una raccolta della barra multifunzione.  
@@ -659,11 +659,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParent*  
- Finestra padre della finestra della raccolta della barra multifunzione.  
+*pParent*<br/>
+[in] La finestra padre della finestra raccolta della barra multifunzione.  
   
- [out] *dati*  
- Oggetto `CAccessibilityData` che riceve i dati di accessibilità dalla raccolta della barra multifunzione.  
+*data*<br/>
+[out] Oggetto `CAccessibilityData` oggetto che riceve i dati di accessibilità dalla raccolta della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -678,8 +678,8 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- TRUE per visualizzare la raccolta della barra multifunzione come un pulsante di menu a discesa. FALSE per visualizzare il contenuto della raccolta della barra multifunzione direttamente sulla barra multifunzione.  
+*bSet*<br/>
+[in] TRUE per visualizzare la raccolta della barra multifunzione come un pulsante di menu a discesa. FALSE per visualizzare il contenuto della raccolta della barra multifunzione direttamente sulla barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -693,11 +693,11 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nGroupIndex*  
- Specifica l'indice in base zero per il gruppo per il quale viene modificato il nome.  
+*nGroupIndex*<br/>
+[in] Specifica l'indice in base zero per il gruppo per il quale viene modificato il nome.  
   
- [in] *lpszGroupName*  
- Specifica il nuovo nome per il gruppo.  
+*lpszGroupName*<br/>
+[in] Specifica il nuovo nome per il gruppo.  
   
 ### <a name="remarks"></a>Note  
  Il gruppo il cui nome viene modificato deve essere stato aggiunto usando il [CMFCRibbonGallery::AddGroup](#addgroup) (metodo).  
@@ -710,8 +710,8 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIconsInRow*  
- Specifica il numero di elementi da visualizzare in ogni riga della raccolta.  
+*nIconsInRow*<br/>
+[in] Specifica il numero di elementi da visualizzare in ogni riga della raccolta.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per specificare la larghezza della raccolta della barra multifunzione.  
@@ -726,11 +726,11 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nItemIndex*  
- Indice a base zero dell'elemento tavolozza a cui associare la descrizione comando.  
+*nItemIndex*<br/>
+[in] Indice a base zero dell'elemento tavolozza a cui associare la descrizione comando.  
   
- [in] *lpszToolTip*  
- Il testo da visualizzare nella descrizione comando.  
+*lpszToolTip*<br/>
+[in] Il testo da visualizzare nella descrizione comando.  
   
 ### <a name="remarks"></a>Note  
   
@@ -747,14 +747,14 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *imagesPalette*  
- Specifica l'elenco di immagini che contiene le icone da visualizzare nella raccolta.  
+*imagesPalette*<br/>
+[in] Specifica l'elenco di immagini che contiene le icone da visualizzare nella raccolta.  
   
- [in] *uiImagesPaletteResID*  
- Specifica l'ID risorsa dell'elenco immagini che contiene le icone da visualizzare nella raccolta.  
+*uiImagesPaletteResID*<br/>
+[in] Specifica l'ID risorsa dell'elenco immagini che contiene le icone da visualizzare nella raccolta.  
   
- [in] *cxPaletteImage*  
- Specifica la larghezza, in pixel, di un'immagine nella raccolta.  
+*cxPaletteImage*<br/>
+[in] Specifica la larghezza, in pixel, di un'immagine nella raccolta.  
   
 ### <a name="remarks"></a>Note  
   
@@ -766,8 +766,8 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Specifica l'ID di comando che viene inviato nel messaggio WM_COMMAND quando un utente seleziona un elemento della raccolta.  
+*nID*<br/>
+[in] Specifica l'ID di comando che viene inviato nel messaggio WM_COMMAND quando un utente seleziona un elemento della raccolta.  
   
 ### <a name="remarks"></a>Note  
  Per determinare l'elemento specifico che un utente ha selezionato dalla raccolta, chiamare il [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) metodo statico.  

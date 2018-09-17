@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 12935c6a735d72bb1eb25627c78d69f362073a90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540011"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724375"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>Funzioni intrinseche _interlockedbittestandreset
 **Sezione specifica Microsoft**  
@@ -82,18 +82,18 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `a`  
- Puntatore alla memoria da esaminare.  
+*a*<br/>
+[in] Puntatore alla memoria da esaminare.  
   
- [in] `b`  
- Posizione del bit da testare.  
+*b*<br/>
+[in] Posizione del bit da testare.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore originale del bit nella posizione specificata da `b`.  
   
 ## <a name="requirements"></a>Requisiti  
   
-|Funzione intrinseca|Architettura|Header|  
+|Funzione intrinseca|Architettura|Intestazione|  
 |---------------|------------------|------------|  
 |`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h>|  
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|  

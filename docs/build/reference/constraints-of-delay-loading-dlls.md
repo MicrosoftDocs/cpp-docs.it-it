@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213a7c32204b8f96969b4ad7a94683916b66db10
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69e985b81072de306c818218e19bbb660e3e04a4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719733"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Vincoli delle DLL a caricamento ritardato
-Per il caricamento ritardato delle importazioni esistono dei vincoli.  
-  
--   Le importazioni di dati non possono essere supportate. Una soluzione alternativa consiste nel gestire personalmente, in modo esplicito, l'importazione di dati mediante `LoadLibrary` (o `GetModuleHandle` quando si è certi che la DLL sia stata caricata dal supporto per il caricamento ritardato) e `GetProcAddress`.  
-  
--   Il caricamento ritardato di Kernel32.dll non è supportato. Questa DLL è necessaria alle routine di supporto del caricamento ritardato per l'esecuzione delle relative attività.  
-  
--   [Associazione](../../build/reference/binding-imports.md) della voce di punti che vengono inoltrati non è supportata.  
-  
--   Se si verificano inizializzazioni per processo nel punto di ingresso della DLL a caricamento ritardato, il comportamento del caricamento ritardato di una DLL può essere diverso. Gli altri casi comprendono la statica (archiviazione thread-local), dichiarata usando [declspec](../../cpp/thread.md), che non è gestita quando la DLL viene caricata tramite `LoadLibrary`. La memoria locale di thread dinamica, che usa `TlsAlloc`, `TlsFree`, `TlsGetValue` e `TlsSetValue`, può essere comunque usata per DLL statiche e DLL a caricamento ritardato.  
-  
--   I puntatori a funzione statici (globali) devono essere reinizializzati sulle funzioni importate dopo la prima chiamata alla funzione, in quanto durante il primo uso della funzione a puntatore verrà considerato come riferimento il thunk.  
-  
--   Non è attualmente possibile ritardare il caricamento da una DLL delle sole routine specifiche con l'uso del normale meccanismo di importazione.  
-  
--   Le convenzioni di chiamata personalizzate, come l'uso di flag su architetture x86, non sono supportate. I registri a virgola mobile, inoltre, non vengono salvati su nessuna piattaforma. Se nella routine di supporto o nelle routine di hook personalizzate vengono usati tipi a virgola mobile, è necessario salvare e ripristinare completamente lo stato della virgola mobile sui computer che usano convenzioni di chiamata del registro con parametri a virgola mobile. Il caricamento ritardato della DLL CRT deve essere eseguito con particolare attenzione nel caso in cui vengano effettuate chiamate alle funzioni CRT che accettano parametri a virgola mobile su uno stack NDP (numeric data processor) nella funzione di supporto.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)   
- [LoadLibrary (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
- [GetModuleHandle (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
- [GetProcAddress (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
- [Funzione TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
- [TlsFree (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
- [TlsGetValue (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   
- [TlsSetValue (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)
+
+Per il caricamento ritardato delle importazioni esistono dei vincoli.
+
+- Le importazioni di dati non possono essere supportate. Una soluzione alternativa consiste nel gestire personalmente, in modo esplicito, l'importazione di dati mediante `LoadLibrary` (o `GetModuleHandle` quando si è certi che la DLL sia stata caricata dal supporto per il caricamento ritardato) e `GetProcAddress`.
+
+- Il caricamento ritardato di Kernel32.dll non è supportato. Questa DLL è necessaria alle routine di supporto del caricamento ritardato per l'esecuzione delle relative attività.
+
+- [Associazione](../../build/reference/binding-imports.md) della voce di punti che vengono inoltrati non è supportata.
+
+- Se si verificano inizializzazioni per processo nel punto di ingresso della DLL a caricamento ritardato, il comportamento del caricamento ritardato di una DLL può essere diverso. Gli altri casi comprendono la statica (archiviazione thread-local), dichiarata usando [declspec](../../cpp/thread.md), che non è gestita quando la DLL viene caricata tramite `LoadLibrary`. La memoria locale di thread dinamica, che usa `TlsAlloc`, `TlsFree`, `TlsGetValue` e `TlsSetValue`, può essere comunque usata per DLL statiche e DLL a caricamento ritardato.
+
+- I puntatori a funzione statici (globali) devono essere reinizializzati sulle funzioni importate dopo la prima chiamata alla funzione, in quanto durante il primo uso della funzione a puntatore verrà considerato come riferimento il thunk.
+
+- Non è attualmente possibile ritardare il caricamento da una DLL delle sole routine specifiche con l'uso del normale meccanismo di importazione.
+
+- Le convenzioni di chiamata personalizzate, come l'uso di flag su architetture x86, non sono supportate. I registri a virgola mobile, inoltre, non vengono salvati su nessuna piattaforma. Se nella routine di supporto o nelle routine di hook personalizzate vengono usati tipi a virgola mobile, è necessario salvare e ripristinare completamente lo stato della virgola mobile sui computer che usano convenzioni di chiamata del registro con parametri a virgola mobile. Il caricamento ritardato della DLL CRT deve essere eseguito con particolare attenzione nel caso in cui vengano effettuate chiamate alle funzioni CRT che accettano parametri a virgola mobile su uno stack NDP (numeric data processor) nella funzione di supporto.
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
+[LoadLibrary (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)<br/>
+[GetModuleHandle (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)<br/>
+[GetProcAddress (funzione)](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)<br/>
+[Funzione TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
+[TlsFree (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
+[TlsGetValue (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
+[TlsSetValue (funzione)](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

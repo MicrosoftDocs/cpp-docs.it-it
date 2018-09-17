@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3c49f76175ced83fb9a9b7e72e1c1fc7dbb68e20
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540635"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720668"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Sezione specifica Microsoft**  
@@ -41,14 +41,14 @@ void __outwordstring(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Port`  
- La porta per inviare i dati.  
+*Porta*<br/>
+[in] La porta per inviare i dati.  
   
- [in] `Buffer`  
- Puntatore ai dati da inviare attraverso la porta specificata.  
+*Buffer*<br/>
+[in] Puntatore ai dati da inviare attraverso la porta specificata.  
   
- [in] `Count`  
- Il numero di parole da inviare.  
+*Conteggio*<br/>
+[in] Il numero di parole da inviare.  
   
 ## <a name="requirements"></a>Requisiti  
   

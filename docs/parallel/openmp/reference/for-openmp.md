@@ -1,5 +1,5 @@
 ---
-title: per (/openmp) | Documenti Microsoft
+title: per (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694862"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721656"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Fa sì che il lavoro svolto in un ciclo all'interno di un'area parallela deve essere diviso tra thread.  
+Fa sì che il lavoro svolto un ciclo all'interno di un'area parallela da dividere tra thread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,17 +33,16 @@ Fa sì che il lavoro svolto in un ciclo all'interno di un'area parallela deve es
    for_statement  
 ```  
   
+## <a name="arguments"></a>Argomenti
+
+*Clausola*<br/>
+(Facoltativo) Zero o più clausole. Vedere la sezione Osservazioni per un elenco delle clausole supportate da **per**.  
+  
+*for_Statement*<br/>
+Un ciclo for. Un comportamento indefinito determinerà se Scrivi codice utente nel di ciclo passa la variabile di indice.  
+  
 ## <a name="remarks"></a>Note  
- dove  
-  
- `clause` (facoltativo)  
- Zero o più clausole. Vedere la sezione Osservazioni per un elenco di clausole supportate da **per**.  
-  
- `for_statement`  
- Un ciclo for. Se il codice utente in si verificherà un comportamento indefinito il di ciclo passa la variabile di indice.  
-  
-## <a name="remarks"></a>Note  
- Il **per** direttiva supporta le clausole OpenMP seguenti:  
+ Il **per** direttiva supporta le clausole OpenMP seguente:  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -59,9 +58,9 @@ Fa sì che il lavoro svolto in un ciclo all'interno di un'area parallela deve es
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Se **parallela** viene anche specificato `clause` può essere qualsiasi clausola accettato dal **parallela** o **per** direttive, ad eccezione di **nowait**.  
+ Se **parallele** viene specificato anche, `clause` può essere qualsiasi clausola accettato dal **parallele** o **per** direttive, tranne **nowait**.  
   
- Per ulteriori informazioni, vedere [2.4.1 costrutto for](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Per altre informazioni, vedere [2.4.1 costrutto for](../../../parallel/openmp/2-4-1-for-construct.md).  
   
 ## <a name="example"></a>Esempio  
   

@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7c2e2e6e4ce39d74142891c5e539b8cc4d028753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101677"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726843"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
@@ -1567,7 +1567,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 *first2*<br/>
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*last2*<br/>
+*Last2*<br/>
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
 *comp*<br/>
@@ -2161,7 +2161,7 @@ Iteratore di input che punta alla posizione immediatamente successiva all'ultimo
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine ordinati consecutivi in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
-*last2*<br/>
+*Last2*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo dei due intervalli di origine ordinati consecutivi in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
 *comp*<br/>
@@ -2520,11 +2520,11 @@ Restituisce **true** se gli elementi nell'intervallo specificato formano un heap
 
 ### <a name="remarks"></a>Note
 
-La prima funzione di modello restituisce [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`.
+La prima funzione modello restituisce [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`.
 
 La seconda funzione di modello restituisce
 
-`is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.
+`is_heap_until(first, last, comp) == last`.
 
 ## <a name="is_heap_until"></a>  is_heap_until
 
@@ -3854,7 +3854,7 @@ constexpr const Type& min(
     const Type& right,
     BinaryPredicate comp);
 template<class Type>
-constexpr Type min( 
+constexpr Type min(
     initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680580"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721253"
 ---
 # <a name="cvslistbox-class"></a>Classe CVSListBox
 Il `CVSListBox` classe supporta un controllo elenco modificabile.  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *strIext*  
- Un riferimento a una stringa.  
+*strIext*<br/>
+[in] Un riferimento a una stringa.  
   
- [in] *dwData*  
- Un valore a 32 bit specifiche dell'applicazione associato con la stringa. Il valore predefinito è 0.  
+*dwData*<br/>
+[in] Un valore a 32 bit specifiche dell'applicazione associato con la stringa. Il valore predefinito è 0.  
   
- [in] *iIndex*  
- Indice a base zero della posizione che conterrà la stringa. Se il *iIndex* parametro è -1, la stringa viene aggiunta alla fine dell'elenco. Il valore predefinito è -1.  
+*iIndex*<br/>
+[in] Indice a base zero della posizione che conterrà la stringa. Se il *iIndex* parametro è -1, la stringa viene aggiunta alla fine dell'elenco. Il valore predefinito è -1.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero della posizione della stringa nel controllo elenco.  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice in base zero di un elemento controllo elenco.  
+*iIndex*<br/>
+[in] Indice in base zero di un elemento controllo elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione di modifica viene avviata correttamente. in caso contrario, FALSE.  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice in base zero dell'elemento controllo elenco modificabile.  
+*iIndex*<br/>
+[in] Indice in base zero dell'elemento controllo elenco modificabile.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il valore a 32 bit che è associato l'elemento specificato.  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `iIndex`  
- Indice in base zero dell'elemento controllo elenco modificabile.  
+*iIndex*<br/>
+[in] Indice in base zero dell'elemento controllo elenco modificabile.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto che contiene il testo dell'elemento specificato.  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice in base zero dell'elemento controllo elenco modificabile.  
+*iIndex*<br/>
+[in] Indice in base zero dell'elemento controllo elenco modificabile.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se viene rimosso l'elemento specificato. in caso contrario, FALSE.  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iItem*  
- Indice in base zero dell'elemento controllo elenco modificabile.  
+*iItem*<br/>
+[in] Indice in base zero dell'elemento controllo elenco modificabile.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice in base zero dell'elemento controllo elenco modificabile.  
+*iIndex*<br/>
+[in] Indice in base zero dell'elemento controllo elenco modificabile.  
   
- [in] *dwData*  
- Un valore a 32 bit. Questo valore può essere un valore integer specifico dell'applicazione o un puntatore a altri dati.  
+*dwData*<br/>
+[in] Un valore a 32 bit. Questo valore può essere un valore integer specifico dell'applicazione o un puntatore a altri dati.  
   
 ### <a name="remarks"></a>Note  
   

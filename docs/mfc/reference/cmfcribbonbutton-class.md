@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541444"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712965"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 La classe `CMFCRibbonButton` implementa i pulsanti che è possibile posizionare negli elementi della barra multifunzione, ad esempio pannelli, barre di accesso rapido e menu a comparsa.  
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pSubItem*  
- Specifica un puntatore al nuovo elemento da aggiungere.  
+*pSubItem*<br/>
+[in] Specifica un puntatore al nuovo elemento da aggiungere.  
   
- [in] *nIndex*  
- Specifica l'indice in corrispondenza del quale aggiungere l'elemento nella matrice di voci di menu del pulsante; -1 per aggiungere l'elemento alla fine della matrice di voci di menu.  
+*nIndex*<br/>
+[in] Specifica l'indice in corrispondenza del quale aggiungere l'elemento nella matrice di voci di menu del pulsante; -1 per aggiungere l'elemento alla fine della matrice di voci di menu.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Specifica l'ID di comando del pulsante.  
+*nID*<br/>
+[in] Specifica l'ID di comando del pulsante.  
   
- [in] *lpszText*  
- Specifica l'etichetta di testo del pulsante.  
+*lpszText*<br/>
+[in] Specifica l'etichetta di testo del pulsante.  
   
- [in] *nSmallImageIndex*  
- Specifica un indice in base zero dell'immagine di piccole dimensioni del pulsante dell'elenco di immagini della categoria padre.  
+*nSmallImageIndex*<br/>
+[in] Specifica un indice in base zero dell'immagine di piccole dimensioni del pulsante dell'elenco di immagini della categoria padre.  
   
- [in] *nLargeImageIndex*  
- Specifica un indice in base zero dell'immagine del pulsante di grandi dimensioni nell'elenco delle immagini della categoria padre.  
+*nLargeImageIndex*<br/>
+[in] Specifica un indice in base zero dell'immagine del pulsante di grandi dimensioni nell'elenco delle immagini della categoria padre.  
   
- [in] *hIcon*  
- Specifica un handle per l'icona utilizzata dall'applicazione come immagine del pulsante.  
+*hIcon*<br/>
+[in] Specifica un handle per l'icona utilizzata dall'applicazione come immagine del pulsante.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come costruire un `CMFCRibbonButton` oggetto.  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *bCalcOnly*  
+*pDC*<br/>
+[in] [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *tipo*  
+*pDC*<br/>
+[in] [in] *tipo*  
  [in] *rectImage*  
   
 ### <a name="remarks"></a>Note  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *strText*  
- [in] *rectText*  
- [in] *uiDTFlags*  
+*pDC*<br/>
+[in] [in] *strText*  
+*rectText*<br/>
+[in] [in] *uiDTFlags*  
  [in] *clrText*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- Specifica l'ID di comando della voce di menu a comparsa.  
+*uiID*<br/>
+[in] Specifica l'ID di comando della voce di menu a comparsa.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero dell'elemento secondario associato con il *uiID*. -1 se non sono presenti tali elementi secondari.  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bLargeImage*  
- Se TRUE, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di grandi dimensioni. in caso contrario, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di piccole dimensioni.  
+*bLargeImage*<br/>
+[in] Se TRUE, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di grandi dimensioni. in caso contrario, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di piccole dimensioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice dell'immagine del pulsante nell'elenco di immagini associato.  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Specifica la posizione di clic del mouse.  
+*punto*<br/>
+[in] Specifica la posizione di clic del mouse.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata se si desidera gestire questo evento.  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice in base zero della voce di menu che si desidera rimuovere.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero della voce di menu che si desidera rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'elemento specificato è stato rimosso correttamente; in caso contrario, FALSE se *nIndex* è negativo o supera il numero di voci di menu nel menu a comparsa.  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- Se TRUE, il pulsante Visualizza un'immagine di grandi dimensioni. In caso contrario, il pulsante Visualizza un'immagine piccola.  
+*bSet*<br/>
+[in] Se TRUE, il pulsante Visualizza un'immagine di grandi dimensioni. In caso contrario, il pulsante Visualizza un'immagine piccola.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Abilita il comando predefinito per il pulsante della barra multifunzione.  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- Se TRUE, il pulsante può eseguire il comando predefinito. Se FALSE, il pulsante non è possibile eseguire il comando predefinito.  
+*bSet*<br/>
+[in] Se TRUE, il pulsante può eseguire il comando predefinito. Se FALSE, il pulsante non è possibile eseguire il comando predefinito.  
   
 ### <a name="remarks"></a>Note  
  *bSet* è rilevante solo quando il pulsante presenta un menu. Se *bSet* è TRUE, il pulsante può eseguire il comando predefinito e menu di scelta rapida assegnato viene visualizzato solo quando un utente fa clic sulla freccia a destra del pulsante. In caso contrario, il pulsante non è possibile eseguire il comando predefinito e viene visualizzato il menu a comparsa indipendentemente dall'area del pulsante l'utente fa clic.  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice dell'immagine.  
+*nIndex*<br/>
+[in] Specifica l'indice dell'immagine.  
   
- [in] *bLargeImage*  
- Se TRUE, l'indice specificato si riferisce all'elenco di immagini di grandi dimensioni. In caso contrario, l'indice fa riferimento all'elenco delle immagini di piccole dimensioni.  
+*bLargeImage*<br/>
+[in] Se TRUE, l'indice specificato si riferisce all'elenco di immagini di grandi dimensioni. In caso contrario, l'indice fa riferimento all'elenco delle immagini di piccole dimensioni.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Assegna un menu a comparsa al pulsante della barra multifunzione.  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- Se TRUE, il menu di scelta è allineata a destra. In caso contrario, il menu di scelta è allineata a sinistra  
+*bSet*<br/>
+[in] Se TRUE, il menu di scelta è allineata a destra. In caso contrario, il menu di scelta è allineata a sinistra  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

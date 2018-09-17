@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e996a83cfc2a79d4bf5cc458ccc5bdd586355b64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6884face758cd7f7b9b507405f41f4fcbac8f188
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540615"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721305"
 ---
 # <a name="umul128"></a>_umul128
 **Sezione specifica Microsoft**  
@@ -39,21 +39,21 @@ unsigned __int64 _umul128(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Multiplier`  
- Primo valore Integer a 64 bit da moltiplicare.  
+*Moltiplicatore*<br/>
+[in] Il primo numero intero a 64 bit da moltiplicare.  
   
- [in] `Multiplicand`  
- Secondo valore Integer a 64 bit da moltiplicare.  
+*Moltiplicando*<br/>
+[in] Il secondo valore integer a 64 bit da moltiplicare.  
   
- [out] `HighProduct`  
- 64 bit alti del prodotto.  
+*HighProduct*<br/>
+[out] I 64 bit alti del prodotto.  
   
 ## <a name="return-value"></a>Valore restituito  
  64 bit bassi del prodotto.  
   
 ## <a name="requirements"></a>Requisiti  
   
-|Funzione intrinseca|Architettura|Header|  
+|Funzione intrinseca|Architettura|Intestazione|  
 |---------------|------------------|------------|  
 |`_umul128`|ARM, x64|\<intrin.h>|  
   

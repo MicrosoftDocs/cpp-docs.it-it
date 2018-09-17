@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680610"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715364"
 ---
 # <a name="cmfccolordialog-class"></a>Classe CMFCColorDialog
 Il `CMFCColorDialog` classe rappresenta una finestra di dialogo di selezione colore.  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *clrInit*  
- La selezione di colore predefinito. Se viene specificato alcun valore, il valore predefinito è RGB(0,0,0) (nero).  
+*clrInit*<br/>
+[in] La selezione di colore predefinito. Se viene specificato alcun valore, il valore predefinito è RGB(0,0,0) (nero).  
   
- [in] *dwFlags*  
- (Riservato).  
+*dwFlags*<br/>
+[in] Riservato.
   
- [in] *pParentWnd*  
- Puntatore alla finestra padre o proprietaria della finestra di dialogo.  
+*pParentWnd*<br/>
+[in] Puntatore alla finestra padre o proprietaria della finestra di dialogo.  
   
- [in] *hPal*  
- Handle per una tavolozza dei colori.  
+*hPal*<br/>
+[in] Handle per una tavolozza dei colori.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rgb*  
- Un valore di colore RGB  
+*rgb*<br/>
+[in] Un valore di colore RGB  
   
 ### <a name="remarks"></a>Note  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rgb*  
- Oggetto [COLORREF](/windows/desktop/gdi/colorref) che specifica un colore RGB.  
+*rgb*<br/>
+[in] Oggetto [COLORREF](/windows/desktop/gdi/colorref) che specifica un colore RGB.  
   
 ### <a name="remarks"></a>Note  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *R*  
- Specifica il componente rosso del valore RGB.  
+*R*<br/>
+[in] Specifica il componente rosso del valore RGB.  
   
- [in] *G*  
- Specifica il componente verde del valore RGB.  
+*G*<br/>
+[in] Specifica il componente verde del valore RGB.  
   
- [in] *B*  
- Specifica il componente blu del valore RGB.  
+*B*<br/>
+[in] Specifica il componente blu del valore RGB.  
   
 ### <a name="remarks"></a>Note  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *R*  
- Specifica un componente rossa del valore RGB  
+*R*<br/>
+[in] Specifica un componente rossa del valore RGB  
   
- [in] *G*  
- Specifica un componente verde di un valore RGB  
+*G*<br/>
+[in] Specifica un componente verde di un valore RGB  
   
- [in] *B*  
- Specifica un componente blu di un valore RGB  
+*B*<br/>
+[in] Specifica un componente blu di un valore RGB  
   
 ### <a name="remarks"></a>Note  
   

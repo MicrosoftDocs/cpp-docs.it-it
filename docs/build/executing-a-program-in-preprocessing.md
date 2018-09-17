@@ -1,5 +1,5 @@
 ---
-title: L'esecuzione di un programma nella pre-elaborazione | Documenti Microsoft
+title: Esecuzione di un programma di pre-elaborazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da87a87a2e97736d202b7ddb9be2dbec54fed44d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e2b0571e67e7c5d24cf31dce6fce548735cad966
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721461"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>Esecuzione di un programma durante la pre-elaborazione
-Per utilizzare il codice di uscita di un comando durante la pre-elaborazione, specificare il comando, con tutti gli argomenti, racchiuso tra parentesi quadre ([]). Eventuali macro vengono espanse prima dell'esecuzione del comando. NMAKE sostituisce la specifica di comando con codice di uscita del comando, che può essere usate in un'espressione per controllare la pre-elaborazione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Espressioni nella pre-elaborazione di makefile](../build/expressions-in-makefile-preprocessing.md)
+
+Per usare il codice di uscita del comando durante la pre-elaborazione, specificare il comando, con tutti gli argomenti, racchiusi tra parentesi quadre ([]). Tutte le macro vengono espanse prima dell'esecuzione del comando. NMAKE sostituisce la specifica del comando con codice di uscita del comando, che può essere usate in un'espressione per controllare la pre-elaborazione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Espressioni nella pre-elaborazione di makefile](../build/expressions-in-makefile-preprocessing.md)

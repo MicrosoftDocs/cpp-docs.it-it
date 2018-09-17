@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 48c73e220c3e80abf0535e414572427f75b04511
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683752"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718211"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 Classe di base per tutti i riquadri in MFC.  
@@ -372,8 +372,8 @@ virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *int*  
- Non usato.  
+*int*<br/>
+[in] Non utilizzato.  
   
 ##  <a name="addpane"></a>  CBasePane::AddPane  
  Aggiunge un riquadro per il gestore di ancoraggio.  
@@ -383,8 +383,8 @@ void AddPane(CBasePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Un puntatore a un riquadro da aggiungere.  
+*pBar*<br/>
+[in] Un puntatore a un riquadro da aggiungere.  
   
 ### <a name="remarks"></a>Note  
  Si tratta di un metodo pratico che aggiunge un riquadro a un gestore di ancoraggio. Con questo metodo, non è necessario scrivere codice che consente di analizzare il tipo del frame padre.  
@@ -399,8 +399,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *hdwp*  
- Handle a una struttura contenente più posizioni delle finestre.  
+*hdwp*<br/>
+[out] Handle a una struttura contenente più posizioni delle finestre.  
   
 ### <a name="remarks"></a>Note  
  Si tratta di un metodo pratico che regola il layout di ancoraggio. Con questo metodo, non è necessario scrivere codice che consente di analizzare il tipo del frame padre.  
@@ -427,11 +427,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bStretch*  
- Indica se la barra deve essere estesa per le dimensioni del fotogramma. Il *bStretch* parametro è diverso da zero quando la barra non è una barra ancorabile (non disponibile per l'ancoraggio) e 0 quando è ancorato o mobile (disponibile per l'ancoraggio).  
+*bStretch*<br/>
+[in] Indica se la barra deve essere estesa per le dimensioni del fotogramma. Il *bStretch* parametro è diverso da zero quando la barra non è una barra ancorabile (non disponibile per l'ancoraggio) e 0 quando è ancorato o mobile (disponibile per l'ancoraggio).  
   
- [in] *bHorz*  
- Indica che la barra è orientata orizzontalmente o verticalmente. Il *bHorz* parametro è diverso da zero se la barra è orientata in senso orizzontale ed è 0 se è orientato verticalmente.  
+*bHorz*<br/>
+[in] Indica che la barra è orientata orizzontalmente o verticalmente. Il *bHorz* parametro è diverso da zero se la barra è orientata in senso orizzontale ed è 0 se è orientato verticalmente.  
   
 ### <a name="return-value"></a>Valore restituito  
  La barra di controllo dimensioni, in pixel, di un `CSize` oggetto.  
@@ -447,8 +447,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore al riquadro per ancorare.  
+*pBar*<br/>
+[in] Puntatore al riquadro per ancorare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se un altro riquadro può essere accettato. in caso contrario, FALSE.  
@@ -515,8 +515,8 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDockBar*  
- Un puntatore a un altro riquadro.  
+*pDockBar*<br/>
+[in] Un puntatore a un altro riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo riquadro può essere ancorato a un altro riquadro; in caso contrario, FALSE.  
@@ -597,8 +597,8 @@ virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pOrgBar*  
- Un puntatore a un altro riquadro.  
+*pOrgBar*<br/>
+[in] Un puntatore a un altro riquadro.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo copia lo stato da *pOrgBar* in questo riquadro.  
@@ -611,8 +611,8 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectInitial*  
- Specifica le coordinate iniziali della finestra con mini-cornice.  
+*rectInitial*<br/>
+[in] Specifica le coordinate iniziali della finestra con mini-cornice.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore alla nuova finestra con mini-cornice oppure NULL se non è riuscita la creazione.  
@@ -639,32 +639,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwStyleEx*  
- Gli stili estesi (vedere [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) per altre informazioni).  
+*dwStyleEx*<br/>
+[in] Gli stili estesi (vedere [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) per altre informazioni).  
   
- [in] *lpszClassName*  
- Il nome della classe di finestra.  
+*lpszClassName*<br/>
+[in] Il nome della classe di finestra.  
   
- [in] *lpszWindowName*  
- Nome della finestra.  
+*lpszWindowName*<br/>
+[in] Il nome della finestra.  
   
- [in] *dwStyle*  
- Lo stile della finestra (vedere [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
+*dwStyle*<br/>
+[in] Lo stile della finestra (vedere [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
- [in] *rect*  
- Il rettangolo iniziale.  
+*Rect*<br/>
+[in] Il rettangolo iniziale.  
   
- [in] *pParentWnd*  
- Puntatore alla finestra padre.  
+*pParentWnd*<br/>
+[in] Puntatore alla finestra padre.  
   
- [in] *nID*  
- Specifica l'ID di riquadro. Deve essere univoco.  
+*nID*<br/>
+[in] Specifica l'ID di riquadro. Deve essere univoco.  
   
- [in] *dwControlBarStyle*  
- Flag di stile per i riquadri.  
+*dwControlBarStyle*<br/>
+[in] Flag di stile per i riquadri.  
   
- [in] *pContext*  
- Un puntatore a `CcreateContext`  
+*pContext*<br/>
+[in] Un puntatore a `CcreateContext`  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro viene creato correttamente. in caso contrario, FALSE.  
@@ -699,14 +699,14 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDockBar*  
- Un puntatore a un altro riquadro.  
+*pDockBar*<br/>
+[in] Un puntatore a un altro riquadro.  
   
- [in] *lpRect*  
- Specifica il rettangolo di destinazione.  
+*lpRect*<br/>
+[in] Specifica il rettangolo di destinazione.  
   
- [in] *dockMethod*  
- Specifica il metodo di ancoraggio.  
+*dockMethod*<br/>
+[in] Specifica il metodo di ancoraggio.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la barra di controllo è stata ancorata correttamente. in caso contrario, FALSE.  
@@ -724,8 +724,8 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bUseDockSite*  
- Se TRUE, ancorare al sito di ancoraggio. Se FALSE, ancorare al frame padre.  
+*bUseDockSite*<br/>
+[in] Se TRUE, ancorare al sito di ancoraggio. Se FALSE, ancorare al frame padre.  
   
 ##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  Ancora un riquadro ancorato in un frame.  
@@ -741,23 +741,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwAlignment*  
- Il lato del frame padre che si desidera ancorare il riquadro.  
+*dwAlignment*<br/>
+[in] Il lato del frame padre che si desidera ancorare il riquadro.  
   
- [in] *lpRect*  
- Le dimensioni desiderate.  
+*lpRect*<br/>
+[in] Le dimensioni desiderate.  
   
- [in] *dwDockFlags*  
- Ignorato.  
+*dwDockFlags*<br/>
+[in] Ignorato.  
   
- [in] *pRelativeBar*  
- Ignorato.  
+*pRelativeBar*<br/>
+[in] Ignorato.  
   
- [in] *nRelativeIndex*  
- Ignorato.  
+*nRelativeIndex*<br/>
+[in] Ignorato.  
   
- [in] *bOuterEdge*  
- Se TRUE e vi sono altri riquadri ancorabili specificato da un lato *dwAlignment*, il riquadro viene ancorato all'esterno di altri riquadri, più da vicino al bordo del frame padre. Se FALSE, il riquadro viene ancorato più vicino al centro dell'area client.  
+*bOuterEdge*<br/>
+[in] Se TRUE e vi sono altri riquadri ancorabili specificato da un lato *dwAlignment*, il riquadro viene ancorato all'esterno di altri riquadri, più da vicino al bordo del frame padre. Se FALSE, il riquadro viene ancorato più vicino al centro dell'area client.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.  
@@ -792,8 +792,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita chiama il gestore visualizzazione corrente per riempire lo sfondo ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
@@ -806,8 +806,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwAlignment*  
- Specifica l'allineamento di ancoraggio da abilitare.  
+*dwAlignment*<br/>
+[in] Specifica l'allineamento di ancoraggio da abilitare.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per consentire l'allineamento di ancoraggio per la cornice principale. È possibile passare una combinazione di flag CBRS_ALIGN_ (per altre informazioni, vedere [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
@@ -824,8 +824,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare la barra gripper; FALSE per disabilitarla.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare la barra gripper; FALSE per disabilitarla.  
   
 ### <a name="remarks"></a>Note  
  Il framework utilizza questo metodo per abilitare un barra gripper invece di usare lo stile WS_CAPTION.  
@@ -841,14 +841,14 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectFloat*  
- Specifica le coordinate dello schermo in cui viene visualizzato il riquadro mobile.  
+*rectFloat*<br/>
+[in] Specifica le coordinate dello schermo in cui viene visualizzato il riquadro mobile.  
   
- [in] *dockMethod*  
- Specifica il metodo di ancoraggio da usare per spostarsi nel riquadro.  
+*dockMethod*<br/>
+[in] Specifica il metodo di ancoraggio da usare per spostarsi nel riquadro.  
   
- [in] *bMostra*  
- Specifica se il riquadro mobile è visibile (TRUE) o nascosta (FALSE).  
+*bMostra*<br/>
+[in] Specifica se il riquadro mobile è visibile (TRUE) o nascosta (FALSE).  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro è stata resa correttamente. in caso contrario, FALSE.  
@@ -867,14 +867,14 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pszHelpFile*  
- Indirizzo di un oggetto BSTR che riceve il percorso completo del **WinHelp** file in cui è associato l'oggetto specificato, se presente.  
+*pszHelpFile*<br/>
+[in] Indirizzo di un oggetto BSTR che riceve il percorso completo del **WinHelp** file in cui è associato l'oggetto specificato, se presente.  
   
- [in] *varChild*  
- Specifica se l'argomento della Guida da recuperare è quello di oggetto o uno degli elementi figlio dell'oggetto. Questo parametro può essere CHILDID_SELF (per ottenere un argomento della Guida per l'oggetto) o un ID figlio (per ottenere un argomento della Guida per un elemento figlio gli elementi dell'oggetto).  
+*varChild*<br/>
+[in] Specifica se l'argomento della Guida da recuperare è quello di oggetto o uno degli elementi figlio dell'oggetto. Questo parametro può essere CHILDID_SELF (per ottenere un argomento della Guida per l'oggetto) o un ID figlio (per ottenere un argomento della Guida per un elemento figlio gli elementi dell'oggetto).  
   
- [in] *pidTopic*  
- Identifica la **aiutare** argomento file in cui è associato l'oggetto specificato.  
+*pidTopic*<br/>
+[in] Identifica la **aiutare** argomento file in cui è associato l'oggetto specificato.  
   
 ### <a name="return-value"></a>Valore restituito  
  `CBasePane` non implementa questo metodo. Pertanto, `CBasePane::get_accHelpTopic` sempre restituisce S_FALSE.  
@@ -890,8 +890,8 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pvarChildren*  
- Riceve le informazioni che identificano gli elementi figlio selezionati.  
+*pvarChildren*<br/>
+[in] Riceve le informazioni che identificano gli elementi figlio selezionati.  
   
 ### <a name="return-value"></a>Valore restituito  
  `CBasePane` non implementa questo metodo. Se *pvarChildren* è NULL, questo metodo viene restituito E_INVALIDARG. In caso contrario, questo metodo restituisce DISP_E_MEMBERNOTFOUND.  
@@ -1017,8 +1017,8 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bBigIcon*  
- Specifica un 32 pixel dall'icona di 32 pixel se è TRUE; Specifica il 16 pixel da 16 icona pixel se è FALSE.  
+*bBigIcon*<br/>
+[in] Specifica un 32 pixel dall'icona di 32 pixel se è TRUE; Specifica il 16 pixel da 16 icona pixel se è FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Handle per l'icona del riquadro. In caso contrario, restituisce NULL.  
@@ -1067,8 +1067,8 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bNoAssert*  
- Se TRUE, questo metodo non verifica per i puntatori non validi. Se si chiama questo metodo alla chiusura dell'applicazione, impostare questo parametro su TRUE.  
+*bNoAssert*<br/>
+[in] Se TRUE, questo metodo non verifica per i puntatori non validi. Se si chiama questo metodo alla chiusura dell'applicazione, impostare questo parametro su TRUE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore valido per la finestra con mini-cornice padre se il riquadro è mobile. in caso contrario NULL.  
@@ -1096,8 +1096,8 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *hWndTab*  
- Se il valore restituito non è NULL, questo parametro contiene l'handle della finestra a schede padre.  
+*hWndTab*<br/>
+[out] Se il valore restituito non è NULL, questo parametro contiene l'handle della finestra a schede padre.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore valido per la finestra a schede padre o NULL.  
@@ -1139,14 +1139,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Puntatore al riquadro da inserire.  
+*pControlBar*<br/>
+[in] Puntatore al riquadro da inserire.  
   
- [in] *pTarget*  
- Puntatore al riquadro adiacente.  
+*pTarget*<br/>
+[in] Puntatore al riquadro adiacente.  
   
- [in] *bDopo*  
- Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.  
+*bDopo*<br/>
+[in] Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo, FALSE in caso contrario.  
@@ -1270,14 +1270,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Il punto specificato.  
+*punto*<br/>
+[in] Il punto specificato.  
   
- [out] *dwBarAlignment*  
- Specifica il bordo punto si avvicina. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[out] Specifica il bordo punto si avvicina. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM  
   
- [out] *bOuterEdge*  
- TRUE se il punto è quasi il bordo esterno del sito di ancoraggio; FALSE in caso contrario.  
+*bOuterEdge*<br/>
+[out] TRUE se il punto è quasi il bordo esterno del sito di ancoraggio; FALSE in caso contrario.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il punto è quasi del sito di ancoraggio. in caso contrario, FALSE.  
@@ -1349,14 +1349,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Nome del profilo.  
+*lpszProfileName*<br/>
+[in] Nome del profilo.  
   
- [in] *nIndex*  
- Indice del profilo.  
+*nIndex*<br/>
+[in] Indice del profilo.  
   
- [in] *uiID*  
- ID del riquadro.  
+*uiID*<br/>
+[in] ID del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se lo stato del riquadro è stato caricato correttamente. in caso contrario, FALSE.  
@@ -1375,14 +1375,14 @@ virtual HDWP MoveWindow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Un rettangolo che specifica la nuova posizione e dimensioni del riquadro.  
+*Rect*<br/>
+[in] Un rettangolo che specifica la nuova posizione e dimensioni del riquadro.  
   
- [in] *bRepaint*  
- Se TRUE, il riquadro viene ridisegnato. Se FALSE, il riquadro non viene ridisegnato.  
+*bRepaint*<br/>
+[in] Se TRUE, il riquadro viene ridisegnato. Se FALSE, il riquadro non viene ridisegnato.  
   
- [in] *hdwp*  
- Handle per una struttura di posizione finestra posticipata.  
+*hdwp*<br/>
+[in] Handle per una struttura di posizione finestra posticipata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Handle a una struttura di posizione finestra posticipata o NULL.  
@@ -1398,8 +1398,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndOldParent*  
- Un puntatore all'elemento padre precedente.  
+*pWndOldParent*<br/>
+[in] Un puntatore all'elemento padre precedente.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo dopo l'elemento padre del riquadro cambia, in genere a causa di un'operazione di ancoraggio o a virgola mobile.  
@@ -1416,11 +1416,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndNewParent*  
- Puntatore a una nuova finestra padre.  
+*pWndNewParent*<br/>
+[in] Puntatore a una nuova finestra padre.  
   
- [in] *bDelay*  
- Specifica se le regolazioni di layout devono essere posticipate.  
+*bDelay*<br/>
+[in] Specifica se le regolazioni di layout devono essere posticipate.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo solo prima di modifiche padre del riquadro, in genere a causa di un ancoraggio, a virgola mobile o operazione Nascondi automaticamente.  
@@ -1458,11 +1458,11 @@ virtual void OnPaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParentFrame*  
- Puntatore al frame padre.  
+*pParentFrame*<br/>
+[in] Puntatore al frame padre.  
   
- [in] *punto*  
- Specifica la posizione del menu di scelta rapida.  
+*punto*<br/>
+[in] Specifica la posizione del menu di scelta rapida.  
   
 ### <a name="remarks"></a>Note  
  `OnPaneContextMenu` chiama il gestore di ancoraggio, che mantiene un elenco dei riquadri che appartengono alla finestra cornice corrente. Questo metodo aggiunge i nomi dei riquadri a un menu di scelta rapida e li visualizza. I comandi dal menu di mostrano o nascondere singoli riquadri.  
@@ -1477,8 +1477,8 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMiniFrame*  
- Un puntatore a una finestra con mini-cornice da cui viene rimosso il riquadro.  
+*pMiniFrame*<br/>
+[in] Un puntatore a una finestra con mini-cornice da cui viene rimosso il riquadro.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando un riquadro viene rimosso dalla finestra con mini-cornice padre (come risultato di ancoraggio, ad esempio).  
@@ -1493,8 +1493,8 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lVal*  
- Non usato.  
+*lVal*<br/>
+[in] Non utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce sempre TRUE.  
@@ -1513,17 +1513,17 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Specifica il punto, nelle coordinate dello schermo, da controllare.  
+*punto*<br/>
+[in] Specifica il punto, nelle coordinate dello schermo, da controllare.  
   
- [in] *nSensitivity*  
- Aumentare l'area di ricerca di questo importo. Se il punto specificato cade nell'area di maggiore, un riquadro soddisferà i criteri di ricerca.  
+*nSensitivity*<br/>
+[in] Aumentare l'area di ricerca di questo importo. Se il punto specificato cade nell'area di maggiore, un riquadro soddisferà i criteri di ricerca.  
   
- [in] *bExactBar*  
- TRUE per ignorare la *nSensitivity* parametro; in caso contrario, FALSE.  
+*bExactBar*<br/>
+[in] TRUE per ignorare la *nSensitivity* parametro; in caso contrario, FALSE.  
   
- [in] *pRTCBarType*  
- Se non è NULL, il metodo cerca solo i riquadri del tipo specificato.  
+*pRTCBarType*<br/>
+[in] Se non è NULL, il metodo cerca solo i riquadri del tipo specificato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il `CBasePane`-oggetto derivato che contiene il punto specificato o NULL se è stato trovato alcun riquadro.  
@@ -1548,20 +1548,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Un puntatore a un riquadro da rimuovere.  
+*pBar*<br/>
+[in] Un puntatore a un riquadro da rimuovere.  
   
- [in] *bDestroy*  
- Se TRUE, il riquadro rimosso viene eliminato definitivamente.  
+*bDestroy*<br/>
+[in] Se TRUE, il riquadro rimosso viene eliminato definitivamente.  
   
- [in] *bAdjustLayout*  
- Se TRUE, modificare il layout di ancoraggio immediatamente.  
+*bAdjustLayout*<br/>
+[in] Se TRUE, modificare il layout di ancoraggio immediatamente.  
   
- [in] *bAutoHide*  
- Se TRUE, il layout di ancoraggio è correlato all'elenco di barre Nascondi automaticamente. Se FALSE, il layout di ancoraggio è correlato all'elenco di riquadri regolari.  
+*bAutoHide*<br/>
+[in] Se TRUE, il layout di ancoraggio è correlato all'elenco di barre Nascondi automaticamente. Se FALSE, il layout di ancoraggio è correlato all'elenco di riquadri regolari.  
   
- [in] *pBarReplacement*  
- Puntatore a un riquadro che sostituisce il riquadro rimosso.  
+*pBarReplacement*<br/>
+[in] Puntatore a un riquadro che sostituisce il riquadro rimosso.  
   
 ##  <a name="savestate"></a>  CBasePane::SaveState  
  Salva lo stato del riquadro nel Registro di sistema.  
@@ -1574,14 +1574,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Nome del profilo.  
+*lpszProfileName*<br/>
+[in] Nome del profilo.  
   
- [in] *nIndex*  
- Indice del profilo.  
+*nIndex*<br/>
+[in] Indice del profilo.  
   
- [in] *uiID*  
- ID del riquadro.  
+*uiID*<br/>
+[in] ID del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se lo stato è stato salvato correttamente. in caso contrario, FALSE.  
@@ -1597,8 +1597,8 @@ CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Un contesto di dispositivo.  
+*pDC*<br/>
+[in] Un contesto di dispositivo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore per il valore predefinito [CFont (Class)](../../mfc/reference/cfont-class.md) oggetto.  
@@ -1611,8 +1611,8 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwNewStyle*  
- Una combinazione OR bit per bit dei valori possibili seguenti.  
+*dwNewStyle*<br/>
+[in] Una combinazione OR bit per bit dei valori possibili seguenti.  
   
 |Stile|Descrizione|  
 |-----------|-----------------|  
@@ -1629,8 +1629,8 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dockModeNew*  
- Specifica la nuova modalità di ancoraggio del riquadro.  
+*dockModeNew*<br/>
+[in] Specifica la nuova modalità di ancoraggio del riquadro.  
   
 ### <a name="remarks"></a>Note  
  Il framework supporta due modalità di ancoraggio: standard e immediato.  
@@ -1647,8 +1647,8 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwAlignment*  
- Specifica l'allineamento di nuovo.  
+*dwAlignment*<br/>
+[in] Specifica l'allineamento di nuovo.  
   
 ### <a name="remarks"></a>Note  
  In genere, il framework chiama questo metodo quando un riquadro viene ancorato da un lato della cornice principale a un altro.  
@@ -1670,8 +1670,8 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwNewStyle*  
- Specifica il nuovo stile da impostare.  
+*dwNewStyle*<br/>
+[in] Specifica il nuovo stile da impostare.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo può essere utilizzato per impostare gli stili CBRS _ definiti in AFXRES. h. Poiché vengono archiviati insieme stile del riquadro e l'allineamento di riquadro, impostare il nuovo stile combinandola con l'allineamento corrente come indicato di seguito.  
@@ -1693,26 +1693,26 @@ virtual HDWP SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndInsertAfter*  
- Identifica la `CWnd` oggetto fornito in precedenza `CWnd` oggetto nell'ordine Z. Per altre informazioni, vedere [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*pWndInsertAfter*<br/>
+[in] Identifica la `CWnd` oggetto fornito in precedenza `CWnd` oggetto nell'ordine Z. Per altre informazioni, vedere [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *x*  
- Specifica la posizione del lato sinistro della finestra.  
+*x*<br/>
+[in] Specifica la posizione del lato sinistro della finestra.  
   
- [in] *y*  
- Specifica la posizione della parte superiore della finestra.  
+*y*<br/>
+[in] Specifica la posizione della parte superiore della finestra.  
   
- [in] *cx*  
- Specifica la larghezza della finestra.  
+*CX*<br/>
+[in] Specifica la larghezza della finestra.  
   
- [in] *cy*  
- Specifica l'altezza della finestra.  
+*CY*<br/>
+[in] Specifica l'altezza della finestra.  
   
- [in] *nFlags*  
- Specifica le opzioni di dimensioni e posizione. Per altre informazioni, vedere [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*nFlags*<br/>
+[in] Specifica le opzioni di dimensioni e posizione. Per altre informazioni, vedere [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *hdwp*  
- Handle per una struttura che contiene informazioni sulle dimensioni e posizione per una o più finestre.  
+*hdwp*<br/>
+[in] Handle per una struttura che contiene informazioni sulle dimensioni e posizione per una o più finestre.  
   
 ### <a name="return-value"></a>Valore restituito  
  Handle a una struttura di posizione finestra aggiornata posticipata o NULL.  
@@ -1731,14 +1731,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- Specifica se visualizzare (TRUE) o nascondere (FALSE) un riquadro.  
+*bMostra*<br/>
+[in] Specifica se visualizzare (TRUE) o nascondere (FALSE) un riquadro.  
   
- [in] *bDelay*  
- Se TRUE, il ricalcolo del layout di ancoraggio viene ritardato.  
+*bDelay*<br/>
+[in] Se TRUE, il ricalcolo del layout di ancoraggio viene ritardato.  
   
- [in] *bActivate*  
- Se TRUE, il riquadro è attivo se visualizzato.  
+*bActivate*<br/>
+[in] Se TRUE, il riquadro è attivo se visualizzato.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo visualizza o nasconde un riquadro. Usare questo metodo anziché `ShowWindow` perché questo metodo notifica i responsabili di ancoraggio rilevanti sulle modifiche nella visibilità del riquadro.  
@@ -1755,11 +1755,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nLength*  
- La lunghezza per cui si desidera estendere il riquadro.  
+*nLength*<br/>
+[in] La lunghezza per cui si desidera estendere il riquadro.  
   
- [in] *bVert*  
- Se TRUE, ridimensionati verticalmente il riquadro. Se FALSE, il riquadro di estensione in senso orizzontale.  
+*bVert*<br/>
+[in] Se TRUE, ridimensionati verticalmente il riquadro. Se FALSE, il riquadro di estensione in senso orizzontale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni del riquadro con estensione.  

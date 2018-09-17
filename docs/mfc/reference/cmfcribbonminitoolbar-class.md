@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543179"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721175"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 Implementa una barra degli strumenti popup contestuale.  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pRibbonBar*  
- La barra multifunzione che la barra Cerca i pulsanti da visualizzare.  
+*pRibbonBar*<br/>
+[in] La barra multifunzione che la barra Cerca i pulsanti da visualizzare.  
   
- [in] *lstCommands*  
- L'elenco di comandi da visualizzare nella barra degli strumenti formattazione rapida. Tutte le categorie della barra multifunzione vengono effettuata la ricerca per trovare i pulsanti associati.  
+*lstCommands*<br/>
+[in] L'elenco di comandi da visualizzare nella barra degli strumenti formattazione rapida. Tutte le categorie della barra multifunzione vengono effettuata la ricerca per trovare i pulsanti associati.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per impostare l'elenco di comandi da visualizzare nella barra di formattazione rapida.  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *x*  
- Specifica la posizione orizzontale della barra di formattazione rapida in coordinate dello schermo.  
+*x*<br/>
+[in] Specifica la posizione orizzontale della barra di formattazione rapida in coordinate dello schermo.  
   
- [in] *y*  
- Specifica la posizione verticale della barra di formattazione rapida in coordinate dello schermo.  
+*y*<br/>
+[in] Specifica la posizione verticale della barra di formattazione rapida in coordinate dello schermo.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la barra di formattazione rapida viene visualizzata correttamente. in caso contrario, FALSE.  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *x*  
- Specifica la posizione orizzontale del menu di scelta rapida in coordinate dello schermo.  
+*x*<br/>
+[in] Specifica la posizione orizzontale del menu di scelta rapida in coordinate dello schermo.  
   
- [in] *y*  
- Specifica la posizione verticale del menu di scelta rapida in coordinate dello schermo.  
+*y*<br/>
+[in] Specifica la posizione verticale del menu di scelta rapida in coordinate dello schermo.  
   
- [in] *uiMenuResID*  
- Specifica l'ID di risorsa di menu di scelta rapida da visualizzare.  
+*uiMenuResID*<br/>
+[in] Specifica l'ID di risorsa di menu di scelta rapida da visualizzare.  
   
- [in] *pWndOwner*  
- Identifica la finestra che riceve messaggi dal menu di scelta rapida.  
+*pWndOwner*<br/>
+[in] Identifica la finestra che riceve messaggi dal menu di scelta rapida.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il menu di scelta rapida è stato visualizzato correttamente. in caso contrario, FALSE.  

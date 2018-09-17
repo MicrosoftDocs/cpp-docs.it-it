@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e292ff062449fd53aba0c5f4775e1b2e0b8ff909
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee097dd95a1a88b8cf2cb3dc48c4406499001443
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852393"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721397"
 ---
 # <a name="cmfcribboncategory-class"></a>Classe CMFCRibbonCategory
 Il `CMFCRibbonCategory` classe implementa una scheda della barra multifunzione che contiene un gruppo di [sulla barra multifunzione pannelli](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -275,8 +275,8 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pElem*  
- Puntatore a un elemento della barra multifunzione.  
+*pElem*<br/>
+[in] Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Elementi della barra multifunzione nella finestra di dialogo di personalizzazione sono i comandi che è possibile aggiungere alla barra di accesso rapido.  
@@ -292,14 +292,14 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszPanelName*  
- Puntatore al nome del nuovo pannello della barra multifunzione.  
+*lpszPanelName*<br/>
+[in] Puntatore al nome del nuovo pannello della barra multifunzione.  
   
- [in] *hIcon*  
- Handle per l'icona predefinita per il nuovo pannello della barra multifunzione.  
+*hIcon*<br/>
+[in] Handle per l'icona predefinita per il nuovo pannello della barra multifunzione.  
   
- [in] *pRTI*  
- Puntatore alle informazioni di classe di runtime per un pannello della barra multifunzione personalizzata.  
+*pRTI*<br/>
+[in] Puntatore alle informazioni di classe di runtime per un pannello della barra multifunzione personalizzata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al pannello della barra multifunzione nuovo se il metodo ha esito positivo; in caso contrario, NULL se il pannello non è stato creato.  
@@ -330,23 +330,23 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParenrRibbonBar*  
- Puntatore alla barra multifunzione principale della categoria della barra multifunzione.  
+*pParenrRibbonBar*<br/>
+[in] Puntatore alla barra multifunzione principale della categoria della barra multifunzione.  
   
- [in] *lpszName*  
- Nome della categoria della barra multifunzione.  
+*lpszName*<br/>
+[in] Nome della categoria della barra multifunzione.  
   
- [in] *uiSmallImagesResID*  
- ID risorsa dell'elenco di immagini per le immagini di piccole dimensioni che vengono utilizzati dagli elementi della barra multifunzione nella categoria della barra multifunzione.  
+*uiSmallImagesResID*<br/>
+[in] ID risorsa dell'elenco di immagini per le immagini di piccole dimensioni che vengono utilizzati dagli elementi della barra multifunzione nella categoria della barra multifunzione.  
   
- [in] *uiLargeImagesResID*  
- ID risorsa dell'elenco di immagini per le immagini di grandi dimensioni che vengono utilizzati dagli elementi della barra multifunzione nella categoria della barra multifunzione.  
+*uiLargeImagesResID*<br/>
+[in] ID risorsa dell'elenco di immagini per le immagini di grandi dimensioni che vengono utilizzati dagli elementi della barra multifunzione nella categoria della barra multifunzione.  
   
- [in] *sizeSmallImage*  
- Dimensioni predefinite del immagini di piccole dimensioni che gli elementi della barra multifunzione nella categoria della barra multifunzione.  
+*sizeSmallImage*<br/>
+[in] Dimensioni predefinite del immagini di piccole dimensioni che gli elementi della barra multifunzione nella categoria della barra multifunzione.  
   
- [in] *sizeLargeImage*  
- Dimensioni predefinite del immagini di grandi dimensioni che gli elementi della barra multifunzione nella categoria della barra multifunzione.  
+*sizeLargeImage*<br/>
+[in] Dimensioni predefinite del immagini di grandi dimensioni che gli elementi della barra multifunzione nella categoria della barra multifunzione.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  Copia lo stato dell'oggetto specificato [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) corrente [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) oggetto.  
@@ -356,8 +356,8 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *src*  
- Oggetto `CMFCRibbonCategory` di origine.  
+*src*<br/>
+[in] L'origine `CMFCRibbonCategory` oggetto.  
   
 ### <a name="remarks"></a>Note  
   
@@ -371,11 +371,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwData*  
- I dati associati a un elemento della barra multifunzione.  
+*dwData*<br/>
+[in] I dati associati a un elemento della barra multifunzione.  
   
- [in] *bVisibleOnly*  
- TRUE per includere gli elementi della barra multifunzione di accesso rapido nella ricerca; FALSE per escludere gli elementi della barra multifunzione di accesso rapido nella ricerca.  
+*bVisibleOnly*<br/>
+[in] TRUE per includere gli elementi della barra multifunzione di accesso rapido nella ricerca; FALSE per escludere gli elementi della barra multifunzione di accesso rapido nella ricerca.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un elemento della barra multifunzione, se il metodo ha esito positivo; in caso contrario NULL.  
@@ -392,11 +392,11 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- ID del comando associato a un elemento della barra multifunzione.  
+*uiCmdID*<br/>
+[in] ID del comando associato a un elemento della barra multifunzione.  
   
- [in] *bVisibleOnly*  
- TRUE per includere gli elementi della barra multifunzione di accesso rapido nella ricerca; FALSE per escludere gli elementi della barra multifunzione di accesso rapido nella ricerca.  
+*bVisibleOnly*<br/>
+[in] TRUE per includere gli elementi della barra multifunzione di accesso rapido nella ricerca; FALSE per escludere gli elementi della barra multifunzione di accesso rapido nella ricerca.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un elemento della barra multifunzione, se il metodo ha esito positivo; in caso contrario NULL.  
@@ -411,8 +411,8 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pElement*  
- Puntatore a un elemento della barra multifunzione.  
+*pElement*<br/>
+[in] Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un pannello della barra multifunzione, se il metodo ha esito positivo; in caso contrario NULL.  
@@ -463,8 +463,8 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *arElements*  
- Fare riferimento a un [CArray](../../mfc/reference/carray-class.md) degli elementi della barra multifunzione.  
+*arElements*<br/>
+[in, out] Fare riferimento a un [CArray](../../mfc/reference/carray-class.md) degli elementi della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Sono inclusi gli elementi della barra multifunzione che sono progettati per l'uso nella barra degli strumenti accesso rapido nella matrice.  
@@ -479,11 +479,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- ID del comando associato a un elemento della barra multifunzione.  
+*uiCmdID*<br/>
+[in] ID del comando associato a un elemento della barra multifunzione.  
   
- [in, out] *arElements*  
- Fare riferimento a un [CArray](../../mfc/reference/carray-class.md) degli elementi della barra multifunzione.  
+*arElements*<br/>
+[in, out] Fare riferimento a un [CArray](../../mfc/reference/carray-class.md) degli elementi della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Sono inclusi gli elementi della barra multifunzione che sono progettati per l'uso nella barra degli strumenti accesso rapido nella matrice.  
@@ -532,8 +532,8 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsLargeImage*  
- TRUE per il numero di immagini nell'elenco immagine di grandi dimensioni. FALSE per il numero di immagini nell'elenco di immagini di piccole dimensioni.  
+*bIsLargeImage*<br/>
+[in] TRUE per il numero di immagini nell'elenco immagine di grandi dimensioni. FALSE per il numero di immagini nell'elenco di immagini di piccole dimensioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero di immagini nell'elenco di immagini specificato.  
@@ -548,8 +548,8 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsLargeImage*  
- TRUE per le dimensioni delle immagini di grandi dimensioni. FALSE per le dimensioni delle immagini di piccole dimensioni.  
+*bIsLargeImage*<br/>
+[in] TRUE per le dimensioni delle immagini di grandi dimensioni. FALSE per le dimensioni delle immagini di piccole dimensioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni di un'immagine nell'elenco di immagini specificato.  
@@ -567,11 +567,11 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *lstItems*  
- L'elenco di ID di comando per gli elementi della barra multifunzione nella categoria della barra multifunzione.  
+*lstItems*<br/>
+[out] L'elenco di ID di comando per gli elementi della barra multifunzione nella categoria della barra multifunzione.  
   
- [in] *bHiddenOnly*  
- TRUE per escludere gli elementi della barra multifunzione visualizzati in pannelli della barra multifunzione nella categoria della barra multifunzione; FALSE per includere tutti gli elementi della barra multifunzione nella categoria della barra multifunzione.  
+*bHiddenOnly*<br/>
+[in] TRUE per escludere gli elementi della barra multifunzione visualizzati in pannelli della barra multifunzione nella categoria della barra multifunzione; FALSE per includere tutti gli elementi della barra multifunzione nella categoria della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -605,8 +605,8 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per i pannelli della barra multifunzione.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per i pannelli della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'altezza massima dei pannelli della barra multifunzione sono contenuti nella categoria della barra multifunzione.  
@@ -634,8 +634,8 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Indice a base zero di un pannello della barra multifunzione.  
+*nIndex*<br/>
+[in] Indice a base zero di un pannello della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al pannello della barra multifunzione che si trova in corrispondenza dell'indice specificato.  
@@ -661,8 +661,8 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un pannello della barra multifunzione, se il metodo ha esito positivo; in caso contrario NULL.  
@@ -678,8 +678,8 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pPanel*  
- Puntatore a un pannello della barra multifunzione.  
+*pPanel*<br/>
+[in] Puntatore a un pannello della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice in base zero del pannello della barra multifunzione specificato se il metodo ha esito positivo; in caso contrario,-1.  
@@ -822,11 +822,11 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pHLPanel*  
- Puntatore al pannello della barra multifunzione per evidenziare.  
+*pHLPanel*<br/>
+[in] Puntatore al pannello della barra multifunzione per evidenziare.  
   
- [in] *punto*  
- Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al pannello della barra multifunzione evidenziato in precedenza; in caso contrario, NULL se nessun pannello della barra multifunzione viene evidenziato quando questo metodo viene richiamato.  
@@ -844,11 +844,11 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.  
   
- [in] *bCheckPanelCaption*  
- TRUE per testare la didascalia del pannello della barra multifunzione; Impostare su FALSE per escludere la didascalia del pannello della barra multifunzione.  
+*bCheckPanelCaption*<br/>
+[in] TRUE per testare la didascalia del pannello della barra multifunzione; Impostare su FALSE per escludere la didascalia del pannello della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un elemento della barra multifunzione, se il metodo ha esito positivo; in caso contrario NULL.  
@@ -864,8 +864,8 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice in base zero di un elemento della barra multifunzione, se il metodo ha esito positivo; in caso contrario,-1.  
@@ -881,8 +881,8 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Punto da testare.  
+*punto*<br/>
+[in] Punto da testare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se *puntare* cade all'interno del rettangolo delimitatore delle sia sinistra o il pulsante di scorrimento a destra della categoria della barra multifunzione, restituisce un puntatore al pulsante o in caso contrario, restituisce NULL.  
@@ -939,17 +939,17 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAccelerator*  
- TRUE se il comando ha avuto origine da un tasto di scelta rapida o FALSE in caso contrario.  
+*bAccelerator*<br/>
+[in] TRUE se il comando ha avuto origine da un tasto di scelta rapida o FALSE in caso contrario.  
   
- [in] *nNotifyCode*  
- Il codice di notifica.  
+*nNotifyCode*<br/>
+[in] Il codice di notifica.  
   
- [in] *wParam*  
- Il campo WPARAM del messaggio.  
+*wParam*<br/>
+[in] Il campo WPARAM del messaggio.  
   
- [in] *lParam*  
- Il campo LPARAM del messaggio.  
+*lParam*<br/>
+[in] Il campo LPARAM del messaggio.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se il messaggio è stato gestito oppure FALSE in caso contrario.  
@@ -973,8 +973,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per la categoria della barra multifunzione.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per la categoria della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -992,23 +992,23 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per l'immagine.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per l'immagine.  
   
- [in] *rect*  
- Rettangolo di visualizzazione per l'immagine.  
+*Rect*<br/>
+[in] Rettangolo di visualizzazione per l'immagine.  
   
- [in] *pElement*  
- Puntatore all'elemento della barra multifunzione che contiene l'immagine.  
+*pElement*<br/>
+[in] Puntatore all'elemento della barra multifunzione che contiene l'immagine.  
   
- [in] *bIsLargeImage*  
- TRUE se l'immagine di grandi dimensioni; FALSO se l'immagine è di piccole dimensioni.  
+*bIsLargeImage*<br/>
+[in] TRUE se l'immagine di grandi dimensioni; FALSO se l'immagine è di piccole dimensioni.  
   
- [in] *nImageIndex*  
- Indice in base zero dell'immagine nella matrice di immagine che si trova nella categoria della barra multifunzione.  
+*nImageIndex*<br/>
+[in] Indice in base zero dell'immagine nella matrice di immagine che si trova nella categoria della barra multifunzione.  
   
- [in] *bCenter*  
- TRUE per allineare al centro l'immagine nel rettangolo di visualizzazione; FALSE per disegnare l'immagine nell'angolo superiore sinistro del rettangolo di visualizzazione.  
+*bCenter*<br/>
+[in] TRUE per allineare al centro l'immagine nel rettangolo di visualizzazione; FALSE per disegnare l'immagine nell'angolo superiore sinistro del rettangolo di visualizzazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.  
@@ -1025,11 +1025,11 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Questo parametro non viene usato.  
+*pDC*<br/>
+[in] Questo parametro non viene utilizzato.  
   
- [in] *pMenuBar*  
- Questo parametro non viene usato.  
+*pMenuBar*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per disegnare il bordo di un menu popup.  
@@ -1055,8 +1055,8 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un elemento della barra multifunzione, se il metodo ha esito positivo; in caso contrario NULL.  
@@ -1071,8 +1071,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1084,8 +1084,8 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1097,8 +1097,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsRTL*  
- TRUE se il layout è right-to-left; FALSE se il layout da sinistra a destra.  
+*bIsRTL*<br/>
+[in] TRUE se il layout è right-to-left; FALSE se il layout da sinistra a destra.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo consente di regolare il layout di tutti i pannelli della barra multifunzione ed elementi della barra multifunzione sono contenuti nella categoria della barra multifunzione.  
@@ -1113,11 +1113,11 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bScrollLeft*  
- TRUE per scorrere a sinistra. FALSE per scorrere verso destra.  
+*bScrollLeft*<br/>
+[in] TRUE per scorrere a sinistra. FALSE per scorrere verso destra.  
   
- [in] *nScrollOffset*  
- La distanza di scorrimento in pixel.  
+*nScrollOffset*<br/>
+[in] La distanza di scorrimento in pixel.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la categoria della barra multifunzione spostato in direzione orizzontale; in caso contrario, FALSE.  
@@ -1135,14 +1135,14 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pCmdUI*  
- Puntatore al `CMFCRibbonCmdUI` oggetto che specifica quali elementi dell'interfaccia utente devono essere attivate e quali deve essere disabilitata.  
+*pCmdUI*<br/>
+[in] Puntatore al `CMFCRibbonCmdUI` oggetto che specifica quali elementi dell'interfaccia utente devono essere attivate e quali deve essere disabilitata.  
   
- [in] *pTarget*  
- Puntatore alla finestra che controlla l'attivazione o disattivazione degli elementi dell'interfaccia utente.  
+*pTarget*<br/>
+[in] Puntatore alla finestra che controlla l'attivazione o disattivazione degli elementi dell'interfaccia utente.  
   
- [in] *bDisableIfNoHndler*  
- TRUE per disabilitare l'elemento dell'interfaccia utente se nessun gestore è definito in una mappa dei messaggi; in caso contrario, FALSE.  
+*bDisableIfNoHndler*<br/>
+[in] TRUE per disabilitare l'elemento dell'interfaccia utente se nessun gestore è definito in una mappa dei messaggi; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1154,8 +1154,8 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per la categoria della barra multifunzione.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per la categoria della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1169,11 +1169,11 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Numero di indice del pannello da rimuovere. Ottenute chiamando il [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) (metodo).  
+*nIndex*<br/>
+[in] Numero di indice del pannello da rimuovere. Ottenute chiamando il [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) (metodo).  
   
- [in] *bElimina*  
- TRUE per eliminare l'oggetto pannello dalla memoria. FALSE per rimuovere l'oggetto pannello senza eliminarlo.  
+*bElimina*<br/>
+[in] TRUE per eliminare l'oggetto pannello dalla memoria. FALSE per rimuovere l'oggetto pannello senza eliminarlo.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.  
@@ -1186,8 +1186,8 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per i pannelli della barra multifunzione sono contenuti nella categoria della barra multifunzione.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per i pannelli della barra multifunzione sono contenuti nella categoria della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1199,8 +1199,8 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *arCollapseOrder*  
- Specifica l'ordine di compressione. La matrice contiene gli indici in base zero di pannelli della barra multifunzione.  
+*arCollapseOrder*<br/>
+[in] Specifica l'ordine di compressione. La matrice contiene gli indici in base zero di pannelli della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  La libreria definisce l'ordine di compressione. Tuttavia, è possibile personalizzare questo comportamento, fornendo la categoria con l'elenco di indici che specifica l'ordine di compressione.  
@@ -1222,8 +1222,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwData*  
- Dati definiti dall'utente.  
+*dwData*<br/>
+[in] I dati definiti dall'utente.  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  Assegna un suggerimento tasto di scelta per la categoria della barra multifunzione.  
@@ -1233,8 +1233,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszKeys*  
- Il testo del suggerimento tasto di scelta.  
+*lpszKeys*<br/>
+[in] Il testo del suggerimento tasto di scelta.  
   
 ### <a name="remarks"></a>Note  
  Quando l'utente preme il tasto Alt o F10, vengono visualizzati suggerimenti tasto di scelta.  
@@ -1247,8 +1247,8 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszName*  
- Il nome e il suggerimento tasto di scelta della categoria della barra multifunzione.  
+*lpszName*<br/>
+[in] Il nome e il suggerimento tasto di scelta della categoria della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Per impostare il suggerimento tasto di scelta per la categoria della barra multifunzione, aggiungere una sequenza di escape di nuova riga seguita dai caratteri al suggerimento tasto di scelta *lpszName*.  
@@ -1261,8 +1261,8 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colore*  
- Specifica il nuovo colore di categoria della barra multifunzione.  
+*Colore*<br/>
+[in] Specifica il nuovo colore di categoria della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Colore può essere uno dei valori seguenti:  

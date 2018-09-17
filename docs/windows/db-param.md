@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3bfa286e253ef634a42fea5a5c926981174c400
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613001"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719108"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -47,8 +47,8 @@ Consente di associare la variabile di membro specificato con un parametro di inp
 *Numero ordinale*  
 Numero di colonna (ordinale DBCOLUMNINFO) corrispondente a un campo nel set di righe a cui associare i dati.
 
-*ParamType* (facoltativo)  
-Il tipo da impostare per il parametro. Provider supportano solo i tipi dei / o di parametro supportati dall'origine dati sottostante. Il tipo è una combinazione di uno o più valori DBPARAMIOENUM:
+*ParamType*  
+(Facoltativo) Il tipo da impostare per il parametro. Provider supportano solo i tipi dei / o di parametro supportati dall'origine dati sottostante. Il tipo è una combinazione di uno o più valori DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT un parametro di input.
 
@@ -56,20 +56,20 @@ Il tipo da impostare per il parametro. Provider supportano solo i tipi dei / o d
 
 - DBPARAMIO_NOTPARAM la funzione di accesso non ha parametri. Impostazione `eParamIO` a questo valore nella riga delle funzioni di accesso ricorda all'utente che i parametri vengono ignorati.
 
-*DbType* (facoltativo)  
-OLE DB [indicatore del tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) per la voce di colonna.
+*DbType*  
+(Facoltativo) OLE DB [indicatore del tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) per la voce di colonna.
 
-*precisione* (facoltativo)  
-La precisione da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+(Facoltativo) La precisione da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*scalabilità* (facoltativo)  
-La scala da usare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bScale` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Scalabilità*  
+(Facoltativo) La scala da usare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bScale` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*stato* (facoltativo)  
-Una variabile membro usata per mantenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio valori NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.
+*status*  
+(Facoltativo) Una variabile membro usata per mantenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio valori NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.
 
-*lunghezza* (facoltativo)  
-Una variabile membro usata per contenere le dimensioni della colonna in byte.
+*length*  
+(Facoltativo) Una variabile membro usata per contenere le dimensioni della colonna in byte.
 
 ## <a name="remarks"></a>Note
 

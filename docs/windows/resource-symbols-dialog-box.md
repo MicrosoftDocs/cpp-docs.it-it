@@ -19,40 +19,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 064fb9adce8b41c13709819f7ce0b7c515fea12a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 09d34d0247f7fd039bca3ea9b643802856734926
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313169"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719303"
 ---
 # <a name="resource-symbols-dialog-box-c"></a>Finestra di dialogo Simboli risorsa (C++)
 
 Il **simboli risorsa** C++ finestra di dialogo consente di aggiungere nuovi simboli risorsa, modificare i simboli visualizzati oppure passare alla posizione nel codice sorgente in cui un simbolo è in uso.
 
-**Name**  
-Visualizza il nome del simbolo. Per altre informazioni, vedere [restrizioni relative ai nomi di simbolo](../windows/symbol-name-restrictions.md).
+- **Name**
 
-**Valore**  
-Visualizza il valore numerico del simbolo. Per altre informazioni, vedere [restrizioni relative ai valori di simbolo](../windows/symbol-value-restrictions.md).
+   Visualizza il nome del simbolo. Per altre informazioni, vedere [restrizioni relative ai nomi di simbolo](../windows/symbol-name-restrictions.md).
 
-**In uso**  
-Se è selezionata, questa opzione specifica che il simbolo viene usato da una o più risorse. La risorsa o le risorse vengono elencate nella casella Usato da.
+- **Valore**
 
-**Mostra simboli di sola lettura**  
-Se è selezionata, questa opzione visualizza le risorse di sola lettura. Per impostazione predefinita, il **simboli risorsa** nella finestra di dialogo Visualizza solo le risorse modificabili nel file di script di risorse, ma questa opzione è selezionata, le risorse modificabili vengono visualizzate in grassetto e le risorse di sola lettura vengono visualizzate come testo normale.
+   Visualizza il valore numerico del simbolo. Per altre informazioni, vedere [restrizioni relative ai valori di simbolo](../windows/symbol-value-restrictions.md).
 
-**Usato da**  
-Visualizza la risorsa o le risorse che usano il simbolo selezionato nell'elenco dei simboli. Per passare all'editor relativo a una determinata risorsa, selezionare la risorsa nel **Used By** casella e fare clic su **Visualizza uso**. Per altre informazioni, vedere [apertura dell'Editor di risorse per un determinato simbolo](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+- **In uso**
 
-**Nuovo**  
-Apre la **nuovo simbolo** nella finestra di dialogo consente di definire il nome e, se necessario, un valore per un nuovo identificatore di risorsa simbolico. Per altre informazioni, vedere [creazione di nuovi simboli](../windows/creating-new-symbols.md).
+   Se è selezionata, questa opzione specifica che il simbolo viene usato da una o più risorse. La risorsa o le risorse vengono elencate nella casella Usato da.
 
-**Modifica**  
-Apre la **Cambia simbolo** nella finestra di dialogo consente di modificare il nome o valore di un simbolo. Se è relativo a un controllo o a una risorsa in uso, è possibile modificare il simbolo solo tramite l'editor di risorse corrispondente. Per altre informazioni, vedere [modifica di simboli non assegnati](../windows/changing-unassigned-symbols.md).
+- **Mostra simboli di sola lettura**
 
-**Visualizza uso**  
-Apre la risorsa contenente il simbolo nell'editor di risorse corrispondente. Per altre informazioni, vedere [apertura dell'Editor di risorse per un determinato simbolo](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+   Se è selezionata, questa opzione visualizza le risorse di sola lettura. Per impostazione predefinita, il **simboli risorsa** nella finestra di dialogo Visualizza solo le risorse modificabili nel file di script di risorse, ma questa opzione è selezionata, le risorse modificabili vengono visualizzate in grassetto e le risorse di sola lettura vengono visualizzate come testo normale.
+
+- **Usato da**
+
+   Visualizza la risorsa o le risorse che usano il simbolo selezionato nell'elenco dei simboli. Per passare all'editor relativo a una determinata risorsa, selezionare la risorsa nel **Used By** casella e fare clic su **Visualizza uso**. Per altre informazioni, vedere [apertura dell'Editor di risorse per un determinato simbolo](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+
+- **Nuovo**
+
+   Apre la **nuovo simbolo** nella finestra di dialogo consente di definire il nome e, se necessario, un valore per un nuovo identificatore di risorsa simbolico. Per altre informazioni, vedere [creazione di nuovi simboli](../windows/creating-new-symbols.md).
+
+- **Modifica**
+
+   Apre la **Cambia simbolo** nella finestra di dialogo consente di modificare il nome o valore di un simbolo. Se è relativo a un controllo o a una risorsa in uso, è possibile modificare il simbolo solo tramite l'editor di risorse corrispondente. Per altre informazioni, vedere [modifica di simboli non assegnati](../windows/changing-unassigned-symbols.md).
+
+- **Visualizza uso**
+
+   Apre la risorsa contenente il simbolo nell'editor di risorse corrispondente. Per altre informazioni, vedere [apertura dell'Editor di risorse per un determinato simbolo](../windows/opening-the-resource-editor-for-a-given-symbol.md).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,5 +1,5 @@
 ---
-title: Tools.ini e NMAKE | Documenti Microsoft
+title: Tools. ini e NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 860a334274a3a1a4ac9e11c3e7b5e9a0f136ecc0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84406886c9aa0c0053ed7c183912bf8a7f1f4771
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723580"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini e NMAKE
-NMAKE legge Tools prima di leggere makefile, a meno che non viene utilizzato /R. Cercato prima nella directory corrente e quindi nella directory specificata dalla variabile di ambiente INIT. La sezione per le impostazioni di NMAKE nel file di inizializzazione inizia con `[NMAKE]` e può contenere qualsiasi informazione sul makefile. Specificare un commento su una riga separata che inizia con un simbolo di cancelletto (#).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Esecuzione di NMAKE](../build/running-nmake.md)
+
+NMAKE legge Tools. ini prima esegue la lettura di makefile, a meno che non viene utilizzato /R. Cerca Tools innanzitutto nella directory corrente e quindi nella directory specificata dalla variabile di ambiente INIT. La sezione per le impostazioni di NMAKE nel file di inizializzazione inizia con `[NMAKE]` e può contenere qualsiasi informazione di makefile. Specificare un commento su un riga separata che inizia con un simbolo di cancelletto (#).
+
+## <a name="see-also"></a>Vedere anche
+
+[Esecuzione di NMAKE](../build/running-nmake.md)

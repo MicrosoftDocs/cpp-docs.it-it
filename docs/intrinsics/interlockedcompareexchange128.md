@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545803"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721123"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Sezione specifica Microsoft**  
   
- Esegue un confronto con interlock 128 bit ed exchange.  
+Esegue un confronto con interlock 128 bit ed exchange.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in, out] `Destination`  
- Puntatore alla destinazione, ovvero una matrice di due interi a 64 bit è considerato come un campo di 128 bit. I dati di destinazione devono essere 16 byte allineate in modo da evitare un errore di protezione generale.  
+*Destinazione*<br/>
+[in, out] Puntatore alla destinazione, ovvero una matrice di due interi a 64 bit è considerato come un campo di 128 bit. I dati di destinazione devono essere 16 byte allineate in modo da evitare un errore di protezione generale.  
   
- [in] `ExchangeHigh`  
- Un valore integer a 64 bit che possono essere scambiati con la parte alta della destinazione.  
+*ExchangeHigh*<br/>
+[in] Un valore integer a 64 bit che possono essere scambiati con la parte alta della destinazione.  
   
- [in] `ExchangeLow`  
- Un valore integer a 64 bit che possono essere scambiati con la parte inferiore della matrice di destinazione.  
+*ExchangeLow*<br/>
+[in] Un valore integer a 64 bit che possono essere scambiati con la parte inferiore della matrice di destinazione.  
   
- [in, out] `ComparandResult`  
- Puntatore a una matrice di due interi a 64 bit (considerata come un campo di 128 bit) da confrontare con la destinazione.  Nell'output viene sovrascritto con il valore originale dell'oggetto di destinazione.  
+*ComparandResult*<br/>
+[in, out] Puntatore a una matrice di due interi a 64 bit (considerata come un campo di 128 bit) da confrontare con la destinazione.  Nell'output viene sovrascritto con il valore originale dell'oggetto di destinazione.  
   
 ## <a name="return-value"></a>Valore restituito  
  1 se il parametro comparand 128 bit uguale al valore originale dell'oggetto di destinazione. `ExchangeHigh` e `ExchangeLow` sovrascrivere la destinazione di 128 bit.  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**Fine sezione specifica Microsoft**  
- Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
+**Fine sezione specifica Microsoft**
+
+Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   

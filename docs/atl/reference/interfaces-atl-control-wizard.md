@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3629b65b8f6373b20fc35dd6d90133d7377e674
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cb248442a1d687b98e8e97c8846d07a50e484564
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766561"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717509"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfacce, Creazione guidata controllo ATL
 
 Questa pagina della procedura guidata identifica le interfacce che supporta il controllo. Per impostazione predefinita, le interfacce supportate sono quelle utilizzate in genere dalla maggior parte dei contenitori.
 
 > [!NOTE]
->  Se è stato selezionato **controllo minimo** nel [opzioni](../../atl/reference/options-atl-control-wizard.md) scheda, viene visualizzata alcuna interfaccia per impostazione predefinita nel **Supported** casella di riepilogo.
+> Se è stato selezionato **controllo minimo** nel [opzioni](../../atl/reference/options-atl-control-wizard.md) scheda, viene visualizzata alcuna interfaccia per impostazione predefinita nel **Supported** casella di riepilogo.
 
-**Non è supportato**  
-Indica le interfacce disponibili che non sono attualmente supportate per il controllo.
+- **Non è supportato**
 
-**Supportato**  
-Indica le interfacce che sono attualmente supportate per il controllo.
+   Indica le interfacce disponibili che non sono attualmente supportate per il controllo.
 
-|Pulsante Trasferimento|Descrizione|
-|---------------------|-----------------|
-|**>**|Aggiunge al **supportati** il nome dell'interfaccia attualmente selezionato nell'elenco il **non è supportato** elenco.|
-|**>>**|Aggiunge il **supportati** elencare tutti i nomi delle interfacce disponibili nel **non supportato** elenco.|
-|**<**|Rimuove il nome dell'interfaccia attualmente selezionato nel **Supported** elenco.|
-|**<<**|Rimuove tutti i nomi attualmente presenti nell'interfaccia di **Supported** elenco.|
+- **Supportato**
+
+   Indica le interfacce che sono attualmente supportate per il controllo.
+
+   |Pulsante Trasferimento|Descrizione|
+   |---------------------|-----------------|
+   |**>**|Aggiunge al **supportati** il nome dell'interfaccia attualmente selezionato nell'elenco il **non è supportato** elenco.|
+   |**>>**|Aggiunge il **supportati** elencare tutti i nomi delle interfacce disponibili nel **non supportato** elenco.|
+   |**\<**|Rimuove il nome dell'interfaccia attualmente selezionato nel **Supported** elenco.|
+   |**\<\<**|Rimuove tutti i nomi attualmente presenti nell'interfaccia di **Supported** elenco.|
 
 ## <a name="see-also"></a>Vedere anche
 

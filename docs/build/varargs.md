@@ -1,5 +1,5 @@
 ---
-title: Varargs | Documenti Microsoft
+title: Varargs | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7b71cd426bc89570f9d394f3e38dc7a002f6e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8305eaddf87a2e67b797bedff1944dbcbbbdbd41
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380508"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713648"
 ---
 # <a name="varargs"></a>Varargs
-Se i parametri vengono passati tramite varargs (ad esempio, gli argomenti sui puntini di sospensione), essenzialmente il normale passaggio dei parametri si applica tra cui la distribuzione di argomenti quinto e successive. È nuovamente responsabilità dump argomenti che è stato recuperato l'indirizzo del destinatario. Per i valori a virgola mobile, sia il valore integer e il registro a virgola mobile, conterrà il valore float nel caso in cui il chiamato prevede che il valore nei registri integer.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Convenzione di chiamata](../build/calling-convention.md)
+
+Se i parametri vengono passati tramite varargs (ad esempio, gli argomenti sui puntini di sospensione), essenzialmente il normale passaggio dei parametri applica tra cui la distribuzione dei argomenti quinto e successive. Anche in questo caso, è responsabilità del chiamato argomenti dump con gli indirizzi. Per i valori a virgola mobile, l'intera e il registro a virgola mobile e conterrà il valore float nel caso in cui il destinatario della chiamata prevede che il valore nei registri integer.
+
+## <a name="see-also"></a>Vedere anche
+
+[Convenzione di chiamata](../build/calling-convention.md)

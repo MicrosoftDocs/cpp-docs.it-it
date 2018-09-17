@@ -1,5 +1,5 @@
 ---
-title: Valore di controllo di modifica | Documenti Microsoft
+title: Valore di controllo di modifica | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7364a294dbb45d28c6168dd8c8939372093e91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 823306fa95b2a4a317afef8aed21cd361a773be3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373816"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722306"
 ---
 # <a name="value-edit-control"></a>Value (controllo di modifica)
-Per utilizzare il controllo, immettere un valore, incollarlo dagli Appunti, o trascinamento della selezione, dal debugger in questo controllo di modifica. Immettere il valore in formato decimale o esadecimale e quindi fare clic su **Cerca**. Valori esadecimali devono essere preceduti da 0x; i caratteri validi sono 0-9, A-F e -f. Valori decimali possono essere preceduti dal segno meno (-). i caratteri validi sono 0-9.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a ERRLOOK](../../build/reference/errlook-reference.md)
+
+Per usare il controllo, immettere un valore, incollare il codice dagli Appunti, o trascinamento della selezione, dal debugger in questo controllo di modifica. Immettere il valore in formato decimale o esadecimale e quindi fare clic su **Cerca**. I valori esadecimali devono essere preceduti da 0x; i caratteri validi sono 0-9, A-F e a-f. I valori decimali possono essere preceduti dal segno meno (-). caratteri validi sono da 0 a 9.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a ERRLOOK](../../build/reference/errlook-reference.md)

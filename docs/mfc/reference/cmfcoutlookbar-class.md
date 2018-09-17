@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b9de076f4682bd3649f62940a0dd492eb801e28
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9ed3a07b7994d2c7adc7a5d708d31abe9c49437f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850183"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717106"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar (classe)
 Riquadro a schede che presenta l'aspetto visivo del **Riquadro di navigazione** di Microsoft Outlook 2000 o Outlook 2003. Il `CMFCOutlookBar` oggetto contiene una [classe CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) oggetto e una serie di schede. Le schede possono essere [classe CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) oggetti o `CWnd`-oggetti derivati. All'utente la barra di Outlook viene visualizzata come una serie di pulsanti e un'area di visualizzazione. Quando l'utente fa clic su un pulsante, viene visualizzato il controllo o il riquadro del pulsante corrispondente.  
@@ -210,8 +210,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore a un altro riquadro in cui è ancorato in questo riquadro.  
+*pBar*<br/>
+[in] Puntatore a un altro riquadro in cui è ancorato in questo riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se un altro riquadro può essere ancorato a riquadro barra di Outlook; in caso contrario, FALSE.  
@@ -253,26 +253,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszCaption*  
- Specifica la didascalia della finestra.  
+*lpszCaption*<br/>
+[in] Specifica la didascalia della finestra.  
   
- [in] *pParentWnd*  
- Specifica un puntatore a una finestra padre. Non deve essere NULL.  
+*pParentWnd*<br/>
+[in] Specifica un puntatore a una finestra padre. Non deve essere NULL.  
   
- [in] *rect*  
- Specifica la dimensione e posizione in pixel della barra di outlook.  
+*Rect*<br/>
+[in] Specifica la dimensione e posizione in pixel della barra di outlook.  
   
- [in] *nID*  
- Specifica l'ID del controllo. Deve essere diverso da altri ID utilizzato nell'applicazione di controllo.  
+*nID*<br/>
+[in] Specifica l'ID del controllo. Deve essere diverso da altri ID utilizzato nell'applicazione di controllo.  
   
- [in] *dwStyle*  
- Specifica lo stile della barra di controllo desiderato. Per i valori possibili, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Specifica lo stile della barra di controllo desiderato. Per i valori possibili, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *dwControlBarStyle*  
- Specifica gli stili definiti libreria speciali.  
+*dwControlBarStyle*<br/>
+[in] Specifica gli stili definiti libreria speciali.  
   
- [in] *pContext*  
- Creare il contesto.  
+*pContext*<br/>
+[in] Creare il contesto.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo. in caso contrario 0.  
@@ -300,17 +300,17 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszPageName*  
- L'etichetta della pagina.  
+*lpszPageName*<br/>
+[in] L'etichetta della pagina.  
   
- [in] *bActivatePage*  
- Se TRUE, la pagina diventa attiva al momento della creazione.  
+*bActivatePage*<br/>
+[in] Se TRUE, la pagina diventa attiva al momento della creazione.  
   
- [in] *dwEnabledDocking*  
- Una combinazione di flag CBRS_ALIGN_ che specifica i lati di ancoraggio abilitati quando la pagina viene scollegata.  
+*dwEnabledDocking*<br/>
+[in] Una combinazione di flag CBRS_ALIGN_ che specifica i lati di ancoraggio abilitati quando la pagina viene scollegata.  
   
- [in] *bEnableTextLabels*  
- Se TRUE, le etichette di testo sono abilitate per i pulsanti che si trovano nella pagina.  
+*bEnableTextLabels*<br/>
+[in] Se TRUE, le etichette di testo sono abilitate per i pulsanti che si trovano nella pagina.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a una pagina appena creata o NULL se non è riuscita la creazione.  
@@ -350,17 +350,17 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore al riquadro e float.  
+*pBar*<br/>
+[in] Puntatore al riquadro e float.  
   
- [in] *nTabID*  
- Indice a base zero della scheda a float.  
+*nTabID*<br/>
+[in] Indice a base zero della scheda a float.  
   
- [in] *dockMethod*  
- Specifica il metodo da usare per spostare il riquadro.  Per altre informazioni, vedere [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
+*dockMethod*<br/>
+[in] Specifica il metodo da usare per spostare il riquadro.  Per altre informazioni, vedere [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
- [in] *bHide*  
- TRUE per nascondere il riquadro prima mobile. in caso contrario, FALSE. A differenza della versione della classe di base di questo metodo, questo parametro non è un valore predefinito.  
+*bHide*<br/>
+[in] TRUE per nascondere il riquadro prima mobile. in caso contrario, FALSE. A differenza della versione della classe di base di questo metodo, questo parametro non è un valore predefinito.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro resa; in caso contrario, FALSE.  
@@ -391,11 +391,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rectTabAreaTop*  
- Quando la funzione viene restituito, contiene le dimensioni e posizione (in coordinate client) dell'area della scheda superiore.  
+*rectTabAreaTop*<br/>
+[out] Quando la funzione viene restituito, contiene le dimensioni e posizione (in coordinate client) dell'area della scheda superiore.  
   
- [out] *rectTabAreaBottom*  
- Quando la funzione restituisce, contiene le dimensioni e posizione (nelle coordinate client) dell'area della scheda nella parte inferiore.  
+*rectTabAreaBottom*<br/>
+[out] Quando la funzione restituisce, contiene le dimensioni e posizione (nelle coordinate client) dell'area della scheda nella parte inferiore.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo per determinare il tipo di ancoraggio nel riquadro di destinazione. Quando il framework determina che l'utente trascina il riquadro per essere ancorato sull'area della scheda del riquadro di destinazione, prova ad aggiungere il primo riquadro come nuova scheda del riquadro di destinazione. In caso contrario, tenta di ancoraggio del riquadro prima un'appropriata sul lato del riquadro di destinazione. Il framework crea un nuovo contenitore con un dispositivo di scorrimento per adattare il riquadro ancorato aggiuntivo.  
@@ -425,8 +425,8 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPage*  
- Indice a base zero della scheda che è diventata attiva.  
+*nPage*<br/>
+[in] Indice a base zero della scheda che è diventata attiva.  
   
 ### <a name="remarks"></a>Note  
  L'effetto dell'impostazione nella scheda attiva dipende dal fatto che è stata abilitata l'animazione. Per altre informazioni, vedere [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
@@ -439,8 +439,8 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPage*  
- Indice a base zero della scheda che sta per essere impostata come attiva.  
+*nPage*<br/>
+[in] Indice a base zero della scheda che sta per essere impostata come attiva.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se l'animazione deve essere usata in impostando la nuova scheda attiva oppure FALSE se l'animazione deve essere disabilitata.  
@@ -455,8 +455,8 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bDown*  
- TRUE se la barra di Outlook è scorrimento verso il basso oppure FALSE se lo scorrimento backup.  
+*bDown*<br/>
+[in] TRUE se la barra di Outlook è scorrimento verso il basso oppure FALSE se lo scorrimento backup.  
   
 ### <a name="remarks"></a>Note  
   
@@ -470,11 +470,11 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiPage*  
- Indice in base zero della pagina della finestra di Outlook padre.  
+*uiPage*<br/>
+[in] Indice in base zero della pagina della finestra di Outlook padre.  
   
- [in] *pTargetWnd*  
- Pointerto la finestra di Outlook padre.  
+*pTargetWnd*<br/>
+[in] Pointerto la finestra di Outlook padre.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la pagina personalizzata è stata rimossa correttamente; in caso contrario 0.  
@@ -496,11 +496,11 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pFont*  
- Specifica il nuovo tipo di carattere.  
+*pFont*<br/>
+[in] Specifica il nuovo tipo di carattere.  
   
- [in] *bRedraw*  
- Se TRUE, la barra di Outlook viene ridisegnata.  
+*bRedraw*<br/>
+[in] Se TRUE, la barra di Outlook viene ridisegnata.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per impostare un tipo di carattere per il testo visualizzato sui pulsanti di pagina della scheda di outlook.  
@@ -513,8 +513,8 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMode2003*  
- Se TRUE, è abilitata la modalità di Office 2003.  
+*bMode2003*<br/>
+[in] Se TRUE, è abilitata la modalità di Office 2003.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per abilitare o disabilitare la modalità di Office 2003. In questa modalità, la barra di Outlook con una barra degli strumenti aggiuntivo con un pulsante di personalizzazione. Il comportamento della barra di Outlook è conforme al comportamento della barra di Outlook in Microsoft Office 2003.  

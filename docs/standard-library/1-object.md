@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840342"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719186"
 ---
 # <a name="1-object"></a>Oggetto _1
 
@@ -35,12 +35,12 @@ Segnaposto per gli argomenti sostituibili.
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>Note
 
-Gli oggetti `_1, _2, ... _M` sono segnaposto che definisce il primo, secondo,..., argomento mese rispettivamente in una chiamata di funzione a un oggetto restituito da [associare](../standard-library/functional-functions.md#bind). Usare `_N` per specificare il punto in cui inserire l'argomento Nth quando viene valutata l'espressione bind.
+Gli oggetti `_1, _2, ... _M` sono segnaposto che designa il primo, secondo e così via argomento Mth rispettivamente in una chiamata di funzione a un oggetto restituito da [associare](../standard-library/functional-functions.md#bind). Usare `_N` per specificare il punto in cui inserire l'argomento Nth quando viene valutata l'espressione bind.
 
 In questa implementazione il valore di `M` è 20.
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab2dd3b359806aa6b5d54e476ec3581f7bb31d02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201779"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717119"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -44,14 +44,14 @@ Apre una tabella di OLE DB.
 *db_table*  
 Stringa che specifica il nome di una tabella di database (ad esempio, "prodotti").
 
-*name* (facoltativo)  
-Il nome dell'handle usato con la tabella. È necessario specificare questo parametro se si desidera restituire più righe di risultati. **db_table** genera una variabile con il parametro specificato *nome* che può essere utilizzato per attraversare il set di righe o eseguire più query.
+*name*  
+(Facoltativo) Il nome dell'handle usato con la tabella. È necessario specificare questo parametro se si desidera restituire più righe di risultati. **db_table** genera una variabile con il parametro specificato *nome* che può essere utilizzato per attraversare il set di righe o eseguire più query.
 
-*source_name* (facoltativo)  
-La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo `db_source` con cui viene eseguito il comando. Vedere [db_source](../windows/db-source.md).
+*source_name*  
+(Facoltativo) Il `CSession` variabile o istanza di una classe che ha il `db_source` attributo applicato ad esso in cui viene eseguito il comando. Vedere [db_source](../windows/db-source.md).
 
-*HRESULT* (facoltativo)  
-Identifica la variabile che riceverà il valore HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
+*HRESULT*  
+(Facoltativo) Identifica la variabile che riceverà il valore HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
 ## <a name="remarks"></a>Note
 

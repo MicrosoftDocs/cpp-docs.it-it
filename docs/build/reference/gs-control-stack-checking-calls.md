@@ -22,27 +22,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104108"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719277"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Verifica le chiamate ai controlli di stack)
+
 Controlla le ricerche dello stack.
 
 ## <a name="syntax"></a>Sintassi
 
-```  
+```
 /Gs[size]
-```  
+```
 
 ## <a name="arguments"></a>Argomenti
+
 *size*<br/>
 Facoltativo. Numero di byte che le variabili locali possono occupare prima che venga avviato un probe dello stack. Se il **/Gs** opzione viene specificata senza un `size` argomento, è lo stesso effetto **/Gs0**,
 
 ## <a name="remarks"></a>Note
+
 Un probe dello stack è una sequenza di codice inserito dal compilatore in ogni chiamata di funzione. Dopo l'avvio, un probe dello stack verifica in modo non invasivo nella memoria la quantità di spazio che sarà necessaria per l'archiviazione delle variabili locali della funzione.
 
 Se per una funzione sono necessari più di `size` byte di spazio dello stack per le variabili locali, viene avviato il relativo probe dello stack. Per impostazione predefinita, il compilatore genera del codice che avvia un probe dello stack quando una funzione richiede più di una pagina di spazio dello stack. Ciò equivale a un'opzione del compilatore **/Gs4096** per piattaforme ARM, x64 e x86. Questo valore consente a un'applicazione e al gestore della memoria di Windows di aumentare la quantità di memoria allocata per lo stack del programma dinamicamente e in fase di esecuzione.
@@ -58,18 +61,19 @@ Alcuni programmi, quali i driver di dispositivo virtuali, non necessitano di que
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-2.  Selezionare il **C/C++** cartella.
+1. Selezionare il **C/C++** cartella.
 
-3.  Selezionare il **riga di comando** pagina delle proprietà.
+1. Selezionare il **riga di comando** pagina delle proprietà.
 
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .
+1. Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Vedere anche
-[Opzioni del compilatore](../../build/reference/compiler-options.md)   
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

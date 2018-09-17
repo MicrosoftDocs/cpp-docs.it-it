@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544434"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715559"
 ---
 # <a name="region-endregion"></a>region, endregion
 `#pragma region` Consente di specificare un blocco di codice che è possibile espandere o comprimere durante l'uso di [funzionalità struttura](/visualstudio/ide/outlining) dell'Editor di codice di Visual Studio.  
@@ -40,11 +40,11 @@ ms.locfileid: "42544434"
 ```  
   
 ### <a name="parameters"></a>Parametri  
-*commento* (facoltativo)  
-Un commento che verrà visualizzato nell'editor di codice.  
+*comment*  
+(Facoltativo) Un commento che verrà visualizzato nell'editor del codice.  
   
-*name* (facoltativo)  
-Il nome dell'area.  Questo nome verrà visualizzato nell'editor di codice.  
+*name*  
+(Facoltativo) Il nome dell'area.  Questo nome verrà visualizzato nell'editor di codice.  
   
 ## <a name="remarks"></a>Note  
  

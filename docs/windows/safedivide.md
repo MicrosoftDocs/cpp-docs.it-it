@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd7d581a632158154822f7ce51ac3dc5042b2a48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e673d01aa5657d9ada9ae1ee84ad3d56483e2fc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589297"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723346"
 ---
 # <a name="safedivide"></a>SafeDivide
 
@@ -41,14 +41,14 @@ inline bool SafeDivide (
 
 ### <a name="parameters"></a>Parametri
 
-[in] *t*  
-Divisore. Deve essere di tipo T.
+*t*<br/>
+[in] Il divisore. Deve essere di tipo T.
 
-[in] *u*  
-Dividendo. Deve essere di tipo U.
+*u*<br/>
+[in] Dividendo. Deve essere di tipo U.
 
-[out] *risultato*  
-Il parametro in cui **SafeDivide** archivia il risultato.
+*Risultato*<br/>
+[out] Il parametro in cui **SafeDivide** archivia il risultato.
 
 ## <a name="return-value"></a>Valore restituito
 

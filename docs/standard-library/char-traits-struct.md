@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106083"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724607"
 ---
 # <a name="chartraits-struct"></a>Struct char_traits
 
@@ -120,7 +120,8 @@ static char_type *assign(char_type* strTo,
 *_CharTo*<br/>
 L'elemento a cui deve essere assegnato il valore del carattere.
 
-* strTo * la matrice di stringhe o caratteri cui elementi iniziali devono essere assegnati i valori di carattere.
+*strTo*<br/>
+Stringa o matrice di caratteri ai cui elementi iniziali devono essere assegnati i valori dei caratteri.
 
 *_Num*<br/>
 Il numero di elementi a cui verranno assegnati i valori.
@@ -198,9 +199,11 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Parametri
 
-* str1 * il primo di due stringhe da confrontare tra loro.
+*str1*<br/>
+La prima di due stringhe da confrontare tra loro.
 
-* str2 * il secondo di due stringhe da confrontare tra loro.
+*str2*<br/>
+La seconda di due stringhe da confrontare tra loro.
 
 *_Num*<br/>
 Il numero di elementi nelle stringhe da confrontare.

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 02806f26f623b2f4ad7f19cd67216018da984e42
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853634"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713700"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar (classe)
 Barra dei menu incorporata in un menu di scelta rapida.  
@@ -140,8 +140,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bRecalcLayout*  
- TRUE per automaticamente Ricalcola il layout del riquadro barra del menu popup; in caso contrario, FALSE.  
+*bRecalcLayout*<br/>
+[in] TRUE per automaticamente Ricalcola il layout del riquadro barra del menu popup; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -153,8 +153,8 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiMenuResID*  
- Specifica l'ID del menu della risorsa di menu da caricare.  
+*uiMenuResID*<br/>
+[in] Specifica l'ID del menu della risorsa di menu da caricare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se ha esito positivo o FALSE in caso contrario.  
@@ -190,8 +190,8 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Un punto dello schermo.  
+*punto*<br/>
+[in] Un punto dello schermo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un handle barra degli strumenti in cui si trova il punto, se presente, oppure NULL se non.  
@@ -257,11 +257,11 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hMenu*  
- Il menu da cui importare i pulsanti di menu popup.  
+*hMenu*<br/>
+[in] Il menu da cui importare i pulsanti di menu popup.  
   
- [in] *bShowAllCommands*  
- TRUE se tutti i comandi del menu devono essere importati oppure FALSE se quelli usati raramente possono essere nascosti.  
+*bShowAllCommands*<br/>
+[in] TRUE se tutti i comandi del menu devono essere importati oppure FALSE se quelli usati raramente possono essere nascosti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se i pulsanti di menu sono stati importati correttamente dal menu di scelta o FALSE se non.  
@@ -325,8 +325,8 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hMenu*  
- Handle per il menu archiviato da caricare.  
+*hMenu*<br/>
+[in] Handle per il menu archiviato da caricare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se il menu di scelta è caricato correttamente o FALSE in caso contrario.  
@@ -364,11 +364,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Indice a base zero del pulsante della barra degli strumenti è necessario impostare il cui stile.  
+*nIndex*<br/>
+[in] Indice a base zero del pulsante della barra degli strumenti è necessario impostare il cui stile.  
   
- [in] *nStyle*  
- Lo stile del pulsante. Visualizzare [stili dei controlli ToolBar](../../mfc/reference/toolbar-control-styles.md) per l'elenco di stili dei pulsanti della barra degli strumenti disponibili.  
+*nStyle*<br/>
+[in] Lo stile del pulsante. Visualizzare [stili dei controlli ToolBar](../../mfc/reference/toolbar-control-styles.md) per l'elenco di stili dei pulsanti della barra degli strumenti disponibili.  
   
 ### <a name="remarks"></a>Note  
   
@@ -380,8 +380,8 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iOffset*  
- Il numero di righe che deve essere con offset della barra dei menu di scelta rapida.  
+*iOffset*<br/>
+[in] Il numero di righe che deve essere con offset della barra dei menu di scelta rapida.  
   
 ### <a name="remarks"></a>Note  
   
@@ -395,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMenuButton*  
- Puntatore al pulsante di menu per cui impostare il timer di ritardo.  
+*pMenuButton*<br/>
+[in] Puntatore al pulsante di menu per cui impostare il timer di ritardo.  
   
- [in] *nDelayFactor*  
- Un fattore ritardo pari ad almeno uno, per cui moltiplicare il tempo di ritardo di menu standard (in genere tra un mezzo secondo e 5 secondi).  
+*nDelayFactor*<br/>
+[in] Un fattore ritardo pari ad almeno uno, per cui moltiplicare il tempo di ritardo di menu standard (in genere tra un mezzo secondo e 5 secondi).  
   
 ### <a name="remarks"></a>Note  
   

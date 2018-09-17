@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208885"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726791"
 ---
 # <a name="application-information-and-management"></a>Informazioni sull'applicazione e gestione
 Quando si scrive un'applicazione, si crea un singolo [CWinApp](../../mfc/reference/cwinapp-class.md)-oggetto derivato. In alcuni casi, è possibile ottenere informazioni su questo oggetto all'esterno di `CWinApp`-oggetto derivato. Oppure potrebbe essere necessario accedere ad altri oggetti globali "Manager".
@@ -406,8 +406,8 @@ Determina se la finestra specificata è un oggetto frame esteso.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore a un oggetto derivato da `CWnd`.  
+*pWnd*<br/>
+[in] Un puntatore a un oggetto derivato da `CWnd`.  
    
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la finestra fornita è un oggetto frame esteso; in caso contrario, FALSE.  
@@ -442,8 +442,8 @@ Determina se la finestra specificata è un oggetto della barra degli strumenti.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore a un oggetto derivato da `CWnd`.  
+*pWnd*<br/>
+[in] Un puntatore a un oggetto derivato da `CWnd`.  
    
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la finestra fornita è un oggetto della barra degli strumenti. in caso contrario, FALSE.  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE indica che le informazioni del Registro di sistema viene indirizzate sul nodo HKCU. FALSE indica che l'applicazione scrive le informazioni del Registro di sistema per il nodo predefinito. Il nodo predefinito è **HKEY_CLASSES_ROOT** ( **HKCR**).  
+*bAttivare il*<br/>
+[in] TRUE indica che le informazioni del Registro di sistema viene indirizzate sul nodo HKCU. FALSE indica che l'applicazione scrive le informazioni del Registro di sistema per il nodo predefinito. Il nodo predefinito è **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Note  
 

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336520"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713596"
 ---
 # <a name="cfileexception-class"></a>Classe CFileException
 Rappresenta una condizione di eccezione correlata al file.  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *lpszError*  
- Puntatore a un buffer che riceve un messaggio di errore.  
+*lpszError*<br/>
+[in, out] Puntatore a un buffer che riceve un messaggio di errore.  
   
- [in] *nMaxError*  
- Il numero massimo di caratteri che può contenere il buffer specificato. Ciò include il carattere di terminazione null.  
+*nMaxError*<br/>
+[in] Il numero massimo di caratteri che può contenere il buffer specificato. Ciò include il carattere di terminazione null.  
   
- [in, out] *pnHelpContext*  
- Puntatore a un intero senza segno che riceve l'ID del contesto della Guida. Se `NULL`, non viene restituito alcun ID.  
+*pnHelpContext*<br/>
+[in, out] Puntatore a un intero senza segno che riceve l'ID del contesto della Guida. Se `NULL`, non viene restituito alcun ID.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.  

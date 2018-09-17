@@ -1,5 +1,5 @@
 ---
-title: __addfsbyte __addfsword, __addfsdword | Documenti Microsoft
+title: __addfsbyte, __addfsword, __addfsdword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714220"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 **Sezione specifica Microsoft**  
   
- Aggiungere un valore in una posizione di memoria specificata da un offset relativo all'inizio del `FS` segmento.  
+ Aggiungere un valore a una posizione di memoria specificata da un offset rispetto all'inizio del `FS` segmento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,11 +53,11 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Offset`  
- L'offset dall'inizio del `FS`.  
+*Offset*<br/>
+[in] L'offset dall'inizio del `FS`.  
   
- [in] `Data`  
- Il valore da aggiungere nella posizione di memoria.  
+*Dati*<br/>
+[in] Il valore da aggiungere alla posizione di memoria.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -68,7 +68,7 @@ void __addfsdword(
 |`__addfsdword`|x86|  
   
 ## <a name="remarks"></a>Note  
- Queste routine sono disponibili solo come funzioni intrinseche.  
+ Queste routine sono disponibili solo come intrinseci.  
   
 **Fine sezione specifica Microsoft**  
   

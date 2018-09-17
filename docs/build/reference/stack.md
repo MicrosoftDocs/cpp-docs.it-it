@@ -1,5 +1,5 @@
 ---
-title: -STACK | Documenti Microsoft
+title: -STACK | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a82111ce950d14bc6b3e270ee9a658d806b28b62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8deb3e3bedcb773aa01ae5f1c3ff66ce9d509f2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374076"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716666"
 ---
 # <a name="stack"></a>/STACK
-```  
-/STACK:reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa opzione imposta la dimensione dello stack in byte e accetta gli argomenti in notazione decimale o in linguaggio C. Essa è applicabile solo a un file eseguibile.  
-  
- Il *riservare* argomento specifica l'allocazione totale per lo stack nella memoria virtuale. Viene arrotondato al valore specificato di 4 byte più vicini.  
-  
- Facoltativo `commit` argomento viene interpretato dal sistema operativo. In Windows NT, Windows 95 e Windows 98, `commit` specifica la quantità di memoria fisica da allocare alla volta. Memoria virtuale vincolata consente lo spazio da riservare nel file di paging. Un valore più alto `commit` valore consente di risparmiare tempo quando l'applicazione richiede più spazio di stack ma incrementa i requisiti di memoria ed eventualmente il tempo di avvio.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/STACK:reserve[,commit]
+```
+
+## <a name="remarks"></a>Note
+
+Questa opzione imposta la dimensione dello stack in byte e richiede argomenti nella notazione decimale o del linguaggio C. Essa è applicabile solo a un file eseguibile.
+
+Il *riservare* argomento consente di specificare l'allocazione totale dello stack nella memoria virtuale. Viene arrotondato al valore specificato di 4 byte più vicini.
+
+L'opzione facoltativa `commit` argomento è soggetto a interpretazione dal sistema operativo. In Windows NT, Windows 95 e Windows 98, `commit` specifica la quantità di memoria fisica da allocare alla volta. Memoria virtuale vincolata fa sì che lo spazio da riservare nel file di paging. Un livello più elevato `commit` valore consente di risparmiare tempo quando l'applicazione richiede più spazio stack ma aumenta i requisiti di memoria ed eventualmente tempi di avvio.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni di EDITBIN](../../build/reference/editbin-options.md)

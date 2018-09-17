@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901011"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712837"
 ---
 # <a name="ctabbedpane-class"></a>Classe CTabbedPane
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAttivare il*  
-TRUE per abilitare la colorazione automatica delle schede. in caso contrario, FALSE.
+*bAttivare il*<br/>
+[in] TRUE per abilitare la colorazione automatica delle schede. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pBar*  
-[in] *nTabID*  
-[in] *dockMethod*  
-[in] *bHide*  
+*pBar*<br/>
+[in] [in] *nTabID*  
+*dockMethod*<br/>
+[in] [in] *bHide*  
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Parametri
 
-[out] *rectTabAreaTop*  
-Contiene le dimensioni e posizione, nelle coordinate dello schermo, dell'area della scheda superiore.
+*rectTabAreaTop*<br/>
+[out] Contiene le dimensioni e posizione, nelle coordinate dello schermo, dell'area della scheda superiore.
 
-[out] *rectTabAreaBottom*  
-Contiene le dimensioni e posizione, in coordinate dello schermo, dell'area della scheda nella parte inferiore.
+*rectTabAreaBottom*<br/>
+[out] Contiene le dimensioni e posizione, in coordinate dello schermo, dell'area della scheda nella parte inferiore.
 
 ### <a name="remarks"></a>Note
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *arColors*  
-Contiene la matrice di colori da impostare.
+*arColors*<br/>
+[in] Contiene la matrice di colori da impostare.
 
 ### <a name="remarks"></a>Note
 

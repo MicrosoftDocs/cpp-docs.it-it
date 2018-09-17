@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315808"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722046"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>Finestra di dialogo Carattere strumento testo (C++) (Editor di immagini per le icone)
 
@@ -34,20 +34,25 @@ Utilizzare questa finestra di dialogo:
 
 Per accedere a questa finestra di dialogo, fare clic sul **Font** pulsante il **strumento testo** nella finestra di dialogo.
 
-**Tipo di carattere**  
-Elenca i tipi di carattere disponibili.
+- **Tipo di carattere**
 
-**Stile del carattere**  
-Elenca gli stili disponibili per il tipo di carattere specificato.
+   Elenca i tipi di carattere disponibili.
 
-**Dimensione**  
-Elenca le dimensioni disponibili per il tipo di carattere specificato.
+- **Stile del carattere**
 
-**Esempio**  
-Visualizzare un esempio del modo in cui testo verrà visualizzato con le impostazioni del carattere specificata.
+   Elenca gli stili disponibili per il tipo di carattere specificato.
 
-**Script**  
-Elenca gli script del linguaggio disponibili per il tipo di carattere specificato. Quando si seleziona uno script in lingue diverse, il set di caratteri per quella lingua diventa disponibile per la creazione di documenti multilingue.
+- **Dimensione**
+
+   Elenca le dimensioni disponibili per il tipo di carattere specificato.
+
+- **Esempio**
+
+   Visualizzare un esempio del modo in cui testo verrà visualizzato con le impostazioni del carattere specificata.
+
+- **Script**
+
+   Elenca gli script del linguaggio disponibili per il tipo di carattere specificato. Quando si seleziona uno script in lingue diverse, il set di caratteri per quella lingua diventa disponibile per la creazione di documenti multilingue.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 72ed2d47c995e19bdfa473c0abd79034e3e51430
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540454"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720941"
 ---
 # <a name="movsq"></a>__movsq
 **Sezione specifica Microsoft**  
@@ -41,14 +41,14 @@ void __movsq(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [out] `Dest`  
- La destinazione dell'operazione.  
+*dest*<br/>
+[out] La destinazione dell'operazione.  
   
- [in] `Source`  
- L'origine dell'operazione.  
+*Source*<br/>
+[in] L'origine dell'operazione.  
   
- [in] `Count`  
- Il numero di parole quadruple da copiare.  
+*Conteggio*<br/>
+[in] Il numero di parole quadruple da copiare.  
   
 ## <a name="requirements"></a>Requisiti  
   

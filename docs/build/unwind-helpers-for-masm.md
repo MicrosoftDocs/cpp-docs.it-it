@@ -1,5 +1,5 @@
 ---
-title: Helper di rimozione per MASM | Documenti Microsoft
+title: Helper di rimozione per MASM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7135802bdc91c611132760ebbee4e0619ba0de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dd43318d19bafa2f69514f81e82da6d303528d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380249"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725621"
 ---
 # <a name="unwind-helpers-for-masm"></a>Helper di rimozione per MASM
-Per poter scrivere routine assembly corrette, esistono una serie di pseudo-operazioni che può essere usata in parallelo con le istruzioni di assembly effettivo per creare l'appropriato. pdata e xdata. Esistono anche un set di macro per semplifica l'utilizzo delle pseudo-operazioni per la maggior parte delle situazioni.  
-  
-## <a name="remarks"></a>Note  
- In questa sezione sono i seguenti argomenti:  
-  
--   [Pseudo operazioni in modalità raw](../build/raw-pseudo-operations.md)  
-  
--   [Macro MASM](../build/masm-macros.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione delle eccezioni (x64)](../build/exception-handling-x64.md)
+
+Per poter scrivere routine assembly appropriati, esistono una serie di pseudo-operazioni che può essere usata in parallelo con le istruzioni di assembly effettivo per creare le appropriate. pdata e. xdata. Esistono anche un set di macro che forniscono semplifica l'utilizzo delle pseudo-operazioni per la maggior parte delle situazioni.
+
+## <a name="remarks"></a>Note
+
+In questa sezione sono i seguenti argomenti:
+
+- [Pseudo operazioni in modalità raw](../build/raw-pseudo-operations.md)
+
+- [Macro MASM](../build/masm-macros.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione delle eccezioni (x64)](../build/exception-handling-x64.md)

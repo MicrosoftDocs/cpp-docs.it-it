@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e4d2bc62ffadb59565ba64e28311cd1283cb5d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bae44c3d92c2e27802c3c1b0849fa23266e2f753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691436"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723528"
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe CMFCPropertySheet
 La classe `CMFCPropertySheet` supporta una finestra delle proprietà in cui ogni pagina delle proprietà è identificata da una scheda, un pulsante della barra degli strumenti, un nodo del controllo dell'albero o un elemento di elenco.  
@@ -151,8 +151,8 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *esercitazione*  
- Puntatore a un oggetto della pagina. Questo parametro non può essere NULL.  
+*Esercitazione*<br/>
+[in] Puntatore a un oggetto della pagina. Questo parametro non può essere NULL.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo aggiunge la pagina delle proprietà specificata come la scheda all'estrema destra nella finestra delle proprietà. Pertanto, è possibile usare questo metodo per aggiungere pagine in ordine da sinistra a destra.  
@@ -171,17 +171,17 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pCategory*  
- Puntatore a un nodo dell'albero padre o NULL da associare alla pagina specificata con il nodo di primo livello. Chiamare il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo per ottenere questo puntatore.  
+*pCategory*<br/>
+[in] Puntatore a un nodo dell'albero padre o NULL da associare alla pagina specificata con il nodo di primo livello. Chiamare il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo per ottenere questo puntatore.  
   
- [in] *esercitazione*  
- Puntatore a un oggetto pagina delle proprietà.  
+*Esercitazione*<br/>
+[in] Puntatore a un oggetto pagina delle proprietà.  
   
- [in] *nIconNum*  
- Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. Quando la pagina non è selezionata, l'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero. Il valore predefinito è -1.  
+*nIconNum*<br/>
+[in] Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. Quando la pagina non è selezionata, l'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero. Il valore predefinito è -1.  
   
- [in] *nSelIconNum*  
- Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. L'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero quando è selezionata la pagina. Il valore predefinito è -1.  
+*nSelIconNum*<br/>
+[in] Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. L'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero quando è selezionata la pagina. Il valore predefinito è -1.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo aggiunge una pagina delle proprietà come un nodo foglia di un controllo struttura ad albero. Per aggiungere una pagina delle proprietà, creare un `CMFCPropertySheet` dell'oggetto, chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo con il *Cerca* parametro impostato su `CMFCPropertySheet::PropSheetLook_Tree`e quindi usare questo metodo per aggiungere la pagina delle proprietà .  
@@ -198,17 +198,17 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLabel*  
- Nome del nodo.  
+*lpszLabel*<br/>
+[in] Il nome del nodo.  
   
- [in] *nIconNum*  
- Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. Quando la pagina non è selezionata, l'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero. Il valore predefinito è -1.  
+*nIconNum*<br/>
+[in] Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. Quando la pagina non è selezionata, l'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero. Il valore predefinito è -1.  
   
- [in] *nSelectedIconNum*  
- Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. L'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero quando è selezionata la pagina. Il valore predefinito è -1.  
+*nSelectedIconNum*<br/>
+[in] Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. L'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero quando è selezionata la pagina. Il valore predefinito è -1.  
   
- [in] *pParentCategory*  
- Puntatore a un nodo dell'albero padre o NULL da associare alla pagina specificata con il nodo di primo livello. Impostare questo parametro con il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) (metodo).  
+*pParentCategory*<br/>
+[in] Puntatore a un nodo dell'albero padre o NULL da associare alla pagina specificata con il nodo di primo livello. Impostare questo parametro con il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) (metodo).  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al nuovo nodo nel controllo albero.  
@@ -234,17 +234,17 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pszCaption*  
- Stringa che contiene la didascalia della finestra delle proprietà. Non può essere NULL.  
+*pszCaption*<br/>
+[in] Stringa che contiene la didascalia della finestra delle proprietà. Non può essere NULL.  
   
- [in] *nIDCaption*  
- ID di risorsa che contiene la didascalia della finestra delle proprietà.  
+*nIDCaption*<br/>
+[in] ID di risorsa che contiene la didascalia della finestra delle proprietà.  
   
- [in] *pParentWnd*  
- Puntatore alla finestra padre della finestra delle proprietà oppure NULL se la finestra padre è la finestra principale dell'applicazione. Il valore predefinito è NULL.  
+*pParentWnd*<br/>
+[in] Puntatore alla finestra padre della finestra delle proprietà oppure NULL se la finestra padre è la finestra principale dell'applicazione. Il valore predefinito è NULL.  
   
- [in] *iSelectPage*  
- Indice a base zero della pagina delle proprietà principali. Il valore predefinito è 0.  
+*iSelectPage*<br/>
+[in] Indice a base zero della pagina delle proprietà principali. Il valore predefinito è 0.  
   
 ### <a name="remarks"></a>Note  
  Per altre informazioni, vedere i parametri per il [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) costruttore.  
@@ -257,8 +257,8 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nHeaderHeight*  
- L'altezza dell'intestazione, in pixel.  
+*nHeaderHeight*<br/>
+[in] L'altezza dell'intestazione, in pixel.  
   
 ### <a name="remarks"></a>Note  
  Per utilizzare il valore della *nHeaderHeight* parametro per creare un'intestazione personalizzata, eseguire l'override di [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) (metodo).  
@@ -334,8 +334,8 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *esercitazione*  
- Puntatore a un oggetto pagina delle proprietà che rappresenta la pagina proprietà enabled.  
+*Esercitazione*<br/>
+[in] Puntatore a un oggetto pagina delle proprietà che rappresenta la pagina proprietà enabled.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo assicura che la pagina proprietà enabled di scorrimento nella visualizzazione. Se lo stile della finestra delle proprietà corrente contiene un riquadro di Microsoft Outlook, questo metodo imposta il pulsante di Outlook corrispondente allo stato selezionato.  
@@ -351,14 +351,14 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *nPage*  
- Il numero di pagina delle proprietà in base zero.  
+*nPage*<br/>
+[in] Il numero di pagina delle proprietà in base zero.  
   
- [in] *rectHeader*  
- Un rettangolo di delimitazione che specifica la posizione in cui disegnare l'intestazione.  
+*rectHeader*<br/>
+[in] Un rettangolo di delimitazione che specifica la posizione in cui disegnare l'intestazione.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo non esegue alcuna operazione. Se si esegue l'override di questo metodo, chiamare il [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metodo prima che il framework chiama questo metodo.  
@@ -371,8 +371,8 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *esercitazione*  
- Puntatore a un oggetto pagina delle proprietà che rappresenta la pagina delle proprietà da rimuovere.  
+*Esercitazione*<br/>
+[in] Puntatore a un oggetto pagina delle proprietà che rappresenta la pagina delle proprietà da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -385,8 +385,8 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pCategory*  
- Puntatore a una categoria (nodo) da rimuovere.  
+*pCategory*<br/>
+[in] Puntatore a una categoria (nodo) da rimuovere.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per rimuovere un nodo che è detta anche una categoria, da un controllo struttura ad albero. Usare la [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo per aggiungere un nodo a un controllo struttura ad albero.  
@@ -400,11 +400,11 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *esercitazione*  
- Puntatore all'oggetto pagina delle proprietà che rappresenta la pagina delle proprietà da rimuovere. Non può essere NULL.  
+*Esercitazione*<br/>
+[in] Puntatore all'oggetto pagina delle proprietà che rappresenta la pagina delle proprietà da rimuovere. Non può essere NULL.  
   
- [in] *nPage*  
- Indice in base zero della pagina da rimuovere.  
+*nPage*<br/>
+[in] Indice in base zero della pagina da rimuovere.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo rimuove la pagina delle proprietà specificate ed elimina la finestra associata. La pagina delle proprietà dell'oggetto che il *esercitazione* parametro specifica non viene eliminato finché il [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) finestra viene chiusa.  
@@ -421,17 +421,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiImageListResID*  
- L'ID di risorsa di un elenco di immagini.  
+*uiImageListResID*<br/>
+[in] L'ID di risorsa di un elenco di immagini.  
   
- [in] *cx*  
- La larghezza in pixel, di icone dell'elenco immagini.  
+*CX*<br/>
+[in] La larghezza in pixel, di icone dell'elenco immagini.  
   
- [in] *clrTransparent*  
- Colore trasparente immagine. Le parti dell'immagine di questo oggetto color sarà trasparente. Il valore predefinito è il colore magenta, RGB(255,0,255).  
+*clrTransparent*<br/>
+[in] Colore trasparente immagine. Le parti dell'immagine di questo oggetto color sarà trasparente. Il valore predefinito è il colore magenta, RGB(255,0,255).  
   
- [in] *gli oggetti HICON*  
- Handle per un elenco di immagini esistente.  
+*oggetti HICON*<br/>
+[in] Handle per un elenco di immagini esistente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il primo metodo consiste nel rapporto di overload sulla sintassi, TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -451,11 +451,11 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *aspetto*  
- Uno dei valori di enumerazione che specifica l'aspetto della finestra delle proprietà. Lo stile predefinito per una finestra delle proprietà è `CMFCPropertySheet::PropSheetLook_Tabs`. Per altre informazioni, vedere la tabella nella sezione Osservazioni di questo argomento.  
+*aspetto*<br/>
+[in] Uno dei valori di enumerazione che specifica l'aspetto della finestra delle proprietà. Lo stile predefinito per una finestra delle proprietà è `CMFCPropertySheet::PropSheetLook_Tabs`. Per altre informazioni, vedere la tabella nella sezione Osservazioni di questo argomento.  
   
- [in] *nNavControlWidth*  
- La larghezza del controllo di navigazione, in pixel. Il valore predefinito è 100.  
+*nNavControlWidth*<br/>
+[in] La larghezza del controllo di navigazione, in pixel. Il valore predefinito è 100.  
   
 ### <a name="remarks"></a>Note  
  Per visualizzare una finestra delle proprietà in uno stile diverso da quello predefinito, chiamare questo metodo prima di creare la finestra delle proprietà.  

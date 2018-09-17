@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895214"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725972"
 ---
 # <a name="base-base-address"></a>/BASE (indirizzo di base)
 
@@ -60,11 +60,11 @@ Nella riga di comando, un altro modo per specificare l'indirizzo di base consist
 
 Il *chiave* è una stringa di caratteri alfanumerici e non viene fatta distinzione tra maiuscole e minuscole. In genere è il nome di una DLL, ma non è necessario. Il *key* è seguita da una base *indirizzo* in notazione del linguaggio C, esadecimale o decimale e un valore massimo *dimensioni*. Tutti i tre argomenti sono separati da spazi o tabulazioni. Il linker genera un avviso se l'oggetto specificato *dimensioni* è minore di spazio degli indirizzi virtuali richiesto dal programma. Oggetto *commento* specificato da un punto e virgola (**;**) e possono essere nello stesso o in una riga separata. Il linker Ignora tutto il testo da punto e virgola alla fine della riga. Questo esempio Mostra parte di tale file:
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 Se il file che contiene le righe seguenti viene chiamato DLLs. txt, il comando seguente si applica queste informazioni:
 
@@ -88,5 +88,5 @@ Un altro modo per impostare l'indirizzo di base consiste nell'usare la *BASE* ar
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)  
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
 [Opzioni del linker](../../build/reference/linker-options.md)

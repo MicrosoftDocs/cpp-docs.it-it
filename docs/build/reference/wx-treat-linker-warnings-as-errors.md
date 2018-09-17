@@ -1,5 +1,5 @@
 ---
-title: -WX (considera gli avvisi del Linker come errori) | Documenti Microsoft
+title: -WX (considera gli avvisi del Linker come errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686b17a3db00175340e3490241c6c2e9f9325225
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91f73af0c270be4452a4b556d2cb77c0d55bed33
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377287"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722592"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Considera gli avvisi del linker come errori)
-```  
-/WX[:NO]  
-```  
-  
-## <a name="remarks"></a>Note  
- /WX fa in modo nessun file di output deve essere generato se il linker genera un avviso.  
-  
- È simile a **/WX** per il compilatore (vedere [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /, abbiamo /wo, /WV., /WX (livello avviso)](../../build/reference/compiler-option-warning-level.md) per altre informazioni). Tuttavia, specificando **/WX** per la compilazione non implica che **/WX** anche verrà attivata per la fase di collegamento, è necessario specificare esplicitamente **/WX** per ogni strumento.  
-  
- Per impostazione predefinita, **/WX** non è attiva. Per considerare gli avvisi del linker come errori, specificare **/WX**. **/WX:No** equivale a non specificare **/WX**.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic su di **Linker** cartella.  
-  
-3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
-  
-4.  Digitare l'opzione nel **opzioni aggiuntive** casella.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
-  
-1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+```
+/WX[:NO]
+```
+
+## <a name="remarks"></a>Note
+
+/WX fa in modo che nessun file di output da generare se il linker genera un avviso.
+
+È simile alla **/WX** per consentire al compilatore (vedere [/w, /W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, /Wall, /wd, / we, /wo, /Wv, /WX (livello avviso)](../../build/reference/compiler-option-warning-level.md) per altre informazioni). Tuttavia, specificando **/WX** per la compilazione non è detto che **/WX** anche sarà attivo per la fase di collegamento, è necessario specificare esplicitamente **/WX** per ogni strumento.
+
+Per impostazione predefinita **/WX** non è attiva. Per considerare gli avvisi del linker come errori, specificare **/WX**. **/WX:No** equivale a non specificare **/WX**.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+
+1. Scegliere il **Linker** cartella.
+
+1. Fare clic sulla pagina delle proprietà **Riga di comando** .
+
+1. Digitare l'opzione nel **opzioni aggiuntive** casella.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
+
+1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894616"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723307"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilazione di una libreria di importazione e di un file di esportazione
 
@@ -60,7 +60,7 @@ Questi sono gli stessi metodi che consente di specificare le esportazioni durant
 
 Le opzioni seguenti si applicano alla creazione di una libreria di importazione ed esportazione file:
 
-> **/ Ingresso uscita:** *importare*  
+> **/ Ingresso uscita:** *importare*
 
 Esegue l'override del nome di file di output predefinito per il *importare* libreria da creare. Quando l'opzione /OUT non viene specificato, il nome predefinito è il nome di base del primo file oggetto o della libreria nel comando LIB e l'estensione. lib. Il file di esportazione viene assegnato lo stesso nome di base come la libreria di importazione e l'estensione. exp.
 

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687987"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721734"
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*UIntType*  
- Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*W*  
- **Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **Ritardo breve**. Numero di valori Integer. **Precondizione:** `0 < S < R`
+*S*<br/>
+**Ritardo breve**. Numero di valori Integer. **Precondizione:** `0 < S < R`
 
-*R*  
- **Ritardo lungo**. Determina la ricorrenza nella serie generata.
+*R*<br/>
+**Ritardo lungo**. Determina la ricorrenza nella serie generata.
 
 ## <a name="members"></a>Membri
 

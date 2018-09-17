@@ -1,5 +1,5 @@
 ---
-title: Concatenate strutture Unwind_info | Documenti Microsoft
+title: Concatenate strutture Unwind_info | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,25 +12,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87469a381c038462549d20b105b791ddb17b1656
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6da09387595188026d855fb99a49b588e6f21aa3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366952"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715026"
 ---
 # <a name="chained-unwind-info-structures"></a>Strutture UNWIND_INFO concatenate
-Se è impostato il flag UNW_FLAG_CHAININFO, una struttura di informazioni sulla rimozione viene e uno secondario, il campo indirizzo eccezione-gestore UNWIND_INFO concatenata condiviso contiene le informazioni di rimozione primarie. Il codice seguente recupera informazioni, supponendo che di rimozione primario `unwindInfo` è la struttura con il UNW_FLAG_CHAININFO flag impostato.  
-  
-```  
-PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);  
-```  
-  
- Questa struttura è utile in due situazioni. In primo luogo, può essere utilizzato per i segmenti di codice non contigui. Utilizzando questa struttura, è possibile ridurre le dimensioni delle informazioni di rimozione necessarie, poiché non è necessario duplicare la matrice di codici di rimozione dalla UNWIND_INFO principale.  
-  
- È inoltre possibile utilizzare UNWIND_INFO per raggruppare i salvataggi dei registri volatili. Il compilatore può ritardare il salvataggio di alcuni registri volatili fino a quando non è di fuori del prologo di ingresso della funzione. È possibile registrare la voce UNWIND_INFO principale per la parte della funzione prima del codice raggruppato e quindi impostare la UNWIND_INFO con una dimensione diversa da zero di prologo, in cui i codici di rimozione in tale struttura riflettono i salvataggi dei registri non volatili. In tal caso, i codici di rimozione sono tutte le istanze di UWOP_SAVE_NONVOL. Un raggruppamento che consente di salvare i registri non volatili tramite un PUSH o modifica il registro RSP tramite un'allocazione dello stack fissa aggiuntiva non è supportato.  
-  
- Un elemento UNWIND_INFO con UNW_FLAG_CHAININFO set può contenere una voce RUNTIME_FUNCTION il cui elemento UNW_FLAG_CHAININFO dispone anche di impostare (senza Shrink). Infine, concatenati UNWIND_INFO puntatori arriverà a un elemento UNWIND_INFO con UNW_FLAG_CHAININFO deselezionata. si tratta dell'elemento UNWIND_INFO principale, che fa riferimento al punto di ingresso effettivo della procedura.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Dati di rimozione per la gestione delle eccezioni, supporto del debugger](../build/unwind-data-for-exception-handling-debugger-support.md)
+
+Se è impostato il flag UNW_FLAG_CHAININFO, significa che una struttura di informazioni di rimozione è uno secondario e il campo indirizzo eccezione gestore/concatenate-info condiviso contiene le informazioni di rimozione primario. Il codice seguente recupera informazioni, supponendo che di rimozione primario `unwindInfo` è la struttura che contiene il UNW_FLAG_CHAININFO flag impostato.
+
+```
+PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
+```
+
+Questa struttura è utile in due situazioni. In primo luogo, può essere utilizzato per segmenti di codice non contigui. Con questa struttura, è possibile ridurre le dimensioni delle informazioni di rimozione necessarie, perché non è necessario duplicare la matrice di codici di rimozione dalla UNWIND_INFO principale.
+
+È anche possibile usare UNWIND_INFO per raggruppare i salvataggi dei registri volatili. Il compilatore può ritardare il salvataggio alcuni registri volatili fino a quando non è di fuori di prologo di ingresso della funzione. È possibile registrare la voce UNWIND_INFO principale per la parte della funzione prima del codice raggruppato e configurando UNWIND_INFO con una dimensione diversa da zero di prologo, in cui i codici di rimozione in tale struttura riflettono i salvataggi dei registri non volatili. In tal caso, i codici di rimozione sono tutte le istanze di UWOP_SAVE_NONVOL. Un raggruppamento che consente di salvare i registri non volatili tramite un'operazione PUSH o modifica il registro RSP usando un'allocazione fissa aggiuntiva dello stack non è supportato.
+
+Un elemento UNWIND_INFO con UNW_FLAG_CHAININFO set può contenere una voce RUNTIME_FUNCTION il cui elemento UNW_FLAG_CHAININFO dispone anche di impostare (senza Shrink). Saranno successivamente concatenati UNWIND_INFO puntatori arriverà a un elemento UNWIND_INFO con UNW_FLAG_CHAININFO cancellato; si tratta dell'elemento UNWIND_INFO principale, che fa riferimento al punto di ingresso di procedura effettiva.
+
+## <a name="see-also"></a>Vedere anche
+
+[Dati di rimozione per la gestione delle eccezioni, supporto del debugger](../build/unwind-data-for-exception-handling-debugger-support.md)

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853764"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719966"
 ---
 # <a name="cmfccmdusagecount-class"></a>Classe CMFCCmdUsageCount
 Registra il conteggio di utilizzo di messaggi di Windows, ad esempio quando l'utente seleziona un elemento da un menu.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *uiCmd*|Specifica il contatore di comando da incrementare.|  
+|*uiCmd*|[in] Specifica il contatore di comando da incrementare.|  
   
 ### <a name="remarks"></a>Note  
  Questo metodo aggiunge una nuova voce per la struttura della mappa dei conteggi di comando, `m_CmdUsage`, se la voce non esiste già.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *uiCmd*|L'ID del contatore comando da recuperare.|  
+|*uiCmd*|[in] L'ID del contatore comando da recuperare.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Il conteggio di utilizzo associato con l'ID del comando specificato.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *uiCmd*|Specifica il comando da controllare.|  
+|*uiCmd*|[in] Specifica il comando da controllare.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il comando è frequente; in caso contrario 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *ar*|Oggetto `CArchive` oggetto da serializzare da o a.|  
+|*ar*|[in] Oggetto `CArchive` oggetto da serializzare da o a.|  
   
 ### <a name="remarks"></a>Note  
  Questo metodo serializza la struttura della mappa del comando conteggi `m_CmdUsage`e l'uso del comando totale, `m_nTotalUsage`, contatore da o verso l'archivio specificato.  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *nStartCount*|Il nuovo conteggio iniziale di comandi tutto viene monitorati.|  
-|[in] *nMinUsagePercentage*|La percentuale di utilizzo minimo della nuova.|  
+|*nStartCount*|[in] Il nuovo conteggio iniziale di comandi tutto viene monitorati.|  
+|*nMinUsagePercentage*|[in] La percentuale di utilizzo minimo della nuova.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo, FALSE se il *nMinUsagePercentage* parametro è maggiore o uguale a 100.  

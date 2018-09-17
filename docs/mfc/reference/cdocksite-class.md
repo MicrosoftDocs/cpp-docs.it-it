@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539065"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720304"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pos*  
- [in] *nHeight*  
+*POS*<br/>
+[in] [in] *nHeight*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectToAlignBy*  
- [in] *rectResult*  
+*rectToAlignBy*<br/>
+[in] [in] *rectResult*  
  [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Note  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwStyleEx*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *dwControlBarStyle*  
- [in] *pContext*  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*dwControlBarStyle*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParentDockBar*  
- [in] *nOffset*  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
  [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
  [in] *lpRect*  
   
 ### <a name="remarks"></a>Note  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- ID comando del riquadro da trovare.  
+*nID*<br/>
+[in] ID comando del riquadro da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al riquadro con l'ID di comando specificato o NULL se il riquadro non viene trovato.  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- [in] *ptDelta*  
+*Rect*<br/>
+[in] [in] *ptDelta*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- [in] *nFlags*  
+*pWnd*<br/>
+[in] [in] *nFlags*  
  [in] *ptOffset*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pos*  
- [in] *bByShow*  
+*POS*<br/>
+[in] [in] *bByShow*  
   
 ### <a name="remarks"></a>Note  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pRowToResize*  
- [in] *nOffset*  
+*pRowToResize*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectAvailable*  
- [in] *nSide*  
- [in] *bExpand*  
- [in] *nOffset*  
+*rectAvailable*<br/>
+[in] [in] *nSide*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Note  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndInsertAfter*  
- [in] *rectWnd*  
+*pWndInsertAfter*<br/>
+[in] [in] *rectWnd*  
  [in] *nFlags*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pos*  
- [in] *bMostra*  
+*POS*<br/>
+[in] [in] *bMostra*  
   
 ### <a name="remarks"></a>Note  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pt*  
- Un punto, nelle coordinate dello schermo, per il riquadro da recuperare.  
+*pt*<br/>
+[in] Un punto, nelle coordinate dello schermo, per il riquadro da recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al riquadro che si trova al punto specificato o NULL se nessun riquadro era presente nel punto specificato.  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- [in] *punto*  
+*Rect*<br/>
+[in] [in] *punto*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Note  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pOldBar*  
- [in] *pNewBar*  
+*pOldBar*<br/>
+[in] [in] *pNewBar*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nNewWidth*  
- [in] *nNewHeight*  
+*nNewWidth*<br/>
+[in] [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Note  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pRow*  
- [in] *nNewSize*  
+*pRow*<br/>
+[in] [in] *nNewSize*  
  [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in] [out] *pBar*  
  Puntatore al riquadro per essere visualizzato o nascosto.  
   
- [in] *bMostra*  
- TRUE per specificare che il riquadro viene visualizzato; FALSE per specificare che il riquadro deve essere nascosto.  
+*bMostra*<br/>
+[in] TRUE per specificare che il riquadro viene visualizzato; FALSE per specificare che il riquadro deve essere nascosto.  
   
- [in] *bDelay*  
- TRUE per specificare che il layout del riquadro deve essere ritardato fino a dopo il riquadro viene visualizzato; in caso contrario, FALSE.  
+*bDelay*<br/>
+[in] TRUE per specificare che il layout del riquadro deve essere ritardato fino a dopo il riquadro viene visualizzato; in caso contrario, FALSE.  
   
- [in] *bActivate*  
- Questo parametro non viene usato.  
+*bActivate*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro è stato visualizzato o nascosto correttamente. FALSO se il riquadro specificato non appartiene a questo sito di ancoraggio.  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pRow*  
- [in] *bMostra*  
+*pRow*<br/>
+[in] [in] *bMostra*  
  [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Note  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pFirstRow*  
- [in] *pSecondRow*  
+*pFirstRow*<br/>
+[in] [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Note  
   

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027323"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721448"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Panoramica delle convenzioni ABI ARM32
 
@@ -64,16 +64,16 @@ L'uso di istruzioni IT nel codice Thumb-2 non è consentito, se non in questi ca
 - L'istruzione di destinazione deve essere una di queste:
 
    |Codici operativi a 16 bit|Classe|Restrizioni|
-    |---------------------|-----------|------------------|
-    |MOV, MVN|Move|Rm != PC, Rd != PC|
-    |LDR, LDR[S]B, LDR[S]H|Load from memory|Ma non formati letterali LDR|
-    |STR, STRB, STRH|Store to memory||
-    |ADD, ADC, RSB, SBC, SUB|Add or subtract|Ma non formati ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-    |CMP, CMN|Compare|Rm != PC, Rn != PC|
-    |MUL|Multiply||
-    |ASR, LSL, LSR, ROR|Bit shift||
-    |AND, BIC, EOR, ORR, TST|Bitwise arithmetic||
-    |BX|Branch to register|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV, MVN|Move|Rm != PC, Rd != PC|
+   |LDR, LDR[S]B, LDR[S]H|Load from memory|Ma non formati letterali LDR|
+   |STR, STRB, STRH|Store to memory||
+   |ADD, ADC, RSB, SBC, SUB|Add or subtract|Ma non formati ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
+   |CMP, CMN|Compare|Rm != PC, Rn != PC|
+   |MUL|Multiply||
+   |ASR, LSL, LSR, ROR|Bit shift||
+   |AND, BIC, EOR, ORR, TST|Bitwise arithmetic||
+   |BX|Branch to register|Rm != PC|
 
 Anche se le CPU ARMv7 correnti non riescono a segnalare l'uso di formati di istruzioni non consentiti, si prevede che le future generazioni saranno in grado di farlo. Se questi formati vengono rilevati, i programmi che li usano potrebbero essere terminati con un'eccezione di istruzione non definita.
 
@@ -233,5 +233,5 @@ Il contatore è un vero e proprio contatore di cicli, non un orologio, e quindi 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
-[Gestione delle eccezioni ARM](../build/arm-exception-handling.md)  
+[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Gestione delle eccezioni ARM](../build/arm-exception-handling.md)

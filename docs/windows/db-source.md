@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bad61c157926fd417467afaa2d97d0db517430f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201556"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716014"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -43,11 +43,11 @@ Crea una connessione a un'origine dati.
 *db_source*  
 La stringa di connessione utilizzata per la connessione all'origine dati. Per il formato della stringa di connessione, vedere [stringhe di connessione e i collegamenti dati](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) il SDK in Microsoft Data Access Components (MDAC).
 
-*name* (facoltativo)  
-Quando si usa **db_source** in una classe *nome* è un'istanza di un oggetto origine dati che contiene la **db_source** attributo applicato (vedere l'esempio 1). Quando si usa **db_source** inline in un'implementazione di metodo *nome* è una variabile (locale al metodo) che può essere utilizzata per accedere ai dati di origine (vedere l'esempio 2). È passare questo *name* per il *source_name* parametro di `db_command` per associare l'origine dati a un comando.
+*name*  
+(Facoltativo) Quando si usa **db_source** in una classe *nome* è un'istanza di un oggetto origine dati che contiene la **db_source** attributo applicato (vedere l'esempio 1). Quando si usa **db_source** inline in un'implementazione di metodo *nome* è una variabile (locale al metodo) che può essere utilizzata per accedere ai dati di origine (vedere l'esempio 2). È passare questo *name* per il *source_name* parametro di `db_command` per associare l'origine dati a un comando.
 
-*HRESULT* (facoltativo)  
-Identifica la variabile che riceverà il valore HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
+*HRESULT*  
+(Facoltativo) Identifica la variabile che riceverà il valore HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
 ## <a name="remarks"></a>Note
 

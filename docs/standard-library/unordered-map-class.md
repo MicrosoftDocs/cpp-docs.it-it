@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726232"
 ---
 # <a name="unorderedmap-class"></a>Classe unordered_map
 
@@ -561,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nbucket*  
+*nbucket*<br/>
 Numero di bucket.
 
 ### <a name="remarks"></a>Note
@@ -925,7 +925,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
+*Keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1190,7 +1190,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
+*Keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1260,16 +1260,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametri
 
-*Where*  
+*Where*<br/>
 Posizione dell'elemento che deve essere rimosso.
 
-*Primo*  
+*Primo*<br/>
 Posizione del primo elemento che deve essere rimosso.
 
-*ultimo*  
+*ultimo*<br/>
 Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-*Key*  
+*Key*<br/>
 Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1292,7 +1292,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*  
+*Keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -2009,7 +2009,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametri
 
-*factor*  
+*factor*<br/>
 Nuovo fattore di carico massimo.
 
 ### <a name="remarks"></a>Note
@@ -2381,7 +2381,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametri
 
-*nbuckets*  
+*nbuckets*<br/>
 Numero di bucket richiesto.
 
 ### <a name="remarks"></a>Note
@@ -2565,7 +2565,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*  
+*right*<br/>
 Contenitore con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note

@@ -19,46 +19,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6204349731222df99683ddb20b2b2d827b3fcd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cb14af38c4bffed4b9f5c60d2d89fd84a892025b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541778"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721747"
 ---
 # <a name="conform"></a>conform
 **Sezione specifica C++**  
-  
-Specifica il comportamento in fase di esecuzione del [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opzione del compilatore.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#pragma conform(name [, show ] [, on | off ] [ [, push | pop ] [, identifier ] ] )  
-```  
-  
-### <a name="parameters"></a>Parametri  
-*name*  
-Specifica il nome dell'opzione del compilatore da modificare. Valido solo *name* è `forScope`.  
-  
-*Mostra* (facoltativo)  
-Fa sì che l'impostazione corrente di *nome* (true o false) da visualizzare mediante un messaggio di avviso durante la compilazione. Ad esempio `#pragma conform(forScope, show)`.  
-  
-*attivato, disattivato*(facoltativo)  
-L'impostazione *nome* a *sul* consente la [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opzione del compilatore. Il valore predefinito è *disattivata*.  
-  
-*push* (facoltativo)  
-Inserisce il valore corrente di *nome* nello stack interno del compilatore. Se si specifica *identificatore*, è possibile specificare la *sul* o *off* value per *nome* da inserire nello stack. Ad esempio `#pragma conform(forScope, push, myname, on)`.  
-  
-*POP* (facoltativo)  
-Imposta il valore della *nome* al valore nella parte superiore dello stack del compilatore interno e quindi estrae lo stack. Se viene specificato con l'identificatore *pop*, verrà visualizzato lo stack indietro fino a quando non individua il record con *identifier*, che verrà sicuramente estratta anche; il valore corrente per *nome* in il record successivo dello stack diventerà il nuovo valore per *nome*. Se si specifica pop con un' *identifier* che non è presente in un record nello stack, il *pop* viene ignorato.  
-  
-*Identificatore*(facoltativo)  
-Può essere incluso in un *push* oppure *pop* comando. Se *identifier* viene usato, un' *sul* o *off* identificatore possa anche essere usato.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp  
+
+Specifica il comportamento in fase di esecuzione del [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opzione del compilatore.
+
+## <a name="syntax"></a>Sintassi
+
+> **#pragma è conforme (** *name* [**, mostrare** ] [**,** { **in** | **off** }] [[**,** { **push** | **pop** }] [**,** *identificatore* ]] **)**
+
+### <a name="parameters"></a>Parametri
+
+*name*<br/>
+Specifica il nome dell'opzione del compilatore da modificare. Valido solo *name* è `forScope`.
+
+**Show**<br/>
+(Facoltativo) Fa sì che l'impostazione corrente di *nome* (true o false) da visualizzare mediante un messaggio di avviso durante la compilazione. Ad esempio `#pragma conform(forScope, show)`.
+
+**sul**, **off**<br/>
+(Facoltativo) L'impostazione *nome* a **sul** consente la [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opzione del compilatore. Il valore predefinito è **disattivata**.
+
+**push**<br/>
+(Facoltativo) Inserisce il valore corrente di *nome* nello stack interno del compilatore. Se si specifica *identificatore*, è possibile specificare la **sul** o **off** value per *nome* da inserire nello stack. Ad esempio `#pragma conform(forScope, push, myname, on)`.
+
+**pop**<br/>
+(Facoltativo) Imposta il valore della *nome* al valore nella parte superiore dello stack del compilatore interno e quindi estrae lo stack. Se viene specificato con l'identificatore **pop**, verrà visualizzato lo stack indietro fino a quando non individua il record con *identifier*, che verrà sicuramente estratta anche; il valore corrente per *nome* in il record successivo dello stack diventerà il nuovo valore per *nome*. Se si specifica **pop** con un *identifier* che non è presente in un record nello stack, il **pop** viene ignorato.
+
+*identifier*<br/>
+(Facoltativo) Può essere incluso in un **push** oppure **pop** comando. Se *identifier* viene usato, un' **sul** o **off** identificatore possa anche essere usato.
+
+## <a name="example"></a>Esempio
+
+```cpp
 // pragma_directive_conform.cpp  
 // compile with: /W1  
 // C4811 expected  
@@ -72,8 +71,8 @@ Può essere incluso in un *push* oppure *pop* comando. Se *identifier* viene usa
 #pragma conform(forScope, show)  
   
 int main() {}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
+```
+
+## <a name="see-also"></a>Vedere anche
 
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

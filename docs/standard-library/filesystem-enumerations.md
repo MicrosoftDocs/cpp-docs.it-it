@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22e4cf19ec3b85d14d346bd56697f4bcc4ff687b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716807"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerazioni &lt;filesystem&gt;
 
@@ -34,7 +34,9 @@ Questo argomento illustra le enumerazioni nell'intestazione del file system.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<sperimentale/filesystem > **Namespace:** std::experimental::filesystem
+**Intestazione:** \<experimental/filesystem>
+
+**Spazio nomi:** std::experimental::filesystem
 
 ## <a name="copy_options"></a>  copy_options
 

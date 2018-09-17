@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077064b25f41648231f27085236fa13d1a662440
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 74aa2e58b7285ced1b49efc7f54c1ec11ad606c1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110618"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714753"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Convenzioni di chiamata, parametri e tipo restituito
 
@@ -69,7 +69,7 @@ Il valore restituito dell'helper a caricamento ritardato deve essere archiviato 
 Nel codice seguente viene illustrato come implementare una semplice funzione hook.
 
 ```C
-FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)  
+FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)
 {
     switch (dliNotify) {
         case dliStartProcessing :

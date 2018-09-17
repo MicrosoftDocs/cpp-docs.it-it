@@ -1,5 +1,5 @@
 ---
-title: -P (pre-elaborazione in un File) | Documenti Microsoft
+title: -P (pre-elabora in un File) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,51 +22,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e9d2d63c7244990a047749f15273b45229c7bd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4cbec53526fe90d1b4644b5b9fdd667d0fffcbe8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377144"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714506"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Pre-elabora in un file)
-Pre-elabora i file di origine C e C++ e scrive l'output pre-elaborato in un file.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/P  
-```  
-  
-## <a name="remarks"></a>Note  
- Il file ha lo stesso nome di base del file di origine e di estensione i. Nel processo, vengono eseguite tutte le direttive del preprocessore, espansioni della macro vengono eseguite e i commenti vengono rimossi. Per mantenere i commenti nell'output pre-elaborato, utilizzare il [/C (mantenere i commenti durante la pre-elaborazione)](../../build/reference/c-preserve-comments-during-preprocessing.md) opzione insieme a **/p**.  
-  
- **P** aggiunge `#line` direttive all'output, all'inizio e alla fine di ogni file incluso e intorno alle righe rimosse dalle direttive del preprocessore per la compilazione condizionale. Queste direttive rinumerano le righe del file pre-elaborato. Di conseguenza, gli errori generati durante le fasi successive dell'elaborazione fanno riferimento ai numeri di riga del file di origine originale anziché alle righe del file pre-elaborato. Per eliminare la generazione di `#line` direttive, utilizzare [/EP (pre-elabora in stdout senza direttive #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) nonché **/p**.  
-  
- Il **/p** opzione disattiva la compilazione. Non produce un file obj, anche se si utilizza [/Fo (nome File oggetto)](../../build/reference/fo-object-file-name.md). È necessario inviare nuovamente il file pre-elaborato per la compilazione. **P** elimina anche i file di output dal **/FA**, **/Fa**, e **/Fm** opzioni. Per ulteriori informazioni, vedere [/FA, /Fa (File di listato)](../../build/reference/fa-fa-listing-file.md) e [/Fm (nome file MAP)](../../build/reference/fm-name-mapfile.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic su di **preprocessore** pagina delle proprietà.  
-  
-4.  Modificare il **genera File pre-elaborato** proprietà.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.  
-  
-## <a name="example"></a>Esempio  
- La seguente riga di comando pre-elabora `ADD.C`, conserva i commenti, aggiunge `#line` direttive e scrive il risultato in un file, `ADD.I`:  
-  
-```  
-CL /P /C ADD.C  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [/Fi (pre-elabora nome file di output)](../../build/reference/fi-preprocess-output-file-name.md)
+
+Pre-elabora i file di origine C e C++ e scrive l'output pre-elaborato in un file.
+
+## <a name="syntax"></a>Sintassi
+
+```
+/P
+```
+
+## <a name="remarks"></a>Note
+
+Il file ha lo stesso nome base del file di origine ed estensione i. Nel processo, vengono eseguite tutte le direttive del preprocessore, espansioni della macro vengono eseguite e vengono rimossi i commenti. Per mantenere i commenti nell'output pre-elaborato, usare il [/C (mantenere i commenti durante la pre-elaborazione)](../../build/reference/c-preserve-comments-during-preprocessing.md) opzione insieme a **/P**.
+
+**/P** aggiunge `#line` direttive nell'output, all'inizio e alla fine di ogni file incluso e intorno alle righe rimosse dalle direttive del preprocessore per la compilazione condizionale. Queste direttive rinumerano le righe del file pre-elaborato. Di conseguenza, gli errori generati durante le fasi successive dell'elaborazione di fare riferimento ai numeri di riga del file di origine originale anziché alle righe del file pre-elaborato. Per disattivare la generazione degli `#line` direttive, usare [/EP (pre-elabora in stdout senza direttive #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) nonché **p**.
+
+Il **/P** opzione disattiva la compilazione. Non produce un file. obj, anche se si usa [/Fo (nome File oggetto)](../../build/reference/fo-object-file-name.md). È necessario eseguire nuovamente il file pre-elaborato per la compilazione. **/P** elimina anche i file di output dal **/FA**, **/Fa**, e **/Fm** opzioni. Per altre informazioni, vedere [/FA, /Fa (File di listato)](../../build/reference/fa-fa-listing-file.md) e [/Fm (specifica file MAP)](../../build/reference/fm-name-mapfile.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Fare clic sulla cartella **C/C++** .
+
+1. Scegliere il **preprocessore** pagina delle proprietà.
+
+1. Modificare il **genera File pre-elaborato** proprietà.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.
+
+## <a name="example"></a>Esempio
+
+La seguente riga di comando preelabora `ADD.C`, conserva i commenti, aggiunge `#line` direttive e scrive il risultato in un file, `ADD.I`:
+
+```
+CL /P /C ADD.C
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[/Fi (pre-elabora nome file di output)](../../build/reference/fi-preprocess-output-file-name.md)

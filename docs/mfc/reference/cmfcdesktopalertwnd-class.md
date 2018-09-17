@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720226"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 Il `CMFCDesktopAlertWnd` classe implementa la funzionalità di una finestra di dialogo non modale visualizzata sullo schermo per informare l'utente su un evento.  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in] [out] *pWndOwner*  
  Specifica il proprietario della finestra di avviso. Tale proprietario riceverà tutte le notifiche per la finestra di avviso. Questo valore non può essere NULL.  
   
- [in] *uiDlgResID*  
- Specifica l'ID risorsa della finestra di avviso.  
+*uiDlgResID*<br/>
+[in] Specifica l'ID risorsa della finestra di avviso.  
   
- [in] *hMenu*  
- Specifica il menu che viene visualizzato quando l'utente fa clic sul pulsante di menu. Se NULL, non viene visualizzato il pulsante di menu.  
+*hMenu*<br/>
+[in] Specifica il menu che viene visualizzato quando l'utente fa clic sul pulsante di menu. Se NULL, non viene visualizzato il pulsante di menu.  
   
- [in] *ptPos*  
- Specifica la posizione iniziale in cui viene visualizzata la finestra di avviso, usando le coordinate dello schermo. Se questo parametro (-1, -1), verrà visualizzata la finestra di avviso nell'angolo inferiore destro della schermata.  
+*ptPos*<br/>
+[in] Specifica la posizione iniziale in cui viene visualizzata la finestra di avviso, usando le coordinate dello schermo. Se questo parametro (-1, -1), verrà visualizzata la finestra di avviso nell'angolo inferiore destro della schermata.  
   
- [in] *pRTIDlgBar*  
- Informazioni sulle classi di runtime per una classe di finestra di dialogo personalizzata relativa area client della finestra dell'avviso.  
+*pRTIDlgBar*<br/>
+[in] Informazioni sulle classi di runtime per una classe di finestra di dialogo personalizzata relativa area client della finestra dell'avviso.  
   
- [in] *params*  
- Specifica i parametri che vengono usati per creare una finestra di avviso.  
+*params*<br/>
+[in] Specifica i parametri che vengono usati per creare una finestra di avviso.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la finestra di avviso è stata creata correttamente. in caso contrario, FALSE.  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- Questo parametro non viene usato.  
+*uiCmdID*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Sempre FALSE.  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *wParam*  
- [in] *lParam*  
+*wParam*<br/>
+[in] [in] *lParam*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nSpeed*  
- Specifica la nuova velocità dell'animazione, in millisecondi.  
+*nSpeed*<br/>
+[in] Specifica la nuova velocità dell'animazione, in millisecondi.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per impostare la velocità dell'animazione per la finestra di avviso. La velocità dell'animazione predefinito è 30 millisecondi.  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *tipo*  
- Specifica il tipo di animazione.  
+*type*<br/>
+[in] Specifica il tipo di animazione.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per impostare il tipo di animazione. È possibile specificare uno dei valori seguenti:  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *Nintervallo*  
- Il tempo, espresso in millisecondi, che deve trascorrere prima che la finestra di avviso deve essere chiuso automaticamente.  
+*Nintervallo*<br/>
+[in] Il tempo, espresso in millisecondi, che deve trascorrere prima che la finestra di avviso deve essere chiuso automaticamente.  
   
 ### <a name="remarks"></a>Note  
  Finestra di avviso viene chiuso automaticamente dopo il periodo di tempo specificato, se l'utente non interagisce con la finestra.  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSmallCaption*  
- TRUE per specificare che la finestra di avviso Visualizza una didascalia di piccole dimensioni; in caso contrario, FALSE per specificare che la finestra di avviso Visualizza una didascalia di dimensioni normali.  
+*bSmallCaption*<br/>
+[in] TRUE per specificare che la finestra di avviso Visualizza una didascalia di piccole dimensioni; in caso contrario, FALSE per specificare che la finestra di avviso Visualizza una didascalia di dimensioni normali.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per visualizzare la didascalia di piccole dimensioni o di dimensioni normali. Per impostazione predefinita, la didascalia di piccole dimensioni è 7 pixel di altezza. È possibile ottenere le dimensioni della didascalia regolare chiamando la funzione API Windows `GetSystemMetrics(SM_CYCAPTION)`.  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTransparency*  
- Specifica il livello di trasparenza. Questo valore deve essere compreso tra 0 e 255 inclusi. Maggiore è il valore, maggiore è l'opacità di finestra.  
+*nTransparency*<br/>
+[in] Specifica il livello di trasparenza. Questo valore deve essere compreso tra 0 e 255 inclusi. Maggiore è il valore, maggiore è l'opacità di finestra.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per impostare il livello di trasparenza della finestra popup.  

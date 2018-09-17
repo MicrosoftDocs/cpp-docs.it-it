@@ -1,5 +1,5 @@
 ---
-title: Specificare un File Inline | Documenti Microsoft
+title: Specifica un File Inline | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0d85436aef5ed48c0a8787f8bce330bf6d3e96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73983094f10088920100b4fbbb8d870aee13f05e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380105"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720564"
 ---
 # <a name="specifying-an-inline-file"></a>Specifica di un file inline
-Specificare due parentesi angolari (<<) nel comando dove *filename* viene visualizzato. Le parentesi uncinate non può essere un'espansione di macro.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-<<[filename]  
-```  
-  
-## <a name="remarks"></a>Note  
- Quando viene eseguito il comando, le parentesi angolari vengono sostituite da *filename*, se specificato, o da un nome univoco generato NMAKE. Se specificato, *filename* deve seguire angolari, senza spazi o tabulazioni. È consentito un percorso. Nessuna estensione è necessaria o presuppone. Se *filename* viene specificato, il file viene creato nella classe corrente o la directory specificata, sovrascrivendo eventuali file con lo stesso nome; in caso contrario, viene creato nella directory TMP (o la directory corrente, se la variabile di ambiente TMP non è definito). Se un precedente *filename* viene riutilizzato, NMAKE sostituisce il file precedente.  
-  
-## <a name="see-also"></a>Vedere anche  
- [File inline in un makefile](../build/inline-files-in-a-makefile.md)
+
+Specificare due parentesi angolari (<<) nel comando in cui *filename* deve essere visualizzato. Le parentesi acute non può essere un'espansione di macro.
+
+## <a name="syntax"></a>Sintassi
+
+```
+<<[filename]
+```
+
+## <a name="remarks"></a>Note
+
+Quando viene eseguito il comando, le parentesi acute vengono sostituite dalle *filename*, se specificato, o da un nome univoco generato NMAKE. Se specificato, *filename* deve seguire angolari senza spazi o tabulazioni. È consentito un percorso. Nessuna estensione è necessaria o si presuppone che. Se *filename* viene specificato, viene creato il file corrente o di directory specificato, sovrascrivendo quelli file con tale nome; in caso contrario, viene creato nella directory /TMP (o nella directory corrente, se la variabile di ambiente TMP non è definito). Se un precedente *filename* viene riutilizzato, NMAKE sostituisce il file precedente.
+
+## <a name="see-also"></a>Vedere anche
+
+[File inline in un makefile](../build/inline-files-in-a-makefile.md)

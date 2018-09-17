@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf84e2e7db6f829cb7afcd1831521b4f94535bd
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4223ce5c358f4e95ab94baac9d5cf0edda5ad73f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850781"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716357"
 ---
 # <a name="csettingsstoresp-class"></a>Classe CSettingsStoreSP
 Il `CSettingsStoreSP` classe è una classe helper che è possibile usare per creare istanze del [classe CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
@@ -88,11 +88,11 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bPercorso amm*  
- Un parametro booleano che determina se un `CSettingsStore` oggetto viene creato in modalità amministratore.  
+*bPercorso amm*<br/>
+[in] Un parametro booleano che determina se un `CSettingsStore` oggetto viene creato in modalità amministratore.  
   
- [in] *bReadOnly*  
- Un parametro booleano che determina se un `CSettingsStore` oggetto viene creato per l'accesso di sola lettura.  
+*bReadOnly*<br/>
+[in] Un parametro booleano che determina se un `CSettingsStore` oggetto viene creato per l'accesso di sola lettura.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento all'oggetto appena creato `CSettingsStore` oggetto.  
@@ -117,8 +117,8 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwUserData*  
- Dati definiti dall'utente che la `CSettingsStoreSP` archivi dell'oggetto.  
+*dwUserData*<br/>
+[in] Dati definiti dall'utente che la `CSettingsStoreSP` archivi dell'oggetto.  
   
 ### <a name="remarks"></a>Note  
  Il `CSettingsStoreSP` oggetto archivia i dati dal *dwUserData* nella variabile membro protetto `m_dwUserData`.  
@@ -131,8 +131,8 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pRTI*  
- Un puntatore alle informazioni sulla classe di runtime per una classe derivata dal [classe CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
+*pRTI*<br/>
+[in] Un puntatore alle informazioni sulla classe di runtime per una classe derivata dal [classe CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo. FALSE se la classe identificato da *pRTI* non è derivato da `CSettingsStore`.  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48312e4840436b1e0cc7c3e176d86f1783ff1746
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207392"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714668"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 Implementa diversi metodi che consentono di utilizzare puntatori a elenchi di identificatori (PIDL).  
@@ -104,23 +104,23 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *strOutFolder*  
- La stringa utilizzata dal metodo per archiviare il percorso della cartella selezionata.  
+*strOutFolder*<br/>
+[out] La stringa utilizzata dal metodo per archiviare il percorso della cartella selezionata.  
   
- [in] *pWndParent*  
- Puntatore alla finestra padre.  
+*pWndParent*<br/>
+[in] Puntatore alla finestra padre.  
   
- [in] *lplszInitialFolder*  
- Stringa che contiene la cartella selezionata per impostazione predefinita quando viene visualizzata la finestra di dialogo.  
+*lplszInitialFolder*<br/>
+[in] Stringa che contiene la cartella selezionata per impostazione predefinita quando viene visualizzata la finestra di dialogo.  
   
- [in] *lpszTitle*  
- Il titolo della finestra di dialogo.  
+*lpszTitle*<br/>
+[in] Il titolo della finestra di dialogo.  
   
- [in] *ulFlags*  
- Flag che specificano le opzioni per la finestra di dialogo. Visualizzare [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) per una descrizione dettagliata.  
+*ulFlags*<br/>
+[in] Flag che specificano le opzioni per la finestra di dialogo. Visualizzare [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) per una descrizione dettagliata.  
   
- [out] *piFolderImage*  
- Puntatore al valore integer in cui il metodo scrive l'indice dell'immagine della cartella selezionata.  
+*piFolderImage*<br/>
+[out] Puntatore al valore integer in cui il metodo scrive l'indice dell'immagine della cartella selezionata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'utente seleziona una cartella nella finestra di dialogo; in caso contrario 0.  
@@ -143,11 +143,11 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pidl1*  
- Il primo elemento.  
+*pidl1*<br/>
+[in] Il primo elemento.  
   
- [in] *pidl2*  
- Il secondo elemento.  
+*pidl2*<br/>
+[in] Il secondo elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al nuovo elenco di elementi se la funzione ha esito positivo, in caso contrario, NULL.  
@@ -163,8 +163,8 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pidlSource*  
- L'elenco di elementi originale.  
+*pidlSource*<br/>
+[in] L'elenco di elementi originale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento appena creato elenco se ha esito positivo. in caso contrario NULL.  
@@ -180,8 +180,8 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *cbSize*  
- Le dimensioni dell'elenco di elementi.  
+*cbSize*<br/>
+[in] Le dimensioni dell'elenco di elementi.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore per l'elenco di elementi creati se ha esito positivo. in caso contrario NULL.  
@@ -204,8 +204,8 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pidl*  
- Un elenco di elementi da eliminare.  
+*PIDL*<br/>
+[in] Un elenco di elementi da eliminare.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  Restituisce il numero di elementi in un elenco di elementi.  
@@ -215,8 +215,8 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pidl*  
- Puntatore a un elenco di elementi.  
+*PIDL*<br/>
+[in] Puntatore a un elenco di elementi.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero di elementi nell'elenco di elementi.  
@@ -229,8 +229,8 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pidl*  
- Puntatore a un elenco di elementi.  
+*PIDL*<br/>
+[in] Puntatore a un elenco di elementi.  
   
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni dell'elenco di elementi.  
@@ -243,8 +243,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pidl*  
- L'elenco di elementi da scorrere.  
+*PIDL*<br/>
+[in] L'elenco di elementi da scorrere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento successivo nell'elenco.  
@@ -262,11 +262,11 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpidl*  
- PIDL verrà recuperato il cui elemento padre.  
+*lpidl*<br/>
+[in] PIDL verrà recuperato il cui elemento padre.  
   
- [out] *lpidlParent*  
- Un riferimento a un PIDL in cui il metodo archivierà il risultato.  
+*lpidlParent*<br/>
+[out] Un riferimento a un PIDL in cui il metodo archivierà il risultato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il livello dell'elemento padre PIDL.  
@@ -284,11 +284,11 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszPath*  
- Stringa che specifica il percorso per l'elemento.  
+*lpszPath*<br/>
+[in] Stringa che specifica il percorso per l'elemento.  
   
- [out] *pidl*  
- Un riferimento a un PIDL. Il metodo Usa questo PIDL per archiviare il puntatore al relativo valore restituito.  
+*PIDL*<br/>
+[out] Un riferimento a un PIDL. Il metodo Usa questo PIDL per archiviare il puntatore al relativo valore restituito.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce NOERROR se ha esito positivo. un valore di errore definiti dall'OLE.  

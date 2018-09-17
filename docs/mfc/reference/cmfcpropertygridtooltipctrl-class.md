@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676780"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716170"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
 Implementa una descrizione comando del controllo che il [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) viene usato per visualizzare le descrizioni comandi.  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndParent*  
- Puntatore alla finestra padre.  
+*pWndParent*<br/>
+[in] Puntatore alla finestra padre.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la finestra è stata creata con successo; in caso contrario, FALSE.  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rect*  
- Contiene l'ultima posizione del controllo tooltip.  
+*Rect*<br/>
+[out] Contiene l'ultima posizione del controllo tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Nasconde il controllo tooltip.  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTextMargin*  
- Specifica la spaziatura tra il bordo di finestra della descrizione comando e il testo del controllo tooltip. Il valore predefinito è 10 pixel.  
+*nTextMargin*<br/>
+[in] Specifica la spaziatura tra il bordo di finestra della descrizione comando e il testo del controllo tooltip. Il valore predefinito è 10 pixel.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Visualizza il controllo tooltip.  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Specifica la posizione e dimensioni del controllo tooltip.  
+*Rect*<br/>
+[in] Specifica la posizione e dimensioni del controllo tooltip.  
   
- [in] *strText*  
- Specifica il testo da visualizzare nella descrizione comando.  
+*strText*<br/>
+[in] Specifica il testo da visualizzare nella descrizione comando.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo visualizza il controllo tooltip in posizione e dimensioni specificato dalla *rect*. Se la posizione, dimensione e testo non sono stati modificati dall'ultima volta in che questo metodo è stato chiamato, questo metodo non ha effetto.  

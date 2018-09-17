@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: 3b78ce35b20c3049c168ab23c512ae7ae23b9886
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: b3b5171e60e9f9348a4e4d86d0b8032db7eb4726
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726544"
 ---
 # <a name="ltregexgt-functions"></a>Funzioni &lt;regex&gt;
 
@@ -88,7 +88,8 @@ bool regex_match(
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*<br/> Tipo di iteratore per le sottocorrispondenze. Per i casi comuni questa è una delle `string::const_iterator`, `wstring::const_iterator`, `const char*` o `const wchar_t*`.
+*BidIt*<br/>
+Tipo di iteratore per le sottocorrispondenze. Per i casi comuni questa è una delle `string::const_iterator`, `wstring::const_iterator`, `const char*` o `const wchar_t*`.
 
 *Alloc*<br/>
 Classe allocator dei risultati di corrispondenza.

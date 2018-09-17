@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335958"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716303"
 ---
 # <a name="cdialogex-class"></a>Classe CDialogEx
 La classe `CDialogEx` specifica il colore e l'immagine di sfondo di una finestra di dialogo.  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIDTemplate*  
- L'ID di risorsa di un modello di finestra di dialogo.  
+*nIDTemplate*<br/>
+[in] L'ID di risorsa di un modello di finestra di dialogo.  
   
- [in] *lpszTemplateName*  
- Nome della risorsa di un modello di finestra di dialogo.  
+*lpszTemplateName*<br/>
+[in] Nome della risorsa di un modello di finestra di dialogo.  
   
- [in] *pParent*  
- Puntatore alla finestra padre. Il valore predefinito è NULL.  
+*pParent*<br/>
+[in] Puntatore alla finestra padre. Il valore predefinito è NULL.  
   
- [in] *pParentWnd*  
- Puntatore alla finestra padre. Il valore predefinito è NULL.  
+*pParentWnd*<br/>
+[in] Puntatore alla finestra padre. Il valore predefinito è NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colore*  
- Un valore di colore RGB.  
+*Colore*<br/>
+[in] Un valore di colore RGB.  
   
- [in] *bRepaint*  
- TRUE per aggiornare immediatamente la schermata; in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bRepaint*<br/>
+[in] TRUE per aggiornare immediatamente la schermata; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hBitmap*  
- Handle per l'immagine di sfondo.  
+*hBitmap*<br/>
+[in] Handle per l'immagine di sfondo.  
   
- [in] *uiBmpResId*  
- L'ID risorsa dell'immagine di sfondo.  
+*uiBmpResId*<br/>
+[in] L'ID risorsa dell'immagine di sfondo.  
   
- [in] *posizione*  
- Uno del `CDialogEx::BackgroundLocation` valori che specificano la posizione dell'immagine. I valori validi includono BACKGR_TILE BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT e BACKGR_BOTTOMRIGHT. Il valore predefinito è BACKGR_TILE.  
+*Posizione*<br/>
+[in] Uno del `CDialogEx::BackgroundLocation` valori che specificano la posizione dell'immagine. I valori validi includono BACKGR_TILE BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT e BACKGR_BOTTOMRIGHT. Il valore predefinito è BACKGR_TILE.  
   
- [in] *il flag bAutoDestroy*  
- TRUE per eliminare automaticamente l'immagine di sfondo; in caso contrario, FALSE.  
+*flag bAutoDestroy*<br/>
+[in] TRUE per eliminare automaticamente l'immagine di sfondo; in caso contrario, FALSE.  
   
- [in] *bRepaint*  
- TRUE per immediatamente ridisegnare la finestra di dialogo; in caso contrario, FALSE.  
+*bRepaint*<br/>
+[in] TRUE per immediatamente ridisegnare la finestra di dialogo; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il secondo metodo overload di informazioni sulla sintassi, TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852994"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721864"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Classe CMFCColorPopupMenu
 Rappresenta un menu a comparsa in cui gli utenti di selezionare colori in un documento o l'applicazione.  
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colori*  
- Matrice di colori che il framework Visualizza il menu a comparsa.  
+*Colori*<br/>
+[in] Matrice di colori che il framework Visualizza il menu a comparsa.  
   
- [in] *colore*  
- Colore predefinito selezionato.  
+*Colore*<br/>
+[in] Colore predefinito selezionato.  
   
- [in] *lpszAutoColor*  
- L'etichetta di testo il *automatica* pulsante colore (impostazione predefinita), o NULL.  
+*lpszAutoColor*<br/>
+[in] L'etichetta di testo il *automatica* pulsante colore (impostazione predefinita), o NULL.  
   
  L'etichetta standard per il pulsante automatico verrà **automatica**.  
   
- [in] *lpszOtherColor*  
- L'etichetta di testo il *altri* button, che consente di visualizzare più colori, o NULL.  
+*lpszOtherColor*<br/>
+[in] L'etichetta di testo il *altri* button, che consente di visualizzare più colori, o NULL.  
   
  L'etichetta standard per il pulsante altro è **altri colori...** .  
   
- [in] *lpszDocColors*  
- L'etichetta di testo del pulsante di colori di documento. La tavolozza dei colori del documento sono elencati tutti i colori utilizzati attualmente nel documento.  
+*lpszDocColors*<br/>
+[in] L'etichetta di testo del pulsante di colori di documento. La tavolozza dei colori del documento sono elencati tutti i colori utilizzati attualmente nel documento.  
   
- [in] *lstDocColors*  
- Un elenco di colori utilizzati attualmente nel documento.  
+*lstDocColors*<br/>
+[in] Un elenco di colori utilizzati attualmente nel documento.  
   
- [in] *nColumns*  
- Il numero di colonne con la matrice di colori.  
+*nColumns*<br/>
+[in] Il numero di colonne con la matrice di colori.  
   
- [in] *nHorzDockRows*  
- Il numero di righe che la barra dei colori è quando è ancorato in orizzontale.  
+*nHorzDockRows*<br/>
+[in] Il numero di righe che la barra dei colori è quando è ancorato in orizzontale.  
   
- [in] *nVertDockColumns*  
- Il numero di colonne nella barra dei colori con cui è ancorato in verticale.  
+*nVertDockColumns*<br/>
+[in] Il numero di colonne nella barra dei colori con cui è ancorato in verticale.  
   
- [in] *colorAutomatic*  
- Il colore predefinito che il framework applica quando si fa clic sul pulsante automatico.  
+*colorAutomatic*<br/>
+[in] Il colore predefinito che il framework applica quando si fa clic sul pulsante automatico.  
   
- [in] *uiCommandID*  
- ID di comando di controllo sulla barra dei colori.  
+*uiCommandID*<br/>
+[in] ID di comando di controllo sulla barra dei colori.  
   
- [in] *bStdColorDlg*  
- Valore booleano che indica se visualizzare la finestra di dialogo colore di sistema standard o la [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) nella finestra di dialogo.  
+*bStdColorDlg*<br/>
+[in] Valore booleano che indica se visualizzare la finestra di dialogo colore di sistema standard o la [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) nella finestra di dialogo.  
   
- [in] *pParentBtn*  
- Puntatore a un padre del pulsante.  
+*pParentBtn*<br/>
+[in] Puntatore a un padre del pulsante.  
   
- [in] *nID*  
- ID di comando.  
+*nID*<br/>
+[in] ID del comando.  
   
 ### <a name="remarks"></a>Note  
  Ogni overload costruttore imposta la `m_bEnabledInCustomizeMode` membro su FALSE.  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pWndMain*|Puntatore alla finestra padre della barra a comparsa.|  
-|[in] *uiID*|ID comando della barra a comparsa.|  
-|[in] *lpszName*|Il testo della finestra della barra a comparsa.|  
+|*pWndMain*|[in] Puntatore alla finestra padre della barra a comparsa.|  
+|*uiID*|[in] ID comando della barra a comparsa.|  
+|*lpszName*|[in] Il testo della finestra della barra a comparsa.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al nuovo oggetto barra a comparsa controllo.  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndList*  
- Puntatore a un oggetto di controllo griglia proprietà.  
+*pWndList*<br/>
+[in] Puntatore a un oggetto di controllo griglia proprietà.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 889a6f083cb4aace6e93d221a33caef29155d7f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541808"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725012"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Classe CMFCRibbonStatusBarPane
 Il `CMFCRibbonStatusBarPane` classe implementa un elemento della barra multifunzione che è possibile aggiungere a una barra di stato multifunzione.  
@@ -136,32 +136,32 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nCmdID*  
- Specifica l'ID di comando del riquadro.  
+*nCmdID*<br/>
+[in] Specifica l'ID di comando del riquadro.  
   
- [in] *lpszText*  
- Specifica la stringa di testo da visualizzare nel riquadro.  
+*lpszText*<br/>
+[in] Specifica la stringa di testo da visualizzare nel riquadro.  
   
- [in] *bIsStatic*  
- Se TRUE, nel riquadro di stato non può essere evidenziato o selezionato facendovi clic sopra.  
+*bIsStatic*<br/>
+[in] Se TRUE, nel riquadro di stato non può essere evidenziato o selezionato facendovi clic sopra.  
   
- [in] *hIcon*  
- Specifica un handle per un'icona da visualizzare nel riquadro.  
+*hIcon*<br/>
+[in] Specifica un handle per un'icona da visualizzare nel riquadro.  
   
- [in] *lpszAlmostLargeText*  
- Specifica la stringa di testo più lunga che può essere visualizzata dal riquadro.  
+*lpszAlmostLargeText*<br/>
+[in] Specifica la stringa di testo più lunga che può essere visualizzata dal riquadro.  
   
- [in] *hBmpAnimationList*  
- Specifica un handle per un elenco di immagini che viene usato per l'animazione.  
+*hBmpAnimationList*<br/>
+[in] Specifica un handle per un elenco di immagini che viene usato per l'animazione.  
   
- [in] *cxAnimation*  
- Specifica la larghezza, in pixel, dell'icona nell'elenco di immagini che viene usato per l'animazione.  
+*cxAnimation*<br/>
+[in] Specifica la larghezza, in pixel, dell'icona nell'elenco di immagini che viene usato per l'animazione.  
   
- [in] *clrTrnsp*  
- Specifica il colore trasparente delle immagini nell'elenco di immagini che vengono utilizzati per l'animazione.  
+*clrTrnsp*<br/>
+[in] Specifica il colore trasparente delle immagini nell'elenco di immagini che vengono utilizzati per l'animazione.  
   
- [in] *uiAnimationListResID*  
- Specifica un ID di risorsa di un elenco di immagini che viene usato per l'animazione.  
+*uiAnimationListResID*<br/>
+[in] Specifica un ID di risorsa di un elenco di immagini che viene usato per l'animazione.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Ottiene la stringa di testo più lunga in grado di visualizzare il riquadro della barra di stato.  
@@ -253,8 +253,8 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszAlmostLargeText*  
- Specifica la stringa più lunga che può essere visualizzata nel riquadro della barra di stato senza troncamenti.  
+*lpszAlmostLargeText*<br/>
+[in] Specifica la stringa più lunga che può essere visualizzata nel riquadro della barra di stato senza troncamenti.  
   
 ### <a name="remarks"></a>Note  
  La libreria calcola le dimensioni del testo che *lpszAlmostLargeText* specifica e ridimensiona il riquadro di conseguenza. Il testo verrà troncato se ancora non rientra nel riquadro.  
@@ -275,17 +275,17 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hBmpAnimationList*  
- Specifica un handle per un elenco di immagini.  
+*hBmpAnimationList*<br/>
+[in] Specifica un handle per un elenco di immagini.  
   
- [in] *cxAnimation*  
- Specifica la larghezza, in pixel, del frame nell'elenco di immagini.  
+*cxAnimation*<br/>
+[in] Specifica la larghezza, in pixel, del frame nell'elenco di immagini.  
   
- [in] *clrTransp*  
- Specifica il colore trasparente dell'elenco immagini.  
+*clrTransp*<br/>
+[in] Specifica il colore trasparente dell'elenco immagini.  
   
- [in] *uiAnimationListResID*  
- Specifica l'ID risorsa dell'elenco immagini.  
+*uiAnimationListResID*<br/>
+[in] Specifica l'ID risorsa dell'elenco immagini.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'elenco di immagini è connesso correttamente al riquadro della barra di stato; FALSE in caso contrario.  
@@ -298,8 +298,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nAlign*  
- Specifica l'allineamento del testo.  
+*nAlign*<br/>
+[in] Specifica l'allineamento del testo.  
   
 ### <a name="remarks"></a>Note  
  *nAlign* può avere uno dei valori seguenti:  
@@ -320,11 +320,11 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nFrameDelay*  
- Specifica la frequenza dei fotogrammi di animazione, in millisecondi.  
+*nFrameDelay*<br/>
+[in] Specifica la frequenza dei fotogrammi di animazione, in millisecondi.  
   
- [in] *nDuration*  
- Specifica il tempo di riproduzione dell'animazione, in millisecondi. Usare -1 per un ciclo infinito.  
+*nDuration*<br/>
+[in] Specifica il tempo di riproduzione dell'animazione, in millisecondi. Usare -1 per un ciclo infinito.  
   
 ### <a name="remarks"></a>Note  
  È necessario specificare un handle per un elenco di immagini prima di chiamare `StartAnimation` tramite `SetAnimationList`.  

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ca81fa18bb5f63f57c057eaa9e64c35df01e33f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196305"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726765"
 ---
 # <a name="hashmultimap-class"></a>Classe hash_multimap
 
@@ -123,16 +123,16 @@ class hash_multimap
 ### <a name="parameters"></a>Parametri
 
 *Key*<br/>
- Tipo di dati relativo alle chiavi da archiviare in hash_multimap.
+Tipo di dati relativo alle chiavi da archiviare in hash_multimap.
 
 *Type*<br/>
- Tipo di dati degli elementi da archiviare in hash_multimap.
+Tipo di dati degli elementi da archiviare in hash_multimap.
 
 *Tratti*<br/>
- Tipo che include due oggetti funzione, uno della classe *tratti* che è in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash è unario predicato mapping i valori di chiave degli elementi Unsigned Integer di tipo `size_t`. Questo argomento è facoltativo e il valore predefinito è `hash_compare<Key, less<Key>>`.
+Tipo che include due oggetti funzione, uno della classe *tratti* che è in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo e una funzione hash è unario predicato mapping i valori di chiave degli elementi Unsigned Integer di tipo `size_t`. Questo argomento è facoltativo e il valore predefinito è `hash_compare<Key, less<Key>>`.
 
 *Allocatore*<br/>
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di multi_map e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair <const Key, Type>>`.
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di multi_map e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Note
 
@@ -600,7 +600,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- La chiave degli elementi per cui trovare un corrispondenza nell'hash_multimap.
+La chiave degli elementi per cui trovare un corrispondenza nell'hash_multimap.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -895,7 +895,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_multimap::emplace_hint
@@ -955,7 +955,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_multimap::empty
@@ -1096,7 +1096,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1187,16 +1187,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parametri
 
 *WHERE*<br/>
- Posizione dell'elemento da rimuovere dall'hash_multimap.
+Posizione dell'elemento da rimuovere dall'hash_multimap.
 
 *first*<br/>
- Posizione del primo elemento rimosso dall'hash_multimap.
+Posizione del primo elemento rimosso dall'hash_multimap.
 
 *last*<br/>
- Posizione oltre l'ultimo elemento rimosso dall'hash_multimap.
+Posizione oltre l'ultimo elemento rimosso dall'hash_multimap.
 
 *key*<br/>
- La chiave degli elementi da rimuovere dall'hash_multimap.
+La chiave degli elementi da rimuovere dall'hash_multimap.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1311,7 +1311,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave per cui trovare una corrispondenza in base alla chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
+Chiave per cui trovare una corrispondenza in base alla chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1505,18 +1505,18 @@ hash_multimap(
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp,
     const Allocator& Al);
@@ -1762,7 +1762,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2316,7 +2316,7 @@ void swap(hash_multimap& right);
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
- Oggetto hash_multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto hash_multimap.
+Oggetto hash_multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto hash_multimap.
 
 ### <a name="remarks"></a>Note
 
@@ -2390,7 +2390,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

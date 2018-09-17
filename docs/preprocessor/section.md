@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7601913b3940de8e6ade2c76100f4d773281db7
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539419"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726050"
 ---
 # <a name="section"></a>section
 Crea una sezione in un file obj.  
@@ -43,30 +43,17 @@ Una sezione, una volta definita, rimarrà valida per il resto della compilazione
 *nome della sezione* è un parametro obbligatorio che sarà il nome della sezione. Il nome non deve essere in conflitto con alcun nome di sezione standard. Visualizzare [/Section](../build/reference/section-specify-section-attributes.md) per un elenco dei nomi non è consigliabile usare durante la creazione di una sezione.  
   
 *gli attributi* è un parametro facoltativo costituito da uno o più attributi di delimitato da virgole che si desidera assegnare alla sezione. Possibili *attributi* sono:  
-  
-**read**  
-Consente operazioni di lettura sui dati.  
-  
-**write**  
-Consente operazioni di scrittura sui dati.  
-  
-**Eseguire**  
-Consente l'esecuzione di codice.  
-  
-**shared**  
-Condivide la sezione tra tutti i processi che caricano l'immagine.  
-  
-**nopage**  
-Contrassegna la sezione come non paginabile; utile per i driver di dispositivo Win32.  
-  
-**nocache**  
-Contrassegna la sezione come non memorizzabile nella cache; utile per i driver di dispositivo Win32.  
-  
-**discard**  
-Contrassegna la sezione come annullabile; utile per i driver di dispositivo Win32.  
-  
-**remove**  
-Contrassegna la sezione come non residente in memoria; driver di dispositivo virtuali (V*x*1!d) solo.  
+
+|Attributo|Descrizione|
+|-|-|
+|**read**|Consente operazioni di lettura sui dati.|
+|**write**|Consente operazioni di scrittura sui dati.|
+|**Eseguire**|Consente l'esecuzione di codice.|
+|**shared**|Condivide la sezione tra tutti i processi che caricano l'immagine.|
+|**nopage**|Contrassegna la sezione come non paginabile; utile per i driver di dispositivo Win32.|
+|**nocache**|Contrassegna la sezione come non memorizzabile nella cache; utile per i driver di dispositivo Win32.|
+|**discard**|Contrassegna la sezione come annullabile; utile per i driver di dispositivo Win32.|
+|**remove**|Contrassegna la sezione come non residente in memoria; driver di dispositivo virtuali (V*x*1!d) solo.|
   
 Se non si specificano attributi, la sezione avrà attributi di lettura e scrittura.  
   

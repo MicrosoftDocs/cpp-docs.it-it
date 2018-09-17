@@ -1,5 +1,5 @@
 ---
-title: -HELP (Guida della riga di comando del compilatore) | Documenti Microsoft
+title: -HELP (Guida della riga di comando del compilatore) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,34 +22,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40246db2d70d69fc2dab576ef5c7da9c7829ab80
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc21ac544a7f30dd193ca571fcd82e1078fb44dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371385"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713232"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (Guida della riga di comando del compilatore)
-Visualizza un elenco di opzioni del compilatore nell'output standard.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/HELP  
-/help  
-/?  
-```  
-  
-## <a name="remarks"></a>Note  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
--   L'opzione del compilatore deve essere effettuata solo dalla riga di comando.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Impossibile modificare l'opzione del compilatore a livello di codice.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+Visualizza un elenco delle opzioni del compilatore all'output standard.
+
+## <a name="syntax"></a>Sintassi
+
+```
+/HELP
+/help
+/?
+```
+
+## <a name="remarks"></a>Note
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+- Questa opzione del compilatore accede solo dalla riga di comando.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Questa opzione del compilatore non può essere modificata a livello di codice.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

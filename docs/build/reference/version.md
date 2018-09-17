@@ -1,5 +1,5 @@
 ---
-title: -VERSIONE | Documenti Microsoft
+title: -VERSION | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 854f0a4a5e24c10f7f9b6edf736f1c3349f72423
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851a1f33dc5ed23b2c489650140768f26f009d9c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375243"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715548"
 ---
 # <a name="version"></a>/VERSION
-```  
-/VERSION:left[,right]  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa opzione inserisce un numero di versione nell'intestazione dell'immagine.  
-  
- La parte di numero intero della versione del numero, la parte a sinistra del separatore decimale, è rappresentato da `left`. La parte frazionaria della versione del numero, la parte a destra del separatore decimale, è rappresentato da `right`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/VERSION:left[,right]
+```
+
+## <a name="remarks"></a>Note
+
+Questa opzione inserisce un numero di versione nell'intestazione dell'immagine.
+
+La parte di numero intero della versione del numero, la parte a sinistra del separatore decimale, è rappresentato dalla `left`. La parte frazionaria della versione del numero, la parte a destra del separatore decimale, è rappresentato dalla `right`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni di EDITBIN](../../build/reference/editbin-options.md)

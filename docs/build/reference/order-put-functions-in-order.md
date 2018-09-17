@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d8ea4df02e87a64d70ce773ed35d1a3cb0509f8b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894512"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717783"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Inserisce le funzioni in ordine)
 
@@ -39,7 +39,7 @@ Specificare l'ordine dei collegamenti per le funzioni di separatamente nel pacch
 
 ### <a name="parameters"></a>Parametri
 
-*filename*  
+*filename*<br/>
 Un file di testo che specifica l'ordine dei collegamenti per le funzioni COMDAT.
 
 ## <a name="remarks"></a>Note
@@ -83,5 +83,5 @@ Il **/ORDER** disabilita il collegamento incrementale. È possibile visualizzare
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)  
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
 [Opzioni del linker](../../build/reference/linker-options.md)

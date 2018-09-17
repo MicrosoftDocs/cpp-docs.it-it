@@ -1,5 +1,5 @@
 ---
-title: Opzioni del compilatore | Documenti Microsoft
+title: Opzioni del compilatore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -18,25 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bea07361a292ee5e7cde99cedad2d5ac4c8a53aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 76ab322dc4573863a30092b296e87e90c41619ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374277"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716213"
 ---
 # <a name="compiler-options"></a>Opzioni del compilatore
 
-CL.exe è uno strumento che controlla il linker e i compilatori C++ e Microsoft Visual C++ (opzioni: MSVC) C. CL.exe può essere eseguito solo in sistemi operativi che supportano Microsoft Visual Studio per Windows.
+CL.exe è uno strumento che consente di controllare il linker e i compilatori C++ e Microsoft Visual C++ (MSVC) C. CL.exe può essere eseguito solo in sistemi operativi che supportano Microsoft Visual Studio per Windows.
 
-> [!NOTE]  
-> È possibile avviare questo strumento solo da un prompt dei comandi per sviluppatori di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File. Per ulteriori informazioni, vedere [codice C/C++ di compilazione nella riga di comando](../building-on-the-command-line.md).
+> [!NOTE]
+> È possibile avviare questo strumento solo da un prompt dei comandi per gli sviluppatori di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File. Per altre informazioni, vedere [codice C/C++ di compilazione dalla riga di comando](../building-on-the-command-line.md).
 
-I compilatori producono file dell'oggetto (obj) comuni oggetto formato COFF (File). Il linker genera file eseguibili (.exe) o librerie a collegamento dinamico (DLL).
+I compilatori producono file oggetto (obj) File formato COFF (Common Object). Il linker produce file eseguibili (.exe) o librerie a collegamento dinamico (DLL).
 
-Si noti che tutte le opzioni del compilatore tra maiuscole e minuscole. È possibile utilizzare una barra rovesciata (`/`) o un trattino (`-`) per specificare un'opzione del compilatore.
+Si noti che tutte le opzioni del compilatore sono tra maiuscole e minuscole. È possibile usare una barra rovesciata (`/`) o un trattino (`-`) per specificare un'opzione del compilatore.
 
-Per la compilazione senza collegamento, usare il [/c](../../build/reference/c-compile-without-linking.md) opzione.
+Per eseguire la compilazione senza collegamento, usare il [/c](../../build/reference/c-compile-without-linking.md) opzione.
 
 ## <a name="find-a-compiler-option"></a>Trovare un'opzione del compilatore
 
@@ -48,7 +48,7 @@ Per trovare una particolare opzione del compilatore, vedere uno degli elenchi se
 
 ## <a name="specify-compiler-options"></a>Specificare le opzioni del compilatore
 
-Questo argomento per ciascuna opzione del compilatore illustra come è possibile impostare nell'ambiente di sviluppo. Per informazioni su come specificare le opzioni all'esterno dell'ambiente di sviluppo, vedere:
+L'argomento relativo a ciascuna opzione del compilatore viene illustrato come può essere impostata nell'ambiente di sviluppo. Per informazioni su come specificare le opzioni di fuori dell'ambiente di sviluppo, vedere:
 
 - [Sintassi della riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md)
 
@@ -58,11 +58,11 @@ Questo argomento per ciascuna opzione del compilatore illustra come è possibile
 
 ## <a name="related-build-tools"></a>Strumenti di compilazione correlati
 
-[Opzioni del linker](../../build/reference/linker-options.md) influire anche sul modo in cui il programma viene compilato.
+[Le opzioni del linker](../../build/reference/linker-options.md) anche influire sul modo in cui il programma viene compilato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti alla compilazione in C/C++](../../build/reference/c-cpp-building-reference.md)  
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)  
-[Compilazione veloce](../../build/reference/fast-compilation.md)  
-[CL richiama il linker](../../build/reference/cl-invokes-the-linker.md)  
+[Riferimenti alla compilazione in C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[Compilazione veloce](../../build/reference/fast-compilation.md)<br/>
+[CL richiama il linker](../../build/reference/cl-invokes-the-linker.md)

@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ad50deb1cb500abb532acac8c3c0d035c37b87ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680104"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726440"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Il `CMFCTabCtrl` classe fornisce funzionalità per un controllo struttura a schede. Il controllo scheda visualizza una finestra ancorabile con schede flat o tridimensionali nella parte superiore o inferiore. Le schede possono visualizzare testo e un'immagine e possono cambiare colore quando sono attive.  
@@ -265,8 +265,8 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTab*  
- Indice a base zero di una scheda da visualizzare, oppure -1 per specificare la scheda attualmente attiva.  
+*nTab*<br/>
+[in] Indice a base zero di una scheda da visualizzare, oppure -1 per specificare la scheda attualmente attiva.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
@@ -288,8 +288,8 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAutoSize*  
- TRUE per ridimensionare automaticamente le finestre di controllo scheda; in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bAutoSize*<br/>
+[in] TRUE per ridimensionare automaticamente le finestre di controllo scheda; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -307,23 +307,23 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *stile*  
- Stile del controllo struttura a schede. Per altre informazioni, vedere la sezione Note.  
+*Stile di visualizzazione*<br/>
+[in] Stile del controllo struttura a schede. Per altre informazioni, vedere la sezione Note.  
   
- [in] *rect*  
- Un rettangolo che delimita il controllo struttura a schede.  
+*Rect*<br/>
+[in] Un rettangolo che delimita il controllo struttura a schede.  
   
- [in] *pParentWnd*  
- Puntatore a una finestra padre. Non deve essere NULL.  
+*pParentWnd*<br/>
+[in] Puntatore a una finestra padre. Non deve essere NULL.  
   
- [in] *nID*  
- L'ID del controllo scheda.  
+*nID*<br/>
+[in] L'ID del controllo scheda.  
   
- [in] *posizione*  
- La posizione delle schede. Il valore predefinito è LOCATION_BOTTOM. Per altre informazioni, vedere la sezione Note.  
+*Posizione*<br/>
+[in] La posizione delle schede. Il valore predefinito è LOCATION_BOTTOM. Per altre informazioni, vedere la sezione Note.  
   
- [in] *bCloseBtn*  
- TRUE per visualizzare un pulsante Chiudi nella scheda. in caso contrario, FALSE. Il valore predefinito è FALSE.  
+*bCloseBtn*<br/>
+[in] TRUE per visualizzare un pulsante Chiudi nella scheda. in caso contrario, FALSE. Il valore predefinito è FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo. in caso contrario, FALSE.  
@@ -362,8 +362,8 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectEdit*  
- Rettangolo che specifica l'area di una scheda.  
+*rectEdit*<br/>
+[in] Rettangolo che specifica l'area di una scheda.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato quando si modifica l'etichetta di una scheda. Questo metodo riduce i lati sinistro e destro del rettangolo specificato da metà all'altezza della scheda corrente e riduzione del Balloon superiore e inferiore di un'unità.  
@@ -376,8 +376,8 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per visualizzare il pulsante Chiudi nella scheda attiva; FALSE per visualizzare il pulsante di chiusura nell'angolo superiore destro dell'area della scheda. Il valore predefinito è TRUE.  
+*bAttivare il*<br/>
+[in] TRUE per visualizzare il pulsante Chiudi nella scheda attiva; FALSE per visualizzare il pulsante di chiusura nell'angolo superiore destro dell'area della scheda. Il valore predefinito è TRUE.  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
  Abilita o disabilita le etichette delle schede modificabile.  
@@ -387,8 +387,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare le etichette delle schede modificabile; FALSE per disattivare le etichette delle schede modificabile.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare le etichette delle schede modificabile; FALSE per disattivare le etichette delle schede modificabile.  
   
 ### <a name="remarks"></a>Note  
   
@@ -400,8 +400,8 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per visualizzare un menu a comparsa di etichette di finestra a schede; FALSE per visualizzare i pulsanti di scorrimento in avanti e indietro. Il valore predefinito è TRUE.  
+*bAttivare il*<br/>
+[in] TRUE per visualizzare un menu a comparsa di etichette di finestra a schede; FALSE per visualizzare i pulsanti di scorrimento in avanti e indietro. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
  Quando l'utente fa clic sull'etichetta di una scheda, il framework Visualizza la finestra a schede corrispondente. Se l'etichetta della scheda è visibile, la finestra a schede viene aperto senza cambiarne la posizione. Se l'utente seleziona un documento nel menu a comparsa e la finestra a schede corrispondente è fuori dallo schermo, la finestra a schede diventa la prima tabulazione.  
@@ -414,8 +414,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo; FALSE se il *iTab* indice del parametro non è valido.  
@@ -431,8 +431,8 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nCmdID*  
- L'ID di comando di una scheda in un menu a comparsa di finestre a schede.  
+*nCmdID*<br/>
+[in] L'ID di comando di una scheda in un menu a comparsa di finestre a schede.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'handle di un'immagine bitmap.  
@@ -483,11 +483,11 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rectTabAreaTop*  
- Quando questo metodo termina, questo riferimento contiene un rettangolo che delimita l'area di etichetta scheda superiore. Il rettangolo è nelle coordinate del client. Questo riferimento è vuoto se è presente alcuna area della scheda etichetta nella parte superiore del controllo scheda.  
+*rectTabAreaTop*<br/>
+[out] Quando questo metodo termina, questo riferimento contiene un rettangolo che delimita l'area di etichetta scheda superiore. Il rettangolo è nelle coordinate del client. Questo riferimento è vuoto se è presente alcuna area della scheda etichetta nella parte superiore del controllo scheda.  
   
- [out] *rectTabAreaBottom*  
- Quando questo metodo termina, questo riferimento contiene un rettangolo che delimita l'area etichetta della scheda nella parte inferiore. Il rettangolo è nelle coordinate del client. Questo riferimento è vuoto se è presente alcuna area della scheda etichetta nella parte inferiore del controllo scheda.  
+*rectTabAreaBottom*<br/>
+[out] Quando questo metodo termina, questo riferimento contiene un rettangolo che delimita l'area etichetta della scheda nella parte inferiore. Il rettangolo è nelle coordinate del client. Questo riferimento è vuoto se è presente alcuna area della scheda etichetta nella parte inferiore del controllo scheda.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per determinare le dimensioni e la posizione dell'area della scheda nella finestra a schede.  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rect*  
- Quando questo metodo termina, il *rect* parametro contiene un rettangolo che delimita l'area della scheda.  
+*Rect*<br/>
+[out] Quando questo metodo termina, il *rect* parametro contiene un rettangolo che delimita l'area della scheda.  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  Recupera i limiti dell'area client del controllo scheda corrente.  
@@ -534,8 +534,8 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *rect*  
- Quando questo metodo termina, questo parametro contiene un rettangolo che delimita il controllo scheda corrente.  
+*Rect*<br/>
+[in, out] Quando questo metodo termina, questo parametro contiene un rettangolo che delimita il controllo scheda corrente.  
   
 ### <a name="remarks"></a>Note  
   
@@ -557,8 +557,8 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bHide*  
- TRUE per non visualizzare una finestra inattiva; FALSE per visualizzare una finestra inattiva. Il valore predefinito è TRUE.  
+*bHide*<br/>
+[in] TRUE per non visualizzare una finestra inattiva; FALSE per visualizzare una finestra inattiva. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -570,8 +570,8 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bHide*  
- True per abilitare il disegno dell'area della scheda. FALSE per disabilitare il disegno. Il valore predefinito è TRUE.  
+*bHide*<br/>
+[in] True per abilitare il disegno dell'area della scheda. FALSE per disabilitare il disegno. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -583,8 +583,8 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bHide*  
- TRUE per non creare una scheda per una singola finestra a schede; FALSE per disegnare una singola scheda. Il valore predefinito è TRUE.  
+*bHide*<br/>
+[in] TRUE per non creare una scheda per una singola finestra a schede; FALSE per disegnare una singola scheda. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -749,8 +749,8 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *stile*  
- Uno dei valori di enumerazione che specifica l'aspetto del controllo scheda. Per altre informazioni, vedere la tabella nella sezione Osservazioni.  
+*Stile di visualizzazione*<br/>
+[in] Uno dei valori di enumerazione che specifica l'aspetto del controllo scheda. Per altre informazioni, vedere la tabella nella sezione Osservazioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  Sempre TRUE.  
@@ -780,14 +780,14 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDataObject*  
- Punta a un oggetto dati che contiene i dati trascinati dall'utente.  
+*pDataObject*<br/>
+[in] Punta a un oggetto dati che contiene i dati trascinati dall'utente.  
   
- [in] *dwKeyState*  
- Contiene lo stato dei tasti di modifica. Questo parametro è una combinazione bit per bit (OR) dei valori seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per altre informazioni, vedere la **parametri del messaggio** sezione [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] Contiene lo stato dei tasti di modifica. Questo parametro è una combinazione bit per bit (OR) dei valori seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per altre informazioni, vedere la **parametri del messaggio** sezione [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *punto*  
- Contiene la posizione corrente del cursore nelle coordinate del client.  
+*punto*<br/>
+[in] Contiene la posizione corrente del cursore nelle coordinate del client.  
   
 ### <a name="return-value"></a>Valore restituito  
  Sempre DROPEFFECT_NONE, il che significa che l'obiettivo di rilascio non può accettare i dati.  
@@ -808,14 +808,14 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDataObject*  
- Puntatore a un [COleDataObject](../../mfc/reference/coledataobject-class.md) oggetto trascinato sull'obiettivo di rilascio.  
+*pDataObject*<br/>
+[in] Puntatore a un [COleDataObject](../../mfc/reference/coledataobject-class.md) oggetto trascinato sull'obiettivo di rilascio.  
   
- [in] *dwKeyState*  
- Lo stato dei tasti di modifica, ovvero una combinazione bit per bit (OR) di MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per altre informazioni, vedere "Parametri del messaggio" nella [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] Lo stato dei tasti di modifica, ovvero una combinazione bit per bit (OR) di MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per altre informazioni, vedere "Parametri del messaggio" nella [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *punto*  
- La posizione corrente del mouse.  
+*punto*<br/>
+[in] La posizione corrente del mouse.  
   
 ### <a name="return-value"></a>Valore restituito  
  Sempre DROPEFFECT_NONE.  
@@ -831,8 +831,8 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate del punto in cui visualizzare il menu di scelta rapida.  
+*punto*<br/>
+[in] Le coordinate del punto in cui visualizzare il menu di scelta rapida.  
   
 ### <a name="remarks"></a>Note  
   
@@ -844,8 +844,8 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bActive*  
- TRUE per rendere la scheda corrente la scheda attiva; FALSE per non rendere inattiva la scheda corrente.  
+*bActive*<br/>
+[in] TRUE per rendere la scheda corrente la scheda attiva; FALSE per non rendere inattiva la scheda corrente.  
   
 ### <a name="remarks"></a>Note  
  È possibile organizzare più finestre dei documenti in entrambi i gruppi di schede orizzontali o verticali e spostare facilmente i documenti da un gruppo di schede a un altro.  
@@ -858,8 +858,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Specifica l'indice in base zero della scheda da attivare.  
+*iTab*<br/>
+[in] Specifica l'indice in base zero della scheda da attivare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la scheda specificata è stato reso attiva; FALSE se l'oggetto specificato *iTab* valore del parametro non è valido.  
@@ -877,8 +877,8 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsBold*  
- TRUE per utilizzare un tipo di carattere grassetto per visualizzare l'etichetta della scheda attiva; FALSE per utilizzare il tipo di carattere standard per visualizzare l'etichetta. Il valore predefinito è TRUE.  
+*bIsBold*<br/>
+[in] TRUE per utilizzare un tipo di carattere grassetto per visualizzare l'etichetta della scheda attiva; FALSE per utilizzare il tipo di carattere standard per visualizzare l'etichetta. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -890,8 +890,8 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bDraw*  
- TRUE per visualizzare un rettangolo frame intorno a una barra incorporato. in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bDraw*<br/>
+[in] TRUE per visualizzare un rettangolo frame intorno a una barra incorporato. in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -905,11 +905,11 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bFlat*  
- TRUE per tracciare un frame flat (2D) attorno all'area della scheda; FALSE per tracciare un frame tridimensionale (3D). Il valore predefinito è TRUE.  
+*bFlat*<br/>
+[in] TRUE per tracciare un frame flat (2D) attorno all'area della scheda; FALSE per tracciare un frame tridimensionale (3D). Il valore predefinito è TRUE.  
   
- [in] *bRepaint*  
- TRUE per ridisegnare la finestra immediatamente. in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bRepaint*<br/>
+[in] TRUE per ridisegnare la finestra immediatamente. in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -926,17 +926,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- L'ID di una risorsa della bitmap che contiene l'elenco di immagini.  
+*uiID*<br/>
+[in] L'ID di una risorsa della bitmap che contiene l'elenco di immagini.  
   
- [in] *cx*  
- La larghezza di ogni immagine, in pixel. Il valore predefinito è 15.  
+*CX*<br/>
+[in] La larghezza di ogni immagine, in pixel. Il valore predefinito è 15.  
   
- [in] *clrTransp*  
- Colore trasparente immagine. Le parti dell'immagine di questo oggetto color sarà trasparente. Il valore predefinito è il colore magenta, RGB(255,0,255).  
+*clrTransp*<br/>
+[in] Colore trasparente immagine. Le parti dell'immagine di questo oggetto color sarà trasparente. Il valore predefinito è il colore magenta, RGB(255,0,255).  
   
- [in] *hImageList*  
- Handle per un elenco di immagini precaricati.  
+*hImageList*<br/>
+[in] Handle per un elenco di immagini precaricati.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo. FALSE se il controllo struttura a schede viene creato utilizzando uno stile flat o se il primo overload di metodo non è possibile caricare la bitmap specificata dal *uiID* parametro.  
@@ -954,8 +954,8 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *resizeMode*  
- Uno del `CMFCTabCtrl::ResizeMode` valori di enumerazione che specifica come può essere ridimensionato il controllo struttura a schede. Per un elenco di valori possibili, vedere la tabella nella sezione Osservazioni.  
+*resizeMode*<br/>
+[in] Uno del `CMFCTabCtrl::ResizeMode` valori di enumerazione che specifica come può essere ridimensionato il controllo struttura a schede. Per un elenco di valori possibili, vedere la tabella nella sezione Osservazioni.  
   
 ### <a name="remarks"></a>Note  
  Il *resizeMode* parametro può essere uno dei seguenti `ResizeMode` valori di enumerazione.  
@@ -974,8 +974,8 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTabMaxWidth*  
- Larghezza massima della scheda, espressa in pixel.  
+*nTabMaxWidth*<br/>
+[in] Larghezza massima della scheda, espressa in pixel.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per limitare la larghezza di ogni scheda in una finestra a schede. Questo metodo è utile se le schede presenti etichette molto lunghe. Il [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) costruttore inizializza la larghezza massima della scheda su 0, che significa che la larghezza non è limitata.  
@@ -988,8 +988,8 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAnnulla*  
- TRUE per abbandonare l'operazione di ridimensionamento corrente. FALSE per il completamento operazione di ridimensionamento corrente. In entrambi i casi, il framework arresta disegnare il rettangolo di ridimensionamento.  
+*bAnnulla*<br/>
+[in] TRUE per abbandonare l'operazione di ridimensionamento corrente. FALSE per il completamento operazione di ridimensionamento corrente. In entrambi i casi, il framework arresta disegnare il rettangolo di ridimensionamento.  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
  Disegna una barra di scorrimento orizzontale in un controllo struttura a schede che Visualizza schede flat.  
@@ -999,8 +999,8 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *pScrollInfo*  
- Puntatore a un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struttura o NULL. Quando questo metodo viene restituito, e se questo parametro non è NULL, la struttura contiene tutti i parametri della barra di scorrimento. Il valore predefinito è NULL.  
+*pScrollInfo*<br/>
+[out] Puntatore a un [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struttura o NULL. Quando questo metodo viene restituito, e se questo parametro non è NULL, la struttura contiene tutti i parametri della barra di scorrimento. Il valore predefinito è NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo; in caso contrario, FALSE.  

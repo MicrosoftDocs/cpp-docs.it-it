@@ -1,5 +1,5 @@
 ---
-title: LIBRERIA | Documenti Microsoft
+title: LIBRERIA | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d2fb7e69b0557bf96601666c390b3d59412b5a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43b14e8e8ff4871ba4319c7f4fac5545e72e710b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371164"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723554"
 ---
 # <a name="library"></a>LIBRARY
-Indica a LINK per creare una DLL. Allo stesso tempo, verrà creata una libreria di importazione, a meno che non viene utilizzato un file. exp nella compilazione.  
-  
-```  
-LIBRARY [library][BASE=address]  
-```  
-  
-## <a name="remarks"></a>Note  
- Il *libreria* argomento specifica il nome della DLL. È inoltre possibile utilizzare il [/out](../../build/reference/out-output-file-name.md) l'opzione del linker per specificare il nome della DLL output.  
-  
- La BASE =*indirizzo* argomento consente di impostare l'indirizzo di base che utilizza il sistema operativo per caricare la DLL. Questo argomento sostituisce la posizione predefinita della 0x10000000 DLL. Vedere la descrizione del [/base](../../build/reference/base-base-address.md) opzione per informazioni dettagliate sugli indirizzi di base.  
-  
- È necessario utilizzare il [/DLL](../../build/reference/dll-build-a-dll.md) l'opzione del linker quando si compila una DLL.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)
+
+Indica a LINK per creare una DLL. Allo stesso tempo, verrà creata una libreria di importazione, a meno che non viene usato un file. exp nella compilazione.
+
+```
+LIBRARY [library][BASE=address]
+```
+
+## <a name="remarks"></a>Note
+
+Il *libreria* argomento specifica il nome della DLL. È anche possibile usare la [/out](../../build/reference/out-output-file-name.md) l'opzione del linker per specificare il nome della DLL output.
+
+La BASE =*indirizzo* argomento consente di impostare l'indirizzo di base che usa il sistema operativo per caricare la DLL. Questo argomento sovrascrive la posizione predefinita della 0x10000000 DLL. Vedere la descrizione della [/base](../../build/reference/base-base-address.md) opzione per informazioni dettagliate sugli indirizzi di base.
+
+Ricordarsi di usare la [/DLL](../../build/reference/dll-build-a-dll.md) l'opzione del linker quando si compila una DLL.
+
+## <a name="see-also"></a>Vedere anche
+
+[Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)

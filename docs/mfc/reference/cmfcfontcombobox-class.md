@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686157"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725181"
 ---
 # <a name="cmfcfontcombobox-class"></a>Classe CMFCFontComboBox
 Il `CMFCFontComboBox` classe crea un controllo casella combinata che contiene un elenco dei tipi di carattere.  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDesc*  
- Punta a un oggetto di descrizione del tipo di carattere.  
+*pDesc*<br/>
+[in] Punta a un oggetto di descrizione del tipo di carattere.  
   
- [in] *lpszName*  
- Specifica il nome del tipo di carattere.  
+*lpszName*<br/>
+[in] Specifica il nome del tipo di carattere.  
   
- [in] *nCharSet*  
- Specifica un set di caratteri. Il valore predefinito è DEFAULT_CHARSET. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
+*nCharSet*<br/>
+[in] Specifica un set di caratteri. Il valore predefinito è DEFAULT_CHARSET. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'oggetto descrizione tipo di carattere specificato o il nome del tipo di carattere e set di caratteri; corrisponde a un elemento nella casella combinata tipo di carattere in caso contrario, FALSE.  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nFontType*  
- Specifica il tipo di carattere. Il valore predefinito è la combinazione bit per bit (OR) di DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Specifica il tipo di carattere. Il valore predefinito è la combinazione bit per bit (OR) di DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Specifica il set di caratteri del tipo di carattere. Il valore predefinito è DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Specifica il set di caratteri del tipo di carattere. Il valore predefinito è DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Specifica del tipo di carattere passo e famiglia. Il valore predefinito è DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Specifica del tipo di carattere passo e famiglia. Il valore predefinito è DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la casella combinata tipo di carattere è stata inizializzata correttamente. in caso contrario, FALSE.  

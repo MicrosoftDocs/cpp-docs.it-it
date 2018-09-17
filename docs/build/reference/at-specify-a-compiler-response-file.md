@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430e6372c1ca26e946c2ff26bfcfe9180dfb0dba
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9c86d49aea2ce7a8d8b438c64cd883b71e5a4646
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894457"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720850"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Specifica un file di risposta del compilatore)
 
@@ -35,7 +35,7 @@ Specifica un file di risposta del compilatore.
 
 ## <a name="arguments"></a>Argomenti
 
-*response_file*  
+*response_file*<br/>
 Un file di testo contenente i comandi del compilatore.
 
 ## <a name="remarks"></a>Note
@@ -56,5 +56,5 @@ Dalla riga di comando è possibile specificare tutte le opzioni di file di rispo
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)  
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)  
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

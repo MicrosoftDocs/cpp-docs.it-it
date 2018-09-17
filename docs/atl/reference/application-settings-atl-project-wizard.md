@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee20d07ff37024506ef925fd94363bf85ceb8bc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e25fa8a730ea31caf747d07ce30a0622c4bd01
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756886"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714688"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto ATL
 
@@ -31,32 +31,40 @@ Usare la **le impostazioni dell'applicazione** pagina della procedura guidata pr
 
 Scegliere uno dei tre tipi di server:
 
-**Libreria di collegamento dinamico (DLL)**  
-Selezionare questa opzione per creare un server in-process.
+- **Libreria di collegamento dinamico (DLL)**  
 
-**File eseguibile (EXE)**  
-Selezionare questa opzione per creare un locale server out-of-process. Questa opzione non consente il supporto per MFC o COM+ 1.0. Non consente l'unione di codice proxy/stub.
+   Selezionare questa opzione per creare un server in-process.
 
-**Servizio (con estensione EXE)**  
-Selezionare questa opzione per creare un'applicazione Windows che viene eseguita in background all'avvio di Windows. Questa opzione non consentire il supporto di MFC o COM+ 1.0 o non consente l'unione di codice proxy/stub.
+- **File eseguibile (EXE)**  
+
+   Selezionare questa opzione per creare un locale server out-of-process. Questa opzione non consente il supporto per MFC o COM+ 1.0. Non consente l'unione di codice proxy/stub.
+
+- **Servizio (con estensione EXE)**  
+
+   Selezionare questa opzione per creare un'applicazione Windows che viene eseguita in background all'avvio di Windows. Questa opzione non consentire il supporto di MFC o COM+ 1.0 o non consente l'unione di codice proxy/stub.
 
 ## <a name="additional-options"></a>Opzioni aggiuntive
 
 > [!NOTE]
->  Tutte le opzioni aggiuntive sono disponibili per i progetti DLL solo.
+> Tutte le opzioni aggiuntive sono disponibili per i progetti DLL solo.
 
-**Consenti merge del codice proxy/stub**  
-Selezionare il **Consenti merge del codice proxy/stub** casella di controllo per maggiore praticità durante il marshalling delle interfacce è obbligatorio. Questa opzione inserisce il codice proxy e stub generati da MIDL nello stesso file eseguibile del server.
+- **Consenti merge del codice proxy/stub**  
 
-**Supporto MFC**  
-Selezionare questa opzione per specificare che l'oggetto include il supporto di MFC. Questa opzione Collega il progetto per le librerie MFC in modo che è possibile accedere a una delle classi e funzioni che contengono.
+   Selezionare il **Consenti merge del codice proxy/stub** casella di controllo per maggiore praticità durante il marshalling delle interfacce è obbligatorio. Questa opzione inserisce il codice proxy e stub generati da MIDL nello stesso file eseguibile del server.
 
-**Supporto COM+ 1.0**  
-Selezionare questa opzione per modificare le impostazioni di compilazione progetto per supportare i componenti COM+ 1.0. Oltre all'elenco standard di librerie, la procedura guidata aggiunge i comsvcs.lib di libreria specifico del componente COM+ 1.0
+- **Supporto MFC**  
 
-Inoltre, il MTXEX è ritardo caricato nel sistema host quando l'applicazione viene avviata.
+   Selezionare questa opzione per specificare che l'oggetto include il supporto di MFC. Questa opzione Collega il progetto per le librerie MFC in modo che è possibile accedere a una delle classi e funzioni che contengono.
 
-- **Supportare registrazione componenti** se il progetto ATL contiene supporto per i componenti COM+ 1.0, è possibile impostare questa opzione. La registrazione del componente consente all'oggetto COM+ 1.0 ottenere un elenco dei componenti, registrare i componenti o annullare la registrazione di componenti (singolarmente o in una sola volta).
+- **Supporto COM+ 1.0**  
+
+   Selezionare questa opzione per modificare le impostazioni di compilazione progetto per supportare i componenti COM+ 1.0. Oltre all'elenco standard di librerie, la procedura guidata aggiunge i comsvcs.lib di libreria specifico del componente COM+ 1.0
+
+   Inoltre, il MTXEX è ritardo caricato nel sistema host quando l'applicazione viene avviata.
+
+- **Registrazione di componenti di supporto**
+
+   Se il progetto ATL contiene supporto per i componenti COM+ 1.0, è possibile impostare questa opzione. La registrazione del componente consente all'oggetto COM+ 1.0 ottenere un elenco dei componenti, registrare i componenti o annullare la registrazione di componenti (singolarmente o in una sola volta).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692383"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719238"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 Barra degli strumenti visualizzata quando l'utente tiene premuto un pulsante della barra degli strumenti di primo livello.  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "calde" della barra degli strumenti.  
+*uiResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini della barra degli strumenti a caldo.  
   
- [in] *uiColdResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "fredde" della barra degli strumenti.  
+*uiColdResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini della barra degli strumenti a freddo.  
   
- [in] *uiMenuResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "normali" della barra dei menu.  
+*uiMenuResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini regolari menu.  
   
- [in] *bloccato*  
- TRUE per bloccare la barra degli strumenti; in caso contrario, FALSE.  
+*Bloccato*<br/>
+[in] TRUE per bloccare la barra degli strumenti; in caso contrario, FALSE.  
   
- [in] *uiDisabledResID*  
- ID risorsa della bitmap che fa riferimento alle immagini disabilitate della barra degli strumenti.  
+*uiDisabledResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini disabilitata sulla barra degli strumenti.  
   
- [in] *uiMenuDisabledResID*  
- ID risorsa della bitmap che fa riferimento alle immagini disabilitate del menu.  
+*uiMenuDisabledResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento a immagini disabilitate del menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiResID*  
- [in] *uiColdResID*  
- [in] *uiMenuResID*  
- [in] *BOOL*  
- [in] *uiDisabledResID*  
- [in] *uiMenuDisabledResID*  
+*uiResID*<br/>
+[in] [in] *uiColdResID*  
+*uiMenuResID*<br/>
+[in] [in] *BOOL*  
+*uiDisabledResID*<br/>
+[in] [in] *uiMenuDisabledResID*  
  [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nFlags*  
- [in] *punto*  
+*nFlags*<br/>
+[in] [in] *punto*  
   
 ### <a name="remarks"></a>Note  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nFlags*  
- [in] *punto*  
+*nFlags*<br/>
+[in] [in] *punto*  
   
 ### <a name="remarks"></a>Note  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Note  
   

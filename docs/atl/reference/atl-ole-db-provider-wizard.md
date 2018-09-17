@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4bb77489a610d9331378e523b6983dcf14d996c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762979"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717210"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
 
@@ -34,49 +34,63 @@ A partire da Visual Studio 2008, lo script di registrazione prodotto da questa p
 
 Nella tabella seguente vengono descritte le opzioni per la creazione guidata Provider OLE DB ATL:
 
-**Nome breve**  
-Digitare il nome breve del provider da creare. Le altre caselle di modifica della procedura guidata verranno popolato automaticamente in base al nome digitato. Se si desidera, è possibile modificare le altre caselle di nome.
+- **Nome breve**
 
-**Coclasse**  
-Il nome della coclasse. Il nome del ProgID verrà modificato in base a questo nome.
+   Digitare il nome breve del provider da creare. Le altre caselle di modifica della procedura guidata verranno popolato automaticamente in base al nome digitato. Se si desidera, è possibile modificare le altre caselle di nome.
 
-**Con attributi**  
-Questa opzione specifica se la procedura guidata creerà le classi di provider usando gli attributi o le dichiarazioni di template. Quando si seleziona questa opzione, verranno utilizzati attributi invece delle dichiarazioni di modello (questo è l'opzione predefinita se si creasse un progetto con attributo). Quando si deseleziona questa opzione, la procedura guidata utilizza le dichiarazioni di template anziché agli attributi (questo è l'opzione predefinita se è stato creato un progetto senza attributi).
+- **Coclasse**
 
-Se si seleziona questa opzione quando è stato creato un progetto senza attributi, la procedura guidata avvisa l'utente che il progetto verrà convertito in un progetto con attributi e chiede se si desidera continuare o meno.
+   Il nome della coclasse. Il nome del ProgID verrà modificato in base a questo nome.
 
-**ProgID**  
-Il ProgID, o identificatore a livello di codice, è una stringa di testo che l'applicazione può usare invece un GUID. Il nome del ProgID ha il formato *CoClassname*.
+- **Con attributi**
 
-**Version**  
-Il numero di versione del provider. Il valore predefinito è 1.
+   Questa opzione specifica se la procedura guidata creerà le classi di provider usando gli attributi o le dichiarazioni di template. Quando si seleziona questa opzione, verranno utilizzati attributi invece delle dichiarazioni di modello (questo è l'opzione predefinita se si creasse un progetto con attributo). Quando si deseleziona questa opzione, la procedura guidata utilizza le dichiarazioni di template anziché agli attributi (questo è l'opzione predefinita se è stato creato un progetto senza attributi).
 
-**Classe DataSource**  
-Il nome della classe di origine dati, nel formato C*Shortname*origine.
+   Se si seleziona questa opzione quando è stato creato un progetto senza attributi, la procedura guidata avvisa l'utente che il progetto verrà convertito in un progetto con attributi e chiede se si desidera continuare o meno.
 
-**Origine dati file con estensione h**  
-Il file di intestazione per la classe dell'origine dati. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+- **ProgID**
 
-**Classe di sessione**  
-Il nome della classe di sessione, nel formato C*Shortname*sessione.
+   Il ProgID, o identificatore a livello di codice, è una stringa di testo che l'applicazione può usare invece un GUID. Il nome del ProgID ha il formato *CoClassname*.
 
-**File con estensione h di sessione**  
-Il file di intestazione per la classe di sessione. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+- **Version**
 
-**Classe di comando**  
-Il nome della classe di comando, nel formato C*Shortname*comando.
+   Il numero di versione del provider. Il valore predefinito è 1.
 
-**File con estensione h di comando**  
-Il file di intestazione per la classe di comando. Questo nome non può essere modificato e dipende dal nome del file di intestazione del set di righe.
+- **Classe DataSource**
 
-**Classe di rowset**  
-Il nome della classe di set di righe, nel formato C*Shortname*set di righe.
+   Il nome della classe di origine dati, nel formato C*Shortname*origine.
 
-**File con estensione h di rowset**  
-Il file di intestazione per la classe di set di righe. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+- **Origine dati file con estensione h**
 
-**File con estensione cpp del set di righe**  
-File di implementazione del provider. È possibile modificare questo nome file o selezionare un file di implementazione esistente.
+   Il file di intestazione per la classe dell'origine dati. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+
+- **Classe di sessione**
+
+   Il nome della classe di sessione, nel formato C*Shortname*sessione.
+
+- **File con estensione h di sessione**
+
+   Il file di intestazione per la classe di sessione. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+
+- **Classe di comando**
+
+   Il nome della classe di comando, nel formato C*Shortname*comando.
+
+- **File con estensione h di comando**
+
+   Il file di intestazione per la classe di comando. Questo nome non può essere modificato e dipende dal nome del file di intestazione del set di righe.
+
+- **Classe di rowset**
+
+   Il nome della classe di set di righe, nel formato C*Shortname*set di righe.
+
+- **File con estensione h di rowset**
+
+   Il file di intestazione per la classe di set di righe. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+
+- **File con estensione cpp del set di righe**
+
+   File di implementazione del provider. È possibile modificare questo nome file o selezionare un file di implementazione esistente.
 
 ## <a name="see-also"></a>Vedere anche
 

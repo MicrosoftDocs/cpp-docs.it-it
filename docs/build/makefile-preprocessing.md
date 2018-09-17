@@ -1,5 +1,5 @@
 ---
-title: Pre-elaborazione di makefile | Documenti Microsoft
+title: Pre-elaborazione di makefile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4b304276f20f66e02808f3894e5b948dd994cbb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11bd2b74a17e5fd7b2507a531fda6da0a31e53c8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368226"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722880"
 ---
 # <a name="makefile-preprocessing"></a>Pre-elaborazione di makefile
-È possibile controllare la sessione NMAKE utilizzando espressioni e direttive di pre-elaborazione. Istruzioni di pre-elaborazione possono essere inserita nel makefile o Tools. Direttive using, è possibile in modo condizionale elaborare il makefile, visualizzare messaggi di errore, includere altri makefile, rimuovere la definizione di una macro e disattivare alcune opzioni.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
- [Direttive di pre-elaborazione di makefile](../build/makefile-preprocessing-directives.md)  
-  
- [Espressioni nella pre-elaborazione di makefile](../build/expressions-in-makefile-preprocessing.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti a NMAKE](../build/nmake-reference.md)
+
+È possibile controllare la sessione NMAKE tramite espressioni e direttive di pre-elaborazione. Istruzioni di pre-elaborazione possono essere inserita nel makefile o Tools. ini. Direttive using, è possibile in modo condizionale elaborare il makefile visualizzare messaggi di errore, includere altri makefile, annullare la definizione di una macro e attivare determinate opzioni o disattivare.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
+
+[Direttive di pre-elaborazione di makefile](../build/makefile-preprocessing-directives.md)
+
+[Espressioni nella pre-elaborazione di makefile](../build/expressions-in-makefile-preprocessing.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimenti a NMAKE](../build/nmake-reference.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195790"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715403"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -51,20 +51,20 @@ Il numero ordinale di colonna (`DBCOLUMNINFO` ordinale) o nome di colonna (strin
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*DbType* (facoltativo)  
-OLE DB [indicatore del tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) per la voce di colonna.
+*DbType*  
+(Facoltativo) OLE DB [indicatore del tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) per la voce di colonna.
 
-*precisione* (facoltativo)  
-La precisione da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` elemento del [struttura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+(Facoltativo) La precisione da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` elemento del [struttura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*scalabilità* (facoltativo)  
-La scala da usare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bScale` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Scalabilità*  
+(Facoltativo) La scala da usare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bScale` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*stato* (facoltativo)  
-Una variabile membro usata per mantenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio valori NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.
+*status*  
+(Facoltativo) Una variabile membro usata per mantenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio valori NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.
 
-*lunghezza* (facoltativo)  
-Una variabile membro usata per contenere le dimensioni della colonna in byte.
+*length*  
+(Facoltativo) Una variabile membro usata per contenere le dimensioni della colonna in byte.
 
 ## <a name="remarks"></a>Note
 

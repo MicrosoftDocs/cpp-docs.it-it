@@ -24,17 +24,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e04182cf673674e1f1ba8c073b624760bc4809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c24dcd92628b9f03596c9d10c38b5d63806dc6c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332793"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720005"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
+
 **Sezione specifica Microsoft**  
   
- Conta il numero di iniziali zeri in 16, 32 o a 64 bit.  
+Conta il numero di leader zeri in 16, 32 o a 64 bit.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,28 +52,28 @@ unsigned __int64 __lzcnt64(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `value`  
- 16 - 32- o intero senza segno a 64 bit in modo da cercare gli zeri iniziali.  
+*valore*<br/>
+[in] Il 16, 32 o intero senza segno a 64 bit a cercare di zeri iniziali.  
   
 ## <a name="return-value"></a>Valore restituito  
- Il numero di bit zero iniziali di `value` parametro. Se `value` è zero, il valore restituito è la dimensione dell'operando di input (16, 32 o 64). Se più significativa di `value` uno, il valore restituito è zero.  
+ Il numero di bit in zero iniziali di `value` parametro. Se `value` è uguale a zero, il valore restituito è la dimensione dell'operando di input (16, 32 o 64). Se più bit significativo di `value` è 1, il valore restituito è uguale a zero.  
   
 ## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`__lzcnt16`|: AMD Modifica avanzata Bit (ABM)<br /><br /> Intel: Haswalle|  
-|`__lzcnt`|: AMD Modifica avanzata Bit (ABM)<br /><br /> Intel: Haswalle|  
-|`__lzcnt64`|AMD: Avanzate Bit manipolazione (ABM) in modalità a 64 bit.<br /><br /> Intel: Haswalle|  
+|`__lzcnt16`|AMD: Manipolazione dei Bit avanzate (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt`|AMD: Manipolazione dei Bit avanzate (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD: Avanzate di manipolazione dei Bit (ABM) in modalità a 64 bit.<br /><br /> Intel: Haswell|  
   
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Ognuna di queste funzioni intrinseche genera il `lzcnt` istruzione.  Le dimensioni del valore che il `lzcnt` istruzione restituisce la stessa dimensione del relativo argomento.  In modalità a 32 bit non esistono alcun 64-bit registri di utilizzo generale, pertanto non è a 64 bit `lzcnt`.  
+ Ognuna di queste funzioni intrinseche genera il `lzcnt` (istruzione).  Le dimensioni del valore che la `lzcnt` istruzione restituisce un valore è quello utilizzato per la dimensione del relativo argomento.  In modalità a 32 bit non è nessun a 64 bit per utilizzo generico registri, pertanto non 64-bit `lzcnt`.  
   
- Per determinare il supporto hardware per il `lzcnt` chiamata istruzione il `__cpuid` intrinseco con `InfoType=0x80000001` e i bit di controllo 5 di `CPUInfo[2] (ECX)`. Questo bit sarà 1 se l'istruzione è supportata e 0 in caso contrario. Se si esegue il codice che utilizza questa funzione intrinseca nell'hardware che non supporta il `lzcnt` (istruzione), i risultati sono imprevedibili.  
+ Per determinare il supporto hardware per il `lzcnt` chiamata di istruzione il `__cpuid` intrinseco con `InfoType=0x80000001` e bit di controllo 5 di `CPUInfo[2] (ECX)`. Questo bit sarà 1 se l'istruzione è supportata e 0 in caso contrario. Se si esegue codice che usa questa funzione intrinseca in hardware che non supporta il `lzcnt` (istruzione), i risultati sono imprevedibili.  
   
- Nei processori Intel che non supportano il `lzcnt` , la codifica dei byte istruzione viene eseguita come `bsr` (bit analisi inversa). Se la portabilità del codice è un problema, provare a usare il `_BitScanReverse` intrinseca invece. Per ulteriori informazioni, vedere [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
+ Nei processori Intel che non supportano il `lzcnt` (istruzione), la codifica dei byte (istruzione) viene eseguita come `bsr` (bit analisi inversa). Se la portabilità del codice costituisce un problema, provare a usare il `_BitScanReverse` intrinseca invece. Per altre informazioni, vedere [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -112,8 +113,9 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0  
 ```  
   
-**Fine sezione specifica Microsoft**  
- Parti del contenuto sono Copyright 2007 Advanced Micro dispositivi, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
+**Fine sezione specifica Microsoft**
+
+Parti del contenuto sono Copyright 2007 avanzate Micro dispositivi, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

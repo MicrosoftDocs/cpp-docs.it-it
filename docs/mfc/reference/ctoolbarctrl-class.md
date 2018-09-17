@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686085"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724074"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 Fornisce la funzionalità del controllo barra degli strumenti comune di Windows.  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *idButton*|Identificatore del comando del pulsante su cui sta per ricevere una nuova bitmap.|  
-|[in] *iBitmap*|Indice in base zero di un'immagine nell'elenco di immagini del controllo della barra degli strumenti corrente.|  
+|*idButton*|[in] Identificatore del comando del pulsante su cui sta per ricevere una nuova bitmap.|  
+|*iBitmap*|[in] Indice in base zero di un'immagine nell'elenco di immagini del controllo della barra degli strumenti corrente.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *idButton*|L'identificatore del pulsante viene recuperato il cui testo da visualizzare.|  
+|*idButton*|[in] L'identificatore del pulsante viene recuperato il cui testo da visualizzare.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [CString](../../atl-mfc-shared/using-cstring.md) che contiene il testo visualizzato del pulsante specificato.  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Puntatore a un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struttura che riceve le informazioni di schema di colori. Quando termina, questo metodo viene descritta la struttura il colore di evidenziazione e il colore di ombreggiatura del controllo della barra degli strumenti.|  
+|*lpColorScheme*|[out] Puntatore a un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struttura che riceve le informazioni di schema di colori. Quando termina, questo metodo viene descritta la struttura il colore di evidenziazione e il colore di ombreggiatura del controllo della barra degli strumenti.|  
   
 ### <a name="return-value"></a>Valore restituito  
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *pnHorzPadding*|Integer che riceve la spaziatura orizzontale del controllo della barra degli strumenti, in pixel.|  
-|[out] *pnVertPadding*|Integer che riceve la spaziatura verticale del controllo della barra degli strumenti, in pixel.|  
+|*pnHorzPadding*|[out] Integer che riceve la spaziatura orizzontale del controllo della barra degli strumenti, in pixel.|  
+|*pnVertPadding*|[out] Integer che riceve la spaziatura verticale del controllo della barra degli strumenti, in pixel.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- ID comando del pulsante della barra degli strumenti.  
+*nID*<br/>
+[in] ID comando del pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Numero intero positivo se il pulsante è evidenziato, 0 se il pulsante non è evidenziato, oppure -1 se un errore si verifica.  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Identificatore del comando del pulsante sulla barra degli strumenti.  
+*nID*<br/>
+[in] Identificatore del comando del pulsante sulla barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Numero intero positivo se il pulsante è indeterminato, zero se il pulsante non è indeterminato, oppure -1 se un errore generato.  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Identificatore del comando del pulsante premere o di rilascio.  
+*nID*<br/>
+[in] Identificatore del comando del pulsante premere o di rilascio.  
   
- [in] *bPress*  
- TRUE per fare clic sul pulsante specificato; FALSE per rilasciare il pulsante specificato. Il valore predefinito è TRUE.  
+*bPress*<br/>
+[in] TRUE per fare clic sul pulsante specificato; FALSE per rilasciare il pulsante specificato. Il valore predefinito è TRUE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Puntatore a un [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) struttura che descrive la bitmap da sostituire e la nuova bitmap.|  
+|*pReplaceBitmap*|[in] Puntatore a un [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) struttura che descrive la bitmap da sostituire e la nuova bitmap.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *fAnchor*  
- Specifica se l'evidenziazione di ancoraggio è abilitato o disabilitato. Se questo valore è diverso da zero, verrà abilitata l'evidenziazione di ancoraggio. Se questo valore è zero, l'evidenziazione di ancoraggio verrà disabilitato  
+*fAnchor*<br/>
+[in] Specifica se l'evidenziazione di ancoraggio è abilitato o disabilitato. Se questo valore è diverso da zero, verrà abilitata l'evidenziazione di ancoraggio. Se questo valore è zero, l'evidenziazione di ancoraggio verrà disabilitato  
   
 ### <a name="return-value"></a>Valore restituito  
  L'impostazione di ancoraggio precedente. Se è stata abilitata l'evidenziazione, questo valore è diverso da zero. Se l'evidenziazione non è stato abilitato, questo valore è zero.  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Puntatore a un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struttura che descrive il colore di evidenziazione e il colore di ombreggiatura del controllo della barra degli strumenti.|  
+|*lpColorScheme*|[in] Puntatore a un [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) struttura che descrive il colore di evidenziazione e il colore di ombreggiatura del controllo della barra degli strumenti.|  
   
 ### <a name="remarks"></a>Note  
  Questo metodo non ha alcun effetto se viene impostato un tema visivo di Windows Vista.  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *nHorzPadding*|Specifica la spaziatura orizzontale del controllo della barra degli strumenti, in pixel.|  
-|[in] *nVertPadding*|Specifica la spaziatura verticale del controllo della barra degli strumenti, in pixel.|  
+|*nHorzPadding*|[in] Specifica la spaziatura orizzontale del controllo della barra degli strumenti, in pixel.|  
+|*nVertPadding*|[in] Specifica la spaziatura verticale del controllo della barra degli strumenti, in pixel.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore DWORD cui Word meno significativa contiene il valore precedente della spaziatura orizzontale e la cui Word più significativa contiene il precedente valore di spaziatura verticale. I valori di spaziatura interna sono misurati in pixel.  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iImageID*|Indice a base zero dell'elenco immagini. Impostare questo parametro su zero se si usa solo un elenco di immagini.|  
-|[in] *pImageList*|Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) che contiene il nuovo elenco di immagini.|  
+|*iImageID*|[in] Indice a base zero dell'elenco immagini. Impostare questo parametro su zero se si usa solo un elenco di immagini.|  
+|*pImageList*|[in] Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) che contiene il nuovo elenco di immagini.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) che contiene l'elenco di immagini precedenti per il controllo corrente oppure NULL se è stato impostato alcun tale elenco di immagini.  

@@ -1,5 +1,5 @@
 ---
-title: Compilazione veloce | Documenti Microsoft
+title: Compilazione veloce | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d29ea4684e5f29374f11cf75dec94756ddde84
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 926c63d3d556d1aa9b85a7ce97e93b60e7c2ea23
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371866"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722268"
 ---
 # <a name="fast-compilation"></a>Compilazione veloce
-Per aumentare la velocità delle compilazioni:  
-  
--   Utilizzare [ricompilazione minima](../../build/reference/gm-enable-minimal-rebuild.md), in cui il compilatore C++ ricompila un file di origine solo se dipende dalle modifiche a una classe in un file di intestazione.  
-  
--   [Creare file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md) e usare il [opzioni di intestazione precompilati o meno](../../build/reference/yc-create-precompiled-header-file.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+Per aumentare la velocità delle compilazioni:
+
+- Uso [ricompilazione minima](../../build/reference/gm-enable-minimal-rebuild.md), in cui il compilatore C++ ricompila un file di origine solo se è dipendente da modifiche apportate a una classe in un file di intestazione.
+
+- [Creare file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md) e usare il [le opzioni di intestazione precompilati o meno](../../build/reference/yc-create-precompiled-header-file.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

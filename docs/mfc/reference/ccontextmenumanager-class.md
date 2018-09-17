@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3a9088ced647dd0e6694181cd7ab7857047c720
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338753"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713281"
 ---
 # <a name="ccontextmenumanager-class"></a>Classe CContextMenuManager
 Il `CContextMenuManager` oggetto gestisce i menu di scelta rapida, noto anche come menu di scelta rapida.  
@@ -115,14 +115,14 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiMenuNameResId*  
- Un ID di risorsa per una stringa che contiene il nome per il nuovo menu.  
+*uiMenuNameResId*<br/>
+[in] Un ID di risorsa per una stringa che contiene il nome per il nuovo menu.  
   
- [in] *uiMenuResId*  
- L'ID di risorsa di menu.  
+*uiMenuResId*<br/>
+[in] L'ID di risorsa di menu.  
   
- [in] *lpszName*  
- Stringa che contiene il nome per il nuovo menu.  
+*lpszName*<br/>
+[in] Stringa che contiene il nome per il nuovo menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; 0 se il metodo ha esito negativo.  
@@ -148,8 +148,8 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nMenuResId*  
- L'ID di risorsa per il menu di scelta.  
+*nMenuResId*<br/>
+[in] L'ID di risorsa per il menu di scelta.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un handle per il menu associato o `NULL` se il menu non viene trovato.  
@@ -164,11 +164,11 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszName*  
- Stringa che contiene il nome del menu da recuperare.  
+*lpszName*<br/>
+[in] Stringa che contiene il nome del menu da recuperare.  
   
- [out] *puiOrigResID*  
- Puntatore a un UINT. Questo parametro contiene l'ID di risorsa di menu specificato, se trovato.  
+*puiOrigResID*<br/>
+[out] Puntatore a un UINT. Questo parametro contiene l'ID di risorsa di menu specificato, se trovato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un handle per il menu che corrisponde al nome specificato da *lpszName*. NULL se non esiste alcun menu chiamato *lpszName*.  
@@ -184,8 +184,8 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *listOfNames*  
- Un riferimento a un [CStringList](../../mfc/reference/cstringlist-class.md) parametro. Questo metodo scrive l'elenco di nomi di menu per questo parametro.  
+*listOfNames*<br/>
+[out] Un riferimento a un [CStringList](../../mfc/reference/cstringlist-class.md) parametro. Questo metodo scrive l'elenco di nomi di menu per questo parametro.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  Carica le informazioni associate le [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) dal Registro di sistema Windows.  
@@ -195,8 +195,8 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszProfileName*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo. in caso contrario 0.  
@@ -227,8 +227,8 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
+*lpszProfileName*<br/>
+[in] Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo. in caso contrario 0.  
@@ -246,8 +246,8 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- Un parametro booleano che controlla se chiudere il menu a comparsa attivo. Il valore TRUE indica che il menu a comparsa attivo non viene chiusa. FALSE indica che il menu a comparsa attivo viene chiuso.  
+*bSet*<br/>
+[in] Un parametro booleano che controlla se chiudere il menu a comparsa attivo. Il valore TRUE indica che il menu a comparsa attivo non viene chiusa. FALSE indica che il menu a comparsa attivo viene chiuso.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il `CContextMenuManager` chiude il menu a comparsa attivo.  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiMenuResId*  
- L'ID risorsa del menu di scelta che visualizzerà questo metodo.  
+*uiMenuResId*<br/>
+[in] L'ID risorsa del menu di scelta che visualizzerà questo metodo.  
   
- [in] *x*  
- Orizzontale offset per il menu di scelta rapida nelle coordinate del client.  
+*x*<br/>
+[in] Orizzontale offset per il menu di scelta rapida nelle coordinate del client.  
   
- [in] *y*  
- L'offset verticale per il menu di scelta rapida nelle coordinate del client  
+*y*<br/>
+[in] L'offset verticale per il menu di scelta rapida nelle coordinate del client  
   
- [in] *pWndOwner*  
- Puntatore alla finestra padre del menu di scelta rapida.  
+*pWndOwner*<br/>
+[in] Puntatore alla finestra padre del menu di scelta rapida.  
   
- [in] *bOwnMessage*  
- Un parametro booleano che indica come vengono indirizzati i messaggi. Se *bOwnMessage* è FALSE, standard MFC viene utilizzato il routing. In caso contrario, *pWndOwner* riceve i messaggi.  
+*bOwnMessage*<br/>
+[in] Un parametro booleano che indica come vengono indirizzati i messaggi. Se *bOwnMessage* è FALSE, standard MFC viene utilizzato il routing. In caso contrario, *pWndOwner* riceve i messaggi.  
   
- [in] *hmenuPopup*  
- L'handle del menu di scelta che visualizzerà questo metodo.  
+*hmenuPopup*<br/>
+[in] L'handle del menu di scelta che visualizzerà questo metodo.  
   
- [in] *il flag bAutoDestroy*  
- Un parametro booleano che indica se il menu di scelta verrà automaticamente eliminato definitivamente.  
+*flag bAutoDestroy*<br/>
+[in] Un parametro booleano che indica se il menu di scelta verrà automaticamente eliminato definitivamente.  
   
- [in] *bRightAlign*  
- Un parametro booleano che indica la modalità di allineamento delle voci di menu. Se *bRightAlign* è TRUE, il menu di scelta è allineata a destra per ordine di lettura da destra a sinistra.  
+*bRightAlign*<br/>
+[in] Un parametro booleano che indica la modalità di allineamento delle voci di menu. Se *bRightAlign* è TRUE, il menu di scelta è allineata a destra per ordine di lettura da destra a sinistra.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il primo overload restituisce diverso da zero se il metodo viene illustrato il menu di scelta correttamente. in caso contrario 0. Il secondo overload del metodo restituisce un puntatore a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) se verrà visualizzato il menu di scelta rapida in modo corretto; in caso contrario, NULL.  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hmenuPopup*  
- Handle del menu di scelta rapida che consente di visualizzare questo metodo.  
+*hmenuPopup*<br/>
+[in] Handle del menu di scelta rapida che consente di visualizzare questo metodo.  
   
- [in] *x*  
- Orizzontale offset per il menu di scelta rapida nelle coordinate del client.  
+*x*<br/>
+[in] Orizzontale offset per il menu di scelta rapida nelle coordinate del client.  
   
- [in] *y*  
- L'offset per il menu di scelta rapida nelle coordinate del client verticale.  
+*y*<br/>
+[in] L'offset per il menu di scelta rapida nelle coordinate del client verticale.  
   
- [in] *pWndOwner*  
- Puntatore alla finestra padre del menu di scelta rapida.  
+*pWndOwner*<br/>
+[in] Puntatore alla finestra padre del menu di scelta rapida.  
   
- [in] *bRightAlign*  
- Un parametro booleano che indica la modalità di allineamento delle voci di menu. Se *bRightAlign* è TRUE, il menu di scelta è allineata a destra per ordine di lettura da destra a sinistra. Se *bRightAlign* è FALSE, il menu di scelta è allineata a sinistra per ordine di lettura da sinistra a destra.  
+*bRightAlign*<br/>
+[in] Un parametro booleano che indica la modalità di allineamento delle voci di menu. Se *bRightAlign* è TRUE, il menu di scelta è allineata a destra per ordine di lettura da destra a sinistra. Se *bRightAlign* è FALSE, il menu di scelta è allineata a sinistra per ordine di lettura da sinistra a destra.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'ID di comando di menu del comando che l'utente sceglie; 0 se l'utente chiude il menu di scelta rapida senza selezionare un comando di menu.  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 36817eba04d630ea4e56140af582bf49fa6f54ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850082"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718120"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 Il `CMFCHeaderCtrl` classe supporta l'ordinamento di più colonne in un controllo intestazione.  
@@ -137,8 +137,8 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare la modalità di ordinamento di più colonne; FALSE per disabilitare la modalità di ordinamento più colonne e rimuovere tutte le colonne dall'elenco di colonne ordinate. Il valore predefinito è TRUE.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare la modalità di ordinamento di più colonne; FALSE per disabilitare la modalità di ordinamento più colonne e rimuovere tutte le colonne dall'elenco di colonne ordinate. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per abilitare o disabilitare la modalità di ordinamento più colonne. Due o più colonne possono partecipare un ordinamento, se il controllo intestazione è in modalità di ordinamento più colonne.  
@@ -151,8 +151,8 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iColumn*  
- Indice a base zero di una colonna.  
+*iColumn*<br/>
+[in] Indice a base zero di una colonna.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore che indica lo stato di ordinamento della colonna specificata. Nella tabella seguente sono elencati i valori possibili:  
@@ -227,20 +227,20 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *iItem*  
- Indice a base zero dell'elemento da disegnare.  
+*iItem*<br/>
+[in] Indice a base zero dell'elemento da disegnare.  
   
- [in] *rect*  
- Il rettangolo di delimitazione dell'elemento da disegnare.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione dell'elemento da disegnare.  
   
- [in] *bIsPressed*  
- TRUE per disegnare l'elemento nello stato pressed; in caso contrario, FALSE.  
+*bIsPressed*<br/>
+[in] TRUE per disegnare l'elemento nello stato pressed; in caso contrario, FALSE.  
   
- [in] *bIsHighlighted*  
- TRUE per disegnare l'elemento in stato evidenziato. in caso contrario, FALSE.  
+*bIsHighlighted*<br/>
+[in] TRUE per disegnare l'elemento in stato evidenziato. in caso contrario, FALSE.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  Chiamata eseguita dal framework per disegnare la freccia di ordinamento.  
@@ -252,11 +252,11 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rectArrow*  
- Il rettangolo di delimitazione della freccia di ordinamento.  
+*rectArrow*<br/>
+[in] Il rettangolo di delimitazione della freccia di ordinamento.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  Chiamato dal framework per riempire lo sfondo di una colonna del controllo intestazione.  
@@ -266,8 +266,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
   
@@ -279,8 +279,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iColumn*  
- Indice a base zero della colonna da rimuovere.  
+*iColumn*<br/>
+[in] Indice a base zero della colonna da rimuovere.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  Imposta l'ordinamento di una colonna specificata in un controllo intestazione.  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iColumn*  
- Indice a base zero di una colonna del controllo intestazione. Se questo parametro è minore di zero, questo metodo rimuove tutte le colonne nell'elenco delle colonne di ordinamento.  
+*iColumn*<br/>
+[in] Indice a base zero di una colonna del controllo intestazione. Se questo parametro è minore di zero, questo metodo rimuove tutte le colonne nell'elenco delle colonne di ordinamento.  
   
- [in] *bAscending*  
- Specifica l'ordinamento della colonna che il *iColumn* parametro specifica. TRUE per impostare l'ordine crescente; FALSE per impostare l'ordine decrescente. Il valore predefinito è TRUE.  
+*bAscending*<br/>
+[in] Specifica l'ordinamento della colonna che il *iColumn* parametro specifica. TRUE per impostare l'ordine crescente; FALSE per impostare l'ordine decrescente. Il valore predefinito è TRUE.  
   
- [in] *bAggiungi*  
- True per impostare l'ordinamento della colonna che il *iColumn* parametro specifica.  
+*bAggiungi*<br/>
+[in] True per impostare l'ordinamento della colonna che il *iColumn* parametro specifica.  
   
  Se il controllo intestazione corrente è nel *ordinamento a più colonne* modalità, questo metodo aggiunge la colonna specificata all'elenco di colonne di ordinamento. Uso [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) impostare più modalità di ordinamento di colonne.  
   

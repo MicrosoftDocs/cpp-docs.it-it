@@ -1,5 +1,5 @@
 ---
-title: -DEF (specifica File di definizione moduli) | Documenti Microsoft
+title: -DEF (specifica File di definizione moduli) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0c712b81fbb755edd132c6f97efc906ba4f5ff9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ec7458f5b81dd2b9d5aac49959b935f49377081
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371151"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720402"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Specifica il file di definizione moduli)
-```  
-/DEF:filename  
-```  
-  
-## <a name="remarks"></a>Note  
- dove:  
-  
- *filename*  
- Il nome di un file di definizione moduli (def) da passare al linker.  
-  
-## <a name="remarks"></a>Note  
- L'opzione /DEF passa un file di definizione moduli (def) al linker. Collegamento, è possibile specificare un solo file def. Per ulteriori informazioni sui file def, vedere [file di definizione moduli](../../build/reference/module-definition-dot-def-files.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic su di **Linker** cartella.  
-  
-3.  Fare clic su di **Input** pagina delle proprietà.  
-  
-4.  Modificare il **File di definizione moduli** proprietà.  
-  
- Per specificare un file def all'interno dell'ambiente di sviluppo, è necessario aggiungerlo al progetto insieme agli altri file e quindi specificare il file per l'opzione /DEF.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ModuleDefinitionFile%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+```
+/DEF:filename
+```
+
+## <a name="arguments"></a>Argomenti
+
+*filename*<br/>
+Il nome di un file di definizione moduli (def) deve essere passato al linker.
+
+## <a name="remarks"></a>Note
+
+L'opzione /DEF passa un file di definizione moduli (def) al linker. Al collegamento, è possibile specificare solo un file def. Per informazioni dettagliate sui file. def, vedere [file di definizione moduli](../../build/reference/module-definition-dot-def-files.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+
+1. Scegliere il **Linker** cartella.
+
+1. Scegliere il **Input** pagina delle proprietà.
+
+1. Modificare il **File di definizione moduli** proprietà.
+
+Per specificare un file con estensione def da all'interno dell'ambiente di sviluppo, è necessario aggiungerlo al progetto insieme agli altri file e quindi specificare il file per l'opzione /DEF.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ModuleDefinitionFile%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

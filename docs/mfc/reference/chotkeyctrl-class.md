@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681625"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722247"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 Fornisce la funzionalità del controllo tasto di scelta comune di Windows.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *wVirtualKeyCode*  
- Codice tasto virtuale di tasti di scelta rapida. Per un elenco di codici di tasti virtuali standard, vedere winuser. h.  
+*wVirtualKeyCode*<br/>
+[out] Codice tasto virtuale di tasti di scelta rapida. Per un elenco di codici di tasti virtuali standard, vedere winuser. h.  
   
- [out] *wModifiers*  
- Una combinazione bit per bit (OR) di flag che indicano i tasti di modifica nel tasto di scelta rapida.  
+*wModifiers*<br/>
+[out] Una combinazione bit per bit (OR) di flag che indicano i tasti di modifica nel tasto di scelta rapida.  
   
  I flag di modifica sono i seguenti:  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *wVirtualKeyCode*  
- Codice tasto virtuale di tasti di scelta rapida. Per un elenco di codici di tasti virtuali standard, vedere winuser. h.  
+*wVirtualKeyCode*<br/>
+[in] Codice tasto virtuale di tasti di scelta rapida. Per un elenco di codici di tasti virtuali standard, vedere winuser. h.  
   
- [in] *wModifiers*  
- Una combinazione bit per bit (OR) di flag che indicano i tasti di modifica nel tasto di scelta rapida.  
+*wModifiers*<br/>
+[in] Una combinazione bit per bit (OR) di flag che indicano i tasti di modifica nel tasto di scelta rapida.  
   
  I flag di modifica sono i seguenti:  
   

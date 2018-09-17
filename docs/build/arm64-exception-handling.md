@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e24997fa2eb6e6e5c3d8438b137e168c2f70b1f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034738"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716555"
 ---
 # <a name="arm64-exception-handling"></a>Gestione delle eccezioni ARM64
 
@@ -129,7 +129,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-    Solo r19 salvato:
+   Solo r19 salvato:
 
     ```asm
         sub    sp, sp, #16              // reg save area allocation*
@@ -636,5 +636,5 @@ Nota: EpilogStart indice [4] punta al centro del codice di rimozione prologo (pa
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica delle convenzioni ABI ARM64](arm64-windows-abi-conventions.md)  
-[Gestione delle eccezioni ARM](../build/arm-exception-handling.md)  
+[Panoramica delle convenzioni ABI ARM64](arm64-windows-abi-conventions.md)<br/>
+[Gestione delle eccezioni ARM](../build/arm-exception-handling.md)

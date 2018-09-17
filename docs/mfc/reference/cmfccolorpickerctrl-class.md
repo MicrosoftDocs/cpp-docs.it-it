@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0ea0bf6ed8361419af3519a41edbe6bb3c4b4a77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849965"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725660"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe CMFCColorPickerCtrl
 Il `CMFCColorPickerCtrl` classe fornisce funzionalità per un controllo che consente di selezionare i colori.  
@@ -158,11 +158,11 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Specifica un'area rettangolare intorno al colore selezionato.  
+*Rect*<br/>
+[in] Specifica un'area rettangolare intorno al colore selezionato.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo quando è necessario modificare la forma del cursore che punta al colore selezionato.  
@@ -190,14 +190,14 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *hue*  
- Puntatore a una variabile di tipo valore double che riceve le informazioni di hue.  
+*Hue*<br/>
+[out] Puntatore a una variabile di tipo valore double che riceve le informazioni di hue.  
   
- [out] *luminanza*  
- Puntatore a una variabile di tipo valore double che riceve le informazioni di luminanza.  
+*luminanza*<br/>
+[out] Puntatore a una variabile di tipo valore double che riceve le informazioni di luminanza.  
   
- [out] *saturazione*  
- Puntatore a una variabile di tipo valore double che riceve le informazioni di saturazione.  
+*saturazione*<br/>
+[out] Puntatore a una variabile di tipo valore double che riceve le informazioni di saturazione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -253,20 +253,20 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *R*  
- Il componente di colore rosso.  
+*R*<br/>
+[in] Il componente di colore rosso.  
   
- [in] *G*  
- Il componente di colore verde.  
+*G*<br/>
+[in] Il componente di colore verde.  
   
- [in] *B*  
- Il componente di colore blu.  
+*B*<br/>
+[in] Il componente di colore blu.  
   
- [in] *x*  
- La coordinata x del cursore, che fa riferimento a un esagono cella.  
+*x*<br/>
+[in] La coordinata x del cursore, che fa riferimento a un esagono cella.  
   
- [in] *y*  
- La coordinata y del cursore, che fa riferimento a un esagono cella.  
+*y*<br/>
+[in] La coordinata y del cursore, che fa riferimento a un esagono cella.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il secondo overload di questo metodo restituisce sempre FALSE.  
@@ -284,8 +284,8 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *Colore*  
- Un valore di colore RGB.  
+*Colore*<br/>
+[in] Un valore di colore RGB.  
   
 ### <a name="remarks"></a>Note  
   
@@ -301,17 +301,17 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hue*  
- Un valore di tonalità.  
+*Hue*<br/>
+[in] Un valore di tonalità.  
   
- [in] *luminanza*  
- Il valore di luminosità.  
+*luminanza*<br/>
+[in] Il valore di luminosità.  
   
- [in] *saturazione*  
- Un valore di saturazione.  
+*saturazione*<br/>
+[in] Un valore di saturazione.  
   
- [in] *bInvalidate*  
- TRUE per forzare la finestra per aggiornare immediatamente il nuovo colore; in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bInvalidate*<br/>
+[in] TRUE per forzare la finestra per aggiornare immediatamente il nuovo colore; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -323,8 +323,8 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *Hue*  
- Un valore di tonalità.  
+*Hue*<br/>
+[in] Un valore di tonalità.  
   
 ### <a name="remarks"></a>Note  
   
@@ -336,8 +336,8 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *Luminanza*  
- Il valore di luminosità.  
+*Luminanza*<br/>
+[in] Il valore di luminosità.  
   
 ### <a name="remarks"></a>Note  
   
@@ -349,8 +349,8 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *w*  
- La larghezza della barra di luminanza misurato in pixel.  
+*w*<br/>
+[in] La larghezza della barra di luminanza misurato in pixel.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per ridimensionare la barra di luminanza, che è attivata il **personalizzato** scheda della finestra di controllo di selezione colore. Il *w* parametro specifica la nuova larghezza della barra di luminanza. Il valore della larghezza viene ignorato se supera i tre quarti di larghezza dell'area client.  
@@ -363,8 +363,8 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *ref*  
- Un valore di colore RGB.  
+*ref*<br/>
+[in] Un valore di colore RGB.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo quando viene inizializzato il controllo di selezione colore.  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pPalette*  
- Puntatore a una tavolozza dei colori.  
+*pPalette*<br/>
+[in] Puntatore a una tavolozza dei colori.  
   
 ### <a name="remarks"></a>Note  
  La tavolozza dei colori definisce la matrice di colori che viene visualizzata nel controllo di selezione colore.  
@@ -391,8 +391,8 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *Saturazione*  
- Un valore di saturazione.  
+*Saturazione*<br/>
+[in] Un valore di saturazione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -404,8 +404,8 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colorType*  
- Un tipo di controllo di selezione colore.  
+*colorType*<br/>
+[in] Un tipo di controllo di selezione colore.  
   
  I tipi sono definiti mediante il `CMFCColorPickerCtrl::COLORTYPE` enumerazione. I tipi possibili sono LUMINANZA, selezione, HEX_GREYSCALE ed ESADECIMALE. Il tipo predefinito è di selezione.  
   

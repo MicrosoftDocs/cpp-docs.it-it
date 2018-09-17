@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8e431b09d0eab84bd6b58e64f71d5f5d98b728fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199238"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714363"
 ---
 # <a name="priorityqueue-class"></a>Classe priority_queue
 
@@ -51,13 +51,13 @@ class priority_queue
 ### <a name="parameters"></a>Parametri
 
 *Type*<br/>
- Tipo di dati degli elementi da archiviare nell'oggetto priority_queue.
+Tipo di dati degli elementi da archiviare nell'oggetto priority_queue.
 
 *Contenitore*<br/>
- Tipo del contenitore sottostante usato per implementare l'oggetto priority_queue.
+Tipo del contenitore sottostante usato per implementare l'oggetto priority_queue.
 
 *Compare*<br/>
- Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nell'oggetto priority_queue. Questo argomento è facoltativo e il predicato binario `less<typename Container::value_type>` rappresenta il valore predefinito.
+Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nell'oggetto priority_queue. Questo argomento è facoltativo e il predicato binario `less<typename Container::value_type>` rappresenta il valore predefinito.
 
 ## <a name="remarks"></a>Note
 
@@ -253,19 +253,19 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 ### <a name="parameters"></a>Parametri
 
 *_ comp*<br/>
- Funzione di confronto di tipo **constTraits** usata per ordinare gli elementi nell'oggetto priority_queue, il cui valore predefinito è la funzione di confronto del contenitore di base.
+Funzione di confronto di tipo **constTraits** usata per ordinare gli elementi nell'oggetto priority_queue, il cui valore predefinito è la funzione di confronto del contenitore di base.
 
 *_Cont*<br/>
- Contenitore di base di cui l'oggetto priority_queue costruito deve essere una copia.
+Contenitore di base di cui l'oggetto priority_queue costruito deve essere una copia.
 
 *right*<br/>
- Oggetto priority_queue di cui il set costruito deve essere una copia.
+Oggetto priority_queue di cui il set costruito deve essere una copia.
 
 *first*<br/>
- Posizione del primo elemento nell'intervallo di elementi da copiare.
+Posizione del primo elemento nell'intervallo di elementi da copiare.
 
 *last*<br/>
- Posizione del primo elemento oltre l'intervallo di elementi da copiare.
+Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -397,7 +397,7 @@ void push(const Type& val);
 ### <a name="parameters"></a>Parametri
 
 *Val*<br/>
- Elemento aggiunto all'inizio dell'oggetto priority_queue.
+Elemento aggiunto all'inizio dell'oggetto priority_queue.
 
 ### <a name="remarks"></a>Note
 
