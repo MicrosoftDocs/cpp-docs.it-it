@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5063eae507ee6c83cbed2ae7fc92679098b91f36
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104619"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703859"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Esporta una funzione)
 
@@ -80,5 +80,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
 [Opzioni del linker](../../build/reference/linker-options.md)

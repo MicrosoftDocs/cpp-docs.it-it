@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205287"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702091"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 Fornisce la funzionalità di una casella combinata di Windows.  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *lpszText*|Puntatore a un buffer che riceve il testo dell'intestazione della segnalazione.|  
-|[in] *cchText*|Dimensione del buffer che il *lpszText* punta il parametro.|  
+|*lpszText*|[out] Puntatore a un buffer che riceve il testo dell'intestazione della segnalazione.|  
+|*cchText*|[in] Dimensione del buffer che il *lpszText* punta il parametro.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Nel primo overload, una [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo dell'intestazione della segnalazione, se esistente; in caso contrario, un `CString` oggetto che ha lunghezza zero.  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *lpszText*|Puntatore a un buffer con terminazione null che contiene il testo della segnalazione.|  
+|*lpszText*|[in] Puntatore a un buffer con terminazione null che contiene il testo della segnalazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iMinVisible*|Specifica il numero minimo di elementi visibili.|  
+|*iMinVisible*|[in] Specifica il numero minimo di elementi visibili.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  

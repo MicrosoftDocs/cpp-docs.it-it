@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0385f2812c58b65102780780a1b7a548b2b08429
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cb647b164ad63a952141e70b9b72e3fab3fda3c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701181"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
@@ -41,11 +41,11 @@ void _mm_stream_si64x(
   
 #### <a name="parameters"></a>Parametri  
   
- [out] `Dest`  
- Puntatore alla posizione in cui scrivere i dati di origine.  
+*dest*<br/>
+[out] Puntatore alla posizione in cui scrivere i dati di origine.  
   
- [in] `Source`  
- I dati da scrivere.  
+*Source*<br/>
+[in] I dati da scrivere.  
   
 ## <a name="requirements"></a>Requisiti  
   

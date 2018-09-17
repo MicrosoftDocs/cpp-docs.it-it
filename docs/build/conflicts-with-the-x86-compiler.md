@@ -1,5 +1,5 @@
 ---
-title: È in conflitto con x86 compilatore | Documenti Microsoft
+title: JE v konfliktu x86 compilatore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cd72de4922c297b4a230e0dc0fb606b56a2a473
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f01e65adfb42a5fb3361e75ce34060f7dc1b9f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366913"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709671"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Conflitti con il compilatore x86
-Tipi di dati che sono maggiori di 4 byte non vengono automaticamente allineate nello stack quando si utilizza x86 compilatore per compilare un'applicazione. Poiché l'architettura di x86 compilatore è in uno stack di allineamento a 4 byte, qualsiasi valore maggiore di 4 byte, ad esempio, un intero a 64 bit, non può essere allineato automaticamente a un indirizzo di 8 byte.  
-  
- Utilizzo di dati non allineati ha due implicazioni.  
-  
--   Potrebbe richiedere più tempo per accedere a percorsi non allineati superiore a quello necessario per accedere ai percorsi allineati.  
-  
--   Percorsi non allineati non possono essere usati in operazioni interlocked.  
-  
- Se si richiede un allineamento più rigido, utilizzare `__declspec(align(N)) on your variable declarations`. In questo modo il compilatore allineare in modo dinamico lo stack per soddisfare le specifiche. Tuttavia, in modo dinamico la regolazione dello stack in fase di esecuzione potrebbe rallentare l'esecuzione dell'applicazione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tipi e archiviazione](../build/types-and-storage.md)   
- [align](../cpp/align-cpp.md)
+
+Tipi di dati che sono maggiori di 4 byte non vengono automaticamente allineate su stack quando si usa x86 compilatore di compilare un'applicazione. Poiché l'architettura di x86 compilatore è uno stack allineata a 4 byte, qualsiasi valore superiore a 4 byte, ad esempio, un valore integer a 64 bit, non può essere allineato automaticamente a un indirizzo di 8 byte.
+
+Utilizzo dei dati non allineati con due implicazioni.
+
+- Potrebbe richiedere più tempo per accedere a percorsi non allineata non superiore a quello necessario per accedere ai percorsi allineati.
+
+- Percorsi non allineate non sono utilizzabile in operazioni con interlock.
+
+Se si richiede un allineamento più rigido, utilizzare `__declspec(align(N)) on your variable declarations`. Ciò indica al compilatore di allineare in modo dinamico lo stack per soddisfare le specifiche. Tuttavia, in modo dinamico la regolazione dello stack in fase di esecuzione potrebbe rallentare l'esecuzione dell'applicazione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Tipi e archiviazione](../build/types-and-storage.md)<br/>
+[align](../cpp/align-cpp.md)

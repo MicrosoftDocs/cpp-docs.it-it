@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 551282b6d99491e49a185bab2ede2f775bb55498
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955836"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707824"
 ---
 # <a name="lttypetraitsgt-functions"></a>Funzioni &lt;type_traits&gt;
 
@@ -53,11 +53,11 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Per*  
- Il tipo di oggetto che riceve l'assegnazione.
+*Per*<br/>
+Il tipo di oggetto che riceve l'assegnazione.
 
-*From*  
- Il tipo di oggetto che fornisce il valore.
+*From*<br/>
+Il tipo di oggetto che fornisce il valore.
 
 ### <a name="remarks"></a>Note
 
@@ -74,8 +74,8 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*  
- Tipo su cui eseguire una query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
@@ -92,8 +92,8 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*  
- Tipo su cui eseguire una query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
@@ -145,8 +145,8 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
- Tipo su cui eseguire una query.
+*T*<br/>
+Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
@@ -198,8 +198,8 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
- Tipo su cui eseguire una query.
+*T*<br/>
+Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
@@ -216,8 +216,8 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
- Il tipo da valutare
+*T*<br/>
+Il tipo da valutare
 
 ### <a name="remarks"></a>Note
 
@@ -234,8 +234,8 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*  
- Tipo su cui eseguire una query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
@@ -252,8 +252,8 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
- Tipo su cui eseguire una query.
+*T*<br/>
+Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
@@ -272,8 +272,8 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*  
- Tipo su cui eseguire una query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
@@ -302,8 +302,8 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*  
- Tipo su cui eseguire una query.
+*Ty*<br/>
+Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 

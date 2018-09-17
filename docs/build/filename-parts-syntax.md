@@ -1,5 +1,5 @@
 ---
-title: Sintassi di nomi file | Documenti Microsoft
+title: Sintassi relativa ai nomi file | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d807087be171a2ad63ed37a8b359c3200c812040
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bf7a9685face739059c4b947a5796cc0a28950a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703170"
 ---
 # <a name="filename-parts-syntax"></a>Sintassi relativa ai nomi file
-Sintassi di nomi file nei comandi rappresenta i componenti del primo nome file dipendenti (che può essere un dipendente implicito). FileName componenti sono unità del file, percorso, nome di base e l'estensione come specificato, non quelli presenti sul disco. Utilizzare **%s** per rappresentare il nome file completo. Uso **%&#124;**[*parti*]**F** (una barra verticale carattere segue il simbolo di percentuale) per rappresentare le parti del nome file, dove *parti*può essere zero o più lettere seguenti, in qualsiasi ordine.  
-  
-|Lettera|Descrizione|  
-|------------|-----------------|  
-|Nessuna lettera|Nome completo (uguale a **%s**)|  
-|**d**|Unità|  
-|**p**|Path|  
-|**f**|Nome del file base|  
-|**e**|Estensione di file|  
-  
- Ad esempio, se il nome del file è c:\prog.exe:  
-  
--   %s sarà c:\prog.exe  
-  
--   %&#124;F sarà c:\prog.exe  
-  
--   %&#124;dF sarà c  
-  
--   %&#124;pF sarà c:\.  
-  
--   %&#124;fF sarà prog  
-  
--   %&#124;eF sarà exe  
-  
-## <a name="see-also"></a>Vedere anche  
- [Comandi di un makefile](../build/commands-in-a-makefile.md)
+
+Sintassi relativa ai nomi file nei comandi rappresenta i componenti del nome del primo dipendente file (che può essere un dipendente implicito). Nome file componenti sono unità del file, percorso, nome di base ed estensione come specificato, non quelli presenti sul disco. Uso **%s** per rappresentare il nome completo del file. Uso **%&#124;**[*parti*]**F** (una barra verticale carattere segue il simbolo di percentuale) per rappresentare parti del nome del file, dove *parti*può essere zero o più lettere seguenti, in qualsiasi ordine.
+
+|Lettera|Descrizione|
+|------------|-----------------|
+|Senza lettera|Nome completo (equivale **%s**)|
+|**d**|Unità|
+|**p**|Path|
+|**f**|Nome file di base|
+|**e**|Estensione di file|
+
+Ad esempio, se il nome del file è c:\prog.exe:
+
+- %s saranno c:\prog.exe
+
+- %&#124;F saranno c:\prog.exe
+
+- %&#124;dF saranno c
+
+- %&#124;pF saranno c:\
+
+- %&#124;fF saranno prog
+
+- %&#124;Entity Framework sarà exe
+
+## <a name="see-also"></a>Vedere anche
+
+[Comandi di un makefile](../build/commands-in-a-makefile.md)

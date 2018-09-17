@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42f7eb1864c2839ecce88785dfaef8ab62d0b423
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207641"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705276"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 Il `CSplitButton` classe rappresenta un controllo pulsante di menu combinato. Il controllo pulsante di menu combinato segue un comportamento predefinito quando un utente fa clic sulla parte principale del pulsante e visualizza un menu a discesa quando l'utente fa clic sulla freccia a discesa del pulsante.  
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Una combinazione bit per bit (OR) di stili da applicare al controllo. Per altre informazioni, vedere [stili dei pulsanti](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
-|[in] *pParentWnd*|Un puntatore non null a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo.|  
-|[in] *nID*|L'ID del controllo.|  
+|*dwStyle*|[in] Una combinazione bit per bit (OR) di stili da applicare al controllo. Per altre informazioni, vedere [stili dei pulsanti](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|*Rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|  
+|*pParentWnd*|[in] Un puntatore non null a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo.|  
+|*nID*|[in] L'ID del controllo.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -126,9 +126,9 @@ CSplitButton(CMenu* pMenu)
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *nMenuId*|L'ID risorsa della barra dei menu.|  
-|[in] *nSubMenuId*|L'ID di risorsa di un sottomenu.|  
-|[in] *pMenu*|Un puntatore a un [CMenu](../../mfc/reference/cmenu-class.md) oggetto che specifica un sottomenu. Il `CSplitButton` eliminazioni dell'oggetto di `CMenu` oggetto e relativo HMENU associati quando la `CSplitButton` oggetto esce dall'ambito.|  
+|*nMenuId*|[in] L'ID risorsa della barra dei menu.|  
+|*nSubMenuId*|[in] L'ID di risorsa di un sottomenu.|  
+|*pMenu*|[in] Un puntatore a un [CMenu](../../mfc/reference/cmenu-class.md) oggetto che specifica un sottomenu. Il `CSplitButton` eliminazioni dell'oggetto di `CMenu` oggetto e relativo HMENU associati quando la `CSplitButton` oggetto esce dall'ambito.|  
   
 ### <a name="remarks"></a>Note  
  Usare la [CSplitButton::Create](#create) per creare un controllo pulsante di menu combinato e associarlo al `CSplitButton` oggetto.  
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pNMHDR viene convertito nel*|Puntatore a un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) struttura che contiene informazioni sul [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notifica.|  
-|[out] *pResult*|(Non usato, viene restituito alcun valore). Valore restituito del [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notifica.|  
+|*pNMHDR viene convertito nel*|[in] Puntatore a un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) struttura che contiene informazioni sul [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notifica.|  
+|*pResult*|[out] (Non usato, viene restituito alcun valore). Valore restituito del [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notifica.|  
   
 ### <a name="remarks"></a>Note  
  Quando l'utente fa clic sulla freccia giù in un controllo split button, sistema invia una notifica BCN_DROPDOWN dei messaggi, quali il `OnDropDown` gli handle di metodo. Tuttavia, il `CSplitButton` oggetto non inoltra la notifica BCN_DROPDOWN al controllo che contiene il controllo pulsante di menu combinato. Di conseguenza, il controllo che lo contiene non supporta un'azione personalizzata in risposta alla notifica.  
@@ -178,9 +178,9 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *nMenuId*|L'ID risorsa della barra dei menu.|  
-|[in] *nSubMenuId*|L'ID di risorsa di un sottomenu.|  
-|[in] *pMenu*|Puntatore a un [CMenu](../../mfc/reference/cmenu-class.md) oggetto che specifica un sottomenu. Il `CSplitButton` eliminazioni dell'oggetto di `CMenu` oggetto e relativo HMENU associati quando la `CSplitButton` oggetto esce dall'ambito.|  
+|*nMenuId*|[in] L'ID risorsa della barra dei menu.|  
+|*nSubMenuId*|[in] L'ID di risorsa di un sottomenu.|  
+|*pMenu*|[in] Puntatore a un [CMenu](../../mfc/reference/cmenu-class.md) oggetto che specifica un sottomenu. Il `CSplitButton` eliminazioni dell'oggetto di `CMenu` oggetto e relativo HMENU associati quando la `CSplitButton` oggetto esce dall'ambito.|  
   
 ### <a name="remarks"></a>Note  
  Il *nMenuId* parametro identifica una barra dei menu, ovvero un elenco delle voci di menu barra orizzontale. Il *nSubMenuId* parametro è un numero di indice in base zero che identifica un sottomenu, ovvero l'elenco di riepilogo a discesa delle voci di menu associata a ogni elemento della barra dei menu. Ad esempio, una tipica applicazione dispone di un menu che contiene gli elementi della barra dei menu, "File", "Modifica" e "Help". L'elemento della barra di menu "File" dispone di un sottomenu contenente le voci di menu "Apri", "Chiudi" ed "Exit". Quando si fa clic sulla freccia a discesa del controllo pulsante di menu combinato, il controllo viene visualizzato il sottomenu specificato, non la barra dei menu.  

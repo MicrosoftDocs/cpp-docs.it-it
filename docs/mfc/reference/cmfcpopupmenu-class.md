@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 065529796ead2a37b9a417f5e1a2352deb429aba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204212"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711243"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 Implementa la funzionalità del menu di scelta rapida di Windows e la estende aggiungendo funzionalità quali menu con barra a comparsa e descrizioni comandi.
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTopFrame*  
- [in] *pPopupMenu*  
+*pTopFrame*<br/>
+[in] [in] *pPopupMenu*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -330,8 +330,8 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- TRUE se il menu di scelta rapida può visualizzare le voci vuote; FALSE in caso contrario.  
+*bMostra*<br/>
+[in] TRUE se il menu di scelta rapida può visualizzare le voci vuote; FALSE in caso contrario.  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
 
@@ -352,8 +352,8 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *ptScreen*  
- Un punto, nelle coordinate dello schermo.  
+*ptScreen*<br/>
+[in] Un punto, nelle coordinate dello schermo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un parametro MENUAREA_TYPE che indica dove il punto è relativo menu di scelta rapida.  
@@ -395,11 +395,11 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pCustPage*  
- Un puntatore a una pagina di personalizzazione.  
+*pCustPage*<br/>
+[in] Un puntatore a una pagina di personalizzazione.  
   
- [in] *lpszTitle*  
- Stringa che contiene la didascalia di menu.  
+*lpszTitle*<br/>
+[in] Stringa che contiene la didascalia di menu.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo consente di allocare le risorse per un `CMFCPopupMenu`. Per creare la voce di menu a comparsa, chiamare [CMFCPopupMenu::Create](#create).  
@@ -418,23 +418,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndParent*  
- Finestra padre per il `CMFCPopupMenu`.  
+*pWndParent*<br/>
+[in] Finestra padre per il `CMFCPopupMenu`.  
   
- [in] *x*  
- La coordinata orizzontale dello schermo per la posizione del menu a comparsa  
+*x*<br/>
+[in] La coordinata orizzontale dello schermo per la posizione del menu a comparsa  
   
- [in] *y*  
- La coordinata verticale dello schermo per la posizione del menu a comparsa.  
+*y*<br/>
+[in] La coordinata verticale dello schermo per la posizione del menu a comparsa.  
   
- [in] *hMenu*  
- Handle per una risorsa di menu.  
+*hMenu*<br/>
+[in] Handle per una risorsa di menu.  
   
- [in] *bloccato*  
- Un parametro booleano che indica se il menu di scelta è personalizzabile. FALSE indica che il menu a comparsa è personalizzabile.  
+*Bloccato*<br/>
+[in] Un parametro booleano che indica se il menu di scelta è personalizzabile. FALSE indica che il menu a comparsa è personalizzabile.  
   
- [in] *bOwnMessage*  
- Un parametro booleano che indica come il framework indirizza i messaggi di menu. Vedere la sezione Osservazioni per altri dettagli.  
+*bOwnMessage*<br/>
+[in] Un parametro booleano che indica come il framework indirizza i messaggi di menu. Vedere la sezione Osservazioni per altri dettagli.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
@@ -458,8 +458,8 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndMain*  
- [in] *uiID*  
+*pWndMain*<br/>
+[in] [in] *uiID*  
  [in] *lpszName*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -487,11 +487,11 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iLogoSize*  
- Le dimensioni del logo, in pixel.  
+*iLogoSize*<br/>
+[in] Le dimensioni del logo, in pixel.  
   
- [in] *nLogoLocation*  
- Tipo di dati enumerato che indica la posizione del logo.  
+*nLogoLocation*<br/>
+[in] Tipo di dati enumerato che indica la posizione del logo.  
   
 ### <a name="remarks"></a>Note  
  Per visualizzare il logo, implementare il metodo [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) nella finestra cornice principale.  
@@ -506,8 +506,8 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare il suono, FALSE in caso contrario.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare il suono, FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Se si abilita il suono, il framework chiama il [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) metodo quando un utente apre un menu a comparsa o seleziona un comando di menu. Per impostazione predefinita, questa funzionalità è abilitata.  
@@ -596,8 +596,8 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bNoSystem*  
- Un parametro booleano che indica se questo metodo controlla il valore globale. FALSE se si desidera che questo metodo per restituire lo stile di animazione per questa istanza di [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).  
+*bNoSystem*<br/>
+[in] Un parametro booleano che indica se questo metodo controlla il valore globale. FALSE se si desidera che questo metodo per restituire lo stile di animazione per questa istanza di [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ### <a name="return-value"></a>Valore restituito  
  Valore enumerato che descrive il tipo di animazione.  
@@ -682,8 +682,8 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice a base zero di una voce di menu.  
+*iIndex*<br/>
+[in] Indice a base zero di una voce di menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a una voce di menu. NULL se l'indice non è valido.  
@@ -849,11 +849,11 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pulsante*  
- Un riferimento alla voce di menu da aggiungere.  
+*Pulsante*<br/>
+[in] Un riferimento alla voce di menu da aggiungere.  
   
- [in] *iInsertAt*  
- Indice a base zero per il nuovo elemento. Se *iInsertAt* è -1, l'elemento viene aggiunto alla fine del menu.  
+*iInsertAt*<br/>
+[in] Indice a base zero per il nuovo elemento. Se *iInsertAt* è -1, l'elemento viene aggiunto alla fine del menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero della posizione in cui è stato inserito l'elemento. -1 se il metodo ha esito negativo.  
@@ -869,8 +869,8 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iInsertAt*  
- Indice a base zero della posizione in cui questo metodo inserisce il separatore.  
+*iInsertAt*<br/>
+[in] Indice a base zero della posizione in cui questo metodo inserisce il separatore.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero della posizione in cui è stato inserito il separatore. -1 se questo metodo ha esito negativo.  
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- [in] *nCode*  
- [in] *pExtra*  
- [in] *pHandlerInfo*  
+*nID*<br/>
+[in] [in] *nCode*  
+*pExtra*<br/>
+[in] [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1137,8 +1137,8 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice a base zero dell'elemento da eliminare.  
+*iIndex*<br/>
+[in] Indice a base zero dell'elemento da eliminare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
@@ -1163,8 +1163,8 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nElapse*  
- La nuova velocità dell'animazione, in millisecondi.  
+*nElapse*<br/>
+[in] La nuova velocità dell'animazione, in millisecondi.  
   
 ### <a name="remarks"></a>Note  
  La velocità dell'animazione è un valore globale e influisce su tutti i menu a comparsa nell'applicazione. Questo valore specifica il tempo necessario per l'animazione per un menu a comparsa terminare.  
@@ -1179,8 +1179,8 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *tipo*  
- Tipo di dati enumerato che specifica il tipo di animazione.  
+*type*<br/>
+[in] Tipo di dati enumerato che specifica il tipo di animazione.  
   
 ### <a name="remarks"></a>Note  
  Visualizzare [CMFCPopupMenu::GetAnimationType](#getanimationtype) per un elenco di valori validi per *tipo*.  
@@ -1205,8 +1205,8 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- L'ID di comando di menu del nuovo comando predefinito.  
+*uiCmd*<br/>
+[in] L'ID di comando di menu del nuovo comando predefinito.  
   
 ### <a name="remarks"></a>Note  
  Il comando predefinito nel menu a comparsa è il comando che viene selezionato quando viene visualizzato il menu a comparsa.  
@@ -1219,8 +1219,8 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bValue*  
- Viene visualizzato Vero se si desidera che il framework per forzare lo stato attivo alla barra dei menu quando un menu a comparsa. FALSE se si desidera che il menu a comparsa per mantenere lo stato attivo.  
+*bValue*<br/>
+[in] Viene visualizzato Vero se si desidera che il framework per forzare lo stato attivo alla barra dei menu quando un menu a comparsa. FALSE se si desidera che il menu a comparsa per mantenere lo stato attivo.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo imposta un flag che è globale per tutti i menu a comparsa nell'applicazione. Per impostazione predefinita, questa funzionalità non è abilitata.  
@@ -1233,8 +1233,8 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bValue*  
- TRUE se si desidera che il framework per disegnare ombreggiature menu, in caso contrario, FALSE.  
+*bValue*<br/>
+[in] TRUE se si desidera che il framework per disegnare ombreggiature menu, in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Quando si chiama questo metodo, imposta un flag globale nell'applicazione. Questo flag ha effetto su tutti i menu a comparsa nell'applicazione.  
@@ -1247,8 +1247,8 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iMaxWidth*  
- La larghezza massima per il menu a comparsa, in pixel.  
+*iMaxWidth*<br/>
+[in] La larghezza massima per il menu a comparsa, in pixel.  
   
 ### <a name="remarks"></a>Note  
  Se il testo associato a un comando di menu non verrà adattato alla larghezza massima, viene troncato e la parte che non rientra viene sostituita da tre punti.  
@@ -1306,8 +1306,8 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bRightAlign*  
- Valore booleano che indica l'allineamento del menu. TRUE indica l'allineamento a destra, FALSE indica l'allineamento a sinistra.  
+*bRightAlign*<br/>
+[in] Valore booleano che indica l'allineamento del menu. TRUE indica l'allineamento a destra, FALSE indica l'allineamento a sinistra.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, tutti i menu a comparsa sono allineati a sinistra.  
@@ -1320,8 +1320,8 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- TRUE se il menu a comparsa notifica relativo frame padre, in caso contrario.  
+*bSet*<br/>
+[in] TRUE se il menu a comparsa notifica relativo frame padre, in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Questa è un'opzione globale per tutti i menu a comparsa in un'applicazione. Se è abilitata, i menu a comparsa invierà un messaggio WM_MENUSELECT al frame padre quando l'utente seleziona un comando.  
@@ -1353,8 +1353,8 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lprectScreen*  
- Rettangolo che specifica l'area da aggiornare, nelle coordinate dello schermo.  
+*lprectScreen*<br/>
+[in] Rettangolo che specifica l'area da aggiornare, nelle coordinate dello schermo.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo è utile quando vengono visualizzati nei menu a comparsa su controlli animati o altre finestre contenenti contenuto dinamico.  
@@ -1367,8 +1367,8 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lprectScreen*  
- Un rettangolo, in coordinate dello schermo, che specifica i limiti dell'area da aggiornare.  
+*lprectScreen*<br/>
+[in] Un rettangolo, in coordinate dello schermo, che specifica i limiti dell'area da aggiornare.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo quando un menu a comparsa presenta un'ombreggiatura si sovrappone a un'immagine animata.  

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894590"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706940"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Specifica opzioni della riga di comando MIDL)
 
@@ -38,7 +38,7 @@ Specifica un file di risposta per le opzioni della riga di comando MIDL
 
 ## <a name="arguments"></a>Argomenti
 
-*file*  
+*file*<br/>
 Il nome del file che contiene [opzioni della riga di comando MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Note
@@ -61,9 +61,9 @@ Il file deve contenere un'opzione della riga di comando MIDL per riga.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
-[Opzioni del linker](../../build/reference/linker-options.md)   
-[/IDLOUT (assegna un nome file di Output MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
-[/IGNOREIDL (non elabora gli attributi in MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
-[/TLBOUT (nome. Al File TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
-[Compilazione di un programma con attributi](../../windows/building-an-attributed-program.md)
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)<br/>
+[/IDLOUT (assegna un nome file di Output MIDL)](../../build/reference/idlout-name-midl-output-files.md)
+[/IGNOREIDL (non elabora gli attributi in MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+[/TLBOUT (nome. Al File TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
+[la creazione di un programma con attributi](../../windows/building-an-attributed-program.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849015"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701389"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Classe CMFCRibbonApplicationButton
 Implementa un pulsante speciale posizionato nell'angolo superiore sinistro della finestra dell'applicazione. Quando si fa clic sul pulsante, questo visualizza un menu che in genere contiene i comuni comandi di **File** come **Apri**, **Salva**ed **Esci**.  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiBmpResID*  
- L'ID risorsa dell'immagine da visualizzare sul pulsante dell'applicazione.  
+*uiBmpResID*<br/>
+[in] L'ID risorsa dell'immagine da visualizzare sul pulsante dell'applicazione.  
   
- [in] *hBmp*  
- Handle per una bitmap da visualizzare sul pulsante dell'applicazione.  
+*hBmp*<br/>
+[in] Handle per una bitmap da visualizzare sul pulsante dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per assegnare una nuova immagine al pulsante della barra multifunzione dell'applicazione dopo aver creato il pulsante. Il pulsante dell'applicazione si trova nell'angolo superiore sinistro della finestra dell'applicazione.  

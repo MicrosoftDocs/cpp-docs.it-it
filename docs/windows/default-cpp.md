@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220420"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699921"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -46,8 +46,8 @@ L'interfaccia predefinita che sarà resa disponibile per gli ambienti di script 
 
 Se non si specifica un'interfaccia predefinita, la prima occorrenza di un'interfaccia non di origine viene usata come predefinita.
 
-*interfaccia2*(facoltativo)  
-L'interfaccia di origine predefinita. È necessario anche specificare questa interfaccia con l'attributo [source](../windows/source-cpp.md) .
+*Interface2*<br/>
+(Facoltativo) L'interfaccia di origine predefinita. È necessario anche specificare questa interfaccia con l'attributo [source](../windows/source-cpp.md) .
 
 Se non si specifica un'interfaccia di origine predefinita, viene usata come predefinita la prima interfaccia di origine.
 

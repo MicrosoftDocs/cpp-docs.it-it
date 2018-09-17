@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_as | Documenti Microsoft
+title: marshal_context::marshal_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27f27b164d7a00e05e8d080a692f97b696776cbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f88d086c76ea6b56f1bb049b886df70ceadbdbb9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136207"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707902"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 Effettua il marshalling su un oggetto dati specifico per convertirlo tra un tipo di dati gestito e un tipo nativo.  
@@ -39,18 +39,18 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `input`  
- Il valore che si desidera effettuare il marshalling di un `To_Type` variabile.  
+*input*<br/>
+[in] Il valore che si desidera effettuare il marshalling in un `To_Type` variabile.  
   
 ## <a name="return-value"></a>Valore restituito  
  Una variabile di tipo `To_Type` che rappresenta il valore convertito di `input`.  
   
 ## <a name="remarks"></a>Note  
- Questa funzione effettua il marshalling di un oggetto dati specifico. Utilizzare questa funzione solo con le conversioni indicate dalla tabella in [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md).  
+ Questa funzione effettua il marshalling di un oggetto dati specifico. Usare questa funzione solo con le conversioni indicate dalla tabella [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md).  
   
- Se si tenta di effettuare il marshalling di una coppia di tipi di dati che non sono supportati, `marshal_as` genererà un errore [l'avviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) in fase di compilazione. Leggere il messaggio fornito con l'errore per ulteriori informazioni. Il `C4996` errore può essere generato per le funzioni più semplicemente deprecate. Due condizioni che generano questo errore stanno tentando di eseguire il marshalling di una coppia di tipi di dati che non sono supportati e stanno tentando di utilizzare `marshal_as` per una conversione che richiede un contesto.  
+ Se si prova a effettuare il marshalling dei tipi di dati che non sono supportati, una coppia `marshal_as` genererà un errore [l'avviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) in fase di compilazione. Legge il messaggio fornito con l'errore per ulteriori informazioni. Il `C4996` errore può essere generato per le funzioni più semplicemente deprecate. Due condizioni che generano questo errore stanno tentando di eseguire il marshalling di una coppia di tipi di dati che non sono supportati e stanno tentando di utilizzare `marshal_as` per una conversione che richiede un contesto.  
   
- La libreria del marshalling è costituito da diversi file di intestazione. Qualsiasi conversione richiede un solo file, ma se è necessario per le altre conversioni, è possibile includere file aggiuntivi. Nella tabella in `Marshaling Overview in C++` è indicato quale file di marshalling deve essere incluso per ogni conversione.  
+ La libreria del marshalling è costituito da diversi file di intestazione. Qualsiasi conversione richiede un solo file, ma è possibile includere file aggiuntivi se è necessario per le altre conversioni. Nella tabella in `Marshaling Overview in C++` è indicato quale file di marshalling deve essere incluso per ogni conversione.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene creato un contesto per il marshalling da un tipo di variabile `System::String` a un tipo di variabile `const char *`. I dati convertiti non saranno validi dopo la riga che elimina il contesto.  

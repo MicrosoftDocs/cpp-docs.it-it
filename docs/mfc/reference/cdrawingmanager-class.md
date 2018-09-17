@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72e37cd8ba46e3ad9e59fa0d585d6a118b7a0038
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196060"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708630"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 Il `CDrawingManager` classe implementa gli algoritmi di disegni complessi.  
@@ -139,8 +139,8 @@ CDrawingManager(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *controller di dominio*  
- Un riferimento a un contesto di dispositivo. Il `CDrawingManager` utilizza questo contesto per il disegno.  
+*dc*<br/>
+[in] Un riferimento a un contesto di dispositivo. Il `CDrawingManager` utilizza questo contesto per il disegno.  
   
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32  
  Crea una bitmap indipendente dalla periferica a 32 bit (DIB) che le applicazioni possono scrivere direttamente.  
@@ -160,8 +160,8 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *dimensioni*|Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) parametro che indica le dimensioni della bitmap.|  
-|[out] *pBits*|Valori di bit un puntatore a un puntatore a dati che riceve il percorso delle DIB.|  
+|*size*|[in] Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) parametro che indica le dimensioni della bitmap.|  
+|*pBits*|[out] Valori di bit un puntatore a un puntatore a dati che riceve il percorso delle DIB.|  
 |*mappa di bit*|Un handle alla bitmap originale|  
 |*clrTransparent*|Un valore RGB che specifica un colore trasparente dell'immagine bitmap originale.|  
   
@@ -183,17 +183,17 @@ void DrawAlpha(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDstDC*  
- Puntatore al contesto di dispositivo per la destinazione.  
+*pDstDC*<br/>
+[in] Puntatore al contesto di dispositivo per la destinazione.  
   
- [in] *rectDst*  
- Il rettangolo di destinazione.  
+*rectDst*<br/>
+[in] Il rettangolo di destinazione.  
   
- [in] *pSrcDC*  
- Puntatore al contesto di dispositivo per l'origine.  
+*pSrcDC*<br/>
+[in] Puntatore al contesto di dispositivo per l'origine.  
   
- [in] *rectSrc*  
- Il rettangolo di origine.  
+*rectSrc*<br/>
+[in] Il rettangolo di origine.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo esegue la fusione alfa per due immagini bitmap. Per altre informazioni sulla fusione alfa, vedere [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) nel SDK di Windows.  
@@ -209,14 +209,14 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Il rettangolo di delimitazione dell'ellisse.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione dell'ellisse.  
   
- [in] *clrFill*  
- Il colore di che questo metodo viene utilizzato per riempire l'ellisse.  
+*clrFill*<br/>
+[in] Il colore di che questo metodo viene utilizzato per riempire l'ellisse.  
   
- [in] *clrLine*  
- Il colore di che questo metodo viene utilizzato come il bordo dell'ellisse.  
+*clrLine*<br/>
+[in] Il colore di che questo metodo viene utilizzato come il bordo dell'ellisse.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo restituisce senza disegnare un'ellisse se dei colori è impostato su -1. Restituisce anche senza disegnare un'ellisse se una dimensione del rettangolo di delimitazione è 0.  
@@ -236,26 +236,26 @@ BOOL DrawGradientRing(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) parametro che specifica il limite per l'anello di sfumatura.  
+*Rect*<br/>
+[in] Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) parametro che specifica il limite per l'anello di sfumatura.  
   
- [in] *colorStart*  
- Primo colore della sfumatura.  
+*colorStart*<br/>
+[in] Primo colore della sfumatura.  
   
- [in] *colorFinish*  
- L'ultimo colore per la sfumatura.  
+*colorFinish*<br/>
+[in] L'ultimo colore per la sfumatura.  
   
- [in] *colorBorder*  
- Colore del bordo.  
+*colorBorder*<br/>
+[in] Colore del bordo.  
   
- [in] *nAngle*  
- Un parametro che specifica l'angolo iniziale di disegno della sfumatura. Questo valore deve essere compreso tra 0 e 360.  
+*nAngle*<br/>
+[in] Un parametro che specifica l'angolo iniziale di disegno della sfumatura. Questo valore deve essere compreso tra 0 e 360.  
   
- [in] *nWidth*  
- La larghezza del bordo per l'anello.  
+*nWidth*<br/>
+[in] La larghezza del bordo per l'anello.  
   
- [in] *clrFace*  
- Il colore all'interno dell'anello.  
+*clrFace*<br/>
+[in] Il colore all'interno dell'anello.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -287,11 +287,11 @@ void DrawLineA(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *x1*|Coordinata x in cui inizia la riga.|  
-|[in] *y1*|Coordinata y in cui inizia la riga.|  
-|[in] *x2*|Coordinata x in cui termina la riga.|  
-|[in] *y2*|Coordinata y in cui termina la riga.|  
-|[in] *clrLine*|Colore della linea.|  
+|*x1*|[in] Coordinata x in cui inizia la riga.|  
+|*y1*|[in] Coordinata y in cui inizia la riga.|  
+|*x2*|[in] Coordinata x in cui termina la riga.|  
+|*y2*|[in] Coordinata y in cui termina la riga.|  
+|*clrLine*|[in] Colore della linea.|  
   
 ### <a name="remarks"></a>Note  
  Questo metodo ha esito negativo se *clrLine* è uguale a -1.  
@@ -307,14 +307,14 @@ void DrawRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- I limiti del rettangolo.  
+*Rect*<br/>
+[in] I limiti del rettangolo.  
   
- [in] *clrFill*  
- Il colore di che questo metodo viene utilizzato per riempire il rettangolo.  
+*clrFill*<br/>
+[in] Il colore di che questo metodo viene utilizzato per riempire il rettangolo.  
   
- [in] *clrLine*  
- Il colore di questo metodo viene utilizzato per il bordo del rettangolo.  
+*clrLine*<br/>
+[in] Il colore di questo metodo viene utilizzato per il bordo del rettangolo.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo restituisce senza disegnare un rettangolo se dei colori è impostato su -1. Restituisce anche se una dimensione del rettangolo è 0.  
@@ -335,29 +335,29 @@ BOOL DrawShadow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Un'area rettangolare all'interno dell'applicazione. Il gestore disegno verrà tracciare un'ombreggiatura sottostante quest'area.  
+*Rect*<br/>
+[in] Un'area rettangolare all'interno dell'applicazione. Il gestore disegno verrà tracciare un'ombreggiatura sottostante quest'area.  
   
- [in] *nDepth*  
- La larghezza e l'altezza dell'ombreggiatura.  
+*nDepth*<br/>
+[in] La larghezza e l'altezza dell'ombreggiatura.  
   
- [in] *iMinBrightness*  
- La luminosità minima dell'ombreggiatura.  
+*iMinBrightness*<br/>
+[in] La luminosità minima dell'ombreggiatura.  
   
- [in] *iMaxBrightness*  
- La luminosità massima dell'ombreggiatura.  
+*iMaxBrightness*<br/>
+[in] La luminosità massima dell'ombreggiatura.  
   
- [in] *pBmpSaveBottom*  
- Puntatore a una bitmap che contiene l'immagine per la parte inferiore dell'ombreggiatura.  
+*pBmpSaveBottom*<br/>
+[in] Puntatore a una bitmap che contiene l'immagine per la parte inferiore dell'ombreggiatura.  
   
- [in] *pBmpSaveRight*  
- Puntatore a una bitmap che contiene l'immagine per l'ombreggiatura che viene disegnata sul lato destro del rettangolo.  
+*pBmpSaveRight*<br/>
+[in] Puntatore a una bitmap che contiene l'immagine per l'ombreggiatura che viene disegnata sul lato destro del rettangolo.  
   
- [in] *clrBase*  
- Colore dell'ombreggiatura.  
+*clrBase*<br/>
+[in] Colore dell'ombreggiatura.  
   
- [in] *bRightShadow*  
- Un parametro booleano che indica come viene disegnata l'ombreggiatura. Se *bRightShadow* viene `TRUE`, `DrawShadow` disegna un'ombreggiatura sul lato destro del rettangolo.  
+*bRightShadow*<br/>
+[in] Un parametro booleano che indica come viene disegnata l'ombreggiatura. Se *bRightShadow* viene `TRUE`, `DrawShadow` disegna un'ombreggiatura sul lato destro del rettangolo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -389,26 +389,26 @@ void Fill4ColorsGradient(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Rettangolo da riempire.  
+*Rect*<br/>
+[in] Rettangolo da riempire.  
   
- [in] *colorStart1*  
- Colore iniziale per la sfumatura di colore prima.  
+*colorStart1*<br/>
+[in] Colore iniziale per la sfumatura di colore prima.  
   
- [in] *colorFinish1*  
- Colore finale della sfumatura di colore prima.  
+*colorFinish1*<br/>
+[in] Colore finale della sfumatura di colore prima.  
   
- [in] *colorStart2*  
- Colore iniziale per la sfumatura di colore della seconda.  
+*colorStart2*<br/>
+[in] Colore iniziale per la sfumatura di colore della seconda.  
   
- [in] *colorFinish2*  
- Colore finale per la sfumatura di colore della seconda.  
+*colorFinish2*<br/>
+[in] Colore finale per la sfumatura di colore della seconda.  
   
- [in] *bHorz*  
- Un parametro booleano che indica se `Fill4ColorsGradient` i colori di una sfumatura orizzontale o verticale. TRUE indica una sfumatura orizzontale.  
+*bHorz*<br/>
+[in] Un parametro booleano che indica se `Fill4ColorsGradient` i colori di una sfumatura orizzontale o verticale. TRUE indica una sfumatura orizzontale.  
   
- [in] *nPercentage*  
- Intero compreso tra 0 e 100. Questo valore indica la percentuale del rettangolo da riempire con sfumatura di colore della prima.  
+*nPercentage*<br/>
+[in] Intero compreso tra 0 e 100. Questo valore indica la percentuale del rettangolo da riempire con sfumatura di colore della prima.  
   
 ### <a name="remarks"></a>Note  
  Quando un rettangolo viene riempito con due sfumature di colore, che sono si trova di sopra di loro o successivo tra loro, in base al valore *bHorz*. Ogni sfumatura di colore viene calcolato in modo indipendente con il metodo [CDrawingManager::FillGradient](#fillgradient).  
@@ -429,23 +429,23 @@ void FillGradient(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- L'area rettangolare da riempire.  
+*Rect*<br/>
+[in] L'area rettangolare da riempire.  
   
- [in] *colorStart*  
- Primo colore della sfumatura.  
+*colorStart*<br/>
+[in] Primo colore della sfumatura.  
   
- [in] *colorFinish*  
- Colore finale della sfumatura.  
+*colorFinish*<br/>
+[in] Colore finale della sfumatura.  
   
- [in] *bHorz*  
- Un parametro booleano che specifica se `FillGradient` deve tracciare una sfumatura orizzontale o verticale.  
+*bHorz*<br/>
+[in] Un parametro booleano che specifica se `FillGradient` deve tracciare una sfumatura orizzontale o verticale.  
   
- [in] *nStartFlatPercentage*  
- La percentuale del rettangolo che `FillGradient` inserisce *colorStart* prima di avviare la sfumatura.  
+*nStartFlatPercentage*<br/>
+[in] La percentuale del rettangolo che `FillGradient` inserisce *colorStart* prima di avviare la sfumatura.  
   
- [in] *nEndFlatPercentage*  
- La percentuale del rettangolo che `FillGradient` inserisce *colorFinish* al termine della sfumatura.  
+*nEndFlatPercentage*<br/>
+[in] La percentuale del rettangolo che `FillGradient` inserisce *colorFinish* al termine della sfumatura.  
   
 ### <a name="example"></a>Esempio  
  L'esempio seguente illustra come usare il `FillGradient` metodo del `CDrawingManager` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
@@ -464,17 +464,17 @@ void FillGradient2 (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- L'area rettangolare da riempire.  
+*Rect*<br/>
+[in] L'area rettangolare da riempire.  
   
- [in] *colorStart*  
- Primo colore della sfumatura.  
+*colorStart*<br/>
+[in] Primo colore della sfumatura.  
   
- [in] *colorFinish*  
- L'ultimo colore della sfumatura.  
+*colorFinish*<br/>
+[in] L'ultimo colore della sfumatura.  
   
- [in] *nAngle*  
- Numero intero compreso tra 0 e 360. Questo parametro specifica la direzione della sfumatura di colore.  
+*nAngle*<br/>
+[in] Numero intero compreso tra 0 e 360. Questo parametro specifica la direzione della sfumatura di colore.  
   
 ### <a name="remarks"></a>Note  
  Uso *nAngle* per specificare la direzione della sfumatura di colore. Quando si specifica la direzione della sfumatura di colore, è inoltre specificare dove viene avviata la sfumatura di colore. Un valore pari a 0 per *nAngle* indica la sfumatura viene avviato dalla parte superiore del rettangolo. Come *nAngle* aumenta, la posizione iniziale per gli spostamenti di sfumatura in senso antiorario in base all'angolo.  
@@ -496,17 +496,17 @@ BOOL GrayRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- L'area rettangolare da riempire.  
+*Rect*<br/>
+[in] L'area rettangolare da riempire.  
   
- [in] *nPercentage*  
- La percentuale di grigio desiderato nel rettangolo.  
+*nPercentage*<br/>
+[in] La percentuale di grigio desiderato nel rettangolo.  
   
- [in] *clrTransparent*  
- Colore trasparente.  
+*clrTransparent*<br/>
+[in] Colore trasparente.  
   
- [in] *clrDisabled*  
- Il colore di questo metodo utilizza per-saturazione eventualmente *nPercentage* è impostato su -1.  
+*clrDisabled*<br/>
+[in] Il colore di questo metodo utilizza per-saturazione eventualmente *nPercentage* è impostato su -1.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.  
@@ -529,20 +529,20 @@ BOOL HighlightRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Un'area rettangolare da evidenziare.  
+*Rect*<br/>
+[in] Un'area rettangolare da evidenziare.  
   
- [in] *nPercentage*  
- Una percentuale che indica la modalità transparent deve essere l'evidenziazione.  
+*nPercentage*<br/>
+[in] Una percentuale che indica la modalità transparent deve essere l'evidenziazione.  
   
- [in] *clrTransparent*  
- Colore trasparente.  
+*clrTransparent*<br/>
+[in] Colore trasparente.  
   
- [in] *nTolerance*  
- Un numero intero compreso tra 0 e 255 che indica la tolleranza di colore.  
+*nTolerance*<br/>
+[in] Un numero intero compreso tra 0 e 255 che indica la tolleranza di colore.  
   
- [in] *clrBlend*  
- Il colore di base per la sfumatura.  
+*clrBlend*<br/>
+[in] Il colore di base per la sfumatura.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
@@ -563,14 +563,14 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *H*  
- Un numero compreso tra 0 e 1 che rappresenta la tonalità del colore.  
+*H*<br/>
+[in] Un numero compreso tra 0 e 1 che rappresenta la tonalità del colore.  
   
- [in] *L*  
- Un numero compreso tra 0 e 1 che indica la luminosità del colore.  
+*L*<br/>
+[in] Un numero compreso tra 0 e 1 che indica la luminosità del colore.  
   
- [in] *S*  
- Un numero compreso tra 0 e 1 che indica la saturazione del colore.  
+*S*<br/>
+[in] Un numero compreso tra 0 e 1 che indica la saturazione del colore.  
   
 ### <a name="return-value"></a>Valore restituito  
  La rappresentazione RGB dei colori HLS forniti.  
@@ -591,14 +591,14 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *H*  
- Un numero compreso tra 0 e 360 che rappresenta la tonalità del colore.  
+*H*<br/>
+[in] Un numero compreso tra 0 e 360 che rappresenta la tonalità del colore.  
   
- [in] *L*  
- Un numero compreso tra 0 e 1 che indica la luminosità del colore.  
+*L*<br/>
+[in] Un numero compreso tra 0 e 1 che indica la luminosità del colore.  
   
- [in] *S*  
- Un numero compreso tra 0 e 1 che indica la saturazione del colore.  
+*S*<br/>
+[in] Un numero compreso tra 0 e 1 che indica la saturazione del colore.  
   
 ### <a name="return-value"></a>Valore restituito  
  La rappresentazione RGB dei colori HLS forniti.  
@@ -623,9 +623,9 @@ static COLORREF __stdcall HSVtoRGB(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *H*|Un numero compreso tra 0 e 360 che indica la tonalità del colore.|  
-|[in] *S*|Un numero compreso tra 0 e 1 che indica la saturazione del colore.|  
-|[in] *V*|Un numero compreso tra 0 e 1 che indica il valore del colore.|  
+|*H*|[in] Un numero compreso tra 0 e 360 che indica la tonalità del colore.|  
+|*S*|[in] Un numero compreso tra 0 e 1 che indica la saturazione del colore.|  
+|*V*|[in] Un numero compreso tra 0 e 1 che indica il valore del colore.|  
   
 ### <a name="return-value"></a>Valore restituito  
  La rappresentazione RGB dei colori HSV forniti.  
@@ -650,23 +650,23 @@ static BYTE __stdcall HueToRGB(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *m1*  
- Vedere la sezione Osservazioni.  
+*M1*<br/>
+[in] Vedere la sezione Osservazioni.  
   
- [in] *m2*  
- Vedere la sezione Osservazioni.  
+*M2*<br/>
+[in] Vedere la sezione Osservazioni.  
   
- [in] *h*  
- Vedere la sezione Osservazioni.  
+*h*<br/>
+[in] Vedere la sezione Osservazioni.  
   
- [in] *rm1*  
- Vedere la sezione Osservazioni.  
+*Rm1*<br/>
+[in] Vedere la sezione Osservazioni.  
   
- [in] *rm2*  
- Vedere la sezione Osservazioni.  
+*rm2*<br/>
+[in] Vedere la sezione Osservazioni.  
   
- [in] *rh*  
- Vedere la sezione Osservazioni.  
+*RH*<br/>
+[in] Vedere la sezione Osservazioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il componente rosso, verde o blu singoli relativo alla tonalità fornito.  
@@ -692,11 +692,11 @@ void MirrorRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Il rettangolo di delimitazione dell'area da invertire.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione dell'area da invertire.  
   
- [in] *bHorz*  
- Un parametro booleano che indica se il rettangolo viene capovolta orizzontalmente o verticalmente.  
+*bHorz*<br/>
+[in] Un parametro booleano che indica se il rettangolo viene capovolta orizzontalmente o verticalmente.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo è possibile passare qualsiasi area del contesto di dispositivo di proprietà di `CDrawingManager` classe. Se *bHorz* è impostata su TRUE, questo metodo consente di capovolgere l'area in orizzontale. In caso contrario, consente di capovolgere l'area in senso verticale.  
@@ -722,23 +722,23 @@ static COLORREF __stdcall PixelAlpha(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *srcPixel*  
- Colore iniziale per il pixel.  
+*srcPixel*<br/>
+[in] Colore iniziale per il pixel.  
   
- [in] *percentuale*  
- Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza. Un valore pari a 100 indica che il colore iniziale è completamente trasparente.  
+*Percentuale*<br/>
+[in] Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza. Un valore pari a 100 indica che il colore iniziale è completamente trasparente.  
   
- [in] *percentR*  
- Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente rossa.  
+*percentR*<br/>
+[in] Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente rossa.  
   
- [in] *percentG*  
- Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente verde.  
+*percentG*<br/>
+[in] Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente verde.  
   
- [in] *percentB*  
- Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente blu.  
+*percentB*<br/>
+[in] Un numero compreso tra 0 e 100 che rappresenta la percentuale di trasparenza per il componente blu.  
   
- [in] *dstPixel*  
- Il colore di base per il pixel.  
+*dstPixel*<br/>
+[in] Il colore di base per il pixel.  
   
 ### <a name="return-value"></a>Valore restituito  
  Colore finale per il pixel semitrasparente.  
@@ -760,17 +760,17 @@ static HBITMAP __stdcall PrepareShadowMask (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nDepth*  
- La larghezza e l'altezza dell'ombreggiatura.  
+*nDepth*<br/>
+[in] La larghezza e l'altezza dell'ombreggiatura.  
   
- [in] *clrBase*  
- Colore dell'ombreggiatura.  
+*clrBase*<br/>
+[in] Colore dell'ombreggiatura.  
   
- [in] *iMinBrightness*  
- La luminosità minima dell'ombreggiatura.  
+*iMinBrightness*<br/>
+[in] La luminosità minima dell'ombreggiatura.  
   
- [in] *iMaxBrightness*  
- La luminosità massima dell'ombreggiatura.  
+*iMaxBrightness*<br/>
+[in] La luminosità massima dell'ombreggiatura.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un handle alla bitmap creata se questo metodo ha esito positivo; in caso contrario NULL.  
@@ -794,10 +794,10 @@ static void __stdcall RGBtoHSL(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *rgb*|Il colore in valori RGB.|  
-|[out] *H*|Puntatore a un valore double in cui il metodo archivia la tonalità del colore.|  
-|[out] *S*|Puntatore a un valore double in cui il metodo archivia la saturazione del colore.|  
-|[out] *L*|Puntatore a un valore double in cui il metodo archivia la luminosità del colore.|  
+|*rgb*|[in] Il colore in valori RGB.|  
+|*H*|[out] Puntatore a un valore double in cui il metodo archivia la tonalità del colore.|  
+|*S*|[out] Puntatore a un valore double in cui il metodo archivia la saturazione del colore.|  
+|*L*|[out] Puntatore a un valore double in cui il metodo archivia la luminosità del colore.|  
   
 ### <a name="remarks"></a>Note  
  Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/p/?linkid=119126).  
@@ -816,17 +816,17 @@ static void __stdcall RGBtoHSV(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rgb*  
- Il colore da convertire in una rappresentazione RGB.  
+*rgb*<br/>
+[in] Il colore da convertire in una rappresentazione RGB.  
   
- [out] *H*  
- Puntatore a un valore double in cui questo metodo consente di memorizzare la tonalità risulta per il colore.  
+*H*<br/>
+[out] Puntatore a un valore double in cui questo metodo consente di memorizzare la tonalità risulta per il colore.  
   
- [out] *S*  
- Puntatore a un valore double in cui questo metodo archivia la saturazione del colore risulta.  
+*S*<br/>
+[out] Puntatore a un valore double in cui questo metodo archivia la saturazione del colore risulta.  
   
- [out] *V*  
- Puntatore a un valore double in cui questo metodo consente di memorizzare il valore risultante per il colore.  
+*V*<br/>
+[out] Puntatore a un valore double in cui questo metodo consente di memorizzare il valore risultante per il colore.  
   
 ### <a name="remarks"></a>Note  
  Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/p/?linkid=119126).  
@@ -849,29 +849,29 @@ static void __stdcall SetAlphaPixel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBits*  
- Puntatore a valori di bit della bitmap.  
+*pBits*<br/>
+[in] Puntatore a valori di bit della bitmap.  
   
- [in] *rect*  
- Un'area rettangolare all'interno dell'applicazione. Il gestore disegno disegna un'ombreggiatura sotto e a destra di quest'area.  
+*Rect*<br/>
+[in] Un'area rettangolare all'interno dell'applicazione. Il gestore disegno disegna un'ombreggiatura sotto e a destra di quest'area.  
   
- [in] *x*  
- La coordinata orizzontale del pixel sul colore.  
+*x*<br/>
+[in] La coordinata orizzontale del pixel sul colore.  
   
- [in] *y*  
- Coordinata verticale del pixel sul colore.  
+*y*<br/>
+[in] Coordinata verticale del pixel sul colore.  
   
- [in] *percentuale*  
- La percentuale di trasparenza.  
+*Percentuale*<br/>
+[in] La percentuale di trasparenza.  
   
- [in] *iShadowSize*  
- La larghezza e l'altezza dell'ombreggiatura.  
+*iShadowSize*<br/>
+[in] La larghezza e l'altezza dell'ombreggiatura.  
   
- [in] *clrBase*  
- Colore dell'ombreggiatura.  
+*clrBase*<br/>
+[in] Colore dell'ombreggiatura.  
   
- [in] *bIsRight*  
- Un parametro booleano che indica quale pixel sul colore. Per altre informazioni, vedere la sezione Osservazioni.  
+*bIsRight*<br/>
+[in] Un parametro booleano che indica quale pixel sul colore. Per altre informazioni, vedere la sezione Osservazioni.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo è un metodo helper che viene usato per il [CDrawingManager::DrawShadow](#drawshadow) (metodo). È consigliabile che se si desidera tracciare un'ombreggiatura, chiamare `CDrawingManager::DrawShadow` invece.  
@@ -896,12 +896,12 @@ static void __stdcall SetPixel(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pBits*|Puntatore a valori di bit della bitmap.|  
-|[in] *cx*|La larghezza totale della bitmap.|  
-|[in] *cy*|L'altezza totale del bitmap.|  
-|[in] *x*|La coordinata x del pixel nella bitmap da modificare.|  
-|[in] *y*|Coordinata y del pixel nella bitmap da modificare.|  
-|[in] *colore*|Il nuovo colore per pixel identificato dalle coordinate specificate.|  
+|*pBits*|[in] Puntatore a valori di bit della bitmap.|  
+|*CX*|[in] La larghezza totale della bitmap.|  
+|*CY*|[in] L'altezza totale del bitmap.|  
+|*x*|[in] La coordinata x del pixel nella bitmap da modificare.|  
+|*y*|[in] Coordinata y del pixel nella bitmap da modificare.|  
+|*Colore*|[in] Il nuovo colore per pixel identificato dalle coordinate specificate.|  
   
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors  
  Combina due colori in base a un rapporto ponderato.  
@@ -920,11 +920,11 @@ static COLORREF __stdcall SmartMixColors(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *color1*|Il primo colore da combinare.|  
-|[in] *color2*|Il secondo colore da combinare.|  
-|[in] *dblLumRatio*|Il rapporto per la luminosità del nuovo colore. `SmartMixColors` Moltiplica la luminosità del colore misto per questo rapporto prima di determinare il colore finale.|  
-|[in] *k1*|Il rapporto ponderato per il primo colore.|  
-|[in] *k2*|Il rapporto ponderato per il secondo colore.|  
+|*color1*|[in] Il primo colore da combinare.|  
+|*color2*|[in] Il secondo colore da combinare.|  
+|*dblLumRatio*|[in] Il rapporto per la luminosità del nuovo colore. `SmartMixColors` Moltiplica la luminosità del colore misto per questo rapporto prima di determinare il colore finale.|  
+|*K1*|[in] Il rapporto ponderato per il primo colore.|  
+|*K2*|[in] Il rapporto ponderato per il secondo colore.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto color che rappresenta una combinazione di Media ponderata dei colori specificati.  

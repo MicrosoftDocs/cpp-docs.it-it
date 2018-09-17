@@ -1,5 +1,5 @@
 ---
-title: -TLBID (specifica l'ID di risorsa per la libreria dei tipi) | Documenti Microsoft
+title: -TLBID (specifica l'ID risorsa per la libreria dei tipi) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,43 +22,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acea8de3f656da54a0697dc5b980dd4913054a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e34e4d27c374fddd7710431e3a09f6a9ccfc802d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375165"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701314"
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (Specifica l'ID di risorsa per una libreria dei tipi)
-```  
-/TLBID:id  
-```  
-  
-## <a name="remarks"></a>Note  
- dove:  
-  
- `id`  
- Un valore specificato dall'utente per una libreria dei tipi creata nel linker. Esegue l'override dell'ID di risorse predefinito di 1.  
-  
-## <a name="remarks"></a>Note  
- Quando si compila un programma che utilizza gli attributi, il linker creerà una libreria dei tipi. Il linker verrà assegnato un ID di risorsa 1 alla libreria dei tipi.  
-  
- Se questo ID di risorsa è in conflitto con una delle risorse esistenti, è possibile specificare un altro ID con /TLBID. L'intervallo di valori che è possibile passare a `id` è compreso tra 1 e 65535.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic su di **Linker** cartella.  
-  
-3.  Fare clic su di **IDL incorporato** pagina delle proprietà.  
-  
-4.  Modificare il **ID risorsa della libreria dei tipi** proprietà.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
-  
-1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+```
+/TLBID:id
+```
+
+## <a name="arguments"></a>Argomenti
+
+*ID*<br/>
+Un valore specificato dall'utente per una libreria dei tipi creata dal linker. Viene eseguito l'override dell'ID di risorse predefinito di 1.
+
+## <a name="remarks"></a>Note
+
+Quando si compila un programma che usa gli attributi, il linker creerà una libreria dei tipi. Il linker assegnerà un ID di risorsa 1 alla libreria dei tipi.
+
+Se questo ID risorsa è in conflitto con una delle risorse esistenti, è possibile specificare un altro ID con /TLBID. L'intervallo di valori che è possibile passare a `id` è compreso tra 1 e 65535.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+
+1. Scegliere il **Linker** cartella.
+
+1. Scegliere il **IDL incorporato** pagina delle proprietà.
+
+1. Modificare il **ID risorsa della libreria dei tipi** proprietà.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
+
+1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

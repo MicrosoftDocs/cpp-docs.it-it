@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9cc4c44807a40425d4531c747526148837e0a25c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540629"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711165"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 **Sezione specifica Microsoft**  
@@ -52,8 +52,8 @@ unsigned __int64 __readgsqword(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Offset`  
- L'offset dall'inizio del `GS` da cui leggere.  
+*Offset*<br/>
+[in] L'offset dall'inizio del `GS` da cui leggere.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il contenuto della memoria del byte, word, parola doppia oppure parola quadrupla (come indicato dal nome della funzione chiamata) in corrispondenza della posizione `GS:[Offset]`.  

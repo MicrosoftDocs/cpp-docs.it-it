@@ -1,5 +1,5 @@
 ---
-title: -FD (ricompilazione minima IDE) | Documenti Microsoft
+title: -FD (ricompilazione minima IDE) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18e31955b131e4ca22d23013565e53f83493275d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74fb35ec25bed808e2165498c00b65723aba5bac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373400"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702442"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Ricompilazione minima IDE)
-**/FD** non è esposta per gli utenti tranne il [riga di comando](../../ide/command-line-property-pages.md) pagina delle proprietà di un progetto C++ **pagine delle proprietà** della finestra di dialogo se e solo se [/Gm (Abilita ricompilazione minima)](../../build/reference/gm-enable-minimal-rebuild.md) non è stata selezionata. **/FD** non ha alcun effetto diverso dall'ambiente di sviluppo. **/FD** non è esposta nell'output del **cl /?**.  
-  
- Se non si abilita **/Gm** nell'ambiente di sviluppo, **/FD** verrà utilizzato. **/FD** assicura che il file con estensione IDB disponga di sufficienti informazioni di dipendenza. **/FD** viene utilizzata solo dall'ambiente di sviluppo, e non deve essere utilizzata dalla riga di comando o uno script di compilazione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [File di output (/ F) opzioni](../../build/reference/output-file-f-options.md)   
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+**/FD** non è esposta agli utenti solo nella [della riga di comando](../../ide/command-line-property-pages.md) pagina delle proprietà di un progetto C++ **pagine delle proprietà** della finestra di dialogo se e solo se [/Gm (Abilita ricompilazione minima)](../../build/reference/gm-enable-minimal-rebuild.md) non è stata selezionata. **/FD** non ha alcun effetto diverso dall'ambiente di sviluppo. **/FD** non viene esposto nell'output di **cl /?**.
+
+Se non si abilita **/Gm** nell'ambiente di sviluppo **/FD** verrà utilizzato. **/FD** garantisce che il file con estensione IDB disponga di sufficienti informazioni sulle dipendenze. **/FD** viene usato solo dall'ambiente di sviluppo, e non deve essere usato dalla riga di comando o uno script di compilazione.
+
+## <a name="see-also"></a>Vedere anche
+
+[File di output (/ F) le opzioni](../../build/reference/output-file-f-options.md)
+[opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

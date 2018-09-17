@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704046"
 ---
 # <a name="cmfckeymapdialog-class"></a>Classe CMFCKeyMapDialog
 Il `CMFCKeyMapDialog` classe supporta un controllo che esegue il mapping di comandi ai tasti sulla tastiera.  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndParentFrame*  
- Un puntatore alla finestra padre del `CMFCKeyMapDialog` oggetto.  
+*pWndParentFrame*<br/>
+[in] Un puntatore alla finestra padre del `CMFCKeyMapDialog` oggetto.  
   
- [in] *bEnablePrint*  
- TRUE se l'elenco di tasti di scelta rapida può essere stampato; in caso contrario, FALSE. Il valore predefinito è FALSE.  
+*bEnablePrint*<br/>
+[in] TRUE se l'elenco di tasti di scelta rapida può essere stampato; in caso contrario, FALSE. Il valore predefinito è FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nItem*  
- Indice a base zero di un elemento nell'elenco interno di mapping di chiavi.  
+*nItem*<br/>
+[in] Indice a base zero di un elemento nell'elenco interno di mapping di chiavi.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CString` oggetto che contiene il testo formattato dell'elemento.  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- Un ID di comando.  
+*uiCmdID*<br/>
+[in] Un ID di comando.  
   
 ### <a name="return-value"></a>Valore restituito  
  Delimitato da punto e virgola (';') elenco dei tasti di scelta rapida associato con il comando specificato.  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Un puntatore a un pulsante della barra degli strumenti che consente di eseguire il mapping di una combinazione di tasti della tastiera a un nome di comando e una descrizione. L'elemento della mappa di chiavi viene archiviato in un controllo elenco interno.  
+*pButton*<br/>
+[in] Un puntatore a un pulsante della barra degli strumenti che consente di eseguire il mapping di una combinazione di tasti della tastiera a un nome di comando e una descrizione. L'elemento della mappa di chiavi viene archiviato in un controllo elenco interno.  
   
- [in] *nItem*  
- Indice in base zero che specifica dove inserire il nuovo elemento della mappa di chiavi nel controllo elenco interno.  
+*nItem*<br/>
+[in] Indice in base zero che specifica dove inserire il nuovo elemento della mappa di chiavi nel controllo elenco interno.  
   
 ### <a name="remarks"></a>Note  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *controller di dominio*  
- Il contesto di dispositivo per la stampante.  
+*dc*<br/>
+[in] Il contesto di dispositivo per la stampante.  
   
- [in] *nPage*  
- Il numero di pagina da stampare.  
+*nPage*<br/>
+[in] Il numero di pagina da stampare.  
   
- [in] *cx*  
- L'offset orizzontale dell'intestazione, in pixel.  
+*CX*<br/>
+[in] L'offset orizzontale dell'intestazione, in pixel.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se l'operazione riesce, l'altezza del testo stampato. Per altre informazioni, vedere la sezione di valore restituito di [CDC](../../mfc/reference/cdc-class.md#drawtext).  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *controller di dominio*  
- Il contesto di dispositivo della stampante.  
+*dc*<br/>
+[in] Il contesto di dispositivo della stampante.  
   
- [in] *nItem*  
- Indice a base zero dell'elemento da stampare.  
+*nItem*<br/>
+[in] Indice a base zero dell'elemento da stampare.  
   
- [in] *y*  
- L'offset verticale tra la parte superiore della pagina e la posizione dell'elemento.  
+*y*<br/>
+[in] L'offset verticale tra la parte superiore della pagina e la posizione dell'elemento.  
   
- [in] *cx*  
- L'offset orizzontale tra sinistra della pagina e la posizione dell'elemento.  
+*CX*<br/>
+[in] L'offset orizzontale tra sinistra della pagina e la posizione dell'elemento.  
   
- [in] *bCalcHeight*  
- TRUE per calcolare l'altezza ottimo per l'elemento di stampa. FALSE per l'elemento stampa verrà troncato in modo che quest'ultima rientri lo spazio predefinito.  
+*bCalcHeight*<br/>
+[in] TRUE per calcolare l'altezza ottimo per l'elemento di stampa. FALSE per l'elemento stampa verrà troncato in modo che quest'ultima rientri lo spazio predefinito.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'altezza dell'elemento stampata.  

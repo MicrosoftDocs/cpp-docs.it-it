@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3e9c9e5122e4bef7007a767fb3225483984e11d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338399"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711685"
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe CMFCCaptionButton
 Il `CMFCCaptionButton` classe implementa un pulsante che viene visualizzato nella barra del titolo per un riquadro ancorato o una finestra con mini-cornice. In genere, il framework crea automaticamente pulsanti della barra del titolo.  
@@ -106,11 +106,11 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nHit*  
- Il comando associato al pulsante.  
+*nHit*<br/>
+[in] Il comando associato al pulsante.  
   
- [in] *bLeftAlign*  
- Specifica se il pulsante è allineato a sinistra.  
+*bLeftAlign*<br/>
+[in] Specifica se il pulsante è allineato a sinistra.  
   
  Nella tabella seguente sono elencati i valori possibili per il *nHit* parametro.  
   
@@ -161,11 +161,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bHorz*  
- TRUE per ID; di immagini freccia sinistra o destra FALSE per verso l'alto o verso il basso gli ID immagine della freccia.  
+*bHorz*<br/>
+[in] TRUE per ID; di immagini freccia sinistra o destra FALSE per verso l'alto o verso il basso gli ID immagine della freccia.  
   
- [in] *bMaximized*  
- TRUE per un ID di immagine di ingrandimento. FALSE per un ID di immagine Riduci a icona.  
+*bMaximized*<br/>
+[in] TRUE per un ID di immagine di ingrandimento. FALSE per un ID di immagine Riduci a icona.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'ID immagine.  
@@ -221,11 +221,11 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *ptTo*  
- Nuova posizione.  
+*ptTo*<br/>
+[in] Nuova posizione.  
   
- [in] *bHide*  
- Indica se mostrare il pulsante.  
+*bHide*<br/>
+[in] Indica se mostrare il pulsante.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  Disegna il pulsante della didascalia.  
@@ -240,20 +240,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per il pulsante.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per il pulsante.  
   
- [in] *bActive*  
- Indica se disegnare un'immagine del pulsante attivo.  
+*bActive*<br/>
+[in] Indica se disegnare un'immagine del pulsante attivo.  
   
- [in] *bHorz*  
- Riservato per uso in una classe derivata.  
+*bHorz*<br/>
+[in] Riservato per uso in una classe derivata.  
   
- [in] *bMaximized*  
- Indica se disegnare un'immagine del pulsante ingrandita.  
+*bMaximized*<br/>
+[in] Indica se disegnare un'immagine del pulsante ingrandita.  
   
- [in] *bDisattivato*  
- Indica se disegnare un'immagine del pulsante abilitata.  
+*bDisattivato*<br/>
+[in] Indica se disegnare un'immagine del pulsante abilitata.  
   
 ### <a name="remarks"></a>Note  
  Il *bMaximized* parametro viene usato quando il pulsante è un Ingrandisci o pulsante Riduci a icona.  
@@ -266,8 +266,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- TRUE per altezza della barra del titolo mini; FALSE per altezza della barra del titolo predefinito.  
+*bSet*<br/>
+[in] TRUE per altezza della barra del titolo mini; FALSE per altezza della barra del titolo predefinito.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

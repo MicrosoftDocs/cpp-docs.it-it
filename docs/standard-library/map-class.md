@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2eb6baf664c2cac7bfc1ed2c95a5fbd204d289b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686799"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703924"
 ---
 # <a name="map-class"></a>Classe map
 
@@ -124,18 +124,18 @@ class map;
 ### <a name="parameters"></a>Parametri
 
 *Key*<br/>
- Tipo di dati relativo alle chiavi da archiviare nella mappa.
+Tipo di dati relativo alle chiavi da archiviare nella mappa.
 
 *Type*<br/>
- Tipo di dati relativo agli elementi da archiviare nella mappa.
+Tipo di dati relativo agli elementi da archiviare nella mappa.
 
 *Tratti*<br/>
- Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nella mappa. Questo argomento è facoltativo e il predicato binario `less<Key>` rappresenta il valore predefinito.
+Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nella mappa. Questo argomento è facoltativo e il predicato binario `less<Key>` rappresenta il valore predefinito.
 
 In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato std::less<> che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).
 
 *Allocatore*<br/>
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione della mappa e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair<const Key, Type> >`.
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione della mappa e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Note
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore chiave degli elementi per cui trovare un corrispondenza nella mappa.
+Valore chiave degli elementi per cui trovare un corrispondenza nella mappa.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1041,7 +1041,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
+Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1128,16 +1128,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametri
 
 *Where*<br/>
- Posizione dell'elemento che deve essere rimosso.
+Posizione dell'elemento che deve essere rimosso.
 
 *Primo*<br/>
- Posizione del primo elemento che deve essere rimosso.
+Posizione del primo elemento che deve essere rimosso.
 
 *ultimo*<br/>
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
+Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
 *Key*<br/>
- Valore della chiave dell'elemento che deve essere rimosso.
+Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1240,7 +1240,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nella mappa in cui eseguire la ricerca.
+Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nella mappa in cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1702,7 +1702,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
+Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2492,7 +2492,7 @@ void swap(
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
- Argomento di tipo map che fornisce gli elementi da scambiare con l'oggetto map di destinazione.
+Argomento di tipo map che fornisce gli elementi da scambiare con l'oggetto map di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -2563,7 +2563,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore della chiave dell'argomento per cui trovare una corrispondenza con il valore della chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
+Valore della chiave dell'argomento per cui trovare una corrispondenza con il valore della chiave di ordinamento di un elemento presente nell'oggetto map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

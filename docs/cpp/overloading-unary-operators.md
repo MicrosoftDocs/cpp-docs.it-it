@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54529bed25fc60815f80ea8660bcf5786cb2887c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700682"
 ---
 # <a name="overloading-unary-operators"></a>Overload degli operatori unari
 Di seguito sono elencati gli operatori unari di cui è possibile eseguire l'overload:  
@@ -55,15 +55,15 @@ Di seguito sono elencati gli operatori unari di cui è possibile eseguire l'over
   
  Le regole seguenti valgono per tutti gli altri operatori unari. Per dichiarare una funzione di un operatore unario come membro non statico, è necessario dichiararla nel seguente formato:  
   
- `ret-type operator` `op` `()`  
+> *RET-type* **operator** *op* **)**  
   
- dove `ret-type` è il tipo restituito e `op` è uno degli operatori elencati nella tabella precedente.  
+ in cui *ret-type* è il tipo restituito e *op* è uno degli operatori elencati nella tabella precedente.  
   
  Per dichiarare una funzione di un operatore unario come funzione globale, è necessario dichiararla nel seguente formato:  
   
- `ret-type operator` `op` (`arg` )  
+> *RET-type* **operator** *op* **(** *arg* **)**  
   
- dove `ret-type` e `op` vengono descritti per le funzioni dell'operatore membro e `arg` è un argomento di tipo classe su cui intervenire.  
+ in cui *ret-type* e *op* vengono descritti per le funzioni dell'operatore membro e il *arg* è un argomento di tipo classe su cui operare.  
   
 > [!NOTE]
 >  Non esiste alcun limite relativamente ai tipi restituiti degli operatori unari. Può ad esempio risultare utile che l'operatore logico NOT (`!`) restituisca un valore integrale, sebbene non sia imposto.  

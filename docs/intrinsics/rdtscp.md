@@ -18,14 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3702dcafbc93e34852d5d8fd4a0f1d3c222ea1a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538313"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706953"
 ---
 # <a name="rdtscp"></a>__rdtscp
+
 **Sezione specifica Microsoft**  
   
  Genera il `rdtscp` scrive un'istruzione `TSC_AUX[31:0`] in memoria e restituisce i 64 bit Time Stamp Counter (`TSC)` risultato.  
@@ -39,8 +40,8 @@ unsigned __int64 __rdtscp(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [out] `Aux`  
- Puntatore a un percorso che conterrà il contenuto del registro specifiche del computer `TSC_AUX[31:0]`.  
+*AUX*<br/>
+[out] Puntatore a un percorso che conterrà il contenuto del registro specifiche del computer `TSC_AUX[31:0]`.  
   
 ## <a name="return-value"></a>Valore restituito  
  Conteggio dei tick un intero senza segno a 64 bit.  
@@ -84,7 +85,8 @@ TSC_AUX was 0
 ```  
   
 **Fine sezione specifica Microsoft**  
- Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
+
+Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
   
 ## <a name="see-also"></a>Vedere anche  
  [__rdtsc](../intrinsics/rdtsc.md)   

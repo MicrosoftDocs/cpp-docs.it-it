@@ -1,5 +1,5 @@
 ---
-title: Puntatori a funzione | Documenti Microsoft
+title: I puntatori a funzione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57c61dc8599ece5020e854b045f9634c1d732a6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96bca27f56122f677eb790e4fbc9140a27b01668
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367147"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703469"
 ---
 # <a name="function-pointers"></a>Puntatori a funzione
-Puntatori a funzione sono semplicemente i puntatori all'etichetta della rispettiva funzione. Non esistono alcuna tabella dei requisiti il sommario per puntatori a funzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Convenzione di chiamata](../build/calling-convention.md)
+
+I puntatori a funzione sono semplicemente puntatori all'etichetta della rispettiva funzione. Non esistono alcuna tabella dei requisiti di contenuto (TOC) per puntatori a funzione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Convenzione di chiamata](../build/calling-convention.md)

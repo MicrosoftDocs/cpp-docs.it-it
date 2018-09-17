@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1435d5fc286349efb2d44eeba65c3ee2231d111f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703898"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementa un riquadro che può essere ancorato in un sito di ancoraggio o incluso in un riquadro a schede.  
@@ -332,14 +332,14 @@ virtual CDockablePane* AttachToTabWnd(
  [in] [out] *pTabControlBarAttachTo*  
  Specifica il riquadro di destinazione che connette il riquadro corrente. Il riquadro di destinazione deve essere un riquadro ancorato.  
   
- [in] *dockMethod*  
- Specifica il metodo di ancoraggio.  
+*dockMethod*<br/>
+[in] Specifica il metodo di ancoraggio.  
   
- [in] *bSetActive*  
- TRUE per attivare il riquadro a schede dopo l'operazione di collegamento. in caso contrario, FALSE.  
+*bSetActive*<br/>
+[in] TRUE per attivare il riquadro a schede dopo l'operazione di collegamento. in caso contrario, FALSE.  
   
- [out] *ppTabbedControlBar*  
- Contiene il riquadro a schede risultante dall'operazione di collegamento.  
+*ppTabbedControlBar*<br/>
+[out] Contiene il riquadro a schede risultante dall'operazione di collegamento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al riquadro corrente, se non è un riquadro a schede. in caso contrario un puntatore al riquadro a schede risultante dall'operazione di collegamento. Il valore restituito è NULL se non è possibile collegare il riquadro corrente o se si verifica un errore.  
@@ -375,11 +375,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bStretch*  
- Non usato.  
+*bStretch*<br/>
+[in] Non utilizzato.  
   
- [in] *bHorz*  
- Non usato.  
+*bHorz*<br/>
+[in] Non utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CSize` oggetto che contiene le dimensioni del rettangolo di riquadro.  
@@ -392,8 +392,8 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMiniFrame*  
- Puntatore a un oggetto `CPaneFrameWnd`.  
+*pMiniFrame*<br/>
+[in] Puntatore a un `CPaneFrameWnd` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se *pMiniFrame* può essere ancorata al riquadro; in caso contrario, FALSE.  
@@ -406,8 +406,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Specifica il riquadro per ancorare il riquadro corrente.  
+*pBar*<br/>
+[in] Specifica il riquadro per ancorare il riquadro corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro specificato può essere ancorato a questo riquadro. in caso contrario, FALSE.  
@@ -469,8 +469,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bActiveTabOnly*  
- Quando si converte un `CTabbedPane`, specificare TRUE per convertire solo la scheda attiva. Specificare FALSE per convertire tutte le schede nel riquadro.  
+*bActiveTabOnly*<br/>
+[in] Quando si converte un `CTabbedPane`, specificare TRUE per convertire solo la scheda attiva. Specificare FALSE per convertire tutte le schede nel riquadro.  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
  Determina se il riquadro ancorato è nascosto (noto anche come modalità Nascondi automaticamente).  
@@ -495,8 +495,8 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bDirection*  
- TRUE se il riquadro è visualizzato; FALSO se il riquadro è nascosto.  
+*bDirection*<br/>
+[in] TRUE se il riquadro è visualizzato; FALSO se il riquadro è nascosto.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se viene soddisfatta la condizione di interruzione. in caso contrario, FALSE.  
@@ -514,8 +514,8 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pOrgBar*  
- Un puntatore a un riquadro ancorato.  
+*pOrgBar*<br/>
+[in] Un puntatore a un riquadro ancorato.  
   
 ### <a name="remarks"></a>Note  
  `CDockablePane::CopyState` lo stato di copia *pOrgBar* nel riquadro corrente chiamando i metodi seguenti:  
@@ -558,38 +558,38 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszCaption*  
- Specifica il nome della finestra.  
+*lpszCaption*<br/>
+[in] Specifica il nome della finestra.  
   
  [in] [out] *pParentWnd*  
  Specifica la finestra padre.  
   
- [in] *rect*  
- Specifica le dimensioni e posizione della finestra, nelle coordinate del client *pParentWnd*.  
+*Rect*<br/>
+[in] Specifica le dimensioni e posizione della finestra, nelle coordinate del client *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE per creare il riquadro con una didascalia; in caso contrario, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE per creare il riquadro con una didascalia; in caso contrario, FALSE.  
   
- [in] *nID*  
- Specifica l'ID della finestra figlio. Questo valore deve essere univoco se si desidera salvare lo stato di ancoraggio per questo riquadro ancorato.  
+*nID*<br/>
+[in] Specifica l'ID della finestra figlio. Questo valore deve essere univoco se si desidera salvare lo stato di ancoraggio per questo riquadro ancorato.  
   
- [in] *dwStyle*  
- Specifica gli attributi di stile di finestra.  
+*dwStyle*<br/>
+[in] Specifica gli attributi di stile di finestra.  
   
- [in] *dwTabbedStyle*  
- Specifica lo stile di una finestra a schede che viene creato quando l'utente trascina un riquadro sulla barra del titolo di questo riquadro a schede.  
+*dwTabbedStyle*<br/>
+[in] Specifica lo stile di una finestra a schede che viene creato quando l'utente trascina un riquadro sulla barra del titolo di questo riquadro a schede.  
   
- [in] *dwControlBarStyle*  
- Specifica gli attributi di stile aggiuntive.  
+*dwControlBarStyle*<br/>
+[in] Specifica gli attributi di stile aggiuntive.  
   
  [in] [out] *pContext*  
  Specifica il contesto di creazione della finestra.  
   
- [in] *lpszWindowName*  
- Specifica il nome della finestra.  
+*lpszWindowName*<br/>
+[in] Specifica il nome della finestra.  
   
- [in] *sizeDefault*  
- Specifica le dimensioni della finestra.  
+*sizeDefault*<br/>
+[in] Specifica le dimensioni della finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è stato creato il riquadro ancorato; in caso contrario, FALSE.  
@@ -612,14 +612,14 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwAlignment*  
- Specifica il lato del frame principale a cui il riquadro viene ancorato. Se *dwAlignment* contiene il flag CBRS_ALIGN_LEFT o CBRS_ALIGN_RIGHT, questo metodo crea un parametro vertical (`CPaneDivider::SS_VERT`) divisore; in caso contrario, questo metodo crea un oggetto orizzontale (`CPaneDivider::SS_HORZ`) divisore.  
+*dwAlignment*<br/>
+[in] Specifica il lato del frame principale a cui il riquadro viene ancorato. Se *dwAlignment* contiene il flag CBRS_ALIGN_LEFT o CBRS_ALIGN_RIGHT, questo metodo crea un parametro vertical (`CPaneDivider::SS_VERT`) divisore; in caso contrario, questo metodo crea un oggetto orizzontale (`CPaneDivider::SS_HORZ`) divisore.  
   
- [in] *pParent*  
- Puntatore al frame padre.  
+*pParent*<br/>
+[in] Puntatore al frame padre.  
   
- [in] *pSliderRTC*  
- Non usato.  
+*pSliderRTC*<br/>
+[in] Non utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce un puntatore per il divisore appena creata o NULL se non è possibile creare divisore.  
@@ -652,32 +652,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwStyleEx*  
- Specifica gli attributi di stile esteso per la nuova finestra.  
+*dwStyleEx*<br/>
+[in] Specifica gli attributi di stile esteso per la nuova finestra.  
   
- [in] *lpszCaption*  
- Specifica il nome della finestra.  
+*lpszCaption*<br/>
+[in] Specifica il nome della finestra.  
   
  [in] [out] *pParentWnd*  
  Specifica la finestra padre.  
   
- [in] *rect*  
- Specifica le dimensioni e posizione della finestra, nelle coordinate del client *pParentWnd*.  
+*Rect*<br/>
+[in] Specifica le dimensioni e posizione della finestra, nelle coordinate del client *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE per creare il riquadro con una didascalia; in caso contrario, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE per creare il riquadro con una didascalia; in caso contrario, FALSE.  
   
- [in] *nID*  
- Specifica l'ID della finestra figlio. Questo valore deve essere univoco se si desidera salvare lo stato di ancoraggio per questo riquadro ancorato.  
+*nID*<br/>
+[in] Specifica l'ID della finestra figlio. Questo valore deve essere univoco se si desidera salvare lo stato di ancoraggio per questo riquadro ancorato.  
   
- [in] *dwStyle*  
- Specifica gli attributi di stile di finestra.  
+*dwStyle*<br/>
+[in] Specifica gli attributi di stile di finestra.  
   
- [in] *dwTabbedStyle*  
- Specifica lo stile di una finestra a schede che viene creato quando l'utente trascina un riquadro sulla barra del titolo di questo riquadro a schede.  
+*dwTabbedStyle*<br/>
+[in] Specifica lo stile di una finestra a schede che viene creato quando l'utente trascina un riquadro sulla barra del titolo di questo riquadro a schede.  
   
- [in] *dwControlBarStyle*  
- Specifica gli attributi di stile aggiuntive.  
+*dwControlBarStyle*<br/>
+[in] Specifica gli attributi di stile aggiuntive.  
   
  [in] [out] *pContext*  
  Specifica il contesto di creazione della finestra.  
@@ -720,14 +720,14 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *barContainerManager*  
- Un riferimento al gestore del contenitore del contenitore in cui è ancorato.  
+*barContainerManager*<br/>
+[in] Un riferimento al gestore del contenitore del contenitore in cui è ancorato.  
   
- [in] *dwAlignment*  
- DWORD che specifica il lato del riquadro in cui è ancorato al contenitore.  
+*dwAlignment*<br/>
+[in] DWORD che specifica il lato del riquadro in cui è ancorato al contenitore.  
   
- [in] *dockMethod*  
- Non usato.  
+*dockMethod*<br/>
+[in] Non utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il contenitore è stato ancorato correttamente per il riquadro attività. in caso contrario, FALSE.  
@@ -750,8 +750,8 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bWasDocked*  
- Quando il metodo termina, questo valore contiene TRUE se il riquadro è stato correttamente ancorato; in caso contrario, contiene FALSE.  
+*bWasDocked*<br/>
+[in] Quando il metodo termina, questo valore contiene TRUE se il riquadro è stato correttamente ancorato; in caso contrario, contiene FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il riquadro è stato ancorato di una finestra a schede o se una finestra a schede è stata creata come risultato di ancoraggio, questo metodo restituisce un puntatore alla finestra a schede. Se il riquadro è stato in caso contrario, è stata ancorata, questo metodo restituisce il **ciò** puntatore. Se l'ancoraggio non è riuscita, questo metodo restituisce NULL.  
@@ -783,11 +783,11 @@ virtual BOOL DockToWindow(
  [in] [out] *pTargetWindow*  
  Specifica il riquadro ancorato per ancorare il riquadro.  
   
- [in] *dwAlignment*  
- Specifica l'allineamento di ancoraggio del riquadro. Potrebbe essere uno dei CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM o CBRS_ALIGN_ANY. (Definito in AFXRES. h).  
+*dwAlignment*<br/>
+[in] Specifica l'allineamento di ancoraggio del riquadro. Potrebbe essere uno dei CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM o CBRS_ALIGN_ANY. (Definito in AFXRES. h).  
   
- [in] *lpRect*  
- Specifica il rettangolo di ancoraggio del riquadro.  
+*lpRect*<br/>
+[in] Specifica il rettangolo di ancoraggio del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro è stato ancorato correttamente. in caso contrario, FALSE.  
@@ -805,11 +805,11 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Rappresenta il contesto di dispositivo usato per il disegno.  
+*pDC*<br/>
+[in] Rappresenta il contesto di dispositivo usato per il disegno.  
   
- [in] *rectCaption*  
- Specifica il rettangolo di delimitazione della didascalia del riquadro.  
+*rectCaption*<br/>
+[in] Specifica il rettangolo di delimitazione della didascalia del riquadro.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo per disegnare la didascalia di un riquadro ancorata.  
@@ -824,8 +824,8 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare la funzione Nascondi automaticamente tutte le funzionalità per il riquadro ancorato. in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare la funzione Nascondi automaticamente tutte le funzionalità per il riquadro ancorato. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Quando un utente tiene premuto il **Ctrl** chiave e fa clic sul pulsante Aggiungi per passare un riquadro alla modalità Nascondi automaticamente, tutti gli altri riquadri nello stesso contenitore si invertono anche alla modalità Nascondi automaticamente.  
@@ -840,8 +840,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare la didascalia; in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare la didascalia; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Quando il framework crea riquadri ancorabili, non hanno lo stile della finestra WS_STYLE, anche se specificato. Ciò significa che la didascalia del riquadro è un'area non client controllata dal framework, ma quest'area è diversa dalla didascalia della finestra standard.  
@@ -908,11 +908,11 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pt*  
- La posizione del puntatore in coordinate dello schermo.  
+*pt*<br/>
+[in] La posizione del puntatore in coordinate dello schermo.  
   
- [in] *nSensitivity*  
- Distanza, espressa in pixel, la distanza di un rettangolo per attivare l'ancoraggio deve essere il puntatore del mouse.  
+*nSensitivity*<br/>
+[in] Distanza, espressa in pixel, la distanza di un rettangolo per attivare l'ancoraggio deve essere il puntatore del mouse.  
   
 ### <a name="return-value"></a>Valore restituito  
  Uno dei valori di stato seguenti:  
@@ -964,11 +964,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectTabAreaTop*  
- `GetTabArea` Questa variabile viene compilata con l'area della scheda se le schede si trovano nella parte superiore del riquadro. Se le schede si trovano nella parte inferiore del riquadro, questa variabile viene riempita con un rettangolo vuoto.  
+*rectTabAreaTop*<br/>
+[in] `GetTabArea` questa variabile viene compilata con l'area della scheda se le schede si trovano nella parte superiore del riquadro. Se le schede si trovano nella parte inferiore del riquadro, questa variabile viene riempita con un rettangolo vuoto.  
   
- [in] *rectTabAreaBottom*  
- `GetTabArea` Questa variabile viene compilata con l'area della scheda se le schede si trovano nella parte inferiore del riquadro. Se le schede si trovano nella parte superiore del riquadro, questa variabile viene riempita con un rettangolo vuoto.  
+*rectTabAreaBottom*<br/>
+[in] `GetTabArea` questa variabile viene compilata con l'area della scheda se le schede si trovano nella parte inferiore del riquadro. Se le schede si trovano nella parte superiore del riquadro, questa variabile viene riempita con un rettangolo vuoto.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene utilizzato solo nelle classi che derivano da `CDockablePane` e dispongano di schede. Per altre informazioni, vedere [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) e [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
@@ -1011,11 +1011,11 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Specifica il punto da testare.  
+*punto*<br/>
+[in] Specifica il punto da testare.  
   
- [in] *bDetectCaption*  
- TRUE se HTCAPTION deve essere restituito se il punto si trova in una didascalia del riquadro in caso contrario, FALSE.  
+*bDetectCaption*<br/>
+[in] TRUE se HTCAPTION deve essere restituito se il punto si trova in una didascalia del riquadro in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Uno dei valori seguenti:  
@@ -1228,11 +1228,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndNewParent*  
- Un puntatore a una nuova finestra padre.  
+*pWndNewParent*<br/>
+[in] Un puntatore a una nuova finestra padre.  
   
- [in] *bDelay*  
- BOOL che specifica se vuoi ritardare il ricalcolo del layout di ancoraggio, se il riquadro non ancorato. Per altre informazioni, vedere [CDockablePane::UndockPane](#undockpane).  
+*bDelay*<br/>
+[in] BOOL che specifica se vuoi ritardare il ricalcolo del layout di ancoraggio, se il riquadro non ancorato. Per altre informazioni, vedere [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Note  
  Se il riquadro viene ancorato e il nuovo elemento padre non consente l'ancoraggio, questo metodo verrà disancorato del riquadro.  
@@ -1249,11 +1249,11 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectFloat*  
- Specifica la posizione e dimensioni del riquadro quando è in uno stato a virgola mobile.  
+*rectFloat*<br/>
+[in] Specifica la posizione e dimensioni del riquadro quando è in uno stato a virgola mobile.  
   
- [in] *dockMethod*  
- Specifica il metodo di ancoraggio. Visualizzare [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) per un elenco di valori possibili.  
+*dockMethod*<br/>
+[in] Specifica il metodo di ancoraggio. Visualizzare [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) per un elenco di valori possibili.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro può essere resa; in caso contrario, FALSE.  
@@ -1269,8 +1269,8 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nHit*  
- Questo parametro non viene usato.  
+*nHit*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Se si aggiunge un pulsante personalizzato per la didascalia di un riquadro ancorata, eseguire l'override di questo metodo per ricevere notifiche quando un utente preme il pulsante.  
@@ -1283,8 +1283,8 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSlideOut*  
- TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.  
+*bSlideOut*<br/>
+[in] TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata per implementare gli effetti personalizzati che si nascondono automaticamente.  
@@ -1310,14 +1310,14 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBarToReplaceWith*  
- Un puntatore a un riquadro ancorato.  
+*pBarToReplaceWith*<br/>
+[in] Un puntatore a un riquadro ancorato.  
   
- [in] *dockMethod*  
- Non usato.  
+*dockMethod*<br/>
+[in] Non utilizzato.  
   
- [in] *bRegisterWithFrame*  
- Se TRUE, il nuovo riquadro è registrato con il gestore di ancoraggio dell'elemento padre del riquadro precedente. Il nuovo riquadro viene inserito in corrispondenza dell'indice del riquadro precedente nell'elenco dei riquadri manutenuti dal gestore di ancoraggio.  
+*bRegisterWithFrame*<br/>
+[in] Se TRUE, il nuovo riquadro è registrato con il gestore di ancoraggio dell'elemento padre del riquadro precedente. Il nuovo riquadro viene inserito in corrispondenza dell'indice del riquadro precedente nell'elenco dei riquadri manutenuti dal gestore di ancoraggio.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la sostituzione prevede l'esito positivo. in caso contrario, FALSE.  
@@ -1344,17 +1344,17 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMode*  
- TRUE per abilitare la modalità Nascondi automaticamente. FALSE per abilitare la modalità di ancoraggio standard.  
+*bMode*<br/>
+[in] TRUE per abilitare la modalità Nascondi automaticamente. FALSE per abilitare la modalità di ancoraggio standard.  
   
- [in] *dwAlignment*  
- Specifica l'allineamento del riquadro che si nascondono automaticamente da creare.  
+*dwAlignment*<br/>
+[in] Specifica l'allineamento del riquadro che si nascondono automaticamente da creare.  
   
  [in] [out] *pCurrAutoHideBar*  
  Puntatore a barra Nascondi automaticamente corrente. Può essere NULL.  
   
- [in] *bUseTimer*  
- Specifica se utilizzare l'effetto che si nascondono automaticamente quando l'utente attiva il riquadro di modalità Nascondi automaticamente o per nascondere il riquadro immediatamente.  
+*bUseTimer*<br/>
+[in] Specifica se utilizzare l'effetto che si nascondono automaticamente quando l'utente attiva il riquadro di modalità Nascondi automaticamente o per nascondere il riquadro immediatamente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Barra degli strumenti Nascondi automaticamente che è stato creato come risultato di passaggio alla modalità Nascondi automaticamente, o NULL.  
@@ -1374,11 +1374,11 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pToolBar*  
- Puntatore a una barra degli strumenti Nascondi automaticamente.  
+*pToolBar*<br/>
+[in] Puntatore a una barra degli strumenti Nascondi automaticamente.  
   
- [in] *pBtn*  
- Puntatore a un pulsante Nascondi automaticamente.  
+*pBtn*<br/>
+[in] Puntatore a un pulsante Nascondi automaticamente.  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
  Imposta la percentuale di spazio che occupa un riquadro relativo contenitore.  
@@ -1388,8 +1388,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *n*  
- Un' **int** che specifica la percentuale di spazio che occupa il riquadro relativo contenitore.  
+*n*<br/>
+[in] Un' **int** che specifica la percentuale di spazio che occupa il riquadro relativo contenitore.  
   
 ### <a name="remarks"></a>Note  
  Il framework consente di regolare il riquadro per usare il nuovo valore quando il layout viene ricalcolato.  
@@ -1402,8 +1402,8 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hRestoredSlider*  
- Handle per un divisore di riquadro (dispositivo di scorrimento).  
+*hRestoredSlider*<br/>
+[in] Handle per un divisore di riquadro (dispositivo di scorrimento).  
   
 ### <a name="remarks"></a>Note  
  Un divisore di riquadro ripristinato predefinito viene ottenuto quando viene deserializzato un riquadro. Per altre informazioni, vedere [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
@@ -1416,8 +1416,8 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pRTC*  
- Le informazioni sulla classe di runtime per il riquadro a schede.  
+*pRTC*<br/>
+[in] Le informazioni sulla classe di runtime per il riquadro a schede.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per impostare le informazioni sulla classe di runtime per i riquadri a schede che vengono creati in modo dinamico. Ciò può verificarsi quando si trascina un riquadro per la didascalia di un altro riquadro, o se si chiama il [CDockablePane:: Attachtotabwnd](#attachtotabwnd) metodo per creare a livello di codice un riquadro a schede da due riquadri ancorabili.  
@@ -1443,14 +1443,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.  
+*bMostra*<br/>
+[in] TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.  
   
- [in] *bDelay*  
- True per ritardo modificando il layout di ancoraggio. Se ha valore FALSE, modificare il layout di ancoraggio immediatamente.  
+*bDelay*<br/>
+[in] True per ritardo modificando il layout di ancoraggio. Se ha valore FALSE, modificare il layout di ancoraggio immediatamente.  
   
- [in] *bActivate*  
- TRUE per attivare il riquadro quando visualizzata; in caso contrario, FALSE.  
+*bActivate*<br/>
+[in] TRUE per attivare il riquadro quando visualizzata; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo anziché il [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) se mostrare o nascondere i riquadri ancorabili.  
@@ -1465,11 +1465,11 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSlideOut*  
- TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.  
+*bSlideOut*<br/>
+[in] TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.  
   
- [in] *bUseTimer*  
- TRUE per mostrare o nascondere il riquadro con l'effetto che si nascondono automaticamente. FALSE per mostrare o nascondere il riquadro immediatamente.  
+*bUseTimer*<br/>
+[in] TRUE per mostrare o nascondere il riquadro con l'effetto che si nascondono automaticamente. FALSE per mostrare o nascondere il riquadro immediatamente.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo per aggiungere un'animazione a un riquadro in modalità Nascondi automaticamente.  
@@ -1494,8 +1494,8 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bDelay*  
- True in ritardo calcolando il layout di ancoraggio. FALSE per ricalcolare il layout di ancoraggio immediatamente.  
+*bDelay*<br/>
+[in] True in ritardo calcolando il layout di ancoraggio. FALSE per ricalcolare il layout di ancoraggio immediatamente.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per annullare l'ancoraggio di un riquadro da una finestra cornice principale o da un contenitore di multi-con mini-cornice finestra (un riquadro in cui è ancorata in una finestra con mini-cornice singola con gli altri riquadri).  

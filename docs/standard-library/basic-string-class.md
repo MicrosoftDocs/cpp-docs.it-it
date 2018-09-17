@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105666"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706615"
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -3979,9 +3979,11 @@ Stringa C che deve essere un'origine dei caratteri per la stringa operando.
 *CH*<br/>
 Carattere da copiare nella stringa operando.
 
-* first0 * un iteratore che punta al primo carattere da rimuovere nella stringa operando.
+*first0*<br/>
+Un iteratore che punta al primo carattere da rimuovere nella stringa operando.
 
-* last0 * un iteratore che punta all'ultimo carattere da rimuovere nella stringa operando.
+*last0*<br/>
+Un iteratore che punta all'ultimo carattere da rimuovere nella stringa operando.
 
 *first*<br/>
 Iteratore, const_pointer o const_iterator che punta al primo carattere da copiare nella stringa parametro.

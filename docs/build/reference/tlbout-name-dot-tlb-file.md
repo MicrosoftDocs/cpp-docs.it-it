@@ -1,5 +1,5 @@
 ---
-title: -TLBOUT (nome. File TLB) | Documenti Microsoft
+title: -TLBOUT (nome. Al File TLB) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,51 +21,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc4103c387fe7a3dae68b642c10e326b361c54a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c44028f834d2b3200b970fdc613d0bf4d4efd29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376852"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702858"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Assegna un nome al file TLB)
-```  
-/TLBOUT:[path\]filename  
-```  
-  
-## <a name="remarks"></a>Note  
- dove:  
-  
- *path*  
- Specifica un percorso assoluto o relativo per in cui deve essere creato il file con estensione tlb.  
-  
- *filename*  
- Specifica il nome del file tlb creato dal compilatore MIDL. Nessuna estensione di file è utilizzata; specificare *filename*tlb se si desidera che l'estensione tlb.  
-  
-## <a name="remarks"></a>Note  
- L'opzione /TLBOUT specifica il nome e l'estensione del file tlb.  
-  
- Il compilatore MIDL viene chiamato dal linker Visual C++, quando il collegamento di progetti che hanno il [modulo](../../windows/module-cpp.md) attributo.  
-  
- Se non è specificata l'opzione /TLBOUT, al file tlb verrà visualizzato il nome di [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md) *filename*. Se /IDLOUT non è specificato, verrà chiamato il file con estensione tlb vc70.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic su di **Linker** cartella.  
-  
-3.  Fare clic su di **IDL incorporato** pagina delle proprietà.  
-  
-4.  Modificare il **libreria dei tipi** proprietà.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
-  
-1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryFile%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)   
- [/IGNOREIDL (non elabora gli attributi in MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [/MIDL (Specifica opzioni della riga di comando MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)   
- [Compilazione di un programma con attributi](../../windows/building-an-attributed-program.md)
+
+```
+/TLBOUT:[path\]filename
+```
+
+## <a name="arguments"></a>Argomenti
+
+*path*<br/>
+Specifica un percorso assoluto o relativo per in cui deve essere creato il file con estensione tlb.
+
+*filename*<br/>
+Specifica il nome del file con estensione tlb creato dal compilatore MIDL. Non presuppone alcuna estensione di file; specificare *filename*tlb se si desidera che l'estensione tlb.
+
+## <a name="remarks"></a>Note
+
+L'opzione /TLBOUT specifica il nome e l'estensione del file con estensione tlb.
+
+Il compilatore MIDL viene chiamato dal linker di Visual C++ quando si collegano i progetti con la [modulo](../../windows/module-cpp.md) attributo.
+
+Se non viene specificata l'opzione /TLBOUT, il file con estensione tlb otterrà il nome dalla [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md) *filename*. Se /IDLOUT non viene specificato, verrà chiamato il file con estensione tlb vc70.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+
+1. Scegliere il **Linker** cartella.
+
+1. Scegliere il **IDL incorporato** pagina delle proprietà.
+
+1. Modificare il **libreria dei tipi** proprietà.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
+
+1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryFile%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)<br/>
+[/IGNOREIDL (non elabora gli attributi in MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+[/MIDL (Specifica opzioni della riga di comando MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
+[la creazione di un programma con attributi](../../windows/building-an-attributed-program.md)

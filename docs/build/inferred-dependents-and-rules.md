@@ -1,5 +1,5 @@
 ---
-title: Dedurre dipendenti e le regole | Documenti Microsoft
+title: Dedotto dipendenti e le regole | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aae09fd756e0eb4eab3031beb5b4cba8c4d35a40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c13ae7784ff40b39642ce26fd062a1aab80f2d4c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368044"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707551"
 ---
 # <a name="inferred-dependents-and-rules"></a>Dipendenti dedotti e regole
-NMAKE presuppone un dipendente dedotto per una destinazione se esiste una regola di inferenza è applicabile. Una regola viene applicata se:  
-  
--   *toext* corrisponda a quella del database di destinazione.  
-  
--   *fromext* corrispondenze l'estensione di un file con nome di base del database di destinazione e che esiste nella directory correnti o specificate.  
-  
--   *fromext* è in [. SUFFISSI](../build/dot-directives.md); nessun altro *fromext* in una regola di corrispondenza è un valore più alto **. SUFFISSI** priorità.  
-  
--   Nessun dipendente esplicito ha un valore più alto **. SUFFISSI** priorità.  
-  
- Dipendenti dedotti possono causare effetti collaterali imprevisti. Se il blocco di descrizione del database di destinazione contiene i comandi, tali comandi anziché i comandi eseguiti NMAKE nella regola.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Regole di inferenza](../build/inference-rules.md)
+
+Se esiste una regola di inferenza applicabile, si presuppone un dipendente dedotto per una destinazione. Se viene applicata una regola:
+
+- *toext* corrisponde all'estensione della destinazione.
+
+- *fromext* corrispondenze l'estensione di un file con nome di base di destinazione e che esiste nella directory correnti o specificate.
+
+- *fromext* è in [. I SUFFISSI](../build/dot-directives.md); nessun altro *fromext* in una regola di corrispondenza ha un livello più elevato **. I SUFFISSI** priorità.
+
+- Nessun dipendente esplicito ha un livello più elevato **. I SUFFISSI** priorità.
+
+Dipendenti dedotti possono causare effetti collaterali imprevisti. Se i blocchi di descrizione della destinazione contiene i comandi, vengono eseguiti tali comandi invece i comandi NMAKE nella regola.
+
+## <a name="see-also"></a>Vedere anche
+
+[Regole di inferenza](../build/inference-rules.md)

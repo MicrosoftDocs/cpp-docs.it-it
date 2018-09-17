@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205703"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711230"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
@@ -175,26 +175,26 @@ Quando il formato di rimozione compresso non è sufficiente per descrivere la ri
 1. Un'intestazione da 1 o 2 parole che descrive la dimensione complessiva della struttura .xdata e fornisce dati di funzione chiave. La seconda parola è presente solo se il *conteggio di epilogo* e *parole di codice* campi vengono impostati entrambi su 0. I campi sono illustrati in dettaglio in questa tabella:
 
    |Parola|Bit|Scopo|
-    |----------|----------|-------------|
-    |0|0-17|*Funzione lunghezza* è un campo a 18 bit che indica la lunghezza totale della funzione in byte diviso 2. Se una funzione è maggiore di 512 KB, è necessario usare più record .pdata e .xdata per descrivere la funzione. Per maggiori dettagli, vedere la sezione Funzioni di grandi dimensioni più avanti in questo documento.|
-    |0|18-19|*Vers=2.1* è un campo a 2 bit che descrive la versione degli xdata rimanenti. Attualmente è definita solo la versione 0; i valori 1-3 sono riservati.|
-    |0|20|*X* è un campo a 1 bit che indica la presenza (1) o l'assenza (0) di dati dell'eccezione.|
-    |0|21|*E* è un campo a 1 bit che indica che le informazioni che descrivono un singolo epilogo sono compresse nell'intestazione (1) invece di richiedere l'ambito aggiuntivo parole successive (0).|
-    |0|22|*F* è un campo a 1 bit che indica che questo record descrive un frammento di funzione (1) o una funzione intera (0). Un frammento implica che non esiste un prologo e che l'elaborazione dei prologhi deve essere ignorata.|
-    |0|23-27|*Conteggio di epilogo* è un campo di bit 5 che ha due significati, a seconda dello stato del *elettronica* bit:<br /><br /> -Se *elettronica* è 0, questo campo è un conteggio del numero totale di ambiti di eccezione descritti nella sezione 3. Se esistono più di 31 ambiti in funzione, quindi questo campo e il *parole codice* campo debba essere impostato entrambi su 0 per indicare che è necessaria una parola di estensione.<br />-Se *elettronica* è 1, questo campo specifica l'indice del primo codice di rimozione che descrive l'unico epilogo.|
-    |0|28-31|*Codice parole* è un campo a 4 bit che specifica il numero di parole a 32 bit necessarie per contenere tutti i codici di rimozione nella sezione 4. Se più di 15 parole per sono necessari più di 63 byte di codice di rimozione, questo campo e il *conteggio di epilogo* campo debba essere impostato entrambi su 0 per indicare che è necessaria una parola di estensione.|
-    |1|0-15|*Il conteggio di epilogo estesa* è un campo a 16 bit che fornisce spazio aggiuntivo per codificare un numero di epiloghi insolitamente ampio. La parola di estensione che contiene questo campo è presente solo se il *conteggio di epilogo* e *parole codice* campi nella prima parola di intestazione sono impostati entrambi su 0.|
-    |1|16-23|*Estesi parole codice* è un campo a 8 bit che fornisce spazio aggiuntivo per codificare un numero di parole di codice di rimozione insolitamente ampio. La parola di estensione che contiene questo campo è presente solo se il *conteggio di epilogo* e *parole codice* campi nella prima parola di intestazione sono impostati entrambi su 0.|
-    |1|24-31|Riservata|
+   |----------|----------|-------------|
+   |0|0-17|*Funzione lunghezza* è un campo a 18 bit che indica la lunghezza totale della funzione in byte diviso 2. Se una funzione è maggiore di 512 KB, è necessario usare più record .pdata e .xdata per descrivere la funzione. Per maggiori dettagli, vedere la sezione Funzioni di grandi dimensioni più avanti in questo documento.|
+   |0|18-19|*Vers=2.1* è un campo a 2 bit che descrive la versione degli xdata rimanenti. Attualmente è definita solo la versione 0; i valori 1-3 sono riservati.|
+   |0|20|*X* è un campo a 1 bit che indica la presenza (1) o l'assenza (0) di dati dell'eccezione.|
+   |0|21|*E* è un campo a 1 bit che indica che le informazioni che descrivono un singolo epilogo sono compresse nell'intestazione (1) invece di richiedere l'ambito aggiuntivo parole successive (0).|
+   |0|22|*F* è un campo a 1 bit che indica che questo record descrive un frammento di funzione (1) o una funzione intera (0). Un frammento implica che non esiste un prologo e che l'elaborazione dei prologhi deve essere ignorata.|
+   |0|23-27|*Conteggio di epilogo* è un campo di bit 5 che ha due significati, a seconda dello stato del *elettronica* bit:<br /><br /> -Se *elettronica* è 0, questo campo è un conteggio del numero totale di ambiti di eccezione descritti nella sezione 3. Se esistono più di 31 ambiti in funzione, quindi questo campo e il *parole codice* campo debba essere impostato entrambi su 0 per indicare che è necessaria una parola di estensione.<br />-Se *elettronica* è 1, questo campo specifica l'indice del primo codice di rimozione che descrive l'unico epilogo.|
+   |0|28-31|*Codice parole* è un campo a 4 bit che specifica il numero di parole a 32 bit necessarie per contenere tutti i codici di rimozione nella sezione 4. Se più di 15 parole per sono necessari più di 63 byte di codice di rimozione, questo campo e il *conteggio di epilogo* campo debba essere impostato entrambi su 0 per indicare che è necessaria una parola di estensione.|
+   |1|0-15|*Il conteggio di epilogo estesa* è un campo a 16 bit che fornisce spazio aggiuntivo per codificare un numero di epiloghi insolitamente ampio. La parola di estensione che contiene questo campo è presente solo se il *conteggio di epilogo* e *parole codice* campi nella prima parola di intestazione sono impostati entrambi su 0.|
+   |1|16-23|*Estesi parole codice* è un campo a 8 bit che fornisce spazio aggiuntivo per codificare un numero di parole di codice di rimozione insolitamente ampio. La parola di estensione che contiene questo campo è presente solo se il *conteggio di epilogo* e *parole codice* campi nella prima parola di intestazione sono impostati entrambi su 0.|
+   |1|24-31|Riservata|
 
 2. I dati (se il *elettronica* bit nell'intestazione è stato impostato su 0) è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i campi seguenti:
 
    |Bit|Scopo|
-    |----------|-------------|
-    |0-17|*Offset di avviare epilogo* è un campo a 18 bit che descrive l'offset dell'epilogo, in byte diviso 2, rispetto all'inizio della funzione.|
-    |18-19|*Res* è un campo a 2 bit riservato per l'espansione futura. Il suo valore deve essere 0.|
-    |20-23|*Condizione* è un campo a 4 bit che indica la condizione in cui viene eseguito l'epilogo. Per gli epiloghi non condizionali, deve essere impostato su 0xE, che significa "sempre". Si noti che un epilogo deve essere interamente condizionale o interamente non condizionale e, in modalità Thumb-2, l'epilogo inizia con la prima istruzione dopo l'opcode IT.|
-    |24-31|*Indice iniziale di epilogo* è un campo a 8 bit che indica l'indice di byte del primo codice di rimozione che descrive questo epilogo.|
+   |----------|-------------|
+   |0-17|*Offset di avviare epilogo* è un campo a 18 bit che descrive l'offset dell'epilogo, in byte diviso 2, rispetto all'inizio della funzione.|
+   |18-19|*Res* è un campo a 2 bit riservato per l'espansione futura. Il suo valore deve essere 0.|
+   |20-23|*Condizione* è un campo a 4 bit che indica la condizione in cui viene eseguito l'epilogo. Per gli epiloghi non condizionali, deve essere impostato su 0xE, che significa "sempre". Si noti che un epilogo deve essere interamente condizionale o interamente non condizionale e, in modalità Thumb-2, l'epilogo inizia con la prima istruzione dopo l'opcode IT.|
+   |24-31|*Indice iniziale di epilogo* è un campo a 8 bit che indica l'indice di byte del primo codice di rimozione che descrive questo epilogo.|
 
 3. L'elenco di ambiti di epilogo è seguito da una matrice di byte che contiene codici di rimozione, descritti in dettaglio nella sezione Codici di rimozione di questo articolo. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. I byte sono archiviati in ordine little-endian, in modo da essere direttamente recuperabili in modalità little-endian.
 
@@ -358,16 +358,16 @@ Se un frammento non include prologo o epiloghi, è comunque necessario che il re
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 Le funzioni con wrapping di riduzione in genere preallocano lo spazio per il salvataggio dei registri aggiuntivi nel prologo normale, quindi eseguono i salvataggi dei registri usando `str` o `stm` anziché `push`. In questo modo, tutte le modifiche ai puntatori dello stack rimangono nel prologo originale della funzione.
@@ -386,14 +386,14 @@ Può funzionare anche un approccio alternativo se la modifica dello stack esegui
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 L'elemento chiave in questo scenario è che a ogni limite di istruzione lo stack è pienamente coerente con i codici di rimozione per l'area. Se si verifica una rimozione prima del push interno in questo esempio, è considerata parte dell'area A e verrà rimosso solo il prologo dell'area A. Se la rimozione si verifica dopo il push interno, viene considerata parte dell'area B, che è priva di prologo ma contiene codici di rimozione che descrivono il push interno e il prologo originale dall'area A. simile per la logica mantiene per il pop interno.
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)  
-[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)

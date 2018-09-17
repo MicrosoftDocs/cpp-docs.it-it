@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676363"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712075"
 ---
 # <a name="cdockablepaneadapter-class"></a>Classe CDockablePaneAdapter
 Fornisce il supporto di ancoraggio per i riquadri derivati da `CWnd`.  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Nome del profilo.  
+*lpszProfileName*<br/>
+[in] Il nome del profilo.  
   
- [in] *nIndex*  
- L'indice di profilo.  
+*nIndex*<br/>
+[in] L'indice di profilo.  
   
- [in] *uiID*  
- L'ID del riquadro.  
+*uiID*<br/>
+[in] L'ID del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Nome del profilo.  
+*lpszProfileName*<br/>
+[in] Il nome del profilo.  
   
- [in] *nIndex*  
- L'indice di profilo (impostazione predefinita è l'ID di controllo della finestra).  
+*nIndex*<br/>
+[in] L'indice di profilo (impostazione predefinita è l'ID di controllo della finestra).  
   
- [in] *uiID*  
- L'ID del riquadro.  
+*uiID*<br/>
+[in] L'ID del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore alla finestra per l'adapter di riquadro eseguire il wrapping.  
+*pWnd*<br/>
+[in] Puntatore alla finestra per l'adapter di riquadro eseguire il wrapping.  
   
 ### <a name="return-value"></a>Valore restituito  
   

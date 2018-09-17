@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677745"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711807"
 ---
 # <a name="cstatusbarctrl-class"></a>Classe CStatusBarCtrl
 Fornisce la funzionalità del controllo barra di stato comune di Windows.  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iPart*|Indice a base zero della parte che contiene l'icona da recuperare. Se questo parametro è -1, si presuppone che la barra di stato da una barra di stato di visualizzazione semplice.|  
+|*iPart*|[in] Indice a base zero della parte che contiene l'icona da recuperare. Se questo parametro è -1, si presuppone che la barra di stato da una barra di stato di visualizzazione semplice.|  
   
 ### <a name="return-value"></a>Valore restituito  
  L'handle dell'icona se il metodo ha esito positivo. in caso contrario, NULL.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSimple*  
- Flag di tipo di visualizzazione. Se questo parametro è TRUE, il controllo Visualizza testo semplice; Se il risultato è FALSE, viene visualizzato più parti.  
+*bSimple*<br/>
+[in] Flag di tipo di visualizzazione. Se questo parametro è TRUE, il controllo Visualizza testo semplice; Se il risultato è FALSE, viene visualizzato più parti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre 0.  

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una Build di rilascio | Documenti Microsoft'
+title: 'Procedura: creare una Build di rilascio | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949cfe629332488821da4313c13d40054778ef06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1221133b55002d49c93d66210c5eae6844b534b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370876"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705604"
 ---
 # <a name="how-to-create-a-release-build"></a>Procedura: creare una build di rilascio
-### <a name="to-generate-a-release-build-of-your-program"></a>Per generare una build di rilascio del programma  
-  
-1.  Selezionare **versione** dal **configurazione soluzione** elenco di riepilogo a discesa, che si trova il **Standard** barra degli strumenti.  
-  
-2.  Nel **compilare** menu, fare clic su **compilare**.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Build di versione](../../build/reference/release-builds.md)
+
+### <a name="to-generate-a-release-build-of-your-program"></a>Per generare una build di rilascio del programma
+
+1. Selezionare **Release** dal **configurazione della soluzione** elenco a discesa, che è attivata il **Standard** sulla barra degli strumenti.
+
+1. Nel **compilare** menu, fare clic su **compilazione**.
+
+## <a name="see-also"></a>Vedere anche
+
+[Build di versione](../../build/reference/release-builds.md)

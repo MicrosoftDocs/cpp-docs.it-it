@@ -1,5 +1,5 @@
 ---
-title: pianificazione | Documenti Microsoft
+title: pianificazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00db7daf5c2c9882c1d54ac054ee285de1fdac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 32c05f2c4740e978d58540727067ea0d76d95871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691833"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712153"
 ---
 # <a name="schedule"></a>pianificazione
-Si applica al [per](../../../parallel/openmp/reference/for-openmp.md) direttiva.  
+Viene applicata il [per](../../../parallel/openmp/reference/for-openmp.md) direttiva.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,11 +44,11 @@ schedule(type[,size])
   
 -   `static`  
   
- `size` (facoltativo)  
- Specifica le dimensioni di iterazioni. `size` deve essere un numero intero. Non è valido quando `type` è `runtime`.  
+*size*<br/>
+(Facoltativo) Specifica le dimensioni di iterazioni. `size` deve essere un numero intero. Non è valida quando `type` è `runtime`.  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [2.4.1 costrutto for](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Per altre informazioni, vedere [2.4.1 costrutto for](../../../parallel/openmp/2-4-1-for-construct.md).  
   
 ## <a name="example"></a>Esempio  
   

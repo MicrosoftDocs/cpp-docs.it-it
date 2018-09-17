@@ -1,5 +1,5 @@
 ---
-title: -MACHINE (specifica della piattaforma di destinazione) | Documenti Microsoft
+title: -MACHINE (specifica la piattaforma di destinazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,37 +21,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e82cc0fec843dede07f474e1ad5bbdfcc2958f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e159fe15b0aed441b1a96047a3ffb035077d6266
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374021"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708617"
 ---
 # <a name="machine-specify-target-platform"></a>/MACHINE (Specifica la piattaforma di destinazione)
-```  
-/MACHINE:{ARM|EBC|X64|X86}  
-```  
-  
-## <a name="remarks"></a>Note  
- L'opzione /MACHINE specifica la piattaforma di destinazione per il programma.  
-  
- In genere non è necessario specificare l'opzione /MACHINE. COLLEGAMENTO deduce il tipo di computer dal file obj. In alcuni casi, tuttavia, non è possibile determinare collegamento i tipo di computer e i problemi un [degli strumenti del linker LNK1113 errore](../../error-messages/tool-errors/linker-tools-error-lnk1113.md). Se si verifica un errore di questo tipo, è possibile specificare questa opzione.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic su di **Linker** cartella.  
-  
-3.  Fare clic su di **avanzate** pagina delle proprietà.  
-  
-4.  Modificare il **inviala** proprietà.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
-  
-1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TargetMachine%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+```
+/MACHINE:{ARM|EBC|X64|X86}
+```
+
+## <a name="remarks"></a>Note
+
+L'opzione /MACHINE specifica la piattaforma di destinazione per il programma.
+
+In genere non è necessario specificare l'opzione /MACHINE. COLLEGAMENTO deduce il tipo di computer dai file con estensione obj. In alcuni casi, tuttavia, non è possibile determinare collegamento il tipo di computer e i problemi di un [degli strumenti del linker LNK1113 errore](../../error-messages/tool-errors/linker-tools-error-lnk1113.md). Se si verifica questo errore, specificare questa opzione.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+
+1. Scegliere il **Linker** cartella.
+
+1. Scegliere il **avanzate** pagina delle proprietà.
+
+1. Modificare il **inviala** proprietà.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
+
+1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TargetMachine%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

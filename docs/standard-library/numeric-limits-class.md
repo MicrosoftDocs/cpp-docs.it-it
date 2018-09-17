@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f40635e3a3c4c00aa98a36ebddcdb5a29c2a66ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206475"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705926"
 ---
 # <a name="numericlimits-class"></a>Classe numeric_limits
 
@@ -101,7 +101,7 @@ class numeric_limits
 ### <a name="parameters"></a>Parametri
 
 *Type*<br/>
- Il tipo di dati elemento fondamentale le cui proprietà vengono testate, sottoposte a query o impostate.
+Il tipo di dati elemento fondamentale le cui proprietà vengono testate, sottoposte a query o impostate.
 
 ## <a name="remarks"></a>Note
 

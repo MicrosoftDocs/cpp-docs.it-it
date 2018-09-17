@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712856"
 ---
 # <a name="moneyget-class"></a>Classe money_get
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>Parametri
 
 *CharType*<br/>
- Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 *InputIterator*<br/>
- Tipo di iteratore da cui le funzioni get leggono il relativo input.
+Tipo di iteratore da cui le funzioni get leggono il relativo input.
 
 ## <a name="remarks"></a>Note
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>Parametri
 
 *first*<br/>
- Iteratore di input che indica l'inizio della sequenza da convertire.
+Iteratore di input che indica l'inizio della sequenza da convertire.
 
 *last*<br/>
- Iteratore di input che indica la fine della sequenza da convertire.
+Iteratore di input che indica la fine della sequenza da convertire.
 
 *Utenti internazionali*<br/>
- Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
+Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
 *iosbase*<br/>
- Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario.
+Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario.
 
 *Stato*<br/>
- Imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
+Imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
 
 *Val*<br/>
- Stringa in cui è archiviata la sequenza convertita.
+Stringa in cui è archiviata la sequenza convertita.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>Parametri
 
 *first*<br/>
- Iteratore di input che indica l'inizio della sequenza da convertire.
+Iteratore di input che indica l'inizio della sequenza da convertire.
 
 *last*<br/>
- Iteratore di input che indica la fine della sequenza da convertire.
+Iteratore di input che indica la fine della sequenza da convertire.
 
 *Utenti internazionali*<br/>
- Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
+Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
 *iosbase*<br/>
- Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
+Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
 
 *Stato*<br/>
- Imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
+Imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
 
 *Val*<br/>
- Stringa in cui è archiviata la sequenza convertita.
+Stringa in cui è archiviata la sequenza convertita.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>Parametri
 
 *_Refs*<br/>
- Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
+Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 

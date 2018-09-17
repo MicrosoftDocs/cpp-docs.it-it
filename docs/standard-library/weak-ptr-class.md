@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4aa0f8e94e0797badbae2a409ae1ce02caea6e81
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954864"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707538"
 ---
 # <a name="weakptr-class"></a>Classe weak_ptr
 
@@ -77,8 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*  
- Tipo controllato dal puntatore debole.
+*Ty*<br/>
+Tipo controllato dal puntatore debole.
 
 ## <a name="remarks"></a>Note
 
@@ -290,14 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametri
 
-*Altro*  
- Tipo controllato dal puntatore dell'argomento condiviso/debole.
+*Altro*<br/>
+Tipo controllato dal puntatore dell'argomento condiviso/debole.
 
-*Windows Phone*  
- Puntatore debole da copiare.
+*Windows Phone*<br/>
+Puntatore debole da copiare.
 
-*SP*  
- Puntatore condiviso da copiare.
+*SP*<br/>
+Puntatore condiviso da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -349,8 +349,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parametri
 
-*ptr*  
- Riferimento `lvalue` a `shared_ptr` o `weak_ptr`.
+*ptr*<br/>
+Riferimento `lvalue` a `shared_ptr` o `weak_ptr`.
 
 ### <a name="remarks"></a>Note
 
@@ -409,8 +409,8 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parametri
 
-*Windows Phone*  
- Puntatore debole da scambiare.
+*Windows Phone*<br/>
+Puntatore debole da scambiare.
 
 ### <a name="remarks"></a>Note
 
@@ -529,14 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametri
 
-*Altro*  
- Tipo controllato dal puntatore dell'argomento condiviso/debole.
+*Altro*<br/>
+Tipo controllato dal puntatore dell'argomento condiviso/debole.
 
-*Windows Phone*  
- Puntatore debole da copiare.
+*Windows Phone*<br/>
+Puntatore debole da copiare.
 
-*SP*  
- Puntatore condiviso da copiare.
+*SP*<br/>
+Puntatore condiviso da copiare.
 
 ### <a name="remarks"></a>Note
 

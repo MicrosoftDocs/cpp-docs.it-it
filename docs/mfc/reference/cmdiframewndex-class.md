@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 91ca6c6a2d00bb377fe5b4980ea821184627826f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678814"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708240"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
 Estende le funzionalità del [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), una finestra cornice Windows Multiple Document Interface (MDI).  
@@ -314,11 +314,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Puntatore al riquadro da registrare.  
+*pControlBar*<br/>
+[in] Puntatore al riquadro da registrare.  
   
- [in] *bTail*  
- Specifica se aggiungere questo riquadro alla fine dell'elenco.  
+*bTail*<br/>
+[in] Specifica se aggiungere questo riquadro alla fine dell'elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se il riquadro è stato registrato correttamente. Restituisce 0 se il riquadro è già registrato con il gestore di ancoraggio.  
@@ -341,8 +341,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hdwp*  
- Identifica la struttura più--posizione della finestra. È possibile ottenere questo valore tramite una chiamata `BeginDeferWindowPos`.  
+*hdwp*<br/>
+[in] Identifica la struttura più--posizione della finestra. È possibile ottenere questo valore tramite una chiamata `BeginDeferWindowPos`.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione membro per ricalcolare il layout di tutti i riquadri ancorati alla finestra cornice.  
@@ -355,8 +355,8 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *pnMDITabsType*  
- Un puntatore a una variabile integer che indica le funzionalità abilitate:  
+*pnMDITabsType*<br/>
+[out] Un puntatore a una variabile integer che indica le funzionalità abilitate:  
   
 -   0: tutte le funzionalità sono disabilitate.  
   
@@ -414,11 +414,11 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpcszDocName*  
- Una stringa di testo che contiene un identificatore di documento. È in genere, il percorso completo di un file di documento.  
+*lpcszDocName*<br/>
+[in] Una stringa di testo che contiene un identificatore di documento. È in genere, il percorso completo di un file di documento.  
   
- [in] *pObj*  
- Puntatore a un oggetto definito dall'utente. Ad esempio, uno sviluppatore può creare una struttura di dati specifici dell'applicazione che descrive il documento e indicando come documento debba essere inizializzato all'avvio.  
+*pObj*<br/>
+[in] Puntatore a un oggetto definito dall'utente. Ad esempio, uno sviluppatore può creare una struttura di dati specifici dell'applicazione che descrive il documento e indicando come documento debba essere inizializzato all'avvio.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a `CMDIChildWndEx`.  
@@ -445,11 +445,11 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpcszDocName*  
- Il nome del documento.  
+*lpcszDocName*<br/>
+[in] Il nome del documento.  
   
- [in] *pObj*  
- Riservato per utilizzi futuri.  
+*pObj*<br/>
+[in] Riservato per utilizzi futuri.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a una nuova finestra.  
@@ -465,14 +465,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore al riquadro per ancorare.  
+*pBar*<br/>
+[in] Puntatore al riquadro per ancorare.  
   
- [in] *nDockBarID*  
- Specifica quali lati della finestra cornice per ancorare a.  
+*nDockBarID*<br/>
+[in] Specifica quali lati della finestra cornice per ancorare a.  
   
- [in] *lpRect*  
- Non usato.  
+*lpRect*<br/>
+[in] Non utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene ancorato l'oggetto specificato nel riquadro per uno dei lati della finestra cornice che è stata specificata al momento [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) e [CMDIFrameWndEx::EnableDocking](#enabledocking) sono state chiamate.  
@@ -492,11 +492,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore al riquadro ancorato.  
+*pBar*<br/>
+[in] Puntatore al riquadro ancorato.  
   
- [in] *pLeftOf*  
- Puntatore al riquadro che viene usato come sito di ancoraggio. .  
+*pLeftOf*<br/>
+[in] Puntatore al riquadro che viene usato come sito di ancoraggio. .  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se l'operazione ha esito positivo. In caso contrario, restituisce FALSE.  
@@ -517,8 +517,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwDockStyle*  
- Specifica i lati della finestra cornice principale che verranno abilitati. Usare uno o più dei flag seguenti.  
+*dwDockStyle*<br/>
+[in] Specifica i lati della finestra cornice principale che verranno abilitati. Usare uno o più dei flag seguenti.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -546,8 +546,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwDockStyle*  
- Specifica lo stile di ancoraggio che si desidera applicare.  
+*dwDockStyle*<br/>
+[in] Specifica lo stile di ancoraggio che si desidera applicare.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -567,8 +567,8 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bEnableMenu*  
- TRUE per mostrare nel menu principale in modalità schermo intero o FALSE per nasconderlo.  
+*bEnableMenu*<br/>
+[in] TRUE per mostrare nel menu principale in modalità schermo intero o FALSE per nasconderlo.  
   
 ### <a name="remarks"></a>Note  
   
@@ -580,8 +580,8 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiFullScreenCmd*  
- L'ID di un comando che abilita o disabilita la modalità schermo intero.  
+*uiFullScreenCmd*<br/>
+[in] L'ID di un comando che abilita o disabilita la modalità schermo intero.  
   
 ### <a name="remarks"></a>Note  
  In modalità schermo intero, tutte le barre di controllo ancoraggio, barre degli strumenti e menu vengono nascoste e la visualizzazione attiva viene ridimensionata in modo che occupi a schermo intero. Quando si abilita la modalità a schermo intero, è necessario specificare un ID del comando che abilita o disabilita. È possibile chiamare `EnableFullScreenMode` rispetto al frame principale `OnCreate` (funzione). Quando una finestra cornice è impostare la modalità schermo intero per, il framework crea una barra degli strumenti a virgola mobile con un pulsante con l'ID di comando specificato. Se si desidera mantenere nel menu principale sullo schermo, chiamare [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
@@ -594,8 +594,8 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare il caricamento dello stato di ancoraggio, FALSE per disabilitare il caricamento dello stato di ancoraggio.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare il caricamento dello stato di ancoraggio, FALSE per disabilitare il caricamento dello stato di ancoraggio.  
   
 ### <a name="remarks"></a>Note  
   
@@ -609,11 +609,11 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Se TRUE, è abilitata la funzionalità di gruppi a schede MDI; Se FALSE, viene disabilitata la caratteristica dei gruppi a schede MDI.  
+*bAttivare il*<br/>
+[in] Se TRUE, è abilitata la funzionalità di gruppi a schede MDI; Se FALSE, viene disabilitata la caratteristica dei gruppi a schede MDI.  
   
- [in] *params*  
- Specifica i parametri che il framework applica alle finestre figlio che vengono create nell'area client MDI.  
+*params*<br/>
+[in] Specifica i parametri che il framework applica alle finestre figlio che vengono create nell'area client MDI.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per abilitare o disabilitare la caratteristica dei gruppi a schede MDI. Questa funzionalità consente alle applicazioni MDI di visualizzare le finestre figlio come finestre a schede che sono allineate verticalmente o orizzontalmente all'interno dell'area client MDI. I gruppi di finestre a schede sono separati da barre di divisione. L'utente può ridimensionare i gruppi a schede con una barra di divisione.  
@@ -695,8 +695,8 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bLastActiveTab*  
- Se TRUE, abilitare l'attivazione dell'ultima scheda attiva. Se FALSE, disabilitare l'attivazione dell'ultima scheda attiva.  
+*bLastActiveTab*<br/>
+[in] Se TRUE, abilitare l'attivazione dell'ultima scheda attiva. Se FALSE, disabilitare l'attivazione dell'ultima scheda attiva.  
   
 ### <a name="remarks"></a>Note  
  Esistono due modi per aprire una scheda quando viene chiusa la scheda attiva:  
@@ -723,23 +723,23 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Se TRUE, la gestione automatica dei menu del riquadro è abilitata; Se FALSE, la gestione automatica è disabilitata.  
+*bAttivare il*<br/>
+[in] Se TRUE, la gestione automatica dei menu del riquadro è abilitata; Se FALSE, la gestione automatica è disabilitata.  
   
- [in] *uiCustomizeCmd*  
- ID del comando il **Personalizza** voce di menu. In genere, questa voce di menu viene aggiunto alla fine dell'elenco di riquadri.  
+*uiCustomizeCmd*<br/>
+[in] ID del comando il **Personalizza** voce di menu. In genere, questa voce di menu viene aggiunto alla fine dell'elenco di riquadri.  
   
- [in] *strCustomizeLabel*  
- Il testo da visualizzare per il **Personalizza** voce di menu (per la localizzazione).  
+*strCustomizeLabel*<br/>
+[in] Il testo da visualizzare per il **Personalizza** voce di menu (per la localizzazione).  
   
- [in] *uiViewToolbarsMenuEntryID*  
- Specifica l'ID di una voce di menu della barra degli strumenti che consente di aprire il menu del riquadro. In genere questo è il **barre degli strumenti** sottomenu del **visualizzazione** menu.  
+*uiViewToolbarsMenuEntryID*<br/>
+[in] Specifica l'ID di una voce di menu della barra degli strumenti che consente di aprire il menu del riquadro. In genere questo è il **barre degli strumenti** sottomenu del **visualizzazione** menu.  
   
- [in] *bContextMenuShowsToolbarsOnly*  
- Se TRUE, il menu del riquadro viene visualizzato solo un elenco delle barre degli strumenti. Se FALSE, il menu Visualizza un elenco di barre di ancoraggio e barre degli strumenti.  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] Se TRUE, il menu del riquadro viene visualizzato solo un elenco delle barre degli strumenti. Se FALSE, il menu Visualizza un elenco di barre di ancoraggio e barre degli strumenti.  
   
- [in] *bViewMenuShowsToolbarsOnly*  
- Se TRUE, il menu del riquadro viene visualizzato solo un elenco delle barre degli strumenti. Se FALSE, il menu Visualizza un elenco di barre di ancoraggio e barre degli strumenti.  
+*bViewMenuShowsToolbarsOnly*<br/>
+[in] Se TRUE, il menu del riquadro viene visualizzato solo un elenco delle barre degli strumenti. Se FALSE, il menu Visualizza un elenco di barre di ancoraggio e barre degli strumenti.  
   
 ### <a name="remarks"></a>Note  
  Menu del riquadro a comparsa viene visualizzato l'elenco dei riquadri dell'applicazione e consente all'utente di mostrare o nascondere singoli riquadri.  
@@ -768,17 +768,17 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiMenuId*  
- Specifica l'ID di risorsa di un menu.  
+*uiMenuId*<br/>
+[in] Specifica l'ID di risorsa di un menu.  
   
- [in] *lpszMenuText*  
- Specifica il testo dell'elemento.  
+*lpszMenuText*<br/>
+[in] Specifica il testo dell'elemento.  
   
- [in] *bShowHelpButton*  
- Specifica se visualizzare una **aiutare** pulsante sulla finestra di dialogo Gestione di windows.  
+*bShowHelpButton*<br/>
+[in] Specifica se visualizzare una **aiutare** pulsante sulla finestra di dialogo Gestione di windows.  
   
- [in] *uiMenuTextResId*  
- Identificatore di risorsa stringa che contiene la stringa di testo dell'elemento.  
+*uiMenuTextResId*<br/>
+[in] Identificatore di risorsa stringa che contiene la stringa di testo dell'elemento.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per inserire una voce di menu con il comando viene chiamata una finestra di dialogo MDI figlio finestra Gestione ( [classe CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Il nuovo elemento viene inserito il menu di scelta specificato da *uiMenuId*. Chiamare `EnableWindowsDialog` quando si elabora il messaggio di notifica WM_CREATE.  
@@ -884,8 +884,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- ID del controllo.  
+*nID*<br/>
+[in] ID del controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al riquadro con l'ID di controllo specificato, se presente. In caso contrario, NULL.  
@@ -925,11 +925,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Un puntatore a un pulsante della barra degli strumenti.  
+*pButton*<br/>
+[in] Un puntatore a un pulsante della barra degli strumenti.  
   
- [in] *strTTText*  
- Il testo della descrizione comando da visualizzare per il pulsante.  
+*strTTText*<br/>
+[in] Il testo della descrizione comando da visualizzare per il pulsante.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la descrizione comando è stato visualizzato. FALSE in caso contrario.  
@@ -947,14 +947,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Puntatore al riquadro da inserire.  
+*pControlBar*<br/>
+[in] Puntatore al riquadro da inserire.  
   
- [in] *pTarget*  
- Puntatore al riquadro prima o dopo il quale inserire il riquadro.  
+*pTarget*<br/>
+[in] Puntatore al riquadro prima o dopo il quale inserire il riquadro.  
   
- [in] *bDopo*  
- Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.  
+*bDopo*<br/>
+[in] Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo di registrazione corretta di riquadro, FALSE se il riquadro è stato già registrato con il gestore di ancoraggio.  
@@ -996,8 +996,8 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore alla finestra a schede.  
+*pWnd*<br/>
+[in] Puntatore alla finestra a schede.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la finestra a schede specificata è presente nell'elenco di finestre a schede che formano i gruppi a schede MDI. In caso contrario, FALSE.  
@@ -1023,14 +1023,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Il punto specificato nelle coordinate dello schermo.  
+*punto*<br/>
+[in] Il punto specificato nelle coordinate dello schermo.  
   
- [in] *dwBarAlignment*  
- Specifica il bordo punto si avvicina. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Specifica il bordo punto si avvicina. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- TRUE se il punto è quasi il bordo esterno del sito di ancoraggio; FALSE in caso contrario.  
+*bOuterEdge*<br/>
+[in] TRUE se il punto è quasi il bordo esterno del sito di ancoraggio; FALSE in caso contrario.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il punto è quasi del sito di ancoraggio. in caso contrario, FALSE.  
@@ -1062,17 +1062,17 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIDResource*  
- L'ID di una risorsa condivisa associata alla finestra cornice.  
+*nIDResource*<br/>
+[in] L'ID di una risorsa condivisa associata alla finestra cornice.  
   
- [in] *dwDefaultStyle*  
- Lo stile della finestra cornice.  
+*dwDefaultStyle*<br/>
+[in] Lo stile della finestra cornice.  
   
- [in] *pParentWnd*  
- Puntatore all'elemento padre del frame.  
+*pParentWnd*<br/>
+[in] Puntatore all'elemento padre del frame.  
   
- [in] *pContext*  
- Un puntatore a un [struttura CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Questo parametro può essere NULL.  
+*pContext*<br/>
+[in] Un puntatore a un [struttura CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Questo parametro può essere NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo, in caso contrario FALSE.  
@@ -1085,8 +1085,8 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Specifica il nome del profilo.  
+*lpszProfileName*<br/>
+[in] Specifica il nome del profilo.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il carico è riuscita. FALSO se il caricamento non riuscito o non sono presenti dati da caricare.  
@@ -1115,8 +1115,8 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAvanti*  
- Se TRUE, spostare la scheda al gruppo di scheda successivo. Se FALSE, spostarlo al gruppo di scheda precedente.  
+*bAvanti*<br/>
+[in] Se TRUE, spostare la scheda al gruppo di scheda successivo. Se FALSE, spostarlo al gruppo di scheda precedente.  
   
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
  Crea un nuovo gruppo a schede che dispone di una singola finestra.  
@@ -1126,8 +1126,8 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bVert*  
- Specifica l'allineamento del nuovo gruppo. Se TRUE, il nuovo gruppo è allineato verticalmente. Se FALSE, il nuovo gruppo è allineato in senso orizzontale.  
+*bVert*<br/>
+[in] Specifica l'allineamento del nuovo gruppo. Se TRUE, il nuovo gruppo è allineato verticalmente. Se FALSE, il nuovo gruppo è allineato in senso orizzontale.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per creare una nuova finestra (nuovo gruppo a schede) a schede e aggiungervi la prima tabulazione.  
@@ -1178,8 +1178,8 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nBorderCmd*  
- Contiene uno dei seguenti valori da enumerazione `CFrameWnd::BorderCmd`:  
+*nBorderCmd*<br/>
+[in] Contiene uno dei seguenti valori da enumerazione `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
   
@@ -1187,8 +1187,8 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [in, out] *lpRectBorder*  
- Puntatore a un [struttura RECT](../../mfc/reference/rect-structure1.md) o una [classe CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che specifica le coordinate del bordo.  
+*lpRectBorder*<br/>
+[in, out] Puntatore a un [struttura RECT](../../mfc/reference/rect-structure1.md) o una [classe CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che specifica le coordinate del bordo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
@@ -1204,8 +1204,8 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore al riquadro viene chiuso.  
+*pWnd*<br/>
+[in] Puntatore al riquadro viene chiuso.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro ancorato può essere chiusa. In caso contrario, FALSE.  
@@ -1223,8 +1223,8 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore alla finestra con mini-cornice in fase di chiusura.  
+*pWnd*<br/>
+[in] Puntatore alla finestra con mini-cornice in fase di chiusura.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la finestra con mini-cornice mobile può essere chiusa. In caso contrario, FALSE.  
@@ -1242,8 +1242,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMenuPopup*  
- Puntatore a un menu a comparsa.  
+*pMenuPopup*<br/>
+[in] Puntatore a un menu a comparsa.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo se si desidera elaborare le notifiche dal [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) oggetti appartenenti alla finestra cornice MDI quando tali oggetti elaborano i messaggi WM_DESTROY.  
@@ -1260,17 +1260,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- ID di comando.  
+*nID*<br/>
+[in] ID del comando.  
   
- [in] *nCode*  
- Identifica il codice di notifica comando. Visualizzare [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) per altre informazioni sui valori per *nCode*.  
+*nCode*<br/>
+[in] Identifica il codice di notifica comando. Visualizzare [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) per altre informazioni sui valori per *nCode*.  
   
- [in] *pExtra*  
- Utilizzato in base al valore della *nCode*. Visualizzare [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) per altre informazioni sui *pExtra*.  
+*pExtra*<br/>
+[in] Utilizzato in base al valore della *nCode*. Visualizzare [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) per altre informazioni sui *pExtra*.  
   
- [in, out] *pHandlerInfo*  
- In genere, questo parametro deve essere NULL. Se non è NULL, `OnCmdMsg` viene compilato il `pTarget` e `pmf` membri del *pHandlerInfo* struttura invece di inviare il comando.  
+*pHandlerInfo*<br/>
+[in, out] In genere, questo parametro deve essere NULL. Se non è NULL, `OnCmdMsg` viene compilato il `pTarget` e `pmf` membri del *pHandlerInfo* struttura invece di inviare il comando.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il messaggio è gestito; in caso contrario 0.  
@@ -1286,14 +1286,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *pMenuButton*  
- Puntatore al pulsante di menu.  
+*pMenuButton*<br/>
+[in] Puntatore al pulsante di menu.  
   
- [in] *rectImage*  
- Rettangolo di delimitazione dell'immagine.  
+*rectImage*<br/>
+[in] Rettangolo di delimitazione dell'immagine.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo consente di disegnare l'immagine. L'implementazione predefinita restituisce FALSE.  
@@ -1337,11 +1337,11 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Il pulsante della barra degli strumenti.  
+*pButton*<br/>
+[in] Il pulsante della barra degli strumenti.  
   
- [out] *pTI*  
- Puntatore a un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struttura.  
+*PTI*<br/>
+[out] Puntatore a un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'applicazione si riempie il *pTI* parametro. L'implementazione predefinita restituisce FALSE.  
@@ -1357,8 +1357,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pFrame*  
- Un puntatore a una finestra con mini-cornice.  
+*pFrame*<br/>
+[in] Un puntatore a una finestra con mini-cornice.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo, in caso contrario FALSE.  
@@ -1373,11 +1373,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bPreview*  
- Se TRUE, imposta la modalità di anteprima di stampa. Se FALSE, modalità Annulla anteprima.  
+*bPreview*<br/>
+[in] Se TRUE, imposta la modalità di anteprima di stampa. Se FALSE, modalità Annulla anteprima.  
   
- [in] *pState*  
- Un puntatore a un `CPrintPreviewState` struttura.  
+*pState*<br/>
+[in] Un puntatore a un `CPrintPreviewState` struttura.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo esegue l'override [CFrameWnd:: Onsetpreviewmode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).  
@@ -1392,11 +1392,11 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMenuPane*  
- Puntatore al riquadro di personalizzazione rapida.  
+*pMenuPane*<br/>
+[in] Puntatore al riquadro di personalizzazione rapida.  
   
- [in] *uiToolbarID*  
- ID di controllo della barra degli strumenti da personalizzare.  
+*uiToolbarID*<br/>
+[in] ID di controllo della barra degli strumenti da personalizzare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce sempre TRUE.  
@@ -1417,11 +1417,11 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- La posizione del menu di scelta in coordinate dello schermo.  
+*punto*<br/>
+[in] La posizione del menu di scelta in coordinate dello schermo.  
   
- [in] *dwAllowedItems*  
- Una combinazione OR bit per bit di flag che indica le azioni consentite per la scheda corrente:  
+*dwAllowedItems*<br/>
+[in] Una combinazione OR bit per bit di flag che indica le azioni consentite per la scheda corrente:  
   
 - BCGP_MDI_CREATE_VERT_GROUP - è possibile creare un gruppo di schede verticali.  
   
@@ -1433,8 +1433,8 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - BCGP_MDI_CAN_BE_DOCKED - passare un documento a schede per lo stato ancorato (rilevante per solo i documenti a schede).  
   
- [in] *bTabDrop*  
- TRUE per visualizzare il menu di scelta in seguito a trascinare un altro gruppo a schede della scheda. FALSE per visualizzare il menu come menu di scelta rapida nella scheda attualmente attiva.  
+*bTabDrop*<br/>
+[in] TRUE per visualizzare il menu di scelta in seguito a trascinare un altro gruppo a schede della scheda. FALSE per visualizzare il menu come menu di scelta rapida nella scheda attualmente attiva.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'override del metodo in un [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-classe derivata.  
@@ -1455,8 +1455,8 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- TRUE per mostrare i riquadri, FALSE per nascondere i riquadri.  
+*bMostra*<br/>
+[in] TRUE per mostrare i riquadri, FALSE per nascondere i riquadri.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se lo stato dei riquadri cambia in seguito alla chiamata di questo metodo, FALSE se i riquadri si trovano già nello stato specificato da *bMostra*. Se, ad esempio, i riquadri sono nascosti e *bMostra* è FALSE, il valore restituito è FALSE.  
@@ -1491,11 +1491,11 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectOld*  
- La dimensione corrente della finestra client MDI.  
+*rectOld*<br/>
+[in] La dimensione corrente della finestra client MDI.  
   
- [in] *rectNew*  
- Nuova dimensione della finestra client MDI.  
+*rectNew*<br/>
+[in] Nuova dimensione della finestra client MDI.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1509,11 +1509,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMenuPopup*  
- Puntatore al menu a comparsa.  
+*pMenuPopup*<br/>
+[in] Puntatore al menu a comparsa.  
   
- [in] *pBar*  
- Puntatore a barra a comparsa.  
+*pBar*<br/>
+[in] Puntatore a barra a comparsa.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE per consentire il menu a comparsa con la barra a comparsa per renderla attiva; in caso contrario, FALSE. Il valore predefinito è TRUE.  
@@ -1529,8 +1529,8 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hMenuAlt*  
- Handle a un menu.  
+*hMenuAlt*<br/>
+[in] Handle a un menu.  
   
 ##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
  Restituisce il riquadro di ancoraggio che contiene il punto specificato.  
@@ -1550,20 +1550,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Il punto (in coordinate dello schermo).  
+*punto*<br/>
+[in] Il punto (in coordinate dello schermo).  
   
- [in] *nSensitivity*  
- Il rettangolo della finestra di ogni riquadro selezionato viene ingrandito in tutte le direzioni per questo valore.  
+*nSensitivity*<br/>
+[in] Il rettangolo della finestra di ogni riquadro selezionato viene ingrandito in tutte le direzioni per questo valore.  
   
- [in] *bExactBar*  
- Se TRUE, il *nSensitivity* parametro viene ignorato.  
+*bExactBar*<br/>
+[in] Se TRUE, il *nSensitivity* parametro viene ignorato.  
   
- [in] *pRTCBarType*  
- Se diverso da NULL, il metodo scorre solo i riquadri del tipo specificato.  
+*pRTCBarType*<br/>
+[in] Se diverso da NULL, il metodo scorre solo i riquadri del tipo specificato.  
   
- [out] *dwAlignment*  
- Se viene trovato un riquadro, questo parametro specificherà il lato del riquadro è più vicino al punto specificato.  
+*dwAlignment*<br/>
+[out] Se viene trovato un riquadro, questo parametro specificherà il lato del riquadro è più vicino al punto specificato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un riquadro ancorato o NULL se nessun controllo contiene il punto specificato da *puntare*.  
@@ -1579,8 +1579,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bNotify*  
- Determina se l'elemento sul posto attivo per la finestra cornice riceve una notifica di modifica del layout. Se TRUE, l'elemento è una notifica; in caso contrario, FALSE.  
+*bNotify*<br/>
+[in] Determina se l'elemento sul posto attivo per la finestra cornice riceve una notifica di modifica del layout. Se TRUE, l'elemento è una notifica; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo esegue l'override [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).  
@@ -1598,20 +1598,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Un puntatore a un riquadro da rimuovere.  
+*pControlBar*<br/>
+[in] Un puntatore a un riquadro da rimuovere.  
   
- [in] *bDestroy*  
- TRUE per eliminare definitivamente il riquadro rimosso. FALSE per non eliminarla definitivamente.  
+*bDestroy*<br/>
+[in] TRUE per eliminare definitivamente il riquadro rimosso. FALSE per non eliminarla definitivamente.  
   
- [in] *bAdjustLayout*  
- TRUE per modificare il layout di ancoraggio immediatamente. Se FALSE, la regolazione si verifica solo quando si verifica un evento riemessi per altri motivi (l'utente ridimensiona la finestra, trascina la cornice principale e così via).  
+*bAdjustLayout*<br/>
+[in] TRUE per modificare il layout di ancoraggio immediatamente. Se FALSE, la regolazione si verifica solo quando si verifica un evento riemessi per altri motivi (l'utente ridimensiona la finestra, trascina la cornice principale e così via).  
   
- [in] *bAutoHide*  
- TRUE per rimuovere il riquadro da un elenco dei riquadri che si nascondono automaticamente. FALSE per rimuovere il riquadro da un elenco dei riquadri regolari.  
+*bAutoHide*<br/>
+[in] TRUE per rimuovere il riquadro da un elenco dei riquadri che si nascondono automaticamente. FALSE per rimuovere il riquadro da un elenco dei riquadri regolari.  
   
- [in] *pBarReplacement*  
- Puntatore a un riquadro che sostituisce il riquadro rimosso.  
+*pBarReplacement*<br/>
+[in] Puntatore a un riquadro che sostituisce il riquadro rimosso.  
   
 ### <a name="remarks"></a>Note  
  È necessario registrare ogni riquadro con il gestore di ancoraggio per essere incluse nel layout di ancoraggio. Uso [CMDIFrameWndEx::AddPane](#addpane) oppure [CMDIFrameWndEx::InsertPane](#insertpane) per registrare i riquadri.  
@@ -1626,8 +1626,8 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Specifica il nome del profilo.  
+*lpszProfileName*<br/>
+[in] Specifica il nome del profilo.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il salvataggio ha avuto esito positivo; FALSO se il salvataggio non riuscito.  
@@ -1660,8 +1660,8 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore a una finestra cornice di anteprima di stampa.  
+*pWnd*<br/>
+[in] Puntatore a una finestra cornice di anteprima di stampa.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1676,14 +1676,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *menu*  
- Un riferimento a un [CMenu (classe)](../../mfc/reference/cmenu-class.md) oggetto da modificare.  
+*Menu di scelta*<br/>
+[in] Un riferimento a un [CMenu (classe)](../../mfc/reference/cmenu-class.md) oggetto da modificare.  
   
- [in] *uiViewUserToolbarCmdFirst*  
- Specifica il primo comando definito dall'utente.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] Specifica il primo comando definito dall'utente.  
   
- [in] *uiViewUserToolbarCmdLast*  
- Specifica l'ultimo comando definito dall'utente.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] Specifica l'ultimo comando definito dall'utente.  
   
 ##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
  Passa la cornice principale dalla modalità normale alla modalità schermo intero.  
@@ -1706,17 +1706,17 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Puntatore al riquadro per essere visualizzato o nascosto.  
+*pBar*<br/>
+[in] Puntatore al riquadro per essere visualizzato o nascosto.  
   
- [in] *bMostra*  
- TRUE per visualizzare il riquadro. FALSE per nascondere il riquadro.  
+*bMostra*<br/>
+[in] TRUE per visualizzare il riquadro. FALSE per nascondere il riquadro.  
   
- [in] *bDelay*  
- TRUE per ritardare il ricalcolo del layout di ancoraggio. FALSE per ricalcolare il layout di ancoraggio immediatamente.  
+*bDelay*<br/>
+[in] TRUE per ritardare il ricalcolo del layout di ancoraggio. FALSE per ricalcolare il layout di ancoraggio immediatamente.  
   
- [in] *bActivate*  
- True per mostrare il riquadro deve come attiva. FALSE per visualizzare il riquadro come inattivo.  
+*bActivate*<br/>
+[in] True per mostrare il riquadro deve come attiva. FALSE per visualizzare il riquadro come inattivo.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per visualizzare o nascondere il riquadro. Non usare `ShowWindow` per i riquadri ancorabili.  
@@ -1786,11 +1786,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwData*  
- Specifica i dati necessari per il tipo di Guida specificato da *nCmd*.  
+*dwData*<br/>
+[in] Specifica i dati necessari per il tipo di Guida specificato da *nCmd*.  
   
- [in] *nCmd*  
- Specifica il tipo di Guida richiesto. Per un elenco di valori possibili e gli effetti di *dwData* parametro, vedere la [funzione WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) nel SDK di Windows.  
+*nCmd*<br/>
+[in] Specifica il tipo di Guida richiesto. Per un elenco di valori possibili e gli effetti di *dwData* parametro, vedere la [funzione WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo esegue l'override [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

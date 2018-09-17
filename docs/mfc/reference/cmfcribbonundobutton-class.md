@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848768"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709190"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe CMFCRibbonUndoButton
 Il `CMFCRibbonUndoButton` classe implementa un pulsante elenco a discesa che contiene i comandi utente più recenti. Gli utenti possono selezionare uno o più dei comandi più recenti dall'elenco a discesa scegliere rollforward o annullarle.  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLabel*  
- L'etichetta dell'azione che verrà visualizzato nell'elenco a discesa.  
+*lpszLabel*<br/>
+[in] L'etichetta dell'azione che verrà visualizzato nell'elenco a discesa.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Cancella elenco di azioni, ovvero l'elenco di riepilogo a discesa.  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Specifica l'identificatore di comando.  
+*nID*<br/>
+[in] Specifica l'identificatore di comando.  
   
- [in] *lpszText*  
- Specifica l'etichetta di testo del pulsante.  
+*lpszText*<br/>
+[in] Specifica l'etichetta di testo del pulsante.  
   
- [in] *nSmallImageIndex*  
- Indice in base zero nell'elenco delle immagini dell'oggetto padre per l'immagine di piccole dimensioni del pulsante.  
+*nSmallImageIndex*<br/>
+[in] Indice in base zero nell'elenco delle immagini dell'oggetto padre per l'immagine di piccole dimensioni del pulsante.  
   
- [in] *nLargeImageIndex*  
- Indice in base zero nell'elenco delle immagini dell'oggetto padre per dell'immagine di grandi dimensioni del pulsante.  
+*nLargeImageIndex*<br/>
+[in] Indice in base zero nell'elenco delle immagini dell'oggetto padre per dell'immagine di grandi dimensioni del pulsante.  
   
- [in] *hIcon*  
- Handle per un'icona che è possibile usare come immagine del pulsante.  
+*hIcon*<br/>
+[in] Handle per un'icona che è possibile usare come immagine del pulsante.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Determina il numero di elementi che un utente selezionato dall'elenco a discesa.  

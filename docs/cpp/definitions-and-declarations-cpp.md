@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462888"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699615"
 ---
 # <a name="definitions-and-declarations-c"></a>Definizioni e dichiarazioni (C++)
-**Specifica di Microsoft** interfaccia la DLL fa riferimento a tutti gli elementi (funzioni e dati) ritenuti esportati da un programma nel sistema, vale a dire tutti gli elementi che vengono dichiarati come **dllimport** o **dllexport** . Tutte le dichiarazioni incluse nell'interfaccia DLL devono specificare la **dllimport** oppure **dllexport** attributo. Tuttavia, la definizione deve specificare solo il **dllexport** attributo. Ad esempio, la definizione di funzione seguente genera un errore del compilatore:
+**Sezione specifica Microsoft**
+
+ L'interfaccia DLL fa riferimento a tutti gli elementi (funzioni e dati) che sono noti per essere esportati da un programma nel sistema. vale a dire tutti gli elementi che vengono dichiarati come **dllimport** oppure **dllexport**. Tutte le dichiarazioni incluse nell'interfaccia DLL devono specificare la **dllimport** oppure **dllexport** attributo. Tuttavia, la definizione deve specificare solo il **dllexport** attributo. Ad esempio, la definizione di funzione seguente genera un errore del compilatore:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport

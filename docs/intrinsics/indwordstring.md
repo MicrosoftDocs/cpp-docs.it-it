@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c0f8e67a535d126eab3a19bf17b0bf8bfd7440
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2c504b4f9a17c65affbcc2635ef63ec743f7ad93
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539815"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700895"
 ---
 # <a name="indwordstring"></a>__indwordstring
 **Sezione specifica Microsoft**  
@@ -41,14 +41,14 @@ void __indwordstring(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Port`  
- La porta da cui leggere.  
+*Porta*<br/>
+[in] La porta da cui leggere.  
   
- [out] `Buffer`  
- I dati letti dalla porta viene scritto qui.  
+*Buffer*<br/>
+[out] I dati letti dalla porta viene scritto qui.  
   
- [in] `Count`  
- Il numero di byte di dati da leggere.  
+*Conteggio*<br/>
+[in] Il numero di byte di dati da leggere.  
   
 ## <a name="requirements"></a>Requisiti  
   

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705016"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchangePointer
 **Sezione specifica Microsoft**  
@@ -72,18 +72,18 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in, out] `Target`  
- Puntatore a puntatore al valore per lo scambio. La funzione imposta il valore su `Value` e restituisce il valore precedente.  
+*Destinazione*<br/>
+[in, out] Puntatore al puntatore al valore da scambiare. La funzione imposta il valore su `Value` e restituisce il valore precedente.  
   
- [in] `Value`  
- Valore da scambiare con il valore a cui punta `Target`.  
+*Valore*<br/>
+[in] Valore da scambiare con il valore a cui punta `Target`.  
   
 ## <a name="return-value"></a>Valore restituito  
  La funzione restituisce il valore iniziale a cui punta `Target`.  
   
 ## <a name="requirements"></a>Requisiti  
   
-|Funzione intrinseca|Architettura|Header|  
+|Funzione intrinseca|Architettura|Intestazione|  
 |---------------|------------------|------------|  
 |`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|  

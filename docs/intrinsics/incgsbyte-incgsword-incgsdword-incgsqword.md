@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e1b74c95f143aac7a915b3f148a85da9c5a3d3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 611786246df9da54d94e673da1a5e48940ca7241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711126"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Sezione specifica Microsoft**  
@@ -56,8 +56,8 @@ void __incgsqword(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Offset`  
- L'offset dall'inizio del `GS`.  
+*Offset*<br/>
+[in] L'offset dall'inizio del `GS`.  
   
 ## <a name="requirements"></a>Requisiti  
   

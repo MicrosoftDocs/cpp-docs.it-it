@@ -1,5 +1,5 @@
 ---
-title: Opzioni di BSCMAKE | Documenti Microsoft
+title: Opzioni di BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,67 +39,69 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c00e6abd28d2e21c73d1eca83f2effb8782d8aa4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377855"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700869"
 ---
 # <a name="bscmake-options"></a>Opzioni di BSCMAKE
-In questa sezione vengono descritte le opzioni disponibili per il controllo di BSCMAKE. Diverse opzioni controllano il contenuto del file di informazioni di visualizzazione escludendo o includendo determinate informazioni. Le opzioni di esclusione consentono BSCMAKE per velocizzare l'esecuzione e possono comportare un file BSC più piccolo. I nomi delle opzioni sono sensibili alle maiuscole (ad eccezione di **/Help** e **/NOLOGO**).  
-  
- Solo **/NOLOGO** e **/o** sono disponibili dall'interno dell'ambiente di sviluppo di Visual Studio.  Vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md) per informazioni sull'accesso alle pagine delle proprietà del progetto.  
-  
- /EI ( `filename`...)  
- Esclude il contenuto del file di inclusione specificati dal file di informazioni di visualizzazione. Per specificare più file, separarli con uno spazio e racchiudere l'elenco tra parentesi. Le parentesi non sono necessarie se si specifica solo uno `filename`. Utilizzare **/Ei** lungo con il **/Es** opzione per escludere i file non esclusi da **/Es**.  
-  
- /EL  
- Esclude i simboli locali. Il valore predefinito è per includere i simboli locali. Per ulteriori informazioni sui simboli locali, vedere [la creazione di un File SBR](../../build/reference/creating-an-dot-sbr-file.md).  
-  
- Em  
- Esclude i simboli nel corpo della macro. Utilizzare **em** da includere solo i nomi delle macro nel file di informazioni di visualizzazione. Il valore predefinito consiste nell'includere sia i nomi delle macro e il risultato delle espansioni della macro.  
-  
- /ER ( `symbol`...)  
- Esclude i simboli specificati dal file di informazioni di visualizzazione. Per specificare più nomi di simboli, separarli con uno spazio e racchiudere l'elenco tra parentesi. Le parentesi non sono necessarie se si specifica solo uno `symbol`.  
-  
- /Es  
- Esclude dal file di informazioni di visualizzazione ogni file di inclusione specificato con un percorso assoluto o trovato in un percorso assoluto specificato nella variabile di ambiente INCLUDE. (In genere, si tratta il sistema di file di inclusione, contenenti numerose informazioni che potrebbero non essere necessario nel file di informazioni di esplorazione.) Questa opzione non esclude i file specificati senza un percorso o con i percorsi relativi o i file trovati in un percorso relativo in INCLUDE. È possibile utilizzare il **/Ei** opzione insieme a **/Es** per escludere i file **/Es** non esclusi. Se si desidera escludere solo alcuni dei file che **/Es** esclude, utilizzare **/Ei** anziché **/Es** ed elencare i file che si desidera escludere.  
-  
- /errorreport: [none &#124; prompt &#124; code &#124; di trasmissione]  
- Consente di inviare a Microsoft informazioni sugli errori interni in bscmake.exe.  
-  
- Per ulteriori informazioni su **/errorreport**, vedere [/errorReport (segnala interni del compilatore gli errori)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
-  
- /HELP  
- Visualizza un riepilogo della sintassi della riga di comando di BSCMAKE.  
-  
- /Iu  
- Sono presenti simboli senza riferimenti. Per impostazione predefinita, BSCMAKE non registra i simboli definiti ma non viene fatto riferimento. Se un file SBR è stato compresso, questa opzione non ha effetto per tale file di input perché il compilatore è già rimosso i simboli senza riferimenti.  
-  
- /n  
- Forza una compilazione non incrementale. Uso **/n** per forzare una build completa del file di informazioni di visualizzazione o meno un file BSC esiste e per evitare che i file SBR vengano troncati. Vedere [la modalità di compilazione di un File BSC in BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
-  
- /NOLOGO  
- Elimina il messaggio di copyright BSCMAKE.  
-  
- /o `filename`  
- Specifica un nome per il file di informazioni. Per impostazione predefinita, il file di informazioni viene assegnato il nome base del primo file sbr e l'estensione bsc.  
-  
- /S ( `filename`...)  
- Indica a BSCMAKE per elaborare il file di inclusione specificato la prima volta che viene rilevata e per escludere, in caso contrario. Utilizzare questa opzione per risparmiare tempo di elaborazione quando un file (ad esempio un'intestazione, o h, file per un file c o file di origine con estensione cpp) è incluso in diversi file di origine, ma resta invariato a seguito di pre-elaborazione direttive ogni volta. È anche possibile utilizzare questa opzione se un file viene modificato in modo che non è importanti per il file di informazioni che si sta creando. Per specificare più file, separarli con uno spazio e racchiudere l'elenco tra parentesi. Le parentesi non sono necessarie se si specifica solo uno `filename`. Se si desidera escludere il file ogni volta che viene incluso, utilizzare il **/Ei** o **/Es** opzione.  
-  
- /v  
- Fornisce un output dettagliato, che include il nome di ogni file SBR in fase di elaborazione e informazioni sull'esecuzione completa di BSCMAKE.  
-  
- /?  
- Visualizza un breve riepilogo della sintassi della riga di comando di BSCMAKE.  
-  
- La seguente riga di comando BSCMAKE di eseguire una compilazione completa di Main. BSC da tre file SBR. Indica inoltre BSCMAKE per escludere le istanze duplicate di Toolbox. h:  
-  
-```  
-BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)
+
+In questa sezione vengono descritte le opzioni disponibili per il controllo di BSCMAKE. Diverse opzioni controllano il contenuto del file di informazioni di visualizzazione da escluse o incluse alcune informazioni. Le opzioni di esclusione possono consentire a BSCMAKE per velocizzare l'esecuzione e possono comportare un file BSC più piccolo. I nomi di opzione sono tra maiuscole e minuscole (ad eccezione di **/Help** e **/NOLOGO**).
+
+Solo **/NOLOGO** e **/o** sono disponibili all'interno dell'ambiente di sviluppo di Visual Studio.  Visualizzare [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md) per informazioni su accesso pagine delle proprietà di un progetto.
+
+**/EI (** *filename*... **)**<br/>
+Esclude il contenuto del file di inclusione specificati dal file di informazioni di visualizzazione. Per specificare più file, separare i nomi con uno spazio e racchiudere l'elenco tra parentesi. Le parentesi non sono necessarie se si specifica solo uno *filename*. Uso **/Ei** con il **/Es** opzione per escludere i file non esclusi da **/Es**.
+
+**/EL**<br/>
+Esclude i simboli locali. L'impostazione predefinita consiste nell'includere simboli locali. Per altre informazioni sui simboli locali, vedere [creazione di un File SBR](../../build/reference/creating-an-dot-sbr-file.md).
+
+**/ Em**<br/>
+Esclude i simboli nel corpo della macro. Uso **/em** da includere solo i nomi delle macro nel file di informazioni di visualizzazione. Il valore predefinito è di includere entrambe le macro e il risultato delle espansioni della macro.
+
+**/ER (** *simbolo*... **)**<br/>
+Esclude i simboli specificati dal file di informazioni di visualizzazione. Per specificare più nomi di simbolo, separare i nomi con uno spazio e racchiudere l'elenco tra parentesi. Le parentesi non sono necessarie se si specifica solo uno *simbolo*.
+
+**/Es**<br/>
+Esclude il file di informazioni di ogni file di inclusione specificato con un percorso assoluto o trovata in un percorso assoluto specificato nella variabile di ambiente INCLUDE. (In genere, questi sono il sistema di file di inclusione, contenenti numerose informazioni che potrebbe non essere necessaria nel file di informazioni di esplorazione.) Questa opzione non esclude i file specificati senza un percorso o i percorsi relativi o i file trovati in un percorso relativo in file di inclusione. È possibile usare la **/Ei** opzione insieme a **/Es** per escludere i file **/Es** non esclude. Se si desidera escludere solo alcuni dei file che **/Es** esclude, usare **/Ei** anziché **/Es** ed elencare i file da escludere.
+
+**/errorreport:**[**none** &#124; **prompt dei comandi** &#124; **coda** &#124; **inviare**]<br/>
+Consente di inviare a Microsoft informazioni sugli errori interni in bscmake.exe.
+
+Per ulteriori informazioni sul **/errorreport**, vedere [/errorReport (segnala interni del compilatore gli errori)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+
+**/HELP**<br/>
+Visualizza un riepilogo della sintassi della riga di comando di BSCMAKE.
+
+**/Iu**<br/>
+Include simboli senza riferimenti. Per impostazione predefinita, BSCMAKE non registra alcun simbolo definito, ma non viene fatto riferimento. Se un file SBR già compressi, questa opzione ha effetto per tale file di input perché il compilatore è già rimosso i simboli senza riferimenti.
+
+**/n**<br/>
+Forza una compilazione non incrementale. Uso **/n** per forzare una build completa del file di informazioni di visualizzazione o meno è presente un file BSC e per impedire che i file SBR vengano troncati. Visualizzare [come compilazione di un File BSC in BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
+
+**/NOLOGO**<br/>
+Elimina il messaggio di copyright BSCMAKE.
+
+**/o** *nomefile*<br/>
+Specifica un nome per il file di informazioni. Per impostazione predefinita, il file di informazioni di BSCMAKE fornisce il nome base del primo file sbr e un'estensione bsc.
+
+**/S (** *filename*... **)**<br/>
+Indica a BSCMAKE per elaborare la prima volta che si è verificato il file di inclusione specificati e per evitare che in caso contrario. Usare questa opzione per risparmiare tempo di elaborazione quando un file (ad esempio un'intestazione, o. h, file per un file. c o file di origine con estensione cpp) è incluso in vari file di origine, ma resta invariato a seguito di pre-elaborazione direttive ogni volta. È anche possibile usare questa opzione se un file viene modificato in modo che non è importanti per il file di informazioni che si sta creando. Per specificare più file, separare i nomi con uno spazio e racchiudere l'elenco tra parentesi. Le parentesi non sono necessarie se si specifica solo uno *filename*. Se si desidera escludere il file ogni volta che viene incluso, usare il **/Ei** oppure **/Es** opzione.
+
+**/v**<br/>
+Fornisce l'output dettagliato, che include il nome di ogni file SBR in fase di elaborazione e informazioni sull'esecuzione completa di BSCMAKE.
+
+**/?**<br/>
+Consente di visualizzare un breve riepilogo della sintassi della riga di comando di BSCMAKE.
+
+La seguente riga di comando a BSCMAKE per eseguire una build completa del file Main. BSC dai tre file SBR. Indica inoltre BSCMAKE per escludere le istanze duplicate di Toolbox. h:
+
+```
+BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)

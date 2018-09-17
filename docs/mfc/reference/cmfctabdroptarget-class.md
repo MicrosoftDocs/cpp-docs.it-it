@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852968"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711633"
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
 Fornisce il meccanismo di comunicazione tra un controllo struttura a schede e le librerie OLE.  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pWnd*|Non usato.|  
-|[in] *pDataObject*|Un puntatore all'oggetto che l'utente trascina.|  
-|[in] *dwKeyState*|Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|  
-|[in] *punto*|La posizione del cursore nelle coordinate del client.|  
+|*pWnd*|[in] Non usato.|  
+|*pDataObject*|[in] Un puntatore all'oggetto che l'utente trascina.|  
+|*dwKeyState*|[in] Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|  
+|*punto*|[in] La posizione del cursore nelle coordinate del client.|  
   
 ### <a name="return-value"></a>Valore restituito  
  L'effetto risultante in caso di trascinamento in corrispondenza della posizione specificata da *puntare*. Può trattarsi di uno o più delle seguenti operazioni:  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pWnd*|Non usato.|  
+|*pWnd*|[in] Non usato.|  
   
 ### <a name="remarks"></a>Note  
  Questo metodo chiama il `CMFCBaseTabCtrl::OnDragLeave` metodo per eseguire l'operazione di trascinamento.  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pWnd*|Non usato.|  
-|[in] *pDataObject*|Un puntatore all'oggetto che l'utente trascina.|  
-|[in] *dwKeyState*|Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|  
-|[in] *punto*|La posizione del puntatore del mouse, nelle coordinate del client.|  
+|*pWnd*|[in] Non usato.|  
+|*pDataObject*|[in] Un puntatore all'oggetto che l'utente trascina.|  
+|*dwKeyState*|[in] Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|  
+|*punto*|[in] La posizione del puntatore del mouse, nelle coordinate del client.|  
   
 ### <a name="return-value"></a>Valore restituito  
  L'effetto risultante in caso di trascinamento in corrispondenza della posizione specificata da *puntare*. Può trattarsi di uno o più delle seguenti operazioni:  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pWnd*|Non usato.|  
-|[in] *pDataObject*|Un puntatore all'oggetto che l'utente trascina.|  
-|[in] *dropEffect*|L'operazione di eliminazione predefinito.|  
-|[in] *elenco a discesa*|Non usato.|  
-|[in] *punto*|La posizione del puntatore del mouse, nelle coordinate del client.|  
+|*pWnd*|[in] Non usato.|  
+|*pDataObject*|[in] Un puntatore all'oggetto che l'utente trascina.|  
+|*dropEffect*|[in] L'operazione di eliminazione predefinito.|  
+|*elenco a discesa*|[in] Non usato.|  
+|*punto*|[in] La posizione del puntatore del mouse, nelle coordinate del client.|  
   
 ### <a name="return-value"></a>Valore restituito  
  L'effetto risultante. Può trattarsi di uno o più delle seguenti operazioni:  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pOwner*|Controllo scheda da registrare come destinazione di rilascio.|  
+|*pOwner*|[in] Controllo scheda da registrare come destinazione di rilascio.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la registrazione ha esito positivo. in caso contrario 0.  

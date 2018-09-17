@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0d9b730e9cb1ca78b5247ea09f1f24a9bb8c307c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848519"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709787"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup (classe)
 Il `CMFCRibbonButtonsGroup` classe consente di organizzare un set di pulsanti della barra multifunzione in un gruppo. Tutti i pulsanti nel gruppo sono direttamente adiacenti l'uno rispetto all'altro in senso orizzontale e racchiusi da un bordo.  
@@ -106,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Puntatore a un pulsante per aggiungere.  
+*pButton*<br/>
+[in] Puntatore a un pulsante per aggiungere.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Aggiunge un elenco di pulsanti a un gruppo.  
@@ -118,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lstButtons*  
- Un elenco di puntatori a pulsanti che si desidera aggiungere.  
+*lstButtons*<br/>
+[in] Un elenco di puntatori a pulsanti che si desidera aggiungere.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Costruisce un oggetto `CMFCRibbonButtonsGroup`.  
@@ -130,8 +130,8 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Specifica un pulsante per aggiungere all'oggetto appena creato `CMFCRibbonButtonsGroup` oggetto.  
+*pButton*<br/>
+[in] Specifica un pulsante per aggiungere all'oggetto appena creato `CMFCRibbonButtonsGroup` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -145,8 +145,8 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *ho*  
- Un indice in base zero di un pulsante da restituire.  
+*i*<br/>
+[in] Un indice in base zero di un pulsante da restituire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al pulsante che si trova in corrispondenza dell'indice specificato. NULL se l'indice specificato è compreso nell'intervallo.  
@@ -183,8 +183,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore al contesto di dispositivo del gruppo della barra multifunzione.  
+*pDC*<br/>
+[in] Puntatore al contesto di dispositivo del gruppo della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -214,17 +214,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore al contesto di dispositivo del `CMFCRibbonButtonsGroup` oggetto.  
+*pDC*<br/>
+[in] Puntatore al contesto di dispositivo del `CMFCRibbonButtonsGroup` oggetto.  
   
- [in] *rectImage*  
- Il rettangolo all'interno della quale disegnare l'immagine.  
+*rectImage*<br/>
+[in] Il rettangolo all'interno della quale disegnare l'immagine.  
   
- [in] *pButton*  
- Il pulsante per la quale disegnare l'immagine.  
+*pButton*<br/>
+[in] Il pulsante per la quale disegnare l'immagine.  
   
- [in] *nImageIndex*  
- Indice dell'immagine da disegnare sul pulsante (in una delle matrici tre immagini per i pulsanti normali, evidenziati o disabilitati).  
+*nImageIndex*<br/>
+[in] Indice dell'immagine da disegnare sul pulsante (in una delle matrici tre immagini per i pulsanti normali, evidenziati o disabilitati).  
   
 ### <a name="remarks"></a>Note  
   
@@ -248,14 +248,14 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pImages*  
- Immagini regolari.  
+*pImages*<br/>
+[in] Immagini regolari.  
   
- [in] *pHotImages*  
- Immagini a caldo.  
+*pHotImages*<br/>
+[in] Immagini a caldo.  
   
- [in] *pDisabledImages*  
- Immagini disabilitate.  
+*pDisabledImages*<br/>
+[in] Immagini disabilitate.  
   
 ### <a name="remarks"></a>Note  
  Chiamare `SetImages` prima di aggiungere pulsanti a un gruppo. Il numero di immagini deve essere maggiore o uguale al numero di pulsanti da aggiungere al gruppo.  
@@ -271,8 +271,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pCategory*  
- Puntatore alla categoria padre impostare (i gruppi a schede nella barra multifunzione vengono chiamati categorie).  
+*pCategory*<br/>
+[in] Puntatore alla categoria padre impostare (i gruppi a schede nella barra multifunzione vengono chiamati categorie).  
   
 ### <a name="remarks"></a>Note  
   

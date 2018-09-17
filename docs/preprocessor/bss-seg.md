@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539219"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711158"
 ---
 # <a name="bssseg"></a>bss_seg
 Specifica il segmento in cui le variabili non inizializzate vengono archiviate nel file obj.  
@@ -35,27 +35,27 @@ Specifica il segmento in cui le variabili non inizializzate vengono archiviate n
 ```  
   
 ## <a name="remarks"></a>Note  
- 
+
 File obj possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file obj per i dati non inizializzati è bss. In alcuni casi sfrutta **bss_seg** può rendere più tempi di caricamento mediante il raggruppamento di dati non inizializzati in una sezione.  
   
 **bss_seg** senza parametri Reimposta il segmento su BSS.  
   
-*push* (facoltativo)  
-Inserisce un record nello stack interno del compilatore. Oggetto *push* può avere un *identifier* e *nome segmento*.  
+**push**<br/>
+(Facoltativo) Inserisce un record nello stack del compilatore interno. Oggetto *pu*sh * può avere un *identifier* e *nome segmento*.  
   
-*POP* (facoltativo)  
-Rimuove un record dall'inizio dello stack interno del compilatore.  
+**pop**<br/>
+(Facoltativo) Rimuove un record dall'inizio dello stack del compilatore interno.  
   
-*Identificatore* (facoltativo)  
-Quando abbinata *push*, assegna un nome al record nello stack del compilatore interno. Quando abbinata *pop*, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
+*identifier*<br/>
+(Facoltativo) Quando abbinata **push**, assegna un nome al record nello stack del compilatore interno. Quando abbinata **pop**, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
   
-*Identificatore* consente di più record da estrarre con un'unica *pop* comando.  
+*Identificatore* consente di più record da estrarre con un'unica **pop** comando.  
   
-*"segment-name"*(facoltativo)  
-Nome di un segmento. Quando abbinata *pop*, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.  
+*"segment-name"*<br/>
+(Facoltativo) Il nome di un segmento. Quando abbinata **pop**, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.  
   
-*"segmento-class"* (facoltativo)  
-Incluso per la compatibilità con le versioni di C++ precedenti alla versione 2.0. Ignorato.  
+*"segmento-class"*<br/>
+(Facoltativo) Opzione inclusa per compatibilità con C++ precedenti alla versione 2.0. Ignorato.  
   
 ## <a name="example"></a>Esempio  
   

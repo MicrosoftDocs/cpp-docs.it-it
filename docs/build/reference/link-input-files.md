@@ -1,5 +1,5 @@
 ---
-title: File di Input di collegamento | Documenti Microsoft
+title: I file di Input di collegamento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,43 +24,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5974914e736278ebb336b6814661845740855fe6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374827"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710241"
 ---
 # <a name="link-input-files"></a>File di input LINK
-Fornire il linker con i file che contengono oggetti, importazione e librerie standard, risorse, le definizioni del modulo e comandi di input. COLLEGAMENTO non utilizza estensioni di file per presupporre il contenuto di un file. In alternativa, collegamento esamina ogni file di input per determinare il tipo di file è.  
-  
- File oggetto nella riga di comando vengono elaborati in ordine che appaiono nella riga di comando. Vengono eseguita la ricerca di librerie in ordine di riga di comando, tenendo però seguenti: simboli non risolti quando riportare in un file di oggetto da una libreria vengono cercati in tale raccolta prima di tutto, quindi le librerie seguenti dalla riga di comando e [/DEFAULTLIB (specifica di libreria predefinito)](../../build/reference/defaultlib-specify-default-library.md) direttive e quindi a tutte le librerie all'inizio della riga di comando.  
-  
+
+Il linker è fornire con i file che contengono oggetti, importazione e librerie standard, le risorse, definizioni di moduli e comandi di input. COLLEGAMENTO non utilizza estensioni di file per fare ipotesi sul contenuto di un file. Al contrario, collegamento esamina ogni file di input per determinare quale tipo di file è.
+
+Oggetto file nella riga di comando vengono elaborati in ordine che vengono visualizzati nella riga di comando. Vengono effettuata la ricerca di librerie nella riga di comando di ordinamento, precisando seguenti: simboli non risolti quando assolutamente innovativo, in un file di oggetti da una raccolta vengono cercati in tale raccolta prima di tutto, quindi le librerie seguenti dalla riga di comando e [/DEFAULTLIB (specifica di libreria predefinita)](../../build/reference/defaultlib-specify-default-library.md) direttive e quindi a tutte le librerie all'inizio della riga di comando.
+
 > [!NOTE]
->  COLLEGAMENTO non accetta più un punto e virgola (o qualsiasi altro carattere) come inizio di un commento nel file di risposta e file di ordinamento. Un punto e virgola viene riconosciuto solo come punto di partenza dei commenti nei file di definizione moduli (def).  
-  
- COLLEGAMENTO utilizza i seguenti tipi di file di input:  
-  
--   [obj (file)](../../build/reference/dot-obj-files-as-linker-input.md)  
-  
--   [file con estensione netmodule](../../build/reference/netmodule-files-as-linker-input.md)  
-  
--   [LIB (file)](../../build/reference/dot-lib-files-as-linker-input.md)  
-  
--   [file EXP](../../build/reference/dot-exp-files-as-linker-input.md)  
-  
--   [DEF (file)](../../build/reference/dot-def-files-as-linker-input.md)  
-  
--   [PDB (file)](../../build/reference/dot-pdb-files-as-linker-input.md)  
-  
--   [file res](../../build/reference/dot-res-files-as-linker-input.md)  
-  
--   [file .exe](../../build/reference/dot-exe-files-as-linker-input.md)  
-  
--   [file con estensione txt](../../build/reference/dot-txt-files-as-linker-input.md)  
-  
--   [ILK (file)](../../build/reference/dot-ilk-files-as-linker-input.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+>  COLLEGAMENTO non accetta più un punto e virgola (o qualsiasi altro carattere) come l'inizio di un commento nel file di risposta e ordinare i file. Un punto e virgola viene riconosciuto solo come punto di partenza di commenti nei file di definizione moduli (def).
+
+COLLEGAMENTO Usa i tipi di file di input seguenti:
+
+- [file con estensione obj](../../build/reference/dot-obj-files-as-linker-input.md)
+
+- [file con estensione netmodule](../../build/reference/netmodule-files-as-linker-input.md)
+
+- [file con estensione LIB](../../build/reference/dot-lib-files-as-linker-input.md)
+
+- [file EXP](../../build/reference/dot-exp-files-as-linker-input.md)
+
+- [DEF (file)](../../build/reference/dot-def-files-as-linker-input.md)
+
+- [file con estensione pdb](../../build/reference/dot-pdb-files-as-linker-input.md)
+
+- [file res](../../build/reference/dot-res-files-as-linker-input.md)
+
+- [file .exe](../../build/reference/dot-exe-files-as-linker-input.md)
+
+- [file con estensione txt](../../build/reference/dot-txt-files-as-linker-input.md)
+
+- [ILK (file)](../../build/reference/dot-ilk-files-as-linker-input.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

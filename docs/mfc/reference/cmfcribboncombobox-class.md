@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 68746d76c9c7842e9fc8c16addeca2cb44f31211
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849669"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701740"
 ---
 # <a name="cmfcribboncombobox-class"></a>Classe CMFCRibbonComboBox
 Il `CMFCRibbonComboBox` classe implementa un controllo casella combinata che è possibile aggiungere a una barra multifunzione, un pannello della barra multifunzione o a un menu di scelta rapida della barra multifunzione.  
@@ -127,11 +127,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszItem*  
- La stringa dell'elemento da aggiungere.  
+*lpszItem*<br/>
+[in] La stringa dell'elemento da aggiungere.  
   
- [in] *dwData*  
- I dati associati con l'elemento da aggiungere.  
+*dwData*<br/>
+[in] I dati associati con l'elemento da aggiungere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero dell'elemento aggiunto.  
@@ -153,20 +153,20 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- L'ID della casella combinata.  
+*nID*<br/>
+[in] L'ID della casella combinata.  
   
- [in] *bHasEditBox*  
- TRUE se si desidera che una casella di modifica nel controllo. FALSE in caso contrario.  
+*bHasEditBox*<br/>
+[in] TRUE se si desidera che una casella di modifica nel controllo. FALSE in caso contrario.  
   
- [in] *nWidth*  
- Larghezza della casella combinata in pixel. oppure -1 per la larghezza predefinita.  
+*nWidth*<br/>
+[in] Larghezza della casella combinata in pixel. oppure -1 per la larghezza predefinita.  
   
- [in] *lpszLabel*  
- L'etichetta di visualizzazione della casella combinata.  
+*lpszLabel*<br/>
+[in] L'etichetta di visualizzazione della casella combinata.  
   
- [in] *immagine*  
- L'indice dell'immagine di piccole dimensioni della casella combinata.  
+*Immagine*<br/>
+[in] L'indice dell'immagine di piccole dimensioni della casella combinata.  
   
 ### <a name="remarks"></a>Note  
  La larghezza predefinita è 108 pixel.  
@@ -182,14 +182,14 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice a base zero dell'elemento da eliminare.  
+*iIndex*<br/>
+[in] Indice a base zero dell'elemento da eliminare.  
   
- [in] *dwData*  
- I dati associati all'elemento da eliminare.  
+*dwData*<br/>
+[in] I dati associati all'elemento da eliminare.  
   
- [in] *lpszText*  
- La stringa dell'elemento da eliminare. Se sono presenti più elementi con la stessa stringa, il primo elemento viene eliminato.  
+*lpszText*<br/>
+[in] La stringa dell'elemento da eliminare. Se sono presenti più elementi con la stessa stringa, il primo elemento viene eliminato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'elemento specificato è stata eliminata, in caso contrario, FALSE.  
@@ -204,8 +204,8 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- True per abilitare il ridimensionamento; FALSE per disabilitare il ridimensionamento.  
+*bAttivare il*<br/>
+[in] True per abilitare il ridimensionamento; FALSE per disabilitare il ridimensionamento.  
   
 ### <a name="remarks"></a>Note  
  Quando è abilitato il ridimensionamento, la casella di riepilogo viene modificato dimensione per adattare gli elementi che vengono visualizzati.  
@@ -218,8 +218,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszText*  
- La stringa di un elemento nella casella di riepilogo.  
+*lpszText*<br/>
+[in] La stringa di un elemento nella casella di riepilogo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero dell'elemento; oppure -1 se l'elemento non viene trovato.  
@@ -268,8 +268,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per la casella combinata.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per la casella combinata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni della casella combinata.  
@@ -285,8 +285,8 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice a base zero di un elemento nella casella di riepilogo.  
+*iIndex*<br/>
+[in] Indice a base zero di un elemento nella casella di riepilogo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a una stringa che viene associato all'articolo; in caso contrario, NULL se il parametro di indice non è valido o se il parametro di indice è -1 e nessun elemento selezionato nella casella combinata.  
@@ -301,8 +301,8 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice a base zero di un elemento nella casella di riepilogo.  
+*iIndex*<br/>
+[in] Indice a base zero di un elemento nella casella di riepilogo.  
   
 ### <a name="return-value"></a>Valore restituito  
  I dati associati all'elemento; oppure 0 se l'elemento non esiste o se il parametro di indice è -1 ed è presente nessun elemento selezionato nella casella di riepilogo.  
@@ -340,8 +340,8 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nItem*  
- L'indice dell'elemento selezionato.  
+*nItem*<br/>
+[in] L'indice dell'elemento selezionato.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo se si desidera elaborare una selezione di input dell'utente.  
@@ -366,14 +366,14 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Indice a base zero di un elemento nella casella di riepilogo.  
+*iIndex*<br/>
+[in] Indice a base zero di un elemento nella casella di riepilogo.  
   
- [in] *dwData*  
- I dati associati a un elemento nella casella di riepilogo.  
+*dwData*<br/>
+[in] I dati associati a un elemento nella casella di riepilogo.  
   
- [in] *lpszText*  
- La stringa di un elemento nella casella di riepilogo.  
+*lpszText*<br/>
+[in] La stringa di un elemento nella casella di riepilogo.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.  
@@ -388,8 +388,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nHeight*  
- Altezza, in pixel, della casella di riepilogo.  
+*nHeight*<br/>
+[in] Altezza, in pixel, della casella di riepilogo.  
   
 ### <a name="remarks"></a>Note  
  L'altezza predefinita è 150 pixel.  

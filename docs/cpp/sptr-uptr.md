@@ -18,15 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e059b8144518f3d0cacdde5d7f438c04b7933a2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dc6625e9f9137bc6adbe10270ef7192d2f1672f0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467869"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700856"
 ---
 # <a name="sptr-uptr"></a>__sptr, __uptr
-**Sezione specifica Microsoft**  
+**Sezione specifica Microsoft**
+
  Usare la **sptr** oppure **uptr** modificatore in una dichiarazione di puntatore a 32 bit per specificare come il compilatore converte un puntatore a 32 bit in un puntatore a 64 bit. Un puntatore a 32 bit viene convertito, ad esempio, quando viene assegnato a una variabile puntatore a 64 bit o è dereferenziato su una piattaforma a 64 bit.  
   
  La documentazione di Microsoft per il supporto delle piattaforme a 64 bit talvolta si riferisce al bit più significativo di un puntatore a 32 bit come il bit di segno. Per impostazione predefinita, il compilatore utilizza l'estensione del segno per convertire un puntatore a 32 bit in un puntatore a 64 bit. Pertanto i 32 bit meno significativi del puntatore a 64 bit vengono impostati sul valore del puntatore a 32 bit e i 32 bit più significativi vengono impostati sul valore di bit di segno del puntatore a 32 bit. Questa conversione produce risultati corretti se il bit di segno è pari a 0, ma non se il bit di segno è pari a 1. Ad esempio, l'indirizzo 0x7FFFFFFF a 32 bit produce l'indirizzo 0x000000007FFFFFFF equivalente a 64 bit, ma l'indirizzo 0x80000000 a 32 bit vien modificato in modo errato in 0xFFFFFFFF80000000.  

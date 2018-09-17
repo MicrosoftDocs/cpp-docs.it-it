@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 083bb7258197bbc11118eaf3d3c3e3423c473310
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fd5661a2b6aa257c91babcc3d17b1babb0b4d2c2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678324"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707161"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Sezione specifica Microsoft**  
@@ -41,7 +41,7 @@ unsigned char __vmx_vmclear(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] `VmcsPhysicalAddress`|Puntatore a una posizione di memoria a 64 bit che contiene l'indirizzo fisico della VMCS da cancellare.|  
+|*VmcsPhysicalAddress*|[in] Puntatore a una posizione di memoria a 64 bit che contiene l'indirizzo fisico della VMCS da cancellare.|  
   
 ## <a name="return-value"></a>Valore restituito  
   

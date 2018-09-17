@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09767927a91c61f564e2013bf1b3e0930821193
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c0e42cd14c5707f728f5577a77b2dd613c5ef2a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572741"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709618"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problemi comuni relativi alla migrazione di Visual C++ ARM
 
@@ -110,4 +110,4 @@ Nelle architetture x86 e x64, il valore predefinito è **/volatile: MS** poiché
 
 ## <a name="see-also"></a>Vedere anche
 
-[Configurare Visual C++ per processori ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
+[Configurare Visual C++ per processori ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)

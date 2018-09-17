@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3123206c90bd5dd901e25ff3fe26e48ba8809452
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540450"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710508"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Classe CMFCRibbonStatusBar
 Il `CMFCRibbonStatusBar` classe implementa un controllo barra di stato che possa visualizzare gli elementi della barra multifunzione.  
@@ -149,8 +149,8 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pElement*  
- Un puntatore a un elemento dinamico.  
+*pElement*<br/>
+[in] Un puntatore a un elemento dinamico.  
   
 ### <a name="remarks"></a>Note  
  A differenza dei normali elementi, elementi dinamici non sono personalizzabili e queste non vengono visualizzate nel menu di personalizzazione della barra di stato.  
@@ -166,14 +166,14 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pElement*  
- Un puntatore all'elemento aggiunto.  
+*pElement*<br/>
+[in] Un puntatore all'elemento aggiunto.  
   
- [in] *lpszLabel*  
- Un'etichetta di testo dell'elemento.  
+*lpszLabel*<br/>
+[in] Un'etichetta di testo dell'elemento.  
   
- [in] *bIsVisible*  
- TRUE se si desidera aggiungere l'elemento come visibile, FALSE se si desidera aggiungere l'elemento come nascosto.  
+*bIsVisible*<br/>
+[in] TRUE se si desidera aggiungere l'elemento come visibile, FALSE se si desidera aggiungere l'elemento come nascosto.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  Aggiunge un elemento della barra multifunzione nell'area estesa della barra di stato della barra multifunzione.  
@@ -186,14 +186,14 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pElement*  
- Un puntatore all'elemento aggiunto.  
+*pElement*<br/>
+[in] Un puntatore all'elemento aggiunto.  
   
- [in] *lpszLabel*  
- L'etichetta di testo dell'elemento.  
+*lpszLabel*<br/>
+[in] L'etichetta di testo dell'elemento.  
   
- [in] *bIsVisible*  
- TRUE se si desidera aggiungere l'elemento come visibile, FALSE se si desidera aggiungere l'elemento come nascosto.  
+*bIsVisible*<br/>
+[in] TRUE se si desidera aggiungere l'elemento come visibile, FALSE se si desidera aggiungere l'elemento come nascosto.  
   
 ### <a name="remarks"></a>Note  
  L'area estesa si trova a destra della barra di stato.  
@@ -219,14 +219,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParentWnd*  
- Puntatore alla finestra padre.  
+*pParentWnd*<br/>
+[in] Puntatore alla finestra padre.  
   
- [in] *dwStyle*  
- Combinazione OR logica di stili del controllo.  
+*dwStyle*<br/>
+[in] Combinazione OR logica di stili del controllo.  
   
- [in] *nID*  
- ID di controllo della barra di stato.  
+*nID*<br/>
+[in] ID di controllo della barra di stato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la barra di stato è stata creata correttamente, FALSE in caso contrario.  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- [in] *BOOL*  
+*uiCmdID*<br/>
+[in] [in] *BOOL*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -281,8 +281,8 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- L'ID dell'elemento.  
+*uiID*<br/>
+[in] L'ID dell'elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento che ha l'ID del comando specificato. NULL se tale elemento non esiste.  
@@ -305,8 +305,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica un indice in base zero di un elemento che si trova nell'area principale del controllo indicatore di stato.  
+*nIndex*<br/>
+[in] Specifica un indice in base zero di un elemento che si trova nell'area principale del controllo indicatore di stato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento situato in corrispondenza dell'indice specificato. NULL se l'indice è un valore negativo o supera il numero di elementi nella barra di stato.  
@@ -331,8 +331,8 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice a base zero di un elemento situato nell'area estesa della barra di stato.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero di un elemento che si trova nell'area estesa della barra di stato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore all'elemento situato in corrispondenza dell'indice specificato nell'area estesa della barra di stato multifunzione. NULL se *nIndex* è negativo o supera il numero di elementi nell'area estesa della barra di stato della barra multifunzione.  
@@ -413,14 +413,14 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *strInfo*  
- La stringa di informazioni.  
+*strInfo*<br/>
+[in] La stringa di informazioni.  
   
- [in] *rectInfo*  
- Rettangolo di delimitazione.  
+*rectInfo*<br/>
+[in] Il rettangolo di delimitazione.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata se si desidera personalizzare l'aspetto della stringa di informazioni sulla barra di stato. Usare la [CMFCRibbonStatusBar::SetInformation](#setinformation) metodo per mettere la barra di stato in modalità di informazioni. In questa modalità, la barra di stato nasconde tutti i riquadri e Visualizza la stringa di informazioni specificata da *strInfo*.  
@@ -449,8 +449,8 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- ID dell'elemento da rimuovere dalla barra di stato.  
+*uiID*<br/>
+[in] ID dell'elemento da rimuovere dalla barra di stato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se un elemento con l'oggetto specificato *uiID* viene rimosso. FALSE in caso contrario.  
@@ -463,8 +463,8 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszInfo*  
- La stringa di informazioni.  
+*lpszInfo*<br/>
+[in] La stringa di informazioni.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per inserire la barra di stato nella modalità di informazioni. In questa modalità, la barra di stato nasconde tutti i riquadri e Visualizza la stringa di informazioni specificata da *lpszInfo*.  

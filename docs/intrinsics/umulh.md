@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afddee0ec2afc43bef22250d37daef201a0fe8dd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07d1bf4dcf942fe358b0367f02ed0486ee10bd39
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539263"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706914"
 ---
 # <a name="umulh"></a>__umulh
 **Sezione specifica Microsoft**  
@@ -38,11 +38,11 @@ unsigned __int64 __umulh(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `a`  
- Primo numero da moltiplicare.  
+*a*<br/>
+[in] Il primo numero da moltiplicare.  
   
- [in] `b`  
- Secondo numero da moltiplicare.  
+*b*<br/>
+[in] Il secondo numero da moltiplicare.  
   
 ## <a name="return-value"></a>Valore restituito  
  64 bit alti del risultato a 128 bit della moltiplicazione.  

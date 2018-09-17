@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543160"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711984"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
 Implementa un controllo che indica visivamente lo stato di avanzamento di un'operazione di lunga durata.  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Specifica l'ID di comando per l'indicatore di stato della barra multifunzione.  
+*nID*<br/>
+[in] Specifica l'ID di comando per l'indicatore di stato della barra multifunzione.  
   
- [in] *nWidth*  
- Specifica la larghezza, in pixel, dell'indicatore di stato della barra multifunzione.  
+*nWidth*<br/>
+[in] Specifica la larghezza, in pixel, dell'indicatore di stato della barra multifunzione.  
   
- [in] *nHeight*  
- Specifica l'altezza, in pixel, dell'indicatore di stato della barra multifunzione.  
+*nHeight*<br/>
+[in] Specifica l'altezza, in pixel, dell'indicatore di stato della barra multifunzione.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Restituisce la posizione corrente dell'indicatore di stato.  
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- TRUE per specificare che l'indicatore di stato è in modalità infinita. in caso contrario, FALSE.  
+*bSet*<br/>
+[in] TRUE per specificare che l'indicatore di stato è in modalità infinita. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  In genere, se l'indicatore di stato è in modalità infinita, lo segnala all'utente che è in corso un'operazione, ma che il tempo di completamento è sconosciuto. Di conseguenza, l'indicatore di stato riempie ripetutamente dal valore minimo al valore massimo.  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPos*  
- Specifica la posizione in cui è impostato l'indicatore di stato.  
+*nPos*<br/>
+[in] Specifica la posizione in cui è impostato l'indicatore di stato.  
   
- [in] *bRedraw*  
- Specifica se l'indicatore di stato deve essere ridisegnato.  
+*bRedraw*<br/>
+[in] Specifica se l'indicatore di stato deve essere ridisegnato.  
   
 ### <a name="remarks"></a>Note  
  L'intervallo impostato deve essere compreso nell'intervallo specificato per il [CMFCRibbonProgressBar::SetRange](#setrange) (metodo).  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nMin*  
- Specifica il valore minimo dell'intervallo.  
+*nMin*<br/>
+[in] Specifica il valore minimo dell'intervallo.  
   
- [in] *nMax*  
- Specifica il valore massimo dell'intervallo.  
+*nMax*<br/>
+[in] Specifica il valore massimo dell'intervallo.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per definire l'intervallo dell'indicatore di stato impostando i valori minimi e massimo.  

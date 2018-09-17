@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027180"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712492"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe CMFCRibbonCheckBox
 La classe `CMFCRibbonCheckBox` implementa una casella di controllo che è possibile aggiungere a un pannello della barra multifunzione, a una barra di accesso rapido o a un menu di scelta rapida.  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Specifica l'ID del comando.  
+*nID*<br/>
+[in] Specifica l'ID del comando.  
   
- [in] *lpszText*  
- Specifica l'etichetta di testo.  
+*lpszText*<br/>
+[in] Specifica l'etichetta di testo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Costruisce un oggetto casella di controllo della barra multifunzione.  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a CDC associati con la casella di controllo.  
+*pDC*<br/>
+[in] Puntatore a CDC associati con la casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un `CSize` oggetto che contiene la dimensione compatta della casella di controllo.  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a CDC associato a questa casella di controllo.  
+*pDC*<br/>
+[in] Puntatore a CDC associato a questa casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CSize` oggetto che contiene la dimensione intermedia della casella di controllo.  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore all'oggetto CDC associato a questa casella di controllo.  
+*pDC*<br/>
+[in] Puntatore all'oggetto CDC associato a questa casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un `CSize` oggetto che contiene la dimensione regolare della casella di controllo.  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a CDC in cui disegnare la casella di controllo.  
+*pDC*<br/>
+[in] Puntatore a CDC in cui disegnare la casella di controllo.  
   
 ### <a name="remarks"></a>Note  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in] *CDC**  
  Puntatore a CDC associati con la casella di controllo.  
   
- [in] *CRect*  
- Oggetto `CRect` oggetto che specifica il rettangolo in cui disegnare l'immagine del menu.  
+*CRect*<br/>
+[in] Oggetto `CRect` oggetto che specifica il rettangolo in cui disegnare l'immagine del menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se è stata disegnata l'immagine o FALSE in caso contrario.  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore al contesto di dispositivo in cui disegnare la casella di controllo.  
+*pDC*<br/>
+[in] Puntatore al contesto di dispositivo in cui disegnare la casella di controllo.  
   
- [in] *strText*  
- Testo visualizzato.  
+*strText*<br/>
+[in] Testo visualizzato.  
   
- [in] *nTextOffset*  
- Distanza, espressa in pixel, dal lato sinistro della casella di riepilogo per il testo visualizzato.  
+*nTextOffset*<br/>
+[in] Distanza, espressa in pixel, dal lato sinistro della casella di riepilogo per il testo visualizzato.  
   
- [in] *rect*  
- Il rettangolo di visualizzazione per la casella di controllo.  
+*Rect*<br/>
+[in] Il rettangolo di visualizzazione per la casella di controllo.  
   
- [in] *bIsSelected*  
- TRUE se la casella di controllo è selezionata oppure FALSE in caso contrario.  
+*bIsSelected*<br/>
+[in] TRUE se la casella di controllo è selezionata oppure FALSE in caso contrario.  
   
- [in] *bHighlighted*  
- TRUE se la casella di controllo è evidenziato o FALSE in caso contrario.  
+*bHighlighted*<br/>
+[in] TRUE se la casella di controllo è evidenziato o FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   

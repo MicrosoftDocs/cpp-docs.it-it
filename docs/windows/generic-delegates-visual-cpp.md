@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9556aee6ef2d9d7cf10e0bb2bd24bdc61c9a0ecd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583473"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702533"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegati generici (Visual C++)
 
@@ -39,8 +39,8 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametri
 
-*gli attributi* (facoltativo)  
-Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.
+*Attributi*  
+(Facoltativo) Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.
 
 *type-parameter-identifier(s)*  
 Elenco delimitato da virgole degli identificatori per i parametri di tipo.
@@ -48,8 +48,8 @@ Elenco delimitato da virgole degli identificatori per i parametri di tipo.
 *parametro di tipo-clausole di vincoli*  
 Assume il formato specificato [vincoli su parametri di tipo generico (C + + / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*i modificatori di accessibilità* (facoltativo)  
-I modificatori di accessibilità (ad esempio **pubbliche**, **privati**).
+*modificatori di accessibilità*  
+(Facoltativo) I modificatori di accessibilità (ad esempio **pubbliche**, **privati**).
 
 *result-type*  
 Tipo restituito del delegato.
@@ -57,8 +57,8 @@ Tipo restituito del delegato.
 *identifier*  
 Il nome del delegato.
 
-*parametri formali di* (facoltativo)  
-Elenco di parametri del delegato.
+*parametri formali di*  
+(Facoltativo) Elenco di parametri del delegato.
 
 ## <a name="example"></a>Esempio
 

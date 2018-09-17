@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8a65066ad19b78319867782255d70da8d5b721
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fb8608e03a514228ecdbaf321124c17a00aeb5c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333144"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700167"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
+
 **Sezione specifica Microsoft**  
   
- Scrive dati a 64 bit in una posizione di memoria senza accedere le cache.  
+ Scrive i dati a 64 bit in una posizione di memoria senza inquinare le cache.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,11 +40,11 @@ void _mm_stream_sd(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [out] `Dest`  
- Un puntatore alla posizione in cui verranno scritti i dati di origine.  
+*dest*<br/>
+[out] Un puntatore alla posizione in cui verranno scritti i dati di origine.  
   
- [in] `Source`  
- Un valore a 128 bit contenente il `double` valore deve essere scritto in inferiore 64 bit...  
+*Source*<br/>
+[in] Un valore a 128 bit che contiene il `double` valore da scrivere in inferiore 64 bit...  
   
 ## <a name="return-value"></a>Valore restituito  
  Nessuno.  
@@ -57,9 +58,9 @@ void _mm_stream_sd(
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- Questo intrinseco genera il `movntsd` istruzione. Per determinare il supporto hardware per questa istruzione, chiamare il `__cpuid` intrinseco con `InfoType=0x80000001` e i bit di controllo 6 di `CPUInfo[2] (ECX)`. Se l'hardware supporta questa istruzione e 0 in caso contrario, questo bit è 1.  
+ Questa funzione intrinseca genera il `movntsd` (istruzione). Per determinare il supporto hardware per questa istruzione, chiama il `__cpuid` intrinseco con `InfoType=0x80000001` e controllare bit 6 di `CPUInfo[2] (ECX)`. Questo bit è 1 se l'hardware supporta questa istruzione e 0 in caso contrario.  
   
- Se si esegue il codice che utilizza il `_mm_stream_sd` intrinseci su hardware che non supporta il `movntsd` (istruzione), i risultati sono imprevedibili.  
+ Se si esegue codice che usa il `_mm_stream_sd` intrinseci su hardware che non supporta il `movntsd` (istruzione), i risultati sono imprevedibili.  
   
 ## <a name="example"></a>Esempio  
   
@@ -89,7 +90,8 @@ d[0] = -1, d[1] = 1
 ```  
   
 **Fine sezione specifica Microsoft**  
- Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
+
+Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   

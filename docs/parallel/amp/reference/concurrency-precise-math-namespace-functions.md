@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711060"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency:: precise_math
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 Valore a virgola mobile
 
-`_Iptr` (parametro out)  
-La parte intera di `_X`, come valore a virgola mobile.
+`_Iptr`  
+[out] La parte intera di `_X`, come valore a virgola mobile.
 
 ### <a name="return-value"></a>Valore restituito
 La parte frazionaria con segno di `_X`.
@@ -1891,8 +1891,8 @@ Il primo argomento a virgola mobile.
 `_Y`  
 Il secondo argomento a virgola mobile.
 
-`_Quo` (parametro out)  
-L'indirizzo di un intero utilizzato per restituire il quoziente dei bit frazionari `_X` diviso per i bit frazionari di `_Y`.
+`_Quo`  
+[out] L'indirizzo di un intero utilizzato per restituire il quoziente dei bit frazionari `_X` diviso per i bit frazionari di `_Y`.
 
 ### <a name="return-value"></a>Valore restituito
 Restituisce il resto di `_X` diviso per `_Y`.
@@ -1914,8 +1914,8 @@ Il primo argomento a virgola mobile.
 `_Y`  
 Il secondo argomento a virgola mobile.
 
-`_Quo` (parametro out)  
-L'indirizzo di un intero utilizzato per restituire il quoziente dei bit frazionari `_X` diviso per i bit frazionari di `_Y`.
+`_Quo`  
+[out] L'indirizzo di un intero utilizzato per restituire il quoziente dei bit frazionari `_X` diviso per i bit frazionari di `_Y`.
 
 ### <a name="return-value"></a>Valore restituito
 Restituisce il resto di `_X` diviso per `_Y`.

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712738"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 Fornisce la funzionalità del controllo intestazione comune di Windows.  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iItem*|Indice in base zero di un elemento di intestazione il cui tipo è ' ultimo. Per altre informazioni, vedere la `fmt` membro della [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struttura.|  
-|[out] *lpRect*|Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura per ricevere le informazioni di rettangolo di delimitazione.|  
+|*iItem*|[in] Indice in base zero di un elemento di intestazione il cui tipo è ' ultimo. Per altre informazioni, vedere la `fmt` membro della [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struttura.|  
+|*lpRect*|[out] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura per ricevere le informazioni di rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questa funzione ha esito positivo; in caso contrario, FALSE.  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *lpRect*|Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni di rettangolo di delimitazione.|  
+|*lpRect*|[out] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni di rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questa funzione ha esito positivo; in caso contrario, FALSE.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in, out] *phdhti*|Puntatore a un [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) struttura che specifica il punto da testare e riceve i risultati del test.|  
+|*phdhti*|[in, out] Puntatore a un [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) struttura che specifica il punto da testare e riceve i risultati del test.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero dell'elemento dell'intestazione, se presente, in corrispondenza della posizione specificata; in caso contrario, -1.  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iItem*|Indice in base zero di un elemento di intestazione.|  
+|*iItem*|[in] Indice in base zero di un elemento di intestazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  

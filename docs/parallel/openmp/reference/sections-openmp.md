@@ -1,5 +1,5 @@
 ---
-title: Nelle sezioni (/openmp) | Documenti Microsoft
+title: le sezioni (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692077"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708032"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
-Identifica le sezioni di codice deve essere diviso tra tutti i thread.  
+Identifica le sezioni di codice da dividere tra tutti i thread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +39,15 @@ Identifica le sezioni di codice deve essere diviso tra tutti i thread.
 }  
 ```  
   
-## <a name="remarks"></a>Note  
- dove  
-  
- `clause` (facoltativo)  
- Zero o più clausole. Vedere la sezione Osservazioni per un elenco di clausole supportate da **sezioni**.  
-  
+## <a name="arguments"></a>Argomenti
+
+*Clausola*<br/>
+(Facoltativo) Zero o più clausole. Vedere la sezione Osservazioni per un elenco delle clausole supportate da **sezioni**.
+
 ## <a name="remarks"></a>Note  
  Il **sezioni** direttiva può contenere zero o più **sezione** direttive.  
   
- Il **sezioni** direttiva supporta le clausole OpenMP seguenti:  
+ Il **sezioni** direttiva supporta le clausole OpenMP seguente:  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -60,9 +59,9 @@ Identifica le sezioni di codice deve essere diviso tra tutti i thread.
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- Se **parallela** viene anche specificato `clause` può essere qualsiasi clausola accettato dal **parallela** o **sezioni** direttive, ad eccezione di `nowait`.  
+ Se **parallele** viene anche specificato, `clause` può essere qualsiasi clausola accettato dal **parallel** o **sezioni** direttive, tranne `nowait`.  
   
- Per ulteriori informazioni, vedere [2.4.2 costrutto sections](../../../parallel/openmp/2-4-2-sections-construct.md).  
+ Per altre informazioni, vedere [2.4.2 costrutto sections](../../../parallel/openmp/2-4-2-sections-construct.md).  
   
 ## <a name="example"></a>Esempio  
   

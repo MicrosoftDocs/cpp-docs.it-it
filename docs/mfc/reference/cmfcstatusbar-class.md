@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7150789756273f9d70b3dd6e156c63d0649d0957
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539910"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708188"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 Il `CMFCStatusBar` classe implementa una barra di stato simile al `CStatusBar` classe. Tuttavia, la classe `CMFCStatusBar` offre funzionalità non fornite dalla classe `CStatusBar` , ad esempio le capacità di visualizzare immagini, animazioni e indicatori di stato, oltre alla possibilità di rispondere al doppio clic del mouse. 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -229,8 +229,8 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParentWnd*  
- [in] *dwStyle*  
+*pParentWnd*<br/>
+[in] [in] *dwStyle*  
  [in] *nID*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParentWnd*  
- [in] *dwCtrlStyle*  
- [in] *dwStyle*  
- [in] *nID*  
+*pParentWnd*<br/>
+[in] [in] *dwCtrlStyle*  
+*dwStyle*<br/>
+[in] [in] *nID*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -277,8 +277,8 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Se TRUE, abilita l'elaborazione del doppio clic del mouse. In caso contrario, disabilitare l'elaborazione del doppio clic del mouse.  
+*bAttivare il*<br/>
+[in] Se TRUE, abilita l'elaborazione del doppio clic del mouse. In caso contrario, disabilitare l'elaborazione del doppio clic del mouse.  
   
 ### <a name="remarks"></a>Note  
  Se la barra di stato è abilitata per l'elaborazione il doppio clic, Windows invia la notifica WM_COMMAND insieme a un ID di risorsa al proprietario della barra ogni volta che l'utente fa doppio clic sul riquadro barra di stato di stato.  
@@ -297,23 +297,23 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro con indicatore di stato per abilitare.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro con indicatore di stato per abilitare.  
   
- [in] *NLA*  
- Specifica il valore massimo per l'indicatore di stato.  
+*NLA*<br/>
+[in] Specifica il valore massimo per l'indicatore di stato.  
   
- [in] *bDisplayText*  
- Specifica se la barra di avanzamento deve visualizzare il valore di stato di avanzamento corrente.  
+*bDisplayText*<br/>
+[in] Specifica se la barra di avanzamento deve visualizzare il valore di stato di avanzamento corrente.  
   
- [in] *clrBar*  
- Specifica il colore di sfondo della barra di stato di avanzamento.  
+*clrBar*<br/>
+[in] Specifica il colore di sfondo della barra di stato di avanzamento.  
   
- [in] *clrBarDest*  
- Specifica il colore secondario dello sfondo della barra di stato di avanzamento. Usare un valore diverso rispetto a *clrBar* da riempire con un colore in una sfumatura.  
+*clrBarDest*<br/>
+[in] Specifica il colore secondario dello sfondo della barra di stato di avanzamento. Usare un valore diverso rispetto a *clrBar* da riempire con un colore in una sfumatura.  
   
- [in] *clrProgressText*  
- Specifica il colore del testo della barra di stato di avanzamento.  
+*clrProgressText*<br/>
+[in] Specifica il colore del testo della barra di stato di avanzamento.  
   
 ### <a name="remarks"></a>Note  
  Se si desidera disabilitare la chiamata di barra di stato di avanzamento `EnablePaneProgressBar` con *NLA* impostato su -1. Per impostazione predefinita *NLA* è impostato su 100. Pertanto, non è necessario alcun calcolo aggiuntive per visualizzare lo stato di avanzamento come percentuale.  
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- [in] *lpRect*  
+*nIndex*<br/>
+[in] [in] *lpRect*  
   
 ### <a name="remarks"></a>Note  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Note  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- [in] *s*  
+*nIndex*<br/>
+[in] [in] *s*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -460,8 +460,8 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro della barra di stato.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro della barra di stato.  
   
 ### <a name="return-value"></a>Valore restituito  
  La larghezza del riquadro della barra di stato che *nIndex* specifica; in caso contrario, zero se non esiste un riquadro barra di stato.  
@@ -474,8 +474,8 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro per il quale recuperare testo della descrizione comando.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro per il quale recuperare testo della descrizione comando.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il testo della descrizione comando del riquadro barra di stato che *nIndex* specifica. In caso contrario, la stringa vuota, se non esiste un riquadro barra di stato per l'oggetto specificato *nIndex* o se il testo della descrizione comando è vuoto.  
@@ -488,8 +488,8 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro il cui contenuto è da invalidare e ridisegnare.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro il cui contenuto è da invalidare e ridisegnare.  
   
 ### <a name="remarks"></a>Note  
  Quando viene invalidata la barra di stato, è contrassegnata per il ridisegno. Ridisegna Windows quando la `UpdateWindow` metodo invia un messaggio WM_PAINT il `OnPaint` (metodo).  
@@ -504,11 +504,11 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per il disegno.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per il disegno.  
   
- [in] *pPane*  
- Un puntatore a un `CMFCStatusBarPaneInfo` struttura che contiene le informazioni sul riquadro ridisegnate.  
+*pPane*<br/>
+[in] Un puntatore a un `CMFCStatusBarPaneInfo` struttura che contiene le informazioni sul riquadro ridisegnate.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita `OnDrawPane` ridisegna il riquadro usando il contesto di periferica *pDC* in base a stile e il contenuto del riquadro.  
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpIDArray*  
- [in] *nIDCount*  
+*lpIDArray*<br/>
+[in] [in] *nIDCount*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -570,17 +570,17 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro in cui si desidera assegnare a esso un'animazione.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro in cui si desidera assegnare a esso un'animazione.  
   
- [in] *hImageList*  
- Specifica un handle per l'elenco di immagini che contiene i frame di animazione.  
+*hImageList*<br/>
+[in] Specifica un handle per l'elenco di immagini che contiene i frame di animazione.  
   
- [in] *nFrameRate*  
- Specifica la frequenza dei fotogrammi, in millisecondi, per l'animazione.  
+*nFrameRate*<br/>
+[in] Specifica la frequenza dei fotogrammi, in millisecondi, per l'animazione.  
   
- [in] *baggiornamento*  
- Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, il contenuto del riquadro viene aggiornato quando che venga invalidata.  
+*bAggiornamento*<br/>
+[in] Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, il contenuto del riquadro viene aggiornato quando che venga invalidata.  
   
 ### <a name="remarks"></a>Note  
  Se si desidera disabilitare l'animazione corrente, chiamare `SetPaneAnimation` con `hImageList` impostato su NULL.  
@@ -596,14 +596,14 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro per cui impostare un nuovo colore di sfondo.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro per cui impostare un nuovo colore di sfondo.  
   
- [in] *clrBackground*  
- Specifica il nuovo colore di sfondo.  
+*clrBackground*<br/>
+[in] Specifica il nuovo colore di sfondo.  
   
- [in] *baggiornamento*  
- Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, non aggiornare il contenuto del riquadro fino a quando il riquadro viene invalidato da un altro metodo.  
+*bAggiornamento*<br/>
+[in] Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, non aggiornare il contenuto del riquadro fino a quando il riquadro viene invalidato da un altro metodo.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
  Impostare l'icona del riquadro della barra di stato.  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro per il quale impostare l'immagine.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro per il quale impostare l'immagine.  
   
- [in] *hIcon*  
- Specifica un handle per l'icona da impostare come l'immagine del riquadro.  
+*hIcon*<br/>
+[in] Specifica un handle per l'icona da impostare come l'immagine del riquadro.  
   
- [in] *baggiornamento*  
- Specifica se aggiornare immediatamente il contenuto del riquadro.  
+*bAggiornamento*<br/>
+[in] Specifica se aggiornare immediatamente il contenuto del riquadro.  
   
- [in] *hBmp*  
- Specifica un handle alla bitmap da impostare come l'immagine del riquadro.  
+*hBmp*<br/>
+[in] Specifica un handle alla bitmap da impostare come l'immagine del riquadro.  
   
- [in] *clrTransparent*  
- Specifica il colore trasparente dell'immagine bitmap che il *hBmp* indica.  
+*clrTransparent*<br/>
+[in] Specifica il colore trasparente dell'immagine bitmap che il *hBmp* indica.  
   
 ### <a name="remarks"></a>Note  
  È possibile passare HICON o HBITMAP con il colore trasparente per impostare l'immagine del riquadro. Se non si desidera visualizzare l'immagine più, passare il valore NULL come handle dell'immagine.  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Note  
   
@@ -673,14 +673,14 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro per il quale aggiornare l'indicatore di stato.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro per il quale aggiornare l'indicatore di stato.  
   
- [in] *nCurr*  
- Specifica il valore corrente dell'indicatore di stato.  
+*nCurr*<br/>
+[in] Specifica il valore corrente dell'indicatore di stato.  
   
- [in] *baggiornamento*  
- Specifica se il riquadro deve essere aggiornato immediatamente.  
+*bAggiornamento*<br/>
+[in] Specifica se il riquadro deve essere aggiornato immediatamente.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo quando si desidera aggiornare l'indicatore di stato per l'indicatore di stato nel riquadro specificato.  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- [in] *nStyle*  
+*nIndex*<br/>
+[in] [in] *nStyle*  
   
 ### <a name="remarks"></a>Note  
   
@@ -713,8 +713,8 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- [in] *lpszNewText*  
+*nIndex*<br/>
+[in] [in] *lpszNewText*  
  [in] *baggiornamento*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -732,14 +732,14 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del riquadro in cui si desidera assegnare un nuovo colore del testo.  
+*nIndex*<br/>
+[in] Specifica l'indice del riquadro in cui si desidera assegnare un nuovo colore del testo.  
   
- [in] *clrText*  
- Specifica il colore del testo.  
+*clrText*<br/>
+[in] Specifica il colore del testo.  
   
- [in] *baggiornamento*  
- Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, non aggiornare il contenuto del riquadro fino a quando il riquadro viene invalidato da un altro metodo.  
+*bAggiornamento*<br/>
+[in] Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, non aggiornare il contenuto del riquadro fino a quando il riquadro viene invalidato da un altro metodo.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
  Impostare la larghezza del riquadro della barra di stato.  
@@ -751,11 +751,11 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Indice del riquadro della barra di stato per cui impostare una nuova larghezza.  
+*nIndex*<br/>
+[in] Indice del riquadro della barra di stato per cui impostare una nuova larghezza.  
   
- [in] *cx*  
- La nuova larghezza del riquadro barra dello stato, in pixel.  
+*CX*<br/>
+[in] La nuova larghezza del riquadro barra dello stato, in pixel.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
  Impostare il testo della descrizione comando di un riquadro barra di stato.  
@@ -767,11 +767,11 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- L'indice del riquadro in cui si desidera assegnare il testo della descrizione comando.  
+*nIndex*<br/>
+[in] L'indice del riquadro in cui si desidera assegnare il testo della descrizione comando.  
   
- [in] *pszTipText*  
- Il nuovo testo della descrizione comando.  
+*pszTipText*<br/>
+[in] Il nuovo testo della descrizione comando.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

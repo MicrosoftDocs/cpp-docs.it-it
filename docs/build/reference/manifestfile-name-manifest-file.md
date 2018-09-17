@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTFILE (nome di File manifesto) | Documenti Microsoft
+title: -MANIFESTFILE (nome File manifesto) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95337afc790436187c547bba108da2161b0738b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d3869b0cb656e7bde9a12fb028f84d1d4d09965
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373348"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706979"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (Assegna un nome al file manifesto)
-```  
-/MANIFESTFILE:filename  
-```  
-  
-## <a name="remarks"></a>Note  
- /MANIFESTFILE consente di modificare il nome predefinito del file manifesto.  Il nome predefinito del file manifesto è il nome del file con l'aggiunta dell'estensione manifest.  
-  
- /MANIFESTFILE avrà alcun effetto se si collega anche con [/manifesto](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Espandere il **le proprietà di configurazione** nodo.  
-  
-3.  Espandere il **Linker** nodo.  
-  
-4.  Selezionare il **File manifesto** pagina delle proprietà.  
-  
-5.  Modificare il **File manifesto** proprietà.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
-  
-1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+```
+/MANIFESTFILE:filename
+```
+
+## <a name="remarks"></a>Note
+
+/MANIFESTFILE consente di modificare il nome predefinito del file manifesto.  Il nome predefinito del file manifesto è il nome del file con estensione manifest aggiunto.
+
+/MANIFESTFILE avrà alcun effetto se non si collega anche con [/manifest](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Espandere il nodo **Proprietà di configurazione**.
+
+1. Espandere la **Linker** nodo.
+
+1. Selezionare il **Manifest File** pagina delle proprietà.
+
+1. Modificare il **Manifest File** proprietà.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
+
+1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

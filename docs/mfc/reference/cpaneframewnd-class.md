@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a7a91920906d5693eafbbf79a4bdd00814c79108
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703716"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
@@ -271,8 +271,8 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Il riquadro da aggiungere.  
+*pWnd*<br/>
+[in] Il riquadro da aggiungere.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
  Aggiunge o rimuove un riquadro dall'elenco globale.  
@@ -284,11 +284,11 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Il riquadro per aggiungere o rimuovere.  
+*pWnd*<br/>
+[in] Il riquadro per aggiungere o rimuovere.  
   
- [in] *bAggiungi*  
- Se diverso da zero, aggiungere il riquadro. Se è 0, rimuovere il riquadro.  
+*bAggiungi*<br/>
+[in] Se diverso da zero, aggiungere il riquadro. Se è 0, rimuovere il riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
@@ -317,8 +317,8 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rectBorderSize*  
- Contiene la dimensione, in pixel, del bordo della finestra con mini-cornice.  
+*rectBorderSize*<br/>
+[out] Contiene la dimensione, in pixel, del bordo della finestra con mini-cornice.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework per calcolare le dimensioni del bordo di una finestra con mini-cornice. Le dimensioni restituite varia a seconda se una finestra con mini-cornice contiene una barra degli strumenti o una [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
@@ -336,20 +336,20 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndToDock*  
- Puntatore alla finestra di ancoraggio.  
+*pWndToDock*<br/>
+[in] Puntatore alla finestra di ancoraggio.  
   
- [in] *ptMouse*  
- Posizione del mouse.  
+*ptMouse*<br/>
+[in] Posizione del mouse.  
   
- [out] *rectResult*  
- Rettangolo calcolato.  
+*rectResult*<br/>
+[out] Rettangolo calcolato.  
   
- [out] *bDrawTab*  
- Se TRUE, disegna una scheda. Se FALSE, non creare una scheda.  
+*bDrawTab*<br/>
+[out] Se TRUE, disegna una scheda. Se FALSE, non creare una scheda.  
   
- [out] *ppTargetBar*  
- Puntatore al riquadro di destinazione.  
+*ppTargetBar*<br/>
+[out] Puntatore al riquadro di destinazione.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo calcola il rettangolo che una finestra occuperebbe se un utente di trascinata la finestra per il punto specificato da *ptMouse* e ancorata sono.  
@@ -372,8 +372,8 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDockingBar*  
- Un riquadro.  
+*pDockingBar*<br/>
+[in] Un riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il mini-cornice può essere ancorata a *pDockingBar*; in caso contrario, 0.  
@@ -407,14 +407,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszWindowName*  
- Specifica il testo da visualizzare nella finestra con mini-cornice.  
+*lpszWindowName*<br/>
+[in] Specifica il testo da visualizzare nella finestra con mini-cornice.  
   
- [in] *dwStyle*  
- Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *rect*  
- Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.  
+*Rect*<br/>
+[in] Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.  
   
  [in] [out] *pParentWnd*  
  Specifica il frame padre della finestra con mini-cornice. Questo valore non deve essere NULL.  
@@ -442,17 +442,17 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwStyleEx*  
- Specifica lo stile della finestra estesi. Per altre informazioni, vedere [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
+*dwStyleEx*<br/>
+[in] Specifica lo stile della finestra estesi. Per altre informazioni, vedere [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] *lpszWindowName*  
- Specifica il testo da visualizzare nella finestra con mini-cornice.  
+*lpszWindowName*<br/>
+[in] Specifica il testo da visualizzare nella finestra con mini-cornice.  
   
- [in] *dwStyle*  
- Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *rect*  
- Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.  
+*Rect*<br/>
+[in] Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.  
   
  [in] [out] *pParentWnd*  
  Specifica il frame padre della finestra con mini-cornice. Questo valore non deve essere NULL.  
@@ -474,8 +474,8 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *bWasDocked*  
- TRUE se il riquadro è stato già ancorato; in caso contrario, FALSE.  
+*bWasDocked*<br/>
+[out] TRUE se il riquadro è stato già ancorato; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se l'operazione ha avuto esito positivo, il `CDockablePane` che il riquadro è stata ancorata alla; in caso contrario, NULL.  
@@ -488,8 +488,8 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Rappresenta l'ID di controllo del riquadro da trovare.  
+*nID*<br/>
+[in] Rappresenta l'ID di controllo del riquadro da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il riquadro con l'ID di controllo specificato. in caso contrario, NULL, se nessun riquadro ha l'ID del controllo specificato.  
@@ -506,17 +506,17 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pt*  
- Il punto, nelle coordinate dello schermo.  
+*pt*<br/>
+[in] Il punto, nelle coordinate dello schermo.  
   
- [in] *nSensitivity*  
- Aumentare l'area di ricerca della finestra con mini-cornice questa dimensione. Una finestra con mini-cornice soddisfa i criteri di ricerca se il punto specificato cade nell'area di maggiore.  
+*nSensitivity*<br/>
+[in] Aumentare l'area di ricerca della finestra con mini-cornice questa dimensione. Una finestra con mini-cornice soddisfa i criteri di ricerca se il punto specificato cade nell'area di maggiore.  
   
- [in] *pFrameToExclude*  
- Specifica una finestra con mini-cornice da escludere dalla ricerca.  
+*pFrameToExclude*<br/>
+[in] Specifica una finestra con mini-cornice da escludere dalla ricerca.  
   
- [in] *bFloatMultiOnly*  
- Se TRUE, solo la ricerca finestre con mini-cornice con lo stile CBRS_FLOAT_MULTI. Se FALSE, la ricerca tutte le finestre con mini-cornice.  
+*bFloatMultiOnly*<br/>
+[in] Se TRUE, solo la ricerca finestre con mini-cornice con lo stile CBRS_FLOAT_MULTI. Se FALSE, la ricerca tutte le finestre con mini-cornice.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore alla finestra con mini-cornice contenente *pt*; in caso contrario, NULL.  
@@ -542,8 +542,8 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rectCaption*  
- Contiene le dimensioni e posizione del titolo della finestra con mini-cornice, nelle coordinate dello schermo.  
+*rectCaption*<br/>
+[out] Contiene le dimensioni e posizione del titolo della finestra con mini-cornice, nelle coordinate dello schermo.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework per la quale calcolare il rettangolo di delimitazione di un titolo di finestra con mini-cornice.  
@@ -688,11 +688,11 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Punto da testare.  
+*punto*<br/>
+[in] Punto da testare.  
   
- [in] *bDetectCaption*  
- Se TRUE, controllare il punto per la didascalia. Se FALSE, ignorare la didascalia.  
+*bDetectCaption*<br/>
+[in] Se TRUE, controllare il punto per la didascalia. Se FALSE, ignorare la didascalia.  
   
 ### <a name="return-value"></a>Valore restituito  
  Uno dei valori seguenti:  
@@ -780,11 +780,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Nome del profilo.  
+*lpszProfileName*<br/>
+[in] Il nome del profilo.  
   
- [in] *uiID*  
- L'ID del riquadro.  
+*uiID*<br/>
+[in] L'ID del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se lo stato del riquadro è stato caricato correttamente. in caso contrario, FALSE.  
@@ -836,8 +836,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Il contesto di dispositivo utilizzato per disegnare il bordo.  
+*pDC*<br/>
+[in] Il contesto di dispositivo utilizzato per disegnare il bordo.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework per disegnare i bordi della finestra con mini-cornice.  
@@ -859,11 +859,11 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Un puntatore a un riquadro (ignorato).  
+*pBar*<br/>
+[in] Un puntatore a un riquadro (ignorato).  
   
- [in] *ptOffset*  
- Offset da cui spostare il riquadro.  
+*ptOffset*<br/>
+[in] Offset da cui spostare il riquadro.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  Regola il layout di un riquadro all'interno di una finestra con mini-cornice.  
@@ -894,11 +894,11 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Il riquadro che viene visualizzato o nascosto.  
+*pBar*<br/>
+[in] Il riquadro che viene visualizzato o nascosto.  
   
- [in] *bMostra*  
- TRUE se viene visualizzato il riquadro; FALSO se il riquadro è nascosto.  
+*bMostra*<br/>
+[in] TRUE se viene visualizzato il riquadro; FALSO se il riquadro è nascosto.  
   
 ### <a name="remarks"></a>Note  
  Chiamato dal framework quando viene visualizzato o nascosto un riquadro della finestra con mini-cornice. L'implementazione predefinita non esegue alcuna operazione.  
@@ -926,14 +926,14 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Il punto che l'utente ha fatto clic, nelle coordinate dello schermo.  
+*punto*<br/>
+[in] Il punto che l'utente ha fatto clic, nelle coordinate dello schermo.  
   
- [in] *nSensitivity*  
- Questo parametro non viene usato.  
+*nSensitivity*<br/>
+[in] Questo parametro non viene utilizzato.  
   
- [in] *bCheckVisibility*  
- TRUE per specificare che devono essere restituiti solo i riquadri visibili; in caso contrario, FALSE.  
+*bCheckVisibility*<br/>
+[in] TRUE per specificare che devono essere restituiti solo i riquadri visibili; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il riquadro selezionato dall'utente, o NULL se nessun riquadro presente in tale percorso.  
@@ -969,14 +969,14 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore al riquadro da rimuovere.  
+*pWnd*<br/>
+[in] Puntatore al riquadro da rimuovere.  
   
- [in] *bDestroy*  
- Specifica che cosa accade alla finestra con mini-cornice. Se *bDestroy* è TRUE, questo metodo elimina la finestra con mini-cornice immediatamente. Se è FALSE, questo metodo elimina la finestra con mini-cornice dopo un certo ritardo.  
+*bDestroy*<br/>
+[in] Specifica che cosa accade alla finestra con mini-cornice. Se *bDestroy* è TRUE, questo metodo elimina la finestra con mini-cornice immediatamente. Se è FALSE, questo metodo elimina la finestra con mini-cornice dopo un certo ritardo.  
   
- [in] *bNoDelayedDestroy*  
- Se TRUE, la distruzione ritardata è disabilitata. Se FALSE, distruzione posticipata è abilitata.  
+*bNoDelayedDestroy*<br/>
+[in] Se TRUE, la distruzione ritardata è disabilitata. Se FALSE, distruzione posticipata è abilitata.  
   
 ### <a name="remarks"></a>Note  
  Il framework può determinare l'eliminazione di windows con mini-cornice immediatamente o dopo un certo ritardo. Se si desidera ritardare la distruzione di finestre con mini-cornice, passare FALSE nel *bNoDelayedDestroy* parametro. Eliminazione posticipata si verifica quando il framework elabora il messaggio AFX_WM_CHECKEMPTYMINIFRAME.  
@@ -991,11 +991,11 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBarOrg*  
- Puntatore al riquadro originale.  
+*pBarOrg*<br/>
+[in] Puntatore al riquadro originale.  
   
- [in] *pBarReplaceWith*  
- Puntatore al riquadro che sostituisce il riquadro originale.  
+*pBarReplaceWith*<br/>
+[in] Puntatore al riquadro che sostituisce il riquadro originale.  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
  Salva lo stato del riquadro nel Registro di sistema.  
@@ -1007,11 +1007,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Nome del profilo.  
+*lpszProfileName*<br/>
+[in] Il nome del profilo.  
   
- [in] *uiID*  
- L'ID del riquadro.  
+*uiID*<br/>
+[in] L'ID del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se lo stato del riquadro è stato salvato correttamente. in caso contrario, FALSE.  
@@ -1024,8 +1024,8 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwButtons*  
- Combinazione OR bit per bit dei valori seguenti:  
+*dwButtons*<br/>
+[in] Combinazione OR bit per bit dei valori seguenti:  
   
 - AFX_CAPTION_BTN_CLOSE  
   
@@ -1067,8 +1067,8 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTimeOut*  
- Valore di timeout in millisecondi.  
+*nTimeOut*<br/>
+[in] Valore di timeout in millisecondi.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  Imposta lo stato di ancoraggio.  
@@ -1078,8 +1078,8 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDockManager*  
- Puntatore a un gestore di ancoraggio.  
+*pDockManager*<br/>
+[in] Puntatore a un gestore di ancoraggio.  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
 
@@ -1104,8 +1104,8 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *preDockState*  
- Valori possibili:  
+*preDockState*<br/>
+[in] Valori possibili:  
   
 - PDS_NOTHING,  
   
@@ -1113,11 +1113,11 @@ virtual BOOL SetPreDockState(
   
 - PDS_DOCK_TO_TAB  
   
- [in] *pBarToDock*  
- Puntatore al riquadro per ancorare.  
+*pBarToDock*<br/>
+[in] Puntatore al riquadro per ancorare.  
   
- [in] *dockMethod*  
- Il metodo di ancoraggio. (Questo parametro viene ignorato).  
+*dockMethod*<br/>
+[in] Il metodo di ancoraggio. (Questo parametro viene ignorato).  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la finestra con mini-cornice è ancorata; FALSE se è ancorata.  
@@ -1140,8 +1140,8 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMenu*  
- Un puntatore a un menu.  
+*pMenu*<br/>
+[in] Un puntatore a un menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.  
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDockingBar*  
- [in] *pTabbedBar*  
+*pDockingBar*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Note  
   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221132"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706628"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Esegue il wrapping di funzioni API di Windows, fornendo un'interfaccia orientata a oggetti che è possibile utilizzare per accedere al Registro di sistema.  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pszPath*  
- Specifica il nome di una chiave può essere creato o aperto.  
+*pszPath*<br/>
+[in] Specifica il nome di una chiave può essere creato o aperto.  
   
 ### <a name="return-value"></a>Valore restituito  
  0 se ha esito positivo. in caso contrario, un valore diverso da zero.  
@@ -121,11 +121,11 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bPercorso amm*  
- Parametro booleano che specifica se il `CSettingsStore` oggetto opera in modalità amministratore.  
+*bPercorso amm*<br/>
+[in] Parametro booleano che specifica se il `CSettingsStore` oggetto opera in modalità amministratore.  
   
- [in] *bReadOnly*  
- Parametro booleano che specifica se il `CSettingsStore` oggetto viene creato in modalità sola lettura.  
+*bReadOnly*<br/>
+[in] Parametro booleano che specifica se il `CSettingsStore` oggetto viene creato in modalità sola lettura.  
   
 ### <a name="remarks"></a>Note  
  Se *bPercorso amm* è impostata su TRUE, il `m_hKey` variabile membro è impostata su **HKEY_LOCAL_MACHINE**. Se si imposta *bPercorso amm* su FALSE, `m_hKey` è impostata su **HKEY_CURRENT_USER**.  
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pszPath*  
- Il nome della chiave da eliminare.  
+*pszPath*<br/>
+[in] Il nome della chiave da eliminare.  
   
- [in] *bPercorso amm*  
- Opzione che specifica il percorso della chiave da eliminare.  
+*bPercorso amm*<br/>
+[in] Opzione che specifica il percorso della chiave da eliminare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pszValue*  
- Specifica il campo del valore da rimuovere.  
+*pszValue*<br/>
+[in] Specifica il campo del valore da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pszPath*  
- Il nome di una chiave del Registro di sistema.  
+*pszPath*<br/>
+[in] Il nome di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pszKey*  
- Puntatore a una stringa con terminazione null che contiene il nome del valore da leggere dal Registro di sistema.  
+*pszKey*<br/>
+[in] Puntatore a una stringa con terminazione null che contiene il nome del valore da leggere dal Registro di sistema.  
   
- [out] *iVal*  
- Riferimento a una variabile integer che riceve il valore letto dalla chiave del Registro di sistema.  
+*iVal*<br/>
+[out] Riferimento a una variabile integer che riceve il valore letto dalla chiave del Registro di sistema.  
   
- [out] *dwVal*  
- Riferimento alla variabile valore double word a 32 bit che riceve il valore letto dalla chiave del Registro di sistema.  
+*dwVal*<br/>
+[out] Riferimento alla variabile valore double word a 32 bit che riceve il valore letto dalla chiave del Registro di sistema.  
   
- [out] *sVal*  
- Riferimento a una variabile di stringa che riceve il valore letto dalla chiave del Registro di sistema.  
+*sVal*<br/>
+[out] Riferimento a una variabile di stringa che riceve il valore letto dalla chiave del Registro di sistema.  
   
- [out] *scStringList*  
- Riferimento a una variabile di elenco di stringhe che riceve il valore letto dalla chiave del Registro di sistema.  
+*scStringList*<br/>
+[out] Riferimento a una variabile di elenco di stringhe che riceve il valore letto dalla chiave del Registro di sistema.  
   
- [out] *scArray*  
- Riferimento a una variabile di matrice di stringa che riceve il valore letto dalla chiave del Registro di sistema.  
+*scArray*<br/>
+[out] Riferimento a una variabile di matrice di stringa che riceve il valore letto dalla chiave del Registro di sistema.  
   
- [out] *dwcArray*  
- Riferimento a una variabile di matrice bit 32 valore double word che riceve il valore letto dalla chiave del Registro di sistema.  
+*dwcArray*<br/>
+[out] Riferimento a una variabile di matrice bit 32 valore double word che riceve il valore letto dalla chiave del Registro di sistema.  
   
- [out] *wcArray*  
- Riferimento a una variabile di matrice di parole a 16 bit che riceve il valore letto dalla chiave del Registro di sistema.  
+*wcArray*<br/>
+[out] Riferimento a una variabile di matrice di parole a 16 bit che riceve il valore letto dalla chiave del Registro di sistema.  
   
- [out] *bcArray*  
- Riferimento a una variabile di matrice di byte che riceve il valore letto dalla chiave del Registro di sistema.  
+*bcArray*<br/>
+[out] Riferimento a una variabile di matrice di byte che riceve il valore letto dalla chiave del Registro di sistema.  
   
- [out] *lpPoint*  
- Riferimento a un puntatore a un `POINT` struttura che riceve il valore di lettura dalla chiave del Registro di sistema.  
+*lpPoint*<br/>
+[out] Riferimento a un puntatore a un `POINT` struttura che riceve il valore di lettura dalla chiave del Registro di sistema.  
   
- [out] *rect*  
- Fare riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variabile che riceve il valore di lettura dalla chiave del Registro di sistema.  
+*Rect*<br/>
+[out] Fare riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variabile che riceve il valore di lettura dalla chiave del Registro di sistema.  
   
- [out] *ppData*  
- Puntatore a un puntatore ai dati che riceve il valore di lettura dalla chiave del Registro di sistema.  
+*ppData*<br/>
+[out] Puntatore a un puntatore ai dati che riceve il valore di lettura dalla chiave del Registro di sistema.  
   
- [out] *pBytes*  
- Puntatore a una variabile integer senza segno. Questa variabile riceve le dimensioni del buffer che *ppData* punta a.  
+*pBytes*<br/>
+[out] Puntatore a una variabile integer senza segno. Questa variabile riceve le dimensioni del buffer che *ppData* punta a.  
   
- [out] *elenco*  
- Fare riferimento a un [CObList](../../mfc/reference/coblist-class.md) variabile che riceve il valore di lettura dalla chiave del Registro di sistema.  
+*list*<br/>
+[out] Fare riferimento a un [CObList](../../mfc/reference/coblist-class.md) variabile che riceve il valore di lettura dalla chiave del Registro di sistema.  
   
- [out] *obj*  
- Fare riferimento a un [CObject](../../mfc/reference/cobject-class.md) variabile che riceve il valore di lettura dalla chiave del Registro di sistema.  
+*obj*<br/>
+[out] Fare riferimento a un [CObject](../../mfc/reference/cobject-class.md) variabile che riceve il valore di lettura dalla chiave del Registro di sistema.  
   
- [out] *pObj*  
- Riferimento a un puntatore a un `CObject` variabile che riceve il valore di lettura dalla chiave del Registro di sistema.  
+*pObj*<br/>
+[out] Riferimento a un puntatore a un `CObject` variabile che riceve il valore di lettura dalla chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pszKey*  
- Puntatore a una stringa che contiene il nome del valore da impostare.  
+*pszKey*<br/>
+[in] Puntatore a una stringa che contiene il nome del valore da impostare.  
   
- [in] *iVal*  
- Riferimento a una variabile integer che contiene i dati da archiviare.  
+*iVal*<br/>
+[in] Riferimento a una variabile integer che contiene i dati da archiviare.  
   
- [in] *dwVal*  
- Riferimento a una variabile a 32 bit valore double word che contiene i dati da archiviare.  
+*dwVal*<br/>
+[in] Riferimento a una variabile a 32 bit valore double word che contiene i dati da archiviare.  
   
- [in] *pszVal*  
- Puntatore a una variabile di stringa a terminazione null che contiene i dati da archiviare.  
+*pszVal*<br/>
+[in] Puntatore a una variabile di stringa a terminazione null che contiene i dati da archiviare.  
   
- [in] *scStringList*  
- Fare riferimento a un [CStringList](../../mfc/reference/cstringlist-class.md) variabile che contiene i dati da archiviare.  
+*scStringList*<br/>
+[in] Fare riferimento a un [CStringList](../../mfc/reference/cstringlist-class.md) variabile che contiene i dati da archiviare.  
   
- [in] *bcArray*  
- Riferimento a una variabile di matrice di byte che contiene i dati da archiviare.  
+*bcArray*<br/>
+[in] Riferimento a una variabile di matrice di byte che contiene i dati da archiviare.  
   
- [in] *scArray*  
- Riferimento a una variabile di matrice di stringa che contiene i dati da archiviare.  
+*scArray*<br/>
+[in] Riferimento a una variabile di matrice di stringa che contiene i dati da archiviare.  
   
- [in] *dwcArray*  
- Riferimento a una variabile di matrice bit 32 valore double word che contiene i dati da archiviare.  
+*dwcArray*<br/>
+[in] Riferimento a una variabile di matrice bit 32 valore double word che contiene i dati da archiviare.  
   
- [in] *wcArray*  
- Riferimento a una variabile di matrice di parole a 16 bit che contiene i dati da archiviare.  
+*wcArray*<br/>
+[in] Riferimento a una variabile di matrice di parole a 16 bit che contiene i dati da archiviare.  
   
- [in] *rect*  
- Fare riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variabile che contiene i dati da archiviare.  
+*Rect*<br/>
+[in] Fare riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variabile che contiene i dati da archiviare.  
   
- [in] *lpPoint*  
- Riferimento a un puntatore a un `POINT` variabile che contiene i dati da archiviare.  
+*lpPoint*<br/>
+[in] Riferimento a un puntatore a un `POINT` variabile che contiene i dati da archiviare.  
   
- [in] *pData*  
- Puntatore a un buffer che contiene i dati da archiviare.  
+*pData*<br/>
+[in] Puntatore a un buffer che contiene i dati da archiviare.  
   
- [in] *nBytes*  
- Specifica la dimensione, espressa in byte, dei dati a cui il *pData* parametro fa riferimento.  
+*nBytes*<br/>
+[in] Specifica la dimensione, espressa in byte, dei dati a cui il *pData* parametro fa riferimento.  
   
- [in] *elenco*  
- Fare riferimento a un [CObList](../../mfc/reference/coblist-class.md) variabile che contiene i dati da archiviare.  
+*list*<br/>
+[in] Fare riferimento a un [CObList](../../mfc/reference/coblist-class.md) variabile che contiene i dati da archiviare.  
   
- [in] *obj*  
- Fare riferimento a un [CObject](../../mfc/reference/cobject-class.md) variabile che contiene i dati da archiviare.  
+*obj*<br/>
+[in] Fare riferimento a un [CObject](../../mfc/reference/cobject-class.md) variabile che contiene i dati da archiviare.  
   
- [in] *pObj*  
- Puntatore a un puntatore a un `CObject` variabile che contiene i dati da archiviare.  
+*pObj*<br/>
+[in] Puntatore a un puntatore a un `CObject` variabile che contiene i dati da archiviare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  

@@ -1,5 +1,5 @@
 ---
-title: -/WINMDFILE (specificare il File winmd) | Documenti Microsoft
+title: -WINMDFILE (specifica il File winmd) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eaf1bfc805db568a012c28d66361bbd99745a95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375597"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709891"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (specificare il file winmd)
-Specifica il nome di file per il file di output di metadati di Windows Runtime (winmd) generato dal [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) l'opzione del linker.  
-  
-```  
-/WINMDFILE:filename  
-```  
-  
-## <a name="remarks"></a>Note  
- Utilizzare il valore specificato in `filename` per eseguire l'override del nome file predefinito con estensione winmd (`binaryname`.winmd). Si noti che non si aggiunge ". winmd" per `filename`.  Se più valori sono elencati nella **/WINMDFILE** l'ultima riga di comando, ha la precedenza.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Selezionare il **Linker** cartella.  
-  
-3.  Selezionare il **metadati di Windows** pagina delle proprietà.  
-  
-4.  Nel **File di metadati Windows** , immettere il percorso del file.  
-  
-## <a name="see-also"></a>Vedere anche  
- [/WINMD (generare metadati di Windows)](../../build/reference/winmd-generate-windows-metadata.md)   
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+Specifica il nome di file per il file di output di metadati di Windows Runtime (winmd) generato dal [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) l'opzione del linker.
+
+```
+/WINMDFILE:filename
+```
+
+## <a name="remarks"></a>Note
+
+Utilizzare il valore specificato in `filename` per eseguire l'override del nome file predefinito con estensione winmd (`binaryname`.winmd). Si noti che non si aggiunge ". winmd" a `filename`.  Se più valori sono elencati nella **/WINMDFILE** riga di comando, l'ultimo metodo ha la precedenza.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Selezionare il **Linker** cartella.
+
+1. Selezionare il **metadati Windows** pagina delle proprietà.
+
+1. Nel **File di metadati Windows** immettere il percorso del file.
+
+## <a name="see-also"></a>Vedere anche
+
+[/WINMD (genera metadati Windows)](../../build/reference/winmd-generate-windows-metadata.md)
+[impostando le opzioni del Linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

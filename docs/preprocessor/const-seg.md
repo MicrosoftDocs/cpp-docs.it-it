@@ -1,7 +1,7 @@
 ---
 title: const_seg | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540607"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705211"
 ---
 # <a name="constseg"></a>const_seg
 Specifica il segmento in cui [const](../cpp/const-cpp.md) le variabili vengono archiviate nel file obj.  
@@ -34,33 +34,35 @@ Specifica il segmento in cui [const](../cpp/const-cpp.md) le variabili vengono a
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Note  
- 
+### <a name="parameters"></a>Parametri
+
+**push**<br/>
+(Facoltativo) Inserisce un record nello stack del compilatore interno. Oggetto **push** può avere un *identifier* e *nome segmento*.  
+  
+**pop**<br/>
+(Facoltativo) Rimuove un record dall'inizio dello stack del compilatore interno.  
+  
+*identifier*<br/>
+(Facoltativo) Quando abbinata **push**, assegna un nome al record nello stack del compilatore interno. Quando abbinata **pop**, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
+  
+Usando *identifier* consente di più record da estrarre con un'unica **pop** comando.  
+  
+"*-nome del segmento*"<br/>  
+(Facoltativo) Il nome di un segmento. Quando abbinata **pop**, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.  
+  
+"*-classe di segmento*"<br/>
+(Facoltativo) Opzione inclusa per compatibilità con C++ precedenti alla versione 2.0. Ignorato.  
+  
+## <a name="remarks"></a>Note
+
 Il significato dei termini *segmento* e *sezione* sono intercambiabili in questo argomento.  
   
 I file OBJ possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file con estensione obj per le variabili `const` è .rdata. Alcune variabili `const`, come le variabili scalari, vengono automaticamente inserite nel flusso di codice. Il codice inline non verrà visualizzato in .rdata.  
   
 La definizione di un oggetto che richiede l'inizializzazione dinamica in un `const_seg` produce un comportamento non definito.  
   
-`#pragma const_seg` senza parametri reimposta il segmento su .rdata.  
-  
-*push* (facoltativo)  
-Inserisce un record nello stack interno del compilatore. Oggetto *push* può avere un *identifier* e *nome segmento*.  
-  
-*POP* (facoltativo)  
-Rimuove un record dall'inizio dello stack interno del compilatore.  
-  
-*Identificatore* (facoltativo)  
-Quando abbinata *push*, assegna un nome al record nello stack del compilatore interno. Quando abbinata *pop*, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
-  
-Usando *identifier* consente di più record da estrarre con un'unica *pop* comando.  
-  
-"*-nome del segmento*" (facoltativo)  
-Nome di un segmento. Quando abbinata *pop*, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.  
-  
-"*-classe di segmento*" (facoltativo)  
-Incluso per la compatibilità con le versioni di C++ precedenti alla versione 2.0. Ignorato.  
-  
+`#pragma const_seg` senza parametri reimposta il segmento su .rdata.
+
 ## <a name="example"></a>Esempio  
   
 ```cpp  

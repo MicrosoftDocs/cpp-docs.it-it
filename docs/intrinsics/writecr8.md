@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3fa5bda2af8d6d6d95474743725c399d3ef5269
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7369261efb43cdf9cd92f0924d1043cde50ac440
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704015"
 ---
 # <a name="writecr8"></a>__writecr8
 **Sezione specifica Microsoft**  
@@ -37,8 +37,8 @@ void writecr8(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Data`  
- Valore da scrivere nel registro CR8.  
+*Dati*<br/>
+[in] Valore da scrivere nel registro CR8.  
   
 ## <a name="requirements"></a>Requisiti  
   

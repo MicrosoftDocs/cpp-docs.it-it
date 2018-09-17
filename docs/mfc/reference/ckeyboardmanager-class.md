@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212891"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707486"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 Gestisce le tabelle di tasti di scelta rapida per la finestra cornice principale e le finestre cornice figlio.  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- ID di comando.  
+*uiCmd*<br/>
+[in] ID del comando.  
   
- [out] *str*  
- Riferimento a un oggetto `CString`.  
+*str*<br/>
+[out] Un riferimento a un `CString` oggetto.  
   
- [in] *pWndFrame*  
- Puntatore a una finestra cornice.  
+*pWndFrame*<br/>
+[in] Puntatore a una finestra cornice.  
   
- [in] *bIsDefaultFrame*  
- Specifica se la finestra cornice è la finestra cornice predefinito.  
+*bIsDefaultFrame*<br/>
+[in] Specifica se la finestra cornice è la finestra cornice predefinito.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se viene trovato lo scelta rapida. in caso contrario 0.  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *nKey*|Tasto da controllare.|  
-|[in] *fVirt*|Specifica il comportamento del tasto di scelta rapida. Per un elenco di valori possibili, vedere [accelerazione struttura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
-|[in] *pWndFrame*|Una finestra cornice. Questo metodo determina se un tasto di scelta rapida viene gestito in questo frame.|  
-|[in] *bIsDefaultFrame*|Un parametro booleano che indica se *pWndFrame* è la finestra cornice predefinito.|  
+|*nKey*|[in] Chiave da controllare.|  
+|*fVirt*|[in] Specifica il comportamento del tasto di scelta rapida. Per un elenco di valori possibili, vedere [accelerazione struttura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
+|*pWndFrame*|[in] Una finestra cornice. Questo metodo determina se un tasto di scelta rapida viene gestito in questo frame.|  
+|*bIsDefaultFrame*|[in] Un parametro booleano che indica se *pWndFrame* è la finestra cornice predefinito.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il tasto di scelta rapida viene gestito. FALSE se la chiave non viene gestita oppure se *pWndFrame* è NULL.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *nChar*|Il carattere che questo metodo controlla.|  
+|*NChar*|[in] Il carattere che questo metodo controlla.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il carattere stampabile, zero in caso contrario.  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Il percorso del Registro di sistema in cui `CKeyboardManager` i dati vengono salvati.  
+*lpszProfileName*<br/>
+[in] Il percorso del Registro di sistema in cui `CKeyboardManager` i dati vengono salvati.  
   
- [in] *pDefaultFrame*  
- Puntatore a una finestra cornice da utilizzare come la finestra predefinita.  
+*pDefaultFrame*<br/>
+[in] Puntatore a una finestra cornice da utilizzare come la finestra predefinita.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se lo stato è stato caricato correttamente oppure 0 in caso contrario.  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Il percorso del Registro di sistema per il salvataggio di `CKeyboardManager` dello stato.  
+*lpszProfileName*<br/>
+[in] Il percorso del Registro di sistema per il salvataggio di `CKeyboardManager` dello stato.  
   
- [in] *pDefaultFrame*  
- Puntatore a una finestra cornice che diventa la finestra predefinita.  
+*pDefaultFrame*<br/>
+[in] Puntatore a una finestra cornice che diventa la finestra predefinita.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se è stato salvato lo stato di gestione della tastiera, oppure 0 in caso contrario.  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bShowAll*  
- Se TRUE, tutti i tasti di scelta rapida verranno visualizzate. Se FALSE, verrà visualizzato solo il primo tasto di scelta rapida.  
+*bShowAll*<br/>
+[in] Se TRUE, tutti i tasti di scelta rapida verranno visualizzate. Se FALSE, verrà visualizzato solo il primo tasto di scelta rapida.  
   
- [in] *lpszDelimiter*  
- Stringa da inserire tra i tasti di scelta rapida. In questo delimitatore non ha alcun effetto se un tasto di scelta rapida viene visualizzato solo una.  
+*lpszDelimiter*<br/>
+[in] Stringa da inserire tra i tasti di scelta rapida. In questo delimitatore non ha alcun effetto se un tasto di scelta rapida viene visualizzato solo una.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, se un comando contiene più di un tasto di scelta rapida associato, verrà visualizzato solo il primo tasto di scelta rapida. Questa funzione consente di elencare tutti i tasti di scelta rapida associati a tutti i comandi.  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nChar*  
- Carattere da convertire.  
+*NChar*<br/>
+[in] Carattere da convertire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il carattere che è il registro superiore del parametro di input.  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTemplate*  
- Puntatore a un modello di documento.  
+*pTemplate*<br/>
+[in] Puntatore a un modello di documento.  
   
- [in] *lpAccel*  
- Puntatore al nuovo tasto di scelta rapida.  
+*lpAccel*<br/>
+[in] Puntatore al nuovo tasto di scelta rapida.  
   
- [in] *nSize*  
- Le dimensioni della nuova tabella di scelta rapida.  
+*nSize*<br/>
+[in] Le dimensioni della nuova tabella di scelta rapida.  
   
- [in] *pDefaultFrame*  
- Puntatore alla finestra cornice predefinito.  
+*pDefaultFrame*<br/>
+[in] Puntatore alla finestra cornice predefinito.  
   
- [in] *hAccelNew*  
- Handle per la nuova tabella di scelta rapida.  
+*hAccelNew*<br/>
+[in] Handle per la nuova tabella di scelta rapida.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo. in caso contrario 0.  

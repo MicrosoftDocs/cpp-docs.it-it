@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540636"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704860"
 ---
 # <a name="writeeflags"></a>__writeeflags
 Scrive il valore specificato per il programma di registrazione dello stato e controllo (contenuto).  
@@ -37,7 +37,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] `Value`|Valore da scrivere nel Registro di contenuto. Il `Value` parametro è a 32 bit a lungo per una piattaforma a 32 bit e a 64 bit a lungo per una piattaforma a 64 bit.|  
+|*Valore*|[in] Valore da scrivere nel Registro di contenuto. Il `Value` parametro è a 32 bit a lungo per una piattaforma a 32 bit e a 64 bit a lungo per una piattaforma a 64 bit.|  
   
 ## <a name="remarks"></a>Note  
  Queste routine sono disponibili solo come intrinseci.  

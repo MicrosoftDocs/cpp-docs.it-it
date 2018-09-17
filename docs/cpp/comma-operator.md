@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9beadf4f532d24ca1f4023ad95dd8583d653c11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409186"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707766"
 ---
 # <a name="comma-operator-"></a>Operatore virgola: ,
 Consente di raggruppare due istruzioni dove previsto.  
@@ -37,11 +37,7 @@ expression , expression
   
  Le virgole possono essere utilizzate come separatori in alcuni contesti, ad esempio gli elenchi di argomenti della funzione. Non confondere l'utilizzo della virgola come separatore con il relativo utilizzo come operatore, i due utilizzi sono completamente differenti.  
   
- Valutare l'espressione  
-  
- *E1* , *e2*  
-  
- Il tipo e il valore dell'espressione sono il tipo e il valore della *e2*; il risultato della valutazione *e1* viene eliminato. Il risultato è un l-value se l'operando destro è un l-value.  
+ Valutare l'espressione `e1, e2`. Il tipo e il valore dell'espressione sono il tipo e il valore della *e2*; il risultato della valutazione *e1* viene eliminato. Il risultato è un l-value se l'operando destro è un l-value.  
   
  Quando la virgola viene normalmente utilizzata come separatore (ad esempio negli argomenti effettivi alle funzioni o agli inizializzatori di aggregazione), l'operatore virgola e i relativi operandi devono essere racchiusi tra parentesi. Ad esempio:  
   

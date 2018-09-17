@@ -1,5 +1,5 @@
 ---
-title: Macro NMAKE speciali | Documenti Microsoft
+title: Macro NMAKE speciali | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb74d09c1facf664c39781f8134d653f3105c9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe854d4e3c625d23a5b83cee50ab468b76abcfff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380014"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710203"
 ---
 # <a name="special-nmake-macros"></a>Macro speciali di NMAKE
-NMAKE fornisce diverse macro speciali per rappresentare vari nomi di file e i comandi. È possibile utilizzare alcune di queste macro è nelle regole di inferenza già. Come tutte le macro, le macro fornite da NMAKE non tra maiuscole e minuscole.  
-  
--   [Macro nome file](../build/filename-macros.md)  
-  
--   [Macro di ricorsione](../build/recursion-macros.md)  
-  
--   [Macro di comando e opzioni](../build/command-macros-and-options-macros.md)  
-  
--   [Macro di variabili di ambiente](../build/environment-variable-macros.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Macro e NMAKE](../build/macros-and-nmake.md)
+
+NMAKE fornisce diverse macro speciali per rappresentare i vari nomi di file e i comandi. È possibile utilizzare alcune di queste macro è nelle regole di inferenza predefinite. Come tutte le macro, le macro fornite da NMAKE sono tra maiuscole e minuscole.
+
+- [Macro di nomi file](../build/filename-macros.md)
+
+- [Macro di ricorsione](../build/recursion-macros.md)
+
+- [Macro di comando e opzioni](../build/command-macros-and-options-macros.md)
+
+- [Macro di variabili di ambiente](../build/environment-variable-macros.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Macro e NMAKE](../build/macros-and-nmake.md)

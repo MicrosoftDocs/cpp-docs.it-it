@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62d78fb7c2b9cbaee62baf59636303f90177cf7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953901"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699595"
 ---
 # <a name="timeputbyname-class"></a>Classe time_put_byname
 
@@ -50,11 +50,11 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*_Locname*  
- Nome delle impostazioni locali.
+*_Locname*<br/>
+Nome delle impostazioni locali.
 
-*_Refs*  
- Conteggio di riferimento iniziale.
+*_Refs*<br/>
+Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
 

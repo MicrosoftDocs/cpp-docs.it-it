@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4fa70eb4be67eb9ec29fbd24b7b1476681f7bd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3d69497092ba89b91a4dbfaf56ac842fa8e07236
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678564"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707454"
 ---
 # <a name="multimap-class"></a>Classe multimap
 
@@ -120,18 +120,18 @@ class multimap;
 ### <a name="parameters"></a>Parametri
 
 *Key*<br/>
- Tipo di dati della chiave da archiviare nel multimap.
+Tipo di dati della chiave da archiviare nel multimap.
 
 *Type*<br/>
- Tipo di dati degli elementi da archiviare nel multimap.
+Tipo di dati degli elementi da archiviare nel multimap.
 
 *Tratti*<br/>
- Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel multimap. Il predicato binario `less<Key>` rappresenta il valore predefinito.
+Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel multimap. Il predicato binario `less<Key>` rappresenta il valore predefinito.
 
 In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato `std::less<>` o `std::greater<>` che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14).
 
 *Allocatore*<br/>
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione della mappa e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair <const Key, Type> >`.
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione della mappa e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Note
 
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- La chiave degli elementi per cui trovare un corrispondenza nel multimap.
+La chiave degli elementi per cui trovare un corrispondenza nel multimap.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -916,7 +916,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1003,16 +1003,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametri
 
 *Where*<br/>
- Posizione dell'elemento che deve essere rimosso.
+Posizione dell'elemento che deve essere rimosso.
 
 *Primo*<br/>
- Posizione del primo elemento che deve essere rimosso.
+Posizione del primo elemento che deve essere rimosso.
 
 *ultimo*<br/>
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
+Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
 *Key*<br/>
- Chiave degli elementi da rimuovere.
+Chiave degli elementi da rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1038,7 +1038,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nel multimap in cui eseguire la ricerca.
+Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nel multimap in cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1493,7 +1493,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2189,7 +2189,7 @@ void swap(
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
- Oggetto multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto multimap `left`.
+Oggetto multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto multimap `left`.
 
 ### <a name="remarks"></a>Note
 
@@ -2259,7 +2259,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multimap in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

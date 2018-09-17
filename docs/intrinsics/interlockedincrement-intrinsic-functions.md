@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 369d7c1c6c5bf2201c52bab67361f196b309c6f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575788"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702546"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Funzioni intrinseche _InterlockedIncrement
 **Sezione specifica Microsoft**  
@@ -108,15 +108,15 @@ __int64 _InterlockedIncrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in, out] `lpAddend`  
- Puntatore alla variabile da incrementare.  
+*lpAddend*<br/>
+[in, out] Puntatore alla variabile da incrementare.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il valore restituito è il valore incrementato risultante.  
   
 ## <a name="requirements"></a>Requisiti  
   
-|Funzione intrinseca|Architettura|Header|  
+|Funzione intrinseca|Architettura|Intestazione|  
 |---------------|------------------|------------|  
 |`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|  

@@ -1,5 +1,5 @@
 ---
-title: -Zs (solo controllo della sintassi) | Documenti Microsoft
+title: -Zs (solo controllo della sintassi) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,41 +19,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbefdf18ac5299addc4c0c251d801b39ab038e1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e2f8d9f711309d7039672cbf3f92aa49b906fc3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380045"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706485"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs (Solo controllo della sintassi)
-Indica al compilatore di controllare solo la sintassi dei file di origine nella riga di comando.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/Zs  
-```  
-  
-## <a name="remarks"></a>Note  
- Quando si utilizza questa opzione, viene creato alcun file di output e i messaggi di errore vengono scritti nell'output standard.  
-  
- Il **/Zs** opzione offre un modo rapido per trovare e correggere gli errori di sintassi prima di compilare e collegare un file di origine.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
-  
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+Indica al compilatore di controllare solo la sintassi dei file di origine nella riga di comando.
+
+## <a name="syntax"></a>Sintassi
+
+```
+/Zs
+```
+
+## <a name="remarks"></a>Note
+
+Quando si usa questa opzione, viene creato alcun file di output e messaggi di errore vengono scritte all'output standard.
+
+Il **/Zs** opzione offre un modo rapido per trovare e correggere gli errori di sintassi prima di compilare e collegare un file di origine.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Fare clic sulla cartella **C/C++** .
+
+1. Fare clic sulla pagina delle proprietà **Riga di comando** .
+
+1. Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

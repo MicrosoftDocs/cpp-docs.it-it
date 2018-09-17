@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756363"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709800"
 ---
 # <a name="idispatchimpl-class"></a>Classe IDispatchImpl
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>Parametri
 
-[in] *T*  
-Un'interfaccia duale.
+*T*<br/>
+[in] Un'interfaccia duale.
 
-[in] *piid*  
-Un puntatore all'IID del *T*.
+*piid*<br/>
+[in] Un puntatore all'IID del *T*.
 
-[in] *plibid*  
-Puntatore a LIBID della libreria dei tipi che contiene informazioni sull'interfaccia. Per impostazione predefinita, viene passata la libreria dei tipi a livello di server.
+*plibid*<br/>
+[in] Puntatore a LIBID della libreria dei tipi che contiene informazioni sull'interfaccia. Per impostazione predefinita, viene passata la libreria dei tipi a livello di server.
 
-[in] *wMajor*  
-Versione principale della libreria dei tipi. Per impostazione predefinita, il valore è 1.
+*wMajor*<br/>
+[in] La versione principale della libreria dei tipi. Per impostazione predefinita, il valore è 1.
 
-[in] *wMinor*  
-Versione secondaria della libreria dei tipi. Per impostazione predefinita, il valore è 0.
+*wMinor*<br/>
+[in] La versione secondaria della libreria dei tipi. Per impostazione predefinita, il valore è 0.
 
-[in] *tihclass*  
-La classe usata per gestire le informazioni sul tipo per *T*. Per impostazione predefinita, il valore è `CComTypeInfoHolder`.
+*tihclass*<br/>
+[in] La classe usata per gestire le informazioni sul tipo per *T*. Per impostazione predefinita, il valore è `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Membri
 

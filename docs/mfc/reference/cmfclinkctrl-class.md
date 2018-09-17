@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a6bed16f338c5ee3333529613189fe03ad7e3ec3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851587"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709553"
 ---
 # <a name="cmfclinkctrl-class"></a>Classe CMFCLinkCtrl
 Il `CMFCLinkCtrl` classe visualizza un pulsante come collegamento ipertestuale e richiama la destinazione del collegamento quando si fa clic sul pulsante.  
@@ -91,11 +91,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rectClient*  
- Un rettangolo che delimita il controllo di collegamento.  
+*rectClient*<br/>
+[in] Un rettangolo che delimita il controllo di collegamento.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo quando si desidera usare il proprio codice per disegnare il rettangolo di attivazione del pulsante.  
@@ -108,8 +108,8 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszURL*  
- Il testo del pulsante da visualizzare.  
+*lpszURL*<br/>
+[in] Il testo del pulsante da visualizzare.  
   
 ### <a name="remarks"></a>Note  
   
@@ -121,8 +121,8 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszPrefix*  
- Il prefisso del protocollo URL.  
+*lpszPrefix*<br/>
+[in] Il prefisso del protocollo URL.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per impostare il prefisso dell'URL. Il prefisso non viene visualizzato nella superficie del pulsante, ma è possibile usarlo per passare alla destinazione dell'URL.  
@@ -137,11 +137,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bVCenter*  
- TRUE per allineare al centro il testo del pulsante e una bitmap in senso verticale tra la parte superiore e inferiore del controllo collegamento. in caso contrario, FALSE. Il valore predefinito è FALSE.  
+*bVCenter*<br/>
+[in] TRUE per allineare al centro il testo del pulsante e una bitmap in senso verticale tra la parte superiore e inferiore del controllo collegamento. in caso contrario, FALSE. Il valore predefinito è FALSE.  
   
- [in] *bHCenter*  
- TRUE per allineare al centro il testo del pulsante e bitmap orizzontalmente tra i lati sinistro e destro del controllo collegamento. in caso contrario, FALSE. Il valore predefinito è FALSE.  
+*bHCenter*<br/>
+[in] TRUE per allineare al centro il testo del pulsante e bitmap orizzontalmente tra i lati sinistro e destro del controllo collegamento. in caso contrario, FALSE. Il valore predefinito è FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che contiene le nuove dimensioni del controllo collegamento.  

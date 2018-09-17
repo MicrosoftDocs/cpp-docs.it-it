@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540028"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711880"
 ---
 # <a name="ctooltipmanager-class"></a>Classe CTooltipManager
 Gestisce informazioni di runtime sulle descrizioni comandi. L'istanza della classe `CTooltipManager` viene avviata una volta per applicazione.  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *pToolTip*  
- Un riferimento a un puntatore della descrizione comando. È impostato in modo da puntare alla descrizione comando appena creata al completamento della funzione.  
+*pToolTip*<br/>
+[out] Un riferimento a un puntatore della descrizione comando. È impostato in modo da puntare alla descrizione comando appena creata al completamento della funzione.  
   
- [in] *pWndParent*  
- Elemento padre della descrizione comando.  
+*pWndParent*<br/>
+[in] Elemento padre della descrizione comando.  
   
- [in] *NLE*  
- Tipo della descrizione comando.  
+*NLE*<br/>
+[in] Tipo della descrizione comando.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se è stata creata una descrizione comando.  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *pToolTip*  
- Un riferimento a un puntatore a una descrizione comando da distruggere.  
+*pToolTip*<br/>
+[in, out] Un riferimento a un puntatore a una descrizione comando da distruggere.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per ogni [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) che è stato creato da [CTooltipManager::CreateToolTip](#createtooltip). Il controllo padre deve chiamare questo metodo dalla relativa `OnDestroy` gestore. Questa è necessaria per rimuovere correttamente la descrizione comando da framework. Questo metodo imposta *pToolTip* su NULL prima della restituzione.  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTypes*  
- Specifica i tipi di controllo.  
+*nTypes*<br/>
+[in] Specifica i tipi di controllo.  
   
- [in] *pRTC*  
- Classe di runtime della descrizione comando personalizzata.  
+*pRTC*<br/>
+[in] Classe di runtime della descrizione comando personalizzata.  
   
- [in] *pParams*  
- Parametri della descrizione comando.  
+*pParams*<br/>
+[in] Parametri della descrizione comando.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo imposta la classe di runtime e i parametri iniziali che il [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) usati durante la creazione di descrizioni comandi. Quando un controllo chiama [CTooltipManager::CreateToolTip](#createtooltip) e passa in una descrizione comando di tipo che rappresenta uno dei tipi indicati da *nTypes*, la gestione della descrizione comando crea un controllo descrizione comando che è un'istanza del classe di runtime specificata da *pRTC* e passa i parametri specificati dal *pParams* per il nuovo controllo tooltip.  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTI*  
- Un puntatore a un oggetto TOOLINFO.  
+*PTI*<br/>
+[in] Un puntatore a un oggetto TOOLINFO.  
   
- [in, out] *pToolTip*  
- Puntatore al controllo descrizione comando per cui impostare il testo e la descrizione.  
+*pToolTip*<br/>
+[in, out] Puntatore al controllo descrizione comando per cui impostare il testo e la descrizione.  
   
- [in] *NLE*  
- Specifica il tipo di controllo a cui è associata questa descrizione comando.  
+*NLE*<br/>
+[in] Specifica il tipo di controllo a cui è associata questa descrizione comando.  
   
- [in] *strText*  
- Testo da impostare come testo della descrizione comando.  
+*strText*<br/>
+[in] Testo da impostare come testo della descrizione comando.  
   
- [in] *lpszDescr*  
- Puntatore alla descrizione della descrizione comando. Può essere NULL.  
+*lpszDescr*<br/>
+[in] Puntatore alla descrizione della descrizione comando. Può essere NULL.  
   
 ### <a name="remarks"></a>Note  
  Il valore di *NLE* deve essere lo stesso valore di *NLE* parametro del [CTooltipManager::CreateToolTip](#createtooltip) durante la creazione della descrizione comandi.  

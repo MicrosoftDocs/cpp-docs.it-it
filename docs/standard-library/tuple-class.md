@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ea4a0c17422823f306942bc7d02514456bf8310
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538642"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712088"
 ---
 # <a name="tuple-class"></a>Classe tuple
 
@@ -52,8 +52,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*TN*  
- Tipo dell'ennesimo elemento tupla.
+*TN*<br/>
+Tipo dell'ennesimo elemento tupla.
 
 ## <a name="remarks"></a>Note
 
@@ -154,11 +154,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametri
 
-*ANNULLA LA*  
- Il tipo dell'ennesimo elemento tupla copiato.
+*ANNULLA LA*<br/>
+Il tipo dell'ennesimo elemento tupla copiato.
 
-*right*  
- Tupla da cui eseguire la copia.
+*right*<br/>
+Tupla da cui eseguire la copia.
 
 ### <a name="remarks"></a>Note
 
@@ -263,11 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametri
 
-*ANNULLA LA*  
- Il tipo dell'ennesimo elemento tupla copiato.
+*ANNULLA LA*<br/>
+Il tipo dell'ennesimo elemento tupla copiato.
 
-*right*  
- Tupla da cui eseguire la copia.
+*right*<br/>
+Tupla da cui eseguire la copia.
 
 ### <a name="remarks"></a>Note
 

@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b8aa623f79c32303a0d5fb84c9b865bff918d9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2ddfeb41f9036e783fbf2b303a796fddf48405c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683577"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701792"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 Implementa la funzionalità principale che controlla il layout di ancoraggio in una finestra cornice principale.  
@@ -320,11 +320,11 @@ BOOL AddDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *info*  
- Un riferimento a una struttura di informazioni che contiene ancora l'allineamento di riquadro.  
+*Informazioni*<br/>
+[in] Un riferimento a una struttura di informazioni che contiene ancora l'allineamento di riquadro.  
   
- [out] *ppDockBar*  
- Un puntatore a un puntatore al nuovo riquadro ancorato.  
+*ppDockBar*<br/>
+[out] Un puntatore a un puntatore al nuovo riquadro ancorato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro dock è stato creato correttamente. FALSE in caso contrario.  
@@ -337,8 +337,8 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Un puntatore a una barra riquadro  
+*pBar*<br/>
+[in] Un puntatore a una barra riquadro  
   
 ##  <a name="addpane"></a>  CDockingManager::AddPane  
  Registra un riquadro con il gestore di ancoraggio.  
@@ -352,17 +352,17 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *pWnd*  
- Specifica il riquadro per aggiungere il gestore di ancoraggio.  
+*pWnd*<br/>
+[in, out] Specifica il riquadro per aggiungere il gestore di ancoraggio.  
   
- [in] *bTail*  
- TRUE per aggiungere il riquadro alla fine dell'elenco di riquadri per il gestore di ancoraggio; in caso contrario, FALSE.  
+*bTail*<br/>
+[in] TRUE per aggiungere il riquadro alla fine dell'elenco di riquadri per il gestore di ancoraggio; in caso contrario, FALSE.  
   
- [in] *bAutoHide*  
- Solo per uso interno. Usare sempre il valore predefinito FALSE.  
+*bAutoHide*<br/>
+[in] Solo per uso interno. Usare sempre il valore predefinito FALSE.  
   
- [in] *bInsertForOuterEdge*  
- Solo per uso interno. Usare sempre il valore predefinito FALSE.  
+*bInsertForOuterEdge*<br/>
+[in] Solo per uso interno. Usare sempre il valore predefinito FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro è stato registrato correttamente con il gestore di ancoraggio; in caso contrario, FALSE.  
@@ -378,8 +378,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hdwp*  
- Specifica la struttura della posizione finestra posticipata. Per altre informazioni, vedere [tipi di dati Windows](/windows/desktop/WinProg/windows-data-types).  
+*hdwp*<br/>
+[in] Specifica la struttura della posizione finestra posticipata. Per altre informazioni, vedere [tipi di dati Windows](/windows/desktop/WinProg/windows-data-types).  
   
 ### <a name="remarks"></a>Note  
   
@@ -391,8 +391,8 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Un puntatore a un frame.  
+*pWnd*<br/>
+[in] Un puntatore a un frame.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il frame non è nell'elenco di frame mini ed è stato aggiunto correttamente; FALSE in caso contrario.  
@@ -416,11 +416,11 @@ virtual BOOL AdjustRectToClientArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectResult*  
- Un riferimento a un `CRect` oggetto  
+*rectResult*<br/>
+[in] Un riferimento a un `CRect` oggetto  
   
- [in] *dwAlignment*  
- L'allineamento del `CRect` oggetto  
+*dwAlignment*<br/>
+[in] L'allineamento del `CRect` oggetto  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'allineamento del `CRect` oggetto è stato modificato; FALSE in caso contrario.  
@@ -446,11 +446,11 @@ void AlignAutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDefaultSlider*  
- Il riquadro ancorato di dispositivo di scorrimento.  
+*pDefaultSlider*<br/>
+[in] Il riquadro ancorato di dispositivo di scorrimento.  
   
- [in] *bIsVisible*  
- TRUE se il riquadro ancorato è visibile; FALSE in caso contrario.  
+*bIsVisible*<br/>
+[in] TRUE se il riquadro ancorato è visibile; FALSE in caso contrario.  
   
 ##  <a name="autohidepane"></a>  CDockingManager::AutoHidePane  
  Crea una barra degli strumenti Nascondi automaticamente.  
@@ -462,11 +462,11 @@ CMFCAutoHideToolBar* AutoHidePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Un puntatore a barra di riquadro.  
+*pBar*<br/>
+[in] Un puntatore a barra di riquadro.  
   
- [in] *pCurrAutoHideToolBar*  
- Puntatore a una barra degli strumenti Nascondi automaticamente.  
+*pCurrAutoHideToolBar*<br/>
+[in] Puntatore a una barra degli strumenti Nascondi automaticamente.  
   
 ### <a name="return-value"></a>Valore restituito  
  NULL se la barra degli strumenti Nascondi automaticamente non è stato creato. in caso contrario un puntatore per la nuova barra degli strumenti.  
@@ -481,11 +481,11 @@ void BringBarsToTop(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwAlignment*  
- L'allineamento delle barre di ancoraggio che vengono offerti in cima ad altre finestre.  
+*dwAlignment*<br/>
+[in] L'allineamento delle barre di ancoraggio che vengono offerti in cima ad altre finestre.  
   
- [in] *bExcludeDockedBars*  
- TRUE per escludere le barre ancorate venga in primo piano. in caso contrario, FALSE.  
+*bExcludeDockedBars*<br/>
+[in] TRUE per escludere le barre ancorate venga in primo piano. in caso contrario, FALSE.  
   
 ##  <a name="buildpanesmenu"></a>  CDockingManager::BuildPanesMenu  
  Aggiunge i nomi di barre degli strumenti e riquadri di ancoraggio a un menu.  
@@ -497,11 +497,11 @@ void BuildPanesMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *menu*  
- Menu per aggiungere i nomi dei riquadri e delle barre degli strumenti di ancoraggio.  
+*Menu di scelta*<br/>
+[in] Menu per aggiungere i nomi dei riquadri e delle barre degli strumenti di ancoraggio.  
   
- [in] *bToolbarsOnly*  
- TRUE per aggiungere nomi solo sulla barra degli strumenti al menu; FALSE in caso contrario.  
+*bToolbarsOnly*<br/>
+[in] TRUE per aggiungere nomi solo sulla barra degli strumenti al menu; FALSE in caso contrario.  
   
 ##  <a name="calcexpecteddockedrect"></a>  CDockingManager::CalcExpectedDockedRect  
  Calcola il rettangolo previsto di una finestra ancorata.  
@@ -516,20 +516,20 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Puntatore alla finestra di ancoraggio.  
+*pWnd*<br/>
+[in] Puntatore alla finestra di ancoraggio.  
   
- [in] *ptMouse*  
- Posizione del mouse.  
+*ptMouse*<br/>
+[in] Posizione del mouse.  
   
- [out] *rectResult*  
- Rettangolo calcolato.  
+*rectResult*<br/>
+[out] Rettangolo calcolato.  
   
- [in] *bDrawTab*  
- True per disegnare una tabulazione; in caso contrario, FALSE.  
+*bDrawTab*<br/>
+[in] True per disegnare una tabulazione; in caso contrario, FALSE.  
   
- [out] *ppTargetBar*  
- Un puntatore a un puntatore al riquadro di destinazione.  
+*ppTargetBar*<br/>
+[out] Un puntatore a un puntatore al riquadro di destinazione.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo calcola il rettangolo che una finestra occuperebbe se un utente di trascinata la finestra per il punto specificato da *ptMouse* e ancorata sono.  
@@ -542,8 +542,8 @@ BOOL Create(CFrameWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParentWnd*  
- Puntatore al frame padre il gestore di ancoraggio. Questo valore non deve essere NULL.  
+*pParentWnd*<br/>
+[in] Puntatore al frame padre il gestore di ancoraggio. Questo valore non deve essere NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
  Sempre TRUE.  
@@ -562,23 +562,23 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pt*  
- La posizione del riquadro da controllare.  
+*pt*<br/>
+[in] La posizione del riquadro da controllare.  
   
- [in] *nSensitivity*  
- Il valore per aumentare il rettangolo della finestra di ogni riquadro selezionato. Se il punto specificato si trova in questa area maggiore, un riquadro soddisfa i criteri di ricerca.  
+*nSensitivity*<br/>
+[in] Il valore per aumentare il rettangolo della finestra di ogni riquadro selezionato. Se il punto specificato si trova in questa area maggiore, un riquadro soddisfa i criteri di ricerca.  
   
- [in] *dwEnabledAlignment*  
- L'allineamento del riquadro ancorato.  
+*dwEnabledAlignment*<br/>
+[in] L'allineamento del riquadro ancorato.  
   
- [out] *ppTargetBar*  
- Un puntatore a un puntatore al riquadro di destinazione.  
+*ppTargetBar*<br/>
+[out] Un puntatore a un puntatore al riquadro di destinazione.  
   
- [in] *pBarToIgnore*  
- Il riquadro in cui il metodo ignora.  
+*pBarToIgnore*<br/>
+[in] Il riquadro in cui il metodo ignora.  
   
- [in] *pBarToDock*  
- Il riquadro ancorato.  
+*pBarToDock*<br/>
+[in] Il riquadro ancorato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Lo stato di ancoraggio.  
@@ -601,8 +601,8 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bDisattivare*  
- True per disabilitare il caricamento del layout di ancoraggio dal Registro di sistema. in caso contrario, FALSE.  
+*bDisattivare*<br/>
+[in] True per disabilitare il caricamento del layout di ancoraggio dal Registro di sistema. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo quando è necessario conservare il layout corrente dell'ancoraggio riquadri e le barre degli strumenti quando si carica lo stato dell'applicazione.  
@@ -618,14 +618,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Un puntatore a una barra per ancorare al riquadro.  
+*pBar*<br/>
+[in] Un puntatore a una barra per ancorare al riquadro.  
   
- [in] *nDockBarID*  
- L'id della barra di ancoraggio.  
+*nDockBarID*<br/>
+[in] L'id della barra di ancoraggio.  
   
- [in] *lpRect*  
- Il rettangolo di destinazione.  
+*lpRect*<br/>
+[in] Il rettangolo di destinazione.  
   
 ##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf  
  Ancora un riquadro a sinistra di un altro riquadro.  
@@ -637,11 +637,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBarToDock*  
- Un puntatore al riquadro ancorato a sinistra del *pTargetBar*.  
+*pBarToDock*<br/>
+[in] Un puntatore al riquadro ancorato a sinistra del *pTargetBar*.  
   
- [in] *pTargetBar*  
- Puntatore al riquadro di destinazione.  
+*pTargetBar*<br/>
+[in] Puntatore al riquadro di destinazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro è stato ancorato correttamente. in caso contrario, FALSE.  
@@ -654,8 +654,8 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwStyle*  
- L'allineamento di ancoraggio.  
+*dwStyle*<br/>
+[in] L'allineamento di ancoraggio.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro dock è stato creato correttamente. FALSE in caso contrario.  
@@ -668,8 +668,8 @@ BOOL EnableDocking(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwStyle*  
- L'allineamento di ancoraggio.  
+*dwStyle*<br/>
+[in] L'allineamento di ancoraggio.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro dock è stato creato correttamente. FALSE in caso contrario.  
@@ -682,8 +682,8 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare il menu del sito di ancoraggio; in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare il menu del sito di ancoraggio; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Il menu del sito di ancoraggio vengono visualizzate le opzioni seguenti per modificare lo stato di ancoraggio del riquadro:  
@@ -710,17 +710,17 @@ void EnablePaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Se TRUE, la libreria consente di attivare il supporto per menu di scelta rapida automatica Se FALSE la libreria consente di disattivare il supporto per menu di scelta rapida automatica.  
+*bAttivare il*<br/>
+[in] Se TRUE, la libreria consente di attivare il supporto per menu di scelta rapida automatica Se FALSE la libreria consente di disattivare il supporto per menu di scelta rapida automatica.  
   
- [in] *uiCustomizeCmd*  
- Un id di comando per il **Personalizza** voce del menu.  
+*uiCustomizeCmd*<br/>
+[in] Un id di comando per il **Personalizza** voce del menu.  
   
- [in] *strCustomizeText*  
- Il testo del **Personalizza** elemento.  
+*strCustomizeText*<br/>
+[in] Il testo del **Personalizza** elemento.  
   
- [in] *bToolbarsOnly*  
- Se TRUE, il menu Visualizza solo un elenco delle barre degli strumenti dell'applicazione; Se FALSE, la libreria consente di aggiungere riquadri ancorati applicazione a questo elenco.  
+*bToolbarsOnly*<br/>
+[in] Se TRUE, il menu Visualizza solo un elenco delle barre degli strumenti dell'applicazione; Se FALSE, la libreria consente di aggiungere riquadri ancorati applicazione a questo elenco.  
   
 ##  <a name="finddocksite"></a>  CDockingManager::FindDockSite  
  Recupera la barra di riquadro che si trova nella posizione specificata e con l'allineamento specificato.  
@@ -732,11 +732,11 @@ virtual CDockSite* FindDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwAlignment*  
- L'allineamento della barra del riquadro.  
+*dwAlignment*<br/>
+[in] L'allineamento della barra del riquadro.  
   
- [in] *bOuter*  
- Se TRUE, recuperare la barra in head posizione nell'elenco di barre di controllo. In caso contrario, recuperare la barra nella posizione della parte finale nell'elenco di barre di controllo.  
+*bOuter*<br/>
+[in] Se TRUE, recuperare la barra in head posizione nell'elenco di barre di controllo. In caso contrario, recuperare la barra nella posizione della parte finale nell'elenco di barre di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il riquadro ancorato che ha l'allineamento specificato; In caso contrario NULL.  
@@ -751,11 +751,11 @@ virtual CBasePane* FindPaneByID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uBarID*  
- Specifica l'ID di controllo del riquadro da trovare.  
+*uBarID*<br/>
+[in] Specifica l'ID di controllo del riquadro da trovare.  
   
- [in] *bSearchMiniFrames*  
- TRUE per includere mobili tutti i riquadri nella ricerca. FALSE per includere solo i riquadri ancorati.  
+*bSearchMiniFrames*<br/>
+[in] TRUE per includere mobili tutti i riquadri nella ricerca. FALSE per includere solo i riquadri ancorati.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il [CBasePane](../../mfc/reference/cbasepane-class.md) oggetto che ha il controllo specificato ID oppure NULL se non è stato trovato nel riquadro specificato.  
@@ -770,8 +770,8 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTargetBar*  
- Puntatore al riquadro della barra di destinazione.  
+*pTargetBar*<br/>
+[in] Puntatore al riquadro della barra di destinazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  La barra di riquadro con l'id del riquadro barra di destinazione; NULL se questo non barra riquadro non esiste.  
@@ -797,14 +797,14 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pt*  
- Specifica il punto, nelle coordinate dello schermo, da controllare.  
+*pt*<br/>
+[in] Specifica il punto, nelle coordinate dello schermo, da controllare.  
   
- [in] *pFrameToExclude*  
- Un puntatore a un frame da escludere.  
+*pFrameToExclude*<br/>
+[in] Un puntatore a un frame da escludere.  
   
- [in] *bFloatMultiOnly*  
- True per escludere fotogrammi che non sono istanze di `CMultiPaneFrameWnd`; FALSE in caso contrario.  
+*bFloatMultiOnly*<br/>
+[in] True per escludere fotogrammi che non sono istanze di `CMultiPaneFrameWnd`; FALSE in caso contrario.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il frame che contiene il punto specificato; In caso contrario NULL.  
@@ -819,8 +819,8 @@ void GetClientAreaBounds(CRect& rcClient);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rcClient*  
- Un riferimento al rettangolo contenente i limiti dell'area client.  
+*rcClient*<br/>
+[out] Un riferimento al rettangolo contenente i limiti dell'area client.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il rettangolo che contiene i limiti dell'area client.  
@@ -899,17 +899,17 @@ void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *lstBars*  
- Contiene tutti i riquadri del gestore di ancoraggio corrente.  
+*lstBars*<br/>
+[in, out] Contiene tutti i riquadri del gestore di ancoraggio corrente.  
   
- [in] *bIncludeAutohide*  
- TRUE per includere i riquadri che sono in modalità Nascondi automaticamente. in caso contrario, FALSE.  
+*bIncludeAutohide*<br/>
+[in] TRUE per includere i riquadri che sono in modalità Nascondi automaticamente. in caso contrario, FALSE.  
   
- [in] *pRTCFilter*  
- Se non è NULL, l'elenco restituito contiene i riquadri solo della classe di runtime specificato.  
+*pRTCFilter*<br/>
+[in] Se non è NULL, l'elenco restituito contiene i riquadri solo della classe di runtime specificato.  
   
- [in] *bIncludeTabs*  
- TRUE per includere le schede; in caso contrario, FALSE.  
+*bIncludeTabs*<br/>
+[in] TRUE per includere le schede; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Se sono presenti eventuali riquadri a schede nel gestore di ancoraggio, il metodo restituisce i puntatori ai [classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md) oggetti ed è necessario enumerare le schede in modo esplicito.  
@@ -958,11 +958,11 @@ void HideAutoHidePanes(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBarToExclude*  
- Un puntatore a una barra da escludere da nascondere.  
+*pBarToExclude*<br/>
+[in] Un puntatore a una barra da escludere da nascondere.  
   
- [in] *bImmediately*  
- TRUE per nascondere il riquadro immediatamente. FALSE per nascondere il riquadro con l'effetto che si nascondono automaticamente.  
+*bImmediately*<br/>
+[in] TRUE per nascondere il riquadro immediatamente. FALSE per nascondere il riquadro con l'effetto che si nascondono automaticamente.  
   
 ##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite  
  Crea un pannello dock e lo inserisce nell'elenco di barre di controllo.  
@@ -975,14 +975,14 @@ BOOL InsertDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *info*  
- Una struttura che contiene le informazioni di allineamento del riquadro dock.  
+*Informazioni*<br/>
+[in] Una struttura che contiene le informazioni di allineamento del riquadro dock.  
   
- [in] *dwAlignToInsertAfter*  
- Allineamento del riquadro dock.  
+*dwAlignToInsertAfter*<br/>
+[in] Allineamento del riquadro dock.  
   
- [out] *ppDockBar*  
- Un puntatore a un puntatore a un pannello dock.  
+*ppDockBar*<br/>
+[out] Un puntatore a un puntatore a un pannello dock.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro dock è stato creato correttamente. FALSE in caso contrario.  
@@ -998,14 +998,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pControlBar*  
- Un puntatore a un riquadro di controllo.  
+*pControlBar*<br/>
+[in] Un puntatore a un riquadro di controllo.  
   
- [in] *pTarget*  
- Un puntatore a un riquadro di destinazione.  
+*pTarget*<br/>
+[in] Un puntatore a un riquadro di destinazione.  
   
- [in] *bDopo*  
- TRUE per inserire il riquadro dopo la posizione del riquadro di destinazione; FALSE in caso contrario.  
+*bDopo*<br/>
+[in] TRUE per inserire il riquadro dopo la posizione del riquadro di destinazione; FALSE in caso contrario.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro di controllo viene aggiunto correttamente all'elenco di barre di controllo. FALSE in caso contrario.  
@@ -1060,14 +1060,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Il punto specificato.  
+*punto*<br/>
+[in] Il punto specificato.  
   
- [out] *dwBarAlignment*  
- Specifica il bordo punto si avvicina. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM.  
+*dwBarAlignment*<br/>
+[out] Specifica il bordo punto si avvicina. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM.  
   
- [out] *bOuterEdge*  
- TRUE se il punto è quasi il bordo esterno del sito di ancoraggio; FALSE in caso contrario.  
+*bOuterEdge*<br/>
+[out] TRUE se il punto è quasi il bordo esterno del sito di ancoraggio; FALSE in caso contrario.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il punto è quasi del sito di ancoraggio. in caso contrario, FALSE.  
@@ -1092,11 +1092,11 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Nome del profilo.  
+*lpszProfileName*<br/>
+[in] Nome del profilo.  
   
- [in] *uiID*  
- L'id del gestore di ancoraggio.  
+*uiID*<br/>
+[in] L'id del gestore di ancoraggio.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se lo stato di gestione di ancoraggio è stato caricato correttamente. in caso contrario, FALSE.  
@@ -1109,8 +1109,8 @@ void LockUpdate(BOOL bLock);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *blocco*  
- TRUE se la finestra è bloccata; FALSE in caso contrario.  
+*Blocco*<br/>
+[in] TRUE se la finestra è bloccata; FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Quando una finestra è bloccata, non può essere spostato e non può essere ridisegnata.  
@@ -1173,8 +1173,8 @@ virtual void OnActivateFrame(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bActivate*  
- Se TRUE, la finestra cornice viene reso attiva; Se FALSE, viene disattivata la finestra cornice.  
+*bActivate*<br/>
+[in] Se TRUE, la finestra cornice viene reso attiva; Se FALSE, viene disattivata la finestra cornice.  
   
 ##  <a name="onclosepopupmenu"></a>  CDockingManager::OnClosePopupMenu  
  Chiamato dal framework quando un menu a comparsa attivo elabora un messaggio WM_DESTROY.  
@@ -1194,8 +1194,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pFrame*  
- Un puntatore a una finestra con mini-cornice.  
+*pFrame*<br/>
+[in] Un puntatore a una finestra con mini-cornice.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1208,8 +1208,8 @@ void OnPaneContextMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Specifica la posizione del menu.  
+*punto*<br/>
+[in] Specifica la posizione del menu.  
   
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint  
  Restituisce il riquadro che contiene il punto specificato.  
@@ -1232,26 +1232,26 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Specifica il punto, nelle coordinate dello schermo, da controllare.  
+*punto*<br/>
+[in] Specifica il punto, nelle coordinate dello schermo, da controllare.  
   
- [in] *nSensitivity*  
- Il valore di ingrandimento il rettangolo della finestra di ogni riquadro selezionato. Un riquadro soddisfa i criteri di ricerca se il punto specificato si trova in questa area ingrandita.  
+*nSensitivity*<br/>
+[in] Il valore di ingrandimento il rettangolo della finestra di ogni riquadro selezionato. Un riquadro soddisfa i criteri di ricerca se il punto specificato si trova in questa area ingrandita.  
   
- [in] *bExactBar*  
- TRUE per ignorare la *nSensitivity* parametro; in caso contrario, FALSE.  
+*bExactBar*<br/>
+[in] TRUE per ignorare la *nSensitivity* parametro; in caso contrario, FALSE.  
   
- [in] *pRTCBarType*  
- Se non è NULL, il metodo cerca solo i riquadri del tipo specificato.  
+*pRTCBarType*<br/>
+[in] Se non è NULL, il metodo cerca solo i riquadri del tipo specificato.  
   
- [in] *bCheckVisibility*  
- TRUE per controllare se solo i riquadri visibili; in caso contrario, FALSE.  
+*bCheckVisibility*<br/>
+[in] TRUE per controllare se solo i riquadri visibili; in caso contrario, FALSE.  
   
- [out] *dwAlignment*  
- Se viene trovato un riquadro in un momento specificato, questo parametro contiene il lato del riquadro che è stato più vicino al punto specificato. Per altre informazioni, vedere la sezione Osservazioni.  
+*dwAlignment*<br/>
+[out] Se viene trovato un riquadro in un momento specificato, questo parametro contiene il lato del riquadro che è stato più vicino al punto specificato. Per altre informazioni, vedere la sezione Osservazioni.  
   
- [in] *pBarToIgnore*  
- Se non è NULL, il metodo ignora riquadri specificati da questo parametro.  
+*pBarToIgnore*<br/>
+[in] Se non è NULL, il metodo ignora riquadri specificati da questo parametro.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il [CBasePane](../../mfc/reference/cbasepane-class.md)-oggetto derivato che contiene il punto specificato o NULL se è stato trovato alcun riquadro.  
@@ -1271,17 +1271,17 @@ BOOL ProcessPaneContextMenuCommand(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- L'id di una barra di controllo nel menu di scelta.  
+*nID*<br/>
+[in] L'id di una barra di controllo nel menu di scelta.  
   
- [in] *nCode*  
- Il codice di notifica comando.  
+*nCode*<br/>
+[in] Il codice di notifica comando.  
   
- [in] *pExtra*  
- Un puntatore a void che viene eseguito il cast a un puntatore a `CCmdUI` se *nCode* è mediante.  
+*pExtra*<br/>
+[in] Un puntatore a void che viene eseguito il cast a un puntatore a `CCmdUI` se *nCode* è mediante.  
   
- [in] *pHandlerInfo*  
- Puntatore a una struttura di informazioni. Questo parametro non viene usato.  
+*pHandlerInfo*<br/>
+[in] Puntatore a una struttura di informazioni. Questo parametro non viene usato.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se *pEXtra* non è NULL e *nCode* è uguale a mediante, o se è presente una barra di controllo con la proprietà specificata *nID*.  
@@ -1294,8 +1294,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bNotify*  
- Questo parametro non viene usato.  
+*bNotify*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ##  <a name="releaseemptypanecontainers"></a>  CDockingManager::ReleaseEmptyPaneContainers  
  Rilascia i contenitori di riquadro vuoto.  
@@ -1312,8 +1312,8 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBar*  
- Un puntatore a una barra di riquadro da rimuovere.  
+*pBar*<br/>
+[in] Un puntatore a una barra di riquadro da rimuovere.  
   
 ##  <a name="removeminiframe"></a>  CDockingManager::RemoveMiniFrame  
  Rimuove un intervallo specificato dall'elenco di frame di formattazione rapida.  
@@ -1323,8 +1323,8 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Un puntatore a un frame da rimuovere.  
+*pWnd*<br/>
+[in] Un puntatore a un frame da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'intervallo specificato viene rimosso. FALSE in caso contrario.  
@@ -1342,20 +1342,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- Un puntatore a un riquadro da rimuovere.  
+*pWnd*<br/>
+[in] Un puntatore a un riquadro da rimuovere.  
   
- [in] *bDestroy*  
- Se TRUE, il riquadro rimosso viene eliminato definitivamente.  
+*bDestroy*<br/>
+[in] Se TRUE, il riquadro rimosso viene eliminato definitivamente.  
   
- [in] *bAdjustLayout*  
- Se TRUE, modificare il layout di ancoraggio immediatamente.  
+*bAdjustLayout*<br/>
+[in] Se TRUE, modificare il layout di ancoraggio immediatamente.  
   
- [in] *bAutoHide*  
- Se TRUE, il riquadro viene rimosso dall'elenco delle barre che si nascondono automaticamente. Se FALSE, il riquadro viene rimosso dall'elenco dei riquadri regolari.  
+*bAutoHide*<br/>
+[in] Se TRUE, il riquadro viene rimosso dall'elenco delle barre che si nascondono automaticamente. Se FALSE, il riquadro viene rimosso dall'elenco dei riquadri regolari.  
   
- [in] *pBarReplacement*  
- Puntatore a un riquadro che sostituisce il riquadro rimosso.  
+*pBarReplacement*<br/>
+[in] Puntatore a un riquadro che sostituisce il riquadro rimosso.  
   
 ##  <a name="replacepane"></a>  CDockingManager::ReplacePane  
  Sostituisce un riquadro con un altro.  
@@ -1367,11 +1367,11 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pOriginalBar*  
- Puntatore al riquadro originale.  
+*pOriginalBar*<br/>
+[in] Puntatore al riquadro originale.  
   
- [in] *pNewBar*  
- Puntatore al riquadro che sostituisce il riquadro originale.  
+*pNewBar*<br/>
+[in] Puntatore al riquadro che sostituisce il riquadro originale.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il riquadro viene sostituito; FALSE in caso contrario.  
@@ -1393,11 +1393,11 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Un percorso di una chiave del Registro di sistema.  
+*lpszProfileName*<br/>
+[in] Un percorso di una chiave del Registro di sistema.  
   
- [in] *uiID*  
- L'ID del manager ancoraggio.  
+*uiID*<br/>
+[in] L'ID del manager ancoraggio.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se lo stato è stato salvato correttamente. in caso contrario, FALSE.  
@@ -1416,14 +1416,14 @@ BOOL SendMessageToMiniFrames(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uMessage*  
- Il messaggio da inviare.  
+*uMessage*<br/>
+[in] Il messaggio da inviare.  
   
- [in] *wParam*  
- Informazioni aggiuntive dipendenti sul messaggio.  
+*wParam*<br/>
+[in] Informazioni aggiuntive dipendenti sul messaggio.  
   
- [in] *lParam*  
- Informazioni aggiuntive dipendenti sul messaggio.  
+*lParam*<br/>
+[in] Informazioni aggiuntive dipendenti sul messaggio.  
   
 ### <a name="return-value"></a>Valore restituito  
  Sempre TRUE.  
@@ -1436,8 +1436,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *ar*  
- Un riferimento a un oggetto di archiviazione.  
+*ar*<br/>
+[in] Un riferimento a un oggetto di archiviazione.  
   
 ### <a name="remarks"></a>Note  
  Per scrivere il gestore di ancoraggio in un archivio, è necessario determinare il numero di barre di controllo e i dispositivi di scorrimento di ancoraggio e scrivere le barre di controllo, i minidump frame, le barre di Nascondi automaticamente e le barre MDI a schede dell'archivio.  
@@ -1450,8 +1450,8 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pAHDockingBar*  
- Un puntatore a un riquadro ancorato.  
+*pAHDockingBar*<br/>
+[in] Un puntatore a un riquadro ancorato.  
   
 ##  <a name="setdockingmode"></a>  CDockingManager::SetDockingMode  
  Imposta la modalità di ancoraggio.  
@@ -1497,11 +1497,11 @@ void SetPrintPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bPreview*  
- TRUE se è impostata la modalità di anteprima di stampa; FALSE in caso contrario.  
+*bPreview*<br/>
+[in] TRUE se è impostata la modalità di anteprima di stampa; FALSE in caso contrario.  
   
- [in] *pState*  
- Puntatore a uno stato di anteprima. Questo parametro non viene usato.  
+*pState*<br/>
+[in] Puntatore a uno stato di anteprima. Questo parametro non viene usato.  
   
 ##  <a name="setsmartdockingparams"></a>  CDockingManager::SetSmartDockingParams  
  Imposta i parametri che definiscono il comportamento di ancoraggio intelligente.  
@@ -1511,8 +1511,8 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *params*  
- Definisce i parametri per ancoraggio intelligente.  
+*params*<br/>
+[in, out] Definisce i parametri per ancoraggio intelligente.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo se si desidera personalizzare l'aspetto, colore o forma dei marcatori di ancoraggio.  
@@ -1527,8 +1527,8 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- TRUE per attivare la finestra del frame illustrato; FALSE per nascondere la finestra del frame.  
+*bMostra*<br/>
+[in] TRUE per attivare la finestra del frame illustrato; FALSE per nascondere la finestra del frame.  
   
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes  
  Mostra o nasconde i riquadri delle barre di controllo e che si nascondono automaticamente.  
@@ -1538,8 +1538,8 @@ virtual BOOL ShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- TRUE per mostrare i riquadri; FALSE per nascondere i riquadri.  
+*bMostra*<br/>
+[in] TRUE per mostrare i riquadri; FALSE per nascondere i riquadri.  
   
 ### <a name="return-value"></a>Valore restituito  
  Sempre FALSE.  
@@ -1552,8 +1552,8 @@ void StartSDocking(CWnd* pDockingWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDockingWnd*  
- Un puntatore a una finestra di ancoraggio.  
+*pDockingWnd*<br/>
+[in] Un puntatore a una finestra di ancoraggio.  
   
 ##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking  
  Arresta smart di ancoraggio.  

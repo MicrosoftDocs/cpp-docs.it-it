@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e84b76f8079656da3ed19aa2c690bf240854015
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ada0997a03cefbec4bcc4faa26ad4eaf8c176ff2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594356"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704887"
 ---
 # <a name="safeadd"></a>SafeAdd
 
@@ -41,14 +41,14 @@ inline bool SafeAdd (
 
 ### <a name="parameters"></a>Parametri
 
-[in] *t*  
-Il primo numero da aggiungere. Deve essere di tipo T.
+*t*<br/>
+[in] Il primo numero da aggiungere. Deve essere di tipo T.
 
-[in] *u*  
-Il secondo numero da aggiungere. Deve essere di tipo U.
+*u*<br/>
+[in] Il secondo numero da aggiungere. Deve essere di tipo U.
 
-[out] *risultato*  
-Il parametro in cui **SafeAdd** archivia il risultato.
+*Risultato*<br/>
+[out] Il parametro in cui **SafeAdd** archivia il risultato.
 
 ## <a name="return-value"></a>Valore restituito
 

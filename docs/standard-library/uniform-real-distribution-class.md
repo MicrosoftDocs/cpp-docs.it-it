@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a9661bc61d59d6ca5b0aff1889a6bb736a1001
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 24a750afa3f4cbc84b4fbfe306c1f97be23200d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103227"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710801"
 ---
 # <a name="uniformrealdistribution-class"></a>Classe uniform_real_distribution
 
@@ -200,13 +200,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*a*  
+*a*<br/>
 Limite inferiore per i valori casuali, inclusivo.
 
-*b*  
+*b*<br/>
 Limite superiore per i valori casuali, esclusivo.
 
-*parm*  
+*parm*<br/>
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -235,13 +235,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*a*  
+*a*<br/>
 Limite inferiore per i valori casuali, inclusivo.
 
-*b*  
+*b*<br/>
 Limite superiore per i valori casuali, esclusivo.
 
-*right*  
+*right*<br/>
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note

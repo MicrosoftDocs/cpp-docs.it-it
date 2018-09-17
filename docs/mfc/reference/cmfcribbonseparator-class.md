@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9112a6790175709a2575319c6f71a55d1303a83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849765"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705315"
 ---
 # <a name="cmfcribbonseparator-class"></a>Classe CMFCRibbonSeparator
 Implementa il separatore della barra multifunzione.  
@@ -113,11 +113,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndListBox*  
- Un puntatore per il **comandi** in cui viene aggiunto il separatore di elenco.  
+*pWndListBox*<br/>
+[in] Un puntatore per il **comandi** in cui viene aggiunto il separatore di elenco.  
   
- [in] *bDeep*  
- Ignorato.  
+*bDeep*<br/>
+[in] Ignorato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice in base zero per la stringa nella casella di riepilogo specificata da *pWndListBox*.  
@@ -130,8 +130,8 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsHoriz*  
- Se TRUE, il separatore è orizzontale; Se FALSE, il separatore è verticale.  
+*bIsHoriz*<br/>
+[in] Se TRUE, il separatore è orizzontale; Se FALSE, il separatore è verticale.  
   
 ### <a name="remarks"></a>Note  
  Nel menu dell'applicazione vengono usati separatori orizzontali. Vengono usati separatori verticali nelle barre degli strumenti.  
@@ -149,8 +149,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *Src*  
- Elemento della barra multifunzione di origine da copiare.  
+*src*<br/>
+[in] Elemento della barra multifunzione di origine da copiare.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  Restituisce le dimensioni di un separatore.  
@@ -160,8 +160,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Un puntatore per il contenuto di un dispositivo.  
+*pDC*<br/>
+[in] Un puntatore per il contenuto di un dispositivo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni del separatore del contesto di dispositivo specificato.  
@@ -197,8 +197,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  Chiamato dal sistema su cui disegnare il separatore di **comandi** elenco.  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pDC*|Puntatore a un contesto di dispositivo.|  
-|[in] *strText*|Testo visualizzato nell'elenco.|  
-|[in] *nTextOffset*|Spaziatura tra il testo e il lato sinistro del rettangolo di delimitazione.|  
-|[in] *rect*|Specifica il rettangolo di delimitazione.|  
-|[in] *bIsSelected*|Ignorato.|  
-|[in] *bHighlighted*|Ignorato.|  
+|*pDC*|[in] Puntatore a un contesto di dispositivo.|  
+|*strText*|[in] Testo visualizzato nell'elenco.|  
+|*nTextOffset*|[in] Spaziatura tra il testo e il lato sinistro del rettangolo di delimitazione.|  
+|*Rect*|[in] Specifica il rettangolo di delimitazione.|  
+|*bIsSelected*|[in] Ignorato.|  
+|*bHighlighted*|[in] Ignorato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

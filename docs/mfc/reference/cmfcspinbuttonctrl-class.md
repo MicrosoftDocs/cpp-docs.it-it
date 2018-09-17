@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCSpinButtonCtrl | Documenti Microsoft
+title: Classe CMFCSpinButtonCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 960a1a0338a3390fdc10cf03ddc235bcf4ecbae9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039466"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712751"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Classe CMFCSpinButtonCtrl
 Il `CMFCSpinButtonCtrl` classe supporta un gestore visualizzazione che disegna un controllo pulsante di selezione.  
@@ -50,10 +50,10 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 |[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Ridisegna il controllo pulsante di selezione corrente.|  
   
 ## <a name="remarks"></a>Note  
- Per utilizzare un gestore visualizzazione per disegnare un controllo pulsante di selezione nell'applicazione, sostituire tutte le istanze del `CSpinButtonCtrl` classe con il `CMFCSpinButtonCtrl` classe.  
+ Per usare un gestore visualizzazione per disegnare un controllo pulsante di selezione nell'applicazione, sostituire tutte le istanze del `CSpinButtonCtrl` classe con il `CMFCSpinButtonCtrl` classe.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come creare un oggetto del `CMFCSpinButtonCtrl` classe e usare il relativo `Create` metodo.  
+ Nell'esempio seguente viene illustrato come creare un oggetto del `CMFCSpinButtonCtrl` classe e usare relativo `Create` (metodo).  
   
  [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
@@ -79,11 +79,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
- Il framework chiama il `CMFCSpinButtonCtrl::OnPaint` metodo per gestire i [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) messaggio e che metodo chiama a sua volta questa `CMFCSpinButtonCtrl::OnDraw` metodo. Eseguire l'override di questo metodo per personalizzare il modo in cui che il framework consente di disegnare il controllo pulsante di selezione.  
+ Il framework chiama il `CMFCSpinButtonCtrl::OnPaint` metodo per gestire i [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) messaggi e che metodo chiama a sua volta questa `CMFCSpinButtonCtrl::OnDraw` (metodo). Eseguire l'override di questo metodo per personalizzare il modo in cui che il framework consente di disegnare il controllo pulsante di selezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

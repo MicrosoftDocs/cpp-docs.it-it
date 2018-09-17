@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 25c03be7ffb504f2bec47677aec70360d0f8b38f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960450"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704252"
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 
@@ -54,8 +54,8 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parametri
 
-*Rel_time*  
- Oggetto [duration](../standard-library/duration-class.md) che specifica un intervallo di tempo.
+*Rel_time*<br/>
+Oggetto [duration](../standard-library/duration-class.md) che specifica un intervallo di tempo.
 
 ### <a name="remarks"></a>Note
 
@@ -74,8 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parametri
 
-*Abs_time*  
- Rappresenta un punto nel tempo.
+*Abs_time*<br/>
+Rappresenta un punto nel tempo.
 
 ### <a name="remarks"></a>Note
 
@@ -91,11 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*  
- Sinistra **thread** oggetto.
+*A sinistra*<br/>
+Sinistra **thread** oggetto.
 
-*A destra*  
- Il diritto **thread** oggetto.
+*A destra*<br/>
+Il diritto **thread** oggetto.
 
 ### <a name="remarks"></a>Note
 

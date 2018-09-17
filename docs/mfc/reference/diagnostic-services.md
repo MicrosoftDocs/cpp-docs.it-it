@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214679"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712955"
 ---
 # <a name="diagnostic-services"></a>Servizi diagnostici
 La libreria Microsoft Foundation Class fornisce numerosi servizi di diagnostica che semplificano il debug dei programmi. I servizi di diagnostica includono macro e funzioni globali che consentono di tenere traccia delle allocazioni della memoria del programma, scaricare il contenuto degli oggetti in fase di esecuzione e stampare i messaggi di debug in fase di esecuzione. Le macro e funzioni globali per servizi di diagnostica sono raggruppate nelle categorie seguenti:  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bDump*  
- TRUE indica che il dump delle perdite di memoria è abilitato. FALSE indica che il dump delle perdite di memoria è disabilitato.  
+*bDump*<br/>
+[in] TRUE indica che il dump delle perdite di memoria è abilitato. FALSE indica che il dump delle perdite di memoria è disabilitato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il valore precedente per questo flag.  

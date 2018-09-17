@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 453bbb5d99d87a03a8627d231e45316cb5456794
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686457"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702053"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
@@ -399,20 +399,20 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPageIdx*  
- Specifica l'indice in base zero della pagina.  
+*nPageIdx*<br/>
+[in] Specifica l'indice in base zero della pagina.  
   
- [in] *lpszGroupName*  
- Specifica il nome del gruppo.  
+*lpszGroupName*<br/>
+[in] Specifica il nome del gruppo.  
   
- [in] *bBottomLocation*  
- TRUE per creare il gruppo nella parte inferiore del controllo del riquadro attività; in caso contrario, FALSE.  
+*bBottomLocation*<br/>
+[in] TRUE per creare il gruppo nella parte inferiore del controllo del riquadro attività; in caso contrario, FALSE.  
   
- [in] *bOpzioni speciali*  
- TRUE per contrassegnare questo gruppo è un *speciale* gruppo; in caso contrario, FALSE. Per altre informazioni sui gruppi speciali, vedere la sezione Osservazioni di `CMFCTasksPane`.  
+*bOpzioni speciali*<br/>
+[in] TRUE per contrassegnare questo gruppo è un *speciale* gruppo; in caso contrario, FALSE. Per altre informazioni sui gruppi speciali, vedere la sezione Osservazioni di `CMFCTasksPane`.  
   
- [in] *hIcon*  
- Specifica l'icona da visualizzare nella barra del titolo gruppo.  
+*hIcon*<br/>
+[in] Specifica l'icona da visualizzare nella barra del titolo gruppo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero del gruppo nell'elenco interno dei gruppi che gestisce la classe.  
@@ -434,17 +434,17 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice del gruppo in cui viene aggiunto l'etichetta.  
+*Separa*<br/>
+[in] Specifica l'indice del gruppo in cui viene aggiunto l'etichetta.  
   
- [in] *lpszLabelName*  
- Specifica il nome dell'etichetta.  
+*lpszLabelName*<br/>
+[in] Specifica il nome dell'etichetta.  
   
- [in] *nTaskIcon*  
- Specifica l'icona da visualizzare accanto all'etichetta. Il framework memorizza le icone in un elenco di immagini. Questo parametro è un indice nell'elenco.  
+*nTaskIcon*<br/>
+[in] Specifica l'icona da visualizzare accanto all'etichetta. Il framework memorizza le icone in un elenco di immagini. Questo parametro è un indice nell'elenco.  
   
- [in] *bIsBold*  
- True per visualizzare l'etichetta di testo in grassetto. in caso contrario, FALSE.  
+*bIsBold*<br/>
+[in] True per visualizzare l'etichetta di testo in grassetto. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero del gruppo in cui è stato aggiunto l'etichetta, oppure -1 se il gruppo specificato da *separa* non esiste.  
@@ -462,11 +462,11 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice di un gruppo. Questo metodo aggiunge l'elenco di file usati di recente per il gruppo specificato da questo parametro.  
+*Separa*<br/>
+[in] Specifica l'indice di un gruppo. Questo metodo aggiunge l'elenco di file usati di recente per il gruppo specificato da questo parametro.  
   
- [in] *nMaxFiles*  
- Specifica il numero di file da visualizzare nell'elenco dei file usati di recente.  
+*nMaxFiles*<br/>
+[in] Specifica il numero di file da visualizzare nell'elenco dei file usati di recente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero del gruppo in cui è stato aggiunto l'elenco di file usati di recente oppure -1 se il gruppo specificato da *separa* non esiste.  
@@ -479,8 +479,8 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszPageLabel*  
- Specifica l'etichetta per la pagina.  
+*lpszPageLabel*<br/>
+[in] Specifica l'etichetta per la pagina.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero della nuova pagina.  
@@ -512,20 +512,20 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice di gruppo in cui l'attività viene aggiunta.  
+*Separa*<br/>
+[in] Specifica l'indice di gruppo in cui l'attività viene aggiunta.  
   
- [in] *lpszTaskName*  
- Specifica il nome dell'attività.  
+*lpszTaskName*<br/>
+[in] Specifica il nome dell'attività.  
   
- [in] *nTaskIcon*  
- Specifica l'icona da visualizzare accanto all'attività. Il framework memorizza le icone in un elenco di immagini. Questo parametro è un indice nell'elenco.  
+*nTaskIcon*<br/>
+[in] Specifica l'icona da visualizzare accanto all'attività. Il framework memorizza le icone in un elenco di immagini. Questo parametro è un indice nell'elenco.  
   
- [in] *uiCommandID*  
- Specifica l'ID di comando del comando da eseguire quando l'utente fa clic sull'attività. L'attività viene considerata come un'etichetta se *uiCommandID* è 0.  
+*uiCommandID*<br/>
+[in] Specifica l'ID di comando del comando da eseguire quando l'utente fa clic sull'attività. L'attività viene considerata come un'etichetta se *uiCommandID* è 0.  
   
- [in] *dwUserData*  
- Specifica i dati definiti dall'utente da associare all'attività.  
+*dwUserData*<br/>
+[in] Specifica i dati definiti dall'utente da associare all'attività.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero del gruppo in cui l'attività è stata aggiunta oppure -1 se il gruppo specificato da *separa* non esiste.  
@@ -543,20 +543,20 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice di gruppo in cui viene aggiunta la finestra.  
+*Separa*<br/>
+[in] Specifica l'indice di gruppo in cui viene aggiunta la finestra.  
   
- [in] *hwndTask*  
- Specifica l'handle della finestra da aggiungere.  
+*hwndTask*<br/>
+[in] Specifica l'handle della finestra da aggiungere.  
   
- [in] *nWndHeight*  
- Specifica l'altezza della finestra.  
+*nWndHeight*<br/>
+[in] Specifica l'altezza della finestra.  
   
- [in] *bAutoDestroyWindow*  
- TRUE per eliminare la finestra quando l'attività viene rimossa; in caso contrario, FALSE.  
+*bAutoDestroyWindow*<br/>
+[in] TRUE per eliminare la finestra quando l'attività viene rimossa; in caso contrario, FALSE.  
   
- [in] *dwUserData*  
- Specifica i dati definiti dall'utente associati all'attività.  
+*dwUserData*<br/>
+[in] Specifica i dati definiti dall'utente associati all'attività.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero del gruppo in cui è stata aggiunta la finestra, oppure -1 se il gruppo specificato da *separa* non esiste.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bCollapse*  
- [in] *nPageIdx*  
+*bCollapse*<br/>
+[in] [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Note  
   
@@ -604,14 +604,14 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pGroup*  
- Specifica il gruppo da comprimere.  
+*pGroup*<br/>
+[in] Specifica il gruppo da comprimere.  
   
- [in] *bCollapse*  
- TRUE per comprimere il gruppo. FALSE per espandere il gruppo.  
+*bCollapse*<br/>
+[in] TRUE per comprimere il gruppo. FALSE per espandere il gruppo.  
   
- [in] *separa*  
- Specifica l'indice in base zero del gruppo per comprimere l'elenco interno dei gruppi.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo per comprimere l'elenco interno dei gruppi.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il gruppo comprime o espande correttamente. in caso contrario, FALSE.  
@@ -656,8 +656,8 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare l'animazione che si verifica quando un gruppo di attività espande o comprime; in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare l'animazione che si verifica quando un gruppo di attività espande o comprime; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, l'animazione che si verifica quando si espande o comprime di un gruppo di attività è abilitata.  
@@ -670,8 +670,8 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE se gli utenti possono comprimere i gruppi di attività; in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE se gli utenti possono comprimere i gruppi di attività; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Un gruppo di attività che viene compressa Visualizza solo la didascalia del gruppo; l'elenco di attività è nascosta.  
@@ -684,8 +684,8 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- True per abilitare i menu elenco a discesa nel **successivo** e **Previous** pulsanti di navigazione; in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] True per abilitare i menu elenco a discesa nel **successivo** e **Previous** pulsanti di navigazione; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, i menu a discesa scegliere il **successivo** e **Previous** pulsanti sono disabilitati.  
@@ -706,17 +706,17 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare la barra di spostamento; in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare la barra di spostamento; in caso contrario, FALSE.  
   
- [in] *uiToolbarBmpRes*  
- Specifica l'ID risorsa della bitmap che contiene le immagini da visualizzare nella barra degli strumenti.  
+*uiToolbarBmpRes*<br/>
+[in] Specifica l'ID risorsa della bitmap che contiene le immagini da visualizzare nella barra degli strumenti.  
   
- [in] *sizeToolbarImage*  
- Specifica le dimensioni di un'immagine della barra degli strumenti.  
+*sizeToolbarImage*<br/>
+[in] Specifica le dimensioni di un'immagine della barra degli strumenti.  
   
- [in] *sizeToolbarButton*  
- Specifica le dimensioni di un pulsante della barra degli strumenti.  
+*sizeToolbarButton*<br/>
+[in] Specifica le dimensioni di un pulsante della barra degli strumenti.  
   
 ### <a name="remarks"></a>Note  
  La barra di navigazione è una barra degli strumenti che consente di visualizzare in framework nella parte superiore del riquadro attività. La barra di spostamento contiene le **nuovamente**, **Forward**, e **Home** pulsanti di spostamento e un pulsante di menu che contiene l'elenco delle pagine disponibili.  
@@ -743,8 +743,8 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per visualizzare i pulsanti di scorrimento nel riquadro attività anziché una barra di scorrimento. in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per visualizzare i pulsanti di scorrimento nel riquadro attività anziché una barra di scorrimento. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il framework Visualizza i pulsanti di scorrimento nel riquadro attività.  
@@ -757,8 +757,8 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- True se a capo il testo delle etichette visualizzati nel riquadro attività. in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] True se a capo il testo delle etichette visualizzati nel riquadro attività. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il framework non va a capo del testo nelle etichette. Quando è abilitato il ritorno a capo, il testo delle etichette può apparire in più righe. L'etichetta può includere, ad esempio i marcatori di interruzione di riga `\n` e il segno di sottolineatura `&`.  
@@ -771,8 +771,8 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per eseguire il wrapping di attività nel riquadro attività. in caso contrario, FALSE.  
+*bAttivare il*<br/>
+[in] TRUE per eseguire il wrapping di attività nel riquadro attività. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il ritorno a capo per le attività è disabilitata.  
@@ -840,11 +840,11 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pGroup*  
- Specifica il gruppo di attività il cui percorso viene recuperato.  
+*pGroup*<br/>
+[in] Specifica il gruppo di attività il cui percorso viene recuperato.  
   
- [out] *separa*  
- Contiene l'indice in base zero del gruppo di attività.  
+*Separa*<br/>
+[out] Contiene l'indice in base zero del gruppo di attività.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il gruppo di attività è stato trovato. in caso contrario, FALSE.  
@@ -894,11 +894,11 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo di attività.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo di attività.  
   
- [out] *nPage*  
- Contiene l'indice della pagina per il gruppo specificato. Se il gruppo di attività contiene solo una pagina predefinita, il valore restituito è 0.  
+*nPage*<br/>
+[out] Contiene l'indice della pagina per il gruppo specificato. Se il gruppo di attività contiene solo una pagina predefinita, il valore restituito è 0.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il gruppo *separa* esiste; in caso contrario, FALSE.  
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo che contiene l'attività.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo che contiene l'attività.  
   
- [in] *nLo*  
- Specifica l'indice in base zero dell'attività nell'elenco specificato da *separa*.  
+*nLo*<br/>
+[in] Specifica l'indice in base zero dell'attività nell'elenco specificato da *separa*.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'attività in corrispondenza dell'indice specificato.  
@@ -966,8 +966,8 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice del gruppo di attività.  
+*Separa*<br/>
+[in] Specifica l'indice del gruppo di attività.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero di attività del gruppo specificato, oppure 0 se *separa* non è valido.  
@@ -980,8 +980,8 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo da recuperare.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo da recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il gruppo di attività in corrispondenza dell'indice specificato.  
@@ -1007,20 +1007,20 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCommandID*  
- Specifica l'ID di comando dell'attività da trovare.  
+*uiCommandID*<br/>
+[in] Specifica l'ID di comando dell'attività da trovare.  
   
- [out] *separa*  
- Contiene l'indice di gruppo dell'attività.  
+*Separa*<br/>
+[out] Contiene l'indice di gruppo dell'attività.  
   
- [out] *nLo*  
- Contiene l'indice dell'attività nel gruppo di attività.  
+*nLo*<br/>
+[out] Contiene l'indice dell'attività nel gruppo di attività.  
   
- [in] *hwndTask*  
- Specifica la finestra associata all'attività.  
+*hwndTask*<br/>
+[in] Specifica la finestra associata all'attività.  
   
- [in] *pTask*  
- Specifica l'attività da trovare.  
+*pTask*<br/>
+[in] Specifica l'attività da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la posizione di attività è stata trovata. FALSO se l'attività specificata non esiste.  
@@ -1199,8 +1199,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *uiID*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1238,17 +1238,17 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nGroupNumber*  
- Specifica l'indice in base zero del gruppo che contiene l'attività selezionata.  
+*nGroupNumber*<br/>
+[in] Specifica l'indice in base zero del gruppo che contiene l'attività selezionata.  
   
- [in] *nTaskNumber*  
- Specifica l'indice in base zero dell'attività selezionata.  
+*nTaskNumber*<br/>
+[in] Specifica l'indice in base zero dell'attività selezionata.  
   
- [in] *uiCommandID*  
- Specifica l'ID di comando associato all'attività.  
+*uiCommandID*<br/>
+[in] Specifica l'ID di comando associato all'attività.  
   
- [in] *dwUserData*  
- Contiene dati definiti dall'utente associati all'attività selezionata.  
+*dwUserData*<br/>
+[in] Contiene dati definiti dall'utente associati all'attività selezionata.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando un utente fa clic su un'attività. Per impostazione predefinita, il framework controlla l'ID di comando associato all'attività selezionato e, se non è uguale a zero, invia il messaggio WM_COMMAND al proprietario del controllo del riquadro attività.  
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pbtn*  
- [in] *pWndOwner*  
+*pbtn*<br/>
+[in] [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Note  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Note  
   
@@ -1378,8 +1378,8 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPageIdx*  
- Specifica l'indice in base zero della pagina.  
+*nPageIdx*<br/>
+[in] Specifica l'indice in base zero della pagina.  
   
 ### <a name="remarks"></a>Note  
  Rimuove tutti i gruppi nella pagina specificata da *nPageIdx*, o tutti i gruppi se è presente solo una pagina predefinita.  
@@ -1399,8 +1399,8 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  Rimuove un gruppo.  
@@ -1410,8 +1410,8 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo da rimuovere.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo da rimuovere.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo rimuove un singolo gruppo. Per rimuovere tutti i gruppi, chiamare [CMFCTasksPane::RemoveAllGroups](#removeallgroups) invece.  
@@ -1426,8 +1426,8 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPageIdx*  
- Specifica l'indice in base zero della pagina da rimuovere.  
+*nPageIdx*<br/>
+[in] Specifica l'indice in base zero della pagina da rimuovere.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  Rimuove un'attività da un gruppo di attività.  
@@ -1440,14 +1440,14 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo di attività che contiene l'attività da rimuovere.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo di attività che contiene l'attività da rimuovere.  
   
- [in] *nLo*  
- Specifica l'indice in base zero dell'attività da rimuovere.  
+*nLo*<br/>
+[in] Specifica l'indice in base zero dell'attività da rimuovere.  
   
- [in] *bRedraw*  
- TRUE per ridisegnare il riquadro attività. in caso contrario, FALSE.  
+*bRedraw*<br/>
+[in] TRUE per ridisegnare il riquadro attività. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la funzione ha esito positivo; FALSE se *separa* oppure *nLo* non è valido.  
@@ -1463,8 +1463,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *uiID*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1491,8 +1491,8 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPageIdx*  
- Specifica l'indice in base zero della pagina da visualizzare.  
+*nPageIdx*<br/>
+[in] Specifica l'indice in base zero della pagina da visualizzare.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo effettua un'asserzione se il *nPageIdx* non è valido.  
@@ -1505,8 +1505,8 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszName*  
- Specifica il nome della didascalia.  
+*lpszName*<br/>
+[in] Specifica il nome della didascalia.  
   
 ### <a name="remarks"></a>Note  
  Se un riquadro attività contiene più pagine, la pagina predefinita contiene la didascalia che tramite questa funzione è stata impostata.  
@@ -1519,8 +1519,8 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *n*  
- Specifica l'altezza della didascalia.  
+*n*<br/>
+[in] Specifica l'altezza della didascalia.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per personalizzare i margini di elementi del riquadro attività.  
@@ -1535,8 +1535,8 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *n*  
- Specifica l'offset orizzontale della didascalia del gruppo.  
+*n*<br/>
+[in] Specifica l'offset orizzontale della didascalia del gruppo.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  Imposta l'offset verticale di didascalia del gruppo.  
@@ -1546,8 +1546,8 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *n*  
- Specifica l'offset verticale, in pixel, della didascalia del gruppo.  
+*n*<br/>
+[in] Specifica l'offset verticale, in pixel, della didascalia del gruppo.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  Imposta un nome di gruppo.  
@@ -1559,11 +1559,11 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo.  
   
- [in] *lpszGroupName*  
- Specifica il nome del gruppo.  
+*lpszGroupName*<br/>
+[in] Specifica il nome del gruppo.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il nome del gruppo è stato impostato correttamente. in caso contrario, FALSE.  
@@ -1579,14 +1579,14 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo.  
   
- [in] *colore*  
- Specifica il colore del testo.  
+*Colore*<br/>
+[in] Specifica il colore del testo.  
   
- [in] *colorHot*  
- Specifica il colore del testo per il gruppo evidenziato. Se-1, viene utilizzato il colore di evidenziazione predefinito.  
+*colorHot*<br/>
+[in] Specifica il colore del testo per il gruppo evidenziato. Se-1, viene utilizzato il colore di evidenziazione predefinito.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il colore del testo di gruppo è stato modificato; in caso contrario, FALSE.  
@@ -1599,8 +1599,8 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *n*  
- Specifica l'offset verticale.  
+*n*<br/>
+[in] Specifica l'offset verticale.  
   
 ### <a name="remarks"></a>Note  
  L'offset verticale è la distanza tra il bordo del riquadro attività e un gruppo di attività.  
@@ -1615,8 +1615,8 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *n*  
- Specifica il margine, in pixel.  
+*n*<br/>
+[in] Specifica il margine, in pixel.  
   
 ### <a name="remarks"></a>Note  
  Il margine orizzontale rappresenta la distanza tra un riquadro attività e il bordo superiore o inferiore dell'area client.  
@@ -1636,17 +1636,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiImageListResID*  
- Specifica l'ID risorsa dell'elenco immagini.  
+*uiImageListResID*<br/>
+[in] Specifica l'ID risorsa dell'elenco immagini.  
   
- [in] *cx*  
- Specifica le dimensioni delle icone dell'elenco immagini.  
+*CX*<br/>
+[in] Specifica le dimensioni delle icone dell'elenco immagini.  
   
- [in] *clrTransparent*  
- Specifica il colore trasparente.  
+*clrTransparent*<br/>
+[in] Specifica il colore trasparente.  
   
- [in] *gli oggetti HICON*  
- Specifica l'elenco di immagini che contiene le icone per il riquadro attività.  
+*oggetti HICON*<br/>
+[in] Specifica l'elenco di immagini che contiene le icone per il riquadro attività.  
   
 ### <a name="remarks"></a>Note  
  Il framework memorizza le icone in un elenco di immagini. Le attività sono associate icone che vengono archiviate in tale elenco.  
@@ -1663,11 +1663,11 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPageIdx*  
- Specifica l'indice in base zero della pagina.  
+*nPageIdx*<br/>
+[in] Specifica l'indice in base zero della pagina.  
   
- [in] *lpszName*  
- Specifica il testo della didascalia da visualizzare nella pagina.  
+*lpszName*<br/>
+[in] Specifica il testo della didascalia da visualizzare nella pagina.  
   
 ### <a name="remarks"></a>Note  
  Se un riquadro attività contiene più pagine, la pagina predefinita contiene la didascalia che è stata impostata con questo metodo.  
@@ -1683,14 +1683,14 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo di attività.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo di attività.  
   
- [in] *nLo*  
- Specifica l'indice in base zero dell'attività.  
+*nLo*<br/>
+[in] Specifica l'indice in base zero dell'attività.  
   
- [in] *lpszTaskName*  
- Specifica il nome dell'attività.  
+*lpszTaskName*<br/>
+[in] Specifica il nome dell'attività.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il nome dell'attività è stato impostato correttamente; in caso contrario, FALSE.  
@@ -1703,8 +1703,8 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *n*  
- Specifica l'offset orizzontale.  
+*n*<br/>
+[in] Specifica l'offset orizzontale.  
   
 ### <a name="remarks"></a>Note  
  L'offset orizzontale rappresenta la distanza in pixel, dai bordi sinistro e destro di un gruppo.  
@@ -1749,17 +1749,17 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo di attività che contiene l'attività.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo di attività che contiene l'attività.  
   
- [in] *nLo*  
- Specifica l'indice in base zero dell'attività.  
+*nLo*<br/>
+[in] Specifica l'indice in base zero dell'attività.  
   
- [in] *colore*  
- Specifica il colore del testo per l'attività.  
+*Colore*<br/>
+[in] Specifica il colore del testo per l'attività.  
   
- [in] *colorHot*  
- Specifica il colore del testo per il gruppo evidenziato. Se-1, questo metodo Usa il colore di evidenziazione predefinito.  
+*colorHot*<br/>
+[in] Specifica il colore del testo per il gruppo evidenziato. Se-1, questo metodo Usa il colore di evidenziazione predefinito.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il colore del testo per l'attività è stato impostato correttamente; in caso contrario, FALSE.  
@@ -1772,8 +1772,8 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *n*  
- Specifica il margine verticale da impostare.  
+*n*<br/>
+[in] Specifica il margine verticale da impostare.  
   
 ### <a name="remarks"></a>Note  
  Il margine verticale rappresenta la distanza tra un riquadro attività e i bordi verticali dell'area client.  
@@ -1796,14 +1796,14 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo che contiene il controllo di finestra.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo che contiene il controllo di finestra.  
   
- [in] *hwndTask*  
- Specifica l'handle per il controllo di finestra.  
+*hwndTask*<br/>
+[in] Specifica l'handle per il controllo di finestra.  
   
- [in] *nWndHeight*  
- Specifica l'altezza da impostare.  
+*nWndHeight*<br/>
+[in] Specifica l'altezza da impostare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'altezza del controllo finestra è stato impostato correttamente. FALSE se *separa* non è valido o se *hwndTask* non esiste.  
@@ -1835,17 +1835,17 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *separa*  
- Specifica l'indice in base zero del gruppo.  
+*Separa*<br/>
+[in] Specifica l'indice in base zero del gruppo.  
   
- [in] *nLo*  
- Specifica l'indice in base zero dell'attività per mostrare o nascondere.  
+*nLo*<br/>
+[in] Specifica l'indice in base zero dell'attività per mostrare o nascondere.  
   
- [in] *bMostra*  
- TRUE per mostrare l'attività. FALSE per nascondere l'attività.  
+*bMostra*<br/>
+[in] TRUE per mostrare l'attività. FALSE per nascondere l'attività.  
   
- [in] *bRedraw*  
- TRUE per ridisegnare il riquadro attività. in caso contrario, FALSE.  
+*bRedraw*<br/>
+[in] TRUE per ridisegnare il riquadro attività. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'attività è stata correttamente visualizzato o nascosto; FALSO se il gruppo specificato o l'attività non esiste.  
@@ -1864,14 +1864,14 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCommandID*  
- Specifica l'ID di comando dell'attività per mostrare o nascondere.  
+*uiCommandID*<br/>
+[in] Specifica l'ID di comando dell'attività per mostrare o nascondere.  
   
- [in] *bMostra*  
- TRUE per mostrare l'attività. FALSE per nascondere l'attività.  
+*bMostra*<br/>
+[in] TRUE per mostrare l'attività. FALSE per nascondere l'attività.  
   
- [in] *bRedraw*  
- TRUE per ridisegnare il riquadro attività. in caso contrario, FALSE.  
+*bRedraw*<br/>
+[in] TRUE per ridisegnare il riquadro attività. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'attività è stata correttamente visualizzato o nascosto; FALSE se un'attività con il comando specificato ID non esiste.  

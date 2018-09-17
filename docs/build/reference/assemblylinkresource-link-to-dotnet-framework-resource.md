@@ -19,65 +19,67 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 36f8f6adcfe5d67b3d27b8557627725ba7295829
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206488"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704145"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Collegamento a risorse .NET Framework)
-```  
-/ASSEMBLYLINKRESOURCE:filename  
-```  
-  
-## <a name="remarks"></a>Note  
- dove:  
-  
- *filename*  
- File di risorse .NET Framework a cui si vuole stabilire un collegamento dall'assembly.  
-  
-## <a name="remarks"></a>Note  
- L'opzione /ASSEMBLYLINKRESOURCE crea un collegamento a una risorsa di .NET Framework nel file di output. il file di risorse non viene inserito nel file di output. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) incorpora un file di risorse nel file di output.  
-  
- Le risorse collegate sono pubbliche nell'assembly quando viene creato con il linker.  
-  
- /ASSEMBLYLINKRESOURCE richiede che la compilazione includa [/clr](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) oppure [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) non è consentita con /ASSEMBLYLINKRESOURCE.  
-  
- Se *nomefile* è un file di risorse .NET Framework creato ad esempio, dal [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di **System. Resources** dello spazio dei nomi. Per altre informazioni, vedere [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi nel **System** classe per accedere alla risorsa in fase di esecuzione.  
-  
- *nome del file* può avere qualsiasi formato di file. Ad esempio, è possibile apportare una DLL nativa parte dell'assembly, per cui può essere installato nella Global Assembly Cache e accedervi dal codice gestito nell'assembly.  
-  
- Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:  
-  
--   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
-  
--   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
-  
--   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
-  
--   [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
-  
--   [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
-  
--   [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
-  
--   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Scegliere il **Linker** cartella.  
-  
-3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
-  
-4.  Digitare l'opzione nel **opzioni aggiuntive** casella.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+```
+/ASSEMBLYLINKRESOURCE:filename
+```
+
+## <a name="arguments"></a>Argomenti
+
+*filename*<br/>
+File di risorse .NET Framework a cui si vuole stabilire un collegamento dall'assembly.
+
+## <a name="remarks"></a>Note
+
+L'opzione /ASSEMBLYLINKRESOURCE crea un collegamento a una risorsa di .NET Framework nel file di output. il file di risorse non viene inserito nel file di output. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) incorpora un file di risorse nel file di output.
+
+Le risorse collegate sono pubbliche nell'assembly quando viene creato con il linker.
+
+/ASSEMBLYLINKRESOURCE richiede che la compilazione includa [/clr](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) oppure [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) non è consentita con /ASSEMBLYLINKRESOURCE.
+
+Se *nomefile* è un file di risorse .NET Framework creato ad esempio, dal [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di **System. Resources** dello spazio dei nomi. Per altre informazioni, vedere [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi nel **System** classe per accedere alla risorsa in fase di esecuzione.
+
+*nome del file* può avere qualsiasi formato di file. Ad esempio, è possibile apportare una DLL nativa parte dell'assembly, per cui può essere installato nella Global Assembly Cache e accedervi dal codice gestito nell'assembly.
+
+Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:
+
+- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+
+- [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+
+- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+
+- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+
+- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+
+- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+
+- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+
+1. Scegliere il **Linker** cartella.
+
+1. Fare clic sulla pagina delle proprietà **Riga di comando** .
+
+1. Digitare l'opzione nel **opzioni aggiuntive** casella.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

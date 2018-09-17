@@ -12,25 +12,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c76ea1bac491a7e9484ac88834c8e4b070c57ae5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fa17bd261a722e169b1a98f908fb9be0f1a591e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573150"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700206"
 ---
 # <a name="types-and-storage"></a>Tipi e archiviazione
-In questa sezione vengono descritti l'enumerazione e l'archiviazione dei tipi di dati per x64 architettura.  
-  
--   [Tipi scalari](../build/scalar-types.md)  
-  
--   [Aggregati e unioni](../build/aggregates-and-unions.md)  
-  
--   [Esempi di allineamento di struttura](../build/examples-of-structure-alignment.md)  
-  
--   [Campi di bit](../build/bitfields.md)  
-  
--   [Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Convenzioni del software x64](../build/x64-software-conventions.md)
+
+In questa sezione vengono descritti l'enumerazione e l'archiviazione dei tipi di dati per x64 architettura.
+
+- [Tipi scalari](../build/scalar-types.md)
+
+- [Aggregati e unioni](../build/aggregates-and-unions.md)
+
+- [Esempi di allineamento di struttura](../build/examples-of-structure-alignment.md)
+
+- [Campi di bit](../build/bitfields.md)
+
+- [Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Convenzioni del software x64](../build/x64-software-conventions.md)

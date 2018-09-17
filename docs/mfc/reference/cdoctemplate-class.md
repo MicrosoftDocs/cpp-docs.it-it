@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336985"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709839"
 ---
 # <a name="cdoctemplate-class"></a>Classe CDocTemplate
 Classe di base astratta che definisce le funzionalità di base per i modelli di documenti.  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszPathName*  
- Puntatore al percorso del file che contiene il documento da aprire.  
+*lpszPathName*<br/>
+[in] Puntatore al percorso del file che contiene il documento da aprire.  
   
- [in] *bAddToMRU*  
- TRUE indica che il documento è uno dei file più recente; FALSE indica che il documento non è uno dei file più recente.  
+*bAddToMRU*<br/>
+[in] TRUE indica che il documento è uno dei file più recente; FALSE indica che il documento non è uno dei file più recente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al documento il cui file è denominato da *lpszPathName*; NULL se ha esito negativo.  

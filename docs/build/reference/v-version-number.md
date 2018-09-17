@@ -1,5 +1,5 @@
 ---
-title: -V (numero versione) | Documenti Microsoft
+title: -V (numero versione) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,47 +20,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3daf62c818b454a5477de04a27c4b4f308c271d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4ad42a72a874537a6307cfc547852f812f4aaaa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377232"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707967"
 ---
 # <a name="v-version-number"></a>/V (Numero versione)
-Deprecato. Incorpora una stringa di testo nel file obj.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/Vstring  
-```  
-  
-## <a name="arguments"></a>Argomenti  
- `string`  
- Stringa che specifica il numero di versione o informazioni sul copyright per essere incorporati in un file con estensione obj.  
-  
-## <a name="remarks"></a>Note  
- L'etichetta stringcan un file con estensione obj con un numero di versione o un avviso di copyright. I caratteri spazio o tabulazione devono essere racchiusi tra virgolette doppie (") se fanno parte della stringa. Una barra rovesciata (\\) devono precedere tutte le virgolette se fanno parte della stringa. Uno spazio tra **/V** e `string` è facoltativo.  
-  
- È inoltre possibile utilizzare [comment (C/C++)](../../preprocessor/comment-c-cpp.md) con l'argomento di tipo di commento del compilatore per inserire il nome e numero di versione del compilatore nel file con estensione obj.  
-  
- Il **/V** opzione è deprecata a partire da Visual Studio 2005. **/V** veniva principalmente utilizzato per supportare la creazione di driver di dispositivo virtuali (VxDs) e funzione non è più supportata dagli strumenti di Visual C++. Per un elenco di opzioni del compilatore obsolete, vedere **deprecate o rimosse le opzioni del compilatore** in [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
-  
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+Deprecato. Incorpora una stringa di testo nel file obj.
+
+## <a name="syntax"></a>Sintassi
+
+```
+/Vstring
+```
+
+## <a name="arguments"></a>Argomenti
+
+*string*<br/>
+Stringa che specifica il numero di versione o informazioni sul copyright per essere incorporato in un file con estensione obj.
+
+## <a name="remarks"></a>Note
+
+L'etichetta stringcan un file con estensione obj con un numero di versione o un avviso di copyright. Qualsiasi carattere spazio o tabulazione devono essere racchiuso tra virgolette doppie (") se sono una parte della stringa. Una barra rovesciata (\\) devono precedere qualsiasi racchiusi tra virgolette doppie se fanno parte della stringa. Uno spazio tra **/V** e `string` è facoltativo.
+
+È anche possibile usare [comment (C/C++)](../../preprocessor/comment-c-cpp.md) con l'argomento del tipo di commento del compilatore a inserire il nome e numero di versione del compilatore nel file con estensione obj.
+
+Il **/V** opzione è deprecata a partire da Visual Studio 2005. **/V** è principalmente usato per supportare la creazione di driver di dispositivo virtuali (VxDs) e funzione non è più supportata dal set di strumenti Visual C++. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Fare clic sulla cartella **C/C++** .
+
+1. Fare clic sulla pagina delle proprietà **Riga di comando** .
+
+1. Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

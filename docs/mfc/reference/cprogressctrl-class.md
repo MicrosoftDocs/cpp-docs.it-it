@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690152"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705913"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 Fornisce la funzionalità del controllo indicatore di stato comune di Windows.  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *clrBar*|Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che specifica il nuovo colore indicatore dell'indicatore di stato. Specificare CLR_DEFAULT per causare l'indicatore di stato da utilizzare sul colore predefinito.|  
+|*clrBar*|[in] Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che specifica il nuovo colore indicatore dell'indicatore di stato. Specificare CLR_DEFAULT per causare l'indicatore di stato da utilizzare sul colore predefinito.|  
   
 ### <a name="return-value"></a>Valore restituito  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *fMarqueeMode*|True se in modalità testo scorrevole turn on o su FALSE per disattivare la modalità testo scorrevole.|  
-|[in] *Nintervallo*|Tempo in millisecondi tra gli aggiornamenti del testo scorrevole.|  
+|*fMarqueeMode*|[in] True se in modalità testo scorrevole turn on o su FALSE per disattivare la modalità testo scorrevole.|  
+|*Nintervallo*|[in] Tempo in millisecondi tra gli aggiornamenti del testo scorrevole.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce sempre TRUE.  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iState*|Stato su cui impostare l'indicatore di stato. Usare uno dei valori indicati di seguito.<br /><br /> -PBST_NORMAL - In corso<br />-PBST_ERROR - errore<br />-PBST_PAUSED - messo in pausa|  
+|*iState*|[in] Lo stato da impostare l'indicatore di stato. Usare uno dei valori indicati di seguito.<br /><br /> -PBST_NORMAL - In corso<br />-PBST_ERROR - errore<br />-PBST_PAUSED - messo in pausa|  
   
 ### <a name="return-value"></a>Valore restituito  
  Stato precedente del controllo indicatore di stato corrente.  

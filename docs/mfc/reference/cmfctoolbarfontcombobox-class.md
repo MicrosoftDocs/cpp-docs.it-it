@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b510b05c80ba7cdbea0bbf0ec580e88daa55fbed
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216261"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704366"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Classe CMFCToolBarFontComboBox
 Pulsante della barra degli strumenti che contiene un controllo casella combinata che consente all'utente di selezionare un tipo di carattere da un elenco di tipi di carattere del sistema.  
@@ -110,14 +110,14 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- ID comando della casella combinata.  
+*uiID*<br/>
+[in] ID comando della casella combinata.  
   
- [in] *iImage*  
- Indice a base zero di un'immagine della barra degli strumenti. L'immagine si trova nel [classe CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) dell'oggetto che [classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) classe gestisce.  
+*iImage*<br/>
+[in] Indice a base zero di un'immagine della barra degli strumenti. L'immagine si trova nel [classe CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) dell'oggetto che [classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) classe gestisce.  
   
- [in] *nFontType*  
- I tipi di carattere contenente la casella combinata. Questo parametro può essere una combinazione (OR booleano) dei valori seguenti:  
+*nFontType*<br/>
+[in] I tipi di carattere contenente la casella combinata. Questo parametro può essere una combinazione (OR booleano) dei valori seguenti:  
   
  DEVICE_FONTTYPE  
   
@@ -125,20 +125,20 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in] *nCharSet*  
- Se impostato su DEFAULT_CHARSET, la casella combinata contiene i tipi di carattere denominato tutto in modo univoco in tutti i set di caratteri. (Se sono presenti due tipi di carattere con lo stesso nome, la casella combinata contiene uno di essi). Se impostato su un valore di set di caratteri valida, la casella combinata contiene solo i tipi di carattere nel set di caratteri specificato. Visualizzare [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) per un elenco di caratteri possibili imposta.  
+*nCharSet*<br/>
+[in] Se impostato su DEFAULT_CHARSET, la casella combinata contiene i tipi di carattere denominato tutto in modo univoco in tutti i set di caratteri. (Se sono presenti due tipi di carattere con lo stesso nome, la casella combinata contiene uno di essi). Se impostato su un valore di set di caratteri valida, la casella combinata contiene solo i tipi di carattere nel set di caratteri specificato. Visualizzare [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) per un elenco di caratteri possibili imposta.  
   
- [in] *dwStyle*  
- Lo stile della casella combinata. (vedere [stili casella combinata](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+*dwStyle*<br/>
+[in] Lo stile della casella combinata. (vedere [stili casella combinata](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in] *iWidth*  
- La larghezza in pixel del controllo di modifica.  
+*iWidth*<br/>
+[in] La larghezza in pixel del controllo di modifica.  
   
- [in] *nPitchAndFamily*  
- Se impostato su DEFAULT_PITCH, la casella combinata contiene i tipi di carattere indipendentemente dal passo. Se è impostato su FIXED_PITCH o VARIABLE_PITCH, la casella combinata contiene solo i tipi di carattere con tale tipo di passo. Filtro in base alla famiglia di caratteri non è attualmente supportato.  
+*nPitchAndFamily*<br/>
+[in] Se impostato su DEFAULT_PITCH, la casella combinata contiene i tipi di carattere indipendentemente dal passo. Se è impostato su FIXED_PITCH o VARIABLE_PITCH, la casella combinata contiene solo i tipi di carattere con tale tipo di passo. Filtro in base alla famiglia di caratteri non è attualmente supportato.  
   
- [out] *pLstFontsExternal*  
- Puntatore a un [classe CObList](../../mfc/reference/coblist-class.md) oggetto che archivia i tipi di carattere disponibili.  
+*pLstFontsExternal*<br/>
+[out] Puntatore a un [classe CObList](../../mfc/reference/coblist-class.md) oggetto che archivia i tipi di carattere disponibili.  
   
 ### <a name="remarks"></a>Note  
  In genere `CMFCToolBarFontComboBox` oggetti archiviare l'elenco dei tipi di carattere disponibili in un singolo condiviso `CObList` oggetto. Se si usa il secondo overload del costruttore e un puntatore valido a fornire *pLstFontsExternal*, che `CMFCToolBarFontComboBox` oggetto invece compilerà il `CObList` che *pLstFontsExternal* punti da con tipi di carattere disponibili.  
@@ -156,8 +156,8 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Specifica l'indice in base zero di un elemento della casella combinata.  
+*iIndex*<br/>
+[in] Specifica l'indice in base zero di un elemento della casella combinata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un `CMFCFontInfo` oggetto. Se *iIndex* non specifica un indice di elemento validi, il valore restituito è NULL.  
@@ -183,14 +183,14 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszName*  
- Specifica il nome del tipo di carattere o un prefisso.  
+*lpszName*<br/>
+[in] Specifica il nome del tipo di carattere o un prefisso.  
   
- [in] *nCharSet*  
- Specifica il set di caratteri.  
+*nCharSet*<br/>
+[in] Specifica il set di caratteri.  
   
- [in] *bExact*  
- Specifica se *lpszName* contiene il nome del tipo di carattere o il prefisso del carattere.  
+*bExact*<br/>
+[in] Specifica se *lpszName* contiene il nome del tipo di carattere o il prefisso del carattere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il tipo di carattere è stato selezionato correttamente. in caso contrario 0.  

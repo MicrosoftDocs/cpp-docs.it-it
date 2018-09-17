@@ -16,24 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10a57271c143a42f9bafaef5fa53f780fa03164f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761943"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700654"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Creazione guidata componente ASP ATL
 
 Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata componente ATL per specificare le impostazioni facoltative per la gestione delle informazioni e lo stato correlato al componente ASP.
 
-**Metodi facoltativi**  
-Aggiunge i metodi facoltativi ASP **OnStartPage** e **OnEndPage**, all'oggetto. Questa opzione deve essere selezionata per impostare gli oggetti intrinseci ASP. Per impostazione predefinita, viene selezionato.
+- **Metodi facoltativi**  
 
-- **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) viene chiamato la prima volta lo script cerca di accedere all'oggetto. **OnEndPage** viene chiamato quando l'oggetto è terminata l'elaborazione dello script.
+   Aggiunge i metodi facoltativi ASP **OnStartPage** e **OnEndPage**, all'oggetto. Questa opzione deve essere selezionata per impostare gli oggetti intrinseci ASP. Per impostazione predefinita, viene selezionato.
 
-**Oggetto intrinseco**  
-È necessario selezionare la **OnStartPage/OnEndPage** opzione per impostare gli oggetti intrinseci ASP.
+- **OnStartPage/OnEndPage**
+
+   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) viene chiamato la prima volta lo script cerca di accedere all'oggetto. **OnEndPage** viene chiamato quando l'oggetto è terminata l'elaborazione dello script.
+
+- **Oggetto intrinseco**  
+
+   È necessario selezionare la **OnStartPage/OnEndPage** opzione per impostare gli oggetti intrinseci ASP.
 
 |Opzione|Descrizione|
 |------------|-----------------|

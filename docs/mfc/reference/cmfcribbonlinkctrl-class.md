@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539833"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712517"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
 Implementa un collegamento ipertestuale collocato in una barra multifunzione. Il collegamento ipertestuale apre una pagina Web quando si fa clic su di esso.  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- Specifica l'ID di comando del comando che viene eseguito quando si fa clic sul controllo collegamento.  
+*nID*<br/>
+[in] Specifica l'ID di comando del comando che viene eseguito quando si fa clic sul controllo collegamento.  
   
- [in] *lpszText*  
- Specifica l'etichetta da visualizzare nel controllo collegamento.  
+*lpszText*<br/>
+[in] Specifica l'etichetta da visualizzare nel controllo collegamento.  
   
- [in] *lpszLink*  
- Specifica il collegamento ipertestuale associato al controllo di collegamento.  
+*lpszLink*<br/>
+[in] Specifica il collegamento ipertestuale associato al controllo di collegamento.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonLinkCtrl` classe. Questo frammento di codice fa parte di [esempio di gadget della barra multifunzione](../../visual-cpp-samples.md).  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLink*  
- Specifica il testo del collegamento ipertestuale.  
+*lpszLink*<br/>
+[in] Specifica il testo del collegamento ipertestuale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

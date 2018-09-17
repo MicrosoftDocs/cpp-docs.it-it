@@ -1,5 +1,5 @@
 ---
-title: '/Zc: inline (rimuovere COMDAT senza riferimenti) | Documenti Microsoft'
+title: '/Zc: inline (rimuove COMDAT senza riferimenti) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2018
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067ba5dad4e0751a86835ea56c536a5b7250485d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9f0ff58108328979b945b32af0c0b884998639
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379588"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708528"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (rimuovere COMDAT senza riferimenti)
 
-Rimuove le funzioni o i dati COMDAT senza riferimenti o che dispongono solo di collegamenti interni. Quando **/Zc: inline** viene specificato, il compilatore richiede che le unità di conversione che usano dati o le funzioni inline devono includere anche le definizioni per i dati o le funzioni.
+Rimuove le funzioni o i dati COMDAT senza riferimenti o che dispongono solo di collegamenti interni. Quando **/Zc: inline** viene specificato, il compilatore richiede che le unità di conversione che usano dati o funzioni inline includano le definizioni per i dati o le funzioni.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,15 +37,15 @@ Rimuove le funzioni o i dati COMDAT senza riferimenti o che dispongono solo di c
 
 ## <a name="remarks"></a>Note
 
-Quando **/Zc: inline** viene specificato, il compilatore non crea le informazioni sui simboli per le funzioni COMDAT senza riferimenti o dati o per le funzioni o dati che hanno un solo collegamento interno. Questa ottimizzazione semplifica parte delle operazioni eseguite dal linker nelle build di rilascio o quando l'opzione del linker [/OPT: ref](../../build/reference/opt-optimizations.md) specificato. Quando il compilatore esegue questa ottimizzazione, può ridurre notevolmente le dimensioni del file .obj e migliorare la velocità del linker. L'opzione del compilatore non è abilitata quando le ottimizzazioni vengono disabilitate ([/Od](../../build/reference/od-disable-debug.md)) o quando [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md) specificato.
+Quando **/Zc: inline** viene specificato, il compilatore non crea le informazioni sui simboli per le funzioni COMDAT senza riferimenti o dati o per le funzioni o dati che hanno un solo collegamento interno. Questa ottimizzazione semplifica parte del lavoro eseguito dal linker nelle build di rilascio o quando l'opzione del linker [/OPT: ref](../../build/reference/opt-optimizations.md) è specificato. Quando il compilatore esegue questa ottimizzazione, può ridurre notevolmente le dimensioni del file .obj e migliorare la velocità del linker. Questa opzione del compilatore non è abilitata quando sono disabilitate le ottimizzazioni ([/Od](../../build/reference/od-disable-debug.md)) o quando [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md) è specificato.
 
-Per impostazione predefinita, questa opzione è disattivata (**/Zc:inline-**). Il [/ permissiva-](permissive-standards-conformance.md) opzione non consente **/Zc: inline**.
+Per impostazione predefinita, questa opzione è disattivata (**/Zc:inline-**). Il [/PERMISSIVE--](permissive-standards-conformance.md) non abilita l'opzione **/Zc: inline**.
 
-Se **/Zc: inline** è specificato, il compilatore impone il requisito C++ 11 che prevede che tutte le funzioni dichiarate `inline` deve avere una definizione nella stessa unità di conversione se vengono usati. Quando l'opzione non è specificata, il compilatore Microsoft consente a codice non conforme che richiama le funzioni dichiarate `inline` anche se non è una definizione visibile. Per altre informazioni, vedere lo standard C++11 nelle sezioni 3.2 e 7.1.2. Questa opzione del compilatore è stata introdotta in Visual Studio 2013 Update 2.
+Se **/Zc: inline** è specificato, il compilatore impone il C requisito c++11 che prevede che tutte le funzioni dichiarate `inline` deve avere una definizione nella stessa unità di conversione se vengono usati. Quando l'opzione non è specificata, il compilatore Microsoft consente codice non conforme che richiama funzioni dichiarate `inline` anche se non è una definizione visibile. Per altre informazioni, vedere lo standard C++11 nelle sezioni 3.2 e 7.1.2. Questa opzione del compilatore è stata introdotta in Visual Studio 2013 Update 2.
 
-Utilizzare il **/Zc: inline** opzione, il codice non conforme di aggiornamento.
+Usare la **/Zc: inline** opzione, il codice non conforme di aggiornamento.
 
-Questo esempio mostra come l'utilizzo di una dichiarazione di funzione inline senza una definizione non conformi ancora compila collega quando il valore predefinito **/Zc:inline-** viene utilizzata l'opzione:
+Questo esempio mostra come l'uso di una dichiarazione di funzione inline senza una definizione non conformi ancora compila collega quando il valore predefinito **/Zc:inline-** opzione viene usata:
 
 ```cpp
 // example.h
@@ -67,11 +67,11 @@ public:
 #include "example.h"
 
 void Example::inline_call() {
-   printf("inline_call was called.\n"); 
+   printf("inline_call was called.\n");
 }
 
 void Example::normal_call() {
-   printf("normal_call was called.\n"); 
+   printf("normal_call was called.\n");
    inline_call(); // with /Zc:inline-, inline_call forced into .obj file
 }
 ```
@@ -87,7 +87,7 @@ void main() {
 }
 ```
 
-Quando **/Zc: inline** è abilitato, lo stesso codice provoca un [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) errore, perché il compilatore non crea un corpo di codice non inline per `Example::inline_call` in example.obj. In questo modo, la chiamata non inline in `main` farà riferimento a un simbolo esterno non definito.
+Quando **/Zc: inline** è abilitata, lo stesso codice provoca un [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) errore, perché il compilatore non crea un corpo di codice non inline per `Example::inline_call` in example. In questo modo, la chiamata non inline in `main` farà riferimento a un simbolo esterno non definito.
 
 Per risolvere questo errore è possibile rimuovere la parola chiave `inline` dalla dichiarazione di `Example::inline_call`, spostare la definizione di `Example::inline_call` nel file di intestazione o spostare l'implementazione di `Example` in main.cpp. L'esempio seguente sposta la definizione nel file di intestazione, in cui è visibile a qualsiasi chiamante che include l'intestazione.
 
@@ -100,7 +100,7 @@ Per risolvere questo errore è possibile rimuovere la parola chiave `inline` dal
 class Example2 {
 public:
    inline void inline_call() {
-      printf("inline_call was called.\n"); 
+      printf("inline_call was called.\n");
    }
    void normal_call();
    Example2() {};
@@ -113,8 +113,8 @@ public:
 #include "example2.h"
 
 void Example2::normal_call() {
-   printf("normal_call was called.\n"); 
-   inline_call(); 
+   printf("normal_call was called.\n");
+   inline_call();
 }
 ```
 
@@ -133,11 +133,11 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Selezionare il **proprietà di configurazione** > **C/C++** > **Language** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **lingua** pagina delle proprietà.
 
-1. Modificare il **rimuovere codice privo di riferimento e i dati** proprietà, quindi scegliere **OK**.
+1. Modificare il **rimuovere dati e codice privo di riferimento** proprietà, quindi scegliere **OK**.
 
 ## <a name="see-also"></a>Vedere anche
 

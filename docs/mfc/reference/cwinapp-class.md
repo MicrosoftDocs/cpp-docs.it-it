@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688545"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712036"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *lpvParam*  
-Riservato per utilizzi futuri.
+*lpvParam*<br/>
+[in] Riservato per utilizzi futuri.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *lpszFileName*  
-Il nome del file da aprire.
+*lpszFileName*<br/>
+[in] Il nome del file da aprire.
 
-[in] *bAddToMRU*  
-TRUE indica che il documento è uno dei file più recente; FALSE indica che il documento non è uno dei file più recente.
+*bAddToMRU*<br/>
+[in] TRUE indica che il documento è uno dei file più recente; FALSE indica che il documento non è uno dei file più recente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bCompat*  
-TRUE aggiunge voci di registrazione per i comandi della shell di stampa e stampare per, consentendo all'utente di stampare i file direttamente dalla shell oppure trascinando il file a un oggetto della stampante. Viene inoltre aggiunta una chiave DefaultIcon. Per impostazione predefinita, questo parametro è FALSE per la compatibilità con le versioni precedenti.
+*bCompat*<br/>
+[in] TRUE aggiunge voci di registrazione per i comandi della shell di stampa e stampare per, consentendo all'utente di stampare i file direttamente dalla shell oppure trascinando il file a un oggetto della stampante. Viene inoltre aggiunta una chiave DefaultIcon. Per impostazione predefinita, questo parametro è FALSE per la compatibilità con le versioni precedenti.
 
 ### <a name="remarks"></a>Note
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |Parametro|Descrizione|
-|[in] *bRegisterRecoveryCallback*|TRUE indica che questa istanza dell'applicazione utilizza una funzione di callback di ripristino; FALSE indica che non lo è. Il framework chiama la funzione di callback di ripristino quando l'applicazione viene chiusa in modo imprevisto. Per altre informazioni, vedere [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *strRestartIdentifier*|Stringa univoca che identifica questa istanza di Gestione riavvio. L'identificatore di Gestione riavvio è univoco per ogni istanza di un'applicazione.|
-|[in] *pwzCommandLineArgs*|Stringa che contiene gli argomenti aggiuntivi dalla riga di comando.|
-|[in] *dwRestartFlags*|Flag opzionale per la gestione riavvio. Per altre informazioni, vedere la sezione Osservazioni.|
-|[in] *pRecoveryCallback*|La funzione di callback di ripristino. Questa funzione deve accettare un parametro LPVOID come input e restituire un valore DWORD. La funzione di callback di ripristino predefinita è `CWinApp::ApplicationRecoveryCallback`.|
-|[in] *lpvParam*|Il parametro di input per la funzione di callback di ripristino. Per altre informazioni, vedere [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *dwPingInterval*|Il periodo di tempo che Gestione riavvio è in attesa per la funzione di callback di ripristino da restituire. Questo parametro è espresso in millisecondi.|
-|[in] *dwCallbackFlags*|Flag passati alla funzione di callback di ripristino. Riservato per utilizzi futuri.|
+|*bRegisterRecoveryCallback*|[in] TRUE indica che questa istanza dell'applicazione utilizza una funzione di callback di ripristino; FALSE indica che non lo è. Il framework chiama la funzione di callback di ripristino quando l'applicazione viene chiusa in modo imprevisto. Per altre informazioni, vedere [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*strRestartIdentifier*|[in] Stringa univoca che identifica questa istanza di Gestione riavvio. L'identificatore di Gestione riavvio è univoco per ogni istanza di un'applicazione.|
+|*pwzCommandLineArgs*|[in] Stringa che contiene gli argomenti aggiuntivi dalla riga di comando.|
+|*dwRestartFlags*|[in] Flag opzionale per la gestione riavvio. Per altre informazioni, vedere la sezione Osservazioni.|
+|*pRecoveryCallback*|[in] La funzione di callback di ripristino. Questa funzione deve accettare un parametro LPVOID come input e restituire un valore DWORD. La funzione di callback di ripristino predefinita è `CWinApp::ApplicationRecoveryCallback`.|
+|*lpvParam*|[in] Il parametro di input per la funzione di callback di ripristino. Per altre informazioni, vedere [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*dwPingInterval*|[in] Il periodo di tempo che Gestione riavvio è in attesa per la funzione di callback di ripristino da restituire. Questo parametro è espresso in millisecondi.|
+|*dwCallbackFlags*|[in] Flag passati alla funzione di callback di ripristino. Riservato per utilizzi futuri.|
 
 ### <a name="return-value"></a>Valore restituito
 

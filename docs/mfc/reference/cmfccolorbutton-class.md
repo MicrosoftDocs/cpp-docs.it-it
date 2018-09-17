@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a6313bcf0a4acfaa705cb4718570dd49374530b4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215328"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707531"
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
 Il `CMFCColorButton` e [classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) classi vengono usate insieme per implementare un controllo di selezione colore.  
@@ -159,14 +159,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLabel*  
- Specifica il testo del pulsante automatico.  
+*lpszLabel*<br/>
+[in] Specifica il testo del pulsante automatico.  
   
- [in] *colorAutomatic*  
- Un valore RGB che specifica il colore di predefinito del pulsante automatico.  
+*colorAutomatic*<br/>
+[in] Un valore RGB che specifica il colore di predefinito del pulsante automatico.  
   
- [in] *bAttivare il*  
- Specifica se il pulsante automatico è abilitato o disabilitato.  
+*bAttivare il*<br/>
+[in] Specifica se il pulsante automatico è abilitato o disabilitato.  
   
 ### <a name="remarks"></a>Note  
   
@@ -181,14 +181,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLabel*  
- Specifica il testo del pulsante.  
+*lpszLabel*<br/>
+[in] Specifica il testo del pulsante.  
   
- [in] *bAltColorDlg*  
- Specifica se il [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) si apre la finestra di dialogo o la finestra di dialogo colore di sistema quando l'utente fa clic sul pulsante.  
+*bAltColorDlg*<br/>
+[in] Specifica se il [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) si apre la finestra di dialogo o la finestra di dialogo colore di sistema quando l'utente fa clic sul pulsante.  
   
- [in] *bAttivare il*  
- Specifica se il pulsante "altro" è abilitato o disabilitato.  
+*bAttivare il*<br/>
+[in] Specifica se il pulsante "altro" è abilitato o disabilitato.  
   
 ### <a name="remarks"></a>Note  
  Fare clic sul pulsante "altro" per visualizzare una finestra di dialogo dei colori. Se il *bAltColorDlg* parametro è TRUE, il [classe CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) viene visualizzato; in caso contrario, viene visualizzata la finestra di dialogo colore di sistema.  
@@ -249,14 +249,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Punta al contesto di dispositivo usato per il rendering dell'immagine del pulsante.  
+*pDC*<br/>
+[in] Punta al contesto di dispositivo usato per il rendering dell'immagine del pulsante.  
   
- [in] *rect*  
- Un rettangolo che delimita il pulsante.  
+*Rect*<br/>
+[in] Un rettangolo che delimita il pulsante.  
   
- [in] *uiState*  
- Specifica lo stato di visualizzazione del pulsante.  
+*uiState*<br/>
+[in] Specifica lo stato di visualizzazione del pulsante.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per personalizzare il processo di rendering.  
@@ -272,14 +272,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Punta al contesto di dispositivo utilizzato per disegnare il bordo.  
+*pDC*<br/>
+[in] Punta al contesto di dispositivo utilizzato per disegnare il bordo.  
   
- [in] *rectClient*  
- Un rettangolo nel contesto di periferica specificato per il *pDC* parametri che definisce i limiti del pulsante deve essere disegnato.  
+*rectClient*<br/>
+[in] Un rettangolo nel contesto di periferica specificato per il *pDC* parametri che definisce i limiti del pulsante deve essere disegnato.  
   
- [in] *uiState*  
- Specifica lo stato di visualizzazione del pulsante.  
+*uiState*<br/>
+[in] Specifica lo stato di visualizzazione del pulsante.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per personalizzare l'aspetto del pulsante il colore del bordo.  
@@ -294,11 +294,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Punta al contesto di dispositivo utilizzato per disegnare il rettangolo di attivazione.  
+*pDC*<br/>
+[in] Punta al contesto di dispositivo utilizzato per disegnare il rettangolo di attivazione.  
   
- [in] *rectClient*  
- Un rettangolo nel contesto di periferica specificato per il *pDC* parametri che definisce i limiti del pulsante.  
+*rectClient*<br/>
+[in] Un rettangolo nel contesto di periferica specificato per il *pDC* parametri che definisce i limiti del pulsante.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per personalizzare l'aspetto del rettangolo di attivazione.  
@@ -323,7 +323,7 @@ void RebuildPalette(CPalette* pPal);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pPal*|Puntatore a una tavolozza logica o NULL. Se NULL, viene utilizzata la tavolozza di sistema predefinito.|  
+|*pPal*|[in] Puntatore a una tavolozza logica o NULL. Se NULL, viene utilizzata la tavolozza di sistema predefinito.|  
   
 ##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  Specifica il colore del pulsante.  
@@ -333,8 +333,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colore*  
- Un valore RGB.  
+*Colore*<br/>
+[in] Un valore RGB.  
   
 ### <a name="remarks"></a>Note  
   
@@ -348,11 +348,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colore*  
- Il valore del colore RGB.  
+*Colore*<br/>
+[in] Il valore del colore RGB.  
   
- [in] *strName*  
- Nome del colore.  
+*strName*<br/>
+[in] Nome del colore.  
   
 ### <a name="remarks"></a>Note  
  L'elenco dei nomi di colore è globale per ogni applicazione. Di conseguenza, questo metodo trasferisce i parametri [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname).  
@@ -365,8 +365,8 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nColumns*  
- Specifica il numero di colonne.  
+*nColumns*<br/>
+[in] Specifica il numero di colonne.  
   
 ### <a name="remarks"></a>Note  
  L'utente può selezionare un colore da una barra dei colori popup contenente una tabella dei colori predefiniti. Utilizzare questo metodo per definire il numero di colonne nella tabella.  
@@ -381,11 +381,11 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLabel*  
- Specifica l'etichetta da visualizzare con il set di colori del documento.  
+*lpszLabel*<br/>
+[in] Specifica l'etichetta da visualizzare con il set di colori del documento.  
   
- [in] *lstColors*  
- Un riferimento a un elenco di valori RGB.  
+*lstColors*<br/>
+[in] Un riferimento a un elenco di valori RGB.  
   
 ### <a name="remarks"></a>Note  
  Oggetto `CMFCColorButton` oggetto gestisce un elenco di valori RGB che vengono trasferiti a un [classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) oggetto. Quando viene visualizzata la barra dei colori, i colori vengono visualizzati in una sezione speciale la cui etichetta specificato dal *lpszLabel* parametro.  
@@ -398,8 +398,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pPalette*  
- Puntatore a una tavolozza dei colori.  
+*pPalette*<br/>
+[in] Puntatore a una tavolozza dei colori.  
   
 ### <a name="remarks"></a>Note  
   
@@ -411,8 +411,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bCalcOnly*  
- Se diverso da zero, viene calcolata la nuova dimensione del controllo pulsante ma non viene modificata la dimensione effettiva.  
+*bCalcOnly*<br/>
+[in] Se diverso da zero, viene calcolata la nuova dimensione del controllo pulsante ma non viene modificata la dimensione effettiva.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CSize` oggetto che specifica la nuova dimensione del controllo pulsante.  
@@ -427,8 +427,8 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colore*  
- Colore selezionato dall'utente.  
+*Colore*<br/>
+[in] Colore selezionato dall'utente.  
   
 ### <a name="remarks"></a>Note  
  Il `UpdateColor` funzione Cambia colore del pulsante attualmente selezionato e invia una notifica padre inviando un messaggio WM_COMMAND con una notifica standard BN_CLICKED. Usare la [CMFCColorButton::GetColor](#getcolor) metodo per recuperare il colore selezionato.  

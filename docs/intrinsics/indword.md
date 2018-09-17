@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540022"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712530"
 ---
 # <a name="indword"></a>__indword
 **Sezione specifica Microsoft**  
@@ -39,8 +39,8 @@ unsigned long __indword(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Port`  
- La porta da cui leggere.  
+*Porta*<br/>
+[in] La porta da cui leggere.  
   
 ## <a name="return-value"></a>Valore restituito  
  La parola di lettura dalla porta.  

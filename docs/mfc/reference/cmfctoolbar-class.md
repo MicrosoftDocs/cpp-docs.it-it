@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9ee255afd70ff789a1d6fb833253b7114d9ad3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689232"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711399"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 Il `CMFCToolBar` classe simile [classe CToolBar](../../mfc/reference/ctoolbar-class.md), ma fornisce supporto aggiuntivo per le funzionalità dell'interfaccia utente. Queste includono barre degli strumenti flat, barre degli strumenti con immagini con area sensibile, icone grandi, pulsanti cercapersone, barre degli strumenti bloccate, controlli Rebar, testo sotto le immagini, immagini di sfondo e barre degli strumenti a schede. La classe `CMFCToolBar` contiene inoltre il supporto incorporato per la personalizzazione da parte dell'utente delle barre degli strumenti e dei menu, il trascinamento della selezione tra barre degli strumenti e menu, i pulsanti della casella combinata, i pulsanti della casella di modifica, le selezioni colore e i pulsanti rollup.
@@ -563,8 +563,8 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- Specifica il comando da aggiungere.  
+*uiCmd*<br/>
+[in] Specifica il comando da aggiungere.  
   
 ### <a name="remarks"></a>Note  
  Un comando di base viene sempre visualizzato quando viene aperto il menu di scelta. Questo metodo è significativo quando l'utente sceglie di visualizzare i comandi usati di recente.  
@@ -579,8 +579,8 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCommand*  
- Specifica il contatore di comando da incrementare.  
+*uiCommand*<br/>
+[in] Specifica il contatore di comando da incrementare.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando l'utente seleziona una voce di menu.  
@@ -603,23 +603,23 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiResID*  
- ID di risorsa di una barra degli strumenti con le immagini da caricare.  
+*uiResID*<br/>
+[in] ID di risorsa di una barra degli strumenti con le immagini da caricare.  
   
- [in] *uiBmpResID*  
- ID risorsa della bitmap con le immagini della barra degli strumenti.  
+*uiBmpResID*<br/>
+[in] ID risorsa della bitmap con le immagini della barra degli strumenti.  
   
- [in] *uiColdResID*  
- ID risorsa della bitmap con immagini "fredde" della barra degli strumenti.  
+*uiColdResID*<br/>
+[in] ID risorsa della bitmap con immagini "fredde" della barra degli strumenti.  
   
- [in] *uiMenuResID*  
- ID risorsa della bitmap con le immagini di menu.  
+*uiMenuResID*<br/>
+[in] ID risorsa della bitmap con le immagini di menu.  
   
- [in] *uiDisabledResID*  
- ID risorsa della bitmap con immagini disabilitata sulla barra degli strumenti.  
+*uiDisabledResID*<br/>
+[in] ID risorsa della bitmap con immagini disabilitata sulla barra degli strumenti.  
   
- [in] *uiMenuDisabledResID*  
- ID risorsa della bitmap con immagini disabilitate del menu.  
+*uiMenuDisabledResID*<br/>
+[in] ID risorsa della bitmap con immagini disabilitate del menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo; FALSE se *uiResID* oppure *uiBmpResID* non si specifica risorse valide o viene generato un altro errore.  
@@ -709,14 +709,14 @@ static void AutoGrayInactiveImages(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Valore booleano che specifica se dim immagini inattive. Se questo parametro è TRUE, le immagini inattive vengono visualizzati in grigio. In caso contrario, le immagini inattive non sono disattivate.  
+*bAttivare il*<br/>
+[in] Valore booleano che specifica se dim immagini inattive. Se questo parametro è TRUE, le immagini inattive vengono visualizzati in grigio. In caso contrario, le immagini inattive non sono disattivate.  
   
- [in] *nGrayImagePercentage*  
- Specifica la percentuale di luminanza per le immagini inattive. Se *bAttivare il* è FALSE, questo valore viene ignorato.  
+*nGrayImagePercentage*<br/>
+[in] Specifica la percentuale di luminanza per le immagini inattive. Se *bAttivare il* è FALSE, questo valore viene ignorato.  
   
- [in] *bRedrawAllToolbars*  
- Valore booleano che specifica se deve essere ridisegnato usando tutte le barre degli strumenti dell'applicazione. Se questo parametro è TRUE, questo metodo consente di ricreare tutte le barre degli strumenti.  
+*bRedrawAllToolbars*<br/>
+[in] Valore booleano che specifica se deve essere ridisegnato usando tutte le barre degli strumenti dell'applicazione. Se questo parametro è TRUE, questo metodo consente di ricreare tutte le barre degli strumenti.  
   
 ### <a name="remarks"></a>Note  
  Se *bAttivare il* è TRUE, il framework utilizza *nGrayImagePercentage* per generare immagini inattive dalle immagini regolari. In caso contrario, è necessario specificare il set di immagini inattivi usando la [CMFCToolBar::GetColdImages](#getcoldimages) (metodo). Per impostazione predefinita, questa opzione è disabilitata.  
@@ -731,8 +731,8 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Un puntatore all'oggetto pulsante della barra degli strumenti.  
+*pButton*<br/>
+[in] Un puntatore all'oggetto pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice del *pButton* nell'elenco interno dei pulsanti della barra degli strumenti; oppure -1 se il pulsante specificato non è presente in questa barra degli strumenti.  
@@ -747,11 +747,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bStretch*  
- TRUE per estendere la barra degli strumenti per le dimensioni del frame padre.  
+*bStretch*<br/>
+[in] TRUE per estendere la barra degli strumenti per le dimensioni del frame padre.  
   
- [in] *bHorz*  
- TRUE per orientare la barra degli strumenti orizzontalmente. FALSE per orientare la barra degli strumenti in senso verticale.  
+*bHorz*<br/>
+[in] TRUE per orientare la barra degli strumenti orizzontalmente. FALSE per orientare la barra degli strumenti in senso verticale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CSize` oggetto che specifica la dimensione della barra degli strumenti.  
@@ -784,8 +784,8 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bVertDock*  
- TRUE per specificare che la barra degli strumenti è ancorato in verticale; FALSE per specificare che la barra degli strumenti è ancorato in orizzontale.  
+*bVertDock*<br/>
+[in] TRUE per specificare che la barra degli strumenti è ancorato in verticale; FALSE per specificare che la barra degli strumenti è ancorato in orizzontale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CSize` oggetto che specifica la dimensione complessiva dei pulsanti sulla barra degli strumenti.  
@@ -887,11 +887,11 @@ int CommandToIndex(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIDFind*  
- Specifica l'ID di comando.  
+*nIDFind*<br/>
+[in] Specifica l'ID di comando.  
   
- [in] *iIndexFirst*  
- Specifica l'indice iniziale da cui iniziare.  
+*iIndexFirst*<br/>
+[in] Specifica l'indice iniziale da cui iniziare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice in base zero del pulsante della barra degli strumenti se il metodo ha esito positivo; -1 se non è disponibile alcun pulsante con l'ID specificato.  
@@ -912,14 +912,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParentWnd*  
- Puntatore alla finestra padre della barra degli strumenti.  
+*pParentWnd*<br/>
+[in] Puntatore alla finestra padre della barra degli strumenti.  
   
- [in] *dwStyle*  
- Lo stile della barra degli strumenti. Visualizzare [barra degli strumenti e gli stili di pulsante](/windows/desktop/Controls/toolbar-control-and-button-styles) nel SDK di Windows per l'elenco degli stili.  
+*dwStyle*<br/>
+[in] Lo stile della barra degli strumenti. Visualizzare [barra degli strumenti e gli stili di pulsante](/windows/desktop/Controls/toolbar-control-and-button-styles) nel SDK di Windows per l'elenco degli stili.  
   
- [in] *nID*  
- L'ID della finestra figlio della barra degli strumenti.  
+*nID*<br/>
+[in] L'ID della finestra figlio della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo; in caso contrario, FALSE.  
@@ -943,20 +943,20 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParentWnd*  
- Puntatore alla finestra padre della barra degli strumenti.  
+*pParentWnd*<br/>
+[in] Puntatore alla finestra padre della barra degli strumenti.  
   
- [in] *dwCtrlStyle*  
- Stili aggiuntivi per la creazione dell'oggetto barra di controllo incorporato.  
+*dwCtrlStyle*<br/>
+[in] Stili aggiuntivi per la creazione dell'oggetto barra di controllo incorporato.  
   
- [in] *dwStyle*  
- Lo stile della barra degli strumenti. Visualizzare [barra degli strumenti e gli stili di pulsante](/windows/desktop/Controls/toolbar-control-and-button-styles) per un elenco degli stili appropriati.  
+*dwStyle*<br/>
+[in] Lo stile della barra degli strumenti. Visualizzare [barra degli strumenti e gli stili di pulsante](/windows/desktop/Controls/toolbar-control-and-button-styles) per un elenco degli stili appropriati.  
   
- [in] *rcBorders*  
- Oggetto `CRect` oggetto che specifica la larghezza dei bordi della finestra degli strumenti.  
+*rcBorders*<br/>
+[in] Oggetto `CRect` oggetto che specifica la larghezza dei bordi della finestra degli strumenti.  
   
- [in] *nID*  
- L'ID della finestra figlio della barra degli strumenti.  
+*nID*<br/>
+[in] L'ID della finestra figlio della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se questo metodo ha esito positivo; in caso contrario 0.  
@@ -990,8 +990,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework quando una parte della barra degli strumenti deve essere ridisegnata.  
@@ -1011,20 +1011,20 @@ virtual BOOL DrawButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *pButton*  
- Un puntatore a un pulsante da disegnare.  
+*pButton*<br/>
+[in] Un puntatore a un pulsante da disegnare.  
   
- [in] *pImages*  
- Puntatore alle immagini della barra degli strumenti.  
+*pImages*<br/>
+[in] Puntatore alle immagini della barra degli strumenti.  
   
- [in] *bHighlighted*  
- TRUE se il pulsante è evidenziato. in caso contrario, FALSE.  
+*bHighlighted*<br/>
+[in] TRUE se il pulsante è evidenziato. in caso contrario, FALSE.  
   
- [in] *bDrawDisabledImages*  
- TRUE se i pulsanti disabilitati sono visualizzate in grigio; in caso contrario, FALSE.  
+*bDrawDisabledImages*<br/>
+[in] TRUE se i pulsanti disabilitati sono visualizzate in grigio; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il pulsante è stato aggiornato. FALSO se il pulsante è nascosto.  
@@ -1045,14 +1045,14 @@ virtual void DrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Il rettangolo di delimitazione della posizione in cui viene disegnato il separatore in pixel.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione della posizione in cui viene disegnato il separatore in pixel.  
   
- [in] *bHorz*  
- TRUE se il separatore è orizzontale, FALSE se il separatore è verticale.  
+*bHorz*<br/>
+[in] TRUE se il separatore è orizzontale, FALSE se il separatore è verticale.  
   
 ### <a name="remarks"></a>Note  
  [CMFCToolBar::DoPaint](#dopaint) chiama questo metodo per ogni [CMFCToolBar::DrawSeparator](#drawseparator) oggetto con lo stile TBBS_SEPARATOR, anziché chiamare [CMFCToolBar::DrawButton](#drawbutton) per quelli pulsanti.  
@@ -1078,20 +1078,20 @@ void EnableCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Abilita o disabilita il pulsante Personalizza.  
+*bAttivare il*<br/>
+[in] Abilita o disabilita il pulsante Personalizza.  
   
- [in] *iCustomizeCmd*  
- ID comando del pulsante Personalizza.  
+*iCustomizeCmd*<br/>
+[in] ID comando del pulsante Personalizza.  
   
- [in] *strCustomizeText*  
- L'etichetta di testo del pulsante Personalizza.  
+*strCustomizeText*<br/>
+[in] L'etichetta di testo del pulsante Personalizza.  
   
- [in] *uiCustomizeTextResId*  
- L'ID di stringa di risorsa dell'etichetta del pulsante Personalizza.  
+*uiCustomizeTextResId*<br/>
+[in] L'ID di stringa di risorsa dell'etichetta del pulsante Personalizza.  
   
- [in] *bQuickCustomize*  
- Abilita o disabilita il **Aggiungi o rimuovi pulsanti** opzione nel menu che consente di visualizzare sul pulsante.  
+*bQuickCustomize*<br/>
+[in] Abilita o disabilita il **Aggiungi o rimuovi pulsanti** opzione nel menu che consente di visualizzare sul pulsante.  
   
 ### <a name="remarks"></a>Note  
  Se *iCustomizeCmd* è -1, verrà visualizzato il framework sul pulsante Personalizza quando non rientrano più pulsanti della barra degli strumenti nell'area della barra degli strumenti. La freccia consente di visualizzare un valore double verso sinistra un pulsante o freccia di espansione, che indica che non esistono altri pulsanti.  
@@ -1108,8 +1108,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwAlignment*  
- Specifica l'allineamento di ancoraggio da abilitare.  
+*dwAlignment*<br/>
+[in] Specifica l'allineamento di ancoraggio da abilitare.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo estende l'implementazione della classe base, [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), impostando il `CBasePane::m_dwControlBarStyle` membro dati da AFX_CBRS_FLOAT. Questo metodo passa quindi *dwAlignment* all'implementazione della classe base.  
@@ -1122,8 +1122,8 @@ void EnableLargeIcons(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare le icone grandi, FALSE per disabilitare le icone grandi.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare le icone grandi, FALSE per disabilitare le icone grandi.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, sono abilitate le icone grandi.  
@@ -1136,8 +1136,8 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare la personalizzazione rapida, FALSE per disabilitare la personalizzazione rapida.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare la personalizzazione rapida, FALSE per disabilitare la personalizzazione rapida.  
   
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
  Abilita o disabilita la reflection di comando.  
@@ -1147,8 +1147,8 @@ void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per abilitare la reflection di comando. FALSE per disabilitare la reflection di comando.  
+*bAttivare il*<br/>
+[in] TRUE per abilitare la reflection di comando. FALSE per disabilitare la reflection di comando.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per abilitare la reflection di comando per i pulsanti della barra degli strumenti che contengono controlli incorporati, ad esempio le caselle combinate.  
@@ -1177,8 +1177,8 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hwnd*  
- L'handle di finestra da cercare.  
+*HWND*<br/>
+[in] L'handle di finestra da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore per il `CMFCToolBar` oggetto che contiene l'handle di finestra specificato oppure NULL se nessun corrispondente `CMFCToolBar` oggetto esiste.  
@@ -1227,8 +1227,8 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Specifica l'indice del pulsante da restituire.  
+*iIndex*<br/>
+[in] Specifica l'indice del pulsante da restituire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al pulsante della barra degli strumenti se presente. o NULL se non esiste alcun tale pulsante.  
@@ -1245,17 +1245,17 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del pulsante nell'elenco dei pulsanti sulla barra degli strumenti.  
+*nIndex*<br/>
+[in] Specifica l'indice del pulsante nell'elenco dei pulsanti sulla barra degli strumenti.  
   
- [out] *nID*  
- L'ID di comando di un pulsante.  
+*nID*<br/>
+[out] L'ID di comando di un pulsante.  
   
- [out] *nStyle*  
- Lo stile del pulsante.  
+*nStyle*<br/>
+[out] Lo stile del pulsante.  
   
- [out] *iImage*  
- L'indice dell'immagine del pulsante.  
+*iImage*<br/>
+[out] L'indice dell'immagine del pulsante.  
   
 ### <a name="remarks"></a>Note  
  Il `GetButtonInfo` metodo trova un pulsante della barra degli strumenti in corrispondenza dell'indice specificato e recupera l'indice di ID, stile e image di comando del pulsante.  
@@ -1283,8 +1283,8 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice di un pulsante della barra degli strumenti.  
+*nIndex*<br/>
+[in] Specifica l'indice di un pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore che specifica lo stile del pulsante della barra degli strumenti. . Visualizzare [stili dei controlli ToolBar](../../mfc/reference/toolbar-control-styles.md) per un elenco di possibili stili.  
@@ -1304,11 +1304,11 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- L'indice di un pulsante della barra degli strumenti.  
+*nIndex*<br/>
+[in] L'indice di un pulsante della barra degli strumenti.  
   
- [out] *rString*  
- Il testo dell'etichetta del pulsante della barra degli strumenti.  
+*rString*<br/>
+[out] Il testo dell'etichetta del pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il testo dell'etichetta del pulsante della barra degli strumenti.  
@@ -1352,11 +1352,11 @@ static int GetCommandButtons(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- ID comando dei pulsanti.  
+*uiCmd*<br/>
+[in] ID comando dei pulsanti.  
   
- [out] *listButtons*  
- Un riferimento a un [classe CObList](../../mfc/reference/coblist-class.md) oggetto che riceve l'elenco dei pulsanti della barra degli strumenti.  
+*listButtons*<br/>
+[out] Un riferimento a un [classe CObList](../../mfc/reference/coblist-class.md) oggetto che riceve l'elenco dei pulsanti della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero di pulsanti con l'ID del comando specificato.  
@@ -1394,8 +1394,8 @@ static int GetDefaultImage(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- Specifica l'ID di comando del pulsante.  
+*uiID*<br/>
+[in] Specifica l'ID di comando del pulsante.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice dell'immagine della barra degli strumenti nell'elenco di immagini condivisa.  
@@ -1437,8 +1437,8 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *pIndex*  
- Riceve l'indice del pulsante nella raccolta di pulsanti della barra degli strumenti.  
+*pIndex*<br/>
+[out] Riceve l'indice del pulsante nella raccolta di pulsanti della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'oggetto pulsante menu in cui viene visualizzato il sottomenu o NULL se nessun menu viene visualizzato il sottomenu.  
@@ -1573,11 +1573,11 @@ virtual void GetInvalidateItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- L'indice del pulsante per il quale recuperare l'area client.  
+*nIndex*<br/>
+[in] L'indice del pulsante per il quale recuperare l'area client.  
   
- [out] *lpRect*  
- Un puntatore a un oggetto RECT che riceve l'area dell'area client.  
+*lpRect*<br/>
+[out] Un puntatore a un oggetto RECT che riceve l'area dell'area client.  
   
 ### <a name="remarks"></a>Note  
  Il *lpRect* parametro non deve essere NULL. Se è presente alcun pulsante in corrispondenza dell'indice specificato *lpRect* riceve un oggetto RECT che viene inizializzato su zero.  
@@ -1590,8 +1590,8 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice del pulsante della barra degli strumenti.  
+*nIndex*<br/>
+[in] Specifica l'indice del pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'ID di comando del pulsante della barra degli strumenti; oppure zero se il pulsante con l'indice specificato non esiste.  
@@ -1606,11 +1606,11 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice di un pulsante della barra degli strumenti.  
+*nIndex*<br/>
+[in] Specifica l'indice di un pulsante della barra degli strumenti.  
   
- [out] *lpRect*  
- Un puntatore a `CRect` oggetto che riceve le coordinate dell'immagine del rettangolo di delimitazione.  
+*lpRect*<br/>
+[out] Un puntatore a `CRect` oggetto che riceve le coordinate dell'immagine del rettangolo di delimitazione.  
   
 ### <a name="remarks"></a>Note  
  Il `CRect` oggetto a cui *lpRect* punti è impostato su 0 se non esiste un pulsante in corrispondenza dell'indice specificato.  
@@ -1904,8 +1904,8 @@ virtual int HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Il punto da testare, nelle coordinate del client.  
+*punto*<br/>
+[in] Il punto da testare, nelle coordinate del client.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice del pulsante su cui si trova nella posizione specificata oppure -1 se è presente alcun questo tipo o il tasto è un separatore.  
@@ -1925,11 +1925,11 @@ virtual int InsertButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pulsante*  
- Specifica il pulsante da inserire.  
+*Pulsante*<br/>
+[in] Specifica il pulsante da inserire.  
   
- [in] *iInsertAt*  
- Specifica la posizione in base zero per l'inserimento del pulsante in.  
+*iInsertAt*<br/>
+[in] Specifica la posizione in base zero per l'inserimento del pulsante in.  
   
 ### <a name="return-value"></a>Valore restituito  
  La posizione in corrispondenza del quale pulsante è stato inserito o -1 se un errore si verifica.  
@@ -1947,8 +1947,8 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iInsertAt*  
- Specifica la posizione in base zero per inserire il separatore in. Questo parametro deve essere maggiore di 0.  
+*iInsertAt*<br/>
+[in] Specifica la posizione in base zero per inserire il separatore in. Questo parametro deve essere maggiore di 0.  
   
 ### <a name="return-value"></a>Valore restituito  
  La posizione in corrispondenza del quale è stato inserito il separatore o -1 se un errore si verifica.  
@@ -1968,8 +1968,8 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Indice a base zero del pulsante sulla barra degli strumenti.  
+*nIndex*<br/>
+[in] Indice a base zero del pulsante sulla barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al `CMFCToolBarButton` oggetto presente all'indice specificato o NULL se tale oggetto non esiste.  
@@ -2022,8 +2022,8 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- Specifica il comando da controllare.  
+*uiCmd*<br/>
+[in] Specifica il comando da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il comando specificato appartiene all'elenco di comandi di base; in caso contrario, FALSE.  
@@ -2054,8 +2054,8 @@ BOOL IsButtonHighlighted(int iButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iButton*  
- Specifica l'indice di un pulsante della barra degli strumenti.  
+*iButton*<br/>
+[in] Specifica l'indice di un pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il pulsante specificato è evidenziato. in caso contrario, FALSE.  
@@ -2070,8 +2070,8 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- Specifica il comando da controllare.  
+*uiCmd*<br/>
+[in] Specifica il comando da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il comando specificato è consentito; in caso contrario, FALSE.  
@@ -2089,8 +2089,8 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- Specifica il comando da controllare.  
+*uiCmd*<br/>
+[in] Specifica il comando da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il comando specificato viene utilizzato raramente. in caso contrario, FALSE.  
@@ -2131,8 +2131,8 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Puntatore a un pulsante della barra degli strumenti.  
+*pButton*<br/>
+[in] Puntatore a un pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il pulsante specificato viene trascinato; in caso contrario, FALSE.  
@@ -2187,8 +2187,8 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Puntatore al pulsante.  
+*pButton*<br/>
+[in] Puntatore al pulsante.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'ultimo comando è stato inviato dal pulsante che *pButton* specifica; in caso contrario, FALSE.  
@@ -2272,23 +2272,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "calde" della barra degli strumenti.  
+*uiResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini della barra degli strumenti a caldo.  
   
- [in] *uiColdResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "fredde" della barra degli strumenti.  
+*uiColdResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini della barra degli strumenti a freddo.  
   
- [in] *uiMenuResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "normali" della barra dei menu.  
+*uiMenuResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini regolari menu.  
   
- [in] *bloccato*  
- TRUE per bloccare la barra degli strumenti; in caso contrario, FALSE.  
+*Bloccato*<br/>
+[in] TRUE per bloccare la barra degli strumenti; in caso contrario, FALSE.  
   
- [in] *uiDisabledResID*  
- ID risorsa della bitmap che fa riferimento alle immagini disabilitate della barra degli strumenti.  
+*uiDisabledResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini disabilitata sulla barra degli strumenti.  
   
- [in] *uiMenuDisabledResID*  
- ID risorsa della bitmap che fa riferimento alle immagini disabilitate del menu.  
+*uiMenuDisabledResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento a immagini disabilitate del menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -2308,8 +2308,8 @@ virtual BOOL LoadBitmapEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *params*  
- [in] *bloccato*  
+*params*<br/>
+[in] [in] *bloccato*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -2337,8 +2337,8 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Specifica il percorso relativo della chiave del Registro di sistema di Windows.  
+*lpszProfileName*<br/>
+[in] Specifica il percorso relativo della chiave del Registro di sistema di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -2359,14 +2359,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Specifica il percorso relativo della chiave del Registro di sistema di Windows.  
+*lpszProfileName*<br/>
+[in] Specifica il percorso relativo della chiave del Registro di sistema di Windows.  
   
- [in] *nIndex*  
- Specifica l'ID di controllo della barra degli strumenti.  
+*nIndex*<br/>
+[in] Specifica l'ID di controllo della barra degli strumenti.  
   
- [in] *uiID*  
- Specifica l'ID risorsa della barra degli strumenti.  
+*uiID*<br/>
+[in] Specifica l'ID risorsa della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -2389,26 +2389,26 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiResID*  
- L'ID risorsa della barra degli strumenti.  
+*uiResID*<br/>
+[in] L'ID risorsa della barra degli strumenti.  
   
- [in] *uiColdResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "fredde" della barra degli strumenti.  
+*uiColdResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini della barra degli strumenti a freddo.  
   
- [in] *uiMenuResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "normali" della barra dei menu.  
+*uiMenuResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini regolari menu.  
   
- [in] *bloccato*  
- Valore booleano che specifica se la barra degli strumenti è bloccato o No. Se questo parametro è *TRUE*, la barra degli strumenti è bloccato. In caso contrario, la barra degli strumenti non è bloccato.  
+*Bloccato*<br/>
+[in] Valore booleano che specifica se la barra degli strumenti è bloccato o No. Se questo parametro è *TRUE*, la barra degli strumenti è bloccato. In caso contrario, la barra degli strumenti non è bloccato.  
   
- [in] *uiDisabledResID*  
- ID risorsa della bitmap che fa riferimento alle immagini disabilitate della barra degli strumenti.  
+*uiDisabledResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini disabilitata sulla barra degli strumenti.  
   
- [in] *uiMenuDisabledResID*  
- ID risorsa della bitmap che fa riferimento alle immagini disabilitate del menu.  
+*uiMenuDisabledResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento a immagini disabilitate del menu.  
   
- [in] *uiHotResID*  
- ID risorsa della bitmap che fa riferimento alle immagini "calde" della barra degli strumenti.  
+*uiHotResID*<br/>
+[in] L'ID risorsa della bitmap che fa riferimento alle immagini della barra degli strumenti a caldo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -2433,14 +2433,14 @@ virtual BOOL LoadToolBarEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiToolbarResID*  
- L'ID risorsa della barra degli strumenti.  
+*uiToolbarResID*<br/>
+[in] L'ID risorsa della barra degli strumenti.  
   
- [in] *params*  
- Un riferimento a un `CMFCToolBarInfo` oggetto che contiene l'ID risorsa per le immagini della barra degli strumenti.  
+*params*<br/>
+[in] Un riferimento a un `CMFCToolBarInfo` oggetto che contiene l'ID risorsa per le immagini della barra degli strumenti.  
   
- [in] *bloccato*  
- Valore booleano che specifica se la barra degli strumenti è bloccato o No. Se questo parametro è TRUE, la barra degli strumenti è bloccato. In caso contrario, la barra degli strumenti non è bloccato.  
+*Bloccato*<br/>
+[in] Valore booleano che specifica se la barra degli strumenti è bloccato o No. Se questo parametro è TRUE, la barra degli strumenti è bloccato. In caso contrario, la barra degli strumenti non è bloccato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -2481,11 +2481,11 @@ virtual BOOL OnBeforeRemoveButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Non usato.  
+*pButton*<br/>
+[in] Non usato.  
   
- [in] *dropEffect*  
- Non usato.  
+*dropEffect*<br/>
+[in] Non usato.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -2499,8 +2499,8 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iHot*  
- Specifica l'indice del pulsante della barra degli strumenti che è selezionato; oppure -1 se non è selezionato alcun pulsante della barra degli strumenti.  
+*iHot*<br/>
+[in] Specifica l'indice del pulsante della barra degli strumenti che è selezionato; oppure -1 se non è selezionato alcun pulsante della barra degli strumenti.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per elaborare le notifiche che l'utente ha selezionato un pulsante sulla barra degli strumenti.  
@@ -2522,8 +2522,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
  [CMFCToolBar::DoPaint](#dopaint) chiama questo metodo quando è stato compilato lo sfondo di una barra degli strumenti. L'implementazione predefinita non esegue alcuna operazione.  
@@ -2573,8 +2573,8 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Punta a un pulsante, il cui testo viene impostata.  
+*pButton*<br/>
+[in] Punta a un pulsante, il cui testo viene impostata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Testo TRUE dimenticata è stato ripristinato; in caso contrario, FALSE.  
@@ -2594,11 +2594,11 @@ virtual BOOL OnUserToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Punta a un pulsante della barra degli strumenti per la quale è visualizzata una descrizione comando.  
+*pButton*<br/>
+[in] Punta a un pulsante della barra degli strumenti per la quale è visualizzata una descrizione comando.  
   
- [out] *strTTText*  
- Un riferimento a `CString` oggetto che riceve il testo della descrizione comando.  
+*strTTText*<br/>
+[out] Un riferimento a `CString` oggetto che riceve il testo della descrizione comando.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se *strTTText* è stato popolato con il testo della descrizione comando; in caso contrario, FALSE.  
@@ -2627,8 +2627,8 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Puntatore a un pulsante sulla barra degli strumenti.  
+*pButton*<br/>
+[in] Puntatore a un pulsante sulla barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo deve sempre restituire TRUE. MFC utilizza internamente i valori FALSE.  
@@ -2656,8 +2656,8 @@ virtual BOOL RemoveButton(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iIndex*  
- Specifica l'indice in base zero del pulsante da rimuovere.  
+*iIndex*<br/>
+[in] Specifica l'indice in base zero del pulsante da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo o FALSE se l'indice specificato non è valido o l'indice indica la **Personalizza** pulsante.  
@@ -2678,14 +2678,14 @@ virtual BOOL RemoveStateFromRegistry(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Specifica la chiave del Registro di sistema in cui si trova le informazioni sullo stato.  
+*lpszProfileName*<br/>
+[in] Specifica la chiave del Registro di sistema in cui si trova le informazioni sullo stato.  
   
- [in] *nIndex*  
- L'ID di controllo della barra degli strumenti.  
+*nIndex*<br/>
+[in] L'ID di controllo della barra degli strumenti.  
   
- [in] *uiID*  
- L'ID risorsa della barra degli strumenti. Se questo parametro è -1, questo metodo Usa il [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) metodo per recuperare l'ID risorsa.  
+*uiID*<br/>
+[in] L'ID risorsa della barra degli strumenti. Se questo parametro è -1, questo metodo Usa il [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) metodo per recuperare l'ID risorsa.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -2706,14 +2706,14 @@ int ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmd*  
- ID comando del pulsante da sostituire.  
+*uiCmd*<br/>
+[in] ID comando del pulsante da sostituire.  
   
- [in] *pulsante*  
- Un riferimento al `CMFCToolBarButton` da inserire.  
+*Pulsante*<br/>
+[in] Un riferimento al `CMFCToolBarButton` da inserire.  
   
- [in] *palla*  
- Valore booleano che specifica se sostituire tutti i pulsanti con l'ID di comando specificato da *uiCmd*. Se questo parametro è TRUE, vengono sostituiti tutti i pulsanti con l'ID di comando specificato. In caso contrario, il primo pulsante viene sostituito.  
+*Palla*<br/>
+[in] Valore booleano che specifica se sostituire tutti i pulsanti con l'ID di comando specificato da *uiCmd*. Se questo parametro è TRUE, vengono sostituiti tutti i pulsanti con l'ID di comando specificato. In caso contrario, il primo pulsante viene sostituito.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero di pulsanti che devono essere sostituiti. Questo metodo restituisce 0 se un pulsante con l'ID di comando specificato non esiste nella barra degli strumenti.  
@@ -2805,14 +2805,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszProfileName*  
- Specifica il percorso relativo della chiave del Registro di sistema di Windows.  
+*lpszProfileName*<br/>
+[in] Specifica il percorso relativo della chiave del Registro di sistema di Windows.  
   
- [in] *nIndex*  
- L'ID di controllo della barra degli strumenti.  
+*nIndex*<br/>
+[in] L'ID di controllo della barra degli strumenti.  
   
- [in] *uiID*  
- L'ID risorsa della barra degli strumenti.  
+*uiID*<br/>
+[in] L'ID risorsa della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -2828,8 +2828,8 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lstCommands*  
- Un riferimento a un `CList` oggetto che contiene una raccolta di comandi.  
+*lstCommands*<br/>
+[in] Un riferimento a un `CList` oggetto che contiene una raccolta di comandi.  
   
 ### <a name="remarks"></a>Note  
  Un comando di base viene sempre visualizzato quando viene aperto il menu di scelta. Questo metodo è significativo quando l'utente sceglie di visualizzare i comandi usati di recente.  
@@ -2850,17 +2850,17 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Indice a base zero del pulsante la cui proprietà vengono impostate.  
+*nIndex*<br/>
+[in] Indice a base zero del pulsante la cui proprietà vengono impostate.  
   
- [in] *nID*  
- ID comando del pulsante.  
+*nID*<br/>
+[in] ID comando del pulsante.  
   
- [in] *nStyle*  
- Lo stile del pulsante. Visualizzare [stili dei controlli ToolBar](../../mfc/reference/toolbar-control-styles.md) per l'elenco di stili dei pulsanti della barra degli strumenti disponibili.  
+*nStyle*<br/>
+[in] Lo stile del pulsante. Visualizzare [stili dei controlli ToolBar](../../mfc/reference/toolbar-control-styles.md) per l'elenco di stili dei pulsanti della barra degli strumenti disponibili.  
   
- [in] *iImage*  
- L'indice dell'immagine in base zero del pulsante (vale a dire, l'indice nella raccolta di immagini della barra degli strumenti).  
+*iImage*<br/>
+[in] L'indice dell'immagine in base zero del pulsante (vale a dire, l'indice nella raccolta di immagini della barra degli strumenti).  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per impostare le proprietà di un pulsante della barra degli strumenti.  
@@ -2880,14 +2880,14 @@ virtual BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpIDArray*  
- Puntatore alla matrice di ID di comando dei pulsanti da inserire.  
+*lpIDArray*<br/>
+[in] Puntatore alla matrice di ID di comando dei pulsanti da inserire.  
   
- [in] *nIDCount*  
- Il numero di elementi in *lpIDArray*.  
+*nIDCount*<br/>
+[in] Il numero di elementi in *lpIDArray*.  
   
- [in] *bRemapImages*  
- Valore booleano che specifica se associare le immagini esistenti sul pulsante con i pulsanti inseriti. Se questo parametro è TRUE, le immagini vengono mappate nuovamente.  
+*bRemapImages*<br/>
+[in] Valore booleano che specifica se associare le immagini esistenti sul pulsante con i pulsanti inseriti. Se questo parametro è TRUE, le immagini vengono mappate nuovamente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.  
@@ -2907,11 +2907,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Indice a base zero del pulsante della barra degli strumenti è necessario impostare il cui stile.  
+*nIndex*<br/>
+[in] Indice a base zero del pulsante della barra degli strumenti è necessario impostare il cui stile.  
   
- [in] *nStyle*  
- Lo stile del pulsante. Visualizzare [stili dei controlli ToolBar](../../mfc/reference/toolbar-control-styles.md) per l'elenco di stili dei pulsanti della barra degli strumenti disponibili.  
+*nStyle*<br/>
+[in] Lo stile del pulsante. Visualizzare [stili dei controlli ToolBar](../../mfc/reference/toolbar-control-styles.md) per l'elenco di stili dei pulsanti della barra degli strumenti disponibili.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo rimuove lo stile TBBS_PRESSED se *nStyle* è TBBS_DISABLED perché l'utente non è possibile fare clic su un pulsante disabilitato.  
@@ -2926,11 +2926,11 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- L'indice del pulsante della barra degli strumenti.  
+*nIndex*<br/>
+[in] L'indice del pulsante della barra degli strumenti.  
   
- [in] *lpszText*  
- L'etichetta di testo del pulsante della barra degli strumenti. Deve essere non NULL.  
+*lpszText*<br/>
+[in] L'etichetta di testo del pulsante della barra degli strumenti. Deve essere non NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo; in caso contrario, FALSE.  
@@ -2948,11 +2948,11 @@ static BOOL SetCommandUsageOptions(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nStartCount*  
- Specifica il numero di volte che i comandi da eseguire prima che il framework Mostra solo i comandi di base e usati di recente.  
+*nStartCount*<br/>
+[in] Specifica il numero di volte che i comandi da eseguire prima che il framework Mostra solo i comandi di base e usati di recente.  
   
- [in] *nMinUsagePercentage*  
- La percentuale di volte in cui deve essere eseguito un comando per essere considerato un comando usati di recente.  
+*nMinUsagePercentage*<br/>
+[in] La percentuale di volte in cui deve essere eseguito un comando per essere considerato un comando usati di recente.  
   
 ### <a name="return-value"></a>Valore restituito  
  FALSE se *nMinUsagePercentage* è uguale a o maggiore di 100; in caso contrario TRUE.  
@@ -2970,8 +2970,8 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- Valore booleano che specifica se abilitare o disabilitare la modalità di personalizzazione. Questo parametro impostato su true per abilitare la modalità di personalizzazione o FALSE per disabilitarla.  
+*bSet*<br/>
+[in] Valore booleano che specifica se abilitare o disabilitare la modalità di personalizzazione. Questo parametro impostato su true per abilitare la modalità di personalizzazione o FALSE per disabilitarla.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se si chiama questo metodo modifica la modalità di personalizzazione; in caso contrario, FALSE.  
@@ -2987,8 +2987,8 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bGrayDisabledButtons*  
- Valore booleano che specifica come visualizzare i pulsanti non disponibili. Se questo parametro è TRUE, il framework attenua i pulsanti. In caso contrario, il framework utilizza la raccolta di immagini non disponibile sul pulsante.  
+*bGrayDisabledButtons*<br/>
+[in] Valore booleano che specifica come visualizzare i pulsanti non disponibili. Se questo parametro è TRUE, il framework attenua i pulsanti. In caso contrario, il framework utilizza la raccolta di immagini non disponibile sul pulsante.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, i pulsanti disponibili vengono visualizzati in grigio.  
@@ -3001,8 +3001,8 @@ void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *cyHeight*  
- L'altezza della barra degli strumenti, in pixel.  
+*cyHeight*<br/>
+[in] L'altezza della barra degli strumenti, in pixel.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo ridisegna la barra degli strumenti dopo avere impostato l'altezza.  
@@ -3041,8 +3041,8 @@ void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bShowHotBorder*  
- Valore booleano che specifica se hot track i pulsanti della barra degli strumenti. Se questo parametro è TRUE, le tracce a caldo della barra degli strumenti relativi pulsanti. In caso contrario, la barra degli strumenti non hot track relativi pulsanti.  
+*bShowHotBorder*<br/>
+[in] Valore booleano che specifica se hot track i pulsanti della barra degli strumenti. Se questo parametro è TRUE, le tracce a caldo della barra degli strumenti relativi pulsanti. In caso contrario, la barra degli strumenti non hot track relativi pulsanti.  
   
 ### <a name="remarks"></a>Note  
  Se un pulsante viene intercettato, il framework evidenzia il pulsante quando il mouse viene spostato su di esso. Per impostazione predefinita, ogni barra degli strumenti-tiene traccia degli hot relativi pulsanti.  
@@ -3057,8 +3057,8 @@ static void SetHotTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *clrText*  
- Specifica il colore del testo per i pulsanti della barra degli strumenti sono intercettato.  
+*clrText*<br/>
+[in] Specifica il colore del testo per i pulsanti della barra degli strumenti sono intercettato.  
   
 ### <a name="remarks"></a>Note  
  Per altre informazioni sui pulsanti intercettato sulla barra degli strumenti, vedere [CMFCToolBar::GetHotBorder](#gethotborder) e [CMFCToolBar::SetHotBorder](#sethotborder).  
@@ -3083,8 +3083,8 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bLargeIcons*  
- Valore booleano che specifica quali icone da utilizzare. Se questo parametro è TRUE, il framework Visualizza icone grandi. In caso contrario, il framework Visualizza icone regolari.  
+*bLargeIcons*<br/>
+[in] Valore booleano che specifica quali icone da utilizzare. Se questo parametro è TRUE, il framework Visualizza icone grandi. In caso contrario, il framework Visualizza icone regolari.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando l'utente modifica lo stato del **icone grandi** casella di controllo nella **opzioni** scheda della finestra di **Personalizza** nella finestra di dialogo. Questo metodo consente di ridimensionare tutte le barre degli strumenti dell'applicazione.  
@@ -3104,11 +3104,11 @@ void SetLockedSizes(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *sizeButton*  
- Specifica la dimensione dei pulsanti della barra degli strumenti bloccate.  
+*sizeButton*<br/>
+[in] Specifica la dimensione dei pulsanti della barra degli strumenti bloccate.  
   
- [in] *sizeImage*  
- Specifica le dimensioni delle immagini bloccato sulla barra degli strumenti.  
+*sizeImage*<br/>
+[in] Specifica le dimensioni delle immagini bloccato sulla barra degli strumenti.  
   
  *bDontScale*  
  Specifica se applicare la scalabilità o non bloccare le immagini della barra degli strumenti in modalità DPI elevata.  
@@ -3140,11 +3140,11 @@ static void __stdcall SetMenuSizes(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *sizeButton*  
- Specifica la dimensione dei pulsanti della barra degli strumenti, in pixel.  
+*sizeButton*<br/>
+[in] Specifica la dimensione dei pulsanti della barra degli strumenti, in pixel.  
   
- [in] *sizeImage*  
- Specifica le dimensioni delle immagini della barra degli strumenti, in pixel.  
+*sizeImage*<br/>
+[in] Specifica le dimensioni delle immagini della barra degli strumenti, in pixel.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, i pulsanti di menu e le relative immagini hanno una dimensione non definita.  
@@ -3161,8 +3161,8 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lstCommands*  
- Un riferimento a un `CList` oggetto che contiene i comandi che non possono essere eseguiti dall'utente.  
+*lstCommands*<br/>
+[in] Un riferimento a un `CList` oggetto che contiene i comandi che non possono essere eseguiti dall'utente.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per impedire all'utente di selezionare determinati comandi. È possibile, ad esempio impedire all'utente di selezionare determinati comandi per motivi di sicurezza. Vedere gli esempi MDITabsDemo e MenuSubSet per alcuni esempi che usano questo metodo.  
@@ -3203,8 +3203,8 @@ void SetPermament(BOOL bPermament=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bPermament*  
- Valore booleano che specifica se un utente può chiudere la barra degli strumenti. Se questo parametro è TRUE, l'utente non è possibile chiudere la barra degli strumenti. In caso contrario, un utente può chiudere la barra degli strumenti.  
+*bPermament*<br/>
+[in] Valore booleano che specifica se un utente può chiudere la barra degli strumenti. Se questo parametro è TRUE, l'utente non è possibile chiudere la barra degli strumenti. In caso contrario, un utente può chiudere la barra degli strumenti.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, un utente può chiudere ogni barra degli strumenti.  
@@ -3219,8 +3219,8 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bValue*  
- Se questo parametro è TRUE, il frame padre invia comandi a barra degli strumenti. In caso contrario, il proprietario invia comandi a barra degli strumenti.  
+*bValue*<br/>
+[in] Se questo parametro è TRUE, il frame padre invia comandi a barra degli strumenti. In caso contrario, il proprietario invia comandi a barra degli strumenti.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il frame padre invia comandi a barra degli strumenti. Chiamare il [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) metodo per determinare se il proprietario o il frame padre invia comandi alla barra degli strumenti.  
@@ -3233,8 +3233,8 @@ static void SetShowTooltips(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bValue*  
- Se questo parametro è TRUE, il framework Mostra le descrizioni comandi. In caso contrario, il framework nasconde le descrizioni comandi.  
+*bValue*<br/>
+[in] Se questo parametro è TRUE, il framework Mostra le descrizioni comandi. In caso contrario, il framework nasconde le descrizioni comandi.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il framework Mostra le descrizioni comandi.  
@@ -3249,8 +3249,8 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pBrotherToolbar*  
- Puntatore a barra degli strumenti di pari livello.  
+*pBrotherToolbar*<br/>
+[in] Puntatore a barra degli strumenti di pari livello.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo consente la **Mostra pulsanti su una riga** oppure **Mostra pulsanti su due righe** pulsanti che vengono visualizzati quando l'utente visualizza il **Personalizza** menu a comparsa. Chiamare questo metodo quando si vuole consentire all'utente di specificare se le barre degli strumenti correlati vengono visualizzati nella stessa riga o sulle righe diverse.  
@@ -3269,11 +3269,11 @@ static void __stdcall SetSizes(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *sizeButton*  
- Le dimensioni dei pulsanti della barra degli strumenti, in pixel.  
+*sizeButton*<br/>
+[in] Le dimensioni dei pulsanti della barra degli strumenti, in pixel.  
   
- [in] *sizeImage*  
- Le dimensioni delle immagini di pulsante della barra degli strumenti, in pixel.  
+*sizeImage*<br/>
+[in] Le dimensioni delle immagini di pulsante della barra degli strumenti, in pixel.  
   
 ### <a name="remarks"></a>Note  
  La dimensione predefinita dei pulsanti della barra degli strumenti è 23 x 22 pixel. Le dimensioni predefinite delle immagini di pulsante della barra degli strumenti sono 16 x 15 pixel.  
@@ -3292,17 +3292,17 @@ void SetToolBarBtnText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nBtnIndex*  
- Indice a base zero del pulsante della barra degli strumenti nell'elenco dei pulsanti della barra degli strumenti.  
+*nBtnIndex*<br/>
+[in] Indice a base zero del pulsante della barra degli strumenti nell'elenco dei pulsanti della barra degli strumenti.  
   
- [in] *szText*  
- Specifica l'etichetta di testo del pulsante della barra degli strumenti.  
+*szText*<br/>
+[in] Specifica l'etichetta di testo del pulsante della barra degli strumenti.  
   
- [in] *bShowText*  
- Se questo parametro è TRUE, il framework Mostra l'etichetta di testo. In caso contrario, il framework consente di nascondere l'etichetta di testo.  
+*bShowText*<br/>
+[in] Se questo parametro è TRUE, il framework Mostra l'etichetta di testo. In caso contrario, il framework consente di nascondere l'etichetta di testo.  
   
- [in] *bShowImage*  
- Se questo parametro è TRUE, il framework Mostra l'immagine del pulsante della barra degli strumenti. In caso contrario, il framework nasconde l'immagine del pulsante della barra degli strumenti.  
+*bShowImage*<br/>
+[in] Se questo parametro è TRUE, il framework Mostra l'immagine del pulsante della barra degli strumenti. In caso contrario, il framework nasconde l'immagine del pulsante della barra degli strumenti.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il framework Mostra le immagini dei pulsanti della barra degli strumenti, ma non mostra l'etichetta di testo dei pulsanti della barra degli strumenti.  
@@ -3331,8 +3331,8 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pUserImages*  
- Puntatore alla raccolta di immagini definite dall'utente.  
+*pUserImages*<br/>
+[in] Puntatore alla raccolta di immagini definite dall'utente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario, 0 se l'oggetto specificato `CMFCToolBarImages` oggetto non è valido o ha una dimensione di immagine che è diverso dalle dimensioni dell'immagine predefinito della barra degli strumenti.  
@@ -3356,11 +3356,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nLength*  
- Quantità, in pixel, per cui si desidera estendere il riquadro.  
+*nLength*<br/>
+[in] Quantità, in pixel, per cui si desidera estendere il riquadro.  
   
- [in] *bVert*  
- Se TRUE, si estende verticalmente il riquadro. Se FALSE, estende orizzontalmente il riquadro.  
+*bVert*<br/>
+[in] Se TRUE, si estende verticalmente il riquadro. Se FALSE, estende orizzontalmente il riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CSize` oggetto che specifica le dimensioni dell'area client della barra degli strumenti.  
@@ -3378,8 +3378,8 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nChar*  
- Specifica un codice tasto virtuale. Per un elenco di codici di tasti virtuali standard, vedere winuser. h  
+*NChar*<br/>
+[in] Specifica un codice tasto virtuale. Per un elenco di codici di tasti virtuali standard, vedere winuser. h  
   
 ### <a name="return-value"></a>Valore restituito  
  FALSE se il codice di chiave specificato può essere non stampabile o non corrisponde a una combinazione di tasti valida; TRUE se il codice di chiave specificato corrisponde a un'opzione di menu a discesa. in caso contrario, il valore restituito da [CMFCToolBar::ProcessCommand](#processcommand).  
@@ -3395,8 +3395,8 @@ void UpdateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice in base zero del pulsante da aggiornare.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero del pulsante da aggiornare.  
   
 ### <a name="remarks"></a>Note  
   
@@ -3413,17 +3413,17 @@ int WrapToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nWidth*  
- Larghezza massima della barra degli strumenti.  
+*nWidth*<br/>
+[in] Larghezza massima della barra degli strumenti.  
   
- [in] *nHeight*  
- Altezza massima della barra degli strumenti. Non usato se la barra degli strumenti è mobile.  
+*nHeight*<br/>
+[in] Altezza massima della barra degli strumenti. Non usato se la barra degli strumenti è mobile.  
   
- [in] *pDC*  
- Puntatore a un contesto di dispositivo. Se NULL, viene utilizzato il contesto di dispositivo per la barra degli strumenti.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo. Se NULL, viene utilizzato il contesto di dispositivo per la barra degli strumenti.  
   
- [in] *nColumnWidth*  
- Larghezza del pulsante. Se-1, viene utilizzata la larghezza corrente.  
+*nColumnWidth*<br/>
+[in] Larghezza del pulsante. Se-1, viene utilizzata la larghezza corrente.  
   
  [in] m *nRowHeight*  
  Altezza del pulsante. Se-1, viene utilizzata l'altezza corrente.  

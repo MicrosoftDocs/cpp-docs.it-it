@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705705"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Classe CMFCRibbonFontComboBox
 Implementa una casella combinata che contiene un elenco dei tipi di carattere. Posizionare la casella combinata in un pannello della barra multifunzione.  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nFontType*  
- Specifica il tipo di carattere dei tipi di carattere da aggiungere.  
+*nFontType*<br/>
+[in] Specifica il tipo di carattere dei tipi di carattere da aggiungere.  
   
- [in] *nCharSet*  
- Specifica il set di caratteri dei tipi di carattere da aggiungere.  
+*nCharSet*<br/>
+[in] Specifica il set di caratteri dei tipi di carattere da aggiungere.  
   
- [in] *nPitchAndFamily*  
- Specifica passo e famiglia di caratteri da aggiungere.  
+*nPitchAndFamily*<br/>
+[in] Specifica passo e famiglia di caratteri da aggiungere.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Costruisce e Inizializza un [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) oggetto.  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- ID comando del comando che viene eseguito quando l'utente seleziona un elemento dalla casella combinata.  
+*nID*<br/>
+[in] ID comando del comando che viene eseguito quando l'utente seleziona un elemento dalla casella combinata.  
   
- [in] *nFontType*  
- Specifica i tipi del tipo di carattere da visualizzare nella casella combinata. Le opzioni valide sono DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE oppure qualsiasi altra combinazione bit per bit.  
+*nFontType*<br/>
+[in] Specifica i tipi del tipo di carattere da visualizzare nella casella combinata. Le opzioni valide sono DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE oppure qualsiasi altra combinazione bit per bit.  
   
- [in] *nCharSet*  
- Filtra i tipi di carattere nella casella combinata a quelli che appartengono al set di caratteri specificato...  
+*nCharSet*<br/>
+[in] Filtra i tipi di carattere nella casella combinata a quelli che appartengono al set di caratteri specificato...  
   
- [in] *nPitchAndFamily*  
- Specifica il passo e famiglia di caratteri che vengono visualizzati nella casella combinata.  
+*nPitchAndFamily*<br/>
+[in] Specifica il passo e famiglia di caratteri che vengono visualizzati nella casella combinata.  
   
- [in] *nWidth*  
- Specifica la larghezza, in pixel, della casella combinata.  
+*nWidth*<br/>
+[in] Specifica la larghezza, in pixel, della casella combinata.  
   
 ### <a name="remarks"></a>Note  
  Per altre informazioni sulle possibili *nFontType* i valori dei parametri, vedere [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) nella documentazione di Windows SDK.  

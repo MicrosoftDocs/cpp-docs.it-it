@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894759"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708670"
 ---
 # <a name="cl-command-files"></a>File di comando di CL
 
@@ -37,25 +37,25 @@ Viene specificato un file di comando da un simbolo di chiocciola (**\@**) seguit
 
 Ad esempio, se il comando seguente in un file denominato RESP:
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 e si specifica il comando CL seguente:
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 come indicato di seguito è riportato il comando di CL:
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 Si noti che la riga di comando e i comandi del file di comando vengono combinati in modo efficace.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
-[opzioni del compilatore](../../build/reference/compiler-options.md)
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[Opzioni del compilatore](../../build/reference/compiler-options.md)

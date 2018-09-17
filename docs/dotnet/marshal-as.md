@@ -1,5 +1,5 @@
 ---
-title: marshal_as | Documenti Microsoft
+title: marshal_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ebca4a94fa48feb4ff5fb897293303a395ac4eb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f57db502be6e34d275e3aba0e7705992b3c4d0d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133779"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701623"
 ---
 # <a name="marshalas"></a>marshal_as
 Questo metodo converte i dati tra ambienti nativi e gestiti.  
@@ -38,21 +38,21 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `input`  
- Il valore che si desidera effettuare il marshalling di un `To_Type` variabile.  
+*input*<br/>
+[in] Il valore che si desidera effettuare il marshalling in un `To_Type` variabile.  
   
 ## <a name="return-value"></a>Valore restituito  
  Una variabile di tipo `To_Type` che rappresenta il valore convertito di `input`.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo è un metodo semplificato per convertire i dati tra i tipi gestiti e nativi. Per determinare i tipi di dati supportati, vedere [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md). Alcune conversioni di dati richiedono un contesto. È possibile convertire i tipi di dati tramite il [classe marshal_context](../dotnet/marshal-context-class.md).  
+ Questo metodo è un metodo semplificato per convertire i dati tra i tipi nativi e gestiti. Per determinare i tipi di dati supportati, vedere [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md). Alcune conversioni di dati richiedono un contesto. È possibile convertire questi tipi di dati tramite il [marshal_context Class](../dotnet/marshal-context-class.md).  
   
- Se si tenta di effettuare il marshalling di una coppia di tipi di dati che non sono supportati, `marshal_as` genererà un errore [l'avviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) in fase di compilazione. Leggere il messaggio fornito con l'errore per ulteriori informazioni. Il `C4996` errore può essere generato per le funzioni più semplicemente deprecate. Un esempio di questo sta tentando di effettuare il marshalling di una coppia di tipi di dati che non sono supportati.  
+ Se si prova a effettuare il marshalling dei tipi di dati che non sono supportati, una coppia `marshal_as` genererà un errore [l'avviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) in fase di compilazione. Legge il messaggio fornito con l'errore per ulteriori informazioni. Il `C4996` errore può essere generato per le funzioni più semplicemente deprecate. Un esempio di questo sta provando a effettuare il marshalling di una coppia di tipi di dati che non sono supportati.  
   
- La libreria del marshalling è costituito da diversi file di intestazione. Qualsiasi conversione richiede un solo file, ma se è necessario per le altre conversioni, è possibile includere file aggiuntivi. Per vedere quali conversioni sono associati a quali file, cercare nella tabella `Marshaling Overview`. Di quali conversione indipendentemente dal fatto che si desidera eseguire, il requisito di spazio dei nomi è sempre attivo.  
+ La libreria del marshalling è costituito da diversi file di intestazione. Qualsiasi conversione richiede un solo file, ma è possibile includere file aggiuntivi se è necessario per le altre conversioni. Per visualizzare quali conversioni sono associati a quali file, esaminare la tabella in `Marshaling Overview`. Di quali conversione indipendentemente dal fatto che si desidera eseguire, il requisito di spazio dei nomi è sempre attivo.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio effettua il marshalling da un `const char*` per un `System::String` tipo di variabile.  
+ In questo esempio esegue il marshalling da un `const char*` a un `System::String` tipo della variabile.  
   
 ```  
 // marshal_as_test.cpp  

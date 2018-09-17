@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 700c88fa71e82e35602efef768fc5753760a5e1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593480"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709149"
 ---
 # <a name="generic-functions-ccli"></a>Funzioni generiche (C++/CLI)
 
@@ -63,11 +63,11 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametri
 
-*gli attributi* (facoltativo)  
-Informazioni dichiarative aggiuntive. Per altre informazioni sugli attributi e classi di attributi, vedere attributi.
+*Attributi*  
+(Facoltativo) Informazioni dichiarative aggiuntive. Per altre informazioni sugli attributi e classi di attributi, vedere attributi.
 
-*modificatori* (facoltativo)  
-Modificatore di funzione, ad esempio statico.  **virtuale** non è consentita perché i metodi virtuali non possono essere generici.
+*Modificatori*  
+(Facoltativo) Modificatore di funzione, ad esempio statico.  **virtuale** non è consentita perché i metodi virtuali non possono essere generici.
 
 *tipo restituito*  
 Tipo restituito dal metodo. Se il tipo restituito è void, nessun valore restituito è obbligatorio.
@@ -78,8 +78,8 @@ Nome della funzione.
 *parametro di tipo identificatore/i*  
 Elenco di identificatori delimitati da virgole.
 
-*parametri formali di* (facoltativo)  
-Elenco di parametri.
+*parametri formali di*  
+(Facoltativo) Elenco di parametri.
 
 *parametro di tipo-clausole di vincoli*  
 Questo specifica le restrizioni sui tipi che possono essere utilizzati come argomenti tipo e assume il formato specificato nella [vincoli su parametri di tipo generico (C + + / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
