@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849165"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701649"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
 Il `CMFCTasksPaneTaskGroup` classe è una classe helper utilizzata per il [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) controllo. Gli oggetti di tipo `CMFCTasksPaneTaskGroup` rappresentano un *gruppo di attività*. Il gruppo di attività è un elenco di elementi visualizzato dal framework in una casella separata dotata di un pulsante di compressione. La casella può avere una didascalia facoltativa (nome del gruppo). Se un gruppo viene compresso, l'elenco di attività non è visibile.  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParent*  
- Rappresenta la finestra padre del gruppo di attività corrente.  
+*pParent*<br/>
+[in] Rappresenta la finestra padre del gruppo di attività corrente.  
   
- [out] *dati*  
- Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità del gruppo di attività corrente.  
+*data*<br/>
+[out] Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità del gruppo di attività corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il *dati* parametro è stato popolato con i dati di accessibilità del gruppo di attività corrente; in caso contrario, FALSE.  

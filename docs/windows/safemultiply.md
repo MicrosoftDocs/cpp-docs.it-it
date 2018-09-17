@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 79f2ae3edaf7f820008882e5ce035446f67b7ce9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 003f2c9241a4ba81e370204ce2102b60e420df04
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608137"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700544"
 ---
 # <a name="safemultiply"></a>SafeMultiply
 
@@ -41,14 +41,14 @@ inline bool SafeMultiply (
 
 ### <a name="parameters"></a>Parametri
 
-[in] *t*  
-Primo numero da moltiplicare. Deve essere di tipo `T`.
+*t*<br/>
+[in] Il primo numero da moltiplicare. Deve essere di tipo `T`.
 
-[in] *u*  
-Secondo numero da moltiplicare. Deve essere di tipo `U`.
+*u*<br/>
+[in] Il secondo numero da moltiplicare. Deve essere di tipo `U`.
 
-[out] *risultato*  
-Il parametro in cui **SafeMultiply** archivia il risultato.
+*Risultato*<br/>
+[out] Il parametro in cui **SafeMultiply** archivia il risultato.
 
 ## <a name="return-value"></a>Valore restituito
 

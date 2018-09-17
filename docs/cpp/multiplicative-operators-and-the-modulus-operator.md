@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209728"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713858"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatori di moltiplicazione e operatori modulo
 ## <a name="syntax"></a>Sintassi  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  Poiché le conversioni eseguite dagli operatori di moltiplicazione non consentono condizioni di overflow o di underflow, le informazioni potrebbero essere perse se il risultato di un'operazione di moltiplicazione non può essere rappresentato nel tipo degli operandi in seguito alla conversione.  
   
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- In Microsoft C++, il risultato di un'espressione di modulo è sempre uguale al segno del primo operando.  
-  
-**Fine sezione specifica Microsoft**  
- Se la divisione calcolata di due interi non è esatta e un solo operando è negativo, il risultato è l'intero più grande (in termini di grandezza, non considerando il segno) che è minore del valore esatto che produrrebbe l'operazione di divisione. Ad esempio, il valore calcolato di -11 / 3 è-3.666666666. Il risultato della divisione è -3.  
+**Sezione specifica Microsoft**
+
+In Microsoft C++, il risultato di un'espressione di modulo è sempre uguale al segno del primo operando.
+
+**Fine sezione specifica Microsoft**
+
+Se la divisione calcolata di due interi non è esatta e un solo operando è negativo, il risultato è l'intero più grande (in termini di grandezza, non considerando il segno) che è minore del valore esatto che produrrebbe l'operazione di divisione. Ad esempio, il valore calcolato di -11 / 3 è-3.666666666. Il risultato della divisione è -3.  
   
  La relazione tra gli operatori moltiplicativi viene fornita dall'identità (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   
