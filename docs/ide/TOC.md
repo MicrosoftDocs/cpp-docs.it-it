@@ -144,7 +144,6 @@
 ### [Risoluzione dei problemi di personalizzazione della compilazione](troubleshooting-build-customizations.md)
 ### [Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [Macro comuni per i comandi e le proprietà di compilazione](common-macros-for-build-commands-and-properties.md)
-## [Compilazione di progetti esterni](building-external-projects.md)
 ## [File di progetto](project-files.md)
 ## [Procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++](using-the-visual-studio-ide-for-cpp-desktop-development.md)
