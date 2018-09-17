@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 244fea4b776f0713b6fb2281563e39d27a910a2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103775"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704249"
 ---
 # <a name="f-set-stack-size"></a>/F (Imposta la dimensione dello stack)
+
 Imposta la dimensione dello stack di programma in byte.
 
 ## <a name="syntax"></a>Sintassi
@@ -47,9 +48,9 @@ Potrebbe essere necessario aumentare la dimensione dello stack se il programma r
 
 È anche possibile impostare la dimensione dello stack:
 
--   Usando il **/stack** l'opzione del linker. Per altre informazioni, vedere [/stack](../../build/reference/stack.md).
+- Usando il **/stack** l'opzione del linker. Per altre informazioni, vedere [/stack](../../build/reference/stack.md).
 
--   Utilizzo di EDITBIN sul file .exe. Per altre informazioni, vedere [riferimenti a EDITBIN](../../build/reference/editbin-reference.md).
+- Utilizzo di EDITBIN sul file .exe. Per altre informazioni, vedere [riferimenti a EDITBIN](../../build/reference/editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
@@ -65,5 +66,5 @@ Potrebbe essere necessario aumentare la dimensione dello stack se il programma r
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)   
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208975"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712803"
 ---
 # <a name="arm-intrinsics"></a>Oggetti intrinseci ARM
 Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per l'architettura ARM. Per altre informazioni su ARM, vedere la [manuali di riferimento di architettura ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) e [Guida degli strumenti dell'Assembler ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) nel sito Web del centro informazioni ARM.  
@@ -2165,8 +2165,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
  `Location`  
  Indirizzo di una posizione di memoria da cui leggere o in cui scrivere.  
   
- `Value` (solo funzioni intrinseche di archiviazione)  
- Valore da scrivere nella posizione di memoria specificata.  
+ `Value`  
+ Valore da scrivere nella posizione di memoria specificato (solo funzioni intrinseche archivio).  
   
  **Valore restituito (solo funzioni intrinseche di caricamento)**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  È possibile usare le funzioni intrinseche `__iso_volatile_load8/16/32/64` e `__iso_volatile_store8/16/32/64` per eseguire in modo esplicito gli accessi alla memoria non soggetti alle ottimizzazioni del compilatore. Il compilatore non può rimuovere, sintetizzare o modificare l'ordine relativo di queste operazioni, ma non genera barriere di memoria hardware implicite. Di conseguenza, l'hardware potrebbe comunque riordinare gli accessi alla memoria osservabili tra più thread. Più precisamente, queste funzioni intrinseche equivalgono alle seguenti espressioni compilate in **/volatile:iso**.  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   

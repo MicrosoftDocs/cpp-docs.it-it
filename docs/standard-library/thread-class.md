@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f0606258ada9a3b4298bdb9710f3c3021e793b8e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958205"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706888"
 ---
 # <a name="thread-class"></a>Classe thread
 
@@ -200,8 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Altro*  
- Oggetto **thread** oggetto.
+*Altro*<br/>
+Oggetto **thread** oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -223,8 +223,8 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Altro*  
- Oggetto **thread** oggetto.
+*Altro*<br/>
+Oggetto **thread** oggetto.
 
 ## <a name="thread"></a>  Costruttore thread::thread
 
@@ -240,14 +240,14 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*F*  
- Una funzione definita dall'applicazione che deve essere eseguita dal thread.
+*F*<br/>
+Una funzione definita dall'applicazione che deve essere eseguita dal thread.
 
-*A*  
- Un elenco di argomenti da passare al *F*.
+*A*<br/>
+Un elenco di argomenti da passare al *F*.
 
-*Altro*  
- Un oggetto esistente **thread** oggetto.
+*Altro*<br/>
+Un oggetto esistente **thread** oggetto.
 
 ### <a name="remarks"></a>Note
 

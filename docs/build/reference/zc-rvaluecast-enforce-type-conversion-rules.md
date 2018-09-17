@@ -1,5 +1,5 @@
 ---
-title: '/Zc: rvaluecast (applicare le regole di conversione tipo) | Documenti Microsoft'
+title: '/Zc: rvaluecast (Applica le regole di conversione tipo) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d730563d01a3b59d4f2ac6bbadc980ca51112203
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626cabbec169d541a63dd65c22a7380718613b79
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379884"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706589"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Applicare regole di conversione dei tipi)
 
-Quando il **/Zc: rvaluecast** è specificata l'opzione, il compilatore identifica correttamente un tipo di riferimento rvalue come risultato di un'operazione cast conforme a C++ 11 standard. Quando l'opzione non è specificata, il comportamento è uguale a quello in Visual Studio 2012.
+Quando la **/Zc: rvaluecast** opzione è specificata, il compilatore identifica correttamente un tipo di riferimento rvalue come risultato di un'operazione cast conforme con c++11 standard. Quando l'opzione non è specificata, il comportamento è uguale a quello in Visual Studio 2012.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,11 +39,11 @@ Quando il **/Zc: rvaluecast** è specificata l'opzione, il compilatore identific
 
 ## <a name="remarks"></a>Note
 
-Se **/Zc: rvaluecast** è specificato, il compilatore seguirà la sezione 5.4 di C++ 11 standard e considera solo le espressioni cast che come risultato tipi non di riferimento e le espressioni cast che risultato riferimenti rvalue a tipi non di funzione come tipi rvalue. Per impostazione predefinita, oppure se **/Zc:rvalueCast-** è specificato, il compilatore non è conforme e considera tutte le espressioni cast risultato riferimenti rvalue come rvalue. Per verificare la conformità ed eliminare gli errori nell'utilizzo di cast, è consigliabile utilizzare **/Zc: rvaluecast**.
+Se **/Zc: rvaluecast** è specificato, il compilatore segue la sezione 5.4 di c++11 standard e considera solo le espressioni cast che daranno luogo a tipi non di riferimento e le espressioni cast che risultato riferimenti rvalue a tipi non di funzione come tipi rvalue. Per impostazione predefinita, oppure se **/Zc:rvalueCast-** è specificato, il compilatore non sarà conforme e considera tutte le espressioni cast che risultato riferimenti rvalue come rvalue. Per verificare la conformità e per eliminare gli errori nell'utilizzo di cast, è consigliabile usare **/Zc: rvaluecast**.
 
-Per impostazione predefinita **/Zc: rvaluecast** è disattivata (**/Zc:rvalueCast-**). Il [/ permissiva-](permissive-standards-conformance.md) l'opzione del compilatore imposta in modo implicito questa opzione, ma può essere sottoposto a override utilizzando **/Zc:rvalueCast-**.
+Per impostazione predefinita **/Zc: rvaluecast** è disattivata (**/Zc:rvalueCast-**). Il [/PERMISSIVE--](permissive-standards-conformance.md) l'opzione del compilatore in modo implicito imposta questa opzione, ma può essere sottoposto a override utilizzando **/Zc:rvalueCast-**.
 
-Utilizzare **/Zc: rvaluecast** se si passa un'espressione cast come argomento a una funzione che accetta un tipo di riferimento rvalue. Il comportamento predefinito provoca un errore del compilatore [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) quando il compilatore determina in modo errato il tipo dell'espressione cast. Questo esempio viene illustrato un errore del compilatore corretto il codice quando **/Zc: rvaluecast** non viene specificato:
+Uso **/Zc: rvaluecast** se si passa un'espressione cast come argomento a una funzione che accetta un tipo di riferimento rvalue. Il comportamento predefinito provoca un errore del compilatore [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) quando il compilatore determina in modo errato il tipo dell'espressione cast. Questo esempio mostra un errore del compilatore corretto codice quando **/Zc: rvaluecast** non viene specificato:
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -63,8 +63,8 @@ struct Thing {
    T& thing2;
 };
 
-// Create a Thing, using move semantics if possible  
-template <typename T>  
+// Create a Thing, using move semantics if possible
+template <typename T>
 Thing<T> make_thing(T&& t1, T&& t2)
 {
    return (Thing<T>(std::forward<T>(t1), std::forward<T>(t2)));
@@ -74,19 +74,19 @@ struct Test1 {
    long a;
    long b;
 
-   Thing<long> test() { 
+   Thing<long> test() {
       // Use identity casts to create rvalues as arguments
       return make_thing(static_cast<long>(a), static_cast<long>(b));
    }
 };
 ```
 
-È possibile che il comportamento predefinito del compilatore non segnali l'errore C2102 quando appropriato. In questo esempio, il compilatore non segnala un errore se l'indirizzo di un rvalue creato da un cast di identità è accettato quando **/Zc: rvaluecast** non è specificato:
+È possibile che il comportamento predefinito del compilatore non segnali l'errore C2102 quando appropriato. In questo esempio, il compilatore non segnala un errore se l'indirizzo di un rvalue creato da un cast di identità è accettato quando **/Zc: rvaluecast** non viene specificato:
 
 ```cpp
 int main() {
    int a = 1;
-   int *p = &a;   // Okay, take address of lvalue 
+   int *p = &a;   // Okay, take address of lvalue
                   // Identity cast creates rvalue from lvalue;
    p = &(int)a;   // problem: should cause C2102: '&' requires l-value
 }
@@ -96,9 +96,9 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **C/C++** > **riga di comando** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
 1. Modificare il **opzioni aggiuntive** proprietà da includere **/Zc: rvaluecast** e quindi scegliere **OK**.
 

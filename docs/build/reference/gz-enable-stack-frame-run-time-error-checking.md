@@ -1,5 +1,5 @@
 ---
-title: -GZ (abilitare Stack Frame controllo degli errori di Run-Time) | Documenti Microsoft
+title: -GZ (attiva Stack Frame controllo degli errori di Run-Time) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31224fa3b2809cbc7b7f29868ad4c3e6a89954e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f13824064b7c7dcdb75524a22b14a4d90942918
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373553"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707226"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Attiva controllo errori in fase di esecuzione dello stack frame)
-Esegue le stesse operazioni come la [/RTC (controlli errore di Run-Time)](../../build/reference/rtc-run-time-error-checks.md) opzione. Deprecato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/GZ  
-```  
-  
-## <a name="remarks"></a>Note  
- **/GZ** è solo per l'utilizzo in un elemento PInvoke ([/Od (disabilita (Debug))](../../build/reference/od-disable-debug.md)) di compilazione.  
-  
- **/GZ** è deprecato a partire da Visual Studio 2005; usare [/RTC (controlli di errore di Run-Time)](../../build/reference/rtc-run-time-error-checks.md) invece. Per un elenco di opzioni del compilatore obsolete, vedere **deprecate o rimosse le opzioni del compilatore** in [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
-  
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+Esegue le stesse operazioni come la [/RTC (controlli di errore di Run-Time)](../../build/reference/rtc-run-time-error-checks.md) opzione. Deprecato.
+
+## <a name="syntax"></a>Sintassi
+
+```
+/GZ
+```
+
+## <a name="remarks"></a>Note
+
+**/GZ** è solo per l'uso in un PInvoke ([/Od (disabilita (Debug))](../../build/reference/od-disable-debug.md)) di compilazione.
+
+**/GZ** è deprecata a partire da Visual Studio 2005; usare [/RTC (controlli di errore di Run-Time)](../../build/reference/rtc-run-time-error-checks.md) invece. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Fare clic sulla cartella **C/C++** .
+
+1. Fare clic sulla pagina delle proprietà **Riga di comando** .
+
+1. Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

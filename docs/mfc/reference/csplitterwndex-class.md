@@ -1,5 +1,5 @@
 ---
-title: Classe CSplitterWndEx | Documenti Microsoft
+title: Classe CSplitterWndEx | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a2b7abb9cbc3f75c2b4f50f87a1bfdd818e6a3f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121650"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707343"
 ---
 # <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
 
@@ -55,7 +55,7 @@ class CSplitterWndEx : public CSplitterWnd
 ## <a name="remarks"></a>Note  
  Eseguire l'override di `OnDrawSplitter` metodo per personalizzare l'aspetto dei componenti con interfaccia grafici di una finestra con separatore.  
   
- Il `CSplitterWndEx` classe viene utilizzata in combinazione con il [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), e [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metodi, che sono implementato da un gestore. Per generare un gestore visualizzazione disegnare una finestra con separatore nell'applicazione, sostituire le dichiarazioni del `CSplitterWnd` classe con il `CSplitterWndEx` classe. Per le applicazioni finestra cornice, la classe della finestra con separatore viene dichiarata nella classe CMainFrame che si trova in MainFrm. Per un esempio, vedere il `OutlookDemo` esempio nella directory degli esempi.  
+ Il `CSplitterWndEx` classe viene usata in combinazione con il [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), e [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metodi, ovvero implementata da un gestore visualizzazione. Per generare un gestore visualizzazione disegnare una finestra con separatore all'interno dell'applicazione, sostituire le dichiarazioni del `CSplitterWnd` classe con il `CSplitterWndEx` classe. Per le applicazioni a finestre cornice, la classe della finestra con separatore viene dichiarata nella classe CMainFrame che si trova in MainFrm. Per un esempio, vedere il `OutlookDemo` esempio nella directory degli esempi.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](cobject-class.md)  
@@ -81,19 +81,19 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore al contesto di dispositivo. Se questo parametro è NULL, il framework ridisegna la finestra attiva.  
+*pDC*<br/>
+[in] Puntatore al contesto di dispositivo. Se questo parametro è NULL, il framework ridisegna la finestra attiva.  
   
- [in] *NLE*  
- Uno del `CSplitterWnd::ESplitType` valori di enumerazione che specifica l'elemento finestra con separatore da disegnare. I valori validi sono `splitBox`, `splitBar`, `splitIntersection`, e `splitBorder`.  
+*NLE*<br/>
+[in] Uno del `CSplitterWnd::ESplitType` valori di enumerazione che specifica l'elemento di finestra con separatore da disegnare. I valori validi sono `splitBox`, `splitBar`, `splitIntersection`, e `splitBorder`.  
   
- [in] *rect*  
- Un rettangolo di delimitazione che specifica le dimensioni e posizione per disegnare l'elemento finestra con separatore specificato.  
+*Rect*<br/>
+[in] Un rettangolo di delimitazione che specifica le dimensioni e il percorso in cui disegnare l'elemento di finestra con separatore specificato.  
   
 ### <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../hierarchy-chart.md)   
  [Classi](mfc-classes.md)   
- [CSplitterWnd (classe)](csplitterwnd-class.md)   
+ [Classe CSplitterWnd](csplitterwnd-class.md)   
  [Classe CMFCVisualManager](cmfcvisualmanager-class.md)

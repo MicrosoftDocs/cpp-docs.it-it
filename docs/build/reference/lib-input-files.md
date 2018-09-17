@@ -1,5 +1,5 @@
 ---
-title: File di Input LIB | Documenti Microsoft
+title: I file di Input LIB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 140a0f1d9ef6fdb3ca5e6d6977804684c88af1fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 952c3345234192e3798fea483d527cd3afec4bff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371967"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702468"
 ---
 # <a name="lib-input-files"></a>File di input LIB
-I file di input previsti da LIB dipendono dalla modalità in cui è utilizzato, come illustrato nella tabella seguente.  
-  
-|Modalità|Input|  
-|----------|-----------|  
-|Predefinito (creazione o modifica di una libreria)|COFF (file oggetto (obj)), le librerie COFF (lib), file oggetto (obj) a 32 bit oggetto modello formato OMF)|  
-|L'estrazione di un membro con l'opzione /EXTRACT|Libreria COFF (lib)|  
-|File di compilazione di un'esportazione e importazione libreria con l'opzione /DEF|File di definizione moduli (def), file oggetto (obj) COFF, librerie COFF (lib), file oggetto (obj) OMF a 32 bit|  
-  
+
+I file di input previsti dal LIB dipendono dalla modalità in cui è utilizzato, come illustrato nella tabella seguente.
+
+|Modalità|Input|
+|----------|-----------|
+|Valore predefinito (creazione o modifica di una libreria)|File oggetto (obj) COFF, librerie COFF (con estensione LIB), file oggetto (obj) a 32 bit oggetto modello formato OMF)|
+|L'estrazione di un membro con /EXTRACT|Libreria COFF (con estensione LIB)|
+|Creazione di un'esportazione di file e di importazione della libreria con l'opzione /DEF|File di definizione moduli (def), file oggetto (obj) COFF, librerie COFF (con estensione LIB), file oggetto (obj) OMF a 32 bit|
+
 > [!NOTE]
->  OMF (librerie) create con la versione a 16 bit non possono essere utilizzate come input per la versione a 32 bit di LIB.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di LIB](../../build/reference/overview-of-lib.md)
+>  OMF (librerie) create con la versione a 16 bit non possono essere utilizzate come input per la versione a 32 bit di LIB.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica di LIB](../../build/reference/overview-of-lib.md)

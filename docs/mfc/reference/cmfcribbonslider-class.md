@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709332"
 ---
 # <a name="cmfcribbonslider-class"></a>Classe CMFCRibbonSlider
 Il `CMFCRibbonSlider` classe implementa un controllo dispositivo di scorrimento che è possibile aggiungere a una barra multifunzione o la barra di stato multifunzione. Il controllo dispositivo di scorrimento della barra multifunzione è simile ai dispositivi di scorrimento dello zoom visualizzati nelle applicazioni di Office 2007.  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- ID del dispositivo di scorrimento.  
+*nID*<br/>
+[in] ID del dispositivo di scorrimento.  
   
  [in]. *nWidth*  
  Larghezza del dispositivo di scorrimento in pixel.  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nPos*  
- Specifica la posizione da impostare per il dispositivo di scorrimento. La posizione è relativa all'inizio del dispositivo di scorrimento.  
+*nPos*<br/>
+[in] Specifica la posizione da impostare per il dispositivo di scorrimento. La posizione è relativa all'inizio del dispositivo di scorrimento.  
   
- [in] *bRedraw*  
- Se TRUE, il dispositivo di scorrimento viene ridisegnato.  
+*bRedraw*<br/>
+[in] Se TRUE, il dispositivo di scorrimento viene ridisegnato.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Impostare l'intervallo di valori per il controllo dispositivo di scorrimento.  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nMin*  
- Specifica il valore minimo del controllo dispositivo di scorrimento.  
+*nMin*<br/>
+[in] Specifica il valore minimo del controllo dispositivo di scorrimento.  
   
- [in] *nMax*  
- Specifica il valore massimo del controllo dispositivo di scorrimento.  
+*nMax*<br/>
+[in] Specifica il valore massimo del controllo dispositivo di scorrimento.  
   
 ### <a name="remarks"></a>Note  
  Specifica l'intervallo di valori per il controllo dispositivo di scorrimento impostando i valori minimi e massimo.  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nZoomIncrement*  
- Specifica l'incremento zoom del controllo dispositivo di scorrimento.  
+*nZoomIncrement*<br/>
+[in] Specifica l'incremento zoom del controllo dispositivo di scorrimento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

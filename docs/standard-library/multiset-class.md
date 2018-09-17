@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27bdcea6f7ebd51f000310f4916f16bfec7840e5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686627"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708695"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
@@ -117,15 +117,15 @@ class multiset
 ### <a name="parameters"></a>Parametri
 
 *Key*<br/>
- Tipo di dati degli elementi da archiviare nel multiset.
+Tipo di dati degli elementi da archiviare nel multiset.
 
 *Compare*<br/>
- Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel multiset. Il predicato binario **less**\<Key> rappresenta il valore predefinito.
+Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel multiset. Il predicato binario **less**\<Key> rappresenta il valore predefinito.
 
 In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato `std::less<>` o `std::greater<>` che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).
 
 *Allocatore*<br/>
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione del multiset e alla deallocazione della memoria. Il valore predefinito è `allocator<Key>`.
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione del multiset e alla deallocazione della memoria. Il valore predefinito è `allocator<Key>`.
 
 ## <a name="remarks"></a>Note
 
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- La chiave degli elementi per cui trovare un corrispondenza nel multiset.
+La chiave degli elementi per cui trovare un corrispondenza nel multiset.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -878,7 +878,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multiset in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multiset in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -963,16 +963,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametri
 
 *Where*<br/>
- Posizione dell'elemento che deve essere rimosso.
+Posizione dell'elemento che deve essere rimosso.
 
 *Primo*<br/>
- Posizione del primo elemento che deve essere rimosso.
+Posizione del primo elemento che deve essere rimosso.
 
 *ultimo*<br/>
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
+Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
 *Key*<br/>
- Valore della chiave dell'elemento che deve essere rimosso.
+Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -998,7 +998,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nel multiset in cui eseguire la ricerca.
+Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nel multiset in cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1441,7 +1441,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multiset in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multiset in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2048,7 +2048,7 @@ void swap(
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
- Argomento di tipo multiset che fornisce gli elementi da scambiare con l'oggetto multiset di destinazione.
+Argomento di tipo multiset che fornisce gli elementi da scambiare con l'oggetto multiset di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -2117,7 +2117,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multiset in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto multiset in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

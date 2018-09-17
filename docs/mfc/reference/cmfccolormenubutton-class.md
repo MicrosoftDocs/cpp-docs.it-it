@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40e943fd6c03838c8c14e202026e10d3c7b22ace
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab793b8c758b95c259c717a794436b59057d4273
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852940"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712985"
 ---
 # <a name="cmfccolormenubutton-class"></a>Classe CMFCColorMenuButton
 Il `CMFCColorMenuButton` classe supporta un comando di menu o un pulsante della barra degli strumenti che avvia una finestra di dialogo di selezione colore.  
@@ -143,14 +143,14 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- ID del comando un pulsante.  
+*uiCmdID*<br/>
+[in] ID del comando un pulsante.  
   
- [in] *lpszText*  
- Il testo del pulsante.  
+*lpszText*<br/>
+[in] Il testo del pulsante.  
   
- [in] *pPalette*  
- Puntatore alla tavolozza dei colori del pulsante.  
+*pPalette*<br/>
+[in] Puntatore alla tavolozza dei colori del pulsante.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -167,8 +167,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *src*  
- Pulsante di origine da copiare.  
+*src*<br/>
+[in] Pulsante di origine da copiare.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override per copiare oggetti derivati da questo metodo il `CMFCColorMenuButton` oggetto.  
@@ -197,14 +197,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLabel*  
- Specifica il testo del pulsante che viene visualizzato quando il pulsante diventa automatica.  
+*lpszLabel*<br/>
+[in] Specifica il testo del pulsante che viene visualizzato quando il pulsante diventa automatica.  
   
- [in] *colorAutomatic*  
- Specifica un nuovo colore automatico.  
+*colorAutomatic*<br/>
+[in] Specifica un nuovo colore automatico.  
   
- [in] *bAttivare il*  
- Specifica se il pulsante è automatica o meno.  
+*bAttivare il*<br/>
+[in] Specifica se il pulsante è automatica o meno.  
   
 ### <a name="remarks"></a>Note  
  Il pulsante automatico si applica il colore predefinito corrente.  
@@ -219,11 +219,11 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLabel*  
- Specifica il testo del pulsante.  
+*lpszLabel*<br/>
+[in] Specifica il testo del pulsante.  
   
- [in] *bAttivare il*  
- TRUE per visualizzare i colori di specifica del documento o su FALSE per visualizzare i colori di sistema.  
+*bAttivare il*<br/>
+[in] TRUE per visualizzare i colori di specifica del documento o su FALSE per visualizzare i colori di sistema.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per visualizzare i colori del documento corrente o i colori della tavolozza del sistema quando l'utente fa clic su un pulsante di menu del colore.  
@@ -239,14 +239,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszLabel*  
- Specifica il testo del pulsante.  
+*lpszLabel*<br/>
+[in] Specifica il testo del pulsante.  
   
- [in] *bAltColorDlg*  
- Specificare TRUE per visualizzare il `CMFCColorDialog` nella finestra di dialogo oppure FALSE per visualizzare la finestra di dialogo dei colori di sistema standard.  
+*bAltColorDlg*<br/>
+[in] Specificare TRUE per visualizzare il `CMFCColorDialog` nella finestra di dialogo oppure FALSE per visualizzare la finestra di dialogo dei colori di sistema standard.  
   
- [in] *bAttivare il*  
- Specificare TRUE per visualizzare il pulsante "altro"; in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bAttivare il*<br/>
+[in] Specificare TRUE per visualizzare il pulsante "altro"; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -261,14 +261,14 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- Specifica l'ID per il riquadro a comparsa.  
+*uiID*<br/>
+[in] Specifica l'ID per il riquadro a comparsa.  
   
- [in] *nVertDockColumns*  
- Specifica il numero di colonne nel riquadro colore verticalmente ancorato mentre è in stato a comparsa.  
+*nVertDockColumns*<br/>
+[in] Specifica il numero di colonne nel riquadro colore verticalmente ancorato mentre è in stato a comparsa.  
   
- [in] *nHorzDockRows*  
- Specifica il numero di righe per del riquadro ancorato in orizzontale colori mentre è in stato a comparsa.  
+*nHorzDockRows*<br/>
+[in] Specifica il numero di righe per del riquadro ancorato in orizzontale colori mentre è in stato a comparsa.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per abilitare la funzionalità "tear-off" per il riquadro di colore che viene visualizzato quando il `CMFCColorMenuButton` pulsante viene premuto.  
@@ -306,8 +306,8 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- Un ID di comando.  
+*uiCmdID*<br/>
+[in] Un ID di comando.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il colore che corrisponde all'ID del comando specificato.  
@@ -336,8 +336,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndParent*  
- Un puntatore a una nuova finestra padre.  
+*pWndParent*<br/>
+[in] Un puntatore a una nuova finestra padre.  
   
 ### <a name="remarks"></a>Note  
   
@@ -357,29 +357,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Un rettangolo che delimita l'area da ridisegnare.  
+*Rect*<br/>
+[in] Un rettangolo che delimita l'area da ridisegnare.  
   
- [in] *pImages*  
- Punta a un elenco di immagini della barra degli strumenti.  
+*pImages*<br/>
+[in] Punta a un elenco di immagini della barra degli strumenti.  
   
- [in] *bHorz*  
- TRUE per specificare che la barra degli strumenti è in uno stato ancorato orizzontale. in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bHorz*<br/>
+[in] TRUE per specificare che la barra degli strumenti è in uno stato ancorato orizzontale. in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
- [in] *bCustomizeMode*  
- TRUE per specificare che l'applicazione è in modalità di personalizzazione. in caso contrario, FALSE. Il valore predefinito è FALSE.  
+*bCustomizeMode*<br/>
+[in] TRUE per specificare che l'applicazione è in modalità di personalizzazione. in caso contrario, FALSE. Il valore predefinito è FALSE.  
   
- [in] *bHighlight*  
- TRUE per specificare che il pulsante è evidenziato. in caso contrario, FALSE. Il valore predefinito è FALSE.  
+*bHighlight*<br/>
+[in] TRUE per specificare che il pulsante è evidenziato. in caso contrario, FALSE. Il valore predefinito è FALSE.  
   
- [in] *bDrawBorder*  
- TRUE per specificare che il bordo del pulsante viene visualizzato; in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bDrawBorder*<br/>
+[in] TRUE per specificare che il bordo del pulsante viene visualizzato; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
- [in] *bGrayDisabledButtons*  
- TRUE per specificare che i pulsanti disabilitati sono in grigio (disattivato) in caso contrario. in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bGrayDisabledButtons*<br/>
+[in] TRUE per specificare che i pulsanti disabilitati sono in grigio (disattivato) in caso contrario. in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -394,14 +394,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Un rettangolo che delimita il pulsante da disegnare.  
+*Rect*<br/>
+[in] Un rettangolo che delimita il pulsante da disegnare.  
   
- [in] *bSelected*  
- TRUE specifica che il pulsante è in stato selezionato. in caso contrario, FALSE.  
+*bSelected*<br/>
+[in] TRUE specifica che il pulsante è in stato selezionato. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  La larghezza del pulsante.  
@@ -419,11 +419,11 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colorDefault*  
- Il colore predefinito selezionato nella finestra di dialogo colore.  
+*colorDefault*<br/>
+[in] Il colore predefinito selezionato nella finestra di dialogo colore.  
   
- [out] *colorRes*  
- Restituisce il colore selezionato dall'utente nella finestra di dialogo colore.  
+*colorRes*<br/>
+[out] Restituisce il colore selezionato dall'utente nella finestra di dialogo colore.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'utente seleziona un colore nuovo; in caso contrario, zero.  
@@ -441,11 +441,11 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *clr*  
- Un valore di colore RGB.  
+*Common Language Runtime*<br/>
+[in] Un valore di colore RGB.  
   
- [in] *bNotify*  
- TRUE per applicare la *clr* colore parametro a qualsiasi pulsante di menu associata o un pulsante della barra degli strumenti; in caso contrario, FALSE.  
+*bNotify*<br/>
+[in] TRUE per applicare la *clr* colore parametro a qualsiasi pulsante di menu associata o un pulsante della barra degli strumenti; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per modificare il colore del pulsante colore corrente. Se il *bNotify* parametro è diverso da zero, il colore del pulsante corrispondente in una barra degli strumenti o qualsiasi menu di scelta rapida associato viene modificato il colore specificato per il *clr* parametro.  
@@ -460,11 +460,11 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- L'ID di risorsa di un pulsante di menu del colore.  
+*uiCmdID*<br/>
+[in] L'ID di risorsa di un pulsante di menu del colore.  
   
- [in] *colore*  
- Un valore di colore RGB.  
+*Colore*<br/>
+[in] Un valore di colore RGB.  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
  Imposta un nuovo nome per il colore specificato.  
@@ -476,11 +476,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *colore*  
- Il valore RGB del colore il cui nome viene modificato.  
+*Colore*<br/>
+[in] Il valore RGB del colore il cui nome viene modificato.  
   
- [in] *strName*  
- Il nuovo nome del colore.  
+*strName*<br/>
+[in] Il nuovo nome del colore.  
   
 ### <a name="remarks"></a>Note  
   
@@ -492,8 +492,8 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nColumns*  
- Il numero di colonne da visualizzare.  
+*nColumns*<br/>
+[in] Il numero di colonne da visualizzare.  
   
 ### <a name="remarks"></a>Note  
   

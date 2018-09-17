@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693972"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707466"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 Il `CMFCEditBrowseCtrl` classe supporta il controllo di esplorazione di modifica, che è una casella di testo modificabile che contiene facoltativamente un pulsante Sfoglia. Quando l'utente fa clic sul pulsante Sfoglia, il controllo esegue un'azione personalizzata o visualizza una finestra di dialogo standard che contiene un visualizzatore file o un visualizzatore cartelle.  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  Il `CMFCEditBrowseCtrl` classe supporta le modalità seguenti.  
   
- **modalità personalizzata**  
- Un'azione personalizzata viene eseguita quando l'utente fa clic sul pulsante Sfoglia. Ad esempio, è possibile visualizzare la finestra di dialogo specifica dell'applicazione.  
+- **modalità personalizzata**
+
+   Un'azione personalizzata viene eseguita quando l'utente fa clic sul pulsante Sfoglia. Ad esempio, è possibile visualizzare la finestra di dialogo specifica dell'applicazione.  
   
- **modalità file**  
- Quando l'utente fa clic sul pulsante Sfoglia, viene visualizzata una finestra di dialogo Selezione file standard.  
+- **modalità file**
+
+   Quando l'utente fa clic sul pulsante Sfoglia, viene visualizzata una finestra di dialogo Selezione file standard.  
   
- **modalità cartella**  
- Quando l'utente fa clic sul pulsante Sfoglia, viene visualizzata una finestra di dialogo di selezione cartelle standard.  
+- **modalità cartella**
+
+   Quando l'utente fa clic sul pulsante Sfoglia, viene visualizzata una finestra di dialogo di selezione cartelle standard.  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>Procedura: Specificare un controllo di visualizzazione di modifica  
  Per incorporare un controllo di visualizzazione di modifica nell'applicazione, procedere come segue:  

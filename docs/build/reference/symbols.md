@@ -22,18 +22,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f0787ca6bcf57f9d336da94b1f47593f05793b
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8759ac9ae4de33862c8f0fa698faecc7b14ff1e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894577"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703235"
 ---
 # <a name="symbols"></a>/SYMBOLS
 
-```  
+```
 /SYMBOLS
-```  
+```
 
 Questa opzione consente di visualizzare la tabella di simboli COFF. Tabelle di simboli presenti in tutti i file oggetto. Solo se è collegato con l'opzione /DEBUG, verrà visualizzata una tabella di simboli COFF in un file di immagine.
 
@@ -41,7 +41,7 @@ Di seguito è una descrizione dell'output per /SYMBOLS. Ulteriori informazioni s
 
 Dato il dump di esempio seguente:
 
-```  
+```
 Dump of file main.obj
 File Type: COFF OBJECT
 
@@ -52,9 +52,9 @@ COFF SYMBOL TABLE
 003 00000000 SECT1    notype       Static       | .drectve
     Section length     26, #relocs    0, #linenums    0, checksum 722C964F
 005 00000000 SECT2    notype       Static       | .text
-    Section length     23, #relocs    1, #linenums    0, checksum 459FF65F, selection    1 (pick no duplicates)  
+    Section length     23, #relocs    1, #linenums    0, checksum 459FF65F, selection    1 (pick no duplicates)
 007 00000000 SECT2    notype ()    External     | _main
-008 00000000 UNDEF    notype ()    External     | ?MyDump@@YAXXZ (void __cdecl MyDump(void))  
+008 00000000 UNDEF    notype ()    External     | ?MyDump@@YAXXZ (void __cdecl MyDump(void))
 
 String Table Size = 0x10 bytes
 
@@ -62,7 +62,7 @@ String Table Size = 0x10 bytes
 
          26 .drectve
          23 .text
-```  
+```
 
 ## <a name="remarks"></a>Note
 

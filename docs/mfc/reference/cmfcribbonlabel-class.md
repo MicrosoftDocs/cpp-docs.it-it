@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848583"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703833"
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
 Implementa un'etichetta di testo non selezionabile per una barra multifunzione.  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszText*  
- Il testo da visualizzare nell'etichetta.  
+*lpszText*<br/>
+[in] Il testo da visualizzare nell'etichetta.  
   
- [in] *bIsMultiLine*  
- TRUE per specificare che l'etichetta è un'etichetta su più righe; in caso contrario, FALSE.  
+*bIsMultiLine*<br/>
+[in] TRUE per specificare che l'etichetta è un'etichetta su più righe; in caso contrario, FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Determina i dati di accessibilità per l'elemento etichetta della barra multifunzione corrente.  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParent*  
- Rappresenta la finestra padre dell'etichetta della barra multifunzione corrente.  
+*pParent*<br/>
+[in] Rappresenta la finestra padre dell'etichetta della barra multifunzione corrente.  
   
- [out] *dati*  
- Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente.  
+*data*<br/>
+[out] Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il *dati* parametro è stato popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente; in caso contrario, FALSE.  

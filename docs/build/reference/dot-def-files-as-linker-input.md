@@ -1,5 +1,5 @@
 ---
-title: . DEF (file) come Input del Linker | Documenti Microsoft
+title: . I file def come Input del Linker | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e7828154501a067c6b236929a18c51724d3f6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5afb165b33dfa7911e01c1c4368946fd91915a35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370527"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710274"
 ---
 # <a name="def-files-as-linker-input"></a>File DEF come input del linker
-Vedere [file di definizione moduli (def)](../../build/reference/module-definition-dot-def-files.md) per ulteriori informazioni. Utilizzare il [/DEF](../../build/reference/def-specify-module-definition-file.md) opzione per specificare il nome del file. def.  
-  
-## <a name="see-also"></a>Vedere anche  
- [File di Input LINK](../../build/reference/link-input-files.md)   
- [Opzioni del linker](../../build/reference/linker-options.md)
+
+Visualizzare [file di definizione moduli (def)](../../build/reference/module-definition-dot-def-files.md) per altre informazioni. Usare la [/DEF](../../build/reference/def-specify-module-definition-file.md) opzione per specificare il nome del file con estensione def.
+
+## <a name="see-also"></a>Vedere anche
+
+[File di input LINK](../../build/reference/link-input-files.md)<br/>
+[Opzioni del linker](../../build/reference/linker-options.md)

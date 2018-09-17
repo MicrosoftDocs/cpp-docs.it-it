@@ -1,5 +1,5 @@
 ---
-title: -X (ignorare Standard includono i percorsi) | Documenti Microsoft
+title: -X (Ignora Standard includono i percorsi) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,46 +23,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d246c43a1f234426b33ac640b3e1bb706d2f72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 994568d74c63e612b55d1101ce957e646c555e4a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707434"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Ignora percorso di inclusione standard)
-Impedisce al compilatore di cercare i file di inclusione nelle directory specificate nelle variabili di ambiente PATH e INCLUDE.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-/X  
-```  
-  
-## <a name="remarks"></a>Note  
- È possibile utilizzare questa opzione con il [/I (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) opzione.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
-  
-2.  Fare clic sulla cartella **C/C++** .  
-  
-3.  Fare clic su di **preprocessore** pagina delle proprietà.  
-  
-4.  Modificare il **Ignora percorso di inclusione Standard** proprietà.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>.  
-  
-## <a name="example"></a>Esempio  
- Il comando seguente, `/X` indica al compilatore di ignorare percorsi specificati dalle variabili di ambiente PATH e INCLUDE e `/I` specifica la directory in cui cercare i file di inclusione:  
-  
-```  
-CL /X /I \ALT\INCLUDE MAIN.C  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+
+Impedisce al compilatore di cercare i file di inclusione nelle directory specificate nelle variabili di ambiente PATH e INCLUDE.
+
+## <a name="syntax"></a>Sintassi
+
+```
+/X
+```
+
+## <a name="remarks"></a>Note
+
+È possibile usare questa opzione con il [/I (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) opzione.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+
+1. Fare clic sulla cartella **C/C++** .
+
+1. Scegliere il **preprocessore** pagina delle proprietà.
+
+1. Modificare il **Ignora percorso di inclusione Standard** proprietà.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>.
+
+## <a name="example"></a>Esempio
+
+Nel comando seguente `/X` indica al compilatore di ignorare i percorsi specificati dalle variabili di ambiente PATH e INCLUDE, e `/I` specifica la directory in cui cercare file di inclusione:
+
+```
+CL /X /I \ALT\INCLUDE MAIN.C
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

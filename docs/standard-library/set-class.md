@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204610"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706160"
 ---
 # <a name="set-class"></a>Classe set
 
@@ -119,15 +119,15 @@ class set
 ### <a name="parameters"></a>Parametri
 
 *Key*<br/>
- Tipo di dati degli elementi da archiviare nel set.
+Tipo di dati degli elementi da archiviare nel set.
 
 *Tratti*<br/>
- Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel set. Questo argomento è facoltativo e il predicato binario **less** *\<Key>* rappresenta il valore predefinito.
+Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel set. Questo argomento è facoltativo e il predicato binario **less** *\<Key>* rappresenta il valore predefinito.
 
 In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato `std::less<>` o `std::greater<>` che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).
 
 *Allocatore*<br/>
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione del set e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<Key>`.
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione del set e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<Key>`.
 
 ## <a name="remarks"></a>Note
 
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- La chiave degli elementi per cui trovare un corrispondenza nel set.
+La chiave degli elementi per cui trovare un corrispondenza nel set.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -934,7 +934,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto set in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto set in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1019,16 +1019,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametri
 
 *Where*<br/>
- Posizione dell'elemento che deve essere rimosso.
+Posizione dell'elemento che deve essere rimosso.
 
 *Primo*<br/>
- Posizione del primo elemento che deve essere rimosso.
+Posizione del primo elemento che deve essere rimosso.
 
 *ultimo*<br/>
- Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
+Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
 *Key*<br/>
- Valore della chiave dell'elemento che deve essere rimosso.
+Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1131,7 +1131,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nel set in cui eseguire la ricerca.
+Valore chiave per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nel set in cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1595,7 +1595,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto set in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto set in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2215,7 +2215,7 @@ void swap(
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
- Argomento di tipo set che fornisce gli elementi da scambiare con l'oggetto set di destinazione.
+Argomento di tipo set che fornisce gli elementi da scambiare con l'oggetto set di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -2284,7 +2284,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto set in cui si esegue la ricerca.
+Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto set in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

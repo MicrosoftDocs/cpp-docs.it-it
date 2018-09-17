@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ce4384ebce3140f8d3ccadf781f3d45b92340b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e9b2574010445f301a77d56adda11bff51f33267
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541607"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705874"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Classe CMFCVisualManagerVS2005
 `CMFCVisualManagerVS2005` Fornisce a un'applicazione un aspetto di Microsoft Visual Studio 2005.  
@@ -166,14 +166,14 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTabWnd*  
- [in] *clrDark*  
- [in] *clrBlack*  
- [in] *clrHighlight*  
- [in] *clrFace*  
- [in] *clrDarkShadow*  
- [in] *clrLight*  
- [in] *pbrFace*  
+*pTabWnd*<br/>
+[in] [in] *clrDark*  
+*clrBlack*<br/>
+[in] [in] *clrHighlight*  
+*clrFace*<br/>
+[in] [in] *clrDarkShadow*  
+*clrLight*<br/>
+[in] [in] *pbrFace*  
  [in] *pbrBlack*  
   
 ### <a name="remarks"></a>Note  
@@ -201,10 +201,10 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rectBounds*  
- [in] *rectBorderSize*  
- [in] *pButton*  
+*pDC*<br/>
+[in] [in] *rectBounds*  
+*rectBorderSize*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Note  
   
@@ -223,12 +223,12 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *pButton*  
- [in] *bActive*  
- [in] *bHorz*  
- [in] *bMaximized*  
- [in] *bDisattivato*  
+*pDC*<br/>
+[in] [in] *pButton*  
+*bActive*<br/>
+[in] [in] *bHorz*  
+*bMaximized*<br/>
+[in] [in] *bDisattivato*  
  [in] *nImageID*  
   
 ### <a name="remarks"></a>Note  
@@ -246,10 +246,10 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *pBar*  
- [in] *bActive*  
- [in] *rectCaption*  
+*pDC*<br/>
+[in] [in] *pBar*  
+*bActive*<br/>
+[in] [in] *rectCaption*  
  [in] *rectButtons*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -268,10 +268,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *pBar*  
- [in] *rect*  
- [in] *bIsHoriz*  
+*pDC*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsHoriz*  
   
 ### <a name="remarks"></a>Note  
   
@@ -288,10 +288,10 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rectTab*  
- [in] *iTab*  
- [in] *bIsActive*  
+*pDC*<br/>
+[in] [in] *rectTab*  
+*iTab*<br/>
+[in] [in] *bIsActive*  
  [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Note  
@@ -306,8 +306,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rect*  
+*pDC*<br/>
+[in] [in] *rect*  
   
 ### <a name="remarks"></a>Note  
   
@@ -322,8 +322,8 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rect*  
+*pDC*<br/>
+[in] [in] *rect*  
  [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Note  
@@ -339,8 +339,8 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rect*  
+*pDC*<br/>
+[in] [in] *rect*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Note  
@@ -357,10 +357,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rect*  
- [in] *pBrush*  
- [in] *pButton*  
+*pDC*<br/>
+[in] [in] *rect*  
+*pBrush*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Note  
   
@@ -376,10 +376,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rectCaption*  
- [in] *pFrameWnd*  
- [in] *bActive*  
+*pDC*<br/>
+[in] [in] *rectCaption*  
+*pFrameWnd*<br/>
+[in] [in] *bActive*  
   
 ### <a name="return-value"></a>Valore restituito  
   

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d3e54f13f6b165288402bbb1d783a2f1979f4ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607699"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704900"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfacce generiche (Visual C++)
 
@@ -42,8 +42,8 @@ Per altre informazioni sulle interfacce, vedere [classe di interfaccia](../windo
 
 ## <a name="remarks"></a>Note
 
-*gli attributi* (facoltativo)  
-Informazioni dichiarative aggiuntive. Per altre informazioni sugli attributi e classi di attributi, vedere **attributi**.
+*Attributi*  
+(Facoltativo) Informazioni dichiarative aggiuntive. Per altre informazioni sugli attributi e classi di attributi, vedere **attributi**.
 
 *chiave di classi*  
 **classe** o **typename**
@@ -54,20 +54,20 @@ Elenco di identificatori delimitati da virgole.
 *parametro di tipo-clausole di vincoli*  
 Assume il formato specificato [vincoli su parametri di tipo generico (C + + / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*i modificatori di accessibilità* (facoltativo)  
-I modificatori di accessibilità (ad esempio **public, private**).
+*modificatori di accessibilità*  
+(Facoltativo) I modificatori di accessibilità (ad esempio **public, private**).
 
 *identifier*  
 Il nome dell'interfaccia.
 
-*base-list* (facoltativo)  
-Un elenco che contiene uno o più interfacce di base esplicite separate da virgole.
+*base-list*  
+(Facoltativo) Un elenco che contiene uno o più interfacce di base esplicite separate da virgole.
 
 *corpo di interfaccia*  
 Dichiarazioni dei membri di interfaccia.
 
-*i dichiaratori* (facoltativo)  
-Dichiarazioni di variabili basate su questo tipo.
+*dichiaratori*  
+(Facoltativo) Dichiarazioni di variabili basate su questo tipo.
 
 ## <a name="example"></a>Esempio
 

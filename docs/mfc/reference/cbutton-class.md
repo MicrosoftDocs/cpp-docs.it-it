@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196711"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701833"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 Fornisce la funzionalità dei controlli pulsante di Windows.  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *lpszNote*|Puntatore a un buffer, a cui il chiamante è responsabile dell'allocazione e deallocazione. Se il valore restituito è TRUE, il buffer contiene il testo della nota che è associato il controllo di collegamento comandi corrente; in caso contrario, il buffer è invariato.|  
-|[in, out] *cchNote*|Un puntatore a una variabile integer senza segno.<br /><br /> Quando questo metodo viene chiamato, la variabile contiene la dimensione del buffer specificata per il *lpszNote* parametro.<br /><br /> Quando il metodo termina, se il valore restituito è TRUE, la variabile contiene la dimensione della nota associata al controllo di collegamento di comando corrente. Se il valore restituito è FALSE, la variabile contiene la dimensione del buffer necessaria per contenere la nota.|  
+|*lpszNote*|[out] Puntatore a un buffer, a cui il chiamante è responsabile dell'allocazione e deallocazione. Se il valore restituito è TRUE, il buffer contiene il testo della nota che è associato il controllo di collegamento comandi corrente; in caso contrario, il buffer è invariato.|  
+|*cchNote*|[in, out] Un puntatore a una variabile integer senza segno.<br /><br /> Quando questo metodo viene chiamato, la variabile contiene la dimensione del buffer specificata per il *lpszNote* parametro.<br /><br /> Quando il metodo termina, se il valore restituito è TRUE, la variabile contiene la dimensione della nota associata al controllo di collegamento di comando corrente. Se il valore restituito è FALSE, la variabile contiene la dimensione del buffer necessaria per contenere la nota.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Nel primo overload, una [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo della nota associato al controllo di collegamento di comando corrente.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura che riceve informazioni sul controllo pulsante divisione corrente. Il chiamante è responsabile dell'allocazione della struttura.|  
+|*pInfo*|[out] Puntatore a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura che riceve informazioni sul controllo pulsante divisione corrente. Il chiamante è responsabile dell'allocazione della struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *pSize*|Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che riceve la descrizione di un rettangolo.|  
+|*pSize*|[out] Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che riceve la descrizione di un rettangolo.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *fDropDown*|TRUE per impostare lo stato BST_DROPDOWNPUSHED; in caso contrario, FALSE.|  
+|*fDropDown*|[in] TRUE per impostare lo stato BST_DROPDOWNPUSHED; in caso contrario, FALSE.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *fElevationRequired*|True per impostare `elevation required` dello stato; in caso contrario, FALSE.|  
+|*fElevationRequired*|[in] True per impostare `elevation required` dello stato; in caso contrario, FALSE.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *lpszNote*|Puntatore a una stringa Unicode che sia impostata come il testo della nota per il controllo command link.|  
+|*lpszNote*|[in] Puntatore a una stringa Unicode che sia impostata come il testo della nota per il controllo command link.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *chGlyph*|Un carattere che specifica il glifo da utilizzare come la divisione pulsante freccia in giù.|  
+|*chGlyph*|[in] Un carattere che specifica il glifo da utilizzare come la divisione pulsante freccia in giù.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pSplitImageList*|Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) oggetto da assegnare per il controllo pulsante di menu combinato corrente.|  
+|*pSplitImageList*|[in] Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) oggetto da assegnare per il controllo pulsante di menu combinato corrente.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura che definisce il controllo pulsante di menu combinato corrente.|  
+|*pInfo*|[in] Puntatore a un [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura che definisce il controllo pulsante di menu combinato corrente.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pSize*|Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che descrive un rettangolo di delimitazione.|  
+|*pSize*|[in] Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che descrive un rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Combinazione bit per bit di stili di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura.|  
+|*uSplitStyle*|[in] Combinazione bit per bit di stili di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  

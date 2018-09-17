@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 18a260e0ea0283489d074e937011722cec2d570b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210850"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702572"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Classe CMFCToolBarButton
 Fornisce la funzionalità di pulsante alle barre degli strumenti.  
@@ -315,8 +315,8 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pToolbar*  
- Non usato.  
+*pToolbar*<br/>
+[in] Non usato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce TRUE.  
@@ -371,20 +371,20 @@ CMFCToolBarButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- ID comando del pulsante.  
+*uiID*<br/>
+[in] ID comando del pulsante.  
   
- [in] *iImage*  
- L'indice dell'immagine del pulsante nella raccolta di immagini.  
+*iImage*<br/>
+[in] L'indice dell'immagine del pulsante nella raccolta di immagini.  
   
- [in] *lpszText*  
- L'etichetta di testo del pulsante. Può essere NULL.  
+*lpszText*<br/>
+[in] L'etichetta di testo del pulsante. Può essere NULL.  
   
- [in] *bUserButton*  
- Valore booleano che determina se il pulsante è definito dall'utente. Se questo parametro è TRUE, il pulsante è definito dall'utente. In caso contrario, l'immagine del pulsante viene caricato da una risorsa.  
+*bUserButton*<br/>
+[in] Valore booleano che determina se il pulsante è definito dall'utente. Se questo parametro è TRUE, il pulsante è definito dall'utente. In caso contrario, l'immagine del pulsante viene caricato da una risorsa.  
   
- [in] *bloccato*  
- Valore booleano che determina se il pulsante può essere personalizzato. Se questo parametro è TRUE, non è possibile personalizzare il pulsante. In caso contrario, è possibile personalizzare il pulsante.  
+*Bloccato*<br/>
+[in] Valore booleano che determina se il pulsante può essere personalizzato. Se questo parametro è TRUE, non è possibile personalizzare il pulsante. In caso contrario, è possibile personalizzare il pulsante.  
   
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
  Confronta questa istanza con l'oggetto fornito `CMFCToolBarButton` oggetto.  
@@ -394,8 +394,8 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *altri*  
- Riferimento all'oggetto da confrontare con questa istanza.  
+*other*<br/>
+[in] Riferimento all'oggetto da confrontare con questa istanza.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'oggetto specificato è uguale al valore di questa istanza. in caso contrario, 0.  
@@ -411,8 +411,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *src*  
- Un riferimento al pulsante di origine da cui copiare.  
+*src*<br/>
+[in] Un riferimento al pulsante di origine da cui copiare.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per copiare un altro pulsante della barra degli strumenti per questo pulsante sulla barra degli strumenti.  
@@ -425,8 +425,8 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDataObject*  
- L'oggetto origine dati OLE.  
+*pDataObject*<br/>
+[in] L'oggetto origine dati OLE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CMFCToolBarButton` creato.  
@@ -442,8 +442,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Impostare questo parametro su true per abilitare input o su FALSE per disattivare l'input.  
+*bAttivare il*<br/>
+[in] Impostare questo parametro su true per abilitare input o su FALSE per disattivare l'input.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo chiama il `EnableWindow` funzione per attivare o disattivare l'input. Per altre informazioni, vedere [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) nel SDK di Windows.  
@@ -456,8 +456,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *menuButton*  
- Un riferimento al pulsante di menu della destinazione.  
+*MenuButton*<br/>
+[in] Un riferimento al pulsante di menu della destinazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce TRUE.  
@@ -742,8 +742,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hwnd*  
- Un handle di finestra.  
+*HWND*<br/>
+[in] Un handle di finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il pulsante è il proprietario dell'handle di finestra fornito; in caso contrario 0.  
@@ -891,8 +891,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iNotifyCode*  
- Il messaggio di notifica associato con il comando.  
+*iNotifyCode*<br/>
+[in] Il messaggio di notifica associato con il comando.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce FALSE.  
@@ -935,8 +935,8 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTarget*  
- La destinazione dell'operazione di trascinamento e rilascio.  
+*pTarget*<br/>
+[in] La destinazione dell'operazione di trascinamento e rilascio.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è possibile eliminare il pulsante nella barra degli strumenti; destinazione forniti in caso contrario, FALSE.  
@@ -957,14 +957,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Il contesto di dispositivo che visualizza il pulsante.  
+*pDC*<br/>
+[in] Il contesto di dispositivo che visualizza il pulsante.  
   
- [in] *sizeDefault*  
- La dimensione predefinita del pulsante.  
+*sizeDefault*<br/>
+[in] La dimensione predefinita del pulsante.  
   
- [in] *bHorz*  
- Lo stato di ancoraggio della barra degli strumenti padre. Questo parametro è TRUE se la barra degli strumenti è mobile o ancorato orizzontalmente, o FALSE se la barra degli strumenti è ancorato in verticale.  
+*bHorz*<br/>
+[in] Lo stato di ancoraggio della barra degli strumenti padre. Questo parametro è TRUE se la barra degli strumenti è mobile o ancorato orizzontalmente, o FALSE se la barra degli strumenti è ancorato in verticale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `SIZE` struttura che contiene le dimensioni del pulsante, in pixel.  
@@ -994,8 +994,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndParent*  
- La nuova finestra padre.  
+*pWndParent*<br/>
+[in] La nuova finestra padre.  
   
 ### <a name="remarks"></a>Note  
  Il pulsante viene inserito in una barra degli strumenti, ad esempio, quando l'utente trascina lo da una barra degli strumenti a un'altra.  
@@ -1012,11 +1012,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- La finestra padre del pulsante della barra degli strumenti.  
+*pWnd*<br/>
+[in] La finestra padre del pulsante della barra degli strumenti.  
   
- [in] *bDelay*  
- TRUE se il messaggio deve essere gestito con un ritardo.  
+*bDelay*<br/>
+[in] TRUE se il messaggio deve essere gestito con un ritardo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce FALSE.  
@@ -1049,8 +1049,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- La finestra padre del pulsante della barra degli strumenti.  
+*pWnd*<br/>
+[in] La finestra padre del pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce FALSE.  
@@ -1070,11 +1070,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Il contesto di dispositivo che visualizza il pulsante.  
+*pDC*<br/>
+[in] Il contesto di dispositivo che visualizza il pulsante.  
   
- [in] *nCtlColor*  
- La notifica di colore specifico.  
+*nCtlColor*<br/>
+[in] La notifica di colore specifico.  
   
 ### <a name="return-value"></a>Valore restituito  
  Handle all'oggetto brush che il framework utilizza per disegnare lo sfondo del pulsante.  
@@ -1094,8 +1094,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMenu*  
- Il menu di personalizzazione.  
+*pMenu*<br/>
+[in] Il menu di personalizzazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce FALSE.  
@@ -1111,8 +1111,8 @@ virtual void OnDblClk(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- -   La finestra padre del pulsante.  
+*pWnd*<br/>
+[in] - finestra padre del pulsante.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato il `CMFCToolBar::OnLButtonDblClk` metodo quando la barra degli strumenti padre gestisce una [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) messaggio.  
@@ -1135,29 +1135,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Il contesto di dispositivo che visualizza il pulsante.  
+*pDC*<br/>
+[in] Il contesto di dispositivo che visualizza il pulsante.  
   
- [in] *rect*  
- Il rettangolo di delimitazione del pulsante.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione del pulsante.  
   
- [in] *pImages*  
- La raccolta di immagini della barra degli strumenti che è associata al pulsante.  
+*pImages*<br/>
+[in] La raccolta di immagini della barra degli strumenti che è associata al pulsante.  
   
- [in] *bHorz*  
- Lo stato di ancoraggio della barra degli strumenti padre. Questo parametro è TRUE quando il pulsante è ancorato in orizzontale e FALSE quando il pulsante è ancorato in verticale.  
+*bHorz*<br/>
+[in] Lo stato di ancoraggio della barra degli strumenti padre. Questo parametro è TRUE quando il pulsante è ancorato in orizzontale e FALSE quando il pulsante è ancorato in verticale.  
   
- [in] *bCustomizeMode*  
- Specifica se la barra degli strumenti è in modalità di personalizzazione. Questo parametro è TRUE se la barra degli strumenti è in modalità di personalizzazione e FALSE quando la barra degli strumenti non è in modalità di personalizzazione.  
+*bCustomizeMode*<br/>
+[in] Specifica se la barra degli strumenti è in modalità di personalizzazione. Questo parametro è TRUE se la barra degli strumenti è in modalità di personalizzazione e FALSE quando la barra degli strumenti non è in modalità di personalizzazione.  
   
- [in] *bHighlight*  
- Specifica se il pulsante è evidenziato. Questo parametro è TRUE quando il pulsante è evidenziato e FALSE quando il pulsante non sia più evidenziato.  
+*bHighlight*<br/>
+[in] Specifica se il pulsante è evidenziato. Questo parametro è TRUE quando il pulsante è evidenziato e FALSE quando il pulsante non sia più evidenziato.  
   
- [in] *bDrawBorder*  
- Specifica se il pulsante deve visualizzare il bordo. Questo parametro è TRUE quando il pulsante dovrebbe visualizzare il bordo e FALSE quando il pulsante non dovrebbe visualizzare il bordo.  
+*bDrawBorder*<br/>
+[in] Specifica se il pulsante deve visualizzare il bordo. Questo parametro è TRUE quando il pulsante dovrebbe visualizzare il bordo e FALSE quando il pulsante non dovrebbe visualizzare il bordo.  
   
- [in] *bGrayDisabledButtons*  
- Specifica se i pulsanti disabilitati, ombreggiate o utilizzare la raccolta di immagini disabilitato. Questo parametro è TRUE quando i pulsanti disabilitati sarà ombreggiata e FALSE quando questo metodo deve usare la raccolta di immagini disabilitato.  
+*bGrayDisabledButtons*<br/>
+[in] Specifica se i pulsanti disabilitati, ombreggiate o utilizzare la raccolta di immagini disabilitato. Questo parametro è TRUE quando i pulsanti disabilitati sarà ombreggiata e FALSE quando questo metodo deve usare la raccolta di immagini disabilitato.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per personalizzare il disegno di pulsante della barra degli strumenti.  
@@ -1173,14 +1173,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Il contesto di dispositivo che visualizza il pulsante.  
+*pDC*<br/>
+[in] Il contesto di dispositivo che visualizza il pulsante.  
   
- [in] *rect*  
- Il rettangolo di delimitazione del pulsante.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione del pulsante.  
   
- [in] *bSelected*  
- Specifica se il pulsante è selezionato. Se questo parametro è TRUE, il pulsante è selezionato. Se questo parametro è FALSE, il pulsante non è selezionato.  
+*bSelected*<br/>
+[in] Specifica se il pulsante è selezionato. Se questo parametro è TRUE, il pulsante è selezionato. Se questo parametro è FALSE, il pulsante non è selezionato.  
   
 ### <a name="return-value"></a>Valore restituito  
  La larghezza in pixel, del pulsante nel contesto di dispositivo specificato.  
@@ -1200,8 +1200,8 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *strToolTip*  
- Oggetto `CString` oggetto che riceve il testo della descrizione comando personalizzata.  
+*strToolTip*<br/>
+[out] Oggetto `CString` oggetto che riceve il testo della descrizione comando personalizzata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce FALSE.  
@@ -1239,8 +1239,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- Specifica se il pulsante è visibile. Se questo parametro è TRUE, il pulsante è visibile. In caso contrario, il pulsante non è visibile.  
+*bMostra*<br/>
+[in] Specifica se il pulsante è visibile. Se questo parametro è TRUE, il pulsante è visibile. In caso contrario, il pulsante non è visibile.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per aggiornare la visibilità del pulsante.  
@@ -1253,8 +1253,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iSize*  
- La nuova larghezza del pulsante.  
+*iSize*<br/>
+[in] La nuova larghezza del pulsante.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per ridimensionare il pulsante quando viene modificata la dimensione o la posizione della barra degli strumenti padre.  
@@ -1269,11 +1269,11 @@ virtual BOOL OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWnd*  
- La finestra padre del pulsante. Può essere NULL.  
+*pWnd*<br/>
+[in] La finestra padre del pulsante. Può essere NULL.  
   
- [in] *pTI*  
- Oggetto `TOOLINFO` struttura che contiene informazioni su uno strumento in un controllo tooltip.  
+*PTI*<br/>
+[in] Oggetto `TOOLINFO` struttura che contiene informazioni su uno strumento in un controllo tooltip.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il risultato di `OnMenuButtonToolHitTest` se il pulsante consente di recuperare un puntatore alla finestra cornice padre; in caso contrario, FALSE.  
@@ -1299,17 +1299,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndParent*  
- Finestra padre.  
+*pWndParent*<br/>
+[in] Finestra padre.  
   
- [in] *iButtonIndex*  
- Indice a base zero del pulsante nell'insieme di pulsanti della padre.  
+*iButtonIndex*<br/>
+[in] Indice a base zero del pulsante nell'insieme di pulsanti della padre.  
   
- [in] *wndToolTip*  
- Il controllo che visualizza il testo della descrizione comando.  
+*wndToolTip*<br/>
+[in] Il controllo che visualizza il testo della descrizione comando.  
   
- [out] *str*  
- Oggetto `CString` oggetto che riceve il testo della descrizione aggiornata.  
+*str*<br/>
+[out] Oggetto `CString` oggetto che riceve il testo della descrizione aggiornata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce FALSE.  
@@ -1325,8 +1325,8 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *srcItem*  
- Oggetto `COleDataSource` oggetto che archivia le informazioni sullo stato relative all'operazione di trascinamento e rilascio.  
+*srcItem*<br/>
+[in] Oggetto `COleDataSource` oggetto che archivia le informazioni sullo stato relative all'operazione di trascinamento e rilascio.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione ha esito positivo; in caso contrario, FALSE.  
@@ -1380,8 +1380,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *ar*  
- Il `CArchive` oggetto da cui o in cui serializzare.  
+*ar*<br/>
+[in] Il `CArchive` oggetto da cui o in cui serializzare.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo supporta i processi di trasferimento dei dati, ad esempio negli Appunti o operazioni di trascinamento e rilascio. Legge o scrive le proprietà del pulsante, ad esempio l'ID etichetta di testo e ID dell'immagine da o verso l'oggetto fornito `CArchive` oggetto.  
@@ -1398,11 +1398,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParent*  
- La finestra padre del pulsante della barra degli strumenti.  
+*pParent*<br/>
+[in] La finestra padre del pulsante della barra degli strumenti.  
   
- [in] *dati*  
- Oggetto `CAccessibilityData` oggetto popolato con i dati di accessibilità del pulsante della barra degli strumenti.  
+*data*<br/>
+[in] Oggetto `CAccessibilityData` oggetto popolato con i dati di accessibilità del pulsante della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce TRUE.  
@@ -1418,8 +1418,8 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszName*  
- Il nuovo nome del formato Appunti globale. Non può essere NULL.  
+*lpszName*<br/>
+[in] Il nuovo nome del formato Appunti globale. Non può essere NULL.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo rende possibile per operazioni di trascinamento e rilascio affinché vengano eseguite tra più applicazioni. Ogni applicazione deve fornire lo stesso nome di formato degli Appunti.  
@@ -1434,8 +1434,8 @@ virtual void SetImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iImage*  
- L'indice dell'immagine nella raccolta di immagini della barra degli strumenti.  
+*iImage*<br/>
+[in] L'indice dell'immagine nella raccolta di immagini della barra degli strumenti.  
   
 ### <a name="remarks"></a>Note  
  Se il pulsante della barra degli strumenti è un separatore *iImage* si intende la nuova larghezza del pulsante separatore.  
@@ -1450,8 +1450,8 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lstCmds*  
- L'elenco di comandi protetti.  
+*lstCmds*<br/>
+[in] L'elenco di comandi protetti.  
   
 ### <a name="remarks"></a>Note  
  In modalità di personalizzazione, il framework disabilita i comandi di pulsante della barra degli strumenti che sono protetti. L'utente non è possibile eseguire trascinamento e rilascio e modificare le operazioni sui pulsanti della barra degli strumenti disabilitato.  
@@ -1476,8 +1476,8 @@ void SetRect(const CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Il nuovo rettangolo di delimitazione del pulsante.  
+*Rect*<br/>
+[in] Il nuovo rettangolo di delimitazione del pulsante.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo chiama il [CMFCToolBarButton::OnMove](#onmove) metodo dopo avere impostato il nuovo rettangolo di delimitazione.  
@@ -1490,8 +1490,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nStyle*  
- Il nuovo stile del pulsante.  
+*nStyle*<br/>
+[in] Il nuovo stile del pulsante.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita imposta il [CMFCToolBarButton::m_nStyle](#m_nstyle) membro dati da *nStyle*. Eseguire l'override di questo metodo se si desidera eseguire un'elaborazione aggiuntiva per gestire la modifica in stile. Visualizzare [stili dei controlli ToolBar](toolbar-control-styles.md) per un elenco dei flag di stile valido.  
@@ -1504,8 +1504,8 @@ void SetVisible(BOOL bShow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- Valore booleano che specifica se mostrare o nascondere il pulsante. Se questo parametro è TRUE, viene visualizzato il pulsante. Se il parametro è FALSE, il pulsante è nascosto.  
+*bMostra*<br/>
+[in] Valore booleano che specifica se mostrare o nascondere il pulsante. Se questo parametro è TRUE, viene visualizzato il pulsante. Se il parametro è FALSE, il pulsante è nascosto.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per nascondere o mostrare un pulsante della barra degli strumenti particolare. Chiamare il [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) metodo dopo aver chiamato questo metodo.  
@@ -1518,8 +1518,8 @@ void Show(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- Valore booleano che specifica se mostrare o nascondere il pulsante. Se questo parametro è TRUE, viene visualizzato il pulsante. Se il parametro è FALSE, il pulsante è nascosto.  
+*bMostra*<br/>
+[in] Valore booleano che specifica se mostrare o nascondere il pulsante. Se questo parametro è TRUE, viene visualizzato il pulsante. Se il parametro è FALSE, il pulsante è nascosto.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo per aggiornare la visibilità dei pulsanti della barra degli strumenti quando la barra degli strumenti padre viene ridimensionato. Il framework chiama questo metodo con *bMostra* impostato su FALSE quando il pulsante non è più adatta all'interno della barra degli strumenti. Il framework chiama questo metodo con *bMostra* impostata su TRUE quando dopo il ridimensionamento del pulsante anche in questo caso si adatta all'interno della barra degli strumenti.  

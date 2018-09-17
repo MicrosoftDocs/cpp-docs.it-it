@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 9841b74d7bef74a117350b84747a606043d05d67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541000"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707668"
 ---
 # <a name="dataseg"></a>data_seg
 Specifica il segmento di dati in cui le variabili inizializzate vengono archiviate nel file .obj.  
@@ -34,31 +34,33 @@ Specifica il segmento di dati in cui le variabili inizializzate vengono archivia
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="parameters"></a>Parametri
+
+**push**<br/>
+(Facoltativo) Inserisce un record nello stack del compilatore interno. Oggetto **push** può avere un *identifier* e *nome segmento*.  
+
+**pop**<br/>
+(Facoltativo) Rimuove un record dall'inizio dello stack del compilatore interno.  
+  
+*identifier*<br/>
+(Facoltativo) Quando abbinata **push**, assegna un nome al record nello stack del compilatore interno. Quando abbinata **pop**, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
+  
+*Identificatore* consente di più record da estrarre con un'unica **pop** comando.  
+  
+*"segment-name"*<br/>
+(Facoltativo) Il nome di un segmento. Quando abbinata **pop**, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.  
+  
+*"segmento-class"*<br/>
+(Facoltativo) Opzione inclusa per compatibilità con C++ precedenti alla versione 2.0. Ignorato.  
+  
 ## <a name="remarks"></a>Note 
 
 Il significato dei termini *segmento* e *sezione* sono intercambiabili in questo argomento.  
   
 I file OBJ possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file .obj per le variabili inizializzate è .data. Le variabili che non sono inizializzate sono considerate inizializzate sul valore zero e vengono archiviate nel segmento .bss.  
   
-**data_seg** senza parametri Reimposta il segmento su. Data.  
-  
-*push* (facoltativo)  
-Inserisce un record nello stack interno del compilatore. Oggetto *push* può avere un *identifier* e *nome segmento*.  
-  
-*POP* (facoltativo)  
-Rimuove un record dall'inizio dello stack interno del compilatore.  
-  
-*Identificatore* (facoltativo)  
-Quando abbinata *push*, assegna un nome al record nello stack del compilatore interno. Quando abbinata *pop*, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.  
-  
-*Identificatore* consente di più record da estrarre con un'unica *pop* comando.  
-  
-*"segment-name"*(facoltativo)  
-Nome di un segmento. Quando abbinata *pop*, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.  
-  
-*"segmento-class"* (facoltativo)  
-Incluso per la compatibilità con le versioni di C++ precedenti alla versione 2.0. Ignorato.  
-  
+**data_seg** senza parametri Reimposta il segmento su. Data.
+
 ## <a name="example"></a>Esempio  
   
 ```cpp  

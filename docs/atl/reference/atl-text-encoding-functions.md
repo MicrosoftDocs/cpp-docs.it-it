@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706836"
 ---
 # <a name="atl-text-encoding-functions"></a>Funzioni di codifica del testo ATL
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pbSrcData*  
-Buffer contenente i dati da decodificare.
+*pbSrcData*<br/>
+[in] Buffer contenente i dati da decodificare.
 
-[in] *nSrcLen*  
-La lunghezza in byte del *pbSrcData*.
+*nSrcLen*<br/>
+[in] La lunghezza in byte del *pbSrcData*.
 
-[out] *szDest*  
-Buffer allocato dal chiamante di ricevere i dati decodificati.
+*szDest*<br/>
+[out] Buffer allocato dal chiamante di ricevere i dati decodificati.
 
-[out] *pnDestLen*  
-Puntatore a una variabile che contiene la lunghezza in byte del *szDest*. Se la funzione ha esito positivo, la variabile riceve il numero di byte scritti nel buffer. Se la funzione ha esito negativo, la variabile riceve la lunghezza richiesta in byte del buffer.
+*pnDestLen*<br/>
+[out] Puntatore a una variabile che contiene la lunghezza in byte del *szDest*. Se la funzione ha esito positivo, la variabile riceve il numero di byte scritti nel buffer. Se la funzione ha esito negativo, la variabile riceve la lunghezza richiesta in byte del buffer.
 
-[in] *dwFlags*  
-ATLSMTP_QPENCODE flag che descrivono come viene eseguita la conversione da eseguire.
+*dwFlags*<br/>
+[in] ATLSMTP_QPENCODE flag che descrivono come viene eseguita la conversione da eseguire.
 
 ### <a name="return-value"></a>Valore restituito
 

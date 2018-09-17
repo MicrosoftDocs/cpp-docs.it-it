@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 866cdc59157aa39a3c6ecbece225d1789cfec789
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693926"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712577"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementa la funzionalità di base per le finestre a schede.  
@@ -436,11 +436,11 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hIcon*  
- Handle per l'icona da aggiungere.  
+*hIcon*<br/>
+[in] Handle per l'icona da aggiungere.  
   
- [in] *l'icona*  
- Indice in base zero dell'icona in protetto `CImageList m_Images` membro.  
+*Icona*<br/>
+[in] Indice in base zero dell'icona in protetto `CImageList m_Images` membro.  
   
 ### <a name="remarks"></a>Note  
   
@@ -463,20 +463,20 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pTabWnd*  
- Puntatore alla finestra che questo metodo rappresenta come una nuova scheda.  
+*pTabWnd*<br/>
+[in] Puntatore alla finestra che questo metodo rappresenta come una nuova scheda.  
   
- [in] *lpszTabLabel*  
- Stringa che contiene l'etichetta per la nuova scheda.  
+*lpszTabLabel*<br/>
+[in] Stringa che contiene l'etichetta per la nuova scheda.  
   
- [in] *uiImageId*  
- ID immagine dall'elenco immagini. Il controllo struttura a schede Usa questa immagine come icona per la nuova scheda.  
+*uiImageId*<br/>
+[in] ID immagine dall'elenco immagini. Il controllo struttura a schede Usa questa immagine come icona per la nuova scheda.  
   
- [in] *uiResTabLabel*  
- L'ID di risorsa per l'etichetta.  
+*uiResTabLabel*<br/>
+[in] L'ID di risorsa per l'etichetta.  
   
- [in] *bDetachable*  
- Un parametro booleano che determina se la nuova scheda è rimovibile.  
+*bDetachable*<br/>
+[in] Un parametro booleano che determina se la nuova scheda è rimovibile.  
   
 ### <a name="remarks"></a>Note  
  Se *pTabWnd* punta a un oggetto che non è derivato dalle [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) e, se *bDetachable* è TRUE, il framework crea automaticamente un wrapper per il *pTabWnd* oggetto. Il wrapper rende il *pTabWnd* oggetto rimovibile. Per impostazione predefinita, il wrapper è un'istanza di [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Se le funzionalità offerte dal wrapper predefinito non sono accettabile, usare il [cmfcbasetabctrl:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc) metodo per specificare un wrapper diversi.  
@@ -546,14 +546,14 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndToWrap*  
- Puntatore alla finestra cornice che viene eseguito il wrapping.  
+*pWndToWrap*<br/>
+[in] Puntatore alla finestra cornice che viene eseguito il wrapping.  
   
- [in] *lpszTabLabel*  
- Stringa che contiene l'etichetta per la finestra.  
+*lpszTabLabel*<br/>
+[in] Stringa che contiene l'etichetta per la finestra.  
   
- [in] *bDetachable*  
- Un parametro booleano che indica se la finestra è rimovibile.  
+*bDetachable*<br/>
+[in] Un parametro booleano che indica se la finestra è rimovibile.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al wrapper derivata dal `CDockablePane` classe se `CreateWrapper` è stata creata una classe wrapper per *pWndToWrap*. Se il metodo ha esito negativo, si recupera *pWndToWrap*.  
@@ -576,14 +576,14 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dockMethod*  
- Tipo di dati enumerato fornito dal [classe CBasePane](../../mfc/reference/cbasepane-class.md). Questo tipo di dati specifica il metodo utilizzato per scollegare la scheda.  
+*dockMethod*<br/>
+[in] Tipo di dati enumerato fornito dal [classe CBasePane](../../mfc/reference/cbasepane-class.md). Questo tipo di dati specifica il metodo utilizzato per scollegare la scheda.  
   
- [in] *nTabNum*  
- Indice a base zero della scheda da scollegare.  
+*nTabNum*<br/>
+[in] Indice a base zero della scheda da scollegare.  
   
- [in] *bHide*  
- Un parametro booleano che indica se il framework deve nascondere la scheda scollegata.  
+*bHide*<br/>
+[in] Un parametro booleano che indica se il framework deve nascondere la scheda scollegata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -611,8 +611,8 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Un parametro booleano che determina se il framework utilizza colori automatici.  
+*bAttivare il*<br/>
+[in] Un parametro booleano che determina se il framework utilizza colori automatici.  
   
 ### <a name="remarks"></a>Note  
  Un controllo struttura a schede dispone di una matrice di colori predefiniti diversi. Quando il framework utilizza colori automatici, ogni scheda in una serie di schede viene assegnato il colore successivo da questa matrice.  
@@ -627,8 +627,8 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Valore booleano che determina se utilizzare le descrizioni comandi personalizzate.  
+*bAttivare il*<br/>
+[in] Valore booleano che determina se utilizzare le descrizioni comandi personalizzate.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
@@ -644,8 +644,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Un parametro booleano che specifica se abilitare la modifica diretta delle etichette della scheda.  
+*bAttivare il*<br/>
+[in] Un parametro booleano che specifica se abilitare la modifica diretta delle etichette della scheda.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, la modifica diretta delle etichette della scheda è disabilitata per controlli struttura a schede.  
@@ -664,11 +664,11 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda.  
   
- [in] *bAttivare il*  
- Valore booleano che indica se effettuare la scheda rimovibile.  
+*bAttivare il*<br/>
+[in] Valore booleano che indica se effettuare la scheda rimovibile.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
@@ -681,8 +681,8 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- Valore booleano che indica se abilitare la sostituzione della scheda.  
+*bAttivare il*<br/>
+[in] Valore booleano che indica se abilitare la sostituzione della scheda.  
   
 ### <a name="remarks"></a>Note  
  Quando lo swapping della scheda è abilitato, l'utente può trascinare una scheda e modificare la posizione relativa nel controllo struttura a schede.  
@@ -695,8 +695,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -723,8 +723,8 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pt*  
- Un punto che viene definito utilizzando l'area client coordinate della [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) oggetto.  
+*pt*<br/>
+[in] Un punto che viene definito utilizzando l'area client coordinate della [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto se riesce; in caso contrario, NULL.  
@@ -830,11 +830,11 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *iTabNum*  
- Un riferimento a un numero intero. Questo metodo scrive l'indice in base zero della prima scheda visibile di questo parametro.  
+*iTabNum*<br/>
+[out] Un riferimento a un numero intero. Questo metodo scrive l'indice in base zero della prima scheda visibile di questo parametro.  
   
- [in] *iStartFrom*  
- Indice a base zero della prima scheda da controllare.  
+*iStartFrom*<br/>
+[in] Indice a base zero della prima scheda da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore alla prima scheda visibile se ha esito positivo. in caso contrario NULL.  
@@ -935,11 +935,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rectTabAreaTop*  
- Riferimento a un oggetto `CRect`. `GetTabArea` l'oggetto utilizzato per archiviare le dimensioni e posizione dell'area della scheda superiore.  
+*rectTabAreaTop*<br/>
+[in] Un riferimento a un `CRect` oggetto. `GetTabArea` l'oggetto utilizzato per archiviare le dimensioni e posizione dell'area della scheda superiore.  
   
- [in] *rectTabAreaBottom*  
- Riferimento a un oggetto `CRect`. `GetTabArea` l'oggetto utilizzato per archiviare le dimensioni e la posizione dell'area della scheda nella parte inferiore.  
+*rectTabAreaBottom*<br/>
+[in] Un riferimento a un `CRect` oggetto. `GetTabArea` l'oggetto utilizzato per archiviare le dimensioni e la posizione dell'area della scheda nella parte inferiore.  
   
 ### <a name="remarks"></a>Note  
  Dopo aver `GetTabArea` viene restituito, il `CRect` parametri contengono le dimensioni e la posizione dell'area della scheda nelle coordinate del client del controllo scheda. Se non è disponibile alcuna area di scheda nella parte superiore o inferiore del controllo struttura a schede, `rectTabAreaTop` o `rectTabAreaBottom` sono vuoti.  
@@ -954,8 +954,8 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore che indica il colore di sfondo della scheda specificata, -1 se *iTab* è compreso nell'intervallo.  
@@ -981,8 +981,8 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *id*  
- Un ID della scheda.  
+*ID*<br/>
+[in] Un ID della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero di una scheda, se trovato; -1 se non viene trovato l'ID della scheda.  
@@ -1009,8 +1009,8 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hwnd*  
- Handle per una finestra.  
+*HWND*<br/>
+[in] Handle per una finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero della scheda se ha esito positivo. -1 se nessuna scheda contiene *hwnd*.  
@@ -1023,8 +1023,8 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pt*  
- Un punto nelle coordinate del client del controllo scheda.  
+*pt*<br/>
+[in] Un punto nelle coordinate del client del controllo scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice della scheda che contiene *pt*; -1 se nessuna scheda contiene *pt*.  
@@ -1051,8 +1051,8 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il HICON associata a un'etichetta di una scheda di caso di esito positivo; NULL se è presente alcun HICON o se il metodo ha esito negativo.  
@@ -1065,8 +1065,8 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'ID icona per la scheda specificata se ha esito positivo. -1 se l'indice non è valido.  
@@ -1082,8 +1082,8 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  ID della scheda o -1 se *iTab* è compreso nell'intervallo.  
@@ -1098,11 +1098,11 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
- [out] *strLabel*  
- Riferimento a un oggetto `CString`. Questo metodo consente di memorizzare l'etichetta della scheda in questo parametro.  
+*strLabel*<br/>
+[out] Un riferimento a un `CString` oggetto. Questo metodo consente di memorizzare l'etichetta della scheda in questo parametro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo. FALSE in caso contrario.  
@@ -1122,11 +1122,11 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
- [out] *rect*  
- Riferimento a un oggetto `CRect`. Questo metodo consente di memorizzare le dimensioni e posizione della scheda in questo parametro.  
+*Rect*<br/>
+[out] Un riferimento a un `CRect` oggetto. Questo metodo consente di memorizzare le dimensioni e posizione della scheda in questo parametro.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo. FALSO se l'indice di tabulazione non è valido.  
@@ -1172,8 +1172,8 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore del testo della scheda specificata, -1 se *iTab* è compreso nell'intervallo.  
@@ -1186,8 +1186,8 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore per il [CWnd](../../mfc/reference/cwnd-class.md) oggetto che si trova nella scheda che *iTab* specifica. NULL se *iTab* non è valido.  
@@ -1205,8 +1205,8 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore per il [CWnd](../../mfc/reference/cwnd-class.md) oggetto che si trova nella scheda specificata. NULL se *iTab* non è valido.  
@@ -1258,8 +1258,8 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bHide*  
- Valore booleano che specifica se abilitare nascondere schede singole.  
+*bHide*<br/>
+[in] Valore booleano che specifica se abilitare nascondere schede singole.  
   
 ### <a name="remarks"></a>Note  
  Quando l'applicazione è configurata per nascondere schede singole, il framework visualizza automaticamente le schede quando viene aggiunta una seconda scheda del controllo struttura a schede.  
@@ -1285,23 +1285,23 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pNewWnd*  
- Puntatore alla finestra che questo metodo viene aggiunto come nuova scheda.  
+*pNewWnd*<br/>
+[in] Puntatore alla finestra che questo metodo viene aggiunto come nuova scheda.  
   
- [in] *lpszTabLabel*  
- Stringa che contiene l'etichetta per la nuova scheda.  
+*lpszTabLabel*<br/>
+[in] Stringa che contiene l'etichetta per la nuova scheda.  
   
- [in] *nInsertAt*  
- Indice a base zero della nuova scheda.  
+*nInsertAt*<br/>
+[in] Indice a base zero della nuova scheda.  
   
- [in] *uiImageId*  
- ID immagine dall'elenco immagini. Il controllo struttura a schede Usa questa immagine come icona per la nuova scheda.  
+*uiImageId*<br/>
+[in] ID immagine dall'elenco immagini. Il controllo struttura a schede Usa questa immagine come icona per la nuova scheda.  
   
- [in] *bDetachable*  
- Un parametro booleano che determina se la nuova scheda è rimovibile.  
+*bDetachable*<br/>
+[in] Un parametro booleano che determina se la nuova scheda è rimovibile.  
   
- [in] *uiResTabLabel*  
- L'ID di risorsa per l'etichetta.  
+*uiResTabLabel*<br/>
+[in] L'ID di risorsa per l'etichetta.  
   
 ### <a name="remarks"></a>Note  
  Se l'oggetto indicato dal *pNewWnd* non è derivato dalle [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) e, se la *bDetachable* parametro è TRUE, il framework crea un wrapper speciale per la nuova scheda. Per impostazione predefinita, il wrapper è un'istanza di [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Usare la [cmfcbasetabctrl:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc) metodo per creare una classe wrapper diversi. Tutte le classi wrapper personalizzato deve derivare da `CDockablePaneAdapter`.  
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hIcon*  
- [in] *l'icona*  
+*hIcon*<br/>
+[in] [in] *l'icona*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1500,8 +1500,8 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Punto da testare.  
+*punto*<br/>
+[in] Punto da testare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il punto nell'area della scheda; in caso contrario 0.  
@@ -1539,8 +1539,8 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda da controllare.  
+*iTab*<br/>
+[in] Indice a base zero della scheda da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la scheda è rimovibile; FALSE in caso contrario.  
@@ -1556,8 +1556,8 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'etichetta di una scheda dispone solo di icone; FALSE in caso contrario.  
@@ -1586,8 +1586,8 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda da controllare.  
+*iTab*<br/>
+[in] Indice a base zero della scheda da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la scheda specificata è visibile; in caso contrario 0.  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *6'%norigine*  
- [in] *nDest*  
+*6'%norigine*<br/>
+[in] [in] *nDest*  
   
 ### <a name="remarks"></a>Note  
   
@@ -1660,8 +1660,8 @@ virtual BOOL OnDrop(
   
 ### <a name="parameters"></a>Parametri  
  [in] *COleDataObject**  
- [in] *DROPEFFECT*  
- [in] *CPoint*  
+*DROPEFFECT*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1679,8 +1679,8 @@ virtual DROPEFFECT OnDragOver(
   
 ### <a name="parameters"></a>Parametri  
  [in] *COleDataObject**  
- [in] *DWORD*  
- [in] *CPoint*  
+*DWORD*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1707,8 +1707,8 @@ virtual DROPEFFECT OnDragEnter(
   
 ### <a name="parameters"></a>Parametri  
  [in] *COleDataObject**  
- [in] *DWORD*  
- [in] *CPoint*  
+*DWORD*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *int*  
- [in] *CString &*  
+*int*<br/>
+[in] [in] *CString &*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1773,11 +1773,11 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda.  
   
- [in] *bRecalcLayout*  
- Un parametro booleano che specifica se ricalcolare il layout della scheda.  
+*bRecalcLayout*<br/>
+[in] Un parametro booleano che specifica se ricalcolare il layout della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la scheda è stato rimosso correttamente; il metodo in caso contrario, FALSE.  
@@ -1823,8 +1823,8 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda. `SetActiveTab` rende attiva la scheda con l'indice.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda. `SetActiveTab` rende attiva la scheda con l'indice.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
@@ -1840,8 +1840,8 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *clr*  
- Specifica il nuovo colore di sfondo.  
+*Common Language Runtime*<br/>
+[in] Specifica il nuovo colore di sfondo.  
   
 ### <a name="remarks"></a>Note  
  Il framework Ottiene il colore di sfondo predefinito per le schede attive dal [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)(metodo).  
@@ -1854,8 +1854,8 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *clr*  
- Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che specifica il nuovo colore del testo.  
+*Common Language Runtime*<br/>
+[in] Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che specifica il nuovo colore del testo.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il framework Ottiene il colore del testo dal [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Eseguire l'override di questo colore predefinito tramite la `SetActiveTabTextColor` (metodo).  
@@ -1868,8 +1868,8 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *arColors*  
- Matrice di colori RGB.  
+*arColors*<br/>
+[in] Matrice di colori RGB.  
   
 ### <a name="remarks"></a>Note  
  Se si specifica una matrice di colori personalizzata, la matrice di predefinito di colori viene ignorata. Se il parametro *arColors* è vuoto, il framework viene ripristinato alla matrice di colori predefinita.  
@@ -1884,8 +1884,8 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pRTC*  
- Le informazioni sulla classe di runtime per la nuova classe wrapper.  
+*pRTC*<br/>
+[in] Le informazioni sulla classe di runtime per la nuova classe wrapper.  
   
 ### <a name="remarks"></a>Note  
  Si aggiungono schede a un controllo struttura a schede usando i metodi [cmfcbasetabctrl:: addTab](#addtab) e [cmfcbasetabctrl:: insertTab](#inserttab). Quando si aggiunge una scheda, ogni controllo in tale scheda deve essere ancorata. Tutti gli oggetti che non sono derivati da `CDockablePane` deve essere eseguito il wrapping. `AddTab` e `InsertTab` crea un wrapper per questi oggetti. La classe wrapper predefinito è il [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Il metodo `SetDockingBarWrapperRTC` consente di modificare la classe che viene usata come una classe wrapper. La classe wrapper fornito deve essere derivata da `CDockablePaneAdapter`.  
@@ -1900,11 +1900,11 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bNoPrefix*  
- TRUE se si desidera elaborare caratteri di prefisso. in caso contrario, FALSE.  
+*bNoPrefix*<br/>
+[in] TRUE se si desidera elaborare caratteri di prefisso. in caso contrario, FALSE.  
   
- [in] *bRedraw*  
- TRUE se si desidera ridisegnare la finestra a schede. in caso contrario, FALSE.  
+*bRedraw*<br/>
+[in] TRUE se si desidera ridisegnare la finestra a schede. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Un carattere di prefisso è un carattere mnemonico è preceduto da una e commerciale (&).  
@@ -1922,17 +1922,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiID*  
- Un ID risorsa della bitmap. `SetImageList` Carica l'elenco di immagini da questa risorsa.  
+*uiID*<br/>
+[in] Un ID risorsa della bitmap. `SetImageList` Carica l'elenco di immagini da questa risorsa.  
   
- [in] *cx*  
- La larghezza di ogni immagine in pixel.  
+*CX*<br/>
+[in] La larghezza di ogni immagine in pixel.  
   
- [in] *clrTransp*  
- Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore trasparente dell'immagine.  
+*clrTransp*<br/>
+[in] Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il colore trasparente dell'immagine.  
   
- [in] *hImageList*  
- Handle per un elenco di immagini precaricati.  
+*hImageList*<br/>
+[in] Handle per un elenco di immagini precaricati.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
@@ -1966,11 +1966,11 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
- [in] *colore*  
- Il colore da impostare.  
+*Colore*<br/>
+[in] Il colore da impostare.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo. FALSE in caso contrario.  
@@ -1985,11 +1985,11 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTabBorderSize*  
- La nuova dimensione, del bordo espressa in pixel.  
+*nTabBorderSize*<br/>
+[in] La nuova dimensione, del bordo espressa in pixel.  
   
- [in] *bRepaint*  
- Un parametro booleano che indica se il framework di ricreare il controllo.  
+*bRepaint*<br/>
+[in] Un parametro booleano che indica se il framework di ricreare il controllo.  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
  Imposta l'icona per un'etichetta della scheda.  
@@ -2001,11 +2001,11 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero di una scheda. Questo metodo viene modificata l'icona per questa scheda.  
+*iTab*<br/>
+[in] Indice a base zero di una scheda. Questo metodo viene modificata l'icona per questa scheda.  
   
- [in] *hIcon*  
- Handle per un'icona.  
+*hIcon*<br/>
+[in] Handle per un'icona.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
@@ -2020,11 +2020,11 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda da aggiornare.  
+*iTab*<br/>
+[in] Indice a base zero della scheda da aggiornare.  
   
- [in] *uiIcon*  
- L'ID icona per la nuova icona. Questo ID fa riferimento all'interno [CImageList](../../mfc/reference/cimagelist-class.md) oggetto.  
+*uiIcon*<br/>
+[in] L'ID icona per la nuova icona. Questo ID fa riferimento all'interno [CImageList](../../mfc/reference/cimagelist-class.md) oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
@@ -2040,14 +2040,14 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda da modificare.  
+*iTab*<br/>
+[in] Indice a base zero della scheda da modificare.  
   
- [in] *bIconOnly*  
- Un parametro booleano che determina se visualizzare solo le icone.  
+*bIconOnly*<br/>
+[in] Un parametro booleano che determina se visualizzare solo le icone.  
   
- [in] *bShowTooltipAlways*  
- Un parametro booleano che determina se il framework Mostra le descrizioni comandi per un'etichetta della scheda che visualizza solo le icone.  
+*bShowTooltipAlways*<br/>
+[in] Un parametro booleano che determina se il framework Mostra le descrizioni comandi per un'etichetta della scheda che visualizza solo le icone.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
@@ -2065,11 +2065,11 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda da aggiornare.  
+*iTab*<br/>
+[in] Indice a base zero della scheda da aggiornare.  
   
- [in] *strLabel*  
- Un riferimento a una stringa che contiene il nuovo testo per l'etichetta della scheda.  
+*strLabel*<br/>
+[in] Un riferimento a una stringa che contiene il nuovo testo per l'etichetta della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  
@@ -2091,8 +2091,8 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *arOrder*  
- Una matrice di indici in base zero che definisce il nuovo ordine di tabulazione.  
+*arOrder*<br/>
+[in] Una matrice di indici in base zero che definisce il nuovo ordine di tabulazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se ha esito positivo. Esito negativo in caso contrario.  
@@ -2110,11 +2110,11 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- Indice a base zero della scheda.  
+*iTab*<br/>
+[in] Indice a base zero della scheda.  
   
- [in] *colore*  
- Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il nuovo colore del testo.  
+*Colore*<br/>
+[in] Oggetto [COLORREF](/windows/desktop/gdi/colorref) parametro che indica il nuovo colore del testo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  
@@ -2131,17 +2131,17 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *iTab*  
- L'indice della scheda che `ShowTab` verranno mostrare o nascondere.  
+*iTab*<br/>
+[in] L'indice della scheda che `ShowTab` verranno mostrare o nascondere.  
   
- [in] *bMostra*  
- Un parametro booleano che indica se visualizzare la scheda.  
+*bMostra*<br/>
+[in] Un parametro booleano che indica se visualizzare la scheda.  
   
- [in] *bRecalcLayout*  
- Un parametro booleano che indica se eseguire immediatamente Ricalcola il layout di finestra.  
+*bRecalcLayout*<br/>
+[in] Un parametro booleano che indica se eseguire immediatamente Ricalcola il layout di finestra.  
   
- [in] *bActivate*  
- Un parametro booleano che indica se selezionare la scheda specificata da *iTab*.  
+*bActivate*<br/>
+[in] Un parametro booleano che indica se selezionare la scheda specificata da *iTab*.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nFisrtTabID*  
- [in] *nSecondTabID*  
+*nFisrtTabID*<br/>
+[in] [in] *nSecondTabID*  
   
 ### <a name="remarks"></a>Note  
   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541435"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700934"
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
 Gestisce i menu con barra a comparsa. Un menu con barra a comparsa è un menu collocato nella barra dei menu. L'utente può rimuovere un menu con barra a comparsa dalla barra dei menu, rendendolo mobile.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiTearOffBarID*  
- [in] *strText*  
+*uiTearOffBarID*<br/>
+[in] [in] *strText*  
   
 ### <a name="remarks"></a>Note  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszRegEntry*  
- Stringa che contiene il percorso di una voce del Registro di sistema. Le applicazioni vengono memorizzate le impostazioni per le barre a comparsa in questa voce del Registro di sistema.  
+*lpszRegEntry*<br/>
+[in] Stringa che contiene il percorso di una voce del Registro di sistema. Le applicazioni vengono memorizzate le impostazioni per le barre a comparsa in questa voce del Registro di sistema.  
   
- [in] *uiTearOffMenuFirst*  
- Il primo ID di menu per un menu a comparsa.  
+*uiTearOffMenuFirst*<br/>
+[in] Il primo ID di menu per un menu a comparsa.  
   
- [in] *uiTearOffMenuLast*  
- L'ultimo ID di menu per un menu a comparsa.  
+*uiTearOffMenuLast*<br/>
+[in] L'ultimo ID di menu per un menu a comparsa.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdId*  
- [in] *bUtilizzare*  
+*uiCmdId*<br/>
+[in] [in] *bUtilizzare*  
   
 ### <a name="remarks"></a>Note  
   

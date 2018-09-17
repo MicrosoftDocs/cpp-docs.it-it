@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540640"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704951"
 ---
 # <a name="writedr"></a>__writedr
 Scrive il valore specificato per la registrazione di debug specificato.  
@@ -34,11 +34,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `DebugRegister`  
- Registrare un numero compreso tra 0 e 7 che identifica il debug.  
+*DebugRegister*<br/>
+[in] Registrare un numero compreso tra 0 e 7 che identifica il debug.  
   
- [in] `DebugValue`  
- Registrare un valore da scrivere per il debug.  
+*DebugValue*<br/>
+[in] Registrare un valore da scrivere per il debug.  
   
 ## <a name="remarks"></a>Note  
  Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  

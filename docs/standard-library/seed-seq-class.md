@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e466d8a176d5c4c7fd1e2250373b42ee263a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c4e86ff5ad4e1ebdba728202904324d9dc9e66f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856332"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711750"
 ---
 # <a name="seedseq-class"></a>Classe seed_seq
 
@@ -68,30 +68,63 @@ public:
 
 ## <a name="types"></a>Tipi
 
-`typedef unsigned int result_type;` Tipo degli elementi della sequenza di seeding. Tipo Unsigned Integer a 32 bit.
+```cpp
+typedef unsigned int result_type;
+```
+
+Tipo degli elementi della sequenza di seeding. Tipo Unsigned Integer a 32 bit.
 
 ## <a name="constructors"></a>Costruttori
 
-`seed_seq();` Costruttore predefinito inizializza disporre di una sequenza interna vuota.
+```cpp
+seed_seq();
+```
 
-`template<class T>` `seed_seq(initializer_list<T> initlist);` Usa `initlist` per impostare la sequenza interna.
+Costruttore predefinito, inizializzato in modo da avere una sequenza interna vuota.
+
+```cpp
+template<class T>
+seed_seq(initializer_list<T> initlist);
+```
+
+Usa `initlist` per impostare la sequenza interna.
 `T` deve essere un tipo Integer.
 
-`template<class InputIterator>` `seed_seq(InputIterator begin, InputIterator end);` Inizializza la sequenza interna usando tutti gli elementi nell'intervallo dell'iteratore di input fornito.
+```cpp
+template<class InputIterator>
+seed_seq(InputIterator begin, InputIterator end);
+```
+
+Inizializza la sequenza interna usando tutti gli elementi nell'intervallo dell'iteratore di input specificato.
 `iterator_traits<InputIterator>::value_type` deve essere un tipo Integer.
 
 ## <a name="members"></a>Membri
 
 ### <a name="generating-functions"></a>Generazione di funzioni
 
-`template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);` Popola gli elementi della sequenza specificata usando un algoritmo interno. Questo algoritmo è influenzato dalla sequenza interna con cui è stato inizializzato `seed_seq`.
+```cpp
+template<class RandomAccessIterator>
+void generate(RandomAccessIterator begin,
+          RandomAccessIterator end);
+```
+
+Popola gli elementi della sequenza specificata usando un algoritmo interno. Questo algoritmo è influenzato dalla sequenza interna con cui è stato inizializzato `seed_seq`.
 Non esegue alcuna operazione se `begin == end`.
 
 ### <a name="property-functions"></a>Funzioni delle proprietà
 
-`size_t size() const;` Restituisce il numero di elementi di `seed_seq`.
+```cpp
+size_t size() const;
+```
 
-`template<class OutputIterator> void param(OutputIterator dest) const;` Copia la sequenza interna nell'iteratore di output `dest`.
+Restituisce il numero di elementi nel `seed_seq`.
+
+```cpp
+template<class OutputIterator>
+void param(OutputIterator dest) const;
+```
+
+Copia la sequenza interna nell'iteratore di output `dest`.
 
 ## <a name="example"></a>Esempio
 

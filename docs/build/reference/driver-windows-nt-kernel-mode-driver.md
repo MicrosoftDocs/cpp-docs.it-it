@@ -1,5 +1,5 @@
 ---
-title: -DRIVER (Driver in modalità Kernel di Windows NT) | Documenti Microsoft
+title: -DRIVER (Driver in modalità Kernel Windows NT) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66291391ed38c27ce7446eccc6fca227c7c2c2d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ae096c502cdc94d47a516caf4c29ac4f3eceb4b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373114"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705549"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Driver in modalità kernel di Windows NT)
 
@@ -33,11 +33,11 @@ ms.locfileid: "32373114"
 
 ## <a name="remarks"></a>Note
 
-Utilizzare il **/DRIVER** l'opzione del linker per compilare un driver in modalità kernel di Windows NT.
+Usare la **/DRIVER** l'opzione del linker per compilare un driver in modalità kernel Windows NT.
 
-**UPONLY** indica al linker di aggiungere il **IMAGE_FILE_UP_SYSTEM_ONLY** bit alle caratteristiche nell'intestazione di output per specificare che si tratta di un computer monoprocessore (UP). Il sistema operativo non caricherà un driver MONOPROCESSORE su un sistema di multiprocessore (MP).
+**UPONLY** fa sì che il linker aggiunga il **IMAGE_FILE_UP_SYSTEM_ONLY** bit caratteristiche nell'intestazione di output per specificare che si tratta di un driver per monoprocessore (UP). Il sistema operativo rifiuterà di caricare un driver MONOPROCESSORE su un sistema multiprocessore (MP).
 
-**/DRIVER** fa sì che il linker imposti il **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit nel campo DllCharacteristics dell'intestazione facoltativa.
+**/Driver: WDM** fa sì che il linker imposti il **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit nel campo DllCharacteristics dell'intestazione facoltativa.
 
 Se **/DRIVER** non viene specificato, questi bit non sono impostati dal linker.
 
@@ -45,23 +45,23 @@ Se **/DRIVER** specificato:
 
 - **/Fixed: No** è attiva. Per altre informazioni, vedere [/FIXED (Indirizzo di base fisso)](../../build/reference/fixed-fixed-base-address.md).
 
-- L'estensione del file di output è impostato su Sys. Utilizzare **/out** per modificare il nome file predefinito e l'estensione. Per altre informazioni, vedere [/OUT (nome file di output)](../../build/reference/out-output-file-name.md).
+- L'estensione del file di output è impostato su Sys. Uso **/out** per modificare il nome file predefinito e l'estensione. Per altre informazioni, vedere [/OUT (nome file di output)](../../build/reference/out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
 
-1. Fare clic su di **Linker** cartella.
+1. Scegliere il **Linker** cartella.
 
-1. Fare clic su di **sistema** pagina delle proprietà.
+1. Scegliere il **sistema** pagina delle proprietà.
 
 1. Modificare il **Driver** proprietà.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
-- Vedere [VCLinkerTool.driver proprietà](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+- Visualizzare [VCLinkerTool.driver proprietà](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
 [Opzioni del linker](../../build/reference/linker-options.md)

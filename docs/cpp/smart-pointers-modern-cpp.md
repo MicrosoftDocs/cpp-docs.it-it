@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462251"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703586"
 ---
 # <a name="smart-pointers-modern-c"></a>Puntatori intelligenti (C++ moderno)
 Nella programmazione C++ moderna, la libreria Standard include *puntatori intelligenti*, che sono usati per garantire che i programmi sono liberi di memoria e risorse di perdite e sono indipendente dalle eccezioni.  
@@ -69,8 +69,9 @@ Nella programmazione C++ moderna, la libreria Standard include *puntatori intell
 ## <a name="kinds-of-smart-pointers"></a>Tipi di puntatori intelligenti  
  Nella sezione seguente vengono riepilogati i diversi tipi di puntatori intelligenti disponibili nell'ambiente di programmazione Windows e ne viene descritto l'utilizzo.  
   
- **Puntatori intelligenti della libreria Standard C++**  
- Utilizzare questi puntatori intelligenti come prima scelta per incapsulare i puntatori in oggetti C++ non aggiornati (POCO, plain old C++ object).  
+### <a name="c-standard-library-smart-pointers"></a>Puntatori intelligenti della libreria standard C++
+
+Utilizzare questi puntatori intelligenti come prima scelta per incapsulare i puntatori in oggetti C++ non aggiornati (POCO, plain old C++ object).  
   
 -   `unique_ptr`   
      Consente esattamente un proprietario del puntatore sottostante. Utilizzarlo come scelta predefinita per POCO, a meno che non sia necessario un `shared_ptr`. Può essere spostato a un nuovo proprietario, ma non copiato o condiviso. Sostituisce `auto_ptr`, che è deprecato. Confrontare con `boost::scoped_ptr`. `unique_ptr` piccola ed efficiente; la dimensione è un indicatore di misura e supporta i riferimenti rvalue per inserimento rapido e il recupero da raccolte di libreria Standard C++. File di intestazione: `<memory>`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) e [classe unique_ptr](../standard-library/unique-ptr-class.md).  
@@ -81,8 +82,9 @@ Nella programmazione C++ moderna, la libreria Standard include *puntatori intell
 -   `weak_ptr`   
     Puntatore intelligente per casi speciali da utilizzare insieme a `shared_ptr`. `weak_ptr` fornisce l'accesso a un oggetto di proprietà di una o più istanze di `shared_ptr`, ma non partecipa al conteggio dei riferimenti. Utilizzarlo quando si desidera osservare un oggetto, ma non è necessario che rimanga attivo. Necessario in alcuni casi per interrompere i riferimenti circolari tra istanze di `shared_ptr`. File di intestazione: `<memory>`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) e [classe weak_ptr](../standard-library/weak-ptr-class.md).  
   
- **Puntatori intelligenti per gli oggetti COM (programmazione Windows classica)**  
- Quando si utilizzano gli oggetti COM, eseguire il wrapping dei puntatori a interfaccia in un tipo di puntatore intelligente appropriato. La libreria ATL (Active Template Library) definisce diversi puntatori intelligenti che assolvono a funzioni diverse. È anche possibile utilizzare il tipo di puntatore intelligente `_com_ptr_t`, utilizzato dal compilatore durante la creazione di classi wrapper da file TLB. Si tratta della scelta migliore quando non si desidera includere i file di intestazione ATL.  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Puntatori intelligenti per oggetti COM (programmazione Windows classica)
+
+Quando si utilizzano gli oggetti COM, eseguire il wrapping dei puntatori a interfaccia in un tipo di puntatore intelligente appropriato. La libreria ATL (Active Template Library) definisce diversi puntatori intelligenti che assolvono a funzioni diverse. È anche possibile utilizzare il tipo di puntatore intelligente `_com_ptr_t`, utilizzato dal compilatore durante la creazione di classi wrapper da file TLB. Si tratta della scelta migliore quando non si desidera includere i file di intestazione ATL.  
   
  [Classe CComPtr](../atl/reference/ccomptr-class.md)  
  Utilizzarlo solo se non si può utilizzare ATL. Esegue il conteggio dei riferimenti mediante i metodi `AddRef` e `Release`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
@@ -99,8 +101,9 @@ Nella programmazione C++ moderna, la libreria Standard include *puntatori intell
  [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)  
  È simile a `CComQIPtr` in termini di funzionalità, ma non dipende dalle intestazioni ATL.  
   
- **Puntatori intelligenti ALT per oggetti POCO**  
- Oltre ai puntatori intelligenti per gli oggetti COM, ATL definisce i puntatori intelligenti e le raccolte di puntatori intelligenti per gli oggetti POCO. Nella programmazione Windows classica questi tipi sono alternative utili alle raccolte di libreria Standard C++, soprattutto quando la portabilità del codice non è necessaria o quando non si desidera combinare i modelli di programmazione della libreria Standard C++ e ATL.  
+### <a name="atl-smart-pointers-for-poco-objects"></a>Puntatori intelligenti ALT per oggetti POCO
+
+Oltre ai puntatori intelligenti per gli oggetti COM, ATL definisce i puntatori intelligenti e le raccolte di puntatori intelligenti per gli oggetti POCO. Nella programmazione Windows classica questi tipi sono alternative utili alle raccolte di libreria Standard C++, soprattutto quando la portabilità del codice non è necessaria o quando non si desidera combinare i modelli di programmazione della libreria Standard C++ e ATL.  
   
  [Classe CAutoPtr](../atl/reference/cautoptr-class.md)  
  Puntatore intelligente che applica la proprietà univoca trasferendo la proprietà sulla copia. Paragonabile alla classe `std::auto_ptr` deprecata.  

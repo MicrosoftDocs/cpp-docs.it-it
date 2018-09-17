@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130891"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702897"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installare il supporto di C++ in Visual Studio
 
@@ -37,9 +37,9 @@ Per dettagli sui requisiti del sistema operativo e lo spazio su disco, vedere [r
 
 ## <a name="visual-studio-2015-installation"></a>Installazione di Visual Studio 2015
 
- Per installare Visual Studio 2015, visitare [Scarica le versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Eseguire il programma di installazione e scegliere **installazione personalizzata** e quindi scegliere il componente C++. 
+Per installare Visual Studio 2015, passare alla pagina per il [download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Eseguire il programma di installazione, scegliere **Installazione personalizzata** e quindi scegliere il componente C++.
 
- In generale, è consigliabile usare Visual Studio 2017 anche se è necessario compilare il codice usando il compilatore di Visual Studio 2015. Per altre informazioni, vedere [Usare multitargeting nativo in Visual Studio per compilare progetti precedenti](../porting/use-native-multi-targeting.md).
+In generale, è consigliabile usare Visual Studio 2017 anche se occorre compilare il codice tramite il compilatore di Visual Studio 2015. Per altre informazioni, vedere [Usare multitargeting nativo in Visual Studio per compilare progetti precedenti](../porting/use-native-multi-targeting.md).
 
 ## <a name="visual-studio-2017-installation"></a>Installazione di Visual Studio 2017
 
@@ -59,13 +59,13 @@ Per dettagli sui requisiti del sistema operativo e lo spazio su disco, vedere [r
 
    ![Sviluppo di applicazioni desktop con C++](../build/media/desktop-development-with-cpp.png "sviluppo Desktop con C++")
 
-    Per C++, selezionare la **sviluppo di applicazioni Desktop con C++** carico di lavoro e quindi scegliere **installare**.
+   Per C++, selezionare la **sviluppo di applicazioni Desktop con C++** carico di lavoro e quindi scegliere **installare**.
 
    ![Installare lo sviluppo Desktop con il carico di lavoro di C++](../build/media/vscpp-concierge-choose-workload.gif "installare lo sviluppo Desktop con il carico di lavoro di C++")
 
 1. Al termine dell'installazione, scegliere il **avviare** per avviare Visual Studio.
 
-   La prima volta che si esegue Visual Studio, viene chiesto di accedere con un Account Microsoft. Se non si dispone di uno, è possibile crearne uno gratuitamente. È anche necessario scegliere un tema. Non preoccuparti, è possibile modificarlo in un secondo momento se si desidera. 
+   La prima volta che si esegue Visual Studio, viene chiesto di accedere con un Account Microsoft. Se non si dispone di uno, è possibile crearne uno gratuitamente. È anche necessario scegliere un tema. Non preoccuparti, è possibile modificarlo in un secondo momento se si desidera.
 
    Visual Studio potrebbe richiedere alcuni minuti per preparare per usano la prima volta viene eseguito. Ecco l'effetto in una Guida introduttiva di time-lapse:
 

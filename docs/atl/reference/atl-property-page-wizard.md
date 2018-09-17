@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760383"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703795"
 ---
 # <a name="atl-property-page-wizard"></a>Creazione guidata pagina delle proprietà ATL
 
@@ -56,17 +56,20 @@ Vengono fornite informazioni per la classe C++ creata per implementare l'oggetto
 
 Fornisce informazioni sulle funzionalità COM per l'oggetto.
 
-**Coclasse**  
-Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto.
+- **Coclasse**
 
-> [!NOTE]
->  Se si crea il progetto mediante attributi oppure se questa pagina della procedura guidata si indica che la pagina delle proprietà utilizza gli attributi, è possibile modificare questa opzione perché ATL non include il `coclass` attributo.
+   Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto.
 
-**Type**  
-Imposta la descrizione dell'oggetto che verrà visualizzato nel Registro di sistema
+   > [!NOTE]
+   > Se si crea il progetto mediante attributi oppure se questa pagina della procedura guidata si indica che la pagina delle proprietà utilizza gli attributi, è possibile modificare questa opzione perché ATL non include il `coclass` attributo.
 
-**ProgID**  
-Imposta il nome che i contenitori possano usare invece il CLSID dell'oggetto.
+- **Type**
+
+   Imposta la descrizione dell'oggetto che verrà visualizzato nel Registro di sistema
+
+- **ProgID**
+
+   Imposta il nome che i contenitori possano usare invece il CLSID dell'oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 

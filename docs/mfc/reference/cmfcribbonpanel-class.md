@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7ae6e3d06f29b5f45c321cc7f11c9260f26ed1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 55233bb264231c3ddfd286a8f3d29883ed185a15
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540243"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711178"
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 Implementa un riquadro contenente un set di elementi della barra multifunzione. Quando il pannello viene disegnato, visualizza tutti gli elementi possibili in base alle proprie dimensioni.  
@@ -235,8 +235,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *pElem*  
- Puntatore a un elemento della barra multifunzione.  
+*pElem*<br/>
+[in, out] Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -262,17 +262,17 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiToolbarResID*  
- Specifica l'ID risorsa della barra degli strumenti da aggiungere.  
+*uiToolbarResID*<br/>
+[in] Specifica l'ID risorsa della barra degli strumenti da aggiungere.  
   
- [in] *uiColdResID*  
- Specifica l'ID risorsa delle immagini a freddo della barra degli strumenti.  
+*uiColdResID*<br/>
+[in] Specifica l'ID risorsa delle immagini a freddo della barra degli strumenti.  
   
- [in] *uiHotResID*  
- Specifica l'ID risorsa delle immagini a caldo della barra degli strumenti.  
+*uiHotResID*<br/>
+[in] Specifica l'ID risorsa delle immagini a caldo della barra degli strumenti.  
   
- [in] *uiDisabledResID*  
- Specifica l'ID risorsa delle immagini disabilitato della barra degli strumenti.  
+*uiDisabledResID*<br/>
+[in] Specifica l'ID risorsa delle immagini disabilitato della barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
  Chiamare questo metodo per aggiungere una barra degli strumenti al pannello della barra multifunzione. Verrà aggiunta la barra degli strumenti accanto all'elemento della barra multifunzione aggiunto dalla chiamata precedente a [cmfcribbonpanel:: Add](#add).  
@@ -292,14 +292,14 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszName*  
- Il nome del pannello della barra multifunzione.  
+*lpszName*<br/>
+[in] Il nome del pannello della barra multifunzione.  
   
- [in] *hIcon*  
- Handle per l'icona del pulsante predefinito per il pannello della barra multifunzione.  
+*hIcon*<br/>
+[in] Handle per l'icona del pulsante predefinito per il pannello della barra multifunzione.  
   
- [in] *pPaletteButton*  
- Puntatore a una raccolta della barra multifunzione per il pannello della barra multifunzione.  
+*pPaletteButton*<br/>
+[in] Puntatore a una raccolta della barra multifunzione per il pannello della barra multifunzione.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
  Recupera l'elemento della barra multifunzione associato con i dati specificati.  
@@ -309,8 +309,8 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwData*  
- I dati associati a un elemento della barra multifunzione.  
+*dwData*<br/>
+[in] I dati associati a un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un elemento della barra multifunzione, se il metodo ha esito positivo; in caso contrario NULL.  
@@ -325,8 +325,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- L'ID di comando di un elemento della barra multifunzione.  
+*uiCmdID*<br/>
+[in] L'ID di comando di un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Elemento della barra multifunzione che è identificato dall'ID di comando specificato; in caso contrario, NULL se nessun elemento della barra multifunzione viene identificato con l'ID del comando specificato.  
@@ -397,8 +397,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice in base zero dell'elemento da recuperare.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero dell'elemento da recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore valido per l'elemento di base della barra multifunzione che si trova nella posizione *nIndex* nel pannello della barra multifunzione, o NULL se non esiste alcun elemento in corrispondenza dell'indice specificato.  
@@ -411,8 +411,8 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *arElements*  
- Matrice da riempire con tutti gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione.  
+*arElements*<br/>
+[out] Matrice da riempire con tutti gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -426,11 +426,11 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- ID comando per un elemento della barra multifunzione.  
+*uiCmdID*<br/>
+[in] ID comando per un elemento della barra multifunzione.  
   
- [in] *arElements*  
- Matrice di elementi della barra multifunzione.  
+*arElements*<br/>
+[in] Matrice di elementi della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Solo gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione vengono testati.  
@@ -455,8 +455,8 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pElem*  
- Puntatore a un elemento della barra multifunzione.  
+*pElem*<br/>
+[in] Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice in base zero dell'elemento della barra multifunzione specificato se il metodo ha esito positivo; in caso contrario,-1.  
@@ -471,8 +471,8 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *lstItems*  
- L'elenco di ID di comando per gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione.  
+*lstItems*<br/>
+[out] L'elenco di ID di comando per gli elementi della barra multifunzione sono contenuti nel pannello della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -528,8 +528,8 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *rect*  
- Questo parametro non viene usato.  
+*Rect*<br/>
+[out] Questo parametro non viene utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre FALSE.  
@@ -569,8 +569,8 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pElem*  
- Puntatore a un elemento della barra multifunzione.  
+*pElem*<br/>
+[in] Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il pannello della barra multifunzione contiene l'elemento specificata della barra multifunzione. in caso contrario, FALSE.  
@@ -587,11 +587,11 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bHighlight*  
- TRUE per evidenziare il pannello della barra multifunzione. FALSE per unhighlight pannello della barra multifunzione.  
+*bHighlight*<br/>
+[in] TRUE per evidenziare il pannello della barra multifunzione. FALSE per unhighlight pannello della barra multifunzione.  
   
- [in] *punto*  
- Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
   
 ### <a name="remarks"></a>Note  
   
@@ -605,11 +605,11 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
   
- [in] *bCheckPanelCaption*  
- TRUE per testare la didascalia del pannello della barra multifunzione; in caso contrario, FALSE.  
+*bCheckPanelCaption*<br/>
+[in] TRUE per testare la didascalia del pannello della barra multifunzione; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un elemento della barra multifunzione, se il punto specificato si trova in esso. in caso contrario NULL.  
@@ -625,8 +625,8 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
+*punto*<br/>
+[in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice a base zero dell'elemento della barra multifunzione con il punto specificato che si trova in esso. in caso contrario,-1.  
@@ -644,11 +644,11 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *pElem*  
- Puntatore a un elemento della barra multifunzione.  
+*pElem*<br/>
+[in, out] Puntatore a un elemento della barra multifunzione.  
   
- [in] *nIndex*  
- Valore in base zero, compreso tra -1 e il numero di elementi della barra multifunzione sono contenuti nella matrice.  
+*nIndex*<br/>
+[in] Valore in base zero, compreso tra -1 e il numero di elementi della barra multifunzione sono contenuti nella matrice.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'elemento della barra multifunzione è stato inserito correttamente. in caso contrario, FALSE.  
@@ -664,8 +664,8 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice in base zero in cui viene inserito il separatore.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero in cui viene inserito il separatore.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il separatore è stato inserito correttamente. in caso contrario, FALSE.  
@@ -769,11 +769,11 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per il pannello della barra multifunzione.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per il pannello della barra multifunzione.  
   
- [in] *nHeight*  
- Altezza del pannello della barra multifunzione.  
+*nHeight*<br/>
+[in] Altezza del pannello della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Un pannello della barra multifunzione modifica la configurazione di layout come le modifiche apportate alla larghezza disponibile.  
@@ -788,11 +788,11 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice in base zero dell'elemento che viene rimosso dal pannello della barra multifunzione.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero dell'elemento che viene rimosso dal pannello della barra multifunzione.  
   
- [in] *bElimina*  
- True per eliminare l'elemento viene rimosso in caso contrario, FALSE.  
+*bElimina*<br/>
+[in] True per eliminare l'elemento viene rimosso in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'elemento è stato rimosso ed eliminato (se *bDelete* è TRUE); FALSE se l'elemento non è stata rimossa o se è presente alcun elemento della barra multifunzione non disponibile all'indirizzo *nIndex*.  
@@ -820,8 +820,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice in base zero dell'elemento da sostituire.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero dell'elemento da sostituire.  
   
  [in] [out] *pElem*  
  Un puntatore valido per l'elemento che sostituisce l'elemento originale.  
@@ -842,8 +842,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- Specifica l'ID di comando dell'elemento da sostituire.  
+*uiCmdID*<br/>
+[in] Specifica l'ID di comando dell'elemento da sostituire.  
   
  [in] [out] *pElem*  
  Un puntatore valido per l'elemento che sostituirà l'elemento originale.  
@@ -862,8 +862,8 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- TRUE per allineare al centro le posizioni verticale degli elementi della barra multifunzione entro il rettangolo di visualizzazione; FALSE per disabilitare questa funzionalità.  
+*bSet*<br/>
+[in] TRUE per allineare al centro le posizioni verticale degli elementi della barra multifunzione entro il rettangolo di visualizzazione; FALSE per disabilitare questa funzionalità.  
   
 ### <a name="remarks"></a>Note  
   
@@ -875,8 +875,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwData*  
- Specifica i dati definiti dall'utente da impostare.  
+*dwData*<br/>
+[in] Specifica i dati definiti dall'utente da impostare.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per associare i dati definiti dall'utente con il pannello della barra multifunzione.  
@@ -900,20 +900,20 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- Specifica l'ID di comando dell'elemento della barra multifunzione in cui viene aggiunto il menu di scelta.  
+*uiCmdID*<br/>
+[in] Specifica l'ID di comando dell'elemento della barra multifunzione in cui viene aggiunto il menu di scelta.  
   
- [in] *hMenu*  
- Specifica l'handle per il menu di Windows da aggiungere al pannello della barra multifunzione.  
+*hMenu*<br/>
+[in] Specifica l'handle per il menu di Windows da aggiungere al pannello della barra multifunzione.  
   
- [in] *bIsDefautCommand*  
- TRUE per specificare che deve essere eseguito il comando associato all'elemento della barra multifunzione se si seleziona l'elemento della barra multifunzione. In questo caso, il menu di scelta è aperto solo quando l'utente fa clic sulla freccia accanto all'elemento della barra multifunzione. FALSE per specificare che il comando associato all'elemento della barra multifunzione non deve essere eseguito se si seleziona l'elemento della barra multifunzione. In questo caso, indipendentemente dal fatto in cui l'utente fa clic sull'elemento viene visualizzato il menu di scelta rapida.  
+*bIsDefautCommand*<br/>
+[in] TRUE per specificare che deve essere eseguito il comando associato all'elemento della barra multifunzione se si seleziona l'elemento della barra multifunzione. In questo caso, il menu di scelta è aperto solo quando l'utente fa clic sulla freccia accanto all'elemento della barra multifunzione. FALSE per specificare che il comando associato all'elemento della barra multifunzione non deve essere eseguito se si seleziona l'elemento della barra multifunzione. In questo caso, indipendentemente dal fatto in cui l'utente fa clic sull'elemento viene visualizzato il menu di scelta rapida.  
   
- [in] *bRightAlign*  
- TRUE per specificare che il menu di scelta rapida è allineato a destra; in caso contrario, FALSE.  
+*bRightAlign*<br/>
+[in] TRUE per specificare che il menu di scelta rapida è allineato a destra; in caso contrario, FALSE.  
   
- [in] *uiMenuResID*  
- Specifica l'ID risorsa del menu da aggiungere al pannello della barra multifunzione.  
+*uiMenuResID*<br/>
+[in] Specifica l'ID risorsa del menu da aggiungere al pannello della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il menu di scelta è stato assegnato all'elemento della barra multifunzione; in caso contrario, FALSE.  
@@ -931,8 +931,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Specifica l'indice in base zero dell'elemento della barra multifunzione da aggiungere.  
+*nIndex*<br/>
+[in] Specifica l'indice in base zero dell'elemento della barra multifunzione da aggiungere.  
   
  [in] [out] *pRTC*  
  Puntatore alle informazioni sulla classe di runtime per l'elemento della barra multifunzione che viene aggiunto al pannello della barra multifunzione.  
@@ -953,8 +953,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- Specifica l'ID di comando dell'elemento della barra multifunzione da aggiungere.  
+*uiCmdID*<br/>
+[in] Specifica l'ID di comando dell'elemento della barra multifunzione da aggiungere.  
   
  [in] [out] *pRTC*  
  Puntatore alle informazioni sulla classe di runtime associati all'elemento della barra multifunzione che viene aggiunto al pannello della barra multifunzione.  
@@ -999,8 +999,8 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- TRUE per regolare la larghezza degli elementi della barra multifunzione nella stessa colonna per la larghezza dell'elemento della barra multifunzione più grande nella colonna. FALSE per disabilitare questa regolazione della larghezza.  
+*bSet*<br/>
+[in] TRUE per regolare la larghezza degli elementi della barra multifunzione nella stessa colonna per la larghezza dell'elemento della barra multifunzione più grande nella colonna. FALSE per disabilitare questa regolazione della larghezza.  
   
 ### <a name="remarks"></a>Note  
  Quando questa funzionalità è abilitata in un pannello della barra multifunzione, la larghezza dell'elemento più grande della barra multifunzione nella stessa colonna è regolata la larghezza degli elementi della barra multifunzione nella stessa colonna.  
@@ -1013,8 +1013,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszKeys*  
- Suggerimento per il pulsante predefinito del pannello della barra multifunzione.  
+*lpszKeys*<br/>
+[in] Suggerimento per il pulsante predefinito del pannello della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Viene visualizzato il pulsante predefinito quando un pannello della barra multifunzione dispone di sufficiente spazio per visualizzarne gli elementi della barra multifunzione.  
@@ -1027,8 +1027,8 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pButton*  
- Puntatore al pulsante predefinito per il pannello della barra multifunzione.  
+*pButton*<br/>
+[in] Puntatore al pulsante predefinito per il pannello della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al menu a comparsa del pannello della barra multifunzione, se il metodo ha esito positivo; in caso contrario NULL.  

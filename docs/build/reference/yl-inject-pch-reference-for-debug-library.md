@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894655"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712374"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Inserisce il riferimento PCH per la libreria di debug)
 
@@ -31,16 +31,16 @@ Il **/Yl** opzione genera un simbolo univoco in un file di intestazione precompi
 
 ## <a name="syntax"></a>Sintassi
 
->**/Yl**  
->**/Yl**_nome_  
->**/Yl-**  
+>**/Yl**
+> **/Yl**_name_
+> **/Yl-**
 
 ### <a name="arguments"></a>Argomenti
 
-*name*  
+*name*<br/>
 Nome facoltativo usato come parte del simbolo univoco.
 
-*\-*  
+*\-*<br/>
 Disabilita in modo esplicito un trattino (-) di **/Yl** opzione del compilatore.
 
 ## <a name="remarks"></a>Note
@@ -75,5 +75,5 @@ Per altre informazioni sulle intestazioni precompilate, vedere:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)  
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)  
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

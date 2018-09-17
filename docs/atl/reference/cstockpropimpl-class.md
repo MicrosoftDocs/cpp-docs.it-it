@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2021f98389177e7c3172fd142172c6bc85f6724
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 609216b38ab67076b454ac5adad3f331b235b580
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767738"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706030"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 
@@ -959,7 +959,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Parametri
 
-*/\* hWnd \*/*  
+*/&ast; hWnd &ast;/*  
 Riservato.
 
 ### <a name="return-value"></a>Valore restituito

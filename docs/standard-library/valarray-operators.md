@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b828081fea1f9886c1a661323e2d0e0c79d1ae96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315028"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703560"
 ---
 # <a name="ltvalarraygt-operators"></a>Operatori &lt;valarray&gt;
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui elementi devono essere testati per verificare la disuguaglianza.
+*left*<br/>
+Primo dei due oggetti valarray i cui elementi devono essere testati per verificare la disuguaglianza.
 
-*right*  
- Secondo dei due oggetti valarray i cui elementi devono essere testati per verificare la disuguaglianza.
+*right*<br/>
+Secondo dei due oggetti valarray i cui elementi devono essere testati per verificare la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Valore di oggetto valarray usato come dividendo in cui deve essere diviso un altro valore o un altro oggetto valarray.
+*left*<br/>
+Valore di oggetto valarray usato come dividendo in cui deve essere diviso un altro valore o un altro oggetto valarray.
 
-*right*  
- Valore oppure oggetto valarray usato come divisore che divide un altro valore oppure un altro oggetto valarray.
+*right*<br/>
+Valore oppure oggetto valarray usato come divisore che divide un altro valore oppure un altro oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `AND` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `AND` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `AND` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `AND` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `AND` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `AND` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `AND` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `AND` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Valore da spostare oppure oggetto valarray i cui elementi sono da spostare.
+*left*<br/>
+Valore da spostare oppure oggetto valarray i cui elementi sono da spostare.
 
-*right*  
- Valore che indica di quanto viene effettuato lo spostamento verso destra oppure oggetto valarray i cui elementi indicano di quanto viene effettuato lo spostamento verso destra elemento per elemento.
+*right*<br/>
+Valore che indica di quanto viene effettuato lo spostamento verso destra oppure oggetto valarray i cui elementi indicano di quanto viene effettuato lo spostamento verso destra elemento per elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui elementi devono essere confrontati oppure valore specificato da confrontare con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Valore da spostare oppure oggetto valarray i cui elementi sono da spostare.
+*left*<br/>
+Valore da spostare oppure oggetto valarray i cui elementi sono da spostare.
 
-*right*  
- Valore che indica di quanto viene effettuato lo spostamento verso sinistra oppure oggetto valarray i cui elementi indicano di quanto viene effettuato lo spostamento verso sinistra elemento per elemento.
+*right*<br/>
+Valore che indica di quanto viene effettuato lo spostamento verso sinistra oppure oggetto valarray i cui elementi indicano di quanto viene effettuato lo spostamento verso sinistra elemento per elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui elementi devono essere moltiplicati oppure valore specificato da moltiplicare con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui elementi devono essere moltiplicati oppure valore specificato da moltiplicare con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui elementi devono essere moltiplicati oppure valore specificato da moltiplicare con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui elementi devono essere moltiplicati oppure valore specificato da moltiplicare con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui elementi devono essere aggiunti oppure valore specificato da aggiungere a ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui elementi devono essere aggiunti oppure valore specificato da aggiungere a ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui elementi devono essere aggiunti oppure valore specificato da aggiungere a ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui elementi devono essere aggiunti oppure valore specificato da aggiungere a ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Valore oppure oggetto valarray usato come minuendo da cui devono essere sottratti altri valori oppure oggetti valarray per formare la differenza.
+*left*<br/>
+Valore oppure oggetto valarray usato come minuendo da cui devono essere sottratti altri valori oppure oggetti valarray per formare la differenza.
 
-*right*  
- Valore oppure oggetto valarray usato come sottraendo che deve essere sottratto da altri valori oppure oggetti valarray per formare la differenza.
+*right*<br/>
+Valore oppure oggetto valarray usato come sottraendo che deve essere sottratto da altri valori oppure oggetti valarray per formare la differenza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Valore oppure oggetto valarray usato come dividendo per cui deve essere diviso un altro valore o un altro oggetto valarray per formare il quoziente.
+*left*<br/>
+Valore oppure oggetto valarray usato come dividendo per cui deve essere diviso un altro valore o un altro oggetto valarray per formare il quoziente.
 
-*right*  
- Valore oppure oggetto valarray usato come divisore che divide un altro valore oppure un altro oggetto valarray per formare il quoziente.
+*right*<br/>
+Valore oppure oggetto valarray usato come divisore che divide un altro valore oppure un altro oggetto valarray per formare il quoziente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui elementi devono essere testati per verificare l'uguaglianza.
+*left*<br/>
+Primo dei due oggetti valarray i cui elementi devono essere testati per verificare l'uguaglianza.
 
-*right*  
- Secondo dei due oggetti valarray i cui elementi devono essere testati per verificare l'uguaglianza.
+*right*<br/>
+Secondo dei due oggetti valarray i cui elementi devono essere testati per verificare l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **XOR** bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **XOR** bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **XOR** bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore **XOR** bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` bit per bit oppure valore specificato del tipo di elemento da combinare bit per bit con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
- Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.
+*left*<br/>
+Primo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.
 
-*right*  
- Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.
+*right*<br/>
+Secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con l'operatore `OR` logico oppure valore specificato del tipo di elemento da combinare con ogni elemento di un oggetto valarray.
 
 ### <a name="return-value"></a>Valore restituito
 

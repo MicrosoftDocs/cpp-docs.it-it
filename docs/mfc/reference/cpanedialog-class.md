@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682327"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710151"
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
 Il `CPaneDialog` classe supporta una finestra di dialogo non modale e ancorabile.  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszWindowName*  
- Il nome della finestra di dialogo di ancoraggio.  
+*lpszWindowName*<br/>
+[in] Il nome della finestra di dialogo di ancoraggio.  
   
- [in] *pParentWnd*  
- Punta alla finestra padre.  
+*pParentWnd*<br/>
+[in] Punta alla finestra padre.  
   
- [in] *bHasGripper*  
- TRUE per creare la finestra di dialogo di ancoraggio con una didascalia (gripper); in caso contrario, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE per creare la finestra di dialogo di ancoraggio con una didascalia (gripper); in caso contrario, FALSE.  
   
- [in] *lpszTemplateName*  
- Il nome del modello di finestra di dialogo di risorse.  
+*lpszTemplateName*<br/>
+[in] Il nome del modello di finestra di dialogo di risorse.  
   
- [in] *nStyle*  
- Lo stile di Windows.  
+*nStyle*<br/>
+[in] Lo stile di Windows.  
   
- [in] *nID*  
- ID del controllo.  
+*nID*<br/>
+[in] ID del controllo.  
   
- [in] *nIDTemplate*  
- L'ID risorsa del modello di finestra di dialogo.  
+*nIDTemplate*<br/>
+[in] L'ID risorsa del modello di finestra di dialogo.  
   
- [in] *dwTabbedStyle*  
- Lo stile della finestra a schede che risulta quando l'utente trascina un altro riquadro di controllo sulla didascalia del riquadro controllo. Il valore predefinito è AFX_CBRS_REGULAR_TABS. Per altre informazioni, vedere la sezione Osservazioni del [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) (metodo).  
+*dwTabbedStyle*<br/>
+[in] Lo stile della finestra a schede che risulta quando l'utente trascina un altro riquadro di controllo sulla didascalia del riquadro controllo. Il valore predefinito è AFX_CBRS_REGULAR_TABS. Per altre informazioni, vedere la sezione Osservazioni del [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) (metodo).  
   
- [in] *dwControlBarStyle*  
- Attributi di stile aggiuntive. Il valore predefinito è AFX_DEFAULT_DOCKING_PANE_STYLE. Per altre informazioni, vedere la sezione Osservazioni del [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) (metodo).  
+*dwControlBarStyle*<br/>
+[in] Attributi di stile aggiuntive. Il valore predefinito è AFX_DEFAULT_DOCKING_PANE_STYLE. Per altre informazioni, vedere la sezione Osservazioni del [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) (metodo).  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il metodo ha esito positivo; in caso contrario, FALSE.  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *wParam*  
- Handle per il controllo che deve ricevere lo stato attivo della tastiera predefinita.  
+*wParam*<br/>
+[in] Handle per il controllo che deve ricevere lo stato attivo della tastiera predefinita.  
   
- [in] *lParam*  
- Specifica i dati di inizializzazione aggiuntiva.  
+*lParam*<br/>
+[in] Specifica i dati di inizializzazione aggiuntiva.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE. Inoltre, TRUE, imposta lo stato attivo sul controllo specificato per il *wParam* parametro. FALSE impedisce l'impostazione dello stato attivo della tastiera predefinita.  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pOccDialogInfo*  
- Puntatore a un modello di finestra di dialogo che viene usato per creare l'oggetto finestra di dialogo. Il valore di questo parametro viene passato successivamente nel [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) (metodo).  
+*pOccDialogInfo*<br/>
+[in] Puntatore a un modello di finestra di dialogo che viene usato per creare l'oggetto finestra di dialogo. Il valore di questo parametro viene passato successivamente nel [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) (metodo).  
   
 ### <a name="return-value"></a>Valore restituito  
  Sempre TRUE.  

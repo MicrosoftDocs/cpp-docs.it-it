@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75c5e4df92cf23198d7225dfe337a5c82ecf5596
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b765f6393b9bd2d632539abb5fb7cd17c29297b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609204"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701753"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
@@ -45,9 +45,9 @@ class SafeInt;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|[in] *rhs*|Un parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.|
-|[in] *ho*|Un parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.|
-|[in] *bits*|Un parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.|
+|*rhs*|[in] Un parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.|
+|*i*|[in] Un parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.|
+|*BITS*|[in] Un parametro di input che rappresenta il valore sul lato destro dell'operatore in numerose funzioni autonome.|
 
 ## <a name="members"></a>Membri
 

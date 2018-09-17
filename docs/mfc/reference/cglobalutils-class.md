@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2c594e86c0e0bcb74fe624743c863c70a1c7f9e6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540240"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707811"
 ---
 # <a name="cglobalutils-class"></a>Classe CGlobalUtils
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
@@ -104,8 +104,8 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *rect*  
- [in] *pRectDelta*  
+*Rect*<br/>
+[in, out] [in] *pRectDelta*  
   
 ### <a name="remarks"></a>Note  
   
@@ -123,12 +123,12 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *barContainerManager*  
- [in] *pWndTodock*  
- [in] *ptMouse*  
- [out] *rectResult*  
- [out] *bDrawTab*  
- [out] *ppTargetBar*  
+*barContainerManager*<br/>
+[in] [in] *pWndTodock*  
+*ptMouse*<br/>
+[in] [out] *rectResult*  
+*bDrawTab*<br/>
+[out] [out] *ppTargetBar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -176,14 +176,14 @@ BOOL CheckAlignment(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- [in] *pBar*  
- [in] *nSensitivity*  
- [in] *pDockManager*  
- [in] *bOuterEdge*  
- [out] *dwAlignment*  
- [in] *dwEnabledDockBars*  
- [in] *lpRectBounds*  
+*punto*<br/>
+[in] [in] *pBar*  
+*nSensitivity*<br/>
+[in] [in] *pDockManager*  
+*bOuterEdge*<br/>
+[in] [out] *dwAlignment*  
+*dwEnabledDockBars*<br/>
+[in] [in] *lpRectBounds*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -199,8 +199,8 @@ BOOL CyFromString(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *cy*  
- [in] *psz*  
+*CY*<br/>
+[out] [in] *psz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -216,8 +216,8 @@ BOOL DecimalFromString(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *decimale*  
- [in] *psz*  
+*decimal*<br/>
+[out] [in] *psz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -233,8 +233,8 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *rect*  
- [in] *nDegrees*  
+*Rect*<br/>
+[in, out] [in] *nDegrees*  
   
 ### <a name="remarks"></a>Note  
   
@@ -249,8 +249,8 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *pDockManager*  
- [in] *bForce*  
+*pDockManager*<br/>
+[in, out] [in] *bForce*  
  [in] *bForceInvisible*  
   
 ### <a name="remarks"></a>Note  
@@ -297,12 +297,12 @@ BOOL GetPaneAndAlignFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *barContainerManager*  
- [in] *pt*  
- [out] *ppTargetControlBar*  
- [out] *dwAlignment*  
- [out] *bTabArea*  
- [out] *bCaption*  
+*barContainerManager*<br/>
+[in] [in] *pt*  
+*ppTargetControlBar*<br/>
+[out] [out] *dwAlignment*  
+*bTabArea*<br/>
+[out] [out] *bCaption*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -333,8 +333,8 @@ void SetNewParent(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lstControlBars*  
- [in] *pNewParent*  
+*lstControlBars*<br/>
+[in] [in] *pNewParent*  
  [in] *bCheckVisibility*  
   
 ### <a name="remarks"></a>Note  
@@ -349,8 +349,8 @@ BOOL StringFromCy(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *str*  
- [in] *cy*  
+*str*<br/>
+[out] [in] *cy*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -366,8 +366,8 @@ BOOL StringFromDecimal(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] *str*  
- [in] *decimale*  
+*str*<br/>
+[out] [in] *decimale*  
   
 ### <a name="return-value"></a>Valore restituito  
   

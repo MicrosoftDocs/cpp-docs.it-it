@@ -1,5 +1,5 @@
 ---
-title: File inline in un Makefile | Documenti Microsoft
+title: File inline in un Makefile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1203a38380e9d5975460fe05de3ced32b939c237
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a845c071979c0736e2e968cf3e7c74568dc95b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368122"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704470"
 ---
 # <a name="inline-files-in-a-makefile"></a>File inline in un makefile
-Un file inline contiene testo specificato nel makefile. Il nome può essere utilizzato nei comandi come input (ad esempio, un file di comando LINK) o può passare i comandi al sistema operativo. Il file viene creato su disco quando si esegue un comando che crea il file.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
- [Specificare un file inline](../build/specifying-an-inline-file.md)  
-  
- [Creazione di testo di un file inline](../build/creating-inline-file-text.md)  
-  
- [Riutilizzo di file inline](../build/reusing-inline-files.md)  
-  
- [File inline multipli](../build/multiple-inline-files.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Comandi di un makefile](../build/commands-in-a-makefile.md)
+
+Un file inline contiene testo specificato dall'utente nel makefile. Il nome può essere utilizzato nei comandi come input (ad esempio, un file di comando LINK) o può passare i comandi del sistema operativo. Il file viene creato sul disco quando si esegue un comando che crea il file.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
+
+[Specifica un file inline](../build/specifying-an-inline-file.md)
+
+[Creazione di testo di un file inline](../build/creating-inline-file-text.md)
+
+[Riutilizzo di file inline](../build/reusing-inline-files.md)
+
+[File inline multipli](../build/multiple-inline-files.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Comandi di un makefile](../build/commands-in-a-makefile.md)

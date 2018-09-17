@@ -1,5 +1,5 @@
 ---
-title: parallelo | Documenti Microsoft
+title: Parallel | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692285"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705965"
 ---
 # <a name="parallel"></a>parallel
-Definisce un'area parallela, ovvero il codice eseguito da più thread in parallelo.  
+Definisce un'area parallela, ovvero codice che verrà eseguito da più thread in parallelo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,14 +35,13 @@ Definisce un'area parallela, ovvero il codice eseguito da più thread in paralle
 }  
 ```  
   
-## <a name="remarks"></a>Note  
- dove  
+## <a name="arguments"></a>Argomenti
+
+*Clausola*<br/>
+(Facoltativo) Zero o più clausole.  Vedere la sezione Osservazioni per un elenco delle clausole supportate da **parallele**.  
   
- `clause` (facoltativo)  
- Zero o più clausole.  Vedere la sezione Osservazioni per un elenco di clausole supportate da **parallela**.  
-  
 ## <a name="remarks"></a>Note  
- Il **parallela** direttiva supporta le clausole OpenMP seguenti:  
+ Il **parallele** direttiva supporta le clausole OpenMP seguente:  
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
@@ -60,12 +59,12 @@ Definisce un'area parallela, ovvero il codice eseguito da più thread in paralle
   
 -   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **parallelo** può anche essere utilizzato con il [sezioni](../../../parallel/openmp/reference/sections-openmp.md) e [per](../../../parallel/openmp/reference/for-openmp.md) direttive.  
+ **Parallel** sono utilizzabili anche con il [sezioni](../../../parallel/openmp/reference/sections-openmp.md) e [per](../../../parallel/openmp/reference/for-openmp.md) direttive.  
   
- Per ulteriori informazioni, vedere [2.3 costrutto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Per altre informazioni, vedere [2.3 costrutto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente viene illustrato come impostare il numero di thread e definire un'area parallela. Per impostazione predefinita, il numero di thread è uguale al numero di processori logici nel computer. Ad esempio, se si dispone di un computer con un processore fisico che ha attivato l'hyperthreading, avrà due processori logici e, pertanto, due thread.  
+ L'esempio seguente viene illustrato come impostare il numero di thread e definire un'area parallela. Per impostazione predefinita, il numero di thread è uguale al numero di processori logici nel computer. Ad esempio, se si dispone di un computer con un unico processore fisico con hyperthreading abilitato, avrà due processori logici e, pertanto, due thread.  
   
 ```  
 // omp_parallel.cpp  

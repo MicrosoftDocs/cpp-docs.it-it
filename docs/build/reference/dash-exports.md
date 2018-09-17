@@ -1,5 +1,5 @@
 ---
-title: -EXPORTS | Documenti Microsoft
+title: -EXPORTS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3e21a8f4c2bfc38c16df1d24d78c3992a8169b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2b7a0645b5486f3a4291c78fad421c974314d94
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369539"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703358"
 ---
 # <a name="exports"></a>/EXPORTS
-```  
-/EXPORTS  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa opzione consente di visualizzare tutte le definizioni esportate da un file eseguibile o DLL.  
-  
- Solo il [/HEADERS](../../build/reference/headers.md) (opzione DUMPBIN) è disponibile per l'utilizzo con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/EXPORTS
+```
+
+## <a name="remarks"></a>Note
+
+Questa opzione consente di visualizzare tutte le definizioni esportate da un file eseguibile o DLL.
+
+Solo le [/HEADERS](../../build/reference/headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) opzione del compilatore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)

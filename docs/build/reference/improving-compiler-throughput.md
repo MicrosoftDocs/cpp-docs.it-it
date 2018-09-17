@@ -1,5 +1,5 @@
 ---
-title: Miglioramento della velocità effettiva del compilatore | Documenti Microsoft
+title: Miglioramento della velocità effettiva del compilatore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c78c0640e415f4a531149a47430833ba94770719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 883b4056226a3595f2255dcadfb4cc056e1150ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371434"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704138"
 ---
 # <a name="improving-compiler-throughput"></a>Incremento dell'efficienza delle operazioni del compilatore
-Utilizzare i file di intestazione precompilata per velocizzare la compilazione del progetto. Questo è importante se si utilizza ATL, MFC o i file di intestazione di Windows SDK.  
-  
- Vedere [/Yc](../../build/reference/yc-create-precompiled-header-file.md) e [/Yu](../../build/reference/yu-use-precompiled-header-file.md).  
-  
- Per altre informazioni sulle intestazioni precompilate, vedere [Creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Ottimizzazione del codice](../../build/reference/optimizing-your-code.md)
+
+Usare file di intestazione precompilata per compilare il progetto più velocemente. Questo è importante se si usa ATL, MFC o i file di intestazione di Windows SDK.
+
+Visualizzare [/Yc](../../build/reference/yc-create-precompiled-header-file.md) e [/Yu](../../build/reference/yu-use-precompiled-header-file.md).
+
+Per altre informazioni sulle intestazioni precompilate, vedere [Creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Ottimizzazione del codice](../../build/reference/optimizing-your-code.md)

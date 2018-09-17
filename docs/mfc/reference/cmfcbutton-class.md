@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1ded79786aaed0bf917ef57f445882c3f7d05719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690875"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709956"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 Il `CMFCButton` classe aggiunge funzionalità per il [CButton](../../mfc/reference/cbutton-class.md) classe, ad esempio l'allineamento del testo del pulsante, la combinazione di testo del pulsante e un'immagine, selezione di un cursore e specificare una descrizione comandi.  
@@ -223,8 +223,8 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bin*  
- TRUE per visualizzare tutto il testo; FALSE per testo troncato.  
+*Bin*<br/>
+[in] TRUE per visualizzare tutto il testo; FALSE per testo troncato.  
   
 ### <a name="remarks"></a>Note  
   
@@ -238,11 +238,11 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bin*  
- TRUE per utilizzare il tipo di carattere dal menu dell'applicazione come tipo di carattere di testo del pulsante; FALSE per utilizzare il carattere di sistema. Il valore predefinito è TRUE.  
+*Bin*<br/>
+[in] TRUE per utilizzare il tipo di carattere dal menu dell'applicazione come tipo di carattere di testo del pulsante; FALSE per utilizzare il carattere di sistema. Il valore predefinito è TRUE.  
   
- [in] *bRedraw*  
- TRUE per aggiornare immediatamente lo schermo; in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*bRedraw*<br/>
+[in] TRUE per aggiornare immediatamente lo schermo; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
  Se non si utilizza questo metodo per specificare il carattere di testo del pulsante, è possibile specificare il tipo di carattere con la [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) (metodo). Se non si specifica un tipo di carattere del tutto, il framework imposta un tipo di carattere predefinito.  
@@ -255,8 +255,8 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bAttivare il*  
- TRUE per utilizzare il tema di Windows corrente per disegnare i bordi pulsante; FALSE per non utilizzare il tema di Windows. Il valore predefinito è TRUE.  
+*bAttivare il*<br/>
+[in] TRUE per utilizzare il tema di Windows corrente per disegnare i bordi pulsante; FALSE per non utilizzare il tema di Windows. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo influisce su tutti i pulsanti nell'applicazione che derivano dal `CMFCButton` classe.  
@@ -517,14 +517,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Un riferimento a un rettangolo che delimita il pulsante.  
+*Rect*<br/>
+[in] Un riferimento a un rettangolo che delimita il pulsante.  
   
- [in] *uiState*  
- Stato del pulsante corrente. Per altre informazioni, vedere la `itemState` membro della [DRAWITEMSTRUCT (struttura)](../../mfc/reference/drawitemstruct-structure.md) argomento.  
+*uiState*<br/>
+[in] Stato del pulsante corrente. Per altre informazioni, vedere la `itemState` membro della [DRAWITEMSTRUCT (struttura)](../../mfc/reference/drawitemstruct-structure.md) argomento.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per usare il proprio codice per disegnare un pulsante.  
@@ -540,14 +540,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rectClient*  
- Un riferimento a un rettangolo che delimita il pulsante.  
+*rectClient*<br/>
+[in] Un riferimento a un rettangolo che delimita il pulsante.  
   
- [in] *uiState*  
- Stato del pulsante corrente. Per altre informazioni, vedere la `itemState` membro della [DRAWITEMSTRUCT (struttura)](../../mfc/reference/drawitemstruct-structure.md) argomento.  
+*uiState*<br/>
+[in] Stato del pulsante corrente. Per altre informazioni, vedere la `itemState` membro della [DRAWITEMSTRUCT (struttura)](../../mfc/reference/drawitemstruct-structure.md) argomento.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per usare il proprio codice per disegnare il bordo.  
@@ -562,11 +562,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rectClient*  
- Un riferimento a un rettangolo che delimita il pulsante.  
+*rectClient*<br/>
+[in] Un riferimento a un rettangolo che delimita il pulsante.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per usare il proprio codice per disegnare il rettangolo di attivazione.  
@@ -584,20 +584,20 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Un riferimento a un rettangolo che delimita il pulsante.  
+*Rect*<br/>
+[in] Un riferimento a un rettangolo che delimita il pulsante.  
   
- [in] *strText*  
- Testo da disegnare.  
+*strText*<br/>
+[in] Testo da disegnare.  
   
- [in] *uiDTFlags*  
- Flag che specificano come formattare il testo. Per altre informazioni, vedere la *nFormat* parametro delle [CDC](../../mfc/reference/cdc-class.md#drawtext) (metodo).  
+*uiDTFlags*<br/>
+[in] Flag che specificano come formattare il testo. Per altre informazioni, vedere la *nFormat* parametro delle [CDC](../../mfc/reference/cdc-class.md#drawtext) (metodo).  
   
- [in] *uiState*  
- (Riservato).  
+*uiState*<br/>
+[in] Riservato.
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per usare il proprio codice per disegnare il testo del pulsante.  
@@ -612,11 +612,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rectClient*  
- Un riferimento a un rettangolo che delimita il pulsante.  
+*rectClient*<br/>
+[in] Un riferimento a un rettangolo che delimita il pulsante.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per usare il proprio codice per disegnare lo sfondo di un pulsante.  
@@ -629,8 +629,8 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Eseguire l'override di questo metodo per usare il proprio codice per recuperare il tipo di carattere.  
@@ -645,8 +645,8 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nTimeDelay*  
- Un numero non negativo che specifica l'intervallo tra i messaggi inviati alla finestra padre. L'intervallo viene misurato in millisecondi e il valore predefinito è 500 millisecondi. Specificare zero per disabilitare la modalità di ripetizione automatica messaggio.  
+*nTimeDelay*<br/>
+[in] Un numero non negativo che specifica l'intervallo tra i messaggi inviati alla finestra padre. L'intervallo viene misurato in millisecondi e il valore predefinito è 500 millisecondi. Specificare zero per disabilitare la modalità di ripetizione automatica messaggio.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo, il pulsante Invia costantemente messaggi WM_COMMAND alla finestra padre fino a quando non viene rilasciato il pulsante, o la *nTimeDelay* parametro è impostato su zero.  
@@ -678,41 +678,41 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hIcon*  
- Handle per l'icona che contiene il bitmap e la maschera per la nuova immagine.  
+*hIcon*<br/>
+[in] Handle per l'icona che contiene il bitmap e la maschera per la nuova immagine.  
   
- [in] *il flag bAutoDestroy*  
- TRUE per specificare che le risorse di bitmap distrutto automaticamente. in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*flag bAutoDestroy*<br/>
+[in] TRUE per specificare che le risorse di bitmap distrutto automaticamente. in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
- [in] *hIconHot*  
- Handle per l'icona che contiene l'immagine per lo stato selezionato.  
+*hIconHot*<br/>
+[in] Handle per l'icona che contiene l'immagine per lo stato selezionato.  
   
- [in] *hBitmap*  
- Handle per la mappa di bit che contiene l'immagine per lo stato non selezionata.  
+*hBitmap*<br/>
+[in] Handle per la mappa di bit che contiene l'immagine per lo stato non selezionata.  
   
- [in] *hBitmapHot*  
- Handle per la mappa di bit che contiene l'immagine per lo stato selezionato.  
+*hBitmapHot*<br/>
+[in] Handle per la mappa di bit che contiene l'immagine per lo stato selezionato.  
   
- [in] *bMap3dColors*  
- Specifica un colore trasparente per lo sfondo del pulsante; vale a dire la faccia del pulsante. TRUE per utilizzare il valore del colore RGB (192, 192, 192); FALSE per utilizzare il valore di colore definito dal `AFX_GLOBAL_DATA::clrBtnFace`.  
+*bMap3dColors*<br/>
+[in] Specifica un colore trasparente per lo sfondo del pulsante; vale a dire la faccia del pulsante. TRUE per utilizzare il valore del colore RGB (192, 192, 192); FALSE per utilizzare il valore di colore definito dal `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] *uiBmpResId*  
- ID di risorsa per l'immagine non selezionata.  
+*uiBmpResId*<br/>
+[in] ID di risorsa per l'immagine non selezionata.  
   
- [in] *uiBmpHotResId*  
- ID di risorsa per l'immagine selezionata.  
+*uiBmpHotResId*<br/>
+[in] ID di risorsa per l'immagine selezionata.  
   
- [in] *hIconDisabled*  
- Handle per l'icona per l'immagine disabilitato.  
+*hIconDisabled*<br/>
+[in] Handle per l'icona per l'immagine disabilitato.  
   
- [in] *hBitmapDisabled*  
- Handle per la mappa di bit che contiene l'immagine disabilitato.  
+*hBitmapDisabled*<br/>
+[in] Handle per la mappa di bit che contiene l'immagine disabilitato.  
   
- [in] *uiBmpDsblResID*  
- ID risorsa della bitmap disabilitata.  
+*uiBmpDsblResID*<br/>
+[in] ID risorsa della bitmap disabilitata.  
   
- [in] *bAlphaBlend*  
- True per utilizzare le immagini di solo 32 bit che usano il canale alfa. FALSE, non usare le immagini di canale alfa solo. Il valore predefinito è FALSE.  
+*bAlphaBlend*<br/>
+[in] True per utilizzare le immagini di solo 32 bit che usano il canale alfa. FALSE, non usare le immagini di canale alfa solo. Il valore predefinito è FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -726,11 +726,11 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *crFace*  
- Un valore di colore RGB.  
+*crFace*<br/>
+[in] Un valore di colore RGB.  
   
- [in] *bRedraw*  
- TRUE per aggiornare lo schermo immediatamente. in caso contrario, FALSE.  
+*bRedraw*<br/>
+[in] TRUE per aggiornare lo schermo immediatamente. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per definire un nuovo colore di riempimento per lo sfondo del pulsante (faccia). Si noti che lo sfondo non è soddisfatta quando la [CMFCButton::m_bTransparent](#m_btransparent) variabile membro è TRUE.  
@@ -762,41 +762,41 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hIcon*  
- Handle per l'icona che contiene il bitmap e la maschera per la nuova immagine.  
+*hIcon*<br/>
+[in] Handle per l'icona che contiene il bitmap e la maschera per la nuova immagine.  
   
- [in] *il flag bAutoDestroy*  
- TRUE per specificare che le risorse di bitmap distrutto automaticamente. in caso contrario, FALSE. Il valore predefinito è TRUE.  
+*flag bAutoDestroy*<br/>
+[in] TRUE per specificare che le risorse di bitmap distrutto automaticamente. in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
- [in] *hIconHot*  
- Handle per l'icona che contiene l'immagine per lo stato selezionato.  
+*hIconHot*<br/>
+[in] Handle per l'icona che contiene l'immagine per lo stato selezionato.  
   
- [in] *hBitmap*  
- Handle per la mappa di bit che contiene l'immagine per lo stato non selezionata.  
+*hBitmap*<br/>
+[in] Handle per la mappa di bit che contiene l'immagine per lo stato non selezionata.  
   
- [in] *hBitmapHot*  
- Handle per la mappa di bit che contiene l'immagine per lo stato selezionato.  
+*hBitmapHot*<br/>
+[in] Handle per la mappa di bit che contiene l'immagine per lo stato selezionato.  
   
- [in] *uiBmpResId*  
- ID di risorsa per l'immagine non selezionata.  
+*uiBmpResId*<br/>
+[in] ID di risorsa per l'immagine non selezionata.  
   
- [in] *uiBmpHotResId*  
- ID di risorsa per l'immagine selezionata.  
+*uiBmpHotResId*<br/>
+[in] ID di risorsa per l'immagine selezionata.  
   
- [in] *bMap3dColors*  
- Specifica un colore trasparente per lo sfondo del pulsante; vale a dire la faccia del pulsante. TRUE per utilizzare il valore del colore RGB (192, 192, 192); FALSE per utilizzare il valore di colore definito dal `AFX_GLOBAL_DATA::clrBtnFace`.  
+*bMap3dColors*<br/>
+[in] Specifica un colore trasparente per lo sfondo del pulsante; vale a dire la faccia del pulsante. TRUE per utilizzare il valore del colore RGB (192, 192, 192); FALSE per utilizzare il valore di colore definito dal `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] *hIconDisabled*  
- Handle per l'icona per l'immagine disabilitato.  
+*hIconDisabled*<br/>
+[in] Handle per l'icona per l'immagine disabilitato.  
   
- [in] *hBitmapDisabled*  
- Handle per la mappa di bit che contiene l'immagine disabilitato.  
+*hBitmapDisabled*<br/>
+[in] Handle per la mappa di bit che contiene l'immagine disabilitato.  
   
- [in] *uiBmpDsblResID*  
- ID risorsa della bitmap disabilitata.  
+*uiBmpDsblResID*<br/>
+[in] ID risorsa della bitmap disabilitata.  
   
- [in] *bAlphaBlend*  
- True per utilizzare le immagini di solo 32 bit che usano il canale alfa. FALSE, non usare le immagini di canale alfa solo. Il valore predefinito è FALSE.  
+*bAlphaBlend*<br/>
+[in] True per utilizzare le immagini di solo 32 bit che usano il canale alfa. FALSE, non usare le immagini di canale alfa solo. Il valore predefinito è FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -814,8 +814,8 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *hcursor*  
- L'handle di un cursore.  
+*hcursor*<br/>
+[in] L'handle di un cursore.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per associare un'immagine di cursore, ad esempio il cursore della mano, con il pulsante. Il cursore viene caricato dalle risorse dell'applicazione.  
@@ -847,14 +847,14 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *id*  
- Uno degli identificatori immagine pulsante definito nel `CMenuImage::IMAGES_IDS` enumerazione. I valori dell'immagine specificano immagini come frecce, pin e pulsanti di opzione.  
+*ID*<br/>
+[in] Uno degli identificatori immagine pulsante definito nel `CMenuImage::IMAGES_IDS` enumerazione. I valori dell'immagine specificano immagini come frecce, pin e pulsanti di opzione.  
   
- [in] *dello stato*  
- Uno degli identificatori pulsante immagine stato definito nel `CMenuImages::IMAGE_STATE` enumerazione. Gli stati di immagine specificano colori dei pulsanti, ad esempio grigio chiaro, grigia nero, bianco e grigio scuro. Il valore predefinito è `CMenuImages::ImageBlack`.  
+*state*<br/>
+[in] Uno degli identificatori pulsante immagine stato definito nel `CMenuImages::IMAGE_STATE` enumerazione. Gli stati di immagine specificano colori dei pulsanti, ad esempio grigio chiaro, grigia nero, bianco e grigio scuro. Il valore predefinito è `CMenuImages::ImageBlack`.  
   
- [in] *idDisabled*  
- Uno degli identificatori immagine pulsante definito nel `CMenuImage::IMAGES_IDS` enumerazione. L'immagine indica che il pulsante è disabilitato. Il valore predefinito è la prima immagine del pulsante ( `CMenuImages::IdArrowDown`).  
+*idDisabled*<br/>
+[in] Uno degli identificatori immagine pulsante definito nel `CMenuImage::IMAGES_IDS` enumerazione. L'immagine indica che il pulsante è disabilitato. Il valore predefinito è la prima immagine del pulsante ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>Note  
   
@@ -866,8 +866,8 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *clrText*  
- Un valore di colore RGB.  
+*clrText*<br/>
+[in] Un valore di colore RGB.  
   
 ### <a name="remarks"></a>Note  
   
@@ -879,8 +879,8 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *clrTextHot*  
- Un valore di colore RGB.  
+*clrTextHot*<br/>
+[in] Un valore di colore RGB.  
   
 ### <a name="remarks"></a>Note  
   
@@ -892,8 +892,8 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszToolTipText*  
- Puntatore al testo della descrizione comandi. Specificare NULL per disabilitare la descrizione comando.  
+*lpszToolTipText*<br/>
+[in] Puntatore al testo della descrizione comandi. Specificare NULL per disabilitare la descrizione comando.  
   
 ### <a name="remarks"></a>Note  
   
@@ -905,8 +905,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bCalcOnly*  
- TRUE per il calcolo, ma non modificare, le nuove dimensioni del pulsante; FALSE per modificare le dimensioni del pulsante. Il valore predefinito è FALSE.  
+*bCalcOnly*<br/>
+[in] TRUE per il calcolo, ma non modificare, le nuove dimensioni del pulsante; FALSE per modificare le dimensioni del pulsante. Il valore predefinito è FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `CSize` oggetto che contiene le nuove dimensioni del pulsante.  

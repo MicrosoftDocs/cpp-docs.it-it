@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701689"
 ---
 # <a name="inline-functions-c"></a>Funzioni inline (C++)
 Una funzione definita nel corpo di una dichiarazione di classe è una funzione inline.  
@@ -156,7 +156,8 @@ private:
   
  Funzioni ricorsive possono essere sostituite inline a una profondità specificata per il [inline_depth](../preprocessor/inline-depth.md) pragma, fino a un massimo di 16 chiamate. Dopo tale profondità, le chiamate di funzioni ricorsive vengono considerate come chiamate a un'istanza della funzione.  La profondità con cui le funzioni ricorsive vengono valutate dalle funzionalità euristiche inline non può superare i 16 livelli. Il [inline_recursion](../preprocessor/inline-recursion.md) pragma controlla l'espansione inline di una funzione attualmente in espansione. Vedere le [espansione funzioni Inline](../build/reference/ob-inline-function-expansion.md) (/ Ob) l'opzione del compilatore per le informazioni correlate.  
   
-**Fine sezione specifica Microsoft**  
+**Fine sezione specifica Microsoft**
+
  Per altre informazioni sull'uso di **inline** identificatore, vedere:  
   
 -   [Funzioni membro di classi inline](../cpp/inline-functions-cpp.md)  

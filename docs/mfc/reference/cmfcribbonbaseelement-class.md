@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703885"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 Il `CMFCRibbonBaseElement` classe è la classe base per tutti gli elementi che è possibile aggiungere a un [barra multifunzione](../../mfc/reference/cmfcribbonbar-class.md). Esempi di elementi della barra multifunzione sono i pulsanti della barra multifunzione, le caselle di controllo della barra multifunzione e le caselle combinate della barra multifunzione.  
@@ -423,8 +423,8 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *arElems*  
- Fare riferimento a un [CArray](../../mfc/reference/carray-class.md) dei suggerimenti tasto di scelta.  
+*arElems*<br/>
+[in] Fare riferimento a un [CArray](../../mfc/reference/carray-class.md) dei suggerimenti tasto di scelta.  
   
 ### <a name="remarks"></a>Note  
  Quando è abilitata la funzionalità suggerimenti tasto di scelta della barra multifunzione, il framework Visualizza suggerimenti tasto di scelta della barra multifunzione quando l'utente preme il tasto ALT o F10.  
@@ -439,11 +439,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pWndListBox*  
- Puntatore a una casella di riepilogo di comandi.  
+*pWndListBox*<br/>
+[in] Puntatore a una casella di riepilogo di comandi.  
   
- [in] *bDeep*  
- Questo parametro non viene usato.  
+*bDeep*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indice in base zero dell'elemento della barra multifunzione aggiunti.  
@@ -529,8 +529,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *src*  
- L'origine [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) oggetto.  
+*src*<br/>
+[in] L'origine [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
   
@@ -555,14 +555,14 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *tipo*  
- Valore enumerato di un tipo di immagine. Vedere la sezione Osservazioni per un elenco di valori possibili.  
+*type*<br/>
+[in] Valore enumerato di un tipo di immagine. Vedere la sezione Osservazioni per un elenco di valori possibili.  
   
- [in] *rectImage*  
- Rettangolo immagine.  
+*rectImage*<br/>
+[in] Rettangolo immagine.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita questo metodo non esegue alcuna operazione. L'override del metodo in una classe derivata per disegnare l'immagine per l'elemento della barra multifunzione.  
@@ -583,8 +583,8 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pElement*  
- Puntatore a un elemento della barra multifunzione.  
+*pElement*<br/>
+[in] Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento della barra multifunzione se *pElement* punta al corrente dell'oggetto; in caso contrario, NULL.  
@@ -599,8 +599,8 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwData*  
- I dati associati a un elemento della barra multifunzione.  
+*dwData*<br/>
+[in] I dati associati a un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento della barra multifunzione se contiene i dati specificati; in caso contrario NULL.  
@@ -615,8 +615,8 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- ID comando per un elemento della barra multifunzione.  
+*uiCmdID*<br/>
+[in] ID comando per un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento della barra multifunzione, se tale elemento è identificato dall'ID di comando specificato; in caso contrario NULL.  
@@ -631,8 +631,8 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pOriginal*  
- Puntatore a un elemento della barra multifunzione.  
+*pOriginal*<br/>
+[in] Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento della barra multifunzione, se l'elemento della barra multifunzione originale corrisponde all'elemento specificata della barra multifunzione. in caso contrario NULL.  
@@ -648,8 +648,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="return-value"></a>Valore restituito  
  La dimensione compatta di un elemento della barra multifunzione.  
@@ -698,8 +698,8 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in, out] *arElements*  
- Matrice di elementi della barra multifunzione.  
+*arElements*<br/>
+[in, out] Matrice di elementi della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -713,11 +713,11 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdID*  
- ID di comando di un elemento della barra multifunzione.  
+*uiCmdID*<br/>
+[in] ID di comando di un elemento della barra multifunzione.  
   
- [in] *arElements*  
- Matrice di elementi della barra multifunzione.  
+*arElements*<br/>
+[in] Matrice di elementi della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -761,8 +761,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni dell'elemento della barra multifunzione nello stato intermedio.  
@@ -787,11 +787,11 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *bIsMenu*  
- TRUE se l'elemento della barra multifunzione Visualizza un menu a comparsa. in caso contrario, FALSE.  
+*bIsMenu*<br/>
+[in] TRUE se l'elemento della barra multifunzione Visualizza un menu a comparsa. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre un rettangolo con valore 0.  
@@ -807,8 +807,8 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni del testo del suggerimento tasto di scelta.  
@@ -965,8 +965,8 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="return-value"></a>Valore restituito  
  La dimensione regolare dell'elemento della barra multifunzione.  
@@ -984,8 +984,8 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="return-value"></a>Valore restituito  
  La dimensione corrente dell'elemento della barra multifunzione.  
@@ -1083,8 +1083,8 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *punto*  
- Questo parametro non viene usato.  
+*punto*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento della barra multifunzione, se presente. in caso contrario, FALSE.  
@@ -1126,8 +1126,8 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nDelay*  
- Questo parametro non viene usato.  
+*nDelay*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre FALSE.  
@@ -1378,8 +1378,8 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bWithDelay*  
- TRUE per aggiungere la notifica tramite comando alla coda dei messaggi della finestra padre. FALSE per inviare il messaggio immediatamente alla finestra padre.  
+*bWithDelay*<br/>
+[in] TRUE per aggiungere la notifica tramite comando alla coda dei messaggi della finestra padre. FALSE per inviare il messaggio immediatamente alla finestra padre.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è stato inviato il messaggio, in caso contrario, FALSE.  
@@ -1394,8 +1394,8 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nIndex*  
- Indice dell'elemento della barra multifunzione nell'elenco.  
+*nIndex*<br/>
+[in] Indice dell'elemento della barra multifunzione nell'elenco.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1407,8 +1407,8 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *qat*  
- Barra di accesso rapido.  
+*qat*<br/>
+[in] Barra di accesso rapido.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre TRUE indica che l'elemento della barra multifunzione è stato aggiunto alla barra di accesso rapido.  
@@ -1423,8 +1423,8 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Questo parametro non viene usato.  
+*pDC*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita questo metodo aggiorna la descrizione comando per l'elemento della barra multifunzione. Eseguire l'override di questo metodo per aggiornare l'elemento della barra multifunzione dopo che il rettangolo di visualizzazione è stato modificato.  
@@ -1450,8 +1450,8 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Questo parametro non viene usato.  
+*pDC*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per calcolare le dimensioni del testo per l'elemento della barra multifunzione.  
@@ -1465,11 +1465,11 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pPanelMenuBar*  
- Questo parametro non viene usato.  
+*pPanelMenuBar*<br/>
+[in] Questo parametro non viene utilizzato.  
   
- [in] *pHot*  
- Questo parametro non viene usato.  
+*pHot*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per aggiornare un elemento della barra multifunzione che si trova in un menu quando viene modificato l'evidenziazione.  
@@ -1482,8 +1482,8 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata se si desidera personalizzare la creazione di un elemento specifico della barra multifunzione.  
@@ -1499,14 +1499,14 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Rettangolo di delimitazione per il suggerimento tasto di scelta.  
+*Rect*<br/>
+[in] Rettangolo di delimitazione per il suggerimento tasto di scelta.  
   
- [in] *bIsMenu*  
- TRUE se il suggerimento tasto di scelta è per un pulsante di menu a comparsa. in caso contrario, FALSE.  
+*bIsMenu*<br/>
+[in] TRUE se il suggerimento tasto di scelta è per un pulsante di menu a comparsa. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1520,11 +1520,11 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Rettangolo immagine di menu.  
+*Rect*<br/>
+[in] Rettangolo immagine di menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre TRUE per indicare che è stata disegnata l'immagine.  
@@ -1545,23 +1545,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo per l'elemento della barra multifunzione.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo per l'elemento della barra multifunzione.  
   
- [in] *strText*  
- Testo visualizzato.  
+*strText*<br/>
+[in] Testo visualizzato.  
   
- [in] *nTextOffset*  
- Distanza, espressa in pixel, dal lato sinistro della casella di riepilogo per il testo visualizzato.  
+*nTextOffset*<br/>
+[in] Distanza, espressa in pixel, dal lato sinistro della casella di riepilogo per il testo visualizzato.  
   
- [in] *rect*  
- Il rettangolo di visualizzazione per l'elemento della barra multifunzione.  
+*Rect*<br/>
+[in] Il rettangolo di visualizzazione per l'elemento della barra multifunzione.  
   
- [in] *bIsSelected*  
- Questo parametro non viene usato.  
+*bIsSelected*<br/>
+[in] Questo parametro non viene utilizzato.  
   
- [in] *bHighlighted*  
- Questo parametro non viene usato.  
+*bHighlighted*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  La casella di riepilogo di comandi Visualizza gli elementi della barra multifunzione per consentire agli utenti di personalizzare la barra di accesso rapido.  
@@ -1574,8 +1574,8 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsMenuKey*  
- TRUE se il suggerimento tasto di scelta Visualizza un menu a comparsa. in caso contrario, FALSE.  
+*bIsMenuKey*<br/>
+[in] TRUE se il suggerimento tasto di scelta Visualizza un menu a comparsa. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'evento è stato gestito; in caso contrario, FALSE.  
@@ -1590,8 +1590,8 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nUpperChar*  
- Questo parametro non viene usato.  
+*nUpperChar*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre FALSE.  
@@ -1607,8 +1607,8 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nChar*  
- Questo parametro non viene usato.  
+*NChar*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre FALSE.  
@@ -1624,8 +1624,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsRTL*  
- Questo parametro non viene usato.  
+*bIsRTL*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per modificare l'elemento della barra multifunzione quando viene modificato il layout direzione. La direzione del layout predefinito è da sinistra a destra.  
@@ -1648,8 +1648,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bMostra*  
- Questo parametro non viene usato.  
+*bMostra*<br/>
+[in] Questo parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per visualizzare o nascondere l'elemento della barra multifunzione.  
@@ -1672,8 +1672,8 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *uiCmdId*  
- Il parametro non viene utilizzato.  
+*uiCmdId*<br/>
+[in] Il parametro non viene utilizzato.  
   
 ### <a name="remarks"></a>Note  
  Il messaggio di chiusura verrà inviato solo se l'elemento della barra multifunzione si trova in un menu a comparsa.  
@@ -1718,8 +1718,8 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bCompactMode*  
- TRUE per ridurre le dimensioni di visualizzazione dell'elemento della barra multifunzione. FALSE per aumentare le dimensioni di visualizzazione dell'elemento della barra multifunzione.  
+*bCompactMode*<br/>
+[in] TRUE per ridurre le dimensioni di visualizzazione dell'elemento della barra multifunzione. FALSE per aumentare le dimensioni di visualizzazione dell'elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  La tabella seguente riepiloga la logica per questo metodo.  
@@ -1739,8 +1739,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *dwData*  
- Il valore dei dati.  
+*dwData*<br/>
+[in] Il valore dei dati.  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
  Imposta l'elemento della barra multifunzione vengono visualizzati come un comando popup.  
@@ -1750,8 +1750,8 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsDefaultMenuLook*  
- TRUE per impostare l'elemento della barra multifunzione vengono visualizzati come un comando popup. in caso contrario, FALSE.  
+*bIsDefaultMenuLook*<br/>
+[in] TRUE per impostare l'elemento della barra multifunzione vengono visualizzati come un comando popup. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1763,8 +1763,8 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszText*  
- Descrizione per l'elemento della barra multifunzione.  
+*lpszText*<br/>
+[in] Descrizione per l'elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Il framework la nuova descrizione viene visualizzato sulla barra di stato, o nella descrizione comando o sotto il pulsante di menu.  
@@ -1777,8 +1777,8 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nID*  
- ID di comando.  
+*nID*<br/>
+[in] ID del comando.  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
  Imposta le dimensioni di visualizzazione iniziale per l'elemento della barra multifunzione.  
@@ -1788,8 +1788,8 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bOneRow*  
- True se le dimensioni di visualizzazione per l'elemento della barra multifunzione per compact o intermedi; limite in caso contrario, FALSE.  
+*bOneRow*<br/>
+[in] True se le dimensioni di visualizzazione per l'elemento della barra multifunzione per compact o intermedi; limite in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Le dimensioni di visualizzazione degli elementi della barra multifunzione possono essere compatto, intermedi o grandi dimensioni.  
@@ -1804,11 +1804,11 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszKeys*  
- Il suggerimento tasto di scelta per l'elemento della barra multifunzione.  
+*lpszKeys*<br/>
+[in] Il suggerimento tasto di scelta per l'elemento della barra multifunzione.  
   
- [in] *lpszMenuKeys*  
- Suggerimento per il menu di scelta rapida dell'elemento della barra multifunzione.  
+*lpszMenuKeys*<br/>
+[in] Suggerimento per il menu di scelta rapida dell'elemento della barra multifunzione.  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
  Imposta l'elemento della barra multifunzione originale per l'elemento della barra multifunzione.  
@@ -1818,8 +1818,8 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pOriginal*  
- Puntatore a un elemento della barra multifunzione.  
+*pOriginal*<br/>
+[in] Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Gli elementi della barra multifunzione che vengono copiati in un altro contenitore mantengono un puntatore all'elemento della barra multifunzione originale.  
@@ -1832,8 +1832,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParent*  
- Puntatore a una categoria della barra multifunzione.  
+*pParent*<br/>
+[in] Puntatore a una categoria della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  I gruppi a schede nella barra multifunzione vengono chiamati categorie.  
@@ -1846,8 +1846,8 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pMenuBar*  
- Menu del padre.  
+*pMenuBar*<br/>
+[in] Menu del padre.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1859,8 +1859,8 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pRibbonBar*  
- Puntatore alla barra multifunzione padre.  
+*pRibbonBar*<br/>
+[in] Puntatore alla barra multifunzione padre.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1872,8 +1872,8 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *rect*  
- Le dimensioni del rettangolo.  
+*Rect*<br/>
+[in] Le dimensioni del rettangolo.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1885,8 +1885,8 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszText*  
- Il testo e il suggerimento tasto di scelta per l'elemento della barra multifunzione.  
+*lpszText*<br/>
+[in] Il testo e il suggerimento tasto di scelta per l'elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
  Per impostare il suggerimento tasto di scelta per l'elemento della barra multifunzione, aggiungere la sequenza di escape di nuova riga seguita dai caratteri al suggerimento tasto di scelta *lpszText*.  
@@ -1910,8 +1910,8 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bSet*  
- TRUE per visualizzare il testo a destra. in caso contrario, FALSE.  
+*bSet*<br/>
+[in] TRUE per visualizzare il testo a destra. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1923,8 +1923,8 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *lpszText*  
- Il testo della descrizione comando.  
+*lpszText*<br/>
+[in] Il testo della descrizione comando.  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
  Imposta la visibilità dell'elemento della barra multifunzione.  
@@ -1934,8 +1934,8 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *bIsVisible*  
- TRUE per visualizzare l'elemento della barra multifunzione. FALSE per nascondere l'elemento della barra multifunzione.  
+*bIsVisible*<br/>
+[in] TRUE per visualizzare l'elemento della barra multifunzione. FALSE per nascondere l'elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1959,11 +1959,11 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Questo parametro non viene usato.  
+*pDC*<br/>
+[in] Questo parametro non viene utilizzato.  
   
- [in] *nHeight*  
- L'altezza della riga.  
+*nHeight*<br/>
+[in] L'altezza della riga.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è stato impostato l'altezza della visualizzazione. in caso contrario, FALSE.  

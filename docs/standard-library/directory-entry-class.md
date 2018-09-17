@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c61d69c1ee5ad40191771dabd829514e3381e88
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 46a031b727f5c592925aaa4d343fc1299f6d4cdf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691406"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701519"
 ---
 # <a name="directoryentry-class"></a>Classe directory_entry
 
@@ -115,13 +115,13 @@ void assign(const std::experimental::filesystem::path& pval,
 ### <a name="parameters"></a>Parametri
 
 *PVal*<br/>
-Il percorso del nome file archiviato.  
+Il percorso del nome file archiviato.
 
 *stat_arg*<br/>
-Lo stato del nome file archiviato.  
+Lo stato del nome file archiviato.
 
 *symstat_arg*<br/>
-Lo stato del collegamento simbolico del nome file archiviato.  
+Lo stato del collegamento simbolico del nome file archiviato.
 
 ## <a name="directory_entry"></a> directory_entry
 
@@ -139,13 +139,13 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 ### <a name="parameters"></a>Parametri
 
 *PVal*<br/>
-Il percorso del nome file archiviato.  
+Il percorso del nome file archiviato.
 
 *stat_arg*<br/>
-Lo stato del nome file archiviato.  
+Lo stato del nome file archiviato.
 
 *symstat_arg*<br/>
-Lo stato del collegamento simbolico del nome file archiviato.  
+Lo stato del collegamento simbolico del nome file archiviato.
 
 ## <a name="op_neq"></a> operatore! =
 
@@ -158,7 +158,7 @@ bool operator!=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.  
+Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
 ## <a name="op_as"></a> operator=
 
@@ -172,7 +172,7 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) copiata nel `directory_entry`.  
+Il [directory_entry](../standard-library/directory-entry-class.md) copiata nel `directory_entry`.
 
 ## <a name="op_eq"></a> operator==
 
@@ -185,7 +185,7 @@ bool operator==(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.  
+Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
 ## <a name="op_lt"></a> Operatore&lt;
 
@@ -198,7 +198,7 @@ bool operator<(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.  
+Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
 ## <a name="op_lteq"></a> Operatore&lt;=
 
@@ -211,7 +211,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.  
+Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
 ## <a name="op_gt"></a> Operatore&gt;
 
@@ -224,7 +224,7 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.  
+Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
 ## <a name="op_gteq"></a> Operatore&gt;=
 
@@ -237,7 +237,7 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.  
+Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
 ## <a name="path_type"></a> operator const path_type &
 
@@ -269,13 +269,13 @@ void replace_filename(
 ### <a name="parameters"></a>Parametri
 
 *PVal*<br/>
-Il percorso del nome file archiviato.  
+Il percorso del nome file archiviato.
 
 *stat_arg*<br/>
-Lo stato del nome file archiviato.  
+Lo stato del nome file archiviato.
 
 *symstat_arg*<br/>
-Lo stato del collegamento simbolico del nome file archiviato.  
+Lo stato del collegamento simbolico del nome file archiviato.
 
 ## <a name="status"></a> Stato
 
@@ -293,7 +293,7 @@ file_status status(error_code& ec) const noexcept;
 ### <a name="parameters"></a>Parametri
 
 *CE*<br/>
-Il codice di errore di stato.  
+Il codice di errore di stato.
 
 ## <a name="symlink_status"></a> symlink_status
 
@@ -307,7 +307,7 @@ file_status symlink_status(error_code& ec) const noexcept;
 ### <a name="parameters"></a>Parametri
 
 *CE*<br/>
-Il codice di errore di stato.  
+Il codice di errore di stato.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712169"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Fornisce la funzionalità del controllo di visualizzazione albero comune di Windows.  
@@ -465,7 +465,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *fCancelWithoutSave*|TRUE per annullare le modifiche all'elemento di struttura prima di concludere l'operazione di modifica oppure FALSE per salvare le modifiche apportate all'elemento di visualizzazione ad albero prima di concludere l'operazione.|  
+|*fCancelWithoutSave*|[in] TRUE per annullare le modifiche all'elemento di struttura prima di concludere l'operazione di modifica oppure FALSE per salvare le modifiche apportate all'elemento di visualizzazione ad albero prima di concludere l'operazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle per un elemento di controllo di visualizzazione ad albero.|  
+|*hItem*|[in] Handle per un elemento di controllo di visualizzazione ad albero.|  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice dell'immagine da visualizzare quando l'elemento specificato si trova nello stato espanso.  
@@ -798,9 +798,9 @@ BOOL GetItemPartRect(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle per un elemento di controllo di visualizzazione ad albero.|  
-|[in] *nPart*|Identificatore per la parte. Deve essere impostata su TVGIPR_BUTTON.|  
-|[out] *lpRect*|Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo della parte specificata da *hItem* e *nPart*.|  
+|*hItem*|[in] Handle per un elemento di controllo di visualizzazione ad albero.|  
+|*nPart*|[in] Identificatore per la parte. Deve essere impostata su TVGIPR_BUTTON.|  
+|*lpRect*|[out] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo della parte specificata da *hItem* e *nPart*.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle per un elemento di controllo di visualizzazione ad albero.|  
+|*hItem*|[in] Handle per un elemento di controllo di visualizzazione ad albero.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Lo stato dell'elemento. Per altre informazioni, vedere la `uStateEx` membro della [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struttura.  
@@ -1322,7 +1322,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *uAccId*|Un identificatore di accessibilità per un elemento nell'elemento di visualizzazione ad albero.|  
+|*uAccId*|[in] Un identificatore di accessibilità per un elemento nell'elemento di visualizzazione ad albero.|  
   
 ### <a name="return-value"></a>Valore restituito  
  L'handle a un elemento di visualizzazione ad albero ( `HTREEITEM`) che corrisponde alla *uAccId* parametro. Per altre informazioni, vedere la *hItem* membro delle [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struttura.  
@@ -1353,7 +1353,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle di un elemento di visualizzazione ad albero nel controllo. Per altre informazioni, vedere la *hItem* membro delle [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struttura.|  
+|*hItem*|[in] Handle di un elemento di visualizzazione ad albero nel controllo. Per altre informazioni, vedere la *hItem* membro delle [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
  L'identificatore di accessibilità che corrisponde alla *hItem* parametro.  
@@ -1474,8 +1474,8 @@ BOOL SetAutoscrollInfo(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *uPixelsPerSec*|Il numero di pixel al secondo da scorrere.|  
-|[in] *uUpdateTime*|L'intervallo di tempo tra gli aggiornamenti del controllo.|  
+|*uPixelsPerSec*|[in] Il numero di pixel al secondo da scorrere.|  
+|*uUpdateTime*|[in] L'intervallo di tempo tra gli aggiornamenti del controllo.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre TRUE.  
@@ -1555,8 +1555,8 @@ DWORD SetExtendedStyle(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *dwExMask*|Maschera di bit che specifica gli stili del controllo di visualizzazione ad albero corrente sono interessati da questo metodo. Se questo parametro è zero, viene ignorato e il valore della *dwExStyles* parametro viene assegnato al controllo di visualizzazione ad albero.<br /><br /> Specificare zero o una combinazione bit per bit (OR) di stili descritto nella [stili estesi del controllo di visualizzazione ad albero](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
-|[in] *dwExStyles*|Maschera di bit che specifica il controllo per impostare o cancellare gli stili nella visualizzazione struttura ad albero corrente.<br /><br /> Per impostare una combinazione degli stili, specificare una combinazione bit per bit (OR) di stili descritto nella [stili estesi del controllo di visualizzazione ad albero](/windows/desktop/Controls/tree-view-control-window-extended-styles). Per cancellare un set di stili, specificare zero.|  
+|*dwExMask*|[in] Maschera di bit che specifica gli stili del controllo di visualizzazione ad albero corrente sono interessati da questo metodo. Se questo parametro è zero, viene ignorato e il valore della *dwExStyles* parametro viene assegnato al controllo di visualizzazione ad albero.<br /><br /> Specificare zero o una combinazione bit per bit (OR) di stili descritto nella [stili estesi del controllo di visualizzazione ad albero](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
+|*dwExStyles*|[in] Maschera di bit che specifica il controllo per impostare o cancellare gli stili nella visualizzazione struttura ad albero corrente.<br /><br /> Per impostare una combinazione degli stili, specificare una combinazione bit per bit (OR) di stili descritto nella [stili estesi del controllo di visualizzazione ad albero](/windows/desktop/Controls/tree-view-control-window-extended-styles). Per cancellare un set di stili, specificare zero.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore che contiene il precedente estesa degli stili del controllo.  
@@ -1747,8 +1747,8 @@ BOOL SetItemExpandedImageIndex(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle per un elemento di controllo di visualizzazione ad albero.|  
-|[in] *iExpandedImage*|L'indice dell'immagine da visualizzare quando l'elemento specificato si trova nello stato espanso.|  
+|*hItem*|[in] Handle per un elemento di controllo di visualizzazione ad albero.|  
+|*iExpandedImage*|[in] L'indice dell'immagine da visualizzare quando l'elemento specificato si trova nello stato espanso.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1858,8 +1858,8 @@ BOOL SetItemStateEx(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle per un elemento di controllo di visualizzazione ad albero.|  
-|[in] *uStateEx*|Lo stato dell'elemento. Per altre informazioni, vedere la `uStateEx` membro della [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struttura.|  
+|*hItem*|[in] Handle per un elemento di controllo di visualizzazione ad albero.|  
+|*uStateEx*|[in] Lo stato dell'elemento. Per altre informazioni, vedere la `uStateEx` membro della [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *hItem*|Handle per un elemento della visualizzazione albero nel controllo. Per altre informazioni, vedere la `hItem` membro della [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struttura.|  
+|*hItem*|[in] Handle per un elemento della visualizzazione albero nel controllo. Per altre informazioni, vedere la `hItem` membro della [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struttura.|  
   
 ### <a name="remarks"></a>Note  
  Per altre informazioni sulla differenza tra le descrizioni comandi e infotip, cercare l'argomento "Descrizioni comandi e Infotip" all'indirizzo [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  

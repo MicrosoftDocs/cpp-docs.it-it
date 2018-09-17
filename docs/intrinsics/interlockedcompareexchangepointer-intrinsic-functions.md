@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214621"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711069"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funzioni intrinseche _InterlockedCompareExchangePointer
 **Sezione specifica Microsoft**  
@@ -87,21 +87,21 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in, out] `Destination`  
- Puntatore a un puntatore al valore di destinazione. Il segno viene ignorato.  
+*Destinazione*<br/>
+[in, out] Puntatore a un puntatore al valore di destinazione. Il segno viene ignorato.  
   
- [in] `Exchange`  
- Puntatore di Exchange. Il segno viene ignorato.  
+*Exchange*<br/>
+[in] Puntatore di Exchange. Il segno viene ignorato.  
   
- [in] `Comparand`  
- Puntatore da confrontare con la destinazione. Il segno viene ignorato.  
+*Parametro comparand*<br/>
+[in] Puntatore da confrontare con la destinazione. Il segno viene ignorato.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il valore restituito è il valore iniziale della destinazione.  
   
 ## <a name="requirements"></a>Requisiti  
   
-|Funzione intrinseca|Architettura|Header|  
+|Funzione intrinseca|Architettura|Intestazione|  
 |---------------|------------------|------------|  
 |`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68bb7ec3d89ac7fffbc2896023fbd2f1dd0584ba
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7340d91d9d91171c073b5acebb282fbd1cff3bf1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541818"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702843"
 ---
 # <a name="writecr0"></a>__writecr0
 **Sezione specifica Microsoft**  
@@ -37,8 +37,8 @@ void writecr0(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `Data`  
- Valore da scrivere nel registro CR0.  
+*Dati*<br/>
+[in] Valore da scrivere nel registro CR0.  
   
 ## <a name="requirements"></a>Requisiti  
   

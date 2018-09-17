@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200218"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711815"
 ---
 # <a name="module-c"></a>modulo (C++)
 
@@ -52,8 +52,8 @@ Definisce il blocco di libreria nel file IDL.
 
 ### <a name="parameters"></a>Parametri
 
-*tipo* (facoltativo)  
-Può essere uno dei seguenti:
+*type*  
+(Facoltativo) Può essere uno dei seguenti:
 
 - `dll` Aggiunge funzioni e classi che consentono alla DLL risultante di funzionare come un server COM in-process. Rappresenta il valore predefinito.
 
@@ -63,11 +63,11 @@ Può essere uno dei seguenti:
 
 - `unspecified` Disabilita l'inserimento di codice ATL correlato all'attributo di modulo: le funzioni di punto di inserimento della classe di modulo ATL, istanza globale atlmodule e voce. Non disabilita l'inserimento di codice ATL a causa di altri attributi del progetto.
 
-*name* (facoltativo)  
-Il nome del blocco di libreria.
+*name*  
+(Facoltativo) Il nome del blocco di libreria.
 
-*versione* (facoltativo)  
-Il numero di versione da assegnare al blocco di libreria. Il valore predefinito è 1,0.
+*version*  
+(Facoltativo) Il numero di versione da assegnare al blocco di libreria. Il valore predefinito è 1,0.
 
 *uuid*  
 L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare il *uuid* del blocco di libreria, è possibile ripetere l'operazione usando l'identificatore **uuidof (** *NomeLibreria* **)**.
@@ -75,32 +75,32 @@ L'ID univoco per la libreria. Se si omette questo parametro, viene generato auto
 *lcid*  
 Il parametro di localizzazione. Visualizzare [lcid](/windows/desktop/Midl/lcid) per altre informazioni.
 
-*controllo* (facoltativo)  
-Specifica che tutte le coclassi nella libreria sono controlli.
+*control*  
+(Facoltativo) Specifica che tutte le coclassi nella libreria sono controlli.
 
 *helpstring*  
 Specifica la libreria dei tipi.
 
-*helpstringdll* (facoltativo)  
-Imposta il nome del file DLL da usare per eseguire una ricerca di stringhe di documento. Visualizzare [helpstringdll](/windows/desktop/Midl/helpstringdll) per altre informazioni.
+*helpstringdll*  
+(Facoltativo) Imposta il nome del file con estensione dll da utilizzare per eseguire una ricerca di stringhe di documento. Visualizzare [helpstringdll](/windows/desktop/Midl/helpstringdll) per altre informazioni.
 
-*HelpFile* (facoltativo)  
-Il nome del **aiutare** file della libreria dei tipi.
+*helpfile*  
+(Facoltativo) Il nome del **aiutare** file della libreria dei tipi.
 
-*HelpContext* (facoltativo)  
-Il **Helpid** per questa libreria dei tipi.
+*helpcontext*  
+(Facoltativo) Il **Helpid** per questa libreria dei tipi.
 
-*helpstringcontext* (facoltativo)  
-Per altre informazioni, vedere [helpstringcontext](../windows/helpstringcontext.md) .
+*helpstringcontext*  
+(Facoltativo) Visualizzare [helpstringcontext](../windows/helpstringcontext.md) per altre informazioni.
 
-*nascosto* (facoltativo)  
-Impedisce la visualizzazione dell'intera libreria. Questo utilizzo è pensato per i controlli. Gli host devono creare una nuova libreria dei tipi che esegue il wrapping del controllo con le proprietà estese. Vedere le [nascosto](/windows/desktop/Midl/hidden) attributo MIDL per altre informazioni.
+*hidden*  
+(Facoltativo) Impedisce l'intera libreria di visualizzazione. Questo utilizzo è pensato per i controlli. Gli host devono creare una nuova libreria dei tipi che esegue il wrapping del controllo con le proprietà estese. Vedere le [nascosto](/windows/desktop/Midl/hidden) attributo MIDL per altre informazioni.
 
-*con restrizioni* (facoltativo)  
-I membri della libreria non possono essere chiamati in modo arbitrario. Vedere le [limitato](/windows/desktop/Midl/restricted) attributo MIDL per altre informazioni.
+*restricted*  
+(Facoltativo) Impossibile chiamare i membri della raccolta in modo arbitrario. Vedere le [limitato](/windows/desktop/Midl/restricted) attributo MIDL per altre informazioni.
 
-*personalizzato* (facoltativo)  
-Uno o più attributi; è simile all'attributo [custom](../windows/custom-cpp.md) . Il primo parametro per *personalizzato* è il GUID dell'attributo. Ad esempio:
+*custom*  
+(Facoltativo) Uno o più attributi; come avviene per i [personalizzato](../windows/custom-cpp.md) attributo. Il primo parametro per *personalizzato* è il GUID dell'attributo. Ad esempio:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]

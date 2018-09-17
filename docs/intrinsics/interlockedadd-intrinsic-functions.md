@@ -1,5 +1,5 @@
 ---
-title: Funzioni intrinseche_interlockedadd | Documenti Microsoft
+title: Funzioni intrinseche interlockedadd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333947"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709527"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Funzioni intrinseche_InterlockedAdd
 **Sezione specifica Microsoft**  
@@ -86,11 +86,11 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in, out] `Addend`  
- Puntatore al valore integer da aggiungere a; sostituito dal risultato dell'addizione.  
+*Addendo*<br/>
+[in, out] Puntatore al valore integer da aggiungere a; sostituito dal risultato dell'addizione.  
   
- [in] `Value`  
- Il valore da aggiungere.  
+*Valore*<br/>
+[in] Il valore da aggiungere.  
   
 ## <a name="return-value"></a>Valore restituito  
  Entrambe le funzioni restituiscono il risultato dell'addizione.  

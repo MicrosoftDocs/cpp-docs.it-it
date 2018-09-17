@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28342c71602409f3d62023e6d7923d49ca63a96f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766243"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711946"
 ---
 # <a name="options-atl-control-wizard"></a>Opzioni, Creazione guidata controllo ATL
 
@@ -31,10 +31,11 @@ Utilizzare questa pagina della procedura guidata per definire il tipo di control
 
 ## <a name="uielement-list"></a>Elenco UIElement
 
-**Tipo controllo**  
+### <a name="control-type"></a>Tipo di controllo
+
 Il tipo di controllo da creare.
 
-- **Controllo standard: un controllo ActiveX.**
+- **Controllo standard**: un controllo ActiveX.
 
 - **Controllo composito**: un controllo ActiveX che può contenere, simile a una finestra di dialogo, altri controlli ActiveX o Windows. Un controllo composito include quanto segue:
 
@@ -54,10 +55,12 @@ Il tipo di controllo da creare.
 
      Per altre informazioni, vedere [identificazione degli elementi del progetto controllo DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-**Controllo minimo**  
+### <a name="minimal-control"></a>Controllo minimo
+
 Supporta solo le interfacce che sono assolutamente necessarie per la maggior parte dei contenitori. È possibile impostare **controllo minimo** per uno qualsiasi dei tipi di controllo: è possibile creare un controllo standard minimo, un controllo composito minima o un controllo DHTML minimo.
 
-**Aggregazione**  
+### <a name="aggregation"></a>Aggregazione
+
 Aggiunge il supporto di aggregazione per il controllo che si sta creando. Per altre informazioni, vedere [aggregazione](../../atl/aggregation.md).
 
 - **Sì**: creare un controllo che può essere aggregato.
@@ -66,25 +69,28 @@ Aggiunge il supporto di aggregazione per il controllo che si sta creando. Per al
 
 - **Solo**: creare un controllo che è possibile creare solo istanze tramite aggregazione.
 
-**Modello di threading**  
+### <a name="threading-model"></a>Modello di threading.
+
 Specifica che il modello di threading utilizzato dal controllo.
 
 - **Singolo**: il controllo viene eseguito solo nel thread COM primario.
 
 - **Apartment**: il controllo può essere creato in qualsiasi apartment a thread singolo. Valore predefinito.
 
-**Interface**  
+### <a name="interface"></a>Interfaccia
+
 Il tipo di interfaccia di questo controllo espone al contenitore.
 
 - **Doppia**: consente di creare un'interfaccia che espone le proprietà e metodi tramite `IDispatch` e direttamente tramite VTBL.
 
 - **Custom**: crea un'interfaccia che espone i metodi direttamente tramite un VTBL.
 
-     Se si seleziona **Custom**, quindi è possibile specificare che il controllo è **compatibile con l'automazione**. Se si seleziona **compatibile con l'automazione**, quindi la procedura guidata aggiunge i [oleautomation](../../windows/oleautomation.md) attributo per l'interfaccia nel file IDL, e l'interfaccia può essere sottoposto a marshalling dal gestore di marshalling universale in oleaut32.dll. Visualizzare [marshalling dettagli](/windows/desktop/com/marshaling-details) nel SDK di Windows per altre informazioni.
+   Se si seleziona **Custom**, quindi è possibile specificare che il controllo è **compatibile con l'automazione**. Se si seleziona **compatibile con l'automazione**, quindi la procedura guidata aggiunge i [oleautomation](../../windows/oleautomation.md) attributo per l'interfaccia nel file IDL, e l'interfaccia può essere sottoposto a marshalling dal gestore di marshalling universale in oleaut32.dll. Visualizzare [marshalling dettagli](/windows/desktop/com/marshaling-details) nel SDK di Windows per altre informazioni.
 
-     Inoltre, se si seleziona **compatibile con l'automazione**, tutti i parametri per tutti i metodi del controllo devono essere variante compatibile.
+   Inoltre, se si seleziona **compatibile con l'automazione**, tutti i parametri per tutti i metodi del controllo devono essere variante compatibile.
 
-**Supporto**  
+### <a name="support"></a>Supporto
+
 Imposta supporti aggiuntivi per il controllo.
 
 - **Punti di connessione**: consente ai punti di connessione per l'oggetto mediante derivazione dalla classe dell'oggetto [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) e consentendo di esporre un'interfaccia di origine.

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211592"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702027"
 ---
 # <a name="hashmap-class"></a>Classe hash_map
 
@@ -125,16 +125,16 @@ class hash_map
 ### <a name="parameters"></a>Parametri
 
 *Key*<br/>
- Tipo di dati relativo alle chiavi da archiviare in hash_map.
+Tipo di dati relativo alle chiavi da archiviare in hash_map.
 
 *Type*<br/>
- Tipo di dati relativo agli elementi da archiviare in hash_map.
+Tipo di dati relativo agli elementi da archiviare in hash_map.
 
 *Tratti*<br/>
- Tipo che include due oggetti funzione, uno della classe compare, in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo, e una funzione hash che corrisponde a un predicato unario che esegue il mapping di valori di chiave degli elementi a valori Unsigned Integer di tipo `size_t`. Questo argomento è facoltativo e hash_compare<`Key`, less<`Key`> > è il valore predefinito.
+Tipo che include due oggetti funzione, uno della classe compare, in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo, e una funzione hash che corrisponde a un predicato unario che esegue il mapping di valori di chiave degli elementi a valori Unsigned Integer di tipo `size_t`. Questo argomento è facoltativo e hash_compare<`Key`, less<`Key`> > è il valore predefinito.
 
 *Allocatore*<br/>
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di hash_map e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è allocator<pair <const `Key`, `Type`>>.
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di hash_map e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Note
 
@@ -649,7 +649,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore della chiave degli elementi per cui trovare un corrispondenza nell'oggetto hash_map.
+Valore della chiave degli elementi per cui trovare un corrispondenza nell'oggetto hash_map.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -940,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
@@ -1000,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_map::empty
@@ -1141,7 +1141,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_map in cui si esegue la ricerca.
+Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1188,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1208,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1230,16 +1230,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parametri
 
 *WHERE*<br/>
- Posizione dell'elemento da rimuovere dall'hash_map.
+Posizione dell'elemento da rimuovere dall'hash_map.
 
 *first*<br/>
- Posizione del primo elemento rimosso dall'hash_map.
+Posizione del primo elemento rimosso dall'hash_map.
 
 *last*<br/>
- Posizione oltre l'ultimo elemento rimosso dall'hash_map.
+Posizione oltre l'ultimo elemento rimosso dall'hash_map.
 
 *key*<br/>
- La chiave degli elementi da rimuovere dall'hash_map.
+La chiave degli elementi da rimuovere dall'hash_map.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1352,7 +1352,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore della chiave per cui trovare una corrispondenza in base alla chiave di ordinamento di un elemento presente nell'oggetto hash_map in cui si esegue la ricerca.
+Valore della chiave per cui trovare una corrispondenza in base alla chiave di ordinamento di un elemento presente nell'oggetto hash_map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1525,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1893,7 +1893,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_map in cui si esegue la ricerca.
+Valore della chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordinamento di un elemento presente nell'oggetto hash_map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2532,7 +2532,7 @@ void swap(hash_map& right);
 ### <a name="parameters"></a>Parametri
 
 *right*<br/>
- Argomento di tipo hash_map che fornisce gli elementi da scambiare con l'oggetto hash_map di destinazione.
+Argomento di tipo hash_map che fornisce gli elementi da scambiare con l'oggetto hash_map di destinazione.
 
 ### <a name="remarks"></a>Note
 
@@ -2608,7 +2608,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametri
 
 *key*<br/>
- Valore della chiave dell'argomento per cui trovare una corrispondenza con il valore della chiave di ordinamento di un elemento presente nell'oggetto hash_map in cui si esegue la ricerca.
+Valore della chiave dell'argomento per cui trovare una corrispondenza con il valore della chiave di ordinamento di un elemento presente nell'oggetto hash_map in cui si esegue la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -1,5 +1,5 @@
 ---
-title: Più destinazioni | Documenti Microsoft
+title: Più destinazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1e072b5c831cecabaf1fd63034a0746b3e3419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66849bdbe28ac2bd965714de56f962df98ced133
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368187"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703664"
 ---
 # <a name="multiple-targets"></a>Destinazioni multiple
-NMAKE valuta più destinazioni in una singola dipendenza come se ciascuna fosse specificata in un blocco di descrizione separato.  
-  
- Ad esempio, questo...  
-  
-```Output  
-bounce.exe leap.exe : jump.obj  
-   echo Building...  
-```  
-  
- ... valutato come:  
-  
-```Output  
-bounce.exe : jump.obj  
-   echo Building...  
-leap.exe : jump.obj  
-   echo Building...  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Destinazioni](../build/targets.md)
+
+NMAKE valuta più destinazioni in una singola dipendenza come se ognuno sono stato specificato in un blocco di descrizione separata.
+
+Ad esempio, questo...
+
+```Output
+bounce.exe leap.exe : jump.obj
+   echo Building...
+```
+
+.. valutato come:
+
+```Output
+bounce.exe : jump.obj
+   echo Building...
+leap.exe : jump.obj
+   echo Building...
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Destinazioni](../build/targets.md)

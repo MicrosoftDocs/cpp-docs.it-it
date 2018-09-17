@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0d1d3e77dfc89fb67c467582c0ed7981ffae8022
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539459"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706342"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Sezione specifica Microsoft**  
@@ -38,8 +38,8 @@ __int64 _mm_cvttss_si64x(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `value`  
- Un `__m128` struttura che contiene i valori a virgola mobile a precisione singola.  
+*valore*<br/>
+[in] Un `__m128` struttura che contiene i valori a virgola mobile a precisione singola.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il risultato della conversione del primo valore a virgola mobile a un integer a 64 bit.  

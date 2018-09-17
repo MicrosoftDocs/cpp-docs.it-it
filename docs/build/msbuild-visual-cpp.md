@@ -1,5 +1,5 @@
 ---
-title: MSBuild (Visual C++) | Documenti Microsoft
+title: MSBuild (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 743aba156f9b937f28242b63e6deaf4c6dfb8369
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bdb48c71c244adc2df5beef9668e12ee47f2b48
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369305"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703950"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
-È possibile utilizzare il **MSBuild** strumento per compilare un'applicazione Visual C++ dal prompt dei comandi. Il processo di compilazione è controllato dalle informazioni in un file di progetto (vcxproj) che è possibile creare e modificare. Il file di progetto specifica le opzioni di compilazione in base a fasi, condizioni e gli eventi di compilazione.  
-  
-## <a name="in-this-section"></a>In questa sezione  
-  
-|Termine|Definizione|  
-|----------|----------------|  
-|[Panoramica di MSBuild (Visual C++)](../build/msbuild-visual-cpp-overview.md)|Descrive l'utilizzo di Visual C++ il **MSBuild** sistema.|  
-|[Modifiche al sistema di compilazione](../build/build-system-changes.md)|Vengono descritte alcune delle differenze tra il sistema di compilazione corrente e la versione precedente.|  
-|[Procedura dettagliata: uso di MSBuild per la creazione di un progetto Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Di seguito viene illustrato come creare un progetto di Visual C++ tramite **MSBuild**.|  
-|[Procedura: Uso di eventi di compilazione in progetti MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)|Viene illustrato come specificare un'azione che si verifica in una determinata fase di compilazione: prima dell'avvio della compilazione; prima dell'inizio del collegamento. o dopo il termine della compilazione.|  
-|[Procedura: Aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)|Viene illustrato come aggiungere una fase definita dall'utente alla sequenza di compilazione.|  
-|[Procedura: Aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|Viene illustrato come associare uno strumento di compilazione di un determinato file.|  
-|[Procedura: Integrare strumenti personalizzati nelle proprietà del progetto](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Viene illustrato come aggiungere le opzioni per uno strumento personalizzato alla proprietà del progetto.|  
-|[Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Viene illustrato come compilare un progetto per più Framework o set di strumenti.|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Compilare codice C/C++ nella riga di comando](../build/building-on-the-command-line.md)
+
+È possibile usare la **MSBuild** strumento per creare un'applicazione Visual C++ dal prompt dei comandi. Il processo di compilazione è controllato dalle informazioni in un file di progetto (vcxproj) che è possibile creare e modificare. Il file di progetto specifica le opzioni di compilazione basate su fasi, condizioni e gli eventi di compilazione.
+
+## <a name="in-this-section"></a>In questa sezione
+
+|Termine|Definizione|
+|----------|----------------|
+|[Panoramica di MSBuild (Visual C++)](../build/msbuild-visual-cpp-overview.md)|Descrive il modo in cui Visual C++ Usa la **MSBuild** sistema.|
+|[Modifiche al sistema di compilazione](../build/build-system-changes.md)|Vengono descritte alcune delle differenze tra il sistema di compilazione corrente e la versione precedente.|
+|[Procedura dettagliata: uso di MSBuild per la creazione di un progetto Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Viene illustrato come creare un progetto di Visual C++ usando **MSBuild**.|
+|[Procedura: Uso di eventi di compilazione in progetti MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)|Viene illustrato come specificare un'azione che si verifica in una determinata fase nella build: prima dell'avvio della compilazione; prima dell'inizio del collegamento. o termine della compilazione.|
+|[Procedura: Aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)|Viene illustrato come aggiungere una fase definita dall'utente alla sequenza di compilazione.|
+|[Procedura: Aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)|Viene illustrato come associare uno strumento di compilazione a un determinato file.|
+|[Procedura: Integrare strumenti personalizzati nelle proprietà del progetto](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|Viene illustrato come aggiungere le opzioni per uno strumento personalizzato alla proprietà del progetto.|
+|[Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|Viene illustrato come compilare un progetto per più Framework o set di strumenti.|
+
+## <a name="see-also"></a>Vedere anche
+
+[Compilare codice C/C++ nella riga di comando](../build/building-on-the-command-line.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e64a8a795181115652ab25750c1bac8712fabbad
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338811"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703125"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: associazione dinamica di colonne di dati (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
@@ -91,19 +91,16 @@ Compilazione degli elenchi di colonne da associare in modo dinamico
      Un approccio consiste nell'aggiungere un ciclo al recordset principale `DoFieldExchange` funzione che consente di scorrere l'elenco delle nuove colonne, chiamando la funzione RFX appropriata per ogni colonna nell'elenco. Per ogni chiamata RFX, passare un nome di colonna dall'elenco dei nomi di colonna e un percorso di archiviazione nel corrispondente membro dell'elenco dei valori di risultato.  
   
 ###  <a name="_core_lists_of_columns"></a> Elenchi di colonne  
- È necessario per lavorare con quattro elenchi vengono visualizzati nella tabella seguente.  
-  
- **Colonne di tabella correnti (elenco 1 nella figura)** un elenco delle colonne attualmente presenti nella tabella dell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel set di record.  
-  
- **Colonne associate del Recordset (elenco 2 nella figura)**  
- Un elenco delle colonne associate nel recordset. Queste colonne già istruzioni RFX di `DoFieldExchange` (funzione).  
-  
- **Le colonne da associare in modo dinamico (elenco 3 nella figura)**  
- Un elenco di colonne nella tabella ma non nel set di record. Queste sono le colonne da associare in modo dinamico.  
-  
- **Valori di colonna dinamiche (elenco 4 nella figura)**  
- Un elenco che contiene risorse di archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Elementi di questo elenco corrispondono a quelli nelle colonne-a-Bind-in modo dinamico, uno alla volta.  
-  
+
+È necessario per lavorare con quattro elenchi vengono visualizzati nella tabella seguente.  
+
+|||
+|-|-|  
+**Colonne della tabella corrente**| (Elenco 1 nella figura) Un elenco delle colonne attualmente presenti nella tabella dell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel set di record.|
+|**Colonne associate a Recordset**| (Elenco 2 nella figura) Un elenco delle colonne associate nel recordset. Queste colonne già istruzioni RFX di `DoFieldExchange` (funzione).|
+|**Le colonne da associare in modo dinamico**| (Elenco di 3 nella figura) Un elenco di colonne nella tabella ma non nel set di record. Queste sono le colonne da associare in modo dinamico.|
+|**Colonna-Dynamic-Values**| (Elenco 4 nella figura) Un elenco che contiene risorse di archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Elementi di questo elenco corrispondono a quelli nelle colonne-a-Bind-in modo dinamico, uno alla volta.|
+
 ###  <a name="_core_building_your_lists"></a> Compilazione degli elenchi  
  Con una strategia generale, è possibile attivare i dettagli. Le procedure descritte nella parte restante di questo argomento mostrano come compilare gli elenchi visualizzati nella [elenchi di colonne](#_core_lists_of_columns). Le procedure descritte illustrano:  
   

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595048"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706680"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Ottimizzazione a virgola mobile di Microsoft Visual C++
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 Questo tipo di conversione e arrotondamento aggiuntive potrà derivati dall'utilizzo di una minore precisione a virgola mobile e unità, ad esempio SSE2, per eseguire alcuni dei calcoli intermedi. L'accuratezza di arrotondamento /fp: fast viene pertanto dipende dalla piattaforma; il codice che compila anche per un processore necessariamente potrebbe non funzionare bene per un altro processore. Rimarrà all'utente per determinare se i vantaggi di velocità siano prevalenti rispetto agli eventuali problemi di accuratezza.
 
 Se l'ottimizzazione /fp: fast è particolarmente problematico per una funzione specifica, la modalità a virgola mobile può essere usata in locale in /fp: preciso tramite i `float_control` pragma del compilatore.
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>Trasformazioni algebriche in /fp: fast
 
