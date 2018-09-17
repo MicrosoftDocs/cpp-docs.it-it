@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339438"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717639"
 ---
 # <a name="carray-class"></a>CArray (classe)
 Supporta matrici che sono simili a matrici del linguaggio C, ma possono dinamicamente ridurre e ingrandire le esigenze.  
@@ -69,12 +69,13 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- *TIPO*  
- Parametro di modello che specifica il tipo di oggetti archiviati nella matrice. *TIPO di* è un parametro restituito da `CArray`.  
-  
- *ARG* *_* *TIPO*  
- Parametro di modello che specifica il tipo di argomento che consente di accedere agli oggetti archiviati nella matrice. Spesso un riferimento a *tipo*. *ARG_TYPE* è un parametro che viene passato a `CArray`.  
+#### <a name="parameters"></a>Parametri
+
+*TIPO*<br/>
+Parametro di modello che specifica il tipo di oggetti archiviati nella matrice. *TIPO di* è un parametro restituito da `CArray`.
+
+*ARG_TYPE*<br/>
+Parametro di modello che specifica il tipo di argomento che consente di accedere agli oggetti archiviati nella matrice. Spesso un riferimento a *tipo*. *ARG_TYPE* è un parametro che viene passato a `CArray`.  
   
 ## <a name="members"></a>Membri  
   
@@ -137,7 +138,7 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Requisiti  
- `Header:` afxtempl. h  
+**Intestazione:** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  Aggiunge un nuovo elemento alla fine della matrice, aumento delle dimensioni della matrice di 1.  

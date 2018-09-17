@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9614303e62d3d1ca374eecca8c04cc30a7f94106
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: aa4147f28e7b780e9d916526f0e46e91432fd1ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109797"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714233"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
@@ -36,8 +36,10 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 *Elem*<br/>
 Tipo di elemento a caratteri "wide".
+
 *Maxcode*<br/>
 Numero massimo di caratteri per il facet delle impostazioni locali.
+
 *Modalità*<br/>
 Informazioni di configurazione per il facet delle impostazioni locali.
 
@@ -49,4 +51,6 @@ Il flusso di byte deve essere scritto in un file binario, poiché si può danneg
 
 ## <a name="requirements"></a>Requisiti
 
-Intestazione: \<codecvt> Spazio dei nomi: std
+Intestazione: \<codecvt >
+
+Namespace: std

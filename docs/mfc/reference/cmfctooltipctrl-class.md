@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538486"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715663"
 ---
 # <a name="cmfctooltipctrl-class"></a>Classe CMFCToolTipCtrl
 Implementazione estesa di descrizioni comandi basata sulla [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Una descrizione comando basata sulla classe `CMFCToolTipCtrl` può visualizzare un'icona, un'etichetta e una descrizione. È possibile personalizzare l'aspetto visivo utilizzando un riempimento sfumato, testo e colori del bordo personalizzati, testo in grassetto, angoli arrotondati o uno stile di tipo fumetto.  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Il rettangolo di delimitazione della descrizione comando.  
+*Rect*<br/>
+[in] Il rettangolo di delimitazione della descrizione comando.  
   
- [in] *clrLine*  
- Colore del bordo.  
+*clrLine*<br/>
+[in] Colore del bordo.  
   
 ### <a name="remarks"></a>Note  
  L'override del metodo in una classe derivata per personalizzare l'aspetto del bordo della descrizione comando.  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- [in] *rect*  
+*pDC*<br/>
+[in] [in] *rect*  
  [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rectImage*  
- Coordinate dell'icona.  
+*rectImage*<br/>
+[in] Coordinate dell'icona.  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se è stata disegnata l'icona. In caso contrario, FALSE.  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Rettangolo di delimitazione dell'area dell'etichetta.  
+*Rect*<br/>
+[in] Rettangolo di delimitazione dell'area dell'etichetta.  
   
- [in] *bCalcOnly*  
- Se TRUE, non dell'etichetta verrà disegnato.  
+*bCalcOnly*<br/>
+[in] Se TRUE, non dell'etichetta verrà disegnato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Dimensione dell'etichetta, in pixel.  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *x1*  
- Coordinata orizzontale dell'estremità sinistra del separatore.  
+*x1*<br/>
+[in] Coordinata orizzontale dell'estremità sinistra del separatore.  
   
- [in] *x2*  
- Coordinata orizzontale dell'estremità destra del separatore.  
+*x2*<br/>
+[in] Coordinata orizzontale dell'estremità destra del separatore.  
   
- [in] *Y*  
- Coordinata verticale del separatore.  
+*Y*<br/>
+[in] Coordinata verticale del separatore.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita consente di disegnare una linea dal punto (x1, y) per il punto (x2, y).  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pDC*  
- Puntatore a un contesto di dispositivo.  
+*pDC*<br/>
+[in] Puntatore a un contesto di dispositivo.  
   
- [in] *rect*  
- Specifica il rettangolo di delimitazione dell'area da riempire.  
+*Rect*<br/>
+[in] Specifica il rettangolo di delimitazione dell'area da riempire.  
   
- [in] *clrText*  
- Colore di primo piano della descrizione comando.  
+*clrText*<br/>
+[in] Colore di primo piano della descrizione comando.  
   
- [in] *clrLine*  
- Colore dei bordi e la linea di delimitazione tra etichetta e descrizione.  
+*clrLine*<br/>
+[in] Colore dei bordi e la linea di delimitazione tra etichetta e descrizione.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita riempie il rettangolo specificato da *rect* con il colore o il modello specificato tramite la chiamata più recente di [CMFCToolTipCtrl::SetParams](#setparams).  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *strDesrciption*  
- Testo della descrizione.  
+*strDesrciption*<br/>
+[in] Testo della descrizione.  
   
 ### <a name="remarks"></a>Note  
  Il testo della descrizione viene visualizzato nella descrizione comando sotto il separatore.  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *nWidthRegular*  
- [in] *nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in] [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Note  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *pParams*  
- Puntatore a un [classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) oggetto che contiene i parametri di visualizzazione.  
+*pParams*<br/>
+[in] Puntatore a un [classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) oggetto che contiene i parametri di visualizzazione.  
   
 ### <a name="remarks"></a>Note  
  Ogni volta che viene visualizzata la descrizione, l'oggetto viene disegnato utilizzando i colori e gli stili di visualizzazione *pParams* specifica. Il valore di *pParams* viene archiviato nel membro protetto `m_Params`, che sono accessibili da una classe derivata che esegue l'override [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), o [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)per mantenere l'aspetto specificato.  

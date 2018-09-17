@@ -1,5 +1,5 @@
 ---
-title: singolo | Documenti Microsoft
+title: singolo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691859"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716989"
 ---
 # <a name="single"></a>singola
-Consente di specificare che una sezione di codice deve essere eseguita su un thread singolo, non necessariamente il thread principale.  
+Consente di specificare che una sezione di codice deve essere eseguita su un thread singolo, non necessariamente del thread master.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,11 +36,12 @@ Consente di specificare che una sezione di codice deve essere eseguita su un thr
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `clause` (facoltativo)  
- Zero o più clausole. Vedere la sezione Osservazioni per un elenco di clausole supportate da **singolo**.  
+
+`clause`  
+(Facoltativo) Zero o più clausole. Vedere la sezione Osservazioni per un elenco delle clausole supportate da **singolo**.  
   
 ## <a name="remarks"></a>Note  
- Il **singolo** direttiva supporta le clausole OpenMP seguenti:  
+ Il **singolo** direttiva supporta le clausole OpenMP seguente:  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
   
@@ -52,7 +53,7 @@ Consente di specificare che una sezione di codice deve essere eseguita su un thr
   
  Il [master](../../../parallel/openmp/reference/master.md) direttiva consente di specificare che una sezione di codice deve essere eseguita solo sul thread master.  
   
- Per ulteriori informazioni, vedere [singolo 2.4.3 costrutto](../../../parallel/openmp/2-4-3-single-construct.md).  
+ Per altre informazioni, vedere [singolo 2.4.3 costrutto](../../../parallel/openmp/2-4-3-single-construct.md).  
   
 ## <a name="example"></a>Esempio  
   

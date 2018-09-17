@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028541"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716638"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -173,7 +173,7 @@ Per ogni argomento nell'elenco le seguenti regole vengono applicate a sua volta,
 
 11. Il NGRN è impostata su 8.
 
-12. L'indirizzo NSAA viene arrotondato per eccesso il maggiore di 8 o l'allineamento naturale del tipo dell'argomento... 
+12. L'indirizzo NSAA viene arrotondato per eccesso il maggiore di 8 o l'allineamento naturale del tipo dell'argomento...
 
 13. Se l'argomento è un tipo composito alla memoria in corrispondenza dell'indirizzo NSAA viene copiato l'argomento. L'indirizzo NSAA viene incrementato della dimensione dell'argomento. L'argomento a questo punto è stato allocato.
 
@@ -189,7 +189,7 @@ Le funzioni che accettano un numero variabile di argomenti vengono gestite in mo
 
 2. SIMD e registri a virgola mobile non vengono utilizzati.
 
-In modo efficace ciò equivale a C.12–C.15 allocare argomenti da uno stack immaginario, in cui i primi 64 byte dello stack vengono caricati in x0 x7, e qualsiasi rimanenti argomenti dello stack vengono inseriti in genere le regole seguenti. 
+In modo efficace ciò equivale a C.12–C.15 allocare argomenti da uno stack immaginario, in cui i primi 64 byte dello stack vengono caricati in x0 x7, e qualsiasi rimanenti argomenti dello stack vengono inseriti in genere le regole seguenti.
 
 ## <a name="return-values"></a>Valori restituiti
 
@@ -231,5 +231,5 @@ Si noti che il contatore di cicli di seguito è un contatore di cicli true, non 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
-[Gestione delle eccezioni ARM64](../build/arm64-exception-handling.md)  
+[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Gestione delle eccezioni ARM64](../build/arm64-exception-handling.md)

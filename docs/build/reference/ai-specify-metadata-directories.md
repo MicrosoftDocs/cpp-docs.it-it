@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f932e186630d1bc6c846c78af99f98262861068
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110669"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716592"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Specifica le directory di metadati)
 
@@ -42,6 +42,7 @@ Specifica una directory in cui il compilatore effettuerà la ricerca per risolve
 Directory o percorso in cui il compilatore effettua la ricerca.
 
 ## <a name="remarks"></a>Note
+
 Una sola directory può essere passata a un **/AI** chiamata. Specificare una **/AI** opzione per ogni percorso in cui il compilatore effettuerà la ricerca. Ad esempio, per aggiungere C:\Project\Meta e C:\Common\Meta al percorso di ricerca del compilatore per `#using` direttive, aggiungere `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` alla riga di comando del compilatore o aggiungere ogni directory per il **aggiuntive #using directory** proprietà in Visual Studio.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
@@ -58,6 +59,6 @@ Una sola directory può essere passata a un **/AI** chiamata. Specificare una **
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)   
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
 [Direttiva #using](../../preprocessor/hash-using-directive-cpp.md)

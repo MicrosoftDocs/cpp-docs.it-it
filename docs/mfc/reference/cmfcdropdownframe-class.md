@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 99b4a84109db8a412f0a3d64967a522d18ada930
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849448"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713453"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 Fornisce la funzionalità di finestra cornice di elenco a discesa per le barre degli strumenti elenco a discesa e pulsanti della barra degli strumenti elenco a discesa.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *pWndParent*|La finestra padre della pagina di riepilogo a discesa.|  
-|[in] *x*|La coordinata orizzontale dello schermo per la posizione del frame rivolta verso il basso.|  
-|[in] *y*|La coordinata verticale dello schermo per la posizione del frame rivolta verso il basso.|  
-|[in] *pWndOriginToolbar*|Barra degli strumenti con pulsanti elenco a discesa che questo metodo viene utilizzato per popolare il nuovo oggetto elenco a discesa frame.|  
+|*pWndParent*|[in] La finestra padre della pagina di riepilogo a discesa.|  
+|*x*|[in] La coordinata orizzontale dello schermo per la posizione del frame rivolta verso il basso.|  
+|*y*|[in] La coordinata verticale dello schermo per la posizione del frame rivolta verso il basso.|  
+|*pWndOriginToolbar*|[in] Barra degli strumenti con pulsanti elenco a discesa che questo metodo viene utilizzato per popolare il nuovo oggetto elenco a discesa frame.|  
   
 ### <a name="return-value"></a>Valore restituito  
  TRUE se il frame di riepilogo a discesa è stato creato con successo; in caso contrario, FALSE.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] *bNotify*|Non usato.|  
+|*bNotify*|[in] Non usato.|  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando si crea il frame di riepilogo a discesa o la finestra padre viene ridimensionata. Questo metodo calcola la posizione e dimensioni della pagina di riepilogo a discesa con la posizione e dimensioni della finestra padre.  
@@ -171,8 +171,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *il flag bAutoDestroy*  
- TRUE per eliminare automaticamente la finestra degli strumenti elenco a discesa associato. in caso contrario, FALSE.  
+*flag bAutoDestroy*<br/>
+[in] TRUE per eliminare automaticamente la finestra degli strumenti elenco a discesa associato. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Se *il flag bAutoDestroy* è TRUE, il `CMFCDropDownFrame` distruttore Elimina la finestra degli strumenti elenco a discesa associato. Il valore predefinito è TRUE.  

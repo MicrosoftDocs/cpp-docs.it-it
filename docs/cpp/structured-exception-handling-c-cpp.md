@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217119"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713193"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -34,10 +34,10 @@ Gestione delle eccezioni strutturata (SEH) è un'estensione Microsoft C per gest
 
 ## <a name="grammar"></a>Grammatica
 
-*try-except-statement* :  
+*try-except-statement* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**try** *compound-statement* **except** **(** *espressione* **)** *compound-statement*
 
-*try-finally-statement* :  
+*try-finally-statement* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**try** *compound-statement* **finally** *compound-statement*
 
 ## <a name="remarks"></a>Note
