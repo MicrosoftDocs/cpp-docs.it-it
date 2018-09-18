@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0027 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0027 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a1c25f87913de312ca766b05edbac39f7191ff0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c642c678c7db29b9826449731f07ad90bc865294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062059"
 ---
 # <a name="project-build-error-prj0027"></a>Errore di compilazione progetto PRJ0027
-Messaggio di registro Unicode "contenuto" contenuto che non può essere tradotto in una tabella codici ANSI dell'utente.  
-  
- Viene in genere visualizzata solo l'avviso in combinazione con errori nella creazione di file batch e/o risposta.  
-  
- La risoluzione di questo errore consiste nell'aggiornare il contenuto del log di compilazione per utilizzare ANSI o installare la tabella codici nel computer in uso e impostarlo come predefinito del sistema.
+
+Messaggio di registro Unicode "contenuto" contenuto che non può essere tradotto in tabella codici ANSI dell'utente.
+
+Viene in genere visualizzata solo l'avviso in combinazione con errori nella creazione dei file batch e/o risposta.
+
+La risoluzione di questo errore consiste nell'aggiornare il contenuto del log di compilazione per utilizzare ANSI o per installare la tabella codici nel computer e impostarlo come impostazione predefinita del sistema.

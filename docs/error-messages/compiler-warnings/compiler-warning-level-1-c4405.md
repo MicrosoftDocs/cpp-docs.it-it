@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4405 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4405 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9971113cc34efc5aa29e4066094517530b186839
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fce005153b9343b25e7de49b3e95a002381d0619
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061578"
 ---
 # <a name="compiler-warning-level-1-c4405"></a>Avviso del compilatore (livello 1) C4405
-'identifier': identificatore è una parola riservata  
-  
- Una parola riservata per assembly inline viene utilizzata come un nome di variabile. Ciò potrebbe causare risultati imprevisti. Per risolvere questo problema, evitare di denominare le variabili con parole riservate per l'assembly inline. L'esempio seguente genera l'errore C4405:  
-  
-```  
-// C4405.cpp  
-// compile with: /W1  
-// processor: x86  
-void func1() {  
-   int mov = 0, i = 0;  
-   _asm {  
-      mov mov, 0;   // C4405  
-      // instead, try ..  
-      // mov i, 0;  
-   }  
-}  
-  
-int main() {  
-}  
+
+'identifier': identificatore è una parola riservata
+
+Una parola riservata per l'assembly inline viene usata come nome di una variabile. Ciò può provocare risultati imprevisti. Per risolvere questo problema, evitare di denominare le variabili con parole riservate per l'assembly inline. L'esempio seguente genera l'errore C4405:
+
+```
+// C4405.cpp
+// compile with: /W1
+// processor: x86
+void func1() {
+   int mov = 0, i = 0;
+   _asm {
+      mov mov, 0;   // C4405
+      // instead, try ..
+      // mov i, 0;
+   }
+}
+
+int main() {
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: PTR::operator = | Documenti Microsoft
+title: PTR::operator = | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075080"
 ---
 # <a name="ptroperator"></a>ptr::operator=
-Associa un oggetto COM per un `com::ptr`.  
+Associa un oggetto COM un `com::ptr`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,22 +39,22 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_right`  
- Puntatore a interfaccia COM da collegare.  
+*a destra*<br/>
+Puntatore a interfaccia COM da collegare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un riferimento di rilevamento nel `com::ptr`.  
+ Un riferimento di traccia sul `com::ptr`.  
   
 ## <a name="exceptions"></a>Eccezioni  
- Se il `com::ptr` possiede già un riferimento a un oggetto COM, `operator=` genera <xref:System.InvalidOperationException>.  
+ Se il `com::ptr` possiede già un riferimento a un oggetto COM `operator=` genera un'eccezione <xref:System.InvalidOperationException>.  
   
 ## <a name="remarks"></a>Note  
- L'assegnazione di un oggetto COM per un `com::ptr` fa riferimento all'oggetto COM ma non comporta il rilascio di riferimento del chiamante.  
+ Assegnazione di un oggetto COM un `com::ptr` fa riferimento all'oggetto COM, ma non rilascia il riferimento del chiamante a esso.  
   
  Questo operatore ha lo stesso effetto `Attach`.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Il `ReplaceDocument` chiamate prima di funzione membro `Release` su qualsiasi proprietà in precedenza oggetto e quindi utilizza `operator=` per collegare un nuovo oggetto documento.  
+ In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Il `ReplaceDocument` chiamate prima funzione membro `Release` in qualsiasi precedentemente proprietà dell'oggetto e quindi Usa `operator=` per collegare un nuovo oggetto documento.  
   
 ```  
 // comptr_op_assign.cpp  

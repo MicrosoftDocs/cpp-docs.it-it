@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff08e5f527d9ef1be99b788ef05beb7ef58da53b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c361bc9510c610f2004af9f09c061d6f4b8b8cd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057450"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
@@ -35,6 +35,6 @@ Si noti che è necessario rispettare [conteggio dei riferimenti](../atl/referenc
 
 ## <a name="see-also"></a>Vedere anche
 
-[Introduzione a COM](../atl/introduction-to-com.md)   
+[Introduzione a COM](../atl/introduction-to-com.md)<br/>
 [QueryInterface: Spostamenti all'interno di un oggetto](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

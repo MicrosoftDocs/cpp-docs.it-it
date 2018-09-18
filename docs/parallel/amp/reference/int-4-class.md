@@ -1,5 +1,5 @@
 ---
-title: Classe int_4 | Documenti Microsoft
+title: Classe int_4 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a29ce2e9ec7b8401e2b9aaf499eabb5c0ceea2b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694485"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066180"
 ---
 # <a name="int4-class"></a>Classe int_4
-Rappresenta uno short vector di quattro valori integer.  
+Rappresenta un vettore short di quattro valori integer.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -306,7 +306,7 @@ class int_4;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore int_4](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore int_4](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -618,7 +618,7 @@ class int_4;
   
 ##  <a name="ctor"></a> int_4 
 
- Predefinito, costruttore inizializza tutti gli elementi con 0.  
+ Default costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 int_4() restrict(amp,
@@ -669,23 +669,23 @@ explicit inline int_4(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V0`  
- Il valore per inizializzare l'elemento 0.  
+*_V0*<br/>
+Il valore per inizializzare l'elemento 0.  
   
- `_V1`  
- Il valore per inizializzare l'elemento 1.  
+*V1*<br/>
+Il valore per inizializzare l'elemento 1.  
   
- `_V2`  
- Il valore per inizializzare l'elemento 2.  
+*_V2*<br/>
+Il valore per inizializzare l'elemento 2.  
   
- `_V3`  
- Il valore per inizializzare l'elemento 3.  
+*_V3*<br/>
+Il valore per inizializzare l'elemento 3.  
   
- `_V`  
- Il valore per l'inizializzazione.  
+*ISOLA*<br/>
+Il valore di inizializzazione.  
   
- `_Other`  
- Oggetto utilizzato per inizializzare.  
+*_Other*<br/>
+Oggetto utilizzato per inizializzare.  
   
 ##  <a name="int_4__size"></a> Dimensioni 
 

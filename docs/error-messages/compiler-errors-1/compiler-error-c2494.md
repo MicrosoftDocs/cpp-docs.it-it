@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2494 | Documenti Microsoft
+title: Errore del compilatore C2494 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071be235ac17fb541dc8c96871057f089646da5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e651e66ce571ddd084c470b52494235f35f2b008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066804"
 ---
 # <a name="compiler-error-c2494"></a>Errore del compilatore C2494
-'keyword' non può essere chiamato dall'interno di un'espressione di filtro o blocco finally/finally  
-  
- Non è possibile utilizzare `keyword` in un `__finally` o blocco finally.  
-  
- L'esempio seguente genera l'errore C2494:  
-  
-```  
-// C2494.cpp  
-#include <malloc.h>  
-  
-int main() {  
-   __try {}  
-   __except ( _alloca(100), 1 ) {}   // C2494  
-   __try {}  
-   __finally {  
-      _alloca(100);   // C2494  
-   }  
-}  
-```  
-  
- C2494 può verificarsi anche quando si utilizza **/clr**.  
-  
-```  
-// C2494b.cpp  
-// compile with: /clr  
-#include <malloc.h>  
-  
-int main() {  
-   char * buf;  
-   try {}  
-   catch (char * buf2) {}  
-   finally {  
-      _alloca(100);   // C2494  
-   }  
-}  
+
+'keyword' non può essere chiamato dall'interno di un'espressione di filtro o blocco finally/finally
+
+Non è possibile usare `keyword` in un `__finally` o blocco finally.
+
+L'esempio seguente genera l'errore C2494:
+
+```
+// C2494.cpp
+#include <malloc.h>
+
+int main() {
+   __try {}
+   __except ( _alloca(100), 1 ) {}   // C2494
+   __try {}
+   __finally {
+      _alloca(100);   // C2494
+   }
+}
+```
+
+C2494 può verificarsi anche quando si usa **/clr**.
+
+```
+// C2494b.cpp
+// compile with: /clr
+#include <malloc.h>
+
+int main() {
+   char * buf;
+   try {}
+   catch (char * buf2) {}
+   finally {
+      _alloca(100);   // C2494
+   }
+}
 ```

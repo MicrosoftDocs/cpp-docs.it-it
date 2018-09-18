@@ -1,5 +1,5 @@
 ---
-title: 'SQL: Esecuzione di chiamate SQL dirette (ODBC) | Documenti Microsoft'
+title: 'SQL: Esecuzione di chiamate SQL dirette (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2134fc41b604ffd659f9ee075abc9d462ff4f0db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edc43ce4fdbd838630d94f93ec018b246a0d5af4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068494"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL: esecuzione di chiamate SQL dirette (ODBC)
+
 Questo argomento viene illustrato:  
   
--   Quando utilizzare SQL dirette chiama.  
+- Quando usare SQL dirette chiama.  
   
--   [Come si modo diretta SQL chiama all'origine dati](#_core_making_direct_sql_function_calls).  
+- [Come creare indirizzare SQL chiama nell'origine dati](#_core_making_direct_sql_function_calls).  
   
 > [!NOTE]
->  Queste informazioni si applicano alle classi ODBC MFC. Se si lavora con le classi DAO MFC, vedere l'argomento "Confronto del Database del motore SQL e ANSI SQL di Microsoft Jet" nella Guida di DAO.  
+>  Queste informazioni si applicano alle classi ODBC MFC. Se si lavora con le classi DAO MFC, vedere l'argomento "Confronto di Microsoft Jet motore di Database SQL e ANSI SQL" nella Guida di DAO.  
   
-##  <a name="_core_when_to_call_sql_directly"></a> Quando eseguire chiamate SQL dirette  
- Per creare nuove tabelle, (delete) o modificare tabelle esistenti, creare indici ed eseguire altre funzioni SQL che modificano il [origine dati (ODBC)](../../data/odbc/data-source-odbc.md) dello schema, è necessario eseguire un'istruzione SQL direttamente all'origine dati utilizzando i Database Definition Language (DDL). Quando si utilizza una procedura guidata per creare un recordset per una tabella (in fase di progettazione), è possibile scegliere quali colonne della tabella per rappresentare nel recordset. Questo non è consentita per le colonne è un altro utente o dell'origine dati aggiunta alla tabella in un secondo momento, dopo la compilazione del programma. Le classi di database non supportano direttamente DDL, ma è comunque possibile scrivere codice per associare una nuova colonna per il recordset in modo dinamico in fase di esecuzione. Per informazioni su come effettuare l'associazione, vedere [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+##  <a name="_core_when_to_call_sql_directly"></a> Quando chiamare direttamente SQL  
+
+Per creare nuove tabelle, eliminare (Elimina) tabelle, modificare le tabelle esistenti, creare indici ed eseguire altre funzioni SQL che modificano il [origine dati (ODBC)](../../data/odbc/data-source-odbc.md) dello schema, è necessario eseguire un'istruzione SQL direttamente all'origine dati con Database Definition Language (DDL). Quando si usa una procedura guidata per creare un set di record per una tabella (in fase di progettazione), è possibile scegliere quali colonne della tabella per essere rappresentato nel set di record. Ciò non consente le colonne si o un altro utente dell'origine dati aggiunte alla tabella in un secondo momento, dopo la compilazione del programma. Le classi di database non supportano DDL direttamente, ma è comunque possibile scrivere codice per associare una nuova colonna del recordset in modo dinamico in fase di esecuzione. Per informazioni su come effettuare questa associazione, vedere [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
- È possibile utilizzare il sistema DBMS per modificare lo schema o un altro strumento che consente di eseguire funzioni DDL. È anche possibile utilizzare chiamate di funzione ODBC per l'invio di istruzioni SQL, quali la chiamata di una query predefinita (stored procedure) che non restituisce i record.  
+È possibile utilizzare il sistema DBMS per modificare lo schema o un altro strumento che consente di eseguire operazioni DDL. È anche possibile usare chiamate di funzione ODBC per l'invio di istruzioni SQL, ad esempio chiamare una query predefinita (stored procedure) che non restituisce i record.  
   
 ##  <a name="_core_making_direct_sql_function_calls"></a> Esecuzione di chiamate di funzione SQL dirette  
- È possibile eseguire direttamente una chiamata SQL utilizzando un [CDatabase (classe)](../../mfc/reference/cdatabase-class.md) oggetto. Impostare la stringa dell'istruzione SQL (in genere in un `CString`) e passarlo al [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) funzione membro del `CDatabase` oggetto. Se si utilizzano chiamate di funzione ODBC per inviare un'istruzione SQL che restituisce i record in genere, i record vengono ignorati.  
+
+È possibile eseguire direttamente una chiamata SQL utilizzando un [CDatabase (classe)](../../mfc/reference/cdatabase-class.md) oggetto. Impostare la stringa dell'istruzione SQL (in genere in un `CString`) e passarlo al [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) funzione membro del `CDatabase` oggetto. Se si usano chiamate di funzione ODBC per inviare un'istruzione SQL che restituisce in genere i record, i record vengono ignorati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL](../../data/odbc/sql.md)
+
+[SQL](../../data/odbc/sql.md)

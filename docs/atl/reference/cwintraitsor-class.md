@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062670"
 ---
 # <a name="cwintraitsor-class"></a>Classe CWinTraitsOR
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>Parametri
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Stili di finestra predefinito.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 Stili finestra estesi per impostazione predefinita.
 
 ## <a name="members"></a>Membri
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*dwStyle*  
+*dwStyle*<br/>
 Stili utilizzati per la creazione di una finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Stili estesi utilizzati per la creazione di una finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -108,6 +108,6 @@ Una combinazione degli stili estesi che vengono passati *dwExStyle* e quelle spe
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../../atl/atl-class-overview.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Informazioni sui tratti delle finestre](../../atl/understanding-window-traits.md)
 

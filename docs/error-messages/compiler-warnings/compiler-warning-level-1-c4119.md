@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4119 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4119 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14a6f53c77c3139c6634f771a09eacb3027b74de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d42e04feece0184ba0d36888c4daa4ccade45abe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061332"
 ---
 # <a name="compiler-warning-level-1-c4119"></a>Avviso del compilatore (livello 1) C4119
-specificate basi diverse 'base1' e 'base2'  
-  
- Due puntatori con base sono incompatibili perché hanno basi diverse. Il compilatore non può eseguire la conversione.
+
+specificate basi diverse 'base1' e 'base2'
+
+Due puntatori con base sono incompatibili perché hanno basi diverse. Il compilatore non può eseguire la conversione.

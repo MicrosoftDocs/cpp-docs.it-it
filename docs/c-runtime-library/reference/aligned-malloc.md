@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94c97eaa987163aa35a3f763a1d56c2e6db6050c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b500471a3580af9045f1c42707a543669da48c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063177"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -55,10 +55,10 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parametri
 
-*size*  
+*size*<br/>
 Dimensione dell'allocazione della memoria necessaria.
 
-*Allineamento*  
+*Allineamento*<br/>
 Valore di allineamento, che deve essere una potenza intera di 2.
 
 ## <a name="return-value"></a>Valore restituito
@@ -163,4 +163,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allineamento dati](../../c-runtime-library/data-alignment.md)  
+[Allineamento dati](../../c-runtime-library/data-alignment.md)

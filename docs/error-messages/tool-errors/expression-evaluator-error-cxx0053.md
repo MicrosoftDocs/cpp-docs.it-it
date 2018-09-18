@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0053 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0053 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e2668f950e6b2553113e74061994d1855ce7bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a3215c0e9dd7a76364c31a59f0f0d923092f686
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295548"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060733"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>Errore dell‘analizzatore di espressioni CXX0053
-rilevato simbolo corrisponde durante l'associazione dei punti di interruzione  
-  
- Un simbolo usato come punto di interruzione non è una funzione. Specifica di un membro dati come un punto di interruzione può causare questo errore.  
-  
- Questo errore è identico all'errore CAN0053.
+
+simboli di funzione non corrispondenti durante l'associazione dei punti di interruzione
+
+Un simbolo usato come punto di interruzione non è stato una funzione. Specifica di un membro dati come un punto di interruzione può causare questo errore.
+
+Questo errore è identico all'errore CAN0053.

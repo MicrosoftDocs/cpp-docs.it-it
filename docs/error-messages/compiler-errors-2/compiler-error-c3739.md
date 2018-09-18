@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3739 | Documenti Microsoft
+title: Errore del compilatore C3739 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283156f436695c011642dc2603d2cc846a449b3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0cc0bbe61f807ccd6b2f2f1404fb8e5cc724107
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069885"
 ---
 # <a name="compiler-error-c3739"></a>Errore del compilatore C3739
-'class': sintassi supportata solo quando il parametro 'layout_dependent' di event_receiver è true  
-  
- Si è tentato di associare un'intera interfaccia di eventi ma `layout_dependent` su [event_receiver](../../windows/event-receiver.md) attributo non è true, è necessario associare un singolo evento alla volta.  
-  
- L'esempio seguente genera l'errore C3739:  
-  
-```  
-// C3739.cpp  
-struct A  
-{  
-   __event void e();  
-};  
-  
-// event_receiver is implied  
-// [ event_receiver(layout_dependent=false)]  
-  
-// use the following line instead  
-// [event_receiver(com, layout_dependent=true), coclass ]  
-struct B  
-{  
-   void f();  
-   B(A* a)  
-   {  
-      __hook(A, a, &B::f);   // C3739  
-      // use the following line instead to hook a single event  
-      // __hook(&A::e, a, &B::f);  
-   }  
-};  
-  
-int main()  
-{  
-}  
+
+'class': la sintassi è supportata solo quando il parametro 'layout_dependent' di event_receiver è true
+
+Si è tentato di associare un'intera interfaccia degli eventi, ma `layout_dependent` sul [event_receiver](../../windows/event-receiver.md) attributo non è true, è necessario associare un solo evento alla volta.
+
+L'esempio seguente genera l'errore C3739:
+
+```
+// C3739.cpp
+struct A
+{
+   __event void e();
+};
+
+// event_receiver is implied
+// [ event_receiver(layout_dependent=false)]
+
+// use the following line instead
+// [event_receiver(com, layout_dependent=true), coclass ]
+struct B
+{
+   void f();
+   B(A* a)
+   {
+      __hook(A, a, &B::f);   // C3739
+      // use the following line instead to hook a single event
+      // __hook(&A::e, a, &B::f);
+   }
+};
+
+int main()
+{
+}
 ```

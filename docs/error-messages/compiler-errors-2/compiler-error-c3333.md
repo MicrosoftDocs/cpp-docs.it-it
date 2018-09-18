@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3333 | Documenti Microsoft
+title: Errore del compilatore C3333 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c54794f09ffea78c005163cb30ceb5fd3b77417a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b0193020adb6d3ec82d444a51551da30285535b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068845"
 ---
 # <a name="compiler-error-c3333"></a>Errore del compilatore C3333
-'type library': impossibile eseguire #import su una libreria dei tipi danneggiata  
-  
- La libreria dei tipi specificata nell'istruzione `#import` non è leggibile dal compilatore. È consigliabile rigenerare la libreria dei tipi, se possibile, o richiedere una nuova libreria dei tipi al fornitore. È consigliabile usare il Visualizzatore OLE fornito con Visual C++ per visualizzare il file della libreria dei tipi per individuarne il problema.
+
+'type library': impossibile eseguire #import su una libreria dei tipi danneggiata
+
+La libreria dei tipi specificata nell'istruzione `#import` non è leggibile dal compilatore. È consigliabile rigenerare la libreria dei tipi, se possibile, o richiedere una nuova libreria dei tipi al fornitore. È consigliabile usare il Visualizzatore OLE fornito con Visual C++ per visualizzare il file della libreria dei tipi per individuarne il problema.

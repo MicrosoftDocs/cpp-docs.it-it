@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2152 | Documenti Microsoft
+title: Errore del compilatore C2152 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e241f918191547812854de9734995b9f0b10770
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3a2215e43573b08a69501edfbd0c7c86897fdd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064913"
 ---
 # <a name="compiler-error-c2152"></a>Errore del compilatore C2152
-'identifier': i puntatori a funzioni con attributi differenti  
-  
- Un puntatore a una funzione con una convenzione di chiamata (`__cdecl`, `__stdcall`, o `__fastcall`) è assegnato a un puntatore a una funzione con la convenzione di chiamata un'altra.
+
+'identifier': i puntatori a funzioni con attributi differenti
+
+Un puntatore a una funzione con una convenzione di chiamata (`__cdecl`, `__stdcall`, o `__fastcall`) viene assegnato a un puntatore a una funzione con un'altra convenzione di chiamata.

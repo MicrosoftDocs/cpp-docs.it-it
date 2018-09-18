@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9998e7ad9605d6d2e32bcaff6204fb09dcbca2a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056781"
 ---
 # <a name="program-and-linkage-c"></a>Programma e collegamento (C++)
 
@@ -45,11 +45,11 @@ Tuttavia, in alcuni casi potrebbe essere necessario dichiarare una variabile glo
 
 ## <a name="linkage-vs-scope"></a>Collegamento e ambito
 
-Il concetto di *collegamento* si intende la visibilità dei simboli globali (ad esempio variabili, i nomi dei tipi e i nomi delle funzioni) all'interno del programma nel suo complesso tra unità di conversione. Il concetto di *ambito* fa riferimento ai simboli dichiarati all'interno di un blocco, ad esempio un spazio dei nomi, classe o corpo della funzione. Questi simboli sono visibili solo all'interno dell'ambito in cui sono definiti; il concetto di un collegamento non è applicabile ad essi. 
+Il concetto di *collegamento* si intende la visibilità dei simboli globali (ad esempio variabili, i nomi dei tipi e i nomi delle funzioni) all'interno del programma nel suo complesso tra unità di conversione. Il concetto di *ambito* fa riferimento ai simboli dichiarati all'interno di un blocco, ad esempio un spazio dei nomi, classe o corpo della funzione. Questi simboli sono visibili solo all'interno dell'ambito in cui sono definiti; il concetto di un collegamento non è applicabile ad essi.
 
 ## <a name="external-vs-internal-linkage"></a>Esterno rispetto al collegamento interno
 
-Oggetto *funzione libera* è una funzione che viene definita a globale o un ambito dello spazio dei nomi. Le variabili globali non-const e le funzioni disponibili per impostazione predefinita hanno *collegamento esterno*; sono visibili da qualsiasi unità di conversione nel programma. Di conseguenza, nessun altro oggetto globale (variabile, definizione di classe e così via) può avere tale nome. Un simbolo con *collegamenti interni* oppure *Nessun collegamento* è visibile solo nell'unità di conversione in cui è dichiarata. Quando un nome con collegamento interno, lo stesso nome può esistere in un'altra unità di conversione. Le variabili dichiarate con le definizioni di classe o i corpi delle funzioni non dispongono di collegamento. 
+Oggetto *funzione libera* è una funzione che viene definita a globale o un ambito dello spazio dei nomi. Le variabili globali non-const e le funzioni disponibili per impostazione predefinita hanno *collegamento esterno*; sono visibili da qualsiasi unità di conversione nel programma. Di conseguenza, nessun altro oggetto globale (variabile, definizione di classe e così via) può avere tale nome. Un simbolo con *collegamenti interni* oppure *Nessun collegamento* è visibile solo nell'unità di conversione in cui è dichiarata. Quando un nome con collegamento interno, lo stesso nome può esistere in un'altra unità di conversione. Le variabili dichiarate con le definizioni di classe o i corpi delle funzioni non dispongono di collegamento.
 
 È possibile forzare un nome globale in modo che un collegamento interno dichiarandolo in modo esplicito come **statici**. Questo limita la visibilità per la stessa unità di conversione in cui è dichiarata. Si noti che in questo contesto **statici** ha un significato diverso rispetto a quando applicato alle variabili locali.
 
@@ -68,4 +68,5 @@ extern const int value = 42;
 Visualizzare [extern](extern-cpp.md) per altre informazioni.
 
 ## <a name="see-also"></a>Vedere anche
- [Concetti di base](../cpp/basic-concepts-cpp.md)
+
+[Concetti di base](../cpp/basic-concepts-cpp.md)

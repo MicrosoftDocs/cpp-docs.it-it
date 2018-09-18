@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2402 | Documenti Microsoft
+title: Errore del compilatore C2402 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6e60d57942981aef6e613c1b4df36facfe27c71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74f61d7ca557ece5d15150022550288aa60eb922
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063268"
 ---
 # <a name="compiler-error-c2402"></a>Errore del compilatore C2402
-'identifier': il registro deve essere di tipo indice in 'context'  
-  
- Il registro usato in un operando di memoria indiretto deve essere un registro di indice in questo contesto.
+
+'identifier': il registro deve essere di tipo indice in 'context'
+
+Il registro usato in un operando di memoria indiretto deve essere un registro di indice in questo contesto.

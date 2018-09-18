@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2143b84a8a8906643b9fc8befd49ffd244aa9625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 34aa546561e13c2728c633db3f96861a1d3ec987
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075683"
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
 
@@ -32,13 +32,13 @@ Questa classe fornisce una funzione statica per il calcolo dei valori hash.
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename T>  
+template<typename T>
 class CDefaultHashTraits
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Il tipo di dati da archiviare nella raccolta.
 
 ## <a name="members"></a>Membri
@@ -69,7 +69,7 @@ static ULONG Hash(const T& element) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*  
+*Elemento*<br/>
 Elemento.
 
 ### <a name="return-value"></a>Valore restituito

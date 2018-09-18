@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3028 | Documenti Microsoft
+title: Errore del compilatore C3028 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,96 +16,97 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f905fd0e3ceef48771de95de327550be4d8c450
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cf01abf7e8351052af87c0d6b0746a3b98e228d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067194"
 ---
 # <a name="compiler-error-c3028"></a>Errore del compilatore C3028
-'member': solo un membro dati statici o variabili può essere utilizzato in una clausola di condivisione dei dati  
-  
- Un simbolo diverso da un membro dati statici o variabili è stato passato alla clausola reduction.  
-  
- L'esempio seguente genera l'errore C3028:  
-  
-```  
-// C3028.cpp  
-// compile with: /openmp /link vcomps.lib  
-int g_i;  
-  
-class MyClass {  
-public:  
-   MyClass();  
-   MyClass(int x);  
-   static int x_public;  
-   int mbr;  
-private:  
-   static int x_private;  
-};  
-  
-int MyClass::x_public;  
-int MyClass::x_private;  
-  
-namespace XyzNS {  
-   struct xyz { int x; };  
-   xyz xyz;  
-}  
-  
-namespace NS {  
-   int a1;  
-   struct Bar {  
-      static MyClass MyClass;  
-   };  
-   struct Baz : public Bar {  
-      using NS::Bar::MyClass;  
-   };  
-}  
-  
-MyClass NS::Bar::MyClass;  
-  
-typedef int MyInt;  
-  
-template <class T, size_t n> class CTempl {  
-public:  
-   static T public_array[n];  
-private:  
-   static T private_array[n];  
-};  
-  
-template<class T,size_t n> T CTempl<T,n>::public_array[n];  
-template<class T,size_t n> T CTempl<T,n>::private_array[n];  
-  
-CTempl<int,5> tx;  
-  
-struct Incomplete;  
-extern Incomplete inc;  
-  
-MyClass::MyClass(int x) {  
-  
-   #pragma omp parallel reduction(+: x, g_i, x_public, x_private)     
-   // OK  
-      ;  
-  
-   #pragma omp parallel reduction(+: x, g_i, MyClass::x_public,   
-   MyClass::x_private)     
-   // OK  
-      ;  
-  
-   #pragma omp parallel reduction(+: mbr)     
-   // C3028, member of a class.  
-      ;  
-}  
-  
-int main() {  
-  
-   #pragma omp parallel reduction(+:main)     
-   // C3028, main is a function.  
-      ;  
-  
-   #pragma omp parallel reduction(+: XyzNS)     
-   // C3028, XyzNS is a namespace.  
-      ;  
-}  
+
+'member': solo un membro dati statici o variabili possa essere usato in una clausola di condivisione dei dati
+
+È stato passato un simbolo diverso da un membro dati statici o variabili per le clausole reduction.
+
+L'esempio seguente genera l'errore C3028:
+
+```
+// C3028.cpp
+// compile with: /openmp /link vcomps.lib
+int g_i;
+
+class MyClass {
+public:
+   MyClass();
+   MyClass(int x);
+   static int x_public;
+   int mbr;
+private:
+   static int x_private;
+};
+
+int MyClass::x_public;
+int MyClass::x_private;
+
+namespace XyzNS {
+   struct xyz { int x; };
+   xyz xyz;
+}
+
+namespace NS {
+   int a1;
+   struct Bar {
+      static MyClass MyClass;
+   };
+   struct Baz : public Bar {
+      using NS::Bar::MyClass;
+   };
+}
+
+MyClass NS::Bar::MyClass;
+
+typedef int MyInt;
+
+template <class T, size_t n> class CTempl {
+public:
+   static T public_array[n];
+private:
+   static T private_array[n];
+};
+
+template<class T,size_t n> T CTempl<T,n>::public_array[n];
+template<class T,size_t n> T CTempl<T,n>::private_array[n];
+
+CTempl<int,5> tx;
+
+struct Incomplete;
+extern Incomplete inc;
+
+MyClass::MyClass(int x) {
+
+   #pragma omp parallel reduction(+: x, g_i, x_public, x_private)
+   // OK
+      ;
+
+   #pragma omp parallel reduction(+: x, g_i, MyClass::x_public,
+   MyClass::x_private)
+   // OK
+      ;
+
+   #pragma omp parallel reduction(+: mbr)
+   // C3028, member of a class.
+      ;
+}
+
+int main() {
+
+   #pragma omp parallel reduction(+:main)
+   // C3028, main is a function.
+      ;
+
+   #pragma omp parallel reduction(+: XyzNS)
+   // C3028, XyzNS is a namespace.
+      ;
+}
 ```

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 71c0fb14574aedb74d756e72a93cd0dc626ba086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057379"
 ---
 # <a name="atlcreatewnddata-structure"></a>Struttura atlcreatewnddata
 
@@ -42,13 +42,13 @@ Questa struttura contiene dati di istanza di classe nel codice di windowing in A
 
 ## <a name="members"></a>Membri
 
-`m_pThis`  
+`m_pThis`<br/>
 Il **ciò** puntatore utilizzato per ottenere l'accesso all'istanza della classe nella routine della finestra.
 
-`m_dwThreadID`  
+`m_dwThreadID`<br/>
 ID del thread dell'istanza della classe corrente.
 
-`m_pNext`  
+`m_pNext`<br/>
 Puntatore al successivo `_AtlCreateWndData` oggetto.
 
 ## <a name="requirements"></a>Requisiti

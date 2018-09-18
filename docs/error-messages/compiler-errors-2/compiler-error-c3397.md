@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3397 | Documenti Microsoft
+title: Errore del compilatore C3397 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a79718726f6d98e486dd286a48f11973c4fe237
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80db76886b4de529b75fd402a70af7c9fa2a892c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064074"
 ---
 # <a name="compiler-error-c3397"></a>Errore del compilatore C3397
-Inizializzazione aggregata non consentita in argomenti predefiniti  
-  
- Una matrice è stata dichiarata in modo non corretto.  Vedere [matrici](../../windows/arrays-cpp-component-extensions.md) per ulteriori informazioni.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3397.  
-  
-```  
-// C3397.cpp  
-// compile with: /clr  
-// /clr /c  
-void Func(array<int> ^p = gcnew array<int> { 1, 2, 3 });   // C3397  
-void Func2(array<int> ^p = gcnew array<int> (3));   // OK  
-  
-int main() {  
-   array<int> ^p = gcnew array<int> { 1, 2, 3};   // OK  
-}  
+
+Inizializzazione aggregata non consentita in argomenti predefiniti
+
+Una matrice è stata dichiarata in modo non corretto.  Visualizzare [matrici](../../windows/arrays-cpp-component-extensions.md) per altre informazioni.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3397.
+
+```
+// C3397.cpp
+// compile with: /clr
+// /clr /c
+void Func(array<int> ^p = gcnew array<int> { 1, 2, 3 });   // C3397
+void Func2(array<int> ^p = gcnew array<int> (3));   // OK
+
+int main() {
+   array<int> ^p = gcnew array<int> { 1, 2, 3};   // OK
+}
 ```

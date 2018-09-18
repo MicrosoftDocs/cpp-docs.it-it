@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059329"
 ---
 # <a name="copyin"></a>copyin
 Consente ai thread di accedere a valore del thread master, per un [threadprivate](../../../parallel/openmp/reference/threadprivate.md) variabile.  
@@ -32,11 +32,10 @@ Consente ai thread di accedere a valore del thread master, per un [threadprivate
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>Note  
- dove  
+## <a name="parameters"></a>Parametri
   
- `var`  
- Il `threadprivate` variabile che verrà inizializzata con il valore della variabile nel thread principale, come si presenta prima del costrutto parallelo.  
+*var*<br/>
+Il `threadprivate` variabile che verrà inizializzata con il valore della variabile nel thread principale, come si presenta prima del costrutto parallelo.  
   
 ## <a name="remarks"></a>Note  
  `copyin` si applica alle direttive seguenti:  
@@ -45,12 +44,12 @@ copyin(var)
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [Nelle sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Per ulteriori informazioni, vedere [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).  
+ Per altre informazioni, vedere [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).  
   
 ## <a name="example"></a>Esempio  
- Vedere [threadprivate](../../../parallel/openmp/reference/threadprivate.md) per un esempio di utilizzo `copyin`.  
+ Visualizzare [threadprivate](../../../parallel/openmp/reference/threadprivate.md) per un esempio d'uso `copyin`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Clausole](../../../parallel/openmp/reference/openmp-clauses.md)

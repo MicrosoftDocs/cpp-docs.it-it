@@ -1,5 +1,5 @@
 ---
-title: Classe unsupported_feature | Documenti Microsoft
+title: Classe unsupported_feature | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ccc811e3459fe668b6a8dbd255007cb60bf0cf1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059683"
 ---
 # <a name="unsupportedfeature-class"></a>Classe unsupported_feature
 Eccezione generata quando viene utilizzata una funzionalità non supportata.  
@@ -64,14 +64,14 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Descrizione dell'errore.  
+*Messaggio*<br/>
+Descrizione dell'errore.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `unsupported_feature`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** amprt.h  
+ **Intestazione:** amprt. h  
   
  **Spazio dei nomi:** Concurrency  
   

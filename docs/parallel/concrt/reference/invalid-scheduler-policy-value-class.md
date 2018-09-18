@@ -1,5 +1,5 @@
 ---
-title: Classe invalid_scheduler_policy_value | Documenti Microsoft
+title: Classe invalid_scheduler_policy_value | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec11d7ebc7d2c074344e9651a7c548fe1ad01943
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae46d9f9de26e80a97d4ea2e9a692caec3445c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068156"
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>Classe invalid_scheduler_policy_value
 Questa classe descrive un'eccezione generata quando una chiave dei criteri di un oggetto `SchedulerPolicy` viene impostata su un valore non valido per tale chiave.  
@@ -62,8 +62,8 @@ invalid_scheduler_policy_value() throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Messaggio descrittivo dell'errore.  
+*Messaggio*<br/>
+Messaggio descrittivo dell'errore.  
   
 
 ## <a name="see-also"></a>Vedere anche  

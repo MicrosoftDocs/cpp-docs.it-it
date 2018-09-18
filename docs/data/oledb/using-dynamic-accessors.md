@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d5015a69c01982398dcb661fc7ea86232dde7f2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: fed93404a6c11addb8068d6140fda48d1c02a253
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056735"
 ---
 # <a name="using-dynamic-accessors"></a>Utilizzo delle funzioni di accesso dinamiche
 
@@ -173,8 +173,8 @@ Per un esempio che illustra come usare questa classe per eseguire una stored pro
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)  
-[Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)  
-[Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)  
-[Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)  
+[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)<br/>
+[Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Esempio DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)  

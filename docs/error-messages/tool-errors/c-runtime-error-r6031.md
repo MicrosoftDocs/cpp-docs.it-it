@@ -1,5 +1,5 @@
 ---
-title: R6031 errore di Runtime C | Documenti Microsoft
+title: C R6031 di errore di Runtime | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66d75fb0095b1de0fe1572d8c946823a89791740
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83dbcdc433ea731e6ddf0765b4b3a55d5707f429
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059498"
 ---
-# <a name="c-runtime-error-r6031"></a>R6031 errore di Runtime C
-Tentativo di inizializzare la libreria CRT a più di una volta. Questo indica un bug nell'applicazione.  
-  
+# <a name="c-runtime-error-r6031"></a>R6031 di errore di Runtime C
+
+Tentativo di inizializzare la libreria CRT a più di una volta. Questo indica un bug nell'applicazione.
+
 > [!NOTE]
->  Se questo messaggio di errore si verifica durante l'esecuzione di un'applicazione, l'app è stato arrestato perché si è verificato un problema interno. Ciò potrebbe dipendere bug nell'app o da un bug in un componente aggiuntivo o un'estensione che usa l'app.  
->   
->  Per risolvere questo errore, è possibile provare questi passaggi:  
->   
->  -   Utilizzare il **App e funzionalità** o **programmi e funzionalità** nella pagina di **Pannello di controllo** per ripristinare o reinstallare il programma.  
-> -   Utilizzare il **App e funzionalità** o **programmi e funzionalità** nella pagina di **Pannello di controllo** per rimuovere, ripristinare o reinstallare tutti i programmi aggiuntivi o estensione usati dall'app.  
-> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.  
-> -   Cerca una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.  
-  
- **Informazioni per i programmatori**  
-  
- Questo messaggio diagnostico indica che le istruzioni MSIL erano in esecuzione durante il blocco del caricatore. Per ulteriori informazioni, vedere [inizializzazione di assembly misti](../../dotnet/initialization-of-mixed-assemblies.md).
+>  Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema interno. Ciò potrebbe dipendere bug nell'app o da un bug in un componente aggiuntivo o un'estensione che usa l'app.
+>
+>  Per risolvere questo errore, è possibile provare questi passaggi:
+>
+>  -   Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
+> -   Usare il **App e funzionalità** oppure **programmi e funzionalità** nella pagina il **Pannello di controllo** per rimuovere, ripristinare o reinstallare eventuali programmi di componente aggiuntivo o l'estensione usati dall'app.
+> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
+> -   Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+
+**Informazioni per i programmatori**
+
+Questa diagnostica indica che l'esecuzione di istruzioni MSIL sono stati durante il blocco del caricatore attivo. Per altre informazioni, vedere [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md).

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3277 | Documenti Microsoft
+title: Errore del compilatore C3277 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd38ccc8a4f812a458073c429d83cebe5dff151b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a346f6b2abce22a1238a1f9bc6f8ea9f961cb43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250016"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059062"
 ---
 # <a name="compiler-error-c3277"></a>Errore del compilatore C3277
-non è possibile definire un enum non gestito 'enum' in 'tipo' gestito  
-  
- È stata definita un'enumerazione in modo non corretto all'interno di un tipo gestito.  
-  
- L'esempio seguente genera l'errore C3277:  
-  
-```  
-// C3277a.cpp  
-// compile with: /clr  
-ref class A  
-{  
-   enum E {e1,e2};   // C3277  
-   // try the following line instead  
-   // enum class E {e1,e2};  
-};  
-  
-int main()  
-{  
-}  
-```  
+
+non è possibile definire un'enumerazione non gestita 'enum' in 'type' gestito
+
+Un'enumerazione è stata definita in modo non corretto all'interno di un tipo gestito.
+
+L'esempio seguente genera l'errore C3277:
+
+```
+// C3277a.cpp
+// compile with: /clr
+ref class A
+{
+   enum E {e1,e2};   // C3277
+   // try the following line instead
+   // enum class E {e1,e2};
+};
+
+int main()
+{
+}
+```

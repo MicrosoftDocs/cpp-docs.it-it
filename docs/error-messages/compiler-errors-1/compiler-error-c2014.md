@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2014 | Documenti Microsoft
+title: Errore del compilatore C2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839fececb10897c799473ae328afb9f422b4c390
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9167d71e717490b89c1861abe9a9da9e0ab6a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064854"
 ---
 # <a name="compiler-error-c2014"></a>Errore del compilatore C2014
-il comando per il preprocessore deve iniziare al primo carattere  
-  
- Il `#` segno di una direttiva del preprocessore deve essere il primo carattere in una riga che non è uno spazio vuoto.  
-  
- L'esempio seguente genera l'errore C2014:  
-  
-```  
-// C2014.cpp  
-int k; #include <stdio.h>   // C2014  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2014b.cpp  
-// compile with: /c  
-int k;   
-#include <stdio.h>  
+
+comando del preprocessore deve iniziare al primo carattere non vuoto
+
+Il `#` segno di una direttiva del preprocessore deve essere il primo carattere in una riga che non è lo spazio vuoto.
+
+L'esempio seguente genera l'errore C2014:
+
+```
+// C2014.cpp
+int k; #include <stdio.h>   // C2014
+```
+
+Possibile soluzione:
+
+```
+// C2014b.cpp
+// compile with: /c
+int k;
+#include <stdio.h>
 ```

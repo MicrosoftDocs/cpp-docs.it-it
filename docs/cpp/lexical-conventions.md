@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9dd92d321f0452c24de04fb94427aa2499677155
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064824"
 ---
 # <a name="lexical-conventions"></a>Convenzioni lessicali
+
 In questa sezione vengono descritti gli elementi fondamentali di un programma C++. Usare questi elementi, denominati elementi lessicali o token per creare istruzioni, definizioni, dichiarazioni e così via, che consentono di creare programmi completi. I seguenti elementi lessicali sono discussi in questa sezione:
 
 - [Cenni preliminari sulla conversione di file](overview-of-file-translation.md)
@@ -45,5 +46,6 @@ In questa sezione vengono descritti gli elementi fondamentali di un programma C+
 - [Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>Vedere anche
- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)  
- [Programma e collegamento](program-and-linkage-cpp.md)
+
+[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Programma e collegamento](program-and-linkage-cpp.md)

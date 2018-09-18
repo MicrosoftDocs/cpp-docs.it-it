@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074838"
 ---
 # <a name="cnorowset-class"></a>Classe CNoRowset
+
 Può essere utilizzato come argomento di modello (`TRowset`) per [CCommand](../../data/oledb/ccommand-class.md) oppure [CTable](../../data/oledb/ctable-class.md).  
   
 ## <a name="syntax"></a>Sintassi
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *TAccessor*  
- Una classe di funzione di accesso. Il valore predefinito è `CAccessorBase`.  
+
+*TAccessor*<br/>
+Una classe di funzione di accesso. Il valore predefinito è `CAccessorBase`.  
   
 ## <a name="remarks"></a>Note  
- Usare `CNoRowset` come argomento di modello, se il comando non restituisce un set di righe.  
+
+Usare `CNoRowset` come argomento di modello, se il comando non restituisce un set di righe.  
   
- `CNoRowset` implementa i metodi stub seguenti, ognuno dei quali corrisponde a altri metodi della classe della funzione di accesso:  
+`CNoRowset` implementa i metodi stub seguenti, ognuno dei quali corrisponde a altri metodi della classe della funzione di accesso:  
   
--   `BindFinished` -Indica se l'associazione è completa (restituisce `S_OK`).  
+- `BindFinished` -Indica se l'associazione è completa (restituisce `S_OK`).  
   
--   `Close` -Rilascia le righe e l'interfaccia IRowset corrente.  
+- `Close` -Rilascia le righe e l'interfaccia IRowset corrente.  
   
--   `GetIID` -Recupera l'ID di interfaccia di un punto di connessione.  
+- `GetIID` -Recupera l'ID di interfaccia di un punto di connessione.  
   
--   `GetInterface` : Recupera un'interfaccia.  
+- `GetInterface` : Recupera un'interfaccia.  
   
--   `GetInterfacePtr` : Recupera un puntatore a interfaccia incapsulato.  
+- `GetInterfacePtr` : Recupera un puntatore a interfaccia incapsulato.  
   
--   `SetAccessor` -Imposta un puntatore alla funzione di accesso.  
+- `SetAccessor` -Imposta un puntatore alla funzione di accesso.  
   
--   `SetupOptionalRowsetInterfaces` -Imposta interfacce facoltative per il set di righe.  
+- `SetupOptionalRowsetInterfaces` -Imposta interfacce facoltative per il set di righe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli.h  
+
+**Intestazione:** atldbcli.h  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

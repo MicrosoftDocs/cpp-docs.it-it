@@ -1,5 +1,5 @@
 ---
-title: La selezione e modifica di record | Documenti Microsoft
+title: Selezione e modifica di record | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2a4b76d0b4273e5afb32206336b4aabbfe9294eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3220fe505bc4f4478fa663eab41f99f01d0f15d7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072095"
 ---
 # <a name="selecting-and-manipulating-records"></a>Selezione e modifica di record
-In genere quando si selezionano record da un'origine dati utilizzando un database SQL **selezionare** istruzione ottenere un set di risultati, ovvero un set di record da una tabella o una query. Con le classi di database, utilizzare un oggetto recordset per selezionare e accedere al set di risultati. Si tratta di un oggetto di una classe specifica dell'applicazione che è possibile derivare dalla classe [CRecordset](../../mfc/reference/crecordset-class.md). Quando si definisce una classe recordset, specificare l'origine dati a cui associare la tabella da utilizzare e le colonne della tabella. La creazione guidata applicazione MFC o **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) Crea una classe con una connessione a un'origine dati specifica. Le procedure guidate scrivono il [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funzione membro di classe `CRecordset` per restituire il nome della tabella. Per ulteriori informazioni sull'utilizzo delle procedure guidate per creare classi di recordset, vedere [supporto Database, creazione guidata applicazione MFC](../../mfc/reference/database-support-mfc-application-wizard.md) e [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
+
+In genere quando si selezionano i record da un'origine dati usando un linguaggio SQL **seleziona** istruzione, si ottiene un set di risultati, ovvero un set di record da una tabella o una query. Con le classi di database, si usa un oggetto recordset per selezionare e accedere al set di risultati. Si tratta di un oggetto di una classe specifica dell'applicazione che è possibile derivare dalla classe [CRecordset](../../mfc/reference/crecordset-class.md). Quando si definisce una classe recordset, specificare l'origine dati a cui associare la tabella da usare e le colonne della tabella. La creazione guidata applicazione MFC o **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) Crea una classe con una connessione a un'origine dati specifica. Le procedure guidate di scrivono la [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funzione membro di classe `CRecordset` per restituire il nome della tabella. Per altre informazioni sull'uso di procedure guidate per creare classi di recordset, vedere [supporto di Database, creazione guidata applicazione MFC](../../mfc/reference/database-support-mfc-application-wizard.md) e [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
- Utilizzando un [CRecordset](../../mfc/reference/crecordset-class.md) dell'oggetto in fase di esecuzione, è possibile:  
+Usando un [CRecordset](../../mfc/reference/crecordset-class.md) dell'oggetto in fase di esecuzione, è possibile:  
   
--   Esaminare i campi di dati del record corrente.  
+- Esaminare i campi dati del record corrente.  
   
--   Filtrare o ordinare il recordset.  
+- Filtrare o ordinare il recordset.  
   
--   Personalizzare il valore predefinito SQL **selezionare** istruzione.  
+- Personalizzare l'impostazione predefinita SQL **seleziona** istruzione.  
   
--   Scorrere i record selezionati.  
+- Scorrere i record selezionati.  
   
--   Aggiungere, aggiornare o eliminare i record (se l'origine dati e il recordset sono aggiornabili).  
+- Aggiungere, aggiornare o eliminare i record (se l'origine dati e set di record sono aggiornabili).  
   
--   Verificare se il recordset consente di ripetizione di query e aggiornare il contenuto.  
+- Verificare se il set di record consente rieseguendo la query e aggiornare il contenuto.  
   
- Al termine dell'utilizzo dell'oggetto recordset, chiudere ed eliminarlo. Per ulteriori informazioni sugli oggetti Recordset, vedere [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).  
+Al termine dell'utilizzo dell'oggetto recordset, chiudere ed eliminarla definitivamente. Per altre informazioni sugli oggetti Recordset, vedere [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)
+
+[ODBC e MFC](../../data/odbc/odbc-and-mfc.md)

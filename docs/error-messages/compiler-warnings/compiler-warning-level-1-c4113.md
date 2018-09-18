@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4113 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4113 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086510c9f8aa4d5ae4231563bef833ec698ae1d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0f90df0fc9416246670e79975bbfde2025997f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275795"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057288"
 ---
-# <a name="compiler-warning-level-1-c4113"></a>Compilatore (livello 1) Avviso C4113
-'identifier1' differisce in elenchi di parametri da 'identifier2'  
-  
- Un puntatore a funzione viene assegnato a un altro puntatore a funzione, ma gli elenchi di parametri formali delle funzioni non concordano. L'assegnazione viene compilata senza modifiche.
+# <a name="compiler-warning-level-1-c4113"></a>Compilatore Warning (level 1) C4113
+
+'identifier1' differisce in elenchi di parametri da 'identifier2'
+
+Un puntatore a funzione è assegnato a un altro puntatore a funzione, ma non si accettano elenchi di parametri formali delle funzioni. L'assegnazione viene compilato senza alcuna modifica.

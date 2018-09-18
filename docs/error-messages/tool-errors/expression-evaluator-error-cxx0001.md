@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0001 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0001 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6fb4fd777fad0c324e8a2a32722d5908d7c2d84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4ea3475ffce417e7e8647f935fc191dfcf58b73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294018"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057849"
 ---
 # <a name="expression-evaluator-error-cxx0001"></a>Errore dell‘analizzatore di espressioni CXX0001
-funzione utente l'esecuzione di eccezione  
-  
- Il codice in esecuzione ha provocato un errore di protezione generale. Questo errore è identico all'errore CAN0001.
+
+funzione user in esecuzione di eccezione
+
+Il codice eseguito ha provocato un errore di protezione generale. Questo errore è identico all'errore CAN0001.

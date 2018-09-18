@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131842"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069118"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
@@ -88,7 +88,7 @@ Un elenco di inizializzatori di membri è preferibile usare tramite l'assegnazio
     {}
 ```
 
-L'identificatore deve fare riferimento a un membro di classe. viene inizializzato con il valore dell'argomento. L'argomento può essere uno dei parametri del costruttore, una chiamata di funzione o un [std:: initializer_list\<T >](../standard-library/initializer-list-class.md). 
+L'identificatore deve fare riferimento a un membro di classe. viene inizializzato con il valore dell'argomento. L'argomento può essere uno dei parametri del costruttore, una chiamata di funzione o un [std:: initializer_list\<T >](../standard-library/initializer-list-class.md).
 
 **const** membri e i membri del tipo di riferimento devono essere inizializzati nell'elenco di inizializzatori di membro.
 
@@ -96,7 +96,7 @@ Per i costruttori della classe di base con parametri devono eseguire chiamate ne
 
 ## <a name="default_constructors"></a> Costruttori predefiniti
 
- *Costruttori predefiniti* in genere essere priva di parametri, ma possono avere parametri con valori predefiniti.
+*Costruttori predefiniti* in genere essere priva di parametri, ma possono avere parametri con valori predefiniti.
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ Quando si definisce un costruttore di copia, è necessario definire anche un ope
 Tentativo di copiare l'oggetto genera l'errore *errore C2280: tentativo di fare riferimento a una funzione eliminata*.
 
 ## <a name="move_constructors"></a> Costruttori di spostamento
+
 Oggetto *costruttore di spostamento* è una funzione membro speciale che consente di spostare la proprietà dei dati dell'oggetto esistente a una nuova variabile senza copiare i dati originali. Accetta un riferimento rvalue come primo parametro e qualsiasi parametro aggiuntivo deve avere i valori predefiniti. I costruttori di spostamento possono aumentare notevolmente l'efficienza del programma quando si passano oggetti di grandi dimensioni. Un costruttore di spostamento accetta un riferimento rvalue come primo parametro. Qualsiasi altro parametro deve avere i valori predefiniti.
 
 ```cpp

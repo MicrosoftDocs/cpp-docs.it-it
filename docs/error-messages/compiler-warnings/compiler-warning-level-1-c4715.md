@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4715 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4715 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bd7f86a06c060a469d31e5fbdfcfbd7afb8c80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b3de829992bfa650280768a2fcd761feaeaece0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283021"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061370"
 ---
 # <a name="compiler-warning-level-1-c4715"></a>Avviso del compilatore (livello 1) C4715
-'function': non tutti i percorsi di controllo restituiscono un valore  
-  
- La funzione specificata potenzialmente non può restituire un valore.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// C4715a.cpp  
-// compile with: /W1 /LD  
-int func1( int i )  
-{  
-   if( i )  
-   return 3;  // C4715 warning, nothing returned if i == 0  
-}  
-```  
-  
- Per evitare questo avviso, modificare il codice in modo che tutti i percorsi di assegnino un valore restituito della funzione:  
-  
-```  
-// C4715b.cpp  
-// compile with: /LD  
-int func1( int i )  
-{  
-   if( i ) return 3;  
-   else return 0;     // OK, always returns a value  
-}  
-```  
-  
- È possibile che il codice può contenere una chiamata a una funzione che non restituisce mai, come nell'esempio seguente:  
-  
-```  
-// C4715c.cpp  
-// compile with: /W1 /LD  
-void fatal()  
-{  
-}  
-int glue()  
-{  
-   if(0)  
-      return 1;  
-   else if(0)  
-      return 0;  
-   else  
-      fatal();   // C4715  
-}  
-```  
-  
- Questo codice genera un avviso, anche perché il compilatore non riconosce che `fatal` non restituisce mai. Per impedire che questo codice di generazione di un messaggio di errore, dichiarare `fatal` utilizzando [__declspec(noreturn)](../../cpp/noreturn.md).
+
+'function': non tutti i percorsi di controllo restituiscono un valore
+
+La funzione specificata potenzialmente non può restituire un valore.
+
+## <a name="example"></a>Esempio
+
+```
+// C4715a.cpp
+// compile with: /W1 /LD
+int func1( int i )
+{
+   if( i )
+   return 3;  // C4715 warning, nothing returned if i == 0
+}
+```
+
+Per evitare questo avviso, modificare il codice in modo che tutti i percorsi di assegnino un valore restituito della funzione:
+
+```
+// C4715b.cpp
+// compile with: /LD
+int func1( int i )
+{
+   if( i ) return 3;
+   else return 0;     // OK, always returns a value
+}
+```
+
+È possibile che il codice può contenere una chiamata a una funzione che non restituisce mai, come nell'esempio seguente:
+
+```
+// C4715c.cpp
+// compile with: /W1 /LD
+void fatal()
+{
+}
+int glue()
+{
+   if(0)
+      return 1;
+   else if(0)
+      return 0;
+   else
+      fatal();   // C4715
+}
+```
+
+Questo codice genera anche un avviso, perché il compilatore non sa che `fatal` non restituisce alcun risultato. Per evitare che questo codice genera un messaggio di errore, dichiarare `fatal` usando [__declspec(noreturn)](../../cpp/noreturn.md).

@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0043 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0043 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b27c1fffca8c21a0fa3e3e79eedae0c17ae580
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01deb34c2e490eb8a2d6529a426aedca40f98901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070574"
 ---
 # <a name="expression-evaluator-error-cxx0043"></a>Errore dell‘analizzatore di espressioni CXX0043
-Questo puntatore utilizzato all'esterno della funzione membro  
-  
- Il **questo** puntatore può essere utilizzato solo per le funzioni membro non statica.  
-  
- Questo errore è identico all'errore CAN0043.
+
+puntatore ' this ' usato all'esterno della funzione membro
+
+Il **ciò** puntatore può essere utilizzato solo per le funzioni membro non statica.
+
+Questo errore è identico all'errore CAN0043.

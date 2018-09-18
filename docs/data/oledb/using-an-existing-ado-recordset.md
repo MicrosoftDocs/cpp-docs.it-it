@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065348"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilizzo di un recordset ADO esistente
+
 Per combinare i modelli consumer OLE DB e Active Data Objects (ADO), utilizzare ADO per aprire un set di record (corrispondente a un set di righe nei modelli Consumer OLE DB). Quando si dispone di un set di record, eseguire le operazioni seguenti per connettersi a un set di righe OLE DB:  
   
-1.  Chiamare `QueryInterface` per il `IRowset` e `IAccessor` puntatori.  
+1. Chiamare `QueryInterface` per il `IRowset` e `IAccessor` puntatori.  
   
     ```cpp  
     IRowset* lpRowset = NULL;  
@@ -39,7 +40,7 @@ Per combinare i modelli consumer OLE DB e Active Data Objects (ADO), utilizzare 
     > [!NOTE]
     >  *lpUnk* punta al `IUnknown` oggetto del recordset ADO.  
   
-2.  Collegare la funzione di accesso e un set di righe per le classi di modello di consumer OLE DB appropriati.  
+1. Collegare la funzione di accesso e un set di righe per le classi di modello di consumer OLE DB appropriati.  
   
     ```cpp  
     CRowset rs;  
@@ -51,4 +52,5 @@ Per combinare i modelli consumer OLE DB e Active Data Objects (ADO), utilizzare 
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)
+
+[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

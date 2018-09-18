@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1026 | Documenti Microsoft
+title: Errore irreversibile C1026 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198105"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068988"
 ---
 # <a name="fatal-error-c1026"></a>Errore irreversibile C1026
-overflow dello stack del parser. Programma troppo complesso  
-  
- Lo spazio necessario per analizzare il programma ha causato un overflow dello stack del compilatore.  
-  
- Ridurre la complessità delle espressioni in base:  
-  
--   Riduzione dell'annidamento in `for` e `switch` istruzioni. Inserimento delle istruzioni più annidamento in funzioni separate.  
-  
--   Suddivisione di espressioni lunghe che contengono chiamate di funzione o operatori di valori delimitati da virgole.
+
+overflow dello stack del parser. Programma troppo complesso
+
+Lo spazio necessario per analizzare il programma ha causato un overflow dello stack del compilatore.
+
+Ridurre la complessità delle espressioni in base:
+
+- Riduzione di nidificazione `for` e `switch` istruzioni. Inserimento delle istruzioni più annidamento in funzioni separate.
+
+- Suddivisione di espressioni lunghe che comportano operatori di virgole o chiamate di funzione.

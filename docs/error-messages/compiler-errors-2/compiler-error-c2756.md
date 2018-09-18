@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2756 | Documenti Microsoft
+title: Errore del compilatore C2756 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3eb61cd111166867be0439709a8b73dd4056099
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 252f212f9034151bc5e77d1d2d6e64e1ee388faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061214"
 ---
 # <a name="compiler-error-c2756"></a>Errore del compilatore C2756
-'template type': argomenti di modello predefiniti non consentiti in una specializzazione parziale  
-  
- Il modello per una specializzazione parziale non può contenere un argomento predefinito.  
-  
- L'esempio seguente genera l'errore C2756 e mostra come risolverlo:  
-  
-```  
-// C2756.cpp  
-template <class T>  
-struct S {};  
-  
-template <class T=int>  
-// try the following line instead  
-// template <class T>  
-struct S<T*> {};   // C2756  
+
+'template type': argomenti di modello predefiniti non consentiti in una specializzazione parziale
+
+Il modello per una specializzazione parziale non può contenere un argomento predefinito.
+
+L'esempio seguente genera l'errore C2756 e mostra come risolverlo:
+
+```
+// C2756.cpp
+template <class T>
+struct S {};
+
+template <class T=int>
+// try the following line instead
+// template <class T>
+struct S<T*> {};   // C2756
 ```

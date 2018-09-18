@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1001 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1001 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68699a235f461a0f5550802cc009d345ecdba7c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4e465af5b4fa22c5f0ba5a9e01ebde0a7ee89e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068143"
 ---
 # <a name="nmake-fatal-error-u1001"></a>Errore irreversibile U1001 di NMAKE 
-Errore di sintassi: carattere non valido 'character' nella macro  
-  
- Il carattere specificato viene visualizzato in una macro, ma non è una lettera, un numero o un carattere di sottolineatura.  
-  
- Questo errore può essere causato da due punti mancanti un'espansione di macro:  
-  
-```  
-syntax error : illegal character '=' in macro  
+
+Errore di sintassi: carattere non valido 'character' nella macro
+
+Il carattere specificato viene visualizzato in una macro, ma non è una lettera, numero o un carattere di sottolineatura.
+
+Questo errore può essere causato da due punti mancanti nell'espansione di una macro:
+
+```
+syntax error : illegal character '=' in macro
 ```

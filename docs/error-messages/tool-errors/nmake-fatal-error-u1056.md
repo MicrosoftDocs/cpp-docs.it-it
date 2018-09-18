@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1056 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1056 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19890e290c98fd9602d755ad35f9d47204bd6c24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0a83c62bedf995708d5e99fee19f05696d05c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065698"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Errore irreversibile U1056 di NMAKE 
-Impossibile trovare il processore dei comandi  
-  
- Il processore dei comandi non è presente nel percorso specificato nella **COMSPEC** o **percorso** le variabili di ambiente.  
-  
- NMAKE utilizza COMMAND.COM o CMD. EXE come un processore dei comandi durante l'esecuzione di comandi. Cerca il processore dei comandi prima nel percorso impostato **COMSPEC**. Se **COMSPEC** non esiste, la directory specificate nelle ricerche NMAKE **percorso**.
+
+Impossibile trovare il processore dei comandi
+
+Il processore dei comandi non era presente nel percorso specificato nella **COMSPEC** oppure **percorso** le variabili di ambiente.
+
+NMAKE Usa COMMAND.COM o CMD. File EXE come un processore dei comandi quando l'esecuzione di comandi. Cerca il processore dei comandi prima di tutto nel percorso impostato in **COMSPEC**. Se **COMSPEC** non esiste, nelle directory specificate nelle ricerche NMAKE **percorso**.

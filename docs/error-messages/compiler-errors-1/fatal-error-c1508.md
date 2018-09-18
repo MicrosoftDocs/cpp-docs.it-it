@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1508 | Documenti Microsoft
+title: Errore irreversibile C1508 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b698c08958693d72fd1642ee95857d65cdc774e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5b0e140aa0c38a04098616302e1aa098c48e9b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060369"
 ---
 # <a name="fatal-error-c1508"></a>Errore irreversibile C1508
-limite del compilatore. 'function': gli argomenti eccedono i 65535 byte  
-  
- I parametri formali per la funzione superano il limite di 65535 byte.
+
+limite del compilatore. 'function': gli argomenti eccedono i 65535 byte
+
+I parametri formali per la funzione superano il limite di 65535 byte.

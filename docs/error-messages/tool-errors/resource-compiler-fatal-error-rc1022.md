@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1022 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RC1022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c81a6afc3316c163e9d1451af51f57f208b6a209
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4186b531fce1b608122df676139b9c676ce2df27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070446"
 ---
 # <a name="resource-compiler-fatal-error-rc1022"></a>Errore irreversibile del compilatore di risorse RC1022
-previsto '#endif'  
-  
- Un `#if`, **#ifdef**, o **#ifndef** direttiva non termina con un `#endif` direttiva.  
-  
- Assicurarsi che sia presente un `#if`, **#ifdef**, o **#ifndef** istruzione prima di questa istruzione.
+
+previsto '#endif'
+
+Un' `#if`, **#ifdef**, o **#ifndef** direttiva non è stata terminata con un `#endif` direttiva.
+
+Assicurarsi che vi sia un' `#if`, **#ifdef**, o **#ifndef** istruzione attiva prima di questa istruzione.

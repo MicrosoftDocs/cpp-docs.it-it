@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0009 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0009 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5692ec643f5e3fe1adebf68048a6c435ab05d6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efeb110823e801dd86a503a7069c4898f400769e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057184"
 ---
 # <a name="project-build-error-prj0009"></a>Errore di compilazione progetto PRJ0009
-Compilazione non è stato aprire i log per la scrittura.  
-  
- **Assicurarsi che il file non è aperto da un altro processo e non è protetto da scrittura.**  
-  
- Dopo aver impostato la **log di compilazione** proprietà **Sì** e si esegue una compilazione o ricompilazione, Visual C++ non è riuscito ad aprire il log di compilazione in modalità esclusiva.  
-  
- Controllare il **log di compilazione** impostazione aprendo il **opzioni** la finestra di dialogo (nel **strumenti** menu, fare clic su **opzioni** comando) e quindi selezione **VC + + compilazione** nel **progetti** cartella. Il file di compilazione è denominato BuildLog e viene scritto nella directory intermedia $(IntDir).  
-  
- Possibili cause di questo errore:  
-  
--   Si sono in esecuzione due processi di Visual C++ e si cerca di creare la stessa configurazione dello stesso progetto in entrambi contemporaneamente.  
-  
--   Il file di log di compilazione viene aperto in un processo che blocca il file.  
-  
--   L'utente non dispone dell'autorizzazione per creare un file.  
-  
--   L'utente corrente non dispone dell'accesso in scrittura al file BuildLog.
+
+Creare log non è stato possibile aprire per la scrittura.
+
+**Assicurarsi che il file non sia aperto da un altro processo e non è protetto da scrittura.**
+
+Dopo aver impostato la **log di compilazione** proprietà **Yes** e si esegue una compilazione o ricompilazione, Visual C++ non è riuscito ad aprire il log di compilazione in modalità esclusiva.
+
+Esaminare il **log di compilazione** impostazione aprendo la **opzioni** la finestra di dialogo (nel **strumenti** dal menu fare clic su **opzioni** comando) e quindi selezionando **VC + + compilazione** nel **progetti** cartella. Il file di compilazione è denominato BuildLog. htm e viene scritto nella directory intermedia $(IntDir).
+
+Cause di questo errore:
+
+- Si è in esecuzione due processi di Visual C++ e si cerca di creare la stessa configurazione del progetto stesso in entrambi contemporaneamente.
+
+- In un processo che blocca il file viene aperto il file di log di compilazione.
+
+- L'utente non dispone dell'autorizzazione per creare un file.
+
+- L'utente corrente non dispone dell'accesso in scrittura al file BuildLog. htm.

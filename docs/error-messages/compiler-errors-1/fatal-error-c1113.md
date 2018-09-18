@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efcf76c02eaeafb89c48b9dc82d9269377e520ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076320"
 ---
 # <a name="fatal-error-c1113"></a>Errore irreversibile C1113
-\#using non riuscito in 'file'  
-  
- Solo un file in formato Microsoft Intermediate Language (MSIL) può essere passato a un [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva. Il [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opzione del compilatore consente di creare un file di output MSIL. File MSIL vengono generati anche altri linguaggi di Visual Studio.
+
+\#using non riuscito in 'file'
+
+Solo un file in formato Microsoft Intermediate Language (MSIL) può essere passato a un [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva. Il [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opzione del compilatore consente di creare un file di output MSIL. File MSIL vengono generati anche altri linguaggi di Visual Studio.

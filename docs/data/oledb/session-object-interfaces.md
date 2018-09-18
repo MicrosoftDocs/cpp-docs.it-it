@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8208a372989fac5fa7c7b0c13b83eb27a4d1444b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e8c641cc543f213b6c81950c22b97f25b31d6c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057328"
 ---
 # <a name="session-object-interfaces"></a>Interfacce dell'oggetto Session
+
 Nella tabella seguente mostra le interfacce obbligatorie e facoltative definite da OLE DB per un oggetto di sessione.  
   
 |Interfaccia|Obbligatorio?|Implementata da modelli OLE DB?|  
@@ -50,9 +51,10 @@ Nella tabella seguente mostra le interfacce obbligatorie e facoltative definite 
 |[Interfaccia ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Facoltativo|No|  
 |[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Facoltativo|No|  
   
- L'oggetto sessione crea un oggetto set di righe. Se il provider supporta i comandi, la sessione crea anche un oggetto command (`CCommand`, l'implementazione di OLE DB `TCommand`). L'oggetto comando implementa il `ICommand` interfaccia e viene utilizzato il `ICommand::Execute` metodo per eseguire comandi nel set di righe, come illustrato nella figura seguente.  
+L'oggetto sessione crea un oggetto set di righe. Se il provider supporta i comandi, la sessione crea anche un oggetto command (`CCommand`, l'implementazione di OLE DB `TCommand`). L'oggetto comando implementa il `ICommand` interfaccia e viene utilizzato il `ICommand::Execute` metodo per eseguire comandi nel set di righe, come illustrato nella figura seguente.  
   
- ![Diagramma concettuale del provider](../../data/oledb/media/vc4u551.gif "vc4u551")  
+![Diagramma concettuale del provider](../../data/oledb/media/vc4u551.gif "vc4u551")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

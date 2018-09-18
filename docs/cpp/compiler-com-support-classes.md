@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc931e643235bc6edb4a1121628ac5185b76cc7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a3403a09700ba6f84792cc570d9fb093026241d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070823"
 ---
 # <a name="compiler-com-support-classes"></a>Classi di supporto COM del compilatore
-**Sezione specifica Microsoft**  
-  
- Le classi standard vengono utilizzate per supportare alcuni tipi COM. Le classi sono definite \<Comdef. h > e i file di intestazione generati dalla libreria dei tipi.  
-  
-|Classe|Scopo|  
-|-----------|-------------|  
-|[_bstr_t](../cpp/bstr-t-class.md)|Esegue il wrapping del tipo `BSTR` per fornire operatori e metodi utili.|  
-|[_com_error](../cpp/com-error-class.md)|Definisce l'oggetto errore generato da [com_raise_error](../cpp/com-raise-error.md) nella maggior parte degli errori.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Incapsula i puntatori a interfaccia COM e automatizza le chiamate richieste a `AddRef`, `Release`, e `QueryInterface`.|  
-|[_variant_t](../cpp/variant-t-class.md)|Esegue il wrapping del tipo `VARIANT` per fornire operatori e metodi utili.|  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Supporto COM del compilatore](../cpp/compiler-com-support.md)   
- [Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)   
- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+
+**Sezione specifica Microsoft**
+
+Le classi standard vengono utilizzate per supportare alcuni tipi COM. Le classi sono definite \<Comdef. h > e i file di intestazione generati dalla libreria dei tipi.
+
+|Classe|Scopo|
+|-----------|-------------|
+|[_bstr_t](../cpp/bstr-t-class.md)|Esegue il wrapping del tipo `BSTR` per fornire operatori e metodi utili.|
+|[_com_error](../cpp/com-error-class.md)|Definisce l'oggetto errore generato da [com_raise_error](../cpp/com-raise-error.md) nella maggior parte degli errori.|
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Incapsula i puntatori a interfaccia COM e automatizza le chiamate richieste a `AddRef`, `Release`, e `QueryInterface`.|
+|[_variant_t](../cpp/variant-t-class.md)|Esegue il wrapping del tipo `VARIANT` per fornire operatori e metodi utili.|
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto COM del compilatore](../cpp/compiler-com-support.md)<br/>
+[Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)<br/>
+[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2550 | Documenti Microsoft
+title: Errore del compilatore C2550 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d215f708513fd7313e0ff82f5b8853b1e00835af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd132184a993f27ec04a913cfef2aed07f8bd4a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062514"
 ---
 # <a name="compiler-error-c2550"></a>Errore del compilatore C2550
-'identifier': gli elenchi di inizializzatori di costruttore sono consentiti solo nella definizione del costruttore  
-  
- La definizione di una funzione che non è un costruttore è utilizzato un elenco di inizializzatori di classe di base.  
-  
- L'esempio seguente genera l'errore C2550:  
-  
-```  
-// C2550.cpp  
-// compile with: /c  
-class C {  
-public:  
-   C();  
-};  
-  
-class D : public C {  
-public:  
-   D();  
-   void func();  
-};  
-  
-void D::func() : C() {}  // C2550  
-D::D() : C() {}   // OK  
+
+'identifier': gli elenchi di inizializzatori di costruttore sono consentiti solo nella definizione del costruttore
+
+Un elenco di inizializzatori di classe di base viene usato nella definizione di una funzione che non è un costruttore.
+
+L'esempio seguente genera l'errore C2550:
+
+```
+// C2550.cpp
+// compile with: /c
+class C {
+public:
+   C();
+};
+
+class D : public C {
+public:
+   D();
+   void func();
+};
+
+void D::func() : C() {}  // C2550
+D::D() : C() {}   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3200 | Documenti Microsoft
+title: Errore del compilatore C3200 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa34ea006b06138290417387bd393589b630aa4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77be23b92d5237d2fa65557bdf36de31cd27d9d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251307"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062644"
 ---
 # <a name="compiler-error-c3200"></a>Errore del compilatore C3200
-'template': argomento di modello non valido per il parametro di modello 'parameter', previsto un modello di classe  
-  
- È stato passato un argomento non valido per un modello di classe. Il modello di classe previsto è un parametro di modello. Nell'esempio seguente, la chiamata `Y<int, int> aY` genera l'errore C3200. Il primo parametro deve essere un modello, ad esempio `Y<X, int> aY`.  
-  
-```  
-// C3200.cpp  
-template<typename T>  
-class X  
-{  
-};  
-  
-template<template<typename U> class T1, typename T2>  
-class Y  
-{  
-};  
-  
-int main()  
-{  
-   Y<int, int> y;   // C3200  
-}  
+
+'template': argomento di modello non valido per il parametro di modello 'parameter', previsto un modello di classe
+
+È stato passato un argomento non valido per un modello di classe. Il modello di classe modello previsto è un parametro. Nell'esempio seguente, la chiamata a `Y<int, int> aY` genererà C3200. Il primo parametro deve essere un modello, ad esempio `Y<X, int> aY`.
+
+```
+// C3200.cpp
+template<typename T>
+class X
+{
+};
+
+template<template<typename U> class T1, typename T2>
+class Y
+{
+};
+
+int main()
+{
+   Y<int, int> y;   // C3200
+}
 ```

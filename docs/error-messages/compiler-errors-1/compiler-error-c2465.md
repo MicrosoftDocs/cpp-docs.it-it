@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2465 | Documenti Microsoft
+title: Errore del compilatore C2465 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5318fd04a79de7e49a3218dbbef6100c4fbe3dba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f27ea349e4955bc78b2115d3de4622a09290eb22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060551"
 ---
 # <a name="compiler-error-c2465"></a>Errore del compilatore C2465
-impossibile definire un tipo anonimo tra parentesi  
-  
- Una struttura anonima, un'unione o un tipo enumerato è definito all'interno di un'espressione tra parentesi. Questa operazione non è valida in C++ perché la definizione non ha significato nell'ambito della funzione.
+
+impossibile definire un tipo anonimo tra parentesi
+
+Una struttura anonima, un'unione o un tipo enumerato è definito all'interno di un'espressione tra parentesi. Questa operazione non è valida in C++ perché la definizione non ha significato nell'ambito della funzione.

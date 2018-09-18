@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0036 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0036 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ca9c282cbf36111bbc6b5d4316745508ccbb0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32b73fb8d86ff537912218ea35089382a93aec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317349"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065192"
 ---
 # <a name="project-build-error-prj0036"></a>Errore di compilazione progetto PRJ0036
-La proprietà "File aggiuntivi" per lo strumento di distribuzione Web contiene una voce non valida.  
-  
- La proprietà di file aggiuntivi nella pagina delle proprietà di distribuzione Web contiene un errore, probabilmente a causa di un problema di valutazione della macro. Questo errore potrebbe indicare anche che il percorso non è corretto, che contengono caratteri o combinazioni di caratteri che non sono validi in un percorso di file.  
-  
- Per correggere l'errore, risolvere la macro o correggere la specifica del percorso. Il percorso valutato è un percorso assoluto della directory del progetto.  
-  
- Questo errore potrebbe indicare anche che uno dei file a cui fa riferimento non esiste.
+
+La proprietà "File aggiuntivi" per lo strumento di distribuzione Web contiene una voce non valida.
+
+La proprietà di file aggiuntivi nella pagina delle proprietà di distribuzione Web contiene un errore, probabilmente a causa di un problema di valutazione della macro. Questo errore può anche significare che il percorso non è corretto, che contiene caratteri o delle combinazioni di caratteri che non sono validi in un percorso di file.
+
+Per risolvere questo errore, correggere la macro o correggere la specifica del percorso. Il percorso valutato è un percorso assoluto dalla directory del progetto.
+
+Questo errore potrebbe indicare anche che uno dei file di cui viene fatto riferimenti non esiste.

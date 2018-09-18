@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2273 | Documenti Microsoft
+title: Errore del compilatore C2273 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f49ee00ba5617b494e27650c38dad679ae6767a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 995f75487820976d045e5db05fe2b170260240cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066219"
 ---
 # <a name="compiler-error-c2273"></a>Errore del compilatore C2273
-'type': non valido a destra dell'operatore '->'  
-  
- Un tipo viene visualizzato come operando destro di un `->` operatore.  
-  
- Questo errore può dipendere dal tentativo di accesso a una conversione di tipo definito dall'utente. Utilizzare la parola chiave `operator` tra -> e `type`.  
-  
- L'esempio seguente genera l'errore C2273:  
-  
-```  
-// C2273.cpp  
-struct MyClass {  
-   operator int() {  
-      return 0;  
-   }  
-};  
-int main() {  
-   MyClass * ClassPtr = new MyClass;  
-   int i = ClassPtr->int();   // C2273  
-   int j = ClassPtr-> operator int();   // OK  
-}  
+
+'type': non valido a destra dell'operatore '->'
+
+Viene visualizzato un tipo come operando destro di un `->` operatore.
+
+Questo errore può essere causato dal tentativo di accedere a una conversione del tipo definito dall'utente. Utilizzare la parola chiave `operator` tra -> e `type`.
+
+L'esempio seguente genera l'errore C2273:
+
+```
+// C2273.cpp
+struct MyClass {
+   operator int() {
+      return 0;
+   }
+};
+int main() {
+   MyClass * ClassPtr = new MyClass;
+   int i = ClassPtr->int();   // C2273
+   int j = ClassPtr-> operator int();   // OK
+}
 ```

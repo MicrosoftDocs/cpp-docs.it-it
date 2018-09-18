@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3290 | Documenti Microsoft
+title: Errore del compilatore C3290 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf65a35469ca978b0464c6f7275a6ac0e331da5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b97818dd6ef7b38bb815e2c0a6345cc056fc45c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058926"
 ---
 # <a name="compiler-error-c3290"></a>Errore del compilatore C3290
-'type': una proprietà trivial non può avere un tipo riferimento  
-  
- Una proprietà è stata dichiarata in modo non corretto. Quando si dichiara una proprietà trivial, il compilatore crea una variabile che verrà aggiornata dalla proprietà e non è possibile avere una variabile di riferimento di rilevamento in una classe.  
-  
- Vedere [proprietà](../../windows/property-cpp-component-extensions.md) e [operatore di riferimento di rilevamento](../../windows/tracking-reference-operator-cpp-component-extensions.md) per ulteriori informazioni.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3290.  
-  
-```  
-// C3290.cpp  
-// compile with: /clr /c  
-ref struct R {};  
-  
-ref struct X {  
-   R^ mr;  
-  
-   property R % y;   // C3290  
-   property R ^ x;   // OK  
-  
-   // OK  
-   property R% prop {  
-      R% get() {   
-         return *mr;   
-      }  
-  
-      void set(R%) {}  
-   }  
-};  
-  
-int main() {  
-   X x;  
-   R% xp = x.prop;  
-}  
+
+'type': una proprietà trivial non può avere un tipo riferimento
+
+Una proprietà è stata dichiarata in modo non corretto. Quando si dichiara una proprietà trivial, il compilatore crea una variabile che verrà aggiornata dalla proprietà e non è possibile avere una variabile di riferimento di rilevamento in una classe.
+
+Visualizzare [proprietà](../../windows/property-cpp-component-extensions.md) e [operatore di riferimento di rilevamento](../../windows/tracking-reference-operator-cpp-component-extensions.md) per altre informazioni.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3290.
+
+```
+// C3290.cpp
+// compile with: /clr /c
+ref struct R {};
+
+ref struct X {
+   R^ mr;
+
+   property R % y;   // C3290
+   property R ^ x;   // OK
+
+   // OK
+   property R% prop {
+      R% get() {
+         return *mr;
+      }
+
+      void set(R%) {}
+   }
+};
+
+int main() {
+   X x;
+   R% xp = x.prop;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2928 | Documenti Microsoft
+title: Errore del compilatore C2928 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e88e3c86bb88f8b46c6e88f55cb57799ccf42bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f1b71d47ecd8cbf110367ccf00ed0f936978ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241804"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076034"
 ---
 # <a name="compiler-error-c2928"></a>Errore del compilatore C2928
-creazione di un'istanza esplicita. 'identifier' non è una funzione o un membro dati statici della classe modello 'class'  
-  
- Non è possibile creare un'istanza esplicita di un membro di `class` diverso da una funzione o da una variabile `static` .
+
+creazione di un'istanza esplicita. 'identifier' non è una funzione o un membro dati statici della classe modello 'class'
+
+Non è possibile creare un'istanza esplicita di un membro di `class` diverso da una funzione o da una variabile `static` .

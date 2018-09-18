@@ -19,28 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cc11c12efc2beb8ec70c9081619c799f0c8c0d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5c7f3f3ac62de6e04b3fd1fd54bde656a12a55d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073720"
 ---
 # <a name="varianttclear"></a>_variant_t::Clear
-**Sezione specifica Microsoft**  
-  
- Cancella incapsulato `VARIANT` oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void Clear( );  
-```  
-  
-## <a name="remarks"></a>Note  
- Le chiamate `VariantClear` sull'oggetto incapsulato `VARIANT` oggetto.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe _variant_t](../cpp/variant-t-class.md)
+
+**Sezione specifica Microsoft**
+
+Cancella incapsulato `VARIANT` oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void Clear( );
+```
+
+## <a name="remarks"></a>Note
+
+Le chiamate `VariantClear` sull'oggetto incapsulato `VARIANT` oggetto.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe _variant_t](../cpp/variant-t-class.md)

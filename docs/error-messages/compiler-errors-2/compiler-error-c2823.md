@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2823 | Documenti Microsoft
+title: Errore del compilatore C2823 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ad7336834d38f7236b88debc28035d8f7d68e88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09b8284626a6af6851147dc36b67e25b76f8eb01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236644"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069518"
 ---
-# <a name="compiler-error-c2823"></a>Errore del compilatore C2823  
-  
-> un modello di typedef non è valido  
-  
-Modelli non sono consentiti `typedef` definizioni.  
-  
-## <a name="example"></a>Esempio  
-  
-L'esempio seguente genera l'errore C2823 e viene illustrato un modo per risolvere questo problema:  
-  
-```cpp  
-// C2823.cpp  
-template<class T>  
-typedef struct x {  
-   T i;   // C2823 can't use T, specify data type and delete template  
-   int i;   // OK  
-} x1;  
+# <a name="compiler-error-c2823"></a>Errore del compilatore C2823
+
+> un modello di typedef non è valido
+
+I modelli non sono consentiti in `typedef` definizioni.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C2823 e viene illustrato un modo per risolvere il problema:
+
+```cpp
+// C2823.cpp
+template<class T>
+typedef struct x {
+   T i;   // C2823 can't use T, specify data type and delete template
+   int i;   // OK
+} x1;
 ```

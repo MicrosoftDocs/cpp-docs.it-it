@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532320e275d233181868e3ab83ab307c176de765
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: af143e4c195c419155b2e23fd61195ccfe11c60f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073700"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>Classe concurrent_unordered_multimap
 La classe `concurrent_unordered_multimap` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const K, _Element_type>`. La sequenza viene rappresentata in un modo che abilita le operazioni di accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.  
@@ -55,20 +55,20 @@ template <typename K,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `K`  
- Tipo di chiave.  
+*K*<br/>
+Tipo di chiave.  
   
- `_Element_type`  
- Tipo mappato.  
+*_Element_type*<br/>
+Tipo mappato.  
   
- `_Hasher`  
- Tipo di oggetto della funzione hash. Questo argomento è facoltativo e il valore predefinito è `std::hash<K>`.  
+*_Hasher*<br/>
+Tipo di oggetto della funzione hash. Questo argomento è facoltativo e il valore predefinito è `std::hash<K>`.  
   
- `key_equality`  
- Tipo di oggetto della funzione di confronto di uguaglianza. Questo argomento è facoltativo e il valore predefinito è `std::equal_to<K>`.  
+*key_equality*<br/>
+Tipo di oggetto della funzione di confronto di uguaglianza. Questo argomento è facoltativo e il valore predefinito è `std::equal_to<K>`.  
   
- `_Allocator_type`  
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione di memoria per il vettore simultaneo. Questo argomento è facoltativo e il valore predefinito è `std::allocator<std::pair<K`, `_Element_type>>`.  
+*_Allocator_type*<br/>
+Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione di memoria per il vettore simultaneo. Questo argomento è facoltativo e il valore predefinito è `std::allocator<std::pair<K`, `_Element_type>>`.  
   
 ## <a name="members"></a>Membri  
   
@@ -207,29 +207,29 @@ concurrent_unordered_multimap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Iterator`  
- Tipo di iteratore di input.  
+*_Iterator*<br/>
+Tipo di iteratore di input.  
   
- `_Number_of_buckets`  
- Numero iniziale di bucket per questo multimap non ordinato.  
+*_Number_of_buckets*<br/>
+Numero iniziale di bucket per questo multimap non ordinato.  
   
- `_Hasher`  
- Funzione hash per questo multimap non ordinato.  
+*_Hasher*<br/>
+Funzione hash per questo multimap non ordinato.  
   
- `key_equality`  
- Funzione di confronto di uguaglianza per questo multimap non ordinato.  
+*key_equality*<br/>
+Funzione di confronto di uguaglianza per questo multimap non ordinato.  
   
- `_Allocator`  
- Allocatore per questo multimap non ordinato.  
+*_Allocator*<br/>
+Allocatore per questo multimap non ordinato.  
   
- `_Begin`  
- Posizione del primo elemento nell'intervallo di elementi da copiare.  
+*Ini_zia*<br/>
+Posizione del primo elemento nell'intervallo di elementi da copiare.  
   
- `_End`  
- Posizione del primo elemento oltre l'intervallo di elementi da copiare.  
+*End*<br/>
+Posizione del primo elemento oltre l'intervallo di elementi da copiare.  
   
- `_Umap`  
- L'origine `concurrent_unordered_multimap` oggetto copiare gli elementi.  
+*_Umap*<br/>
+L'origine `concurrent_unordered_multimap` oggetto copiare gli elementi.  
   
 ### <a name="remarks"></a>Note  
  Tramite tutti i costruttori viene archiviato un oggetto allocatore `_Allocator` e viene inizializzato il multimap non ordinato.  
@@ -253,8 +253,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `KVal`  
- Chiave da ricercare.  
+*KVal*<br/>
+Chiave da ricercare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero di volte in cui numero di volte in cui che la chiave viene visualizzata nel contenitore.  
@@ -301,8 +301,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `KVal`  
- Il valore della chiave da cercare.  
+*KVal*<br/>
+Il valore della chiave da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [coppia](../../../standard-library/pair-structure.md) dove il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.  
@@ -321,8 +321,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `KVal`  
- Il valore della chiave da cercare.  
+*KVal*<br/>
+Il valore della chiave da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta alla posizione del primo elemento corrispondente la chiave specificata o l'iteratore `end()` se tale elemento non esiste.  
@@ -378,23 +378,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Iterator`  
- Tipo di iteratore utilizzato per l'inserimento.  
+*_Iterator*<br/>
+Tipo di iteratore utilizzato per l'inserimento.  
   
- `V`  
- Il tipo del valore inserito nella mappa.  
+*V*<br/>
+Il tipo del valore inserito nella mappa.  
   
- `value`  
- Valore da inserire.  
+*valore*<br/>
+Valore da inserire.  
   
- `_Where`  
- Posizione iniziale in corrispondenza della quale cercare un punto di inserimento.  
+*WHERE*<br/>
+Posizione iniziale in corrispondenza della quale cercare un punto di inserimento.  
   
- `first`  
- Inizio dell'intervallo da inserire.  
+*first*<br/>
+Inizio dell'intervallo da inserire.  
   
- `last`  
- Fine dell'intervallo da inserire.  
+*last*<br/>
+Fine dell'intervallo da inserire.  
   
 ### <a name="return-value"></a>Valore restituito  
  Iteratore che punta alla posizione di inserimento.  
@@ -471,8 +471,8 @@ concurrent_unordered_multimap& operator= (concurrent_unordered_multimap&& _Umap)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Umap`  
- Oggetto `concurrent_unordered_multimap` di origine.  
+*_Umap*<br/>
+Oggetto `concurrent_unordered_multimap` di origine.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `concurrent_unordered_multimap` oggetto.  
@@ -489,8 +489,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Buckets`  
- Il numero desiderato di bucket.  
+*_Buckets*<br/>
+Il numero desiderato di bucket.  
   
 ### <a name="remarks"></a>Note  
  La funzione membro modifica il numero di bucket in modo da essere almeno pari a `_Buckets` e ricompila la tabella hash in base alle esigenze. Il numero di bucket deve essere una potenza di 2. Se non una potenza di 2, si verranno arrotondati per eccesso alla potenza di 2 più grande.  
@@ -520,8 +520,8 @@ void swap(concurrent_unordered_multimap& _Umap);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Umap`  
- Oggetto `concurrent_unordered_multimap` con cui eseguire lo scambio.  
+*_Umap*<br/>
+Oggetto `concurrent_unordered_multimap` con cui eseguire lo scambio.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
@@ -534,8 +534,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Bucket`  
- L'indice di bucket.  
+*Bucket*<br/>
+L'indice di bucket.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta all'inizio del bucket.  
@@ -549,8 +549,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `KVal`  
- La chiave dell'elemento da cercare.  
+*KVal*<br/>
+La chiave dell'elemento da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice di bucket per la chiave in questo contenitore.  
@@ -575,8 +575,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Bucket`  
- Il bucket per la ricerca.  
+*Bucket*<br/>
+Il bucket per la ricerca.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero corrente di bucket in questo contenitore.  
@@ -590,8 +590,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Bucket`  
- L'indice di bucket.  
+*Bucket*<br/>
+L'indice di bucket.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta all'inizio del bucket.  
@@ -605,8 +605,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Bucket`  
- L'indice di bucket.  
+*Bucket*<br/>
+L'indice di bucket.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta all'inizio del bucket.  
@@ -622,8 +622,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Bucket`  
- L'indice di bucket.  
+*Bucket*<br/>
+L'indice di bucket.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta alla fine del bucket.  
@@ -645,14 +645,15 @@ iterator unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Where`  
- La posizione dell'iteratore da cancellare.  
+*WHERE*<br/>
+La posizione dell'iteratore da cancellare.  
   
- `KVal`  
- Il valore della chiave da cancellare.  
+*KVal*<br/>
+Il valore della chiave da cancellare.  
   
- `first`  
- `last`  
+*first*<br/>
+*last*<br/>
+Iteratori.
   
 ### <a name="return-value"></a>Valore restituito  
  Le prime due funzioni membro restituiscono un iteratore che designa il primo elemento rimanente oltre gli elementi rimossi o `concurrent_unordered_multimap::end`() se tale elemento non esiste. La terza funzione membro restituisce il numero di elementi che viene rimosso.  

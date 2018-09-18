@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 3) Avviso C4133 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4133 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f01a3a4b6ccf1750ec3cd0df643c02b7678bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22878ebb7caa5549779d4c53b1f6b7068dc480
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056833"
 ---
-# <a name="compiler-warning-level-3-c4133"></a>Compilatore (livello 3) Avviso C4133
-'type': tipi incompatibili - da 'type1' a 'type2'  
-  
- Questo avviso può essere causato dal tentativo di sottrarre due puntatori di tipi diversi.  
-  
- Per evitare questo avviso, fornire un cast di tipo appropriato.
+# <a name="compiler-warning-level-3-c4133"></a>Compilatore avviso (livello 3) C4133
+
+'type': tipi non compatibili. da 'type1' a 'type2'
+
+Questo avviso può essere causato dal tentativo di sottrazione di due puntatori di tipi diversi.
+
+Per evitare questo avviso, fornire un cast di tipo appropriato.

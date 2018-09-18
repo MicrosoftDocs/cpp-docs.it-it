@@ -1,5 +1,5 @@
 ---
-title: Classe CMultipleResults | Documenti Microsoft
+title: Classe CMultipleResults | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2b4f147943e09c0203f863d7514566de8466acf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3dc76e7d3557f777bb8d521de968671defdde8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071562"
 ---
 # <a name="cmultipleresults-class"></a>Classe CMultipleResults
-Se si desidera un comando gestisca più set di risultati, utilizzare `CMultipleResults` per il `CCommand` argomento di modello *TMultiple*.  
+
+Se si vuole che un comando gestisca più set di risultati, usare `CMultipleResults` per il `CCommand` argomento di modello *TMultiple*.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -36,11 +37,14 @@ class CMultipleResults
 ```  
   
 ## <a name="remarks"></a>Note  
- Per gestire il risultato di più set, [CCommand](../../data/oledb/ccommand-class.md) deve ereditare da questa classe.  
+
+Per gestire il risultato di più set, [CCommand](../../data/oledb/ccommand-class.md) deve ereditare da questa classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli  
+
+**Intestazione:** atldbcli  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

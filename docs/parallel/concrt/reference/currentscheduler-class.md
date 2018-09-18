@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059485"
 ---
 # <a name="currentscheduler-class"></a>Classe CurrentScheduler
 Rappresenta un'astrazione per l'utilità di pianificazione corrente associata al contesto di chiamata.  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Policy`  
- I criteri dell'utilità di pianificazione che descrive il comportamento dell'utilità di pianificazione appena creata.  
+*C_riteri per il*<br/>
+I criteri dell'utilità di pianificazione che descrive il comportamento dell'utilità di pianificazione appena creata.  
   
 ### <a name="remarks"></a>Note  
  L'allegato dell'utilità di pianificazione nel contesto di chiamata inserisce in modo implicito un conteggio dei riferimenti nell'utilità di pianificazione.  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Placement`  
- Un riferimento a una posizione in cui le attività all'interno del gruppo di pianificazione verranno data priorità in esecuzione.  
+*Selezione*<br/>
+Un riferimento a una posizione in cui le attività all'interno del gruppo di pianificazione verranno data priorità in esecuzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al gruppo di pianificazione appena creata. Ciò `ScheduleGroup` oggetto ha un conteggio di riferimento iniziale posizionato su di esso.  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Placement`  
- Riferimento alla posizione riguardo alla quale eseguire una query sull'utilità di pianificazione corrente.  
+*Selezione*<br/>
+Riferimento alla posizione riguardo alla quale eseguire una query sull'utilità di pianificazione corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Indicazione dell'eventuale disponibilità della posizione specificata dall'argomento `_Placement` nell'utilità di pianificazione corrente.  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_ShutdownEvent`  
- Handle per un oggetto di eventi di Windows che viene segnalato dal runtime quando l'utilità di pianificazione associata al contesto corrente è arrestato e distrugge.  
+*ShutdownEvent*<br/>
+Handle per un oggetto di eventi di Windows che viene segnalato dal runtime quando l'utilità di pianificazione associata al contesto corrente è arrestato e distrugge.  
   
 ### <a name="remarks"></a>Note  
  Se non è presente alcuna utilità di pianificazione associata al contesto di chiamata, chiamare questo metodo comporterà un' [scheduler_not_attached](scheduler-not-attached-class.md) eccezione generata.  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Proc`  
- Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.  
+*_Proc*<br/>
+Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.  
   
- `_Data`  
- Un puntatore void per i dati che verranno passati come parametro al corpo dell'attività.  
+*Data*<br/>
+Un puntatore void per i dati che verranno passati come parametro al corpo dell'attività.  
   
- `_Placement`  
- Riferimento a una posizione in cui per l'attività leggera verrà data priorità all'esecuzione.  
+*Selezione*<br/>
+Riferimento a una posizione in cui per l'attività leggera verrà data priorità all'esecuzione.  
   
 ### <a name="remarks"></a>Note  
  Tale metodo determinerà la creazione dell'utilità di pianificazione predefinita del processo e/o il collegamento al contesto di chiamata se non è presente alcuna utilità di pianificazione attualmente associata al contesto di chiamata.  

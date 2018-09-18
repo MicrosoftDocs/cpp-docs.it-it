@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ce6a5f26cba69aff8ebb296a6f4a716adf1c46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071731"
 ---
 # <a name="array-class"></a>Classe array
 Rappresenta un contenitore di dati utilizzato per spostare i dati a un tasto di scelta rapida.
@@ -50,10 +50,10 @@ friend class array;
 ```  
 
 #### <a name="parameters"></a>Parametri
-`value_type`  
+*value_type*<br/>
 Il tipo di elemento di dati.
 
-`_Rank`  
+*_Rank*<br/>
 Il rango della matrice.
 
 ## <a name="members"></a>Membri
@@ -404,46 +404,46 @@ array(array&& _Other) restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_Associated_Av`  
+*_Associated_Av*<br/>
 Un accelerator_view che specifica il percorso di destinazione desiderato della matrice.
 
-`_Av`  
+*_Av*<br/>
 Un' [accelerator_view](accelerator-view-class.md) oggetto che specifica la posizione della matrice.
 
-`_Cpu_access_type`  
+*_Cpu_access_type*<br/>
 Il valore desiderato [access_type](concurrency-namespace-enums-amp.md#access_type) per la matrice nella CPU. Questo parametro ha un valore predefinito pari `access_type_auto` lasciando le CPU `access_type` determinazione al runtime. CPU effettiva `access_type` per la matrice è possibile eseguire query usando il `get_cpu_access_type` (metodo).
 
-`_Extent`  
+*_Extent*<br/>
 L'extent in ogni dimensione della matrice.
 
-`_E0`  
+*_E0*<br/>
 Componente più significativo dell'extent di questa sezione.
 
-`_E1`  
+*_E1*<br/>
 Il componente successivo-a-più significativo dell'extent di questa sezione.
 
-`_E2`  
+*_E2*<br/>
 Componente meno significativo dell'extent di questa sezione.
 
-`_InputIterator`  
+*_InputIterator*<br/>
 Tipo di iteratore di input.
 
-`_Src`  
+*_Src*<br/>
 Oggetto da copiare.
 
-`_Src_first`  
+*_Src_first*<br/>
 Un iteratore iniziale nel contenitore di origine.
 
-`_Src_last`  
+*_Src_last*<br/>
 Iteratore di fine del contenitore sorgente.
 
-`_Other`  
+*_Other*<br/>
 Altra origine dati.
 
-`_Rank`  
+*_Rank*<br/>
 Numero di dimensioni della sezione.
 
-`value_type`  
+*value_type*<br/>
 Il tipo di dati degli elementi copiati.
 
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view
@@ -467,7 +467,7 @@ void copy_to(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_Dest`  
+*Dest*<br/>
 Il [array_view](array-view-class.md) oggetto in cui copiare.
 
 ##  <a name="cpu_access_type"></a> cpu_access_type
@@ -551,7 +551,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`value_type`  
+*value_type*<br/>
 Il tipo di dati degli elementi del vettore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -580,19 +580,19 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_Index`  
+*Index*<br/>
 Il percorso dell'elemento.
 
-`_I0`  
+*_I0*<br/>
 Componente più significativo dell'origine di questa sezione.
 
-`_I1`  
+*_I1*<br/>
 Il componente successivo-a-più significativo dell'origine di questa sezione.
 
-`_I2`  
+*_I2*<br/>
 Componente meno significativo dell'origine di questa sezione.
 
-`_I`  
+*_I*<br/>
 Il percorso dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -614,10 +614,10 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_Index`  
+*Index*<br/>
 Indice.
 
-`_I`  
+*_I*<br/>
 Indice.
 
 ### <a name="return-value"></a>Valore restituito
@@ -637,10 +637,10 @@ array& operator= (
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_Other`  
+*_Other*<br/>
 Il `array` da copiare dall'oggetto.
 
-`_Src`  
+*_Src*<br/>
 Il `array` da copiare dall'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -752,40 +752,40 @@ array_view<const value_type,3> section(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_E0`  
+*_E0*<br/>
 Componente più significativo dell'extent di questa sezione.
 
-`_E1`  
+*_E1*<br/>
 Il componente successivo-a-più significativo dell'extent di questa sezione.
 
-`_E2`  
+*_E2*<br/>
 Componente meno significativo dell'extent di questa sezione.
 
-`_Ext`  
+*Ext*<br/>
 Il [extent](extent-class.md) oggetto che specifica l'extent della sezione. L'origine è 0.
 
-`_Idx`  
+*IDX*<br/>
 Il [indice](index-class.md) oggetto che specifica la posizione dell'origine. La sottosezione rappresenta il resto dell'extent.
 
-`_I0`  
+*_I0*<br/>
 Componente più significativo dell'origine di questa sezione.
 
-`_I1`  
+*_I1*<br/>
 Il componente successivo-a-più significativo dell'origine di questa sezione.
 
-`_I2`  
+*_I2*<br/>
 Componente meno significativo dell'origine di questa sezione.
 
-`_Rank`  
+*_Rank*<br/>
 Numero di dimensioni della sezione.
 
-`_Section_extent`  
+*_Section_extent*<br/>
 Il [extent](extent-class.md) oggetto che specifica l'extent della sezione.
 
-`_Section_origin`  
+*_Section_origin*<br/>
 Il [indice](index-class.md) oggetto che specifica la posizione dell'origine.
 
-`value_type`  
+*value_type*<br/>
 Il tipo di dati degli elementi copiati.
 
 ### <a name="return-value"></a>Valore restituito
@@ -807,13 +807,13 @@ array_view<const value_type,_New_rank> view_as(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_New_rank`  
+*_New_rank*<br/>
 Il rango del `extent` oggetto passato come parametro.
 
-`_View_extent`  
+*_View_extent*<br/>
 L'extent che viene usato per costruire la nuova [array_view](array-view-class.md) oggetto.
 
-`value_type`  
+*value_type*<br/>
 Il tipo di dati degli elementi in entrambi originale `array` oggetto e il valore restituito `array_view` oggetto.
 
 ### <a name="return-value"></a>Valore restituito

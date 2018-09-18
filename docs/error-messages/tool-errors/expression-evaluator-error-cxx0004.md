@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0004 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0004 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8791159e4357b003da38f58a669400bfed7c290e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cafc9d1976ea7e68266e56ac8c58c37be422d70e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057119"
 ---
 # <a name="expression-evaluator-error-cxx0004"></a>Errore dell‘analizzatore di espressioni CXX0004
-Errore di sintassi  
-  
- La sintassi dell'espressione non è corretta.  
-  
- Digitare di nuovo l'espressione con la sintassi corretta.  
-  
- Questo errore è identico all'errore CAN0004.
+
+Errore di sintassi
+
+La sintassi dell'espressione non è corretta.
+
+Digitare di nuovo l'espressione con la sintassi corretta.
+
+Questo errore è identico all'errore CAN0004.

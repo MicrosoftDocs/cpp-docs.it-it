@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3744 | Documenti Microsoft
+title: Errore del compilatore C3744 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96b8445c343bdd4f606157e692c4d6ce262e369
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d644a621fc6d8e460e1b97e5baec360de8662365
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265883"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063723"
 ---
 # <a name="compiler-error-c3744"></a>Errore del compilatore C3744
-unhook deve avere almeno 3 argomenti per gli eventi gestiti  
-  
- Il [unhook](../../cpp/unhook.md) funzioni devono avere tre parametri quando viene utilizzato in un programma compilato per le estensioni gestite per C++.  
-  
- `__hook` e `__unhook` non sono compatibili con la programmazione /clr. Utilizzare gli operatori + = e -=.  
-  
- C3744 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+
+unhook deve avere almeno 3 argomenti per gli eventi gestiti
+
+Il [unhook](../../cpp/unhook.md) funzione deve accettare tre parametri quando utilizzata in un programma che viene compilato per le estensioni gestite per C++.
+
+`__hook` e `__unhook` non sono compatibili con la programmazione /clr. Usare invece gli operatori + = e -=.
+
+È raggiungibile tramite l'opzione del compilatore obsolete solo C3744 **/CLR: oldSyntax**.

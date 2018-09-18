@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760123"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063112"
 ---
 # <a name="cheapptrbase-class"></a>Classe CHeapPtrBase
 
@@ -40,16 +40,16 @@ Questa classe costituisce la base per diverse classi di puntatore intelligente d
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Il tipo di oggetto da archiviare nell'heap.
 
-*Allocatore*  
+*Allocatore*<br/>
 La classe di allocazione di memoria da utilizzare. Per impostazione predefinita le routine CRT vengono utilizzate per allocare e liberare memoria.
 
 ## <a name="members"></a>Membri
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBytes*  
+*nBytes*<br/>
 Il numero di byte di memoria da allocare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pData*  
+*pData*<br/>
 Il `CHeapPtrBase` oggetto assumerà la proprietà del puntatore ' this '.
 
 ### <a name="remarks"></a>Note
@@ -216,7 +216,7 @@ Utilizzare questo operatore per chiamare un metodo in una classe a cui punta il 
 
 L'operatore di cast.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBytes*  
+*nBytes*<br/>
 La nuova quantità di memoria da allocare, in byte.
 
 ### <a name="return-value"></a>Valore restituito
@@ -243,6 +243,6 @@ Restituisce true se la memoria è stata allocata, false in caso contrario.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+[Classe CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -16,50 +16,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee63ace276863a30c4ec81d970ba3bf5fd29e40
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66999d99e7809a3588dc3c92cae822bb4295ee07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073356"
 ---
 # <a name="ifnotexists-statement"></a>Istruzione __if_not_exists
-Il **if_not_exists** istruzione verifica se l'identificatore specificato esiste. Se l'identificatore non è presente, il blocco di istruzioni specificato viene eseguito.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-__if_not_exists ( identifier ) {   
-statements  
-};  
-```  
-  
-#### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|*identifier*|Identificatore del quale si desidera verificare l'esistenza.|  
-|*Istruzioni*|Uno o più istruzioni da eseguire se *identificatore* non esiste.|  
-  
-## <a name="remarks"></a>Note  
-  
+
+Il **if_not_exists** istruzione verifica se l'identificatore specificato esiste. Se l'identificatore non è presente, il blocco di istruzioni specificato viene eseguito.
+
+## <a name="syntax"></a>Sintassi
+
+```
+__if_not_exists ( identifier ) { 
+statements
+};
+```
+
+#### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|*identifier*|Identificatore del quale si desidera verificare l'esistenza.|
+|*Istruzioni*|Uno o più istruzioni da eseguire se *identificatore* non esiste.|
+
+## <a name="remarks"></a>Note
+
 > [!CAUTION]
->  Per ottenere risultati più affidabili, usare il **if_not_exists** istruzione in base ai vincoli seguenti.  
-  
--   Si applicano i **if_not_exists** unici tipi semplici, non i modelli dell'istruzione.  
-  
--   Si applicano i **if_not_exists** istruzione agli identificatori sia interni che esterni alla classe. Non si applicano i **if_not_exists** istruzione alle variabili locali.  
-  
--   Usare la **if_not_exists** istruzione solo nel corpo di una funzione. All'esterno del corpo di una funzione, il **if_not_exists** istruzione può testare solo tipi completamente definiti.  
-  
--   Quando si testano funzioni in overload, non è possibile testare una forma specifica di overload.  
-  
- Il complemento per il **if_not_exists** istruzione è la [if_exists](../cpp/if-exists-statement.md) istruzione.  
-  
-## <a name="example"></a>Esempio  
- Per un esempio su come usare **if_not_exists**, vedere [if_exists istruzione](../cpp/if-exists-statement.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Istruzioni di selezione](../cpp/selection-statements-cpp.md)   
- [Parole chiave](../cpp/keywords-cpp.md)   
- [__if_exists Statement](../cpp/if-exists-statement.md)
+>  Per ottenere risultati più affidabili, usare il **if_not_exists** istruzione in base ai vincoli seguenti.
+
+- Si applicano i **if_not_exists** unici tipi semplici, non i modelli dell'istruzione.
+
+- Si applicano i **if_not_exists** istruzione agli identificatori sia interni che esterni alla classe. Non si applicano i **if_not_exists** istruzione alle variabili locali.
+
+- Usare la **if_not_exists** istruzione solo nel corpo di una funzione. All'esterno del corpo di una funzione, il **if_not_exists** istruzione può testare solo tipi completamente definiti.
+
+- Quando si testano funzioni in overload, non è possibile testare una forma specifica di overload.
+
+Il complemento per il **if_not_exists** istruzione è la [if_exists](../cpp/if-exists-statement.md) istruzione.
+
+## <a name="example"></a>Esempio
+
+Per un esempio su come usare **if_not_exists**, vedere [if_exists istruzione](../cpp/if-exists-statement.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Istruzioni di selezione](../cpp/selection-statements-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[__if_exists Statement](../cpp/if-exists-statement.md)

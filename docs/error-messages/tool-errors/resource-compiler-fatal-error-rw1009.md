@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RW1009 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RW1009 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 490f2865f8d3518facbaa86f4fa81932305e508d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 175b8fcbabbb0b16a69f20025e42939a38ef8bf0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056859"
 ---
 # <a name="resource-compiler-fatal-error-rw1009"></a>Errore irreversibile del compilatore di risorse RW1009
-Errore durante la creazione di nome di risorsa  
-  
- Impossibile creare il file con estensione res specificato. Assicurarsi che non sia stata creata in un'unità di sola lettura. Utilizzare /V per sapere se il file viene creato.
+
+Errore durante la creazione di risorse-name
+
+Impossibile creare il file con estensione res specificato. Assicurarsi che non sia stata creata in un'unità di sola lettura. Usare /V per scoprire se il file viene creato.

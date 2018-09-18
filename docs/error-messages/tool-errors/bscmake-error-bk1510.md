@@ -1,5 +1,5 @@
 ---
-title: Errore BK1510 di BSCMAKE | Documenti Microsoft
+title: Errore BK1510 di BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3db32beb2f63a67a34045eab8a89ad82312ac4ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 062e035f2689539dbfbc415bf200471aa7580bda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077139"
 ---
 # <a name="bscmake-error-bk1510"></a>Errore BK1510 di BSCMAKE
-danneggiato. Nome file del file SBR  
-  
- Il file SBR specificato non è del formato previsto. Ricompilare per creare un nuovo file SBR.
+
+danneggiato. Nome file del file SBR
+
+Il file SBR specificato non è nel formato previsto. Ricompilare per creare un nuovo file SBR.

@@ -14,81 +14,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62041f78af18d6ac2f521fea763a11bb2859fbf5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0eae1d77b3d0c9fa34cb2bbd5f39548aea83f6a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067155"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Risoluzione dell'overload di chiamate a modelli di funzioni
-Un modello di funzione può eseguire l'overload delle funzioni non template dello stesso nome. In questi casi, le chiamate di funzione vengono risolte innanzitutto utilizzando la deduzione dell'argomento di modello, per creare un'istanza del modello di funzione con una specializzazione univoca. Se la deduzione dell'argomento di modello non riesce, vengono presi in considerazione gli altri overload di funzione per risolvere la chiamata. Tali altri overload, noti anche come set candidati, includono funzioni non template e altri modelli di funzione per i quali si è creata un'istanza. Se la deduzione dell'argomento di modello viene eseguita correttamente, la funzione generata viene confrontata con le altre funzioni, al fine di determinare la migliore corrispondenza in base alle regole di risoluzione dell'overload. Per altre informazioni, vedere [overload di funzioni](function-overloading.md).  
-  
+
+Un modello di funzione può eseguire l'overload delle funzioni non template dello stesso nome. In questi casi, le chiamate di funzione vengono risolte innanzitutto utilizzando la deduzione dell'argomento di modello, per creare un'istanza del modello di funzione con una specializzazione univoca. Se la deduzione dell'argomento di modello non riesce, vengono presi in considerazione gli altri overload di funzione per risolvere la chiamata. Tali altri overload, noti anche come set candidati, includono funzioni non template e altri modelli di funzione per i quali si è creata un'istanza. Se la deduzione dell'argomento di modello viene eseguita correttamente, la funzione generata viene confrontata con le altre funzioni, al fine di determinare la migliore corrispondenza in base alle regole di risoluzione dell'overload. Per altre informazioni, vedere [overload di funzioni](function-overloading.md).
+
 ## <a name="example"></a>Esempio
 
- Se una funzione non template risulta essere una corrispondenza ugualmente valida, rispetto a una funzione di modello, viene scelta la funzione non template (a meno che gli argomenti di modello non siano stati specificati in modo esplicito), come nella chiamata `f(1, 1)` riportata nell'esempio seguente.  
-  
+Se una funzione non template risulta essere una corrispondenza ugualmente valida, rispetto a una funzione di modello, viene scelta la funzione non template (a meno che gli argomenti di modello non siano stati specificati in modo esplicito), come nella chiamata `f(1, 1)` riportata nell'esempio seguente.
+
 ```cpp
-// template_name_resolution9.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-void f(int, int) { cout << "f(int, int)" << endl; }  
-void f(char, char) { cout << "f(char, char)" << endl; }  
-  
-template <class T1, class T2>  
-void f(T1, T2)  
-{  
-   cout << "void f(T1, T2)" << endl;  
-};  
-  
-int main()  
-{  
-   f(1, 1);   // Equally good match; choose the nontemplate function.  
-   f('a', 1); // Chooses the template function.  
-   f<int, int>(2, 2);  // Template arguments explicitly specified.  
-}  
-```  
-  
-```Output  
-f(int, int)  
-void f(T1, T2)  
-void f(T1, T2)  
-```  
-  
+// template_name_resolution9.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+void f(int, int) { cout << "f(int, int)" << endl; }
+void f(char, char) { cout << "f(char, char)" << endl; }
+
+template <class T1, class T2>
+void f(T1, T2)
+{
+   cout << "void f(T1, T2)" << endl;
+};
+
+int main()
+{
+   f(1, 1);   // Equally good match; choose the nontemplate function.
+   f('a', 1); // Chooses the template function.
+   f<int, int>(2, 2);  // Template arguments explicitly specified.
+}
+```
+
+```Output
+f(int, int)
+void f(T1, T2)
+void f(T1, T2)
+```
+
 ## <a name="example"></a>Esempio
 
- Nell'esempio seguente, viene dimostrato come, nel caso in cui la funzione non template richieda una conversione, si preferisca la funzione di modello esattamente corrispondente.  
-  
+Nell'esempio seguente, viene dimostrato come, nel caso in cui la funzione non template richieda una conversione, si preferisca la funzione di modello esattamente corrispondente.
+
 ```cpp
-// template_name_resolution10.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-void f(int, int) { cout << "f(int, int)" << endl; }  
-  
-template <class T1, class T2>  
-void f(T1, T2)  
-{  
-   cout << "void f(T1, T2)" << endl;  
-};  
-  
-int main()  
-{  
-   long l = 0;  
-   int i = 0;  
-   // Call the template function f(long, int) because f(int, int)  
-   // would require a conversion from long to int.  
-   f(l, i);  
-}  
-```  
-  
-```Output  
-void f(T1, T2)  
-```  
-  
+// template_name_resolution10.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+void f(int, int) { cout << "f(int, int)" << endl; }
+
+template <class T1, class T2>
+void f(T1, T2)
+{
+   cout << "void f(T1, T2)" << endl;
+};
+
+int main()
+{
+   long l = 0;
+   int i = 0;
+   // Call the template function f(long, int) because f(int, int)
+   // would require a conversion from long to int.
+   f(l, i);
+}
+```
+
+```Output
+void f(T1, T2)
+```
+
 ## <a name="see-also"></a>Vedere anche
- [Risoluzione dei nomi](../cpp/templates-and-name-resolution.md)   
- [typename](../cpp/typename.md)   
+
+[Risoluzione dei nomi](../cpp/templates-and-name-resolution.md)<br/>
+[typename](../cpp/typename.md)

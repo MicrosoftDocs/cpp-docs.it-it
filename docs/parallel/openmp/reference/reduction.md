@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059095"
 ---
 # <a name="reduction"></a>reduction
 Specifica che una o più variabili private per ogni thread sono l'oggetto di un'operazione di riduzione alla fine di tale area.  
@@ -32,14 +32,13 @@ Specifica che una o più variabili private per ogni thread sono l'oggetto di un'
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Note  
- dove  
+### <a name="parameters"></a>Parametri
   
- `operation`  
- L'operatore per l'operazione da eseguire sulle variabili (`var`) alla fine di tale area.  
+*Operazione*<br/>
+L'operatore per l'operazione da eseguire sulle variabili (`var`) alla fine di tale area.  
   
- `var`  
- Una o più variabili in cui eseguire la riduzione scalare. Se è specificata più di una variabile, separare i nomi delle variabili con una virgola.  
+*var*<br/>
+Una o più variabili in cui eseguire la riduzione scalare. Se è specificata più di una variabile, separare i nomi delle variabili con una virgola.  
   
 ## <a name="remarks"></a>Note  
  `reduction` si applica alle direttive seguenti:  

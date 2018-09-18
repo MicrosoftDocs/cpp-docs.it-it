@@ -1,5 +1,5 @@
 ---
-title: Errore matematico M6111 | Documenti Microsoft
+title: Errore matematico M6111 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b03937ed442b169b960d573b44c0eb6ebca9660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95a55ec6b7cdf0b6e4c15bd283dde77c610698fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317996"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074825"
 ---
 # <a name="math-error-m6111"></a>Errore matematico M6111
-underflow dello stack  
-  
- Un'operazione a virgola mobile ha restituito un underflow dello stack del coprocessore 8087/287/387 o l'emulatore.  
-  
- Questo errore è spesso causato da una chiamata a un `long double` funzione che restituisce un valore. Ad esempio, di seguito genera questo errore quando compilato ed eseguito:  
-  
-```  
-long double ld() {};  
-main ()  
-{  
-  ld();  
-}  
-```  
-  
- Il programma termina con il codice di uscita 139.
+
+underflow di stack
+
+Un'operazione a virgola mobile ha comportato un underflow di stack nel coprocessore 8087/287/387 o nell'emulatore.
+
+Questo errore è spesso causato da una chiamata a un `long double` funzione che restituisce un valore. Ad esempio, di seguito genera questo errore quando compilato ed eseguito:
+
+```
+long double ld() {};
+main ()
+{
+  ld();
+}
+```
+
+Il programma termina con il codice di uscita 139.

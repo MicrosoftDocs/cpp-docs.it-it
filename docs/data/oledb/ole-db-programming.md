@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073671"
 ---
 # <a name="ole-db-programming"></a>Programmazione con OLE DB
+
 Microsoft OLE DB è una tecnologia legacy; per le nuove applicazioni è l'API di accesso ai dati necessari per i server SQL collegati. Tutte le altre nuove applicazioni devono utilizzare ODBC. Il provider OLE DB corrente per SQL Server è SQLNCLI11. DLL. Il provider è ancora shipping in SQL Server 2016. Questa documentazione è destinata agli sviluppatori che gestiscono le applicazioni esistenti che già utilizzano OLE DB.
   
- I modelli OLE DB sono modelli C++ che semplificano l'uso della tecnologia per database OLE DB ad alte prestazioni tramite classi che implementano molte delle interfacce OLE DB maggiormente usate. Questa libreria contiene modelli consumer e modelli provider.  
+I modelli OLE DB sono modelli C++ che semplificano l'uso della tecnologia per database OLE DB ad alte prestazioni tramite classi che implementano molte delle interfacce OLE DB maggiormente usate. Questa libreria contiene modelli consumer e modelli provider.  
   
- In Visual C++ sono anche supportate procedure guidate per la creazione di applicazioni di base OLE DB.  
+In Visual C++ sono anche supportate procedure guidate per la creazione di applicazioni di base OLE DB.  
   
- Inoltre, è possibile usare gli attributi per implementare i modelli consumer OLE DB.  
+Inoltre, è possibile usare gli attributi per implementare i modelli consumer OLE DB.  
   
 |Per altre informazioni|Vedere|  
 |-------------------------|---------|  
@@ -45,4 +46,5 @@ Microsoft OLE DB è una tecnologia legacy; per le nuove applicazioni è l'API di
 |Argomenti concettuali su ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
 ## <a name="see-also"></a>Vedere anche  
- [Accesso ai dati](../data-access-in-cpp.md)
+
+[Accesso ai dati](../data-access-in-cpp.md)

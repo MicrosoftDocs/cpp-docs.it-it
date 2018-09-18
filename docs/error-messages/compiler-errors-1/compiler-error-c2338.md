@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2338 | Documenti Microsoft
+title: Errore del compilatore C2338 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156074f20517c1d2e2f4fdb4ac5c54d6cf014276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77bc98afdad36e0505abb58ee06ec1c7e7654ae5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071575"
 ---
-# <a name="compiler-error-c2338"></a>Errore del compilatore C2338  
-  
-> *Messaggio di errore*  
-  
-Questo errore può essere causato da un `static_assert` errore durante la compilazione. Il messaggio viene fornito dal `static_assert` parametri.   
-  
-Questo messaggio di errore può anche essere generato da provider esterni al compilatore. Nella maggior parte dei casi, questi errori vengono segnalati da un provider di attributi DLL, ad esempio ATLPROV. Alcune forme comuni di questo messaggio includono:
+# <a name="compiler-error-c2338"></a>Errore del compilatore C2338
 
-> '*attributo*' Provider di attributi Atl: errore ATL*numero* *messaggio*  
-  
+> *messaggio di errore*
+
+Questo errore può essere causato da un `static_assert` errore durante la compilazione. Il messaggio viene fornito dal `static_assert` parametri.
+
+Questo messaggio di errore può anche essere generato da provider esterni al compilatore. Nella maggior parte dei casi, questi errori vengono segnalati da un provider di attributi DLL, ad esempio ATLPROV. Alcuni moduli comuni di questo messaggio includono:
+
+> «*attributo*' Provider di attributi Atl: errore ATL*numero* *messaggio*
+
 > Utilizzo non corretto dell'attributo '*attributo*'
-  
-> '*utilizzo*': formato non corretto per l'attributo 'utilizzo'  
-  
-Questi errori spesso sono irreversibili e possono essere seguiti da un errore irreversibile del compilatore.  
-  
-Per risolvere questi problemi, correggere l'utilizzo dell'attributo. Ad esempio, in alcuni casi, i parametri dell'attributo devono essere dichiarati prima di poter essere usati. Se viene fornito un numero di errore ATL, consultare la documentazione per tale errore per informazioni più specifiche.  
+
+> «*utilizzo*': formato non corretto per l'attributo 'usage'
+
+Questi errori spesso sono irreversibili e possono essere seguiti da un errore irreversibile del compilatore.
+
+Per risolvere questi problemi, correggere l'utilizzo dell'attributo. Ad esempio, in alcuni casi, i parametri di attributo devono essere dichiarati prima di poter essere usati. Se viene fornito un numero di errore ATL, vedere la documentazione per tale errore per informazioni più specifiche.

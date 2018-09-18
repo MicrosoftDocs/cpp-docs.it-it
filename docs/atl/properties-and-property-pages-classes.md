@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c71ca9412c9db86421c586c0602eb8e6548df622
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 29400fc2e47b419587b81164aa5a7720a7ef134b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065712"
 ---
 # <a name="properties-and-property-pages-classes"></a>Le proprietà e classi delle pagine delle proprietà
 
@@ -51,6 +51,6 @@ Le classi seguenti supportano le proprietà e pagine delle proprietà:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)   
+[Panoramica della classe](../atl/atl-class-overview.md)<br/>
 [Macro della mappa proprietà](../atl/reference/property-map-macros.md)
 

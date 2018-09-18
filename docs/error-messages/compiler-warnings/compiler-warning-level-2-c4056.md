@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 2) Avviso C4056 | Documenti Microsoft
+title: Compilatore avviso (livello 2) C4056 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf5a5855d0b4291105826679e2ae81ed6d69e5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e069867d4aef749f9f6e42f46a34745d9e8aa62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067507"
 ---
-# <a name="compiler-warning-level-2-c4056"></a>Compilatore (livello 2) Avviso C4056
-overflow di aritmetica a virgola mobile costante  
-  
- Operazioni aritmetiche su costanti a virgola mobile e genera un risultato che supera il valore massimo consentito.  
-  
- Questo avviso può essere causato da ottimizzazioni del compilatore eseguite durante operazioni aritmetiche su costanti. È possibile ignorare questo avviso se scompare quando si disattiva l'ottimizzazione ([/Od](../../build/reference/od-disable-debug.md)).  
-  
- L'esempio seguente genera l'errore C4056:  
-  
-```  
-// C4056.cpp  
-// compile with: /W2 /LD  
-#pragma warning (default : 4056)  
-float fp_val = 1.0e300 * 1.0e300;   // C4056  
+# <a name="compiler-warning-level-2-c4056"></a>Compilatore avviso (livello 2) C4056
+
+overflow in aritmetica a virgola mobile costante
+
+Operazioni aritmetiche su costanti a virgola mobile e genera un risultato che supera il valore massimo consentito.
+
+Questo avviso può dipendere dalle ottimizzazioni del compilatore eseguite durante operazioni aritmetiche su costanti. È possibile ignorare questo avviso se scompare quando disattiva l'ottimizzazione ([/Od](../../build/reference/od-disable-debug.md)).
+
+L'esempio seguente genera l'errore C4056:
+
+```
+// C4056.cpp
+// compile with: /W2 /LD
+#pragma warning (default : 4056)
+float fp_val = 1.0e300 * 1.0e300;   // C4056
 ```

@@ -17,52 +17,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deee0209866580afd038fbce068a9275f5b5874
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2de25452d708545481bdc4a65cab998930b2778e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406968"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068435"
 ---
 # <a name="novtable"></a>novtable
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Si tratta di un **declspec** attributi estesa.  
-  
- Questa forma di **declspec** possono essere applicati a qualsiasi dichiarazione di classe, ma deve essere applicato solo a classi di interfaccia pure, ovvero le classi che non verranno mai avviata l'istanza in modo indipendente. Il **declspec** interrompe il compilatore di generare codice per inizializzare vfptr nel costruttori e nel distruttore della classe il costruttore di o. In molti casi, in tal modo vengono rimossi gli unici riferimenti a vtable associati alla classe e, pertanto, il linker la rimuoverà. Utilizzo del formato del **declspec** può comportare una riduzione significativa delle dimensioni del codice.  
-  
- Se si prova a creare un'istanza di una classe contrassegnata con **novtable** e quindi accedere a un membro di classe, si riceverà una violazione di accesso (AV).  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// novtable.cpp  
-#include <stdio.h>  
-  
-struct __declspec(novtable) X {  
-   virtual void mf();  
-};  
-  
-struct Y : public X {  
-   void mf() {  
-      printf_s("In Y\n");  
-   }  
-};  
-  
-int main() {  
-   // X *pX = new X();  
-   // pX->mf();   // Causes a runtime access violation.  
-  
-   Y *pY = new Y();  
-   pY->mf();  
-}  
-```  
-  
-```Output  
-In Y  
-```  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [__declspec](../cpp/declspec.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+
+Si tratta di un **declspec** attributi estesa.
+
+Questa forma di **declspec** possono essere applicati a qualsiasi dichiarazione di classe, ma deve essere applicato solo a classi di interfaccia pure, ovvero le classi che non verranno mai avviata l'istanza in modo indipendente. Il **declspec** interrompe il compilatore di generare codice per inizializzare vfptr nel costruttori e nel distruttore della classe il costruttore di o. In molti casi, in tal modo vengono rimossi gli unici riferimenti a vtable associati alla classe e, pertanto, il linker la rimuoverà. Utilizzo del formato del **declspec** può comportare una riduzione significativa delle dimensioni del codice.
+
+Se si prova a creare un'istanza di una classe contrassegnata con **novtable** e quindi accedere a un membro di classe, si riceverà una violazione di accesso (AV).
+
+## <a name="example"></a>Esempio
+
+```cpp
+// novtable.cpp
+#include <stdio.h>
+
+struct __declspec(novtable) X {
+   virtual void mf();
+};
+
+struct Y : public X {
+   void mf() {
+      printf_s("In Y\n");
+   }
+};
+
+int main() {
+   // X *pX = new X();
+   // pX->mf();   // Causes a runtime access violation.
+
+   Y *pY = new Y();
+   pY->mf();
+}
+```
+
+```Output
+In Y
+```
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[__declspec](../cpp/declspec.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

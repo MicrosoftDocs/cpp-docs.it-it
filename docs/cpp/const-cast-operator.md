@@ -16,62 +16,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ba0312b255b2957c815bb5f26c97a668d4f7b6d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 314e8363fafa4f2a6649055f2c608cd5b7edd18c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070080"
 ---
 # <a name="constcast-operator"></a>Operatore const_cast
-Rimuove il **const**, **volatile**, e **unaligned** attributi da una classe.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-const_cast <type-id> (expression)  
-```  
-  
-## <a name="remarks"></a>Note  
- Un puntatore a qualsiasi tipo di oggetto o un puntatore a un membro dati può essere convertito in modo esplicito a un tipo che è identico tranne per il **const**, **volatile**, e **unaligned** qualificatori. Per i puntatori e i riferimenti, il risultato farà riferimento all'oggetto originale. Per i puntatori ai membri dati, il risultato farà riferimento allo stesso membro del puntatore originale (uncast) al membro dati. A seconda del tipo di oggetto a cui si fa riferimento, un'operazione di scrittura tramite il puntatore risultante, il riferimento o il puntatore al membro dati potrebbe produrre un comportamento non definito.  
-  
- Non è possibile usare la **const_cast** operatore per eseguire l'override direttamente dello stato costante costante di una variabile.  
-  
- Il **const_cast** operatore converte un valore del puntatore null per il valore del puntatore null del tipo di destinazione.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// expre_const_cast_Operator.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-class CCTest {  
-public:  
-   void setNumber( int );  
-   void printNumber() const;  
-private:  
-   int number;  
-};  
-  
-void CCTest::setNumber( int num ) { number = num; }  
-  
-void CCTest::printNumber() const {  
-   cout << "\nBefore: " << number;  
-   const_cast< CCTest * >( this )->number--;  
-   cout << "\nAfter: " << number;  
-}  
-  
-int main() {  
-   CCTest X;  
-   X.setNumber( 8 );  
-   X.printNumber();  
-}  
-```  
-  
- Nella riga contenente il **const_cast**, il tipo di dati di **questo** puntatore è `const CCTest *`. Il **const_cast** operatore modifica il tipo di dati del **ciò** puntatore al `CCTest *`, consentendo al membro `number` da modificare. Il cast dura solo per il resto dell'istruzione in cui viene visualizzato.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Operatori di cast](../cpp/casting-operators.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+
+Rimuove il **const**, **volatile**, e **unaligned** attributi da una classe.
+
+## <a name="syntax"></a>Sintassi
+
+```
+const_cast <type-id> (expression)
+```
+
+## <a name="remarks"></a>Note
+
+Un puntatore a qualsiasi tipo di oggetto o un puntatore a un membro dati può essere convertito in modo esplicito a un tipo che è identico tranne per il **const**, **volatile**, e **unaligned** qualificatori. Per i puntatori e i riferimenti, il risultato farà riferimento all'oggetto originale. Per i puntatori ai membri dati, il risultato farà riferimento allo stesso membro del puntatore originale (uncast) al membro dati. A seconda del tipo di oggetto a cui si fa riferimento, un'operazione di scrittura tramite il puntatore risultante, il riferimento o il puntatore al membro dati potrebbe produrre un comportamento non definito.
+
+Non è possibile usare la **const_cast** operatore per eseguire l'override direttamente dello stato costante costante di una variabile.
+
+Il **const_cast** operatore converte un valore del puntatore null per il valore del puntatore null del tipo di destinazione.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// expre_const_cast_Operator.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+class CCTest {
+public:
+   void setNumber( int );
+   void printNumber() const;
+private:
+   int number;
+};
+
+void CCTest::setNumber( int num ) { number = num; }
+
+void CCTest::printNumber() const {
+   cout << "\nBefore: " << number;
+   const_cast< CCTest * >( this )->number--;
+   cout << "\nAfter: " << number;
+}
+
+int main() {
+   CCTest X;
+   X.setNumber( 8 );
+   X.printNumber();
+}
+```
+
+Nella riga contenente il **const_cast**, il tipo di dati di **questo** puntatore è `const CCTest *`. Il **const_cast** operatore modifica il tipo di dati del **ciò** puntatore al `CCTest *`, consentendo al membro `number` da modificare. Il cast dura solo per il resto dell'istruzione in cui viene visualizzato.
+
+## <a name="see-also"></a>Vedere anche
+
+[Operatori di cast](../cpp/casting-operators.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

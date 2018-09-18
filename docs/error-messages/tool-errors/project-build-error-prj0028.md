@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0028 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0028 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42c6e55cdce7294d7d2bc2e2a5634f362a539363
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f90e7f6629ae50f734ac127d05c6c70d002133a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317726"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062618"
 ---
 # <a name="project-build-error-prj0028"></a>Errore di compilazione progetto PRJ0028
-Il file temporaneo 'file' contenuto Unicode che non può essere tradotto in una tabella codici ANSI dell'utente.  
-  
- È stato specificato un valore con il [/MIDL (Specifica opzioni di riga di comando MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) l'opzione del linker che non può essere risolto per la tabella codici del sistema.  
-  
- La tabella codici utilizzata quando si specifica il comando MIDL (la tabella codici input) deve essere quella della tabella codici del sistema.
+
+File temporaneo 'file' contenuto Unicode che non può essere tradotto in tabella codici ANSI dell'utente.
+
+È stato specificato un valore con il [/MIDL (Specifica opzioni della riga di comando di MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) opzione del linker che non può essere risolta dalla tabella codici del sistema.
+
+La tabella codici utilizzata quando si specifica il comando MIDL (la tabella codici input) deve essere quello utilizzato per la tabella codici del sistema.

@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7130146ceb0031224304cb41fd9264956e5fba61
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d255a64fbbf820c5c1fcaa63608bc453e276b5e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072004"
 ---
 # <a name="comptrt-operators"></a>Operatori _com_ptr_t
-Per informazioni sul `_com_ptr_t` gli operatori, vedere [com_ptr_t Class](../cpp/com-ptr-t-class.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)
+
+Per informazioni sul `_com_ptr_t` gli operatori, vedere [com_ptr_t Class](../cpp/com-ptr-t-class.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

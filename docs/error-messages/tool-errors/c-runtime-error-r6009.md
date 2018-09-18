@@ -1,5 +1,5 @@
 ---
-title: R6009 errore di Runtime C | Documenti Microsoft
+title: C R6009 di errore di Runtime | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c44c08ec3b52cc53e1b29a0ecf23606c3ec06a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0deafa72a427543c0d885401a1d4192d61a6db65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296848"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069040"
 ---
-# <a name="c-runtime-error-r6009"></a>R6009 errore di Runtime C
-spazio insufficiente per l'ambiente  
-  
+# <a name="c-runtime-error-r6009"></a>R6009 di errore di Runtime C
+
+spazio insufficiente per l'ambiente
+
 > [!NOTE]
->  Se questo messaggio di errore si verifica durante l'esecuzione di un'applicazione, l'app è stato arrestato perché si è verificato un problema di memoria interna. Possibili cause di questo errore, ma spesso è provocato da una condizione di memoria molto bassa, troppa memoria utilizzata da variabili di ambiente o un bug nel programma.  
->   
->  Per risolvere questo errore, è possibile provare questi passaggi:  
->   
->  -   Chiudere le altre applicazioni in esecuzione o riavviare il computer per liberare memoria.  
-> -   Utilizzare il **App e funzionalità** o **programmi e funzionalità** nella pagina di **Pannello di controllo** per ripristinare o reinstallare il programma.  
-> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.  
-> -   Cerca una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.  
-  
- **Informazioni per i programmatori**  
-  
- Si è verificato di memoria insufficiente per caricare il programma, ma non è sufficiente memoria per creare il **envp** matrice.  Può essere causato da condizioni di memoria estremamente bassa o dall'utilizzo di variabili di ambiente insolitamente ampio. Prendere in considerazione una delle seguenti soluzioni:  
-  
--   Aumentare la quantità di memoria disponibile per il programma.  
-  
--   Ridurre il numero e la dimensione degli argomenti della riga di comando.  
-  
--   Ridurre la dimensione di ambiente rimuovendo le variabili non necessarie.
+>  Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema di memoria interna. Esistono diversi motivi possibili per questo errore, ma spesso è causata da una condizione di memoria estremamente ridotto, eccessivo di memoria eseguita da variabili di ambiente o un bug nel programma.
+>
+>  Per risolvere questo errore, è possibile provare questi passaggi:
+>
+>  -   Chiudere le altre applicazioni in esecuzione oppure riavviare il computer per liberare memoria.
+> -   Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
+> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
+> -   Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+
+**Informazioni per i programmatori**
+
+Si è verificato disponibile memoria sufficiente per caricare il programma, ma non sono sufficienti per creare il **envp** matrice.  Ciò può essere causato da condizioni di memoria estremamente basse o dall'utilizzo di variabili di ambiente insolitamente ampio. Prendere in considerazione una delle soluzioni seguenti:
+
+- Aumentare la quantità di memoria disponibile per il programma.
+
+- Ridurre il numero e la dimensione degli argomenti della riga di comando.
+
+- Ridurre le dimensioni di ambiente rimuovendo le variabili non necessarie.

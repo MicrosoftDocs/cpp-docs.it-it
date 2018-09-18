@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2438 | Documenti Microsoft
+title: Errore del compilatore C2438 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf42740c137953007cab2c5301bff122b553e5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f5153e3ff6626f3ea1b1155f14bc9ef96441e7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066076"
 ---
 # <a name="compiler-error-c2438"></a>Errore del compilatore C2438
-'identifier': Impossibile inizializzare i dati di classe statica tramite il costruttore  
-  
- Un costruttore viene utilizzato per inizializzare un membro statico di una classe. Membri statici devono essere inizializzati in una definizione all'esterno della dichiarazione di classe.  
-  
- L'esempio seguente genera l'errore C2438:  
-  
-```  
-// C2438.cpp  
-struct X {  
-   X(int i) : j(i) {}   // C2438  
-   static int j;  
-};  
-  
-int X::j;  
-  
-int main() {  
-   X::j = 1;  
-}  
+
+'identifier': non è possibile inizializzare i dati di classe statica tramite il costruttore
+
+Un costruttore viene utilizzato per inizializzare un membro statico di una classe. Membri statici devono essere inizializzati in una definizione all'esterno della dichiarazione di classe.
+
+L'esempio seguente genera l'errore C2438:
+
+```
+// C2438.cpp
+struct X {
+   X(int i) : j(i) {}   // C2438
+   static int j;
+};
+
+int X::j;
+
+int main() {
+   X::j = 1;
+}
 ```

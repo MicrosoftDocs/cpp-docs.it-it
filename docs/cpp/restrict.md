@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068338"
 ---
 # <a name="restrict"></a>restrict
 
@@ -32,21 +32,21 @@ Quando applicato a una definizione che restituisce un tipo di puntatore, o dichi
 
 ## <a name="syntax"></a>Sintassi
 
-> **__declspec(restrict)** *pointer_return_type* *funzione*();  
-  
+> **__declspec(restrict)** *pointer_return_type* *funzione*();
+
 ## <a name="remarks"></a>Note
 
 Il compilatore propaga **__declspec(restrict)**. Ad esempio, la libreria CRT `malloc` funzione ha un **__declspec(restrict)** decoration e conseguenza, il compilatore presuppone che i puntatori inizializzati in posizioni di memoria da `malloc` non sono inoltre associato un alias da in precedenza ai puntatori esistenti.
 
-Il compilatore non verifica che il puntatore restituito non è effettivamente un alias. È responsabilità dello sviluppatore assicurarsi che il programma non alias non un puntatore contrassegnato con il **limitare declspec** modificatore.  
-  
+Il compilatore non verifica che il puntatore restituito non è effettivamente un alias. È responsabilità dello sviluppatore assicurarsi che il programma non alias non un puntatore contrassegnato con il **limitare declspec** modificatore.
+
 Per una semantica simile nelle variabili, vedere [Restrict](../cpp/extension-restrict.md).
- 
+
 Per un'altra annotazione che viene applicato l'aliasing all'interno di una funzione, vedere [__declspec(noalias)](../cpp/noalias.md).
-  
-Per informazioni sul **limitare** parola chiave che fa parte di C++ AMP, vedere [limitare (C++ AMP)](../cpp/restrict-cpp-amp.md).  
- 
-## <a name="example"></a>Esempio  
+
+Per informazioni sul **limitare** parola chiave che fa parte di C++ AMP, vedere [limitare (C++ AMP)](../cpp/restrict-cpp-amp.md).
+
+## <a name="example"></a>Esempio
 
 L'esempio seguente illustra l'uso della **__declspec(restrict)**.
 
@@ -122,6 +122,7 @@ int main()
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
- [Parole chiave](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [__declspec(noalias)](../cpp/noalias.md)  
+
+[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

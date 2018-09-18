@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e29fd2c7af893fe6bb548db0a3ec3f956576a37
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ce2fbe4a2dd566541a637459510ec8422b318c47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070918"
 ---
 # <a name="aggregation"></a>Aggregazione
 
@@ -32,6 +32,6 @@ In primo luogo tutti `IUnknown` chiamate al metodo sull'oggetto contenuto devono
 
 ## <a name="see-also"></a>Vedere anche
 
-[Introduzione a COM](../atl/introduction-to-com.md)   
+[Introduzione a COM](../atl/introduction-to-com.md)<br/>
 [Riutilizzo di oggetti](/windows/desktop/com/reusing-objects)
 

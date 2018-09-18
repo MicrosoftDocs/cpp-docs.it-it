@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4238 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4238 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06dbec01da8d1b47cb7b93c90a22ae5266e9b4c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4d5f358d08f81e6b8097140ad47d54f4b3b3fed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057028"
 ---
 # <a name="compiler-warning-level-4-c4238"></a>Avviso del compilatore (livello 4) C4238
-utilizzata estensione non standard: rvalue di classe utilizzato come lvalue  
-  
- Per garantire la compatibilità con le versioni precedenti di Visual C++, le estensioni Microsoft (**/Ze**) consentono di utilizzare un tipo di classe come rvalue in un contesto che in modo implicito o esplicito ne accetta l'indirizzo. In alcuni casi, come nell'esempio seguente, questo può essere pericoloso.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// C4238.cpp  
-// compile with: /W4 /c  
-struct C {  
-   C() {}  
-};  
-  
-C * pC = &C();   // C4238  
-```  
-  
- Questa procedura genera un errore in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+utilizzata estensione non standard: rvalue di classe utilizzato come lvalue
+
+Per garantire la compatibilità con le versioni precedenti di Visual C++, le estensioni Microsoft (**/Ze**) consentono di usare un tipo di classe come un rvalue in un contesto che in modo implicito o esplicito accetta l'indirizzo. In alcuni casi, come illustrato nell'esempio riportato di seguito, può essere pericolosa.
+
+## <a name="example"></a>Esempio
+
+```
+// C4238.cpp
+// compile with: /W4 /c
+struct C {
+   C() {}
+};
+
+C * pC = &C();   // C4238
+```
+
+Questo utilizzo provoca un errore in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

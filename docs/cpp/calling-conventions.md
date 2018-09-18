@@ -14,31 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4a8b77985a06a3898c525500b8a23eab9b54f87
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 97a03e8c73f75e51a955805cd4ad76b902b0373c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407345"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071484"
 ---
 # <a name="calling-conventions"></a>Convenzioni di chiamata
-Il compilatore Visual C/C++ fornisce numerose convenzioni per chiamare funzioni interne ed esterne. La comprensione di questi diversi approcci può facilitare il debug del programma e il collegamento del codice con le routine del linguaggio assembly.  
-  
- In questo argomento vengono illustrate le differenze tra le convenzioni di chiamata, il modo in cui gli argomenti vengono passati e il modo in cui i valori vengono restituiti dalle funzioni. Vengono inoltre illustrate le chiamate di funzione naked, una funzionalità avanzata che consente di scrivere codice di epilogo e di prologo personalizzato.  
-  
- Per informazioni sulle convenzioni di chiamata x64 processori, vedere [convenzioni di chiamata](../build/calling-convention.md).  
-  
-## <a name="topics-in-this-section"></a>Argomenti contenuti in questa sezione  
-  
--   [Passaggio di argomenti e convenzioni di denominazione](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`e così via)  
-  
--   [Esempio di chiamata: prototipo e chiamata di funzione](../cpp/calling-example-function-prototype-and-call.md)  
-  
--   [Tramite le chiamate di funzione naked per scrivere il codice di prologo/epilogo personalizzate](../cpp/naked-function-calls.md)  
-  
--   [Coprocessore a virgola mobile e convenzioni di chiamata](../cpp/floating-point-coprocessor-and-calling-conventions.md)  
-  
--   [Convenzioni di chiamata obsolete](../cpp/obsolete-calling-conventions.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md)
+
+Il compilatore Visual C/C++ fornisce numerose convenzioni per chiamare funzioni interne ed esterne. La comprensione di questi diversi approcci può facilitare il debug del programma e il collegamento del codice con le routine del linguaggio assembly.
+
+In questo argomento vengono illustrate le differenze tra le convenzioni di chiamata, il modo in cui gli argomenti vengono passati e il modo in cui i valori vengono restituiti dalle funzioni. Vengono inoltre illustrate le chiamate di funzione naked, una funzionalità avanzata che consente di scrivere codice di epilogo e di prologo personalizzato.
+
+Per informazioni sulle convenzioni di chiamata x64 processori, vedere [convenzioni di chiamata](../build/calling-convention.md).
+
+## <a name="topics-in-this-section"></a>Argomenti contenuti in questa sezione
+
+- [Passaggio di argomenti e convenzioni di denominazione](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`e così via)
+
+- [Esempio di chiamata: prototipo e chiamata di funzione](../cpp/calling-example-function-prototype-and-call.md)
+
+- [Tramite le chiamate di funzione naked per scrivere il codice di prologo/epilogo personalizzate](../cpp/naked-function-calls.md)
+
+- [Coprocessore a virgola mobile e convenzioni di chiamata](../cpp/floating-point-coprocessor-and-calling-conventions.md)
+
+- [Convenzioni di chiamata obsolete](../cpp/obsolete-calling-conventions.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md)

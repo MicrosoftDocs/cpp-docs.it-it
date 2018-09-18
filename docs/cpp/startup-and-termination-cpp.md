@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71541c20831180a0097780e9ee6b2fd9dfb2c43
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a16edcc40c0e81453e10275189384d81151123d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071963"
 ---
 # <a name="startup-and-termination-c"></a>Avvio e terminazione (C++)
-Chiusura e avvio del programma sono facilitati utilizzando due funzioni: [principale](../cpp/main-program-startup.md) e [uscire](../cpp/program-termination.md). È possibile eseguire altro codice di avvio e di chiusura.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Concetti di base](../cpp/basic-concepts-cpp.md)
+
+Chiusura e avvio del programma sono facilitati utilizzando due funzioni: [principale](../cpp/main-program-startup.md) e [uscire](../cpp/program-termination.md). È possibile eseguire altro codice di avvio e di chiusura.
+
+## <a name="see-also"></a>Vedere anche
+
+[Concetti di base](../cpp/basic-concepts-cpp.md)

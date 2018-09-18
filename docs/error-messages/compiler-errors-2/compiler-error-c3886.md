@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3886 | Documenti Microsoft
+title: Errore del compilatore C3886 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e17e56ac999680728f14d0ea3a98cc7c05b66e31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 593c7e71c315801bcf080b60916a92d72ac32cd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064038"
 ---
 # <a name="compiler-error-c3886"></a>Errore del compilatore C3886
-'var': un membro dati literal deve essere inizializzato  
-  
- Oggetto [letterale](../../windows/literal-cpp-component-extensions.md) variabile deve essere inizializzata al momento della dichiarazione.  
-  
- L'esempio seguente genera l'errore C3886:  
-  
-```  
-// C3886.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   literal int staticConst;   // C3886  
-   literal int staticConst2 = 0;   // OK  
-};  
+
+'var': un membro dati literal deve essere inizializzato
+
+Oggetto [letterale](../../windows/literal-cpp-component-extensions.md) variabile deve essere inizializzata al momento della dichiarazione.
+
+L'esempio seguente genera l'errore C3886:
+
+```
+// C3886.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   literal int staticConst;   // C3886
+   literal int staticConst2 = 0;   // OK
+};
 ```

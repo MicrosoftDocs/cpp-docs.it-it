@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7fae3dafe056598dea5026d0639ce257af3cee87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066778"
 ---
 # <a name="issuing-a-parameterized-query"></a>Esecuzione di una query con parametri
+
 Nell'esempio seguente esegue una query con parametri semplice che consente di recuperare i record con un campo age (che è maggiore di 30) da una tabella in un database Microsoft Access. Per supportare il parametro, il record dell'utente deve disporre di una mappa aggiuntiva. Il codice seguente, in un progetto ATL, Usa la `CCommand` classe anziché il `CTable` classe usata nell'esempio precedente [scorrimento di un Rowset semplice](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```cpp  
@@ -51,7 +52,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Il record dell'utente, `CArtists`, ha un aspetto simile al seguente:  
+Il record dell'utente, `CArtists`, ha un aspetto simile al seguente:  
   
 ```cpp  
 class CArtists  
@@ -78,4 +79,5 @@ END_PARAM_MAP()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

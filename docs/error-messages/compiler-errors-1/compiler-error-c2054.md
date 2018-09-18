@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2054 | Documenti Microsoft
+title: Errore del compilatore C2054 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb6d7bf69885d2ac5bf59947ea9f2f70c797003
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fc936bf6c42144a55bc6d84a8434959383e7e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071432"
 ---
 # <a name="compiler-error-c2054"></a>Errore del compilatore C2054
-previsto ' (' ' dopo 'identificatore'  
-  
- Identificatore della funzione viene utilizzata in un contesto che richiede le parentesi.  
-  
- Questo errore può essere causato dall'omissione di un segno di uguale (=) in un'inizializzazione complessa.  
-  
- L'esempio seguente genera l'errore C2054:  
-  
-```  
-// C2054.c  
-int array1[] { 1, 2, 3 };   // C2054, missing =  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2054b.c  
-int main() {  
-   int array2[] = { 1, 2, 3 };  
-}  
+
+previsto ' (' seguire 'identifier'
+
+L'identificatore della funzione viene utilizzata in un contesto che richiede le parentesi.
+
+Questo errore può essere causato da un segno di uguale (=) in un'inizializzazione complessa l'omissione.
+
+L'esempio seguente genera l'errore C2054:
+
+```
+// C2054.c
+int array1[] { 1, 2, 3 };   // C2054, missing =
+```
+
+Possibile soluzione:
+
+```
+// C2054b.c
+int main() {
+   int array2[] = { 1, 2, 3 };
+}
 ```

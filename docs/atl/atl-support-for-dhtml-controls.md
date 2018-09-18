@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5144a11f0b035822e6f729692569e5e861c44dcc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 281b767151726f695e23c4cf2b2df26f8690c5c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063996"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>Supporto ATL per controlli DHTML
 
@@ -41,26 +41,26 @@ Un controllo DHTML è simile a qualsiasi altro controllo ATL, ma il controllo DH
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Identificazione degli elementi del progetto dei controlli DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+[Identificazione degli elementi del progetto dei controlli DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)<br/>
 Descrive gli elementi di un progetto controllo DHTML.
 
-[Chiamata al codice C++ da DHTML](../atl/calling-cpp-code-from-dhtml.md)  
+[Chiamata al codice C++ da DHTML](../atl/calling-cpp-code-from-dhtml.md)<br/>
 Fornisce un esempio di chiamata di codice C++ da un controllo DHTML.
 
-[Creazione di un controllo DHTML ATL](../atl/creating-an-atl-dhtml-control.md)  
+[Creazione di un controllo DHTML ATL](../atl/creating-an-atl-dhtml-control.md)<br/>
 Elenca i passaggi per la creazione di un controllo DHTML.
 
-[Test del controllo DHTML di ATL](../atl/testing-the-atl-dhtml-control.md)  
+[Test del controllo DHTML di ATL](../atl/testing-the-atl-dhtml-control.md)<br/>
 Viene illustrato come compilare e testare il progetto controllo DHTML iniziale.
 
-[Modifica del un controllo DHTML ATL](../atl/modifying-the-atl-dhtml-control.md)  
+[Modifica del un controllo DHTML ATL](../atl/modifying-the-atl-dhtml-control.md)<br/>
 Viene illustrato come aggiungere alcune funzionalità al controllo.
 
-[Test del controllo modificato DHTML ATL](../atl/testing-the-modified-atl-dhtml-control.md)  
+[Test del controllo modificato DHTML ATL](../atl/testing-the-modified-atl-dhtml-control.md)<br/>
 Viene illustrato come compilare e testare la funzionalità del controllo aggiunto.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 

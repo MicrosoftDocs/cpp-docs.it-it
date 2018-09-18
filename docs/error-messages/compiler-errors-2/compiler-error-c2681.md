@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2681 | Documenti Microsoft
+title: Errore del compilatore C2681 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e35cf6effdbb5aaed5a898bf19a6b42c3df519e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a0f0ab4b9c6a2dd2ae69f0370f808e32e496b97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059082"
 ---
 # <a name="compiler-error-c2681"></a>Errore del compilatore C2681
-'type': tipo di espressione non valida per nome  
-  
- Un operatore di cast ha tentato di eseguire la conversione da un tipo non valido. Ad esempio, se si utilizza il [dynamic_cast](../../cpp/dynamic-cast-operator.md) per convertire un'espressione in un tipo di puntatore, l'espressione di origine deve essere un puntatore.  
-  
- L'esempio seguente genera l'errore C2681:  
-  
-```  
-// C2681.cpp  
-class A { virtual void f(); };  
-  
-void g(int i) {  
-    A* pa;  
-    pa = dynamic_cast<A*>(i);  // C2681  
-}  
+
+'type': tipo di espressione non valida per nome
+
+Un operatore di cast ha provato a eseguire la conversione da un tipo non valido. Ad esempio, se si usa la [dynamic_cast](../../cpp/dynamic-cast-operator.md) operatore per convertire un'espressione in un tipo di puntatore, l'espressione di origine deve essere un puntatore.
+
+L'esempio seguente genera l'errore C2681:
+
+```
+// C2681.cpp
+class A { virtual void f(); };
+
+void g(int i) {
+    A* pa;
+    pa = dynamic_cast<A*>(i);  // C2681
+}
 ```

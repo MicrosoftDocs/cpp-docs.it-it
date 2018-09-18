@@ -18,21 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067077"
 ---
 # <a name="fetching-data"></a>Recupero dei dati
+
 Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile recuperare i dati. A seconda del tipo di funzione di accesso che si usa, è necessario associare le colonne.  
   
 ### <a name="to-fetch-data"></a>Per recuperare i dati  
   
-1.  Aprire il set di righe utilizzando il metodo appropriato **aperto** comando.  
+1. Aprire il set di righe utilizzando il metodo appropriato **aperto** comando.  
   
-2.  Se si usa `CManualAccessor`, associare le colonne di output se non si è già stato fatto. Per associare le colonne, chiamare `GetColumnInfo`e quindi creare una funzione di accesso con le associazioni, come illustrato nell'esempio seguente:  
+1. Se si usa `CManualAccessor`, associare le colonne di output se non si è già stato fatto. Per associare le colonne, chiamare `GetColumnInfo`e quindi creare una funzione di accesso con le associazioni, come illustrato nell'esempio seguente:  
   
     ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -49,7 +50,7 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
     rs.Bind();  
     ```  
   
-3.  Scrivere un `while` ciclo per recuperare i dati. Nel ciclo, chiamare `MoveNext` far avanzare il cursore e testare il valore restituito rispetto S_OK, come illustrato nell'esempio seguente:  
+1. Scrivere un `while` ciclo per recuperare i dati. Nel ciclo, chiamare `MoveNext` far avanzare il cursore e testare il valore restituito rispetto S_OK, come illustrato nell'esempio seguente:  
   
     ```cpp  
     while (rs.MoveNext() == S_OK)  
@@ -59,7 +60,7 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
     }  
     ```  
   
-4.  All'interno di `while` ciclo, è possibile recuperare i dati in base al tipo di funzione di accesso.  
+1. All'interno di `while` ciclo, è possibile recuperare i dati in base al tipo di funzione di accesso.  
   
     -   Se si usa la [CAccessor](../../data/oledb/caccessor-class.md) (classe), è necessario un record utente che contiene i membri dati. È possibile accedere ai dati usando tali membri dati, come illustrato nell'esempio seguente:  
   
@@ -101,4 +102,5 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
         ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

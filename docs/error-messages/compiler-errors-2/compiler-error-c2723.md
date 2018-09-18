@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2723 | Documenti Microsoft
+title: Errore del compilatore C2723 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01476218683205d0fb06e81847cfe9727b733158
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b1be2d81ecec7eb96fd9c1cd7e9938ce509f71e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072017"
 ---
 # <a name="compiler-error-c2723"></a>Errore del compilatore C2723
-'function': identificatore 'specifier' non valido nella definizione di funzione  
-  
- L'identificatore non può essere visualizzato con una definizione di funzione di fuori di una dichiarazione di classe. L'identificatore `virtual` può essere specificato solo in una dichiarazione di funzione membro all'interno di una dichiarazione di classe.  
-  
- L'esempio seguente genera l'errore C2723 e mostra come risolverlo:  
-  
-```  
-// C2723.cpp  
-struct X {  
-   virtual void f();  
-   virtual void g();  
-};  
-  
-virtual void X::f() {}   // C2723  
-  
-// try the following line instead  
-void X::g() {}  
+
+'function': identificatore 'specifier' non valido nella definizione di funzione
+
+L'identificatore non può essere visualizzato con una definizione di funzione di fuori di una dichiarazione di classe. L'identificatore `virtual` può essere specificato solo in una dichiarazione di funzione membro all'interno di una dichiarazione di classe.
+
+L'esempio seguente genera l'errore C2723 e mostra come risolverlo:
+
+```
+// C2723.cpp
+struct X {
+   virtual void f();
+   virtual void g();
+};
+
+virtual void X::f() {}   // C2723
+
+// try the following line instead
+void X::g() {}
 ```

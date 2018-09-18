@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2679 | Documenti Microsoft
+title: Errore del compilatore C2679 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24a304d88ccc6044c5358759efffa2a38dfeaf67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a01a79dfdff06c50b65bde33de62676e6df64a82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069495"
 ---
 # <a name="compiler-error-c2679"></a>Errore del compilatore C2679
-'operator' binario: è stato trovato alcun operatore che accetti un operando di destra di tipo 'type' (o nessuna conversione accettabile)  
-  
- Per usare l'operatore, è necessario eseguirne l'overload per il tipo specificato o definire una conversione in un tipo per cui l'operatore è definito.  
-  
- L'esempio seguente genera l'errore C2679:  
-  
-```  
-// C2679.cpp  
-class C {  
-public:  
-   C();   // no constructor with an int argument  
-} c;  
-  
-class D {  
-public:  
-   D(int) {}  
-   D(){}  
-} d;  
-  
-int main() {  
-   c = 10;   // C2679  
-   d = 10;   // OK  
-}  
+
+'operator' binario: è stato trovato alcun operatore che accetti un operando a destra del tipo 'type' (o nessuna conversione accettabili)
+
+Per usare l'operatore, è necessario eseguirne l'overload per il tipo specificato o definire una conversione in un tipo per cui l'operatore è definito.
+
+L'esempio seguente genera l'errore C2679:
+
+```
+// C2679.cpp
+class C {
+public:
+   C();   // no constructor with an int argument
+} c;
+
+class D {
+public:
+   D(int) {}
+   D(){}
+} d;
+
+int main() {
+   c = 10;   // C2679
+   d = 10;   // OK
+}
 ```

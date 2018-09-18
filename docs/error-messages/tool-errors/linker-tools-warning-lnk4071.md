@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4071 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4071 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cb0d4b8d78eb8c7cf1812abb1a7981c605f2c4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d11247c823a93604359b4cab6995b694bcf5a2f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064674"
 ---
 # <a name="linker-tools-warning-lnk4071"></a>Avviso degli strumenti del linker LNK4071
-non può essere collegato in modo incrementale su collegamenti successivi  
-  
- Sono state rilevate più definizioni per uno o più simboli, ma [/Force](../../build/reference/force-force-file-output.md) o **/FORCE** utilizzato per creare un file di output indipendentemente dagli errori. COLLEGAMENTO eliminato il file di stato incrementale (ilk).
+
+non può essere collegato in modo incrementale su collegamenti successivi
+
+Sono state rilevate più definizioni per uno o più simboli, ma [/Force](../../build/reference/force-force-file-output.md) oppure **/Force: multiple** usata per creare un file di output indipendentemente da errori. COLLEGAMENTO eliminato il file di stato incrementale (ilk).

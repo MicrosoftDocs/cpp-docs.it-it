@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 3) C4543 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4543 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434f6ce0a1f57e144bd4f58d2f19c4f3639fb66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f0c076da0beb765a84485968dd57f72abb9824
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075464"
 ---
 # <a name="compiler-warning-level-3-c4543"></a>Avviso del compilatore (livello 3) C4543
-Testo inserito soppresso dall'attributo 'no_injected_text'  
-  
- Il [no_injected_text](../../windows/no-injected-text.md) attributo presente nel codice di origine, che significa che il compilatore impedirà gli attributi di inserimento di codice.  
-  
- Questo avviso è per ricordare che gli attributi non sarà in grado di inserire codice.
+
+Testo inserito soppresso dall'attributo 'no_injected_text'
+
+Il [no_injected_text](../../windows/no-injected-text.md) attributo presente nel codice sorgente, che significa che il compilatore impedirà gli attributi di inserimento di codice.
+
+Questo avviso è possibile che gli attributi non sarà in grado di inserire il codice.

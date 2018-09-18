@@ -14,37 +14,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 845ca21dc4de4263c9063712b372c70cfb022059
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6e80f49067d2482254803df563b56de1fc43b685
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076086"
 ---
 # <a name="statements-c"></a>Istruzioni (C++)
-Le istruzioni di C++ sono gli elementi di un programma che controllano l'ordine e il modo in cui gli oggetti vengono modificati. Contenuto della sezione  
-  
--   [Panoramica](../cpp/overview-of-cpp-statements.md)  
-  
--   [Istruzioni con etichetta](../cpp/labeled-statements.md)  
-  
--   Categorie di istruzioni  
-  
-    -   [Le istruzioni di espressione](../cpp/expression-statement.md). Queste istruzioni valutano un'espressione per i relativi effetti collaterali o per il valore restituito.  
-  
-    -   [Istruzioni null](../cpp/null-statement.md). Queste istruzioni possono essere fornite dove un'istruzione è richiesta dalla sintassi di C++ e dove non esiste alcuna azione da intraprendere.  
-  
-    -   [Istruzioni composte](../cpp/compound-statements-blocks.md). Queste istruzioni sono un gruppo di istruzioni racchiuse tra parentesi graffe ({ }). Possono essere utilizzate dove è possibile utilizzare un'istruzione singola.  
-  
-    -   [Istruzioni di selezione](../cpp/selection-statements-cpp.md). Queste istruzioni consentono di eseguire un test, quindi eseguono una sezione di codice se il test restituisce true (valore diverso da zero), o un'altra sezione di codice se il test restituisce false.  
-  
-    -   [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md). Queste istruzioni consentono l'esecuzione ripetuta di un blocco di codice finché non si verifica un caso specifico di terminazione.  
-  
-    -   [Istruzioni di salto](../cpp/jump-statements-cpp.md). Queste istruzioni trasferiscono immediatamente il controllo a un'altra posizione nella funzione o restituiscono il controllo dalla funzione.  
-  
-    -   [Le istruzioni di dichiarazione](declarations-and-definitions-cpp.md). Le dichiarazioni introducono un nome in un programma.  
-  
- Per informazioni sulle istruzioni di gestione delle eccezioni, vedere [gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+
+Le istruzioni di C++ sono gli elementi di un programma che controllano l'ordine e il modo in cui gli oggetti vengono modificati. Contenuto della sezione
+
+- [Panoramica](../cpp/overview-of-cpp-statements.md)
+
+- [Istruzioni con etichetta](../cpp/labeled-statements.md)
+
+- Categorie di istruzioni
+
+   - [Le istruzioni di espressione](../cpp/expression-statement.md). Queste istruzioni valutano un'espressione per i relativi effetti collaterali o per il valore restituito.
+
+   - [Istruzioni null](../cpp/null-statement.md). Queste istruzioni possono essere fornite dove un'istruzione è richiesta dalla sintassi di C++ e dove non esiste alcuna azione da intraprendere.
+
+   - [Istruzioni composte](../cpp/compound-statements-blocks.md). Queste istruzioni sono un gruppo di istruzioni racchiuse tra parentesi graffe ({ }). Possono essere utilizzate dove è possibile utilizzare un'istruzione singola.
+
+   - [Istruzioni di selezione](../cpp/selection-statements-cpp.md). Queste istruzioni consentono di eseguire un test, quindi eseguono una sezione di codice se il test restituisce true (valore diverso da zero), o un'altra sezione di codice se il test restituisce false.
+
+   - [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md). Queste istruzioni consentono l'esecuzione ripetuta di un blocco di codice finché non si verifica un caso specifico di terminazione.
+
+   - [Istruzioni di salto](../cpp/jump-statements-cpp.md). Queste istruzioni trasferiscono immediatamente il controllo a un'altra posizione nella funzione o restituiscono il controllo dalla funzione.
+
+   - [Le istruzioni di dichiarazione](declarations-and-definitions-cpp.md). Le dichiarazioni introducono un nome in un programma.
+
+Per informazioni sulle istruzioni di gestione delle eccezioni, vedere [gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)

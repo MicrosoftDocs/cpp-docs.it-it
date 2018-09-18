@@ -1,5 +1,5 @@
 ---
-title: Riga di comando D9025 avviso | Documenti Microsoft
+title: Avviso della riga di comando D9025 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3875a2cbd065fd5ad887267bcc80748fa9845d0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298850"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063697"
 ---
 # <a name="command-line-warning-d9025"></a>Avviso della riga di comando D9025
-si esegue l'override di 'opzione1' con 'opzione2'  
-  
- Il *opzione1* opzione è stato specificato ma è stata sottoposta a override da *opzione2*. Il *opzione2* è stata utilizzata l'opzione.  
-  
- Se due opzioni specificano direttive contraddittorie o incompatibili, viene utilizzata la direttiva specificata o implicita con l'opzione più a destra nella riga di comando.  
-  
- Se è visualizzato questo avviso durante la compilazione dall'ambiente di sviluppo e non si è certi provengano le opzioni in conflitto, considerare quanto segue:  
-  
--   Nel codice o nelle impostazioni del progetto del progetto, è possibile specificare un'opzione. Se si esamina il compilatore [pagine delle proprietà riga di comando](../../ide/command-line-property-pages.md) e se è possibile visualizzare le opzioni in conflitto nel **tutte le opzioni** campo quindi le opzioni sono impostate nelle pagine delle proprietà del progetto, in caso contrario, le opzioni vengono impostate nel codice sorgente.  
-  
-     Se le opzioni sono impostate nelle pagine delle proprietà del progetto, cercare nella pagina delle proprietà per il preprocessore del compilatore (con il nodo di progetto selezionato in Esplora soluzioni).  Se non è presente l'opzione set non esiste, verificare le impostazioni della pagina proprietà per il preprocessore per ogni file di codice sorgente (in Esplora soluzioni) non è aggiunto non esiste.  
-  
-     Se le opzioni sono impostate nel codice potrebbe essere impostato nel codice o nelle intestazioni di windows.  È possibile provare a creare un file di pre-elaborato ([/p](../../build/reference/p-preprocess-to-a-file.md)) e di eseguire la ricerca per il simbolo.
+
+override di 'opzione1' con 'option2'
+
+Il *opzione1* opzione è stata specificata ma è stata quindi sostituita da *opzione2*. Il *opzione2* stata utilizzata l'opzione.
+
+Se due opzioni di specificano delle direttive incompatibili o contraddittorie, viene utilizzata la direttiva specificata o in cui è inclusa nell'opzione esterno più a destra nella riga di comando.
+
+Se visualizzato questo messaggio di avviso durante la compilazione dall'ambiente di sviluppo e non è certi di provengano le opzioni in conflitto, considerare quanto segue:
+
+- Nel codice o nelle impostazioni del progetto del progetto, è possibile specificare un'opzione. Se si esamina il compilatore [pagine delle proprietà della riga di comando](../../ide/command-line-property-pages.md) e se vengono visualizzate le opzioni in conflitto nel **tutte le opzioni** campo quindi le opzioni sono impostate nelle pagine delle proprietà del progetto, in caso contrario, le opzioni vengono impostati nel codice sorgente.
+
+     Se le opzioni sono impostate nelle pagine delle proprietà del progetto, cercare nella pagina delle proprietà per il preprocessore del compilatore (con il nodo del progetto selezionato in Esplora soluzioni).  Se non viene visualizzata l'opzione set non esiste, verificare le impostazioni di pagina delle proprietà per il preprocessore per ogni file di codice sorgente (in Esplora soluzioni) che non viene aggiunto non esiste.
+
+     Se le opzioni sono impostate nel codice è possibile impostare nel codice o nelle intestazioni di windows.  È possibile provare a creare un file pre-elaborato ([/P](../../build/reference/p-preprocess-to-a-file.md)) e si cerca il simbolo.

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3297 | Documenti Microsoft
+title: Errore del compilatore C3297 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afdf54e7a335dda86a4046a01b31875a0c91575
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aa23cebc7ad7019c375c351f723b7ad1573ab86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069835"
 ---
 # <a name="compiler-error-c3297"></a>Errore del compilatore C3297
-'constraint_2': impossibile utilizzare 'constraint_1' come vincolo poiché 'constraint_1' contiene il vincolo value  
-  
- Le classi di valori sono sealed. Se un vincolo è una classe di valori, un altro vincolo non può mai derivare da quella stessa classe.  
-  
- Per ulteriori informazioni, vedere [vincoli sui parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3297.  
-  
-```  
-// C3297.cpp  
-// compile with: /clr /c  
-generic<class T, class U>  
-where T : value class  
-where U : T   // C3297  
-public ref struct R {};  
+
+'constraint_2': impossibile utilizzare 'constraint_1' come vincolo poiché 'constraint_1' contiene il vincolo value
+
+Le classi di valori sono sealed. Se un vincolo è una classe di valori, un altro vincolo non può mai derivare da quella stessa classe.
+
+Per altre informazioni, vedere [vincoli su parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3297.
+
+```
+// C3297.cpp
+// compile with: /clr /c
+generic<class T, class U>
+where T : value class
+where U : T   // C3297
+public ref struct R {};
 ```

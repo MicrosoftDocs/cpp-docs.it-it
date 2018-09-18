@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3902 | Documenti Microsoft
+title: Errore del compilatore C3902 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0430ab95ae4884c420a3f7153fbbbbc4f7931675
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5998c0836f3adfbf047cc7259b032258a584f272
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070041"
 ---
 # <a name="compiler-error-c3902"></a>Errore del compilatore C3902
-'accessor': tipo di parametro ultimo deve essere 'type'  
-  
- Il tipo dell'ultimo parametro di almeno un metodo set deve corrispondere al tipo della proprietà. Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md).  
-  
- L'esempio seguente genera l'errore C3902:  
-  
-```  
-// C3902.cpp  
-// compile with: /clr /c  
-using namespace System;  
-ref class X {  
-   property String ^Name {  
-      void set(int);   // C3902  
-      // try the following line instead  
-      // void set(String^){}  
-   }  
-  
-   property double values[int,int] {  
-      void set(int, int, float);   // C3902  
-      // try the following line instead  
-      // void set(int, int, double){}  
-   }  
-};  
+
+'accessor': tipo dell'ultimo parametro deve essere 'type'
+
+Il tipo dell'ultimo parametro di almeno un metodo set deve corrispondere al tipo della proprietà. Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md).
+
+L'esempio seguente genera l'errore C3902:
+
+```
+// C3902.cpp
+// compile with: /clr /c
+using namespace System;
+ref class X {
+   property String ^Name {
+      void set(int);   // C3902
+      // try the following line instead
+      // void set(String^){}
+   }
+
+   property double values[int,int] {
+      void set(int, int, float);   // C3902
+      // try the following line instead
+      // void set(int, int, double){}
+   }
+};
 ```

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e3c7c930df13c09afc48f17e7042f2fe846b095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075280"
 ---
 # <a name="composite-controls-classes"></a>Classi dei controlli composti
 
@@ -36,7 +36,7 @@ La classe seguente fornisce il supporto per la creazione di controlli composti
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)   
-[Macro di controlli compositi](../atl/reference/composite-control-macros.md)   
+[Panoramica della classe](../atl/atl-class-overview.md)<br/>
+[Macro di controlli compositi](../atl/reference/composite-control-macros.md)<br/>
 [Funzioni globali di controllo composito](../atl/reference/composite-control-global-functions.md)
 

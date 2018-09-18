@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2114 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2114 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a60b0620a116b67faefbdf35fb708f1ac4f3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 115231944ce9f56e0fcec472bed29a2d5ba9d9ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317622"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063071"
 ---
 # <a name="resource-compiler-error-rc2114"></a>Errore del compilatore di risorse RC2114
-nome della classe controllo previsto  
-  
- Il `class` campo di un'istruzione di controllo nel **finestra di dialogo** istruzione deve essere uno dei seguenti tipi: BUTTON, COMBOBOX, EDIT, LISTBOX, barra di scorrimento, statico, o definito dall'utente. Verificare che la classe sia stata digitata correttamente.
+
+nome della classe controllo previsto
+
+Il `class` campo di un'istruzione di controllo nel **finestra di dialogo** istruzione deve essere uno dei seguenti tipi: pulsante, casella combinata, modifica, LISTBOX, della barra di scorrimento, statico, o definito dall'utente. Assicurarsi che la classe sia stata digitata correttamente.

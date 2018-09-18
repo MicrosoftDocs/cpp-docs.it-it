@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451550"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064633"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -66,24 +66,24 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parametri
 
-*DirName*<br/>
+*nomedir*<br/>
 Percorso della nuova directory di lavoro.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Il valore restituito-1 indica un errore. Se non è stato possibile trovare il percorso specificato, **errno** è impostata su **ENOENT**. Se *dirname* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
+Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Valore restituito di -1 indica un errore. Se non è stato possibile trovare il percorso specificato, **errno** è impostata su **ENOENT**. Se *dirname* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
 
 ## <a name="remarks"></a>Note
 
-Il **ChDir** funzione consente di modificare la directory di lavoro corrente per la directory specificata da *dirname*. Il *dirname* parametro deve fare riferimento a una directory esistente. Questa funzione può modificare la directory di lavoro corrente in qualsiasi unità. Se viene specificata in una nuova lettera di unità *dirname*, viene modificata anche la lettera di unità predefinito. Ad esempio, se A è la lettera di unità predefinita e \BIN è la directory di lavoro corrente, la chiamata seguente consente di passare alla directory di lavoro corrente per l'unità C e stabilisce C come nuova unità predefinita:
+Il **ChDir** funzione modifica la directory di lavoro corrente per la directory specificata da *dirname*. Il *dirname* parametro deve fare riferimento a una directory esistente. Questa funzione può modificare la directory di lavoro corrente in qualsiasi unità. Se una nuova lettera di unità viene specificata nel *dirname*, viene modificata anche la lettera di unità predefinite. Ad esempio, se A è la lettera di unità predefinita e \BIN è la directory di lavoro corrente, la chiamata seguente consente di passare alla directory di lavoro corrente per l'unità C e stabilisce C come nuova unità predefinita:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Quando si usa il carattere barra rovesciata facoltativi (**&#92;**) nei percorsi, è necessario inserire due barre rovesciate (**&#92;&#92;**) in una stringa C per rappresentare una singola barra rovesciata letterale ( **&#92;**).
+Quando si usa il carattere barra rovesciata facoltativo (**&#92;**) nei percorsi, è necessario inserire due barre rovesciate (**&#92;&#92;**) in una stringa C per rappresentare una singola barra rovesciata letterale ( **&#92;**).
 
-**wchdir** è una versione a caratteri wide **ChDir**; il *dirname* argomento **wchdir** è una stringa di caratteri "wide". **wchdir** e **ChDir** si comportano in modo identico in caso contrario.
+**wchdir** è una versione a caratteri wide di **ChDir**; gli *dirname* argomento **wchdir** è una stringa di caratteri "wide". **wchdir** e **ChDir** hanno lo stesso comportamento in caso contrario.
 
 ### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico:
 
@@ -137,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe

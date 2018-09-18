@@ -1,5 +1,5 @@
 ---
-title: Classe unorm | Documenti Microsoft
+title: Classe unorm | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071224"
 ---
 # <a name="unorm-class"></a>Classe unorm
-Rappresenta un numero unorm. Ogni elemento è mobile punto numero compreso nell'intervallo [0, 0F, 1.0 f].  
+Rappresenta un numero unorm. Ogni elemento è mobile punto numero compreso nell'intervallo [0.0f, 1.0f].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,14 +38,14 @@ class unorm;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore unorm](#ctor)|Di overload. Costruttore predefinito. L'inizializzazione su 0, 0F.|  
+|[Costruttore unorm](#ctor)|Di overload. Costruttore predefinito. L'inizializzazione su 0.0f.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |unorm::operator--||  
-|unorm::operator float|Operatore di conversione. Convertire il numero di unorm mobile valore punto.|  
+|unorm::operator float|Operatore di conversione. Convertire il numero di unorm in Mobile valore del punto.|  
 |unorm::operator*=||  
 |unorm::operator/=||  
 |unorm::operator + +||  
@@ -63,7 +63,7 @@ class unorm;
   
 ##  <a name="ctor"></a> unorm 
 
- Costruttore predefinito. L'inizializzazione su 0, 0F.  
+ Costruttore predefinito. L'inizializzazione su 0.0f.  
   
 ```  
 unorm(
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V`  
- Il valore utilizzato per inizializzare.  
+*ISOLA*<br/>
+Il valore utilizzato per inizializzare.  
   
- `_Other`  
- Utilizzato per inizializzare l'oggetto di norma.  
+*_Other*<br/>
+L'oggetto di norma utilizzato per inizializzare.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2222 | Documenti Microsoft
+title: Errore del compilatore C2222 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78679021289e41ed9c584abdd94348b55e30184e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f97e96a7a5548de25ba9b0b45f76e4cdef87baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072589"
 ---
 # <a name="compiler-error-c2222"></a>Errore del compilatore C2222
-tipo 'type' imprevisto: prevista classe di base o membro  
-  
- L'elenco di inizializzatori può inizializzare solo le classi di base o i membri di un tipo. Per correggere l'errore, verificare che solo le classi di base o i membri del tipo vengano inizializzati nell'elenco di inizializzatori.
+
+tipo 'type' imprevisto: prevista classe di base o membro
+
+L'elenco di inizializzatori può inizializzare solo le classi di base o i membri di un tipo. Per correggere l'errore, verificare che solo le classi di base o i membri del tipo vengano inizializzati nell'elenco di inizializzatori.

@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4154 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4154 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2873b29672b7c9c0279ff7911004b641ca7795
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8cdb93f5bc7e4ef099b4e05bb92673abe9d36e7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063632"
 ---
-# <a name="compiler-warning-level-1-c4154"></a>Compilatore (livello 1) Avviso C4154
-eliminazione di un'espressione di matrice. fornita conversione a puntatore  
-  
- Non è possibile utilizzare `delete` su una matrice, questa viene convertita in un puntatore.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// C4154.cpp  
-// compile with: /c /W1  
-int main() {  
-   int array[ 10 ];  
-   delete array;   // C4154 can't delete stack object  
-  
-   int *parray2 = new int [10];  
-   int (&array2)[10] = (int(&)[10]) parray2;  
-   delete [] array2;   // C4154  
-  
-   // try the following line instead  
-   delete [] &array2;  
-}  
+# <a name="compiler-warning-level-1-c4154"></a>Compilatore Warning (level 1) C4154
+
+eliminazione di un'espressione di matrice. fornita conversione a puntatore
+
+Non è possibile usare `delete` su una matrice, pertanto, il compilatore converte in un puntatore.
+
+## <a name="example"></a>Esempio
+
+```
+// C4154.cpp
+// compile with: /c /W1
+int main() {
+   int array[ 10 ];
+   delete array;   // C4154 can't delete stack object
+
+   int *parray2 = new int [10];
+   int (&array2)[10] = (int(&)[10]) parray2;
+   delete [] array2;   // C4154
+
+   // try the following line instead
+   delete [] &array2;
+}
 ```

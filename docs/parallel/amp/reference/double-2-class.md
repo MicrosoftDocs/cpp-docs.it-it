@@ -1,5 +1,5 @@
 ---
-title: Classe double_2 | Documenti Microsoft
+title: Classe double_2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d049ef7207871382fa343dd3e2034a7e7abef0ac
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d607fd0d63eb1e4fc968b4f83ce71d19eda4cfd0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059290"
 ---
 # <a name="double2-class"></a>Classe double_2
-Rappresentano uno short vector di 2 double.  
+Rappresentano un vettore short di 2 doppia.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ class double_2;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore double_2](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore double_2](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -127,7 +127,7 @@ class double_2;
   
 ##  <a name="ctor"></a> double_2 
 
- Predefinito, costruttore inizializza tutti gli elementi con 0.  
+ Default costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 double_2() restrict(amp,
@@ -176,17 +176,17 @@ explicit inline double_2(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V0`  
- Il valore per inizializzare l'elemento 0.  
+*_V0*<br/>
+Il valore per inizializzare l'elemento 0.  
   
- `_V1`  
- Il valore per inizializzare l'elemento 1.  
+*V1*<br/>
+Il valore per inizializzare l'elemento 1.  
   
- `_V`  
- Il valore per l'inizializzazione.  
+*ISOLA*<br/>
+Il valore di inizializzazione.  
   
- `_Other`  
- Oggetto utilizzato per inizializzare.  
+*_Other*<br/>
+Oggetto utilizzato per inizializzare.  
   
 ##  <a name="double_2__size"></a> Dimensioni 
 

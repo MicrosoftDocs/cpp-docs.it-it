@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2758 | Documenti Microsoft
+title: Errore del compilatore C2758 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34cce7840f888a4377440299a4dc5ac38ee6a1d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ffa6d33dba70a463d789f3b0f016dc1d157eb65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233971"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072927"
 ---
 # <a name="compiler-error-c2758"></a>Errore del compilatore C2758
-'member': un membro di tipo di riferimento deve essere inizializzato  
-  
- L'errore del compilatore C2758 si verifica quando il costruttore non inizializza un membro del tipo riferimento in un elenco di inizializzatori. Il compilatore lascia il membro non definito. È necessario che le variabili del membro di riferimento siano inizializzate quando vengono dichiarate o che ricevano un valore nell'elenco di inizializzazione del costruttore.  
-  
- L'esempio seguente genera l'errore C2758:  
-  
-```  
-// C2758.cpp  
-// Compile by using: cl /W3 /c C2758.cpp  
-struct A {  
-   const int i;  
-  
-   A(int n) { };   // C2758  
-   // try the following line instead  
-   // A(int n) : i{n} {};  
-};  
+
+'member': un membro di tipo di riferimento deve essere inizializzato
+
+L'errore del compilatore C2758 si verifica quando il costruttore non inizializza un membro del tipo riferimento in un elenco di inizializzatori. Il compilatore lascia il membro non definito. È necessario che le variabili del membro di riferimento siano inizializzate quando vengono dichiarate o che ricevano un valore nell'elenco di inizializzazione del costruttore.
+
+L'esempio seguente genera l'errore C2758:
+
+```
+// C2758.cpp
+// Compile by using: cl /W3 /c C2758.cpp
+struct A {
+   const int i;
+
+   A(int n) { };   // C2758
+   // try the following line instead
+   // A(int n) : i{n} {};
+};
 ```

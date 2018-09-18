@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 3) C4240 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4240 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f0691230454ffd935d67c99f58b857cdc1ce0f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f3c059e63bcca9bbde9e863cc17c9e240e4f78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057015"
 ---
 # <a name="compiler-warning-level-3-c4240"></a>Avviso del compilatore (livello 3) C4240
-utilizzata estensione non standard: accesso a 'NomeClasse', ora definito come 'identificatore di accesso,' precedentemente è stato definito come 'identificatore di accesso'  
-  
- In compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), è possibile modificare l'accesso a una classe annidata. Nelle estensioni di Microsoft (/Ze) valore predefinito, è possibile, con l'avviso.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// C4240.cpp  
-// compile with: /W3  
-class X  
-{  
-private:  
-   class N;  
-public:  
-   class N  
-   {   // C4240  
-   };  
-};  
-  
-int main()  
-{  
-}  
+
+utilizzata estensione non standard: accesso a 'classname' ora definito come 'identificatore di accesso,' era precedentemente è stato definito come 'identificatore di accesso'
+
+In compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), non è possibile modificare l'accesso a una classe annidata. Nelle estensioni di Microsoft (/Ze) impostazione predefinita, è possibile, da questo avviso.
+
+## <a name="example"></a>Esempio
+
+```
+// C4240.cpp
+// compile with: /W3
+class X
+{
+private:
+   class N;
+public:
+   class N
+   {   // C4240
+   };
+};
+
+int main()
+{
+}
 ```

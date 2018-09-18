@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 3) Avviso C4101 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4101 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973b966e4b589cb35ffc92da9031779b14d448e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1549a327329d438cb30bd6908e07419eb1b6bc1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291115"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060837"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>Compilatore (livello 3) Avviso C4101
-'identifier': variabile locale senza riferimenti  
-  
- La variabile locale non viene mai utilizzata. Questo avviso si verifica nella situazione ovvia:  
-  
-```  
-// C4101a.cpp  
-// compile with: /W3  
-int main() {  
-int i;   // C4101  
-}  
-```  
-  
- Tuttavia, questo avviso si verificherà anche quando si chiama un **statico** funzione membro tramite un'istanza della classe:  
-  
-```  
-// C4101b.cpp  
-// compile with:  /W3  
-struct S {  
-   static int func()  
-   {  
-      return 1;  
-   }  
-};  
-  
-int main() {  
-   S si;   // C4101, si is never used  
-   int y = si.func();  
-   return y;  
-}  
-```  
-  
- In questo caso, il compilatore utilizza le informazioni sulle `si` per l'accesso il **statico** funzione, ma l'istanza della classe non è necessaria per chiamare il **statico** funzione; pertanto il messaggio di avviso. Per risolvere il problema, è possibile:  
-  
--   Aggiungere un costruttore, in cui verrà utilizzata l'istanza di `si` nella chiamata a `func`.  
-  
--   Rimuovere il **statico** parola chiave dalla definizione della `func`.  
-  
--   Chiamare il **statico** funzione in modo esplicito: `int y = S::func();`.
+# <a name="compiler-warning-level-3-c4101"></a>Compilatore avviso (livello 3) C4101
+
+'identifier': variabile locale senza riferimenti
+
+La variabile locale non viene mai usata. Questo avviso si verifica nella situazione ovvia:
+
+```
+// C4101a.cpp
+// compile with: /W3
+int main() {
+int i;   // C4101
+}
+```
+
+Tuttavia, questo avviso viene generato anche quando si chiama un **statici** funzione membro tramite un'istanza della classe:
+
+```
+// C4101b.cpp
+// compile with:  /W3
+struct S {
+   static int func()
+   {
+      return 1;
+   }
+};
+
+int main() {
+   S si;   // C4101, si is never used
+   int y = si.func();
+   return y;
+}
+```
+
+In questo caso, il compilatore utilizza le informazioni sulle `si` per l'accesso il **statici** funzione, ma l'istanza della classe non è necessaria per chiamare il **statico** funzione; di conseguenza l'avviso. Per risolvere questo problema, è possibile:
+
+- Aggiungere un costruttore, in cui il compilatore utilizzerà l'istanza di `si` nella chiamata a `func`.
+
+- Rimuovere il **statici** parola chiave dalla definizione della `func`.
+
+- Chiamare il **statici** funzionare in modo esplicito: `int y = S::func();`.

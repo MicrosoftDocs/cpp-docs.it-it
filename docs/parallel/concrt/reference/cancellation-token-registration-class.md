@@ -1,5 +1,5 @@
 ---
-title: Classe cancellation_token_registration | Documenti Microsoft
+title: Classe cancellation_token_registration | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe11e2697734d06988f4cbcfce48f38cf02c32b7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cf803fbd35071a7a7100e3267dcf1bfa8b91e9f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059596"
 ---
 # <a name="cancellationtokenregistration-class"></a>Classe cancellation_token_registration
 La classe `cancellation_token_registration` rappresenta una notifica di callback da `cancellation_token`. Quando il metodo `register` in `cancellation_token` viene utilizzato per ricevere la notifica dell'annullamento, un oggetto `cancellation_token_registration` viene restituito al callback come handle, in modo che da parte del chiamante possa essere richiesto di non eseguire più un callback specifico tramite l'utilizzo del metodo `deregister`.  
@@ -55,7 +55,7 @@ class cancellation_token_registration;
  `cancellation_token_registration`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** pplconcrt  
+ **Intestazione:** . h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -76,8 +76,9 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Src`  
-  
+*_Src*<br/>
+Il `cancellation_token_registration` per copiare o spostare.
+ 
 ##  <a name="operator_neq"></a> operatore! = 
 
 ```
@@ -85,8 +86,9 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rhs`  
-  
+*_Rhs*<br/>
+Oggetto `cancellation_token_registration` da confrontare.
+ 
 ### <a name="return-value"></a>Valore restituito  
   
 ##  <a name="operator_eq"></a> operator= 
@@ -98,8 +100,9 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Src`  
-  
+*_Src*<br/>
+Il `cancellation_token_registration` da assegnare.
+ 
 ### <a name="return-value"></a>Valore restituito  
   
 ##  <a name="operator_eq_eq"></a> operator== 
@@ -109,8 +112,9 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rhs`  
-  
+*_Rhs*<br/>
+Oggetto `cancellation_token_registration` da confrontare.
+ 
 ### <a name="return-value"></a>Valore restituito  
   
 ## <a name="see-also"></a>Vedere anche  

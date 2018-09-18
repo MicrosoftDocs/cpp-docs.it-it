@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0008 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0008 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4011a27b7e6707f9c9b4e3ed386306b00f2792cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7c24634a845423de590228af01cb9f4779e37ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062787"
 ---
 # <a name="project-build-error-prj0008"></a>Errore di compilazione progetto PRJ0008
-Impossibile eliminare il file 'file'.  
-  
- **Assicurarsi che il file non è aperto da un altro processo e non è protetto da scrittura.**  
-  
- Durante la ricompilazione o pulizia, Visual C++ consente di eliminare tutti i file intermedi e di output utilizzati per la compilazione, nonché i file che soddisfano specifiche dei caratteri jolly nel **estensioni da eliminare durante la pulizia** proprietà il [generale Pagina di proprietà delle impostazioni di configurazione](../../ide/general-property-page-project.md).  
-  
- Questo errore si verifica se Visual C++ non è in grado di eliminare un file. Per risolvere l'errore, verificare il file e la relativa directory scrivibile per l'utente che esegue la compilazione.
+
+Impossibile eliminare il file 'file'.
+
+**Assicurarsi che il file non sia aperto da un altro processo e non è protetto da scrittura.**
+
+Durante la ricompilazione o di pulizia, Visual C++ vengono eliminati tutti i file intermedi e di output utilizzati per la compilazione, nonché qualsiasi file che soddisfano le specifiche dei caratteri jolly nel **estensioni da eliminare durante la pulitura** proprietà nel [generale Pagina delle proprietà di configurazione delle impostazioni](../../ide/general-property-page-project.md).
+
+Verrà visualizzato questo errore se non è in grado di eliminare un file di Visual C++. Per risolvere l'errore, verificare il file e la relativa directory scrivibile per l'utente che effettua la compilazione.

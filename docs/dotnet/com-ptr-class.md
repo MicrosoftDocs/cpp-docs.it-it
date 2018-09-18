@@ -1,5 +1,5 @@
 ---
-title: Classe com | Documenti Microsoft
+title: 'Classe com:: PTR | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066727"
 ---
 # <a name="comptr-class"></a>com::ptr Class
 Un wrapper per un oggetto COM che può essere utilizzato come membro di una classe CLR.  Il wrapper consente anche di automatizzare la gestione della durata dell'oggetto COM, rilasciando tutti i riferimenti di proprietà nell'oggetto quando viene chiamato il distruttore. Analogo a [classe CComPtr](../atl/reference/ccomptr-class.md).  
@@ -38,13 +38,13 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_interface_type`  
- Interfaccia COM.  
+*_interface_type*<br/>
+Interfaccia COM.  
   
 ## <a name="remarks"></a>Note  
  È possibile utilizzare `com::ptr` come variabile di funzione locale per semplificare le varie attività COM e automatizzare la gestione della durata.  
   
- Oggetto `com::ptr` non può essere utilizzato direttamente come parametro di funzione; utilizzare un [operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md) o [operatore Handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) invece.  
+ Oggetto `com::ptr` non può essere utilizzato direttamente come parametro di funzione; utilizzare un [operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md) o una [operatore Handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) invece.  
   
  Un `com::ptr` non può essere restituito direttamente da una funzione; utilizzare invece un handle.  
   

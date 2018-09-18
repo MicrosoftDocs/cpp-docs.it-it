@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4212 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4212 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb70cf045a1cc563e4eb009ed00ffe82be812b0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 107581742f1a60cfc015a9a1b8ccea8b2f89c7a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074760"
 ---
 # <a name="compiler-warning-level-4-c4212"></a>Avviso del compilatore (livello 4) C4212
-utilizzata estensione non standard: dichiarazione di funzione utilizzato i puntini di sospensione  
-  
- Il prototipo di funzione è un numero variabile di argomenti. Non è la definizione di funzione.  
-  
- L'esempio seguente genera l'errore C4212:  
-  
-```  
-// C4212.c  
-// compile with: /W4 /Ze /c  
-void f(int , ...);  
-void f(int i, int j) {}  
+
+utilizzata estensione non standard: dichiarazione di funzione usato con puntini di sospensione
+
+Il prototipo di funzione ha un numero variabile di argomenti. Non è la definizione di funzione.
+
+L'esempio seguente genera l'errore C4212:
+
+```
+// C4212.c
+// compile with: /W4 /Ze /c
+void f(int , ...);
+void f(int i, int j) {}
 ```

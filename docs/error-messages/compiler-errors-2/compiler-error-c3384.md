@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3384 | Documenti Microsoft
+title: Errore del compilatore C3384 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab09df08edb9f1d5808f2214535c76b20fda62b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75c904556951838de0308aea499980132440cbdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061604"
 ---
 # <a name="compiler-error-c3384"></a>Errore del compilatore C3384
-'type_parameter': i vincoli value e ref si escludono a vicenda  
-  
- Non è possibile vincolare un tipo generico sia a `value class` che `ref class`.  
-  
- Vedere [vincoli sui parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) per ulteriori informazioni.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3384.  
-  
-```  
-// C3384.cpp  
-// compile with: /c /clr  
-generic <typename T>  
-where T : ref class  
-where T : value class   // C3384  
-ref class List {};  
+
+'type_parameter': i vincoli value e ref si escludono a vicenda
+
+Non è possibile vincolare un tipo generico sia a `value class` che `ref class`.
+
+Vedere [vincoli su parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) per altre informazioni.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3384.
+
+```
+// C3384.cpp
+// compile with: /c /clr
+generic <typename T>
+where T : ref class
+where T : value class   // C3384
+ref class List {};
 ```

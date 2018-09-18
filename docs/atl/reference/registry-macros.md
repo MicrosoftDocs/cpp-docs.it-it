@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058497"
 ---
 # <a name="registry-macros"></a>Macro del Registro di sistema
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parametri
 
-*LIBID*  
+*LIBID*<br/>
 Il GUID della libreria dei tipi.
 
 ### <a name="remarks"></a>Note
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Parametri
 
-*class*  
+*class*<br/>
 [in] Opzione inclusa per compatibilità con le versioni precedenti.
 
-*pid*  
+*pid*<br/>
 [in] LPCTSTR che è un identificatore di programma specifico della versione.
 
-*vpid*  
+*vpid*<br/>
 [in] LPCTSTR che è un identificatore di programma indipendente dalla versione.
 
-*nID*  
+*nID*<br/>
 [in] UINT e rappresenta l'indice della stringa di risorsa nel Registro di sistema da utilizzare come descrizione del programma.
 
-*flags*  
+*flags*<br/>
 [in] Un valore DWORD contenente modello di threading del programma nel Registro di sistema. Deve essere uno dei seguenti valori: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH o AUTPRXFLAG.
 
 ### <a name="remarks"></a>Note
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parametri
 
-*RESID*  
+*RESID*<br/>
 L'id risorsa del file con estensione RGS che contiene informazioni sul *appid*.
 
-*ID App*  
+*ID App*<br/>
 Un valore GUID.
 
 ### <a name="remarks"></a>Note
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Identificatore della risorsa di tipo stringa.
 
 ### <a name="remarks"></a>Note
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Identificatore generato dalla creazione guidata della risorsa.
 
 ### <a name="remarks"></a>Note

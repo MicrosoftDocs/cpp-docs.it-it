@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3388 | Documenti Microsoft
+title: Errore del compilatore C3388 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481096aa870d7e66df032f4d297c652417a7b487
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4447d2d72c2a0a56df9f3a64549f201f86ddf129
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073473"
 ---
 # <a name="compiler-error-c3388"></a>Errore del compilatore C3388
-'type': non consentito come vincolo, presupposto 'ref class' per continuare l'analisi  
-  
- Un vincolo è stato specificato su un tipo generico, ma non in modo corretto. Vedere [vincoli sui parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) per ulteriori informazioni.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3388.  
-  
-```  
-// C3388.cpp  
-// compile with: /clr /c  
-interface class AA {};  
-  
-generic <class T>  
-where T : interface class   // C3388  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where T : AA  
-ref class D {};  
+
+'type': non consentito come vincolo, presupposto 'ref class' per continuare l'analisi
+
+Un vincolo è stato specificato su un tipo generico, ma non in modo corretto. Vedere [vincoli su parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) per altre informazioni.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3388.
+
+```
+// C3388.cpp
+// compile with: /clr /c
+interface class AA {};
+
+generic <class T>
+where T : interface class   // C3388
+ref class C {};
+
+// OK
+generic <class T>
+where T : AA
+ref class D {};
 ```

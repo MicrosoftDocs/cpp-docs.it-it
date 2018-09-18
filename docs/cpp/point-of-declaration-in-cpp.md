@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f94cdee6be18436b3f39f840fb7880e5860adb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 68ac24fcfe35701dd75d74800661aa5e41c005f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409376"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072065"
 ---
 # <a name="point-of-declaration-in-c"></a>Punto di dichiarazione in C++
-Un nome viene considerato dichiarato immediatamente dopo il proprio dichiaratore e prima del proprio inizializzatore (quest'ultimo è facoltativo). (Per altre informazioni sui dichiaratori, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).)  
-  
- Si consideri l'esempio seguente:  
-  
-```cpp 
-// point_of_declaration1.cpp  
-// compile with: /W1   
-double dVar = 7.0;  
-int main()  
-{  
-   double dVar = dVar;   // C4700  
-}  
-```  
-  
- Se la posizione della dichiarazione fosse *dopo aver* l'inizializzazione, quindi locale `dVar` verrebbe inizializzata su 7.0, il valore della variabile globale `dVar`. Tuttavia, poiché non è questo il caso, `dVar` viene inizializzata su un valore non definito.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Ambito](../cpp/scope-visual-cpp.md)
+
+Un nome viene considerato dichiarato immediatamente dopo il proprio dichiaratore e prima del proprio inizializzatore (quest'ultimo è facoltativo). (Per altre informazioni sui dichiaratori, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).)
+
+Si consideri l'esempio seguente:
+
+```cpp
+// point_of_declaration1.cpp
+// compile with: /W1
+double dVar = 7.0;
+int main()
+{
+   double dVar = dVar;   // C4700
+}
+```
+
+Se la posizione della dichiarazione fosse *dopo aver* l'inizializzazione, quindi locale `dVar` verrebbe inizializzata su 7.0, il valore della variabile globale `dVar`. Tuttavia, poiché non è questo il caso, `dVar` viene inizializzata su un valore non definito.
+
+## <a name="see-also"></a>Vedere anche
+
+[Ambito](../cpp/scope-visual-cpp.md)

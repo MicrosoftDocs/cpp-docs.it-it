@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680195"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069417"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 Fornisce un indice in una [tiled_extent](tiled-extent-class.md) oggetto. Questa classe dispone di proprietà per accedere agli elementi di origine locale della sezione e relativo all'origine globale. Per altre informazioni sugli elementi affiancati, vedere [usando i riquadri](../../../parallel/amp/using-tiles.md).  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_Dim0`  
- La lunghezza della dimensione più significativa.  
+*_Dim0*<br/>
+La lunghezza della dimensione più significativa.  
   
- `_Dim1`  
- La lunghezza della dimensione significativa next-a-la maggior parte.  
+*_Dim1*<br/>
+La lunghezza della dimensione significativa next-a-la maggior parte.  
   
- `_Dim2`  
- Lunghezza della dimensione meno significativa.  
+*_Dim2*<br/>
+Lunghezza della dimensione meno significativa.  
   
 ## <a name="members"></a>Membri  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_Global`  
- Globale [indice](index-class.md) costruito `tiled_index`.  
+*Global*<br/>
+Globale [indice](index-class.md) costruito `tiled_index`.  
   
- `_Local`  
- Locale [indice](index-class.md) costruito `tiled_index`  
+*Locale*<br/>
+Locale [indice](index-class.md) costruito `tiled_index`  
   
- `_Tile`  
- Il riquadro [indice](index-class.md) costruito `tiled_index`  
+*_Tile*<br/>
+Il riquadro [indice](index-class.md) costruito `tiled_index`  
   
- `_Tile_origin`  
- L'origine della sezione [indice](index-class.md) costruito `tiled_index`  
+*_Tile_origin*<br/>
+L'origine della sezione [indice](index-class.md) costruito `tiled_index`  
   
- `_Barrier`  
- Il [tile_barrier](tile-barrier-class.md) oggetto costruito `tiled_index`.  
+*_Barrier*<br/>
+Il [tile_barrier](tile-barrier-class.md) oggetto costruito `tiled_index`.  
   
- `_Other`  
- Il `tile_index` oggetto da copiare per l'oggetto costruito `tiled_index`.  
+*_Other*<br/>
+Il `tile_index` oggetto da copiare per l'oggetto costruito `tiled_index`.  
   
 ## <a name="overloads"></a>Overloads  
   

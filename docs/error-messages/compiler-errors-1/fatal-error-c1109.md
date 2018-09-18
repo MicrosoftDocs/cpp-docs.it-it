@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1109 | Documenti Microsoft
+title: Errore irreversibile C1109 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b68513b497b97c78d31264a565dadc9b1fe95a98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b8e7c80ca3a184135da3784e7744ae1528517a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070691"
 ---
 # <a name="fatal-error-c1109"></a>Errore irreversibile C1109
-Impossibile trovare 'entry point' nella DLL 'dll'  
-  
- Un punto di ingresso richiesto dal compilatore non è stato trovato in [delay-loaded DLL](../../build/reference/linker-support-for-delay-loaded-dlls.md) .
+
+Impossibile trovare 'entry point' nella DLL 'dll'
+
+Un punto di ingresso richiesto dal compilatore non è stato trovato in [delay-loaded DLL](../../build/reference/linker-support-for-delay-loaded-dlls.md) .

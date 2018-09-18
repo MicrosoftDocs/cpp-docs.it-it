@@ -18,66 +18,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205a03323a765940ce8cdc5def413faa716fa2fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 982b03ae1785aba03dd96ef3b1423a93c74efdf2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075696"
 ---
 # <a name="conditional-operator--"></a>Operatore condizionale:? :
-## <a name="syntax"></a>Sintassi  
-  
-``` 
-expression ? expression : expression  
-``` 
-  
-## <a name="remarks"></a>Note  
- L'operatore condizionale (**?:**) è un operatore ternario (accetta tre operandi). L'operatore condizionale funziona nel modo seguente:  
-  
--   Il primo operando viene convertito implicitamente in **bool**. Viene valutato e tutti gli effetti collaterali vengono completati prima di continuare.  
-  
--   Se il primo operando restituisce **true** (1), il secondo operando viene valutato.  
-  
--   Se il primo operando restituisce **false** (0), il terzo operando viene valutato.  
-  
- Il risultato dell'operatore condizionale è il risultato di qualunque operando venga valutato: il secondo o il terzo. Solo uno degli ultimi due operandi viene valutato in un'espressione condizionale.  
-  
- Le espressioni condizionali presentano un'associatività da destra a sinistra. Il primo operando deve essere di tipo integrale o puntatore. Le regole seguenti si applicano al secondo e terzo operando:  
-  
--   Se entrambi gli operandi sono dello stesso tipo, il risultato è di quel tipo.  
-  
--   Se entrambi gli operandi sono di tipo aritmetico o enumerazione, le conversioni aritmetiche consuete (illustrate in [conversioni Standard](standard-conversions.md)) vengono eseguiti per convertirli in un tipo comune.  
-  
--   Se entrambi gli operandi sono di tipo puntatore o se uno è un tipo puntatore e l'altro è un'espressione costante che restituisce 0, vengono eseguite le conversioni del puntatore per convertire tali operandi in un tipo comune.  
-  
--   Se entrambi gli operandi sono di tipo riferimento, vengono eseguite le conversioni dei riferimenti per convertirli in un tipo comune.  
-  
--   Se entrambi gli operandi sono di tipo void, il tipo comune è il tipo void.  
-  
--   Se entrambi gli operanti sono dello stesso tipo definito dall'utente, il tipo comune è di quel tipo.  
-  
--   Se gli operandi sono di tipi diversi e almeno un operando è di un tipo definito dall'utente, per determinare il tipo comune vengono usate le regole del linguaggio. Vedere l'avviso di seguito.  
-  
- Tutte le combinazioni del secondo e del terzo operando che non si trovano nell'elenco precedente non sono valide. Il tipo del risultato è il tipo comune e si tratta di un l-value se sia il secondo che il terzo operando sono dello stesso tipo e sono entrambi l-value.  
-  
+
+## <a name="syntax"></a>Sintassi
+
+```
+expression ? expression : expression
+```
+
+## <a name="remarks"></a>Note
+
+L'operatore condizionale (**?:**) è un operatore ternario (accetta tre operandi). L'operatore condizionale funziona nel modo seguente:
+
+- Il primo operando viene convertito implicitamente in **bool**. Viene valutato e tutti gli effetti collaterali vengono completati prima di continuare.
+
+- Se il primo operando restituisce **true** (1), il secondo operando viene valutato.
+
+- Se il primo operando restituisce **false** (0), il terzo operando viene valutato.
+
+Il risultato dell'operatore condizionale è il risultato di qualunque operando venga valutato: il secondo o il terzo. Solo uno degli ultimi due operandi viene valutato in un'espressione condizionale.
+
+Le espressioni condizionali presentano un'associatività da destra a sinistra. Il primo operando deve essere di tipo integrale o puntatore. Le regole seguenti si applicano al secondo e terzo operando:
+
+- Se entrambi gli operandi sono dello stesso tipo, il risultato è di quel tipo.
+
+- Se entrambi gli operandi sono di tipo aritmetico o enumerazione, le conversioni aritmetiche consuete (illustrate in [conversioni Standard](standard-conversions.md)) vengono eseguiti per convertirli in un tipo comune.
+
+- Se entrambi gli operandi sono di tipo puntatore o se uno è un tipo puntatore e l'altro è un'espressione costante che restituisce 0, vengono eseguite le conversioni del puntatore per convertire tali operandi in un tipo comune.
+
+- Se entrambi gli operandi sono di tipo riferimento, vengono eseguite le conversioni dei riferimenti per convertirli in un tipo comune.
+
+- Se entrambi gli operandi sono di tipo void, il tipo comune è il tipo void.
+
+- Se entrambi gli operanti sono dello stesso tipo definito dall'utente, il tipo comune è di quel tipo.
+
+- Se gli operandi sono di tipi diversi e almeno un operando è di un tipo definito dall'utente, per determinare il tipo comune vengono usate le regole del linguaggio. Vedere l'avviso di seguito.
+
+Tutte le combinazioni del secondo e del terzo operando che non si trovano nell'elenco precedente non sono valide. Il tipo del risultato è il tipo comune e si tratta di un l-value se sia il secondo che il terzo operando sono dello stesso tipo e sono entrambi l-value.
+
 > [!WARNING]
->  Se i tipi del secondo e terzo operando non sono identici, vengono richiamate regole di conversione di tipo complesso, come specificato nello standard C++. Queste conversioni possono causare un comportamento imprevisto, ad esempio la costruzione e l'eliminazione di oggetti temporanei. Per questo motivo, è consigliabile (1) evitare di usare tipi definiti dall'utente come operandi con l'operatore condizionale oppure (2), se si usano tipi definiti dall'utente, eseguire il cast in modo esplicito di ogni operando a un tipo comune.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// expre_Expressions_with_the_Conditional_Operator.cpp  
-// compile with: /EHsc  
-// Demonstrate conditional operator  
-#include <iostream>  
-using namespace std;  
-int main() {  
-   int i = 1, j = 2;  
-   cout << ( i > j ? i : j ) << " is greater." << endl;  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operatore di espressione condizionale](../c-language/conditional-expression-operator.md)
+>  Se i tipi del secondo e terzo operando non sono identici, vengono richiamate regole di conversione di tipo complesso, come specificato nello standard C++. Queste conversioni possono causare un comportamento imprevisto, ad esempio la costruzione e l'eliminazione di oggetti temporanei. Per questo motivo, è consigliabile (1) evitare di usare tipi definiti dall'utente come operandi con l'operatore condizionale oppure (2), se si usano tipi definiti dall'utente, eseguire il cast in modo esplicito di ogni operando a un tipo comune.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// expre_Expressions_with_the_Conditional_Operator.cpp
+// compile with: /EHsc
+// Demonstrate conditional operator
+#include <iostream>
+using namespace std;
+int main() {
+   int i = 1, j = 2;
+   cout << ( i > j ? i : j ) << " is greater." << endl;
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatore di espressione condizionale](../c-language/conditional-expression-operator.md)

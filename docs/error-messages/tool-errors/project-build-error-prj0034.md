@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0034 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0034 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a65ca2c53ba2801f861471c66f7e1f2ec8766345
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b271875173bf0e55d94989d60a1c8f7aaf408b2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065582"
 ---
 # <a name="project-build-error-prj0034"></a>Errore di compilazione progetto PRJ0034
-La proprietà "Dipendenze aggiuntive" per l'oggetto personalizzato a livello di progetto di compilazione contiene "macro" che restituisce "espansione".  
-  
- Un'istruzione di compilazione personalizzata a un progetto è presente un errore nella dipendenza aggiuntiva probabilmente a causa di un problema di valutazione della macro. Questo errore potrebbe indicare anche che il percorso non è corretto, che contengono caratteri o combinazioni di caratteri che non sono validi in un percorso di file.  
-  
- Per correggere l'errore, risolvere la macro o correggere la specifica del percorso. Il percorso valutato è un percorso assoluto della directory del progetto.
+
+La proprietà "Dipendenze aggiuntive" per l'oggetto personalizzato a livello di progetto di compilazione passaggio contenuto "macro" che restituisce "espansione".
+
+Un'istruzione di compilazione personalizzata a un progetto è presente un errore nella dipendenza aggiuntiva probabilmente a causa di un problema di valutazione della macro. Questo errore può anche significare che il percorso non è corretto, che contiene caratteri o delle combinazioni di caratteri che non sono validi in un percorso di file.
+
+Per risolvere questo errore, correggere la macro o correggere la specifica del percorso. Il percorso valutato è un percorso assoluto dalla directory del progetto.

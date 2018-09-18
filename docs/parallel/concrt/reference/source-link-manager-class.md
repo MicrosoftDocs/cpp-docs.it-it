@@ -1,5 +1,5 @@
 ---
-title: Classe source_link_manager | Documenti Microsoft
+title: Classe source_link_manager | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff869fb93d5dae39a924c3d4133f5a6bc6fb824f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059797"
 ---
 # <a name="sourcelinkmanager-class"></a>Classe source_link_manager
 L'oggetto `source_link_manager` gestisce i collegamenti di rete dei blocchi della messaggistica nei blocchi `ISource`.  
@@ -45,8 +45,8 @@ class source_link_manager;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_LinkRegistry`  
- Registro di sistema del collegamento di rete.  
+*_LinkRegistry*<br/>
+Il Registro di collegamento di rete.  
   
 ## <a name="members"></a>Membri  
   
@@ -54,10 +54,10 @@ class source_link_manager;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`const_pointer`|Un tipo che fornisce un puntatore a un `const` elemento in un `source_link_manager` oggetto.|  
-|`const_reference`|Un tipo che fornisce un riferimento a un `const` elemento archiviato in un `source_link_manager` oggetto per la lettura e l'esecuzione di operazioni const.|  
-|`iterator`|Un tipo che fornisce un iteratore che può leggere o modificare qualsiasi elemento di `source_link_manager` oggetto.|  
-|`type`|Il tipo di registro di sistema del collegamento viene gestito mediante la `source_link_manager` oggetto.|  
+|`const_pointer`|Tipo che fornisce un puntatore a un `const` elemento in un `source_link_manager` oggetto.|  
+|`const_reference`|Tipo che fornisce un riferimento a un `const` elemento archiviato in un `source_link_manager` oggetto per la lettura e l'esecuzione di operazioni di const.|  
+|`iterator`|Tipo che fornisce un iteratore che può leggere o modificare qualsiasi elemento nel `source_link_manager` oggetto.|  
+|`type`|Il tipo del Registro di sistema di collegamento viene gestito mediante la `source_link_manager` oggetto.|  
   
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
@@ -70,18 +70,18 @@ class source_link_manager;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[add](#add)|Aggiunge un collegamento di origine per il `source_link_manager` oggetto.|  
+|[add](#add)|Aggiunge un collegamento all'origine per il `source_link_manager` oggetto.|  
 |[begin](#begin)|Restituisce un iteratore al primo elemento nel file di `source_link_manager` oggetto.|  
-|[contiene](#contains)|Ricerche di `network_link_registry` all'interno di questa `source_link_manager` oggetto per un blocco specificato.|  
+|[Contiene](#contains)|Cerca il `network_link_registry` all'interno di questo `source_link_manager` oggetto per un blocco specificato.|  
 |[count](#count)|Conta il numero di blocchi collegati nel `source_link_manager` oggetto.|  
 |[reference](#reference)|Acquisisce un riferimento nel `source_link_manager` oggetto.|  
-|[register_target_block](#register_target_block)|Registra il blocco di destinazione che contiene questo oggetto `source_link_manager` oggetto.|  
+|[register_target_block](#register_target_block)|Registra il blocco di destinazione che contiene questo `source_link_manager` oggetto.|  
 |[release](#release)|Rilascia il riferimento nel `source_link_manager` oggetto.|  
 |[remove](#remove)|Rimuove un collegamento dal `source_link_manager` oggetto.|  
 |[set_bound](#set_bound)|Imposta il numero massimo di collegamenti di origine che possono essere aggiunti all'oggetto `source_link_manager` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- I blocchi di origine non sono attualmente riferimento conteggiato. Si tratta di un wrapper in una `network_link_registry` oggetto che consente l'accesso simultaneo ai collegamenti e offre la possibilità di fare riferimento ai collegamenti tramite callback. Blocchi dei messaggi ( `target_block`s o `propagator_block`s) devono utilizzare questa classe per i collegamenti di origine.  
+ Attualmente, i blocchi di origine sono riferimenti. Si tratta di un wrapper su un `network_link_registry` oggetto che consente l'accesso simultaneo ai collegamenti e offre la possibilità di fare riferimento ai collegamenti tramite callback. Blocchi del messaggio ( `target_block`s o `propagator_block`s) devono utilizzare questa classe per i collegamenti di origine.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `source_link_manager`  
@@ -93,17 +93,17 @@ class source_link_manager;
   
 ##  <a name="add"></a> Aggiungere 
 
- Aggiunge un collegamento di origine per il `source_link_manager` oggetto.  
+ Aggiunge un collegamento all'origine per il `source_link_manager` oggetto.  
   
 ```
 void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Link`  
- Un puntatore a un blocco da aggiungere.  
+*Collega*<br/>
+Un puntatore a un blocco da aggiungere.  
   
-##  <a name="begin"></a> Begin 
+##  <a name="begin"></a> iniziare 
 
  Restituisce un iteratore al primo elemento nel file di `source_link_manager` oggetto.  
   
@@ -112,27 +112,27 @@ iterator begin();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Iteratore che punta al primo elemento di `source_link_manager` oggetto.  
+ Un iteratore che punta al primo elemento di `source_link_manager` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Viene indicato lo stato finale dell'iteratore da un `NULL` collegamento.  
+ Lo stato finale dell'iteratore è indicato da un `NULL` collegamento.  
   
-##  <a name="contains"></a> contiene 
+##  <a name="contains"></a> Contiene 
 
- Ricerche di `network_link_registry` all'interno di questa `source_link_manager` oggetto per un blocco specificato.  
+ Cerca il `network_link_registry` all'interno di questo `source_link_manager` oggetto per un blocco specificato.  
   
 ```
 bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Link`  
- Un puntatore a un blocco di cui eseguire la ricerca nel `source_link_manager` oggetto.  
+*Collega*<br/>
+Un puntatore a un blocco che deve essere eseguita la ricerca nel `source_link_manager` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` Se il blocco specificato è stato trovato, `false` in caso contrario.  
+ `true` Se il blocco specificato viene trovato, `false` in caso contrario.  
   
-##  <a name="count"></a> Conteggio 
+##  <a name="count"></a> conteggio 
 
  Conta il numero di blocchi collegati nel `source_link_manager` oggetto.  
   
@@ -153,17 +153,17 @@ void reference();
   
 ##  <a name="register_target_block"></a> register_target_block 
 
- Registra il blocco di destinazione che contiene questo oggetto `source_link_manager` oggetto.  
+ Registra il blocco di destinazione che contiene questo `source_link_manager` oggetto.  
   
 ```
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_PTarget`  
- Blocco di destinazione contenente questo `source_link_manager` oggetto.  
+*PTarget*<br/>
+Il blocco di destinazione che contiene questo `source_link_manager` oggetto.  
   
-##  <a name="release"></a> versione 
+##  <a name="release"></a> Versione 
 
  Rilascia il riferimento nel `source_link_manager` oggetto.  
   
@@ -171,7 +171,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```  
   
-##  <a name="remove"></a> Rimuovere 
+##  <a name="remove"></a> Rimuovi 
 
  Rimuove un collegamento dal `source_link_manager` oggetto.  
   
@@ -180,8 +180,8 @@ bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Link`  
- Un puntatore a un blocco da rimuovere, se trovato.  
+*Collega*<br/>
+Un puntatore a un blocco deve essere rimosso, se trovato.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se il collegamento è stato trovato e rimosso, `false` in caso contrario.  
@@ -195,8 +195,8 @@ void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_MaxLinks`  
- Il numero massimo di collegamenti.  
+*_MaxLinks*<br/>
+Il numero massimo di collegamenti.  
   
 ##  <a name="ctor"></a> source_link_manager 
 

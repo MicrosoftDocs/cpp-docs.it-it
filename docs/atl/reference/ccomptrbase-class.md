@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766587"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070158"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 
@@ -41,13 +41,13 @@ Questa classe fornisce una base per le classi di puntatore intelligente con le r
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Il tipo di oggetto a cui fa riferimento il puntatore intelligente.
 
 ## <a name="members"></a>Membri
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Parametri
 
-*pUnk*  
+*pUnk*<br/>
 Un puntatore al client `IUnknown`.
 
-*IID*  
+*IID*<br/>
 Il GUID del punto di connessione. In genere, questo è lo stesso come interfaccia in uscita gestita dal punto di connessione.
 
-*PDW*  
+*PDW*<br/>
 Puntatore a cookie che identifica in modo univoco la connessione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*P2*  
+*P2*<br/>
 Il `CComPtrBase` oggetto assumerà la proprietà del puntatore ' this '.
 
 ### <a name="remarks"></a>Note
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Parametri
 
-*szProgID*  
+*szProgID*<br/>
 Puntatore a un ProgID, usato per ripristinare il CLSID.
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Se NULL, indica che l'oggetto non viene creata come parte di un'aggregazione. Se diverso da NULL, è un puntatore all'oggetto aggregato `IUnknown` interfaccia (il controllo `IUnknown`).
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Contesto in cui verrà eseguito il codice che gestisce l'oggetto appena creato.
 
-*rclsid*  
+*rclsid*<br/>
 CLSID associato ai dati e al codice che verrà utilizzato per creare l'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*ppT*  
+*ppT*<br/>
 Indirizzo della variabile che riceverà il `CComPtrBase` puntatore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pOther*  
+*pOther*<br/>
 Oggetto `IUnknown *` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pT*  
+*pT*<br/>
 Un puntatore a un oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pT*  
+*pT*<br/>
 Un puntatore a un oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -345,7 +345,7 @@ Restituisce true se il puntatore gestito dall'oggetto corrente è inferiore a qu
 
 L'operatore di cast.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parametri
 
-*Q*  
+*Q*<br/>
 Il tipo di oggetto cui puntatore a interfaccia è necessaria.
 
-*profilo di porta*  
+*profilo di porta*<br/>
 Indirizzo della variabile di output che riceve il puntatore a interfaccia richiesto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*punkParent*  
+*punkParent*<br/>
 Un puntatore al `IUnknown` interfaccia dell'elemento padre.
 
 ### <a name="return-value"></a>Valore restituito

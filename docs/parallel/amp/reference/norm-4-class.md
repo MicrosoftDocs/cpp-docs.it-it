@@ -1,5 +1,5 @@
 ---
-title: Classe norm_4 | Documenti Microsoft
+title: Classe norm_4 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a2b5c47f6283f4a4b9fefb5683c8e7be0c4bdb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058094"
 ---
 # <a name="norm4-class"></a>Classe norm_4
-Rappresenta uno short vector di quattro numeri normali.  
+Rappresenta un vettore short di quattro numeri normale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -306,7 +306,7 @@ class norm_4;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore norm_4](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore norm_4](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -611,7 +611,7 @@ class norm_4;
   
 ##  <a name="ctor"></a> norm_4 
 
- Predefinito, costruttore inizializza tutti gli elementi con 0.  
+ Default costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 norm_4() restrict(amp,
@@ -683,23 +683,23 @@ explicit inline norm_4(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V0`  
- Il valore per inizializzare l'elemento 0.  
+*_V0*<br/>
+Il valore per inizializzare l'elemento 0.  
   
- `_V1`  
- Il valore per inizializzare l'elemento 1.  
+*V1*<br/>
+Il valore per inizializzare l'elemento 1.  
   
- `_V2`  
- Il valore per inizializzare l'elemento 2.  
+*_V2*<br/>
+Il valore per inizializzare l'elemento 2.  
   
- `_V3`  
- Il valore per inizializzare l'elemento 3.  
+*_V3*<br/>
+Il valore per inizializzare l'elemento 3.  
   
- `_V`  
- Il valore per l'inizializzazione.  
+*ISOLA*<br/>
+Il valore di inizializzazione.  
   
- `_Other`  
- Oggetto utilizzato per inizializzare.  
+*_Other*<br/>
+Oggetto utilizzato per inizializzare.  
   
 ##  <a name="norm_4__size"></a> Dimensioni 
 

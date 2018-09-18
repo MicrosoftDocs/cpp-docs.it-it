@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0014 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0014 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d088acfe817dc2980f593d3e013a021646586f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc13a7eb9a9b86ac57c66ff8c09c03ea9b3f3e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074740"
 ---
 # <a name="project-build-error-prj0014"></a>Errore di compilazione progetto PRJ0014
-L'oggetto processo utilizzato per controllare i processi compilati non è riuscita.  Impossibile continuare la compilazione.  
-  
- Si è verificato un errore nell'ambiente di sviluppo.  
-  
- Per correggere l'errore, chiudere e ricaricare il progetto. Se necessario, chiudere e riavviare Visual Studio.
+
+L'oggetto processo usato per controllare i processi generati non è riuscita.  Impossibile continuare la compilazione.
+
+Si è verificato un errore nell'ambiente di sviluppo.
+
+Per risolvere questo errore, chiudere e ricaricare il progetto. Se necessario, chiudere e riavviare Visual Studio.

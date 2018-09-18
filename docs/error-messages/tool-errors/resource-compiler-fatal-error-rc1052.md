@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1052 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RC1052 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e0651f8c2b48ea69e7137ffa3415ddaffd8fe44
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef276bdecf675a178f43f22e3aef88f4ed1c73cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071185"
 ---
 # <a name="resource-compiler-fatal-error-rc1052"></a>Errore irreversibile del compilatore di risorse RC1052
-limite del compilatore: blocchi #if o #ifdef eccessivamente annidati  
-  
- Il programma ha superato il livello massimo di annidamento consentito per le direttive `#if` e `#ifdef`.  
-  
- L'errore può essere causato da file di inclusione che usano tali direttive per il preprocessore.  
-  
- Per risolvere il problema, ridurre il numero direttive `#if` e `#ifdef` annidate nel file di risorse. Se il problema è causato da file di intestazione inclusi nel file di risorse, ridurre il numero di direttive `#if` e `#ifdef` nei file di intestazione. Se ciò non è possibile, considerare la creazione e l'inclusione di un nuovo file di intestazione nel file di risorse, eseguendo il preprocessore nei file di intestazione inclusi esistenti. Per ulteriori informazioni, vedere il [/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md) l'opzione del compilatore.
+
+limite del compilatore: blocchi #if o #ifdef eccessivamente annidati
+
+Il programma ha superato il livello massimo di annidamento consentito per le direttive `#if` e `#ifdef`.
+
+L'errore può essere causato da file di inclusione che usano tali direttive per il preprocessore.
+
+Per risolvere il problema, ridurre il numero direttive `#if` e `#ifdef` annidate nel file di risorse. Se il problema è causato da file di intestazione inclusi nel file di risorse, ridurre il numero di direttive `#if` e `#ifdef` nei file di intestazione. Se ciò non è possibile, considerare la creazione e l'inclusione di un nuovo file di intestazione nel file di risorse, eseguendo il preprocessore nei file di intestazione inclusi esistenti. Per altre informazioni, vedere la [/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md) opzione del compilatore.

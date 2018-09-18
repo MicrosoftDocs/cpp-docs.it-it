@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 3) C4522 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4522 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e57f32c715b6e6f0846025d5010631c746589bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65662d3e62abbeb06127c7b5a49479a23fb20a7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298935"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070938"
 ---
 # <a name="compiler-warning-level-3-c4522"></a>Avviso del compilatore (livello 3) C4522
-'class': specificato più di un operatore di assegnazione  
-  
- La classe dispone di più operatori di assegnazione di un solo tipo. Questo avviso è puramente informativo; i costruttori possono essere chiamati nel programma.  
-  
- Utilizzare il [avviso](../../preprocessor/warning.md) pragma per non visualizzare questo avviso.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4522.  
-  
-```  
-// C4522.cpp  
-// compile with: /EHsc /W3  
-#include <iostream>  
-  
-using namespace std;  
-class A {  
-public:  
-   A& operator=( A & o ) { cout << "A&" << endl; return *this; }  
-   A& operator=( const A &co ) { cout << "const A&" << endl; return *this; }   // C4522  
-};  
-  
-int main() {  
-   A o1, o2;  
-   o2 = o1;  
-   const A o3;  
-   o1 = o3;  
-}  
+
+'class': specificato più di un operatore di assegnazione
+
+La classe dispone di più operatori di assegnazione di un singolo tipo. Questo avviso è puramente informativo; i costruttori possono essere chiamati nel programma.
+
+Usare la [avviso](../../preprocessor/warning.md) pragma per non visualizzare questo avviso.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4522.
+
+```
+// C4522.cpp
+// compile with: /EHsc /W3
+#include <iostream>
+
+using namespace std;
+class A {
+public:
+   A& operator=( A & o ) { cout << "A&" << endl; return *this; }
+   A& operator=( const A &co ) { cout << "const A&" << endl; return *this; }   // C4522
+};
+
+int main() {
+   A o1, o2;
+   o2 = o1;
+   const A o3;
+   o1 = o3;
+}
 ```

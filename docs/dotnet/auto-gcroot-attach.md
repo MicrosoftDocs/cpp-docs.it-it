@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::Attach | Documenti Microsoft
+title: auto_gcroot::Attach | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 242c83ce7a22d56d3c584b50ec93c941b45213ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ddd11cf6c9fbc1b0a032a609f1315e581290c01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074981"
 ---
 # <a name="autogcrootattach"></a>auto_gcroot::attach
 Collegare `auto_gcroot` a un oggetto.  
@@ -46,14 +46,14 @@ auto_gcroot<_element_type> & attach(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_right`  
- Oggetto da connettere, o un `auto_gcroot` contenente l'oggetto da connettere.  
+*a destra*<br/>
+Oggetto da connettere, o un `auto_gcroot` contenente l'oggetto da collegare.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto `auto_gcroot` corrente.  
   
 ## <a name="remarks"></a>Note  
- Se `_right` è un `auto_gcroot`, rilascia la proprietà dell'oggetto prima che l'oggetto è connesso all'oggetto corrente `auto_gcroot`.  
+ Se `_right` è un `auto_gcroot`, rilascia la proprietà del relativo oggetto prima che l'oggetto è connesso all'oggetto corrente `auto_gcroot`.  
   
 ## <a name="example"></a>Esempio  
   

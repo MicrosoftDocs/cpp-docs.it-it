@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0055 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0055 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce01ecbc6913c844cadcf2d3f761cfe815f68a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ee5fc5467e656bd811c89f78ecf7d36f6df1b54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066383"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Errore dell‘analizzatore di espressioni CXX0055
-simbolo ambiguo nell'operatore di contesto  
-  
- Un simbolo nell'operatore di contesto (**{}**) definito per più di un simbolo nel programma.  
-  
- L'operatore di risoluzione ambito (`::`) potrebbe essere in grado di risolvere l'ambiguità.  
-  
- Questo errore è identico all'errore CAN0055.
+
+simbolo ambiguo nell'operatore di contesto
+
+Un simbolo nell'operatore di contesto (**{}**) è riferito a più di un simbolo nel programma.
+
+L'operatore di risoluzione ambito (`::`) potrebbe essere in grado di risolvere l'ambiguità.
+
+Questo errore è identico all'errore CAN0055.

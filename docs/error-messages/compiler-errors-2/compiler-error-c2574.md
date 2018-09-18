@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2574 | Documenti Microsoft
+title: Errore del compilatore C2574 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2832800f85e390c65d225671db9691b4bc13a6f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51874eed00c66832cbae11490147eca50c2d5071
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058394"
 ---
 # <a name="compiler-error-c2574"></a>Errore del compilatore C2574
-'distruttore': non può essere dichiarato static  
-  
- Né i distruttori né i costruttori possono essere dichiarati `static`.  
-  
- L'esempio seguente genera l'errore C2574:  
-  
-```  
-// C2574.cpp  
-// compile with: /c  
-class A {  
-   virtual static ~A();   // C2574  
-   //  try the following line instead  
-   // virtual ~A();  
-};  
+
+'distruttore': non può essere dichiarato statico
+
+I distruttori, né i costruttori possono essere dichiarati `static`.
+
+L'esempio seguente genera l'errore C2574:
+
+```
+// C2574.cpp
+// compile with: /c
+class A {
+   virtual static ~A();   // C2574
+   //  try the following line instead
+   // virtual ~A();
+};
 ```

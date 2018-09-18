@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3022 | Documenti Microsoft
+title: Errore del compilatore C3022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0211567dfe7d61e0d7d817095479411720715bd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ce4a6cbc0a6cb90cf022c7bfc18295694b4d5e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243561"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065231"
 ---
 # <a name="compiler-error-c3022"></a>Errore del compilatore C3022
-'clause': tipo di pianificazione non valido per 'value' nella direttiva OpenMP 'directive'  
-  
- È stato passato un valore non supportato a una clausola.  
-  
- L'esempio seguente genera l'errore C3022:  
-  
-```  
-// C3022.cpp  
-// compile with: /openmp /link vcomps.lib  
-#include <stdio.h>  
-#include "omp.h"  
-  
-int main() {  
-   int i;  
-  
-   #pragma omp parallel for schedule(10)   // C3022  
-   for (i = 0; i < 10; ++i) ;  
-  
-   #pragma omp parallel for schedule(x)   // C3022  
-   for (i = 0; i < 10; ++i) ;  
-  
-   // OK  
-   #pragma omp parallel for schedule(runtime)  
-   for (i = 0; i < 10; ++i)  
-   ;  
-}  
+
+'clause': tipo di pianificazione non valido per 'value' nella direttiva OpenMP 'directive'
+
+È stato passato un valore non supportato a una clausola.
+
+L'esempio seguente genera l'errore C3022:
+
+```
+// C3022.cpp
+// compile with: /openmp /link vcomps.lib
+#include <stdio.h>
+#include "omp.h"
+
+int main() {
+   int i;
+
+   #pragma omp parallel for schedule(10)   // C3022
+   for (i = 0; i < 10; ++i) ;
+
+   #pragma omp parallel for schedule(x)   // C3022
+   for (i = 0; i < 10; ++i) ;
+
+   // OK
+   #pragma omp parallel for schedule(runtime)
+   for (i = 0; i < 10; ++i)
+   ;
+}
 ```

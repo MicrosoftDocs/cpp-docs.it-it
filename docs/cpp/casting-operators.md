@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b2aa683f539e643127f8f71ff536d4c2ca2c9c0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 341812299d8cf95e351a087e9957dc0425cb25b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407526"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075943"
 ---
 # <a name="casting-operators"></a>Operatori di cast
-Nel linguaggio C++ sono disponibili numerosi operatori di cast specifici. Tali operatori consentono di rimuovere parte dell'ambiguità e alcuni problemi relativi agli operatori cast obsoleti del linguaggio C. Gli operatori sono i seguenti:  
-  
--   [dynamic_cast](../cpp/dynamic-cast-operator.md) utilizzato per la conversione dei tipi polimorfici.  
-  
--   [static_cast](../cpp/static-cast-operator.md) utilizzato per la conversione dei tipi non polimorfici.  
-  
--   [const_cast](../cpp/const-cast-operator.md) utilizzato per rimuovere il **const**, **volatile**, e **unaligned** attributi.  
-  
--   [reinterpret_cast](../cpp/reinterpret-cast-operator.md) utilizzato per la reinterpretazione semplice dei bit.  
-  
--   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) utilizzati per produrre codice MSIL verificabile.  
-  
- Uso **const_cast** e **reinterpret_cast** come ultima risorsa, poiché questi operatori provocare gli stessi cast obsoleti. Tali operatori sono tuttavia ancora necessari per sostituire completamente gli operatori cast obsoleti.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cast](../cpp/casting.md)
+
+Nel linguaggio C++ sono disponibili numerosi operatori di cast specifici. Tali operatori consentono di rimuovere parte dell'ambiguità e alcuni problemi relativi agli operatori cast obsoleti del linguaggio C. Gli operatori sono i seguenti:
+
+- [dynamic_cast](../cpp/dynamic-cast-operator.md) utilizzato per la conversione dei tipi polimorfici.
+
+- [static_cast](../cpp/static-cast-operator.md) utilizzato per la conversione dei tipi non polimorfici.
+
+- [const_cast](../cpp/const-cast-operator.md) utilizzato per rimuovere il **const**, **volatile**, e **unaligned** attributi.
+
+- [reinterpret_cast](../cpp/reinterpret-cast-operator.md) utilizzato per la reinterpretazione semplice dei bit.
+
+- [safe_cast](../windows/safe-cast-cpp-component-extensions.md) utilizzati per produrre codice MSIL verificabile.
+
+Uso **const_cast** e **reinterpret_cast** come ultima risorsa, poiché questi operatori provocare gli stessi cast obsoleti. Tali operatori sono tuttavia ancora necessari per sostituire completamente gli operatori cast obsoleti.
+
+## <a name="see-also"></a>Vedere anche
+
+[Cast](../cpp/casting.md)

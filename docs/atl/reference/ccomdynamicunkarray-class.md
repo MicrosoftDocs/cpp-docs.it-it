@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b36f19cc6e3deddbd5984e63b70c61a0ca8ea8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e776fd88799999ce175ba2efc137fc0353cbe65a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762769"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068468"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Classe CComDynamicUnkArray
 
@@ -93,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parametri
 
-*pUnk*  
+*pUnk*<br/>
 Il `IUnknown` puntatore da aggiungere alla matrice.
 
 ### <a name="return-value"></a>Valore restituito
@@ -174,7 +174,7 @@ IUnknown* GetAt(int nIndex);
 
 ### <a name="parameters"></a>Parametri
 
-*nIndex*  
+*nIndex*<br/>
 Indice dell'elemento da recuperare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -191,7 +191,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Parametri
 
-*ppFind*  
+*ppFind*<br/>
 Il `IUnknown` puntatore per cui è richiesto il cookie associato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -224,7 +224,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parametri
 
-*dwCookie*  
+*dwCookie*<br/>
 Per il quale il cookie associato `IUnknown` puntatore è obbligatorio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -241,7 +241,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parametri
 
-*dwCookie*  
+*dwCookie*<br/>
 Il cookie che fa riferimento il `IUnknown` puntatore da rimuovere dalla matrice.
 
 ### <a name="return-value"></a>Valore restituito
@@ -250,5 +250,5 @@ Restituisce TRUE se il puntatore viene rimosso; in caso contrario, FALSE.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComUnkArray](../../atl/reference/ccomunkarray-class.md)   
+[Classe CComUnkArray](../../atl/reference/ccomunkarray-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

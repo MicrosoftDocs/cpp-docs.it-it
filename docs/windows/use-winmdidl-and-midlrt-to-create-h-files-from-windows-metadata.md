@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071362"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Procedura: utilizzare winmdidl.exe e midlrt.exe per creare file con estensione .h dai metadati di Windows
 
@@ -42,24 +42,25 @@ Per impostazione predefinita in [Windows 8.1, winmdidl.exe e midlrt.exe si trova
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 Impedisce la visualizzazione sulla console delle informazioni sul copyright e il numero di versione di winmdidl. 
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 Non usato.
 
-`/time`  
+**/ ora**<br/>
 Visualizza il tempo di esecuzione totale nell'output della console.
 
-/OutDir:\<dir > specifica una directory di output. Se il percorso contiene spazi, usare le virgolette. La directory di output predefinita è  *\<unità >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program file (x86) \Microsoft Visual Studio 12.0\\.
+**/OutDir:**<em>dir</em><br/>
+Specifica una directory di output. Se il percorso contiene spazi, usare le virgolette. La directory di output predefinita è  *\<unità >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program file (x86) \Microsoft Visual Studio 12.0\\.
 
-`/banner:<file>`  
+**/ banner:**<em>file</em><br/>
 Specifica un file che contiene del testo personalizzato da anteporre al messaggio di copyright predefinito e al numero di versione di winmdidl all'inizio del file IDL generato. Se il percorso contiene spazi, usare le virgolette.
 
-`/utf8`  
+**/utf8**<br/>
 Comporta la formattazione del file nel formato UTF-8.
 
-`Winmdfile`  
+*Winmdfile*<br/>
 Nome del file con estensione winmd da analizzare. Se il percorso contiene spazi, usare le virgolette.
 
 ## <a name="midlrt-command-line-arguments"></a>Argomenti della riga di comando di Midlrt

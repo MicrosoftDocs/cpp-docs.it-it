@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1045 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1045 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673b20dde7156025c6aa56c487433eebe9e77aa3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c2b9be4f7440d9e79d603e917c1886aebe7c44af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056885"
 ---
 # <a name="nmake-fatal-error-u1045"></a>Errore irreversibile U1045 di NMAKE 
-generazione non riuscita: messaggio  
-  
- Un programma o un comando chiamato da NMAKE non è riuscito per il motivo specificato. Quando NMAKE chiama un altro programma, ad esempio il compilatore o il linker, la chiamata potrebbe non riuscire o può essere restituito un errore dal programma chiamato. Questo messaggio viene usato per segnalare l'errore.  
-  
- Per risolvere questo problema, determinare innanzitutto la causa dell'errore. È possibile utilizzare i comandi riportati dal NMAKE [/N](../../build/nmake-options.md) opzione per verificare le impostazioni di ambiente e per ripetere le azioni eseguite da NMAKE nella riga di comando.
+
+generazione non riuscita: messaggio
+
+Un programma o un comando chiamato da NMAKE non è riuscito per il motivo specificato. Quando NMAKE chiama un altro programma, ad esempio il compilatore o il linker, la chiamata potrebbe non riuscire o può essere restituito un errore dal programma chiamato. Questo messaggio viene usato per segnalare l'errore.
+
+Per risolvere questo problema, determinare innanzitutto la causa dell'errore. È possibile usare i comandi riportati dal NMAKE [/N](../../build/nmake-options.md) opzione per verificare le impostazioni dell'ambiente e per ripetere le azioni eseguite da NMAKE nella riga di comando.
