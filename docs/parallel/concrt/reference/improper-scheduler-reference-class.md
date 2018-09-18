@@ -1,5 +1,5 @@
 ---
-title: Classe improper_scheduler_reference | Documenti Microsoft
+title: Classe improper_scheduler_reference | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320e0f4560baa5b07c982ca9af6134cf2bfdc292
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: adc6467a66163eeef5916580181005cac1a0a4b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016937"
 ---
 # <a name="improperschedulerreference-class"></a>Classe improper_scheduler_reference
 Questa classe descrive un'eccezione generata quando il metodo `Reference` viene chiamato su un oggetto `Scheduler` che si sta chiudendo, da un contesto che non fa parte dell'unità di pianificazione.  
@@ -63,8 +63,8 @@ improper_scheduler_reference() throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Messaggio descrittivo dell'errore.  
+*Messaggio*<br/>
+Messaggio descrittivo dell'errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   

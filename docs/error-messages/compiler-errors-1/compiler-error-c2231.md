@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2231 | Documenti Microsoft
+title: Errore del compilatore C2231 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775d559c332e37e91be2b89b10e046e0f8c1abd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6cd35d20f4ce0377aa5ae5cd66cd8c08004fb8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021678"
 ---
 # <a name="compiler-error-c2231"></a>Errore del compilatore C2231
-'.': operando sinistro punta a 'class-key', utilizzare '->'  
-  
- L'operando a sinistra dell'operazione di selezione dei membri (.) è un puntatore e non una classe, struttura o unione.  
-  
- L'esempio seguente genera l'errore C2231:  
-  
-```  
-// C2231.c  
-struct S {  
-   int member;  
-} s, *ps = &s;  
-int main() {  
-   ps.member = 0;   // C2231  
-  
-   // OK  
-   ps->member = 0;   // crash  
-   s.member = 0;  
-}  
+
+'.': operando sinistro punta a 'class-key', usare '->'
+
+L'operando a sinistra dell'operazione di selezione dei membri (.) è un puntatore e non una classe, struttura o unione.
+
+L'esempio seguente genera l'errore C2231:
+
+```
+// C2231.c
+struct S {
+   int member;
+} s, *ps = &s;
+int main() {
+   ps.member = 0;   // C2231
+
+   // OK
+   ps->member = 0;   // crash
+   s.member = 0;
+}
 ```

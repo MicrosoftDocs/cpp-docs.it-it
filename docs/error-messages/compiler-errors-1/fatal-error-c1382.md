@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1382 | Documenti Microsoft
+title: Errore irreversibile C1382 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07c6af1209faface96585224cbd08b4e35101478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a5a6ce312c5ef886ef25e8de46e6d3376eded2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229255"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030653"
 ---
 # <a name="fatal-error-c1382"></a>Errore irreversibile C1382
-il file PCH 'file' è stato ricompilato 'obj' è stato generato. Ricompilare l'oggetto  
-  
- Quando si utilizza [/LTCG](../../build/reference/ltcg-link-time-code-generation.md), il compilatore ha rilevato un file pch più recente di un file obj CIL che fa riferimento ad esso. Le informazioni nel file obj CIL sono scadute. Ricompilare l'oggetto.  
-  
- C1382 può verificarsi anche se si compila con **/Yc**, ma anche passare i file del codice sorgente più al compilatore.  Per risolvere, non utilizzare **/Yc** durante il passaggio di origine più file di codice al compilatore.  Per ulteriori informazioni, vedere [/Yc (Crea precompilata File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md).
+
+il file PCH 'file' è stato generato 'obj' è stato ricompilato. Ricompilare l'oggetto
+
+Quando si usa [/LTCG](../../build/reference/ltcg-link-time-code-generation.md), il compilatore ha rilevato un file con estensione pch più recente di un file obj CIL che punta ad esso. Le informazioni nel file con estensione obj elenco CIL non sono aggiornate. Ricompilare l'oggetto.
+
+C1382 può verificarsi anche se si esegue la compilazione con **/Yc**, ma anche passare più origini per i file di codice al compilatore.  Per risolvere, non utilizzare **/Yc** quando si passano più origini, i file di codice al compilatore.  Per altre informazioni, vedere [/Yc (Crea precompilati o meno File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md).

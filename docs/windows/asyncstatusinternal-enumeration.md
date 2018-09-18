@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b389e5b137ef3cdb94ffbb1fc381ebe2e5813963
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4c7751929a55993876034bb3c1918b82193681fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016884"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal (enumerazione)
 
@@ -40,19 +40,19 @@ Specifica un mapping tra enumerazioni interne per lo stato delle operazioni asin
 
 ## <a name="members"></a>Membri
 
-`_Created`  
+`_Created`<br/>
 Equivalente a `::Windows::Foundation::AsyncStatus::Created`
 
-`_Started`  
+`_Started`<br/>
 Equivalente a `::Windows::Foundation::AsyncStatus::Started`
 
-`_Completed`  
+`_Completed`<br/>
 Equivalente a `::Windows::Foundation::AsyncStatus::Completed`
 
-`_Cancelled`  
+`_Cancelled`<br/>
 Equivalente a `::Windows::Foundation::AsyncStatus::Cancelled`
 
-`_Error`  
+`_Error`<br/>
 Equivalente a `::Windows::Foundation::AsyncStatus::Error`
 
 ## <a name="requirements"></a>Requisiti

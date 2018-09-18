@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4162 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4162 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2789f6aa63c8a547a34ec6adfd89c1e1163c68e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a36fa6a63443bf2272df7ce6125fd77afedf100f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027180"
 ---
-# <a name="compiler-warning-level-1-c4162"></a>Compilatore (livello 1) Avviso C4162
-'identifier': nessuna funzione con collegamento C trovato  
-  
- Una funzione con collegamento C viene dichiarata ma non è stata trovata.  
-  
- Per risolvere il problema, compilare in un file c (richiamare il compilatore C).  Se è necessario richiamare il compilatore C++, posizionare extern "C" prima della dichiarazione di funzione.  
-  
- L'esempio seguente genera l'errore C4162  
-  
-```  
-// C4162.cpp  
-// compile with: /c /W1  
-unsigned char _bittest(long* a, long b);  
-#pragma intrinsic (_bittest)   // C4162  
-  
-int main() {  
-   bool bit;  
-   long num = 78002;  
-   bit = _bittest(&num, 5);  
-}  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C4162b.cpp  
-// compile with: /c  
-extern "C"  
-unsigned char _bittest(long* a, long b);  
-#pragma intrinsic (_bittest)  
-  
-int main() {  
-   bool bit;  
-   long num = 78002;  
-   bit = _bittest(&num, 5);  
-}  
+# <a name="compiler-warning-level-1-c4162"></a>Compilatore Warning (level 1) C4162
+
+'identifier': nessuna funzione con collegamento C trovato
+
+Una funzione con collegamento C viene dichiarata ma non è stata trovata.
+
+Per risolvere questo problema, compilare in un file c (richiamare il compilatore C).  Se è necessario richiamare il compilatore C++, inserire "C" esterno prima della dichiarazione di funzione.
+
+L'esempio seguente genera l'errore C4162
+
+```
+// C4162.cpp
+// compile with: /c /W1
+unsigned char _bittest(long* a, long b);
+#pragma intrinsic (_bittest)   // C4162
+
+int main() {
+   bool bit;
+   long num = 78002;
+   bit = _bittest(&num, 5);
+}
+```
+
+Possibile soluzione:
+
+```
+// C4162b.cpp
+// compile with: /c
+extern "C"
+unsigned char _bittest(long* a, long b);
+#pragma intrinsic (_bittest)
+
+int main() {
+   bool bit;
+   long num = 78002;
+   bit = _bittest(&num, 5);
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Classe message_processor | Documenti Microsoft
+title: Classe message_processor | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f720ad2590a731792f79ef66a68dd2894a15517d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026920"
 ---
 # <a name="messageprocessor-class"></a>Classe message_processor
 La classe `message_processor` rappresenta la classe base astratta per l'elaborazione degli oggetti `message`. Non esiste garanzia sull'ordinamento dei messaggi.  
@@ -39,8 +39,8 @@ class message_processor;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di dati del payload all'interno di messaggi gestiti da questo `message_processor` oggetto.  
+*T*<br/>
+Il tipo di dati del payload all'interno di messaggi gestito da questo `message_processor` oggetto.  
   
 ## <a name="members"></a>Membri  
   
@@ -56,13 +56,13 @@ class message_processor;
 |----------|-----------------|  
 |[async_send](#async_send)|Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo asincrono nel blocco.|  
 |[sync_send](#sync_send)|Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo sincrono nel blocco.|  
-|[wait](#wait)|Quando sottoposto a override in una classe derivata, attende completare tutte le operazioni asincrone.|  
+|[wait](#wait)|Quando sottoposto a override in una classe derivata, attende che tutte le operazioni asincrone completare.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|Quando sottoposto a override in una classe derivata, esegue l'elaborazione diretta dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.|  
+|[process_incoming_message](#process_incoming_message)|Quando sottoposto a override in una classe derivata, esegue l'elaborazione futura dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `message_processor`  
@@ -81,15 +81,15 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Msg`  
- Oggetto `message` oggetto a cui inviare in modo asincrono.  
+*Msg*<br/>
+Oggetto `message` oggetto da inviare in modo asincrono.  
   
 ### <a name="remarks"></a>Note  
  Le implementazioni del processore devono eseguire l'override di questo metodo.  
   
 ##  <a name="process_incoming_message"></a> process_incoming_message 
 
- Quando sottoposto a override in una classe derivata, esegue l'elaborazione diretta dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.  
+ Quando sottoposto a override in una classe derivata, esegue l'elaborazione futura dei messaggi nel blocco. Chiamato una volta ogni volta che viene aggiunto un nuovo messaggio e la coda risulta vuota.  
   
 ```
 virtual void process_incoming_message() = 0;
@@ -107,15 +107,15 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Msg`  
- Oggetto `message` oggetto a cui inviare in modo sincrono.  
+*Msg*<br/>
+Oggetto `message` oggetto da inviare in modo sincrono.  
   
 ### <a name="remarks"></a>Note  
  Le implementazioni del processore devono eseguire l'override di questo metodo.  
   
-##  <a name="wait"></a> attesa 
+##  <a name="wait"></a> Attendere 
 
- Quando sottoposto a override in una classe derivata, attende completare tutte le operazioni asincrone.  
+ Quando sottoposto a override in una classe derivata, attende che tutte le operazioni asincrone completare.  
   
 ```
 virtual void wait() = 0;

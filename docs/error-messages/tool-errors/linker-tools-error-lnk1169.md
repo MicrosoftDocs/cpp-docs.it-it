@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1169 errore | Documenti Microsoft
+title: Strumenti del linker LNK1169 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79682f58111804b3c1340aa7dc5ab5f0c97e0d68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30171eedd43695b26be24f6c7e2c9751ae8fcdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036046"
 ---
 # <a name="linker-tools-error-lnk1169"></a>Errore degli strumenti del linker LNK1169
-uno o più simboli definiti trovati più volte  
-  
- La compilazione non riuscita a causa di più definizioni di uno o più simboli. Questo errore è preceduto dall'errore [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).  
-  
- Il [/Force](../../build/reference/force-force-file-output.md) o **/FORCE** viene eseguito l'override di questo errore.
+
+uno o più simboli definiti trovati più volte
+
+Compilazione non riuscita a causa di più definizioni di uno o più simboli. Questo errore è preceduto dall'errore [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).
+
+Il [/Force](../../build/reference/force-force-file-output.md) oppure **/Force: multiple** opzione esegue l'override di questo errore.

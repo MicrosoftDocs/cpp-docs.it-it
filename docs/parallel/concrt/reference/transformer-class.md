@@ -1,5 +1,5 @@
 ---
-title: Classe Transformer | Documenti Microsoft
+title: Classe Transformer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9ea43e1d3f6f369b93e92e91fa3606cf7d6af5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3fd8dc0f3e013fdd50d855ce6da803cfecbe653b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017631"
 ---
 # <a name="transformer-class"></a>Classe transformer
 Un blocco della messaggistica `transformer` è un `propagator_block` multi-origine, a destinazione singola, che può accettare messaggi di un tipo ed è in grado di archiviare un numero non associato di messaggi di un tipo diverso.  
@@ -47,11 +47,11 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 ```   
   
 #### <a name="parameters"></a>Parametri  
- `_Input`  
- Il tipo di payload dei messaggi accettati dal buffer.  
+*Input*<br/>
+Il tipo di payload dei messaggi accettate dal buffer.  
   
- `_Output`  
- Il tipo di payload dei messaggi archiviati e propagata dal buffer.  
+*Output*<br/>
+Il tipo di payload dei messaggi archiviati e propagata dal buffer.  
   
 ## <a name="members"></a>Membri  
   
@@ -66,19 +66,19 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|Accetta un messaggio offerto da questo `transformer` blocco della messaggistica, trasferire la proprietà al chiamante.|  
-|[consume_message](#consume_message)|Utilizza un messaggio offerto in precedenza il `transformer` e riservato dalla destinazione del trasferimento della proprietà al chiamante.|  
-|[link_target_notification](#link_target_notification)|Un callback di notifica che una nuova destinazione è stata collegata a questo `transformer` blocco della messaggistica.|  
-|[propagate_message](#propagate_message)|Passare in modo asincrono un messaggio da un `ISource` questo blocco `transformer` blocco della messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.|  
+|[accept_message](#accept_message)|Accetta un messaggio in cui è stato offerto da questo `transformer` blocco della messaggistica, trasferimento di proprietà al chiamante.|  
+|[consume_message](#consume_message)|Utilizza un messaggio offerto in precedenza dal `transformer` e riservati dalla destinazione, trasferimento di proprietà al chiamante.|  
+|[link_target_notification](#link_target_notification)|Un callback che invia una notifica che una nuova destinazione è stata collegata a questa `transformer` blocco della messaggistica.|  
+|[propagate_message](#propagate_message)|Consente di passare in modo asincrono un messaggio da un `ISource` a questo blocco `transformer` blocco della messaggistica. Viene richiamato per la `propagate` metodo, quando viene chiamato da un blocco di origine.|  
 |[propagate_to_any_targets](#propagate_to_any_targets)|Esegue la funzione del trasformatore nei messaggi di input.|  
 |[release_message](#release_message)|Rilascia una prenotazione messaggio precedente. (Esegue l'override [source_block:: release_message](source-block-class.md#release_message).)|  
-|[reserve_message](#reserve_message)|Riserva un messaggio precedentemente offerto da questo `transformer` blocco della messaggistica. (Esegue l'override [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[resume_propagation](#resume_propagation)|Riprende la propagazione dopo una prenotazione è stata rilasciata. (Esegue l'override [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
-|[send_message](#send_message)|Passare in modo sincrono un messaggio da un `ISource` questo blocco `transformer` blocco della messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.|  
+|[reserve_message](#reserve_message)|Consente di riservare un messaggio offerto in precedenza da questo `transformer` blocco della messaggistica. (Esegue l'override [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Riprende la propagazione dopo il rilascio di una prenotazione. (Esegue l'override [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[send_message](#send_message)|Consente di passare in modo sincrono un messaggio da un `ISource` a questo blocco `transformer` blocco della messaggistica. Viene richiamato per la `send` metodo, quando viene chiamato da un blocco di origine.|  
 |[supports_anonymous_source](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. (Esegue l'override [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).  
+ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [ISource](isource-class.md)  
@@ -98,40 +98,40 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 ##  <a name="accept_message"></a> accept_message 
 
- Accetta un messaggio offerto da questo `transformer` blocco della messaggistica, trasferire la proprietà al chiamante.  
+ Accetta un messaggio in cui è stato offerto da questo `transformer` blocco della messaggistica, trasferimento di proprietà al chiamante.  
   
 ```
 virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_MsgId`  
- Il `runtime_object_identity` proposto `message` oggetto.  
+*MsgId*<br/>
+Il `runtime_object_identity` proposto `message` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al `message` che il chiamante dispone ora di proprietà dell'oggetto.  
+ Un puntatore al `message` che il chiamante ora possiede la proprietà dell'oggetto.  
   
 ##  <a name="consume_message"></a> consume_message 
 
- Utilizza un messaggio offerto in precedenza il `transformer` e riservato dalla destinazione del trasferimento della proprietà al chiamante.  
+ Utilizza un messaggio offerto in precedenza dal `transformer` e riservati dalla destinazione, trasferimento di proprietà al chiamante.  
   
 ```
 virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_MsgId`  
- Il `runtime_object_identity` del `message` dell'oggetto viene utilizzato.  
+*MsgId*<br/>
+Il `runtime_object_identity` del `message` consumata dell'oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al `message` che il chiamante dispone ora di proprietà dell'oggetto.  
+ Un puntatore al `message` che il chiamante ora possiede la proprietà dell'oggetto.  
   
 ### <a name="remarks"></a>Note  
- Simile a `accept`, ma è sempre preceduto da una chiamata a `reserve`.  
+ Simile a `accept`, ma viene sempre preceduta da una chiamata a `reserve`.  
   
 ##  <a name="link_target_notification"></a> link_target_notification 
 
- Un callback di notifica che una nuova destinazione è stata collegata a questo `transformer` blocco della messaggistica.  
+ Un callback che invia una notifica che una nuova destinazione è stata collegata a questa `transformer` blocco della messaggistica.  
   
 ```
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
@@ -139,7 +139,7 @@ virtual void link_target_notification(_Inout_ ITarget<_Output> *);
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- Passare in modo asincrono un messaggio da un `ISource` questo blocco `transformer` blocco della messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.  
+ Consente di passare in modo asincrono un messaggio da un `ISource` a questo blocco `transformer` blocco della messaggistica. Viene richiamato per la `propagate` metodo, quando viene chiamato da un blocco di origine.  
   
 ```
 virtual message_status propagate_message(
@@ -148,14 +148,14 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_PMessage`  
- Puntatore all'oggetto `message`.  
+*PMessage*<br/>
+Puntatore all'oggetto `message`.  
   
- `_PSource`  
- Un puntatore al blocco di origine del messaggio di offerta.  
+*PSource*<br/>
+Un puntatore al blocco di origine offrendo il messaggio.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [message_status](concurrency-namespace-enums.md) indicazione dei quali ha deciso di destinazione con il messaggio.  
+ Oggetto [message_status](concurrency-namespace-enums.md) indicazione di cosa ha deciso di destinazione a che fare con il messaggio.  
   
 ##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
@@ -174,30 +174,30 @@ virtual void release_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_MsgId`  
- Il `runtime_object_identity` del `message` dell'oggetto viene rilasciato.  
+*MsgId*<br/>
+Il `runtime_object_identity` del `message` oggetto rilasciato.  
   
 ##  <a name="reserve_message"></a> reserve_message 
 
- Riserva un messaggio precedentemente offerto da questo `transformer` blocco della messaggistica.  
+ Consente di riservare un messaggio offerto in precedenza da questo `transformer` blocco della messaggistica.  
   
 ```
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_MsgId`  
- Il `runtime_object_identity` del `message` viene riservato dell'oggetto.  
+*MsgId*<br/>
+Il `runtime_object_identity` del `message` oggetto riservato.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se il messaggio è stato riservato, `false` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Dopo aver `reserve` viene chiamato se restituisce `true`, `consume` o `release` deve essere chiamato per assumere o rilasciare la proprietà del messaggio.  
+ Dopo aver `reserve` viene chiamato, se viene restituito `true`, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.  
   
 ##  <a name="resume_propagation"></a> resume_propagation 
 
- Riprende la propagazione dopo una prenotazione è stata rilasciata.  
+ Riprende la propagazione dopo il rilascio di una prenotazione.  
   
 ```
 virtual void resume_propagation();
@@ -205,7 +205,7 @@ virtual void resume_propagation();
   
 ##  <a name="send_message"></a> send_message 
 
- Passare in modo sincrono un messaggio da un `ISource` questo blocco `transformer` blocco della messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.  
+ Consente di passare in modo sincrono un messaggio da un `ISource` a questo blocco `transformer` blocco della messaggistica. Viene richiamato per la `send` metodo, quando viene chiamato da un blocco di origine.  
   
 ```
 virtual message_status send_message(
@@ -214,14 +214,14 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_PMessage`  
- Puntatore all'oggetto `message`.  
+*PMessage*<br/>
+Puntatore all'oggetto `message`.  
   
- `_PSource`  
- Un puntatore al blocco di origine del messaggio di offerta.  
+*PSource*<br/>
+Un puntatore al blocco di origine offrendo il messaggio.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [message_status](concurrency-namespace-enums.md) indicazione dei quali ha deciso di destinazione con il messaggio.  
+ Oggetto [message_status](concurrency-namespace-enums.md) indicazione di cosa ha deciso di destinazione a che fare con il messaggio.  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
@@ -272,20 +272,20 @@ transformer(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Func`  
- Una funzione che sarà richiamata per ogni messaggio accettato.  
+*Func*<br/>
+Una funzione che verrà richiamata per ogni messaggio accettato.  
   
- `_PTarget`  
- Puntatore a un blocco di destinazione a cui collegare il trasformatore.  
+*PTarget*<br/>
+Puntatore a un blocco di destinazione a cui collegare il trasformatore.  
   
- `_Filter`  
- Una funzione di filtro che determina se accettare messaggi offerti.  
+*Filtro*<br/>
+Una funzione di filtro che determina se i messaggi offerti devono essere accettati.  
   
- `_PScheduler`  
- Il `Scheduler` oggetto all'interno del quale l'attività di propagazione per il `transformer` blocco della messaggistica.  
+*_PScheduler*<br/>
+Il `Scheduler` oggetto all'interno del quale la propagazione di attività per il `transformer` blocco della messaggistica è pianificata.  
   
- `_PScheduleGroup`  
- Il `ScheduleGroup` oggetto all'interno del quale l'attività di propagazione per il `transformer` blocco della messaggistica. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
+*PScheduleGroup*<br/>
+Il `ScheduleGroup` oggetto all'interno del quale la propagazione di attività per il `transformer` blocco della messaggistica è pianificata. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
   
 ### <a name="remarks"></a>Note  
  Se non si specificano i parametri `_PScheduler` o `_PScheduleGroup` , il runtime usa l'utilità di pianificazione predefinita.  

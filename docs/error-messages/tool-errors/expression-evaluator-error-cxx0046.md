@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0046 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0046 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f8092f5233d1a0e1501c3c0ea16164b96c137e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28cffba8a424d5a8cf2160dd6a5f8718259a54b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022487"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>Errore dell‘analizzatore di espressioni CXX0046
-elenco di argomenti richiesto per la funzione membro  
-  
- Un'espressione di chiamata una funzione membro, ma non specificava parametri effettivi.  
-  
- Questo errore è identico all'errore CAN0046.
+
+elenco di argomenti necessario per la funzione membro
+
+Un'espressione chiamata una funzione membro, ma non ha specificato i parametri effettivi.
+
+Questo errore è identico all'errore CAN0046.

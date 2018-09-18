@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e5dc3be0a13d593b605f4953530bff0885a8f198
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018301"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency:: precise_math
 ||||
@@ -165,7 +165,7 @@ inline double acos(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -179,7 +179,7 @@ inline float acosf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -196,7 +196,7 @@ inline double acosh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -210,7 +210,7 @@ inline float acoshf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -227,7 +227,7 @@ inline double asin(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -241,7 +241,7 @@ inline float asinf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -258,7 +258,7 @@ inline double asinh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -272,7 +272,7 @@ inline float asinhf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -289,7 +289,7 @@ inline double atan(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -310,10 +310,10 @@ inline double atan2(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -329,10 +329,10 @@ inline float atan2f(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -346,7 +346,7 @@ inline float atanf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -363,7 +363,7 @@ inline double atanh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -377,7 +377,7 @@ inline float atanhf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -394,7 +394,7 @@ inline double cbrt(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -408,7 +408,7 @@ inline float cbrtf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -425,7 +425,7 @@ inline double ceil(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -439,7 +439,7 @@ inline float ceilf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -460,10 +460,10 @@ inline double copysign(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -479,10 +479,10 @@ inline float copysignf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -499,7 +499,7 @@ inline double cos(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -513,7 +513,7 @@ inline float cosf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -530,7 +530,7 @@ inline double cosh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -544,7 +544,7 @@ inline float coshf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -561,7 +561,7 @@ inline double cospi(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -575,7 +575,7 @@ inline float cospif(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -592,7 +592,7 @@ inline double erf(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -609,7 +609,7 @@ inline double erfc(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -623,7 +623,7 @@ inline float erfcf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -640,7 +640,7 @@ inline double erfcinv(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -654,7 +654,7 @@ inline float erfcinvf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -668,7 +668,7 @@ inline float erff(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -685,7 +685,7 @@ inline double erfinv(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -699,7 +699,7 @@ inline float erfinvf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -716,7 +716,7 @@ inline double exp10(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -730,7 +730,7 @@ inline float exp10f(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -747,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`exponent`  
+*Esponente*<br/>
 Termine esponenziale *n* dell'espressione matematica `e` <sup>n</sup>, dove `e` costituisce la base del logaritmo naturale.
 
 ### <a name="return-value"></a>Valore restituito
@@ -761,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`exponent`  
+*Esponente*<br/>
 Termine esponenziale *n* dell'espressione matematica `e` <sup>n</sup>, dove `e` costituisce la base del logaritmo naturale.
 
 ### <a name="return-value"></a>Valore restituito
@@ -778,7 +778,7 @@ inline double exp(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -792,7 +792,7 @@ inline float expf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -809,7 +809,7 @@ inline double exp2(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -823,7 +823,7 @@ inline float exp2f(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -840,7 +840,7 @@ inline double fabs(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -854,7 +854,7 @@ inline float fabsf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -908,7 +908,7 @@ inline double floor(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -922,7 +922,7 @@ inline float floorf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -989,10 +989,10 @@ inline double fmax(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1008,10 +1008,10 @@ inline float fmaxf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1032,10 +1032,10 @@ inline double fmin(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1051,10 +1051,10 @@ inline float fminf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1075,10 +1075,10 @@ inline double fmod(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Il primo argomento a virgola mobile.
 
-`_Y`  
+*Y*<br/>
 Il secondo argomento a virgola mobile.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1094,10 +1094,10 @@ inline float fmodf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Il primo argomento a virgola mobile.
 
-`_Y`  
+*Y*<br/>
 Il secondo argomento a virgola mobile.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1114,7 +1114,7 @@ inline int fpclassify(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1135,10 +1135,10 @@ inline double frexp(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Exp`  
+*2^_exp*<br/>
 Restituisce l'esponente intero di x in valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1154,10 +1154,10 @@ inline float frexpf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Exp`  
+*2^_exp*<br/>
 Restituisce l'esponente intero di x in valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1178,10 +1178,10 @@ inline double hypot(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1197,10 +1197,10 @@ inline float hypotf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1217,7 +1217,7 @@ inline int ilogb(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1231,7 +1231,7 @@ inline int ilogbf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1248,7 +1248,7 @@ inline int isfinite(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1265,7 +1265,7 @@ inline int isinf(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1282,7 +1282,7 @@ inline int isnan(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1299,7 +1299,7 @@ inline int isnormal(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1320,10 +1320,10 @@ inline double ldexp(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile, mantissa
 
-`_Exp`  
+*2^_exp*<br/>
 Valore intero, esponente
 
 ### <a name="return-value"></a>Valore restituito
@@ -1339,10 +1339,10 @@ inline float ldexpf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile, mantissa
 
-`_Exp`  
+*2^_exp*<br/>
 Valore intero, esponente
 
 ### <a name="return-value"></a>Valore restituito
@@ -1363,10 +1363,10 @@ inline double lgamma(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Sign`  
+*_Sign*<br/>
 Restituisce il segno
 
 ### <a name="return-value"></a>Valore restituito
@@ -1382,10 +1382,10 @@ inline float lgammaf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Sign`  
+*_Sign*<br/>
 Restituisce il segno
 
 ### <a name="return-value"></a>Valore restituito
@@ -1402,7 +1402,7 @@ inline double log(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1419,7 +1419,7 @@ inline double log10(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1433,7 +1433,7 @@ inline float log10f(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1450,7 +1450,7 @@ inline double log1p(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1464,7 +1464,7 @@ inline float log1pf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1481,7 +1481,7 @@ inline double log2(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1495,7 +1495,7 @@ inline float log2f(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1512,7 +1512,7 @@ inline double logb(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1526,7 +1526,7 @@ inline float logbf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1540,7 +1540,7 @@ inline float logf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1561,10 +1561,10 @@ inline double modf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Iptr`  
+*_Iptr*<br/>
 [out] La parte intera di `_X`, come valore a virgola mobile.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1580,10 +1580,10 @@ inline float modff(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Iptr`  
+*_Iptr*<br/>
 La parte intera di `_X`, come valore a virgola mobile.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1597,7 +1597,7 @@ inline double nan(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -1611,7 +1611,7 @@ inline float nanf(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -1628,7 +1628,7 @@ inline double nearbyint(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1642,7 +1642,7 @@ inline float nearbyintf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1663,10 +1663,10 @@ inline double nextafter(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1682,10 +1682,10 @@ inline float nextafterf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1702,7 +1702,7 @@ inline double phi(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1716,7 +1716,7 @@ inline float phif(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1737,10 +1737,10 @@ inline double pow(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile, base
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile, esponente
 
 ### <a name="return-value"></a>Valore restituito
@@ -1755,10 +1755,10 @@ inline float powf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile, base
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile, esponente
 
 ### <a name="return-value"></a>Valore restituito
@@ -1774,7 +1774,7 @@ inline double probit(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1788,7 +1788,7 @@ inline float probitf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1805,7 +1805,7 @@ inline double rcbrt(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1819,7 +1819,7 @@ inline float rcbrtf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1840,10 +1840,10 @@ inline double remainder(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1859,10 +1859,10 @@ inline float remainderf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1885,13 +1885,13 @@ inline double remquo(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Il primo argomento a virgola mobile.
 
-`_Y`  
+*Y*<br/>
 Il secondo argomento a virgola mobile.
 
-`_Quo`  
+*Quo*<br/>
 [out] L'indirizzo di un intero utilizzato per restituire il quoziente dei bit frazionari `_X` diviso per i bit frazionari di `_Y`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1908,13 +1908,13 @@ inline float remquof(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Il primo argomento a virgola mobile.
 
-`_Y`  
+*Y*<br/>
 Il secondo argomento a virgola mobile.
 
-`_Quo`  
+*Quo*<br/>
 [out] L'indirizzo di un intero utilizzato per restituire il quoziente dei bit frazionari `_X` diviso per i bit frazionari di `_Y`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1931,7 +1931,7 @@ inline double round(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1945,7 +1945,7 @@ inline float roundf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1962,7 +1962,7 @@ inline double rsqrt(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1976,7 +1976,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -1997,10 +1997,10 @@ inline double scalb(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2016,10 +2016,10 @@ inline float scalbf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2040,10 +2040,10 @@ inline double scalbn(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -2059,10 +2059,10 @@ inline float scalbnf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_Y`  
+*Y*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -2079,7 +2079,7 @@ inline int signbit(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2093,7 +2093,7 @@ inline int signbitf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2110,7 +2110,7 @@ inline double sin(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2124,7 +2124,7 @@ inline float sinf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2147,13 +2147,13 @@ inline void sincos(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_S`  
+*S*<br/>
 Restituisce il valore seno di x
 
-`_C`  
+*C*<br/>
 Restituisce il valore del coseno di x
 
 ##  <a name="sincosf"></a>  sincosf
@@ -2167,13 +2167,13 @@ inline void sincosf(
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
-`_S`  
+*S*<br/>
 Restituisce il valore seno di x
 
-`_C`  
+*C*<br/>
 Restituisce il valore del coseno di x
 
 ##  <a name="sinh"></a>  sinh
@@ -2187,7 +2187,7 @@ inline double sinh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2201,7 +2201,7 @@ inline float sinhf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2218,7 +2218,7 @@ inline double sinpi(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2232,7 +2232,7 @@ inline float sinpif(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2249,7 +2249,7 @@ inline double sqrt(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2263,7 +2263,7 @@ inline float sqrtf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2280,7 +2280,7 @@ inline double tan(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2294,7 +2294,7 @@ inline float tanf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2311,7 +2311,7 @@ inline double tanh(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2325,7 +2325,7 @@ inline float tanhf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2342,7 +2342,7 @@ inline double tanpi(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2356,7 +2356,7 @@ inline float tanpif(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2373,7 +2373,7 @@ inline double tgamma(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2387,7 +2387,7 @@ inline float tgammaf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2404,7 +2404,7 @@ inline double trunc(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -2418,7 +2418,7 @@ inline float truncf(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Parametri
-`_X`  
+*X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito

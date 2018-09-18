@@ -1,5 +1,5 @@
 ---
-title: Errore della riga di comando D8045 | Documenti Microsoft
+title: Errore della riga di comando D8045 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf1248c072374cbe65d74136dfd1a8680e483b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6838202178e8012df61d17e2434461d6f4858bf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022786"
 ---
 # <a name="command-line-error-d8045"></a>Errore della riga di comando D8045
-Impossibile compilare il file C 'file' con l'opzione /clr  
-  
- Solo file di codice sorgente C++ possono essere passati a una compilazione che utilizza **/clr**.  Utilizzare **/TP** per compilare un file c come file con estensione cpp; vedere [/Tc, /Tp, /TC, /TP (specifica del tipo File di origine)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) per ulteriori informazioni.  
-  
- Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- D8045 può verificarsi anche se si compila un'applicazione ATL con Visual C++. Vedere [procedura: migrare a /clr](../../dotnet/how-to-migrate-to-clr.md) per ulteriori informazioni.
+
+non è possibile compilare il file C 'file' con l'opzione /clr
+
+Solo file di codice sorgente C++ possono essere passati a una compilazione che usa **/clr**.  Uso **/TP** per compilare un file di c come file con estensione cpp; vedere [/Tc, /Tp, /TC, /TP (specifica del tipo di File di origine)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) per altre informazioni.
+
+Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+D8045 può verificarsi anche se si compila un'applicazione ATL con Visual C++. Visualizzare [procedura: migrare a /clr](../../dotnet/how-to-migrate-to-clr.md) per altre informazioni.

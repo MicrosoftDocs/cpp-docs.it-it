@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1b367dd02506678af8c147dc93bb8725ca3c83
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b1edd5d01300324a8d24b41aa289f510cf078ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762710"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021773"
 ---
 # <a name="catlservicemoduletstart-function"></a>Funzione CAtlServiceModuleT:: Start
 
@@ -35,6 +35,6 @@ Quando viene eseguito il servizio, `_tWinMain` chiamate `CAtlServiceModuleT::Win
 
 ## <a name="see-also"></a>Vedere anche
 
-[servizi](../atl/atl-services.md)   
+[Servizi](../atl/atl-services.md)<br/>
 [CAtlServiceModuleT:: Start](../atl/reference/catlservicemodulet-class.md#start)
 

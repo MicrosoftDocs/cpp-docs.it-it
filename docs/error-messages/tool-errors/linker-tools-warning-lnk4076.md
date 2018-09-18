@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4076 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4076 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0e9a85237a47515925a5867b0f26b7321e778c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de96bdbbc9752cd68ca78728395ad4bfdb4b01a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018531"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>Avviso degli strumenti del linker LNK4076
-file di stato incrementale 'nomefile'; il collegamento in modo non incrementale  
-  
- COLLEGAMENTO non è possibile scrivere nel file di stato incrementale (ilk). Entrambi `filename` è danneggiato o non è un database di collegamento incrementale. Rimuovere i file e ripetere il collegamento.
+
+file di stato incrementale 'filename'; il collegamento in modo non incrementale
+
+COLLEGAMENTO non è possibile scrivere nel file di stato incrementale (ilk). Entrambi `filename` è danneggiato o non è un database di collegamento incrementale. Rimuovere il file e ripetere il collegamento.

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2293 | Documenti Microsoft
+title: Errore del compilatore C2293 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6b3f395199a1621d507683aa6c79b1212888145
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c5a24be3c51f17d12712b950babe5e723f1633c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031171"
 ---
 # <a name="compiler-error-c2293"></a>Errore del compilatore C2293
-'identifier': non è consentito avere una variabile membro come identificatore __based  
-  
- Gli identificatori per il modificatore `__based` devono essere puntatori non membro.  
-  
- L'esempio seguente genera l'errore C2293:  
-  
-```  
-// C2293.cpp  
-// compile with: /c  
-class A {  
-   static int *i;  
-   void __based(i) *bp;   // C2293  
-   void *bp2;   // OK  
-};  
+
+'identifier': non è consentito avere una variabile membro come identificatore __based
+
+Gli identificatori per il modificatore `__based` devono essere puntatori non membro.
+
+L'esempio seguente genera l'errore C2293:
+
+```
+// C2293.cpp
+// compile with: /c
+class A {
+   static int *i;
+   void __based(i) *bp;   // C2293
+   void *bp2;   // OK
+};
 ```

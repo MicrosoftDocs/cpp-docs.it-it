@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1107 | Documenti Microsoft
+title: Errore irreversibile C1107 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949ee09244a106984522fb35dd13c0b3426fc820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc896f08ac161cae4e4fab5e991da810f3faf195
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016637"
 ---
 # <a name="fatal-error-c1107"></a>Errore irreversibile C1107
-Impossibile trovare l'assembly 'file': specificare il percorso di ricerca dell'assembly utilizzando /AI o impostando la variabile d'ambiente LIBPATH  
-  
- È stato passato un file di metadati per un [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva che il compilatore non è riuscito a individuare.  
-  
- LIBPATH, descritta nell'argomento per `#using`e [/AI](../../build/reference/ai-specify-metadata-directories.md) l'opzione del compilatore consentono di specificare le directory in cui verranno cercati i file di metadati di riferimento.
+
+Impossibile trovare l'assembly 'file': specificare il percorso di ricerca assembly usando /AI o impostando la variabile di ambiente LIBPATH
+
+Un file di metadati è stato passato a un [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva per il compilatore non è riuscito a individuare.
+
+LIBPATH, che è descritti nell'argomento relativo `#using`e il [/AI](../../build/reference/ai-specify-metadata-directories.md) opzione del compilatore consentono di specificare le directory in cui verranno cercati i file di metadati di riferimento.

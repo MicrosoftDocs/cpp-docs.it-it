@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cfa52749f6789ef8bfe65f9bdcdf5238923216f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019382"
 ---
 # <a name="atlcommodule70-structure"></a>Struttura _ATL_COM_MODULE70
 
@@ -44,19 +44,19 @@ struct _ATL_COM_MODULE70 {
 
 ## <a name="members"></a>Membri
 
-`cbSize`  
+`cbSize`<br/>
 Le dimensioni della struttura, usata per il controllo delle versioni.
 
-`m_hInstTypeLib`  
+`m_hInstTypeLib`<br/>
 L'handle di istanza alla libreria dei tipi per questo modulo.
 
-`m_ppAutoObjMapFirst`  
+`m_ppAutoObjMapFirst`<br/>
 Indirizzo dell'elemento della matrice che indica l'inizio delle voci della mappa oggetti per questo modulo.
 
-`m_ppAutoObjMapLast`  
+`m_ppAutoObjMapLast`<br/>
 Indirizzo dell'elemento della matrice che indica la fine delle voci della mappa oggetti per questo modulo.
 
-`m_csObjMap`  
+`m_csObjMap`<br/>
 Sezione critica per serializzare l'accesso alle voci della mappa oggetto. Usato internamente da ATL.
 
 ## <a name="remarks"></a>Note

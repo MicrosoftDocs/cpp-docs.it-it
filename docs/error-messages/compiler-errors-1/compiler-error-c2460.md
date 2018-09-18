@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2460 | Documenti Microsoft
+title: Errore del compilatore C2460 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4220be654f93ecd79d196efc14657ca7346411f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb2d85ffbc7aa799f0688fbb10021a04ef9455ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022620"
 ---
 # <a name="compiler-error-c2460"></a>Errore del compilatore C2460
-'identifier1': utilizza 'identifier2', che viene definito  
-  
- Una classe o struttura (`identifier2`) è dichiarato come un membro di se stesso (`identifier1`). Le definizioni di classi e strutture ricorsive non sono consentite.  
-  
- L'esempio seguente genera l'errore C2460:  
-  
-```  
-// C2460.cpp  
-class C {  
-   C aC;    // C2460  
-};  
-```  
-  
- Utilizzare invece un riferimento a un puntatore nella classe.  
-  
-```  
-// C2460.cpp  
-class C {  
-   C * aC;    // OK  
-};  
+
+'identifier1': utilizza 'identifier2', che viene definito
+
+Una classe o struttura (`identifier2`) viene dichiarato come un membro di se stesso (`identifier1`). Ricorsivo definizioni delle classi e strutture non sono consentite.
+
+L'esempio seguente genera l'errore C2460:
+
+```
+// C2460.cpp
+class C {
+   C aC;    // C2460
+};
+```
+
+Usare invece un riferimento a un puntatore nella classe.
+
+```
+// C2460.cpp
+class C {
+   C * aC;    // OK
+};
 ```

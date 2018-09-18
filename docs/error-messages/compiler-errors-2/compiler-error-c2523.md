@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2523 | Documenti Microsoft
+title: Errore del compilatore C2523 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4546e576ced8d57a35c4c4861f29824a8d91d910
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f440bf282d6159af3a96bfeb1aa7db8941e87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228342"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022799"
 ---
 # <a name="compiler-error-c2523"></a>Errore del compilatore C2523
-' classe:: ~ identifier': mancata corrispondenza del tag distruttore/finalizzatore  
-  
- Il nome del distruttore deve essere il nome della classe preceduto da una tilde (`~`). Il costruttore e distruttore sono i soli membri che hanno lo stesso nome della classe.  
-  
- L'esempio seguente genera l'errore C2523:  
-  
-```  
-// C2523.cpp  
-// compile with: /c  
-class A {  
-   ~B();    // C2523  
-   ~A();   // OK  
-};  
+
+' classe:: ~ identifier': mancata corrispondenza del tag finalizzatore/un distruttore
+
+Il nome del distruttore deve essere il nome della classe preceduto da una tilde (`~`). Il costruttore e distruttore sono gli unici membri che hanno lo stesso nome della classe.
+
+L'esempio seguente genera l'errore C2523:
+
+```
+// C2523.cpp
+// compile with: /c
+class A {
+   ~B();    // C2523
+   ~A();   // OK
+};
 ```

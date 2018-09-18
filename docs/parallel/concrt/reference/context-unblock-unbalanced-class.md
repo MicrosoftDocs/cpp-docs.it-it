@@ -1,5 +1,5 @@
 ---
-title: Classe context_unblock_unbalanced | Documenti Microsoft
+title: Classe context_unblock_unbalanced | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c964701f9a26c655bbb9529a112f036c7c9f0bf5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037476"
 ---
 # <a name="contextunblockunbalanced-class"></a>Classe context_unblock_unbalanced
 Questa classe descrive un'eccezione generata quando le chiamate ai metodi `Block` e `Unblock` di un oggetto `Context` non sono abbinate correttamente.  
@@ -43,7 +43,7 @@ class context_unblock_unbalanced : public std::exception;
 |[context_unblock_unbalanced](#ctor)|Di overload. Costruisce un oggetto `context_unblock_unbalanced`.|  
   
 ## <a name="remarks"></a>Note  
- Le chiamate al `Block` e `Unblock` metodi di un `Context` oggetto deve sempre essere abbinato correttamente. Il Runtime di concorrenza consente le operazioni a verificarsi in qualsiasi ordine. Ad esempio, una chiamata a `Block` può essere seguita da una chiamata a `Unblock` o viceversa. Verrebbe generata questa eccezione se, ad esempio, due chiamate al `Unblock` metodo sono state apportate in una riga, in un `Context` oggetto che non è stato bloccato.  
+ Le chiamate al `Block` e `Unblock` metodi di un `Context` oggetto deve sempre essere abbinato correttamente. Il Runtime di concorrenza consente le operazioni a verificarsi in qualsiasi ordine. Ad esempio, una chiamata a `Block` può essere seguita da una chiamata a `Unblock` o viceversa. Questa eccezione viene generata se, ad esempio, due chiamate al `Unblock` metodo sono stati eseguiti in una riga, in un `Context` oggetto che non è stato bloccato.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -67,8 +67,8 @@ context_unblock_unbalanced() throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Messaggio descrittivo dell'errore.  
+*Messaggio*<br/>
+Messaggio descrittivo dell'errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)

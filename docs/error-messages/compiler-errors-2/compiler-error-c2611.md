@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2611 | Documenti Microsoft
+title: Errore del compilatore C2611 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee4215d9407a9dc873c7affdf97e4d16c55ec2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 728d22a7af72232618716e665b241188773cd66c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031288"
 ---
 # <a name="compiler-error-c2611"></a>Errore del compilatore C2611
-'token': non valido dopo ' ~' (previsto identificatore)  
-  
- Il token non è un identificatore.  
-  
- L'esempio seguente genera l'errore C2611:  
-  
-```  
-// C2611.cpp  
-// compile with: /c  
-class C {  
-   C::~operator int();   // C2611  
-   ~C();   // OK  
-};  
+
+'token': non valido dopo ' ~' (previsto identificatore)
+
+Il token non è un identificatore.
+
+L'esempio seguente genera l'errore C2611:
+
+```
+// C2611.cpp
+// compile with: /c
+class C {
+   C::~operator int();   // C2611
+   ~C();   // OK
+};
 ```

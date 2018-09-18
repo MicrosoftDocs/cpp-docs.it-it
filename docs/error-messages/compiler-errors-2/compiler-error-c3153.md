@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3153 | Documenti Microsoft
+title: Errore del compilatore C3153 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c9829313947c7d3e954ddfd309f47d571ae2639
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 621af32475008eda4d7502530087673dcb4a0848
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016040"
 ---
 # <a name="compiler-error-c3153"></a>Errore del compilatore C3153
-'interface': non è possibile creare un'istanza di un'interfaccia  
-  
- Non è possibile creare un'istanza di un'interfaccia. Per utilizzare i membri di un'interfaccia, una classe derivata dall'interfaccia, implementare i membri di interfaccia e quindi utilizzare i membri.  
-  
- L'esempio seguente genera l'errore C3153:  
-  
-```  
-// C3153.cpp  
-// compile with: /clr  
-interface class A {  
-};  
-  
-int main() {  
-   A^ a = gcnew A;   // C3153  
-}  
-```  
+
+'interface': non è possibile creare un'istanza di un'interfaccia
+
+Non è possibile creare istanze di un'interfaccia. Per usare i membri di un'interfaccia, una classe derivata dall'interfaccia, implementare i membri di interfaccia e quindi usare i membri.
+
+L'esempio seguente genera l'errore C3153:
+
+```
+// C3153.cpp
+// compile with: /clr
+interface class A {
+};
+
+int main() {
+   A^ a = gcnew A;   // C3153
+}
+```

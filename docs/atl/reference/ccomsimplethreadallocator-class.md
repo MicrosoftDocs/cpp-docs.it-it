@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c8c7b2e6132bb39c8e548f6057ded0b0ca6c1e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1538d5148eeb1eb95c51150a43ef5dd7b107cae3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033550"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Classe CComSimpleThreadAllocator
 
@@ -64,10 +64,10 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 
 ### <a name="parameters"></a>Parametri
 
-*pApt*  
+*pApt*<br/>
 Non utilizzato nell'implementazione predefinita di ATL.
 
-*nThreads*  
+*nThreads*<br/>
 Il numero massimo di thread nel modulo EXE.
 
 ### <a name="return-value"></a>Valore restituito
@@ -82,5 +82,5 @@ Un numero intero compreso tra zero e (*nThreads* - 1). Identifica uno dei thread
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComApartment](../../atl/reference/ccomapartment-class.md)   
+[Classe CComApartment](../../atl/reference/ccomapartment-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

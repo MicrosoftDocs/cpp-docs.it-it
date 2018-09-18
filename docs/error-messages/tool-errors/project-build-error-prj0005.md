@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0005 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0005 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b02e831c9adc8d7ff7fce759334263f847d24cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be1ac49d5d6fa3b85b327305bc4919d183b962e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327766"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016514"
 ---
 # <a name="project-build-error-prj0005"></a>Errore di compilazione progetto PRJ0005
-Impossibile creare un file temporaneo nella directory 'directory'.  
-  
- La chiamata per creare un file temporaneo non riuscita. Le cause di errore includono:  
-  
--   Ha esaurito i nomi di file temporaneo.  
-  
--   La directory temporanea è di sola lettura.  
-  
--   Non è presente alcuna directory temporanea o variabile di ambiente TMP.  
-  
--   Il computer ha esaurito lo spazio libero sul disco.
+
+Impossibile creare un file temporaneo nella directory 'directory'.
+
+La chiamata per creare un file temporaneo non riuscita. Motivi dell'errore:
+
+- Si è esaurito i nomi di file temporaneo.
+
+- La directory temp è di sola lettura.
+
+- Non sono directory temporanea o variabile di ambiente TMP.
+
+- Il computer ha esaurito lo spazio libero sul disco.

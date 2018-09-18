@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035539"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Override di una funzione di accesso dinamica
+
 Quando si usa una funzione di accesso dinamico, ad esempio `CDynamicAccessor`, il comando `Open` metodo crea una funzione di accesso per automaticamente, in base alle informazioni di colonna del set di righe aperto. È possibile sostituire la funzione di accesso dinamico per controllare esattamente come le colonne sono associate.  
   
- Per sostituire la funzione di accesso dinamico, passare **false** come ultimo parametro per il `CCommand::Open` (metodo). Ciò impedisce `Open` dalla creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente viene illustrato come eseguire questa operazione:  
+Per sostituire la funzione di accesso dinamico, passare **false** come ultimo parametro per il `CCommand::Open` (metodo). Ciò impedisce `Open` dalla creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente viene illustrato come eseguire questa operazione:  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)
+
+[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

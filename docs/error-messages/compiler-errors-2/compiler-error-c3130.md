@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3130 | Documenti Microsoft
+title: Errore del compilatore C3130 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e338ff497ca0674b68ee25ba745d669a10468a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe26a86b85d6b38283a6ef21d081620237f8788a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030839"
 ---
 # <a name="compiler-error-c3130"></a>Errore del compilatore C3130
-Errore interno del compilatore: Impossibile scrivere nel PDB il blocco di codice inserito  
-  
- Questo errore si verifica se il compilatore non è stato possibile scrivere un blocco di codice inserito al file con estensione pdb. La causa più comune per l'errore è la mancanza di spazio su disco.
+
+Errore del compilatore interno: non è stato possibile scrivere nel PDB il blocco di codice inserito
+
+Questo errore si verifica se il compilatore non è stato possibile scrivere un blocco di codice inserito al file con estensione pdb. Il motivo più comune dell'errore è la mancanza di spazio su disco.

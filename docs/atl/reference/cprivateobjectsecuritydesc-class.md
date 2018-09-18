@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb24b1d00c7c70b545213a64e685f238d6b5157
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757962"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029013"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Classe CPrivateObjectSecurityDesc
 
@@ -93,16 +93,16 @@ bool ConvertToAutoInherit(
 
 ### <a name="parameters"></a>Parametri
 
-*pParent*  
+*pParent*<br/>
 Puntatore a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) oggetto che fa riferimento il contenitore padre dell'oggetto. Se non c'è alcun contenitore padre, questo parametro è NULL.
 
-*ObjectType*  
+*ObjectType*<br/>
 Puntatore a un `GUID` struttura che identifica il tipo di oggetto associato all'oggetto corrente. Impostare *ObjectType* su NULL se l'oggetto non ha un GUID.
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 Specifica se il nuovo oggetto può contenere altri oggetti. Il valore true indica che il nuovo oggetto è un contenitore. Il valore false indica che il nuovo oggetto non è un contenitore.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Puntatore a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.
 
 ### <a name="return-value"></a>Valore restituito
@@ -161,28 +161,28 @@ bool Create(
 
 ### <a name="parameters"></a>Parametri
 
-*pParent*  
+*pParent*<br/>
 Puntatore a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) oggetto che fa riferimento la directory padre in cui viene creato un nuovo oggetto. Se non vi è alcuna directory padre, impostato su NULL.
 
-*pCreator*  
+*pCreator*<br/>
 Puntatore a un descrittore di sicurezza fornito dall'autore dell'oggetto. Se il creatore dell'oggetto non viene passato in modo esplicito le informazioni di sicurezza per il nuovo oggetto, impostare questo parametro su NULL.
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 Specifica se il nuovo oggetto può contenere altri oggetti. Il valore true indica che il nuovo oggetto è un contenitore. Il valore false indica che il nuovo oggetto non è un contenitore.
 
-*Token*  
+*Token*<br/>
 Riferimento per la [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto per conto del quale l'oggetto viene creato il processo di client.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Puntatore a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.
 
-*ObjectType*  
+*ObjectType*<br/>
 Puntatore a un `GUID` struttura che identifica il tipo di oggetto associato all'oggetto corrente. Impostare *ObjectType* su NULL se l'oggetto non ha un GUID.
 
-*bIsContainerObject*  
+*bIsContainerObject*<br/>
 Specifica se il nuovo oggetto può contenere altri oggetti. Il valore true indica che il nuovo oggetto è un contenitore. Il valore false indica che il nuovo oggetto non è un contenitore.
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
@@ -210,10 +210,10 @@ bool Get(
 
 ### <a name="parameters"></a>Parametri
 
-*sistema internazionale di misura*  
+*sistema internazionale di misura*<br/>
 Un set di flag di bit che indicano le parti del descrittore di sicurezza da recuperare. Questo valore può essere una combinazione dei [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) flag di bit.
 
-*pResult*  
+*pResult*<br/>
 Puntatore a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) oggetto che riceve una copia delle informazioni richieste dal descrittore di sicurezza specificato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -234,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>Parametri
 
-*rhs*  
+*rhs*<br/>
 Il `CPrivateObjectSecurityDesc` oggetto da assegnare all'oggetto corrente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -262,19 +262,19 @@ bool Set(
 
 ### <a name="parameters"></a>Parametri
 
-*sistema internazionale di misura*  
+*sistema internazionale di misura*<br/>
 Un set di flag di bit che indicano le parti del descrittore di sicurezza da impostare. Questo valore può essere una combinazione dei [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) flag di bit.
 
-*Modifica*  
+*Modifica*<br/>
 Puntatore a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) oggetto. Le parti di questo descrittore di sicurezza indicato dal *sistema internazionale di misura* parametro vengono applicate al descrittore di sicurezza dell'oggetto.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Puntatore a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) struttura che specifica il mapping tra ogni diritto a diritti specifici per l'oggetto generico.
 
-*Token*  
+*Token*<br/>
 Riferimento per la [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto per conto del quale l'oggetto viene creato il processo di client.
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
@@ -287,7 +287,7 @@ Il secondo metodo consente di specificare il tipo di oggetto GUID dell'oggetto o
 
 ## <a name="see-also"></a>Vedere anche
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Panoramica della classe](../../atl/atl-class-overview.md)   
-[Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)   
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
+[Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)<br/>
 [Classe CSecurityDesc](../../atl/reference/csecuritydesc-class.md)

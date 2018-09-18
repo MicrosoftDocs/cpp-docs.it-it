@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2948 | Documenti Microsoft
+title: Errore del compilatore C2948 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ee324ebbdbc1d9dc19c6a1323f2f47c370f08b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 052bfdb49e965b0d42a8af2c7cf2e57ee1af6f6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020862"
 ---
 # <a name="compiler-error-c2948"></a>Errore del compilatore C2948
-creazione di un'istanza esplicita. Identificatore di classe di archiviazione 'specifier' non valido in una specializzazione  
-  
- È possibile utilizzare gli identificatori di classe di archiviazione (ad esempio `extern`) in una specializzazione di una classe modello che è stata creata in precedenza un'istanza in modo esplicito.
+
+creazione di un'istanza esplicita. Identificatore di classe di archiviazione 'specifier' non valido in una specializzazione
+
+Non è possibile usare gli identificatori di classi di archiviazione (ad esempio `extern`) in una specializzazione della classe modello che è stata creata in precedenza un'istanza in modo esplicito.

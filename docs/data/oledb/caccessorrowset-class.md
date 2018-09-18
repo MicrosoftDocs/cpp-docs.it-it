@@ -41,14 +41,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: afae1f91907e8fd22640dd87fe607a067900edfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024645"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
+
 Incapsula un set di righe e delle relative funzioni di accesso associati in una singola classe.  
   
 ## <a name="syntax"></a>Sintassi
@@ -60,14 +61,16 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *TAccessor*  
- Una classe di funzione di accesso.  
+
+*TAccessor*<br/>
+Una classe di funzione di accesso.  
   
- *TRowset*  
- Una classe di set di righe.  
+*TRowset*<br/>
+Una classe di set di righe.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli.h  
+
+**Intestazione:** atldbcli.h  
   
 ## <a name="members"></a>Membri  
   
@@ -75,16 +78,18 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[Eseguire l'associazione](#bind)|Consente di creare associazioni (utilizzato quando `bBind` viene specificato come **false** nelle [CCommand::](../../data/oledb/ccommand-open.md)).|  
+|[Bind](#bind)|Consente di creare associazioni (utilizzato quando `bBind` viene specificato come **false** nelle [CCommand::](../../data/oledb/ccommand-open.md)).|  
 |[CAccessorRowset](#caccessorrowset)|Costruttore.|  
 |[Chiudi](#close)|Chiude il set di righe e le funzioni di accesso.|  
 |[FreeRecordMemory](#freerecordmemory)|Libera tutte le colonne nel record corrente che devono essere liberate.|  
 |[GetColumnInfo](#getcolumninfo)|Implements [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
   
 ## <a name="remarks"></a>Note  
- Classe `TAccessor` gestisce la funzione di accesso. Classe *TRowset* gestisce il set di righe.  
+
+Classe `TAccessor` gestisce la funzione di accesso. Classe *TRowset* gestisce il set di righe.  
 
 ## <a name="bind"></a> CAccessorRowset:: Bind
+
 Consente di creare le associazioni se è stato specificato `bBind` come **false** nelle [CCommand::](../../data/oledb/ccommand-open.md).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -94,9 +99,11 @@ HRESULT Bind();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="caccessorrowset"></a> CAccessorRowset:: CAccessorRowset
+
 Inizializza il `CAccessorRowset` oggetto.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -106,6 +113,7 @@ CAccessorRowset();
 ```  
 
 ## <a name="close"></a> CAccessorRowset:: Close
+
 Rilascia tutte le funzioni di accesso attivi e il set di righe.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -115,9 +123,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Note  
- Rilascia qualsiasi memoria associati.  
+
+Rilascia qualsiasi memoria associati.  
 
 ## <a name="freerecordmemory"></a> CAccessorRowset:: Freerecordmemory
+
 Libera tutte le colonne nel record corrente che devono essere liberate.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -127,6 +137,7 @@ void FreeRecordMemory();
 ```  
 
 ## <a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
+
 Ottiene informazioni sulle colonne dal set di righe aperto.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -141,16 +152,20 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- L'utente deve liberare il buffer di stringa e le informazioni di colonna restituita. Utilizzare la seconda versione di questo metodo quando si usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ed è necessario eseguire l'override delle associazioni.  
+
+L'utente deve liberare il buffer di stringa e le informazioni di colonna restituita. Utilizzare la seconda versione di questo metodo quando si usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ed è necessario eseguire l'override delle associazioni.  
   
- Per altre informazioni, vedere [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+Per altre informazioni, vedere [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

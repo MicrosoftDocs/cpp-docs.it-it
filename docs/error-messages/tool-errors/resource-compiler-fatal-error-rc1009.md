@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1009 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RC1009 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f90b127ccee7579304e3963d4edb6ff56ecd95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ceed87c62863f9a5150feebf90f67118656d858
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317544"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034109"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>Errore irreversibile del compilatore di risorse RC1009
-limite del compilatore: macro eccessivamente annidate "macro"  
-  
- Il file supera il limite del compilatore di risorse per la nidificazione di macro. Modificare il file di origine specificato per ridurre il livello di nidificazione delle relative macro.
+
+limite del compilatore: macro eccessivamente annidate 'macro'
+
+Il file supera il limite del compilatore di risorse per la nidificazione di macro. Modificare il file di origine specificato per diminuire il livello di nidificazione delle relative macro.

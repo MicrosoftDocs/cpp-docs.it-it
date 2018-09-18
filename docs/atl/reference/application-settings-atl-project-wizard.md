@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e25fa8a730ea31caf747d07ce30a0622c4bd01
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035851"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto ATL
 
@@ -68,7 +68,7 @@ Scegliere uno dei tre tipi di server:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)   
-[Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)   
+[Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
 

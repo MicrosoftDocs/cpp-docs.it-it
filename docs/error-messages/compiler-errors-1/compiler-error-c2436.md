@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2436 | Documenti Microsoft
+title: Errore del compilatore C2436 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7ca7d92a99092e6c0daf63378ff9bff89c4283
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f32b94f0e68de893897a5bdf48977a47417e6729
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198690"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032991"
 ---
 # <a name="compiler-error-c2436"></a>Errore del compilatore C2436
-'identifier': funzione membro o classe annidata nell'elenco di inizializzatori di costruttore  
-  
- Impossibile inizializzare le funzioni membro o le classi locali nell'elenco di inizializzatori di costruttore.  
-  
- L'esempio seguente genera l'errore C2436:  
-  
-```  
-// C2436.cpp  
-struct S{  
-   int f();  
-   struct Inner{  
-      int i;  
-   };  
-   S():f(10), Inner(0){}   // C2436  
-};  
+
+'identifier': funzione membro o classe annidata nell'elenco di inizializzatori del costruttore
+
+Impossibile inizializzare le funzioni membro o le classi locali nell'elenco di inizializzatori di costruttore.
+
+L'esempio seguente genera l'errore C2436:
+
+```
+// C2436.cpp
+struct S{
+   int f();
+   struct Inner{
+      int i;
+   };
+   S():f(10), Inner(0){}   // C2436
+};
 ```

@@ -35,29 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031443"
 ---
 # <a name="try-except-statement"></a>Istruzione try-except
 
 **Sezione specifica Microsoft**
 
-Il **try-tranne** istruzione è un'estensione Microsoft C e linguaggi di C++ che supporta la gestione delle eccezioni strutturata.  
+Il **try-tranne** istruzione è un'estensione Microsoft C e linguaggi di C++ che supporta la gestione delle eccezioni strutturata.
 
-## <a name="syntax"></a>Sintassi  
-  
-> **__try**   
-> {  
->    codice controllato  
-> }  
-> **except** ( *espressione* )  
-> {  
->    codice del gestore eccezioni  
-> }  
+## <a name="syntax"></a>Sintassi
+
+> **try** {/ / sorvegliato codice} **except** ( *espressione* ) {/ / codice del gestore eccezioni}
 
 ## <a name="remarks"></a>Note
 
@@ -74,7 +67,7 @@ L'istruzione composta dopo la **try** clausola è il corpo o la sezione protetta
 
 1. La sezione protetta viene eseguita.
 
-2. Se si verifica alcuna eccezione durante l'esecuzione della sezione protetta, l'esecuzione continua in corrispondenza dell'istruzione dopo il **except** clausola.  
+2. Se si verifica alcuna eccezione durante l'esecuzione della sezione protetta, l'esecuzione continua in corrispondenza dell'istruzione dopo il **except** clausola.
 
 3. Se si verifica un'eccezione durante l'esecuzione della sezione protetta o nelle routine chiamate dalla sezione protetta, il **except** *expression* (chiamato il *filtro* espressione) viene valutata e il valore determina come viene gestita l'eccezione. Sono disponibili tre valori:
 
@@ -88,10 +81,10 @@ Poiché il **except** espressione viene valutata come un'espressione C, è limit
 
 Ogni applicazione può essere associata al proprio gestore di eccezioni.
 
-Non è valido passare a un **try** istruzione, ma è valido uscire da uno. Il gestore di eccezioni non viene chiamato se un processo viene terminato nel corso dell'esecuzione una **try-tranne** istruzione.  
-  
-Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q315937: Procedura: Intercettare l'overflow dello stack nell'applicazione Visual C++.  
-  
+Non è valido passare a un **try** istruzione, ma è valido uscire da uno. Il gestore di eccezioni non viene chiamato se un processo viene terminato nel corso dell'esecuzione una **try-tranne** istruzione.
+
+Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q315937: Procedura: Intercettare l'overflow dello stack nell'applicazione Visual C++.
+
 ## <a name="the-leave-keyword"></a>La parola chiave __leave
 
 Il **Leave** parola chiave è valida solo all'interno della sezione protetta di un **provare-tranne** istruzione e relativo effetto è il passaggio alla fine della sezione protetta. L'esecuzione continua con la prima istruzione dopo il gestore dell'eccezione.
@@ -106,12 +99,12 @@ Gestione eccezioni strutturata fornisce due funzioni intrinseche disponibili da 
 
 La funzione intrinseca `GetExceptionInformation` restituisce un puntatore a una struttura contenente informazioni aggiuntive sull'eccezione. Tramite questo puntatore, è possibile accedere allo stato del computer esistente al momento di un'eccezione hardware. La struttura è la seguente:
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 I tipi di puntatori `PEXCEPTION_RECORD` e `PCONTEXT` sono definiti nel file di inclusione \<Winnt. h >, e `_EXCEPTION_RECORD` e `_CONTEXT` sono definiti nel file di inclusione \<excpt. h >
 
@@ -123,10 +116,10 @@ excpt. h definisce alcuni nomi alternativi per questi intrinseci:
 
 `GetExceptionCode` equivale a `_exception_code`
 
- `GetExceptionInformation` equivale a `_exception_info`
+`GetExceptionInformation` equivale a `_exception_info`
 
- `AbnormalTermination` equivale a `_abnormal_termination`
-  
+`AbnormalTermination` equivale a `_abnormal_termination`
+
 ## <a name="example"></a>Esempio
 
 ```cpp
@@ -176,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>Output  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**Fine sezione specifica Microsoft**  
+## <a name="output"></a>Output
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
- [La scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)   
- [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+
+[Scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)<br/>
+[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

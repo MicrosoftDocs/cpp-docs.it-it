@@ -1,5 +1,5 @@
 ---
-title: Errore BK1516 di BSCMAKE | Documenti Microsoft
+title: Errore BK1516 di BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95b76d41719da17e6e69d88d17a45269fff75cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9be9eeb1043c28806d28cf216bc87931015695d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030014"
 ---
 # <a name="bscmake-error-bk1516"></a>Errore BK1516 di BSCMAKE
-FileBSC danneggiato. non è possibile aggiornare in modo incrementale  
-  
- Il file BSC è stato danneggiato, probabilmente a causa di un errore di sistema durante la compilazione. Eliminare il file BSC, ricompilare tutti i file sbr e ricompilare il file BSC.
+
+FileBSC danneggiato; non è possibile aggiornare in modo incrementale
+
+File BSC è stato danneggiato, probabilmente a causa di un errore di sistema durante la compilazione. Eliminare il file con estensione bsc, ricompilare tutti i file sbr e ricompilare il file BSC.

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2e448d5fa73c64e9abb66ef70e513bc9fa0728
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0abc7e3b87ef23e6350b54c3f64b50fbcfdd5b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031145"
 ---
 # <a name="ienumonstlimpl-class"></a>Classe IEnumOnSTLImpl
 
@@ -40,25 +40,25 @@ Questa classe definisce un'interfaccia dell'enumeratore basata su una raccolta d
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType>  
+    const IID* piid, class T, class Copy, class CollType>
 class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*base*  
+*base*<br/>
 Enumeratore COM. Visualizzare [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) per un esempio.
 
-*piid*  
+*piid*<br/>
 Un puntatore all'ID di interfaccia di interfaccia dell'enumeratore.
 
-*T*  
+*T*<br/>
 Il tipo di elemento esposto dall'interfaccia dell'enumeratore.
 
-*Copia*  
+*Copia*<br/>
 Oggetto [copiare criteri classe](../../atl/atl-copy-policy-classes.md).
 
-*CollType*  
+*CollType*<br/>
 Classe contenitore della libreria Standard C++.
 
 ## <a name="members"></a>Membri
@@ -114,10 +114,10 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametri
 
-*pUnkForRelease*  
+*pUnkForRelease*<br/>
 [in] Il `IUnknown` puntatore di un oggetto che deve essere mantenuto attivo nel corso della durata dell'enumeratore. Passare NULL se tale oggetto non esiste.
 
-*collection*  
+*collection*<br/>
 Un riferimento al contenitore della libreria Standard C++ che contiene gli elementi da enumerare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -140,7 +140,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Parametri
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] Interfaccia dell'enumeratore per un oggetto appena creato verrà duplicato dell'enumeratore corrente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -192,13 +192,13 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>Parametri
 
-*celt*  
+*celt*<br/>
 [in] Il numero di elementi richiesti.
 
-*rgelt*  
+*rgelt*<br/>
 [out] Matrice da compilare con gli elementi.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] Il numero di elementi effettivamente restituiti nella *rgelt*. Può essere minore *celt* se meno *celt* elementi rimangono nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
@@ -227,7 +227,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Parametri
 
-*celt*  
+*celt*<br/>
 [in] Il numero di elementi da ignorare.
 
 ### <a name="return-value"></a>Valore restituito

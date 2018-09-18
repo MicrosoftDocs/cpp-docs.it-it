@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d7ee8fa674174d95c3e538889f6d5538be049b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020720"
 ---
 # <a name="taskgroup-class"></a>Classe task_group
 La classe `task_group` rappresenta una raccolta di lavoro parallelo che può essere messa in attesa o annullata.  
@@ -127,17 +127,17 @@ void run(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function`  
- Il tipo dell'oggetto funzione che verrà richiamato per eseguire il corpo dell'handle di attività.  
+*_Function*<br/>
+Il tipo dell'oggetto funzione che verrà richiamato per eseguire il corpo dell'handle di attività.  
   
- `_Func`  
- Una funzione che verrà chiamata per richiamare il corpo dell'attività. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.  
+*Func*<br/>
+Una funzione che verrà chiamata per richiamare il corpo dell'attività. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.  
   
- `_Placement`  
- Riferimento alla posizione in cui deve essere eseguita l'attività rappresentata dal parametro `_Func`.  
+*Selezione*<br/>
+Riferimento alla posizione in cui deve essere eseguita l'attività rappresentata dal parametro `_Func`.  
   
- `_Task_handle`  
- Handle per il lavoro pianificato. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino a quando non le `wait` oppure `run_and_wait` metodo è stato chiamato su questo `task_group` oggetto.  
+*Task_handle*<br/>
+Handle per il lavoro pianificato. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino a quando non le `wait` oppure `run_and_wait` metodo è stato chiamato su questo `task_group` oggetto.  
   
 ### <a name="remarks"></a>Note  
  Il runtime consente di pianificare la funzione lavoro fornita per l'esecuzione in un secondo momento, che può essere dopo che restituisce la funzione chiamante. Questo metodo Usa una [task_handle](task-handle-class.md) oggetto per contenere una copia della funzione lavoro fornita. Di conseguenza, le modifiche di stato che si verificano in un oggetto funzione passato a questo metodo non compariranno nella propria copia di tale oggetto funzione. Inoltre, assicurarsi che la durata di tutti gli oggetti che si passano il puntatore o riferimento alla funzione lavoro rimanga valida finché non restituisce la funzione lavoro.  
@@ -167,14 +167,14 @@ task_group_status run_and_wait(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function`  
- Tipo dell'oggetto funzione che sarà richiamato per eseguire il corpo dell'attività.  
+*_Function*<br/>
+Tipo dell'oggetto funzione che sarà richiamato per eseguire il corpo dell'attività.  
   
- `_Task_handle`  
- Handle per l'attività che verrà eseguita inline sul contesto di chiamata. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino al `run_and_wait` metodo completa l'esecuzione.  
+*Task_handle*<br/>
+Handle per l'attività che verrà eseguita inline sul contesto di chiamata. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino al `run_and_wait` metodo completa l'esecuzione.  
   
- `_Func`  
- Una funzione che verrà chiamata per richiamare il corpo del lavoro. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.  
+*Func*<br/>
+Una funzione che verrà chiamata per richiamare il corpo del lavoro. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un'indicazione del fatto che l'attesa è stata soddisfatta o il gruppo di attività è stato annullato a causa di un'operazione di annullamento esplicito o un'eccezione generata da una delle relative attività. Per altre informazioni, vedere [task_group_status](concurrency-namespace-enums.md#task_group_status).  
@@ -202,8 +202,8 @@ task_group(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_CancellationToken`  
- Token di annullamento da associare a questo gruppo di attività. Il gruppo di attività verrà annullato quando il token viene annullato.  
+*_CancellationToken*<br/>
+Token di annullamento da associare a questo gruppo di attività. Il gruppo di attività verrà annullato quando il token viene annullato.  
   
 ### <a name="remarks"></a>Note  
  Tramite il costruttore che accetta un token di annullamento viene creato un oggetto `task_group` che verrà annullato quando l'origine associata al token viene annullata. Fornire un token di annullamento esplicito permette di isolare questo gruppo di attività dalla partecipazione a un annullamento implicito di un gruppo padre con un token diverso o senza token.  

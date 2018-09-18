@@ -1,5 +1,5 @@
 ---
-title: Creazione di un Provider | Documenti Microsoft
+title: Creazione di un Provider | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b08d2a2f68d174ae7c92d1d6bc0fa2bbb764fdca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3149e59a239401c7c847da9371619821824a5d37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097185"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032094"
 ---
 # <a name="creating-the-provider"></a>Creazione di un provider
+
 #### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Per creare un provider OLE DB con la creazione guidata Provider OLE DB ATL  
   
-1.  Fare clic sul progetto.  
+1. Fare clic sul progetto.  
   
-2.  Menu di scelta rapida, fare clic su **Aggiungi**, quindi fare clic su **Aggiungi classe**.  
+1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **Aggiungi classe**.  
   
-3.  Nel **Aggiungi classe** la finestra di dialogo, seleziona il **Provider OLE DB ATL** icona e quindi fare clic su **aprire**.  
+1. Nel **Aggiungi classe** finestra di dialogo, seleziona la **Provider OLE DB ATL** icona e quindi fare clic su **Open**.  
   
-4.  Nella creazione guidata Provider OLE DB ATL immettere un nome breve per il provider nel **nome breve** casella. Gli argomenti seguenti di utilizzare il nome breve "MyProvider", ma è possibile utilizzare un altro nome. Le altre caselle Nome popolano in base al nome specificato.  
+1. Nella creazione guidata Provider OLE DB ATL, immettere un nome breve per il provider nel **nome breve** casella. Gli argomenti seguenti usano il nome breve "MyProvider", ma è possibile usare un altro nome. Le altre caselle Nome popolano in base al nome specificato.  
   
-5.  Modificare le altre caselle di nome, se necessario. Oltre ai nomi di oggetto e il file, è possibile modificare le operazioni seguenti:  
+1. Modificare le altre caselle di nome, se necessario. Oltre ai nomi oggetto e il file, è possibile modificare quanto segue:  
   
     -   **Coclasse**: il nome utilizzato da COM per creare il provider.  
   
     -   **ProgID**: l'identificatore a livello di codice, che è una stringa di testo che può essere utilizzata invece di un GUID.  
   
-    -   **Versione**: utilizzata con il ProgID e la coclasse per generare un ID di livello di codice dipendente dalla versione.  
+    -   **Versione**: usato con i ProgID e coclasse per generare un ID a livello di codice dipendente dalla versione  
   
-6.  Scegliere **Fine**.  
+1. Scegliere **Fine**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

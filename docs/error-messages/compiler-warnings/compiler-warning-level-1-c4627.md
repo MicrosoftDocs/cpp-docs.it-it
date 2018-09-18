@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
-ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
+ms.openlocfilehash: fef8d0ab55205d2377fc52049c40a1c50151b93e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249620"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024177"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Avviso del compilatore (livello 1) C4627
 
@@ -32,7 +32,7 @@ Se il file di origine corrente ha il [/Yu \(utilizzare file di intestazione prec
 ## <a name="example"></a>Esempio
 
 Questo esempio viene illustrato come può verificarsi l'errore e Mostra come risolverlo:
- 
+
 ```cpp
 // c4627.cpp
 #include <iostream>       // C4627 - iostream not included by pch.h
@@ -43,7 +43,7 @@ int main()
     std::cout << "std::cout is defined!\n";
 }
 ```
-  
+
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)

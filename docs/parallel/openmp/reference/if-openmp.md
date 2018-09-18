@@ -1,5 +1,5 @@
 ---
-title: Se (/openmp) | Documenti Microsoft
+title: Se (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2467c295c4f2724ec6d258e844f2bdaa84cfe29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 83e1920ab2cb44815e9547e4f7f4a07999c1c588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692238"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020953"
 ---
 # <a name="if-openmp"></a>if (OpenMP)
-Specifica se un ciclo deve essere eseguito in parallelo o seriale.  
+Specifica se un ciclo deve essere eseguito in parallelo o in serie.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,11 +32,10 @@ Specifica se un ciclo deve essere eseguito in parallelo o seriale.
 if(expression)  
 ```  
   
-## <a name="remarks"></a>Note  
- dove  
+### <a name="parameters"></a>Parametri
   
- `expression`  
- Un'espressione integrale che, se restituisce true (diverso da zero), fa sì che il codice in tale area per eseguire in parallelo. Se l'espressione restituisce false (zero), l'area parallela viene eseguito in serie (da un singolo thread).  
+*Espressione*<br/>
+Un'espressione integrale che, se restituisce true (diverso da zero), fa sì che il codice in tale area per l'esecuzione in parallelo. Se l'espressione restituisce false (zero), l'area parallela viene eseguito in serie (per un singolo thread).  
   
 ## <a name="remarks"></a>Note  
  `if` si applica alle direttive seguenti:  
@@ -45,9 +44,9 @@ if(expression)
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [Nelle sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Per ulteriori informazioni, vedere [2.3 costrutto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Per altre informazioni, vedere [2.3 costrutto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Esempio  
   

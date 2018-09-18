@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2051 | Documenti Microsoft
+title: Errore del compilatore C2051 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,52 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49817ff2ad99a2cd3f23d1d0cda1456dc2c30b9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 034c4953669b2d1a196649cc7b8886a9629d9ca4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030992"
 ---
 # <a name="compiler-error-c2051"></a>Errore del compilatore C2051
-espressione case non costante  
-  
- Le espressioni case devono essere costanti integer.  
-  
- L'esempio seguente genera l'errore C2051:  
-  
-```  
-// C2051.cpp  
-class X {};  
-  
-int main() {  
-   static X x;  
-   int i = 0;  
-  
-   switch (i) {  
-      case x:   // C2051 use constant expression to resolve error  
-         break;  
-      default:  
-         break;  
-   }  
-}  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2051b.cpp  
-class X {};  
-  
-int main() {  
-   static X x;  
-   int i = 0;  
-  
-   switch (i) {  
-      case 1:  
-         break;  
-      default:  
-         break;  
-   }  
-}  
+
+espressione case non costante
+
+Le espressioni case devono essere costanti integer.
+
+L'esempio seguente genera l'errore C2051:
+
+```
+// C2051.cpp
+class X {};
+
+int main() {
+   static X x;
+   int i = 0;
+
+   switch (i) {
+      case x:   // C2051 use constant expression to resolve error
+         break;
+      default:
+         break;
+   }
+}
+```
+
+Possibile soluzione:
+
+```
+// C2051b.cpp
+class X {};
+
+int main() {
+   static X x;
+   int i = 0;
+
+   switch (i) {
+      case 1:
+         break;
+      default:
+         break;
+   }
+}
 ```

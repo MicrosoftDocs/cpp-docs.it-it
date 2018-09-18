@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4515 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4515 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42bdf6edbd55f533a01c5c430ed328ded7e71dde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae4fde16336b3bcd06b344641207b70279c7416
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037229"
 ---
 # <a name="compiler-warning-level-4-c4515"></a>Avviso del compilatore (livello 4) C4515
-'namespace': lo spazio dei nomi utilizza se stesso  
-  
- Uno spazio dei nomi viene utilizzato in modo ricorsivo.  
-  
- L'esempio seguente genera l'errore C4515:  
-  
-```  
-// C4515.cpp  
-// compile with: /W4  
-namespace A  
-{  
-   using namespace A; // C4515  
-}  
-  
-int main()  
-{  
-}  
+
+'namespace': lo spazio dei nomi utilizza se stesso
+
+Uno spazio dei nomi è utilizzato in modo ricorsivo.
+
+L'esempio seguente genera l'errore C4515:
+
+```
+// C4515.cpp
+// compile with: /W4
+namespace A
+{
+   using namespace A; // C4515
+}
+
+int main()
+{
+}
 ```

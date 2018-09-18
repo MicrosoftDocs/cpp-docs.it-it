@@ -16,42 +16,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb810f880ac86651059d71a59040e34810c7e167
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8e43fbfd9b3cff9ea617238ed7b4cccd08f780cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018704"
 ---
 # <a name="true-c"></a>true (C++)
-## <a name="syntax"></a>Sintassi  
-  
-```  
-bool-identifier = true ;  
-bool-expression logical-operator true ;  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa parola chiave è uno dei due valori per una variabile di tipo [bool](../cpp/bool-cpp.md) o un'espressione condizionale (un'espressione condizionale è ora un'espressione booleana true). Se `i` JE typu **bool**, quindi l'istruzione `i = true;` assegna **true** a `i`.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// bool_true.cpp  
-#include <stdio.h>  
-int main()  
-{  
-    bool bb = true;  
-    printf_s("%d\n", bb);  
-    bb = false;  
-    printf_s("%d\n", bb);  
-}  
-```  
-  
-```Output  
-1  
-0  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave](../cpp/keywords-cpp.md)
+
+## <a name="syntax"></a>Sintassi
+
+```
+bool-identifier = true ;
+bool-expression logical-operator true ;
+```
+
+## <a name="remarks"></a>Note
+
+Questa parola chiave è uno dei due valori per una variabile di tipo [bool](../cpp/bool-cpp.md) o un'espressione condizionale (un'espressione condizionale è ora un'espressione booleana true). Se `i` JE typu **bool**, quindi l'istruzione `i = true;` assegna **true** a `i`.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// bool_true.cpp
+#include <stdio.h>
+int main()
+{
+    bool bb = true;
+    printf_s("%d\n", bb);
+    bb = false;
+    printf_s("%d\n", bb);
+}
+```
+
+```Output
+1
+0
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Parole chiave](../cpp/keywords-cpp.md)

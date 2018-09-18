@@ -12,117 +12,115 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0edf350289d04824dc2e06e4e11144a4f3141770
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0e4486bc3106bd438c7a963ca241465cbc167710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035204"
 ---
 # <a name="range-based-for-statement-c"></a>Istruzione for basata su intervallo (C++)
-Esegue `statement` ripetutamente e in sequenza per ogni elemento in `expression`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-for ( for-range-declaration : expression )  
-   statement   
-```  
-  
-## <a name="remarks"></a>Note  
- Usare basato su intervallo **per** istruzione per costruire cicli che devono essere eseguite tramite un "range", che è definita come tutto ciò che è possibile eseguire l'iterazione attraverso, ad esempio, `std::vector`, o qualsiasi altra libreria C++ Standard con un intervallo di sequenza è definito da una `begin()` e `end()`. Il nome dichiarato nel `for-range-declaration` parte è locale per il **per** istruzione e non può essere dichiarato nuovamente in `expression` o `statement`. Si noti che il [automatica](../cpp/auto-cpp.md) parola chiave è preferito nel `for-range-declaration` parte dell'istruzione. 
 
- **Novità di Visual Studio 2017:** basati su intervallo per i cicli non richiedono più che Begin () ed end () restituiscano oggetti dello stesso tipo. Ciò consente a end() di restituire un oggetto sentinel come viene usato dagli intervalli in base alla definizione nella proposta Ranges-V3. Per altre informazioni, vedere il documento relativo alla [generalizzazione del ciclo for basato su intervallo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e la [libreria range-v3 su GitHub](https://github.com/ericniebler/range-v3).
-  
- Questo codice viene illustrato come utilizzare in base a intervallo **per** cicli di iterazione per scorrere una matrice e un vettore:  
-  
-```cpp  
-// range-based-for.cpp  
-// compile by using: cl /EHsc /nologo /W4  
-#include <iostream>  
-#include <vector>  
-using namespace std;  
-  
-int main()   
-{  
-    // Basic 10-element integer array.  
-    int x[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };  
-  
-    // Range-based for loop to iterate through the array.  
-    for( int y : x ) { // Access by value using a copy declared as a specific type.   
-                       // Not preferred.  
-        cout << y << " ";  
-    }  
-    cout << endl;  
-  
-    // The auto keyword causes type inference to be used. Preferred.  
-  
-    for( auto y : x ) { // Copy of 'x', almost always undesirable  
-        cout << y << " ";  
-    }  
-    cout << endl;  
-  
-    for( auto &y : x ) { // Type inference by reference.  
-        // Observes and/or modifies in-place. Preferred when modify is needed.  
-        cout << y << " ";  
-    }  
-    cout << endl;  
-  
-    for( const auto &y : x ) { // Type inference by const reference.  
-        // Observes in-place. Preferred when no modify is needed.  
-        cout << y << " ";  
-    }  
-    cout << endl;  
-    cout << "end of integer array test" << endl;  
-    cout << endl;  
-  
-    // Create a vector object that contains 10 elements.  
-    vector<double> v;  
-    for (int i = 0; i < 10; ++i) {  
-        v.push_back(i + 0.14159);  
-    }  
-  
-    // Range-based for loop to iterate through the vector, observing in-place.  
-    for( const auto &j : v ) {  
-        cout << j << " ";  
-    }  
-    cout << endl;  
-    cout << "end of vector test" << endl;  
-}  
-```  
-  
- L'output è il seguente:  
+Esegue `statement` ripetutamente e in sequenza per ogni elemento in `expression`.
 
-```Output
- 1 2 3 4 5 6 7 8 9 10  
-  
- 1 2 3 4 5 6 7 8 9 10  
-  
- 1 2 3 4 5 6 7 8 9 10  
-  
- 1 2 3 4 5 6 7 8 9 10  
-  
- `end of integer array test`  
-  
- `0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159`  
-  
- `end of vector test`  
+## <a name="syntax"></a>Sintassi
+
+```
+for ( for-range-declaration : expression )
+   statement
 ```
 
- Una basata su intervallo **per** ciclo termina quando una di queste condizioni `statement` viene eseguito: una [interruzione](../cpp/break-statement-cpp.md), [restituiscono](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) a un'etichetta istruzione all'esterno basato su intervallo **per** ciclo. Oggetto [continuare](../cpp/continue-statement-cpp.md) istruzione in un intervallo basato **per** ciclo termina solo l'iterazione corrente.  
-  
- Tenere presente questi fatti su basati su intervallo **per**:  
-  
--   Riconosce automaticamente le matrici.  
-  
--   Riconosce i contenitori con `.begin()` e `.end()`.  
-  
--   Utilizzare la ricerca dipendente dall'argomento `begin()` e `end()` per altri scopi.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Automatico](../cpp/auto-cpp.md)   
- [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md)   
- [Parole chiave](../cpp/keywords-cpp.md)   
- [Istruzione while (C++)](../cpp/while-statement-cpp.md)   
- [Istruzione do-while (C++)](../cpp/do-while-statement-cpp.md)   
- [Istruzione for (C++)](../cpp/for-statement-cpp.md)
+## <a name="remarks"></a>Note
+
+Usare basato su intervallo **per** istruzione per costruire cicli che devono essere eseguite tramite un "range", che è definita come tutto ciò che è possibile eseguire l'iterazione attraverso, ad esempio, `std::vector`, o qualsiasi altra libreria C++ Standard con un intervallo di sequenza è definito da una `begin()` e `end()`. Il nome dichiarato nel `for-range-declaration` parte è locale per il **per** istruzione e non può essere dichiarato nuovamente in `expression` o `statement`. Si noti che il [automatica](../cpp/auto-cpp.md) parola chiave è preferito nel `for-range-declaration` parte dell'istruzione.
+
+**Novità di Visual Studio 2017:** basati su intervallo per i cicli non richiedono più che Begin () ed end () restituiscano oggetti dello stesso tipo. Ciò consente a end() di restituire un oggetto sentinel come viene usato dagli intervalli in base alla definizione nella proposta Ranges-V3. Per altre informazioni, vedere il documento relativo alla [generalizzazione del ciclo for basato su intervallo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e la [libreria range-v3 su GitHub](https://github.com/ericniebler/range-v3).
+
+Questo codice viene illustrato come utilizzare in base a intervallo **per** cicli di iterazione per scorrere una matrice e un vettore:
+
+```cpp
+// range-based-for.cpp
+// compile by using: cl /EHsc /nologo /W4
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    // Basic 10-element integer array.
+    int x[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+    // Range-based for loop to iterate through the array.
+    for( int y : x ) { // Access by value using a copy declared as a specific type.
+                       // Not preferred.
+        cout << y << " ";
+    }
+    cout << endl;
+
+    // The auto keyword causes type inference to be used. Preferred.
+
+    for( auto y : x ) { // Copy of 'x', almost always undesirable
+        cout << y << " ";
+    }
+    cout << endl;
+
+    for( auto &y : x ) { // Type inference by reference.
+        // Observes and/or modifies in-place. Preferred when modify is needed.
+        cout << y << " ";
+    }
+    cout << endl;
+
+    for( const auto &y : x ) { // Type inference by const reference.
+        // Observes in-place. Preferred when no modify is needed.
+        cout << y << " ";
+    }
+    cout << endl;
+    cout << "end of integer array test" << endl;
+    cout << endl;
+
+    // Create a vector object that contains 10 elements.
+    vector<double> v;
+    for (int i = 0; i < 10; ++i) {
+        v.push_back(i + 0.14159);
+    }
+
+    // Range-based for loop to iterate through the vector, observing in-place.
+    for( const auto &j : v ) {
+        cout << j << " ";
+    }
+    cout << endl;
+    cout << "end of vector test" << endl;
+}
+```
+
+L'output è il seguente:
+
+```Output
+1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+end of integer array test
+
+0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159
+end of vector test
+```
+
+Una basata su intervallo **per** ciclo termina quando una di queste condizioni `statement` viene eseguito: una [interruzione](../cpp/break-statement-cpp.md), [restituiscono](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) a un'etichetta istruzione all'esterno basato su intervallo **per** ciclo. Oggetto [continuare](../cpp/continue-statement-cpp.md) istruzione in un intervallo basato **per** ciclo termina solo l'iterazione corrente.
+
+Tenere presente questi fatti su basati su intervallo **per**:
+
+- Riconosce automaticamente le matrici.
+
+- Riconosce i contenitori con `.begin()` e `.end()`.
+
+- Utilizzare la ricerca dipendente dall'argomento `begin()` e `end()` per altri scopi.
+
+## <a name="see-also"></a>Vedere anche
+
+[auto](../cpp/auto-cpp.md)<br/>
+[Istruzioni di iterazione](../cpp/iteration-statements-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[Istruzione while (C++)](../cpp/while-statement-cpp.md)<br/>
+[Istruzione do-while (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[Istruzione for (C++)](../cpp/for-statement-cpp.md)

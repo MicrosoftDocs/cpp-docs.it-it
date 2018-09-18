@@ -13,17 +13,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baf70ac7fd4d07958478d2eef455c7dc395e221
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: c43ce60d319c427877b77a043df7c30bd00edc9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025880"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>Del compilatore (livello 4) Avviso C4840
 
 > uso non portabile della classe*tipo*' come argomento per una funzione variadic
-  
+
 ## <a name="remarks"></a>Note
 
 Classi o struct che vengono passati a una funzione variadic deve essere facilmente copiabili. Quando si passano tali oggetti il compilatore si limita a creare una copia bit per bit e non chiama il costruttore o distruttore.

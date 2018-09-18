@@ -1,5 +1,5 @@
 ---
-title: Classe accelerator_view_removed | Documenti Microsoft
+title: Classe accelerator_view_removed | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688154"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020257"
 ---
 # <a name="acceleratorviewremoved-class"></a>Classe accelerator_view_removed
-Eccezione generata quando una chiamata a DirectX sottostante ha esito negativo a causa il meccanismo di rilevamento e ripristino timeout Windows.  
+Eccezione generata quando una chiamata sottostante di DirectX ha esito negativo a causa il meccanismo di rilevamento e ripristino timeout Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ class accelerator_view_removed : public runtime_exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[get_view_removed_reason](#get_view_removed_reason)|Restituisce un codice di errore HRESULT che indica la causa dei `accelerator_view` la rimozione dell'oggetto.|  
+|[get_view_removed_reason](#get_view_removed_reason)|Restituisce un codice di errore HRESULT che indica la causa del `accelerator_view` la rimozione dell'oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -57,7 +57,7 @@ class accelerator_view_removed : public runtime_exception;
  `out_of_memory`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** amprt.h  
+ **Intestazione:** amprt. h  
   
  **Spazio dei nomi:** Concurrency  
 
@@ -77,18 +77,18 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Descrizione dell'errore.  
+*Messaggio*<br/>
+Descrizione dell'errore.  
   
- `_View_removed_reason`  
- Che indica la causa della rimozione di un codice di errore HRESULT di `accelerator_view` oggetto.  
+*_View_removed_reason*<br/>
+Un codice di errore HRESULT che indica la causa della rimozione del `accelerator_view` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  Una nuova istanza della classe accelerator_view_removed.  
   
 ## <a name="get_view_removed_reason_method"></a> get_view_removed_reason 
 
-Restituisce un codice di errore HRESULT che indica la causa dei `accelerator_view` la rimozione dell'oggetto.  
+Restituisce un codice di errore HRESULT che indica la causa del `accelerator_view` la rimozione dell'oggetto.  
   
 ### <a name="syntax"></a>Sintassi  
   

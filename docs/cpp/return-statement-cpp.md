@@ -17,53 +17,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda9406909f3508472c11524402c37baa17a76b0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 42248813cdc69a4db268d1e3a2ef447a483ebeb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017483"
 ---
 # <a name="return-statement-c"></a>Istruzione return (C++)
-Viene interrotta l'esecuzione di una funzione e il controllo viene restituito alla funzione chiamante (o al sistema operativo, se il controllo viene trasferito dalla funzione `main`). Nella funzione chiamante, l'esecuzione riprende dal punto immediatamente successivo alla chiamata.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-return [expression];  
-```  
-  
-## <a name="remarks"></a>Note  
- La clausola `expression`, se presente, viene convertita nel tipo specificato nella dichiarazione di funzione, come se si eseguisse un'inizializzazione. Conversione dal tipo dell'espressione per il **restituire** tipo della funzione può creare oggetti temporanei. Per altre informazioni su come e quando temporanei vengono creati, vedere [oggetti temporanei](../cpp/temporary-objects.md).  
-  
- Il valore della clausola `expression` viene restituito alla funzione chiamante. Se l'espressione viene omessa, il valore restituito della funzione è indefinito. Costruttori e distruttori e funzioni di tipo **void**, non è possibile specificare un'espressione nel **restituire** istruzione. Funzioni di tutti gli altri tipi devono specificare un'espressione nel **restituire** istruzione.  
-  
- Quando il flusso di controllo esce dal blocco che racchiude la definizione di funzione, il risultato è lo stesso come lo sarebbe se un **restituire** fosse stata eseguita un'istruzione senza un'espressione. Ciò non è valido per le funzioni che vengono dichiarate come elementi che restituiscono un valore.  
-  
- Una funzione può avere un numero qualsiasi di **restituire** istruzioni.  
-  
- L'esempio seguente usa un'espressione con un **restituire** istruzione per ottenere il più elevato tra due numeri interi.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// return_statement2.cpp  
-#include <stdio.h>  
-  
-int max ( int a, int b )  
-{  
-   return ( a > b ? a : b );  
-}  
-  
-int main()  
-{  
-    int nOne = 5;  
-    int nTwo = 7;  
-  
-    printf_s("\n%d is bigger\n", max( nOne, nTwo ));  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Istruzioni di spostamento](../cpp/jump-statements-cpp.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+
+Viene interrotta l'esecuzione di una funzione e il controllo viene restituito alla funzione chiamante (o al sistema operativo, se il controllo viene trasferito dalla funzione `main`). Nella funzione chiamante, l'esecuzione riprende dal punto immediatamente successivo alla chiamata.
+
+## <a name="syntax"></a>Sintassi
+
+```
+return [expression];
+```
+
+## <a name="remarks"></a>Note
+
+La clausola `expression`, se presente, viene convertita nel tipo specificato nella dichiarazione di funzione, come se si eseguisse un'inizializzazione. Conversione dal tipo dell'espressione per il **restituire** tipo della funzione può creare oggetti temporanei. Per altre informazioni su come e quando temporanei vengono creati, vedere [oggetti temporanei](../cpp/temporary-objects.md).
+
+Il valore della clausola `expression` viene restituito alla funzione chiamante. Se l'espressione viene omessa, il valore restituito della funzione è indefinito. Costruttori e distruttori e funzioni di tipo **void**, non è possibile specificare un'espressione nel **restituire** istruzione. Funzioni di tutti gli altri tipi devono specificare un'espressione nel **restituire** istruzione.
+
+Quando il flusso di controllo esce dal blocco che racchiude la definizione di funzione, il risultato è lo stesso come lo sarebbe se un **restituire** fosse stata eseguita un'istruzione senza un'espressione. Ciò non è valido per le funzioni che vengono dichiarate come elementi che restituiscono un valore.
+
+Una funzione può avere un numero qualsiasi di **restituire** istruzioni.
+
+L'esempio seguente usa un'espressione con un **restituire** istruzione per ottenere il più elevato tra due numeri interi.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// return_statement2.cpp
+#include <stdio.h>
+
+int max ( int a, int b )
+{
+   return ( a > b ? a : b );
+}
+
+int main()
+{
+    int nOne = 5;
+    int nTwo = 7;
+
+    printf_s("\n%d is bigger\n", max( nOne, nTwo ));
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Istruzioni di spostamento](../cpp/jump-statements-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

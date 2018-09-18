@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4235 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4235 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc63640bc58caefa281b9207b9796ffdf387a7a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e709017e51101efe53a8697bb145014f200871
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292542"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031821"
 ---
 # <a name="compiler-warning-level-4-c4235"></a>Avviso del compilatore (livello 4) C4235
-utilizzata estensione non standard: parola chiave' keyword ' non è supportata in questa architettura  
-  
- Il compilatore non supporta la parola chiave che è utilizzata.  
-  
- Questo avviso viene promossa automaticamente a un errore. Se si desidera modificare questo comportamento, utilizzare [#pragma avviso](../../preprocessor/warning.md). Ad esempio, rendere C4235 un avviso di livello 2, utilizzare la seguente riga di codice  
-  
-```  
-#pragma warning(2:4235)  
-```  
-  
- nel file del codice sorgente.
+
+utilizzata estensione non standard: parola chiave 'keyword' non è supportata in questa architettura
+
+Il compilatore non supporta la parola chiave che è utilizzata.
+
+Questo avviso viene promossa automaticamente a un errore. Se si vuole modificare questo comportamento, usare [#pragma avviso](../../preprocessor/warning.md). Ad esempio, per rendere C4235 in un avviso di livello 2, utilizzare la seguente riga di codice
+
+```
+#pragma warning(2:4235)
+```
+
+nel file del codice sorgente.

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3218 | Documenti Microsoft
+title: Errore del compilatore C3218 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6938768211a78ca2a72c78ebb03a8972e0a86a74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a21050e49a05980a4e4a644fa9f08bc42f23310
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030820"
 ---
 # <a name="compiler-error-c3218"></a>Errore del compilatore C3218
-'type': tipo non consentito come vincolo  
-  
- Per un tipo di vincolo, deve essere un tipo di valore o riferimento a una classe gestita o un'interfaccia.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3218.  
-  
-```  
-// C3218.cpp  
-// compile with: /clr /c  
-class A {};  
-ref class B {};  
-  
-// Delete the following 3 lines to resolve.  
-generic <class T>  
-where T : A   // C3218  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where  T : B  
-ref class D {};  
+
+'type': tipo non consentito come vincolo
+
+Per un tipo può essere un vincolo, deve essere un tipo di valore o riferimento a una classe gestita o un'interfaccia.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3218.
+
+```
+// C3218.cpp
+// compile with: /clr /c
+class A {};
+ref class B {};
+
+// Delete the following 3 lines to resolve.
+generic <class T>
+where T : A   // C3218
+ref class C {};
+
+// OK
+generic <class T>
+where  T : B
+ref class D {};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2510 | Documenti Microsoft
+title: Errore del compilatore C2510 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 555d6d30f78c82e4c37e9fd5a047f62018b3d3d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2a672b8329bc3167452ec5e3d1d76f19161bf6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055962"
 ---
 # <a name="compiler-error-c2510"></a>Errore del compilatore C2510
-'identifier': a sinistra di '::' occorre specificare una classe, una struttura o un'unione  
-  
- Un nome di classe, struttura o unione deve essere visualizzato nella parte sinistra dell'operatore di risoluzione dell'ambito (`::`).
+
+'identifier': a sinistra di '::' occorre specificare una classe, una struttura o un'unione
+
+Un nome di classe, struttura o unione deve essere visualizzato nella parte sinistra dell'operatore di risoluzione dell'ambito (`::`).

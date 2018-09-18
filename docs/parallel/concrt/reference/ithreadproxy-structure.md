@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027856"
 ---
 # <a name="ithreadproxy-structure"></a>Struttura IThreadProxy
 Astrazione per un thread di esecuzione. A seconda della chiave di criteri `SchedulerType` dell'utilità di pianificazione che si crea, Gestione risorse concederà un proxy del thread appoggiato da un thread Win32 normale o un thread UMS in modalità utente. I thread UMS sono supportati su sistemi operativi a 64 bit con Windows versione 7 e successive.  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `switchState`  
- Indica lo stato del proxy del thread che sta eseguendo l'opzione. Il parametro è di tipo `SwitchingProxyState`.  
+*switchState farà*<br/>
+Indica lo stato del proxy del thread che sta eseguendo l'opzione. Il parametro è di tipo `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare `SwitchOut` se è necessario rimuovere, per qualsiasi motivo, l'associazione tra un contesto e la radice del processore virtuale in cui è in esecuzione. A seconda del valore passato al parametro `switchState` e dell'eventuale esecuzione in una radice del processore virtuale, tramite la chiamata il proxy thread associato al contesto verrà restituito immediatamente o bloccato. È errato chiamare `SwitchOut` con il parametro impostato su `Idle`. Questa operazione comporterà un' [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione.  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pContext`  
- Il contesto di esecuzione passa in modo cooperativo.  
+*pContext*<br/>
+Il contesto di esecuzione passa in modo cooperativo.  
   
- `switchState`  
- Indica lo stato del proxy del thread che sta eseguendo l'opzione. Il parametro è di tipo `SwitchingProxyState`.  
+*switchState farà*<br/>
+Indica lo stato del proxy del thread che sta eseguendo l'opzione. Il parametro è di tipo `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Note  
  Usare questo metodo per passare da un contesto di esecuzione a un altro, dal [IExecutionContext:: dispatch](iexecutioncontext-structure.md#dispatch) metodo del contesto di esecuzione prima. Il metodo associa il contesto di esecuzione `pContext` con un proxy del thread se non è già associato a uno. La proprietà del proxy del thread corrente è determinata dal valore specificato per il `switchState` argomento.  

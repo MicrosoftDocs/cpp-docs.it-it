@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3075 | Documenti Microsoft
+title: Errore del compilatore C3075 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c582c9907987fe9f015f3e639e2f3f2e362e0c82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb2cbcb8908803cef2347fe5eb60342647094f95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023332"
 ---
 # <a name="compiler-error-c3075"></a>Errore del compilatore C3075
-'instance': impossibile incorporare un'istanza di un tipo riferimento, 'type', in un tipo di valore  
-  
- Un tipo valore non può contenere un'istanza di un tipo riferimento.  
-  
- Per ulteriori informazioni, vedere [semantica dello Stack C++ per i tipi riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3075.  
-  
-```  
-// C3075.cpp  
-// compile with: /clr /c  
-ref struct U {};  
-value struct X {  
-   U y;   // C3075  
-};  
-  
-ref struct Y {  
-   U y;   // OK  
-};  
+
+'instance': impossibile incorporare un'istanza di un tipo riferimento, 'type', in un tipo di valore
+
+Un tipo valore non può contenere un'istanza di un tipo riferimento.
+
+Per altre informazioni, vedere [semantica dello Stack C++ per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3075.
+
+```
+// C3075.cpp
+// compile with: /clr /c
+ref struct U {};
+value struct X {
+   U y;   // C3075
+};
+
+ref struct Y {
+   U y;   // OK
+};
 ```

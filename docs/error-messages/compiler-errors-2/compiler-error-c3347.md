@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3347 | Documenti Microsoft
+title: Errore del compilatore C3347 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 961ddc31fbd4b2ac5cac283c949ebb443f0ca855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 824d2e787ae613636c20c0cc79ae3167431a8fe7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015728"
 ---
 # <a name="compiler-error-c3347"></a>Errore del compilatore C3347
-'arg': argomento obbligatorio non specificato nell'attributo idl_module  
-  
- Un argomento obbligatorio non è stato passato all'attributo [idl_module](../../windows/idl-module.md) .  
-  
- L'esempio seguente genera l'errore C3347:  
-  
-```  
-// C3347.cpp  
-// compile with: /c  
-[module(name="xx")];  
-  
-[idl_module(dllname="x")];    // C3347  
-// try the following line instead  
-// [idl_module(name="test", dllname="x")];  
+
+'arg': argomento obbligatorio non specificato nell'attributo idl_module
+
+Un argomento obbligatorio non è stato passato all'attributo [idl_module](../../windows/idl-module.md) .
+
+L'esempio seguente genera l'errore C3347:
+
+```
+// C3347.cpp
+// compile with: /c
+[module(name="xx")];
+
+[idl_module(dllname="x")];    // C3347
+// try the following line instead
+// [idl_module(name="test", dllname="x")];
 ```

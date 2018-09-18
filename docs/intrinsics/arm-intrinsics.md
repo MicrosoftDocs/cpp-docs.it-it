@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0c2138de2becc7afa9d2392c2fa5240b584b6d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712803"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018249"
 ---
 # <a name="arm-intrinsics"></a>Oggetti intrinseci ARM
 Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per l'architettura ARM. Per altre informazioni su ARM, vedere la [manuali di riferimento di architettura ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) e [Guida degli strumenti dell'Assembler ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) nel sito Web del centro informazioni ARM.  
@@ -2162,11 +2162,11 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  **Parametri**  
   
- `Location`  
- Indirizzo di una posizione di memoria da cui leggere o in cui scrivere.  
+*Posizione*<br/>
+Indirizzo di una posizione di memoria da cui leggere o in cui scrivere.  
   
- `Value`  
- Valore da scrivere nella posizione di memoria specificato (solo funzioni intrinseche archivio).  
+*Valore*<br/>
+Valore da scrivere nella posizione di memoria specificato (solo funzioni intrinseche archivio).  
   
  **Valore restituito (solo funzioni intrinseche di caricamento)**  
   
@@ -2209,20 +2209,20 @@ int _MoveFromCoprocessor2(
   
  **Parametri**  
   
- `coproc`  
- Numero del coprocessore compreso tra 0 e 15.  
+*coproc*<br/>
+Numero del coprocessore compreso tra 0 e 15.  
   
- `opcode1`  
- Opcode specifico del coprocessore compreso tra 0 e 7.  
+*opcode1*<br/>
+Codice operativo specifico del coprocessore compreso tra 0 e 7.  
   
- `crn`  
- Numero del registro del coprocessore, compreso tra 0 e 15, che specifica il primo operando nell'istruzione.  
+*CRN*<br/>
+Numero del registro del coprocessore, compreso tra 0 e 15, che specifica il primo operando nell'istruzione.  
   
- `crm`  
- Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.  
+*CRM*<br/>
+Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.  
   
- `opcode2`  
- Codice operativo aggiuntivo specifico del coprocessore compreso tra 0 e 7.  
+*opcode2*<br/>
+Codice operativo aggiuntivo specifico del coprocessore compreso tra 0 e 7.  
   
  **Valore restituito**  
   
@@ -2248,14 +2248,14 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  **Parametri**  
   
- `coproc`  
- Numero del coprocessore compreso tra 0 e 15.  
+*coproc*<br/>
+Numero del coprocessore compreso tra 0 e 15.  
   
- `opcode1`  
- Opcode specifico del coprocessore compreso tra 0 e 15.  
+*opcode1*<br/>
+Codice operativo specifico del coprocessore compreso tra 0 e 15.  
   
- `crm`  
- Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.  
+*CRM*<br/>
+Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.  
   
  **Restituisce il valore**  
   
@@ -2293,23 +2293,23 @@ void _MoveToCoprocessor2(
   
  **Parametri**  
   
- `value`  
- Valore da scrivere nel coprocessore.  
+*valore*<br/>
+Valore da scrivere nel coprocessore.  
   
- `coproc`  
- Numero del coprocessore compreso tra 0 e 15.  
+*coproc*<br/>
+Numero del coprocessore compreso tra 0 e 15.  
   
- `opcode1`  
- Opcode specifico del coprocessore compreso tra 0 e 7.  
+*opcode1*<br/>
+Codice operativo specifico del coprocessore compreso tra 0 e 7.  
   
- `crn`  
- Numero del registro del coprocessore, compreso tra 0 e 15, che specifica il primo operando nell'istruzione.  
+*CRN*<br/>
+Numero del registro del coprocessore, compreso tra 0 e 15, che specifica il primo operando nell'istruzione.  
   
- `crm`  
- Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.  
+*CRM*<br/>
+Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.  
   
- `opcode2`  
- Codice operativo aggiuntivo specifico del coprocessore compreso tra 0 e 7.  
+*opcode2*<br/>
+Codice operativo aggiuntivo specifico del coprocessore compreso tra 0 e 7.  
   
  **Valore restituito**  
   
@@ -2336,14 +2336,14 @@ void _MoveFromCoprocessor64(
   
  **Parametri**  
   
- `coproc`  
- Numero del coprocessore compreso tra 0 e 15.  
+*coproc*<br/>
+Numero del coprocessore compreso tra 0 e 15.  
   
- `opcode1`  
- Opcode specifico del coprocessore compreso tra 0 e 15.  
+*opcode1*<br/>
+Codice operativo specifico del coprocessore compreso tra 0 e 15.  
   
- `crm`  
- Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.  
+*CRM*<br/>
+Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.  
   
  **Valore restituito**  
   

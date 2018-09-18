@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029468"
 ---
 # <a name="c-bit-fields"></a>Campi di bit C++
 
@@ -38,7 +38,7 @@ Le classi e le strutture possono contenere membri che occupano uno spazio di arc
 > [!NOTE]
 > Un campo di bit senza nome di larghezza 0 forza l'allineamento del campo di bit successivo a quello successivo **tipo** limite, in cui **tipo** è il tipo del membro.
 
- Nell'esempio seguente viene dichiarata una struttura contenente i campi di bit:
+Nell'esempio seguente viene dichiarata una struttura contenente i campi di bit:
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ Nell'elenco seguente vengono descritte le operazioni erronee nei campi di bit:
 - L'inizializzazione non -**const** riferimento con un campo di bit.
 
 ## <a name="see-also"></a>Vedere anche
- [Classi e struct](../cpp/classes-and-structs-cpp.md)
+
+[Classi e struct](../cpp/classes-and-structs-cpp.md)

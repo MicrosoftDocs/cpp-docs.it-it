@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bba9e3cce5424fdba86c05c0fd94cb3a0d08a5bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030924"
 ---
 # <a name="ccomptr-class"></a>Classe CComPtr
 
@@ -32,13 +32,13 @@ Una classe del puntatore intelligente per la gestione dei puntatori a interfacci
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<class T>  
+template<class T>
 class CComPtr
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Un'interfaccia COM che specifica il tipo di puntatore da archiviare.
 
 ## <a name="members"></a>Membri
@@ -89,10 +89,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Parametri
 
-*LP*  
+*LP*<br/>
 Utilizzato per inizializzare il puntatore di interfaccia.
 
-*T*  
+*T*<br/>
 Un'interfaccia COM.
 
 ##  <a name="operator_eq"></a>  CComPtr::operator =
@@ -114,6 +114,6 @@ Questa operazione AddRefs il nuovo oggetto e rilascia l'oggetto esistente, se un
 
 ## <a name="see-also"></a>Vedere anche
 
-[CComPtr::CComPtr](#ccomptr)   
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

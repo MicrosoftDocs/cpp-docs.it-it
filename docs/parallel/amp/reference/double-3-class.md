@@ -1,5 +1,5 @@
 ---
-title: Classe double_3 | Documenti Microsoft
+title: Classe double_3 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6ecc1939faab978c84f786d90c8693b036d2e938
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027752"
 ---
 # <a name="double3-class"></a>Classe double_3
-Rappresenta uno short vector di tre valori Double.  
+Rappresenta un vettore short di tre valori Double.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -110,7 +110,7 @@ class double_3;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore double_3](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore double_3](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -217,7 +217,7 @@ class double_3;
   
 ##  <a name="ctor"></a> double_3 
 
- Predefinito, costruttore inizializza tutti gli elementi con 0.  
+ Default costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 double_3() restrict(amp,
@@ -267,20 +267,20 @@ explicit inline double_3(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V0`  
- Il valore per inizializzare l'elemento 0.  
+*_V0*<br/>
+Il valore per inizializzare l'elemento 0.  
   
- `_V1`  
- Il valore per inizializzare l'elemento 1.  
+*V1*<br/>
+Il valore per inizializzare l'elemento 1.  
   
- `_V2`  
- Il valore per inizializzare l'elemento 2.  
+*_V2*<br/>
+Il valore per inizializzare l'elemento 2.  
   
- `_V`  
- Il valore per l'inizializzazione.  
+*ISOLA*<br/>
+Il valore di inizializzazione.  
   
- `_Other`  
- Oggetto utilizzato per inizializzare.  
+*_Other*<br/>
+Oggetto utilizzato per inizializzare.  
   
 ##  <a name="double_3__size"></a> Dimensioni 
 

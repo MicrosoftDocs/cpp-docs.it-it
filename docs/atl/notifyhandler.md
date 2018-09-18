@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9ad03df6a342d47919eb576227422f687d15b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f11c698b0f89e0584b673a112da10e82250cf5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755631"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035773"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -29,22 +29,22 @@ Il nome della funzione identificato dal terzo parametro della macro NOTIFY_HANDL
 
 ## <a name="syntax"></a>Sintassi
 
-```  
+```cpp
 LRESULT NotifyHandler(
-    int idCtrl,  
-    LPNMHDR pnmh,  
+    int idCtrl,
+    LPNMHDR pnmh,
     BOOL& bHandled);
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*idCtrl*  
+*idCtrl*<br/>
 L'identificatore del controllo che invia il messaggio.
 
-*pnmh*  
+*pnmh*<br/>
 Indirizzo di un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) struttura che contiene il codice di notifica e informazioni aggiuntive. Per alcuni messaggi di notifica, questo parametro punta a una struttura più grande che presenta il `NMHDR` struttura come il primo membro.
 
-*bHandled*  
+*bHandled*<br/>
 Il set di mapping dei messaggi *bHandled* su TRUE prima *NotifyHandler* viene chiamato. Se *NotifyHandler* non gestisce completamente il messaggio deve essere impostato *bHandled* al **FALSE** per indicare che il messaggio richiede un'ulteriore elaborazione.
 
 ## <a name="return-value"></a>Valore restituito
@@ -57,6 +57,6 @@ Per un esempio dell'uso di questo gestore di messaggi in una mappa dei messaggi,
 
 ## <a name="see-also"></a>Vedere anche
 
-[Implementazione di una finestra](../atl/implementing-a-window.md)   
-[Mappe messaggi](../atl/message-maps-atl.md)   
+[Implementazione di una finestra](../atl/implementing-a-window.md)<br/>
+[Mappe messaggi](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

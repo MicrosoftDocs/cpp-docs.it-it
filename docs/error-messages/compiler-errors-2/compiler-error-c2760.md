@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2760 | Documenti Microsoft
+title: Errore del compilatore C2760 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beee34b7dfa31365e9bdf79c843cca501a930e02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ae920b9bf0d6d8a743bd9defac883304e80c117
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229836"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026088"
 ---
 # <a name="compiler-error-c2760"></a>Errore del compilatore C2760
-Errore di sintassi: previsto 'nome1' non 'name2'  
-  
- Un operatore di cast viene utilizzato con un operatore non valido.  
-  
- L'esempio seguente genera l'errore C2760:  
-  
-```  
-// C2760.cpp  
-class B {};  
-class D : public B {};  
-  
-void f(B* pb) {  
-    D* pd1 = static_cast<D*>(pb);  
-    D* pd2 = static_cast<D*>=(pb);  // C2760  
-    D* pd3 = static_cast<D*=(pb);   // C2760  
-}  
+
+Errore di sintassi: previsto 'name1' non 'name2'
+
+Un operatore di cast viene usato con un operatore non valido.
+
+L'esempio seguente genera l'errore C2760:
+
+```
+// C2760.cpp
+class B {};
+class D : public B {};
+
+void f(B* pb) {
+    D* pd1 = static_cast<D*>(pb);
+    D* pd2 = static_cast<D*>=(pb);  // C2760
+    D* pd3 = static_cast<D*=(pb);   // C2760
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3610 | Documenti Microsoft
+title: Errore del compilatore C3610 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58d66e9d3dacfa2c0b38eb84fe51e0813a892d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46b3669978ff3735d5a16015ca0a01e65f07ae9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037853"
 ---
 # <a name="compiler-error-c3610"></a>Errore del compilatore C3610
-'valuetype': tipo di valore deve essere 'boxed' prima di poter chiamare il metodo 'method'  
-  
- Per impostazione predefinita, un tipo di valore non è nell'heap gestito. Prima di poter chiamare metodi dalle classi di runtime .NET, ad esempio `Object`, è necessario spostare il tipo di valore per l'heap gestito.  
-  
- C3610 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+
+'valuetype': tipo di valore deve essere 'boxed' prima di poter chiamare il 'metodo metodo'
+
+Per impostazione predefinita, un tipo di valore non è nell'heap gestito. Prima di chiamare i metodi da classi di runtime .NET, ad esempio `Object`, è necessario spostare il tipo di valore nell'heap gestito.
+
+È raggiungibile tramite l'opzione del compilatore obsolete solo C3610 **/CLR: oldSyntax**.

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 609216b38ab67076b454ac5adad3f331b235b580
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032029"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 
@@ -95,7 +95,7 @@ template <class T, class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 plibid,
     wMajor,
@@ -105,25 +105,25 @@ wMinor,
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe che implementa il controllo e la derivazione da `CStockPropImpl`.
 
-*InterfaceName*  
+*InterfaceName*<br/>
 Un'interfaccia duale espone le proprietà predefinite.
 
-*piid*  
+*piid*<br/>
 Un puntatore all'IID di `InterfaceName`.
 
-*plibid*  
+*plibid*<br/>
 Un puntatore a LIBID della libreria dei tipi contenente la definizione di `InterfaceName`.
 
-*wMajor*  
+*wMajor*<br/>
 Versione principale della libreria dei tipi. Il valore predefinito è 1.
 
-*wMinor*  
+*wMinor*<br/>
 Versione secondaria della libreria dei tipi. Il valore predefinito è 0.
 
-*tihclass*  
+*tihclass*<br/>
 La classe usata per gestire le informazioni sul tipo per *T*. Il valore predefinito è `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Membri
@@ -228,7 +228,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>Parametri
 
-*pnAppearance*  
+*pnAppearance*<br/>
 Variabile che riceve lo stile di disegno del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -245,7 +245,7 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="parameters"></a>Parametri
 
-*pbAutoSize*  
+*pbAutoSize*<br/>
 Variabile che riceve lo stato del flag. TRUE indica che il controllo non può essere qualsiasi altra dimensione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -262,7 +262,7 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="parameters"></a>Parametri
 
-*pclrBackColor*  
+*pclrBackColor*<br/>
 Variabile che riceve il colore di sfondo del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -279,7 +279,7 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*pnBackStyle*  
+*pnBackStyle*<br/>
 Variabile che riceve lo stile dello sfondo del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -296,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="parameters"></a>Parametri
 
-*pclrBorderColor*  
+*pclrBorderColor*<br/>
 Variabile che riceve colore del bordo del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -313,7 +313,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*pnBorderStyle*  
+*pnBorderStyle*<br/>
 Variabile che riceve lo stile del bordo del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -330,7 +330,7 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="parameters"></a>Parametri
 
-*pbBorderVisible*  
+*pbBorderVisible*<br/>
 Variabile che riceve lo stato del flag. TRUE indica che il bordo del controllo è visibile.
 
 ### <a name="return-value"></a>Valore restituito
@@ -347,7 +347,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="parameters"></a>Parametri
 
-*pnBorderWidth*  
+*pnBorderWidth*<br/>
 Variabile che riceve la larghezza del bordo del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -364,7 +364,7 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="parameters"></a>Parametri
 
-*pbstrCaption*  
+*pbstrCaption*<br/>
 Il testo da visualizzare con il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -381,7 +381,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="parameters"></a>Parametri
 
-*pnDrawMode*  
+*pnDrawMode*<br/>
 Variabile che riceve le modalità di disegno del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -398,7 +398,7 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*pnDrawStyle*  
+*pnDrawStyle*<br/>
 Variabile che riceve lo stile di disegno del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -415,7 +415,7 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="parameters"></a>Parametri
 
-*pnDrawWidth*  
+*pnDrawWidth*<br/>
 Variabile che riceve il valore del controllo larghezza, in pixel.
 
 ### <a name="return-value"></a>Valore restituito
@@ -432,7 +432,7 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>Parametri
 
-*pbEnabled*  
+*pbEnabled*<br/>
 Variabile che riceve lo stato del flag. TRUE indica che il controllo è abilitato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -449,7 +449,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="parameters"></a>Parametri
 
-*pclrFillColor*  
+*pclrFillColor*<br/>
 Variabile che riceve il colore di riempimento del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -466,7 +466,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*pnFillStyle*  
+*pnFillStyle*<br/>
 Variabile che riceve lo stile di riempimento del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -483,7 +483,7 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Parametri
 
-*ppFont*  
+*ppFont*<br/>
 Variabile che riceve un puntatore alla proprietà del tipo di carattere del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -500,7 +500,7 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="parameters"></a>Parametri
 
-*pclrForeColor*  
+*pclrForeColor*<br/>
 Variabile che riceve il colore di primo piano i controlli.
 
 ### <a name="return-value"></a>Valore restituito
@@ -517,7 +517,7 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*phWnd*  
+*phWnd*<br/>
 Handle della finestra associato al controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -534,7 +534,7 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parametri
 
-*ppPicture*  
+*ppPicture*<br/>
 Variabile che riceve un puntatore alle proprietà di immagine del grafico.
 
 ### <a name="return-value"></a>Valore restituito
@@ -551,7 +551,7 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="parameters"></a>Parametri
 
-*pnMousePointer*  
+*pnMousePointer*<br/>
 Variabile che riceve il tipo del puntatore del mouse.
 
 ### <a name="return-value"></a>Valore restituito
@@ -568,7 +568,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parametri
 
-*ppPicture*  
+*ppPicture*<br/>
 Variabile che riceve un puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
@@ -585,7 +585,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="parameters"></a>Parametri
 
-*pnReadyState*  
+*pnReadyState*<br/>
 Variabile che riceve lo stato del controllo pronto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -602,7 +602,7 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="parameters"></a>Parametri
 
-*pbTabStop*  
+*pbTabStop*<br/>
 Variabile che riceve lo stato del flag. TRUE indica che il controllo è un punto di tabulazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -619,7 +619,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="parameters"></a>Parametri
 
-*pbstrText*  
+*pbstrText*<br/>
 Il testo visualizzato con il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -636,7 +636,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="parameters"></a>Parametri
 
-*pbValid*  
+*pbValid*<br/>
 Variabile che riceve lo stato del flag. TRUE indica che il controllo è valido.
 
 ### <a name="return-value"></a>Valore restituito
@@ -653,7 +653,7 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*phWnd*  
+*phWnd*<br/>
 Handle della finestra associato al controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -670,7 +670,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>Parametri
 
-*nAppearance*  
+*nAppearance*<br/>
 Il nuovo stile di disegno per essere utilizzato dal controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -687,7 +687,7 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="parameters"></a>Parametri
 
-*bAutoSize*  
+*bAutoSize*<br/>
 TRUE se il controllo non può essere qualsiasi altra dimensione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -704,7 +704,7 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="parameters"></a>Parametri
 
-*clrBackColor*  
+*clrBackColor*<br/>
 Il nuovo colore di sfondo controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -721,7 +721,7 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*nBackStyle*  
+*nBackStyle*<br/>
 Il nuovo stile dello sfondo del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -738,7 +738,7 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 
 ### <a name="parameters"></a>Parametri
 
-*clrBorderColor*  
+*clrBorderColor*<br/>
 Il nuovo colore del bordo. Il tipo di dati OLE_COLOR viene rappresentato internamente come valore long integer a 32 bit.
 
 ### <a name="return-value"></a>Valore restituito
@@ -755,7 +755,7 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*nBorderStyle*  
+*nBorderStyle*<br/>
 Il nuovo stile del bordo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -772,7 +772,7 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="parameters"></a>Parametri
 
-*bBorderVisible*  
+*bBorderVisible*<br/>
 TRUE se il bordo deve essere visibile.
 
 ### <a name="return-value"></a>Valore restituito
@@ -789,7 +789,7 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>Parametri
 
-*nBorderWidth*  
+*nBorderWidth*<br/>
 La nuova larghezza del bordo del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -806,7 +806,7 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>Parametri
 
-*bstrCaption*  
+*bstrCaption*<br/>
 Il testo da visualizzare con il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -823,7 +823,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>Parametri
 
-*nDrawMode*  
+*nDrawMode*<br/>
 La nuova modalità di disegno del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -840,7 +840,7 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*nDrawStyle*  
+*nDrawStyle*<br/>
 Il nuovo stile di disegno del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -857,7 +857,7 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>Parametri
 
-*nDrawWidth*  
+*nDrawWidth*<br/>
 La nuova larghezza utilizzabile dal controllo di metodi di disegno.
 
 ### <a name="return-value"></a>Valore restituito
@@ -874,7 +874,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnabled*  
+*bEnabled*<br/>
 TRUE se il controllo è abilitato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -891,7 +891,7 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="parameters"></a>Parametri
 
-*clrFillColor*  
+*clrFillColor*<br/>
 Il nuovo colore di riempimento per il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -908,7 +908,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*nFillStyle*  
+*nFillStyle*<br/>
 Il nuovo stile di riempimento per il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -925,7 +925,7 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametri
 
-*pFont*  
+*pFont*<br/>
 Puntatore alla proprietà del tipo di carattere del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -942,7 +942,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="parameters"></a>Parametri
 
-*clrForeColor*  
+*clrForeColor*<br/>
 Il nuovo colore di primo piano del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -959,7 +959,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Parametri
 
-*/&ast; hWnd &ast;/*  
+*/&ast; hWnd &ast;/*<br/>
 Riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -980,7 +980,7 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametri
 
-*pPicture*  
+*pPicture*<br/>
 Puntatore alle proprietà di immagine del grafico.
 
 ### <a name="return-value"></a>Valore restituito
@@ -997,7 +997,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>Parametri
 
-*nMousePointer*  
+*nMousePointer*<br/>
 Tipo del puntatore del mouse.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1014,7 +1014,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametri
 
-*pPicture*  
+*pPicture*<br/>
 Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1031,7 +1031,7 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="parameters"></a>Parametri
 
-*nReadyState*  
+*nReadyState*<br/>
 Lo stato del controllo pronto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1048,7 +1048,7 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="parameters"></a>Parametri
 
-*bTabStop*  
+*bTabStop*<br/>
 TRUE se il controllo è un punto di tabulazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1065,7 +1065,7 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="parameters"></a>Parametri
 
-*bstrText*  
+*bstrText*<br/>
 Il testo visualizzato con il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1082,7 +1082,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="parameters"></a>Parametri
 
-*bValid*  
+*bValid*<br/>
 TRUE se il controllo è valido.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1099,7 +1099,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*hWnd*  
+*hWnd*<br/>
 Handle di finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1120,7 +1120,7 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametri
 
-*pFont*  
+*pFont*<br/>
 Puntatore alla proprietà del tipo di carattere del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1141,7 +1141,7 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametri
 
-*pPicture*  
+*pPicture*<br/>
 Puntatore alle proprietà di immagine del grafico.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1162,7 +1162,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametri
 
-*pPicture*  
+*pPicture*<br/>
 Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1175,5 +1175,5 @@ Identico [CStockPropImpl::put_Picture](#put_picture), ma con un conteggio dei ri
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../../atl/atl-class-overview.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Classe IDispatchImpl](../../atl/reference/idispatchimpl-class.md)

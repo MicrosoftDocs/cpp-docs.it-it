@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2101 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2101 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b07f6211e1cc36bd471b04126e724e42eb610641
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 196806e6d2767c889ae96d239af69113c542ba6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330817"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034759"
 ---
 # <a name="resource-compiler-error-rc2101"></a>Errore del compilatore di risorse RC2101
-Direttiva non valida nel file RC pre-elaborato  
-  
- Il file del compilatore di risorse contiene un **#pragma** direttiva.  
-  
- Utilizzare il **#ifndef** direttiva del preprocessore con la costante RC_INVOKED che il compilatore di risorse definisce quando elabora un file di inclusione. Sul posto di **#pragma** direttiva in un blocco di codice che non viene elaborato quando viene definita la costante RC_INVOKED. Nel blocco di codice viene elaborato solo dal compilatore C/C++ e non dal compilatore di risorse. Esempio di codice seguente viene illustrata questa tecnica:  
-  
-```  
-#ifndef RC_INVOKED  
-#pragma pack(2)  // C/C++ only, ignored by Resource Compiler  
-#endif  
-```  
-  
- Il **#pragma** direttiva per il preprocessore non ha significato un. File RC. Il **#include** direttiva per il preprocessore è usata spesso in un. File RC per includere un file di intestazione (un file di intestazione personalizzato basato sul progetto o un file di intestazione standard forniti da Microsoft con uno dei suoi prodotti). Alcuni di questi file di inclusione contengono il **#pragma** direttiva. Perché un file di intestazione può includere uno o più altri file di intestazione, il file che contiene una direttiva **#pragma** direttiva potrebbe non essere immediatamente evidente.  
-  
- Il **#ifndef** RC_INVOKED consente il controllo dell'inclusione di file di intestazione nei file di intestazione basato su progetto.
+
+Direttiva non valida nel file RC pre-elaborato
+
+Il file del compilatore di risorse contiene un **#pragma** direttiva.
+
+Usare la **#ifndef** direttiva del preprocessore con la costante RC_INVOKED che il compilatore di risorse consente di definire quando elabora un file di inclusione. Sul posto di **#pragma** direttiva in un blocco di codice che non viene elaborato quando viene definita la costante RC_INVOKED. Codice del blocco viene elaborato solo dal compilatore C/C++ e non dal compilatore di risorse. Esempio di codice seguente illustra questa tecnica:
+
+```
+#ifndef RC_INVOKED
+#pragma pack(2)  // C/C++ only, ignored by Resource Compiler
+#endif
+```
+
+Il **#pragma** direttiva del preprocessore non ha significato una. File RC. Il **#include** direttiva del preprocessore viene usata spesso in una. File RC per includere un file di intestazione (un file di intestazione personalizzato basato sul progetto o un file di intestazione standard fornito da Microsoft con uno dei suoi prodotti). Alcuni di questi file di inclusione contengono le **#pragma** direttiva. Perché un file di intestazione può includere uno o più altri file di intestazione, il file che contiene la funzione **#pragma** direttiva potrebbe non essere immediatamente evidente.
+
+Il **#ifndef** RC_INVOKED consente il controllo dell'inclusione di file di intestazione nel file di intestazione in base al progetto.

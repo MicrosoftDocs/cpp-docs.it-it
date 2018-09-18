@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2798 | Documenti Microsoft
+title: Errore del compilatore C2798 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de30a19a2a27cde991cfce0ca061ce6f5447f033
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88241989d54e1a068b226b59091a381f531dee9e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028857"
 ---
 # <a name="compiler-error-c2798"></a>Errore del compilatore C2798
-'super:: membro' è ambiguo  
-  
- Più strutture ereditate contengono il membro si è fatto riferimento con [super](../../cpp/super.md). Per correggere l'errore tramite:  
-  
--   Rimozione B1 o B2 dall'elenco di ereditarietà di D.  
-  
--   Modificare il nome del membro dati in B1 o B2.  
-  
- L'esempio seguente genera l'errore C2798:  
-  
-```  
-// C2798.cpp  
-struct B1 {  
-   int i;  
-};  
-  
-struct B2 {  
-   int i;  
-};  
-  
-struct D : B1, B2 {  
-   void g() {  
-      __super::i = 4; // C2798  
-   }  
-};  
+
+'super:: membro' è ambiguo
+
+Più strutture ereditate contengono il membro è stato fatto riferimento con [super](../../cpp/super.md). È possibile correggere l'errore in uno dei modi:
+
+- Rimozione B1 o B2 dall'elenco di ereditarietà di D.
+
+- Modifica del nome del membro dati in B2 o B1.
+
+L'esempio seguente genera l'errore C2798:
+
+```
+// C2798.cpp
+struct B1 {
+   int i;
+};
+
+struct B2 {
+   int i;
+};
+
+struct D : B1, B2 {
+   void g() {
+      __super::i = 4; // C2798
+   }
+};
 ```

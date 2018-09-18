@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0026 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0026 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45f95a69827d3753307e210b348a6f490a756240
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b90950807cb394412eabcd1af878c63f48e610cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299721"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017930"
 ---
 # <a name="expression-evaluator-error-cxx0026"></a>Errore dell‘analizzatore di espressioni CXX0026
-stringa di formato non valido  
-  
- Una stringa di formato è stata specificata correttamente. Controllare la sintassi dell'espressione.  
-  
- Questo errore è identico all'errore CAN0026.  
-  
- Per ulteriori informazioni, vedere [identificatori di formato in C++](/visualstudio/debugger/format-specifiers-in-cpp).
+
+stringa di formato non valido
+
+Una stringa di formato è stata specificata in modo non corretto. Controllare la sintassi dell'espressione.
+
+Questo errore è identico all'errore CAN0026.
+
+Per altre informazioni, vedere [identificatori di formato in C++](/visualstudio/debugger/format-specifiers-in-cpp).

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2026 | Documenti Microsoft
+title: Errore del compilatore C2026 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b2952daa8cc7b3642cca5ba278990fde7d1ebe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 055ac47d036a1027817aa6b3433bfe0e2e88570e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019549"
 ---
 # <a name="compiler-error-c2026"></a>Errore del compilatore C2026
-caratteri finali troncato stringa troppo grande.  
-  
- La stringa è supera al limite di 16380 caratteri a byte singolo.  
-  
- Prima di concatenazione delle stringhe adiacenti, una stringa non può essere più lunga di 16380 caratteri a byte singolo.  
-  
- Una stringa Unicode di questa lunghezza di circa la metà anche genera l'errore.  
-  
- Se si dispone di una stringa definita come indicato di seguito, viene generato C2026:  
-  
-```  
-char sz[] =  
-"\  
-imagine a really, really \  
-long string here\  
-";  
-```  
-  
- È possibile suddividere la come indicato di seguito:  
-  
-```  
-char sz[] =  
-"\  
-imagine a really, really "  
-"long string here\  
-";  
-```  
-  
- È consigliabile archiviare i valori letterali stringa eccezionalmente elevate (32 KB o più) in una risorsa personalizzata o un file esterno. Vedere [la creazione di una nuova risorsa personalizzata o dati](../../windows/creating-a-new-custom-or-data-resource.md) per ulteriori informazioni.
+
+la stringa è troppo grande caratteri finali verranno troncati
+
+La stringa è supera al limite di caratteri a byte singolo 16380.
+
+Prima della concatenazione delle stringhe adiacenti, una stringa non può superare 16380 caratteri a byte singolo.
+
+Una stringa Unicode di questa lunghezza di circa la metà anche genera questo errore.
+
+Se si dispone di una stringa definita come indicato di seguito, viene generato C2026:
+
+```
+char sz[] =
+"\
+imagine a really, really \
+long string here\
+";
+```
+
+È possibile suddividere la come indicato di seguito:
+
+```
+char sz[] =
+"\
+imagine a really, really "
+"long string here\
+";
+```
+
+È possibile archiviare i valori letterali stringa eccezionalmente grandi (32 KB o superiore) in una risorsa personalizzata o un file esterno. Visualizzare [creazione di una nuova risorsa personalizzata o dati](../../windows/creating-a-new-custom-or-data-resource.md) per altre informazioni.

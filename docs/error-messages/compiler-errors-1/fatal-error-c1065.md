@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1065 | Documenti Microsoft
+title: Errore irreversibile C1065 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e211af9390f9102fcd7b2514aed900140cd531e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865e353af85b392c1da696166f77a1e28acd8475
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022955"
 ---
 # <a name="fatal-error-c1065"></a>Errore irreversibile C1065
-limite del compilatore: tag esauriti  
-  
- Il file di origine contiene più di 65.523 classi, strutture, unioni, spazi dei nomi o le enumerazioni.  
-  
- Suddividere il file in file più piccoli.
+
+limite del compilatore: tag esauriti
+
+Il file di origine contiene più di 65.523 classi, struct, unioni, gli spazi dei nomi o le enumerazioni.
+
+Suddividere il file in file più piccoli.

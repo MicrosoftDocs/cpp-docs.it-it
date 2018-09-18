@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2379 | Documenti Microsoft
+title: Errore del compilatore C2379 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1016bedfa9df0e9dfacb56734ee60397108d046
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec340a5a48705eb91bf5bf72ec20ad382f4b262c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032445"
 ---
 # <a name="compiler-error-c2379"></a>Errore del compilatore C2379
-numero di parametro formale è un tipo diverso quando promosso  
-  
- Il tipo del parametro specificato non è compatibile, le promozioni predefinite, con il tipo in una dichiarazione precedente. Si tratta di un errore in ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e un avviso con le estensioni Microsoft (**/Ze**).  
-  
- L'esempio seguente genera l'errore C2379:  
-  
-```  
-// C2379.c  
-// compile with: /Za  
-void func();  
-void func(char);   // C2379, char promotes to int  
+
+numero di parametri formali ha un tipo diverso quando promosso
+
+Il tipo del parametro specificato non è compatibile, le promozioni di predefinite, con il tipo in una dichiarazione precedente. Si tratta di un errore in ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e un avviso con le estensioni Microsoft (**/Ze**).
+
+L'esempio seguente genera l'errore C2379:
+
+```
+// C2379.c
+// compile with: /Za
+void func();
+void func(char);   // C2379, char promotes to int
 ```

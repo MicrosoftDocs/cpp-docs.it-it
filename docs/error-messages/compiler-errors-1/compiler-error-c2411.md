@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2411 | Documenti Microsoft
+title: Errore del compilatore C2411 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 228fa8bd08c6761fbdeb018ff3ec1e027eb475dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20198235e04fbcc95bafbcfe119462e754587a3f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036839"
 ---
 # <a name="compiler-error-c2411"></a>Errore del compilatore C2411
-'identifier': membro di struct/union non valido in 'context'  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
-  
-1.  L'identificatore non è un membro di una struttura visibile o l'unione in questo contesto.  
-  
-2.  L'identificatore non è un membro della struttura o unione specificata con l'operatore di selezione dei membri (.).
+
+'identifier': membro di struct/union non valido in 'context'
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+
+1. L'identificatore non è un membro di una struttura visibile o unione in questo contesto.
+
+1. L'identificatore non è un membro della struttura o unione specificata con l'operatore di selezione dei membri (.).

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2829 | Documenti Microsoft
+title: Errore del compilatore C2829 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091e8ad9238b0f4281b3afc900663ca487d4eada
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04798056b25d09ad78f5da0e85b47345db5608dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034993"
 ---
 # <a name="compiler-error-c2829"></a>Errore del compilatore C2829
-'operatore' non può avere un elenco di parametri variabile  
-  
- Solo due operatori possono accettare gli elenchi di parametri variabile:  
-  
--   Chiamata di funzione `()`  
-  
--   `new`
+
+'operator operator' non può avere un elenco di parametri variabili
+
+Solo due operatori possono accettare gli elenchi di parametri variabile:
+
+- Chiamata di funzione `()`
+
+- `new`

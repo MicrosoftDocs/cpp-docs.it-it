@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2483 | Documenti Microsoft
+title: Errore del compilatore C2483 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/15/2017
 ms.technology:
@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a10fd33ebeef43904db964fc327fb749029f963
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be2a2caef9e1252bf1ab36253a7f5f715b94d5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031613"
 ---
 # <a name="compiler-error-c2483"></a>Errore del compilatore C2483
 
->'*identificatore*': l'oggetto con un costruttore o distruttore non può essere dichiarato 'thread'
+>«*identificatore*': oggetto con costruttore o distruttore non può essere dichiarato 'thread'
 
-Questo messaggio di errore è obsoleto in Visual Studio 2015 e versioni successive. Nelle versioni precedenti, le variabili dichiarate con la `thread` attributo non può essere inizializzato con un costruttore o in un'altra espressione che richiede la valutazione in fase di esecuzione. È necessaria un'espressione statica per inizializzare `thread` dati.
+Questo messaggio di errore è obsoleto in Visual Studio 2015 e versioni successive. Nelle versioni precedenti, le variabili dichiarate con la `thread` attributo non può essere inizializzato con un costruttore o in un'altra espressione che richiede la valutazione in fase di esecuzione. È necessaria per inizializzare un'espressione statica `thread` dei dati.
 
 ## <a name="example"></a>Esempio
 
@@ -39,7 +39,7 @@ L'esempio seguente genera l'errore C2483 in Visual Studio 2013 e versioni preced
 __declspec(thread) struct A {
    A(){}
    ~A(){}
-} aa;   // C2483 error  
+} aa;   // C2483 error
 
 __declspec(thread) struct B {} b;   // OK
 ```

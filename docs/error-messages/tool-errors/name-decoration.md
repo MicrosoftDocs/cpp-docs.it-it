@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 063464fe58417cfce58160ccba12fbcd514c7320
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: fa493a886509a85cc45c14f003ff07886c435280
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036033"
 ---
 # <a name="name-decoration"></a>Decorazione dei nomi
 
 La decorazione dei nomi in genere fa riferimento alle convenzioni di denominazione di C++, ma può essere applicata anche a diversi casi di C. Per impostazione predefinita, C++ usa il nome della funzione, i parametri e il tipo restituito per creare un nome linker per la funzione. Si consideri la seguente funzione:
 
 ```
-void CALLTYPE test(void)  
+void CALLTYPE test(void)
 ```
 
 La seguente tabella mostra il nome linker per diverse convenzioni di chiamata.

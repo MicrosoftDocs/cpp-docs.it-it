@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1020 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RC1020 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c90d3a5bb880ad10dcc4fb24d31fdc107f898840
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe19b079a0407f07796bd8141db2cbedaf02cbbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032965"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>Errore irreversibile del compilatore di risorse RC1020
-'#endif' imprevisto  
-  
- Un `#endif` direttiva sembrava senza un corrispondente `#if`, **#ifdef**, o **#ifndef** direttiva.  
-  
- Assicurarsi che sia presente una corrispondenza `#endif` per ogni `#if`, **#ifdef**, e **#ifndef** istruzione.
+
+'#endif' imprevisto
+
+Un' `#endif` direttiva viene visualizzato senza il corrispondente `#if`, **#ifdef**, o **#ifndef** direttiva.
+
+Assicurarsi che vi sia un oggetto corrispondente `#endif` per ognuno `#if`, **#ifdef**, e **#ifndef** istruzione.

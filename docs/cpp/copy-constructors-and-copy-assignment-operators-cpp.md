@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8e00190e7c7b4eacbd8f53b87f2e5ad3efd44d1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 249182277473eebf5f11d4f6f3de1e8e7d275b61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197862"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032614"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Costruttori di copia e operatori di assegnazione di copia (C++)
 
@@ -95,4 +95,4 @@ Gli operatori di assegnazione generato dal compilatore seguono lo stesso modello
 
 La implicazioni sono simili a quelle del costruttore di copia. Quando il tipo di argomento non è **const**, assegnazione di un **const** oggetto genera un errore. Non è vero il contrario: se un **const** valore viene assegnato a un valore che non è **const**, l'assegnazione ha esito positivo.
 
-Per altre informazioni sugli operatori di assegnazione di overload, vedere [assegnazione](../cpp/assignment.md).  
+Per altre informazioni sugli operatori di assegnazione di overload, vedere [assegnazione](../cpp/assignment.md).

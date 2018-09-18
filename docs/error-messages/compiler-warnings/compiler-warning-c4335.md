@@ -1,5 +1,5 @@
 ---
-title: Avviso del compilatore C4335 | Documenti Microsoft
+title: Avviso del compilatore C4335 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adb8a7b484ce0946f385c3b2a8669ba1b5ccf0d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2b28909d0c4b663fffeacbec58ad694131bb008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036579"
 ---
 # <a name="compiler-warning-c4335"></a>Avviso del compilatore C4335
-Rilevato formato di file Mac: convertire il file di origine in formato DOS o UNIX  
-  
- Il carattere di terminazione della riga prima di un file di origine è in formato Macintosh ('\r') anziché UNIX ('\n') o DOS ('\r\n').  
-  
- Questo avviso viene sempre generato come errore.  Vedere [avviso](../../preprocessor/warning.md) pragma per informazioni su come disabilitare questo avviso.  Inoltre, questo avviso viene generato solo una volta per ogni modulo. Pertanto, se sono presenti più `#include` direttive che specificano i file in formato Macintosh, C4335 sarà pubblicato solo una volta.  
-  
- Un modo per generare file in formato Macintosh è tramite il **opzioni di salvataggio avanzate** (sul **File** menu) in Visual Studio.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4335.  
-  
-```  
-// C4335 expected  
-#include "c4335.h"   // assume both include files are in Macintosh format  
-#include "c4335_2.h"  
+
+Rilevato formato di file Mac: convertire il file di origine in formato DOS o UNIX
+
+Il carattere di terminazione di riga della prima riga di un file di origine è lo stile Macintosh ('\r') invece di UNIX ('\n') o DOS ("\r\n").
+
+Questo avviso viene sempre generato come errore.  Visualizzare [avviso](../../preprocessor/warning.md) pragma per informazioni su come disabilitare questo avviso.  Inoltre, questo avviso viene generato solo una volta per ogni modulo. Pertanto, se sono presenti più `#include` direttive che specificano i file in formato Macintosh, C4335 verranno rilasciati una sola volta.
+
+Un modo per generare i file in formato Macintosh consiste nell'usare la **opzioni di salvataggio avanzate** (nelle **File** menu) in Visual Studio.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4335.
+
+```
+// C4335 expected
+#include "c4335.h"   // assume both include files are in Macintosh format
+#include "c4335_2.h"
 ```

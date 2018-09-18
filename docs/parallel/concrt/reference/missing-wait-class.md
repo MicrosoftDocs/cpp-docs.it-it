@@ -1,5 +1,5 @@
 ---
-title: Classe missing_wait | Documenti Microsoft
+title: Classe missing_wait | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5ebd607dc207975e7d38e3217c275d3d5d18bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2a44cbdb5abeed7d5dbd7be7dfaba37ba1d0145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686347"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024957"
 ---
 # <a name="missingwait-class"></a>Classe missing_wait
 Questa classe descrive un'eccezione generata quando vi sono attività ancora pianificate per un oggetto `task_group` o `structured_task_group` nel momento di esecuzione del distruttore dell'oggetto. Questa eccezione non sarà mai generata se il distruttore viene raggiunto a causa del processo di rimozione dello stack come risultato di un'eccezione.  
@@ -43,7 +43,7 @@ class missing_wait : public std::exception;
 |[missing_wait](#ctor)|Di overload. Costruisce un oggetto `missing_wait`.|  
   
 ## <a name="remarks"></a>Note  
- Assente il flusso di eccezione, l'utente è responsabile per una chiamata di `wait` o `run_and_wait` metodo di un `task_group` o `structured_task_group` oggetto prima di consentire a distruggere quell'oggetto. Il runtime genera questa eccezione per indicare che non è stato chiamato il `wait` o `run_and_wait` metodo.  
+ Assente flusso dell'eccezione, si è responsabili della chiamata ai `wait` oppure `run_and_wait` metodo di un `task_group` o `structured_task_group` oggetto prima di consentire a tale oggetto da distruggere. Il runtime genera questa eccezione, per indicare che non è stato chiamato il `wait` o `run_and_wait` (metodo).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -66,12 +66,12 @@ missing_wait() throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Messaggio descrittivo dell'errore.  
+*Messaggio*<br/>
+Messaggio descrittivo dell'errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
  [Classe task_group](task-group-class.md)   
- [attesa](task-group-class.md)   
+ [Attendere](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [Classe structured_task_group](structured-task-group-class.md)

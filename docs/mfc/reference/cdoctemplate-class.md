@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cd7e80d3c01cf84080ba2b5851da99584122ec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023943"
 ---
 # <a name="cdoctemplate-class"></a>Classe CDocTemplate
 Classe di base astratta che definisce le funzionalità di base per i modelli di documenti.  
@@ -167,17 +167,15 @@ CDocTemplate (
  Specifica l'ID delle risorse utilizzate con il tipo di documento. Può trattarsi di menu, icona, tabella di tasti di scelta rapida e risorse di tipo stringa.  
   
  La risorsa di tipo stringa è costituito da sottostringhe fino a sette separate dal carattere '\n' (il carattere '\n' come richiesto per un segnaposto se non è inclusa una sottostringa; tuttavia, non sono necessari i caratteri finali '\n'); le sottostringhe descrivono il tipo di documento. Per informazioni sulle sottostringhe, vedere [GetDocString](#getdocstring). Questa risorsa stringa è stata trovata nel file di risorse dell'applicazione. Ad esempio:  
-  
- `// MYCALC.RC`  
-  
- `STRINGTABLE PRELOAD DISCARDABLE`  
-  
- `BEGIN`  
-  
- `IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"`  
-  
- `END`  
-  
+
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"
+END
+```
+
  Si noti che la stringa inizia con un carattere '\n'. infatti, la prima sottostringa non viene utilizzata per le applicazioni MDI e pertanto non è inclusa. È possibile modificare questa stringa usando l'editor di stringa; l'intera stringa viene visualizzato come una singola voce nell'Editor di stringa, non come sette voci separate.  
   
  *pDocClass*  

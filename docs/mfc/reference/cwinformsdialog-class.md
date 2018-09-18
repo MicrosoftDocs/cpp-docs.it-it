@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324df7657be7f74cade6fc4b50b98d6790245ab4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 69882f9b22d11de139951b6196b58729af70a36a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018145"
 ---
 # <a name="cwinformsdialog-class"></a>Classe CWinFormsDialog
 Wrapper per una classe finestra di dialogo MFC che ospita un controllo utente Windows Form.  
@@ -43,8 +43,8 @@ class CWinFormsDialog :
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `TManagedControl`  
- Il controllo utente .NET Framework da visualizzare nell'applicazione MFC.  
+*TManagedControl*<br/>
+Il controllo utente .NET Framework da visualizzare nell'applicazione MFC.  
   
 ## <a name="members"></a>Membri  
   

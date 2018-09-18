@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0019 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0019 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edab70ebb0e6abcf3761034e7ee8ed19b16dad57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06ea422a272b43f7e6226b330a210c0c6ea3f977
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038087"
 ---
 # <a name="project-build-error-prj0019"></a>Errore di compilazione progetto PRJ0019
-Uno strumento ha restituito un codice di errore  
-  
- Un livello di errore è diverso da zero per un passaggio di compilazione personalizzata o un evento di compilazione.  
-  
- PRJ0019 si verifica anche quando uno strumento ha restituito un codice di errore, ma nessun messaggio di errore. Ciò può verificarsi, ad esempio, se si reindirizza l'output di MIDL in null.  
-  
- Vedere [eventi di compilazione e di risoluzione dei problemi di istruzioni di compilazione personalizzate](../../ide/troubleshooting-build-customizations.md) per ulteriori informazioni.  
-  
- Questo errore può verificarsi anche quando vengono eseguiti come un membro del gruppo Users ed è necessario l'accesso amministrativo. Per ulteriori informazioni, vedere [in esecuzione come membro del gruppo di utenti](../../security/running-as-a-member-of-the-users-group.md).
+
+È stato restituito un codice di errore
+
+Un livello di errore è diverso da zero per un passaggio di compilazione personalizzata o un evento di compilazione.
+
+Noterai anche PRJ0019 quando è stato restituito un codice di errore, ma nessun messaggio di errore. Questa situazione può verificarsi, ad esempio, se si reindirizza l'output di MIDL in null.
+
+Visualizzare [risoluzione dei problemi di istruzioni di compilazione personalizzate e sugli eventi di compilazione](../../ide/troubleshooting-build-customizations.md) per altre informazioni.
+
+Questo errore può verificarsi anche quando si eseguono come membro del gruppo di utenti ed è necessario l'accesso amministrativo. Per altre informazioni, vedere [in esecuzione come membro del gruppo di utenti](../../security/running-as-a-member-of-the-users-group.md).

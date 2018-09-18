@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3704 | Documenti Microsoft
+title: Errore del compilatore C3704 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b3b1f255852def5e04d75751b0a902fb7072545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4504534e3a53f37089f0b0ba045b7afde5a8065d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054987"
 ---
 # <a name="compiler-error-c3704"></a>Errore del compilatore C3704
-'function': un metodo vararg non può generare eventi  
-  
- Si è tentato di utilizzare [event](../../cpp/event.md) su un metodo vararg. Per correggere l'errore, sostituire il `fireEvent(int i, ...)` chiamata con il `fireEvent(int i)` come illustrato nell'esempio di codice seguente.  
-  
- L'esempio seguente genera l'errore C3704:  
-  
-```  
-// C3704.cpp  
-[ event_source(native) ]  
-class CEventSrc {  
-   public:  
-      __event void fireEvent(int i, ...);   // C3704  
-      // try the following line instead:  
-      // __event void fireEvent(int i);  
-};  
-  
-int main() {  
-}  
+
+'function': un metodo vararg non può generare eventi
+
+Si è provato a usare [event](../../cpp/event.md) su un metodo vararg. Per risolvere questo errore, sostituire il `fireEvent(int i, ...)` chiamata con il `fireEvent(int i)` chiamare come illustrato nell'esempio di codice seguente.
+
+L'esempio seguente genera l'errore C3704:
+
+```
+// C3704.cpp
+[ event_source(native) ]
+class CEventSrc {
+   public:
+      __event void fireEvent(int i, ...);   // C3704
+      // try the following line instead:
+      // __event void fireEvent(int i);
+};
+
+int main() {
+}
 ```

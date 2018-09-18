@@ -1,5 +1,5 @@
 ---
-title: Errore matematico M6110 | Documenti Microsoft
+title: Errore matematico M6110 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97918c38f896dd5fccd3abeae86a3104cf80694
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 333a6d9741d4ccaa5764e84fabd71f58788c1b6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015796"
 ---
 # <a name="math-error-m6110"></a>Errore matematico M6110
-overflow dello stack  
-  
- Un'espressione a virgola mobile ha causato un overflow dello stack a virgola mobile.  
-  
- Eccezioni di overflow dello stack a virgola mobile vengono intercettate con un limite massimo di sette livelli oltre ai livelli di otto generalmente supportati dal coprocessore 8087/287/387.  
-  
- Il programma termina con il codice di uscita 138.
+
+overflow dello stack
+
+Un'espressione a virgola mobile ha causato un overflow dello stack a virgola mobile.
+
+Eccezioni di overflow dello stack a virgola mobile vengono intercettate con un limite massimo di sette livelli oltre ai livelli di otto in genere supportati da coprocessore 8087/287/387.
+
+Il programma termina con il codice di uscita 138.

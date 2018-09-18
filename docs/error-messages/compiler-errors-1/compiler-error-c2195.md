@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2195 | Documenti Microsoft
+title: Errore del compilatore C2195 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979dcfee8733a7e575170c36e90ec36bbd4ff154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ec81b9c720d1dfc5a629faaa74fb321cdf93b4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020604"
 ---
 # <a name="compiler-error-c2195"></a>Errore del compilatore C2195
-'identifier': è un segmento di dati  
-  
- Il `code_seg` pragma utilizza il nome di un segmento usato con il `data_seg` pragma.  
-  
- L'esempio seguente genera l'errore C2195:  
-  
-```  
-// C2195.cpp  
-#pragma data_seg("MYDATA")  
-#pragma code_seg("MYDATA")   // C2195  
-#pragma code_seg("MYDATA2")   // OK  
+
+'identifier': è un segmento di dati
+
+Il `code_seg` pragma viene utilizzato il nome di un segmento usato con il `data_seg` pragma.
+
+L'esempio seguente genera l'errore C2195:
+
+```
+// C2195.cpp
+#pragma data_seg("MYDATA")
+#pragma code_seg("MYDATA")   // C2195
+#pragma code_seg("MYDATA2")   // OK
 ```

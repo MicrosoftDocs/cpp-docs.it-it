@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4502 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4502 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb812e462ffac15626a0504a81f4a32f7231617f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a88ed68f48960afb7dd0a13e91f44f63d00313be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037723"
 ---
 # <a name="compiler-warning-level-1-c4502"></a>Avviso del compilatore (livello 1) C4502
-'specifica di collegamento' richiede l'uso della parola chiave 'extern' e deve precedere tutti gli altri identificatori  
-  
- È stato specificato un collegamento senza il `extern` (parola chiave). Collegamento non è pertinente per i tipi non extern.  
-  
- Il compilatore presuppone che il `extern` (parola chiave).
+
+'le specifiche di collegamento' richiede l'uso della parola chiave 'extern' e devono precedere tutti gli altri identificatori
+
+È stato specificato un collegamento senza il `extern` (parola chiave). Un collegamento non è rilevante per i tipi non extern.
+
+Il compilatore presuppone che il `extern` (parola chiave).

@@ -19,45 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031459"
 ---
 # <a name="if-else-statement-c"></a>Istruzione if-else (C++)
+
 Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco if* vengono eseguiti solo se il *espressione if* restituisce un valore diverso da zero (o TRUE). Se il valore di *espressione* è diverso da zero, *statement1* e vengono eseguite le altre istruzioni nel blocco e l'altro blocco, se presente, viene ignorato. Se il valore di *espressione* è uguale a zero, quindi il blocco se viene ignorato e l'altro blocco, se presente, viene eseguito. Sono espressioni che restituiscono diverso da zero
 - true
 - un puntatore non null,
-- qualsiasi valore diverso da zero aritmetico, o 
-- tipo di un tipo di classe che definisce una conversione non ambigua a un'operazione aritmetica, boolean o puntatore. (Per informazioni sulle conversioni, vedere [conversioni Standard](../cpp/standard-conversions.md).)   
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-if ( expression )  
+- qualsiasi valore diverso da zero aritmetico, o
+- tipo di un tipo di classe che definisce una conversione non ambigua a un'operazione aritmetica, boolean o puntatore. (Per informazioni sulle conversioni, vedere [conversioni Standard](../cpp/standard-conversions.md).)
+
+## <a name="syntax"></a>Sintassi
+
+```
+if ( expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-} 
+}
 
 // Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )  
+if ( initialization; expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-}  
+}
 
 // Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
@@ -69,13 +70,13 @@ else  // optional
 {
    statement2;
    ...
-} 
-```  
+}
+```
 
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Esempio
 
-```cpp  
-// if_else_statement.cpp  
+```cpp
+// if_else_statement.cpp
 #include <iostream>
 
 using namespace std;
@@ -103,10 +104,10 @@ int main()
   // no else statement
     if (x == 10)
     {
-        x = 0; 
+        x = 0;
     }
     
-  
+
     C* c;
   init(c);
     if (c)
@@ -118,13 +119,14 @@ int main()
         cout << "c is null!\n";
     }
 }
-```  
+```
 ## <a name="if_with_init"></a> Se l'istruzione con un inizializzatore
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): un' **se** istruzione può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questa forma di istruzione if quando la variabile è necessaria solo all'interno dell'ambito del blocco di if. 
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): un' **se** istruzione può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questa forma di istruzione if quando la variabile è necessaria solo all'interno dell'ambito del blocco di if.
 
 ```cpp
-## Example  
+## Example
+
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -166,12 +168,13 @@ int main()
 }
 ```
 
- In tutte le forme del **se** istruzione *espressione*, che possono avere qualsiasi valore salvo una struttura, viene valutata, inclusi tutti gli effetti collaterali. Controllo passa dal **se** istruzione all'istruzione successiva nel programma, a meno che uno del *istruzione*s contiene una [interruzione](../cpp/break-statement-cpp.md), [continuare](../cpp/continue-statement-cpp.md), oppure [goto](../cpp/goto-statement-cpp.md).  
-  
- Il **else** clausola di un `if...else` istruzione è associata a più vicina precedente **se** istruzione nello stesso ambito che non ha un corrispondente **else** istruzione.   
+In tutte le forme del **se** istruzione *espressione*, che possono avere qualsiasi valore salvo una struttura, viene valutata, inclusi tutti gli effetti collaterali. Controllo passa dal **se** istruzione all'istruzione successiva nel programma, a meno che uno del *istruzione*s contiene una [interruzione](../cpp/break-statement-cpp.md), [continuare](../cpp/continue-statement-cpp.md), oppure [goto](../cpp/goto-statement-cpp.md).
+
+Il **else** clausola di un `if...else` istruzione è associata a più vicina precedente **se** istruzione nello stesso ambito che non ha un corrispondente **else** istruzione.
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Se le istruzioni di constexpr
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione, è possibile usare un' **se constexpr** istruzione per prendere decisioni di diramazione in fase di compilazione senza dover ricorrere ai più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle decompressione (non è necessario alcun overload di parametro da zero): 
+
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione, è possibile usare un' **se constexpr** istruzione per prendere decisioni di diramazione in fase di compilazione senza dover ricorrere ai più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle decompressione (non è necessario alcun overload di parametro da zero):
 
 ```cpp
 template <class T, class... Rest>
@@ -181,9 +184,9 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   if constexpr (sizeof...(r)) 
+   if constexpr (sizeof...(r))
    {
-      f(r...); 
+      f(r...);
    }
    else
    {
@@ -192,7 +195,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>Vedere anche  
- [Istruzioni di selezione](../cpp/selection-statements-cpp.md)   
- [Parole chiave](../cpp/keywords-cpp.md)   
- [Istruzione switch (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>Vedere anche
+
+[Istruzioni di selezione](../cpp/selection-statements-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[Istruzione switch (C++)](../cpp/switch-statement-cpp.md)

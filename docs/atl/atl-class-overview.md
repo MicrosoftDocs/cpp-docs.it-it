@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e64ecd708f5ff159b61a6b7601c74dbf2b6abda6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de241532763267f5d20d051121e501934da972cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055156"
 ---
 # <a name="atl-class-overview"></a>Panoramica sulle classi ATL
 
@@ -52,10 +52,10 @@ Per le classi aggiuntive che possono essere usate nei progetti ATL, vedere [le c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classi e struct](../atl/reference/atl-classes.md)   
-[Componenti Desktop COM ATL](../atl/atl-com-desktop-components.md)  
-[Funzioni](../atl/reference/atl-functions.md)   
-[Global Variables](../atl/reference/atl-global-variables.md)  (Variabili globali)  
-[Macro](../atl/reference/atl-macros.md)   
+[Classi e struct](../atl/reference/atl-classes.md)<br/>
+[Componenti Desktop COM ATL](../atl/atl-com-desktop-components.md)<br/>
+[Funzioni](../atl/reference/atl-functions.md)<br/>
+[Variabili globali](../atl/reference/atl-global-variables.md)<br/>
+[Macro](../atl/reference/atl-macros.md)<br/>
 [Typedef](../atl/reference/atl-typedefs.md)
 

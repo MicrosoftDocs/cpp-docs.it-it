@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3e0ac7cf3a5448a2963aa92c2e275be796c895d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c977ecc1094af37c5e2c2e3ed8f27a6f2bdf1c93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033875"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Classe IProvideClassInfo2Impl
 
@@ -41,28 +41,28 @@ template <const CLSID* pcoclsid,
     const IID* psrcid,
     const GUID* plibid = &CAtlModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>
 class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*pcoclsid*  
+*pcoclsid*<br/>
 Un puntatore all'identificatore della coclasse.
 
-*psrcid*  
+*psrcid*<br/>
 Un puntatore all'identificatore per impostazione predefinita della coclasse in uscita dell'interfaccia dispatch.
 
-*plibid*  
+*plibid*<br/>
 Puntatore a LIBID della libreria dei tipi che contiene informazioni sull'interfaccia. Per impostazione predefinita, viene passata la libreria dei tipi a livello di server.
 
-*wMajor*  
+*wMajor*<br/>
 Versione principale della libreria dei tipi. Il valore predefinito è 1.
 
-*wMinor*  
+*wMinor*<br/>
 Versione secondaria della libreria dei tipi. Il valore predefinito è 0.
 
-*tihclass*  
+*tihclass*<br/>
 La classe usata per gestire le informazioni sul tipo della coclasse. Il valore predefinito è `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Membri

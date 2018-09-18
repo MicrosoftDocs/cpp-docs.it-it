@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f0a8066b8e79b75f3d5ede37f4e5ad6b61db168
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037879"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>Avviso del compilatore (livello 1) C4076
 
@@ -30,13 +30,13 @@ ms.locfileid: "43198478"
 ## <a name="remarks"></a>Note
 
 Un modificatore di tipo, se si tratta **firmato** oppure **unsigned**, non può essere usato con un tipo non integer. *modificatore di tipo* viene ignorato.
-  
-## <a name="example"></a>Esempio  
+
+## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C4076; Per risolvere il problema, rimuovere il **unsigned** modificatore di tipo:
 
 ```cpp
-// C4076.cpp  
-// compile with: /W1 /LD  
-unsigned double x;   // C4076  
+// C4076.cpp
+// compile with: /W1 /LD
+unsigned double x;   // C4076
 ```

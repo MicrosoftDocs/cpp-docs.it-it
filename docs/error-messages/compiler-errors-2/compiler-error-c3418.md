@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3418 | Documenti Microsoft
+title: Errore del compilatore C3418 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92147a636ff1b087134dd7c2d3fdbdb1398d5135
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26fa67da6f24e578319660c17cb48d7d715be408
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256637"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033275"
 ---
 # <a name="compiler-error-c3418"></a>Errore del compilatore C3418
-l'identificatore di accesso 'specifier' non è supportato  
-  
-Un identificatore di accesso CLR è stato specificato in modo non corretto.  Per ulteriori informazioni, vedere visibilità del tipo e la visibilità di membri in [procedura: definire e usare classi e struct (C + + CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
-  
-## <a name="example"></a>Esempio  
-L'esempio seguente genera l'errore C3418.  
-  
-```cpp  
-// C3418.cpp  
-// compile with: /clr /c  
-ref struct m {  
-internal public:   // C3418  
-   void test(){}  
-};  
-  
-ref struct n {  
-internal:   // OK  
-   void test(){}  
-};  
+
+l'identificatore di accesso 'specifier' non è supportato
+
+Un identificatore di accesso CLR è stato specificato in modo non corretto.  Per altre informazioni, vedere visibilità del tipo e la visibilità di membri nella [procedura: definire e usare classi e struct (C + c++ /CLI CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3418.
+
+```cpp
+// C3418.cpp
+// compile with: /clr /c
+ref struct m {
+internal public:   // C3418
+   void test(){}
+};
+
+ref struct n {
+internal:   // OK
+   void test(){}
+};
 ```

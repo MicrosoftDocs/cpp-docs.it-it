@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028636"
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
+
 L'esempio seguente illustra un accesso rapido e semplice database che non riguarda i comandi. Il codice del consumer, in un progetto ATL, recupera i record da una tabella denominata *alle creazioni degli artisti* in Microsoft Access database utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un [CTable](../../data/oledb/ctable-class.md) oggetto di tabella con una funzione di accesso basato sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e la tabella viene aperta nella sessione.  
   
 ```cpp  
@@ -53,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Il record dell'utente, `CArtists`, ha un aspetto simile al seguente:  
+Il record dell'utente, `CArtists`, ha un aspetto simile al seguente:  
   
 ```cpp  
 class CArtists  
@@ -73,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

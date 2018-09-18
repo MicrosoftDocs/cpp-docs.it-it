@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756574"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021135"
 ---
 # <a name="ccomcompositecontrol-class"></a>Classe CComCompositeControl
 
@@ -43,13 +43,13 @@ Questa classe fornisce i metodi necessari per implementare un controllo composit
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), anche da tutte le altre interfacce desiderate per il supporto per il controllo composito.
 
 ## <a name="members"></a>Membri
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parametri
 
-*bAdvise*  
+*bAdvise*<br/>
 True se tutti i controlli sono a cui annunciare; in caso contrario, false.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK  
-Tutti i controlli in caso di mappa del sink sono stati connesso o disconnesso dalla relativa origine evento completata.
-
-E_FAIL  
-Non tutti i controlli nel caso in cui mappa sink è stato connesso o disconnesso dalla relativa origine evento completata.
-
-E_POINTER  
-Questo errore indica in genere un problema con una voce nella mappa del sink di evento del controllo o un problema con un argomento di modello utilizzato in un' `IDispEventImpl` o `IDispEventSimpleImpl` classe di base.
-
-CONNECT_E_ADVISELIMIT  
-Il punto di connessione ha già raggiunto il limite di connessioni e non è possibile accettarne altre.
-
-CONNECT_E_CANNOTCONNECT  
-Il sink non supporta l'interfaccia richiesta da questo punto di connessione.
-
-CONNECT_E_NOCONNECTION  
-Il valore del cookie non rappresenta una connessione valida. Questo errore indica in genere un problema con una voce nella mappa del sink di evento del controllo o un problema con un argomento di modello utilizzato in un' `IDispEventImpl` o `IDispEventSimpleImpl` classe di base.
+|||
+|-|-|
+|S_OK  |Tutti i controlli in caso di mappa del sink sono stati connesso o disconnesso dalla relativa origine evento completata.|
+|E_FAIL  |Non tutti i controlli nel caso in cui mappa sink è stato connesso o disconnesso dalla relativa origine evento completata.|
+|E_POINTER  |Questo errore indica in genere un problema con una voce nella mappa del sink di evento del controllo o un problema con un argomento di modello utilizzato in un' `IDispEventImpl` o `IDispEventSimpleImpl` classe di base.|
+|CONNECT_E_ADVISELIMIT  |Il punto di connessione ha già raggiunto il limite di connessioni e non è possibile accettarne altre.|
+|CONNECT_E_CANNOTCONNECT  |Il sink non supporta l'interfaccia richiesta da questo punto di connessione.|
+|CONNECT_E_NOCONNECTION  |Il valore del cookie non rappresenta una connessione valida. Questo errore indica in genere un problema con una voce nella mappa del sink di evento del controllo o un problema con un argomento di modello utilizzato in un' `IDispEventImpl` o `IDispEventSimpleImpl` classe di base.|
 
 ### <a name="remarks"></a>Note
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>Parametri
 
-*size*  
+*size*<br/>
 Un riferimento a un `SIZE` struttura deve essere compilato da questo metodo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametri
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle alla finestra padre del controllo.
 
-*rcPos*  
+*rcPos*<br/>
 Riservato.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 Dati da passare al controllo durante la creazione del controllo. I dati passati come *dwInitParam* verrà visualizzato come il parametro LPARAM del [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) messaggio, che verrà inviato al controllo composito quando viene creata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>Parametri
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle alla finestra padre del controllo.
 
-*rcPos*  
+*rcPos*<br/>
 Coordina il rettangolo di posizione del controllo composito nel client relativo alla *hWndParent*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -280,6 +271,6 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Nozioni fondamentali sul controllo composito](../../atl/atl-composite-control-fundamentals.md)   
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Nozioni fondamentali sul controllo composito](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

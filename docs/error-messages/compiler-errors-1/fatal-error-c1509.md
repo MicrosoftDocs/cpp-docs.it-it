@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1509 | Documenti Microsoft
+title: Errore irreversibile C1509 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec83f6b6138eacc613e560b9da4557079d6677d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 837ab5b7cf76b724726c6c52fbfe974d4da6ca85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033134"
 ---
 # <a name="fatal-error-c1509"></a>Errore irreversibile C1509
-limite del compilatore: troppi stati di gestore di eccezioni nella funzione 'function'. semplificare la funzione  
-  
- Il codice supera un limite interno sugli stati di gestione delle eccezioni (32.768 stati).  
-  
- La causa più comune è che la funzione contiene un'espressione complessa di operatori aritmetici e variabili di classe definito dall'utente.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili  
-  
-1.  Tramite l'assegnazione di sottoespressioni comuni per le variabili temporanee, semplificare le espressioni.  
-  
-2.  Suddividere la funzione in funzioni più piccole.
+
+limite del compilatore: troppi stati di gestore di eccezioni nella funzione 'function'. semplificare la funzione
+
+Il codice supera un limite interno sugli stati di gestione delle eccezioni (32.768 stati).
+
+La causa più comune è che la funzione contiene un'espressione complessa di variabili di classe definita dall'utente e gli operatori aritmetici.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili
+
+1. Semplificare le espressioni tramite l'assegnazione di sottoespressioni comuni per le variabili temporanee.
+
+1. Suddividere la funzione in funzioni più piccole.

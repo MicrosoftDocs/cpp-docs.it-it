@@ -1,5 +1,5 @@
 ---
-title: Classe double_4 | Documenti Microsoft
+title: Classe double_4 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5c776784f78f79fb6d90bde96b199631d08d22
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 92f0a8ed6842986e7f64279ab0c6b23a80dab293
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028441"
 ---
 # <a name="double4-class"></a>Classe double_4
-Rappresenta uno short vector di quattro valori Double.  
+Rappresenta un vettore short di quattro valori Double.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -306,7 +306,7 @@ class double_4;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore double_4](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore double_4](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -611,7 +611,7 @@ class double_4;
   
 ##  <a name="ctor"></a> double_4 
 
- Predefinito, costruttore inizializza tutti gli elementi con 0.  
+ Default costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 double_4() restrict(amp,
@@ -662,23 +662,23 @@ explicit inline double_4(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V0`  
- Il valore per inizializzare l'elemento 0.  
+*_V0*<br/>
+Il valore per inizializzare l'elemento 0.  
   
- `_V1`  
- Il valore per inizializzare l'elemento 1.  
+*V1*<br/>
+Il valore per inizializzare l'elemento 1.  
   
- `_V2`  
- Il valore per inizializzare l'elemento 2.  
+*_V2*<br/>
+Il valore per inizializzare l'elemento 2.  
   
- `_V3`  
- Il valore per inizializzare l'elemento 3.  
+*_V3*<br/>
+Il valore per inizializzare l'elemento 3.  
   
- `_V`  
- Il valore per l'inizializzazione.  
+*ISOLA*<br/>
+Il valore di inizializzazione.  
   
- `_Other`  
- Oggetto utilizzato per inizializzare.  
+*_Other*<br/>
+Oggetto utilizzato per inizializzare.  
   
 ##  <a name="double_4__size"></a> Dimensioni 
 

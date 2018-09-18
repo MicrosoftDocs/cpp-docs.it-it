@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2771 | Documenti Microsoft
+title: Errore del compilatore C2771 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b545e4f1a5654177f4fc787931b229f493d7826
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfd6bc68b7081e4bf38fe02f54b632a141313c4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232926"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036527"
 ---
 # <a name="compiler-error-c2771"></a>Errore del compilatore C2771
-\#importazione consentite solo globale o l'ambito dello spazio dei nomi  
-  
- La direttiva `#import` non è consentita, ad esempio, in una funzione o una struttura.
+
+\#Import consentito solo nel globale o un ambito dello spazio dei nomi
+
+La direttiva `#import` non è consentita, ad esempio, in una funzione o una struttura.

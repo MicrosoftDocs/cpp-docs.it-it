@@ -1,5 +1,5 @@
 ---
-title: Classe auto_handle | Documenti Microsoft
+title: Classe auto_handle | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bd6675f725e2a987a85cc73d6eec92f2b496df09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bddacec4e416173fc60ceb1c2c6ee71b3a198e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029715"
 ---
 # <a name="autohandle-class"></a>Classe auto_handle
-Gestione automatica delle risorse che può essere utilizzata per incorporare un handle virtuale in un tipo gestito.  
+Gestione automatica delle risorse che può essere usata per incorporare un handle virtuale in un tipo gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,8 +36,8 @@ ref class auto_handle;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_element_type`  
- Il tipo gestito da incorporare.  
+*_element_type*<br/>
+Tipo gestito da incorporare.  
   
 ## <a name="requirements"></a>Requisiti  
  **File di intestazione** \<msclr\auto_handle.h >  

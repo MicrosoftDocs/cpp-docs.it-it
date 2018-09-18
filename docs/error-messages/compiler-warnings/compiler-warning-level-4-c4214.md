@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4214 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4214 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0efe0666ded5428dcc40a1900f263cfc522a1502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 879c959bfe851b56dbc60b4eeb714db8d7f9dfaf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292922"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027427"
 ---
 # <a name="compiler-warning-level-4-c4214"></a>Avviso del compilatore (livello 4) C4214
-utilizzata estensione non standard: tipi diversi da int di campi di bit  
-  
- Con le estensioni Microsoft predefinite (/Ze), i membri di struttura di campo di bit possono essere di qualsiasi tipo integer.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// C4214.c  
-// compile with: /W4  
-struct bitfields  
-{  
-   unsigned short j:4;  // C4214  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
- Tali campi di bit non sono validi in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+utilizzata estensione non standard: tipi di campo diversi da int di bit
+
+Con le estensioni Microsoft predefinito (/Ze), i membri di struttura di campo di bit possono essere di qualsiasi tipo integer.
+
+## <a name="example"></a>Esempio
+
+```
+// C4214.c
+// compile with: /W4
+struct bitfields
+{
+   unsigned short j:4;  // C4214
+};
+
+int main()
+{
+}
+```
+
+Tali campi di bit non sono validi in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

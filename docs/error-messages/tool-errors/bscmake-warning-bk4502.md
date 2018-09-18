@@ -1,5 +1,5 @@
 ---
-title: Avviso BK4502 di BSCMAKE | Documenti Microsoft
+title: Avviso BK4502 di BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ed7145c28b10885dc6edf0c399478aea4503ca0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4142993b3f4f5bda2b3e4ce322aa26d7beca8584
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296250"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056326"
 ---
 # <a name="bscmake-warning-bk4502"></a>Avviso BK4502 di BSCMAKE
-troncato. File SBR 'nomefile', non nel nome file  
-  
- Durante un aggiornamento, è stato specificato un file SBR di lunghezza zero non faceva parte del file BSC.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
-  
-1.  Nome file errato.  
-  
-2.  File eliminato. (Errore [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) risultati.)  
-  
-3.  File danneggiato, BSCMAKE deve eseguire una compilazione completa.
+
+troncato. File SBR 'nomefile' non nel nome file
+
+Durante un aggiornamento è stato specificato un file SBR di lunghezza zero che non faceva parte del file con estensione bsc.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+
+1. Nome file errato specificato.
+
+1. File eliminato. (Errore [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) risultati.)
+
+1. File danneggiato, BSCMAKE deve eseguire una build completa.

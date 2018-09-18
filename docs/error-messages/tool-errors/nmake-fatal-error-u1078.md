@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1078 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1078 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a977a2e8f3b9f36832b5f96c6c911966cac7d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b894579c56368e953c1d60aa5d2940d8c9c79f65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019369"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Errore irreversibile U1078 di NMAKE 
-overflow della costante in 'expression'  
-  
- L'espressione specificata contiene una costante non compresa tra-2.147.483.648 e 2.147.483.647. La costante è presente in una delle situazioni seguenti:  
-  
--   Un'espressione specificata con una direttiva di pre-elaborazione  
-  
--   Un livello di errore specificato con il trattino (**-**) come modificatore di comando
+
+overflow della costante in 'expression'
+
+L'espressione specificata contiene una costante che supera l'intervallo - 2.147.483.648 e 2.147.483.647. La costante è presente in una delle situazioni seguenti:
+
+- Un'espressione specificata con una direttiva di pre-elaborazione
+
+- Un livello di errore specificato con il trattino (**-**) come modificatore di comando

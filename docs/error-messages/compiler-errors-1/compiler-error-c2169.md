@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2169 | Documenti Microsoft
+title: Errore del compilatore C2169 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bd0666f264d204c75fd74edbdffce17ecf2529a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e352d32193e6de287c845a451407927c29123fc2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030599"
 ---
 # <a name="compiler-error-c2169"></a>Errore del compilatore C2169
-'function': non è possibile definire una funzione intrinseca  
-  
- Viene visualizzata una definizione di funzione per una funzione dichiarata già `intrinsic`.
+
+'function': non è possibile definire la funzione intrinseca,
+
+Viene visualizzata una definizione di funzione per una funzione è già dichiarata `intrinsic`.

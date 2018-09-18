@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b503e36dfe04eaa3180809033187957ff8d970a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2473a2a66792f1bfff18086030a8898a67339e10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766815"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024281"
 ---
 # <a name="exception-handling-macros"></a>Macro di gestione delle eccezioni
 
@@ -50,7 +50,7 @@ _ATLCATCH(e)
 
 ### <a name="parameters"></a>Parametri
 
-*e*  
+*e*<br/>
 Eccezione da intercettare.
 
 ### <a name="remarks"></a>Note

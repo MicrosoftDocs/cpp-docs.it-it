@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0048 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0048 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dca56b5114e8c0ec98d65e43edaca19a7e23663
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07877215a2b230a7ef2f75d83b71b7d03e4e7d34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031855"
 ---
 # <a name="expression-evaluator-error-cxx0048"></a>Errore dell‘analizzatore di espressioni CXX0048
-sequenza di chiamata non supportata  
-  
- Una funzione specificata nell'espressione utilizza una sequenza di chiamata non supportata dall'analizzatore di espressioni C. È possibile chiamare questa funzione in un'espressione di finestra Espressioni di controllo.  
-  
- Questo errore è identico all'errore CAN0048.
+
+sequenza di chiamata non supportata
+
+Una funzione specificata nell'espressione Usa una sequenza di chiamata non è supportata dall'analizzatore di espressioni C. È possibile chiamare questa funzione in un'espressione di finestra Espressioni di controllo.
+
+Questo errore è identico all'errore CAN0048.

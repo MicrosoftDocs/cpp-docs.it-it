@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2809 | Documenti Microsoft
+title: Errore del compilatore C2809 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283dfdbc3c6c0168cf9a6bd4887fa4b5599dabf1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6503f395a795056d0952c7a55f2c69300501313e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237544"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018874"
 ---
 # <a name="compiler-error-c2809"></a>Errore del compilatore C2809
-'operatore' non ha parametri formali  
-  
- L'operatore non dispone di parametri obbligatori.  
-  
- L'esempio seguente genera l'errore C2809:  
-  
-```  
-// C2809.cpp  
-// compile with: /c  
-class A{};  
-int operator+ ();   // C2809  
-int operator+ (A);   // OK  
+
+'operator operator' non ha parametri formali
+
+L'operatore non ha parametri obbligatori.
+
+L'esempio seguente genera l'errore C2809:
+
+```
+// C2809.cpp
+// compile with: /c
+class A{};
+int operator+ ();   // C2809
+int operator+ (A);   // OK
 ```

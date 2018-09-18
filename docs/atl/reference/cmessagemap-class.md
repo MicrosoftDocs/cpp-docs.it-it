@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024398"
 ---
 # <a name="cmessagemap-class"></a>Classe CMessageMap
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>Parametri
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle alla finestra di ricezione del messaggio.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Il messaggio inviato alla finestra.
 
-*wParam*  
+*wParam*<br/>
 [in] Informazioni aggiuntive specifiche del messaggio.
 
-*lParam*  
+*lParam*<br/>
 [in] Informazioni aggiuntive specifiche del messaggio.
 
-*lResult*  
+*lResult*<br/>
 [out] Il risultato dell'elaborazione del messaggio.
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identificatore della mappa messaggi che elaborerà il messaggio. Il mapping dei messaggi predefinito, dichiarato con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), è identificato da 0. Una mappa messaggi alternativo dichiarato con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), è identificato da `msgMapID`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -108,7 +108,7 @@ Chiamato da routine della finestra di un [CContainedWindow](../../atl/reference/
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CDynamicChain](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[Classe CDynamicChain](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

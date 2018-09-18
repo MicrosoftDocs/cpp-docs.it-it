@@ -1,5 +1,5 @@
 ---
-title: Classe task_options (Runtime di concorrenza) | Documenti Microsoft
+title: Classe task_options (Runtime di concorrenza) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b01d9d5308590bead126cd623b7da0468f0df60f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65a12af3bf99075b2a2a77e0dc2c17d28e80849e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028259"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>Classe task_options (runtime di concorrenza)
 Rappresenta le opzioni consentite per la creazione di un'attività  
@@ -155,9 +155,13 @@ task_options(
   
 ### <a name="parameters"></a>Parametri  
  `_SchedType`  
+
  `_Token`  
+
  `_ContinuationContext`  
+
  `_Scheduler`  
+
  `_TaskOptions`  
   
 ## <a name="see-also"></a>Vedere anche  

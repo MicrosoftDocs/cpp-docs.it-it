@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1055 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1055 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f99681ff7219c46820da4c909a6f4eddccdabf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50103f7445096e553a510da6272dd4be1886b710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017936"
 ---
 # <a name="nmake-fatal-error-u1055"></a>Errore irreversibile U1055 di NMAKE 
-spazio di ambiente insufficiente  
-  
- Il sistema operativo ha esaurito la chat room per le variabili di ambiente.  
-  
- Aumentare lo spazio di ambiente o impostare un numero inferiore di variabili di ambiente.
+
+spazio di ambiente insufficiente
+
+Il sistema operativo ha esaurito la chat room per le variabili di ambiente.
+
+Aumentare lo spazio di ambiente o impostare un minor numero di variabili di ambiente.

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1003 | Documenti Microsoft
+title: Errore irreversibile C1003 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11dbaa335a7354a54deda8db1bb29f2384873a28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aeb12cfb83b8fc7e7a0b4b89e325897002d1561c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029351"
 ---
 # <a name="fatal-error-c1003"></a>Errore irreversibile C1003
-il conteggio degli errori supera il numero. Interruzione della compilazione  
-  
- Gli errori del programma sono troppo numerosi per consentire il recupero. Il compilatore deve essere terminato.
+
+il conteggio degli errori supera il numero. Interruzione della compilazione
+
+Gli errori del programma sono troppo numerosi per consentire il recupero. Il compilatore deve essere terminato.

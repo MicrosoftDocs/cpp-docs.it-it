@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025542"
 ---
 # <a name="connection-point-global-functions"></a>Funzioni globali del punto di connessione
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>Parametri
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Un puntatore al `IUnknown` dell'oggetto desidera connettersi con il client.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Un puntatore al client `IUnknown`.
 
-*IID*  
+*IID*<br/>
 [in] Il GUID del punto di connessione. In genere, questo è lo stesso come interfaccia in uscita gestita dal punto di connessione.
 
-*PDW*  
+*PDW*<br/>
 [out] Puntatore a cookie che identifica in modo univoco la connessione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>Parametri
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Un puntatore al `IUnknown` dell'oggetto che il client è connesso con.
 
-*IID*  
+*IID*<br/>
 [in] Il GUID del punto di connessione. In genere, questo è lo stesso come interfaccia in uscita gestita dal punto di connessione.
 
-*dw*  
+*dw*<br/>
 [in] Cookie che identifica in modo univoco la connessione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Parametri
 
-*pT*  
+*pT*<br/>
 [in] Un puntatore all'oggetto che contiene la mappa di sink.
 
-*bAdvise*  
+*bAdvise*<br/>
 [in] TRUE se tutte le voci di sink a cui annunciare; FALSE se devono essere annullare tutte le voci di sink.
 
 ### <a name="return-value"></a>Valore restituito
@@ -145,5 +145,5 @@ Un valore HRESULT standard.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Funzioni](../../atl/reference/atl-functions.md)   
+[Funzioni](../../atl/reference/atl-functions.md)<br/>
 [Macro di punto di connessione](../../atl/reference/connection-point-macros.md)

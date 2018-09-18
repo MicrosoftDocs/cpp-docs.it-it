@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 284efeda739f3282bf0ae23f11f950971538645d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 3d3e6ca79794eafe64ee2797c12ec8a82a3bb064
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038219"
 ---
 # <a name="cmapptrtoptr-class"></a>Classe CMapPtrToPtr
 Supporta mappe di puntatori void con chiave fornita da puntatori void.  
@@ -63,9 +63,7 @@ class CMapPtrToPtr : public CObject
 ## <a name="members"></a>Membri  
  Le funzioni membro della `CMapPtrToPtr` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire un puntatore a **void**. Ogni volta che un `CString` o un **const** puntatore al **char** come parametro della funzione o valore restituito, sostituire con un puntatore a **void**.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  ad esempio, si converte in  
   

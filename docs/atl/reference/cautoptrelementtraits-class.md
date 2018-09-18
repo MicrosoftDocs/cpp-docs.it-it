@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cab1b2699c87c09761258fcde8cbb8b4c8eaa32f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f406415afab907b7b00d75e52dce1fcac7166fd5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021083"
 ---
 # <a name="cautoptrelementtraits-class"></a>Classe CAutoPtrElementTraits
 
@@ -36,14 +36,14 @@ Questa classe fornisce metodi e funzioni statiche typedef utile durante la creaz
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename T>  
-class CAutoPtrElementTraits 
+template<typename T>
+class CAutoPtrElementTraits
     : public CDefaultElementTraits<ATL::CAutoPtr<T>>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-`T`  
+*T*<br/>
 Il tipo di puntatore.
 
 ## <a name="members"></a>Membri
@@ -93,5 +93,5 @@ typedef T *& OUTARGTYPE;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

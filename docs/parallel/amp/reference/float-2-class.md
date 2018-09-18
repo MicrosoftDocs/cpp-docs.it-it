@@ -1,5 +1,5 @@
 ---
-title: Classe float_2 | Documenti Microsoft
+title: Classe float_2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82197c785c8b27e2d4f2607cd677141b219c90ca
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019953"
 ---
 # <a name="float2-class"></a>Classe float_2
-Rappresenta un vettore short di due elementi mobili.  
+Rappresenta un vettore short di due valori a virgola mobile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ class float_2;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore float_2](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore float_2](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -127,7 +127,7 @@ class float_2;
   
 ##  <a name="ctor"></a> float_2 
 
- Predefinito, costruttore inizializza tutti gli elementi con 0.  
+ Default costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 float_2() restrict(amp,
@@ -176,17 +176,17 @@ explicit inline float_2(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V0`  
- Il valore per inizializzare l'elemento 0.  
+*_V0*<br/>
+Il valore per inizializzare l'elemento 0.  
   
- `_V1`  
- Il valore per inizializzare l'elemento 1.  
+*V1*<br/>
+Il valore per inizializzare l'elemento 1.  
   
- `_V`  
- Il valore per l'inizializzazione.  
+*ISOLA*<br/>
+Il valore di inizializzazione.  
   
- `_Other`  
- Oggetto utilizzato per inizializzare.  
+*_Other*<br/>
+Oggetto utilizzato per inizializzare.  
   
 ##  <a name="float_2__size"></a> Dimensioni 
 

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1211 | Documenti Microsoft
+title: Errore irreversibile C1211 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef92816c157d6bbc72d7c7539f2d0644c70082b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d2bc25c2eddd5ea9a0170272bd3e71b61f94f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018528"
 ---
 # <a name="fatal-error-c1211"></a>Errore irreversibile C1211
-L'attributo personalizzato TypeForwardedTo non è supportato dalla versione del runtime installata  
-  
- L'errore C1211 si verifica quando è presente un compilatore per la versione corrente, ma un Common Language Runtime di una versione precedente.  
-  
- Alcune funzionalità del compilatore potrebbero non funzionare in una versione precedente del runtime.  
-  
- Per risolvere l'errore C1211, installare Common Language Runtime fornito con il compilatore in uso.  
-  
- Per ulteriori informazioni, vedere [inoltro dei tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md).
+
+L'attributo personalizzato TypeForwardedTo non è supportato dalla versione del runtime installata
+
+L'errore C1211 si verifica quando è presente un compilatore per la versione corrente, ma un Common Language Runtime di una versione precedente.
+
+Alcune funzionalità del compilatore potrebbero non funzionare in una versione precedente del runtime.
+
+Per risolvere l'errore C1211, installare Common Language Runtime fornito con il compilatore in uso.
+
+Per altre informazioni, vedere [l'inoltro di tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md).

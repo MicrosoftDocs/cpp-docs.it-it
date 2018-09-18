@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3708 | Documenti Microsoft
+title: Errore del compilatore C3708 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d54f61af55cb768251dd60e261d26ba8e990ee8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 143b386e0f1704ea8271cc93d5d7632fc84b051a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023501"
 ---
 # <a name="compiler-error-c3708"></a>Errore del compilatore C3708
-'interface': l'uso improprio di 'keyword'; deve essere un membro di un'origine eventi compatibile  
-  
- Per dichiarare un'interfaccia come un evento, la dichiarazione dell'evento deve essere un'origine evento.  
-  
- L'esempio seguente genera l'errore C3708:  
-  
-```  
-// C3708.cpp  
-// compile with: /c  
-#define _ATL_ATTRIBUTES 1  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[ module(name="MyLibrary")];  
-  
-[ object, uuid("00000000-0000-0000-0000-000000000001") ]  
-__interface I {  
-   HRESULT func();  
-};  
-  
-[ object, uuid("00000000-0000-0000-0000-000000000002") ]  
-__interface II {  
-   HRESULT func();  
-};  
-  
-__event __interface I;   // C3708  
-  
-// put the event in an event source  
-[ coclass, event_source(com), uuid("00000000-0000-0000-0000-000000000003") ]  
-struct E : II {  
-   __event __interface II;  
-};  
+
+'interface': utilizzo improprio di 'keyword'; deve essere un membro di un'origine eventi compatibile
+
+Per dichiarare un'interfaccia come un evento, la dichiarazione dell'evento deve essere un'origine evento.
+
+L'esempio seguente genera l'errore C3708:
+
+```
+// C3708.cpp
+// compile with: /c
+#define _ATL_ATTRIBUTES 1
+#include "atlbase.h"
+#include "atlcom.h"
+
+[ module(name="MyLibrary")];
+
+[ object, uuid("00000000-0000-0000-0000-000000000001") ]
+__interface I {
+   HRESULT func();
+};
+
+[ object, uuid("00000000-0000-0000-0000-000000000002") ]
+__interface II {
+   HRESULT func();
+};
+
+__event __interface I;   // C3708
+
+// put the event in an event source
+[ coclass, event_source(com), uuid("00000000-0000-0000-0000-000000000003") ]
+struct E : II {
+   __event __interface II;
+};
 ```

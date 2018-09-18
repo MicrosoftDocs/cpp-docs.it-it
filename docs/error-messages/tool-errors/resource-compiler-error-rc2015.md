@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2015 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2015 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9d9f0507f0e71e9417c6b0e577d8626c63c402e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 247282e7371ab79f40bfdb99031348100ee25d6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037398"
 ---
 # <a name="resource-compiler-error-rc2015"></a>Errore del compilatore di risorse RC2015
-Troppi caratteri nella costante.  
-  
- Una costante carattere contiene più di due caratteri.  
-  
- Costanti carattere sono limitate a un carattere (costanti carattere standard) o due caratteri (costanti carattere long).  
-  
- Si noti che una sequenza di escape (ad esempio, \t per scheda) viene convertita in un singolo carattere.
+
+Troppi caratteri nella costante.
+
+Una costante carattere contiene più di due caratteri.
+
+Costanti carattere sono limitate a un carattere (le costanti carattere standard) o due caratteri (costanti di tipo carattere long).
+
+Si noti che una sequenza di escape (ad esempio, \t per scheda) viene convertita in un singolo carattere.

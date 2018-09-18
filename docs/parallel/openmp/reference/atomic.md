@@ -1,5 +1,5 @@
 ---
-title: Atomic | Documenti Microsoft
+title: Atomic | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694407"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037489"
 ---
 # <a name="atomic"></a>atomico
 Specifica che una posizione di memoria che verrà aggiornata in modo atomico.  
@@ -34,13 +34,13 @@ Specifica che una posizione di memoria che verrà aggiornata in modo atomico.
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `expression`  
- L'istruzione contenente lvalue la cui posizione di memoria a cui si desidera proteggere più scritture. Per ulteriori informazioni sui moduli di espressione validi, vedere la specifica OpenMP.  
+*Espressione*<br/>
+L'istruzione che contiene il lvalue la cui posizione di memoria a cui si desidera proteggersi da più operazioni di scrittura. Per altre informazioni sulle forme espressione legali, vedere la specifica di OpenMP.  
   
 ## <a name="remarks"></a>Note  
- Il `atomic` direttiva non supporta clausole OpenMP.  
+ Il `atomic` direttiva non supporta nessuna clausole OpenMP.  
   
- Per ulteriori informazioni, vedere [atomica 2.6.4 costrutto](../../../parallel/openmp/2-6-4-atomic-construct.md).  
+ Per altre informazioni, vedere [atomico 2.6.4 costrutto](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   
 ## <a name="example"></a>Esempio  
   

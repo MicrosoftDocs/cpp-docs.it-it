@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753149"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022111"
 ---
 # <a name="registry-scripting-examples"></a>Esempi di script del Registro di sistema
 
@@ -32,17 +32,17 @@ L'esempio di script in questo argomento viene illustrato come aggiungere una chi
 
 L'albero di analisi seguente illustra un semplice script che aggiunge una singola chiave al Registro di sistema. In particolare, lo script aggiunge la chiave `MyVeryOwnKey`, a `HKEY_CURRENT_USER`. Assegna anche il valore di stringa predefinita del `HowGoesIt` alla nuova chiave:
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 Questo script può essere facilmente esteso per definire più di sottochiavi come indicato di seguito:
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 A questo punto, lo script aggiunge una sottochiave `HasASubkey`, a `MyVeryOwnKey`. Questa sottochiave, entrambi aggiunge il `PrettyCool` sottochiave (con un valore predefinito `DWORD` pari a 55) e il `ANameValue` denominato valore (con un valore di stringa di `WithANamedValue`).
@@ -61,8 +61,8 @@ A questo punto, lo script aggiunge una sottochiave `HasASubkey`, a `MyVeryOwnKey
 
 Lo script seguente registra il server COM di registrazione.
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 In fase di esecuzione, questo albero di analisi aggiunge il `ATL.Registrar` chiave `HKEY_CLASSES_ROOT`. Per questa nuova chiave, quindi it:
@@ -106,15 +106,15 @@ L'albero di analisi aggiunge due nuove sottochiavi da `{44EC053A-400F-11D0-9DCD-
 
 Per specificare più di un albero di analisi in uno script, è sufficiente inserire un albero alla fine di un altro. Ad esempio, lo script seguente aggiunge la chiave `MyVeryOwnKey`, per gli alberi di analisi per entrambe `HKEY_CLASSES_ROOT` e `HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

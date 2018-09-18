@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197335"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020616"
 ---
 # <a name="subscript-operator-"></a>Operatore di indice]
 
@@ -64,7 +64,7 @@ Un'espressione di indice può inoltre avere più indici, come nel modo seguente:
 
 *expression1* **[** *expression2* **] [** *expression3* **]** ...
 
-Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra *expression1* **[** *expression2* **]**, viene valutato per primo. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. L'operatore di riferimento indiretto (<strong>\*</strong>) viene applicato dopo l'ultima espressione di indice viene valutata, a meno che il valore del puntatore finale indirizzi un tipo di matrice.
+Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, *expression1* **[** *expression2* **]**, viene valutata per prima. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. L'operatore di riferimento indiretto (<strong>\*</strong>) viene applicato dopo l'ultima espressione di indice viene valutata, a meno che il valore del puntatore finale indirizzi un tipo di matrice.
 
 Le espressioni con più indici fanno riferimento a elementi di "matrici multidimensionali". Una matrice multidimensionale è una matrice i cui elementi sono matrici. Ad esempio, il primo elemento di una matrice tridimensionale è una matrice con due dimensioni. Nell'esempio seguente viene dichiarata e inizializzata una matrice bidimensionale di caratteri semplice:
 
@@ -120,6 +120,6 @@ L'operatore di indice è commutativo. Di conseguenza, le espressioni *matrice*[*
 
 [Espressioni di suffissi](../cpp/postfix-expressions.md)<br/>
 [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Le matrici](../cpp/arrays-cpp.md)
-[matrici unidimensionali](../c-language/one-dimensional-arrays.md)<br/>
+[Array](../cpp/arrays-cpp.md)<br/>
+[Matrici unidimensionali](../c-language/one-dimensional-arrays.md)<br/>
 [Matrici multidimensionali](../c-language/multidimensional-arrays-c.md)<br/>

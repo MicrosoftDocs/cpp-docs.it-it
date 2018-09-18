@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6e32ec0e474f901818618af662a91e3e46efed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024913"
 ---
 # <a name="message-map-macros-atl"></a>Macro della mappa messaggi (ATL)
 
@@ -109,7 +109,7 @@ ALT_MSG_MAP(msgMapID)
 
 ### <a name="parameters"></a>Parametri
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] L'identificatore della mappa del messaggio.
 
 ### <a name="remarks"></a>Note
@@ -148,7 +148,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>Parametri
 
-*theClass*  
+*theClass*<br/>
 [in] Il nome della classe contenente la mappa dei messaggi.
 
 ### <a name="remarks"></a>Note
@@ -227,10 +227,10 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>Parametri
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] Il nome della classe di base che contiene la mappa dei messaggi.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] L'identificatore della mappa del messaggio.
 
 ### <a name="remarks"></a>Note
@@ -256,10 +256,10 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>Parametri
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] Il nome del membro dati che contiene la mappa dei messaggi.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] L'identificatore della mappa del messaggio.
 
 ### <a name="remarks"></a>Note
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>Parametri
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] Il nome della classe di base che contiene la mappa dei messaggi.
 
 ### <a name="remarks"></a>Note
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="parameters"></a>Parametri
 
-*dynaChainID*  
+*dynaChainID*<br/>
 [in] Identificatore univoco per la mappa dei messaggi di un oggetto.
 
 ### <a name="remarks"></a>Note
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>Parametri
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] Il nome del membro dati che contiene la mappa dei messaggi.
 
 ### <a name="remarks"></a>Note
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>Parametri
 
-*Codice*  
+*Codice*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
@@ -407,13 +407,13 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
-*Codice*  
+*Codice*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="remarks"></a>Note
@@ -449,10 +449,10 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] Identificatore della voce di menu, controllo o l'invio del messaggio di tasti di scelta rapida.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
@@ -469,16 +469,16 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 ### <a name="parameters"></a>Parametri
 
-*idFirst*  
+*idFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
-*idLast*  
+*idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*Codice*  
+*Codice*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="remarks"></a>Note
@@ -499,13 +499,13 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 ### <a name="parameters"></a>Parametri
 
-*idFirst*  
+*idFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
-*idLast*  
+*idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="remarks"></a>Note
@@ -598,10 +598,10 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>Parametri
 
-*msg*  
+*msg*<br/>
 [in] Il messaggio di Windows.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="remarks"></a>Note
@@ -639,13 +639,13 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ### <a name="parameters"></a>Parametri
 
-*msgFirst*  
+*msgFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di messaggi.
 
-*msgLast*  
+*msgLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di messaggi.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
@@ -662,10 +662,10 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Parametri
 
-*recapito continuo*  
+*recapito continuo*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
@@ -682,13 +682,13 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] L'identificatore del controllo che invia il messaggio.
 
-*recapito continuo*  
+*recapito continuo*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="remarks"></a>Note
@@ -726,10 +726,10 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] L'identificatore del controllo che invia il messaggio.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
@@ -746,16 +746,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parametri
 
-*idFirst*  
+*idFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
-*idLast*  
+*idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*recapito continuo*  
+*recapito continuo*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="remarks"></a>Note
@@ -776,13 +776,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametri
 
-*idFirst*  
+*idFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
-*idLast*  
+*idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="remarks"></a>Note
@@ -819,10 +819,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>Parametri
 
-*Codice*  
+*Codice*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.  
 
 ### <a name="requirements"></a>Requisiti
@@ -839,13 +839,13 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
-*Codice*  
+*Codice*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.  
 
 ### <a name="requirements"></a>Requisiti
@@ -862,10 +862,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.  
 
 ### <a name="requirements"></a>Requisiti
@@ -882,16 +882,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ### <a name="parameters"></a>Parametri
 
-*idFirst*  
+*idFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
-*idLast*  
+*idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*Codice*  
+*Codice*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.  
 
 ### <a name="requirements"></a>Requisiti
@@ -908,13 +908,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametri
 
-*idFirst*  
+*idFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
-*idLast*  
+*idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.  
 
 ### <a name="requirements"></a>Requisiti
@@ -931,10 +931,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Parametri
 
-*recapito continuo*  
+*recapito continuo*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.  
 
 ### <a name="requirements"></a>Requisiti
@@ -951,13 +951,13 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
-*recapito continuo*  
+*recapito continuo*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.  
 
 ### <a name="requirements"></a>Requisiti
@@ -974,10 +974,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.  
 
 ### <a name="requirements"></a>Requisiti
@@ -994,16 +994,16 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parametri
 
-*idFirst*  
+*idFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
-*idLast*  
+*idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*recapito continuo*  
+*recapito continuo*<br/>
 [in] Il codice di notifica.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
@@ -1020,13 +1020,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametri
 
-*idFirst*  
+*idFirst*<br/>
 [in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
-*idLast*  
+*idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*func*  
+*func*<br/>
 [in] Il nome della funzione di gestore di messaggi.
 
 ## <a name="see-also"></a>Vedere anche

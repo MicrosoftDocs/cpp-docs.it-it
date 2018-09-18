@@ -1,5 +1,5 @@
 ---
-title: Generazione avviso progetto PRJ0018 | Documenti Microsoft
+title: Avviso di compilazione PRJ0018 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914f05b6e2bb3dfb8932b306fb7c84b9a31466c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e232ed90af6002a58356827421b2d49e68ba14a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033212"
 ---
 # <a name="project-build-warning-prj0018"></a>Avviso di compilazione progetto PRJ0018
-Le variabili di ambiente seguenti non sono state trovate:  
-  
- Non è definita una variabile di ambiente. Questo errore Elenca le variabili di ambiente che non sono state definite.  
-  
- Vedere [macro per comandi di compilazione personalizzati](../../ide/common-macros-for-build-commands-and-properties.md) per informazioni sulle macro nel processo di compilazione.
+
+Le variabili di ambiente seguenti non sono state trovate:
+
+Non è definita una variabile di ambiente. Questo errore sono elencate le variabili di ambiente che non sono state definite.
+
+Visualizzare [macro per comandi di compilazione personalizzati](../../ide/common-macros-for-build-commands-and-properties.md) per informazioni sulle macro nel processo di compilazione.

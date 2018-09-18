@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762080"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033979"
 ---
 # <a name="cheapptr-class"></a>Classe CHeapPtr
 
@@ -37,16 +37,16 @@ Una classe del puntatore intelligente per la gestione dei puntatori di heap.
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Il tipo di oggetto da archiviare nell'heap.
 
-*Allocatore*  
+*Allocatore*<br/>
 La classe di allocazione di memoria da utilizzare.
 
 ## <a name="members"></a>Membri
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nElements*  
+*nElements*<br/>
 Il numero di elementi usati per calcolare la quantità di memoria da allocare. Il valore predefinito è 1.
 
 ### <a name="return-value"></a>Valore restituito
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Un puntatore di heap esistente o `CHeapPtr`.
 
 ### <a name="remarks"></a>Note
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Oggetto `CHeapPtr` esistente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nElements*  
+*nElements*<br/>
 Nuovo numero di elementi usati per calcolare la quantità di memoria da allocare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -177,6 +177,6 @@ Restituisce true se la memoria è stato allocato, false in caso di errore.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
-[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
+[Classe CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
+[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

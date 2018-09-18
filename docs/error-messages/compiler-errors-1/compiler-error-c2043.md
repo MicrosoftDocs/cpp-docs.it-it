@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2043 | Documenti Microsoft
+title: Errore del compilatore C2043 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a71e00fa86b506b4b5dd5b059c778f5dc8749
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d29298a11e0984120a8902b08b96699724669f58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030543"
 ---
 # <a name="compiler-error-c2043"></a>Errore del compilatore C2043
-break non valido  
-  
- [break](../../cpp/break-statement-cpp.md) è valido solo all'interno di un'istruzione `do`, `for`, `while`o `switch` .
+
+break non valido
+
+[break](../../cpp/break-statement-cpp.md) è valido solo all'interno di un'istruzione `do`, `for`, `while`o `switch` .

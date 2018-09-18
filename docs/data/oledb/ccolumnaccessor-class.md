@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4c55b2e10112c38835bb1f230970db56a6f53d4e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b1843b6279cb7c86762cc6d975a2a7e67d3d278d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055637"
 ---
 # <a name="ccolumnaccessor-class"></a>Classe CColumnAccessor
+
 Genera il codice inserito consumer.  
   
 ## <a name="syntax"></a>Sintassi
@@ -36,29 +37,32 @@ class CColumnAccessor : public CAccessorBase
 ```  
   
 ## <a name="remarks"></a>Note  
- Nel codice inserito, ogni colonna è associata come una funzione di accesso separato. È necessario essere consapevoli che questa classe viene utilizzata l'inserimento di codice (ad esempio, che potrebbe verificarsi durante il debug), ma in genere non è necessario usare direttamente o i relativi metodi.  
+
+Nel codice inserito, ogni colonna è associata come una funzione di accesso separato. È necessario essere consapevoli che questa classe viene utilizzata l'inserimento di codice (ad esempio, che potrebbe verificarsi durante il debug), ma in genere non è necessario usare direttamente o i relativi metodi.  
   
- `CColumnAccessor` implementa i metodi stub seguenti, ognuno dei quali corrispondono funzionalità agli altri metodi di classe della funzione di accesso:  
+`CColumnAccessor` implementa i metodi stub seguenti, ognuno dei quali corrispondono funzionalità agli altri metodi di classe della funzione di accesso:  
   
--   `CColumnAccessor` Il costruttore. Crea e inizializza il `CColumnAccessor` oggetto.  
+- `CColumnAccessor` Il costruttore. Crea e inizializza il `CColumnAccessor` oggetto.  
   
--   `CreateAccessor` Alloca memoria per la colonna di strutture di associazione e inizializza i membri di dati di colonna.  
+- `CreateAccessor` Alloca memoria per la colonna di strutture di associazione e inizializza i membri di dati di colonna.  
   
--   `BindColumns` Associa le colonne per le funzioni di accesso.  
+- `BindColumns` Associa le colonne per le funzioni di accesso.  
   
--   `SetParameterBuffer` Alloca i buffer per i parametri.  
+- `SetParameterBuffer` Alloca i buffer per i parametri.  
   
--   `AddParameter` Aggiunge una voce di parametro alle strutture di voce di parametro.  
+- `AddParameter` Aggiunge una voce di parametro alle strutture di voce di parametro.  
   
--   `HasOutputColumns` Determina se la funzione di accesso include colonne di output  
+- `HasOutputColumns` Determina se la funzione di accesso include colonne di output  
   
--   `HasParameters` Determina se la funzione di accesso dispone di parametri.  
+- `HasParameters` Determina se la funzione di accesso dispone di parametri.  
   
--   `BindParameters` Associa i parametri creati per le colonne.  
+- `BindParameters` Associa i parametri creati per le colonne.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli.h  
+
+**Intestazione:** atldbcli.h  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

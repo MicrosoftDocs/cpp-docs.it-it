@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0019 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0019 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e1679374e105ab06ce245ba68cfe92706689e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031808"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>Errore dell‘analizzatore di espressioni CXX0019
-cast di tipo non valido  
-  
- L'analizzatore di espressioni C non è possibile eseguire il cast come scritto del tipo.  
-  
- Questo errore è identico all'errore CAN0019.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
-  
-1.  Il tipo specificato è sconosciuto.  
-  
-2.  Si sono verificati troppi livelli di tipi di puntatore. Ad esempio, il cast del tipo  
-  
-    ```  
-    (char **)h_message  
-    ```  
-  
-     non può essere valutata dall'analizzatore di espressioni C.
+
+cast di tipo non valido
+
+L'analizzatore di espressioni C non è possibile eseguire il cast come scritto del tipo.
+
+Questo errore è identico all'errore CAN0019.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+
+1. Il tipo specificato è sconosciuto.
+
+1. Si sono verificati troppi livelli di tipi di puntatore. Ad esempio, il cast del tipo
+
+    ```
+    (char **)h_message
+    ```
+
+     non possono essere valutate dall'analizzatore di espressioni C.

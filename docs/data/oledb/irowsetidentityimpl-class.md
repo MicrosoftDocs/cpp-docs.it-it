@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed8cc8fc2b61a3a85beb7297317c5b266557268c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1431fb9b35ab83f6cb0fc167eff4ba4508f2e301
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036189"
 ---
 # <a name="irowsetidentityimpl-class"></a>Classe IRowsetIdentityImpl
+
 Implementa OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\)) interfaccia, che consente di eseguire test per l'identità di riga.  
   
 ## <a name="syntax"></a>Sintassi
@@ -44,14 +45,16 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *T*  
- Una classe derivata da `IRowsetIdentityImpl`.  
+
+*T*<br/>
+Una classe derivata da `IRowsetIdentityImpl`.  
   
- *RowClass*  
- L'unità di archiviazione per il `HROW`.  
+*RowClass*<br/>
+L'unità di archiviazione per il `HROW`.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldb.h  
+
+**Intestazione:** atldb.h  
   
 ## <a name="members"></a>Membri  
   
@@ -62,6 +65,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 |[IsSameRow](#issamerow)|Confronta due handle di riga per vedere se fanno riferimento alla stessa riga.|  
   
 ## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
+
 Confronta due handle di riga per vedere se fanno riferimento alla stessa riga.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -72,11 +76,14 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
- Per confrontare gli handle di riga, questo metodo viene eseguito il cast di `HROW` handle a `RowClass` membri e chiamate `memcmp` sugli indicatori di misura.  
+
+Per confrontare gli handle di riga, questo metodo viene eseguito il cast di `HROW` handle a `RowClass` membri e chiamate `memcmp` sugli indicatori di misura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

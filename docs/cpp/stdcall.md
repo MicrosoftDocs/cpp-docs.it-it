@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a452d563646ac869bc1a3bc832a72a9bd11b694
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: bb65ff85346412587fab96934ca5438bb6a4dfe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894809"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031379"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -54,7 +54,7 @@ In ARM e x64 processori **stdcall** viene accettata e ignorata dal compilatore; 
 Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline. Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione. Data questa definizione di classe,
 
 ```cpp
-struct CMyClass {  
+struct CMyClass {
    void __stdcall mymethod();
 };
 ```
@@ -62,13 +62,13 @@ struct CMyClass {
 this
 
 ```cpp
-void CMyClass::mymethod() { return; }  
+void CMyClass::mymethod() { return; }
 ```
 
 equivale a questo
 
 ```cpp
-void __stdcall CMyClass::mymethod() { return; }  
+void __stdcall CMyClass::mymethod() { return; }
 ```
 
 ## <a name="example"></a>Esempio
@@ -84,5 +84,5 @@ typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fla
 
 ## <a name="see-also"></a>Vedere anche
 
-[Passaggio di argomenti e convenzioni di denominazione](../cpp/argument-passing-and-naming-conventions.md)   
+[Passaggio di argomenti e convenzioni di denominazione](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

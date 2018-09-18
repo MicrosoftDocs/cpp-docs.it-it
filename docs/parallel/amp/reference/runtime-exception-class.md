@@ -1,5 +1,5 @@
 ---
-title: Classe runtime_exception | Documenti Microsoft
+title: runtime_exception (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff10cb3958ffa82e3ef2bb70d8370d1a52c4a929
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8f0cd5e025e8f8b442c47cb5e115766478ff1d4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019902"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (classe)
 Il tipo di base per le eccezioni nella libreria C++ Accelerated Massive Parallelism (AMP).  
@@ -55,7 +55,7 @@ class runtime_exception : public std::exception;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `runtime_exception` specificato in questo oggetto.|  
+|[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `runtime_exception` in questo oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `exception`  
@@ -63,7 +63,7 @@ class runtime_exception : public std::exception;
  `runtime_exception`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** amprt.h  
+ **Intestazione:** amprt. h  
   
  **Spazio dei nomi:** Concurrency  
 
@@ -85,20 +85,20 @@ runtime_exception(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Descrizione dell'errore che ha causato l'eccezione.  
+*Messaggio*<br/>
+Descrizione dell'errore che ha causato l'eccezione.  
   
- `_Hresult`  
- Valore HRESULT di errore che ha causato l'eccezione.  
+*_Hresult*<br/>
+Il valore HRESULT dell'errore che ha causato l'eccezione.  
   
- `_Other`  
- Il `runtime_exception` oggetto da copiare.  
+*_Other*<br/>
+Il `runtime_exception` oggetto da copiare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `runtime_exception`.  
 
 ## <a name="dtor"></a>  ~ runtime_exception distruttore  
-Elimina definitivamente l'oggetto.  
+Elimina l'oggetto.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -116,10 +116,10 @@ HRESULT get_error_code() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Valore HRESULT di errore che ha causato l'eccezione.  
+ Il valore HRESULT dell'errore che ha causato l'eccezione.  
   
 ## <a name="runtime_exception__operator_eq"></a>  operator=   
-  Copia il contenuto dell'oggetto specificato `runtime_exception` specificato in questo oggetto.  
+  Copia il contenuto dell'oggetto specificato `runtime_exception` in questo oggetto.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -128,8 +128,8 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Other`  
- Il `runtime_exception` oggetto da copiare.  
+*_Other*<br/>
+Il `runtime_exception` oggetto da copiare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `runtime_exception` oggetto.  

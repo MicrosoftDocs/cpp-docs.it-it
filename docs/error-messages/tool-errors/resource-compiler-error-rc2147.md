@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2147 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2147 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434e61f701bf74ad77b5a8a210ebf1002bb95e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f3ca510dfd61e92a33f599c7ef261e03b8ad2cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032850"
 ---
 # <a name="resource-compiler-error-rc2147"></a>Errore del compilatore di risorse RC2147
-ID di varietà di lingua non è un numero.  
-  
- Il valore ID SOTTOLINGUA deve essere un numero.  
-  
- L'istruzione **LANGUAGE** deve usare la sintassi seguente:  
-  
- **LANGUAGE** *ID_lingua_principale*,*ID_lingua_secondaria*  
-  
- ID di varietà di lingua validi sono definiti come **SUBLANG _** costanti nel file Winnt. h.
+
+ID varietà di lingua non è un numero.
+
+Il valore dell'ID di varietà di lingua deve essere un numero.
+
+L'istruzione **LANGUAGE** deve usare la sintassi seguente:
+
+**LANGUAGE** *ID_lingua_principale*,*ID_lingua_secondaria*
+
+ID varietà di lingua validi sono definiti come **SUBLANG _** costanti in file Winnt. h.

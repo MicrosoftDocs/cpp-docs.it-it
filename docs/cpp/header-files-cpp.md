@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028532"
 ---
 # <a name="header-files-c"></a>File di intestazione (C++)
 
-I nomi degli elementi di programma, ad esempio variabili, funzioni, classi e così via devono essere dichiarati prima di poter essere usati. Ad esempio, non è possibile scrivere semplicemente `x = 42` senza prima dichiarare 'x'. 
+I nomi degli elementi di programma, ad esempio variabili, funzioni, classi e così via devono essere dichiarati prima di poter essere usati. Ad esempio, non è possibile scrivere semplicemente `x = 42` senza prima dichiarare 'x'.
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- La dichiarazione indica al compilatore che è un **int**, un **double**, una **funzione**, un **classe** o un altro aspetto.  Inoltre, ogni nome deve essere dichiarato (direttamente o indirettamente) in ogni file con estensione cpp in cui viene utilizzata. Quando si compila un programma, ogni file con estensione cpp viene compilato in modo indipendente in un'unità di compilazione. Il compilatore non dispone di alcuna conoscenza di quali i nomi vengono dichiarati in altre unità di compilazione. Ciò significa che se si definisce una classe o una funzione o variabile globale, è necessario fornire una dichiarazione di tale operazione in ogni file con estensione cpp aggiuntive che lo utilizza. Ogni dichiarazione di tale operazione deve essere identico in tutti i file. Un'inconsistenza lieve causerà errori o un comportamento imprevisto, quando il linker tenta di unire tutte le unità di compilazione in un unico programma.
+La dichiarazione indica al compilatore che è un **int**, un **double**, una **funzione**, un **classe** o un altro aspetto.  Inoltre, ogni nome deve essere dichiarato (direttamente o indirettamente) in ogni file con estensione cpp in cui viene utilizzata. Quando si compila un programma, ogni file con estensione cpp viene compilato in modo indipendente in un'unità di compilazione. Il compilatore non dispone di alcuna conoscenza di quali i nomi vengono dichiarati in altre unità di compilazione. Ciò significa che se si definisce una classe o una funzione o variabile globale, è necessario fornire una dichiarazione di tale operazione in ogni file con estensione cpp aggiuntive che lo utilizza. Ogni dichiarazione di tale operazione deve essere identico in tutti i file. Un'inconsistenza lieve causerà errori o un comportamento imprevisto, quando il linker tenta di unire tutte le unità di compilazione in un unico programma.
 
-Per ridurre al minimo il rischio di errori, C++ ha adottato la convenzione dell'uso *file di intestazione* per contenere le dichiarazioni. Rendere le dichiarazioni in un file di intestazione, quindi usare il #include (direttiva) in ogni file con estensione cpp o altri file di intestazione richiede tale dichiarazione. Il #include consente di inserire una copia del file di intestazione direttamente nel file con estensione cpp prima della compilazione. 
+Per ridurre al minimo il rischio di errori, C++ ha adottato la convenzione dell'uso *file di intestazione* per contenere le dichiarazioni. Rendere le dichiarazioni in un file di intestazione, quindi usare il #include (direttiva) in ogni file con estensione cpp o altri file di intestazione richiede tale dichiarazione. Il #include consente di inserire una copia del file di intestazione direttamente nel file con estensione cpp prima della compilazione.
 
 ## <a name="example"></a>Esempio
 
@@ -91,7 +91,7 @@ Al termine il compilatore la compilazione di ogni file con estensione cpp nel fi
 
 ## <a name="include-guards"></a>Guard include
 
-In genere, i file di intestazione sono un *guard includono* o un `#pragma once` direttiva per garantire che non vengono inseriti più volte in un file con estensione cpp singolo. 
+In genere, i file di intestazione sono un *guard includono* o un `#pragma once` direttiva per garantire che non vengono inseriti più volte in un file con estensione cpp singolo.
 
 ```cpp
 // my_class.h
@@ -115,20 +115,20 @@ namespace N
 Perché un file di intestazione potrebbe potenzialmente essere inclusa da più file, non può contenere definizioni che potrebbero produrre più definizioni con lo stesso nome. Di seguito non è consentiti, o è considerate pratiche non molto corrette:
 
 - definizioni dei tipi incorporati in ambito globale o dello spazio dei nomi
-- definizioni di funzione non inline 
+- definizioni di funzione non inline
 - definizioni delle variabili non const
 - definizioni di aggregazione
 - spazi dei nomi senza nome
 - Direttive using
 
-Usare la **usando** direttiva non necessariamente genera un errore, ma può potenzialmente causare un problema in quanto introduce lo spazio dei nomi nell'ambito di ogni file con estensione cpp che direttamente o indirettamente include l'intestazione. 
+Usare la **usando** direttiva non necessariamente genera un errore, ma può potenzialmente causare un problema in quanto introduce lo spazio dei nomi nell'ambito di ogni file con estensione cpp che direttamente o indirettamente include l'intestazione.
 
 ## <a name="sample-header-file"></a>File di intestazione di esempio
 
 L'esempio seguente illustra i diversi tipi di dichiarazioni e definizioni che sono consentite in un file di intestazione:
 
 ```cpp
-#pragma once 
+#pragma once
 #include <vector> // #include directive
 #include <string>
 
@@ -157,7 +157,7 @@ namespace N  // namespace declaration
     void print_to_log();
 #endif
 
-    class my_class   // regular class definition, 
+    class my_class   // regular class definition,
     {                // but no non-inline function definitions
 
         friend class other_class;

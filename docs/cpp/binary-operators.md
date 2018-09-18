@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76250926ab89c14dfa26f0df3bb5571c1dae10
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6c5ad5997657ce9f8a61383a2cd7e685f0a28751
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036553"
 ---
 # <a name="binary-operators"></a>Operatori binari
 
@@ -80,4 +80,5 @@ in cui *ret-type* e *op* vengono descritti per le funzioni dell'operatore membro
 > Non c'è alcuna restrizione sui tipi restituiti degli operatori binari; tuttavia, la maggior parte degli operatori binari definiti dall'utente restituiscono un tipo di classe o un riferimento al tipo di classe.
 
 ## <a name="see-also"></a>Vedere anche
- [Overload degli operatori](../cpp/operator-overloading.md)
+
+[Overload degli operatori](../cpp/operator-overloading.md)

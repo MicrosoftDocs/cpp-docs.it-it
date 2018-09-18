@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1105 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RC1105 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c31c79f31d5121fea694ab80a13ba522d31c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8749610c37db1463d1d1d470105eb8d26bb92b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031314"
 ---
 # <a name="resource-compiler-fatal-error-rc1105"></a>Errore irreversibile del compilatore di risorse RC1105
-opzione non valida, opzione: troppe opzioni /d.  
-  
- Sono stati definiti troppi simboli utilizzando i simboli definire (/d) opzione. Definire alcuni simboli nell'origine e ricompilare.
+
+opzione non valida, opzione: troppi parametri /d
+
+Troppi simboli fossero definiti tramite i simboli definire (/d) opzione. Definire alcuni simboli in origine e ricompilare.

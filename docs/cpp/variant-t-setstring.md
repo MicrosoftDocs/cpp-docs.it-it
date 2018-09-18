@@ -16,32 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 090fd7ed027738ebe7bc9276e3b3f124b9212c4a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 52ea719a2c9296ca1e64d881ac150994c041e206
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018730"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
-**Sezione specifica Microsoft**  
-  
- Assegna una stringa a questo oggetto `_variant_t`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void SetString(const char* pSrc);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *pSrc*  
- Puntatore alla stringa di caratteri.  
-  
-## <a name="remarks"></a>Note  
- Converte una stringa di caratteri ANSI in una stringa `BSTR` Unicode e la assegna a questo oggetto `_variant_t`.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe _variant_t](../cpp/variant-t-class.md)
+
+**Sezione specifica Microsoft**
+
+Assegna una stringa a questo oggetto `_variant_t`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void SetString(const char* pSrc);
+```
+
+#### <a name="parameters"></a>Parametri
+
+*pSrc*<br/>
+Puntatore alla stringa di caratteri.
+
+## <a name="remarks"></a>Note
+
+Converte una stringa di caratteri ANSI in una stringa `BSTR` Unicode e la assegna a questo oggetto `_variant_t`.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe _variant_t](../cpp/variant-t-class.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020433"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -193,6 +193,6 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
 ## <a name="see-also"></a>Vedere anche
 
-[Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)
-[aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)
-[stringhe di connessione e i collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Stringhe di connessione e i collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

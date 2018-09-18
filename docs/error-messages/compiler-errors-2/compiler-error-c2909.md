@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2909 | Documenti Microsoft
+title: Errore del compilatore C2909 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bb5252c0122f5610348c5fb154fedd1869d131e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f611a026d0a969f49eaf2dcd93ba081bae052d10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030885"
 ---
 # <a name="compiler-error-c2909"></a>Errore del compilatore C2909
-'identifier': la creazione esplicita di un'istanza di un modello di funzione richiede un tipo restituito  
-  
- La creazione esplicita di un'istanza di un modello di funzione richiede la specifica esplicita del tipo restituito. La specifica implicita del tipo restituito non funziona.  
-  
- L'esempio seguente genera l'errore C2909:  
-  
-```  
-// C2909.cpp  
-// compile with: /c  
-template<class T> int f(T);  
-template f<int>(int);         // C2909  
-template int f<int>(int);   // OK  
+
+'identifier': la creazione esplicita di un'istanza di un modello di funzione richiede un tipo restituito
+
+La creazione esplicita di un'istanza di un modello di funzione richiede la specifica esplicita del tipo restituito. La specifica implicita del tipo restituito non funziona.
+
+L'esempio seguente genera l'errore C2909:
+
+```
+// C2909.cpp
+// compile with: /c
+template<class T> int f(T);
+template f<int>(int);         // C2909
+template int f<int>(int);   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1854 | Documenti Microsoft
+title: Errore irreversibile C1854 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e517832720e31bfae88e79ad879f1427b9c25a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83450169ec928bb77e46916619c84b3b9a3443a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029390"
 ---
 # <a name="fatal-error-c1854"></a>Errore irreversibile C1854
-  
-> non è possibile sovrascrivere le informazioni generate durante la creazione dell'intestazione precompilata nel file oggetto: '*filename*'  
-  
-È specificato il [/Yu (utilizza il File intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md) opzione dopo aver specificato il [/Yc (Crea precompilata File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md) opzione per lo stesso file.  
-  
-Per risolvere questo problema, in generale, impostare solo un file nel progetto per essere compilato utilizzando il **/Yc** opzione e impostare tutti gli altri file per la compilazione utilizzando il **/Yu** opzione. Per informazioni dettagliate sull'utilizzo del **/Yc** opzione e come impostarla nell'IDE di Visual Studio, vedere [/Yc (Crea precompilata File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md). Per ulteriori informazioni sull'utilizzo di intestazioni precompilate, vedere [creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md).  
+
+> non è possibile sovrascrivere le informazioni generate durante la creazione dell'intestazione precompilata nel file oggetto: '*filename*'
+
+È specificato il [/Yu (Usa il File intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md) opzione dopo aver specificato le [/Yc (Crea precompilati o meno File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md) opzione per lo stesso file.
+
+Per risolvere questo problema, in generale, impostare un solo file nel progetto da compilare tramite il **/Yc** opzione e impostare tutti gli altri file da compilare tramite il **/Yu** opzione. Per informazioni dettagliate sull'uso delle **/Yc** opzione e come impostarla in IDE di Visual Studio, vedere [/Yc (Crea precompilati o meno File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md). Per altre informazioni sull'uso di intestazioni precompilate, vedere [creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md).

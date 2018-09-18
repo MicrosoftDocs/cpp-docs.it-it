@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2107 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2107 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6f613b92260d92cf8e6fd55d617b2b6f2a214d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b2062e54fecee218d8b59b3f6a37accb9b65d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035246"
 ---
 # <a name="resource-compiler-error-rc2107"></a>Errore del compilatore di risorse RC2107
-**previsto valore numerico di comando**  
-  
- Il compilatore di risorse era previsto un valore numerico *idvalue* campo il **tasti di scelta rapida** istruzione. Assicurarsi di avere usato una `#define` costante per specificare il valore e che la costante sia stata digitata correttamente.
+
+**previsto valore numerico di comando**
+
+Il compilatore di risorse era in attesa di un valore numerico *idvalue* campo le **ACCELERATORI** istruzione. Assicurarsi che sia stato usato un `#define` costante per specificare il valore e che la costante sia stata digitata correttamente.

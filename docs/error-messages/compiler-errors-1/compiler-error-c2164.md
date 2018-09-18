@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2164 | Documenti Microsoft
+title: Errore del compilatore C2164 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23596fc25685adc155220de344adcd7d25827985
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e997a3b260b9ec8b68a92967233269707e6888
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171324"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032159"
 ---
 # <a name="compiler-error-c2164"></a>Errore del compilatore C2164
-'function': funzione intrinseca non dichiarata  
-  
- Un `intrinsic` pragma utilizza una funzione non dichiarata (si verifica solo con **/Oi**). In alternativa, una delle funzioni intrinseche del compilatore è stata utilizzata senza includere il file di intestazione.  
-  
- L'esempio seguente genera l'errore C2164:  
-  
-```  
-// C2164.c  
-// compile with: /c  
-// processor: x86  
-// Uncomment the following line to resolve.  
-// #include "xmmintrin.h"  
-void b(float *p) {  
-   _mm_load_ss(p);   // C2164  
-}  
+
+'function': funzione intrinseca non dichiarata
+
+Un' `intrinsic` pragma viene utilizzata una funzione non dichiarata (si verifica solo con **/Oi**). In alternativa, una delle funzioni intrinseche del compilatore è stata utilizzata senza includere il file di intestazione.
+
+L'esempio seguente genera l'errore C2164:
+
+```
+// C2164.c
+// compile with: /c
+// processor: x86
+// Uncomment the following line to resolve.
+// #include "xmmintrin.h"
+void b(float *p) {
+   _mm_load_ss(p);   // C2164
+}
 ```

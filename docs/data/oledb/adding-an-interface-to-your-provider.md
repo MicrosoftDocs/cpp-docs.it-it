@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un'interfaccia al Provider | Documenti Microsoft
+title: Aggiunta di un'interfaccia al Provider | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f50459550c91f07c12f6f18b3fbbaa5622ab7408
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032393"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Aggiunta di un'interfaccia al provider
-Determinare quale oggetto a cui si desidera aggiungere l'interfaccia a (in genere dati origine, il set di righe, comando o sessione oggetti creati dalla creazione guidata Provider OLE DB). È possibile che l'oggetto che è necessario aggiungere l'interfaccia sia quello che attualmente non supporta il provider. In tal caso, eseguire la creazione guidata Provider OLE DB ATL per creare l'oggetto. Fare clic sul progetto in visualizzazione classi, fare clic su **Aggiungi classe** dal **Aggiungi** menu e quindi fare clic su **Provider OLE DB ATL**. È possibile inserire il codice dell'interfaccia in una directory distinta e quindi copiare i file di progetto del provider.  
+
+Determinare quale oggetto si desidera aggiungere l'interfaccia a (in genere dati origine, set di righe, comando o sessione oggetti creati dalla creazione guidata Provider OLE DB). È possibile che l'oggetto che è necessario aggiungere l'interfaccia è quella attualmente non supporta il provider. In tal caso, eseguire la creazione guidata Provider OLE DB ATL per creare l'oggetto. Fare clic sul progetto in visualizzazione classi, fare clic su **Aggiungi classe** dal **Add** dal menu e quindi fare clic su **Provider OLE DB ATL**. È possibile inserire il codice dell'interfaccia in una directory distinta e quindi copiare i file di progetto del provider.  
   
- Se è stata creata una nuova classe per supportare l'interfaccia, rendere l'oggetto di ereditare da quella classe. Ad esempio, è possibile aggiungere la classe **IRowsetIndexImpl** a un oggetto set di righe:  
+Se è stata creata una nuova classe per supportare l'interfaccia, rendere l'oggetto ereditano da tale classe. Ad esempio, è possibile aggiungere la classe **IRowsetIndexImpl** a un oggetto set di righe:  
   
 ```cpp  
 template <class Creator>  
@@ -34,7 +35,7 @@ class CAgentRowset :
     public IRowsetIndexImpl< ... >   
 ```  
   
- Aggiungere l'interfaccia **COM_MAP** nell'oggetto tramite la macro COM_INTERFACE_ENTRY. Se è disponibile alcuna mappa, crearne uno. Ad esempio:  
+Aggiungere l'interfaccia **COM_MAP** nell'oggetto tramite la macro COM_INTERFACE_ENTRY. Se non è presente alcun mapping, crearne uno. Ad esempio:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -42,7 +43,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- Per l'oggetto set di righe, catena la mappa dell'elemento padre dell'oggetto in modo che sia possibile delegare l'oggetto alla classe padre. In questo esempio, aggiungere la macro COM_INTERFACE_ENTRY_CHAIN alla mappa:  
+Per l'oggetto set di righe, catena la mappa dell'elemento padre dell'oggetto in modo che l'oggetto può delegare alla classe padre. In questo esempio, aggiungere la macro COM_INTERFACE_ENTRY_CHAIN alla mappa:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -52,4 +53,5 @@ END_COM_MAP()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -58,68 +58,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c18605c7539636e3158bc1dd9fe3a47e1d3146d6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6a9d4e13a4b7382d15e601eba16a5a12edd2d00f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034148"
 ---
 # <a name="variantt-extractors"></a>Estrattori _variant_t
-**Sezione specifica Microsoft**  
-  
- Estrarre dati da incapsulato `VARIANT` oggetto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-operator short( ) const;   
-operator long( ) const;   
-operator float( ) const;   
-operator double( ) const;   
-operator CY( ) const;   
-operator _bstr_t( ) const;   
-operator IDispatch*( ) const;   
-operator bool( ) const;   
-operator IUnknown*( ) const;   
-operator DECIMAL( ) const;   
-operator BYTE( ) const;  
-operator VARIANT() const throw();  
-operator char() const;  
-operator unsigned short() const;  
-operator unsigned long() const;  
-operator int() const;  
-operator unsigned int() const;  
-operator __int64() const;  
-operator unsigned __int64() const;  
-```  
-  
-## <a name="remarks"></a>Note  
- Estrae i dati non elaborati da un incapsulato `VARIANT`. Se il `VARIANT` non è già il tipo appropriato, `VariantChangeType` viene utilizzato per cercare una conversione, e viene generato un errore in caso di errore:  
-  
--   **operator short ()** estrae un **breve** valore intero.  
-  
--   **operator long ()** estrae un **lungo** valore intero.  
-  
--   **operator float ()** estrae un **float** valore numerico.  
-  
--   **operator double ()** estrae un **double** valore intero.  
-  
--   **operator CY ()** estrae un `CY` oggetto.  
-  
--   **operator bool ()** estrae un **bool** valore.  
-  
--   **operator DECIMAL ()** estrae un `DECIMAL` valore.  
-  
--   **operator BYTE ()** estrae un `BYTE` valore.  
-  
--   **operator () bstr_t** estrae una stringa, che è incapsulata in un `_bstr_t` oggetto.  
-  
--   **operatore IDispatch\*()** estrae un puntatore a interfaccia dispatch da un incapsulato `VARIANT`. `AddRef` viene chiamato sul puntatore risulta, pertanto è responsabilità dell'utente per chiamare `Release` liberarlo.  
-  
--   **operatore IUnknown\*()** estrae un puntatore a interfaccia COM da un incapsulato `VARIANT`. `AddRef` viene chiamato sul puntatore risulta, pertanto è responsabilità dell'utente per chiamare `Release` liberarlo.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe _variant_t](../cpp/variant-t-class.md)
+
+**Sezione specifica Microsoft**
+
+Estrarre dati da incapsulato `VARIANT` oggetto.
+
+## <a name="syntax"></a>Sintassi
+
+```
+operator short( ) const; 
+operator long( ) const; 
+operator float( ) const; 
+operator double( ) const; 
+operator CY( ) const; 
+operator _bstr_t( ) const; 
+operator IDispatch*( ) const; 
+operator bool( ) const; 
+operator IUnknown*( ) const; 
+operator DECIMAL( ) const; 
+operator BYTE( ) const;
+operator VARIANT() const throw();
+operator char() const;
+operator unsigned short() const;
+operator unsigned long() const;
+operator int() const;
+operator unsigned int() const;
+operator __int64() const;
+operator unsigned __int64() const;
+```
+
+## <a name="remarks"></a>Note
+
+Estrae i dati non elaborati da un incapsulato `VARIANT`. Se il `VARIANT` non è già il tipo appropriato, `VariantChangeType` viene utilizzato per cercare una conversione, e viene generato un errore in caso di errore:
+
+- **operator short ()** estrae un **breve** valore intero.
+
+- **operator long ()** estrae un **lungo** valore intero.
+
+- **operator float ()** estrae un **float** valore numerico.
+
+- **operator double ()** estrae un **double** valore intero.
+
+- **operator CY ()** estrae un `CY` oggetto.
+
+- **operator bool ()** estrae un **bool** valore.
+
+- **operator DECIMAL ()** estrae un `DECIMAL` valore.
+
+- **operator BYTE ()** estrae un `BYTE` valore.
+
+- **operator () bstr_t** estrae una stringa, che è incapsulata in un `_bstr_t` oggetto.
+
+- **operatore IDispatch\*()** estrae un puntatore a interfaccia dispatch da un incapsulato `VARIANT`. `AddRef` viene chiamato sul puntatore risulta, pertanto è responsabilità dell'utente per chiamare `Release` liberarlo.
+
+- **operatore IUnknown\*()** estrae un puntatore a interfaccia COM da un incapsulato `VARIANT`. `AddRef` viene chiamato sul puntatore risulta, pertanto è responsabilità dell'utente per chiamare `Release` liberarlo.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe _variant_t](../cpp/variant-t-class.md)

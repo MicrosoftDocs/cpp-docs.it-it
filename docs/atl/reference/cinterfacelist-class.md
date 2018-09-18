@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032432"
 ---
 # <a name="cinterfacelist-class"></a>Classe CInterfaceList
 
@@ -32,7 +32,7 @@ Questa classe fornisce metodi utili quando si crea un elenco di puntatori a inte
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Parametri
 
-*I*  
+*I*<br/>
 Un'interfaccia COM che specifica il tipo di puntatore da archiviare.
 
-*piid*  
+*piid*<br/>
 Un puntatore all'IID del *ho*.
 
 ## <a name="members"></a>Membri
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Dimensione del blocco, con valore predefinito è 10.
 
 ### <a name="remarks"></a>Note
@@ -89,7 +89,7 @@ La dimensione del blocco è una misura della quantità di memoria allocata quand
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CAtlList](../../atl/reference/catllist-class.md)   
-[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
-[Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

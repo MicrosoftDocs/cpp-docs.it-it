@@ -1,5 +1,5 @@
 ---
-title: Classe scheduler_not_attached | Documenti Microsoft
+title: Classe scheduler_not_attached | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea0bf7f9e9467b35391034dafcbd48044b6229d7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c980115496e70cf0c767ce0592ef5ac9fd1fd239
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027024"
 ---
 # <a name="schedulernotattached-class"></a>Classe scheduler_not_attached
 Questa classe descrive un'eccezione generata quando viene eseguita un'operazione che richiede un'utilità di pianificazione da allegare al contesto corrente e non lo è.  
@@ -63,8 +63,8 @@ scheduler_not_attached() throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Messaggio descrittivo dell'errore.  
+*Messaggio*<br/>
+Messaggio descrittivo dell'errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   

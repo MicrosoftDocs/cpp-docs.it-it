@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2449 | Documenti Microsoft
+title: Errore del compilatore C2449 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2ea92f79125e4e3b96f35229a487a5ab787e1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e92638eaca1fe951d6b67da7563930214198926
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224232"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018769"
 ---
 # <a name="compiler-error-c2449"></a>Errore del compilatore C2449
-trovato ' {' in ambito file (intestazione di funzione mancante)?  
-  
- Una parentesi graffa di apertura si verifica nell'ambito del file.  
-  
- Questo errore può essere causato da un punto e virgola tra un'intestazione di funzione e la parentesi graffa di apertura della definizione della funzione.  
-  
- L'esempio seguente genera l'errore C2499:  
-  
-```  
-// C2449.c  
-// compile with: /c  
-void __stdcall func(void) {}   // OK  
-void __stdcall func(void);  // extra semicolon on this line  
-{                         // C2449 detected here  
+
+trovato ' {' nell'ambito del file (intestazione di funzione mancante)?
+
+Una parentesi graffa aperta si verifica nell'ambito del file.
+
+Questo errore può essere causato da un punto e virgola tra un'intestazione di funzione e la parentesi graffa di apertura della definizione di funzione.
+
+L'esempio seguente genera l'errore C2499:
+
+```
+// C2449.c
+// compile with: /c
+void __stdcall func(void) {}   // OK
+void __stdcall func(void);  // extra semicolon on this line
+{                         // C2449 detected here
 ```

@@ -18,47 +18,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3070108e9e85273a86b93d40301747b658ae231b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029026"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Specializzazione esplicita di modelli di funzioni
-Con un modello di funzione, è possibile definire il comportamento speciale per un tipo specifico fornendo una specializzazione esplicita (ignora) del modello di funzione per quel tipo. Ad esempio:  
-  
+
+Con un modello di funzione, è possibile definire il comportamento speciale per un tipo specifico fornendo una specializzazione esplicita (ignora) del modello di funzione per quel tipo. Ad esempio:
+
 ```cpp
-template<> void MySwap(double a, double b);  
-```  
-  
- Questa dichiarazione consente di definire una funzione diversa per **doppie** variabili. Come funzioni non modello, le conversioni di tipo standard (quali la promozione di una variabile di tipo **float** al **double**) vengono applicati.  
-  
-## <a name="example"></a>Esempio  
-  
+template<> void MySwap(double a, double b);
+```
+
+Questa dichiarazione consente di definire una funzione diversa per **doppie** variabili. Come funzioni non modello, le conversioni di tipo standard (quali la promozione di una variabile di tipo **float** al **double**) vengono applicati.
+
+## <a name="example"></a>Esempio
+
 ```cpp
-// explicit_specialization.cpp  
-template<class T> void f(T t)  
-{  
-};  
-  
-// Explicit specialization of f with 'char' with the  
-// template argument explicitly specified:  
-//  
-template<> void f<char>(char c)  
-{  
-}  
-  
-// Explicit specialization of f with 'double' with the  
-// template argument deduced:  
-//  
-template<> void f(double d)  
-{  
-}  
-int main()  
-{  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modelli di funzioni](../cpp/function-templates.md)
+// explicit_specialization.cpp
+template<class T> void f(T t)
+{
+};
+
+// Explicit specialization of f with 'char' with the
+// template argument explicitly specified:
+//
+template<> void f<char>(char c)
+{
+}
+
+// Explicit specialization of f with 'double' with the
+// template argument deduced:
+//
+template<> void f(double d)
+{
+}
+int main()
+{
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Modelli di funzioni](../cpp/function-templates.md)

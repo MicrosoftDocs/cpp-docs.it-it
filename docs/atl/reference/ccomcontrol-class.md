@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761352"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036176"
 ---
 # <a name="ccomcontrol-class"></a>Classe CComControl
 
@@ -46,17 +46,17 @@ Questa classe fornisce metodi per la creazione e gestione dei controlli ATL.
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe di implementazione del controllo.
 
-*WinBase*  
+*WinBase*<br/>
 Classe di base che implementa le funzioni di windowing. Per impostazione predefinita [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
 ## <a name="members"></a>Membri
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
-*ppv*  
+*ppv*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal *iid*, oppure NULL se l'interfaccia non viene trovato.
 
 ### <a name="remarks"></a>Note
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>Parametri
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Handle per la finestra padre o proprietaria. È necessario specificare un handle della finestra valida. La finestra di controllo è limitata all'area della finestra padre.
 
-*rcPos*  
+*rcPos*<br/>
 [in] Le dimensioni iniziali e la posizione della finestra da creare.
 
 ### <a name="remarks"></a>Note
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>Parametri
 
-*dispID*  
+*dispID*<br/>
 [in] Identificatore della proprietà che è stato modificato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>Parametri
 
-*dispID*  
+*dispID*<br/>
 [in] Identificatore della proprietà per essere modificata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -203,7 +203,7 @@ Uno dei valori di HRESULT standard.
 
 ### <a name="remarks"></a>Note
 
-Se la classe del controllo deriva da [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), questo metodo chiama [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) per notificare tutti connesso `IPropertyNotifySink` interfacce che dovranno essere specificati proprietà di un controllo sta per essere modificata. Se la classe del controllo non deriva da `IPropertyNotifySink`, questo metodo restituisce S_OK.  
+Se la classe del controllo deriva da [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), questo metodo chiama [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) per notificare tutti connesso `IPropertyNotifySink` interfacce che dovranno essere specificati proprietà di un controllo sta per essere modificata. Se la classe del controllo non deriva da `IPropertyNotifySink`, questo metodo restituisce S_OK.
 
 Questo metodo è sicuro chiamare anche se il controllo non supporta i punti di connessione.
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszText*  
+*lpszText*<br/>
 Il testo da visualizzare nella finestra di messaggio.
 
-*lpszCaption*  
+*lpszCaption*<br/>
 Il titolo della finestra di dialogo. Se NULL (predefinito), il titolo viene usato "Error".
 
-*NLE*  
+*NLE*<br/>
 Specifica il contenuto e il comportamento della finestra di dialogo. Vedere le [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) voce nella documentazione di Windows SDK per un elenco delle finestre di messaggio diversi disponibili. L'impostazione predefinita offre un semplice **OK** pulsante.
 
 ### <a name="return-value"></a>Valore restituito
@@ -243,7 +243,7 @@ Restituisce un valore intero che specifica uno dei valori di voci di menu elenca
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
-[Panoramica della classe](../../atl/atl-class-overview.md)   
-[Classe CComControlBase](../../atl/reference/ccomcontrolbase-class.md)   
+[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
+[Classe CComControlBase](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [Classe CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)

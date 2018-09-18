@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4381 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4381 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cb72c373b5c0808b4b1600871cd8148bcc9c9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81c61dcbf49beeb41780cdaeff669cf21bfffee9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037827"
 ---
 # <a name="compiler-warning-level-1-c4381"></a>Avviso del compilatore (livello 1) C4381
-'function1': metodo di interfaccia non verrà implementato dal metodo non pubblico 'function2'  
-  
- Una classe deve implementare tutte le funzioni in un'interfaccia. Se una delle relative classi base implementa la funzione, una classe può soddisfare questa condizione. Tuttavia, la funzione deve essere implementata come una funzione pubblica.
+
+'function1': metodo di interfaccia non verrà implementato dal metodo non pubblico 'function2'
+
+Una classe deve implementare tutte le funzioni in un'interfaccia. Una classe può soddisfare questa condizione, se una delle relative classi base implementa la funzione. Tuttavia, la funzione deve essere implementata come una funzione pubblica.

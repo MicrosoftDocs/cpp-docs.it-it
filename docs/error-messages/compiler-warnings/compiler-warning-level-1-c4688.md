@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4688 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4688 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503f7783748407415ecd3a4ddbaafeb601b7c2b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aff10e34fd2dde20059ccbe2845b199486beb865
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027830"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>Avviso del compilatore (livello 1) C4688
-'constraint': l'elenco di vincoli contiene il tipo privato 'type' dell'assembly  
-  
- Un elenco di vincoli include un tipo privato dell'assembly. Questo significa che il tipo non sarà disponibile se si accede dall'esterno dell'assembly. Per altre informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4688.  
-  
-```  
-// C4688.cpp  
-// compile with: /clr /c /W1  
-ref struct A {};   // private type  
-public ref struct B {};  
-  
-// Delete the following 3 lines to resolve.  
-generic <class T>   
-where T : A   // C4688  
-public ref struct M {};  
-  
-generic <class T>   
-where T : B  
-public ref struct N {};  
+
+'constraint': l'elenco di vincoli contiene il tipo privato 'type' dell'assembly
+
+Un elenco di vincoli include un tipo privato dell'assembly. Questo significa che il tipo non sarà disponibile se si accede dall'esterno dell'assembly. Per altre informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4688.
+
+```
+// C4688.cpp
+// compile with: /clr /c /W1
+ref struct A {};   // private type
+public ref struct B {};
+
+// Delete the following 3 lines to resolve.
+generic <class T>
+where T : A   // C4688
+public ref struct M {};
+
+generic <class T>
+where T : B
+public ref struct N {};
 ```

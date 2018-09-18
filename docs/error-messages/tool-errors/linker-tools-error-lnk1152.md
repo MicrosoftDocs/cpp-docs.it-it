@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1152 Errore | Documenti Microsoft
+title: Strumenti del linker LNK1152 Errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b15185977dfdaa6c6cad154889e95f59ab27c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22276d0b3189f93f57f8337b22b5d6070cd3db0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297950"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034473"
 ---
 # <a name="linker-tools-error-lnk1152"></a>Errore degli strumenti del linker LNK1152
-Impossibile risolvere uno o più simboli non decorati  
-  
- Questo errore è preceduto da un avviso [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) per ogni simbolo non decorato che non può essere risolto e da almeno due avvisi [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) per i simboli duplicati trovati per il simbolo non decorato.
+
+non è possibile risolvere uno o più simboli non decorati
+
+Questo errore è preceduto da un avviso [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) per ogni simbolo non decorato che non può essere risolto e da almeno due avvisi [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) per i simboli duplicati trovati per il simbolo non decorato.

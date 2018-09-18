@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2865 | Documenti Microsoft
+title: Errore del compilatore C2865 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b2c6c831fde18f9054e139a120d834a75b6950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc0a49f8e6ab42f7e607cd5f4f7cc91f6895abe0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035168"
 ---
 # <a name="compiler-error-c2865"></a>Errore del compilatore C2865
-'function': confronto non valido per handle_o_puntatore  
-  
- È possibile confrontare i riferimenti a [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md) o tipi di riferimento solo per verificarne l'uguaglianza per verificare se fanno riferimento allo stesso oggetto (= =) o a diversi oggetti gestiti (! =).  
-  
- Non è possibile confrontarli per ordinarli, in quanto il runtime .NET potrebbe spostare gli oggetti gestiti in qualsiasi momento, modificando il risultato del test.
+
+'function': confronto non valido per handle_o_puntatore
+
+È possibile confrontare i riferimenti a [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md) o tipi di riferimento solo per verificarne l'uguaglianza per verificare se fanno riferimento allo stesso oggetto (= =) o per diversi oggetti gestiti (! =).
+
+Non è possibile confrontarli per l'ordinamento poiché il runtime di .NET potrebbe spostare gli oggetti gestiti in qualsiasi momento, modificare il risultato del test.

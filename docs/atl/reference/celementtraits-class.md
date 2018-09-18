@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45139b16ebb923acd004d995cd9466ea9e39e163
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 61cbd301d01d62c0d24f232703b53cebf411a082
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021070"
 ---
 # <a name="celementtraits-class"></a>Classe CElementTraits
 
@@ -31,13 +31,13 @@ Questa classe viene utilizzata dalle classi di raccolta per fornire funzioni e m
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-`T`  
+*T*<br/>
 Il tipo di dati da archiviare nella raccolta.
 
 ## <a name="remarks"></a>Note
@@ -54,5 +54,5 @@ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4558 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4558 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852e3d3e8bb1c8186232cbed2636ac890b0cd057
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 404f4a343b35081a64267424c436063c085958e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282463"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056651"
 ---
 # <a name="compiler-warning-level-1-c4558"></a>Avviso del compilatore (livello 1) C4558
-valore dell'operando 'value' non compreso nell'intervallo 'limite inferiore - limite superiore'  
-  
- Il valore passato a un'istruzione in linguaggio assembly è compreso nell'intervallo specificato per il parametro. Il valore verrà troncato.  
-  
- L'esempio seguente genera l'errore C4558:  
-  
-```  
-// C4558.cpp  
-// compile with: /W1  
-// processor: x86  
-void asm_test() {  
-   __asm pinsrw   mm1, eax, 8;   // C4558  
-}  
-  
-int main() {  
-}  
+
+valore dell'operando 'value' non è compreso nell'intervallo 'lowerbound - upperbound'
+
+Il valore passato a un'istruzione in linguaggio assembly è compreso nell'intervallo specificato per il parametro. Il valore verrà troncato.
+
+L'esempio seguente genera l'errore C4558:
+
+```
+// C4558.cpp
+// compile with: /W1
+// processor: x86
+void asm_test() {
+   __asm pinsrw   mm1, eax, 8;   // C4558
+}
+
+int main() {
+}
 ```

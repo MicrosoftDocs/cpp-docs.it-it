@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3831 | Documenti Microsoft
+title: Errore del compilatore C3831 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c0295f598b79436d1f892114615473d16275e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8525df7eb854ee56eef7bc9167d3630ea3c72ad5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029884"
 ---
 # <a name="compiler-error-c3831"></a>Errore del compilatore C3831
-'member': 'class' non può avere un membro dati bloccato o una funzione membro che restituisce un puntatore di blocco  
-  
- [pin_ptr (C + c++ /CLI)](../../windows/pin-ptr-cpp-cli.md) è stata utilizzata in modo non corretto.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3831:  
-  
-```  
-// C3831a.cpp  
-// compile with: /clr  
-ref class Y  
-{  
-public:  
-   int i;  
-};  
-  
-ref class X  
-{  
-   pin_ptr<int> mbr_Y;   // C3831  
-   int^ mbr_Y2;   // OK  
-};  
-  
-int main() {  
-   Y y;  
-   pin_ptr<int> p = &y.i;  
-}  
-```  
+
+'member': 'class' non può avere un membro dati bloccato o una funzione membro che restituisce un puntatore di blocco
+
+[pin_ptr (C + + CLI)](../../windows/pin-ptr-cpp-cli.md) è stato usato in modo errato.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3831:
+
+```
+// C3831a.cpp
+// compile with: /clr
+ref class Y
+{
+public:
+   int i;
+};
+
+ref class X
+{
+   pin_ptr<int> mbr_Y;   // C3831
+   int^ mbr_Y2;   // OK
+};
+
+int main() {
+   Y y;
+   pin_ptr<int> p = &y.i;
+}
+```

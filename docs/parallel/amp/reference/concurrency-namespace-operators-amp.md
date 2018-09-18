@@ -1,5 +1,5 @@
 ---
-title: Operatori di spazio dei nomi Concurrency (AMP) | Documenti Microsoft
+title: Operatori dello spazio dei nomi di concorrenza (AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3bb77599fc81fa29f2c8155a6fd491ed2d639c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d6e8d2a198105e9cd63581dd8ed8445b681da2e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026933"
 ---
-# <a name="concurrency-namespace-operators-amp"></a>Operatori di spazio dei nomi Concurrency (AMP)
+# <a name="concurrency-namespace-operators-amp"></a>Operatori dello spazio dei nomi di concorrenza (AMP)
 ||||  
 |-|-|-|  
 |[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|  
@@ -38,14 +38,14 @@ bool operator== (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rank`  
- La classificazione degli argomenti di tupla.  
+*_Rank*<br/>
+Il rango della tupla argomenti.  
   
- `_Lhs`  
- Uno delle tuple da confrontare.  
+*_Lhs*<br/>
+Una delle tuple da confrontare.  
   
- `_Rhs`  
- Uno delle tuple da confrontare.  
+*_Rhs*<br/>
+Una delle tuple da confrontare.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se le tuple sono uguali. in caso contrario, `false`.  
@@ -64,21 +64,21 @@ bool operator!= (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rank`  
- La classificazione degli argomenti di tupla.  
+*_Rank*<br/>
+Il rango della tupla argomenti.  
   
- `_Lhs`  
- Uno delle tuple da confrontare.  
+*_Lhs*<br/>
+Una delle tuple da confrontare.  
   
- `_Rhs`  
- Uno delle tuple da confrontare.  
+*_Rhs*<br/>
+Una delle tuple da confrontare.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se le tuple non sono uguali. in caso contrario, `false`.  
   
 ##  <a name="operator_add"></a>  operator+   
 
- Calcola la somma component-wise di argomenti specificati.  
+ Calcola la somma per componente degli argomenti specificati.  
   
 ```  
 template <
@@ -109,21 +109,21 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rank`  
- La classificazione degli argomenti di tupla.  
+*_Rank*<br/>
+Il rango della tupla argomenti.  
   
- `_Lhs`  
- Uno degli argomenti da aggiungere.  
+*_Lhs*<br/>
+Uno degli argomenti da aggiungere.  
   
- `_Rhs`  
- Uno degli argomenti da aggiungere.  
+*_Rhs*<br/>
+Uno degli argomenti da aggiungere.  
   
 ### <a name="return-value"></a>Valore restituito  
- La somma component-wise di argomenti specificati.  
+ La somma per componente degli argomenti specificati.  
   
 ##  <a name="operator-"></a>  operator-   
 
- Calcola la differenza component-wise tra gli argomenti specificati.  
+ Calcola la differenza per componente tra gli argomenti specificati.  
   
 ```  
 template <
@@ -154,21 +154,21 @@ _Tuple_type<_Rank>   operator-(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rank`  
- La classificazione degli argomenti di tupla.  
+*_Rank*<br/>
+Il rango della tupla argomenti.  
   
- `_Lhs`  
- L'argomento da sottrarre.  
+*_Lhs*<br/>
+Argomento da sottrarre.  
   
- `_Rhs`  
- L'argomento da sottrarre.  
+*_Rhs*<br/>
+Argomento da sottrarre.  
   
 ### <a name="return-value"></a>Valore restituito  
- La differenza component-wise tra gli argomenti specificati.  
+ La differenza per componente tra gli argomenti specificati.  
   
 ##  <a name="operator_star"></a>  operator*   
 
- Calcola il prodotto component-wise di argomenti specificati.  
+ Calcola il prodotto per componente degli argomenti specificati.  
   
 ```  
 template <
@@ -190,21 +190,21 @@ _Tuple_type<_Rank>   operator*(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rank`  
- La classificazione degli argomenti di tupla.  
+*_Rank*<br/>
+Il rango della tupla argomenti.  
   
- `_Lhs`  
- Uno delle tuple da moltiplicare.  
+*_Lhs*<br/>
+Una delle tuple da moltiplicare.  
   
- `_Rhs`  
- Uno delle tuple da moltiplicare.  
+*_Rhs*<br/>
+Una delle tuple da moltiplicare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il prodotto component-wise di argomenti specificati.  
+ Il prodotto per componente degli argomenti specificati.  
   
 
 ##  <a name="operator_div"></a>  operator/   
- Calcola il quoziente component-wise tra gli argomenti specificati.  
+ Calcola il quoziente per componente degli argomenti specificati.  
   
 ```  
 template <
@@ -226,17 +226,17 @@ _Tuple_type<_Rank>   operator/(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rank`  
- La classificazione degli argomenti di tupla.  
+*_Rank*<br/>
+Il rango della tupla argomenti.  
   
- `_Lhs`  
- Tupla da dividere.  
+*_Lhs*<br/>
+Tupla da dividere.  
   
- `_Rhs`  
- La tupla per cui dividere.  
+*_Rhs*<br/>
+Tupla da dividere.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il quoziente component-wise di argomenti specificati.  
+ Il quoziente per componente degli argomenti specificati.  
   
 ##  <a name="operator_mod"></a>  operator%   
 
@@ -262,14 +262,14 @@ _Tuple_type<_Rank>   operator%(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rank`  
- La classificazione degli argomenti di tupla.  
+*_Rank*<br/>
+Il rango della tupla argomenti.  
   
- `_Lhs`  
- La tupla da cui il modulo viene calcolata.  
+*_Lhs*<br/>
+Tupla da cui il modulo viene calcolato.  
   
- `_Rhs`  
- La tupla di modulo da.  
+*_Rhs*<br/>
+La tupla per modulo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il risultato del modulo della primo argomento specificato, il secondo argomento specificato.  

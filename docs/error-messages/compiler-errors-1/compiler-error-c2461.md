@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2461 | Documenti Microsoft
+title: Errore del compilatore C2461 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47aee3122dad3e875cf58d5a41bcadda297e1463
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39d58b315fdd7e3c4e1899041cebf8400813ed40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197637"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029299"
 ---
 # <a name="compiler-error-c2461"></a>Errore del compilatore C2461
-  
-> '*classe*': la sintassi del costruttore priva di parametri formali  
-  
- Il costruttore per la classe non specifica alcun parametro formale. La dichiarazione di un costruttore deve specificare un elenco di parametri formali. L'elenco può essere vuoto.  
-  
-Per risolvere questo problema, aggiungere una coppia di parentesi dopo la dichiarazione di *classe*:: **classe*.  
-  
-## <a name="example"></a>Esempio  
-  
-L'esempio seguente viene illustrato come correggere C2461:  
-  
-```cpp  
-// C2461.cpp  
-// compile with: /c  
-class C {  
-   C::C;     // C2461  
-   C::C();   // OK  
-};  
+
+> «*classe*': la sintassi del costruttore priva di parametri formali
+
+Il costruttore per la classe non specifica alcun parametro formale. La dichiarazione di un costruttore deve specificare un elenco di parametri formali. L'elenco può essere vuoto.
+
+Per risolvere questo problema, aggiungere una coppia di parentesi dopo la dichiarazione di *classe*:: **classe*.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente viene illustrato come correggere C2461:
+
+```cpp
+// C2461.cpp
+// compile with: /c
+class C {
+   C::C;     // C2461
+   C::C();   // OK
+};
 ```

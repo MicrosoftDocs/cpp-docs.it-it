@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2592 | Documenti Microsoft
+title: Errore del compilatore C2592 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d999056d718d9c7aad93d08a99895caebbef539
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f2377f48eb8102771705f2dedc67a7a15f6fa95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030989"
 ---
 # <a name="compiler-error-c2592"></a>Errore del compilatore C2592
-'class': 'base_class_2' è ereditato da 'base_class_1' e non può essere specificato nuovamente  
-  
- È possibile specificare solo le classi di base che non ereditano da altre classi di base. In questo caso, solo `base_class_1` è necessario nella specifica di `class` perché `base_class_1` eredita già `base_class_2`.
+
+'class': 'base_class_2' è ereditato da 'base_class_1' e non può essere specificato nuovamente
+
+È possibile specificare solo le classi di base che non ereditano da altre classi di base. In questo caso, solo `base_class_1` è necessario nella specifica di `class` perché `base_class_1` eredita già `base_class_2`.

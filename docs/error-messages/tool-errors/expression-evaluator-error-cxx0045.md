@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0045 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0045 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac52b16c2c8551282b79ef6a7fda40e24acc6bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9913bc77dfc3fbc95bd03fd32c954c4d304d27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023202"
 ---
 # <a name="expression-evaluator-error-cxx0045"></a>Errore dell‘analizzatore di espressioni CXX0045
-non è una funzione  
-  
- Per un simbolo nel programma che non è il nome di una funzione, è stato fornito un elenco di argomenti.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-queue( alpha, beta )  
-```  
-  
- Quando `queue` non è una funzione.  
-  
- Questo errore è identico all'errore CAN0045.
+
+non è una funzione
+
+È stato fornito un elenco di argomenti per un simbolo nel programma che non è il nome di una funzione.
+
+## <a name="example"></a>Esempio
+
+```
+queue( alpha, beta )
+```
+
+Quando `queue` non è una funzione.
+
+Questo errore è identico all'errore CAN0045.

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703846"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033953"
 ---
 # <a name="ccomgitptr-class"></a>Classe CComGITPtr
 
@@ -38,13 +38,13 @@ Questa classe fornisce metodi per la gestione di puntatori a interfaccia e la ta
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>Parametri
 
-`T`  
+*T*<br/>
 Il tipo del puntatore a interfaccia da memorizzare in GIT.
 
 ## <a name="members"></a>Membri
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore a interfaccia da aggiungere a GIT.
 
-*dwCookie*  
+*dwCookie*<br/>
 Il cookie utilizzato per identificare il puntatore di interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*profilo di porta*  
+*profilo di porta*<br/>
 Il puntatore che deve ricevere l'interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -262,7 +262,7 @@ Assegna un nuovo valore per un `CComGITPtr` oggetto, da un oggetto esistente o d
 
 Restituisce il cookie associato il `CComGITPtr` oggetto.
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ Rimuove l'interfaccia da GIT.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestore del marshalling a thread libero](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[Accesso alle interfacce tra apartment](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[Quando usare la tabella di interfaccia globale](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[Gestore del marshalling a thread libero](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[Accesso alle interfacce tra apartment](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[Quando usare la tabella di interfaccia globale](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

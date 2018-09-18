@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d83f98de4f1d07fbebdd07186729453d2ef1d3b2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 23cc8e519fc47173efe413cc687ef48c0dc39945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025165"
 ---
 # <a name="cautoptrarray-class"></a>Classe CAutoPtrArray
 
@@ -84,7 +84,7 @@ Consente di inizializzare la matrice di puntatore intelligente.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CAtlArray](../../atl/reference/catlarray-class.md)   
-[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
-[Classe CAutoPtrList](../../atl/reference/cautoptrlist-class.md)   
+[Classe CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[Classe CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

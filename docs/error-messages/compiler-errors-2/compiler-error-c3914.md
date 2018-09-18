@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3914 | Documenti Microsoft
+title: Errore del compilatore C3914 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3818c54f3720bdff92280e04a4750ed1b4f238c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb10652a6328bb8ddcc3a8e62755a960a7fc850
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029416"
 ---
 # <a name="compiler-error-c3914"></a>Errore del compilatore C3914
-una proprietà predefinita non può essere statica  
-  
-Una proprietà predefinita è stata dichiarata in modo non corretto.  Per ulteriori informazioni, vedere [procedura: utilizzare le proprietà in C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Esempio  
-L'esempio seguente genera l'errore C3914 e Mostra come risolverlo.  
-  
-```  
-// C3914.cpp  
-// compile with: /clr /c  
-ref struct X {  
-   static property int default[int] {   // C3914  
-   // try the following line instead  
-   // property int default[int] {  
-      int get(int) { return 0; }  
-      void set(int, int) {}  
-   }  
-};  
+
+una proprietà predefinita non può essere statica
+
+Una proprietà predefinita è stata dichiarata in modo non corretto.  Per altre informazioni, vedere [procedura: utilizzare le proprietà in C + + c++ /CLI CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera C3914 e Mostra come risolverlo.
+
+```
+// C3914.cpp
+// compile with: /clr /c
+ref struct X {
+   static property int default[int] {   // C3914
+   // try the following line instead
+   // property int default[int] {
+      int get(int) { return 0; }
+      void set(int, int) {}
+   }
+};
 ```

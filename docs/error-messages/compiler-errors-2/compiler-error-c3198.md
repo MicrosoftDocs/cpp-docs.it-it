@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3198 | Documenti Microsoft
+title: Errore del compilatore C3198 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0516e7cae12e544195d157781e6ed86923470420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbb91d6f7b3ef6b8204a5f8bfb753db98ab6f93d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023384"
 ---
 # <a name="compiler-error-c3198"></a>Errore del compilatore C3198
-utilizzo non valido di pragma a virgola mobile: il pragma fenv_access funziona solo in modalità precise  
-  
- [fenv_access](../../preprocessor/fenv-access.md) pragma è stato utilizzato in un [/fp](../../build/reference/fp-specify-floating-point-behavior.md) impostazione diversa da **/fp: precise**.  
-  
- L'esempio seguente genera l'errore C3198:  
-  
-```  
-// C3198.cpp  
-// compile with: /fp:fast  
-#pragma fenv_access(on)   // C3198  
+
+utilizzo non valido di pragma a virgola mobile: il pragma fenv_access funziona solo in modalità precise
+
+[fenv_access](../../preprocessor/fenv-access.md) pragma è stato usato in un [/fp](../../build/reference/fp-specify-floating-point-behavior.md) impostazione diversa da **/fp: precise**.
+
+L'esempio seguente genera l'errore C3198:
+
+```
+// C3198.cpp
+// compile with: /fp:fast
+#pragma fenv_access(on)   // C3198
 ```

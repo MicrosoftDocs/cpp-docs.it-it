@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1535ccda7b53a4fe87c496e2749e382413e32d0a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e71804a2b9b9420e4e7839bf33054fb1ed0a7797
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021200"
 ---
 # <a name="concurrency-namespace-functions"></a>funzioni dello spazio dei nomi Concurrency
 ||||  
@@ -75,8 +75,8 @@ void* __cdecl Alloc(size_t _NumBytes);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_NumBytes`  
- Il numero di byte di memoria da allocare.  
+*_NumBytes*<br/>
+Il numero di byte di memoria da allocare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore alla memoria appena allocata.  
@@ -100,14 +100,14 @@ bool asend(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- Tipo di dati da inviare.  
+*T*<br/>
+Tipo di dati da inviare.  
   
- `_Trg`  
- Puntatore o riferimento alla destinazione a cui i dati vengono inviati.  
+*_Trg*<br/>
+Puntatore o riferimento alla destinazione a cui i dati vengono inviati.  
   
- `_Data`  
- Riferimento ai dati da inviare.  
+*Data*<br/>
+Riferimento ai dati da inviare.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se è stato accettato il messaggio prima della restituzione del metodo `false` in caso contrario.  
@@ -133,8 +133,9 @@ void concurrent_queue<T, _Ax>::clear();
 ```   
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- `_Ax`  
+*T*<br/>
+
+*_Ax*<br/>
   
 ##  <a name="create_async"></a>  create_async  
  Crea un costrutto asincrono di Windows Runtime in base a un'espressione lambda o un oggetto funzione fornito dall'utente. Il tipo restituito `create_async` è uno tra `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` o `IAsyncOperationWithProgress<TResult, TProgress>^` in base alla firma dell'espressione lambda passata al metodo.  
@@ -146,9 +147,11 @@ __declspec(noinline) auto create_async(const _Function& _Func)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function`  
- `_Func`  
- Espressione lambda o oggetto funzione da cui si crea un costrutto asincrono di Windows Runtime.  
+*_Function*<br/>
+Tipo.
+
+*Func*<br/>
+Espressione lambda o oggetto funzione da cui si crea un costrutto asincrono di Windows Runtime.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un costrutto asincrono rappresentato da IAsyncAction ^, IAsyncActionWithProgress\<TProgress > ^, IAsyncOperation\<TResult > ^, o IAsyncOperationWithProgress\<TResult, TProgress > ^. L'interfaccia restituita dipende dalla firma dell'espressione lambda passata nella funzione.  
@@ -196,16 +199,21 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- Tipo del parametro dal quale deve essere costruita l'attività.  
+*T*<br/>
+Tipo del parametro dal quale deve essere costruita l'attività.  
   
- `_ReturnType`  
- `_Param`  
- Parametro dal quale deve essere costruita l'attività. Potrebbe trattarsi di un oggetto lambda o funzione, una `task_completion_event` object, un altro `task` oggetto o un'interfaccia Windows::Foundation::IAsyncInfo se si usa le attività nell'app UWP.  
+*_ReturnType*<br/>
+Tipo.
+
+*_Param*<br/>
+Parametro dal quale deve essere costruita l'attività. Potrebbe trattarsi di un oggetto lambda o funzione, una `task_completion_event` object, un altro `task` oggetto o un'interfaccia Windows::Foundation::IAsyncInfo se si usa le attività nell'app UWP.  
   
- `_TaskOptions`  
- `_Task`  
-  
+*_TaskOptions*<br/>
+Le opzioni dell'attività.
+
+*_Task*<br/>
+Attività da creare.
+
 ### <a name="return-value"></a>Valore restituito  
  Una nuova attività di tipo `T`, che viene dedotto dal `_Param`.  
   
@@ -246,8 +254,8 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_PAllocation`  
- Puntatore alla memoria precedentemente allocato dal `Alloc` metodo che deve essere liberata. Se il parametro `_PAllocation` è impostata sul valore `NULL`, questo metodo ignorarlo e restituirà immediatamente.  
+*PAllocation*<br/>
+Puntatore alla memoria precedentemente allocato dal `Alloc` metodo che deve essere liberata. Se il parametro `_PAllocation` è impostata sul valore `NULL`, questo metodo ignorarlo e restituirà immediatamente.  
   
 ### <a name="remarks"></a>Note  
  Per altre informazioni su quali scenari nell'applicazione possono trarre vantaggio dal suballocatore di cache, vedere [utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
@@ -338,11 +346,15 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 ```   
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- `_Ax`  
- `_I`  
- `first`  
- `last`  
+*T*<br/>
+
+*_Ax*<br/>
+
+*_I*<br/>
+
+*first*<br/>
+
+*last*<br/>
   
 ##  <a name="interruption_point"></a>  interruption_point  
  Crea un punto di interruzione per l'annullamento. Se un annullamento è in corso nel contesto in cui questa funzione viene chiamata, questa genererà un'eccezione interna che interrompe l'esecuzione del lavoro parallelo in esecuzione. Se l'annullamento non è in corso, la funzione non esegue alcuna operazione.  
@@ -393,26 +405,26 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T1`  
- Il tipo di messaggio di blocco della prima origine.  
+*T1*<br/>
+Il tipo di messaggio di blocco della prima origine.  
   
- `T2`  
- Il tipo di blocco di messaggio della seconda origine.  
+*T2*<br/>
+Il tipo di blocco di messaggio della seconda origine.  
   
- `_PScheduler`  
- Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `choice` .  
+*_PScheduler*<br/>
+Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `choice` .  
   
- `_Item1`  
- La prima origine.  
+*_Item1*<br/>
+La prima origine.  
   
- `_Item2`  
- La seconda origine.  
+*_Item2*<br/>
+La seconda origine.  
   
- `_Items`  
- Origini supplementari.  
+*Items*<br/>
+Origini supplementari.  
   
- `_PScheduleGroup`  
- Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `choice` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
+*PScheduleGroup*<br/>
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `choice` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Blocco di messaggi `choice` con due o più origini di input.  
@@ -443,26 +455,26 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T1`  
- Il tipo di messaggio di blocco della prima origine.  
+*T1*<br/>
+Il tipo di messaggio di blocco della prima origine.  
   
- `T2`  
- Il tipo di blocco di messaggio della seconda origine.  
+*T2*<br/>
+Il tipo di blocco di messaggio della seconda origine.  
   
- `_PScheduler`  
- Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` .  
+*_PScheduler*<br/>
+Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` .  
   
- `_Item1`  
- La prima origine.  
+*_Item1*<br/>
+La prima origine.  
   
- `_Item2`  
- La seconda origine.  
+*_Item2*<br/>
+La seconda origine.  
   
- `_Items`  
- Origini supplementari.  
+*Items*<br/>
+Origini supplementari.  
   
- `_PScheduleGroup`  
- Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
+*PScheduleGroup*<br/>
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Blocco di messaggi `greedy multitype_join` con due o più origini di input.  
@@ -494,26 +506,26 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T1`  
- Il tipo di messaggio di blocco della prima origine.  
+*T1*<br/>
+Il tipo di messaggio di blocco della prima origine.  
   
- `T2`  
- Il tipo di blocco di messaggio della seconda origine.  
+*T2*<br/>
+Il tipo di blocco di messaggio della seconda origine.  
   
- `_PScheduler`  
- Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` .  
+*_PScheduler*<br/>
+Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` .  
   
- `_Item1`  
- La prima origine.  
+*_Item1*<br/>
+La prima origine.  
   
- `_Item2`  
- La seconda origine.  
+*_Item2*<br/>
+La seconda origine.  
   
- `_Items`  
- Origini supplementari.  
+*Items*<br/>
+Origini supplementari.  
   
- `_PScheduleGroup`  
- Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
+*PScheduleGroup*<br/>
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Blocco di messaggi `non_greedy multitype_join` con due o più origini di input.  
@@ -527,11 +539,11 @@ task_handle<_Function> make_task(const _Function& _Func);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function`  
- Il tipo dell'oggetto funzione che verrà richiamato per eseguire il lavoro rappresentato dal `task_handle` oggetto.  
+*_Function*<br/>
+Il tipo dell'oggetto funzione che verrà richiamato per eseguire il lavoro rappresentato dal `task_handle` oggetto.  
   
- `_Func`  
- La funzione che verrà richiamata per eseguire il lavoro rappresentato dal `task_handle` oggetto. Potrebbe trattarsi di un funtore lambda, un puntatore a una funzione, o qualsiasi oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.  
+*Func*<br/>
+La funzione che verrà richiamata per eseguire il lavoro rappresentato dal `task_handle` oggetto. Potrebbe trattarsi di un funtore lambda, un puntatore a una funzione, o qualsiasi oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `task_handle`.  
@@ -590,29 +602,29 @@ inline void parallel_buffered_sort(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Random_iterator`  
- Tipo dell'iteratore dell'intervallo di input.  
+*_Random_iterator*<br/>
+Tipo dell'iteratore dell'intervallo di input.  
   
- `_Allocator`  
- Tipo di allocatore di memoria compatibile della libreria Standard C++.  
+*_Allocator*<br/>
+Tipo di allocatore di memoria compatibile della libreria Standard C++.  
   
- `_Function`  
- Tipo di confronto binario.  
+*_Function*<br/>
+Tipo di confronto binario.  
   
- `_Begin`  
- Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.  
+*Ini_zia*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.  
   
- `_End`  
- Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.  
+*End*<br/>
+Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.  
   
- `_Alloc`  
- Un'istanza di un allocatore di memoria compatibile della libreria Standard C++.  
+*_Alloc*<br/>
+Un'istanza di un allocatore di memoria compatibile della libreria Standard C++.  
   
- `_Func`  
- Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e viene restituito `true` se la condizione è soddisfatta e `false` se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.  
+*Func*<br/>
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e viene restituito `true` se la condizione è soddisfatta e `false` se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.  
   
- `_Chunk_size`  
- Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.  
+*_Chunk_size*<br/>
+Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.  
   
 ### <a name="remarks"></a>Note  
  Tutti gli overload richiedono `n * sizeof(T)` ulteriore spazio, dove `n` è il numero di elementi da ordinare e `T` è il tipo di elemento. Nella maggior parte dei casi parallel_buffered_sort mostrerà un miglioramento delle prestazioni tramite [parallel_sort](concurrency-namespace-functions.md), ed è consigliabile usarla su parallel_sort se si dispone di memoria disponibile.  
@@ -672,29 +684,29 @@ void parallel_for(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Index_type`  
- Tipo di indice utilizzato per l'iterazione.  
+*Index_type*<br/>
+Tipo di indice utilizzato per l'iterazione.  
   
- `_Function`  
- Il tipo della funzione che verrà eseguito a ogni iterazione.  
+*_Function*<br/>
+Il tipo della funzione che verrà eseguito a ogni iterazione.  
   
- `_Partitioner`  
- Tipo di partitioner che consente di partizionare l'intervallo specificato.  
+*_Partitioner*<br/>
+Tipo di partitioner che consente di partizionare l'intervallo specificato.  
   
- `first`  
- Il primo indice da includere nell'iterazione.  
+*first*<br/>
+Il primo indice da includere nell'iterazione.  
   
- `last`  
- L'indice uno dopo l'ultimo indice da includere nell'iterazione.  
+*last*<br/>
+L'indice uno dopo l'ultimo indice da includere nell'iterazione.  
   
- `_Step`  
- Il valore per il quale al passaggio quando si esegue l'iterazione dal `first` a `last`. Il passaggio deve essere positivo. [invalid_argument](../../../standard-library/invalid-argument-class.md) viene generata se il passaggio è minore di 1.  
+*Step*<br/>
+Il valore per il quale al passaggio quando si esegue l'iterazione dal `first` a `last`. Il passaggio deve essere positivo. [invalid_argument](../../../standard-library/invalid-argument-class.md) viene generata se il passaggio è minore di 1.  
   
- `_Func`  
- La funzione deve essere eseguito a ogni iterazione. Potrebbe trattarsi di un'espressione lambda, un puntatore a funzione, o qualsiasi oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()(_Index_type)`.  
+*Func*<br/>
+La funzione deve essere eseguito a ogni iterazione. Potrebbe trattarsi di un'espressione lambda, un puntatore a funzione, o qualsiasi oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()(_Index_type)`.  
   
- `_Part`  
- Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ Partitioner](simple-partitioner-class.md) `&` oppure [affinity_partitioner](affinity-partitioner-class.md) `&` se un [affinity_partitioner](affinity-partitioner-class.md) oggetto viene usato, il riferimento deve essere un'espressione l-value non const Fare riferimento, in modo che l'algoritmo può archiviare lo stato per i cicli futuri di riutilizzare.  
+*Parte*<br/>
+Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ Partitioner](simple-partitioner-class.md) `&` oppure [affinity_partitioner](affinity-partitioner-class.md) `&` se un [affinity_partitioner](affinity-partitioner-class.md) oggetto viene usato, il riferimento deve essere un'espressione l-value non const Fare riferimento, in modo che l'algoritmo può archiviare lo stato per i cicli futuri di riutilizzare.  
   
 ### <a name="remarks"></a>Note  
  Per altre informazioni, vedere [gli algoritmi paralleli](../../../parallel/concrt/parallel-algorithms.md).  
@@ -718,24 +730,24 @@ void parallel_for_each(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Iterator`  
- Tipo di iteratore utilizzato per scorrere il contenitore.  
+*_Iterator*<br/>
+Tipo di iteratore utilizzato per scorrere il contenitore.  
   
- `_Function`  
- Il tipo della funzione che verrà applicato a ogni elemento all'interno dell'intervallo.  
+*_Function*<br/>
+Il tipo della funzione che verrà applicato a ogni elemento all'interno dell'intervallo.  
   
- `_Partitioner`  
- `first`  
- Un iteratore che punta alla posizione del primo elemento da includere nell'iterazione parallela.  
+*_Partitioner*<br/>
+*first*<br/>
+Un iteratore che punta alla posizione del primo elemento da includere nell'iterazione parallela.  
   
- `last`  
- Un iteratore che punta alla posizione immediatamente successiva all'ultimo elemento da includere nell'iterazione parallela.  
+*last*<br/>
+Un iteratore che punta alla posizione immediatamente successiva all'ultimo elemento da includere nell'iterazione parallela.  
   
- `_Func`  
- Oggetto funzione definita dall'utente che viene applicato a ogni elemento nell'intervallo.  
+*Func*<br/>
+Oggetto funzione definita dall'utente che viene applicato a ogni elemento nell'intervallo.  
   
- `_Part`  
- Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ Partitioner](simple-partitioner-class.md) `&` oppure [affinity_partitioner](affinity-partitioner-class.md) `&` se un [affinity_partitioner](affinity-partitioner-class.md) oggetto viene usato, il riferimento deve essere un'espressione l-value non const Fare riferimento, in modo che l'algoritmo può archiviare lo stato per i cicli futuri di riutilizzare.  
+*Parte*<br/>
+Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ Partitioner](simple-partitioner-class.md) `&` oppure [affinity_partitioner](affinity-partitioner-class.md) `&` se un [affinity_partitioner](affinity-partitioner-class.md) oggetto viene usato, il riferimento deve essere un'espressione l-value non const Fare riferimento, in modo che l'algoritmo può archiviare lo stato per i cicli futuri di riutilizzare.  
   
 ### <a name="remarks"></a>Note  
  [auto_partitioner](auto-partitioner-class.md) verrà utilizzato per eseguire l'overload senza un partitioner esplicito.  
@@ -873,65 +885,65 @@ void parallel_invoke(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function1`  
- Il tipo del primo oggetto funzione da eseguire in parallelo.  
+*_Function1*<br/>
+Il tipo del primo oggetto funzione da eseguire in parallelo.  
   
- `_Function2`  
- Il tipo del secondo oggetto funzione da eseguire in parallelo.  
+*_Function2*<br/>
+Il tipo del secondo oggetto funzione da eseguire in parallelo.  
   
- `_Function3`  
- Il tipo del terzo oggetto funzione da eseguire in parallelo.  
+*_Function3*<br/>
+Il tipo del terzo oggetto funzione da eseguire in parallelo.  
   
- `_Function4`  
- Il tipo del quarto oggetto funzione da eseguire in parallelo.  
+*_Function4*<br/>
+Il tipo del quarto oggetto funzione da eseguire in parallelo.  
   
- `_Function5`  
- Il tipo del quinto oggetto funzione da eseguire in parallelo.  
+*_Function5*<br/>
+Il tipo del quinto oggetto funzione da eseguire in parallelo.  
   
- `_Function6`  
- Il tipo del sesto oggetto funzione da eseguire in parallelo.  
+*_Function6*<br/>
+Il tipo del sesto oggetto funzione da eseguire in parallelo.  
   
- `_Function7`  
- Il tipo del settimo oggetto funzione da eseguire in parallelo.  
+*_Function7*<br/>
+Il tipo del settimo oggetto funzione da eseguire in parallelo.  
   
- `_Function8`  
- Il tipo dell'ottavo oggetto funzione da eseguire in parallelo.  
+*_Function8*<br/>
+Il tipo dell'ottavo oggetto funzione da eseguire in parallelo.  
   
- `_Function9`  
- Il tipo del nono oggetto funzione da eseguire in parallelo.  
+*_Function9*<br/>
+Il tipo del nono oggetto funzione da eseguire in parallelo.  
   
- `_Function10`  
- Il tipo del decimo oggetto funzione da eseguire in parallelo.  
+*_Function10*<br/>
+Il tipo del decimo oggetto funzione da eseguire in parallelo.  
   
- `_Func1`  
- Primo oggetto funzione da eseguire in parallelo.  
+*_Func1*<br/>
+Primo oggetto funzione da eseguire in parallelo.  
   
- `_Func2`  
- Secondo oggetto funzione da eseguire in parallelo.  
+*_Func2*<br/>
+Secondo oggetto funzione da eseguire in parallelo.  
   
- `_Func3`  
- Terzo oggetto funzione da eseguire in parallelo.  
+*_Func3*<br/>
+Terzo oggetto funzione da eseguire in parallelo.  
   
- `_Func4`  
- Quarto oggetto funzione da eseguire in parallelo.  
+*_Func4*<br/>
+Quarto oggetto funzione da eseguire in parallelo.  
   
- `_Func5`  
- Il quinto oggetto funzione da eseguire in parallelo.  
+*_Func5*<br/>
+Il quinto oggetto funzione da eseguire in parallelo.  
   
- `_Func6`  
- Il sesto oggetto funzione da eseguire in parallelo.  
+*_Func6*<br/>
+Il sesto oggetto funzione da eseguire in parallelo.  
   
- `_Func7`  
- Il settimo oggetto funzione da eseguire in parallelo.  
+*_Func7*<br/>
+Il settimo oggetto funzione da eseguire in parallelo.  
   
- `_Func8`  
- L'ottavo oggetto funzione deve essere eseguito in parallelo.  
+*_Func8*<br/>
+L'ottavo oggetto funzione deve essere eseguito in parallelo.  
   
- `_Func9`  
- Il nono oggetto funzione da eseguire in parallelo.  
+*_Func9*<br/>
+Il nono oggetto funzione da eseguire in parallelo.  
   
- `_Func10`  
- Il decimo oggetto funzione da eseguire in parallelo.  
+*_Func10*<br/>
+Il decimo oggetto funzione da eseguire in parallelo.  
   
 ### <a name="remarks"></a>Note  
  Si noti che una o più degli oggetti funzione forniti come parametri può essere eseguita inline sul contesto di chiamata.  
@@ -987,29 +999,29 @@ inline void parallel_radixsort(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Random_iterator`  
- Tipo dell'iteratore dell'intervallo di input.  
+*_Random_iterator*<br/>
+Tipo dell'iteratore dell'intervallo di input.  
   
- `_Allocator`  
- Tipo di allocatore di memoria compatibile della libreria Standard C++.  
+*_Allocator*<br/>
+Tipo di allocatore di memoria compatibile della libreria Standard C++.  
   
- `_Function`  
- Il tipo della funzione di proiezione.  
+*_Function*<br/>
+Il tipo della funzione di proiezione.  
   
- `_Begin`  
- Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.  
+*Ini_zia*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.  
   
- `_End`  
- Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.  
+*End*<br/>
+Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.  
   
- `_Alloc`  
- Un'istanza di un allocatore di memoria compatibile della libreria Standard C++.  
+*_Alloc*<br/>
+Un'istanza di un allocatore di memoria compatibile della libreria Standard C++.  
   
- `_Proj_func`  
- Un oggetto funzione di proiezione definito dall'utente che converte un elemento in un valore integrale.  
+*_Proj_func*<br/>
+Un oggetto funzione di proiezione definito dall'utente che converte un elemento in un valore integrale.  
   
- `_Chunk_size`  
- Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.  
+*_Chunk_size*<br/>
+Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.  
   
 ### <a name="remarks"></a>Note  
  Tutti gli overload richiedono `n * sizeof(T)` ulteriore spazio, dove `n` è il numero di elementi da ordinare e `T` è il tipo di elemento. Un funtore di proiezione unario con la firma `I _Proj_func(T)` è necessaria per restituire una chiave quando viene specificato un elemento, dove `T` è il tipo di elemento e `I` è un tipo di tipo intero senza segno.  
@@ -1050,32 +1062,32 @@ inline _Reduce_type parallel_reduce(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Forward_iterator`  
- Tipo di iteratore dell'intervallo di input.  
+*_Forward_iterator*<br/>
+Tipo di iteratore dell'intervallo di input.  
   
- `_Sym_reduce_fun`  
- Il tipo della funzione di riduzione simmetrica. Deve trattarsi di un tipo di funzione con firma `_Reduce_type _Sym_fun(_Reduce_type, _Reduce_type)`, dove _Reduce_type è lo stesso come il tipo di identità e il tipo di risultato della riduzione. Per il terzo overload, deve essere coerenza con il tipo di output di `_Range_reduce_fun`.  
+*_Sym_reduce_fun*<br/>
+Il tipo della funzione di riduzione simmetrica. Deve trattarsi di un tipo di funzione con firma `_Reduce_type _Sym_fun(_Reduce_type, _Reduce_type)`, dove _Reduce_type è lo stesso come il tipo di identità e il tipo di risultato della riduzione. Per il terzo overload, deve essere coerenza con il tipo di output di `_Range_reduce_fun`.  
   
- `_Reduce_type`  
- Tipo che l'input viene limitato agli, che può essere diverso dal tipo di elemento di input. Il valore restituito e il valore di identità verrà ha questo tipo.  
+*_Reduce_type*<br/>
+Tipo che l'input viene limitato agli, che può essere diverso dal tipo di elemento di input. Il valore restituito e il valore di identità verrà ha questo tipo.  
   
- `_Range_reduce_fun`  
- Il tipo della funzione di riduzione intervallo. Deve trattarsi di un tipo di funzione con firma `_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`, _Reduce_type è lo stesso come il tipo di identità e il tipo di risultato della riduzione.  
+*_Range_reduce_fun*<br/>
+Il tipo della funzione di riduzione intervallo. Deve trattarsi di un tipo di funzione con firma `_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`, _Reduce_type è lo stesso come il tipo di identità e il tipo di risultato della riduzione.  
   
- `_Begin`  
- Iteratore di input che punta al primo elemento nell'intervallo venga ridotta.  
+*Ini_zia*<br/>
+Iteratore di input che punta al primo elemento nell'intervallo venga ridotta.  
   
- `_End`  
- Iteratore di input che punta all'elemento che è una posizione successiva all'ultimo elemento nell'intervallo venga ridotta.  
+*End*<br/>
+Iteratore di input che punta all'elemento che è una posizione successiva all'ultimo elemento nell'intervallo venga ridotta.  
   
- `_Identity`  
- Il valore identity `_Identity` è dello stesso tipo del tipo di risultato di riduzione, nonché il `value_type` dell'iteratore per il primo e secondo overload. Per il terzo overload, deve avere lo stesso tipo del tipo di risultato della riduzione del valore identity, ma può essere diverso dal `value_type` dell'iteratore. Deve avere un valore appropriato in modo che l'operatore di riduzione di intervallo `_Range_fun`, quando applicato a un intervallo di un singolo elemento di tipo `value_type` e il valore di identità, si comporta come un cast di tipo del valore di tipo `value_type` al tipo di identità.  
+*Identity*<br/>
+Il valore identity `_Identity` è dello stesso tipo del tipo di risultato di riduzione, nonché il `value_type` dell'iteratore per il primo e secondo overload. Per il terzo overload, deve avere lo stesso tipo del tipo di risultato della riduzione del valore identity, ma può essere diverso dal `value_type` dell'iteratore. Deve avere un valore appropriato in modo che l'operatore di riduzione di intervallo `_Range_fun`, quando applicato a un intervallo di un singolo elemento di tipo `value_type` e il valore di identità, si comporta come un cast di tipo del valore di tipo `value_type` al tipo di identità.  
   
- `_Sym_fun`  
- La funzione simmetrica che verrà usata nel secondo della riduzione. Per altre informazioni, consultare la sezione Osservazioni.  
+*_Sym_fun*<br/>
+La funzione simmetrica che verrà usata nel secondo della riduzione. Per altre informazioni, consultare la sezione Osservazioni.  
   
- `_Range_fun`  
- Funzione che verrà usata nella prima fase di riduzione. Per altre informazioni, consultare la sezione Osservazioni.  
+*_Range_fun*<br/>
+Funzione che verrà usata nella prima fase di riduzione. Per altre informazioni, consultare la sezione Osservazioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il risultato della riduzione.  
@@ -1107,23 +1119,23 @@ inline void parallel_sort(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Random_iterator`  
- Tipo dell'iteratore dell'intervallo di input.  
+*_Random_iterator*<br/>
+Tipo dell'iteratore dell'intervallo di input.  
   
- `_Function`  
- Tipo del funtore di confronto binario.  
+*_Function*<br/>
+Tipo del funtore di confronto binario.  
   
- `_Begin`  
- Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.  
+*Ini_zia*<br/>
+Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.  
   
- `_End`  
- Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.  
+*End*<br/>
+Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.  
   
- `_Func`  
- Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e viene restituito `true` se la condizione è soddisfatta e `false` se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.  
+*Func*<br/>
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e viene restituito `true` se la condizione è soddisfatta e `false` se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.  
   
- `_Chunk_size`  
- Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.  
+*_Chunk_size*<br/>
+Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.  
   
 ### <a name="remarks"></a>Note  
  Il primo overload viene utilizzato il confronto binario `std::less`.  
@@ -1204,42 +1216,42 @@ _Output_iterator parallel_transform(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Input_iterator1`  
- Tipo del primo iteratore o di quello solo di input.  
+*_Input_iterator1*<br/>
+Tipo del primo iteratore o di quello solo di input.  
   
- `_Output_iterator`  
- Tipo di iteratore di output.  
+*_Output_iterator*<br/>
+Tipo di iteratore di output.  
   
- `_Unary_operator`  
- Tipo del funtore unario che deve essere eseguito in ogni elemento nell'intervallo di input.  
+*_Unary_operator*<br/>
+Tipo del funtore unario che deve essere eseguito in ogni elemento nell'intervallo di input.  
   
- `_Input_iterator2`  
- Tipo del secondo iteratore di input.  
+*_Input_iterator2*<br/>
+Tipo del secondo iteratore di input.  
   
- `_Binary_operator`  
- Tipo del funtore binario eseguito a livello pairwise negli elementi di due intervalli di origine.  
+*_Binary_operator*<br/>
+Tipo del funtore binario eseguito a livello pairwise negli elementi di due intervalli di origine.  
   
- `_Partitioner`  
- `first1`  
- Iteratore di input che punta alla posizione del primo elemento nel primo intervallo o in quello solo origine da utilizzare.  
+*_Partitioner*<br/>
+*first1*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel primo intervallo o in quello solo origine da utilizzare.  
   
- `last1`  
- Iteratore di input che punta alla prima posizione dopo l'elemento finale nel primo intervallo o in quello solo di origine da utilizzare.  
+*last1*<br/>
+Iteratore di input che punta alla prima posizione dopo l'elemento finale nel primo intervallo o in quello solo di origine da utilizzare.  
   
- `_Result`  
- Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.  
+*_Result*<br/>
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.  
   
- `_Unary_op`  
- Oggetto funzione unario definito dall'utente che viene applicato a ogni elemento nell'intervallo di origine.  
+*_Unary_op*<br/>
+Oggetto funzione unario definito dall'utente che viene applicato a ogni elemento nell'intervallo di origine.  
   
- `_Part`  
- Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ Partitioner](simple-partitioner-class.md) `&` oppure [affinity_partitioner](affinity-partitioner-class.md) `&` se un [affinity_partitioner](affinity-partitioner-class.md) oggetto viene usato, il riferimento deve essere un'espressione l-value non const Fare riferimento, in modo che l'algoritmo può archiviare lo stato per i cicli futuri di riutilizzare.  
+*Parte*<br/>
+Riferimento all'oggetto partitioner. L'argomento può essere uno dei `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ Partitioner](simple-partitioner-class.md) `&` oppure [affinity_partitioner](affinity-partitioner-class.md) `&` se un [affinity_partitioner](affinity-partitioner-class.md) oggetto viene usato, il riferimento deve essere un'espressione l-value non const Fare riferimento, in modo che l'algoritmo può archiviare lo stato per i cicli futuri di riutilizzare.  
   
- `first2`  
- Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo di origine da utilizzare.  
+*first2*<br/>
+Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo di origine da utilizzare.  
   
- `_Binary_op`  
- Oggetto funzione binario definito dall'utente applicato a livello pairwise, in ordine progressivo, ai due intervalli di origine.  
+*_Binary_op*<br/>
+Oggetto funzione binario definito dall'utente applicato a livello pairwise, in ordine progressivo, ai due intervalli di origine.  
   
 ### <a name="return-value"></a>Valore restituito  
  Iteratore di output che punta alla prima posizione dopo l'elemento finale nell'intervallo di destinazione in cui vengono ricevuti gli elementi di output trasformati dall'oggetto funzione.  
@@ -1283,17 +1295,17 @@ T receive(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di payload.  
+*T*<br/>
+Il tipo di payload.  
   
- `_Src`  
- Un puntatore o un riferimento all'origine da cui si prevede che i dati.  
+*_Src*<br/>
+Un puntatore o un riferimento all'origine da cui si prevede che i dati.  
   
- `_Timeout`  
- Il tempo massimo per il quale il metodo necessario per i dati, in millisecondi.  
+*Timeout*<br/>
+Il tempo massimo per il quale il metodo necessario per i dati, in millisecondi.  
   
- `_Filter_proc`  
- Una funzione di filtro che determina se i messaggi devono essere accettati.  
+*_Filter_proc*<br/>
+Una funzione di filtro che determina se i messaggi devono essere accettati.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore dall'origine, il tipo di payload.  
@@ -1314,14 +1326,14 @@ void run_with_cancellation_token(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function`  
- Tipo dell'oggetto funzione che sarà richiamato.  
+*_Function*<br/>
+Tipo dell'oggetto funzione che sarà richiamato.  
   
- `_Func`  
- Oggetto funzione che verrà eseguito. Questo oggetto deve supportare l'operatore di chiamata di funzione con una firma void(void).  
+*Func*<br/>
+Oggetto funzione che verrà eseguito. Questo oggetto deve supportare l'operatore di chiamata di funzione con una firma void(void).  
   
- `_Ct`  
- Token di annullamento tramite cui verrà controllato l'annullamento implicito dell'oggetto funzione. Utilizzare `cancellation_token::none()` se si desidera che la funzione venga eseguita senza alcuna possibilità di annullamento implicito da un gruppo di attività padre che viene annullato.  
+*CT*<br/>
+Token di annullamento tramite cui verrà controllato l'annullamento implicito dell'oggetto funzione. Utilizzare `cancellation_token::none()` se si desidera che la funzione venga eseguita senza alcuna possibilità di annullamento implicito da un gruppo di attività padre che viene annullato.  
   
 ### <a name="remarks"></a>Note  
  Quando l'oggetto `cancellation_token` viene annullato, verranno attivati tutti i punti di interruzione nell'oggetto funzione. Tramite il token esplicito `_Ct` questo parametro `_Func` verrà isolato dall'annullamento padre se al padre è associato un token diverso o se non ne dispone.  
@@ -1338,14 +1350,14 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di payload.  
+*T*<br/>
+Il tipo di payload.  
   
- `_Trg`  
- Puntatore o riferimento alla destinazione a cui i dati vengono inviati.  
+*_Trg*<br/>
+Puntatore o riferimento alla destinazione a cui i dati vengono inviati.  
   
- `_Data`  
- Riferimento ai dati da inviare.  
+*Data*<br/>
+Riferimento ai dati da inviare.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se il messaggio è stato accettato, `false` in caso contrario.  
@@ -1360,7 +1372,8 @@ inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_inter
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Scheduler`  
+*_Scheduler*<br/>
+L'ambiente dell'utilità di pianificazione da impostare.
   
 ##  <a name="set_task_execution_resources"></a>  set_task_execution_resources  
  Limita le risorse di esecuzione usate dai thread di lavoro interni del runtime di concorrenza al set di affinità specificato.  
@@ -1379,14 +1392,14 @@ void __cdecl set_task_execution_resources(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_ProcessAffinityMask`  
- Maschera di affinità in base alla quale devono essere limitati i thread di lavoro del runtime di concorrenza. Utilizzare questo metodo in un sistema con più di 64 thread hardware solo se si desidera limitare il runtime di concorrenza a un subset del gruppo di processori correnti. In genere, è necessario utilizzare la versione del metodo che accetta una matrice di affinità di gruppo come parametro, per limitare l'affinità in computer con più di 64 thread hardware.  
+*_ProcessAffinityMask*<br/>
+Maschera di affinità in base alla quale devono essere limitati i thread di lavoro del runtime di concorrenza. Utilizzare questo metodo in un sistema con più di 64 thread hardware solo se si desidera limitare il runtime di concorrenza a un subset del gruppo di processori correnti. In genere, è necessario utilizzare la versione del metodo che accetta una matrice di affinità di gruppo come parametro, per limitare l'affinità in computer con più di 64 thread hardware.  
   
- `count`  
- Numero di voci `GROUP_AFFINITY` nella matrice specificata dal parametro `_PGroupAffinity`.  
+*count*<br/>
+Numero di voci `GROUP_AFFINITY` nella matrice specificata dal parametro `_PGroupAffinity`.  
   
- `_PGroupAffinity`  
- Matrice di voci `GROUP_AFFINITY`.  
+*_PGroupAffinity*<br/>
+Matrice di voci `GROUP_AFFINITY`.  
   
 ### <a name="remarks"></a>Note  
  Il metodo genera un' [invalid_operation](invalid-operation-class.md) eccezione se è presente al momento viene richiamato un gestore di risorse e un [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione se l'affinità specificata risultati in un set vuoto di risorse.  
@@ -1406,17 +1419,17 @@ inline void swap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di dati degli elementi da archiviare nel vettore simultaneo.  
+*T*<br/>
+Il tipo di dati degli elementi da archiviare nel vettore simultaneo.  
   
- `_Ax`  
- Il tipo di allocatore dei vettori simultanei.  
+*_Ax*<br/>
+Il tipo di allocatore dei vettori simultanei.  
   
- `_A`  
- Vettore simultaneo cui elementi devono essere scambiati con quelli del vettore simultaneo `_B`.  
+*_A*<br/>
+Vettore simultaneo cui elementi devono essere scambiati con quelli del vettore simultaneo `_B`.  
   
- `_B`  
- Vettore simultaneo che fornisce gli elementi da scambiare o vettore i cui elementi devono essere scambiati con quelli del vettore simultaneo `_A`.  
+*B*<br/>
+Vettore simultaneo che fornisce gli elementi da scambiare o vettore i cui elementi devono essere scambiati con quelli del vettore simultaneo `_A`.  
   
 ### <a name="remarks"></a>Note  
  La funzione modello è un algoritmo specializzato sulla classe contenitore `concurrent_vector` per eseguire la funzione membro `_A`. [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). Si tratta di istanze di ordinamento parziale dei modelli di funzione da parte del compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, `template <class T> void swap(T&, T&)`, nell'algoritmo classe funziona base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.  
@@ -1433,10 +1446,13 @@ task<_TaskType> task_from_exception(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_TaskType`  
- `_ExType`  
- `_Exception`  
- `_TaskOptions`  
+*_TaskType*<br/>
+
+*_ExType*<br/>
+
+*Exception*<br/>
+
+*_TaskOptions*<br/>
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1455,9 +1471,11 @@ inline task<void> task_from_result(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- `_Param`  
- `_TaskOptions`  
+*T*<br/>
+
+*_Param*<br/>
+
+*_TaskOptions*<br/>
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1472,14 +1490,14 @@ void Trace_agents_register_name(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- Tipo dell'oggetto. Si tratta in genere di un blocco di messaggi o di un agente.  
+*T*<br/>
+Tipo dell'oggetto. Si tratta in genere di un blocco di messaggi o di un agente.  
   
- `_PObject`  
- Puntatore al blocco di messaggi o all'agente che viene denominato nella traccia.  
+*_PObject*<br/>
+Puntatore al blocco di messaggi o all'agente che viene denominato nella traccia.  
   
- `_Name`  
- Nome dell'oggetto fornito.  
+*Nome*<br/>
+Nome dell'oggetto fornito.  
   
 ##  <a name="try_receive"></a>  try_receive  
  Un'implementazione di ricezione try generale, che consente a un contesto di cercare i dati esattamente da un'origine e di filtrare i valori accettati. Se i dati non sono pronti, il metodo restituirà false.  
@@ -1505,17 +1523,17 @@ bool try_receive(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di payload  
+*T*<br/>
+Il tipo di payload  
   
- `_Src`  
- Un puntatore o un riferimento all'origine da cui si prevede che i dati.  
+*_Src*<br/>
+Un puntatore o un riferimento all'origine da cui si prevede che i dati.  
   
- `_value`  
- Un riferimento a una posizione in cui verrà inserito il risultato.  
+*Value*<br/>
+Un riferimento a una posizione in cui verrà inserito il risultato.  
   
- `_Filter_proc`  
- Una funzione di filtro che determina se i messaggi devono essere accettati.  
+*_Filter_proc*<br/>
+Una funzione di filtro che determina se i messaggi devono essere accettati.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `bool` valore che indica se è stato inserito un payload in `_value`.  
@@ -1531,8 +1549,8 @@ void __cdecl wait(unsigned int _Milliseconds);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Milliseconds`  
- Numero di millisecondi durante i quali il contesto corrente deve essere sospeso. Se il parametro `_Milliseconds` viene impostato sul valore `0`, il contesto corrente deve essere eseguito in altri contesti eseguibili prima di continuare.  
+*Milliseconds*<br/>
+Numero di millisecondi durante i quali il contesto corrente deve essere sospeso. Se il parametro `_Milliseconds` viene impostato sul valore `0`, il contesto corrente deve essere eseguito in altri contesti eseguibili prima di continuare.  
   
 ### <a name="remarks"></a>Note  
  Se questo metodo viene chiamato in un contesto dell'utilità di pianificazione del Runtime di concorrenza, l'utilità di pianificazione troverà un contesto diverso da eseguire sulla risorsa sottostante. Poiché l'utilità di pianificazione è cooperativa di natura, non è possibile riprendere il contesto subito dopo il numero di millisecondi specificati. Se tramite l'utilità di pianificazione vengono eseguite altre attività che non vengono passate in modo cooperativo all'utilità, il periodo di attesa potrebbe essere indefinito.  
@@ -1551,16 +1569,17 @@ auto when_all(
 ```   
   
 ### <a name="parameters"></a>Parametri  
- `_Iterator`  
- Tipo di iteratore di input.  
+*_Iterator*<br/>
+Tipo di iteratore di input.  
   
- `_Begin`  
- Posizione del primo elemento nell'intervallo di elementi da combinare nell'attività risultante.  
+*Ini_zia*<br/>
+Posizione del primo elemento nell'intervallo di elementi da combinare nell'attività risultante.  
   
- `_End`  
- Posizione del primo elemento oltre l'intervallo di elementi da combinare nell'attività risultante.  
+*End*<br/>
+Posizione del primo elemento oltre l'intervallo di elementi da combinare nell'attività risultante.  
   
- `_TaskOptions`  
+*_TaskOptions*<br/>
+Oggetto `task_options`.
   
 ### <a name="return-value"></a>Valore restituito  
  Attività che viene completata correttamente quando tutte le attività di input sono state completate. Se le attività di input sono di tipo `T`, l'output di questa funzione sarà `task<std::vector<T>>`. Se le attività di input sono di tipo `void`, anche l'attività di output sarà `task<void>`.  
@@ -1598,18 +1617,18 @@ auto when_any(
 ```   
   
 ### <a name="parameters"></a>Parametri  
- `_Iterator`  
- Tipo di iteratore di input.  
+*_Iterator*<br/>
+Tipo di iteratore di input.  
   
- `_Begin`  
- Posizione del primo elemento nell'intervallo di elementi da combinare nell'attività risultante.  
+*Ini_zia*<br/>
+Posizione del primo elemento nell'intervallo di elementi da combinare nell'attività risultante.  
   
- `_End`  
- Posizione del primo elemento oltre l'intervallo di elementi da combinare nell'attività risultante.  
+*End*<br/>
+Posizione del primo elemento oltre l'intervallo di elementi da combinare nell'attività risultante.  
   
- `_TaskOptions`  
- `_CancellationToken`  
- Token di annullamento che controlla l'annullamento dell'attività restituita. Se non si fornisce un token di annullamento, l'attività risultante riceverà il token di annullamento dell'attività che ne causa il completamento.  
+*_TaskOptions*<br/>
+*_CancellationToken*<br/>
+Token di annullamento che controlla l'annullamento dell'attività restituita. Se non si fornisce un token di annullamento, l'attività risultante riceverà il token di annullamento dell'attività che ne causa il completamento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Attività che viene completata correttamente quando una delle attività di input è stata completata. Se le attività di input sono di tipo `T`, l'output di questa funzione sarà un `task<std::pair<T, size_t>>>`, dove il primo elemento della coppia è il risultato dell'attività in corso di completamento e il secondo elemento è l'indice dell'attività completata. Se le attività di input sono di tipo `void` l'output è un `task<size_t>`, dove il risultato è l'indice dell'attività in corso di completamento.  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2739b9306647b1929a0ad51aca8e0b66a65e9d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018262"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
 Il `CMFCMaskedEdit` classe supporta un controllo di modifica mascherato, che convalida l'input utente rispetto a una maschera e visualizza i risultati convalidati in base a un modello.  
@@ -196,18 +196,17 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  Ad esempio, si potrebbe usare il seguente controllo MaskedEdit per convalidare un numero di telefono:  
   
- `m_wndMaskEdit.EnableMask(`  
-  
- `_T(" ddd  ddd dddd"),// Mask string`  
-  
- `_T("(___) ___-____"),// Template string`  
-  
- `_T(' '));// Default char`  
-  
- `m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.`  
-  
- `m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt`  
-  
+```cpp
+m_wndMaskEdit.EnableMask(
+    _T(" ddd  ddd dddd"),  // Mask string
+    _T("(___) ___-____"),  // Template string
+    _T(' '));              // Default char
+
+m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.
+
+m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt
+```
+
  Se è abilitata la selezione per gruppo, l'utente può recuperare solo il "425", "555" o "0187" gruppi di stringa. Se la selezione del gruppo è disabilitata l'utente può recuperare l'intero testo del numero di telefono: "(425) 555-0187".  
   
 ##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
@@ -288,7 +287,16 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
  Esempio di codice seguente accetta solo i numeri esadecimali.  
   
- `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
+```cpp
+//Mask: 0xFFFF
+m_wndMaskEdit.EnableMask( 
+    _T(" AAAA"),                // The mask string.
+    _T("0x____"),               // The literal template string.
+    _T('_'));                   // The default character that 
+                                // replaces the backspace character.
+// Valid string characters
+m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));
+```
   
 ##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
  Visualizza un prompt nel controllo di modifica mascherato.  

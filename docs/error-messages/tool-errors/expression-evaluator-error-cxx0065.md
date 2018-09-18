@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0065 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0065 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78c25c9c6bde27219f10e4047dc7a6ab416f55d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c100b1edbd36f4384e8deb1abf5b36465e8da479
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024164"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>Errore dell‘analizzatore di espressioni CXX0065
-variabile richiede uno stack frame  
-  
- Un'espressione contiene una variabile che esiste all'interno dell'ambito corrente, ma non è stato ancora creata.  
-  
- Questo errore può verificarsi quando è stato eseguito il prologo di una funzione, ma non ancora configurare lo stack frame della funzione, o se è stato eseguito il codice di uscita per la funzione.  
-  
- Eseguire il codice di prologo fino a quando non è stato impostato il frame dello stack prima di valutare l'espressione.  
-  
- Questo errore è identico all'errore CAN0065.
+
+variabile richiede uno stack frame
+
+Un'espressione contiene una variabile che esiste all'interno dell'ambito corrente, ma non è ancora stata creata.
+
+Questo errore può verificarsi quando è stato eseguito il prologo di una funzione, ma non ancora configurare lo stack frame della funzione, o se è stato eseguito il codice di uscita per la funzione.
+
+Eseguire il codice di prologo della query fino a quando non è stato impostato il frame dello stack prima della valutazione dell'espressione.
+
+Questo errore è identico all'errore CAN0065.

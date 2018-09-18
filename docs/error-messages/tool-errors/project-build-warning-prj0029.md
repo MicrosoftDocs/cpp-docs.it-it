@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0029 avviso di compilazione | Documenti Microsoft
+title: Avviso di compilazione PRJ0029 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6e7b738785d9cfacfb2128e03d3a3123da4fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 854120bf6021295348ff2e28b36f7b44007017b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026020"
 ---
 # <a name="project-build-warning-prj0029"></a>Avviso di compilazione progetto PRJ0029
-La proprietà 'Output' per il passaggio di compilazione personalizzata a livello di progetto non è impostata. L'istruzione di compilazione personalizzata verrà ignorata.  
-  
- Un'istruzione di compilazione personalizzata non è stata eseguita perché è stato specificato alcun output.  
-  
- Per correggere l'errore, effettuare una delle seguenti:  
-  
--   Escludere l'istruzione di compilazione personalizzata dalla compilazione.  
-  
--   Aggiungere un output.  
-  
--   Eliminare il contenuto del comando dell'istruzione di compilazione personalizzata.
+
+La proprietà 'Output' per il passaggio di compilazione personalizzata a livello di progetto non è impostata. Il passaggio di compilazione personalizzata verrà ignorato.
+
+Un'istruzione di compilazione personalizzati non è stata eseguita perché è stato specificato alcun output.
+
+Per risolvere questo errore, effettuare una delle operazioni seguenti:
+
+- Escludere il passaggio di compilazione personalizzato dalla compilazione.
+
+- Aggiungere un output.
+
+- Eliminare il contenuto del comando dell'istruzione di compilazione personalizzata.

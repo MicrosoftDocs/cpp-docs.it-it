@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1224 errore | Documenti Microsoft
+title: Strumenti del linker LNK1224 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2be38847d9804279758ce8e224c06d655dc382
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7953e2e4df82bf271babaa385eabd93e98ae39e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022463"
 ---
 # <a name="linker-tools-error-lnk1224"></a>Errore degli strumenti del linker LNK1224
-indirizzo di base dell'immagine non valido  
-  
- È stato specificato un indirizzo di base non valido per l'immagine. Gli indirizzi di base devono essere allineati a 64KB (le ultime quattro cifre esadecimali devono essere zero) e l'immagine di base deve essere contenuta in un valore con o senza segno a 32 bit.
+
+indirizzo di base dell'immagine non valido
+
+È specificato un indirizzo di base valido per l'immagine. Indirizzi di base devono essere allineati a 64KB (le ultime quattro cifre esadecimali devono essere zero) e l'immagine di base deve essere contenuta in un valore con o senza segno a 32 bit.

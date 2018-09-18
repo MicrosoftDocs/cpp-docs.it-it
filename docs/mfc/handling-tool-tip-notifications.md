@@ -1,5 +1,5 @@
 ---
-title: Gestione delle notifiche delle descrizioni comandi | Documenti Microsoft
+title: Gestione delle notifiche delle descrizioni comandi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e18dc83bf57b449f71c3219cf7f67b6152c17394
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016061"
 ---
 # <a name="handling-tool-tip-notifications"></a>Gestione delle notifiche delle descrizioni comandi
-Quando si specifica il **TBSTYLE_TOOLTIPS** stile, la barra degli strumenti crea e gestisce un controllo descrizione comando. Una descrizione comandi è una piccola finestra popup che contiene una riga di testo che descrive un pulsante della barra degli strumenti. La descrizione comando è nascosto, visualizzata solo quando l'utente posiziona il cursore del mouse su un pulsante della barra degli strumenti e lascia in tale posizione per circa mezzo secondo. La descrizione comando viene visualizzata accanto al cursore.  
+Quando si specifica la **TBSTYLE_TOOLTIPS** stile, la barra degli strumenti crea e gestisce un controllo descrizione comandi. Una descrizione comandi è una piccola finestra popup che contiene una riga di testo che descrive un pulsante della barra degli strumenti. La descrizione comando è nascosto, visualizzata solo quando l'utente posiziona il cursore del mouse su un pulsante della barra degli strumenti e lascia in tale posizione per circa metà secondo. La descrizione comando viene visualizzata accanto al cursore.  
   
- Prima che venga visualizzata la descrizione comando, il **TTN_NEEDTEXT** messaggio di notifica viene inviata alla finestra proprietaria della barra degli strumenti per recuperare il testo descrittivo per il pulsante. Se finestra proprietaria della barra degli strumenti è un `CFrameWnd` finestra, lo strumento senza alcuno sforzo aggiuntivo, vengono visualizzati i suggerimenti perché `CFrameWnd` dispone di un gestore predefinito per il **TTN_NEEDTEXT** notifica. Se finestra proprietaria della barra degli strumenti non è derivato da `CFrameWnd`, ad esempio una visualizzazione di form o finestra di dialogo, è necessario aggiungere una voce alla mappa messaggi della finestra proprietaria e fornire un gestore di notifica nella mappa messaggi. La voce alla mappa messaggi della finestra proprietaria è come segue:  
+ Prima che venga visualizzata la descrizione comando, il **TTN_NEEDTEXT** messaggio di notifica viene inviato alla finestra proprietaria della barra degli strumenti per recuperare il testo descrittivo per il pulsante. Se finestra proprietaria della barra degli strumenti è una `CFrameWnd` finestra, lo strumento suggerimenti vengono visualizzati senza alcuna operazione aggiuntiva, perché `CFrameWnd` dispone di un gestore predefinito per il **TTN_NEEDTEXT** notifica. Se finestra proprietaria della barra degli strumenti non è derivato da `CFrameWnd`, ad esempio una visualizzazione di form o finestra di dialogo, è necessario aggiungere una voce alla mappa messaggi della finestra proprietaria e fornire un gestore delle notifiche nella mappa messaggi. La voce alla mappa messaggi della finestra proprietaria è come segue:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]  
   
 ## <a name="remarks"></a>Note  
- `memberFxn`  
- La funzione membro da chiamare quando è necessario il testo del pulsante.  
+*memberFxn*<br/>
+La funzione membro da chiamare quando è necessario il testo di questo pulsante.  
   
  Si noti che l'id di una descrizione comando è sempre 0.  
   
- Oltre ai **TTN_NEEDTEXT** notifica, un controllo descrizione comando può inviare le notifiche seguenti a un controllo barra degli strumenti:  
+ Oltre al **TTN_NEEDTEXT** notifica, un controllo di descrizione comando può inviare le notifiche seguenti a un controllo barra degli strumenti:  
   
 |Notifica|Significato|  
 |------------------|-------------|  
-|**TTN_NEEDTEXTA**|Controllo descrizione comando richiede un testo ASCII (solo Windows 95)|  
-|**NOTIFICHE TTN_NEEDTEXTW**|Controllo descrizione comando richiede un testo UNICODE (solo Windows NT)|  
+|**TTN_NEEDTEXTA**|Controllo di descrizione comando richiede un testo ASCII (solo Windows 95)|  
+|**NOTIFICHE TTN_NEEDTEXTW**|Controllo di descrizione comando richiede testo UNICODE (solo Windows NT)|  
 |**TBN_HOTITEMCHANGE**|Indica che l'elemento attivo (evidenziato) è stato modificato.|  
 |**NM_RCLICK**|Indica che l'utente ha complessiva di un pulsante.|  
-|**TBN_DRAGOUT**|Indica l'utente ha fatto clic sul pulsante e trascinare il puntatore dal pulsante. Consente a un'applicazione implementare il trascinamento della selezione da un pulsante della barra degli strumenti. Quando si riceve questa notifica, l'applicazione inizierà l'operazione di trascinamento e operazione di trascinamento.|  
-|**TBN_DROPDOWN**|Indica l'utente ha fatto clic su un pulsante che utilizza il **TBSTYLE_DROPDOWN** stile.|  
-|**TBN_GETOBJECT**|Indica l'utente ha spostato il puntatore su un pulsante che utilizza il **TBSTYLE_DROPPABLE** stile.|  
+|**TBN_DRAGOUT**|Indica l'utente ha fatto clic sul pulsante e trascinare il puntatore del mouse dal pulsante. Consente a un'applicazione implementare il trascinamento della selezione da un pulsante della barra degli strumenti. Quando si riceve questa notifica, l'applicazione di iniziare l'operazione di trascinamento e l'operazione di eliminazione.|  
+|**TBN_DROPDOWN**|Indica l'utente ha fatto clic sul pulsante che usa il **TBSTYLE_DROPDOWN** stile.|  
+|**TBN_GETOBJECT**|Indica l'utente ha spostato il puntatore su un pulsante che usa il **TBSTYLE_DROPPABLE** stile.|  
   
- Per una funzione del gestore di esempio e altre informazioni sull'abilitazione di descrizioni, vedere [descrizioni](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
+ Per una funzione di gestore di esempio e altre informazioni sull'abilitazione di descrizioni comandi, vedere [descrizioni](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   

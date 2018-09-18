@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021564"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
+
 Fornisce un'implementazione del [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\)) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *T*  
- L'oggetto sessione derivato da `IDBCreateCommandImpl`.  
+
+*T*<br/>
+L'oggetto sessione derivato da `IDBCreateCommandImpl`.  
   
- *CommandClass*  
- Classe del comando.  
+*CommandClass*<br/>
+Classe del comando.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldb.h  
+
+**Intestazione:** atldb.h  
   
 ## <a name="members"></a>Membri  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |[CreateCommand](#createcommand)|Crea un nuovo comando.|  
   
 ## <a name="remarks"></a>Note  
- Interfaccia opzionale sull'oggetto sessione per ottenere un nuovo comando.  
+
+Interfaccia opzionale sull'oggetto sessione per ottenere un nuovo comando.  
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl:: CreateCommand
+
 Crea un nuovo comando e restituisce l'interfaccia richiesta.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -74,14 +79,16 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IDBCreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IDBCreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
- Alcuni parametri corrispondono ai *riferimento per programmatori OLE DB* i parametri dei nomi diversi, descritte nelle `IDBCreateCommand::CreateCommand`:  
+Alcuni parametri corrispondono ai *riferimento per programmatori OLE DB* i parametri dei nomi diversi, descritte nelle `IDBCreateCommand::CreateCommand`:  
   
 |Parametri di modelli OLE DB|*Riferimento per programmatori OLE DB* parametri|  
 |--------------------------------|------------------------------------------------|  
 |*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

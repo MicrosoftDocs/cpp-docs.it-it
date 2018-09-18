@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2302 | Documenti Microsoft
+title: Errore del compilatore C2302 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4484e5cb76995a8bd75eeaf83d3d28383fdf900
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482612aaddc659d0f3c07746051ac93b1ff362de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168188"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055715"
 ---
 # <a name="compiler-error-c2302"></a>Errore del compilatore C2302
-l'elemento a sinistra di '.~identifier' deve avere tipo di classe, struttura o unione  
-  
- L'espressione a sinistra dell'operatore punto (.) non è una classe, struttura o unione.
+
+l'elemento a sinistra di '.~identifier' deve avere tipo di classe, struttura o unione
+
+L'espressione a sinistra dell'operatore punto (.) non è una classe, struttura o unione.

@@ -1,5 +1,5 @@
 ---
-title: auto_handle::auto_handle | Documenti Microsoft
+title: auto_handle::auto_handle | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: af9ca3d472aa3c942b86d338a6b6f8f25a573ca8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67cc2393feff127e2b4278f5a5257ea2be102237
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018600"
 ---
 # <a name="autohandleautohandle"></a>auto_handle::auto_handle
 Il `auto_handle` costruttore.  
@@ -47,11 +47,11 @@ auto_handle(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_ptr`  
- L'oggetto proprietario.  
+*_ptr*<br/>
+L'oggetto proprietario.  
   
- `_right`  
- Oggetto `auto_handle` esistente.  
+*a destra*<br/>
+Oggetto `auto_handle` esistente.  
   
 ## <a name="example"></a>Esempio  
   

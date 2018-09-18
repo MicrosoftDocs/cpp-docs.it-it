@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2512 | Documenti Microsoft
+title: Errore del compilatore C2512 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 286be19ca407039a77d51503a34c7a27da1c3d5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1fbba98237879927fd82d6535c0c2688c1c304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036919"
 ---
 # <a name="compiler-error-c2512"></a>Errore del compilatore C2512
 
-> '*identificatore*': non è disponibile alcun costruttore predefinito appropriato  
+> «*identificatore*': non è disponibile alcun costruttore predefinito appropriato
 
-Oggetto *costruttore predefinito*, un costruttore che non richiede argomenti, non è disponibile per la classe specificata, struttura o unione. Il compilatore fornisce un costruttore predefinito solo se non è specificati alcun costruttore definito dall'utente.
+Oggetto *costruttore predefinito*, un costruttore che non richiede argomenti, non è disponibile per la classe specificata, struttura o unione. Il compilatore fornisce un costruttore predefinito solo se non vengono forniti alcuna costruttori definiti dall'utente.
 
-Se si fornisce un costruttore che accetta un parametro non void e si desidera che la classe possa essere creata senza parametri (ad esempio, gli elementi della matrice), è necessario fornire anche un costruttore predefinito. Il costruttore predefinito può essere un costruttore con valori predefiniti per tutti i parametri.
+Se si specifica un costruttore che accetta un parametro non void e si vuole consentire la classe deve essere creata senza parametri (ad esempio gli elementi della matrice), è necessario fornire anche un costruttore predefinito. Il costruttore predefinito può essere un costruttore con valori predefiniti per tutti i parametri.
 
 ## <a name="example"></a>Esempio
 
-Una causa comune di errore C2512 è quando si definisce un costruttore di classe o struct che accetta argomenti, e quindi si tenta di dichiarare un'istanza della classe o struct senza argomenti. Ad esempio, `struct B` seguito dichiara un costruttore che richiede un `char *` argomento, ma non uno che non accetta argomenti. In `main`, viene dichiarata un'istanza di B, ma viene fornito alcun argomento. Il compilatore genera l'errore C2512 perché non è possibile trovare un costruttore predefinito per B.
+Una causa comune dell'errore C2512 è quando si definisce un costruttore di classe o struct che accetta argomenti, e quindi si tenta di dichiarare un'istanza di classe o struct senza argomenti. Ad esempio, `struct B` di seguito dichiara un costruttore che richiede un `char *` argomento, ma non quello che non accetta argomenti. In `main`, viene dichiarata un'istanza di B, ma viene fornito alcun argomento. Il compilatore genera l'errore C2512 perché non è possibile trovare un costruttore predefinito per B.
 
 ```cpp
 // C2512.cpp
@@ -50,4 +50,4 @@ int main() {
 }
 ```
 
-È possibile risolvere il problema mediante la definizione di un costruttore predefinito per la struttura o una classe, ad esempio `B() {}`, o un costruttore in cui tutti gli argomenti presentano valori predefiniti, ad esempio `B (char * = nullptr) {}`.
+È possibile risolvere il problema con la definizione di un costruttore predefinito per le struct o una classe, ad esempio `B() {}`, o un costruttore in cui tutti gli argomenti sono valori predefiniti, ad esempio `B (char * = nullptr) {}`.

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017963"
 ---
 # <a name="cdynamicchain-class"></a>Classe CDynamicChain
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>Parametri
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle alla finestra di ricezione del messaggio.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Il messaggio inviato alla finestra.
 
-*wParam*  
+*wParam*<br/>
 [in] Informazioni aggiuntive specifiche del messaggio.
 
-*lParam*  
+*lParam*<br/>
 [in] Informazioni aggiuntive specifiche del messaggio.
 
-*lResult*  
+*lResult*<br/>
 [out] Il risultato dell'elaborazione del messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>Parametri
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi. Si definisce inizialmente questo valore tramite una chiamata a [SetChainEntry](#setchainentry).
 
 ### <a name="return-value"></a>Valore restituito
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>Parametri
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] L'identificatore univoco associato l'oggetto concatenata e propria mappa messaggi.
 
-*pObject*  
+*pObject*<br/>
 [in] Un puntatore all'oggetto concatenata dichiarando la mappa dei messaggi. Questo oggetto deve derivare da [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] L'identificatore della mappa del messaggio nell'oggetto concatenata. Il valore predefinito è 0, che identifica la mappa dei messaggi predefinito dichiarata con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Per specificare una mappa messaggi alternativa dichiarato con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passare `msgMapID`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -201,5 +201,5 @@ Se il *dwChainID* valore esiste già nella raccolta, il suo oggetto associato e 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
+[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

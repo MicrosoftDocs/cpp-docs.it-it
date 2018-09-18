@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75cb922f2bd5cc6da2666a59bd0827b7ec013bf2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: bda159ed4111bffe935d5ceb6824662159553ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032016"
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>OR bit per bit operatore OR inclusivo: |
 
@@ -61,5 +61,6 @@ int main() {
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
- [Operatori bit per bit C](../c-language/c-bitwise-operators.md)  
+
+[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori bit per bit C](../c-language/c-bitwise-operators.md)

@@ -51,14 +51,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459192f5936db3c47d2377885cf3ca30dadb92df
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: f72bb476d50f9f8d382657ed3b9109bc6a399a09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020303"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
+
 Trova un carattere in una stringa usando le impostazioni locali correnti o una categoria di stato di conversione LC_CTYPE specificata.
 
 > [!IMPORTANT]

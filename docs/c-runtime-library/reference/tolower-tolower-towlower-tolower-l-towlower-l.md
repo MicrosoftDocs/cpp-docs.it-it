@@ -53,14 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412628"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023666"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+
 Converte un carattere in minuscolo.
 
 ## <a name="syntax"></a>Sintassi
@@ -95,13 +96,13 @@ Impostazioni locali da usare per la conversione specifica delle impostazioni loc
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine converte una copia della *c* in lettere minuscole se la conversione è possibile e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
+Ognuna di queste routine converte una copia di *c* in lettere minuscole se la conversione è possibile e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione di maiuscole e minuscole **towlower** dalle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il **l** utilizzare il suffisso delle impostazioni locali. Le versioni di queste funzioni con il **l** suffisso accettano le impostazioni locali come parametro e che usano anziché attualmente impostati dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione di maiuscole e minuscole **towlower** dipende dalle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il **l** suffisso usare correnti delle impostazioni locali. Le versioni di queste funzioni che hanno le **l** suffisso accettano le impostazioni locali come parametro e usano tali anziché correnti delle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Affinché **ToLower** per fornire i risultati previsti [isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) deve restituire sia diverso da zero.
+Affinché **ToLower** possa fornire i risultati previsti [isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devono entrambe restituire diverso da zero.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -111,7 +112,7 @@ Affinché **ToLower** per fornire i risultati previsti [isascii](isascii-isascii
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **tolower_l** e **towlower_l** non dispone di alcuna dipendenza dalle impostazioni locali e non sono concepiti per essere chiamati direttamente. Vengono forniti per uso interno da parte **_totlower_l**.
+> **tolower_l** e **towlower_l** non dipendono dalle impostazioni locali e non sono progettate per essere chiamate direttamente. Vengono forniti per uso interno da parte **_totlower_l**.
 
 ## <a name="requirements"></a>Requisiti
 
