@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Dichiarazione di una classe per una tabella (ODBC) | Documenti Microsoft'
+title: 'Recordset: Dichiarazione di una classe per una tabella (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 460b09d32b46bb9f15a95bcb976afa63519b8263
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107663"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset: dichiarazione di una classe per una tabella (ODBC)
+
 Questo argomento si applica alle classi ODBC MFC.  
   
- La classe recordset più comune verrà visualizzata una singola tabella. Per dichiarare una classe per una singola tabella, utilizzare il [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) da **Aggiungi classe** e scegliere le colonne desiderate specificando un membro dati di campo del recordset corrispondente.  
+La classe recordset più comune si apre una singola tabella. Per dichiarare una classe recordset per una singola tabella, usare il [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) dalla **Aggiungi classe** e scegliere le colonne desiderate assegnando un membro dati di campo del recordset corrispondente.  
   
- Altri utilizzi per i recordset includono:  
+Altri utilizzi per i recordset comprendono:  
   
--   Unione di due o più tabelle.  
+- Unione di due o più tabelle.  
   
--   Contenente i risultati di una query predefinita.  
+- Contenente i risultati di una query predefinita.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Recordset: Creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
- [Recordset: Dichiarazione di una classe per una Query già definita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Recordset: esecuzione di un join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+
+[Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Recordset: dichiarazione di una classe per una query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Recordset: esecuzione di un join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

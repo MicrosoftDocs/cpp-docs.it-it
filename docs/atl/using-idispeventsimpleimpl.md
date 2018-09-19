@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47cef741e9db3237bbc9f6477cdf2863b38e4e3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 00dadde438af1b4de820316dd4dc50e773827aca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107524"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Uso di IDispEventSimpleImpl
 
@@ -46,7 +46,7 @@ L'esempio seguente viene illustrato come gestire le `DocumentChange` eventi gene
 L'esempio è tratto dal [esempio ATLEventHandling](../visual-cpp-samples.md).  
 
 ```cpp
-[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]  
+[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
 dispinterface ApplicationEvents {
 properties:
 methods:
@@ -77,6 +77,6 @@ Il codice seguente deriva dal Simple. cpp:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione degli eventi](../atl/event-handling-and-atl.md)   
+[Gestione di eventi](../atl/event-handling-and-atl.md)<br/>
 [Nell'esempio ATLEventHandling](../visual-cpp-samples.md)
 

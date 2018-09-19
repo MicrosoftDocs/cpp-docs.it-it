@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4002 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4002 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78bf20b152f70350b88d7cae5db71ce6df855f5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3774dd53ba9d6dde24909df1ade33bfb7e13b840
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107641"
 ---
 # <a name="linker-tools-warning-lnk4002"></a>Avviso degli strumenti del linker LNK4002
-simbolo definito nell'oggetto  
-  
- Il simbolo, visualizzato nel formato decorato, è stato specificato in formato non decorato in `object`, ma non è stato possibile trovare una corrispondenza univoca con un simbolo decorato. Questo avviso è sempre preceduto dall'avviso [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) e seguito da un errore irreversibile [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+
+simbolo definito nell'oggetto
+
+Il simbolo, visualizzato nel formato decorato, è stato specificato in formato non decorato in `object`, ma non è stato possibile trovare una corrispondenza univoca con un simbolo decorato. Questo avviso viene sempre preceduto da avviso [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) seguita da un errore irreversibile [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).

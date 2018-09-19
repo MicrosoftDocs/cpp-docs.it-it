@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2855 | Documenti Microsoft
+title: Errore del compilatore C2855 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68441fad9f6261e01f91c0557eed583a5331e143
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbdbb2b5498f3312dd12b27755405ee77cc3b1e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108469"
 ---
 # <a name="compiler-error-c2855"></a>Errore del compilatore C2855
-opzione della riga di comando 'opzione' non è coerente con l'intestazione precompilata  
-  
- L'opzione della riga di comando specificato è diverso dall'opzione utilizzata per creare l'intestazione precompilata. Rigenerare l'intestazione precompilata con l'opzione della riga di comando specificata.
+
+opzione della riga di comando 'option' non è coerente con l'intestazione precompilata
+
+L'opzione della riga di comando specificato è diverso dall'opzione usata per creare l'intestazione precompilata. Rigenerare l'intestazione precompilata con l'opzione della riga di comando specificata.

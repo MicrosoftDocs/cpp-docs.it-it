@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3699 | Documenti Microsoft
+title: Errore del compilatore C3699 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddbf6ac43b2a3d987faa86fab6d9862068fc0fe0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64e5a5bb98f9e8a6950bbb279c026f167a2ee92e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107712"
 ---
 # <a name="compiler-error-c3699"></a>Errore del compilatore C3699
-'operator': non è possibile utilizzare questo riferimento indiretto nel tipo 'type'  
-  
- Si è verificato un tentativo di utilizzare un riferimento indiretto non consentito in `type`.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3699.  
-  
-```  
-// C3699.cpp  
-// compile with: /clr /c  
-using namespace System;  
-int main() {  
-   String * s;   // C3699  
-   // try the following line instead  
-   // String ^ s2;  
-}  
-```  
-  
-## <a name="example"></a>Esempio  
- Una proprietà trivial non può avere il tipo di riferimento. Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md) . L'esempio seguente genera l'errore C3699.  
-  
-```  
-// C3699_b.cpp  
-// compile with: /clr /c  
-ref struct C {  
-   property System::String % x;   // C3699  
-   property System::String ^ y;   // OK  
-};  
-```  
-  
-## <a name="example"></a>Esempio  
- L'equivalente di una sintassi di "puntatore a un puntatore" è un handle a un riferimento di rilevamento. L'esempio seguente genera l'errore C3699.  
-  
-```  
-// C3699_c.cpp  
-// compile with: /clr /c  
-using namespace System;  
-void Test(String ^^ i);   // C3699  
-void Test2(String ^% i);  
+
+'operator': non è possibile usare questo riferimento indiretto nel tipo 'type'
+
+È stato effettuato un tentativo per utilizzare un riferimento indiretto non consentito su `type`.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3699.
+
+```
+// C3699.cpp
+// compile with: /clr /c
+using namespace System;
+int main() {
+   String * s;   // C3699
+   // try the following line instead
+   // String ^ s2;
+}
+```
+
+## <a name="example"></a>Esempio
+
+Una proprietà trivial non può avere tipo di riferimento. Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md) . L'esempio seguente genera l'errore C3699.
+
+```
+// C3699_b.cpp
+// compile with: /clr /c
+ref struct C {
+   property System::String % x;   // C3699
+   property System::String ^ y;   // OK
+};
+```
+
+## <a name="example"></a>Esempio
+
+L'equivalente di una sintassi di "puntatore a un puntatore" è un handle per un riferimento di traccia. L'esempio seguente genera l'errore C3699.
+
+```
+// C3699_c.cpp
+// compile with: /clr /c
+using namespace System;
+void Test(String ^^ i);   // C3699
+void Test2(String ^% i);
 ```

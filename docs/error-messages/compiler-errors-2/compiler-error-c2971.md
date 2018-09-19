@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2971 | Documenti Microsoft
+title: Errore del compilatore C2971 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd46be67a2ce8e7f3a8ab1319c7a16a465797474
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a311e6cd25ab275b7aa38325e45d26fd733d8b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107538"
 ---
 # <a name="compiler-error-c2971"></a>Errore del compilatore C2971
-'class': parametro di modello 'param': 'arg': una variabile locale non può essere utilizzata come argomento non di tipo  
-  
- È possibile utilizzare il nome o l'indirizzo di una variabile locale come argomento di modello.  
-  
- L'esempio seguente genera l'errore C2971:  
-  
-```  
-// C2971.cpp  
-template <int *pi>   
-class Y {};  
-  
-int global_var = 0;  
-  
-int main() {  
-   int local_var = 0;  
-   Y<&local_var> aY;   // C2971  
-   // try the following line instead  
-   // Y<&global_var> aY;  
-}  
+
+'class': parametro di modello 'param': 'arg': una variabile locale non può essere utilizzata come un argomento non di tipo
+
+È possibile usare il nome o l'indirizzo di una variabile locale come argomento di modello.
+
+L'esempio seguente genera l'errore C2971:
+
+```
+// C2971.cpp
+template <int *pi>
+class Y {};
+
+int global_var = 0;
+
+int main() {
+   int local_var = 0;
+   Y<&local_var> aY;   // C2971
+   // try the following line instead
+   // Y<&global_var> aY;
+}
 ```

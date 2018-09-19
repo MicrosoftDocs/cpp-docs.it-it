@@ -1,5 +1,5 @@
 ---
-title: File generato dalla creazione guidata provider | Documenti Microsoft
+title: I file generati dalla procedura guidata del provider | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac23f06bf1ae697ecd627d493aa5902219488138
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26e20e0417e2253158930a8d3d055171fe767001
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108404"
 ---
 # <a name="provider-wizard-generated-files"></a>File del provider generati tramite procedura guidata
-La creazione guidata Provider OLE DB ATL genera i seguenti file. Gli argomenti seguenti di utilizzare il nome breve "MyProvider", ma i nomi esatti del file dipenderanno la scelta effettuata quando si crea il provider.  
+
+La creazione guidata Provider OLE DB ATL genera i file seguenti. Gli argomenti seguenti usano il nome breve "MyProvider", ma i nomi esatti del file dipendono dalle scelte effettuate durante la creazione del provider.  
   
 |Nome file|Descrizione|  
 |---------------|-----------------|  
-|MyProviderRS.cpp|Contiene il supporto di comandi `Execute` metodo e la mappa delle colonne del provider.|  
+|MyProviderRS.cpp|Contiene l'helper comando `Execute` metodo e la mappa delle colonne del provider.|  
 |MyProviderDS.h|Implementa l'oggetto origine dati. Questo file di intestazione contiene il mapping di proprietà dell'origine dati.|  
 |MyProviderRS.h|Implementa gli oggetti comando e set di righe. Questo file di intestazione contiene il mapping di proprietà per proprietà rowset e comando.|  
-|MyProviderSess.h|Implementa l'oggetto di sessione. Questo file di intestazione contiene il mapping di proprietà per proprietà della sessione.|  
+|MyProviderSess.h|Implementa l'oggetto sessione. Questo file di intestazione contiene il mapping di proprietà per proprietà della sessione.|  
 |MyProvider.rgs|Contiene gli oggetti registrati generati dalla creazione guidata Provider OLE DB.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

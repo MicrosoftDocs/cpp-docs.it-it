@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47c017a178d0a222780532b74db4135447f062
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a7364f86ad08f882660f49556853826bb7186f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108430"
 ---
 # <a name="iviewobjecteximpl-class"></a>Classe IViewObjectExImpl
 
@@ -49,14 +49,14 @@ Questa classe implementa `IUnknown` e fornisce le implementazioni predefinite de
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IViewObjectExImpl 
    : public IViewObjectEx
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe, derivata da `IViewObjectExImpl`.
 
 ## <a name="members"></a>Membri
@@ -309,7 +309,7 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>Parametri
 
-*hHandle*  
+*hHandle*<br/>
 Handle da chiudere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -336,10 +336,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parametri
 
-*dwParam*  
+*dwParam*<br/>
 Il parametro user.
 
-*hObject*  
+*hObject*<br/>
 Handle che è diventato segnalato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -358,8 +358,8 @@ Il codice seguente illustra un'implementazione semplice di `IWorkerThreadClient:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Interfacce di controlli ActiveX](/windows/desktop/com/activex-controls-interfaces)   
-[Esercitazione](../../atl/active-template-library-atl-tutorial.md)   
-[Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)   
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Interfacce di controlli ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
+[Esercitazione](../../atl/active-template-library-atl-tutorial.md)<br/>
+[Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3728 | Documenti Microsoft
+title: Errore del compilatore C3728 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae204db616db9e7d7e04cfd62d53374b0793aa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e412824bd2afdadfc21d71b73f38eb8ba5ace82d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108417"
 ---
 # <a name="compiler-error-c3728"></a>Errore del compilatore C3728
-'event': evento privo di un metodo di generazione  
-  
- I metadati creati con un linguaggio, ad esempio c#, che non consente un evento da generare dall'esterno della classe in cui è stato definito, è stato incluso il [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva e un programma Visual C++ utilizza la programmazione CLR ha tentata di Genera l'evento.  
-  
- Per generare un evento in un programma sviluppato in un linguaggio quale c#, la classe che contiene l'evento deve anche definire un metodo pubblico che genera l'evento.
+
+'event': evento non ha un metodo di generazione
+
+Metadati creati con un linguaggio, ad esempio c#, che non supporta un evento da generare dall'esterno della classe in cui è stato definito, è stato incluso il [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva e un programma Visual C++ tramite la programmazione CLR ha tentata di generare l'evento.
+
+Per generare un evento in un'applicazione sviluppata in un linguaggio come c#, la classe che contiene l'evento deve anche definire un metodo pubblico che genera l'evento.

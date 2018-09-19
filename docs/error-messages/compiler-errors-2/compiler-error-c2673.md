@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2673 | Documenti Microsoft
+title: Errore del compilatore C2673 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d819a5e0e9cc7fb5acffdd2c476d05ceb23fec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 942ad581c4b272078eabfe225e7fdab2245d0ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108526"
 ---
 # <a name="compiler-error-c2673"></a>Errore del compilatore C2673
-'function': le funzioni globali non hanno puntatori 'this'  
-  
- Una funzione globale ha tentato di accedere a `this`.  
-  
- L'esempio seguente genera l'errore C2673:  
-  
-```  
-// C2673.cpp  
-int main() {  
-   this = 0;   // C2673  
-}  
+
+'function': le funzioni globali non hanno puntatori 'this'
+
+Una funzione globale ha provato ad accedere `this`.
+
+L'esempio seguente genera l'errore C2673:
+
+```
+// C2673.cpp
+int main() {
+   this = 0;   // C2673
+}
 ```

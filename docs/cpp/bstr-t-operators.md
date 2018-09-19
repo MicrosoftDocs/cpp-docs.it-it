@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5db61b6106d34725e2edba8b5681391c6a7147a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ed011a2d6de6b076853c7452e24e116b079655b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107711"
 ---
 # <a name="bstrt-operators"></a>Operatori _bstr_t
-Per informazioni sul `_bstr_t` gli operatori, vedere [classe bstr_t](../cpp/bstr-t-class.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe _bstr_t](../cpp/bstr-t-class.md)
+
+Per informazioni sul `_bstr_t` gli operatori, vedere [classe bstr_t](../cpp/bstr-t-class.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe _bstr_t](../cpp/bstr-t-class.md)
