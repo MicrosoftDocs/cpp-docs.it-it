@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040232"
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
 
@@ -42,13 +42,13 @@ Questa classe crea un thread di lavoro o viene utilizzato uno esistente, è in a
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 La classe che fornisce la funzione di creazione di thread, ad esempio [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) oppure [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
 ## <a name="members"></a>Membri
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>Parametri
 
-*hObject*  
+*hObject*<br/>
 Handle per un oggetto awaitable.
 
-*pClient*  
+*pClient*<br/>
 Il puntatore per il [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interfaccia sull'oggetto da chiamare quando l'handle viene segnalato.
 
-*dwParam*  
+*dwParam*<br/>
 Il parametro deve essere passato [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) quando l'handle viene segnalato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>Parametri
 
-*dwInterval*  
+*dwInterval*<br/>
 Specifica il periodo del timer in millisecondi.
 
-*pClient*  
+*pClient*<br/>
 Il puntatore per il [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interfaccia sull'oggetto da chiamare quando l'handle viene segnalato.
 
-*dwParam*  
+*dwParam*<br/>
 Il parametro deve essere passato [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) quando l'handle viene segnalato.
 
-*phTimer*  
+*phTimer*<br/>
 [out] Indirizzo della variabile di HANDLE che, in caso di esito positivo riceve l'handle per il timer appena creato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pThread*  
+*pThread*<br/>
 Un thread di lavoro esistente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*hObject*  
+*hObject*<br/>
 Handle da rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*dwWait*  
+*dwWait*<br/>
 Tempo in millisecondi di attesa per il thread di lavoro da arrestare. ATL_WORKER_THREAD_WAIT il valore predefinito è 10 secondi. Se necessario, è possibile definire il proprio valore per questo simbolo prima di includere atlutil. h.
 
 ### <a name="return-value"></a>Valore restituito
@@ -285,7 +285,7 @@ Si noti che la chiamata `Shutdown` su un oggetto inizializzato con un puntatore 
 
 ## <a name="see-also"></a>Vedere anche
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[Classi](../../atl/reference/atl-classes.md)   
-[Multithreading: Creazione di thread di lavoro](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[Classi](../../atl/reference/atl-classes.md)<br/>
+[Multithreading: creazione di thread di lavoro](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [Interfaccia IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)

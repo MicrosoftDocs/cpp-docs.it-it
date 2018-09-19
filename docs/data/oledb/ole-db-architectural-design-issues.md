@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7dbc9b361dd04956803dde42f73f0d757b10b8b3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e20fce19824cf093625347bca42f55cbad302b61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040609"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemi di progettazione dell'architettura OLE DB
+
 È necessario tenere presente quanto segue prima di avviare l'applicazione OLE DB:  
   
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Quale implementazione di programmazione si userà per scrivere un'applicazione OLE DB?

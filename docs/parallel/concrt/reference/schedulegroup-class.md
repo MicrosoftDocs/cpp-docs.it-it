@@ -1,5 +1,5 @@
 ---
-title: Classe ScheduleGroup | Documenti Microsoft
+title: Classe ScheduleGroup | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df2ad30fca410a71bc6333e34948bc938ca38d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039991"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 Rappresenta un'astrazione per un gruppo di pianificazione. I gruppi di pianificazione organizzano un set di lavoro correlato che trae vantaggio da una chiusura pianificata a livello temporaneo, eseguendo un'altra attività nello stesso gruppo prima di spostarsi in un altro gruppo, o a livello spaziale, eseguendo più elementi all'interno dello stesso gruppo sullo stesso nodo NUMA o sul socket fisico.  
@@ -75,7 +75,7 @@ virtual unsigned int Id() const = 0;
   
 ##  <a name="operator_delete"></a> operatore delete 
 
- Oggetto `ScheduleGroup` oggetto sia distrutto internamente dal runtime quando vengono rilasciati tutti i riferimenti esterni a esso. Non è possibile eliminarlo in modo esplicito.  
+ Oggetto `ScheduleGroup` oggetto viene eliminato definitivamente internamente dal runtime quando vengono rilasciati tutti i riferimenti esterni. Non è possibile eliminarlo in modo esplicito.  
   
 ```
 void operator delete(
@@ -89,8 +89,8 @@ void operator delete(
 ```    
   
 ### <a name="parameters"></a>Parametri  
- `_PObject`  
- Un puntatore all'oggetto da eliminare.  
+*_PObject*<br/>
+Un puntatore all'oggetto da eliminare.  
   
 ##  <a name="reference"></a> Riferimento 
 
@@ -104,9 +104,9 @@ virtual unsigned int Reference() = 0;
  Il conteggio dei riferimenti appena incrementato.  
   
 ### <a name="remarks"></a>Note  
- Viene in genere utilizzato per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Un gruppo di pianificazione creato utilizzando il [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) metodo, o [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) metodo inizia con un conteggio dei riferimenti di uno.  
+ Ciò in genere viene usato per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Un gruppo di pianificazione creato usando il [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) metodo, o il [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) metodo inizia con un conteggio dei riferimenti di uno.  
   
-##  <a name="release"></a> versione 
+##  <a name="release"></a> Versione 
 
  Decrementa il conteggio dei riferimenti del gruppo di pianificazione.  
   
@@ -118,7 +118,7 @@ virtual unsigned int Release() = 0;
  Il conteggio dei riferimenti appena decrementato.  
   
 ### <a name="remarks"></a>Note  
- Viene in genere utilizzato per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Dopo aver chiamato il metodo `Release` per il numero specifico di volte per rimuovere il conteggio riferimenti di creazione e qualsiasi riferimento aggiuntivo inserito utilizzando il metodo `Reference`, non è possibile utilizzare ulteriormente il gruppo di pianificazione. Questa operazione provocherà un comportamento indefinito.  
+ Ciò in genere viene usato per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Dopo aver chiamato il metodo `Release` per il numero specifico di volte per rimuovere il conteggio riferimenti di creazione e qualsiasi riferimento aggiuntivo inserito utilizzando il metodo `Reference`, non è possibile utilizzare ulteriormente il gruppo di pianificazione. In questo modo, è determineranno un comportamento non definito.  
   
  Un gruppo di pianificazione è associato a un'istanza di utilità di pianificazione specifica. È necessario assicurarsi che tutti i riferimenti al gruppo di pianificazione vengano rilasciati prima del rilascio di tutti i riferimenti all'utilità di pianificazione, poiché questi ultimi potrebbero provocare la distruzione dell'utilità di pianificazione. In caso contrario potrebbe un comportamento indefinito.  
   
@@ -139,11 +139,11 @@ virtual void ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Proc`  
- Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.  
+*_Proc*<br/>
+Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.  
   
- `_Data`  
- Un puntatore void per i dati che verranno passati come parametro per il corpo dell'attività.  
+*Data*<br/>
+Un puntatore void per i dati che verranno passati come parametro al corpo dell'attività.  
   
 ### <a name="remarks"></a>Note  
  La chiamata di `ScheduleTask` metodo posiziona in modo implicito un conteggio dei riferimenti nel gruppo di pianificazione che è stata rimossa dal runtime in un momento appropriato dopo l'esecuzione dell'attività.  
@@ -151,7 +151,7 @@ virtual void ScheduleTask(
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
  [Classe CurrentScheduler](currentscheduler-class.md)   
- [Classe di utilità di pianificazione](scheduler-class.md)   
+ [Classe Scheduler](scheduler-class.md)   
  [Utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

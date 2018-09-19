@@ -1,5 +1,5 @@
 ---
-title: lock::acquire | Documenti Microsoft
+title: lock::acquire | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 54b74721e39489ce8fab5eb93f626f78493479b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c0b89b635ec0f0487027d5a90e43c57c39cde34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042013"
 ---
 # <a name="lockacquire"></a>lock::acquire
-Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco continuo, per un determinato periodo di tempo o affatto.  
+Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un determinato periodo di tempo o niente affatto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,19 +44,19 @@ void acquire(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_timeout`  
- Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.  
+*timeout*<br/>
+Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Eccezioni  
- Genera <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguito prima del timeout.  
+ Genera un'eccezione <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguito prima del timeout.  
   
 ## <a name="remarks"></a>Note  
- Se non viene specificato un valore di timeout, il timeout predefinito è <xref:System.Threading.Timeout.Infinite>.  
+ Se non viene fornito un valore di timeout, il timeout predefinito è <xref:System.Threading.Timeout.Infinite>.  
   
  Se è già stato acquisito un blocco, questa funzione non esegue alcuna operazione.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio Usa una singola istanza di una classe su più thread.  Per verificare che gli accessi ai dati interni siano coerenti per ogni thread, la classe Usa un blocco su se stesso.  Il thread principale dell'applicazione utilizza un blocco sulla stessa istanza della classe per controllare periodicamente per vedere se un thread di lavoro continuano a esistere e attese per uscire dall'installazione fino a quando tutti i thread di lavoro completamento delle attività.  
+ Questo esempio Usa una singola istanza di una classe in più thread.  La classe Usa un blocco su se stesso per garantire la coerenza per ogni thread che accede ai propri dati interni.  Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se qualsiasi thread di lavoro continuano a esistere e attese per uscire dalla finché tutti thread di lavoro completate le attività.  
   
 ```  
 // msl_lock_acquire.cpp  

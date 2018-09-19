@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3752 | Documenti Microsoft
+title: Errore del compilatore C3752 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcc71d7e7418571b606be96e571c2b855f8497f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d12ae854e54080fe0b80c3e4ffd2d4b3f514651f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041727"
 ---
 # <a name="compiler-error-c3752"></a>Errore del compilatore C3752
-'classe attributo': non è possibile classificare l'attributo. 'keyword' non deve essere utilizzato in questo contesto  
-  
- Un attributo definito dall'utente è stato applicato in modo non corretto.
+
+'classe attribute': non è possibile classificare l'attributo. 'keyword' non deve essere utilizzato in questo contesto
+
+Un attributo definito dall'utente è stato applicato in modo non corretto.

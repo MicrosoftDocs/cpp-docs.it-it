@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5d78ea68606513b2fe8491137e29fb45afb36e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3069762810aebae516d6d02ce69da215a2847c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761498"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038936"
 ---
 # <a name="event-handling-and-atl"></a>Gestione di eventi e ATL
 
@@ -29,24 +29,24 @@ Per informazioni su come generare eventi e implementare i punti di connessione, 
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Principi di gestione degli eventi](../atl/event-handling-principles.md)  
+[Principi di gestione degli eventi](../atl/event-handling-principles.md)<br/>
 Vengono illustrati i passaggi comuni per la gestione degli eventi tutti.
 
-[Implementazione dell'interfaccia di gestione degli eventi](../atl/implementing-the-event-handling-interface.md)  
+[Implementazione dell'interfaccia di gestione degli eventi](../atl/implementing-the-event-handling-interface.md)<br/>
 Vengono illustrate le classi da usare per implementare l'interfaccia eventi.
 
-[Uso di IDispEventImpl](../atl/using-idispeventimpl.md)  
+[Uso di IDispEventImpl](../atl/using-idispeventimpl.md)<br/>
 Elenca i passaggi per l'uso di `IDispEventImpl` e Mostra un esempio di codice.
 
-[Uso di IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
+[Uso di IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)<br/>
 Elenca i passaggi per l'uso di `IDispEventSimpleImpl` e Mostra un esempio di codice.
 
-[Riepilogo della gestione degli eventi ATL](../atl/atl-event-handling-summary.md)  
+[Riepilogo della gestione degli eventi ATL](../atl/atl-event-handling-summary.md)<br/>
 Riepiloga, utilizzo di tabelle, i principali metodi per implementare un'interfaccia di eventi e per consigli l'origine evento mediante ATL.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 
 ## <a name="see-also"></a>Vedere anche

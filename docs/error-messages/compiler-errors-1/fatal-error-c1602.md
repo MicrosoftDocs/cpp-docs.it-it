@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1602 | Documenti Microsoft
+title: Errore irreversibile C1602 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e108fee9b73e1fa66b8ca9a45e67eeb0ea93d290
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c26e5199c3839069a938d34daf13408ce76e99b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198326"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042845"
 ---
 # <a name="fatal-error-c1602"></a>Errore irreversibile C1602
-intrinseco non supportato  
-  
- Questo errore indica una mancata corrispondenza nei file di .exe del compilatore, potrebbe essersi verificato a causa di un'installazione incompleta. Ad esempio, si possono è installato un service pack, ma non il pacchetto del processore. Installare tutti i prodotti necessari.
+
+intrinseco non supportato
+
+Questo errore indica una mancata corrispondenza nei file del compilatore .exe, che possono essersi verificati a causa di un'installazione incompleta. Ad esempio, si potrebbe avere installato un service pack, ma non il pacchetto del processore. Installare tutti i prodotti necessari.

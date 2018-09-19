@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1061b105b7fd1e344223da3850275910c164774b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040440"
 ---
 # <a name="object-map-macros"></a>Macro della mappa oggetti
 
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Descrizione dell'oggetto classe.
 
 ### <a name="remarks"></a>Note
@@ -74,10 +74,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*  
+*clsid*<br/>
 [in] Il CLSID di una classe COM implementata dalla classe C++ denominata *classe*.
 
-*class*  
+*class*<br/>
 [in] Il nome della classe C++ implementa la classe COM rappresentata da *clsid*.
 
 ### <a name="remarks"></a>Note
@@ -106,10 +106,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*  
+*clsid*<br/>
 [in] Il CLSID di una classe COM implementata dalla classe C++ denominata *classe*.
 
-*class*  
+*class*<br/>
 [in] Il nome della classe C++ implementa la classe COM rappresentata da *clsid*.
 
 ### <a name="remarks"></a>Note

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2121 | Documenti Microsoft
+title: Errore del compilatore C2121 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fa7015880eee512cfdcaf6284c79b9c5965bb40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e40451a70744b7918301cd6dfa837df1295cea8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042403"
 ---
 # <a name="compiler-error-c2121"></a>Errore del compilatore C2121
-'#': carattere non valido: probabilmente il risultato di un'espansione di macro  
-  
- Un carattere non valido # può inserito da una macro errata che utilizza l'operatore di concatenamento dei token (#) anziché l'operatore di concatenamento (#).
+
+'#': carattere non valido: probabilmente il risultato dell'espansione di una macro
+
+Un carattere non valido & può avere inserito da una macro di tipo non corretta che utilizza l'operatore di Incolla per token (#) anziché l'operatore per (#).

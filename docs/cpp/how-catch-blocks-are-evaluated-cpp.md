@@ -18,60 +18,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f073f82114c2d58b6d4d94bfeb35048b9e676c45
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fe86770692554551b88e1aef9bbddc509e21f0f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039439"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Modalità di valutazione dei blocchi catch (C++)
-C++ consente di generare eccezioni di qualsiasi tipo, sebbene in genere sia consigliabile generare i tipi derivati da std::exception. Un'eccezione C++ può essere rilevata da un **catch** gestore che specifica lo stesso tipo dell'eccezione generata o da un gestore in grado di rilevare qualsiasi tipo di eccezione.  
-  
- Se il tipo di eccezione generata è una classe, che dispone inoltre di una o di più classi base, tale eccezione può essere rilevata da gestori che accettano le classi base del tipo dell'eccezione oppure dai riferimenti alle basi del tipo dell'eccezione. Si noti che quando un'eccezione viene rilevata da un riferimento, viene associata all'oggetto effettivo dell'eccezione generata. In caso contrario, è una copia (molto simile a un argomento di una funzione).  
-  
- Quando viene generata un'eccezione, può essere rilevata dai seguenti tipi di **catch** gestori:  
-  
--   Gestore che accetta qualsiasi tipo (mediante la sintassi costituita dai puntini di sospensione).  
-  
--   Gestore che accetta lo stesso tipo dell'oggetto eccezione. Poiché si tratta di una copia **const** e **volatile** modificatori vengono ignorati.  
-  
--   Gestore che accetta un riferimento allo stesso tipo dell'oggetto eccezione.  
-  
--   Gestore che accetta un riferimento a un **const** oppure **volatile** modulo dello stesso tipo dell'oggetto eccezione.  
-  
--   Gestore che accetta una classe di base dello stesso tipo dell'oggetto eccezione. Poiché si tratta di una copia **const** e **volatile** modificatori vengono ignorati. Il **intercettare** gestore per una classe di base non deve precedere le **catch** gestore per la classe derivata.  
-  
--   Gestore che accetta un riferimento a una classe base dello stesso tipo dell'oggetto eccezione.  
-  
--   Gestore che accetta un riferimento a un **const** oppure **volatile** forma di una classe di base dello stesso tipo dell'oggetto eccezione.  
-  
--   Gestore che accetta un puntatore a un elemento in cui un oggetto del puntatore generato può essere convertito tramite le regole di conversione standard del puntatore.  
-  
- L'ordine in cui **intercettare** gestori vengono visualizzate è significativo, perché i gestori per un determinato **provare** blocco vengono esaminate nell'ordine di visualizzazione. Ad esempio, l'inserimento del gestore per una classe base prima del gestore per una classe derivata è un errore. Dopo un oggetto corrispondente **catch** gestore viene trovato, i gestori successivi non vengono esaminati. Di conseguenza, i puntini di sospensione **intercettare** gestore deve essere l'ultimo gestore per relativo **provare** blocco. Ad esempio:  
-  
-```cpp 
-// ...  
-try  
-{  
-    // ...  
-}  
-catch( ... )  
-{  
-    // Handle exception here.  
-}  
-// Error: the next two handlers are never examined.  
-catch( const char * str )  
-{  
-    cout << "Caught exception: " << str << endl;  
-}  
-catch( CExcptClass E )  
-{  
-    // Handle CExcptClass exception here.  
-}  
-```  
-  
- In questo esempio, i puntini di sospensione **catch** gestore di è l'unico gestore che viene esaminato.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)
+
+C++ consente di generare eccezioni di qualsiasi tipo, sebbene in genere sia consigliabile generare i tipi derivati da std::exception. Un'eccezione C++ può essere rilevata da un **catch** gestore che specifica lo stesso tipo dell'eccezione generata o da un gestore in grado di rilevare qualsiasi tipo di eccezione.
+
+Se il tipo di eccezione generata è una classe, che dispone inoltre di una o di più classi base, tale eccezione può essere rilevata da gestori che accettano le classi base del tipo dell'eccezione oppure dai riferimenti alle basi del tipo dell'eccezione. Si noti che quando un'eccezione viene rilevata da un riferimento, viene associata all'oggetto effettivo dell'eccezione generata. In caso contrario, è una copia (molto simile a un argomento di una funzione).
+
+Quando viene generata un'eccezione, può essere rilevata dai seguenti tipi di **catch** gestori:
+
+- Gestore che accetta qualsiasi tipo (mediante la sintassi costituita dai puntini di sospensione).
+
+- Gestore che accetta lo stesso tipo dell'oggetto eccezione. Poiché si tratta di una copia **const** e **volatile** modificatori vengono ignorati.
+
+- Gestore che accetta un riferimento allo stesso tipo dell'oggetto eccezione.
+
+- Gestore che accetta un riferimento a un **const** oppure **volatile** modulo dello stesso tipo dell'oggetto eccezione.
+
+- Gestore che accetta una classe di base dello stesso tipo dell'oggetto eccezione. Poiché si tratta di una copia **const** e **volatile** modificatori vengono ignorati. Il **intercettare** gestore per una classe di base non deve precedere le **catch** gestore per la classe derivata.
+
+- Gestore che accetta un riferimento a una classe base dello stesso tipo dell'oggetto eccezione.
+
+- Gestore che accetta un riferimento a un **const** oppure **volatile** forma di una classe di base dello stesso tipo dell'oggetto eccezione.
+
+- Gestore che accetta un puntatore a un elemento in cui un oggetto del puntatore generato può essere convertito tramite le regole di conversione standard del puntatore.
+
+L'ordine in cui **intercettare** gestori vengono visualizzate è significativo, perché i gestori per un determinato **provare** blocco vengono esaminate nell'ordine di visualizzazione. Ad esempio, l'inserimento del gestore per una classe base prima del gestore per una classe derivata è un errore. Dopo un oggetto corrispondente **catch** gestore viene trovato, i gestori successivi non vengono esaminati. Di conseguenza, i puntini di sospensione **intercettare** gestore deve essere l'ultimo gestore per relativo **provare** blocco. Ad esempio:
+
+```cpp
+// ...
+try
+{
+    // ...
+}
+catch( ... )
+{
+    // Handle exception here.
+}
+// Error: the next two handlers are never examined.
+catch( const char * str )
+{
+    cout << "Caught exception: " << str << endl;
+}
+catch( CExcptClass E )
+{
+    // Handle CExcptClass exception here.
+}
+```
+
+In questo esempio, i puntini di sospensione **catch** gestore di è l'unico gestore che viene esaminato.
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)

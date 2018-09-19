@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d6ff72f9f5011d7c4e0f0b65cca9a82227b70d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ec124d1010a5870d47b9f1504655a7822505fe6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040492"
 ---
 # <a name="catlfile-class"></a>Classe CAtlFile
 
@@ -107,13 +107,13 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*file*  
+*file*<br/>
 L'oggetto file.
 
-*oggetto hFile*  
+*oggetto hFile*<br/>
 L'handle di file.
 
-*pTM*  
+*pTM*<br/>
 Puntatore all'oggetto CAtlTransactionManager
 
 ### <a name="remarks"></a>Note
@@ -137,25 +137,25 @@ HRESULT Create(
 
 ### <a name="parameters"></a>Parametri
 
-*szFilename*  
+*szFilename*<br/>
 Nome file.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 L'accesso desiderato. Visualizzare *dwDesiredAccess* nelle [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) nel SDK di Windows.
 
-*dwShareMode*  
+*dwShareMode*<br/>
 La modalità di condivisione. Visualizzare *dwShareMode* in `CreateFile`.
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 Disposizione di creazione. Visualizzare *dwCreationDisposition* in `CreateFile`.
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 I flag e gli attributi. Visualizzare *dwFlagsAndAttributes* in `CreateFile`.
 
-*lpsa*  
+*lpsa*<br/>
 Gli attributi di sicurezza. Visualizzare *lpSecurityAttributes* in `CreateFile`.
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 Il file di modello. Visualizzare *hTemplateFile* in `CreateFile`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -195,13 +195,13 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>Parametri
 
-*pOverlapped*  
+*pOverlapped*<br/>
 La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) nel SDK di Windows.
 
-*dwBytesTransferred*  
+*dwBytesTransferred*<br/>
 I byte trasferiti. Visualizzare *lpNumberOfBytesTransferred* in `GetOverlappedResult`.
 
-*bWait*  
+*bWait*<br/>
 L'opzione di attesa. Visualizzare *bWait* in `GetOverlappedResult`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -222,7 +222,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nPos*  
+*nPos*<br/>
 La posizione in byte.
 
 ### <a name="return-value"></a>Valore restituito
@@ -243,7 +243,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nLen*  
+*nLen*<br/>
 Il numero di byte nel file.
 
 ### <a name="return-value"></a>Valore restituito
@@ -264,10 +264,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nPos*  
+*nPos*<br/>
 La posizione nel file in cui deve iniziare il blocco.
 
-*nCount*  
+*nCount*<br/>
 La lunghezza dell'intervallo di byte da bloccare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -316,19 +316,19 @@ HRESULT Read(
 
 ### <a name="parameters"></a>Parametri
 
-*pBuffer*  
+*pBuffer*<br/>
 Puntatore al buffer che riceverà i dati letti dal file.
 
-*nBufSize*  
+*nBufSize*<br/>
 Dimensioni del buffer, in byte.
 
-*nBytesRead*  
+*nBytesRead*<br/>
 Numero di byte letti.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) nel SDK di Windows.
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 La routine di completamento. Visualizzare *lpCompletionRoutine* nelle [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
@@ -351,10 +351,10 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>Parametri
 
-*nOffset*  
+*nOffset*<br/>
 L'offset dal punto di partenza specificato da *dwFrom*.
 
-*dwFrom*  
+*dwFrom*<br/>
 Il punto di partenza (FILE_BEGIN, FILE_CURRENT o FILE_END).
 
 ### <a name="return-value"></a>Valore restituito
@@ -375,7 +375,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nNewLen*  
+*nNewLen*<br/>
 La nuova lunghezza del file in byte.
 
 ### <a name="return-value"></a>Valore restituito
@@ -396,10 +396,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nPos*  
+*nPos*<br/>
 La posizione nel file in cui deve iniziare lo sblocco.
 
-*nCount*  
+*nCount*<br/>
 La lunghezza dell'intervallo di byte da sbloccare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -434,19 +434,19 @@ HRESULT Write(
 
 ### <a name="parameters"></a>Parametri
 
-*pBuffer*  
+*pBuffer*<br/>
 Buffer contenente i dati da scrivere nel file.
 
-*nBufSize*  
+*nBufSize*<br/>
 Il numero di byte da trasferire dal buffer.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 La struttura sovrapposta. Visualizzare *lpOverlapped* nelle [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) nel SDK di Windows.
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 La routine di completamento. Visualizzare *lpCompletionRoutine* nelle [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) nel SDK di Windows.
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 Byte scritti.
 
 ### <a name="return-value"></a>Valore restituito
@@ -459,6 +459,6 @@ Chiamare le prime tre forme [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio di testo scorrevole](../../visual-cpp-samples.md)   
-[Panoramica della classe](../../atl/atl-class-overview.md)   
+[Esempio di testo scorrevole](../../visual-cpp-samples.md)<br/>
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Classe CHandle](../../atl/reference/chandle-class.md)

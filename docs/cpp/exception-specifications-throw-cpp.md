@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040940"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifiche di eccezione (throw, noexcept) (C++)
 
-Le specifiche di eccezione sono una funzionalità del linguaggio C++ che indicano lo scopo del programmatore sui tipi di eccezioni che possono essere propagati da una funzione. È possibile specificare che una funzione può o non può uscire da un'eccezione con un *specifica di eccezione*. Il compilatore può usare queste informazioni per ottimizzare le chiamate alla funzione e la funzione di escape per terminare il programma se un'eccezione imprevista. 
+Le specifiche di eccezione sono una funzionalità del linguaggio C++ che indicano lo scopo del programmatore sui tipi di eccezioni che possono essere propagati da una funzione. È possibile specificare che una funzione può o non può uscire da un'eccezione con un *specifica di eccezione*. Il compilatore può usare queste informazioni per ottimizzare le chiamate alla funzione e la funzione di escape per terminare il programma se un'eccezione imprevista.
 
 Prima di c++17 non vi sono due tipi di specifica dell'eccezione. Il *noexcept specifica* introdotto in c++11. Specifica se il set di possibili eccezioni che è possibile eseguire l'escape la funzione è vuoto. Il *specifica di eccezione dinamiche*, o `throw(optional_type_list)` specifica, è stata deprecata in c++11 e rimossi in c++17, ad eccezione dei `throw()`, che è un alias per `noexcept(true)`. Questa specifica dell'eccezione è stata progettata per fornire informazioni di riepilogo sulle eccezioni che possono essere generate da una funzione, ma in pratica è stato trovato un problema. La specifica di eccezione dinamiche uno che è risultata piuttosto utile è stata l'incondizionale `throw()` specifica. Ad esempio, la dichiarazione di funzione:
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Istruzioni try, throw e catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)
+
+[Istruzioni try, throw e catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)

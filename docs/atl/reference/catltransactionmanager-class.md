@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1217fe9c7bbb43b578a7f7236c69531f04464a44
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6109ad46fb171d4bfe3386a4746b21768510ce0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755921"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042443"
 ---
 # <a name="catltransactionmanager-class"></a>Classe CAtlTransactionManager
 
@@ -124,10 +124,10 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="parameters"></a>Parametri
 
-*bFallback*  
+*bFallback*<br/>
 TRUE indica che il fallback di supporto. Se sottoposta a transazione funzione ha esito negativo, la classe chiama automaticamente la funzione "non in transazioni". FALSE non indica nessuna chiamata "fallback".
 
-*bAutoCreateTransaction*  
+*bAutoCreateTransaction*<br/>
 TRUE indica che il gestore delle transazioni viene creato automaticamente nel costruttore. FALSE indica che non lo è.
 
 ### <a name="remarks"></a>Note
@@ -197,25 +197,25 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>Parametri
 
-*lpFileName*  
+*lpFileName*<br/>
 Il nome di un oggetto può essere creato o aperto.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 L'accesso all'oggetto, che può essere riepilogata come lettura, scrittura, entrambi o Nessuno (zero). I valori più comunemente usati sono GENERIC_READ, GENERIC_WRITE o entrambi: GENERIC_READ &#124; GENERIC_WRITE.
 
-*dwShareMode*  
+*dwShareMode*<br/>
 La modalità di condivisione di un oggetto che può essere di lettura, scrittura, entrambi, Elimina, tutti di questi elementi o nessun: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 Un puntatore a una struttura SECURITY_ATTRIBUTES che contiene un descrittore di sicurezza facoltativo e determina inoltre se l'handle restituito può essere ereditato dai processi figlio. Il parametro può essere NULL.
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 Un'azione da eseguire sui file esistenti e non esistono. Questo parametro deve essere uno dei valori seguenti, che non possono essere combinati: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING o TRUNCATE_EXISTING.
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 Gli attributi di file e i flag. Questo parametro può includere qualsiasi combinazione degli attributi di file disponibili (FILE_ATTRIBUTE_ *). Tutti gli altri attributi di file di eseguire l'override FILE_ATTRIBUTE_NORMAL. Questo parametro può contenere anche le combinazioni di flag (FILE_FLAG_\*) per il controllo del comportamento di memorizzazione nel buffer, accedere a modalità e altri flag speciali. La loro combinazione con qualsiasi FILE_ATTRIBUTE_\* valori.
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 Un handle valido in un file di modello con il diritto di accesso GENERIC_READ. Il file del modello fornisce gli attributi di file e agli attributi estesi per il file che si sta creando. Questo parametro può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -236,7 +236,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parametri
 
-*lpFileName*  
+*lpFileName*<br/>
 Nome del file da eliminare.
 
 ### <a name="remarks"></a>Note
@@ -255,10 +255,10 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>Parametri
 
-*lpFileName*  
+*lpFileName*<br/>
 La directory o percorso e il nome del file da cercare. Questo parametro può includere caratteri jolly, ad esempio un asterisco (*) o una (punto interrogativo).
 
-*pNextInfo*  
+*pNextInfo*<br/>
 Puntatore alla struttura WIN32_FIND_DATA che riceve informazioni relative a un file trovato o sottodirectory.
 
 ### <a name="return-value"></a>Valore restituito
@@ -279,7 +279,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parametri
 
-*lpFileName*  
+*lpFileName*<br/>
 Il nome del file o directory.
 
 ### <a name="remarks"></a>Note
@@ -299,13 +299,13 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>Parametri
 
-*lpFileName*  
+*lpFileName*<br/>
 Il nome del file o directory.
 
-*fInfoLevelId*  
+*fInfoLevelId*<br/>
 Il livello di informazioni di attributo da recuperare.
 
-*lpFileInformation*  
+*lpFileInformation*<br/>
 Puntatore a un buffer che riceve le informazioni sugli attributi. Il tipo di informazioni sugli attributi che vengono archiviati in questo buffer viene determinato dal valore della *fInfoLevelId*. Se il *fInfoLevelId* parametro è GetFileExInfoStandard quindi questo parametro punta a una struttura WIN32_FILE_ATTRIBUTE_DATA.
 
 ### <a name="remarks"></a>Note
@@ -370,10 +370,10 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="parameters"></a>Parametri
 
-*lpOldFileName*  
+*lpOldFileName*<br/>
 Il nome corrente del file esistente o della directory nel computer locale.
 
-*lpNewFileName*  
+*lpNewFileName*<br/>
 Il nuovo nome per il file o directory. Questo nome non deve esistere già. Un nuovo file potrebbe essere in un'unità o un sistema di file diverso. Una nuova directory deve essere nella stessa unità.
 
 ### <a name="remarks"></a>Note
@@ -399,31 +399,31 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>Parametri
 
-*hKey*  
+*hKey*<br/>
 Handle a una chiave del Registro di sistema open.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Il nome di una sottochiave che questa funzione si apre o crea.
 
-*dwReserved*  
+*dwReserved*<br/>
 Questo parametro è riservato e deve essere zero.
 
-*lpClass*  
+*lpClass*<br/>
 La classe definita dall'utente di questa chiave. Questo parametro può essere ignorato. Questo parametro può essere NULL.
 
-*dwOptions*  
+*dwOptions*<br/>
 Questo parametro può essere uno dei seguenti valori: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE o REG_OPTION_VOLATILE.
 
-*samDesired*  
+*samDesired*<br/>
 Maschera che specifica i diritti di accesso per la chiave.
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 Puntatore a una struttura SECURITY_ATTRIBUTES che determina se l'handle restituito può essere ereditato dai processi figlio. Se *lpSecurityAttributes* è NULL, l'handle non può essere ereditata.
 
-*phkResult*  
+*phkResult*<br/>
 Puntatore a una variabile che riceve un handle per la chiave creata o aperta. Se la chiave non è una delle chiavi del Registro di sistema predefinito, chiamare il `RegCloseKey` dopo aver utilizzato l'handle.
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 Un puntatore a una variabile che riceve uno dei seguenti valori disposition: REG_CREATED_NEW_KEY o REG_OPENED_EXISTING_KEY.
 
 ### <a name="return-value"></a>Valore restituito
@@ -472,19 +472,19 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>Parametri
 
-*hKey*  
+*hKey*<br/>
 Handle a una chiave del Registro di sistema open.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Il nome della sottochiave del Registro di sistema da aprire.
 
-*ulOptions*  
+*ulOptions*<br/>
 Questo parametro è riservato e deve essere zero.
 
-*samDesired*  
+*samDesired*<br/>
 Maschera che specifica i diritti di accesso per la chiave.
 
-*phkResult*  
+*phkResult*<br/>
 Puntatore a una variabile che riceve un handle per la chiave creata o aperta. Se la chiave non è una delle chiavi del Registro di sistema predefinito, chiamare il `RegCloseKey` dopo aver utilizzato l'handle.
 
 ### <a name="return-value"></a>Valore restituito
@@ -521,10 +521,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>Parametri
 
-*lpFileName*  
+*lpFileName*<br/>
 Il nome del file o directory.
 
-*dwAttributes*  
+*dwAttributes*<br/>
 Gli attributi di file da impostare per il file. Per altre informazioni, vedere [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda).
 
 ### <a name="remarks"></a>Note

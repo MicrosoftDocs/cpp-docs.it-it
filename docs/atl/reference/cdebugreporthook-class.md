@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039064"
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Parametri
 
-*szMachineName*  
+*szMachineName*<br/>
 Il nome del computer in cui deve essere inviato l'output di debug. L'impostazione predefinita nel computer locale.
 
-*szPipeName*  
+*szPipeName*<br/>
 Il nome della named pipe a cui inviare l'output di debug.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Il tempo in millisecondi che questa classe dovrà attendere la named pipe diventi disponibile.
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Parametri
 
-*reportType*  
+*reportType*<br/>
 Tipo di report ( CRT_WARN, CRT_ERROR o CRT_ASSERT).
 
-*message*  
+*message*<br/>
 La stringa di messaggio.
 
-*returnValue*  
+*returnValue*<br/>
 Il valore che deve essere restituito dalla [CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Valore restituito
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Parametri
 
-*szMachineName*  
+*szMachineName*<br/>
 Il nome del computer in cui deve essere inviato l'output di debug.
 
-*szPipeName*  
+*szPipeName*<br/>
 Il nome della named pipe a cui inviare l'output di debug.
 
 ### <a name="return-value"></a>Valore restituito
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Parametri
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Il tempo in millisecondi che questa classe dovrà attendere la named pipe diventi disponibile.
 
 ## <a name="see-also"></a>Vedere anche

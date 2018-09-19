@@ -1,5 +1,5 @@
 ---
-title: Debug del Provider | Documenti Microsoft
+title: Debug del Provider | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6258ddd3fd4317c608cb20486c364918fb5c73a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5552b9c3d3d697b322b8c1d71eaf0e71630fac38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106394"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040200"
 ---
 # <a name="debugging-your-provider"></a>Debug del provider
+
 Esistono due modi per eseguire il debug del provider:  
   
--   Poiché i provider vengono creati nel processo, è possibile creare tramite i modelli consumer OLE DB e istruzioni del provider in genere il codice del consumer.  
+- Poiché i provider vengono creati nel processo, è possibile creare codice consumer usando i modelli consumer OLE DB e il passaggio in un provider normalmente.  
   
--   È possibile utilizzare l'utilità ITEST fornito con Visual C++.  
+- È possibile usare l'utilità ITEST fornito con Visual C++.  
   
-### <a name="to-use-the-itest-utility"></a>Utilizzare l'utilità ITEST  
+### <a name="to-use-the-itest-utility"></a>Usare l'utilità ITEST  
   
-1.  Aprire il progetto del provider.  
+1. Aprire il progetto del provider.  
   
-2.  Nel **progetti** menu, fare clic su **impostazioni**.  
+1. Nel **progetti** menu, fare clic su **impostazioni**.  
   
-3.  Nel **pagine delle proprietà** la finestra di dialogo, fare clic sul **Debug** scheda.  
+1. Nel **pagine delle proprietà** della finestra di dialogo fare clic sui **Debug** scheda.  
   
-4.  Nel **eseguibile per la sessione di Debug** , selezionare l'applicazione ITEST.  
+1. Nel **eseguibile per sessione di Debug** , selezionare l'applicazione ITEST.  
   
-5.  Impostare punti di interruzione e quindi eseguire il debug come di consueto.  
+1. Impostare punti di interruzione e quindi eseguire il debug come di consueto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

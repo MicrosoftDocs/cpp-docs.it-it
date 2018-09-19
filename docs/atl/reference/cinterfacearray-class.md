@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 533458b35e4589e04d95a4618a04a90aa1994c35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039335"
 ---
 # <a name="cinterfacearray-class"></a>Classe CInterfaceArray
 
@@ -32,7 +32,7 @@ Questa classe fornisce metodi utili quando si crea una matrice di puntatori a in
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class I, const IID* piid=& __uuidof(I)>  
+template <class I, const IID* piid=& __uuidof(I)>
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>Parametri
 
-*I*  
+*I*<br/>
 Un'interfaccia COM che specifica il tipo di puntatore da archiviare.
 
-*piid*  
+*piid*<br/>
 Un puntatore all'IID del *ho*.
 
 ## <a name="members"></a>Membri
@@ -84,7 +84,7 @@ Consente di inizializzare la matrice di puntatore intelligente.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CAtlArray](../../atl/reference/catlarray-class.md)   
-[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
-[Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Classe CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

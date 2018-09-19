@@ -1,5 +1,5 @@
 ---
-title: Errore matematico M6107 | Documenti Microsoft
+title: Errore matematico M6107 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d16df0d314aa5039d0fc495c1b934e647a40c62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d954e06bfe0ca6b6d94347c6f847242ec549cf80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041389"
 ---
 # <a name="math-error-m6107"></a>Errore matematico M6107
-non emulato.  
-  
- Tentativo di eseguire un'istruzione del coprocessore che non è valido o non è supportata dall'emulatore.  
-  
- Il programma termina con il codice di uscita 135.
+
+non emulato.
+
+È stato effettuato il tentativo di eseguire un'istruzione del coprocessore che non è valido o non è supportata dall'emulatore.
+
+Il programma termina con il codice di uscita 135.

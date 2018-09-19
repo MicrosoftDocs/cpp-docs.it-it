@@ -1,5 +1,5 @@
 ---
-title: Classe Message | Documenti Microsoft
+title: Classe Message | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b0828d1d8698cb696b257e6730e4aea3961dd159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042228"
 ---
 # <a name="message-class"></a>Classe message
 Busta del messaggio di base contenente il payload dei dati passati tra blocchi della messaggistica.  
@@ -40,8 +40,8 @@ class message : public ::Concurrency::details::_Runtime_object;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di dati del payload all'interno del messaggio.  
+*T*<br/>
+Il tipo di dati del payload all'interno del messaggio.  
   
 ## <a name="members"></a>Membri  
   
@@ -62,9 +62,9 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|Aggiunge il numero di riferimento per il `message` oggetto. Utilizzato per i blocchi di messaggi che necessitano di conteggio dei riferimenti per determinare la durata dei messaggi.|  
+|[add_ref](#add_ref)|Aggiunge il conteggio dei riferimenti per il `message` oggetto. Utilizzato per i blocchi di messaggio che servono per determinare la durata dei messaggi di conteggio dei riferimenti.|  
 |[msg_id](#msg_id)|Restituisce l'ID del `message` oggetto.|  
-|[remove_ref](#remove_ref)|Sottrae dal numero di riferimento per il `message` oggetto. Utilizzato per i blocchi di messaggi che necessitano di conteggio dei riferimenti per determinare la durata dei messaggi.|  
+|[remove_ref](#remove_ref)|Sottrae dal conteggio dei riferimenti per il `message` oggetto. Utilizzato per i blocchi di messaggio che servono per determinare la durata dei messaggi di conteggio dei riferimenti.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
@@ -73,7 +73,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 |[payload](#payload)|Il payload del `message` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).  
+ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `message`  
@@ -85,7 +85,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ##  <a name="add_ref"></a> add_ref 
 
- Aggiunge il numero di riferimento per il `message` oggetto. Utilizzato per i blocchi di messaggi che necessitano di conteggio dei riferimenti per determinare la durata dei messaggi.  
+ Aggiunge il conteggio dei riferimenti per il `message` oggetto. Utilizzato per i blocchi di messaggio che servono per determinare la durata dei messaggi di conteggio dei riferimenti.  
   
 ```
 long add_ref();
@@ -114,17 +114,17 @@ message(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_P`  
- Il payload del messaggio.  
+*P*<br/>
+Il payload del messaggio.  
   
- `_Id`  
- ID univoco di questo messaggio.  
+*ID*<br/>
+ID univoco di questo messaggio.  
   
- `_Msg`  
- Un riferimento o puntatore a un `message` oggetto.  
+*Msg*<br/>
+Un riferimento o puntatore a un `message` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Il costruttore che accetta un puntatore a un `message` oggetto come argomento viene generata una [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione se il parametro `_Msg` è `NULL`.  
+ Il costruttore che accetta un puntatore a un `message` dell'oggetto come argomento viene generata un' [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione se il parametro `_Msg` è `NULL`.  
   
 ##  <a name="dtor"></a> ~ messaggio 
 
@@ -155,7 +155,7 @@ T const payload;
   
 ##  <a name="remove_ref"></a> remove_ref 
 
- Sottrae dal numero di riferimento per il `message` oggetto. Utilizzato per i blocchi di messaggi che necessitano di conteggio dei riferimenti per determinare la durata dei messaggi.  
+ Sottrae dal conteggio dei riferimenti per il `message` oggetto. Utilizzato per i blocchi di messaggio che servono per determinare la durata dei messaggi di conteggio dei riferimenti.  
   
 ```
 long remove_ref();

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1097 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1097 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abfecf605dfba95643e455d7f9523ca046b3002
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 352964f92c6475aa860dc8b0a73cd9e95a8b56ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043833"
 ---
 # <a name="nmake-fatal-error-u1097"></a>Errore irreversibile U1097 di NMAKE 
-sintassi di nomi file richiede un dipendente.  
-  
- La dipendenza corrente non dispone di un dipendente esplicito o un dipendente implicito. Sintassi di nomi file, che utilizza la percentuale (`%`) identificatore, rappresenta i componenti del primo dipendente di destinazione corrente.
+
+sintassi relativa ai nomi file richiede un dipendente.
+
+La dipendenza corrente non è un dipendente esplicito o un dipendente implicito. Sintassi relativa ai nomi file, che usa la percentuale (`%`) identificatore, rappresenta i componenti del primo dipendente di destinazione corrente.

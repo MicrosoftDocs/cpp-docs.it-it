@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039088"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -39,16 +39,16 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>Parametri
 
-*uMsg*  
+*uMsg*<br/>
 Specifica il messaggio.
 
-*wParam*  
+*wParam*<br/>
 Informazioni aggiuntive specifiche del messaggio.
 
-*lParam*  
+*lParam*<br/>
 Informazioni aggiuntive specifiche del messaggio.
 
-*bHandled*  
+*bHandled*<br/>
 Il set di mapping dei messaggi *bHandled* su TRUE prima `MessageHandler` viene chiamato. Se `MessageHandler` non gestisce completamente il messaggio deve essere impostato *bHandled* su FALSE per indicare che il messaggio richiede un'ulteriore elaborazione.
 
 ## <a name="return-value"></a>Valore restituito
@@ -61,6 +61,6 @@ Per un esempio dell'uso di questo gestore di messaggi in una mappa dei messaggi,
 
 ## <a name="see-also"></a>Vedere anche
 
-[Implementazione di una finestra](../atl/implementing-a-window.md)   
-[Mappe messaggi](../atl/message-maps-atl.md)   
+[Implementazione di una finestra](../atl/implementing-a-window.md)<br/>
+[Mappe messaggi](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

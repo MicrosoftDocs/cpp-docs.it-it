@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1012 | Documenti Microsoft
+title: Errore irreversibile C1012 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32ec5d68641f83ca03b956fbba14b4168763e47f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eee666035af531d576b10831daec2474d8a7316a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041779"
 ---
 # <a name="fatal-error-c1012"></a>Errore irreversibile C1012
-parentesi non corrispondenti: carattere mancante  
-  
- Le parentesi in una direttiva per il preprocessore non corrispondono.
+
+parentesi non corrispondenti: carattere mancante
+
+Le parentesi in una direttiva per il preprocessore non corrispondono.

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a85b840aba9d52600b3cf730eada0e8095eb98
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ffe21526dd106ad067c68da49d6b07bb9e50cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756324"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039829"
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
 
@@ -41,14 +41,14 @@ Questa classe implementa il [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iun
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<class contained>  
-class CComAggObject : public IUnknown, 
+template<class contained>
+class CComAggObject : public IUnknown,
    public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*contenuti*  
+*contenuti*<br/>
 La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da tutte le altre interfacce si desidera supportare nell'oggetto.
 
 ## <a name="members"></a>Membri
@@ -119,7 +119,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*  
+*PV*<br/>
 [in] Unknown esterno.
 
 ### <a name="remarks"></a>Note
@@ -152,7 +152,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parametri
 
-*profilo di porta*  
+*profilo di porta*<br/>
 [out] Un puntatore a un **CComAggObject\<**<em>contenute</em> **>** puntatore. Se `CreateInstance` ha esito negativo *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -195,7 +195,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parametri
 
-*contenuti*  
+*contenuti*<br/>
 [in] La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da tutte le altre interfacce si desidera supportare nell'oggetto.
 
 ### <a name="remarks"></a>Note
@@ -214,13 +214,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] L'identificatore dell'interfaccia richiesto.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal *iid*. Se l'oggetto non supporta questa interfaccia, *ppvObject* è impostato su NULL.
 
-*profilo di porta*  
+*profilo di porta*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal tipo `Q`. Se l'oggetto non supporta questa interfaccia, *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -245,9 +245,9 @@ Nelle build di debug `Release` restituisce un valore che può essere utile per l
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComObject](../../atl/reference/ccomobject-class.md)   
-[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

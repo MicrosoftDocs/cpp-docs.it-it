@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4172 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4172 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746442638820d0c81144611a678996dc4c8483b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f606b48fb060472dd67d34800c06946bc41712
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043508"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>Compilatore (livello 1) Avviso C4172
-Restituisce l'indirizzo della variabile locale o temporanei  
-  
- Una funzione restituisce l'indirizzo di un oggetto temporaneo o di variabile locale. Le variabili locali e gli oggetti temporanei vengono eliminati definitivamente quando una funzione viene restituito, pertanto l'indirizzo restituito non è valido.  
-  
- Riprogettare la funzione in modo che restituisca l'indirizzo di un oggetto locale.  
-  
- L'esempio seguente genera l'errore C4172:  
-  
-```  
-// C4172.cpp  
-// compile with: /W1 /LD  
-float f = 10;  
-  
-const double& bar() {  
-// try the following line instead  
-// const float& bar() {  
-   return f;   // C4172  
-}  
+# <a name="compiler-warning-level-1-c4172"></a>Compilatore Warning (level 1) C4172
+
+restituzione di indirizzo della variabile locale o temporanei
+
+Una funzione restituisce l'indirizzo di un oggetto temporaneo o variabile locale. Le variabili locali e gli oggetti temporanei vengono eliminati definitivamente quando una funzione viene restituito, in modo che l'indirizzo restituito non è valido.
+
+Riprogettare la funzione in modo che non viene restituito l'indirizzo di un oggetto locale.
+
+L'esempio seguente genera l'errore C4172:
+
+```
+// C4172.cpp
+// compile with: /W1 /LD
+float f = 10;
+
+const double& bar() {
+// try the following line instead
+// const float& bar() {
+   return f;   // C4172
+}
 ```

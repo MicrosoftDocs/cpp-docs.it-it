@@ -1,5 +1,5 @@
 ---
-title: Errore BK1512 di BSCMAKE | Documenti Microsoft
+title: Errore BK1512 di BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b161375d9f8396854cc491e038e39d096d30d246
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ce429c0c4cf0300b3818a9be9d28fd03e95f5eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33306465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039855"
 ---
 # <a name="bscmake-error-bk1512"></a>Errore BK1512 di BSCMAKE
-FileName: superato  
-  
- BSCMAKE non è possibile compilare un file di informazioni perché il numero di definizioni, i riferimenti, i moduli o altre informazioni supera il limite.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili  
-  
-1.  Escludere alcune informazioni tramite em, /Es o /Ei.  
-  
-2.  Omettere l'opzione /Iu.
+
+FileName: capacità superata
+
+BSCMAKE non è possibile compilare un file di informazioni perché il numero di definizioni, riferimenti, i moduli o altre informazioni supera il limite.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili
+
+1. Escludere alcune informazioni tramite/em, /Es o /Ei.
+
+1. Omettere l'opzione /Iu.

@@ -1,5 +1,5 @@
 ---
-title: Errore della riga di comando D8036 | Documenti Microsoft
+title: Errore della riga di comando D8036 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f121310318cbb91b1f983ec240b42d5d9ea34b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c533ada388f876443021fbf159320f171a07a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299962"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041844"
 ---
 # <a name="command-line-error-d8036"></a>Errore della riga di comando D8036
-'/Option' non è consentita con più file di origine  
-  
- Queste opzioni del compilatore non possono essere utilizzate con più file di origine:  
-  
--   Elenco di file di assembly di nome (o Fa)  
-  
--   Rinominare il file oggetto (o Fo)  
-  
--   Creare informazioni di visualizzazione di origine senza variabili locali (o Fr)  
-  
--   Creare informazioni di visualizzazione di origine che include le variabili locali (o FR)
+
+'/Option' non è consentita con più file di origine
+
+Queste opzioni del compilatore non possono essere utilizzate con più file di origine:
+
+- Elenco di file di assembly di nome (/ Fa)
+
+- Rinominare il file oggetto (/ Fo)
+
+- Creare informazioni di visualizzazione di origine senza variabili locali (/ Fr)
+
+- Creare informazioni di visualizzazione origine che include le variabili locali (/ FR)

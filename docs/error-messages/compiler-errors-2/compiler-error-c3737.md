@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3737 | Documenti Microsoft
+title: Errore del compilatore C3737 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29d31597e9581d03f97c2b07856ce81c5de50bd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99ab9394f2c475079ee226dd294cca346ec68e32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264610"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039257"
 ---
 # <a name="compiler-error-c3737"></a>Errore del compilatore C3737
-'delegato': un delegato non può avere una convenzione di chiamata esplicita  
-  
- Non è possibile specificare il [la convenzione di chiamata](../../cpp/calling-conventions.md) per un `delegate`.  
-  
-## <a name="example"></a>Esempio  
-L'esempio seguente genera l'errore C3737:  
-  
-```  
-// C3737a.cpp  
-// compile with: /clr  
-delegate void __stdcall MyFunc();   // C3737  
-// Try the following line instead.  
-// delegate void MyFunc();  
-  
-int main() {  
-}  
-```  
+
+'delegate': un delegato non può avere una convenzione di chiamata esplicita
+
+Non è possibile specificare il [convenzione di chiamata](../../cpp/calling-conventions.md) per un `delegate`.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3737:
+
+```
+// C3737a.cpp
+// compile with: /clr
+delegate void __stdcall MyFunc();   // C3737
+// Try the following line instead.
+// delegate void MyFunc();
+
+int main() {
+}
+```

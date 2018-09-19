@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3216 | Documenti Microsoft
+title: Errore del compilatore C3216 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19091b0e200bb44ca6c1ec7c9a8ee359a95fad1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4eb1fb93335dc6fb61e8e73ea11cfc91c6b461b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043690"
 ---
 # <a name="compiler-error-c3216"></a>Errore del compilatore C3216
-il vincolo deve essere un parametro generico, non 'type'  
-  
- Un vincolo non è stato creato nel formato corretto.  
-  
- L'esempio seguente genera l'errore C3216:  
-  
-```  
-// C3216.cpp  
-// compile with: /clr  
-interface struct A {};  
-  
-generic <class T>  
-where F : A   // C3216  
-// Try the following line instead:  
-// where T : A    // C3216  
-ref class C {};  
-```  
-  
- L'esempio seguente illustra una possibile soluzione:  
-  
-```  
-// C3216b.cpp  
-// compile with: /clr /c  
-interface struct A {};  
-  
-generic <class T>  
-where T : A  
-ref class C {};  
+
+il vincolo deve essere un parametro generico, non 'type'
+
+Un vincolo non è stato creato nel formato corretto.
+
+L'esempio seguente genera l'errore C3216:
+
+```
+// C3216.cpp
+// compile with: /clr
+interface struct A {};
+
+generic <class T>
+where F : A   // C3216
+// Try the following line instead:
+// where T : A    // C3216
+ref class C {};
+```
+
+L'esempio seguente illustra una possibile soluzione:
+
+```
+// C3216b.cpp
+// compile with: /clr /c
+interface struct A {};
+
+generic <class T>
+where T : A
+ref class C {};
 ```

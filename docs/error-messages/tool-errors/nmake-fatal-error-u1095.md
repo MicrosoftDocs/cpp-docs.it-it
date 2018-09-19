@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1095 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1095 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13c819d18149e61bca71f6a4cb10ea851a2d485d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964ec1d029e56a5d9d78659ad919c71a4e44506d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039881"
 ---
 # <a name="nmake-fatal-error-u1095"></a>Errore irreversibile U1095 di NMAKE 
-riga di comando espansa 'la riga di comando' troppo lungo  
-  
- Dopo l'espansione della macro, la riga di comando specificata supera il limite di lunghezza delle righe di comando per il sistema operativo.  
-  
- MS-DOS consente un massimo di 128 caratteri in una riga di comando.  
-  
- Se il comando per un programma che può accettare input della riga di comando da un file, modificare il comando e fornire l'input da un file su disco o un file inline. Ad esempio, collegamento e LIB accetta input da un file di risposta.
+
+riga di comando espansa 'commandline' troppo lungo
+
+Dopo l'espansione della macro, la riga di comando specificata ha superato il limite di lunghezza delle righe di comando per il sistema operativo.
+
+MS-DOS consente fino a 128 caratteri in una riga di comando.
+
+Se il comando è per un programma in grado di accettare input da riga di comando da un file, modificare il comando e fornire l'input da un file su disco o un file inline. Ad esempio, collegamento e LIB accettare input da un file di risposta.

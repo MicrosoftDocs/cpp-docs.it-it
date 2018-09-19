@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di ODBC e driver | Documenti Microsoft
+title: Utilizzo di ODBC e driver | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7d49fa24c6cb27bc54e8cc3dc6bba674cb12ae57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37888b735e76c42aaca20b3519efe381f3d7578c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095115"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038789"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Utilizzo di ODBC e driver
-ODBC consente di scrivere applicazioni che non dipendono da un unico sistema di gestione di database (DBMS). È possibile scrivere un'applicazione in grado di operare con più DBMS per il quale gli utenti hanno il driver ODBC specifici del DBMS corretto.  
+
+ODBC consente di scrivere applicazioni che non dipendono da un unico sistema di gestione di database (DBMS). È possibile scrivere un'applicazione in grado di operare con più di DBMS per il quale gli utenti hanno il driver ODBC di specifici del DBMS corretto.  
   
 ## <a name="in-this-section"></a>In questa sezione  
   
--   [Determinare lo schema di un'origine dati ODBC in fase di esecuzione](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
+- [Determinare lo schema di un'origine dati ODBC in fase di esecuzione](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
   
--   [Ottenere una descrizione del driver tramite Amministratore ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Ottenere una descrizione del driver tramite Amministratore ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [Ottenere la Guida online per il driver ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Ottenere la Guida in linea per il driver ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [A livello di codice crea una tabella in un'origine dati ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
+- [A livello di codice crea una tabella in un'origine dati ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
   
--   [Chiamare le funzioni API ODBC direttamente in MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+- [Chiamare funzioni API ODBC direttamente in MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

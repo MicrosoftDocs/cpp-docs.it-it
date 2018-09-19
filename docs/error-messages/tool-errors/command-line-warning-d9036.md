@@ -1,5 +1,5 @@
 ---
-title: Riga di comando D9036 avviso | Documenti Microsoft
+title: Avviso della riga di comando D9036 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c382f971c12b9ffb54c6e98c8b1f4609d7aadad4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6c8f3030e1ee59b92b32d340e89e909f9da4fd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296016"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039764"
 ---
 # <a name="command-line-warning-d9036"></a>Avviso della riga di comando D9036
-Utilizzare 'opzione_2' anziché 'opzione_1'  
-  
- Avviso D9036 è una continuazione di [avviso della riga di comando D9035](../../error-messages/tool-errors/command-line-warning-d9035.md).
+
+Utilizzare 'opzione_2' anziché 'opzione_1'
+
+È la continuazione dell'avviso D9036 [avviso della riga di comando D9035](../../error-messages/tool-errors/command-line-warning-d9035.md).

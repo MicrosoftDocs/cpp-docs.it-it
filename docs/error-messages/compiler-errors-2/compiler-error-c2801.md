@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2801 | Documenti Microsoft
+title: Errore del compilatore C2801 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68b3f575fcb8b909f58ac2ffbcaca26580279da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d57ee5bf5f5152ef55852c9f9b829bc4a1d17d41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040635"
 ---
 # <a name="compiler-error-c2801"></a>Errore del compilatore C2801
-'operatore' deve essere un membro non statico  
-  
- Gli operatori seguenti possono essere sottoposti a overload solo come membri non statici:  
-  
--   Assegnazione `=`  
-  
--   Accesso ai membri di classe `->`  
-  
--   Indice `[]`  
-  
--   Chiamata di funzione `()`  
-  
- Possibili cause C2801:  
-  
--   Operatore di overload non è una classe, struttura o unione membro.  
-  
--   Operatore di overload è dichiarato `static`.  
-  
--   L'esempio seguente genera l'errore C2801:  
-  
-```  
-// C2801.cpp  
-// compile with: /c  
-operator[]();   // C2801 not a member  
-class A {  
-   static operator->();   // C2801 static  
-   operator()();   // OK  
-};  
+
+'operator operator' deve essere un membro non statica
+
+Solo come membri non statici possono essere sottoposti a overload gli operatori seguenti:
+
+- Assegnazione `=`
+
+- Accesso ai membri di classe `->`
+
+- Indice `[]`
+
+- Chiamata di funzione `()`
+
+Possibili cause C2801:
+
+- Operatore di overload non è una classe, struttura o membro di unione.
+
+- Operatore di overload è dichiarato `static`.
+
+- L'esempio seguente genera l'errore C2801:
+
+```
+// C2801.cpp
+// compile with: /c
+operator[]();   // C2801 not a member
+class A {
+   static operator->();   // C2801 static
+   operator()();   // OK
+};
 ```

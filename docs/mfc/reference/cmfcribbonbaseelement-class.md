@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136335"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 Il `CMFCRibbonBaseElement` classe è la classe base per tutti gli elementi che è possibile aggiungere a un [barra multifunzione](../../mfc/reference/cmfcribbonbar-class.md). Esempi di elementi della barra multifunzione sono i pulsanti della barra multifunzione, le caselle di controllo della barra multifunzione e le caselle combinate della barra multifunzione.  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  Per impostazione predefinita questo metodo non esegue alcuna operazione. L'override del metodo in una classe derivata per disegnare l'immagine per l'elemento della barra multifunzione.  
   
  Nella tabella seguente sono elencati i valori possibili per il *tipo* parametro:  
-  
- `RibbonImageLarge`  
- Dimensioni immagine 32x32 pixel.  
-  
- `RibbonImageSmall`  
- Dimensioni immagine 16x16 pixel.  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | Dimensioni immagine 32x32 pixel.  |
+| `RibbonImageSmall`  | Dimensioni immagine 16x16 pixel.  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  Restituisce il puntatore specificato se fa riferimento all'oggetto corrente.  

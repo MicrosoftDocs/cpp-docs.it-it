@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e6570e82c7cd50c03530b085ee9497fbc974fd58
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8643b8150f08191fa041107fa4a88e3cbcf2964a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338739"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042260"
 ---
 # <a name="using-bookmarks"></a>Utilizzo dei bookmark
+
 Prima di aprire il set di righe, è necessario indicare al provider che si desidera usare i segnalibri. A questo scopo, impostare il `DBPROP_BOOKMARKS` proprietà **true** nel set di proprietà. Il provider recupera segnalibri come colonna da zero, pertanto è necessario usare la macro speciale BOOKMARK_ENTRY e `CBookmark` classe se si usa una funzione di accesso statico. `CBookmark` è una classe di modello in cui l'argomento è la lunghezza in byte del buffer del segnalibro. La lunghezza del buffer necessaria per un segnalibro dipende dal provider. Se si utilizza il provider OLE DB ODBC, come illustrato nell'esempio seguente, il buffer deve essere 4 byte.  
   
 ```cpp  
@@ -48,7 +49,7 @@ CTable<CAccessor<CProducts>> product;
 product.Open(session, "Products", &propset);  
 ```  
   
- Se si usa `CDynamicAccessor`, il buffer viene allocato dinamicamente in fase di esecuzione. In questo caso, è possibile usare una versione specializzata della `CBookmark` per cui non si specifica una lunghezza di buffer. Utilizzare la funzione `GetBookmark` per recuperare il segnalibro dal record corrente, come illustrato nell'esempio di codice:  
+Se si usa `CDynamicAccessor`, il buffer viene allocato dinamicamente in fase di esecuzione. In questo caso, è possibile usare una versione specializzata della `CBookmark` per cui non si specifica una lunghezza di buffer. Utilizzare la funzione `GetBookmark` per recuperare il segnalibro dal record corrente, come illustrato nell'esempio di codice:  
   
 ```cpp  
 CTable<CDynamicAccessor> product;  
@@ -65,7 +66,8 @@ product.MoveNext();
 product.GetBookmark(&bookmark);  
 ```  
   
- Per informazioni sul supporto dei bookmark nel provider, vedere [supporto dei bookmark nel Provider](../../data/oledb/provider-support-for-bookmarks.md).  
+Per informazioni sul supporto dei bookmark nel provider, vedere [supporto dei bookmark nel Provider](../../data/oledb/provider-support-for-bookmarks.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)
+
+[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

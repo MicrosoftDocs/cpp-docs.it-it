@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1082 | Documenti Microsoft
+title: Errore irreversibile C1082 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ec81258606cc7af67e8e9e4708a056cccb7eea5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12b722c6c36c600acc5c098c1e4907386cd7c3c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044457"
 ---
 # <a name="fatal-error-c1082"></a>Errore irreversibile C1082
-Non è possibile chiudere il file filetype: 'file': messaggio  
-  
- Se viene visualizzato il messaggio "Numero di file non valido", è possibile che il file sia stato chiuso in primo piano durante la compilazione in background.
+
+Non è possibile chiudere il file filetype: 'file': messaggio
+
+Se viene visualizzato il messaggio "Numero di file non valido", è possibile che il file sia stato chiuso in primo piano durante la compilazione in background.

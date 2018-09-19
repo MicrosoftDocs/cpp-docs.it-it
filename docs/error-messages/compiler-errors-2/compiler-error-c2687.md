@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2687 | Documenti Microsoft
+title: Errore del compilatore C2687 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54c3be7a3706dd5471b21c2a1779e9990eae678
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1333d26a7733ffeb0876a9b563377e5ead010261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233018"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042676"
 ---
 # <a name="compiler-error-c2687"></a>Errore del compilatore C2687
-'type': dichiarazione di eccezione non può essere 'void' o indicare un tipo incompleto o un puntatore o un riferimento a un tipo incompleto  
-  
- Per un tipo di parte di una dichiarazione di eccezione deve essere definito e non void.  
-  
- L'esempio seguente genera l'errore C2687:  
-  
-```  
-// C2687.cpp  
-class C;  
-  
-int main() {  
-   try {}  
-   catch (C) {}   // C2687 error  
-}  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2687b.cpp  
-// compile with: /EHsc  
-class C {};  
-  
-int main() {  
-   try {}  
-   catch (C) {}  
-}  
+
+'type': dichiarazione di eccezione non può essere 'void' o indicare un tipo incompleto o un puntatore o riferimento a un tipo incompleto
+
+Per un tipo a far parte di una dichiarazione di eccezione, deve essere definito e diverso da void.
+
+L'esempio seguente genera l'errore C2687:
+
+```
+// C2687.cpp
+class C;
+
+int main() {
+   try {}
+   catch (C) {}   // C2687 error
+}
+```
+
+Possibile soluzione:
+
+```
+// C2687b.cpp
+// compile with: /EHsc
+class C {};
+
+int main() {
+   try {}
+   catch (C) {}
+}
 ```

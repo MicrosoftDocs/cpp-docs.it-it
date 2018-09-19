@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043937"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 Fornisce la funzionalità del controllo scheda comune di Windows.  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>Note  
  Quando viene inviato il messaggio, il `mask` membro specifica gli attributi da restituire. Se il `mask` membro specifica il valore TCIF_TEXT, il `pszText` membro deve contenere l'indirizzo del buffer che riceve il testo dell'elemento e il `cchTextMax` membro è necessario specificare le dimensioni del buffer.  
   
- `mask`  
- Valore che specifica quali `TCITEM` strutturare i membri da recuperare o impostare. Questo membro può essere zero o una combinazione dei valori seguenti:  
+- `mask`
+
+   Valore che specifica quali `TCITEM` strutturare i membri da recuperare o impostare. Questo membro può essere zero o una combinazione dei valori seguenti:  
   
-- TCIF_TEXT il `pszText` membro è valido.  
+   - TCIF_TEXT il `pszText` membro è valido.  
   
-- TCIF_IMAGE il `iImage` membro è valido.  
+   - TCIF_IMAGE il `iImage` membro è valido.  
   
-- TCIF_PARAM il `lParam` membro è valido.  
+   - TCIF_PARAM il `lParam` membro è valido.  
   
-- TCIF_RTLREADING il testo di `pszText` viene visualizzata utilizzando l'ordine di lettura da destra a sinistra in sistemi ebraico o arabo.  
+   - TCIF_RTLREADING il testo di `pszText` viene visualizzata utilizzando l'ordine di lettura da destra a sinistra in sistemi ebraico o arabo.  
   
-- TCIF_STATE il `dwState` membro è valido.  
+   - TCIF_STATE il `dwState` membro è valido.  
   
- `pszText`  
- Puntatore a una stringa con terminazione null che contiene il testo della scheda se la struttura contiene informazioni su una scheda. Se la struttura riceve informazioni, questo membro specifica l'indirizzo del buffer che riceve il testo della scheda.  
+- `pszText`  
+
+   Puntatore a una stringa con terminazione null che contiene il testo della scheda se la struttura contiene informazioni su una scheda. Se la struttura riceve informazioni, questo membro specifica l'indirizzo del buffer che riceve il testo della scheda.  
   
- `cchTextMax`  
- Dimensione del buffer a cui punta `pszText`. Questo membro viene ignorato se la struttura non riceve informazioni.  
+- `cchTextMax`  
+
+   Dimensione del buffer a cui punta `pszText`. Questo membro viene ignorato se la struttura non riceve informazioni.  
   
- `iImage`  
+- `iImage`  
  Indice in del controllo scheda elenco di immagini o - 1 se non è presente alcuna immagine per la scheda.  
   
- lParam  
- Dati definiti dall'applicazione associati alla scheda. Se sono presenti più di quattro byte di dati definiti dall'applicazione per ogni scheda, un'applicazione deve definire una struttura e usarlo al posto di `TCITEM` struttura. Il primo membro della struttura definita dall'applicazione deve essere un [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)struttura. Il `TCITEMHEADER` struttura è identica per il `TCITEM` struttura, ma senza il `lParam` membro. La differenza tra le dimensioni della struttura di e le dimensioni del `TCITEMHEADER` struttura deve essere uguale al numero di byte extra per ogni scheda.  
+- `lParam`  
+
+   Dati definiti dall'applicazione associati alla scheda. Se sono presenti più di quattro byte di dati definiti dall'applicazione per ogni scheda, un'applicazione deve definire una struttura e usarlo al posto di `TCITEM` struttura. Il primo membro della struttura definita dall'applicazione deve essere un [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)struttura. Il `TCITEMHEADER` struttura è identica per il `TCITEM` struttura, ma senza il `lParam` membro. La differenza tra le dimensioni della struttura di e le dimensioni del `TCITEMHEADER` struttura deve essere uguale al numero di byte extra per ogni scheda.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK2013 errore | Documenti Microsoft
+title: Strumenti del linker LNK2013 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9320b9ead0276b6fb5e1b9773260049a01520e12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d04ce4ca8079317da090cf05d43f41e4e40a6b19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041740"
 ---
 # <a name="linker-tools-error-lnk2013"></a>Errore degli strumenti del linker LNK2013
-overflow della correzione tipo correzione. 'Symbol name' di destinazione non compreso nell'intervallo  
-  
- Il linker non è sufficiente l'offset o l'indirizzo necessarie nell'istruzione data poiché il simbolo di destinazione è troppo lontano dal percorso dell'istruzione.  
-  
- È possibile risolvere questo problema creando più immagini o utilizzando il [/ORDER](../../build/reference/order-put-functions-in-order.md) opzione in modo che l'istruzione e la destinazione siano insieme più vicino.  
-  
- Quando il nome del simbolo è un simbolo definito dall'utente (e non un simbolo generato dal compilatore), è anche possibile provare le azioni seguenti per risolvere l'errore:  
-  
--   Modificare la funzione statica per essere non statico.  
-  
--   Rinominare la sezione di codice che contiene la funzione statica per corrispondere a quello del chiamante.  
-  
- Utilizzare `DUMPBIN /SYMBOLS`, per verificare se una funzione statica.
+
+overflow della correzione del tipo di correzione. 'Symbol name' di destinazione è compreso nell'intervallo
+
+Il linker non è idoneo per gli indirizzi necessari offset l'istruzione specificata perché il simbolo di destinazione è troppo distante dalla posizione dell'istruzione.
+
+È possibile risolvere questo problema creando più immagini o tramite il [/ORDER](../../build/reference/order-put-functions-in-order.md) opzione in modo che l'istruzione e destinazione più vicini tra loro.
+
+Quando il nome del simbolo è un simbolo definito dall'utente (e non è un simbolo generato dal compilatore), è anche possibile provare le azioni per risolvere l'errore seguente:
+
+- Modificare la funzione statica per essere non statico.
+
+- Rinominare la sezione di codice contenente la funzione statica per corrispondere a quello del chiamante.
+
+Usare `DUMPBIN /SYMBOLS`, per verificare se una funzione è statica.

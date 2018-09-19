@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3275 | Documenti Microsoft
+title: Errore del compilatore C3275 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a9ed116e833c0302120fff52b57e08ca85afbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad39cf081996f583367a8e5c2cf74bbefba35478
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042052"
 ---
 # <a name="compiler-error-c3275"></a>Errore del compilatore C3275
-'enum member': impossibile utilizzare questo simbolo senza qualificatore  
-  
-Quando si usa codice gestito e quando due o più enumerazioni contengono un identificatore con lo stesso nome, è necessario qualificare in modo esplicito i riferimenti all'identificatore.  
-  
-C3275 è raggiungibile tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+
+'enum member': impossibile utilizzare questo simbolo senza qualificatore
+
+Quando si usa codice gestito e quando due o più enumerazioni contengono un identificatore con lo stesso nome, è necessario qualificare in modo esplicito i riferimenti all'identificatore.
+
+C3275 è raggiungibile tramite l'opzione del compilatore obsolete solo **/CLR: oldSyntax**.

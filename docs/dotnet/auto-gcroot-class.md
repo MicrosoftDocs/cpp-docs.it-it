@@ -1,5 +1,5 @@
 ---
-title: Classe auto_gcroot | Documenti Microsoft
+title: Classe auto_gcroot | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b6afad3450aff2a9243b3e4a480a374fbcd14fc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da63d58136d61bbea75daa90ac01cee5b44ac86d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103866"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039101"
 ---
 # <a name="autogcroot-class"></a>Classe auto_gcroot
-Gestione automatica delle risorse (ad esempio [classe auto_ptr](../standard-library/auto-ptr-class.md)) che può essere utilizzato per incorporare un handle virtuale in un tipo nativo.  
+Gestione automatica delle risorse (ad esempio [classe auto_ptr](../standard-library/auto-ptr-class.md)) che può essere usato per incorporare un handle virtuale in un tipo nativo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,8 +37,8 @@ class auto_gcroot;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_element_type`  
- Il tipo gestito da incorporare.  
+*_element_type*<br/>
+Tipo gestito da incorporare.  
   
 ## <a name="requirements"></a>Requisiti  
  **File di intestazione** \<msclr\auto_gcroot.h >  

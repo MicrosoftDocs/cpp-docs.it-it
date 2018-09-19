@@ -1,5 +1,5 @@
 ---
-title: per ognuno, in | Documenti Microsoft
+title: per ognuna, in | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040693"
 ---
 # <a name="for-each-in"></a>for each, in
-Scorre una matrice o una raccolta. Questa parola chiave non standard è disponibile sia nei progetti C++/CLI sia nei progetti C++ nativi. Il suo utilizzo non è tuttavia consigliato. È consigliabile utilizzare uno standard [per istruzione (C++) basato su intervallo](../cpp/range-based-for-statement-cpp.md) invece.  
+Scorre una matrice o una raccolta. Questa parola chiave non standard è disponibile sia nei progetti C++/CLI sia nei progetti C++ nativi. Il suo utilizzo non è tuttavia consigliato. È consigliabile usare una norma [Range-based per istruzione (C++)](../cpp/range-based-for-statement-cpp.md) invece.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
  **Sintassi**  
@@ -43,23 +43,23 @@ Scorre una matrice o una raccolta. Questa parola chiave non standard è disponib
   
  **Parametri**  
   
- `type`  
- Tipo di `identifier`.  
+*type*<br/>
+Tipo di `identifier`.  
   
- `identifier`  
- Variabile di iterazione che rappresenta l'elemento della raccolta.  Quando `identifier` è un [operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md), è possibile modificare l'elemento.  
+*identifier*<br/>
+Variabile di iterazione che rappresenta l'elemento della raccolta.  Quando `identifier` è un [operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md), è possibile modificare l'elemento.  
   
- `expression`  
- Raccolta o espressione di matrice. L'elemento della raccolta deve poter essere convertito dal compilatore nel tipo `identifier`.  
+*Espressione*<br/>
+Raccolta o espressione di matrice. L'elemento della raccolta deve poter essere convertito dal compilatore nel tipo `identifier`.  
   
- `statements`  
- Una o più istruzioni da eseguire.  
+*Istruzioni*<br/>
+Una o più istruzioni da eseguire.  
   
  **Note**  
   
  L'istruzione `for each` viene utilizzata per scorrere una raccolta. È possibile modificare gli elementi di una raccolta, ma non è possibile aggiungere o eliminare elementi.  
   
- Il *istruzioni* vengono eseguiti per ogni elemento nella matrice o raccolta. Dopo che l'iterazione è stata completata per tutti gli elementi della raccolta, il controllo viene trasferito all'istruzione che segue il blocco `for each`.  
+ Il *istruzioni* vengono eseguiti per ogni elemento nella matrice o nella raccolta. Dopo che l'iterazione è stata completata per tutti gli elementi della raccolta, il controllo viene trasferito all'istruzione che segue il blocco `for each`.  
   
  `for each` e `in` vengono [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
@@ -118,12 +118,12 @@ Testing
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Note**  
   
- La sintassi CLR è lo stesso come il **tutti i runtime** sintassi, tranne che come indicato di seguito.  
+ La sintassi CLR è lo stesso come il **tutti i runtime** informazioni sulla sintassi, tranne che come indicato di seguito.  
   
- *espressione*  
- Raccolta o espressione di matrice gestita. L'elemento della raccolta deve essere in modo che il compilatore può convertire da <xref:System.Object> per il *identificatore* tipo.  
+ *Espressione*  
+ Raccolta o espressione di matrice gestita. L'elemento della raccolta deve essere in modo che il compilatore può convertirlo dal <xref:System.Object> per il *identificatore* tipo.  
   
- *espressione* restituisce un tipo che implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo che definisce un `GetEnumerator` metodo che restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti in `IEnumerator`.  
+ *espressione* restituisce un tipo che implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo che definisce una `GetEnumerator` metodo che restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti nel `IEnumerator`.  
   
 ### <a name="requirements"></a>Requisiti  
  Opzione del compilatore: **/clr**  

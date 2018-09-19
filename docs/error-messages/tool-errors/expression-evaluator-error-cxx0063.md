@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0063 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0063 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 962fd27cc174097ff4d6c72cf91ade89e74f1ce4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 835a396fdbf7f97e1dccde66581af463c8254cb5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039075"
 ---
 # <a name="expression-evaluator-error-cxx0063"></a>Errore dell‘analizzatore di espressioni CXX0063
-l'operatore di overload -> non è supportato  
-  
- L'espressione utilizza un operatore di accesso di membro di classe di overload (**->**).  
-  
- Questo errore è identico all'errore CAN0063.
+
+l'operatore di overload -> non è supportato
+
+L'espressione utilizza un operatore di accesso membro di classe di overload (**->**).
+
+Questo errore è identico all'errore CAN0063.

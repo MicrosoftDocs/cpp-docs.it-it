@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760058"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040804"
 ---
 # <a name="catlcommodule-class"></a>Classe CAtlComModule
 
@@ -107,10 +107,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE se la libreria dei tipi deve essere registrato. Il valore predefinito è FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Punta al CLSID dell'oggetto da registrare. Se NULL (valore predefinito), tutti gli oggetti nella mappa oggetto verrà registrato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -132,7 +132,7 @@ HRESULT RegisterTypeLib();
 
 ### <a name="parameters"></a>Parametri
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Stringa nel formato "\\\N", dove N è l'indice integer della risorsa della libreria dei tipi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -155,10 +155,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Parametri
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE se è possibile annullare la registrazione della libreria dei tipi. Il valore predefinito è FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Punta al CLSID dell'oggetto da cui annullare la registrazione. Se NULL (valore predefinito), tutti gli oggetti nella mappa oggetto verrà annullata la registrazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -180,7 +180,7 @@ HRESULT UnRegisterTypeLib();
 
 ### <a name="parameters"></a>Parametri
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Stringa nel formato "\\\N", dove N è l'indice integer della risorsa della libreria dei tipi.
 
 ### <a name="remarks"></a>Note
@@ -193,5 +193,5 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 
 ## <a name="see-also"></a>Vedere anche
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

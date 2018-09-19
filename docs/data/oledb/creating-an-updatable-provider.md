@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043300"
 ---
 # <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
 
 Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (scrivere) nell'archivio dati. In questo argomento illustra come creare provider aggiornabile usando i modelli OLE DB.  
   
- Questo argomento si presuppone che si inizi con un provider utilizzabile. Esistono due passaggi per la creazione di un provider aggiornabile. È prima necessario decidere come il provider verrà apportate modifiche all'archivio dati; in particolare, se le modifiche devono essere eseguite immediatamente o posticipata fino a quando non viene eseguito un comando update. La sezione "[rendendo provider aggiornabili](#vchowmakingprovidersupdatable)" descrive le modifiche e le impostazioni necessarie nel codice del provider.  
+Questo argomento si presuppone che si inizi con un provider utilizzabile. Esistono due passaggi per la creazione di un provider aggiornabile. È prima necessario decidere come il provider verrà apportate modifiche all'archivio dati; in particolare, se le modifiche devono essere eseguite immediatamente o posticipata fino a quando non viene eseguito un comando update. La sezione "[rendendo provider aggiornabili](#vchowmakingprovidersupdatable)" descrive le modifiche e le impostazioni necessarie nel codice del provider.  
   
- Successivamente, è necessario assicurarsi che di provider contiene tutte le funzionalità necessarie per supportare che il consumer può richiedere di esso. Se l'utente vuole aggiornare l'archivio dati, il provider deve contenere codice che rende persistenti i dati nell'archivio dati. Ad esempio, si potrebbe usare la libreria Run-Time di C o MFC per eseguire queste operazioni nell'origine dati. La sezione "[scrittura all'origine dati](#vchowwritingtothedatasource)" viene descritto come scrivere nell'origine dati, gestire i valori NULL e predefiniti e impostare i flag di colonna.  
+Successivamente, è necessario assicurarsi che di provider contiene tutte le funzionalità necessarie per supportare che il consumer può richiedere di esso. Se l'utente vuole aggiornare l'archivio dati, il provider deve contenere codice che rende persistenti i dati nell'archivio dati. Ad esempio, si potrebbe usare la libreria Run-Time di C o MFC per eseguire queste operazioni nell'origine dati. La sezione "[scrittura all'origine dati](#vchowwritingtothedatasource)" viene descritto come scrivere nell'origine dati, gestire i valori NULL e predefiniti e impostare i flag di colonna.  
   
 > [!NOTE]
 >  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) è riportato un esempio di un provider aggiornabile. UpdatePV è uguale a MyProv, ma con il supporto aggiornabile.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Provider di rendere aggiornabili  
 
- La chiave per prendere un provider aggiornabile è comprendere le operazioni che si desidera che il provider per eseguire l'archivio dati e come si desidera che il provider per eseguire tali operazioni. In particolare, il problema principale è che gli aggiornamenti nell'archivio dati sono per essere eseguita immediatamente o posticipata (batch) fino a quando non viene eseguito un comando update.  
+La chiave per prendere un provider aggiornabile è comprendere le operazioni che si desidera che il provider per eseguire l'archivio dati e come si desidera che il provider per eseguire tali operazioni. In particolare, il problema principale è che gli aggiornamenti nell'archivio dati sono per essere eseguita immediatamente o posticipata (batch) fino a quando non viene eseguito un comando update.  
   
- È prima necessario decidere se si desidera ereditare `IRowsetChangeImpl` o `IRowsetUpdateImpl` nella classe del set di righe. A seconda di quale di questi si sceglie di implementare, saranno interessate le funzionalità dei tre metodi: `SetData`, `InsertRows`, e `DeleteRows`.  
+È prima necessario decidere se si desidera ereditare `IRowsetChangeImpl` o `IRowsetUpdateImpl` nella classe del set di righe. A seconda di quale di questi si sceglie di implementare, saranno interessate le funzionalità dei tre metodi: `SetData`, `InsertRows`, e `DeleteRows`.  
   
 - Se si eredita da [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), chiamando questi tre metodi modificato immediatamente l'archivio dati.  
   
 - Se si eredita da [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), i metodi di rinviare le modifiche all'archivio dati finché non si chiama `Update`, `GetOriginalData`, o `Undo`. Se l'aggiornamento implica molte modifiche, vengono eseguiti in modalità batch (si noti che l'invio in batch delle modifiche può aggiungere overhead notevole della memoria).  
   
- Si noti che `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl`. Di conseguenza, `IRowsetUpdateImpl` offre solo modifica funzionalità oltre a funzionalità di batch.  
+Si noti che `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl`. Di conseguenza, `IRowsetUpdateImpl` offre solo modifica funzionalità oltre a funzionalità di batch.  
   
 #### <a name="to-support-updatability-in-your-provider"></a>Per supportare aggiornabilità nel provider  
   
@@ -72,21 +72,21 @@ Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (s
     > [!NOTE]
     >  È necessario rimuovere il `IRowsetChangeImpl` riga dalla catena di ereditarietà. Questa eccezione per la direttiva menzionata in precedenza deve includere il codice per `IRowsetChangeImpl`.  
   
-2.  Aggiungere il codice seguente alla mappa COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
+1. Aggiungere il codice seguente alla mappa COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
     |Se si implementa|Aggiungere alla mappa COM|  
     |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  Nel comando, aggiungere il codice seguente alla mappa del set di proprietà (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
+1. Nel comando, aggiungere il codice seguente alla mappa del set di proprietà (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
   
     |Se si implementa|Aggiungere alla mappa proprietà|  
     |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  Nel mapping dei set di proprietà, è necessario anche includere tutte le impostazioni seguenti riportati di seguito:  
+1. Nel mapping dei set di proprietà, è necessario anche includere tutte le impostazioni seguenti riportati di seguito:  
   
     ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -145,7 +145,8 @@ Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (s
         >  Se si supportano le notifiche, potrebbe essere anche altre proprietà non corretta. vedere la sezione sulla `IRowsetNotifyCP` per questo elenco.  
   
 ##  <a name="vchowwritingtothedatasource"></a> La scrittura all'origine dati  
- Per leggere dall'origine dati, chiamare il `Execute` (funzione). Per scrivere nell'origine dati, chiamare il `FlushData` (funzione). (In senso generale, scaricamento mezzi per salvare le modifiche apportate a una tabella o indice su disco).  
+
+Per leggere dall'origine dati, chiamare il `Execute` (funzione). Per scrivere nell'origine dati, chiamare il `FlushData` (funzione). (In senso generale, scaricamento mezzi per salvare le modifiche apportate a una tabella o indice su disco).  
 
 ```cpp
 
@@ -158,6 +159,7 @@ L'handle di riga (HROW) e gli argomenti di handle (HACCESSOR) della funzione di 
 Il `FlushData` metodo scrive i dati nel formato in cui è stato archiviato originalmente. Se non si esegue l'override di questa funzione, il provider funzioneranno correttamente ma le modifiche non verranno scaricate nell'archivio dati.
 
 ### <a name="when-to-flush"></a>Quando lo scaricamento
+
 I modelli di provider chiamano FlushData ogni volta che i dati devono essere scritti nell'archivio dati; Ciò in genere (ma non sempre) si verifica come risultato di chiamate alle funzioni seguenti:
 
 - `IRowsetChange::DeleteRows`
@@ -312,6 +314,7 @@ Lo sviluppatore di provider, è necessario valutare come verranno archiviati i d
 Esaminare il codice dell'esempio UpdatePV; viene illustrato come un provider può gestire i dati NULL. Nell'esempio UpdatePV, il provider archivia i dati NULL scrivendo la stringa "NULL" nell'archivio dati. Quando legge i dati NULL dall'archivio dati, tale stringa viene quindi svuota il buffer, creazione di una stringa NULL. htm. Include inoltre un override di `IRowsetImpl::GetDBStatus` in cui si restituisce DBSTATUS_S_ISNULL se tale valore è vuoto.
 
 ### <a name="marking-nullable-columns"></a>Contrassegno delle colonne ammette valori null
+
 Se si implementa anche i set di righe dello schema (vedere `IDBSchemaRowsetImpl`), l'implementazione deve specificare nel set di righe DBSCHEMA_COLUMNS (in genere contrassegnati nel provider con CxxxSchemaColSchemaRowset) che la colonna è nullable.
 
 Devi anche specificare che tutte le colonne nullable contengano il valore DBCOLUMNFLAGS_ISNULLABLE nella versione del `GetColumnInfo`.
@@ -441,4 +444,5 @@ m_rgRowData.Add(trData[0]);
 Questo codice specifica, tra le altre cose, che la colonna supporta un valore predefinito pari a 0, che essere scrivibile, e che tutti i dati della colonna hanno la stessa lunghezza. Se si desidera che i dati in una colonna a lunghezza variabile, non si imposterebbe questo flag.
 
 ## <a name="see-also"></a>Vedere anche
+
 [Creazione di un provider OLE DB](creating-an-ole-db-provider.md)
