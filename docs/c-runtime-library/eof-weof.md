@@ -18,33 +18,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f4d6138ab18220031c96ab84c2b7ca57e419371
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 113ae268b4f97fdd14a3ac1a7fd0397b61ef8eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065751"
 ---
 # <a name="eof-weof"></a>EOF, WEOF
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-#include <stdio.h>  
-```  
-  
-## <a name="remarks"></a>Note  
- EOF viene restituito da una routine di I/O quando viene rilevata la fine del file (o in alcuni casi, un errore).  
-  
- WEOF produce il valore restituito, di tipo **wint_t**, usato per segnalare la fine di un flusso di caratteri wide o per segnalare una condizione di errore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [putc, putwc](../c-runtime-library/reference/putc-putwc.md)   
- [ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)   
- [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [fflush](../c-runtime-library/reference/fflush.md)   
- [fclose, _fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)   
- [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)   
- [_putch, _putwch](../c-runtime-library/reference/putch-putwch.md)   
- [isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)   
- [Global Constants](../c-runtime-library/global-constants.md) (Costanti globali)
+
+## <a name="syntax"></a>Sintassi
+
+```
+
+#include <stdio.h>
+```
+
+## <a name="remarks"></a>Note
+
+EOF viene restituito da una routine di I/O quando viene rilevata la fine del file (o in alcuni casi, un errore).
+
+WEOF produce il valore restituito, di tipo **wint_t**, usato per segnalare la fine di un flusso di caratteri wide o per segnalare una condizione di errore.
+
+## <a name="see-also"></a>Vedere anche
+
+[putc, putwc](../c-runtime-library/reference/putc-putwc.md)<br/>
+[ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[fflush](../c-runtime-library/reference/fflush.md)<br/>
+[fclose, _fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)<br/>
+[_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>
+[_putch, _putwch](../c-runtime-library/reference/putch-putwch.md)<br/>
+[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)<br/>
+[Costanti globali](../c-runtime-library/global-constants.md)

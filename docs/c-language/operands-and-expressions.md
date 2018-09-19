@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 804039142e63af838ddd7e8a899d616657596f66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08b92dcf1e51a58255254f36df5c140ea36343f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023371"
 ---
 # <a name="operands-and-expressions"></a>Operandi ed espressioni
-Un "operando" è un'entità su cui agisce l'operatore. Un'"espressione" è una sequenza di operatori e operandi che esegue qualsiasi combinazione delle seguenti azioni:  
-  
--   Calcola un valore  
-  
--   Designa un oggetto o una funzione  
-  
--   Genera effetti collaterali  
-  
- Gli operandi di C includono costanti, identificatori, stringhe, chiamate di funzioni, espressioni di indice, espressioni di selezione dei membri ed espressioni complesse ottenute combinando gli operandi con gli operatori oppure racchiudendo gli operandi tra parentesi. La sintassi di questi operandi viene specificata in [Espressioni primarie](../c-language/c-primary-expressions.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Espressioni e assegnazioni](../c-language/expressions-and-assignments.md)
+
+Un "operando" è un'entità su cui agisce l'operatore. Un'"espressione" è una sequenza di operatori e operandi che esegue qualsiasi combinazione delle seguenti azioni:
+
+- Calcola un valore
+
+- Designa un oggetto o una funzione
+
+- Genera effetti collaterali
+
+Gli operandi di C includono costanti, identificatori, stringhe, chiamate di funzioni, espressioni di indice, espressioni di selezione dei membri ed espressioni complesse ottenute combinando gli operandi con gli operatori oppure racchiudendo gli operandi tra parentesi. La sintassi di questi operandi viene specificata in [Espressioni primarie](../c-language/c-primary-expressions.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Espressioni e assegnazioni](../c-language/expressions-and-assignments.md)

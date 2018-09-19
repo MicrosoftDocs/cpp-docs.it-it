@@ -24,24 +24,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d763b8c5379223ddacb8077c463efa0b91acfa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a9917d614261afaffe28ea92f913799c429a9611
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060720"
 ---
 # <a name="hugeval-huge"></a>HUGE_VAL, _HUGE
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>Note  
- `HUGE_VAL` è il massimo valore double rappresentabile. Questo valore viene restituito da numerose funzioni matematiche di runtime quando si verifica un errore. Per alcune funzioni, viene restituito -`HUGE_VAL`. `HUGE_VAL` viene definito come `_HUGE`, ma le funzioni matematiche di runtime restituiscono `HUGE_VAL`. È inoltre necessario utilizzare `HUGE_VAL` nel codice, per coerenza.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintassi
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>Note
+
+`HUGE_VAL` è il massimo valore double rappresentabile. Questo valore viene restituito da numerose funzioni matematiche di runtime quando si verifica un errore. Per alcune funzioni, viene restituito -`HUGE_VAL`. `HUGE_VAL` viene definito come `_HUGE`, ma le funzioni matematiche di runtime restituiscono `HUGE_VAL`. È inoltre necessario utilizzare `HUGE_VAL` nel codice, per coerenza.
+
+## <a name="see-also"></a>Vedere anche
+
+[Costanti globali](../c-runtime-library/global-constants.md)

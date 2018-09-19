@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2037d64aba025b9acf8279a3da9073611d11ce8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107910"
 ---
 # <a name="conditional-expression-operator"></a>Operatore di espressione condizionale
+
 Il linguaggio C dispone di un operatore ternario: l'operatore di espressione condizionale (**? :**).
 
 ## <a name="syntax"></a>Sintassi
@@ -34,23 +35,23 @@ Il linguaggio C dispone di un operatore ternario: l'operatore di espressione con
 
 *logical-OR-expression* deve essere di tipo integrale, a virgola mobile o puntatore. Viene valutata in termini di equivalenza relativa a 0. *logical-OR-expression* è seguita da un punto di sequenza. La valutazione degli operandi prosegue nel modo seguente:
 
--   Se *logical-OR-expression* non è uguale a 0, *expression* viene valutato. Il risultato della valutazione dell'espressione è dato da *expression* non terminale. Ciò significa che *expression* viene valutato solo se *logical-OR-expression* è true.
+- Se *logical-OR-expression* non è uguale a 0, *expression* viene valutato. Il risultato della valutazione dell'espressione è dato da *expression* non terminale. Ciò significa che *expression* viene valutato solo se *logical-OR-expression* è true.
 
--   Se *logical-OR-expression* è uguale a 0, *conditional-expression* viene valutato. Il risultato dell'espressione è il valore di *conditional-expression*. Ciò significa che *conditional-expression* viene valutato solo se *logical-OR-expression* è false.
+- Se *logical-OR-expression* è uguale a 0, *conditional-expression* viene valutato. Il risultato dell'espressione è il valore di *conditional-expression*. Ciò significa che *conditional-expression* viene valutato solo se *logical-OR-expression* è false.
 
 Si noti che viene valutato *expression* o *conditional-expression*, ma non entrambi.
 
 Il tipo del risultato di un'operazione condizionale dipende dal tipo dell'operando *expression* o *conditional-expression* come segue:
 
--   Se *expression* o *conditional-expression* è di tipo integrale o a virgola mobile (i tipi possono essere diversi), l'operatore esegue le conversioni aritmetiche comuni. Il tipo del risultato è il tipo degli operandi in seguito alla conversione.
+- Se *expression* o *conditional-expression* è di tipo integrale o a virgola mobile (i tipi possono essere diversi), l'operatore esegue le conversioni aritmetiche comuni. Il tipo del risultato è il tipo degli operandi in seguito alla conversione.
 
--   Se *expression* e *conditional-expression* hanno lo stesso tipo struttura, unione o puntatore, il tipo del risultato è lo stesso tipo struttura, unione o puntatore.
+- Se *expression* e *conditional-expression* hanno lo stesso tipo struttura, unione o puntatore, il tipo del risultato è lo stesso tipo struttura, unione o puntatore.
 
--   Se entrambi gli operandi possiedono il tipo `void`, il risultato è di tipo `void`.
+- Se entrambi gli operandi possiedono il tipo `void`, il risultato è di tipo `void`.
 
--   Se uno degli operandi è un puntatore a un oggetto di qualsiasi tipo e l'altro operando è un puntatore a `void`, il puntatore all'oggetto viene convertito in un puntatore a `void` e il risultato è un puntatore a `void`.
+- Se uno degli operandi è un puntatore a un oggetto di qualsiasi tipo e l'altro operando è un puntatore a `void`, il puntatore all'oggetto viene convertito in un puntatore a `void` e il risultato è un puntatore a `void`.
 
--   Se *expression* o *conditional-expression* è un puntatore e l'altro operando è un'espressione costante con valore 0, il tipo del risultato è il tipo puntatore.
+- Se *expression* o *conditional-expression* è un puntatore e l'altro operando è un'espressione costante con valore 0, il tipo del risultato è il tipo puntatore.
 
 Nel confronto dei tipi tra i puntatori qualsiasi qualificatore di tipo (**const** o `volatile`) nel tipo a cui punta il puntatore non è significativo, ma il tipo del risultato eredita i qualificatori da entrambi i componenti dell'espressione condizionale.
 

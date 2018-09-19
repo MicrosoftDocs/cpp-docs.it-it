@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835b59a16927e447cbe462add99baf0c1fa9a241
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc13b4e8d7f70f107e78dbc8ab679b3fac3bc513
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028831"
 ---
 # <a name="terminating-newline-characters"></a>Termine caratteri di nuova riga
-**ANSI 4.9.2** Se è necessario che l'ultima riga di un flusso di testo termini con un carattere di nuova riga  
-  
- Le funzioni di flusso riconoscono o il carattere di nuova riga o il carattere di fine file come terminazione di riga.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni della libreria](../c-language/library-functions.md)
+
+**ANSI 4.9.2** Se è necessario che l'ultima riga di un flusso di testo termini con un carattere di nuova riga
+
+Le funzioni di flusso riconoscono o il carattere di nuova riga o il carattere di fine file come terminazione di riga.
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni della libreria](../c-language/library-functions.md)

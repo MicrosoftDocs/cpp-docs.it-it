@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 576a8d9252db3d5733775a7a0c348b428462aa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9756861fd1204a05179ac77dfa648822ed83e5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079537"
 ---
 # <a name="pointer-subtraction"></a>Sottrazione di puntatori
-**ANSI 3.3.6, 4.1.1** Il tipo di Integer necessario per mantenere la differenza tra due puntatori agli elementi della stessa matrice, **ptrdiff_t**  
-  
- Il typedef `ptrdiff_t` è un valore `int` sulla piattaforma x86 a 32 bit. Nelle piattaforme a 64 bit il typedef `ptrdiff_t` è un valore `__int64`.
-  
-## <a name="see-also"></a>Vedere anche  
- [Matrici e puntatori](../c-language/arrays-and-pointers.md)
+
+**ANSI 3.3.6, 4.1.1** Il tipo di Integer necessario per mantenere la differenza tra due puntatori agli elementi della stessa matrice, **ptrdiff_t**
+
+Il typedef `ptrdiff_t` è un valore `int` sulla piattaforma x86 a 32 bit. Nelle piattaforme a 64 bit il typedef `ptrdiff_t` è un valore `__int64`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Matrici e puntatori](../c-language/arrays-and-pointers.md)

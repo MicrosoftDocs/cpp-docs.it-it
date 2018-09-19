@@ -14,25 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033914"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitatori per i tag della documentazione di Visual C++
 L'uso dei tag della documentazione richiede la specifica di delimitatori per indicare al compilatore il punto di inizio e di fine di un commento relativo alla documentazione.  
   
  È possibile usare con i tag della documentazione XML i tipi di delimitatori seguenti:  
+|||
+|-|-|
+|`///`  | Formato riportato negli esempi della documentazione e usato dai modelli dei progetti Visual C++.  |
+| `/** */`  | Delimitatori di più righe.  |
   
- `///`  
- Formato riportato negli esempi della documentazione e usato dai modelli dei progetti Visual C++.  
-  
- `/** */`  
- Delimitatori di più righe.  
-  
- Quando si usano i delimitatori `/** */` è necessario rispettare determinate regole di formattazione:  
+Quando si usano i delimitatori `/** */` è necessario rispettare determinate regole di formattazione:  
   
 -   Per la riga contenente il delimitatore `/**` se la parte restante della riga è rappresentata da uno spazio vuoto, la riga non viene elaborata per i commenti. Se il primo carattere è uno spazio vuoto, lo spazio vuoto viene ignorato e il resto della riga viene elaborato. In caso contrario, l'intero testo della riga dopo il delimitatore `/**` viene elaborato come parte del commento.  
   
@@ -40,7 +38,7 @@ L'uso dei tag della documentazione richiede la specifica di delimitatori per ind
   
 -   Per le righe successive a quella che inizia con il delimitatore `/**`, il compilatore cerca un modello comune all'inizio di ogni riga costituito da uno spazio vuoto facoltativo e un asterisco (`*`), seguiti da altri spazi vuoti facoltativi. Se il compilatore rileva un set comune di caratteri all'inizio di ogni riga, ignorerà il modello per tutte le righe successive al delimitatore `/**` fino a, ed eventualmente includendo, la riga contenente il delimitatore `*/`.  
   
- Ecco alcuni esempi:  
+Ecco alcuni esempi:  
   
 -   La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`. I formati dei due tag seguenti produrranno gli stessi commenti:  
   

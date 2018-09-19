@@ -12,21 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2eac057bbf8164915ff645cca098bbbf7c1995a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f31ebddb38d1eb1cafe9495f8c121811ec502524
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032414"
 ---
 # <a name="right-shifts"></a>Spostamenti a destra
-Il risultato di uno spostamento a destra di un valore negativo tipo integrale con segno  
-  
- Lo spostamento di un valore negativo a destra produce la metà del valore assoluto, arrotondato per difetto. Ad esempio, un valore `short` signed di -253 (valore esadecimale 0xFF03, valore binario 11111111 00000011) spostato a destra di un solo bit produce -127 (valore esadecimale 0xFF81, valore binario 11111111 10000001). Un positivo 253 spostato a destra produce + 126.  
-  
- Spostamenti a destra mantengono il bit del segno di tipi integrali con segno. Quando un intero con segno scorre a destra, il bit più significativo rimane impostato. Ad esempio, se 0xF0000000 è con segno`int`, uno spostamento a destra produce 0xF8000000. Lo scorrimento di un numero `int` negativo a destra 32 volte produce 0xFFFFFFFF.  
-  
- Quando un intero senza segno scorre a destra, il bit più significativo viene cancellato. Ad esempio, se 0xF000 è senza segno, il risultato è 0x7800. Lo scorrimento di un numero `unsigned`  positivo `int` a destra 32 volte produce 0xFFFFFFFF.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Valori Integer](../c-language/integers.md)
+
+Il risultato di uno spostamento a destra di un valore negativo tipo integrale con segno
+
+Lo spostamento di un valore negativo a destra produce la metà del valore assoluto, arrotondato per difetto. Ad esempio, un valore `short` signed di -253 (valore esadecimale 0xFF03, valore binario 11111111 00000011) spostato a destra di un solo bit produce -127 (valore esadecimale 0xFF81, valore binario 11111111 10000001). Un positivo 253 spostato a destra produce + 126.
+
+Spostamenti a destra mantengono il bit del segno di tipi integrali con segno. Quando un intero con segno scorre a destra, il bit più significativo rimane impostato. Ad esempio, se 0xF0000000 è con segno`int`, uno spostamento a destra produce 0xF8000000. Lo scorrimento di un numero `int` negativo a destra 32 volte produce 0xFFFFFFFF.
+
+Quando un intero senza segno scorre a destra, il bit più significativo viene cancellato. Ad esempio, se 0xF000 è senza segno, il risultato è 0x7800. Lo scorrimento di un numero `unsigned`  positivo `int` a destra 32 volte produce 0xFFFFFFFF.
+
+## <a name="see-also"></a>Vedere anche
+
+[Valori Integer](../c-language/integers.md)

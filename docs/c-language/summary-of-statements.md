@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fdc129bd2aadd45ebaa13510e6029dba9a07df
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e83d4db17dd20a46ed2cbdd91598428e14748cf0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766857"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030313"
 ---
 # <a name="summary-of-statements"></a>Riepilogo di istruzioni
 
@@ -49,8 +49,8 @@ ms.locfileid: "43766857"
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
 
 *expression-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
+
 *iteration-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**<br/>
@@ -67,10 +67,11 @@ ms.locfileid: "43766857"
 &nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
 *try-except-statement*:   /\* Specifico di Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
+
 *try-finally-statement*:   /\* Specifico di Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
 [Grammatica di struttura della frase](../c-language/phrase-structure-grammar.md)

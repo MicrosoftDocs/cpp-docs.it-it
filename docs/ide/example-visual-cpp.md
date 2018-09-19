@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7c6be247c6c756557e7173c4b295197d9e4267cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110965"
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
 Il tag \<example> consente di specificare un esempio di come usare un metodo o un altro membro della libreria. Ciò comporta in genera anche il ricorso al tag [\<code>](../ide/code-visual-cpp.md).  
@@ -35,8 +35,8 @@ Il tag \<example> consente di specificare un esempio di come usare un metodo o u
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `description`  
- Descrizione dell'esempio di codice.  
+*description*<br/>
+Descrizione dell'esempio di codice.  
   
 ## <a name="remarks"></a>Note  
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084557"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 
@@ -45,19 +45,19 @@ Fornisce metodi per la creazione di una finestra o di una sottoclasse di finestr
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La nuova classe, derivata da `CWindowImpl`.
 
-*TBase*  
+*TBase*<br/>
 Classe base della classe. Per impostazione predefinita, è la classe di base [CWindow](../../atl/reference/cwindow-class.md).
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Oggetto [classe traits](../../atl/understanding-window-traits.md) che definisce gli stili della finestra. Il valore predefinito è `CControlWinTraits`.
 
 ## <a name="members"></a>Membri
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametri
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Handle alla finestra padre o proprietaria.
 
-*Rect*  
+*Rect*<br/>
 [in] Oggetto [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica la posizione della finestra. Il `RECT` renserlo passabile per puntatore o riferimento.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Specifica il nome della finestra. Il valore predefinito è NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Lo stile della finestra. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Lo stile della finestra estesi. Questo valore viene combinato con lo stile fornito dalla classe traits per la finestra. Il valore predefinito consente i tratti di classe completo controllare lo stile. Per un elenco di valori possibili, vedere [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel SDK di Windows.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Per una finestra figlio, l'identificatore di finestra. Per una finestra di primo livello, un handle di menu per la finestra. Il valore predefinito è **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Un puntatore ai dati di creazione della finestra. Per una descrizione completa, vedere la descrizione per il parametro finale [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Valore restituito
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>Parametri
 
-*uMsg*  
+*uMsg*<br/>
 [in] Il messaggio inviato alla finestra.
 
-*wParam*  
+*wParam*<br/>
 [in] Informazioni aggiuntive specifiche del messaggio.
 
-*lParam*  
+*lParam*<br/>
 [in] Informazioni aggiuntive specifiche del messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle alla finestra in corso l'eliminazione.
 
 ### <a name="remarks"></a>Note
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle alla finestra in corso una sottoclasse.
 
 ### <a name="return-value"></a>Valore restituito
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parametri
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle alla finestra.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Il messaggio inviato alla finestra.
 
-*wParam*  
+*wParam*<br/>
 [in] Informazioni aggiuntive specifiche del messaggio.
 
-*lParam*  
+*lParam*<br/>
 [in] Informazioni aggiuntive specifiche del messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -387,6 +387,6 @@ Il risultato dell'elaborazione del messaggio.
 
 ## <a name="see-also"></a>Vedere anche
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

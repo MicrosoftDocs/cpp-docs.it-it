@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e76adb397c9131bbaa7c2c40124de31348c56a31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c074ddd193765029a2925e1a98c4ab1787f9a82a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082677"
 ---
 # <a name="execution-character-set"></a>Set di caratteri di esecuzione
-Questo contenuto fa spesso riferimento al "set di caratteri di esecuzione". Il set di caratteri di esecuzione non è necessariamente lo stesso del set di caratteri di origine utilizzato per la scrittura di programmi C. Il set di caratteri di esecuzione include tutti i caratteri nel set di caratteri di origine e il carattere null, il carattere di nuova riga, il backspace, la tabulazione orizzontale, la tabulazione verticale, il ritorno a capo e le sequenze di escape. I set di caratteri di esecuzione e di origine possono variare in altre implementazioni.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Costanti carattere C](../c-language/c-character-constants.md)
+
+Questo contenuto fa spesso riferimento al "set di caratteri di esecuzione". Il set di caratteri di esecuzione non è necessariamente lo stesso del set di caratteri di origine utilizzato per la scrittura di programmi C. Il set di caratteri di esecuzione include tutti i caratteri nel set di caratteri di origine e il carattere null, il carattere di nuova riga, il backspace, la tabulazione orizzontale, la tabulazione verticale, il ritorno a capo e le sequenze di escape. I set di caratteri di esecuzione e di origine possono variare in altre implementazioni.
+
+## <a name="see-also"></a>Vedere anche
+
+[Costanti carattere C](../c-language/c-character-constants.md)

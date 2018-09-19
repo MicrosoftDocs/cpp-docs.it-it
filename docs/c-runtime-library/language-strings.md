@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaab56876651a1056ef89d57bebb2799d1bb3194
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0bcb9d5dbadc0fbaa33a3c8df6f9193704514e0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604141"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083288"
 ---
 # <a name="language-strings"></a>Language Strings
 
@@ -101,7 +101,7 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 
 ## <a name="see-also"></a>Vedere anche
 
-[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
-[Stringhe relative a paesi/aree geografiche](../c-runtime-library/country-region-strings.md)  
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
+[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Stringhe relative a paesi/aree geografiche](../c-runtime-library/country-region-strings.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

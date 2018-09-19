@@ -17,15 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fed38adbad5289e2693c10f2852247d3ec5f3951
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 884b96ac7f7cf35cd4e6bf19c4b1e9424299a87f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118416"
 ---
 # <a name="storage-of-arrays"></a>Archiviazione di matrici
-Lo spazio di archiviazione associato a un tipo di matrice è lo spazio di archiviazione necessario per tutti i relativi elementi. Gli elementi di una matrice vengono archiviati in posizioni di memoria contigue e crescenti, dal primo elemento all'ultimo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Dichiarazioni di matrice](../c-language/array-declarations.md)
+
+Lo spazio di archiviazione associato a un tipo di matrice è lo spazio di archiviazione necessario per tutti i relativi elementi. Gli elementi di una matrice vengono archiviati in posizioni di memoria contigue e crescenti, dal primo elemento all'ultimo.
+
+## <a name="see-also"></a>Vedere anche
+
+[Dichiarazioni di matrice](../c-language/array-declarations.md)

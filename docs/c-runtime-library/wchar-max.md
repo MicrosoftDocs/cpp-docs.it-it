@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd2e208c5bad728156ea39f228b1b9157c4aaaa5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b749fb64594796efb49b565193b86c2e68facc6a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407402"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024255"
 ---
 # <a name="wcharmax"></a>WCHAR_MAX
-Valore massimo per il tipo `wchar_t`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#include <wchar.h>  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+Valore massimo per il tipo `wchar_t`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+#include <wchar.h>
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Costanti globali](../c-runtime-library/global-constants.md)

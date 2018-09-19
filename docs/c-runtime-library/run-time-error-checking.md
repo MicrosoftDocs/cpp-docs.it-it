@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2468cd05efdf732fbf955b8532a61d24fa6c0ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaa4972a12729a5697db3574fcf89b0fb2b252ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068455"
 ---
 # <a name="run-time-error-checking"></a>Controllo degli errori di runtime
 
 La libreria di runtime C contiene le funzioni che supportano i controlli degli errori di runtime (RTC). Il controllo degli errori di runtime consente di compilare il programma in modo che determinati tipi di errori di runtime vengano segnalati. Specificare come gli errori vengono segnalati e quali tipi di errori vengono segnalati. Per altre informazioni, vedere [Procedura: Usare controlli run-time nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
- Utilizzare le seguenti funzioni per personalizzare il modo in cui il programma esegue il controllo degli errori di runtime.
+Utilizzare le seguenti funzioni per personalizzare il modo in cui il programma esegue il controllo degli errori di runtime.
 
 ## <a name="run-time-error-checking-functions"></a>Funzioni di controllo degli errori di runtime
 
@@ -42,6 +42,6 @@ La libreria di runtime C contiene le funzioni che supportano i controlli degli e
 ## <a name="see-also"></a>Vedere anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [/RTC (controlli per gli errori di runtime)](../build/reference/rtc-run-time-error-checks.md)<br/>
- [runtime_checks](../preprocessor/runtime-checks.md)<br/>
- [Routine di debug](../c-runtime-library/debug-routines.md)<br/>
+[/RTC (controlli per gli errori di runtime)](../build/reference/rtc-run-time-error-checks.md)<br/>
+[runtime_checks](../preprocessor/runtime-checks.md)<br/>
+[Routine di debug](../c-runtime-library/debug-routines.md)<br/>

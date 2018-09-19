@@ -17,36 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c1934cc511073aa38b97228f7ae0f71f06ed31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a052dbc666be05d05753c7408b1d09643f09dc8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022877"
 ---
 # <a name="expressions-in-parentheses"></a>Espressioni tra parentesi
-È possibile includere qualsiasi operando tra parentesi senza modificare il tipo o il valore dell'espressione inclusa. Ad esempio, nell'espressione:  
-  
-```  
-( 10 + 5 ) / 5  
-```  
-  
- le parentesi che racchiudono `10 + 5` indicano che il valore `10 + 5` viene valutato per primo e diventa l'operando sinistro dell'operatore di divisione (**/**). Il risultato di `( 10 + 5 ) / 5` è 3. Senza le parentesi, `10 + 5 / 5` restituirebbe 11.  
-  
- Sebbene le parentesi influiscano sulla modalità con cui vengono raggruppati gli operandi in un'espressione, non è possibile garantire un particolare ordine di valutazione in tutti i casi. Ad esempio, né le parentesi né il raggruppamento da sinistra a destra dell'espressione seguente garantisce che il valore `i` sarà in una delle sottoespressioni:  
-  
-```  
-( i++ +1 ) * ( 2 + i )  
-```  
-  
- Il compilatore è libero di valutare i due lati della moltiplicazione in qualsiasi ordine. Se il valore iniziale `i` è zero, l'intera espressione potrebbe essere valutata come una di queste due istruzioni:  
-  
-```  
-( 0 + 1 + 1 ) * ( 2 + 1 )   
-( 0 + 1 + 1 ) * ( 2 + 0 )  
-```  
-  
- Le eccezioni derivanti dagli effetti collaterali vengono trattate in [Effetti collaterali](../c-language/side-effects.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Espressioni primarie C](../c-language/c-primary-expressions.md)
+
+È possibile includere qualsiasi operando tra parentesi senza modificare il tipo o il valore dell'espressione inclusa. Ad esempio, nell'espressione:
+
+```
+( 10 + 5 ) / 5
+```
+
+le parentesi che racchiudono `10 + 5` indicano che il valore `10 + 5` viene valutato per primo e diventa l'operando sinistro dell'operatore di divisione (**/**). Il risultato di `( 10 + 5 ) / 5` è 3. Senza le parentesi, `10 + 5 / 5` restituirebbe 11.
+
+Sebbene le parentesi influiscano sulla modalità con cui vengono raggruppati gli operandi in un'espressione, non è possibile garantire un particolare ordine di valutazione in tutti i casi. Ad esempio, né le parentesi né il raggruppamento da sinistra a destra dell'espressione seguente garantisce che il valore `i` sarà in una delle sottoespressioni:
+
+```
+( i++ +1 ) * ( 2 + i )
+```
+
+Il compilatore è libero di valutare i due lati della moltiplicazione in qualsiasi ordine. Se il valore iniziale `i` è zero, l'intera espressione potrebbe essere valutata come una di queste due istruzioni:
+
+```
+( 0 + 1 + 1 ) * ( 2 + 1 )
+( 0 + 1 + 1 ) * ( 2 + 0 )
+```
+
+Le eccezioni derivanti dagli effetti collaterali vengono trattate in [Effetti collaterali](../c-language/side-effects.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Espressioni primarie C](../c-language/c-primary-expressions.md)

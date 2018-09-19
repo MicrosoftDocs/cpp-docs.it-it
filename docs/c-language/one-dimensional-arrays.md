@@ -20,53 +20,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cde6bfbdf7ec72a9c1db6a7cb77613163400d737
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087890"
 ---
 # <a name="one-dimensional-arrays"></a>Matrici unidimensionali
-Un'espressione di suffisso seguita da un'espressione tra parentesi quadre (**[ ]**) è una rappresentazione con indice di un elemento di un oggetto matrice. Un'espressione di indice rappresenta il valore all'indirizzo che si trova a un numero di posizioni corrispondente a *expression* oltre *postfix-expression*, se espressa come  
-  
-```  
+
+Un'espressione di suffisso seguita da un'espressione tra parentesi quadre (**[ ]**) è una rappresentazione con indice di un elemento di un oggetto matrice. Un'espressione di indice rappresenta il valore all'indirizzo che si trova a un numero di posizioni corrispondente a *expression* oltre *postfix-expression*, se espressa come
+
+```
 postfix-expression [ expression ]
-```  
-  
- In genere, il valore rappresentato da *postfix-expression* è un valore puntatore, quale un identificatore di matrice, ed *expression* è un valore integrale. Tuttavia, l'unica condizione da soddisfare dal punto di vista sintattico è che una delle espressioni sia di tipo puntatore e l'altra di tipo integrale. Pertanto, il valore integrale può trovarsi nella posizione *postfix-expression* e il valore puntatore può essere racchiuso tra parentesi quadre nella posizione di *expression*, ovvero dell'indice. Ad esempio, questo codice è valido:  
-  
-```  
-// one_dimensional_arrays.c  
-int sum, *ptr, a[10];  
-int main() {  
-   ptr = a;  
-   sum = 4[ptr];  
-}  
-```  
-  
- Le espressioni di indice sono in genere utilizzate per fare riferimento agli elementi di matrice, ma è possibile applicare un indice a un puntatore. Qualsiasi sia l'ordine di valori, *expression* deve essere racchiusa tra parentesi (**[ ]**).  
-  
- L'espressione di indice viene valutata aggiungendo il valore integrale al valore puntatore e quindi applicando l'operatore di riferimento indiretto (<strong>\*</strong>) al risultato. Per informazioni sull'operatore di riferimento indiretto, vedere [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md). In effetti, per una matrice unidimensionale, le quattro espressioni seguenti sono equivalenti, supponendo che `a` è un puntatore e `b` è un Integer:  
-  
-```  
-a[b]  
-*(a + b)  
-*(b + a)  
-b[a]  
-```  
-  
- In base alle regole di conversione per l'operatore di addizione, descritte in [Operatori di addizione](../c-language/c-additive-operators.md), il valore integrale viene convertito in un offset di indirizzo moltiplicandolo per la lunghezza del tipo a cui il puntatore fa riferimento.  
-  
- Ad esempio, si supponga che l'identificatore `line` faccia riferimento a una matrice di valori `int`. La procedura riportata di seguito viene utilizzata per valutare l'espressione di indice `line[ i ]`:  
-  
-1.  L'Integer `i` viene moltiplicato per il numero di byte definito come la lunghezza di un elemento `int`. Il valore convertito di `i` rappresenta le posizioni `i` `int`.  
-  
-2.  Questo valore convertito viene aggiunto al valore di puntatore originale (`line`) per produrre un indirizzo con un offset di `i` `int` posizioni da `line`.  
-  
-3.  L'operatore di riferimento indiretto viene applicato al nuovo indirizzo. Il risultato è il valore dell'elemento della matrice in tale posizione (intuitivamente, `line [ i ]`).  
-  
- L'espressione di indice `line[0]` rappresenta il valore del primo elemento della riga, poiché l'offset dall'indirizzo rappresentato da `line` è 0. Analogamente, un'espressione come `line[5]` fa riferimento all'offset dell'elemento cinque posizioni dalla riga o al sesto elemento della matrice.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Operatore di indice inferiore:](../cpp/subscript-operator.md)
+```
+
+In genere, il valore rappresentato da *postfix-expression* è un valore puntatore, quale un identificatore di matrice, ed *expression* è un valore integrale. Tuttavia, l'unica condizione da soddisfare dal punto di vista sintattico è che una delle espressioni sia di tipo puntatore e l'altra di tipo integrale. Pertanto, il valore integrale può trovarsi nella posizione *postfix-expression* e il valore puntatore può essere racchiuso tra parentesi quadre nella posizione di *expression*, ovvero dell'indice. Ad esempio, questo codice è valido:
+
+```
+// one_dimensional_arrays.c
+int sum, *ptr, a[10];
+int main() {
+   ptr = a;
+   sum = 4[ptr];
+}
+```
+
+Le espressioni di indice sono in genere utilizzate per fare riferimento agli elementi di matrice, ma è possibile applicare un indice a un puntatore. Qualsiasi sia l'ordine di valori, *expression* deve essere racchiusa tra parentesi (**[ ]**).
+
+L'espressione di indice viene valutata aggiungendo il valore integrale al valore puntatore e quindi applicando l'operatore di riferimento indiretto (<strong>\*</strong>) al risultato. Per informazioni sull'operatore di riferimento indiretto, vedere [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md). In effetti, per una matrice unidimensionale, le quattro espressioni seguenti sono equivalenti, supponendo che `a` è un puntatore e `b` è un Integer:
+
+```
+a[b]
+*(a + b)
+*(b + a)
+b[a]
+```
+
+In base alle regole di conversione per l'operatore di addizione, descritte in [Operatori di addizione](../c-language/c-additive-operators.md), il valore integrale viene convertito in un offset di indirizzo moltiplicandolo per la lunghezza del tipo a cui il puntatore fa riferimento.
+
+Ad esempio, si supponga che l'identificatore `line` faccia riferimento a una matrice di valori `int`. La procedura riportata di seguito viene utilizzata per valutare l'espressione di indice `line[ i ]`:
+
+1. L'Integer `i` viene moltiplicato per il numero di byte definito come la lunghezza di un elemento `int`. Il valore convertito di `i` rappresenta le posizioni `i` `int`.
+
+1. Questo valore convertito viene aggiunto al valore di puntatore originale (`line`) per produrre un indirizzo con un offset di `i` `int` posizioni da `line`.
+
+1. L'operatore di riferimento indiretto viene applicato al nuovo indirizzo. Il risultato è il valore dell'elemento della matrice in tale posizione (intuitivamente, `line [ i ]`).
+
+L'espressione di indice `line[0]` rappresenta il valore del primo elemento della riga, poiché l'offset dall'indirizzo rappresentato da `line` è 0. Analogamente, un'espressione come `line[5]` fa riferimento all'offset dell'elemento cinque posizioni dalla riga o al sesto elemento della matrice.
+
+## <a name="see-also"></a>Vedere anche
+
+[Operatore di indice inferiore:](../cpp/subscript-operator.md)

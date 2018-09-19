@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25118792500d679d243f55e5d87e62a4994eaa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 791509a7c67f5fa47128fda97688c43e592724ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389930"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115177"
 ---
 # <a name="heap-constants"></a>Constanti heap
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-#include <malloc.h>  
-  
-```  
-  
-## <a name="remarks"></a>Note  
- Queste costanti forniscono il valore restituito che indica lo stato dell'heap.  
-  
-|Costante|Significato|  
-|--------------|-------------|  
-|`_HEAPBADBEGIN`|Le informazioni di intestazione iniziali non sono state trovate o non erano valide.|  
-|`_HEAPBADNODE`|È stato trovato un nodo non valido o l'heap è danneggiato.|  
-|`_HEAPBADPTR`|Il campo **_pentry** della struttura **_HEAPINFO** non contiene un puntatore valido nell'heap (solo routine `_heapwalk`).|  
-|`_HEAPEMPTY`|L'heap non è stato inizializzato.|  
-|`_HEAPEND`|Fine dell'heap raggiunta correttamente (solo routine `_heapwalk`).|  
-|`_HEAPOK`|L'heap è coerente (solo routine `_heapset` e `_heapchk`). Nessun errore fino a questo punto; la struttura **_HEAPINFO** contiene informazioni sulla voce seguente (solo routine `_heapwalk`).|  
-  
-## <a name="see-also"></a>Vedere anche  
- [_heapchk](../c-runtime-library/reference/heapchk.md)   
- [_heapset](../c-runtime-library/heapset.md)   
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintassi
+
+```
+
+#include <malloc.h>
+
+```
+
+## <a name="remarks"></a>Note
+
+Queste costanti forniscono il valore restituito che indica lo stato dell'heap.
+
+|Costante|Significato|
+|--------------|-------------|
+|`_HEAPBADBEGIN`|Le informazioni di intestazione iniziali non sono state trovate o non erano valide.|
+|`_HEAPBADNODE`|È stato trovato un nodo non valido o l'heap è danneggiato.|
+|`_HEAPBADPTR`|Il campo **_pentry** della struttura **_HEAPINFO** non contiene un puntatore valido nell'heap (solo routine `_heapwalk`).|
+|`_HEAPEMPTY`|L'heap non è stato inizializzato.|
+|`_HEAPEND`|Fine dell'heap raggiunta correttamente (solo routine `_heapwalk`).|
+|`_HEAPOK`|L'heap è coerente (solo routine `_heapset` e `_heapchk`). Nessun errore fino a questo punto; la struttura **_HEAPINFO** contiene informazioni sulla voce seguente (solo routine `_heapwalk`).|
+
+## <a name="see-also"></a>Vedere anche
+
+[_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
+[_heapset](../c-runtime-library/heapset.md)<br/>
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
+[Costanti globali](../c-runtime-library/global-constants.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a63caea7186114244927b9ede4c63ed97871d6e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326583"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111264"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
 Il tag \<paramref > offre un modo per indicare che una parola è un parametro. Il file con estensione xml può essere elaborato per formattare questo parametro in modo specifico.  
@@ -35,8 +35,8 @@ Il tag \<paramref > offre un modo per indicare che una parola è un parametro. I
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `name`  
- Nome del parametro a cui fare riferimento.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `name`.  
+*name*<br/>
+Nome del parametro a cui fare riferimento.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `name`.  
   
 ## <a name="remarks"></a>Note  
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  

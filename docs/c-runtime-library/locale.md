@@ -20,22 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392510"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082222"
 ---
 # <a name="locale"></a>Impostazioni locali
 
 Le *impostazioni locali* si riferiscono alle impostazioni di paese/area geografica e lingua che è possibile usare per personalizzare il programma. Alcune categorie dipendenti dalle impostazioni locali includono i formati di visualizzazione per date e valori monetari. Per altre informazioni, vedere [Categorie di impostazioni locali](../c-runtime-library/locale-categories.md).
 
- Usare la funzione [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) per modificare o eseguire una query su alcune o tutte le informazioni riguardanti il programma corrente o le impostazioni locali del thread usando funzioni senza il suffisso **_l**. Le funzioni con il suffisso **_l** useranno il parametro delle impostazioni locali passato per le informazioni sulle impostazioni locali durante l'esecuzione della sola funzione specificata. Per creare impostazioni locali da usare con una funzione con suffisso **_l**, usare [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Per rendere disponibili le impostazioni locali, usare [_free_locale](../c-runtime-library/reference/free-locale.md). Per ottenere le impostazioni locali correnti, usare [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
+Usare la funzione [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) per modificare o eseguire una query su alcune o tutte le informazioni riguardanti il programma corrente o le impostazioni locali del thread usando funzioni senza il suffisso **_l**. Le funzioni con il suffisso **_l** useranno il parametro delle impostazioni locali passato per le informazioni sulle impostazioni locali durante l'esecuzione della sola funzione specificata. Per creare impostazioni locali da usare con una funzione con suffisso **_l**, usare [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Per rendere disponibili le impostazioni locali, usare [_free_locale](../c-runtime-library/reference/free-locale.md). Per ottenere le impostazioni locali correnti, usare [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
- Usare [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) per verificare se ogni thread ha le proprie impostazioni locali o se tutti i thread in un programma condividono le stesse impostazioni locali. Per alte informazioni, vedere [Impostazioni locali e tabelle codici](../text/locales-and-code-pages.md).
+Usare [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) per verificare se ogni thread ha le proprie impostazioni locali o se tutti i thread in un programma condividono le stesse impostazioni locali. Per alte informazioni, vedere [Impostazioni locali e tabelle codici](../text/locales-and-code-pages.md).
 
- Sono disponibili più versioni sicure delle funzioni presenti nella seguente tabella, indicate dal suffisso **_s** ("sicuro"). Per altre informazioni, vedere [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Sono disponibili più versioni sicure delle funzioni presenti nella seguente tabella, indicate dal suffisso **_s** ("sicuro"). Per altre informazioni, vedere [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="locale-dependent-routines"></a>Routine dipendenti dalle impostazioni locali
 
@@ -82,4 +82,4 @@ Le *impostazioni locali* si riferiscono alle impostazioni di paese/area geografi
 ## <a name="see-also"></a>Vedere anche
 
 [Internazionalizzazione](../c-runtime-library/internationalization.md)<br/>
- [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

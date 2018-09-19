@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 618a8053bea59896615d23514c2cf8aff29bea93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087481"
 ---
 # <a name="indirection-and-address-of-operators"></a>Operatori address-of e di riferimento indiretto
 
@@ -52,7 +52,6 @@ L'operatore address-of unario (**&**) specifica l'indirizzo del relativo operand
 
 Se l'operando è il risultato di un operatore __&#42;__ unario, non viene valutato alcun operatore e ne deriva un risultato che corrisponde all'omissione di entrambi. Il risultato non è un lvalue e i vincoli sugli operatori vengono mantenuti. Se l'operando è il risultato di un operatore __&#91;&#93;__, non viene valutato né l'operatore __&__ né l'operatore __&#42;__ unario implicato dall'operatore __&#91;&#93;__. Il risultato corrisponde alla rimozione dell'operatore __&__ e alla modifica dell'operatore __&#91;&#93;__ in un operatore __+__. In caso contrario, il risultato è un puntatore all'oggetto o alla funzione definita dall'operando.
 
-
 ## <a name="examples"></a>Esempi
 
 Gli esempi seguenti usano le dichiarazioni comuni che seguono:
@@ -65,7 +64,7 @@ double d;
 
 Questa istruzione usa l'operatore address-of (**&**) per accettare l'indirizzo del sesto elemento della matrice `a`. Il risultato viene archiviato nella variabile del puntatore `pa`:
 
-```C  
+```C
 pa = &a[5];
 ```
 
@@ -89,11 +88,11 @@ int roundup( void );     /* Function declaration */
 int  *proundup  = roundup;
 int  *pround  = &roundup;
 assert( pround == proundup );
-```  
+```
 
 Dopo che la funzione `roundup` è stata dichiarata, vengono dichiarati e inizializzati due puntatori a `roundup`. Il primo puntatore, `proundup`, viene inizializzata utilizzando solo il nome della funzione, mentre il secondo, `pround`, utilizza l'operatore address-of nell'inizializzazione. Le inizializzazioni sono equivalenti.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Operatore di riferimento indiretto: &#42;](../cpp/indirection-operator-star.md)  
-[Operatore address-of: &](../cpp/address-of-operator-amp.md)  
+[Operatore di riferimento indiretto: &#42;](../cpp/indirection-operator-star.md)<br/>
+[Operatore address-of: &](../cpp/address-of-operator-amp.md)

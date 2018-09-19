@@ -18,28 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cecc47bc4633aa40f38bda23d1aee0007ea34ab4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f79f8648c2c0d12bf521c38e2db025a8841ab927
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061084"
 ---
 # <a name="argument-description"></a>Descrizione di argomenti
-Il parametro `argc` nelle funzioni **main** e **wmain** corrisponde a un Integer che specifica il numero degli argomenti che vengono passati al programma dalla riga di comando. Poiché il nome del programma è considerato un argomento, il valore di `argc` è almeno uno.  
-  
-## <a name="remarks"></a>Note  
- Il parametro `argv` è una matrice di puntatori a stringhe con terminazione null che rappresentano gli argomenti del programma. Ogni elemento della matrice punta a una rappresentazione di stringa di un argomento passato a **main** (o a **wmain**). Per altre informazioni sulle matrici, vedere [Dichiarazioni di matrice](../c-language/array-declarations.md). Il parametro `argv` può essere dichiarato sia come matrice di puntatori al tipo `char` (`char *argv[]`), che come puntatore a puntatori al tipo `char` (`char **argv`). Per **wmain** il parametro `argv` può essere dichiarato sia come matrice di puntatori al tipo `wchar_t` (`wchar_t *argv[]`) che come puntatore a puntatori al tipo `wchar_t` (`wchar_t **argv`).  
-  
- Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia è possibile generare un processo usando [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) e se si usa sia il primo che il secondo argomento (`lpApplicationName` e `lpCommandLine`), `argv`**[0]** non può essere il nome eseguibile; usare [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome eseguibile.  
-  
- L'ultimo puntatore (`argv[argc]`) è **NULL**. Per informazioni su un metodo alternativo per ottenere informazioni sulle variabili di ambiente, vedere [getenv](../c-runtime-library/reference/getenv-wgetenv.md) in *Riferimenti della libreria di runtime*.  
-  
- **Sezione specifica Microsoft**  
-  
- Il parametro `envp` è un puntatore a una matrice di stringhe con terminazione null che rappresentano i valori impostati nelle variabili di ambiente dell'utente. Il parametro `envp` può essere dichiarato come matrice di puntatori a `char` (`char *envp[]`) o come puntatore a puntatori a `char` (`char **envp`). In una funzione **wmain** il parametro `envp` può essere dichiarato come matrice di puntatori a `wchar_t` (`wchar_t *envp[]`) o come puntatore a puntatori a `wchar_t` (`wchar_t **envp`). La fine della matrice è indicata da un puntatore **NULL** \*. Si noti che il blocco di ambiente passato a **main** o **wmain** è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a _**putenv** o a `_wputenv`, l'ambiente corrente (come restituito da `getenv`/`_wgetenv` e dalle variabili `_environ` o `_wenviron`) cambia, ma il blocco a cui punta `envp` rimane invariato. Il parametro `envp` è compatibile con ANSI in C, ma non in C++.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzione main ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)
+
+Il parametro `argc` nelle funzioni **main** e **wmain** corrisponde a un Integer che specifica il numero degli argomenti che vengono passati al programma dalla riga di comando. Poiché il nome del programma è considerato un argomento, il valore di `argc` è almeno uno.
+
+## <a name="remarks"></a>Note
+
+Il parametro `argv` è una matrice di puntatori a stringhe con terminazione null che rappresentano gli argomenti del programma. Ogni elemento della matrice punta a una rappresentazione di stringa di un argomento passato a **main** (o a **wmain**). Per altre informazioni sulle matrici, vedere [Dichiarazioni di matrice](../c-language/array-declarations.md). Il parametro `argv` può essere dichiarato sia come matrice di puntatori al tipo `char` (`char *argv[]`), che come puntatore a puntatori al tipo `char` (`char **argv`). Per **wmain** il parametro `argv` può essere dichiarato sia come matrice di puntatori al tipo `wchar_t` (`wchar_t *argv[]`) che come puntatore a puntatori al tipo `wchar_t` (`wchar_t **argv`).
+
+Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia è possibile generare un processo usando [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) e se si usa sia il primo che il secondo argomento (`lpApplicationName` e `lpCommandLine`), `argv`**[0]** non può essere il nome eseguibile; usare [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome eseguibile.
+
+L'ultimo puntatore (`argv[argc]`) è **NULL**. Per informazioni su un metodo alternativo per ottenere informazioni sulle variabili di ambiente, vedere [getenv](../c-runtime-library/reference/getenv-wgetenv.md) in *Riferimenti della libreria di runtime*.
+
+**Sezione specifica Microsoft**
+
+Il parametro `envp` è un puntatore a una matrice di stringhe con terminazione null che rappresentano i valori impostati nelle variabili di ambiente dell'utente. Il parametro `envp` può essere dichiarato come matrice di puntatori a `char` (`char *envp[]`) o come puntatore a puntatori a `char` (`char **envp`). In una funzione **wmain** il parametro `envp` può essere dichiarato come matrice di puntatori a `wchar_t` (`wchar_t *envp[]`) o come puntatore a puntatori a `wchar_t` (`wchar_t **envp`). La fine della matrice è indicata da un puntatore **NULL** \*. Si noti che il blocco di ambiente passato a **main** o **wmain** è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a _**putenv** o a `_wputenv`, l'ambiente corrente (come restituito da `getenv`/`_wgetenv` e dalle variabili `_environ` o `_wenviron`) cambia, ma il blocco a cui punta `envp` rimane invariato. Il parametro `envp` è compatibile con ANSI in C, ma non in C++.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzione main ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)

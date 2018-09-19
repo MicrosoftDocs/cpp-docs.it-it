@@ -30,60 +30,64 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c323780308d71158bf717898a05f3454fabf0c3d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030242"
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
-Richiama l'analisi della riga di comando e copia gli argomenti nel `main()` tramite i puntatori passati.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-int __getmainargs(  
-    int * _Argc,   
-   char *** _Argv,   
-   char *** _Env,   
-   int _DoWildCard,  
-_startupinfo * _StartInfo);  
-  
- int __wgetmainargs (  
-   int *_Argc,  
-   wchar_t ***_Argv,  
-   wchar_t ***_Env,  
-   int _DoWildCard,  
-   _startupinfo * _StartInfo)  
-  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `_Argc`  
- Un Integer contenente il numero di argomenti che seguono in `argv`. Il parametro `argc` è sempre maggiore di o uguale a 1.  
-  
- `_Argv`  
- Una matrice di stringhe con terminazione null che rappresentano gli argomenti della riga di comando immessi dall'utente del programma. Per convenzione, `argv[0]` è il comando con cui il programma viene richiamato, argv[1] è il primo argomento della riga di comando e così via, fino a argv[argc] che è sempre **NULL**. Il primo argomento della riga di comando è sempre `argv[1]` e l'ultimo è `argv[argc - 1]`.  
-  
- `_Env`  
- Una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da una voce **NULL**.  
-  
- `_DoWildCard`  
- Un Integer che, se impostato su 1, espande i caratteri jolly negli argomenti della riga di comando o, se impostato su 0, non esegue alcuna operazione.  
-  
- `_StartInfo`  
- Altre informazioni da passare alla DLL CRT.  
-  
-## <a name="return-value"></a>Valore restituito  
- 0 se ha esito positivo; un valore negativo sa ha esito negativo.  
-  
-## <a name="remarks"></a>Note  
- Utilizzare `__getmainargs` sulle piattaforme di caratteri non wide e `__wgetmainargs` sulle piattaforme di caratteri wide (Unicode).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|__getmainargs|internal.h|  
+
+Richiama l'analisi della riga di comando e copia gli argomenti nel `main()` tramite i puntatori passati.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+int __getmainargs(
+    int * _Argc,
+   char *** _Argv,
+   char *** _Env,
+   int _DoWildCard,
+_startupinfo * _StartInfo);
+
+int __wgetmainargs (
+   int *_Argc,
+   wchar_t ***_Argv,
+   wchar_t ***_Env,
+   int _DoWildCard,
+   _startupinfo * _StartInfo)
+
+```
+
+#### <a name="parameters"></a>Parametri
+
+`_Argc`<br/>
+Un Integer contenente il numero di argomenti che seguono in `argv`. Il parametro `argc` è sempre maggiore di o uguale a 1.
+
+`_Argv`<br/>
+Una matrice di stringhe con terminazione null che rappresentano gli argomenti della riga di comando immessi dall'utente del programma. Per convenzione, `argv[0]` è il comando con cui il programma viene richiamato, argv[1] è il primo argomento della riga di comando e così via, fino a argv[argc] che è sempre **NULL**. Il primo argomento della riga di comando è sempre `argv[1]` e l'ultimo è `argv[argc - 1]`.
+
+`_Env`<br/>
+Una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da una voce **NULL**.
+
+`_DoWildCard`<br/>
+Un Integer che, se impostato su 1, espande i caratteri jolly negli argomenti della riga di comando o, se impostato su 0, non esegue alcuna operazione.
+
+`_StartInfo`<br/>
+Altre informazioni da passare alla DLL CRT.
+
+## <a name="return-value"></a>Valore restituito
+
+0 se ha esito positivo; un valore negativo sa ha esito negativo.
+
+## <a name="remarks"></a>Note
+
+Utilizzare `__getmainargs` sulle piattaforme di caratteri non wide e `__wgetmainargs` sulle piattaforme di caratteri wide (Unicode).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|__getmainargs|internal.h|
 |__wgetmainargs|internal.h|

@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8e09aea98c63015e86eeacf8f3458723aa4e61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 351fb7704faf8a168d13cde2558015c340e44d72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385838"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090060"
 ---
 # <a name="sign-of-bit-fields"></a>Segno dei campi di bit
-**ANSI 3.5.2.1** Se un campo `int` "normale" viene considerato come campo di bit **signed int** o come campo di bit unsigned int  
-  
- I campi di bit possono essere con o senza segno. I campi di bit normali vengono considerati come con segno.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Strutture, unioni, enumerazioni e campi di bit](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.1** Se un campo `int` "normale" viene considerato come campo di bit **signed int** o come campo di bit unsigned int
+
+I campi di bit possono essere con o senza segno. I campi di bit normali vengono considerati come con segno.
+
+## <a name="see-also"></a>Vedere anche
+
+[Strutture, unioni, enumerazioni e campi di bit](../c-language/structures-unions-enumerations-and-bit-fields.md)

@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaa6595fa9d7e87c7021368125af7a3bc53128e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a2b8221976dc00666a24cfc2627dad35e73f3ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076021"
 ---
 # <a name="file-buffering"></a>Buffer dei file
-**ANSI 4.9.3** Le caratteristiche della memorizzazione di file nel buffer  
-  
- I file su disco a cui viene eseguito l'accesso mediante le funzioni di I/O standard vengono memorizzati completamente nel buffer. Per impostazione predefinita, la memorizzazione nel buffer utilizza 512 byte.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni della libreria](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Le caratteristiche della memorizzazione di file nel buffer
+
+I file su disco a cui viene eseguito l'accesso mediante le funzioni di I/O standard vengono memorizzati completamente nel buffer. Per impostazione predefinita, la memorizzazione nel buffer utilizza 512 byte.
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni della libreria](../c-language/library-functions.md)

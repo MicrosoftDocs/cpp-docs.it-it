@@ -22,20 +22,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113721"
 ---
 # <a name="code-pages"></a>Tabelle codici
 
 Una *tabella codici* è un set di caratteri che può includere numeri, segni di punteggiatura e altri glifi. Lingue e impostazioni locali diverse possono utilizzare tabelle codici differenti. La tabella codici ANSI 1252, ad esempio, viene utilizzata per l'inglese e per la maggior parte delle lingue europee; mentre la tabella codici OEM 932 viene utilizzata per il Kanji giapponese.
 
- Una tabella codici può essere rappresentata in una tabella come mapping dei caratteri in valori a byte singolo o multibyte. Molte tabelle codici condividono il set di caratteri ASCII per i caratteri nell'intervallo compreso tra 0x00 e 0x7F.
+Una tabella codici può essere rappresentata in una tabella come mapping dei caratteri in valori a byte singolo o multibyte. Molte tabelle codici condividono il set di caratteri ASCII per i caratteri nell'intervallo compreso tra 0x00 e 0x7F.
 
- La libreria di runtime Microsoft utilizza i seguenti tipi di tabelle codici:
+La libreria di runtime Microsoft utilizza i seguenti tipi di tabelle codici:
 
 - Tabella codici ANSI predefinita del sistema. Per impostazione predefinita, all'avvio il sistema runtime imposta automaticamente la tabella codici multibyte alla tabella codici ANSI predefinita del sistema, ottenuta dal sistema operativo. La chiamata:
 
@@ -54,4 +54,4 @@ Una *tabella codici* è un set di caratteri che può includere numeri, segni di 
 ## <a name="see-also"></a>Vedere anche
 
 [Internazionalizzazione](../c-runtime-library/internationalization.md)<br/>
- [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 409f10dffdf6816f3ff0ab4e71060c9bcb6eaf9f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5bf60222b276050af5296d678985eda8fd12948b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684212"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027570"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;remarks&gt; (Visual C++)
 Il tag \<remarks> viene usato per aggiungere informazioni su un tipo, integrando le informazioni con [\<summary>](../ide/summary-visual-cpp.md). Queste informazioni vengono visualizzate in [Visualizzatore oggetti](/visualstudio/ide/viewing-the-structure-of-code) e nel report Web sui commenti del codice.  
@@ -35,8 +35,8 @@ Il tag \<remarks> viene usato per aggiungere informazioni su un tipo, integrando
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `description`  
- Descrizione del membro.  
+*description*<br/>
+Descrizione del membro.  
   
 ## <a name="remarks"></a>Note  
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  

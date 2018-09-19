@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085758"
 ---
 # <a name="process-and-environment-control"></a>Controllo processo e ambiente
 
@@ -77,11 +77,11 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 |[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Crea ed esegue un nuovo processo usando la variabile **PATH**, l'ambiente specificato e una matrice di argomenti|
 |[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Esegue un comando del sistema operativo|
 
- Nel sistema operativo Windows, il processo figlio è equivalente al processo padre. Qualsiasi processo può usare **_cwait** per attendere un altro processo di cui è noto l'ID.
+Nel sistema operativo Windows, il processo figlio è equivalente al processo padre. Qualsiasi processo può usare **_cwait** per attendere un altro processo di cui è noto l'ID.
 
- La differenza tra le famiglie **_exec** e **_spawn** consiste nel fatto che una funzione **_spawn** può restituire il controllo dal nuovo processo al processo chiamante. In una funzione **_spawn**,sia il processo chiamante che il nuovo processo sono presenti in memoria, a meno che non sia specificato **_P_OVERLAY**. In una funzione **_exec**, il nuovo processo si sovrappone al processo chiamante, in modo che il controllo non torni a quest'ultimo a meno che non si verifichi un errore durante il tentativo di avviare l'esecuzione del nuovo processo.
+La differenza tra le famiglie **_exec** e **_spawn** consiste nel fatto che una funzione **_spawn** può restituire il controllo dal nuovo processo al processo chiamante. In una funzione **_spawn**,sia il processo chiamante che il nuovo processo sono presenti in memoria, a meno che non sia specificato **_P_OVERLAY**. In una funzione **_exec**, il nuovo processo si sovrappone al processo chiamante, in modo che il controllo non torni a quest'ultimo a meno che non si verifichi un errore durante il tentativo di avviare l'esecuzione del nuovo processo.
 
- Le differenze tra le funzioni della famiglia **_exec**, come tra quelle della famiglia **_spawn**, includono il metodo di individuazione del file da eseguire come nuovo processo, il modo in cui gli argomenti vengono passati al nuovo processo e il metodo di impostazione dell'ambiente, come illustrato nella tabella seguente. Usare una funzione che passa un elenco di argomenti quando il numero di argomenti è costante o è noto in fase di esecuzione. Usare una funzione che passa un puntatore a una matrice contenente gli argomenti quando il numero di argomenti viene determinato in fase di esecuzione. Le informazioni riportate nella tabella seguente vengono applicate anche alle controparti con caratteri wide delle funzioni **_spawn** ed **_exec**.
+Le differenze tra le funzioni della famiglia **_exec**, come tra quelle della famiglia **_spawn**, includono il metodo di individuazione del file da eseguire come nuovo processo, il modo in cui gli argomenti vengono passati al nuovo processo e il metodo di impostazione dell'ambiente, come illustrato nella tabella seguente. Usare una funzione che passa un elenco di argomenti quando il numero di argomenti è costante o è noto in fase di esecuzione. Usare una funzione che passa un puntatore a una matrice contenente gli argomenti quando il numero di argomenti viene determinato in fase di esecuzione. Le informazioni riportate nella tabella seguente vengono applicate anche alle controparti con caratteri wide delle funzioni **_spawn** ed **_exec**.
 
 ### <a name="spawn-and-exec-function-families"></a>Famiglie di funzioni _spawn e _exec
 

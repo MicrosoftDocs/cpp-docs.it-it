@@ -27,38 +27,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd67abc48af35b5e538b8ad1928269d10f9a71aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d239820221c696dbb8d27e2824ed871a7e2d5ad8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063055"
 ---
 # <a name="lccollatecpfunc"></a>___lc_collate_cp_func
-Funzione CRT interna. Recupera l'attuale tabella codici delle regole di confronto del thread.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-UINT ___lc_codepage_func(void);  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Attuale tabella codici delle regole di confronto del thread.  
-  
-## <a name="remarks"></a>Note  
- `___lc_collate_cp_func` è una funzione CRT interna che viene usata da altre funzioni CRT per ottenere l'attuale tabella codici delle regole di confronto dall'archiviazione locale di thread per i dati di CRT. Queste informazioni sono disponibili anche usando la funzione [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).  
-  
- Le funzioni CRT interne sono specifiche dell'implementazione e soggette a modifica a ogni rilascio. Se ne sconsiglia l'uso nel codice.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`___lc_collate_cp_func`|crt\src\setlocal.h|  
-  
-## <a name="see-also"></a>Vedere anche  
- [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
- [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../c-runtime-library/reference/free-locale.md)
+
+Funzione CRT interna. Recupera l'attuale tabella codici delle regole di confronto del thread.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+UINT ___lc_codepage_func(void);
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Attuale tabella codici delle regole di confronto del thread.
+
+## <a name="remarks"></a>Note
+
+`___lc_collate_cp_func` è una funzione CRT interna che viene usata da altre funzioni CRT per ottenere l'attuale tabella codici delle regole di confronto dall'archiviazione locale di thread per i dati di CRT. Queste informazioni sono disponibili anche usando la funzione [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
+
+Le funzioni CRT interne sono specifiche dell'implementazione e soggette a modifica a ogni rilascio. Se ne sconsiglia l'uso nel codice.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|`___lc_collate_cp_func`|crt\src\setlocal.h|
+
+## <a name="see-also"></a>Vedere anche
+
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[_free_locale](../c-runtime-library/reference/free-locale.md)

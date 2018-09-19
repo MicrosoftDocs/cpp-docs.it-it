@@ -23,19 +23,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 452c6803ea05f051727a1417aee49c3a56759141
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5fceb2681befa5ed9c8c82facb85442aed2d646
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023345"
 ---
 # <a name="ansi-c-compliance"></a>Conformità ANSI C
-La convenzione di denominazione per tutti gli identificatori specifici Microsoft nel sistema di runtime (ad esempio funzioni, macro, costanti, variabili e definizioni di tipo) è conforme a ANSI. In questa documentazione, qualsiasi funzione di runtime che segue gli standard ANSI/ISO C viene indicata come compatibile con ANSI. Le applicazioni conformi allo standard ANSI devono utilizzare solo queste funzioni compatibili con ANSI.  
-  
- I nomi delle funzioni specifiche Microsoft e delle variabili globali iniziano con un carattere di sottolineatura. Questi nomi possono essere sottoposti a override solo localmente, all'interno dell'ambito del codice. Ad esempio, quando si includono i file di intestazione di runtime Microsoft, è ancora possibile eseguire localmente l'override della funzione specifica Microsoft denominata `_open` dichiarando una variabile locale con lo stesso nome. Tuttavia, non è possibile utilizzare questo nome per una funzione globale o una variabile globale.  
-  
- I nomi delle macro specifiche Microsoft e delle costanti manifesto iniziano con due caratteri di sottolineatura o con un singolo carattere di sottolineatura iniziale immediatamente seguito da una lettera maiuscola. L'ambito di questi identificatori è assoluto. Ad esempio, non è possibile usare l'identificatore specifico Microsoft **_UPPER** per questo motivo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Compatibilità](../c-runtime-library/compatibility.md)
+
+La convenzione di denominazione per tutti gli identificatori specifici Microsoft nel sistema di runtime (ad esempio funzioni, macro, costanti, variabili e definizioni di tipo) è conforme a ANSI. In questa documentazione, qualsiasi funzione di runtime che segue gli standard ANSI/ISO C viene indicata come compatibile con ANSI. Le applicazioni conformi allo standard ANSI devono utilizzare solo queste funzioni compatibili con ANSI.
+
+I nomi delle funzioni specifiche Microsoft e delle variabili globali iniziano con un carattere di sottolineatura. Questi nomi possono essere sottoposti a override solo localmente, all'interno dell'ambito del codice. Ad esempio, quando si includono i file di intestazione di runtime Microsoft, è ancora possibile eseguire localmente l'override della funzione specifica Microsoft denominata `_open` dichiarando una variabile locale con lo stesso nome. Tuttavia, non è possibile utilizzare questo nome per una funzione globale o una variabile globale.
+
+I nomi delle macro specifiche Microsoft e delle costanti manifesto iniziano con due caratteri di sottolineatura o con un singolo carattere di sottolineatura iniziale immediatamente seguito da una lettera maiuscola. L'ambito di questi identificatori è assoluto. Ad esempio, non è possibile usare l'identificatore specifico Microsoft **_UPPER** per questo motivo.
+
+## <a name="see-also"></a>Vedere anche
+
+[Compatibilità](../c-runtime-library/compatibility.md)

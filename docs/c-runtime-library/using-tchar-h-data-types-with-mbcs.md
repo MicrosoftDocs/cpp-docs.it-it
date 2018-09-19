@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066459593be4970fde141333a6f22f0846f8bbc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc14f5831904e2fea9bfa7ef7607f2085d1f0e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061266"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>Using TCHAR.H Data Types with _MBCS
 
@@ -35,7 +35,7 @@ Come indicato nella tabella dei mapping di routine di testo generico (vedere [Ma
 
 - Una routine specifica di MBCS. In questo caso, il tipo previsto per gli argomenti della stringa è __unsigned char&#42;__. Ad esempio, **_tcsrev** viene mappato a **_mbsrev**, che accetta e restituisce una stringa di tipo __unsigned char&#42;__. Anche in questo caso, se per i tipi di stringa si usa il tipo di dati a testo generico **_TCHAR**, è possibile che si verifichi un conflitto di tipi, poiché **_TCHAR** è mappato al tipo **char**.
 
- Di seguito sono riportate tre soluzioni che consentono di evitare questo conflitto di tipi e la conseguente visualizzazione dei messaggi di avviso del compilatore C o degli errori del compilatore C++:
+Di seguito sono riportate tre soluzioni che consentono di evitare questo conflitto di tipi e la conseguente visualizzazione dei messaggi di avviso del compilatore C o degli errori del compilatore C++:
 
 - Usare il comportamento predefinito TCHAR.H fornisce prototipi di routine a testo generico per le routine nelle librerie run-time, come illustrato nell'esempio seguente.
 

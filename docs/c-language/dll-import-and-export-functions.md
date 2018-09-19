@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da456b7caca59fb874f4da87a342162b53c09319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3da47c4d6c5af518660b5799b3bf9ae3f512a6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029221"
 ---
 # <a name="dll-import-and-export-functions"></a>Funzioni di importazione ed esportazione DLL
-**Sezione specifica Microsoft**  
-  
- Le informazioni più complete e più aggiornate su questo argomento sono disponibili in [dllexport, dllimport](../cpp/dllexport-dllimport.md).  
-  
- I modificatori della classe di archiviazione **dllimport** e `dllexport` sono estensioni specifiche di Microsoft per il linguaggio C. Questi modificatori definiscono in modo esplicito l'interfaccia della DLL per il client (file eseguibile o un'altra DLL). La dichiarazione di funzioni come `dllexport` elimina la necessità di un file di definizione di modulo (con estensioni def). È anche possibile usare i modificatori **dllimport** e `dllexport` con dati e oggetti.  
-  
- I modificatori della classe di archiviazione **dllimport** e `dllexport` devono essere usati con la parola chiave della sintassi degli attributi estesa, `__declspec`, come illustrato nell'esempio seguente:  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-#define DllExport   __declspec( dllexport )  
-  
-DllExport void func();  
-DllExport int i = 10;  
-DllExport int j;  
-DllExport int n;  
-```  
-  
- Per informazioni specifiche sulla sintassi per i modificatori della classe di archiviazione estesi, vedere [Attributi di classi di archiviazione estesi](../c-language/c-extended-storage-class-attributes.md).  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Definizioni di funzioni C](../c-language/c-function-definitions.md)
+
+**Sezione specifica Microsoft**
+
+Le informazioni più complete e più aggiornate su questo argomento sono disponibili in [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+
+I modificatori della classe di archiviazione **dllimport** e `dllexport` sono estensioni specifiche di Microsoft per il linguaggio C. Questi modificatori definiscono in modo esplicito l'interfaccia della DLL per il client (file eseguibile o un'altra DLL). La dichiarazione di funzioni come `dllexport` elimina la necessità di un file di definizione di modulo (con estensioni def). È anche possibile usare i modificatori **dllimport** e `dllexport` con dati e oggetti.
+
+I modificatori della classe di archiviazione **dllimport** e `dllexport` devono essere usati con la parola chiave della sintassi degli attributi estesa, `__declspec`, come illustrato nell'esempio seguente:
+
+```
+#define DllImport   __declspec( dllimport )
+#define DllExport   __declspec( dllexport )
+
+DllExport void func();
+DllExport int i = 10;
+DllExport int j;
+DllExport int n;
+```
+
+Per informazioni specifiche sulla sintassi per i modificatori della classe di archiviazione estesi, vedere [Attributi di classi di archiviazione estesi](../c-language/c-extended-storage-class-attributes.md).
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Definizioni di funzioni C](../c-language/c-function-definitions.md)

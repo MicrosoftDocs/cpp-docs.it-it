@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9ebf20a365b48058bc7e5cf4dc0556d917ef44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 04c628dec2c2fd7e0b0b5a61aa20abf9266ca416
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386202"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084445"
 ---
 # <a name="cisqrt"></a>_CIsqrt
-Calcola la radice quadrata del primo valore dello stack.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __cdecl _CIsqrt();  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa versione della funzione `sqrt` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.  
-  
- Il valore risultante viene inserito all'inizio dello stack.  
-  
-## <a name="requirements"></a>Requisiti  
- **Piattaforma:** x86  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)
+
+Calcola la radice quadrata del primo valore dello stack.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __cdecl _CIsqrt();
+```
+
+## <a name="remarks"></a>Note
+
+Questa versione della funzione `sqrt` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.
+
+Il valore risultante viene inserito all'inizio dello stack.
+
+## <a name="requirements"></a>Requisiti
+ **Piattaforma:** x86
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)

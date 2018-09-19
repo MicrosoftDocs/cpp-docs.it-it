@@ -27,29 +27,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1030bf3f0ef907f3904bca92da4e43646d0e1a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34873681d0bc33cede9cda994aa9684e04a689e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113773"
 ---
 # <a name="lifetime"></a>Durata
-"Durata" è il periodo di tempo durante l'esecuzione di un programma in cui esiste una variabile o una funzione. La durata di archiviazione dell'identificatore determina la sua durata.  
-  
- Un identificatore dichiarato con *storage-class-specifier* **static** ha una durata di archiviazione statica. Gli identificatori con durata di archiviazione statica (anche detta "globale") dispongono di archiviazione e di un valore definito per la durata di un programma. L'archiviazione è riservata e il valore archiviato dell'identificatore viene inizializzato solo una volta, prima dell'avvio del programma. Anche un identificatore dichiarato con collegamento esterno o interno ha una durata di archiviazione statica (vedere [Collegamento](../c-language/linkage.md)).  
-  
- Un identificatore dichiarato senza l'identificatore classe di archiviazione **static** ha una durata di archiviazione automatica se è dichiarato all'interno di una funzione. Un identificatore con durata di archiviazione automatica (un "identificatore locale") dispone di archiviazione e di un valore definito solo all'interno del blocco in cui l'identificatore viene definito o dichiarato. Un identificatore automatico è una nuova archiviazione allocata ogni volta che il programma accede a tale blocco e perde la relativa archiviazione (e il relativo valore) quando il programma esce dal blocco. Anche gli identificatori dichiarati in una funzione senza collegamento hanno una durata di archiviazione automatica.  
-  
- Le regole seguenti specificano se un identificatore ha durata globale (statica) o locale (automatica):  
-  
--   Tutte le funzioni hanno una durata statica. Pertanto sono sempre presenti durante l'esecuzione del programma. Gli identificatori dichiarati a livello esterno (ovvero all'esterno di tutti i blocchi nel programma allo stesso livello delle definizioni di funzione) hanno sempre durate globali (statiche).  
-  
--   Se una variabile locale dispone di un inizializzatore viene inizializzata ogni volta che viene creata (a meno che non venga dichiarata come **static**). Anche i parametri di funzione dispongono di durata locale. È possibile specificare la durata globale per un identificatore all'interno di un blocco includendo l'identificatore classe di archiviazione **static** nella dichiarazione dell'identificatore. Dopo che è stata dichiarata come **static**, la variabile mantiene il valore da una voce del blocco alla seguente.  
-  
- Anche se un identificatore con durata globale esiste durante l'intera esecuzione del programma di origine (ad esempio una variabile dichiarata esternamente o una variabile locale dichiarata con la parola chiave **static**), l'identificatore potrebbe non essere visibile in tutte le parti del programma. Vedere [Ambito e visibilità](../c-language/scope-and-visibility.md) per informazioni sulla visibilità e [Classi di archiviazione](../c-language/c-storage-classes.md) per informazioni sull'identificatore *storage-class-specifier* non terminale.  
-  
- La memoria può essere allocata in base alle esigenze (dinamica) se creata tramite l'utilizzo delle routine di libreria speciali come `malloc`. Poiché l'allocazione di memoria dinamica utilizza routine di libreria, non viene considerata parte del linguaggio. Vedere la funzione [malloc](../c-runtime-library/reference/malloc.md) in *Riferimenti alla libreria di runtime*.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md)
+
+"Durata" è il periodo di tempo durante l'esecuzione di un programma in cui esiste una variabile o una funzione. La durata di archiviazione dell'identificatore determina la sua durata.
+
+Un identificatore dichiarato con *storage-class-specifier* **static** ha una durata di archiviazione statica. Gli identificatori con durata di archiviazione statica (anche detta "globale") dispongono di archiviazione e di un valore definito per la durata di un programma. L'archiviazione è riservata e il valore archiviato dell'identificatore viene inizializzato solo una volta, prima dell'avvio del programma. Anche un identificatore dichiarato con collegamento esterno o interno ha una durata di archiviazione statica (vedere [Collegamento](../c-language/linkage.md)).
+
+Un identificatore dichiarato senza l'identificatore classe di archiviazione **static** ha una durata di archiviazione automatica se è dichiarato all'interno di una funzione. Un identificatore con durata di archiviazione automatica (un "identificatore locale") dispone di archiviazione e di un valore definito solo all'interno del blocco in cui l'identificatore viene definito o dichiarato. Un identificatore automatico è una nuova archiviazione allocata ogni volta che il programma accede a tale blocco e perde la relativa archiviazione (e il relativo valore) quando il programma esce dal blocco. Anche gli identificatori dichiarati in una funzione senza collegamento hanno una durata di archiviazione automatica.
+
+Le regole seguenti specificano se un identificatore ha durata globale (statica) o locale (automatica):
+
+- Tutte le funzioni hanno una durata statica. Pertanto sono sempre presenti durante l'esecuzione del programma. Gli identificatori dichiarati a livello esterno (ovvero all'esterno di tutti i blocchi nel programma allo stesso livello delle definizioni di funzione) hanno sempre durate globali (statiche).
+
+- Se una variabile locale dispone di un inizializzatore viene inizializzata ogni volta che viene creata (a meno che non venga dichiarata come **static**). Anche i parametri di funzione dispongono di durata locale. È possibile specificare la durata globale per un identificatore all'interno di un blocco includendo l'identificatore classe di archiviazione **static** nella dichiarazione dell'identificatore. Dopo che è stata dichiarata come **static**, la variabile mantiene il valore da una voce del blocco alla seguente.
+
+Anche se un identificatore con durata globale esiste durante l'intera esecuzione del programma di origine (ad esempio una variabile dichiarata esternamente o una variabile locale dichiarata con la parola chiave **static**), l'identificatore potrebbe non essere visibile in tutte le parti del programma. Vedere [Ambito e visibilità](../c-language/scope-and-visibility.md) per informazioni sulla visibilità e [Classi di archiviazione](../c-language/c-storage-classes.md) per informazioni sull'identificatore *storage-class-specifier* non terminale.
+
+La memoria può essere allocata in base alle esigenze (dinamica) se creata tramite l'utilizzo delle routine di libreria speciali come `malloc`. Poiché l'allocazione di memoria dinamica utilizza routine di libreria, non viene considerata parte del linguaggio. Vedere la funzione [malloc](../c-runtime-library/reference/malloc.md) in *Riferimenti alla libreria di runtime*.
+
+## <a name="see-also"></a>Vedere anche
+
+[Durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md)

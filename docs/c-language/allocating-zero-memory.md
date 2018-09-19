@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0de013e9ddd3fb983436bf6ee0db290458936eb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc3b7a92cdc8a05c73f15c7cea917d86a3b6bb46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085056"
 ---
 # <a name="allocating-zero-memory"></a>Allocazione memoria azzerata
-**ANSI 4.10.3** Comportamento della funzione `calloc`, `malloc` o `realloc` se la dimensione richiesta è zero  
-  
- Le funzioni `calloc`, `malloc` e `realloc` accettano lo zero come argomento. Non è stata allocata alcuna memoria, ma viene restituito un puntatore valido e il blocco di memoria può essere modificato in un secondo momento da realloc.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni della libreria](../c-language/library-functions.md)
+
+**ANSI 4.10.3** Comportamento della funzione `calloc`, `malloc` o `realloc` se la dimensione richiesta è zero
+
+Le funzioni `calloc`, `malloc` e `realloc` accettano lo zero come argomento. Non è stata allocata alcuna memoria, ma viene restituito un puntatore valido e il blocco di memoria può essere modificato in un secondo momento da realloc.
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni della libreria](../c-language/library-functions.md)

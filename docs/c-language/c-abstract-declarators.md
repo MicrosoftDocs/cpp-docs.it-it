@@ -15,44 +15,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea9ca44dbc484749cc10a59fec0b91d096921827
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a2056ddd4abaf483cd8685531d2e0fd7a0eb5468
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034369"
 ---
 # <a name="c-abstract-declarators"></a>Dichiaratori astratti C
-Un dichiaratore astratto è un dichiaratore senza un identificatore, composto da uno o più puntatori, matrici o modificatori di funzione. Il modificatore del puntatore (<strong>\*</strong>) precede sempre l'identificatore contenuto in un dichiaratore; i modificatori di matrice (**[ ]**) e funzione (**( )**) seguono l'identificatore. Partendo da questo presupposto, è possibile determinare se l'identificatore dovrà apparire in un dichiaratore astratto e interpretare il dichiaratore di conseguenza. Per altre informazioni ed esempi di dichiaratori complessi, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md). `typedef` può essere in genere utilizzato per semplificare i dichiaratori. Vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).  
-  
- I dichiaratori astratti possono essere complessi. Le parentesi in un dichiaratore astratto complesso specificano un'interpretazione speciale, così come fanno per i dichiaratori complessi all'interno delle dichiarazioni.  
-  
- In questi esempi vengono illustrati i dichiaratori astratti:  
-  
-```  
-int *         // The type name for a pointer to type int:  
-  
-int *[3]      // An array of three pointers to int  
-  
-int (*) [5]   // A pointer to an array of five int  
-  
-int *()       // A function with no parameter specification  
-              // returning a pointer to int  
-  
-// A pointer to a function taking no arguments and   
-// returning an int  
-  
-int (*) ( void )    
-  
-// An array of an unspecified number of constant pointers to   
-// functions each with one parameter that has type unsigned int   
-// and an unspecified number of other parameters returning an int   
-  
-int (*const []) ( unsigned int, ... )  
-```  
-  
+
+Un dichiaratore astratto è un dichiaratore senza un identificatore, composto da uno o più puntatori, matrici o modificatori di funzione. Il modificatore del puntatore (<strong>\*</strong>) precede sempre l'identificatore contenuto in un dichiaratore; i modificatori di matrice (**[ ]**) e funzione (**( )**) seguono l'identificatore. Partendo da questo presupposto, è possibile determinare se l'identificatore dovrà apparire in un dichiaratore astratto e interpretare il dichiaratore di conseguenza. Per altre informazioni ed esempi di dichiaratori complessi, vedere [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md). `typedef` può essere in genere utilizzato per semplificare i dichiaratori. Vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).
+
+I dichiaratori astratti possono essere complessi. Le parentesi in un dichiaratore astratto complesso specificano un'interpretazione speciale, così come fanno per i dichiaratori complessi all'interno delle dichiarazioni.
+
+In questi esempi vengono illustrati i dichiaratori astratti:
+
+```
+int *         // The type name for a pointer to type int:
+
+int *[3]      // An array of three pointers to int
+
+int (*) [5]   // A pointer to an array of five int
+
+int *()       // A function with no parameter specification
+              // returning a pointer to int
+
+// A pointer to a function taking no arguments and
+// returning an int
+
+int (*) ( void )
+
+// An array of an unspecified number of constant pointers to
+// functions each with one parameter that has type unsigned int
+// and an unspecified number of other parameters returning an int
+
+int (*const []) ( unsigned int, ... )
+```
+
 > [!NOTE]
->  Il dichiaratore astratto composto da un set di parentesi vuote **( )** non è consentito perché è ambiguo. È impossibile determinare se l'identificatore implicito appartiene all'interno delle parentesi (in questo caso è un tipo non modificato) oppure le precede (in questo caso è un tipo di funzione).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)
+>  Il dichiaratore astratto composto da un set di parentesi vuote **( )** non è consentito perché è ambiguo. È impossibile determinare se l'identificatore implicito appartiene all'interno delle parentesi (in questo caso è un tipo non modificato) oppure le precede (in questo caso è un tipo di funzione).
+
+## <a name="see-also"></a>Vedere anche
+
+[Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)

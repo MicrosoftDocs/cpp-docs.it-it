@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87a6518eec495961d1f8d40c625e589db01bd3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a31d32ce7bdf89cd0216926c6628b4fa7bdd27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027351"
 ---
 # <a name="c-pragmas"></a>Pragma C
 
@@ -37,8 +37,8 @@ Un *pragma* indica al compilatore di eseguire un'azione specifica in fase di com
 
 Vedere [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) per una descrizione dei pragma del compilatore Microsoft C.
 
- **Fine sezione specifica Microsoft**
+**Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[File e programmi di origine](../c-language/source-files-and-source-programs.md)  
+[File e programmi di origine](../c-language/source-files-and-source-programs.md)

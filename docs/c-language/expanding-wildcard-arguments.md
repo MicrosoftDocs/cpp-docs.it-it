@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d7a9fc75e23a03e4db232bc798c89f89083e62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d78b23f81b72d04e9299616b0273bc97bb7a4e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383631"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078153"
 ---
 # <a name="expanding-wildcard-arguments"></a>Espansione di argomenti con caratteri jolly
-**Sezione specifica Microsoft**  
-  
- Quando si esegue un programma C, è possibile usare uno dei due caratteri jolly, il punto interrogativo (?) e l'asterisco (*), per specificare gli argomenti del percorso e del nome del file nella riga di comando.  
-  
- Per impostazione predefinita, i caratteri jolly non vengono espansi negli argomenti della riga di comando. È possibile sostituire la normale routine di caricamento `argv` del vettore dell'argomento con una versione in grado di espandere i caratteri jolly mediante il collegamento al file setargv.obj o wsetargv.obj. Se il programma usa una funzione `main` , effettuare il collegamento a setargv.obj. Se il programma usa una funzione `wmain` , effettuare il collegamento a wsetargv.obj. Il comportamento dei due file è equivalente.  
-  
- Per effettuare il collegamento a setargv.obj o wsetargv.obj, usare l'opzione **/link** . Ad esempio:  
-  
- **cl example.c /link setargv.obj**  
-  
- I caratteri jolly vengono espansi nello stesso modo dei comandi del sistema operativo. Se non si ha familiarità con i caratteri jolly, vedere il manuale del sistema operativo.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di collegamento](../c-runtime-library/link-options.md)   
- [Funzione main ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)
+
+**Sezione specifica Microsoft**
+
+Quando si esegue un programma C, è possibile usare uno dei due caratteri jolly, il punto interrogativo (?) e l'asterisco (*), per specificare gli argomenti del percorso e del nome del file nella riga di comando.
+
+Per impostazione predefinita, i caratteri jolly non vengono espansi negli argomenti della riga di comando. È possibile sostituire la normale routine di caricamento `argv` del vettore dell'argomento con una versione in grado di espandere i caratteri jolly mediante il collegamento al file setargv.obj o wsetargv.obj. Se il programma usa una funzione `main` , effettuare il collegamento a setargv.obj. Se il programma usa una funzione `wmain` , effettuare il collegamento a wsetargv.obj. Il comportamento dei due file è equivalente.
+
+Per effettuare il collegamento a setargv.obj o wsetargv.obj, usare l'opzione **/link** . Ad esempio:
+
+**cl example.c /link setargv.obj**
+
+I caratteri jolly vengono espansi nello stesso modo dei comandi del sistema operativo. Se non si ha familiarità con i caratteri jolly, vedere il manuale del sistema operativo.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni di collegamento](../c-runtime-library/link-options.md)<br/>
+[Funzione main ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)

@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e68b1b16873989f59a8322246e2547b56e360d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3be68ca3632d11231f446de262a8251c2b3409c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032511"
 ---
 # <a name="tznamemax"></a>TZNAME_MAX
-La lunghezza massima consentita per la stringa di una variabile di nome di fuso orario.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#include <limits.h>  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Environmental Constants](../c-runtime-library/environmental-constants.md)  (Costanti di ambiente)  
- [Costanti globali](../c-runtime-library/global-constants.md)   
- [_get_tzname](../c-runtime-library/reference/get-tzname.md)
+
+La lunghezza massima consentita per la stringa di una variabile di nome di fuso orario.
+
+## <a name="syntax"></a>Sintassi
+
+```
+#include <limits.h>
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Costanti di ambiente](../c-runtime-library/environmental-constants.md)<br/>
+[Costanti globali](../c-runtime-library/global-constants.md)<br/>
+[_get_tzname](../c-runtime-library/reference/get-tzname.md)

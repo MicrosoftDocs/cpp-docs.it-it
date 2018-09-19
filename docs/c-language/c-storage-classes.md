@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6bed6fa3722b320e23f5d6da94673ba928c225
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bade146edd1b83f893af72fc4e760a46187679b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111706"
 ---
 # <a name="c-storage-classes"></a>Classi di archiviazione C
 
@@ -60,6 +60,6 @@ Il significato esatto di ogni identificatore della classe di archiviazione dipen
 
 Gli argomenti [Identificatori di classi di archiviazione per dichiarazioni di livello esterno](../c-language/storage-class-specifiers-for-external-level-declarations.md) e [Identificatori di classi di archiviazione per dichiarazioni di livello interno](../c-language/storage-class-specifiers-for-internal-level-declarations.md) descrivono i terminali *storage-class-specifier* in ogni tipo di dichiarazione e illustrano il comportamento predefinito quando *storage-class-specifier* viene omesso da una variabile. In [Identificatori di classi di archiviazione con dichiarazioni di funzione](../c-language/storage-class-specifiers-with-function-declarations.md) vengono descritti gli identificatori della classe di archiviazione usati con le funzioni.
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
-[Dichiarazioni e tipi](../c-language/declarations-and-types.md)  
+[Dichiarazioni e tipi](../c-language/declarations-and-types.md)

@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba3d4e2b6e9661f936337cefcd6e660fc91c35eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5e95a8c84c8d705c6f140358de842313d0ac936
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385741"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106120"
 ---
 # <a name="statements-limits-on-switch-statements"></a>Istruzioni: limiti sulle istruzioni Switch
-**ANSI 3.6.4.2** Il numero massimo di valori **case** in un'istruzione `switch`  
-  
- Microsoft C non limita il numero di valori **case** in un'istruzione **switch**. Il loro numero è limitato solo dalla memoria disponibile.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.6.4.2** Il numero massimo di valori **case** in un'istruzione `switch`
+
+Microsoft C non limita il numero di valori **case** in un'istruzione **switch**. Il loro numero è limitato solo dalla memoria disponibile.
+
+## <a name="see-also"></a>Vedere anche
+
+[Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)

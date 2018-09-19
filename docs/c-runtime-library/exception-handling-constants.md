@@ -23,15 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc17e429c0750b9f0cc8d9eb24bc94adf00484e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070600"
 ---
 # <a name="exception-handling-constants"></a>Costanti di gestione delle eccezioni
-La costante `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` o `EXCEPTION_EXECUTE_HANDLER` viene restituita quando si verifica un'eccezione durante l'esecuzione della sezione protetta di un'istruzione **try-except**. Il valore restituito determina come è gestita l'eccezione. Per altre informazioni, vedere [try-except Statement](../cpp/try-except-statement.md) (Istruzione try-except) in *Riferimenti del linguaggio C++*.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+La costante `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` o `EXCEPTION_EXECUTE_HANDLER` viene restituita quando si verifica un'eccezione durante l'esecuzione della sezione protetta di un'istruzione **try-except**. Il valore restituito determina come è gestita l'eccezione. Per altre informazioni, vedere [try-except Statement](../cpp/try-except-statement.md) (Istruzione try-except) in *Riferimenti del linguaggio C++*.
+
+## <a name="see-also"></a>Vedere anche
+
+[Costanti globali](../c-runtime-library/global-constants.md)

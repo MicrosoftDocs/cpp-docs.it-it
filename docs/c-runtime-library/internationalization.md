@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0107e163a7435a2434852868687b5e386d324d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2aa28d8974fe34f9824617a1f2c86181443397e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084588"
 ---
 # <a name="internationalization"></a>Internazionalizzazione
 
 La libreria di runtime Microsoft fornisce molte routine utili per la creazione di versioni diverse di un programma destinato ai mercati internazionali. Sono incluse [routine correlate alle impostazioni locali](../c-runtime-library/locale.md), routine a caratteri wide, routine a caratteri multibyte e routine di testo generico. Per praticità, la maggior parte delle routine correlate alle impostazioni locali è suddivisa in questo riferimento in base alle operazioni che esegue. In questa sezione e nel riferimento alfabetico le routine a caratteri multibyte e le routine a caratteri wide vengono descritte con le controparti a caratteri a singolo byte, qualora esistano.
 
- Sono inoltre incluse le alternative dell'operatore ISO646.
+Sono inoltre incluse le alternative dell'operatore ISO646.
 
 ## <a name="see-also"></a>Vedere anche
 

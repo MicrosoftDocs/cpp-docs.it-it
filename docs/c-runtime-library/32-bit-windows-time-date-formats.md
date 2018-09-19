@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a415b2601db1e7fc755903145d6dd2b6293ed9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55eca447de7818f749628505a4c4f2fa6eb0dcd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061116"
 ---
 # <a name="32-bit-windows-timedate-formats"></a>Formati data e ora di Windows a 32 bit
-L'ora del file e la data vengono archiviate separatamente usando interi senza segno come campi di bit. L'ora del file e la data sono raccolte nel modo seguente:  
-  
-### <a name="time"></a>utente  
-  
-|Posizione di bit:|0   1   2   3   4|5   6   7   8   9   A|B   C   D   E   F|  
-|-------------------|-----------------------|---------------------------|-----------------------|  
-|Lunghezza:|5|6|5|  
-|Contenuto:|ore|minuti|incrementi di 2 secondi|  
-|Intervallo di valori:|0-23|0-59|0-29 in intervalli di 2 secondi|  
-  
-### <a name="date"></a>Date  
-  
-|Posizione di bit:|0   1   2   3   4   5   6|7   8   9   A|B   C   D   E   F|  
-|-------------------|-------------------------------|-------------------|-----------------------|  
-|Lunghezza:|7|4|5|  
-|Contenuto:|anno|mese|giorno|  
-|Intervallo di valori:|0-119|1-12|1-31|  
-||(rispetto al 1980)|||  
-  
-## <a name="see-also"></a>Vedere anche  
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+L'ora del file e la data vengono archiviate separatamente usando interi senza segno come campi di bit. L'ora del file e la data sono raccolte nel modo seguente:
+
+### <a name="time"></a>utente
+
+|Posizione di bit:|0   1   2   3   4|5   6   7   8   9   A|B   C   D   E   F|
+|-------------------|-----------------------|---------------------------|-----------------------|
+|Lunghezza:|5|6|5|
+|Contenuto:|ore|minuti|incrementi di 2 secondi|
+|Intervallo di valori:|0-23|0-59|0-29 in intervalli di 2 secondi|
+
+### <a name="date"></a>Date
+
+|Posizione di bit:|0   1   2   3   4   5   6|7   8   9   A|B   C   D   E   F|
+|-------------------|-------------------------------|-------------------|-----------------------|
+|Lunghezza:|7|4|5|
+|Contenuto:|anno|mese|giorno|
+|Intervallo di valori:|0-119|1-12|1-31|
+||(rispetto al 1980)|||
+
+## <a name="see-also"></a>Vedere anche
+
+[Costanti globali](../c-runtime-library/global-constants.md)
