@@ -1,5 +1,5 @@
 ---
-title: Errore matematico M6201 | Documenti Microsoft
+title: Errore matematico M6201 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a15e841cfc8daf1abdafc9997698807e7356af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87d2c09d6448bcf7fb0557fa3a174c60205a34ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332065"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099395"
 ---
 # <a name="math-error-m6201"></a>Errore matematico M6201
-'function': errore Domain  
-  
- Un argomento della funzione specificata non è all'esterno del dominio di valori di input validi per tale funzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-result = sqrt(-1.0)   // C statement  
-result = SQRT(-1.0)   !  FORTRAN statement  
-```  
-  
- L'errore chiama la `_matherr` funzione con il nome della funzione, gli argomenti e il tipo di errore. È possibile riscrivere la `_matherr` funzione per personalizzare la gestione di determinati errori matematica a virgola mobile in fase di esecuzione.
+
+'function': errore di dominio
+
+Un argomento della funzione specificata non è all'esterno del dominio di valori di input validi per tale funzione.
+
+## <a name="example"></a>Esempio
+
+```
+result = sqrt(-1.0)   // C statement
+result = SQRT(-1.0)   !  FORTRAN statement
+```
+
+Questo errore viene chiamato il `_matherr` funzione con il nome della funzione, argomenti e il tipo di errore. È possibile riscrivere il `_matherr` funzioni per personalizzare la gestione di alcuni errori di run-time matematica a virgola mobile.

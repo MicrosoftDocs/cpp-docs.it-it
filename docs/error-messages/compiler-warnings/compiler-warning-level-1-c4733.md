@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4733 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4733 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d702867fb4950b97ee2d2c6249c26229aac975
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75b4aac2d71267b4ba012384fe83f167f44ec2d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092934"
 ---
 # <a name="compiler-warning-level-1-c4733"></a>Avviso del compilatore (livello 1) C4733
-Assegnazione dell'assembly inline a "FS: 0": gestore non registrato come sicuro  
-  
- Una funzione che modifica il valore su FS: 0 per aggiungere un nuovo gestore eccezioni potrebbe non funzionare con le eccezioni sicure, poiché il gestore non può essere registrato come un gestore di eccezioni validi (vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).  
-  
- Per risolvere il problema, rimuovere la definizione su FS: 0 o disattivare questo avviso e utilizzare [. SAFESEH](../../assembler/masm/dot-safeseh.md) per specificare i gestori eccezioni sicuri.  
-  
- L'esempio seguente genera l'errore C4733:  
-  
-```  
-// C4733.cpp  
-// compile with: /W1 /c  
-// processor: x86  
-#include "stdlib.h"  
-#include "stdio.h"  
-void my_handler()  
-{  
-   printf("Hello from my_handler\n");  
-   exit(1);  
-}  
-  
-int main()  
-{  
-   _asm {  
-      push    my_handler  
-      mov     eax, DWORD PTR fs:0  
-      push    eax  
-      mov     DWORD PTR fs:0, esp   // C4733  
-   }  
-  
-   *(int*)0 = 0;  
-}  
+
+Assegnazione dell'assembly inline a 'FS:0': gestore non registrato come sicuro
+
+Una funzione che modifica il valore in corrispondenza FS:0 per aggiungere un nuovo gestore di eccezioni potrebbe non funzionare con le eccezioni sicure, in quanto il gestore non può essere registrato come un gestore di eccezioni validi (vedere [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
+
+Per risolvere questo problema, rimuovere la definizione FS:0 o disattivare questo avviso e usare [. SAFESEH](../../assembler/masm/dot-safeseh.md) per specificare i gestori eccezioni sicuri.
+
+L'esempio seguente genera l'errore C4733:
+
+```
+// C4733.cpp
+// compile with: /W1 /c
+// processor: x86
+#include "stdlib.h"
+#include "stdio.h"
+void my_handler()
+{
+   printf("Hello from my_handler\n");
+   exit(1);
+}
+
+int main()
+{
+   _asm {
+      push    my_handler
+      mov     eax, DWORD PTR fs:0
+      push    eax
+      mov     DWORD PTR fs:0, esp   // C4733
+   }
+
+   *(int*)0 = 0;
+}
 ```

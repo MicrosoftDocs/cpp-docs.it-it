@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::auto_gcroot | Documenti Microsoft
+title: auto_gcroot::auto_gcroot | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df9650c5a013d6308869de002919c33a08b2ae04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc168596c43c4ea8f26da5157656822b862bdc1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100441"
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
 Il `auto_gcroot` costruttore.  
@@ -46,14 +46,14 @@ auto_gcroot(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_ptr`  
- L'oggetto proprietario.  
+*_ptr*<br/>
+L'oggetto proprietario.  
   
- `_right`  
- Oggetto `auto_gcroot` esistente.  
+*a destra*<br/>
+Oggetto `auto_gcroot` esistente.  
   
 ## <a name="remarks"></a>Note  
- Quando si crea un `auto_gcroot` da un oggetto esistente `auto_gcroot`, esistente `auto_gcroot` rilascia l'oggetto prima di trasferire la proprietà dell'oggetto per il nuovo `auto_gcroot`.  
+ Quando si crea un' `auto_gcroot` da un oggetto esistente `auto_gcroot`, esistente `auto_gcroot` rilascia l'oggetto prima di trasferire la proprietà dell'oggetto al nuovo `auto_gcroot`.  
   
 ## <a name="example"></a>Esempio  
   

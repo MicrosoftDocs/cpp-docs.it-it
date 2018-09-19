@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RW1023 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RW1023 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2feab76fb4ade2832986ccc82cb98418fee2c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 298cde9d9f44ace74e7e46080dcbeeff72b8bb33
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320385"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093493"
 ---
 # <a name="resource-compiler-fatal-error-rw1023"></a>Errore irreversibile del compilatore di risorse RW1023
-Errore dei / o scrittura del file, unità completa  
-  
- Spazio disponibile deve essere uguale almeno due volte le dimensioni del file eseguibile che si sta creando.
+
+Errore dei / o la scrittura del file, unità completa
+
+Lo spazio disponibile deve essere uguale almeno due volte la dimensione del file eseguibile che si sta creando.

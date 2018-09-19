@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a1c08e8e50e8ef1236b253d471c2332c4e6e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1479ced25a741e27a195b529b6bf8825b47ce41e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763770"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099603"
 ---
 # <a name="ipersiststorageimpl-class"></a>Classe IPersistStorageImpl
 
@@ -42,13 +42,13 @@ Questa classe implementa il [IPersistStorage](/windows/desktop/api/objidl/nn-obj
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe, derivata da `IPersistStorageImpl`.
 
 ## <a name="members"></a>Membri
@@ -185,7 +185,7 @@ Visualizzare [IPersistStorage:SaveCompleted](/windows/desktop/api/objidl/nf-obji
 
 ## <a name="see-also"></a>Vedere anche
 
-[Flussi e archivi](/windows/desktop/Stg/storages-and-streams)   
-[Classe IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)   
-[Classe IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)   
+[Flussi e archivi](/windows/desktop/Stg/storages-and-streams)<br/>
+[Classe IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
+[Classe IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0cbb7f3bc7263165a988a910f0311d3d2c368e0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104322"
 ---
 # <a name="assume"></a>__assume
 **Sezione specifica Microsoft**  
@@ -38,8 +38,8 @@ __assume(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `expression`  
- Espressione che si presuppone restituisca true.  
+*Espressione*<br/>
+Espressione che si presuppone restituisca true.  
   
 ## <a name="remarks"></a>Note  
  L'utilità di ottimizzazione presuppone che la condizione rappresentata dal parametro `expression` sia true nel punto in cui viene visualizzata la parola chiave e rimanga true finché `expression` non viene modificato, ad esempio da un'assegnazione a una variabile. L'uso selettivo degli hint passati all'utilità di ottimizzazione da `__assume` possono migliorare l'ottimizzazione.  

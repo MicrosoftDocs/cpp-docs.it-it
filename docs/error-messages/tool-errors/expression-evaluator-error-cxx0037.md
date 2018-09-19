@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0037 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0037 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c64c9542d9ba4814ffbc38d17dbbf87601f4ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1512e3dc29a0cc65e9eec252ec6d89458d02c07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294843"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107156"
 ---
 # <a name="expression-evaluator-error-cxx0037"></a>Errore dell‘analizzatore di espressioni CXX0037
-Memoria insufficiente  
-  
- L'analizzatore di espressioni C ha esaurito la memoria, la valutazione dell'espressione.  
-  
- Questo errore è identico all'errore CAN0037.
+
+Memoria insufficiente
+
+L'analizzatore di espressioni C ha esaurito la memoria, la valutazione dell'espressione.
+
+Questo errore è identico all'errore CAN0037.

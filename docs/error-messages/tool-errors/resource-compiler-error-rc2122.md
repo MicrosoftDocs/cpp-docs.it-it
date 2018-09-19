@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2122 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2122 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d468686fa874afbcf3d1d95517afe7fbcff8d2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c836819f1267056e21596274d46101ad75f970fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105497"
 ---
 # <a name="resource-compiler-error-rc2122"></a>Errore del compilatore di risorse RC2122
-sottotipo sconosciuto di un menu  
-  
- Il *definizione di elemento* campo il **MENU** istruzione può contenere solo **MENUITEM** e **POPUP** istruzioni.
+
+sottotipo di menu sconosciuta
+
+Il *definizione di elemento* campo del **dal MENU** istruzione può contenere solo **MENUITEM** e **POPUP** istruzioni.

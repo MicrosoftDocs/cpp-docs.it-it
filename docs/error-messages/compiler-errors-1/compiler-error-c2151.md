@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2151 | Documenti Microsoft
+title: Errore del compilatore C2151 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfd708c64beffe3be3e7bf127547c904cc39709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae236956d991aae2b62db704acbd4d736cbc56bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101553"
 ---
 # <a name="compiler-error-c2151"></a>Errore del compilatore C2151
-più di un attributo di linguaggio  
-  
- Una funzione contiene più parole chiave ( `__cdecl`, `__stdcall`, o `__fastcall`) specificando una convenzione di chiamata.
+
+più di un attributo di linguaggio
+
+Una funzione dispone di più di una parola chiave ( `__cdecl`, `__stdcall`, o `__fastcall`) specificando una convenzione di chiamata.

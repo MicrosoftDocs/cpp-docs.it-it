@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3356 | Documenti Microsoft
+title: Errore del compilatore C3356 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 552dbab4796e39616a2833731e5170e671845f80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b21b54fc498a8fd194cea54823ce6958c25f67c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105992"
 ---
 # <a name="compiler-error-c3356"></a>Errore del compilatore C3356
-'attribute': impossibile chiamare un attributo multicast con un nome completo  
-  
- Un attributo elaborato da più processi, ad esempio, il compilatore e il provider ATL, non è stato specificato correttamente.
+
+'attribute': impossibile chiamare un attributo multicast con un nome completo
+
+Un attributo elaborato da più processi, ad esempio, il compilatore e il provider ATL, non è stato specificato correttamente.

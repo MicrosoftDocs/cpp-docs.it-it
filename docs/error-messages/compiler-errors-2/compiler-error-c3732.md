@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3732 | Documenti Microsoft
+title: Errore del compilatore C3732 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b6b5c66ba02bdb23e5b8dffe6f0ba74350b2e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 187a7079eee1bc3b5ce36f29b8fbaef67c64fc59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092791"
 ---
 # <a name="compiler-error-c3732"></a>Errore del compilatore C3732
-'interface': un'interfaccia personalizzata che genera eventi COM non può ereditare da IDispatch  
-  
- Un'interfaccia che supporta gli eventi COM non può ereditare da `IDispatch`. Per ulteriori informazioni, vedere [gestione degli eventi in COM](../../cpp/event-handling-in-com.md).  
-  
- L'errore seguente genera l'errore C3732:  
-  
-```  
-// C3732.cpp  
-#define _ATL_ATTRIBUTES 1  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module(name="test")];  
-  
-// to resolve this C3732, use dual instead of object  
-// or inherit from IUnknown  
-[ object ]  
-__interface I : IDispatch  
-{  
-};  
-  
-[ event_source(com), coclass ]  
-struct A  
-{  
-   __event __interface I;   // C3732  
-};  
-  
-int main()  
-{  
-}  
+
+'interface': un'interfaccia personalizzata che genera eventi COM non può ereditare da IDispatch
+
+Un'interfaccia che supporta gli eventi COM non può ereditare da `IDispatch`. Per altre informazioni, vedere [gestione degli eventi in COM](../../cpp/event-handling-in-com.md).
+
+L'errore seguente genera l'errore C3732:
+
+```
+// C3732.cpp
+#define _ATL_ATTRIBUTES 1
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module(name="test")];
+
+// to resolve this C3732, use dual instead of object
+// or inherit from IUnknown
+[ object ]
+__interface I : IDispatch
+{
+};
+
+[ event_source(com), coclass ]
+struct A
+{
+   __event __interface I;   // C3732
+};
+
+int main()
+{
+}
 ```

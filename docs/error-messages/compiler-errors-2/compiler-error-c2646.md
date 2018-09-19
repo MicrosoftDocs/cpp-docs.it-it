@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2646 | Documenti Microsoft
+title: Errore del compilatore C2646 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6d4fdd5141c8fafb350110bee838a13b2cd3b1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c94895dfd429723819190ad622e3a7d93fd38a99
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104270"
 ---
 # <a name="compiler-error-c2646"></a>Errore del compilatore C2646
-nell'ambito globale o dello spazio dei nomi una struct o unione anonima deve essere dichiarata come statica  
-  
- Una struct o unione anonima dispone dell'ambito globale o dello spazio dei nomi, ma non è dichiarata come `static`.  
-  
- L'esempio seguente genera l'errore C2646 e mostra come risolverlo:  
-  
-```  
-// C2646.cpp  
-// compile with: /c  
-union { int i; };   // C2646 not static  
-  
-// OK  
-static union { int j; };  
-union U { int i; };  
+
+nell'ambito globale o dello spazio dei nomi una struct o unione anonima deve essere dichiarata come statica
+
+Una struct o unione anonima dispone dell'ambito globale o dello spazio dei nomi, ma non è dichiarata come `static`.
+
+L'esempio seguente genera l'errore C2646 e mostra come risolverlo:
+
+```
+// C2646.cpp
+// compile with: /c
+union { int i; };   // C2646 not static
+
+// OK
+static union { int j; };
+union U { int i; };
 ```

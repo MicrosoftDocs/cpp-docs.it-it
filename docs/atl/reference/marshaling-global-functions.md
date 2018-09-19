@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106233"
 ---
 # <a name="marshaling-global-functions"></a>Funzioni globali di marshalling
 
@@ -50,7 +50,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parametri
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntatore al `IStream` interfaccia nel flusso utilizzato per effettuare il marshalling.
 
 ### <a name="example"></a>Esempio
@@ -70,13 +70,13 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>Parametri
 
-*pUnk*  
+*pUnk*<br/>
 [in] Un puntatore all'interfaccia per effettuare il marshalling.
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia di cui effettuare il marshalling.
 
-*ppStream*  
+*ppStream*<br/>
 [out] Un puntatore al `IStream` interfaccia per il nuovo oggetto flusso utilizzato per effettuare il marshalling.
 
 ### <a name="return-value"></a>Valore restituito
@@ -108,13 +108,13 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>Parametri
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntatore al flusso in fase di unmarshalling.
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia in fase di unmarshalling.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Un puntatore all'interfaccia di unmarshalling.
 
 ### <a name="return-value"></a>Valore restituito

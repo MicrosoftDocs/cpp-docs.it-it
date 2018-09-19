@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4096 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4096 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6dedf18989341df82cacfde14f358c778d141e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264bbff052be7b37af1525392ffe0289fddef6d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104089"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Avviso degli strumenti del linker LNK4096
-Il valore di /base "number" non è valido per Windows 95 e Windows 98; immagine non può essere eseguita  
-  
- L'indirizzo di base specificato non è valido. File eseguibili per Windows 95 e Windows 98 devono avere un indirizzo di base superiore a 0x400000. Per ulteriori informazioni sugli indirizzi di base, vedere il [/base](../../build/reference/base-base-address.md) l'opzione del linker.
+
+/ Valore BASE "number" non è valido per Windows 95 e Windows 98; immagine non venga eseguita
+
+L'indirizzo di base specificato non è valido. File eseguibile Windows 95 e Windows 98 devono avere un indirizzo di base superiore a 0x400000. Per altre informazioni sugli indirizzi di base, vedere la [/base](../../build/reference/base-base-address.md) l'opzione del linker.

@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 3) C4267 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4267 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de75c4eb05002f638e6b665a39f2a35e114b0ab4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 359b254c937eb0c52edd56ae9a2616bfea764213
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097042"
 ---
 # <a name="compiler-warning-level-3-c4267"></a>Avviso del compilatore (livello 3) C4267
-'var': conversione da 'size_t' a 'type'. Possibile perdita di dati.  
-  
- Il compilatore ha rilevato una conversione da `size_t` a un tipo più piccolo.  
-  
- Per risolvere l'avviso, usare `size_t` invece di `type`. In alternativa, usare un tipo integrale che abbia almeno le stesse dimensioni di `size_t`.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4267.  
-  
-```  
-// C4267.cpp  
-// compile by using: cl /W4 C4267.cpp  
-void Func1(short) {}  
-void Func2(int) {}  
-void Func3(long) {}  
-void Func4(size_t) {}  
-  
-int main() {  
-   size_t bufferSize = 10;  
-   Func1(bufferSize);   // C4267 for all platforms  
-   Func2(bufferSize);   // C4267 only for 64-bit platforms  
-   Func3(bufferSize);   // C4267 only for 64-bit platforms  
-   Func4(bufferSize);   // OK for all platforms  
-}  
+
+'var': conversione da 'size_t' a 'type'. Possibile perdita di dati.
+
+Il compilatore ha rilevato una conversione da `size_t` a un tipo più piccolo.
+
+Per risolvere l'avviso, usare `size_t` invece di `type`. In alternativa, usare un tipo integrale che abbia almeno le stesse dimensioni di `size_t`.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4267.
+
+```
+// C4267.cpp
+// compile by using: cl /W4 C4267.cpp
+void Func1(short) {}
+void Func2(int) {}
+void Func3(long) {}
+void Func4(size_t) {}
+
+int main() {
+   size_t bufferSize = 10;
+   Func1(bufferSize);   // C4267 for all platforms
+   Func2(bufferSize);   // C4267 only for 64-bit platforms
+   Func3(bufferSize);   // C4267 only for 64-bit platforms
+   Func4(bufferSize);   // OK for all platforms
+}
 ```

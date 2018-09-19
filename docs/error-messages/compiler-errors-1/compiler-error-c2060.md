@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2060 | Documenti Microsoft
+title: Errore del compilatore C2060 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6e23bd3f67bb6e2b100b8afa483b2be8fc68fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5584bf596a507a3055cc9196acd233da8139523b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101579"
 ---
 # <a name="compiler-error-c2060"></a>Errore del compilatore C2060
-Errore di sintassi: trovata fine del file  
-  
- Era previsto almeno un token più.
+
+Errore di sintassi: trovata fine del file
+
+Almeno uno più token previsto.

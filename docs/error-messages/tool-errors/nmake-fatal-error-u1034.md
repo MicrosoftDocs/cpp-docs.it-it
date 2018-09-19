@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1034 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1034 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b8442ffcab4a800902a634ddb015c7bcb4b91c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a8f6f64f3f24ebb6294f16c451a1fb6027ec1f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105196"
 ---
 # <a name="nmake-fatal-error-u1034"></a>Errore irreversibile U1034 di NMAKE 
-Errore di sintassi: manca il separatore  
-  
- I due punti (**:**) che separa le destinazioni e dipendenti è mancante.
+
+Errore di sintassi: manca il separatore
+
+I due punti (**:**) che separa le destinazioni e oggetti dipendenti è mancante.

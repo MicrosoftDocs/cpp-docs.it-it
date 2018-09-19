@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3394 | Documenti Microsoft
+title: Errore del compilatore C3394 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66d99ff65ba7fa6fd463a1266cdc506d7fd0a11b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7a7f66d437158504b3ca4c8dccaf3c35d2c1ae4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096418"
 ---
 # <a name="compiler-error-c3394"></a>Errore del compilatore C3394
-errore di sintassi nella clausola constraint: trovato 'identifier', previsto un tipo  
-  
- Un vincolo non è stato creato nel formato corretto.  Per ulteriori informazioni, vedere [vincoli sui parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3394:  
-  
-```  
-// C3394.cpp  
-// compile with: /clr /c  
-ref class MyClass {};  
-ref class R {  
-   generic<typename T>  
-   where T : static   // C3394  
-   // try the following line instead  
-   // where T : MyClass  
-   void f() {}  
-};  
+
+errore di sintassi nella clausola constraint: trovato 'identifier', previsto un tipo
+
+Un vincolo non è stato creato nel formato corretto.  Per altre informazioni, vedere [vincoli su parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3394:
+
+```
+// C3394.cpp
+// compile with: /clr /c
+ref class MyClass {};
+ref class R {
+   generic<typename T>
+   where T : static   // C3394
+   // try the following line instead
+   // where T : MyClass
+   void f() {}
+};
 ```

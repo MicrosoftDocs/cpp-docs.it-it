@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095859"
 ---
 # <a name="atl-com-property-pages"></a>Pagine delle proprietà COM ATL
 
@@ -38,18 +38,18 @@ Per altre informazioni, vedere [finestre delle proprietà e pagine delle proprie
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Specifica delle pagine delle proprietà](../atl/specifying-property-pages.md)  
+[Specifica delle pagine delle proprietà](../atl/specifying-property-pages.md)<br/>
 Elenca i passaggi per la specifica di pagine delle proprietà per controllare e viene illustrato un esempio di classe.
 
-[Implementazione delle pagine delle proprietà](../atl/implementing-property-pages.md)  
+[Implementazione delle pagine delle proprietà](../atl/implementing-property-pages.md)<br/>
 Elenca i passaggi per l'implementazione di pagine delle proprietà, inclusi i metodi per eseguire l'override. Illustra un esempio completo basato sul programma di esempio ATLPages.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Esempio ATLPages](../visual-cpp-samples.md)  
+[Esempio ATLPages](../visual-cpp-samples.md)<br/>
 La classe astratta di esempio per l'esempio ATLPages, che implementa una pagina di proprietà mediante `IPropertyPageImpl`.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 
 ## <a name="see-also"></a>Vedere anche

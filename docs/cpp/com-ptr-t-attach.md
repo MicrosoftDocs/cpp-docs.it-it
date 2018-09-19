@@ -17,39 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48da9a0ff3b9cadf0b7e228f3108277154e8417
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f2fbedb2bbfba16abf1196d1dba377f7589c916b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099616"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
-**Sezione specifica Microsoft**  
-  
- Incapsula un puntatore a interfaccia raw di questo tipo di puntatore intelligente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void Attach( Interface* pInterface ) throw( );  
-void Attach( Interface* pInterface, bool fAddRef ) throw( );  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *pInterface*  
- Puntatore a interfaccia raw.  
-  
- *fAddRef*  
- Se è TRUE, quindi `AddRef` viene chiamato. Se è FALSE, il `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`.  
-  
-## <a name="remarks"></a>Note  
-  
--   **Collega (***pInterface***)** `AddRef` non viene chiamato. La proprietà dell'interfaccia viene passata a questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.  
-  
--   **Collega (***pInterface* **,***fAddRef***)** se *fAddRef* è TRUE, `AddRef`viene chiamato per incrementare il conteggio dei riferimenti per il puntatore a interfaccia incapsulato.       Se *fAddRef* è FALSE, questa `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)
+
+**Sezione specifica Microsoft**
+
+Incapsula un puntatore a interfaccia raw di questo tipo di puntatore intelligente.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void Attach( Interface* pInterface ) throw( );
+void Attach( Interface* pInterface, bool fAddRef ) throw( );
+```
+
+#### <a name="parameters"></a>Parametri
+
+*pInterface*<br/>
+Puntatore a interfaccia raw.
+
+*fAddRef*<br/>
+Se è TRUE, quindi `AddRef` viene chiamato. Se è FALSE, il `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`.
+
+## <a name="remarks"></a>Note
+
+- **Collega (***pInterface***)** `AddRef` non viene chiamato. La proprietà dell'interfaccia viene passata a questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.
+
+- **Collega (***pInterface* **,***fAddRef***)** se *fAddRef* è TRUE, `AddRef`viene chiamato per incrementare il conteggio dei riferimenti per il puntatore a interfaccia incapsulato. Se *fAddRef* è FALSE, questa `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

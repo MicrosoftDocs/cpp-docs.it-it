@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0050 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0050 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad17614f693e313190dba9cc767c023981dec34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3949ea0db2f1667aecf1aeeefd922b192cbf41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100591"
 ---
 # <a name="project-build-error-prj0050"></a>Errore di compilazione progetto PRJ0050
-Impossibile registrare l'output. Assicurarsi di che disporre delle autorizzazioni appropriate per modificare il Registro di sistema.  
-  
- Il sistema di compilazione di Visual C++ non è in grado di registrare l'output di compilazione (dll o .exe). È necessario essere connessi come amministratore per modificare il Registro di sistema.  
-  
- Se si compila una DLL, è possibile provare a registrare la DLL manualmente utilizzando regsvr32.exe, questo deve visualizzare le informazioni sulla causa dell'errore di compilazione.  
-  
- Se non si compila una DLL, esaminare il log di compilazione per il comando che provoca un errore.
+
+Impossibile registrare l'output. Assicurarsi di che avere le autorizzazioni appropriate per modificare il Registro di sistema.
+
+Il sistema di compilazione Visual C++ non è in grado di registrare l'output della compilazione (dll o .exe). È necessario essere connessi come amministratore per modificare il Registro di sistema.
+
+Se si compila una DLL, è possibile provare a registrare la DLL manualmente utilizzando regsvr32.exe, questo deve visualizzare informazioni sui motivi per cui la compilazione non riuscita.
+
+Se non si compila una DLL, esaminare il log di compilazione per il comando che ha provocato un errore.

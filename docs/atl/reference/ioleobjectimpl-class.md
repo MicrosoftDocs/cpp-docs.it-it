@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82aa22c3cc1c217ba4dfd332c43f6663c94638e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107117"
 ---
 # <a name="ioleobjectimpl-class"></a>Classe IOleObjectImpl
 
@@ -76,13 +76,13 @@ Questa classe implementa `IUnknown` ed è l'interfaccia principale da un conteni
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe, derivata da `IOleObjectImpl`.
 
 ## <a name="members"></a>Membri
@@ -219,10 +219,10 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametri
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Puntatore al rettangolo contenitore richiede il controllo in cui disegnare.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle della finestra che contiene il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -239,10 +239,10 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametri
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Puntatore al rettangolo contenitore richiede il controllo in cui disegnare.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle della finestra che contiene il controllo. Non utilizzato nell'implementazione di ATL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -259,10 +259,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametri
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Puntatore al rettangolo contenitore richiede il controllo in cui disegnare.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle della finestra che contiene il controllo. Non utilizzato nell'implementazione di ATL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -283,10 +283,10 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametri
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Puntatore al rettangolo contenitore richiede il controllo in cui disegnare.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle della finestra che contiene il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -303,10 +303,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>Parametri
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Puntatore al rettangolo contenitore richiede il controllo in cui disegnare.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle della finestra che contiene il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -327,10 +327,10 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametri
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Puntatore al rettangolo contenitore richiede il controllo in cui disegnare.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle della finestra che contiene il controllo. Non utilizzato nell'implementazione di ATL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -347,10 +347,10 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametri
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Puntatore al rettangolo contenitore richiede il controllo in cui disegnare.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Handle della finestra che contiene il controllo. Non utilizzato nell'implementazione di ATL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -833,6 +833,6 @@ Visualizzare [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobje
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Interfacce di controlli ActiveX](/windows/desktop/com/activex-controls-interfaces)   
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Interfacce di controlli ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

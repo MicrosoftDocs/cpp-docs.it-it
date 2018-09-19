@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2005 | Documenti Microsoft
+title: Errore del compilatore C2005 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c6b690b54ea7f847128091500e75192440bc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6dfba3b960a046bf40751c135c3b99fbe843545
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100678"
 ---
 # <a name="compiler-error-c2005"></a>Errore del compilatore C2005
-\#riga previsto un numero di riga, trovato 'token'  
-  
- Il `#line` direttiva deve essere seguita da un numero di riga.  
-  
- L'esempio seguente genera l'errore C2005:  
-  
-```  
-// C2005.cpp  
-int main() {  
-   int i = 0;  
-   #line i   // C2005  
-}  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2005b.cpp  
-int main() {  
-   int i = 0;  
-   #line 0  
-}  
+
+\#riga previsto un numero di riga, trovato 'token'
+
+Il `#line` direttiva deve essere seguita da un numero di riga.
+
+L'esempio seguente genera l'errore C2005:
+
+```
+// C2005.cpp
+int main() {
+   int i = 0;
+   #line i   // C2005
+}
+```
+
+Possibile soluzione:
+
+```
+// C2005b.cpp
+int main() {
+   int i = 0;
+   #line 0
+}
 ```

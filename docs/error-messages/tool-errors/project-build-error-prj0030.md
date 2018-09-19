@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0030 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0030 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf1c9137f8c4ed0d80955eef38b07ea86204a5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964fedd40f577a8b337c4ad0c20ba80d33ed2a23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099920"
 ---
 # <a name="project-build-error-prj0030"></a>Errore di compilazione progetto PRJ0030
-Errore di espansione di macro. Valutazione della ricorsione superata i 32 livelli per $(macro).  
-  
- Questo errore è causato dalla ricorsione nelle macro. Ad esempio, se si imposta la **Directory intermedia** proprietà (vedere [pagina delle proprietà Generale (progetto)](../../ide/general-property-page-project.md)) su $(IntDir), si otterrà una ricorsione.  
-  
- Per correggere l'errore, non definire macro o alle proprietà in termini vengono utilizzati per definire macro.
+
+Errore di espansione di macro. Valutazione della ricorsione superata i 32 livelli per $(macro).
+
+Questo errore è causato da nelle macro di ricorsione. Ad esempio, se si imposta la **Directory intermedia** proprietà (vedere [General Property Page (Project)](../../ide/general-property-page-project.md)) $ (IntDir), si otterrà una ricorsione.
+
+Per risolvere questo errore, non definire macro o proprietà in termini di macro che vengono usate per definire.

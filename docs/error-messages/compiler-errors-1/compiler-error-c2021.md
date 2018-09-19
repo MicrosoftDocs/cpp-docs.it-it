@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2021 | Documenti Microsoft
+title: Errore del compilatore C2021 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1c3640b4fbe5b1473c2e678406321f5533e586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31169c59ba9731d8eda52f22644294b8bb680bf2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167502"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101994"
 ---
 # <a name="compiler-error-c2021"></a>Errore del compilatore C2021
-previsto valore esponente. Trovato 'character'  
-  
- Carattere usato come esponente di una costante a virgola mobile non è un numero valido. Assicurarsi di utilizzare un esponente è compreso nell'intervallo.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C2021:  
-  
-```  
-// C2021.cpp  
-float test1=1.175494351E;   // C2021  
-```  
-  
-## <a name="example"></a>Esempio  
- Possibile soluzione:  
-  
-```  
-// C2021b.cpp  
-// compile with: /c  
-float test2=1.175494351E8;  
+
+previsto valore esponente. Trovato 'character'
+
+Il carattere usato come esponente di una costante a virgola mobile non è un numero valido. Assicurarsi di usare un esponente che è compreso nell'intervallo.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C2021:
+
+```
+// C2021.cpp
+float test1=1.175494351E;   // C2021
+```
+
+## <a name="example"></a>Esempio
+
+Possibile soluzione:
+
+```
+// C2021b.cpp
+// compile with: /c
+float test2=1.175494351E8;
 ```

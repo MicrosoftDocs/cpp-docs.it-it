@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 548b75a3cee974538450534e25a091c56ae35014
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098784"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opzioni, Creazione guidata oggetto semplice ATL
 
@@ -75,7 +75,7 @@ Per altre informazioni sulle classi ATL COM e progetti ATL, vedere [ATL COM Desk
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione guidata oggetto semplice ATL](../../atl/reference/atl-simple-object-wizard.md)   
-[Oggetto semplice ATL](../../atl/reference/adding-an-atl-simple-object.md)   
+[Creazione guidata oggetto semplice ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
+[Oggetto semplice ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [Problemi relativi al Threading di Server in-Process](/windows/desktop/com/in-process-server-threading-issues)
 

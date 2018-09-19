@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0038 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0038 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa0b47313e367f73b241ae94c5e022b45e57587d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5695b00dc52737ab3247d59e363a42aecf001ffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098829"
 ---
 # <a name="expression-evaluator-error-cxx0038"></a>Errore dell‘analizzatore di espressioni CXX0038
-mancata corrispondenza del numero e/o tipo di argomento (funzione)  
-  
- La chiamata di funzione specificata non corrisponde al prototipo per la funzione.  
-  
- Digitare nuovamente la chiamata con il numero corretto di argomenti. Eseguire il cast di tipo ciascun argomento in base al prototipo, in base alle esigenze.  
-  
- Questo errore è identico all'errore CAN0038.
+
+mancata corrispondenza del numero e/o tipo di argomento (funzione)
+
+La chiamata di funzione come specificato non corrisponde il prototipo della funzione.
+
+Digitare nuovamente la chiamata con il numero corretto di argomenti. Eseguire il cast di tipo ciascun argomento in modo che corrisponda il prototipo, in base alle esigenze.
+
+Questo errore è identico all'errore CAN0038.

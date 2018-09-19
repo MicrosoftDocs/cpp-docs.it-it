@@ -41,14 +41,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0179bbc68bb6ed60f6fadf26f98be492c2eeb4c1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e1f22b0206499b227b8b7812e004e46f565d803a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105414"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
+
 Implementa le proprietà per un'ampia gamma di interfacce della proprietà OLE DB (ad esempio, `IDBProperties`, `IDBProperties`, e `IRowsetInfo`).  
   
 ## <a name="syntax"></a>Sintassi
@@ -59,11 +60,13 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *T*  
- La classe che contiene il `BEGIN_PROPSET_MAP`.  
+
+*T*<br/>
+La classe che contiene il `BEGIN_PROPSET_MAP`.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldb.h  
+
+**Intestazione:** atldb.h  
 
 ## <a name="members"></a>Membri  
   
@@ -78,13 +81,15 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 |[SetPropValue](#setpropvalue)|Imposta una proprietà in un set di proprietà.|  
   
 ## <a name="remarks"></a>Note  
- La maggior parte di questa classe è un dettaglio di implementazione.  
+
+La maggior parte di questa classe è un dettaglio di implementazione.  
   
- `CUtlProps` contiene due membri per l'impostazione delle proprietà internamente: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) e [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
+`CUtlProps` contiene due membri per l'impostazione delle proprietà internamente: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) e [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
   
- Per altre informazioni sulle macro di utilizzato in una mappa di set di proprietà, vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).  
+Per altre informazioni sulle macro di utilizzato in una mappa di set di proprietà, vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).  
   
 ## <a name="getpropvalue"></a> CUtlProps:: GetPropValue
+
 Ottiene una proprietà da un set di proprietà.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -96,19 +101,22 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *pguidPropSet*  
- [in] GUID per il set di proprietà.  
+
+*pguidPropSet*<br/>
+[in] GUID per il set di proprietà.  
   
- *dwPropId*  
- [in] L'indice della proprietà.  
+*dwPropId*<br/>
+[in] L'indice della proprietà.  
   
- *pvValue*  
- [out] Un puntatore a un variant contenente il nuovo valore della proprietà.  
+*pvValue*<br/>
+[out] Un puntatore a un variant contenente il nuovo valore della proprietà.  
   
 ### <a name="return-value"></a>Valore restituito  
- `Failure` in errore e S_OK se l'operazione riesce.
+
+`Failure` in errore e S_OK se l'operazione riesce.
 
 ## <a name="isvalidvalue"></a> CUtlProps:: IsValidValue
+
 Usato per convalidare un valore prima di impostare una proprietà.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -119,19 +127,23 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *iCurSet*  
- L'indice nella matrice di set di proprietà; zero se è presente una sola proprietà set.  
+
+*iCurSet*<br/>
+L'indice nella matrice di set di proprietà; zero se è presente una sola proprietà set.  
   
- *pDBProp*  
- L'ID di proprietà e un nuovo valore in una [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) struttura.  
+*pDBProp*<br/>
+L'ID di proprietà e un nuovo valore in una [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard. Il valore predefinito è S_OK.  
+
+Un valore HRESULT standard. Il valore predefinito è S_OK.  
   
 ### <a name="remarks"></a>Note  
- Se si dispone di qualsiasi routine di convalida da eseguire su un valore che sta tentando di usare per impostare una proprietà, si deve eseguire l'override di questa funzione. È ad esempio, è stato possibile convalidare DBPROP_AUTH_PASSWORD rispetto a una tabella di password per determinare un valore valido. 
+
+Se si dispone di qualsiasi routine di convalida da eseguire su un valore che sta tentando di usare per impostare una proprietà, si deve eseguire l'override di questa funzione. È ad esempio, è stato possibile convalidare DBPROP_AUTH_PASSWORD rispetto a una tabella di password per determinare un valore valido. 
 
 ## <a name="oninterfacerequested"></a> CUtlProps:: Oninterfacerequested
+
 Gestisce le richieste per un'interfaccia facoltativa quando un consumer chiama un metodo in uno degli oggetti interfacce di creazione.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -141,29 +153,32 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *riid*  
- [in] IID per l'interfaccia richiesta. Per altre informazioni, vedere la descrizione del *riid* parametro di `ICommand::Execute` nel *riferimento per programmatori OLE DB* (nel *SDK di MDAC*).  
+
+*riid*<br/>
+[in] IID per l'interfaccia richiesta. Per altre informazioni, vedere la descrizione del *riid* parametro di `ICommand::Execute` nel *riferimento per programmatori OLE DB* (nel *SDK di MDAC*).  
   
 ### <a name="remarks"></a>Note  
- `OnInterfaceRequested` gestisce le richieste di consumer per un'interfaccia facoltativa quando un consumer chiama un metodo in uno degli oggetti interfacce di creazione (ad esempio `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`, o `ICommand`). Imposta la proprietà OLE DB corrispondente per l'interfaccia richiesta. Ad esempio, se il consumer richiede `IID_IRowsetLocate`, `OnInterfaceRequested` imposta il `DBPROP_IRowsetLocate` interfaccia. In questo modo mantiene lo stato corretto durante la creazione del set di righe.  
+
+`OnInterfaceRequested` gestisce le richieste di consumer per un'interfaccia facoltativa quando un consumer chiama un metodo in uno degli oggetti interfacce di creazione (ad esempio `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`, o `ICommand`). Imposta la proprietà OLE DB corrispondente per l'interfaccia richiesta. Ad esempio, se il consumer richiede `IID_IRowsetLocate`, `OnInterfaceRequested` imposta il `DBPROP_IRowsetLocate` interfaccia. In questo modo mantiene lo stato corretto durante la creazione del set di righe.  
   
- Questo metodo viene chiamato quando il consumer chiama `IOpenRowset::OpenRowset` o `ICommand::Execute`.  
+Questo metodo viene chiamato quando il consumer chiama `IOpenRowset::OpenRowset` o `ICommand::Execute`.  
   
- Se un utente apre un oggetto e richiede un'interfaccia facoltativa, il provider deve impostare la proprietà associata all'interfaccia su VARIANT_TRUE. Per consentire l'elaborazione di specifici delle proprietà, `OnInterfaceRequested` viene chiamato prima che il provider `Execute` viene chiamato il metodo. Per impostazione predefinita, `OnInterfaceRequested` gestisce le interfacce seguenti:  
+Se un utente apre un oggetto e richiede un'interfaccia facoltativa, il provider deve impostare la proprietà associata all'interfaccia su VARIANT_TRUE. Per consentire l'elaborazione di specifici delle proprietà, `OnInterfaceRequested` viene chiamato prima che il provider `Execute` viene chiamato il metodo. Per impostazione predefinita, `OnInterfaceRequested` gestisce le interfacce seguenti:  
   
--   `IRowsetLocate`  
+- `IRowsetLocate`  
   
--   `IRowsetChange`  
+- `IRowsetChange`  
   
--   `IRowsetUpdate`  
+- `IRowsetUpdate`  
   
--   `IConnectionPointContainer`  
+- `IConnectionPointContainer`  
   
--   `IRowsetScroll`  
+- `IRowsetScroll`  
   
- Se si vuole gestire altre interfacce, eseguire l'override di questa funzione nella classe dati origine, sessione, nel comando o set di righe per le funzioni di processo. La sostituzione deve passare attraverso le interfacce di proprietà get/set normale per assicurarsi che le proprietà si imposta alcuna proprietà concatenate (vedere [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
+Se si vuole gestire altre interfacce, eseguire l'override di questa funzione nella classe dati origine, sessione, nel comando o set di righe per le funzioni di processo. La sostituzione deve passare attraverso le interfacce di proprietà get/set normale per assicurarsi che le proprietà si imposta alcuna proprietà concatenate (vedere [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
 
 ## <a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
+
 Chiamato dopo l'impostazione di una proprietà per gestire le proprietà concatenate.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -174,24 +189,29 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *iCurSet*  
- L'indice nella matrice di set di proprietà; zero se è presente una sola proprietà set.  
+
+*iCurSet*<br/>
+L'indice nella matrice di set di proprietà; zero se è presente una sola proprietà set.  
   
- *pDBProp*  
- L'ID di proprietà e un nuovo valore in una [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) struttura.  
+*pDBProp*<br/>
+L'ID di proprietà e un nuovo valore in una [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard. Il valore predefinito è S_OK.  
+
+Un valore HRESULT standard. Il valore predefinito è S_OK.  
   
 ### <a name="remarks"></a>Note  
- Se si desidera gestire proprietà concatenate, ad esempio i segnalibri o aggiornamenti i cui valori sono dipendenti dal valore della proprietà di un altro, si deve eseguire l'override di questa funzione.  
+
+Se si desidera gestire proprietà concatenate, ad esempio i segnalibri o aggiornamenti i cui valori sono dipendenti dal valore della proprietà di un altro, si deve eseguire l'override di questa funzione.  
   
 ### <a name="example"></a>Esempio  
- In questa funzione, l'utente ottiene l'ID di proprietà dal `DBPROP*` parametro. A questo punto, è possibile confrontare l'ID in base a una proprietà alla catena. Quando la proprietà viene trovata, `SetProperties` viene chiamata con la proprietà che verrà impostata in combinazione con l'altra proprietà. In questo caso, se uno Ottiene il `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, o `DBPROP_ORDEREDBOOKMARKS` proprietà, è possibile impostare il `DBPROP_BOOKMARKS` proprietà.  
+
+In questa funzione, l'utente ottiene l'ID di proprietà dal `DBPROP*` parametro. A questo punto, è possibile confrontare l'ID in base a una proprietà alla catena. Quando la proprietà viene trovata, `SetProperties` viene chiamata con la proprietà che verrà impostata in combinazione con l'altra proprietà. In questo caso, se uno Ottiene il `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, o `DBPROP_ORDEREDBOOKMARKS` proprietà, è possibile impostare il `DBPROP_BOOKMARKS` proprietà.  
   
- [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  
+[!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  
   
 ## <a name="setpropvalue"></a> CUtlProps:: Setpropvalue
+
 Imposta una proprietà in un set di proprietà.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -203,18 +223,21 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *pguidPropSet*  
- [in] GUID per il set di proprietà.  
+
+*pguidPropSet*<br/>
+[in] GUID per il set di proprietà.  
   
- *dwPropId*  
- [in] L'indice della proprietà.  
+*dwPropId*<br/>
+[in] L'indice della proprietà.  
   
- *pvValue*  
- [in] Un puntatore a un variant contenente il nuovo valore della proprietà.  
+*pvValue*<br/>
+[in] Un puntatore a un variant contenente il nuovo valore della proprietà.  
   
 ### <a name="return-value"></a>Valore restituito  
- `Failure` in errore e S_OK se l'operazione riesce. 
+
+`Failure` in errore e S_OK se l'operazione riesce. 
 
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

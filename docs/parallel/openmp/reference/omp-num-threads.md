@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e25369f18f542198638e324110ba14d10b8ddc69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691768"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091166"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
-Imposta il numero massimo di thread in tale area, a meno che non viene sottoposto a override da [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) o [num_threads](../../../parallel/openmp/reference/num-threads.md).  
+Imposta il numero massimo di thread in tale area, a meno che non viene sottoposto a override da [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) oppure [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,21 +32,20 @@ Imposta il numero massimo di thread in tale area, a meno che non viene sottopost
 set OMP_NUM_THREADS[=num]  
 ```  
   
-## <a name="remarks"></a>Note  
- dove  
+### <a name="parameters"></a>Parametri
   
- `num`  
- Il numero massimo di thread desiderato nell'area parallela, fino a 64 nell'implementazione di Visual C++.  
+*num*<br/>
+Il numero massimo di thread desiderata nell'area parallela, un massimo di 64 nell'implementazione di Visual C++.  
   
 ## <a name="remarks"></a>Note  
- Il **OMP_NUM_THREADS** variabile di ambiente può essere sostituita dal [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funzione o da [num_threads](../../../parallel/openmp/reference/num-threads.md).  
+ Il **OMP_NUM_THREADS** variabile di ambiente può eseguire l'override di [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) (funzione) o tramite [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
  Il valore predefinito di `num` in Visual C++ implementazione dello standard OpenMP è il numero di processori virtuali, tra cui CPU hyperthreading.  
   
- Per ulteriori informazioni, vedere [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
+ Per altre informazioni, vedere [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
   
 ## <a name="example"></a>Esempio  
- Il comando seguente imposta il **OMP_NUM_THREADS** variabile di ambiente a 16:  
+ Il comando seguente imposta la **OMP_NUM_THREADS** variabile di ambiente a 16:  
   
 ```  
 set OMP_NUM_THREADS=16  

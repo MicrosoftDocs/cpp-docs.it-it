@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4070 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4070 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e4599e96552f1b98ef0b1af8d38995ebbe5a83e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cfb4ae1c5440742c491d9615a2b4929a9b04f66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302503"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106960"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>Avviso degli strumenti del linker LNK4070
-Direttiva /out: nomefile in. EXP differisce dal nome di file di output 'nomefile'; direttiva ignorata  
-  
- Il `filename` specificato nella [nome](../../build/reference/name-c-cpp.md) o [libreria](../../build/reference/library.md) istruzione quando è stato creato il file. EXP differisce dall'output `filename` che è stato impostato per impostazione predefinita o specificato con il [/Out](../../build/reference/out-output-file-name.md) opzione.  
-  
- Verrà visualizzato questo avviso se si modifica il nome di un file di output nell'ambiente di sviluppo e in cui non è stato aggiornato il file del progetto con estensione def. Aggiornare manualmente il file. def per risolvere il problema.  
-  
- Un programma client che utilizza la DLL risulta che si verifichino problemi.
+
+Direttiva /out: in. EXP differisce dal nome file di output 'filename'; direttiva ignorata
+
+Il `filename` specificato nella [NAME](../../build/reference/name-c-cpp.md) o [libreria](../../build/reference/library.md) istruzione quando è stato creato il file EXP differisce dall'output `filename` che è stato impostato per impostazione predefinita o specificato con il [/Out](../../build/reference/out-output-file-name.md) opzione.
+
+Verrà visualizzato questo avviso se si modifica il nome di un file di output nell'ambiente di sviluppo e in cui non è stato aggiornato il file del progetto con estensione def. Aggiornare manualmente il file con estensione def per risolvere il problema.
+
+Un programma client che usa la DLL risulta potrebbe verificarsi problemi.

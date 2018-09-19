@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2077 | Documenti Microsoft
+title: Errore del compilatore C2077 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba9395bd783307ae184cf7f23f187d4425523968
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a9025a61f9ca32679f5041256a2972ab1eaeea0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100656"
 ---
 # <a name="compiler-error-c2077"></a>Errore del compilatore C2077
-inizializzatore di campo non scalare 'identifier'  
-  
- Si è tentato di inizializzare un campo di bit con un elemento non scalare (struttura, unione, matrice o classe). Utilizzare un numero intero o un valore a virgola mobile.
+
+inizializzatore di campo non scalare 'identifier'
+
+Si è provato a inizializzare un campo di bit con un elemento non scalare (struct, unione, matrice o classe). Usare un numero intero o un valore a virgola mobile.

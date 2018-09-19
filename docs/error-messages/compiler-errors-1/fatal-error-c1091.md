@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1091 | Documenti Microsoft
+title: Errore irreversibile C1091 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48c9dca72bddc844e94fb7978cb6414aa8fecf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e93c2e6c26f8704e700465fb706867129847a460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104252"
 ---
 # <a name="fatal-error-c1091"></a>Errore irreversibile C1091
-limite del compilatore: la lunghezza della stringa supera i 'length' byte  
-  
- Una costante della stringa ha superato il limite corrente per la lunghezza delle stringhe.  
-  
- È consigliabile suddividere la stringa statica in due (o più) variabili e usare [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) per unire il risultato come parte della dichiarazione o in fase di esecuzione.
+
+limite del compilatore: la lunghezza della stringa supera i 'length' byte
+
+Una costante della stringa ha superato il limite corrente per la lunghezza delle stringhe.
+
+È consigliabile suddividere la stringa statica in due (o più) variabili e usare [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) per unire il risultato come parte della dichiarazione o in fase di esecuzione.

@@ -1,5 +1,5 @@
 ---
-title: Avviso del compilatore di risorse RW4004 | Documenti Microsoft
+title: Avviso del compilatore di risorse RW4004 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bd1c043ac5660c5cb8fc8b2bfa1dd2f6968b55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33305f1f86c0cc1722e4a235ec27927f6e70675f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095989"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>Avviso del compilatore di risorse RW4004
-Carattere ASCII non equivalente a codice tasto virtuale  
-  
- È stato usato un valore letterale stringa per il codice tasto virtuale in un tasto di scelta rapida di tipo VIRTKEY.  
-  
- Questo avviso permette di continuare, ma tenere presente che i tasti di scelta rapida generati potrebbero non corrispondere alla stringa specificata (i tasti VIRTKEY usano codici tasto diversi rispetto ai tasti di scelta rapida ASCII).  
-  
- Mentre i valori letterali stringa siano sintatticamente corretti, l'unico modo di ottenere l'acceleratore desiderato utilizzando il **VK _\* #define** valori in Windows. h.
+
+Carattere ASCII non equivalente a codice tasto virtuale
+
+È stato usato un valore letterale stringa per il codice tasto virtuale in un tasto di scelta rapida di tipo VIRTKEY.
+
+Questo avviso permette di continuare, ma tenere presente che i tasti di scelta rapida generati potrebbero non corrispondere alla stringa specificata (i tasti VIRTKEY usano codici tasto diversi rispetto ai tasti di scelta rapida ASCII).
+
+Valori letterali stringa siano sintatticamente validi, l'unico modo di ottenere il tasto di scelta rapida desiderato usando il **VK _\* #define** valori in Windows. h.

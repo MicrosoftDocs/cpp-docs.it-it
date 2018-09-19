@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2556 | Documenti Microsoft
+title: Errore del compilatore C2556 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb090b932daa93c2c680d4ec871b36c78f09a7c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 880234d1d11556b8882bfd564fdf64bc587d56ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107795"
 ---
 # <a name="compiler-error-c2556"></a>Errore del compilatore C2556
-'identifier': le funzioni in overload si differenziano solo per il tipo restituito  
-  
- Le funzioni in overload hanno tipi restituiti, ma lo stesso elenco di parametri. Ogni funzione in overload deve avere un elenco di parametri formali distinto.  
-  
- L'esempio seguente genera l'errore C2556:  
-  
-```  
-// C2556.cpp  
-// compile with: /c  
-class C {  
-   int func();  
-   double func();   // C2556  
-   int func(int i);   // ok parameter lists differ  
-};  
+
+'identifier': le funzioni in overload si differenziano solo per il tipo restituito
+
+Le funzioni in overload hanno tipi restituiti diversi ma lo stesso elenco di parametri. Ogni funzione in overload deve avere un elenco di parametri formali distinti.
+
+L'esempio seguente genera l'errore C2556:
+
+```
+// C2556.cpp
+// compile with: /c
+class C {
+   int func();
+   double func();   // C2556
+   int func(int i);   // ok parameter lists differ
+};
 ```

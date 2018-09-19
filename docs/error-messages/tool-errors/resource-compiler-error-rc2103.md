@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2103 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2103 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c70c89c927dca59f9bc242245d19f91e9e4a3894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bfdfefa0ee66093708ea7f839d7fbe8630ffe81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093467"
 ---
 # <a name="resource-compiler-error-rc2103"></a>Errore del compilatore di risorse RC2103
-fine file imprevista nel valore letterale stringa  
-  
- La fine di file trovata prima della fine di una stringa. La stringa è possibile che manchi un segno di virgolette doppie di chiusura (**"**).
+
+fine file imprevista nel valore letterale stringa
+
+La fine di file è stato trovato entro la fine di una stringa. La stringa è possibile che manchi un segno di virgolette doppie di chiusura (**"**).

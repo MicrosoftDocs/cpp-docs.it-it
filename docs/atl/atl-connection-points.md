@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f7c9360af2b5e2220daacabcd9ac04e108871dc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe2cf03debbfd88f19ccc77d3922a9a5c50a50d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091270"
 ---
 # <a name="atl-connection-points"></a>Punti di connessione ATL
 
@@ -33,18 +33,18 @@ Ogni punto di connessione supporta le [IConnectionPoint](/windows/desktop/api/oc
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Classi dei punti di connessione ATL](../atl/atl-connection-point-classes.md)  
+[Classi dei punti di connessione ATL](../atl/atl-connection-point-classes.md)<br/>
 Descrive in breve le classi ATL che supportano i punti di connessione.
 
-[Aggiunta di punti di connessione a un oggetto](../atl/adding-connection-points-to-an-object.md)  
+[Aggiunta di punti di connessione a un oggetto](../atl/adding-connection-points-to-an-object.md)<br/>
 Delinea i passaggi necessari per aggiungere punti di connessione a un oggetto.
 
-[Esempio di punto di connessione ATL](../atl/atl-connection-point-example.md)  
+[Esempio di punto di connessione ATL](../atl/atl-connection-point-example.md)<br/>
 Fornisce un esempio di dichiarazione di un punto di connessione.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 
 ## <a name="see-also"></a>Vedere anche

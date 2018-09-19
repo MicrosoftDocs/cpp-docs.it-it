@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3174 | Documenti Microsoft
+title: Errore del compilatore C3174 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b8898bc2079c3f62c2c1db1ac2a7420db7be7f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ca73c1fa16f2cc8b25f355705c7f0a72916158d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105188"
 ---
 # <a name="compiler-error-c3174"></a>Errore del compilatore C3174
-non è stato specificato l'attributo module  
-  
- Un programma che utilizza gli attributi di Visual C++ non è stata utilizzata anche la [modulo](../../windows/module-cpp.md) attributo, è necessario in qualsiasi programma che utilizza gli attributi.  
-  
- L'esempio seguente genera l'errore C3174:  
-  
-```  
-// C3174.cpp  
-// C3174 expected  
-// uncomment the following line to resolve this C3174  
-// [module(name="x")];  
-[export]  
-struct S  
-{  
-   int i;  
-};  
-  
-int main()  
-{  
-}  
+
+attributo del modulo non è stato specificato
+
+Un programma che usa gli attributi di Visual C++ non è stato anche usato il [modulo](../../windows/module-cpp.md) attributo, che è obbligatorio in qualsiasi programma che usa gli attributi.
+
+L'esempio seguente genera l'errore C3174:
+
+```
+// C3174.cpp
+// C3174 expected
+// uncomment the following line to resolve this C3174
+// [module(name="x")];
+[export]
+struct S
+{
+   int i;
+};
+
+int main()
+{
+}
 ```

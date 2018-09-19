@@ -1,5 +1,5 @@
 ---
-title: Classe message_not_found | Documenti Microsoft
+title: Classe message_not_found | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7973da83716e4dc99dc98b199421ab9d840a8380
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f28096fccae4f24b236631b3c27178bda7e22771
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705185"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103984"
 ---
 # <a name="messagenotfound-class"></a>Classe message_not_found
 Questa classe descrive un'eccezione generata quando un blocco della messaggistica non è in grado di trovare un messaggio richiesto.  
@@ -63,8 +63,8 @@ message_not_found() throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Messaggio descrittivo dell'errore.  
+*Messaggio*<br/>
+Messaggio descrittivo dell'errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   

@@ -1,5 +1,5 @@
 ---
-title: Errore matematico M6205 | Documenti Microsoft
+title: Errore matematico M6205 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8d7fbd042d8ce8210ec4fe275b0d83314f5d12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55549300a5ea603e4462d5b81679f935319838ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099753"
 ---
 # <a name="math-error-m6205"></a>Errore matematico M6205
-'function': errore di TLOSS  
-  
- Si è verificata una perdita totale di significato (precisione).  
-  
- Questo errore potrebbe essere causato da assegnando un numero molto elevato di operando di sin, cos, o tangente perché l'operando deve essere ridotto a un numero compreso tra 0 e 2 * pi.
+
+'function': errore TLOSS
+
+Si è verificata una perdita totale di significato (precisione).
+
+Questo errore può essere causato, assegnando a un numero molto elevato come operando di sin, cos, o tan perché l'operando deve essere ridotto a un numero compreso tra 0 e 2 * pi greco.

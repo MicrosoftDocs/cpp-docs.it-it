@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095446"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 Implementa la funzionalità di un'interfaccia a documento singolo (SDI) di Windows sovrapposta o di una finestra cornice popup e fornisce i membri per gestire la finestra. Estende la [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>Valore restituito  
  La parola più significativa deve essere uno dei valori seguenti.  
-  
- `0`  
- Il framework deve ignorare la sequenza di tasti.  
-  
- `1`  
- Il framework deve chiudere il menu di scelta.  
-  
- `2`  
- Il framework è necessario selezionare uno degli elementi visualizzati nel menu di scelta. La parola di ordine inferiore contiene l'ID del comando da selezionare.  
-  
-### <a name="remarks"></a>Note  
+
+|||
+|-|-|
+ `0` | Il framework deve ignorare la sequenza di tasti.  
+ `1`  | Il framework deve chiudere il menu di scelta.  
+ `2`  | Il framework è necessario selezionare uno degli elementi visualizzati nel menu di scelta. La parola di ordine inferiore contiene l'ID del comando da selezionare.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  Il framework chiama questo metodo quando si sposta il puntatore del mouse.  

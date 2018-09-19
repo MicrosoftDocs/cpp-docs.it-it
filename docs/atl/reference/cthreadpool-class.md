@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757394"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091699"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 
@@ -44,16 +44,16 @@ Questa classe fornisce un pool di thread di lavoro che elaborano una coda di ele
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*Ruolo di lavoro*  
+*Ruolo di lavoro*<br/>
 La classe conforme al [archetipo worker](../../atl/reference/worker-archetype.md) fornendo il codice utilizzato per elaborare gli elementi in coda nel pool di thread di lavoro.
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 La classe che fornisce la funzione utilizzata per creare il thread nel pool.
 
 ## <a name="members"></a>Membri
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Indirizzo della variabile che, in caso di esito positivo riceve il numero di thread nel pool.
 
 ### <a name="return-value"></a>Valore restituito
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Indirizzo della variabile che, in caso di esito positivo riceve il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.
 
 ### <a name="return-value"></a>Valore restituito
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>Parametri
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Il parametro di ruolo di lavoro deve essere passato l'oggetto thread worker `Initialize`, `Execute`, e `Terminate` metodi.
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Il numero richiesto di thread nel pool.
 
 Se *nNumThreads* è negativo, il valore assoluto corrispondente verrà moltiplicato per il numero di processori del computer per ottenere il numero totale di thread.
 
 Se *nNumThreads* è uguale a zero, ATLS_DEFAULT_THREADSPERPROC verrà moltiplicata per il numero di processori del computer per ottenere il numero totale di thread.  Il valore predefinito è 2 thread per processore. Se necessario, è possibile definire il proprio valore intero positivo per questo simbolo prima di includere atlutil. h.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 La dimensione dello stack per ogni thread nel pool.
 
-*hCompletion*  
+*hCompletion*<br/>
 L'handle di un oggetto da associare la porta di completamento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Richiesta*  
+*Richiesta*<br/>
 La richiesta da inserire in coda.
 
 ### <a name="return-value"></a>Valore restituito
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Il numero richiesto di thread nel pool.
 
 Se *nNumThreads* è negativo, il valore assoluto corrispondente verrà moltiplicato per il numero di processori del computer per ottenere il numero totale di thread.
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Il tempo massimo richiesto in millisecondi di attesa per un thread arrestare il pool di thread.
 
 ### <a name="return-value"></a>Valore restituito
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Il tempo massimo richiesto in millisecondi di attesa per un thread arrestare il pool di thread. Se viene fornito alcun valore o 0, questo metodo verrà utilizzato il timeout impostato [CThreadPool::SetTimeout](#settimeout).
 
 ### <a name="remarks"></a>Note
@@ -358,6 +358,6 @@ Questo metodo invia una richiesta di arresto a tutti i thread nel pool. Se il ti
 
 ## <a name="see-also"></a>Vedere anche
 
-[Interfaccia IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[Interfaccia IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Classi](../../atl/reference/atl-classes.md)

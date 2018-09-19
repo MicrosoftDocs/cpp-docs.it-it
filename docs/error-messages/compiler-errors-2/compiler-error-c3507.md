@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3507 | Documenti Microsoft
+title: Errore del compilatore C3507 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 008267fddbd1d83574081d7b257e6627b32a1f58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8375f96c0a35e01a2a93866157c0156cf22a4993
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252917"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105151"
 ---
 # <a name="compiler-error-c3507"></a>Errore del compilatore C3507
-un ProgID può avere non più di 39 caratteri 'id'; né contenere punteggiatura oltre a '.'; né iniziare con una cifra  
-  
- Il [progid](../../windows/progid.md) presenta limitazioni sui valori che possono essere necessari.  
-  
- L'esempio seguente genera l'errore C3507:  
-  
-```  
-// C3507.cpp  
-[module(name="x")];  
-[  
-coclass,  
-progid("0123456789012345678901234567890123456789"),  
-uuid("00000000-0000-0000-0000-000000000001") // C3507 expected  
-]  
-struct CMyStruct {  
-};  
-int main() {  
-}  
+
+un ProgID può avere non più di 39 caratteri 'id'; né contenere punteggiatura allontanarle '.'; né iniziare con una cifra
+
+Il [progid](../../windows/progid.md) attributo è presenti restrizioni per i valori che possono essere necessari.
+
+L'esempio seguente genera l'errore C3507:
+
+```
+// C3507.cpp
+[module(name="x")];
+[
+coclass,
+progid("0123456789012345678901234567890123456789"),
+uuid("00000000-0000-0000-0000-000000000001") // C3507 expected
+]
+struct CMyStruct {
+};
+int main() {
+}
 ```

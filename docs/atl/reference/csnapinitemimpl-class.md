@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091829"
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 
@@ -54,16 +54,16 @@ Questa classe fornisce metodi per l'implementazione di un oggetto snap-in di nod
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe, derivata da `CSnapInItemImpl`.
 
-*bIsExtension*  
+*bIsExtension*<br/>
 TRUE se l'oggetto è un'estensione lo snap-in. in caso contrario, FALSE.
 
 ## <a name="members"></a>Membri
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Parametri
 
-*piCallback*  
+*piCallback*<br/>
 [in] Puntatore al `IContextMenuCallback` in grado di aggiungere elementi al menu di scelta rapida.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Identifica definito Microsoft Management Console MMC, voci di menu i punti di inserimento che possono essere utilizzati. Può trattarsi di una combinazione dei flag seguenti:
 
 - È possibile inserire elementi CCM_INSERTIONALLOWED_TOP nella parte superiore di un menu di scelta rapida.
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW elementi possono essere inseriti nel menu Visualizza sulla barra degli strumenti o nel sottomenu di visualizzazione del menu di scelta rapida riquadro risultati.
 
-*type*  
+*type*<br/>
 [in] Specifica il tipo di oggetto. Può avere uno dei valori seguenti:
 
 - Oggetto dati CCT_SCOPE per contesto riquadro dell'ambito.
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Parametri
 
-*lCommandID*  
+*lCommandID*<br/>
 [in] Specifica l'identificatore di comando della voce di menu.
 
-*type*  
+*type*<br/>
 [in] Specifica il tipo di oggetto. Può avere uno dei valori seguenti:
 
 - Oggetto dati CCT_SCOPE per contesto riquadro dell'ambito.
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>Parametri
 
-*lpProvider*  
+*lpProvider*<br/>
 [in] Puntatore al `IPropertySheetCallback` interfaccia.
 
-*handle*  
+*handle*<br/>
 [in] Specifica l'handle utilizzato per indirizzare il messaggio di notifica MMCN_PROPERTY_CHANGE alla classe di dati appropriato.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Puntatore al `IExtendPropertySheet` interfaccia sull'oggetto che contiene informazioni sul nodo di contesto.
 
-*type*  
+*type*<br/>
 [in] Specifica il tipo di oggetto. Può avere uno dei valori seguenti:
 
 - Oggetto dati CCT_SCOPE per contesto riquadro dell'ambito.
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*  
+*cloud Foundry*<br/>
 [in] Formato degli Appunti (testo, testo RTF o testo RTF con gli elementi OLE).
 
-*pStream*  
+*pStream*<br/>
 [in] Puntatore al flusso contenente i dati dell'oggetto.
 
 ### <a name="remarks"></a>Note
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Parametri
 
-*ppViewType*  
+*ppViewType*<br/>
 [out] Puntatore all'indirizzo del tipo di visualizzazione restituito.
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out] Puntatore all'enumerazione MMC_VIEW_OPTIONS, che fornisce la console con le opzioni specificate per lo snap-in appartenenza. Questo valore può essere uno dei seguenti:
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 indica fintato presentando le opzioni di visualizzazione elenco standard alla console di **vista** menu. Consente lo snap-in visualizzare il proprio visualizzazioni personalizzate solo nel riquadro di visualizzazione dei risultati. Questo è il solo flag di opzione definito in questo momento.
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>Parametri
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out] Un puntatore per il `SCOPEDATAITEM` struttura del `CSnapInItemImpl` oggetto.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>Parametri
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out] Un puntatore per il `RESULTDATAITEM` struttura del `CSnapInItemImpl` oggetto.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Parametri
 
-*event*  
+*event*<br/>
 [in] Identifica un'azione eseguita da un utente. Sono possibili le notifiche seguenti:
 
 - MMCN_ACTIVATE inviati quando una finestra viene attivata e disattivata.
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE inviato quando lo snap-in può aggiornare tutte le viste quando viene apportata una modifica.
 
-*arg*  
+*arg*<br/>
 [in] Dipende dal tipo di notifica.
 
-*param*  
+*param*<br/>
 [in] Dipende dal tipo di notifica.
 
-*pComponentData*  
+*pComponentData*<br/>
 [out] Un puntatore all'oggetto che implementa `IComponentData`. Questo parametro è NULL se la notifica non viene inoltrata dal `IComponentData::Notify`.
 
-*pComponent*  
+*pComponent*<br/>
 [out] Un puntatore all'oggetto che implementa `IComponent`. Questo parametro è NULL se la notifica non viene inoltrata dal `IComponent::Notify`.
 
-*type*  
+*type*<br/>
 [in] Specifica il tipo di oggetto. Può avere uno dei valori seguenti:
 
 - Oggetto dati CCT_SCOPE per contesto riquadro dell'ambito.
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>Parametri
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in] Diverso da zero se la funzione deve essere chiamata prima che gli elementi vengono aggiunti al menu di scelta rapida; in caso contrario 0.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Identifica definito Microsoft Management Console MMC, voci di menu i punti di inserimento che possono essere utilizzati. Può trattarsi di una combinazione dei flag seguenti:
 
 - È possibile inserire elementi CCM_INSERTIONALLOWED_TOP nella parte superiore di un menu di scelta rapida.
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] L'ID del pulsante della barra degli strumenti da impostare.
 
-*fsState*  
+*fsState*<br/>
 [in] I flag di stato del pulsante. Può essere uno o più dei seguenti:
 
 - TBSTATE_CHECKED il pulsante è applicato lo stile TBSTYLE_CHECKED e viene premuto.
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - Interruzione di riga A TBSTATE_WRAP segue il pulsante. Il pulsante deve inoltre disporre di TBSTATE_ENABLED.
 
-*fsType*  
+*fsType*<br/>
 [in] I flag di stato del pulsante. Può essere uno o più dei seguenti:
 
 - TBSTYLE_BUTTON crea un pulsante di comando standard.
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 [in] L'ID della voce di menu da impostare.
 
-*pBuf*  
+*pBuf*<br/>
 [in] Puntatore alla stringa della voce di menu da aggiornare.
 
-*flags*  
+*flags*<br/>
 [in] Specifica il nuovo flag di stato. Può trattarsi di una combinazione dei flag seguenti:
 
 - MF_POPUP specifica che si tratta di un sottomenu all'interno di menu di scelta rapida. Possono aggiungere voci di menu, i punti di inserimento e sottomenu ulteriormente questa usando sottomenu relativo `lCommandID` come loro `IInsertionPointID`.
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Parametri
 
-*ID*  
+*ID*<br/>
 Specifica l'ID del pulsante della barra degli strumenti da aggiornare.
 
-*fsState*  
+*fsState*<br/>
 Specifica uno stato del pulsante della barra degli strumenti. Se è necessario impostare questo stato, restituisce TRUE. Può trattarsi di una combinazione dei flag seguenti:
 
 - ABILITATO il pulsante accetta l'input dell'utente. Un pulsante che non ha questo stato non accetta input dell'utente e viene disattivato.

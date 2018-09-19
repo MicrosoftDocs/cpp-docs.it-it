@@ -14,106 +14,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7767b833fb80926e425e14a209c3d97a778e72b5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1c0d7a50be0ab940ebff82cd8a21fb5ac3aed075
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404226"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107000"
 ---
 # <a name="member-function-templates"></a>Modelli di funzioni membro
 
-Il termine modello di membro si riferisce sia ai modelli di funzioni membro che ai modelli di classe annidati. I modelli di funzioni membro sono funzioni modello membri di una classe o di un modello di classe.  
-  
- Le funzioni membro possono essere modelli di funzione in vari contesti. Tutte le funzioni dei modelli di classe sono generiche, ma non vengono definite come modelli di membro o modelli di funzioni membro. Se queste funzioni membro accettano i propri argomenti di modello, vengono considerate come modelli di funzioni membro.  
-  
+Il termine modello di membro si riferisce sia ai modelli di funzioni membro che ai modelli di classe annidati. I modelli di funzioni membro sono funzioni modello membri di una classe o di un modello di classe.
+
+Le funzioni membro possono essere modelli di funzione in vari contesti. Tutte le funzioni dei modelli di classe sono generiche, ma non vengono definite come modelli di membro o modelli di funzioni membro. Se queste funzioni membro accettano i propri argomenti di modello, vengono considerate come modelli di funzioni membro.
+
 ## <a name="example"></a>Esempio
 
- I modelli di funzioni membro delle classi di modelli e non di modelli vengono dichiarati come modelli di funzione con i relativi parametri di modello.  
-  
+I modelli di funzioni membro delle classi di modelli e non di modelli vengono dichiarati come modelli di funzione con i relativi parametri di modello.
+
 ```cpp
-// member_function_templates.cpp  
-struct X  
-{  
-   template <class T> void mf(T* t) {}  
-};  
-  
-int main()  
-{  
-   int i;  
-   X* x = new X();  
-   x->mf(&i);  
-}  
-```  
-  
+// member_function_templates.cpp
+struct X
+{
+   template <class T> void mf(T* t) {}
+};
+
+int main()
+{
+   int i;
+   X* x = new X();
+   x->mf(&i);
+}
+```
+
 ## <a name="example"></a>Esempio
 
- Nell'esempio seguente viene illustrato un modello di funzione membro di una classe di modello.  
-  
+Nell'esempio seguente viene illustrato un modello di funzione membro di una classe di modello.
+
 ```cpp
-// member_function_templates2.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u)  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
-## <a name="example"></a>Esempio
-  
-```cpp
-// defining_member_templates_outside_class.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u);  
-};  
-  
-template<typename T> template <typename U>  
-void X<T>::mf(const U &u)  
-{  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
+// member_function_templates2.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u)
+   {
+   }
+};
+
+int main()
+{
+}
+```
+
 ## <a name="example"></a>Esempio
 
- Le classi locali non possono avere modelli di membro.  
-  
- Le funzioni modello di membro non possono essere funzioni virtuali e non possono eseguire l'override delle funzioni virtuali da una classe base quando vengono dichiarate con lo stesso nome di una funzione virtuale di una classe base.  
-  
-Nell'esempio seguente viene illustrata una conversione definita dall'utente basate su modelli:  
-  
 ```cpp
-// templated_user_defined_conversions.cpp  
-template <class T>  
-struct S  
-{  
-   template <class U> operator S<U>()  
-   {  
-      return S<U>();  
-   }  
-};  
-  
-int main()  
-{  
-   S<int> s1;  
-   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.  
-}  
-```  
-  
+// defining_member_templates_outside_class.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u);
+};
+
+template<typename T> template <typename U>
+void X<T>::mf(const U &u)
+{
+}
+
+int main()
+{
+}
+```
+
+## <a name="example"></a>Esempio
+
+Le classi locali non possono avere modelli di membro.
+
+Le funzioni modello di membro non possono essere funzioni virtuali e non possono eseguire l'override delle funzioni virtuali da una classe base quando vengono dichiarate con lo stesso nome di una funzione virtuale di una classe base.
+
+Nell'esempio seguente viene illustrata una conversione definita dall'utente basate su modelli:
+
+```cpp
+// templated_user_defined_conversions.cpp
+template <class T>
+struct S
+{
+   template <class U> operator S<U>()
+   {
+      return S<U>();
+   }
+};
+
+int main()
+{
+   S<int> s1;
+   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.
+}
+```
+
 ## <a name="see-also"></a>Vedere anche
- [Modelli di funzioni](../cpp/function-templates.md)
+
+[Modelli di funzioni](../cpp/function-templates.md)

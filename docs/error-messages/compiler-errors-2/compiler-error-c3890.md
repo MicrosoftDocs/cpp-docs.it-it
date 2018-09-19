@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3890 | Documenti Microsoft
+title: Errore del compilatore C3890 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc1bfbba9cfb8991491bcbb42d2e13c586c7fc26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e599150c1e8d62d751f9dca67cffc99fb079bd32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104924"
 ---
 # <a name="compiler-error-c3890"></a>Errore del compilatore C3890
-'var': è possibile accettare l'indirizzo di un membro dati literal  
-  
- Un membro dati literal esiste nell'heap sottoposto a garbage collection.  Un oggetto nell'heap sottoposto a garbage collection può essere spostato in modo da accettare l'indirizzo non è utile.  
-  
- L'esempio seguente genera l'errore C3890:  
-  
-```  
-// C3890.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   literal int staticConst = 9;  
-};  
-  
-int main() {  
-   int p = &Y1::staticConst;   // C3890  
-   int p2 = Y1::staticConst;   // OK  
-}  
+
+'var': è possibile accettare l'indirizzo di un membro dati literal
+
+Un membro dati literal esiste nell'heap sottoposto a garbage collection.  Un oggetto nell'heap sottoposto a garbage collection può essere spostato, in modo da accettare l'indirizzo non è utile.
+
+L'esempio seguente genera l'errore C3890:
+
+```
+// C3890.cpp
+// compile with: /clr
+ref struct Y1 {
+   literal int staticConst = 9;
+};
+
+int main() {
+   int p = &Y1::staticConst;   // C3890
+   int p2 = Y1::staticConst;   // OK
+}
 ```

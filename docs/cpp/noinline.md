@@ -17,33 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de433a1eccab3b58858aaf5fd3aa9ddb04d0cc1c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c7a2831251d00f0dc24b1cfab7beeecaff100962
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092289"
 ---
 # <a name="noinline"></a>noinline
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- **noinline** indica al compilatore di non incorporare mai una funzione membro specifica (funzione in una classe).  
-  
- Può essere preferibile non incorporare una funzione se è ridotta e non fondamentale per le prestazioni del codice. Ovvero se la funzione è di piccole dimensioni e probabilmente non viene chiamata spesso, ad esempio una funzione che gestisce una condizione di errore.  
-  
- Tenere presente che se una funzione è contrassegnata **noinline**, la funzione chiamante sarà più piccoli e, pertanto, se stesso un candidato per l'incorporamento del compilatore.  
-  
-```cpp 
-class X {  
-   __declspec(noinline) int mbrfunc() {  
-      return 0;   
-   }   // will not inline  
-};  
-```  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [__declspec](../cpp/declspec.md)   
- [Parole chiave](../cpp/keywords-cpp.md)   
- [inline, __inline, \__forceinline](inline-functions-cpp.md)
+
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+
+**noinline** indica al compilatore di non incorporare mai una funzione membro specifica (funzione in una classe).
+
+Può essere preferibile non incorporare una funzione se è ridotta e non fondamentale per le prestazioni del codice. Ovvero se la funzione è di piccole dimensioni e probabilmente non viene chiamata spesso, ad esempio una funzione che gestisce una condizione di errore.
+
+Tenere presente che se una funzione è contrassegnata **noinline**, la funzione chiamante sarà più piccoli e, pertanto, se stesso un candidato per l'incorporamento del compilatore.
+
+```cpp
+class X {
+   __declspec(noinline) int mbrfunc() {
+      return 0;
+   }   // will not inline
+};
+```
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[__declspec](../cpp/declspec.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[inline, __inline, \__forceinline](inline-functions-cpp.md)
 

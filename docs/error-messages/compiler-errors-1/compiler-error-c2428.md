@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2428 | Documenti Microsoft
+title: Errore del compilatore C2428 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2468e20265de6558464a493f49439f1766effa5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac8b176db26ed615874569a9ed646b9d89ec4db0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097939"
 ---
 # <a name="compiler-error-c2428"></a>Errore del compilatore C2428
-'operation': non consentito su operando di tipo 'bool'  
-  
- Non è possibile applicare un operatore di decremento a oggetti di tipo `bool`.  
-  
- L'esempio seguente genera l'errore C2428:  
-  
-```  
-// C2428.cpp  
-void g(bool fFlag) {  
-   --fFlag;   // C2428  
-   fFlag--;   // C2428  
-}  
+
+'operation': non consentito su operando di tipo 'bool'
+
+Non è possibile applicare un operatore di decremento in forma di oggetti di tipo `bool`.
+
+L'esempio seguente genera l'errore C2428:
+
+```
+// C2428.cpp
+void g(bool fFlag) {
+   --fFlag;   // C2428
+   fFlag--;   // C2428
+}
 ```

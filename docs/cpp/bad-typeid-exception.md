@@ -18,70 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55718522bdbf618fb656eedc5c6afd59bfcaca08
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9cc93ab5a0f2d7fce12e926d571881ccb9c070fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092206"
 ---
 # <a name="badtypeid-exception"></a>Eccezione bad_typeid
-Il **bad_typeid** eccezione generata dalle [operatore typeid](../cpp/typeid-operator.md) quando l'operando di **typeid** è un puntatore NULL.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-catch (bad_typeid)  
-   statement  
-```  
-  
-## <a name="remarks"></a>Note  
- L'interfaccia **bad_typeid** è:  
-  
-```cpp 
-class bad_typeid : public exception  
-{  
-public:  
-   bad_typeid(const char * _Message = "bad typeid");  
-   bad_typeid(const bad_typeid &);  
-   virtual ~bad_typeid();  
-};  
-```  
-  
- L'esempio seguente mostra le **typeid** operatore la generazione di un **bad_typeid** eccezione.  
-  
-```cpp 
-// expre_bad_typeid.cpp  
-// compile with: /EHsc /GR  
-#include <typeinfo.h>  
-#include <iostream>  
-  
-class A{  
-public:  
-   // object for class needs vtable  
-   // for RTTI  
-   virtual ~A();  
-};  
-  
-using namespace std;  
-int main() {  
-A* a = NULL;  
-  
-try {  
-   cout << typeid(*a).name() << endl;  // Error condition  
-   }  
-catch (bad_typeid){  
-   cout << "Object is NULL" << endl;  
-   }  
-}  
-```  
-  
-## <a name="output"></a>Output  
-  
-```Output 
-Object is NULL  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Informazioni sui tipi di runtime](../cpp/run-time-type-information.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+
+Il **bad_typeid** eccezione generata dalle [operatore typeid](../cpp/typeid-operator.md) quando l'operando di **typeid** è un puntatore NULL.
+
+## <a name="syntax"></a>Sintassi
+
+```
+catch (bad_typeid)
+   statement
+```
+
+## <a name="remarks"></a>Note
+
+L'interfaccia **bad_typeid** è:
+
+```cpp
+class bad_typeid : public exception
+{
+public:
+   bad_typeid(const char * _Message = "bad typeid");
+   bad_typeid(const bad_typeid &);
+   virtual ~bad_typeid();
+};
+```
+
+L'esempio seguente mostra le **typeid** operatore la generazione di un **bad_typeid** eccezione.
+
+```cpp
+// expre_bad_typeid.cpp
+// compile with: /EHsc /GR
+#include <typeinfo.h>
+#include <iostream>
+
+class A{
+public:
+   // object for class needs vtable
+   // for RTTI
+   virtual ~A();
+};
+
+using namespace std;
+int main() {
+A* a = NULL;
+
+try {
+   cout << typeid(*a).name() << endl;  // Error condition
+   }
+catch (bad_typeid){
+   cout << "Object is NULL" << endl;
+   }
+}
+```
+
+## <a name="output"></a>Output
+
+```Output
+Object is NULL
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Informazioni sui tipi di runtime](../cpp/run-time-type-information.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2784 | Documenti Microsoft
+title: Errore del compilatore C2784 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beca5e3db426828eeec884cfc8e5e6048006fcd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed0e5dd7628031a7ad5ac66d2b691ee52dda62f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233318"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091309"
 ---
 # <a name="compiler-error-c2784"></a>Errore del compilatore C2784
-'declaration': impossibile dedurre un argomento modello per 'type' da 'type'  
-  
- Il compilatore non può determinare un argomento modello dagli argomenti della funzione forniti.  
-  
- L'esempio seguente genera l'errore C2784 e mostra come risolverlo:  
-  
-```  
-// C2784.cpp  
-template<class T> class X {};  
-template<class T> void f(X<T>) {}  
-  
-int main() {  
-   X<int> x;  
-   f(1);   // C2784  
-  
-   // To fix it, try the following line instead  
-   f(x);  
-}  
+
+'declaration': impossibile dedurre un argomento modello per 'type' da 'type'
+
+Il compilatore non può determinare un argomento modello dagli argomenti della funzione forniti.
+
+L'esempio seguente genera l'errore C2784 e mostra come risolverlo:
+
+```
+// C2784.cpp
+template<class T> class X {};
+template<class T> void f(X<T>) {}
+
+int main() {
+   X<int> x;
+   f(1);   // C2784
+
+   // To fix it, try the following line instead
+   f(x);
+}
 ```

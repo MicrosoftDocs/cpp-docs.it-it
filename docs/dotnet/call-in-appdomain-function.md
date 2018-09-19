@@ -1,5 +1,5 @@
 ---
-title: Funzione call_in_appdomain | Documenti Microsoft
+title: Funzione call_in_appdomain | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105245"
 ---
 # <a name="callinappdomain-function"></a>Funzione call_in_appdomain
-Esegue una funzione in un dominio di applicazione specificata.  
+Esegue una funzione in un dominio applicazione specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,17 +49,17 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `appdomainId`  
- Dominio dell'applicazione in cui chiamare la funzione.  
+*appdomainId*<br/>
+Il dominio applicazione in cui chiamare la funzione.  
   
- `voidFunc`  
- Puntatore a un `void` funzione che accetta parametri N (0 < = N < = 15).  
+*voidFunc*<br/>
+Puntatore a un `void` funzione che accetta parametri, N (0 < = N < = 15).  
   
- `nonvoidFunc`  
- Puntatore a non -`void` funzione che accetta parametri N (0 < = N < = 15).  
+*nonvoidFunc*<br/>
+Puntatore a non -`void` funzione che accetta parametri, N (0 < = N < = 15).  
   
- `arg1...argN`  
- Zero per 15 parametri da passare al `voidFunc` o `nonvoidFunc` in altro dominio applicazione.  
+*arg1... argN*<br/>
+Zero a 15 parametri da passare al `voidFunc` o `nonvoidFunc` in altro dominio applicazione.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il risultato dell'esecuzione `voidFunc` o `nonvoidFunc` nel dominio dell'applicazione specificato.  

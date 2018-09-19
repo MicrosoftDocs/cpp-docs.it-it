@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4205 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4205 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1764f04f7733cfb6b9a9a033b8667e53fbbfcc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e76cef24436fc5ce3468a1c94be2d1a49733525a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300716"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105531"
 ---
 # <a name="linker-tools-warning-lnk4205"></a>Avviso degli strumenti del linker LNK4205
-'nomefile' mancano informazioni di debug corrente per il riferimento modulo. oggetto collegato senza informazioni di debug  
-  
- Il file con estensione PDB contiene informazioni non aggiornate. Il linker continuerà collegare oggetti senza informazioni di debug. Si consiglia di ricompilare il file oggetto utilizzando il [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opzione.
+
+'filename' mancano informazioni di debug correnti per fare riferimento a tale modulo. oggetto collegato senza informazioni di debug
+
+Il file con estensione PDB contiene informazioni non aggiornate. Il linker continuerà collegare oggetti senza informazioni di debug. È possibile ricompilare il file oggetto usando il [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opzione.

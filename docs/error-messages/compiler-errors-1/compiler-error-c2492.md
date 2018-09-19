@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2492 | Documenti Microsoft
+title: Errore del compilatore C2492 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68b3d769c5b86be172a0a27828fb1dc3905959d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fcb9058bf1aac584e8b7728616f821bda4b33f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096275"
 ---
 # <a name="compiler-error-c2492"></a>Errore del compilatore C2492
-'*variabile*': i dati con durata di archiviazione di thread non possono avere un'interfaccia dll    
-  
- La variabile è dichiarata con la [thread](../../cpp/thread.md) degli attributi e con la DLL dell'interfaccia. L'indirizzo del `thread` variabile non è noto in fase di esecuzione, pertanto non può essere collegato a un'importazione di file DLL o l'esportazione.  
-  
- L'esempio seguente genera l'errore C2492:  
-  
-```  
-// C2492.cpp  
-// compile with: /c  
-class C {  
-public:  
-   char   ch;  
-};  
-  
-__declspec(dllexport) __declspec(thread) C c_1;   // C2492  
-__declspec(thread) C c_1;   // OK  
+
+«*variabile*': i dati con durata di archiviazione del thread potrebbero non avere un'interfaccia dll
+
+La variabile viene dichiarata con la [thread](../../cpp/thread.md) attributo e con la DLL dell'interfaccia. L'indirizzo del `thread` variabile non è noto fino alla fase di esecuzione, pertanto, non può essere collegata a un'importazione di file DLL o un'esportazione.
+
+L'esempio seguente genera l'errore C2492:
+
+```
+// C2492.cpp
+// compile with: /c
+class C {
+public:
+   char   ch;
+};
+
+__declspec(dllexport) __declspec(thread) C c_1;   // C2492
+__declspec(thread) C c_1;   // OK
 ```

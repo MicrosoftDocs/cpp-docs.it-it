@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2506 | Documenti Microsoft
+title: Errore del compilatore C2506 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5369a6a5bf904f7a7492037fbad4df44de92e66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4967c410dfdce781a4191c9ac848883228ba4d3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093415"
 ---
 # <a name="compiler-error-c2506"></a>Errore del compilatore C2506
-'member': '__declspec(modifier)' non è possibile applicare a questo simbolo  
-  
- È possibile dichiarare per processo o per dominio di applicazione per i membri statici di una classe gestita.  
-  
- Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) .  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C2506.  
-  
-```  
-// C2506.cpp  
-// compile with: /clr /c  
-ref struct R {  
-   __declspec(process) static int n;   // C2506  
-   int o;   // OK  
-};  
+
+'member': '__declspec(modifier)' non è possibile applicare a questo simbolo
+
+È possibile dichiarare per processo o per ogni appdomain per i membri statici di una classe gestita.
+
+Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) .
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C2506.
+
+```
+// C2506.cpp
+// compile with: /clr /c
+ref struct R {
+   __declspec(process) static int n;   // C2506
+   int o;   // OK
+};
 ```

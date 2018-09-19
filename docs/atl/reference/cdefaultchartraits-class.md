@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080a7b9f5da71535f8b141555ec1890a521fe715
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69b6a7b94e993641452154ede11d65929424df5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095755"
 ---
 # <a name="cdefaultchartraits-class"></a>Classe CDefaultCharTraits
 
@@ -33,13 +33,13 @@ Questa classe fornisce due funzioni statiche per la conversione dei caratteri tr
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <typename T>  
+template <typename T>
 class CDefaultCharTraits
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Il tipo di dati da archiviare nella raccolta.
 
 ## <a name="members"></a>Membri
@@ -64,13 +64,13 @@ Questa classe fornisce funzioni che vengono utilizzate dalla classe [CStringElem
 Chiamare questa funzione per convertire un carattere in minuscolo.
 
 ```
-static wchar_t CharToLower(wchar_t x);  
+static wchar_t CharToLower(wchar_t x);
 static char CharToLower(char x);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 Carattere da convertire in caratteri minuscoli.
 
 ### <a name="example"></a>Esempio
@@ -82,13 +82,13 @@ Carattere da convertire in caratteri minuscoli.
 Chiamare questa funzione per convertire un carattere in maiuscolo.
 
 ```
-static wchar_t CharToUpper(wchar_t x);  
+static wchar_t CharToUpper(wchar_t x);
 static char CharToUpper(char x);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 Carattere da convertire in maiuscolo.
 
 ## <a name="see-also"></a>Vedere anche

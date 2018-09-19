@@ -17,43 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c732bcf45f2dfbd4927366670aed6bfbdcfb4721
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101644"
 ---
 # <a name="using-manual-accessors"></a>Utilizzo delle funzioni di accesso manuali
+
 Esistono quattro cose da fare quando si gestisce un comando sconosciuto:  
   
--   Determinare i parametri  
+- Determinare i parametri  
   
--   Eseguire il comando  
+- Eseguire il comando  
   
--   Determinare le colonne di output  
+- Determinare le colonne di output  
   
--   Verificare se esistono più set di righe restituito  
+- Verificare se esistono più set di righe restituito  
   
- Per eseguire questa operazione con i modelli Consumer OLE DB, usare il `CManualAccessor` classe e seguire questa procedura:  
+Per eseguire questa operazione con i modelli Consumer OLE DB, usare il `CManualAccessor` classe e seguire questa procedura:  
   
-1.  Aprire una `CCommand` dell'oggetto con `CManualAccessor` come parametro di modello.  
+1. Aprire una `CCommand` dell'oggetto con `CManualAccessor` come parametro di modello.  
   
     ```cpp  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  Eseguire una query della sessione per il `IDBSchemaRowset` interfaccia e utilizzare il set di righe di parametri di procedura. Se il `IDBSchemaRowset` interfaccia non è disponibile, eseguire una query per il `ICommandWithParameters` interfaccia. Chiamare `GetParameterInfo` per informazioni. Se è disponibile alcuna interfaccia, si può presupporre che non sono presenti parametri.  
+1. Eseguire una query della sessione per il `IDBSchemaRowset` interfaccia e utilizzare il set di righe di parametri di procedura. Se il `IDBSchemaRowset` interfaccia non è disponibile, eseguire una query per il `ICommandWithParameters` interfaccia. Chiamare `GetParameterInfo` per informazioni. Se è disponibile alcuna interfaccia, si può presupporre che non sono presenti parametri.  
   
-3.  Per ogni parametro, chiamare `AddParameterEntry` per aggiungere i parametri e averli configurati.  
+1. Per ogni parametro, chiamare `AddParameterEntry` per aggiungere i parametri e averli configurati.  
   
-4.  Aprire il set di righe, ma impostare il parametro dell'associazione **false**.  
+1. Aprire il set di righe, ma impostare il parametro dell'associazione **false**.  
   
-5.  Chiamare `GetColumnInfo` per recuperare le colonne di output. Usare `AddBindEntry` per aggiungere la colonna di output per l'associazione.  
+1. Chiamare `GetColumnInfo` per recuperare le colonne di output. Usare `AddBindEntry` per aggiungere la colonna di output per l'associazione.  
   
-6.  Chiamare `GetNextResult` per determinare se sono disponibili ulteriori set di righe. Ripetere i passaggi da 2 a 5.  
+1. Chiamare `GetNextResult` per determinare se sono disponibili ulteriori set di righe. Ripetere i passaggi da 2 a 5.  
   
- Per un esempio di una funzione di accesso manuali, vedere `CDBListView::CallProcedure` nella [DBVIEWER](https://github.com/Microsoft/VCSamples) esempio.  
+Per un esempio di una funzione di accesso manuali, vedere `CDBListView::CallProcedure` nella [DBVIEWER](https://github.com/Microsoft/VCSamples) esempio.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)
+
+[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

@@ -1,5 +1,5 @@
 ---
-title: Avviso del compilatore di risorse RW4003 | Documenti Microsoft
+title: Avviso del compilatore di risorse RW4003 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d584811e056995e19cac0ec68cb58f25ccc921e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f800fc37d41102044c0b8b88921d8bad216d5984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322000"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101124"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>Avviso del compilatore di risorse RW4003
-MAIUSC o CTRL usati senza VIRTKEY  
-  
- In una risorsa della tabella di tasti di scelta rapida, MAIUSC o CTRL richiede VIRTKEY. Poiché MAIUSC e CTRL sono indicati come bit flag nei tasti di scelta rapida di tipo VIRTKEY, non possono esistere indipendentemente da VIRTKEY.
+
+MAIUSC o CTRL usati senza VIRTKEY
+
+In una risorsa della tabella di tasti di scelta rapida, MAIUSC o CTRL richiede VIRTKEY. Poiché MAIUSC e CTRL sono indicati come bit flag nei tasti di scelta rapida di tipo VIRTKEY, non possono esistere indipendentemente da VIRTKEY.

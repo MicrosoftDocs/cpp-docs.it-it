@@ -1,5 +1,5 @@
 ---
-title: funzioni omp_test_lock | Documenti Microsoft
+title: funzioni omp_test_lock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4bb63974f5d1864fe7b1c6359f7e8bda19b90c2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c34edd258c087f70bc9bb0b732cfd7ca192c791c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106103"
 ---
 # <a name="omptestlock"></a>omp_test_lock
-Tenta di impostare un blocco, ma non blocca l'esecuzione del thread.  
+Tenta di impostare un blocco ma non blocca l'esecuzione del thread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,14 +34,13 @@ int omp_test_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Note  
- dove  
+### <a name="parameters"></a>Parametri
   
- `lock`  
- Una variabile di tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) che è stato inizializzato con [funzioni omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
+*lock*<br/>
+Una variabile di tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) che è stata inizializzata [funzioni omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [3.2.5 funzioni omp_test_lock e omp_test_nest_lock funzioni](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
+ Per altre informazioni, vedere [3.2.5 funzioni omp_test_lock e omp_test_nest_lock funzioni](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
   
 ## <a name="example"></a>Esempio  
   

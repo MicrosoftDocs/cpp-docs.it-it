@@ -38,14 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bde6a3947d7afa836d93387e80c9b7885b1bc15c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099408"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Classe IColumnsInfoImpl
+
 Fornisce un'implementazione del [IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
@@ -58,11 +59,13 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *T*  
- La classe, derivata da `IColumnsInfoImpl`.  
+
+*T*<br/>
+La classe, derivata da `IColumnsInfoImpl`.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldb.h  
+
+**Intestazione:** atldb.h  
   
 ## <a name="members"></a>Membri  
   
@@ -74,9 +77,11 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 |[MapColumnIDs](#mapcolumnids)|Restituisce una matrice di ordinali delle colonne in un set di righe che sono identificati dall'ID di colonna specificati.|  
   
 ## <a name="remarks"></a>Note  
- Un'interfaccia obbligatoria nel set di righe e i comandi. Per modificare il comportamento del proprio provider `IColumnsInfo` implementazione, è necessario modificare la mappa delle colonne del provider.  
+
+Un'interfaccia obbligatoria nel set di righe e i comandi. Per modificare il comportamento del proprio provider `IColumnsInfo` implementazione, è necessario modificare la mappa delle colonne del provider.  
 
 ## <a name="getcolumninfo"></a> Icolumnsinfoimpl:: GetColumnInfo
+
 Restituisce i metadati della colonna necessari per la maggior parte dei consumatori.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -88,9 +93,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
 
 ## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
+
 Restituisce una matrice di ordinali delle colonne in un set di righe che sono identificati dall'ID di colonna specificati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -102,8 +109,10 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

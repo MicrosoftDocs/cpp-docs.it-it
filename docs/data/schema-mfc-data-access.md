@@ -1,5 +1,5 @@
 ---
-title: Schema (accesso ai dati MFC) | Documenti Microsoft
+title: Schema (accesso ai dati MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,19 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f7ba3e7b64a8c65678830593098ef658b3495c75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ff1759203593cd556a91cbe17b93388488a2b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091244"
 ---
 # <a name="schema--mfc-data-access"></a>Schema (accesso ai dati MFC)
+
 Uno schema di database descrive la struttura corrente delle tabelle e delle visualizzazioni del database. In generale, il codice prodotto da una creazione guidata si basa sul presupposto che lo schema della tabella o delle tabelle a cui accede un recordset non venga modificato, anche se le classi di database supportano alcune modifiche dello schema, quali l'aggiunta, il riordino o l'eliminazione di colonne non associate. Se una tabella viene modificata, sarà necessario aggiornare manualmente il recordset della tabella, quindi ripetere la compilazione dell'applicazione.  
   
- È inoltre possibile integrare il codice generato dalla creazione guidata in modo che funzioni con un database il cui schema non è del tutto conosciuto in fase di compilazione. Per ulteriori informazioni, vedere [Recordset: associazione dinamica di colonne di dati (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+È inoltre possibile integrare il codice generato dalla creazione guidata in modo che funzioni con un database il cui schema non è del tutto conosciuto in fase di compilazione. Per altre informazioni, vedere [Recordset: associazione dinamica di colonne di dati (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso ai dati (MFC/ATL) di programmazione](../data/data-access-programming-mfc-atl.md)   
- [SQL](../data/odbc/sql.md)   
- [Recordset (ODBC)](../data/odbc/recordset-odbc.md)
+
+[Accesso ai dati (MFC/ATL) di programmazione](../data/data-access-programming-mfc-atl.md)<br/>
+[SQL](../data/odbc/sql.md)<br/>
+[Recordset (ODBC)](../data/odbc/recordset-odbc.md)

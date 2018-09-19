@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2658 | Documenti Microsoft
+title: Errore del compilatore C2658 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e071e070b259dee7293d607d292a51ee608b71c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adbaa5c538bf5e85f30064d698d7755851c9549b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096197"
 ---
 # <a name="compiler-error-c2658"></a>Errore del compilatore C2658
-'member': ridefinizione in struct/union anonima  
-  
- Due strutture o unioni anonime contenevano le dichiarazioni dei membri con lo stesso identificatore ma con tipi diversi. In [/Za](../../build/reference/za-ze-disable-language-extensions.md), si otterrà l'errore per i membri con lo stesso identificatore e tipo.  
-  
- L'esempio seguente genera l'errore C2658:  
-  
-```  
-// C2658.cpp  
-// compile with: /c  
-struct X {  
-   union { // can be struct too  
-      int i;  
-   };  
-   union {  
-      int i;   // Under /Za, C2658  
-      // int i not needed here because it is defined in the first union  
-   };  
-};  
-  
-struct Z {  
-   union {  
-      char *i;  
-   };  
-  
-   union {  
-      void *i;   // C2658 redefinition of 'i'  
-      // try the following line instead  
-      // void *ii;  
-   };  
-};  
+
+'member': ridefinizione in struct/union anonima
+
+Due strutture o unioni anonime contenevano le dichiarazioni dei membri con lo stesso identificatore ma con tipi diversi. Sotto [/Za](../../build/reference/za-ze-disable-language-extensions.md), si otterrà anche l'errore per i membri con lo stesso identificatore e tipo.
+
+L'esempio seguente genera l'errore C2658:
+
+```
+// C2658.cpp
+// compile with: /c
+struct X {
+   union { // can be struct too
+      int i;
+   };
+   union {
+      int i;   // Under /Za, C2658
+      // int i not needed here because it is defined in the first union
+   };
+};
+
+struct Z {
+   union {
+      char *i;
+   };
+
+   union {
+      void *i;   // C2658 redefinition of 'i'
+      // try the following line instead
+      // void *ii;
+   };
+};
 ```

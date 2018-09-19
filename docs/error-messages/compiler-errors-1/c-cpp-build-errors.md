@@ -1,5 +1,5 @@
 ---
-title: Errori di compilazione di C/C++ | Documenti Microsoft
+title: Errori di compilazione di C/C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -310,20 +310,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a6eb5fe80c25912c76e3446efb1ee00413fff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14529f9246572299fc6629ec13ff4eab837bb5fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095846"
 ---
 # <a name="cc-build-errors"></a>Errori di compilazione in C/C++
 
-Gli articoli in questa sezione della documentazione illustrano diagnostica messaggi di errore e avviso generati dagli strumenti di compilazione.
+Gli articoli in questa sezione della documentazione illustrano diagnostica errori e messaggi di avviso generati dagli strumenti di compilazione.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="see-also"></a>Vedere anche
 
-[C/C++ Building Reference](../../build/reference/c-cpp-building-reference.md)  (Informazioni di riferimento per la compilazione in C/C++)  
+[Riferimenti alla compilazione in C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
 [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2198 | Documenti Microsoft
+title: Errore del compilatore C2198 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f69874b5c324250338baf480b6bd1cf1c36a1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a4e391f35a4487246ca074d218391348c83e0d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096821"
 ---
 # <a name="compiler-error-c2198"></a>Errore del compilatore C2198
-'function': argomenti insufficienti per una chiamata  
-  
- Il compilatore ha rilevato parametri insufficienti per una chiamata alla funzione o una dichiarazione di funzione non corretta.  
-  
- L'esempio seguente genera l'errore C2198:  
-  
-```  
-// C2198.c  
-// compile with: /c  
-void func( int, int );  
-int main() {  
-   func( 1 );   // C2198 only one actual parameter  
-   func( 1, 1 );   // OK  
-}  
+
+'function': argomenti insufficienti per una chiamata
+
+Il compilatore ha rilevato parametri insufficienti per una chiamata alla funzione o una dichiarazione di funzione non corretta.
+
+L'esempio seguente genera l'errore C2198:
+
+```
+// C2198.c
+// compile with: /c
+void func( int, int );
+int main() {
+   func( 1 );   // C2198 only one actual parameter
+   func( 1, 1 );   // OK
+}
 ```

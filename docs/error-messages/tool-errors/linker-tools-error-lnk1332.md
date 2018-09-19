@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1332 errore | Documenti Microsoft
+title: Errore LNK1332 degli strumenti del linker | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8558ae80fa3c21d01f276e010409dd9d47a67af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b256c61b9e9de6bf19e754054de1f55fcdec5f0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094520"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Errore degli strumenti del linker LNK1332
-rilevato\<count > tipi Windows Runtime importati in un modulo e definiti in un altro modulo  
-  
- Quando generato la destinazione corrente, il linker ha rilevato <`count`> tipi Windows Runtime, ognuno dei quali è importato in un modulo e anche definito in un altro modulo.  
-  
-### <a name="to-correct-this-error"></a>Per correggere l'errore  
-  
--   Correggere tutti gli errori LNK2039 nella compilazione a seconda del suggerimento nel messaggio di errore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [LNK2039 di errore degli strumenti del linker](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)   
- [Errori e avvisi degli strumenti del linkers](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+
+rilevato\<count > tipi Windows Runtime importati in un modulo e definiti in un altro modulo
+
+Quando ha prodotto la destinazione corrente, il linker rileva <`count`> tipi Windows Runtime, ognuno dei quali è importato in un modulo ed è anche definito in un altro modulo.
+
+### <a name="to-correct-this-error"></a>Per correggere l'errore
+
+- Correggere tutti gli errori LNK2039 nella compilazione a seconda del suggerimento nel messaggio di errore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Errore degli strumenti del linker LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)<br/>
+[Errori e avvisi degli strumenti del linkers](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

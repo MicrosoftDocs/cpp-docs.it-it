@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097796"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>Parametri
 
-*E*  
+*E*<br/>
 Tipo di dati da memorizzare nella matrice.
 
-*ETraits*  
+*ETraits*<br/>
 Il codice usato per copiare o spostare gli elementi.
 
 ## <a name="members"></a>Membri
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*  
+*Elemento*<br/>
 L'elemento da aggiungere alla matrice.
 
 ### <a name="return-value"></a>Valore restituito
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parametri
 
-*aSrc*  
+*aSrc*<br/>
 Matrice da accodare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parametri
 
-*aSrc*  
+*aSrc*<br/>
 L'origine degli elementi da copiare in una matrice.
 
 ### <a name="remarks"></a>Note
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*iElement*  
+*iElement*<br/>
 Il valore di indice dell'elemento della matrice da restituire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>Parametri
 
-*iStart*  
+*iStart*<br/>
 Indice in corrispondenza del quale la matrice deve essere inserito.
 
-*paNew*  
+*paNew*<br/>
 Matrice da inserire.
 
 ### <a name="remarks"></a>Note
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parametri
 
-*iElement*  
+*iElement*<br/>
 Indice in cui uno o più elementi devono essere inseriti.
 
-*Elemento*  
+*Elemento*<br/>
 Il valore di uno o più elementi da inserire.
 
-*nCount*  
+*nCount*<br/>
 Il numero di elementi da aggiungere.
 
 ### <a name="remarks"></a>Note
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*iElement*  
+*iElement*<br/>
 Il valore di indice dell'elemento della matrice da restituire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parametri
 
-*iElement*  
+*iElement*<br/>
 L'indice del primo elemento da rimuovere.
 
-*nCount*  
+*nCount*<br/>
 Numero di elementi da rimuovere.
 
 ### <a name="remarks"></a>Note
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametri
 
-*iElement*  
+*iElement*<br/>
 L'indice che punta all'elemento della matrice da impostare.
 
-*Elemento*  
+*Elemento*<br/>
 Il nuovo valore dell'elemento specificato.
 
 ### <a name="remarks"></a>Note
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>Parametri
 
-*nNewSize*  
+*nNewSize*<br/>
 La dimensione necessaria della matrice.
 
-*nGrowBy*  
+*nGrowBy*<br/>
 Un valore utilizzato per determinare le dimensioni di buffer. Il valore -1 determina un valore calcolato internamente da utilizzare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametri
 
-*iElement*  
+*iElement*<br/>
 L'indice che punta all'elemento della matrice da impostare.
 
-*Elemento*  
+*Elemento*<br/>
 Il nuovo valore dell'elemento specificato.
 
 ### <a name="remarks"></a>Note
@@ -559,9 +559,9 @@ Sostituisce il valore dell'elemento a cui punta l'indice. Se *iElement* è maggi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MMXSwarm](../../visual-cpp-samples.md)   
-[Esempio DynamicConsumer](../../visual-cpp-samples.md)   
-[Esempio UpdatePV](../../visual-cpp-samples.md)   
-[Esempio di testo scorrevole](../../visual-cpp-samples.md)   
-[CArray (classe)](../../mfc/reference/carray-class.md)   
+[Esempio MMXSwarm](../../visual-cpp-samples.md)<br/>
+[Esempio DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Esempio UpdatePV](../../visual-cpp-samples.md)<br/>
+[Esempio di testo scorrevole](../../visual-cpp-samples.md)<br/>
+[Classe CArray](../../mfc/reference/carray-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

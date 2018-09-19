@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edfe84b767136d5ea7e2dcb0b47a06474020c074
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d674b2e3049d27f0e79eb082a44640f67a395dea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097892"
 ---
 # <a name="cwndclassinfo-class"></a>Classe CWndClassInfo
 
@@ -185,7 +185,7 @@ ATOM Register(WNDPROC* pProc);
 
 ### <a name="parameters"></a>Parametri
 
-*pProc*  
+*pProc*<br/>
 [out] Specifica la procedura di finestra originale di una classe di finestra esistente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -200,5 +200,5 @@ Se è stato specificato il [DECLARE_WND_SUPERCLASS](window-class-macros.md#decla
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

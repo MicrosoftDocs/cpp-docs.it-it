@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107467"
 ---
-# <a name="storage-classes-c"></a>Classi di archiviazione (C++)  
-  
-Oggetto *classe di archiviazione* nel contesto di C++ le dichiarazioni delle variabili è un identificatore di tipo che determina la posizione di memoria, un collegamento e durata degli oggetti. Un oggetto specificato può avere una sola classe di archiviazione. Le variabili definite all'interno di un blocco hanno archiviazione automatica se non diversamente specificato usando il **extern**, **statici**, o `thread_local` identificatori. Le variabili e gli oggetti automatici non hanno alcun collegamento e non sono visibili a codice esterno al blocco.  
-  
-**Note**  
-  
-1.  Il [modificabile](../cpp/mutable-data-members-cpp.md) parola chiave può essere considerato un identificatore di classe di archiviazione. Tale parola chiave, tuttavia, è disponibile solo nell'elenco dei membri di una definizione di classe.  
-  
-2.  **Visual C++ 2010 e versioni successive:** il **automaticamente** parola chiave non è più un identificatore di classe di archiviazione C++ e il **registrare** parola chiave è deprecata. **Visual Studio 2017 versione 15.7 e successive:** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): il **registrare** (parola chiave) viene rimossa dal linguaggio C++.
+# <a name="storage-classes-c"></a>Classi di archiviazione (C++)
+
+Oggetto *classe di archiviazione* nel contesto di C++ le dichiarazioni delle variabili è un identificatore di tipo che determina la posizione di memoria, un collegamento e durata degli oggetti. Un oggetto specificato può avere una sola classe di archiviazione. Le variabili definite all'interno di un blocco hanno archiviazione automatica se non diversamente specificato usando il **extern**, **statici**, o `thread_local` identificatori. Le variabili e gli oggetti automatici non hanno alcun collegamento e non sono visibili a codice esterno al blocco.
+
+**Note**
+
+1. Il [modificabile](../cpp/mutable-data-members-cpp.md) parola chiave può essere considerato un identificatore di classe di archiviazione. Tale parola chiave, tuttavia, è disponibile solo nell'elenco dei membri di una definizione di classe.
+
+1. **Visual C++ 2010 e versioni successive:** il **automaticamente** parola chiave non è più un identificatore di classe di archiviazione C++ e il **registrare** parola chiave è deprecata. **Visual Studio 2017 versione 15.7 e successive:** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): il **registrare** (parola chiave) viene rimossa dal linguaggio C++.
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ Il codice seguente vengono illustrati due **extern** dichiarazioni `DefinedElsew
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,7 +224,7 @@ Aspetti da considerare per la `thread_local` identificatore:
 
 -  È possibile applicare `thread_local` solo a dichiarazioni di dati e definizioni; `thread_local` non può essere utilizzato su definizioni o dichiarazioni di funzione.
 
--  È possibile specificare `thread_local` solo per elementi di dati con durata di archiviazione statica. Ciò include gli oggetti dati globali (entrambe **statici** e **extern**), gli oggetti statici locali e i membri dati statici di classi. Qualsiasi variabile locale dichiarata `thread_local` implicitamente statico se nessuna altra classe di archiviazione viene fornita; in altre parole, nell'ambito del blocco `thread_local` equivale a `thread_local static`. 
+-  È possibile specificare `thread_local` solo per elementi di dati con durata di archiviazione statica. Ciò include gli oggetti dati globali (entrambe **statici** e **extern**), gli oggetti statici locali e i membri dati statici di classi. Qualsiasi variabile locale dichiarata `thread_local` implicitamente statico se nessuna altra classe di archiviazione viene fornita; in altre parole, nell'ambito del blocco `thread_local` equivale a `thread_local static`.
 
 -  È necessario specificare `thread_local` per la dichiarazione e la definizione di un oggetto locale di thread, indipendentemente dal fatto che la definizione e la dichiarazione si verificano nello stesso file o in file separati.
 
@@ -232,7 +232,7 @@ In Windows, `thread_local` è funzionalmente equivalente a [declspec](../cpp/thr
 
 ##  <a name="register"></a>  registrare
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): il **registrare** parola chiave non è più una classe di archiviazione supportati. La parola chiave è ancora riservata nello standard per uso futuro. 
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): il **registrare** parola chiave non è più una classe di archiviazione supportati. La parola chiave è ancora riservata nello standard per uso futuro.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -322,4 +322,5 @@ Esistono diversi punti da notare circa il programma:
 - Infine, le variabili locali statiche come `I3` mantengono i propri valori per tutta la durata del programma, ma vengono eliminate al termine del programma.
 
 ## <a name="see-also"></a>Vedere anche
- [Dichiarazioni e definizioni](../cpp/declarations-and-definitions-cpp.md)
+
+[Dichiarazioni e definizioni](../cpp/declarations-and-definitions-cpp.md)

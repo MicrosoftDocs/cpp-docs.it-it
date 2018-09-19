@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760162"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097614"
 ---
 # <a name="ccomcoclass-class"></a>Classe CComCoClass
 
@@ -36,16 +36,16 @@ Questa classe fornisce metodi per la creazione di istanze di una classe e ottene
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe, derivata da `CComCoClass`.
 
-*pclsid*  
+*pclsid*<br/>
 Puntatore al CLSID dell'oggetto.
 
 ## <a name="members"></a>Membri
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Parametri
 
-*Q*  
+*Q*<br/>
 L'interfaccia COM che deve essere restituito attraverso *pp*.
 
-*punkOuter*  
+*punkOuter*<br/>
 [in] Unknown esterno o controllo sconosciuto della funzione di aggregazione.
 
-*profilo di porta*  
+*profilo di porta*<br/>
 [out] L'indirizzo di una variabile puntatore che riceve il puntatore a interfaccia richiesto se la creazione ha esito positivo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszDesc*  
-[in] Stringa che descrive l'errore. La versione di Unicode `Error` specifica che *lpszDesc* è di tipo LPCOLESTR; la versione ANSI specifica un tipo di LPCSTR.  
-*IID*  
+*lpszDesc*<br/>
+[in] Stringa che descrive l'errore. La versione di Unicode `Error` specifica che *lpszDesc* è di tipo LPCOLESTR; la versione ANSI specifica un tipo di LPCSTR.
+
+*IID*<br/>
 [in] IID dell'interfaccia che definisce l'errore o GUID_NULL (valore predefinito) se l'errore è definito dal sistema operativo.
 
-*HRESULT*  
+*HRESULT*<br/>
 [in] Il valore HRESULT desiderato restituito al chiamante. Il valore predefinito è 0. Per altre informazioni sulle *HRESULT*, vedere la sezione Osservazioni.
 
-*nID*  
+*nID*<br/>
 [in] L'identificatore di risorsa in cui è archiviata la stringa di descrizione di errore. Questo valore deve trovarsi tra 0x0200 e 0xFFFF, inclusi. Nelle build di debug, un' **ASSERT** determinerà se *nID* non esegue l'indicizzazione di una stringa valida. Nelle build di rilascio, imposterà la stringa di descrizione di errore a "Errore sconosciuto".
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] L'identificatore di contesto della Guida per l'errore.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] Il percorso e il nome del file della Guida che descrive l'errore.
 
-*hInst*  
+*hInst*<br/>
 [in] Handle per la risorsa. Per impostazione predefinita, questo parametro è `_AtlModule::GetResourceInstance`, dove `_AtlModule` è l'istanza di global [CAtlModule](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Valore restituito

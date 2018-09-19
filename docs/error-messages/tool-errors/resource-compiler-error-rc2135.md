@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2135 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2135 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14600b00b1347f7fe63c0bc8b6d1ab5c70b68fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8bd510aa4a6045b3e691ba89d05b327d35818b8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092988"
 ---
 # <a name="resource-compiler-error-rc2135"></a>Errore del compilatore di risorse RC2135
-Impossibile trovare il file: nomefile  
-  
- Non è stato trovato il file specificato nella riga di comando del compilatore di risorse. Verificare che il file sia stato spostato in un'altra directory e se il nome del file e il percorso siano stati digitati correttamente.  
-  
- Vengono eseguita la ricerca di file per l'utilizzo di **INCLUDE** variabile di ambiente o di Visual C++ **INCLUDE** impostazione.
+
+Impossibile trovare il file: nomefile
+
+Non è stato trovato il file specificato nella riga di comando del compilatore di risorse. Verificare se il file è stato spostato in un'altra directory e indica se il nome del file e il percorso siano stati digitati correttamente.
+
+I file vengono cercati tramite il **inclusione** variabile di ambiente o di Visual C++ **INCLUDE** impostazione.

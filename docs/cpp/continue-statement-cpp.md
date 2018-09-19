@@ -16,58 +16,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ab1e052b3e6d843813c33e5444fc3c08796d00
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 88281d90ce15ced12079b3c66a74bb2f23c11034
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099716"
 ---
 # <a name="continue-statement-c"></a>Istruzioni continue (C++)
-Forza il trasferimento del controllo per l'espressione di controllo di inclusione più piccolo [scopo](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), o [mentre](../cpp/while-statement-cpp.md) ciclo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-continue;  
-```  
-  
-## <a name="remarks"></a>Note  
- Alcune istruzioni restanti nell'iterazione corrente non vengono eseguite. L'iterazione successiva del ciclo è determinata nel modo seguente:  
-  
--   In un **effettuare** o **mentre** ciclo, l'iterazione successiva inizia rivalutando l'espressione di controllo del **eseguire** o **mentre** istruzione.  
-  
--   In un **per** ciclo (usando la sintassi `for`(`init-expr`; `cond-expr`; `loop-expr`)), il `loop-expr` clausola viene eseguita. La clausola `cond-expr` viene rivalutata e, a seconda del risultato, il ciclo termina o si verifica un'altra iterazione.  
-  
- L'esempio seguente illustra come la **continuare** istruzione può essere utilizzata per ignorare le sezioni di codice e avviare l'iterazione successiva di un ciclo.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// continue_statement.cpp  
-#include <stdio.h>  
-int main()  
-{  
-    int i = 0;  
-    do  
-    {  
-        i++;  
-        printf_s("before the continue\n");  
-        continue;  
-        printf("after the continue, should never print\n");  
-     } while (i < 3);  
-  
-     printf_s("after the do loop\n");  
-}  
-```  
-  
-```Output  
-before the continue  
-before the continue  
-before the continue  
-after the do loop  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Istruzioni di spostamento](../cpp/jump-statements-cpp.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+
+Forza il trasferimento del controllo per l'espressione di controllo di inclusione più piccolo [scopo](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), o [mentre](../cpp/while-statement-cpp.md) ciclo.
+
+## <a name="syntax"></a>Sintassi
+
+```
+continue;
+```
+
+## <a name="remarks"></a>Note
+
+Alcune istruzioni restanti nell'iterazione corrente non vengono eseguite. L'iterazione successiva del ciclo è determinata nel modo seguente:
+
+- In un **effettuare** o **mentre** ciclo, l'iterazione successiva inizia rivalutando l'espressione di controllo del **eseguire** o **mentre** istruzione.
+
+- In un **per** ciclo (usando la sintassi `for`(`init-expr`; `cond-expr`; `loop-expr`)), il `loop-expr` clausola viene eseguita. La clausola `cond-expr` viene rivalutata e, a seconda del risultato, il ciclo termina o si verifica un'altra iterazione.
+
+L'esempio seguente illustra come la **continuare** istruzione può essere utilizzata per ignorare le sezioni di codice e avviare l'iterazione successiva di un ciclo.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// continue_statement.cpp
+#include <stdio.h>
+int main()
+{
+    int i = 0;
+    do
+    {
+        i++;
+        printf_s("before the continue\n");
+        continue;
+        printf("after the continue, should never print\n");
+     } while (i < 3);
+
+     printf_s("after the do loop\n");
+}
+```
+
+```Output
+before the continue
+before the continue
+before the continue
+after the do loop
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Istruzioni di spostamento](../cpp/jump-statements-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

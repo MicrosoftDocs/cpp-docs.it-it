@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2869 | Documenti Microsoft
+title: Errore del compilatore C2869 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9aa6092347b224abf02e0d6fac394146094e576
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a899826ab299665a7a44deaa89416affe5d41f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101514"
 ---
 # <a name="compiler-error-c2869"></a>Errore del compilatore C2869
-'name': è già stato definito per uno spazio dei nomi  
-  
- Non è possibile riutilizzare un nome già utilizzato come uno spazio dei nomi.  
-  
- L'esempio seguente genera l'errore C2869:  
-  
-```  
-// C2869.cpp  
-// compile with: /c  
-namespace A { int i; };  
-  
-class A {};   // C2869, A is already used  
+
+'name': è già stato definito da uno spazio dei nomi
+
+È possibile riusare un nome già usato come uno spazio dei nomi.
+
+L'esempio seguente genera l'errore C2869:
+
+```
+// C2869.cpp
+// compile with: /c
+namespace A { int i; };
+
+class A {};   // C2869, A is already used
 ```

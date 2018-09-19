@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d7b8ee240b94fe6a9b05d5c06c960ab8857ed6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093441"
 ---
 # <a name="catlmodule-class"></a>Classe CAtlModule
 
@@ -106,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>Parametri
 
-*pRegistrar*  
+*pRegistrar*<br/>
 Riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -129,10 +129,10 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*pFunc*  
+*pFunc*<br/>
 Puntatore alla funzione da aggiungere.
 
-*dw*  
+*dw*<br/>
 Dati definiti dall'utente, passati alla funzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -173,7 +173,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*ppGIT*  
+*ppGIT*<br/>
 Puntatore alla variabile che riceverà il puntatore alla tabella di interfaccia globale.
 
 ### <a name="return-value"></a>Valore restituito
@@ -270,16 +270,16 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszRes*  
+*lpszRes*<br/>
 Un nome di risorsa.
 
-*nResID*  
+*nResID*<br/>
 Un ID risorsa.
 
-*bRegistrazione immediata*  
+*bRegistrazione immediata*<br/>
 TRUE se l'oggetto deve essere registrato. FALSE in caso contrario.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Puntatore alla mappa di sostituzione l'archiviazione dei valori associati a parametri sostituibili dello script. ATL usa automaticamente il modulo % %. Per usare parametri sostituibili aggiuntivi, vedere [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, usare il valore predefinito NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -307,13 +307,13 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszRes*  
+*lpszRes*<br/>
 Un nome di risorsa.
 
-*bRegistrazione immediata*  
+*bRegistrazione immediata*<br/>
 Indica se l'oggetto deve essere registrato.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Puntatore alla mappa di sostituzione l'archiviazione dei valori associati a parametri sostituibili dello script. ATL usa automaticamente il modulo % %. Per usare parametri sostituibili aggiuntivi, vedere [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, usare il valore predefinito NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -342,16 +342,16 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Parametri
 
-*nResID*  
+*nResID*<br/>
 Un ID risorsa.
 
-*lpszRes*  
+*lpszRes*<br/>
 Un nome di risorsa.
 
-*bRegistrazione immediata*  
+*bRegistrazione immediata*<br/>
 Indica se lo script di risorsa deve essere registrato.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Puntatore alla mappa di sostituzione l'archiviazione dei valori associati a parametri sostituibili dello script. ATL usa automaticamente il modulo % %. Per usare parametri sostituibili aggiuntivi, vedere [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). In caso contrario, usare il valore predefinito NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -364,7 +364,7 @@ Simile a [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced
 
 ## <a name="see-also"></a>Vedere anche
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)   
-[Panoramica della classe](../../atl/atl-class-overview.md)   
-[Classi di modulo](../../atl/atl-module-classes.md)   
+[_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
+[Classi di modulo](../../atl/atl-module-classes.md)<br/>
 [Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md)  

@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0049 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0049 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d40a823ebcac377198254555181d9821320a848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9193363ca5d2fa03ad585816ee618e3c194a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097075"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>Errore dell‘analizzatore di espressioni CXX0049
-OMF obsoleto -. ricollegare il programma  
-  
- Il programma utilizzato un vecchio OMF (Object Module Format).  
-  
- Ricollegare il programma utilizzando la versione del linker corrente.  
-  
- Questo errore è identico all'errore CAN0049.
+
+obsoleto OMF: il ricollegamento automatico
+
+Il programma usato un vecchio OMF (formato di modulo oggetto).
+
+Collegare nuovamente il programma utilizzando la versione corrente del linker.
+
+Questo errore è identico all'errore CAN0049.

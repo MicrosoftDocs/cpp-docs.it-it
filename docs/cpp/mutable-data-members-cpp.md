@@ -16,44 +16,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: de0a208341e6a687d1319c4d8d60cc8671555dd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106999"
 ---
 # <a name="mutable-data-members-c"></a>Membri dati modificabili (C++)
-Questa parola chiave può essere applicata solo a membri dati non dichiarati come static e const di una classe. Se un membro dati viene dichiarato **modificabile**, è consentito assegnare un valore per questo membro dati da un **const** funzione membro.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-mutable member-variable-declaration;  
-```  
-  
-## <a name="remarks"></a>Note  
- Ad esempio, il codice seguente verrà compilata senza errori perché `m_accessCount` è stata dichiarata come **modificabile**e pertanto può essere modificato da `GetFlag` anche se `GetFlag` è una funzione membro const.  
-  
-```cpp 
-// mutable.cpp  
-class X  
-{  
-public:  
-   bool GetFlag() const  
-   {  
-      m_accessCount++;  
-      return m_flag;  
-   }  
-private:  
-   bool m_flag;  
-   mutable int m_accessCount;  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave](../cpp/keywords-cpp.md)
+
+Questa parola chiave può essere applicata solo a membri dati non dichiarati come static e const di una classe. Se un membro dati viene dichiarato **modificabile**, è consentito assegnare un valore per questo membro dati da un **const** funzione membro.
+
+## <a name="syntax"></a>Sintassi
+
+```
+mutable member-variable-declaration;
+```
+
+## <a name="remarks"></a>Note
+
+Ad esempio, il codice seguente verrà compilata senza errori perché `m_accessCount` è stata dichiarata come **modificabile**e pertanto può essere modificato da `GetFlag` anche se `GetFlag` è una funzione membro const.
+
+```cpp
+// mutable.cpp
+class X
+{
+public:
+   bool GetFlag() const
+   {
+      m_accessCount++;
+      return m_flag;
+   }
+private:
+   bool m_flag;
+   mutable int m_accessCount;
+};
+
+int main()
+{
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Parole chiave](../cpp/keywords-cpp.md)

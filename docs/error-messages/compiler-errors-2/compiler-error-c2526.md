@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2526 | Documenti Microsoft
+title: Errore del compilatore C2526 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 735222893b69763b2934a93abbb965852d2f6d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 152baa8b4fcd3f28e38b94c69b04a87f45040ccc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094975"
 ---
 # <a name="compiler-error-c2526"></a>Errore del compilatore C2526
-'identifier1': funzione con collegamento C non è possibile restituire la classe C++ 'identifier2'  
-  
- Una funzione definita con collegamento C non può restituire un tipo definito dall'utente.
+
+'identifier1': funzione con collegamento C non può restituire la classe C++ 'identifier2'
+
+Una funzione definita con collegamento C non può restituire un tipo definito dall'utente.

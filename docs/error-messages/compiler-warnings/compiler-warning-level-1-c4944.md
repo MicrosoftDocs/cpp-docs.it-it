@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4944 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4944 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57ddad7aa383cfd6f8716d6b12fa56627c1ee0e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdf155ce5fb53bb4b1b5914d7738c8c12f458888
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290699"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105507"
 ---
 # <a name="compiler-warning-level-1-c4944"></a>Avviso del compilatore (livello 1) C4944
-'symbol': non è possibile importare il simbolo da 'assembly1' perché 'symbol' esiste già nell'ambito corrente  
-  
- In un file di codice sorgente è definito un simbolo, che è definito anche in un assembly a cui fa riferimento un'istruzione #using. Il simbolo nell'assembly viene ignorato.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente crea un componente con un tipo denominato ClassA.  
-  
-```  
-// C4944.cs  
-// compile with: /target:library  
-// C# source code to create a dll  
-public class ClassA {  
-   public int i;  
-}  
-```  
-  
-## <a name="example"></a>Esempio  
- Gli esempi seguenti generano l'errore C4944.  
-  
-```  
-// C4944b.cpp  
-// compile with: /clr /W1  
-class ClassA {  
-public:  
-   int u;  
-};  
-  
-#using "C4944.dll"   // C4944 ClassA also defined C4944.dll  
-  
-int main() {  
-   ClassA * x = new ClassA();  
-   x->u = 9;  
-   System::Console::WriteLine(x->u);  
-}  
+
+'symbol': non è possibile importare il simbolo da 'assembly1' perché 'symbol' esiste già nell'ambito corrente
+
+In un file di codice sorgente è definito un simbolo, che è definito anche in un assembly a cui fa riferimento un'istruzione #using. Il simbolo nell'assembly viene ignorato.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente crea un componente con un tipo denominato ClassA.
+
+```
+// C4944.cs
+// compile with: /target:library
+// C# source code to create a dll
+public class ClassA {
+   public int i;
+}
+```
+
+## <a name="example"></a>Esempio
+
+Gli esempi seguenti generano l'errore C4944.
+
+```
+// C4944b.cpp
+// compile with: /clr /W1
+class ClassA {
+public:
+   int u;
+};
+
+#using "C4944.dll"   // C4944 ClassA also defined C4944.dll
+
+int main() {
+   ClassA * x = new ClassA();
+   x->u = 9;
+   System::Console::WriteLine(x->u);
+}
 ```

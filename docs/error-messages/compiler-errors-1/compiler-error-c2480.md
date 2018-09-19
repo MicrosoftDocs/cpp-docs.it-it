@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2480 | Documenti Microsoft
+title: Errore del compilatore C2480 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 987cefa42b3f3f8d9588e446ca181c0b7cd48f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b5d8f80293c05b651ad01e725ae501288005dfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102586"
 ---
 # <a name="compiler-error-c2480"></a>Errore del compilatore C2480
-'identifier': 'thread' è valida solo per elementi di dati di estensione statica  
-  
- Non è possibile utilizzare il `thread` attributo con un variabile automatica, un membro dati non statico, un parametro della funzione oppure in definizioni o dichiarazioni di funzione.  
-  
- Utilizzare il `thread` attributo per le variabili globali, i membri dati statici e solo le variabili statiche locale.  
-  
- L'esempio seguente genera l'errore C2480:  
-  
-```  
-// C2480.cpp  
-// compile with: /c  
-__declspec( thread ) void func();   // C2480  
-__declspec( thread ) static int i;   // OK  
+
+'identifier': 'thread' è valido solo per gli elementi di dati di estensione statica
+
+Non è possibile usare il `thread` attributo con una variabile automatica, membro dati non statico, parametro della funzione oppure in definizioni o dichiarazioni di funzione.
+
+Usare il `thread` attributo per le variabili globali, i membri dati statici e variabili statiche locali solo.
+
+L'esempio seguente genera l'errore C2480:
+
+```
+// C2480.cpp
+// compile with: /c
+__declspec( thread ) void func();   // C2480
+__declspec( thread ) static int i;   // OK
 ```

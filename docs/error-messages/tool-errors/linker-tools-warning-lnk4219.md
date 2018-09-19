@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4219 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4219 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59cb7376957b7985b7ae2335ea472171d490ff42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf097cd8715a7c523e6e8a2ea46714481ca7d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105209"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Avviso degli strumenti del linker LNK4219
-overflow della correzione nome correzione. La destinazione 'nome simbolo di destinazione' non compreso nell'intervallo, verrà inserito il thunk  
-  
- Il linker inserito un thunk in una situazione in cui l'indirizzo o offset non è riuscito per l'istruzione specificata perché il simbolo di destinazione è troppo lontano dal percorso dell'istruzione.  
-  
- Si consiglia di riordinare l'immagine (con il [/ORDER](../../build/reference/order-put-functions-in-order.md) opzione, ad esempio) per evitare un livello aggiuntivo di riferimento indiretto.
+
+overflow della correzione nome correzione. 'Il nome di simbolo di destinazione' di destinazione è compreso nell'intervallo, verrà inserito il thunk
+
+Il linker inserito un thunk in una situazione in cui l'indirizzo o offset non è riuscito per adattarsi all'interno dell'istruzione specificata perché il simbolo di destinazione è troppo distante dalla posizione dell'istruzione.
+
+È possibile riordinare l'immagine (usando il [/ORDER](../../build/reference/order-put-functions-in-order.md) opzione, ad esempio) per evitare un livello aggiuntivo di riferimento indiretto.

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1196 | Documenti Microsoft
+title: Errore irreversibile C1196 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51316b1e25c13a7e501d1d0f2fbde88f6b2ce613
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53c10a2b3849bfa45f5111b07c95d7355fcbdbfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199015"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102528"
 ---
 # <a name="fatal-error-c1196"></a>Errore irreversibile C1196
-'identifier': l'identificatore trovato nella libreria dei tipi 'typelib' non è un identificatore C++ valido  
-  
- Uno degli identificatori presente nella libreria dei tipi non è un identificatore C++ valido. La libreria dei tipi non è disponibile per l'uso con [#import](../../preprocessor/hash-import-directive-cpp.md).
+
+'identifier': l'identificatore trovato nella libreria dei tipi 'typelib' non è un identificatore C++ valido
+
+Uno degli identificatori presente nella libreria dei tipi non è un identificatore C++ valido. La libreria dei tipi non è disponibile per l'uso con [#import](../../preprocessor/hash-import-directive-cpp.md).

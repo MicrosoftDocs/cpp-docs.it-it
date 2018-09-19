@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2247 | Documenti Microsoft
+title: Errore del compilatore C2247 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,72 +16,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed27398ea1f51ccc2ef0d3339446b422c7a503c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f00516a3aa9cb2e88f47e81ad27890247a725733
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107479"
 ---
 # <a name="compiler-error-c2247"></a>Errore del compilatore C2247
-'identifier' non è accessibile perché 'class' Usa 'identificatore' per ereditare da 'class'  
-  
- `identifier` viene ereditata da una classe dichiarata con accesso privato o protetto.  
-  
- L'esempio seguente genera l'errore C2247:  
-  
-```  
-// C2247.cpp  
-class A {  
-public:  
-   int i;  
-};  
-class B : private A {};    // B inherits a private A  
-class C : public B {} c;   // so even though C's B is public  
-int j = c.i;               // C2247, i not accessible  
-```  
-  
- Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: controllo di accesso con i membri protetti. Un membro protetto (n) è accessibile solo tramite una funzione membro di una classe (B) che eredita dalla classe (A) dei quali (n) è un membro.  
-  
- Per il codice è valido in Visual Studio .NET 2003 sia le versioni di Visual Studio .NET di Visual C++, dichiarare il membro come friend del tipo. È anche possibile usare l'ereditarietà pubblica.  
-  
-```  
-// C2247b.cpp  
-// compile with: /c  
-// C2247 expected  
-class A {  
-public:  
-   void f();  
-   int n;  
-};  
-  
-class B: protected A {  
-   // Uncomment the following line to resolve.  
-   // friend void A::f();  
-};  
-  
-void A::f() {  
-   B b;  
-   b.n;  
-}  
-```  
-  
- C2247 può anche essere generato in seguito alle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: ora accessibili alle classi base private. Una classe (A) che è una classe base privata in un tipo (B) non siano accessibile a un tipo (C) che utilizza B come classe base.  
-  
- Per il codice è valido in Visual Studio .NET 2003 sia le versioni di Visual Studio .NET di Visual C++, utilizzare l'operatore di ambito.  
-  
-```  
-// C2247c.cpp  
-// compile with: /c  
-struct A {};  
-  
-struct B: private A {};  
-  
-struct C : B {  
-   void f() {  
-      A *p1 = (A*) this;   // C2247  
-      // try the following line instead  
-      // ::A *p2 = (::A*) this;  
-   }  
-};  
+
+'identifier' non è accessibile perché 'class' Usa 'specifier' per ereditare da 'class'
+
+`identifier` viene ereditata da una classe dichiarata con accesso privato o protetto.
+
+L'esempio seguente genera l'errore C2247:
+
+```
+// C2247.cpp
+class A {
+public:
+   int i;
+};
+class B : private A {};    // B inherits a private A
+class C : public B {} c;   // so even though C's B is public
+int j = c.i;               // C2247, i not accessible
+```
+
+Questo errore può anche essere generato in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: controllo di accesso con i membri protetti. Un membro protetto (n) è accessibile solo tramite una funzione membro di una classe (B) che eredita dalla classe (A) di cui (n) è un membro.
+
+Per il codice sia valido in entrambe le Visual Studio .NET 2003 e versioni di Visual Studio .NET di Visual C++, dichiarare il membro sia del tipo di un amico. È anche possibile utilizzare l'ereditarietà pubblica.
+
+```
+// C2247b.cpp
+// compile with: /c
+// C2247 expected
+class A {
+public:
+   void f();
+   int n;
+};
+
+class B: protected A {
+   // Uncomment the following line to resolve.
+   // friend void A::f();
+};
+
+void A::f() {
+   B b;
+   b.n;
+}
+```
+
+C2247 può anche essere generato in seguito alle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: ora accessibile alle classi base private. Una classe (A) che è una classe base privata a un tipo (B) non siano accessibile a un tipo (C) che usa B come una classe di base.
+
+Per il codice sia valido in entrambe le Visual Studio .NET 2003 e versioni di Visual Studio .NET di Visual C++, usare l'operatore di ambito.
+
+```
+// C2247c.cpp
+// compile with: /c
+struct A {};
+
+struct B: private A {};
+
+struct C : B {
+   void f() {
+      A *p1 = (A*) this;   // C2247
+      // try the following line instead
+      // ::A *p2 = (::A*) this;
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4215 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4215 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d5e07b9382c24f82f3e7d84fe82aee9dd91ca19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 137a278452e9e3e204d761f0519c16541cfdb46e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094091"
 ---
 # <a name="compiler-warning-level-1-c4215"></a>Avviso del compilatore (livello 1) C4215
-utilizzata estensione non standard: long float  
-  
- Nelle estensioni di Microsoft (/Ze) predefinito **long float** come **double**. La compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) non. Utilizzare **doppie** per mantenere la compatibilità.  
-  
- L'esempio seguente genera l'errore C4215:  
-  
-```  
-// C4215.cpp  
-// compile with: /W1 /LD  
-long float a;   // C4215  
-  
-// use the line below to resolve the warning  
-// double a;  
+
+utilizzata estensione non standard: long float
+
+Le estensioni di Microsoft (/Ze) predefinita considerano **long float** come **doppie**. Garantire la compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) non esiste. Uso **doppie** per mantenere la compatibilità.
+
+L'esempio seguente genera l'errore C4215:
+
+```
+// C4215.cpp
+// compile with: /W1 /LD
+long float a;   // C4215
+
+// use the line below to resolve the warning
+// double a;
 ```

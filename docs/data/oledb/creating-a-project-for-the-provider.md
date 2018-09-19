@@ -17,29 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dad3b020cb7f66fc4ba6535f79393c2d0ad0333f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 573cfdf3abda8f8190ceb7bca447e40130ea8610
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339841"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103323"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Creazione di un progetto per il provider
+
 ### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Per creare un progetto in cui risiederà il provider OLE DB  
   
-1.  Nel menu **File** fare clic su **Nuovo** e quindi su **Progetto**.  
+1. Nel menu **File** fare clic su **Nuovo** e quindi su **Progetto**.  
   
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-2.  Nel riquadro Tipi progetto selezionare la cartella progetti Visual C++. Nel riquadro Modelli fare clic su **progetto ATL**.  
+1. Nel riquadro Tipi progetto selezionare la cartella progetti Visual C++. Nel riquadro Modelli fare clic su **progetto ATL**.  
   
-3.  Nel **Name** casella, immettere un nome per il progetto e quindi fare clic su **OK**.  
+1. Nel **Name** casella, immettere un nome per il progetto e quindi fare clic su **OK**.  
   
      Viene visualizzata la creazione guidata progetto ATL.  
   
-4.  Nella creazione guidata progetto ATL, scegliere **libreria di collegamento dinamico (DLL)** per **tipo di Server**.  
+1. Nella creazione guidata progetto ATL, scegliere **libreria di collegamento dinamico (DLL)** per **tipo di Server**.  
   
-5.  Scegliere **Fine**.  
+1. Scegliere **Fine**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

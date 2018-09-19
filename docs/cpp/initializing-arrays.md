@@ -15,57 +15,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1ecb15cfc34ec518f46474497a3577a51b00c4e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 94f13ca235091c730f81eefb5c36f388bf3dee38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103295"
 ---
 # <a name="initializing-arrays"></a>Inizializzazione di matrici
-Se una classe dispone di un costruttore, le matrici di tale classe vengono inizializzate da un costruttore. Se vi sono meno elementi nell'elenco di inizializzatori rispetto agli elementi nella matrice, il costruttore predefinito viene usato per gli elementi rimanenti. Se nessun costruttore predefinito è definito per la classe, l'elenco di inizializzatori deve essere completo, ovvero deve esserci un inizializzatore per ogni elemento della matrice.  
-  
- Si consideri la classe `Point` che definisce due costruttori:  
-  
-```cpp 
-// initializing_arrays1.cpp  
-class Point  
-{  
-public:  
-   Point()   // Default constructor.  
-   {  
-   }  
-   Point( int, int )   // Construct from two ints  
-   {  
-   }  
-};  
-  
-// An array of Point objects can be declared as follows:  
-Point aPoint[3] = {  
-   Point( 3, 3 )     // Use int, int constructor.  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
- Il primo elemento `aPoint` viene costruito usando il costruttore `Point( int, int )`; i due elementi rimanenti vengono costruiti usando il costruttore predefinito.  
-  
- Matrici statiche del membro (se **const** o No) possono essere inizializzate nelle relative definizioni (all'esterno della dichiarazione di classe). Ad esempio:  
-  
-```cpp 
-// initializing_arrays2.cpp  
-class WindowColors  
-{  
-public:  
-    static const char *rgszWindowPartList[7];  
-};  
-  
-const char *WindowColors::rgszWindowPartList[7] = {  
-    "Active Title Bar", "Inactive Title Bar", "Title Bar Text",  
-    "Menu Bar", "Menu Bar Text", "Window Background", "Frame"   };  
-int main()  
-{  
-}  
-```  
+
+Se una classe dispone di un costruttore, le matrici di tale classe vengono inizializzate da un costruttore. Se vi sono meno elementi nell'elenco di inizializzatori rispetto agli elementi nella matrice, il costruttore predefinito viene usato per gli elementi rimanenti. Se nessun costruttore predefinito è definito per la classe, l'elenco di inizializzatori deve essere completo, ovvero deve esserci un inizializzatore per ogni elemento della matrice.
+
+Si consideri la classe `Point` che definisce due costruttori:
+
+```cpp
+// initializing_arrays1.cpp
+class Point
+{
+public:
+   Point()   // Default constructor.
+   {
+   }
+   Point( int, int )   // Construct from two ints
+   {
+   }
+};
+
+// An array of Point objects can be declared as follows:
+Point aPoint[3] = {
+   Point( 3, 3 )     // Use int, int constructor.
+};
+
+int main()
+{
+}
+```
+
+Il primo elemento `aPoint` viene costruito usando il costruttore `Point( int, int )`; i due elementi rimanenti vengono costruiti usando il costruttore predefinito.
+
+Matrici statiche del membro (se **const** o No) possono essere inizializzate nelle relative definizioni (all'esterno della dichiarazione di classe). Ad esempio:
+
+```cpp
+// initializing_arrays2.cpp
+class WindowColors
+{
+public:
+    static const char *rgszWindowPartList[7];
+};
+
+const char *WindowColors::rgszWindowPartList[7] = {
+    "Active Title Bar", "Inactive Title Bar", "Title Bar Text",
+    "Menu Bar", "Menu Bar Text", "Window Background", "Frame"   };
+int main()
+{
+}
+```

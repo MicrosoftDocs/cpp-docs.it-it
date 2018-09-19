@@ -1,5 +1,5 @@
 ---
-title: Classe concurrent_priority_queue | Documenti Microsoft
+title: Classe concurrent_priority_queue | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d52598f5ef987ce05eb664c6d3ef24ab86e002d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096151"
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
 La classe `concurrent_priority_queue` è un contenitore che consente a più thread di inserire e togliere elementi contemporaneamente. Gli elementi vengono prelevati secondo un ordine di priorità dove la priorità è determinata da una funzione fornita come argomento del modello.  
@@ -46,14 +46,14 @@ template <typename T,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Tipo di dati degli elementi da archiviare nella coda di priorità.  
+*T*<br/>
+Tipo di dati degli elementi da archiviare nella coda di priorità.  
   
- `_Compare`  
- Tipo dell'oggetto funzione tramite cui è possibile confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nella coda di priorità. Questo argomento è facoltativo e il predicato binario `less<T>` rappresenta il valore predefinito.  
+*Confronta*<br/>
+Tipo dell'oggetto funzione tramite cui è possibile confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nella coda di priorità. Questo argomento è facoltativo e il predicato binario `less<T>` rappresenta il valore predefinito.  
   
- `_Ax`  
- Tipo che rappresenta l'oggetto allocatore archiviato in cui sono inclusi i dettagli sull'allocazione e sulla deallocazione di memoria per la coda di priorità simultanea. Questo argomento è facoltativo e il valore predefinito è `allocator<T>`.  
+*_Ax*<br/>
+Tipo che rappresenta l'oggetto allocatore archiviato in cui sono inclusi i dettagli sull'allocazione e sulla deallocazione di memoria per la coda di priorità simultanea. Questo argomento è facoltativo e il valore predefinito è `allocator<T>`.  
   
 ## <a name="members"></a>Membri  
   
@@ -89,7 +89,7 @@ template <typename T,
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_priority_queue` questo oggetto. Questo metodo non è indipendente dalla concorrenza.|  
+|[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_priority_queue` a questo oggetto. Questo metodo non è indipendente dalla concorrenza.|  
   
 ## <a name="remarks"></a>Note  
  Per informazioni dettagliate sul `concurrent_priority_queue` classe, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -111,7 +111,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Note  
- `clear` non è indipendente dalla concorrenza. È necessario assicurarsi che nessun altro thread sta chiamando metodi sulla coda di priorità simultanea quando si chiama questo metodo. `clear` libera la memoria.  
+ `clear` non è indipendente dalla concorrenza. È necessario assicurarsi che nessun altro thread richiamano metodi nella coda di priorità simultanea quando si chiama questo metodo. `clear` non liberare la memoria.  
   
 ##  <a name="ctor"></a> concurrent_priority_queue 
 
@@ -146,38 +146,38 @@ concurrent_priority_queue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_InputIterator`  
- Tipo di iteratore di input.  
+*_InputIterator*<br/>
+Tipo di iteratore di input.  
   
- `_Al`  
- Classe Allocator da usare con questo oggetto.  
+*_Al*<br/>
+Classe Allocator da usare con questo oggetto.  
   
- `_Init_capacity`  
- Capacità iniziale dell'oggetto `concurrent_priority_queue`.  
+*_Init_capacity*<br/>
+Capacità iniziale dell'oggetto `concurrent_priority_queue`.  
   
- `_Begin`  
- Posizione del primo elemento nell'intervallo di elementi da copiare.  
+*Ini_zia*<br/>
+Posizione del primo elemento nell'intervallo di elementi da copiare.  
   
- `_End`  
- Posizione del primo elemento oltre l'intervallo di elementi da copiare.  
+*End*<br/>
+Posizione del primo elemento oltre l'intervallo di elementi da copiare.  
   
- `_Src`  
- Oggetto `concurrent_priority_queue` di origine da cui copiare o spostare elementi.  
+*_Src*<br/>
+Oggetto `concurrent_priority_queue` di origine da cui copiare o spostare elementi.  
   
 ### <a name="remarks"></a>Note  
  Tutti i costruttori archiviano un oggetto allocatore `_Al` e inizializzare la coda di priorità.  
   
- Il primo costruttore specifica una coda di priorità iniziale vuoto e, facoltativamente, specifica un allocatore.  
+ Il primo costruttore specifica una coda di priorità iniziale vuoto e, facoltativamente, viene specificato un allocatore.  
   
- Il secondo costruttore specifica una coda di priorità con una capacità iniziale `_Init_capacity` e, facoltativamente, specifica un allocatore.  
+ Il secondo costruttore specifica una coda di priorità con una capacità iniziale `_Init_capacity` e, facoltativamente, viene specificato un allocatore.  
   
- Il terzo costruttore specifica i valori forniti dall'intervallo dell'iteratore [ `_Begin`, `_End`) e, facoltativamente, specifica un allocatore.  
+ Il terzo costruttore specifica i valori forniti dall'intervallo dell'iteratore [ `_Begin`, `_End`) e, facoltativamente, viene specificato un allocatore.  
   
  Il quarto e quinto costruttore viene specificata una copia della coda di priorità `_Src`.  
   
- Il sesto e il settimo costruttore specificano uno spostamento della coda di priorità `_Src`.  
+ Il sesto e il settimo costruttore specificano un'operazione di spostamento della coda di priorità `_Src`.  
   
-##  <a name="empty"></a> vuoto 
+##  <a name="empty"></a> vuota 
 
  Testa se la coda di priorità simultanea è vuota nel momento in cui questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.  
   
@@ -186,7 +186,7 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` Se la coda di priorità era vuota nel momento in cui è stata chiamata la funzione, `false` in caso contrario.  
+ `true` Se la coda di priorità era vuota al momento della chiamata della funzione, `false` in caso contrario.  
   
 ##  <a name="get_allocator"></a> get_allocator 
 
@@ -201,7 +201,7 @@ allocator_type get_allocator() const;
   
 ##  <a name="operator_eq"></a> operator= 
 
- Assegna il contenuto di un altro `concurrent_priority_queue` questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
+ Assegna il contenuto di un altro `concurrent_priority_queue` a questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
   
 ```
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -210,13 +210,13 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Src`  
- Oggetto `concurrent_priority_queue` di origine.  
+*_Src*<br/>
+Oggetto `concurrent_priority_queue` di origine.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `concurrent_priority_queue` oggetto.  
   
-##  <a name="push"></a> Push 
+##  <a name="push"></a> push 
 
  Aggiunge un elemento alla coda di priorità simultanea. Questo metodo è indipendente dalla concorrenza.  
   
@@ -227,8 +227,8 @@ void push(value_type&& _Elem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Elem`  
- L'elemento da aggiungere alla coda di priorità simultanea.  
+*_Elem*<br/>
+L'elemento da aggiungere alla coda di priorità simultanea.  
   
 ##  <a name="size"></a> Dimensioni 
 
@@ -242,9 +242,9 @@ size_type size() const;
  Il numero di elementi in questo `concurrent_priority_queue` oggetto.  
   
 ### <a name="remarks"></a>Note  
- La dimensione restituita è garantita da includere tutti gli elementi aggiunti dalle chiamate alla funzione `push`. Tuttavia, potrebbe non riflettere i risultati di operazioni simultanee in sospeso.  
+ La dimensione restituita è garantita per includere tutti gli elementi aggiunti dalle chiamate alla funzione `push`. Tuttavia, potrebbe non riflettere i risultati di operazioni simultanee in sospeso.  
   
-##  <a name="swap"></a> Swap 
+##  <a name="swap"></a> swap 
 
  Scambia il contenuto di due code di priorità simultanee. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -253,8 +253,8 @@ void swap(concurrent_priority_queue& _Queue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Queue`  
- Il `concurrent_priority_queue` oggetto scambiare contenuti con.  
+*Fronty*<br/>
+Il `concurrent_priority_queue` oggetto cui scambiare il contenuto con.  
   
 ##  <a name="try_pop"></a> try_pop 
 
@@ -265,8 +265,8 @@ bool try_pop(reference _Elem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Elem`  
- Un riferimento a una variabile che verrà popolato con l'elemento di priorità più elevata, se la coda non vuota.  
+*_Elem*<br/>
+Un riferimento a una variabile che verrà popolato con l'elemento con priorità più alta, se la coda è non vuoto.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se è stato estratto un valore, `false` in caso contrario.  

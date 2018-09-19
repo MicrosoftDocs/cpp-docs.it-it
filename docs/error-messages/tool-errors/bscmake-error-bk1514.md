@@ -1,5 +1,5 @@
 ---
-title: Errore BK1514 di BSCMAKE | Documenti Microsoft
+title: Errore BK1514 di BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f1c72760f0597709de430588052445366e434d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20f66c5c48547e92aef00568d5488a6293303be1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094715"
 ---
 # <a name="bscmake-error-bk1514"></a>Errore BK1514 di BSCMAKE
-tutti. I file SBR troncati, non è stato trovato nel nome file  
-  
- Nessuno dei file SBR specificati per un aggiornamento facevano parte del file di informazioni (BSC) originale. Per trovare i nomi dei file sbr che ha causato l'errore, leggere la [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) avvisi che lo precedono.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
-  
-1.  Nome file errato specificato per il file SBR o BSC.  
-  
-2.  File BSC danneggiato necessario BSCMAKE ricompilarlo.
+
+tutti. I file SBR troncati, non è stato trovato nel nome file
+
+Nessuno dei file SBR specificati per un aggiornamento facevano parte del file di informazioni (BSC) originale. Per trovare i nomi dei file sbr che ha causato l'errore, leggere il [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) avvisi che lo precedono.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+
+1. Nome file errato specificato per SBR o con estensione bsc.
+
+1. File BSC danneggiato necessario BSCMAKE per ricompilarla.

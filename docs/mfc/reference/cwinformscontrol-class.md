@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797903c3f558cff9a0ff5addb689e31ae2adbed7
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5c39d289ae2cf7580eba5a36257b7f5ea8ed061d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105401"
 ---
 # <a name="cwinformscontrol-class"></a>Classe CWinFormsControl
 Fornisce la funzionalità di base per l'hosting di un controllo Windows Form.  
@@ -42,8 +42,8 @@ class CWinFormsControl : public CWnd
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `TManagedControl`  
- Un controllo Windows Form di .NET Framework da visualizzare nell'applicazione MFC.  
+*TManagedControl*<br/>
+Un controllo Windows Form di .NET Framework da visualizzare nell'applicazione MFC.  
   
 ## <a name="members"></a>Membri  
   

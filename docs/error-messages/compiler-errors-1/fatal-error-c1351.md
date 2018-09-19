@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1351 | Documenti Microsoft
+title: Errore irreversibile C1351 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a700734cc2fb860d9d3ad8143aed817809ab69f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bd76b164e24834f22cc4654873559e340efcb79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100459"
 ---
 # <a name="fatal-error-c1351"></a>Errore irreversibile C1351
 
-> Errore durante il caricamento di dll '*dll*': versione non compatibile  
+> Errore durante il caricamento di dll '*dll*': versione non compatibile
 
-La versione non corretta di una DLL è stata trovata.
+La versione errata di una DLL è stata trovata.
 
 Ciò indica un problema con l'installazione e reinstallare Visual Studio.

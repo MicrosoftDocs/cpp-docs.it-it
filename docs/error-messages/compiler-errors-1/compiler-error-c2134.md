@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2134 | Documenti Microsoft
+title: Errore del compilatore C2134 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,41 +14,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8390e720e1a4389e43c263faf0c7582eaccfceec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e616540fdb83619096ae24533380c559aa4759da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101449"
 ---
 # <a name="compiler-error-c2134"></a>Errore del compilatore C2134
-'function': chiamata non produce un'espressione costante  
-  
- Una funzione dichiarata come constexpr è possibile chiamare solo altre funzioni dichiarate come constexpr.  
-  
- L'esempio seguente genera l'errore C2134:  
-  
-```  
-// C2134.cpp  
-// compile with: /c  
-int A() {  
-    return 42;  
-};  
-  
-constexpr int B() {  
-    return A();  // Error C2134: 'A': call does not result in a constant expression.  
-}  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2134b.cpp  
-constexpr int A() {  // add constexpr to A, since it meets the requirements of constexpr.  
-    return 42;  
-};  
-  
-constexpr int B() {  
-    return A();  // No error  
-}  
+
+'function': chiamata non produce un'espressione costante
+
+Una funzione dichiarata come constexpr può solo chiamare altre funzioni dichiarate come constexpr.
+
+L'esempio seguente genera l'errore C2134:
+
+```
+// C2134.cpp
+// compile with: /c
+int A() {
+    return 42;
+};
+
+constexpr int B() {
+    return A();  // Error C2134: 'A': call does not result in a constant expression.
+}
+```
+
+Possibile soluzione:
+
+```
+// C2134b.cpp
+constexpr int A() {  // add constexpr to A, since it meets the requirements of constexpr.
+    return 42;
+};
+
+constexpr int B() {
+    return A();  // No error
+}
 ```

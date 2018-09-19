@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914e11c71d4f015f7b62797d4ba2ab3bfca3c7fb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 42c42b43fdc04978fabe36b0ea64f39b9a5d333f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098485"
 ---
 # <a name="iunknown-implementation-classes"></a>Classi di implementazione IUnknown
 
@@ -55,8 +55,8 @@ Le seguenti classi implementano `IUnknown` e metodi correlati:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)   
-[Aggregazione e macro di Class Factory](../atl/reference/aggregation-and-class-factory-macros.md)   
-[Macro di mappa COM](../atl/reference/com-map-macros.md)   
+[Panoramica della classe](../atl/atl-class-overview.md)<br/>
+[Macro di aggregazione e class factory](../atl/reference/aggregation-and-class-factory-macros.md)<br/>
+[Macro di mappa COM](../atl/reference/com-map-macros.md)<br/>
 [Funzioni globali di mappa COM](../atl/reference/com-map-global-functions.md)
 

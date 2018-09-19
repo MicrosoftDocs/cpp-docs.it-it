@@ -30,44 +30,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63a09dec74fc1b7b41f8029dcff285b62b017f1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3465b75d39d62c2118c53533f46627a68a1f286d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101670"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t Extractors
-**Sezione specifica Microsoft**  
-  
- Estrae il puntatore a interfaccia COM incapsulato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-operator Interface*( ) const throw( );   
-operator Interface&( ) const;   
-Interface& operator*( ) const;   
-Interface* operator->( ) const;   
-Interface** operator&( ) throw( );   
-operator bool( ) const throw( );  
-```  
-  
-## <a name="remarks"></a>Note  
-  
--   **operatore Interface** <strong>\*</strong> restituisce il puntatore a interfaccia incapsulato, che può essere NULL.  
-  
--   **operatore Interface &** restituisce un riferimento a puntatore a interfaccia incapsulato e genera un errore se il puntatore è NULL.  
-  
--   **operatore** <strong>\*</strong> consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.  
-  
--   **operator ->** consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.  
-  
--   **operatore &** rilascia qualsiasi puntatore a interfaccia incapsulato, sostituendolo con valore NULL e restituisce l'indirizzo del puntatore incapsulato. In questo modo il puntatore intelligente deve essere passato in base all'indirizzo a una funzione che ha un *out* parametro con il quale restituisce un puntatore a interfaccia.  
-  
--   **operatore bool** consente a un oggetto del puntatore intelligente da utilizzare in un'espressione condizionale. Questo operatore restituisce TRUE se il puntatore non NULL.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)
+
+**Sezione specifica Microsoft**
+
+Estrae il puntatore a interfaccia COM incapsulato.
+
+## <a name="syntax"></a>Sintassi
+
+```
+operator Interface*( ) const throw( ); 
+operator Interface&( ) const; 
+Interface& operator*( ) const; 
+Interface* operator->( ) const; 
+Interface** operator&( ) throw( ); 
+operator bool( ) const throw( );
+```
+
+## <a name="remarks"></a>Note
+
+- **operatore Interface** <strong>\*</strong> restituisce il puntatore a interfaccia incapsulato, che può essere NULL.
+
+- **operatore Interface &** restituisce un riferimento a puntatore a interfaccia incapsulato e genera un errore se il puntatore è NULL.
+
+- **operatore** <strong>\*</strong> consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.
+
+- **operator ->** consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.
+
+- **operatore &** rilascia qualsiasi puntatore a interfaccia incapsulato, sostituendolo con valore NULL e restituisce l'indirizzo del puntatore incapsulato. In questo modo il puntatore intelligente deve essere passato in base all'indirizzo a una funzione che ha un *out* parametro con il quale restituisce un puntatore a interfaccia.
+
+- **operatore bool** consente a un oggetto del puntatore intelligente da utilizzare in un'espressione condizionale. Questo operatore restituisce TRUE se il puntatore non NULL.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

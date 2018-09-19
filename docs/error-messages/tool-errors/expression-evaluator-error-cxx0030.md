@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0030 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0030 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 669c585c637129c1fb6a480d91b31e5a1264fd22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb2921013d116b7d8f02e1e29380ca3cd14086b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102814"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>Errore dell‘analizzatore di espressioni CXX0030
-espressione non analizzabile.  
-  
- L'analizzatore di espressioni del debugger. Impossibile ottenere un valore per l'espressione così come scritta. Una causa probabile è che l'espressione fa riferimento alla memoria esterna allo spazio degli indirizzi del programma (dereferenziare un puntatore null è un esempio). Windows non consente l'accesso alla memoria di fuori di spazio degli indirizzi del programma.  
-  
- È consigliabile riscrivere l'espressione utilizzando le parentesi per controllare l'ordine di valutazione.  
-  
- Questo errore è identico all'errore CAN0030.
+
+espressione non analizzabile.
+
+L'analizzatore di espressioni del debugger non è stato possibile ottenere un valore per l'espressione così come scritta. Una causa probabile è che l'espressione fa riferimento alla memoria esterna allo spazio degli indirizzi del programma (dereferenzia un puntatore null è un esempio). Windows non consente l'accesso alla memoria esterna allo spazio degli indirizzi del programma.
+
+È possibile riscrivere l'espressione utilizzando le parentesi per controllare l'ordine di valutazione.
+
+Questo errore è identico all'errore CAN0030.

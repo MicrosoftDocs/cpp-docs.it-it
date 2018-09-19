@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3364 | Documenti Microsoft
+title: Errore del compilatore C3364 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337bcf71e89dc1ff3e434eba6645f76df1022a11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65ac2c54ccd0fe4a086cfcc79cf4dba269876ad3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096249"
 ---
 # <a name="compiler-error-c3364"></a>Errore del compilatore C3364
-'delegato': costruttore di delegato: l'argomento deve essere puntatore a funzione membro di classe gestita o una funzione globale  
-  
- Il secondo parametro del costruttore del delegato accetta l'indirizzo di una funzione membro o l'indirizzo di una funzione membro statico di una qualsiasi classe. Entrambi sono trattati come semplici indirizzi.  
-  
- L'esempio seguente genera l'errore C3364:  
-  
-```  
-// C3364_2.cpp  
-// compile with: /clr  
-  
-delegate int D( int, int );  
-  
-ref class C {  
-public:  
-   int mf( int, int ) {  
-      return 1;  
-   }  
-};  
-  
-int main() {  
-   C^ pC = gcnew C;  
-   System::Delegate^ pD = gcnew D( pC,pC->mf( 1, 2 ) ); // C3364  
-  
-   // try the following line instead  
-   // System::Delegate^ pD = gcnew D(pC, &C::mf);  
-}  
-```  
+
+'delegate': costruttore di delegato: argomento deve essere puntatore a funzione membro di classe gestita o una funzione globale
+
+Il secondo parametro del costruttore del delegato accetta l'indirizzo di una funzione membro o l'indirizzo di una funzione membro statico di una classe. Entrambi vengono considerati come gli indirizzi simple.
+
+L'esempio seguente genera l'errore C3364:
+
+```
+// C3364_2.cpp
+// compile with: /clr
+
+delegate int D( int, int );
+
+ref class C {
+public:
+   int mf( int, int ) {
+      return 1;
+   }
+};
+
+int main() {
+   C^ pC = gcnew C;
+   System::Delegate^ pD = gcnew D( pC,pC->mf( 1, 2 ) ); // C3364
+
+   // try the following line instead
+   // System::Delegate^ pD = gcnew D(pC, &C::mf);
+}
+```

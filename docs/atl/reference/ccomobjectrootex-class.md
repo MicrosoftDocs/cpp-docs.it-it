@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dcaa927bc9fe38ca45cf938a20cf08713ecff1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098953"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 
@@ -44,13 +44,13 @@ Questa classe fornisce metodi per la gestione di gestione di conteggio di riferi
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<class ThreadModel>  
+template<class ThreadModel>
 class CComObjectRootEx : public CComObjectRootBase
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*ThreadModel*  
+*ThreadModel*<br/>
 La classe i cui metodi implementano il modello di threading desiderato. È possibile scegliere il modello di threading in modo esplicito, impostando *ThreadModel* al [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), o [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). È possibile accettare modello thread predefinito del server impostando *ThreadModel* al [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) oppure [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
 
 ## <a name="members"></a>Membri
@@ -205,16 +205,16 @@ static HRESULT InternalQueryInterface(
 
 ### <a name="parameters"></a>Parametri
 
-*pThis*  
+*pThis*<br/>
 [in] Un puntatore all'oggetto che contiene la mappa COM di interfacce esposte a `QueryInterface`.
 
-*pEntries*  
+*pEntries*<br/>
 [in] Un puntatore al `_ATL_INTMAP_ENTRY` struttura che accede a una mappa delle interfacce disponibili.
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntatore a puntatore a interfaccia specificato nella *iid*, oppure NULL se l'interfaccia non viene trovato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -308,7 +308,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="parameters"></a>Parametri
 
-*bStarting*  
+*bStarting*<br/>
 [out] Il valore è TRUE se la classe viene inizializzata; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -343,10 +343,10 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntatore a puntatore a interfaccia specificato nella *iid*, oppure NULL se l'aggregazione non supporta l'interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -381,7 +381,7 @@ Se il modello di thread è a thread singolo, questo metodo non esegue alcuna ope
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Classe CComObject](../../atl/reference/ccomobject-class.md)   
-[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
+[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

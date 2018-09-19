@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1311 | Documenti Microsoft
+title: Errore irreversibile C1311 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b3759a5fec4b072f9a9b300670d61cb0d101c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d93aa28d0cef3c07fd469349d485c4009fa4771d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091062"
 ---
 # <a name="fatal-error-c1311"></a>Errore irreversibile C1311
-Formato COFF non è possibile inizializzare in modo statico 'var' con numero di byte di un indirizzo  
-  
- Impossibile assegnare un indirizzo, il cui valore non è noto in fase di compilazione in modo statico a una variabile il cui tipo è archiviazione meno di quattro byte.  
-  
- Questo errore può verificarsi nel codice che altrimenti C++ valido.  
-  
- Nell'esempio riportato di seguito viene illustrata una condizione da cui potrebbe essere generato l'errore C1311.  
-  
-```  
-char c = (char)"Hello, world";   // C1311  
-char *d = (char*)"Hello, world";   // OK  
+
+Formato COFF non è possibile inizializzare in modo statico 'var' con numero di byte di un indirizzo
+
+Un indirizzo il cui valore non è noto in fase di compilazione non può essere assegnato in modo statico a una variabile il cui tipo è archiviazione di meno di quattro byte.
+
+Questo errore può verificarsi nel codice che sarebbe altrimenti C++ valido.
+
+Nell'esempio riportato di seguito viene illustrata una condizione da cui potrebbe essere generato l'errore C1311.
+
+```
+char c = (char)"Hello, world";   // C1311
+char *d = (char*)"Hello, world";   // OK
 ```

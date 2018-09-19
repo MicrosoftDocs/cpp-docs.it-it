@@ -1,5 +1,5 @@
 ---
-title: PTR::PTR | Documenti Microsoft
+title: PTR::PTR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107026"
 ---
 # <a name="ptrptr"></a>ptr::ptr
 Costruisce un `com::ptr` per eseguire il wrapping di un oggetto COM.  
@@ -40,15 +40,15 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `P`  
- Puntatore a interfaccia COM.  
+*P*<br/>
+Puntatore a interfaccia COM.  
   
 ## <a name="remarks"></a>Note  
- Il costruttore senza argomenti assegna `nullptr` all'handle dell'oggetto sottostante. Le chiamate successive al `com::ptr` verrà convalidare l'oggetto interno e l'esito negativo fino a quando un oggetto viene effettivamente creato o collegato.  
+ Il costruttore senza argomenti assegna `nullptr` all'handle dell'oggetto sottostante. Le chiamate successive al `com::ptr` verrà convalidato l'oggetto interno e verrà automaticamente esito negativo fino a quando un oggetto viene creato effettivamente o collegato.  
   
- Il costruttore di un solo argomento aggiunge un riferimento all'oggetto COM ma non rilascia il riferimento del chiamante, pertanto il chiamante deve chiamare `Release` realmente concedere il controllo all'oggetto COM. Quando il `com::ptr`del distruttore viene chiamato rilascerà automaticamente i riferimenti all'oggetto COM.  
+ Il costruttore di un solo argomento aggiunge un riferimento all'oggetto COM, ma non rilascia il riferimento del chiamante, in modo che il chiamante deve chiamare `Release` sull'oggetto COM per realmente rinunciare al controllo. Quando il `com::ptr`del distruttore viene chiamato automaticamente rilascerà i riferimenti all'oggetto COM.  
   
- Il passaggio di `NULL` a questo costruttore è equivalente alla chiamata la versione senza argomenti.  
+ Il passaggio `NULL` a questo costruttore equivale a chiamare tale versione senza argomenti.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Viene illustrato l'utilizzo di entrambe le versioni del costruttore.  

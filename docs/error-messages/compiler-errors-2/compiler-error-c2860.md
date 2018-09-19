@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2860 | Documenti Microsoft
+title: Errore del compilatore C2860 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ced30a3d737cc8fbd8599489600674da423dbfc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51a73a9997dda717f2c4977d75d99da72d58ae7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091153"
 ---
 # <a name="compiler-error-c2860"></a>Errore del compilatore C2860
-'void' non può essere un tipo di argomento, ad eccezione di '(void)'  
-  
- Tipo `void` non può essere utilizzato come tipo di argomento con altri argomenti.  
-  
- L'esempio seguente genera l'errore C2860:  
-  
-```  
-// C2860.cpp  
-// compile with: /c  
-void profunc1(void, int i);   // C2860  
-void func10(void);   // OK  
+
+'void' non può essere un tipo di argomento, ad eccezione di '(void)'
+
+Tipo `void` non può essere utilizzato come tipo di argomento con gli altri argomenti.
+
+L'esempio seguente genera l'errore C2860:
+
+```
+// C2860.cpp
+// compile with: /c
+void profunc1(void, int i);   // C2860
+void func10(void);   // OK
 ```

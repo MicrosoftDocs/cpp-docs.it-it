@@ -22,82 +22,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ffea0fdf40f7ef794563849f97b0b68631b9734e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099785"
 ---
 # <a name="alignof-operator"></a>Operatore __alignof
-C++11 introduce le **alignof** operatore che restituisce l'allineamento, espressa in byte, del tipo specificato. Per garantire la massima portabilità, è consigliabile usare l'operatore alignof invece dell'operatore __alignof specifico di Microsoft.  
-  
- **Sezione specifica Microsoft**  
-  
- Restituisce un valore di tipo `size_t` vale a dire il requisito di allineamento del tipo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
+
+C++11 introduce le **alignof** operatore che restituisce l'allineamento, espressa in byte, del tipo specificato. Per garantire la massima portabilità, è consigliabile usare l'operatore alignof invece dell'operatore __alignof specifico di Microsoft.
+
+**Sezione specifica Microsoft**
+
+Restituisce un valore di tipo `size_t` vale a dire il requisito di allineamento del tipo.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
   __alignof( type )
-```  
-  
-## <a name="remarks"></a>Note  
- Ad esempio:  
-  
-|Espressione|Valore|  
-|----------------|-----------|  
-|**__alignof( char )**|1|  
-|**__alignof( short )**|2|  
-|**__alignof( int )**|4|  
-|**__alignof( \__int64 )**|8|  
-|**__alignof( float )**|4|  
-|**alignof (double)**|8|  
-|**__alignof( char\* )**|4|  
-  
- Il **alignof** valore è identico al valore per `sizeof` per i tipi di base. Si consideri, in ogni caso, il seguente esempio:  
-  
-```cpp 
-typedef struct { int a; double b; } S;  
-// __alignof(S) == 8  
-```  
-  
- In questo caso, il **alignof** valore è il requisito di allineamento dell'elemento più grande nella struttura.  
-  
- Analogamente, per  
-  
-```cpp 
-typedef __declspec(align(32)) struct { int a; } S;  
-```  
-  
- `__alignof(S)` è uguale a `32`.  
-  
- È possibile utilizzare **alignof** sarebbe come parametro a una delle proprie routine di allocazione della memoria. Ad esempio, data la seguente struttura definita `S`, si potrebbe chiamare una routine di allocazione della memoria denominata `aligned_malloc` per allocare memoria su un particolare limite di allineamento.  
-  
-```cpp 
-typedef __declspec(align(32)) struct { int a; double b; } S;  
-int n = 50; // array size  
-S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  
-```  
-  
- Per altre informazioni sulla modifica dell'allineamento, vedere:  
-  
--   [pack](../preprocessor/pack.md)  
-  
--   [align](../cpp/align-cpp.md)  
-  
--   [__unaligned](../cpp/unaligned.md)  
-  
--   [/Zp (allineamento membri struct)](../build/reference/zp-struct-member-alignment.md)  
-  
--   [Esempi di allineamento di strutture](../build/examples-of-structure-alignment.md) (specifico per x64)  
-  
- Per altre informazioni sulle differenze nell'allineamento nel codice per x86 e x64, vedere:  
-  
--   [Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+```
+
+## <a name="remarks"></a>Note
+
+Ad esempio:
+
+|Espressione|Valore|
+|----------------|-----------|
+|**__alignof( char )**|1|
+|**__alignof( short )**|2|
+|**__alignof( int )**|4|
+|**__alignof( \__int64 )**|8|
+|**__alignof( float )**|4|
+|**alignof (double)**|8|
+|**__alignof( char\* )**|4|
+
+Il **alignof** valore è identico al valore per `sizeof` per i tipi di base. Si consideri, in ogni caso, il seguente esempio:
+
+```cpp
+typedef struct { int a; double b; } S;
+// __alignof(S) == 8
+```
+
+In questo caso, il **alignof** valore è il requisito di allineamento dell'elemento più grande nella struttura.
+
+Analogamente, per
+
+```cpp
+typedef __declspec(align(32)) struct { int a; } S;
+```
+
+`__alignof(S)` è uguale a `32`.
+
+È possibile utilizzare **alignof** sarebbe come parametro a una delle proprie routine di allocazione della memoria. Ad esempio, data la seguente struttura definita `S`, si potrebbe chiamare una routine di allocazione della memoria denominata `aligned_malloc` per allocare memoria su un particolare limite di allineamento.
+
+```cpp
+typedef __declspec(align(32)) struct { int a; double b; } S;
+int n = 50; // array size
+S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
+```
+
+Per altre informazioni sulla modifica dell'allineamento, vedere:
+
+- [pack](../preprocessor/pack.md)
+
+- [align](../cpp/align-cpp.md)
+
+- [__unaligned](../cpp/unaligned.md)
+
+- [/Zp (allineamento membri struct)](../build/reference/zp-struct-member-alignment.md)
+
+- [Esempi di allineamento di strutture](../build/examples-of-structure-alignment.md) (specifico per x64)
+
+Per altre informazioni sulle differenze nell'allineamento nel codice per x86 e x64, vedere:
+
+- [Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

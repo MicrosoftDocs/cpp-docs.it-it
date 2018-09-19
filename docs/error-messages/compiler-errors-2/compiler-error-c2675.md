@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2675 | Documenti Microsoft
+title: Errore del compilatore C2675 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb949f5d6ab5881b911bab89150ae13f47443fcf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1772f6e88516e7c8c1498f84d180ab6c4e0e05ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102404"
 ---
 # <a name="compiler-error-c2675"></a>Errore del compilatore C2675
-'operatore' unario: 'type' non definisce questo operatore né una conversione in un tipo accettabile dall'operatore predefinito  
-  
- C2675 può verificarsi anche quando si usa un operatore unario, e il tipo non definisce l'operatore né una conversione in un tipo accettabile dall'operatore predefinito. Per usare l'operatore, è necessario eseguirne l'overload per il tipo specificato o definire una conversione in un tipo per cui l'operatore è definito.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C2675.  
-  
-```  
-// C2675.cpp  
-struct C {   
-   C(){}  
-} c;  
-  
-struct D {   
-   D(){}  
-   void operator-(){}  
-} d;  
-  
-int main() {  
-   -c;   // C2675  
-   -d;   // OK  
-}  
+
+unario 'operator': 'type' non definisce questo operatore né una conversione in un tipo accettabile dall'operatore predefinito
+
+C2675 può verificarsi anche quando si usa un operatore unario, e il tipo non definisce l'operatore né una conversione in un tipo accettabile dall'operatore predefinito. Per usare l'operatore, è necessario eseguirne l'overload per il tipo specificato o definire una conversione in un tipo per cui l'operatore è definito.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C2675.
+
+```
+// C2675.cpp
+struct C {
+   C(){}
+} c;
+
+struct D {
+   D(){}
+   void operator-(){}
+} d;
+
+int main() {
+   -c;   // C2675
+   -d;   // OK
+}
 ```

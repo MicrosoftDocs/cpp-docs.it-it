@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3539 | Documenti Microsoft
+title: Errore del compilatore C3539 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f704bd283ab5228a8988d587707e978aa5b49e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b2f78b69e00290dcc283e3fc340d25a4a071776
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256402"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091881"
 ---
 # <a name="compiler-error-c3539"></a>Errore del compilatore C3539
-'type': un argomento di modello non può essere un tipo che contiene 'auto'  
-  
- Il tipo di argomento di modello indicato non può contenere un utilizzo del `auto` (parola chiave).  
-  
-### <a name="to-correct-this-error"></a>Per correggere l'errore  
-  
-1.  Non si specifica l'argomento del modello con il `auto` (parola chiave).  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3539.  
-  
-```  
-// C3539.cpp  
-// Compile with /Zc:auto  
-template<class T> class C{};  
-int main()  
-{  
-   C<auto> c;   // C3539  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Auto (parola chiave)](../../cpp/auto-keyword.md)
+
+'type': un argomento di modello non può essere un tipo che contiene 'auto'
+
+Il tipo di argomento di modello specificato non può contenere un utilizzo del `auto` (parola chiave).
+
+### <a name="to-correct-this-error"></a>Per correggere l'errore
+
+1. Non si specifica l'argomento di modello con il `auto` (parola chiave).
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente generato l'errore C3539.
+
+```
+// C3539.cpp
+// Compile with /Zc:auto
+template<class T> class C{};
+int main()
+{
+   C<auto> c;   // C3539
+   return 0;
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Auto (parola chiave)](../../cpp/auto-keyword.md)

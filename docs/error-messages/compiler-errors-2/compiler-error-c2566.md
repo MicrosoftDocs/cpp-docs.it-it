@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2566 | Documenti Microsoft
+title: Errore del compilatore C2566 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7685a7633aa06424f1999fbf539dbfd8b62703
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 868098b6f939fe95166b7228566e19f710f19ee5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094910"
 ---
 # <a name="compiler-error-c2566"></a>Errore del compilatore C2566
-funzione in overload in espressione condizionale  
-  
- Impossibile valutare una funzione in overload in un'espressione condizionale.
+
+funzione in overload in espressione condizionale
+
+Una funzione in overload in un'espressione condizionale non è possibile valutare.

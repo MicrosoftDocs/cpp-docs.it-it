@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1065 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1065 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a0d5c202320d7dd7eded32e1a2c326b7bf8c5f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f37a654fec1783a8aecb6a6cf7f3dc84ca75840
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103954"
 ---
 # <a name="nmake-fatal-error-u1065"></a>Errore irreversibile U1065 di NMAKE 
-opzione 'opzione' non valida  
-  
- L'opzione non è valida.
+
+opzione 'opzione' non valida
+
+L'opzione non è valido per NMAKE.

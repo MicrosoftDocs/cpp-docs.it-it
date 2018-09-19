@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70ac6f333312fc62854478897912fc28f3c2f8e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756561"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093961"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e i controlli a un progetto ATL
 
@@ -56,10 +56,10 @@ ms.locfileid: "43756561"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)   
-[Tipi di progetto Visual C++](../../ide/visual-cpp-project-types.md)   
-[Creazione di progetti desktop tramite le creazioni guidate applicazioni](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Nozioni fondamentali su oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
-[Programmazione con codice di runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Tipi di progetto Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Creazione di progetti desktop tramite le creazioni guidate applicazioni](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
 

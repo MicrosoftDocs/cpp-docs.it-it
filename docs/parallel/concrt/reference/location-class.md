@@ -1,5 +1,5 @@
 ---
-title: Classe Location | Documenti Microsoft
+title: Classe Location | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104764"
 ---
 # <a name="location-class"></a>Classe location
 Un'astrazione di una posizione fisica sull'hardware.  
@@ -42,8 +42,8 @@ class location;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Percorso](#ctor)|Di overload. Costruisce un oggetto `location`.|  
-|[~ percorso distruttore](#dtor)|Elimina un oggetto `location`.|  
+|[Posizione](#ctor)|Di overload. Costruisce un oggetto `location`.|  
+|[~ location distruttore](#dtor)|Elimina un oggetto `location`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -68,7 +68,7 @@ class location;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="dtor"></a> ~ percorso 
+##  <a name="dtor"></a> ~ location 
 
  Elimina un oggetto `location`.  
   
@@ -96,13 +96,13 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_NumaNodeNumber`  
- Numero del nodo NUMA per cui costruire una posizione.  
+*_NumaNodeNumber*<br/>
+Numero del nodo NUMA per cui costruire una posizione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Posizione che rappresenta il nodo NUMA specificato dal parametro `_NumaNodeNumber`.  
   
-##  <a name="ctor"></a> Percorso 
+##  <a name="ctor"></a> Posizione 
 
  Costruisce un oggetto `location`.  
   
@@ -120,12 +120,17 @@ location(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Src`  
- `_LocationType`  
- `_Id`  
- `_BindingId`  
- `_PBinding`  
-  
+*_Src*<br/>
+
+*_LocationType*<br/>
+
+*ID*<br/>
+
+*_BindingId*<br/>
+
+*_PBinding*<br/>
+(Facoltativo) Puntatore di associazione.
+
 ### <a name="remarks"></a>Note  
  Una posizione costruita predefinita rappresenta il sistema nel suo complesso.  
   
@@ -138,7 +143,8 @@ bool operator!= (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rhs`  
+*_Rhs*<br/>
+Operando `location`.
   
 ### <a name="return-value"></a>Valore restituito  
  `true` se le due posizioni sono diverse; in caso contrario `false`.  
@@ -152,8 +158,8 @@ location& operator= (const location& _Rhs);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rhs`  
- Oggetto `location` di origine.  
+*_Rhs*<br/>
+Oggetto `location` di origine.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -166,10 +172,11 @@ bool operator== (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rhs`  
+*_Rhs*<br/>
+Operando `location`.
   
 ### <a name="return-value"></a>Valore restituito  
- `true` Se i due percorsi sono identici, e `false` in caso contrario.  
+ `true` Se le due posizioni sono identiche, e `false` in caso contrario.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)

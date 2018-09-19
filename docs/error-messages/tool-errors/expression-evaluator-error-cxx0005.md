@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0005 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0005 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203af51226bddd09e67f1d04efba7f97f19f0850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2dc22555b84a0726aa9ce0da8ce225c00a9d037
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094572"
 ---
 # <a name="expression-evaluator-error-cxx0005"></a>Errore dell‘analizzatore di espressioni CXX0005
-operatore non è supportato  
-  
- È stato specificato un operatore C non supportato in un'espressione. Scrivere un'espressione equivalente utilizzando gli operatori C supportati.  
-  
- Questo errore è identico all'errore CAN0005.
+
+operatore non supportato
+
+È stato specificato un operatore di C non supportato in un'espressione. Scrivere un'espressione equivalente che usa gli operatori C supportati.
+
+Questo errore è identico all'errore CAN0005.
