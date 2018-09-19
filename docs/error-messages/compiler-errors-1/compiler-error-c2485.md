@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2485 | Documenti Microsoft
+title: Errore del compilatore C2485 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf668f70d0d55c81744119e77fbb3bd24630493a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe33462f5f2e5e958a70823a6b4652882860ba0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046628"
 ---
 # <a name="compiler-error-c2485"></a>Errore del compilatore C2485
-'identifier': attributo esteso non riconosciuto  
-  
- L'attributo di dichiarazione non è valido.
+
+'identifier': attributo esteso non riconosciuto
+
+L'attributo di dichiarazione non è valido.

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2264 | Documenti Microsoft
+title: Errore del compilatore C2264 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8942c5537e7129c5ecd8b8ac6956fdd6c9e1efaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5b6f2cdf7a0c9708a34acd3e73241e942b2194b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045874"
 ---
 # <a name="compiler-error-c2264"></a>Errore del compilatore C2264
-'function': errore nella definizione di funzione o dichiarazione. funzione non chiamata.  
-  
- Impossibile chiamare la funzione a causa di una dichiarazione o definizione non corretta.  
-  
- L'esempio seguente genera l'errore C2264:  
-  
-```  
-// C2264.cpp  
-struct C {  
-   // Delete the following line to resolve.  
-   operator int(int = 0){}   // incorrect declaration  
-};  
-  
-struct D {  
-   operator int(){return 0;}   // OK  
-};  
-  
-int main() {  
-   int i;  
-  
-   C c;  
-   i = c;   // C2264  
-  
-   D d;  
-   i = d;   // OK  
-}  
+
+'function': errore nella definizione di funzione o dichiarazione. funzione non chiamata.
+
+La funzione non può essere chiamata a causa di una dichiarazione o definizione non corretta.
+
+L'esempio seguente genera l'errore C2264:
+
+```
+// C2264.cpp
+struct C {
+   // Delete the following line to resolve.
+   operator int(int = 0){}   // incorrect declaration
+};
+
+struct D {
+   operator int(){return 0;}   // OK
+};
+
+int main() {
+   int i;
+
+   C c;
+   i = c;   // C2264
+
+   D d;
+   i = d;   // OK
+}
 ```

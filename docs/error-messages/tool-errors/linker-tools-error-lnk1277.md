@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1277 errore | Documenti Microsoft
+title: Strumenti del linker LNK1277 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec8f00793fcda748c60d9d8ea775611e3d025cd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c48bd23b3f84ab301404987c77d964f51823e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082526"
 ---
 # <a name="linker-tools-error-lnk1277"></a>Errore degli strumenti del linker LNK1277
-record dell'oggetto non trovato in pgd (nomefile)  
-  
- Quando si utilizza [PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), il percorso di uno dei file di input lib, def o obj è diverso dal percorso in cui sono stati trovati durante /LTCG: PGINSTRUMENT. Può essere spiegato da una modifica nella variabile di ambiente LIB dopo /LTCG: PGINSTRUMENT. Il percorso completo per i file di input viene archiviato nel file pgd.  
-  
- /LTCG: PGOPTIMIZE richiede che gli input siano identiche alla fase di /LTCG: PGINSTRUMENT.  
-  
- Per risolvere il problema, effettuare una delle seguenti operazioni:  
-  
--   Esecuzione di /LTCG: PGINSTRUMENT, ripristinare tutte le esecuzioni di test ed eseguire /LTCG: PGOPTIMIZE.  
-  
--   Modificare la variabile di ambiente LIB in vigore al momento dell'esecuzione di /LTCG: PGINSTRUMENT.  
-  
- Non è consigliabile risolvere LNK1277 utilizzando /LTCG: PGUPDATE.
+
+record dell'oggetto non trovato in pgd (filename)
+
+Quando si usa [PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), il percorso di uno dei file di input def,. lib o obj è diverso dal percorso in cui sono stati trovati durante /LTCG: PGINSTRUMENT. Questo può essere spiegato da una modifica nella variabile di ambiente LIB dopo /LTCG: PGINSTRUMENT. Il percorso completo al file di input viene archiviato nel file con estensione pgd.
+
+/LTCG: PGOPTIMIZE richiede che gli input sia identica alla fase di /LTCG: PGINSTRUMENT.
+
+Per risolvere questo problema, effettuare una delle operazioni seguenti:
+
+- Esecuzione di /LTCG: PGINSTRUMENT, ripristinare tutte le esecuzioni di test ed eseguire /LTCG: PGOPTIMIZE.
+
+- Modificare la variabile di ambiente LIB in vigore al momento dell'esecuzione di /LTCG: PGINSTRUMENT.
+
+Non è consigliabile risolvere LNK1277 con /LTCG: PGUPDATE.

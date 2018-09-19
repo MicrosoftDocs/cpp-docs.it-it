@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7be7709baadff35c10cec861b4a0bca94c8cbe5f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337170"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082417"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementazione di un consumer semplice
+
 Gli argomenti seguenti illustrano come modificare i file creati dalla creazione guidata applicazione MFC e creazione guidata Consumer OLE DB ATL per creare un consumer semplice. Questo esempio è costituito dalle parti seguenti:  
   
--   "Il recupero dei dati con il Consumer" viene illustrato come implementare il codice del consumer che legge tutti i dati, riga per riga, da una tabella di database.  
+- "Il recupero dei dati con il Consumer" viene illustrato come implementare il codice del consumer che legge tutti i dati, riga per riga, da una tabella di database.  
   
--   "Aggiunta di segnalibro supporto per il Consumer" viene illustrato come aggiungere supporto per segnalibro al consumer.  
+- "Aggiunta di segnalibro supporto per il Consumer" viene illustrato come aggiungere supporto per segnalibro al consumer.  
   
--   "Aggiunta di supporto XML per il Consumer" viene illustrato come modificare il codice consumer per restituire i dati di set di righe recuperato come dati XML.  
+- "Aggiunta di supporto XML per il Consumer" viene illustrato come modificare il codice consumer per restituire i dati di set di righe recuperato come dati XML.  
   
 > [!NOTE]
 >  È possibile usare l'applicazione consumer descritte in questa sezione per testare il provider di esempio MyProv e Provider.  
@@ -45,7 +46,7 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
   
 #### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Per modificare l'applicazione console per utilizzare l'applicazione consumer OLE DB  
   
-1.  In MyCons, modificare il codice principale inserendo il testo in grassetto, come indicato di seguito:  
+1. In MyCons, modificare il codice principale inserendo il testo in grassetto, come indicato di seguito:  
   
     ```cpp  
     // MyCons.cpp : Defines the entry point for the console application.  
@@ -73,30 +74,31 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
     ```  
   
 ## <a name="adding-bookmark-support-to-the-consumer"></a>Aggiunta del supporto di segnalibro al Consumer  
- Un segnalibro è una colonna che identifica in modo univoco le righe della tabella. In genere si tratta della colonna chiave, ma non sempre; è specifico del provider. Questa sezione illustra come aggiungere il supporto di segnalibro. A tale scopo, è necessario eseguire le operazioni seguenti nella classe di record utente:  
+
+Un segnalibro è una colonna che identifica in modo univoco le righe della tabella. In genere si tratta della colonna chiave, ma non sempre; è specifico del provider. Questa sezione illustra come aggiungere il supporto di segnalibro. A tale scopo, è necessario eseguire le operazioni seguenti nella classe di record utente:  
   
--   Creare un'istanza di segnalibri. Si tratta di oggetti di tipo [CBookmark](../../data/oledb/cbookmark-class.md).  
+- Creare un'istanza di segnalibri. Si tratta di oggetti di tipo [CBookmark](../../data/oledb/cbookmark-class.md).  
   
--   Richiedere una colonna del segnalibro dal provider impostando il `DBPROP_IRowsetLocate` proprietà.  
+- Richiedere una colonna del segnalibro dal provider impostando il `DBPROP_IRowsetLocate` proprietà.  
   
--   Aggiungere una voce segnalibro alla mappa delle colonne utilizzando il [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.  
+- Aggiungere una voce segnalibro alla mappa delle colonne utilizzando il [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.  
   
- I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro con cui operare. Questo esempio di codice viene illustrato un segnalibro come indicato di seguito:  
+I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro con cui operare. Questo esempio di codice viene illustrato un segnalibro come indicato di seguito:  
   
--   Aprire un file per la scrittura.  
+- Aprire un file per la scrittura.  
   
--   Dati del set di righe di output per il file riga per riga.  
+- Dati del set di righe di output per il file riga per riga.  
   
--   Sposta il cursore del set di righe al segnalibro chiamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
+- Sposta il cursore del set di righe al segnalibro chiamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
   
--   La riga con segnalibro, aggiungerlo alla fine del file di output.  
+- La riga con segnalibro, aggiungerlo alla fine del file di output.  
   
 > [!NOTE]
 >  Se si usa un'applicazione consumer per testare l'applicazione di provider di esempio di Provider, omettere il supporto per segnalibro descritte in questa sezione.  
   
 #### <a name="to-instantiate-the-bookmark"></a>Per creare un'istanza del segnalibro  
   
-1.  La funzione di accesso deve contenere un oggetto di tipo [CBookmark](../../data/oledb/cbookmark-class.md). Il *nSize* parametro specifica la dimensione del buffer del segnalibro in byte, in genere 4 per piattaforme a 32 bit e 8 per le piattaforme a 64 bit. Per i membri dati delle colonne nella classe di record utente, aggiungere la dichiarazione seguente:  
+1. La funzione di accesso deve contenere un oggetto di tipo [CBookmark](../../data/oledb/cbookmark-class.md). Il *nSize* parametro specifica la dimensione del buffer del segnalibro in byte, in genere 4 per piattaforme a 32 bit e 8 per le piattaforme a 64 bit. Per i membri dati delle colonne nella classe di record utente, aggiungere la dichiarazione seguente:  
   
     ```cpp  
     //////////////////////////////////////////////////////////////////////  
@@ -111,7 +113,7 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
   
 #### <a name="to-request-a-bookmark-column-from-the-provider"></a>Per richiedere una colonna del segnalibro del provider  
   
-1.  Aggiungere il codice seguente nel `GetRowsetProperties` metodo nella classe di record utente:  
+1. Aggiungere il codice seguente nel `GetRowsetProperties` metodo nella classe di record utente:  
   
     ```cpp  
     // Set the DBPROP_IRowsetLocate property.  
@@ -125,7 +127,7 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
   
 #### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Per aggiungere una voce segnalibro alla mappa delle colonne  
   
-1.  Aggiungere la voce seguente alla mappa delle colonne nella classe di record utente:  
+1. Aggiungere la voce seguente alla mappa delle colonne nella classe di record utente:  
   
     ```cpp  
     // Set a bookmark entry in the column map.  
@@ -139,7 +141,7 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
   
 #### <a name="to-use-a-bookmark-in-your-main-code"></a>Per utilizzare un segnalibro nel codice principale  
   
-1.  File MyCons. cpp dell'applicazione console creata in precedenza, modificare il codice principale come segue. Per usare i segnalibri, il codice principale deve creare un'istanza di un proprio oggetto segnalibro (`myBookmark`); si tratta di un segnalibro diverso da quello nella funzione di accesso (`m_bookmark`).  
+1. File MyCons. cpp dell'applicazione console creata in precedenza, modificare il codice principale come segue. Per usare i segnalibri, il codice principale deve creare un'istanza di un proprio oggetto segnalibro (`myBookmark`); si tratta di un segnalibro diverso da quello nella funzione di accesso (`m_bookmark`).  
   
     ```cpp  
     ///////////////////////////////////////////////////////////////////////  
@@ -208,14 +210,15 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
     }  
     ```  
   
- Per altre informazioni sui segnalibri, vedere [mediante segnalibri](../../data/oledb/using-bookmarks.md). Sono inoltre riportati alcuni esempi di segnalibri nel [aggiornamento dei rowset](../../data/oledb/updating-rowsets.md).  
+Per altre informazioni sui segnalibri, vedere [mediante segnalibri](../../data/oledb/using-bookmarks.md). Sono inoltre riportati alcuni esempi di segnalibri nel [aggiornamento dei rowset](../../data/oledb/updating-rowsets.md).  
   
 ## <a name="adding-xml-support-to-the-consumer"></a>Aggiunta del supporto XML per il Consumer  
- Come descritto in [l'accesso ai dati XML](../../data/oledb/accessing-xml-data.md), esistono due modi per recuperare i dati XML da un'origine dati: uso [CStreamRowset](../../data/oledb/cstreamrowset-class.md) o usando [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Questo esempio Usa `CStreamRowset`, che risulta più efficiente, ma è necessario avere SQL Server 2000 in esecuzione nel computer in cui si esegue questa applicazione di esempio.  
+
+Come descritto in [l'accesso ai dati XML](../../data/oledb/accessing-xml-data.md), esistono due modi per recuperare i dati XML da un'origine dati: uso [CStreamRowset](../../data/oledb/cstreamrowset-class.md) o usando [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Questo esempio Usa `CStreamRowset`, che risulta più efficiente, ma è necessario avere SQL Server 2000 in esecuzione nel computer in cui si esegue questa applicazione di esempio.  
   
 #### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Modificare la classe di comando da cui ereditare CStreamRowset  
   
-1.  Nell'applicazione consumer creato in precedenza, modificare il `CCommand` dichiarazione specificare `CStreamRowset` come classe di rowset come indicato di seguito:  
+1. Nell'applicazione consumer creato in precedenza, modificare il `CCommand` dichiarazione specificare `CStreamRowset` come classe di rowset come indicato di seguito:  
   
     ```cpp  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
@@ -223,7 +226,7 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
   
 #### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Per modificare il codice principale per recuperare e visualizzare i dati XML  
   
-1.  File MyCons. cpp dell'applicazione console creata in precedenza, modificare il codice principale come segue:  
+1. File MyCons. cpp dell'applicazione console creata in precedenza, modificare il codice principale come segue:  
   
     ```cpp  
     ///////////////////////////////////////////////////////////////////////  
@@ -279,4 +282,5 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

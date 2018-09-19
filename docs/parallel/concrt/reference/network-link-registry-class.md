@@ -1,5 +1,5 @@
 ---
-title: Classe network_link_registry | Documenti Microsoft
+title: Classe network_link_registry | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae551c934c4286a321772fb01a21260c36dfccff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080324"
 ---
 # <a name="networklinkregistry-class"></a>Classe network_link_registry
 La classe base astratta `network_link_registry` gestisce i collegamenti tra i blocchi di origine e blocchi di destinazione.  
@@ -40,8 +40,8 @@ class network_link_registry;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_Block`  
- Tipo di dati di blocco memorizzato nel `network_link_registry`.  
+*_Block*<br/>
+Tipo di dati di blocco vengano archiviate nel `network_link_registry`.  
   
 ## <a name="members"></a>Membri  
   
@@ -49,19 +49,19 @@ class network_link_registry;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`const_pointer`|Un tipo che fornisce un puntatore a un `const` elemento in un `network_link_registry` oggetto.|  
-|`const_reference`|Un tipo che fornisce un riferimento a un `const` elemento archiviato in un `network_link_registry` oggetto per la lettura e l'esecuzione di operazioni const.|  
-|`iterator`|Un tipo che fornisce un iteratore che può leggere o modificare qualsiasi elemento in un `network_link_registry` oggetto.|  
-|`type`|Un tipo che rappresenta il tipo di blocco memorizzato nel `network_link_registry` oggetto.|  
+|`const_pointer`|Tipo che fornisce un puntatore a un `const` elemento in un `network_link_registry` oggetto.|  
+|`const_reference`|Tipo che fornisce un riferimento a un `const` elemento archiviato in un `network_link_registry` oggetto per la lettura e l'esecuzione di operazioni di const.|  
+|`iterator`|Tipo che fornisce un iteratore che può leggere o modificare qualsiasi elemento in un `network_link_registry` oggetto.|  
+|`type`|Un tipo che rappresenta il tipo di blocco archiviato nel `network_link_registry` oggetto.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[add](#add)|Quando sottoposto a override in una classe derivata, aggiunge un collegamento al `network_link_registry` oggetto.|  
-|[begin](#begin)|Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento nel `network_link_registry` oggetto.|  
-|[contiene](#contains)|Quando sottoposto a override in una classe derivata, Cerca il `network_link_registry` oggetto per un blocco specificato.|  
-|[count](#count)|In caso di override in una classe derivata, restituisce il numero di elementi di `network_link_registry` oggetto.|  
+|[add](#add)|Quando sottoposto a override in una classe derivata, aggiunge un collegamento per il `network_link_registry` oggetto.|  
+|[begin](#begin)|Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento nel file di `network_link_registry` oggetto.|  
+|[Contiene](#contains)|Quando sottoposto a override in una classe derivata, Cerca il `network_link_registry` oggetto per un blocco specificato.|  
+|[count](#count)|Quando sottoposto a override in una classe derivata, restituisce il numero di elementi nel `network_link_registry` oggetto.|  
 |[remove](#remove)|Quando sottoposto a override in una classe derivata, rimuove un blocco specificato da di `network_link_registry` oggetto.|  
   
 ## <a name="remarks"></a>Note  
@@ -77,31 +77,31 @@ class network_link_registry;
   
 ##  <a name="add"></a> Aggiungere 
 
- Quando sottoposto a override in una classe derivata, aggiunge un collegamento al `network_link_registry` oggetto.  
+ Quando sottoposto a override in una classe derivata, aggiunge un collegamento per il `network_link_registry` oggetto.  
   
 ```
 virtual void add(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Link`  
- Un puntatore a un blocco da aggiungere.  
+*Collega*<br/>
+Un puntatore a un blocco da aggiungere.  
   
-##  <a name="begin"></a> Begin 
+##  <a name="begin"></a> iniziare 
 
- Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento nel `network_link_registry` oggetto.  
+ Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento nel file di `network_link_registry` oggetto.  
   
 ```
 virtual iterator begin() = 0;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Iteratore che punta al primo elemento di `network_link_registry` oggetto.  
+ Un iteratore che punta al primo elemento di `network_link_registry` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Viene indicato lo stato finale dell'iteratore da un `NULL` collegamento.  
+ Lo stato finale dell'iteratore è indicato da un `NULL` collegamento.  
   
-##  <a name="contains"></a> contiene 
+##  <a name="contains"></a> Contiene 
 
  Quando sottoposto a override in una classe derivata, Cerca il `network_link_registry` oggetto per un blocco specificato.  
   
@@ -110,24 +110,24 @@ virtual bool contains(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Link`  
- Un puntatore a un blocco che viene cercato nel `network_link_registry` oggetto.  
+*Collega*<br/>
+Un puntatore a un blocco che viene cercato nel `network_link_registry` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se il blocco è stato trovato, `false` in caso contrario.  
   
-##  <a name="count"></a> Conteggio 
+##  <a name="count"></a> conteggio 
 
- In caso di override in una classe derivata, restituisce il numero di elementi di `network_link_registry` oggetto.  
+ Quando sottoposto a override in una classe derivata, restituisce il numero di elementi nel `network_link_registry` oggetto.  
   
 ```
 virtual size_t count() = 0;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il numero di elementi di `network_link_registry` oggetto.  
+ Il numero di elementi nel `network_link_registry` oggetto.  
   
-##  <a name="remove"></a> Rimuovere 
+##  <a name="remove"></a> Rimuovi 
 
  Quando sottoposto a override in una classe derivata, rimuove un blocco specificato da di `network_link_registry` oggetto.  
   
@@ -136,8 +136,8 @@ virtual bool remove(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Link`  
- Un puntatore a un blocco da rimuovere, se trovato.  
+*Collega*<br/>
+Un puntatore a un blocco deve essere rimosso, se trovato.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true` Se il collegamento è stato trovato e rimosso, `false` in caso contrario.  

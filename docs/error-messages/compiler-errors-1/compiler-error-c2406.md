@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2406 | Documenti Microsoft
+title: Errore del compilatore C2406 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88d9d9e485f632ac4e4a65d109f2bf39265c5f12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a68a2b152ce90db7a6f4de665e0d625e1c6ad7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223767"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047187"
 ---
 # <a name="compiler-error-c2406"></a>Errore del compilatore C2406
-'identifier': nome non definito in 'context'  
-  
- Un identificatore non definito viene usato con il `SIZE`, `LENGTH`, o un operatore di selezione dei membri (.).
+
+'identifier': nome non definito in 'context'
+
+Viene usato un identificatore non definito con la `SIZE`, `LENGTH`, o un operatore di selezione dei membri (.).

@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4086 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4086 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b3ad3a8ceebf97ccdcf7a1d8079886f54a3984
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21a2ee7660f0ad78d04f7edb191929296c8d47a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079232"
 ---
 # <a name="linker-tools-warning-lnk4086"></a>Avviso degli strumenti del linker LNK4086
-punto di ingresso 'function' non è stdcall con 'numero' byte di argomenti; immagine non può essere eseguita  
-  
- Il punto di ingresso per una DLL deve essere `__stdcall`. Ricompilare la funzione con il [/Gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) oppure specificare `__stdcall` o WINAPI nella definizione della funzione.
+
+punto di ingresso 'function' non è stdcall con 'numero' byte di argomenti; immagine non venga eseguita
+
+Deve essere il punto di ingresso per una DLL `__stdcall`. Ricompilare la funzione con il [/Gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) oppure specificare `__stdcall` o WINAPI quando si definisce la funzione.

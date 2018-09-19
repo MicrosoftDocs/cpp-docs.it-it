@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2070 | Documenti Microsoft
+title: Errore del compilatore C2070 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8eaf9ee345543fe838358c345e68874eecadd72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b23daf8a8c25e132aa0717715a742352537010c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165178"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044080"
 ---
 # <a name="compiler-error-c2070"></a>Errore del compilatore C2070
-'type': operando di sizeof non valido  
-  
- Il [sizeof](../../cpp/sizeof-operator.md) operatore richiede un'espressione o un tipo di nome.  
-  
- L'esempio seguente genera l'errore C2070:  
-  
-```  
-// C2070.cpp  
-void func() {}  
-int main() {  
-   int a;  
-   a = sizeof(func);   // C2070  
-}  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2070b.cpp  
-void func() {}  
-int main() {  
-   int a;  
-   a = sizeof(a);  
-}  
+
+'type': operando di sizeof non valido
+
+Il [sizeof](../../cpp/sizeof-operator.md) operatore richiede un'espressione o digitare un nome.
+
+L'esempio seguente genera l'errore C2070:
+
+```
+// C2070.cpp
+void func() {}
+int main() {
+   int a;
+   a = sizeof(func);   // C2070
+}
+```
+
+Possibile soluzione:
+
+```
+// C2070b.cpp
+void func() {}
+int main() {
+   int a;
+   a = sizeof(a);
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4167 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4167 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c72d6fd88b8c4797b2e352d6d30dbf797a23a00d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c154a91c21bf0b35493bb8033e5453ef1c536267
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082183"
 ---
 # <a name="compiler-warning-level-1-c4167"></a>Avviso del compilatore (livello 1) C4167
-funzione: disponibile solo come funzione intrinseca  
-  
- **#pragma function** prova a forzare nel compilatore l'uso di una chiamata convenzionale a una funzione che deve essere usata nel formato intrinseco, pertanto la direttiva pragma viene ignorata.  
-  
- Per evitare la visualizzazione dell'avviso, rimuovere **#pragma function**.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// C4167.cpp  
-// compile with: /W1  
-#include <malloc.h>  
-#pragma function(_alloca )   // C4167: _alloca() is intrinsic only  
-int main(){}  
+
+funzione: disponibile solo come funzione intrinseca
+
+**#pragma function** prova a forzare nel compilatore l'uso di una chiamata convenzionale a una funzione che deve essere usata nel formato intrinseco, pertanto la direttiva pragma viene ignorata.
+
+Per evitare la visualizzazione dell'avviso, rimuovere **#pragma function**.
+
+## <a name="example"></a>Esempio
+
+```
+// C4167.cpp
+// compile with: /W1
+#include <malloc.h>
+#pragma function(_alloca )   // C4167: _alloca() is intrinsic only
+int main(){}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Classe float_3 | Documenti Microsoft
+title: Classe float_3 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -84,15 +84,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0579a728210dc74db13faaae7ea4c7161ad4142e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8fdc665fea4aefe744850a5b2ca2565cb32fae3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047564"
 ---
 # <a name="float3-class"></a>Classe float_3
-Rappresenta uno short vector di tre elementi mobili.  
+Rappresenta un vettore short di tre valori a virgola mobile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -112,7 +112,7 @@ class float_3;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore float_3](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore float_3](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -219,7 +219,7 @@ class float_3;
   
 ##  <a name="ctor"></a> float_3 
 
- Predefinito, costruttore inizializza tutti gli elementi con 0.  
+ Default costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 float_3() restrict(amp,
@@ -269,20 +269,20 @@ explicit inline float_3(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V0`  
- Il valore per inizializzare l'elemento 0.  
+*_V0*<br/>
+Il valore per inizializzare l'elemento 0.  
   
- `_V1`  
- Il valore per inizializzare l'elemento 1.  
+*V1*<br/>
+Il valore per inizializzare l'elemento 1.  
   
- `_V2`  
- Il valore per inizializzare l'elemento 2.  
+*_V2*<br/>
+Il valore per inizializzare l'elemento 2.  
   
- `_V`  
- Il valore per l'inizializzazione.  
+*ISOLA*<br/>
+Il valore di inizializzazione.  
   
- `_Other`  
- Oggetto utilizzato per inizializzare.  
+*_Other*<br/>
+Oggetto utilizzato per inizializzare.  
   
 ##  <a name="float_3__size"></a> Dimensioni 
 

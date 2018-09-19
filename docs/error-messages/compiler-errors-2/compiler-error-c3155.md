@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3155 | Documenti Microsoft
+title: Errore del compilatore C3155 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383727d6f1665544654c047f37f094a38d6b5309
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b4000c9e7d3f175c243d4d3761216f4acface8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076476"
 ---
 # <a name="compiler-error-c3155"></a>Errore del compilatore C3155
-attributi non consentiti in un indicizzatore di proprietà  
-  
-Una proprietà indicizzata è stata dichiarata in modo non corretto. Per ulteriori informazioni, vedere [procedura: utilizzare le proprietà in C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Esempio  
-L'esempio seguente genera l'errore C3155.  
-  
-```  
-// C3155.cpp  
-// compile with: /clr /c  
-using namespace System;  
-ref struct R {  
-   property int F[[ParamArray] int] {   // C3155  
-   // try the following line instead  
-   // property int F[ int] {   // OK  
-      int get(int i) {   
-         return 0;   
-      }  
-   }  
-};  
+
+atributy nejsou povolené. in un indicizzatore di proprietà
+
+È stata dichiarata in modo errato una proprietà indicizzata. Per altre informazioni, vedere [procedura: utilizzare le proprietà in C + + c++ /CLI CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3155.
+
+```
+// C3155.cpp
+// compile with: /clr /c
+using namespace System;
+ref struct R {
+   property int F[[ParamArray] int] {   // C3155
+   // try the following line instead
+   // property int F[ int] {   // OK
+      int get(int i) {
+         return 0;
+      }
+   }
+};
 ```

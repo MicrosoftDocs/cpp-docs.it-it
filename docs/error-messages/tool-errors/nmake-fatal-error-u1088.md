@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1088 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1088 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3934e39cd87bd41432e90af1b7053815e5e44ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72f09dec61cec9870627682e9413d98e0d623188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109756"
 ---
 # <a name="nmake-fatal-error-u1088"></a>Errore irreversibile U1088 di NMAKE 
-separatore non valido ':: ' nella regola di inferenza  
-  
- Una regola di inferenza deve essere seguita da un unico carattere due punti (**:**).
+
+separatore non valido ':: ' regola di inferenza
+
+Una regola di inferenza dei tipi deve essere seguita da un unico carattere due punti (**:**).

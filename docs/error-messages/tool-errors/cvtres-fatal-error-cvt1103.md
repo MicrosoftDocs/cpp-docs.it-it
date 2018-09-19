@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile CVT1103 di CVTRES | Documenti Microsoft
+title: Errore irreversibile CVT1103 di CVTRES | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c357714eb4118caa989fb86eb7d733518b7fd873
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5c9f77d15b77ff55abf500b626ff23328639a0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050385"
 ---
 # <a name="cvtres-fatal-error-cvt1103"></a>Errore irreversibile CVT1103 di CVTRES
-Impossibile leggere il nome di file  
-  
- Si è verificato un errore irreversibile durante il tentativo di leggere il file specificato con CVTRES.  
-  
- Questo errore può essere causato dal danneggiamento dei file.
+
+non è possibile leggere filename
+
+Si è verificato un errore irreversibile durante il tentativo di leggere il file indicato di CVTRES.
+
+Questo errore può essere causato dal danneggiamento dei file.

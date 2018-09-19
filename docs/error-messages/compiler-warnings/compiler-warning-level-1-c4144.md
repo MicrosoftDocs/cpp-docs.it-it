@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4144 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4144 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b84e8a062871bfaa1d83da50175e3485f2d8bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba9c1210247ad537f8fa1224c30b1c88d9c6b721
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109665"
 ---
-# <a name="compiler-warning-level-1-c4144"></a>Compilatore (livello 1) Avviso C4144
-'expression': espressione relazionale come espressione switch  
-  
- L'espressione relazionale specificata è stata utilizzata come espressione di controllo di un [passare](../../cpp/switch-statement-cpp.md) istruzione. Le istruzioni case associate verranno offerta valori booleani. L'esempio seguente genera l'errore C4144:  
-  
-```  
-// C4144.cpp  
-// compile with: /W1  
-int main()  
-{  
-   int i = 0;  
-   switch(!i) {   // C4144, remove the ! to resolve  
-      case 1:  
-         break;  
-      default:  
-         break;  
-   }  
-}  
+# <a name="compiler-warning-level-1-c4144"></a>Compilatore Warning (level 1) C4144
+
+'expression': espressione relazionale come espressione switch
+
+L'espressione relazionale specificata è stata utilizzata come espressione di controllo di un [commutatore](../../cpp/switch-statement-cpp.md) istruzione. Le istruzioni case associate verranno offerto valori booleani. L'esempio seguente genera l'errore C4144:
+
+```
+// C4144.cpp
+// compile with: /W1
+int main()
+{
+   int i = 0;
+   switch(!i) {   // C4144, remove the ! to resolve
+      case 1:
+         break;
+      default:
+         break;
+   }
+}
 ```

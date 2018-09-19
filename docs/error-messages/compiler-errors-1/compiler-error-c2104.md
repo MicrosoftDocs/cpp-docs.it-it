@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2104 | Documenti Microsoft
+title: Errore del compilatore C2104 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f3a9173f1141c055547149bc18b5f96a3a475b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e35be180be7ded6a65585566dff6173a13ba7821
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083379"
 ---
 # <a name="compiler-error-c2104"></a>Errore del compilatore C2104
-'&' su campo di bit ignorato  
-  
- È possibile accettare l'indirizzo di un campo di bit.  
-  
- L'esempio seguente genera l'errore C2104:  
-  
-```  
-// C2104.cpp  
-struct X {  
-   int sb : 1;  
-};  
-  
-int main() {  
-   X x;  
-   &x.sb;   // C2104   
-   x.sb;   // OK  
-}  
+
+'&' su campo di bit ignorato
+
+È possibile accettare l'indirizzo di un campo di bit.
+
+L'esempio seguente genera l'errore C2104:
+
+```
+// C2104.cpp
+struct X {
+   int sb : 1;
+};
+
+int main() {
+   X x;
+   &x.sb;   // C2104
+   x.sb;   // OK
+}
 ```

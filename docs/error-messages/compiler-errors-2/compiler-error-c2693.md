@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2693 | Documenti Microsoft
+title: Errore del compilatore C2693 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bed9c0dcad60febf343357ee3e0762ab3d93ef6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ecf51f5fdbe7d1c6b5d5070e048c69bfc840460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051256"
 ---
 # <a name="compiler-error-c2693"></a>Errore del compilatore C2693
-'operator': confronto non valido per i riferimenti a una matrice gestita o WinRT  
-  
- Non è possibile testare qualsiasi tipo di disuguaglianza in una matrice gestita o WinRT. Ad esempio, è possibile verificare se le matrici gestite sono uguali, ma non è possibile verificare se una matrice è maggiore o minore di un'altra matrice.  
+
+'operator': confronto non valido per i riferimenti a una matrice gestita o WinRT
+
+Non è possibile testare qualsiasi tipo di disuguaglianza in una matrice gestita o WinRT. Ad esempio, è possibile verificare se le matrici gestite sono uguali, ma non è possibile verificare se una matrice è maggiore o minore di un'altra matrice.

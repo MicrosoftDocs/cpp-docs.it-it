@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4049 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4049 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea293ff64ed8fe2bf4bf0d38d897eb82223802
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a89d02129e5e8fbedb0649fff0cfe3813304c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053518"
 ---
-# <a name="compiler-warning-level-1-c4049"></a>Compilatore (livello 1) Avviso C4049
-limite del compilatore: termine emissione numeri di riga  
-  
- Il file contiene più di 16.777.215 (2<sup>24</sup>-1) righe di codice sorgente. Il compilatore numerazione 16.777.215 viene interrotta.  
-  
- Per il codice successivo alla riga 16.777.215:  
-  
--   L'immagine non conterrà alcuna informazione di debug per i numeri di riga.  
-  
--   Alcune funzionalità di diagnostica possono essere riportati con numeri di riga non corretta.  
-  
--   elenchi di ASM (/ /FAs) potrebbe avere numeri di riga non corretta.
+# <a name="compiler-warning-level-1-c4049"></a>Compilatore Warning (level 1) C4049
+
+limite del compilatore: termine emissione numeri di riga
+
+Il file contiene più di 16.777.215 (2<sup>24</sup>-1) le righe di origine. Il compilatore interrompe la numerazione 16.777.215.
+
+Per il codice dopo la riga e 16.777.215:
+
+- L'immagine non conterrà alcuna informazione di debug per i numeri di riga.
+
+- Alcune funzionalità di diagnostica possono essere segnalati con numeri di riga non corretto.
+
+- gli elenchi di ASM (/ /FAs) possono avere numeri di riga non corretto.

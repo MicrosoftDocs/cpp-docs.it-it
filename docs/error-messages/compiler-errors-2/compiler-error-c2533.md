@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2533 | Documenti Microsoft
+title: Errore del compilatore C2533 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06733dc8ee52462ab7fcac4255ee8fa697a9bac4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 528b78e71713725907a9f0e2bd06cec1a8c62e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045406"
 ---
 # <a name="compiler-error-c2533"></a>Errore del compilatore C2533
-'identifier': i costruttori non possono avere un tipo restituito  
-  
- Un costruttore non può avere un tipo restituito (nemmeno un tipo restituito `void`).  
-  
- Questo errore si verifica di solito a causa di un punto e virgola mancante tra la fine della definizione di una classe e l'implementazione del primo costruttore. Il compilatore riconosce la classe come definizione del tipo restituito per la funzione costruttore e genera l'errore C2533.  
-  
- L'esempio seguente genera l'errore C2533 e mostra come risolverlo:  
-  
-```  
-// C2533.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X();     
-};  
-  
-int X::X() {}   // C2533 - constructor return type not allowed  
-X::X() {}   // OK - fix by using no return type  
+
+'identifier': i costruttori non possono avere un tipo restituito
+
+Un costruttore non può avere un tipo restituito (nemmeno un tipo restituito `void`).
+
+Questo errore si verifica di solito a causa di un punto e virgola mancante tra la fine della definizione di una classe e l'implementazione del primo costruttore. Il compilatore riconosce la classe come definizione del tipo restituito per la funzione costruttore e genera l'errore C2533.
+
+L'esempio seguente genera l'errore C2533 e mostra come risolverlo:
+
+```
+// C2533.cpp
+// compile with: /c
+class X {
+public:
+   X();
+};
+
+int X::X() {}   // C2533 - constructor return type not allowed
+X::X() {}   // OK - fix by using no return type
 ```

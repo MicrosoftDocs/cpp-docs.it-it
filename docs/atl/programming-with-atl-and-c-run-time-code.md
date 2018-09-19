@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506dc7179db367d4683a180d6148a07e9f2916ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 473c4f20f1271e82ba69b50bfe4b392975f21489
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755138"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088774"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programmazione con il codice runtime C e ATL
 
@@ -30,21 +30,21 @@ Questa sezione illustra i vantaggi dell'uso di libreria di Run-Time C (CRT) con 
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Vantaggi e compromessi del metodo usato per collegarsi a CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+[Vantaggi e compromessi del metodo usato per collegarsi a CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)<br/>
 Riepiloga i vantaggi e compromessi da collegamento statico a CRT o il collegamento in modo dinamico.
 
-[Collegamento a CRT nel progetto ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
+[Collegamento a CRT nel progetto ATL](../atl/linking-to-the-crt-in-your-atl-project.md)<br/>
 Vengono illustrate le impostazioni del progetto e le opzioni del linker per il collegamento a CRT. fornisce anche informazioni dettagliate su come collegamento a CRT influisce sull'immagine del programma.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 
-[DLL e comportamento delle librerie di runtime Visual C++](../build/run-time-library-behavior.md)  
+[DLL e comportamento delle librerie di runtime Visual C++](../build/run-time-library-behavior.md)<br/>
 Fornisce informazioni dettagliate su come funziona il codice di avvio VCRuntime e CRT.
 
-[Librerie di runtime C](../c-runtime-library/crt-library-features.md)  
+[Librerie di runtime C](../c-runtime-library/crt-library-features.md)<br/>
 Illustra i vari file lib che includono le librerie di runtime C e sono elencate le opzioni del compilatore associate e direttive del preprocessore.
 
 ## <a name="see-also"></a>Vedere anche

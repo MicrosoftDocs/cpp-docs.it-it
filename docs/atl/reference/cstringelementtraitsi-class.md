@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b75398db6e078f28fab4525da55aaae8193663
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d34277bd3c9b47c5ba9367d19348e43ea263f43b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089905"
 ---
 # <a name="cstringelementtraitsi-class"></a>Classe CStringElementTraitsI
 
@@ -36,13 +36,13 @@ Questa classe fornisce funzioni statiche relative alle stringhe negli oggetti di
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <typename T, class CharTraits = CDefaultCharTraits<T ::XCHAR>>  
+template <typename T, class CharTraits = CDefaultCharTraits<T ::XCHAR>>
 class CStringElementTraitsI : public CElementTraitsBase<T>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Il tipo di dati da archiviare nella raccolta.
 
 ## <a name="members"></a>Membri
@@ -88,10 +88,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*str1*  
+*str1*<br/>
 Il primo elemento di stringa.
 
-*str2*  
+*str2*<br/>
 Il secondo elemento di stringa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -112,10 +112,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*str1*  
+*str1*<br/>
 Il primo elemento di stringa.
 
-*str2*  
+*str2*<br/>
 Il secondo elemento di stringa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -136,7 +136,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*str*  
+*str*<br/>
 L'elemento di stringa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -161,6 +161,6 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
-[Panoramica della classe](../../atl/atl-class-overview.md)   
+[Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Classe CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089580"
 ---
 # <a name="ccomtearoffobject-class"></a>Classe CComTearOffObject
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parametri
 
-*base*  
+*base*<br/>
 La classe a comparsa, derivata da `CComTearOffObjectBase` e le interfacce si desidera che l'oggetto tear-off per il supporto.
 
 ATL implementa le interfacce tear-off in due fasi, ovvero il `CComTearOffObjectBase` metodi gestiscono il conteggio dei riferimenti e `QueryInterface`, mentre `CComTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*  
+*PV*<br/>
 [in] Puntatore che verrà convertita in un puntatore a un `CComObject<Owner>` oggetto.
 
 ### <a name="remarks"></a>Note
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parametri
 
-*Proprietario*  
+*Proprietario*<br/>
 [in] La classe per il quale un tear-off si prediligono.
 
 ### <a name="remarks"></a>Note
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] IID dell'interfaccia richiesta.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal *iid*, oppure NULL se l'interfaccia non viene trovato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -209,5 +209,5 @@ Nelle compilazioni non di debug, restituisce sempre zero. Nelle build di debug, 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[Classe CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

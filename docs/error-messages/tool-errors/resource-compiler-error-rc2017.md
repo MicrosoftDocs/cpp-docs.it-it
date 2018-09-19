@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2017 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2017 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73acafab54c5448eaa9fbf0887a9e124311a654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e00759ae0d987a04d60fd5f32ca0a7d18f3832c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053843"
 ---
 # <a name="resource-compiler-error-rc2017"></a>Errore del compilatore di risorse RC2017
-sequenza di escape decimale non valida  
-  
- Una sequenza di escape è presente in uno non stato previsto.  
-  
- Una sequenza di escape, ovvero una barra rovesciata ( **\\** ) seguito da un numero o una lettera, può verificarsi solo in un carattere o una stringa costante.
+
+sequenza di escape non valida
+
+In cui ne era previsto non è presente una sequenza di escape.
+
+Una sequenza di escape, ovvero una barra rovesciata ( **\\** ) seguito da un numero o una lettera, possono verificarsi solo in un carattere o una stringa costante.

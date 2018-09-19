@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085225"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY macro  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>Parametri
 
-[in] nome di un'interfaccia x l'oggetto della classe deriva da direttamente.
+*x*<br/>
+[in] Il nome di un'interfaccia che di oggetto della classe deriva da direttamente.
 
 ### <a name="remarks"></a>Note
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Il nome di un'interfaccia da esporre l'oggetto.
 
-*x2*  
+*x2*<br/>
 [in] Il nome del ramo di ereditarietà da cui *x* viene esposto.
 
 ### <a name="remarks"></a>Note
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia esposta.
 
-*x*  
+*x*<br/>
 [in] Il nome della classe verrà esposto come l'interfaccia identificata da cui vtable *iid*.
 
 ### <a name="example"></a>Esempio
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID specificato per l'interfaccia.
 
-*x*  
+*x*<br/>
 [in] Il nome di oggetto di classe deriva direttamente da un'interfaccia.
 
-*x2*  
+*x2*<br/>
 [in] Il nome di una seconda interfaccia di oggetto della classe derivata da direttamente.
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Il nome di un `IUnknown` puntatore.
 
 ### <a name="remarks"></a>Note
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parametri
 
-*pUnk*  
+*pUnk*<br/>
 [in] Il nome di un `IUnknown` puntatore.
 
 ### <a name="remarks"></a>Note
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Il nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM.
 
-*clsid*  
+*clsid*<br/>
 [in] L'identificatore della funzione di aggregazione che verrà creato se *punk* è NULL.
 
 ### <a name="remarks"></a>Note
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parametri
 
-*pUnk*  
+*pUnk*<br/>
 [in] Il nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM.
 
-*clsid*  
+*clsid*<br/>
 [in] L'identificatore della funzione di aggregazione che verrà creato se *punk* è NULL.
 
 ### <a name="remarks"></a>Note
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Testo utilizzato per costruire l'identificatore di interfaccia.
 
 ### <a name="remarks"></a>Note
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia tear-off.
 
-*x*  
+*x*<br/>
 [in] Il nome della classe che implementa l'interfaccia.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Il nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM. Nel costruttore dell'oggetto classe deve essere inizializzato su NULL.
 
 ### <a name="remarks"></a>Note
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia tear-off.
 
-*x*  
+*x*<br/>
 [in] Il nome della classe che implementa l'interfaccia.
 
 ### <a name="remarks"></a>Note
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Parametri
 
-*nomeclasse*  
+*nomeclasse*<br/>
 [in] Una classe di base dell'oggetto corrente.
 
 ### <a name="remarks"></a>Note
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia esposta.
 
-*dw*  
+*dw*<br/>
 [in] Un parametro passato tramite la *func*.
 
-*func*  
+*func*<br/>
 [in] Il puntatore a funzione che restituirà *iid*.
 
 ### <a name="remarks"></a>Note
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parametri
 
-*dw*  
+*dw*<br/>
 [in] Un parametro passato tramite la *func*.
 
-*func*  
+*func*<br/>
 [in] La funzione che viene chiamata durante l'elaborazione di questa voce nella mappa COM.
 
 ### <a name="remarks"></a>Note
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Testo utilizzato per costruire l'identificatore di interfaccia.
 
 ### <a name="remarks"></a>Note

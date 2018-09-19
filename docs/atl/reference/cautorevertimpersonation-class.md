@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f0615dc37070311428ec12894bcaeea8febe8d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 45a14f8c742393c60a026f7c58217407715ef282
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052751"
 ---
 # <a name="cautorevertimpersonation-class"></a>Classe CAutoRevertImpersonation
 
@@ -77,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*TOKEN DI ACCESSO PERSONALE*  
+*TOKEN DI ACCESSO PERSONALE*<br/>
 L'indirizzo del [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto annullate automaticamente
 
 ### <a name="remarks"></a>Note
@@ -94,7 +94,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*TOKEN DI ACCESSO PERSONALE*  
+*TOKEN DI ACCESSO PERSONALE*<br/>
 L'indirizzo del [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto annullate automaticamente.
 
 ### <a name="remarks"></a>Note
@@ -147,6 +147,6 @@ Se questo metodo viene chiamato per gli scopi che includono l'annullamento di un
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio ATLSecurity](../../visual-cpp-samples.md)   
-[Token di accesso](/windows/desktop/SecAuthZ/access-tokens)   
+[Esempio ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Token di accesso](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

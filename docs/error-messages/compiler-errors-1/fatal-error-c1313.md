@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1313 | Documenti Microsoft
+title: Errore irreversibile C1313 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e390fe35acd469cabba254f429a042e8c6feaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d32dc8cd42d9e038e8cf71bb0a323e2727b2a3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048188"
 ---
 # <a name="fatal-error-c1313"></a>Errore irreversibile C1313
-limite del compilatore: blocchi di tipo non possono essere annidati oltre numero livelli  
-  
- Eccezioni (o gestione delle eccezioni strutturata) blocchi sono stati eccessivamente annidati.  Semplificare il codice.
+
+limite del compilatore: blocchi di tipo non possono essere annidati oltre numero livelli
+
+Eccezioni (o gestione strutturata delle eccezioni) blocchi erano eccessivamente annidati.  Semplificare il codice.

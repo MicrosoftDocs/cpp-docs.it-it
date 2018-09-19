@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 4) Avviso C4032 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4032 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb61588c12378972194305d979ecdd89140ac6f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 608c99c81fac0088a4d1d8bb8a6d3b0b61c7af50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086037"
 ---
-# <a name="compiler-warning-level-4-c4032"></a>Compilatore (livello 4) Avviso C4032
-il parametro formale 'number' ha un tipo diverso quando promosso  
-  
- Il tipo di parametro non è compatibile, le promozioni predefinite, con il tipo in una dichiarazione precedente.  
-  
- Si tratta di un errore in ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e un avviso nelle estensioni Microsoft (/Ze).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// C4032.c  
-// compile with: /W4  
-void func();  
-void func(char);   // C4032, char promotes to int  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4032"></a>Compilatore avviso (livello 4) C4032
+
+parametro formale 'number' ha un tipo diverso quando promosso
+
+Il tipo di parametro non è compatibile, le promozioni di predefinite, con il tipo in una dichiarazione precedente.
+
+Si tratta di un errore in ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e un avviso in estensioni Microsoft (/Ze).
+
+## <a name="example"></a>Esempio
+
+```
+// C4032.c
+// compile with: /W4
+void func();
+void func(char);   // C4032, char promotes to int
+
+int main()
+{
+}
 ```

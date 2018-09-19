@@ -12,39 +12,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265eccc4c1a9f51a03e5a84433a9f7e9cc6d6a92
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 724944028c7343d6b85cf61bde810afcbf1c9619
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402136"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136010"
 ---
 # <a name="objects-own-resources-raii"></a>Risorse proprie degli oggetti (RAII)
-Assicurarsi che gli oggetti risorse proprie. Questo principio è noto anche come "resource acquisition is inizializzazione" o "RAII."  
-  
-## <a name="example"></a>Esempio  
- Passa tutti gli oggetti "nuovo" come argomento del costruttore a un altro oggetto denominato che lo possiede è (quasi sempre unique_ptr).  
-  
-```cpp  
-void f() {  
-    unique_ptr<widget> p( new widget() );  
-    my_class x( new widget() );  
-    // ...  
-} // automatic destruction and deallocation for both widget objects  
-  // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"  
-```  
-  
- Passare sempre immediatamente una nuova risorsa a un altro oggetto che ne è proprietario.  
-  
-```cpp  
-void g() {  
-    other_class y( OpenFile() );  
-    // ...  
-} // automatic closing and release for file resource  
-  // automatic exception safety, as if "finally { y.file.dispose(); }"  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   
- [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+
+Assicurarsi che gli oggetti risorse proprie. Questo principio è noto anche come "resource acquisition is inizializzazione" o "RAII."
+
+## <a name="example"></a>Esempio
+
+Passa tutti gli oggetti "nuovo" come argomento del costruttore a un altro oggetto denominato che lo possiede è (quasi sempre unique_ptr).
+
+```cpp
+void f() {
+    unique_ptr<widget> p( new widget() );
+    my_class x( new widget() );
+    // ...
+} // automatic destruction and deallocation for both widget objects
+  // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"
+```
+
+Passare sempre immediatamente una nuova risorsa a un altro oggetto che ne è proprietario.
+
+```cpp
+void g() {
+    other_class y( OpenFile() );
+    // ...
+} // automatic closing and release for file resource
+  // automatic exception safety, as if "finally { y.file.dispose(); }"
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2908 | Documenti Microsoft
+title: Errore del compilatore C2908 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d84f7fbda450b0830125a30898480ea94455332
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 913a01a21c75933688c55bbb79c3621124601745
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053115"
 ---
 # <a name="compiler-error-c2908"></a>Errore del compilatore C2908
-specializzazione esplicita. 'template' è già stata creata un'istanza.  
-  
- Una specializzazione del modello principale si verifica prima la specializzazione esplicita.  
-  
- L'esempio seguente genera l'errore C2908:  
-  
-```  
-// C2908.cpp  
-// compile with: /c  
-template<class T> class X {};  
-  
-void f() {  
-X<int> x;   //specialization and instantiation  
-            //of X<int>  
-}  
-  
-template<> class X<int> {}  // C2908, explicit specialization  
+
+specializzazione esplicita. 'template' è già stata creata un'istanza.
+
+Una specializzazione del modello principale si verifica prima la specializzazione esplicita.
+
+L'esempio seguente genera l'errore C2908:
+
+```
+// C2908.cpp
+// compile with: /c
+template<class T> class X {};
+
+void f() {
+X<int> x;   //specialization and instantiation
+            //of X<int>
+}
+
+template<> class X<int> {}  // C2908, explicit specialization
 ```

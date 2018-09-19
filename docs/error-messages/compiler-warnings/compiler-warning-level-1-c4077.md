@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4077 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4077 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a558ff0ae3c33f25c4f07dc642607fd8a840c70c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf2b8f6f70db3d9cf385c87d1c9e71b4df05920
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044821"
 ---
 # <a name="compiler-warning-level-1-c4077"></a>Avviso del compilatore (livello 1) C4077
-opzione check_stack sconosciuta  
-  
- La forma precedente del pragma **check_stack** è stata usata con un argomento sconosciuto. L'argomento deve essere `+`, `-`, `(on)`, `(off)`o vuoto.  
-  
- Il compilatore ignora i pragma e lascia invariato il controllo dello stack.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// C4077.cpp  
-// compile with: /W1 /LD  
-#pragma check_stack yes // C4077  
-#pragma check_stack +    // Correct old form  
-#pragma check_stack (on) // Correct new form  
+
+opzione check_stack sconosciuta
+
+La forma precedente del pragma **check_stack** è stata usata con un argomento sconosciuto. L'argomento deve essere `+`, `-`, `(on)`, `(off)`o vuoto.
+
+Il compilatore ignora i pragma e lascia invariato il controllo dello stack.
+
+## <a name="example"></a>Esempio
+
+```
+// C4077.cpp
+// compile with: /W1 /LD
+#pragma check_stack yes // C4077
+#pragma check_stack +    // Correct old form
+#pragma check_stack (on) // Correct new form
 ```

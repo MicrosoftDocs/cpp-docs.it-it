@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4513 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4513 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92c3e89204ec30f9c96a5ea03ede5093dd013d0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75ae1c94d7a11fc9bb0049333c65a6677b04778a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087383"
 ---
 # <a name="compiler-warning-level-4-c4513"></a>Avviso del compilatore (livello 4) C4513
-'class': Impossibile generare un distruttore  
-  
- Il compilatore può generare un distruttore predefinito per la classe specificata. è stato creato senza un distruttore. Il distruttore è in una classe di base che non è possibile accedere alla classe derivata. Se la classe base ha un distruttore privato, renderlo pubblico o protetto.
+
+'class': Impossibile generare un distruttore
+
+Il compilatore non è possibile generare un distruttore predefinito per la classe specificata. è stato creato alcun distruttore. Il distruttore è in una classe base che non è accessibile nella classe derivata. Se la classe base ha un distruttore privato, è possibile renderlo pubblico o protetto.

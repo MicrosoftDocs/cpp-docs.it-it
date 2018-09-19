@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1073 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1073 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde9ca2f4a15edf6599dcc31b39d9411645f2a6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c309ed94cd1c984406e0d21f0139e35c6e41d7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053940"
 ---
 # <a name="nmake-fatal-error-u1073"></a>Errore irreversibile U1073 di NMAKE 
-non sapere come effettuare 'targetname'  
-  
- La destinazione specificata non esiste, e nessun comando da eseguire o una regola di inferenza da applicare.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili  
-  
-1.  Controllare l'ortografia del nome della destinazione.  
-  
-2.  Se *targetname* è una pseudo-destinazione, specificarla come destinazione in un altro blocco di descrizione.  
-  
-3.  Se *targetname* è una chiamata di macro, assicurarsi non si espande in una stringa null.
+
+informazioni su come rendere 'targetname'
+
+La destinazione specificata non esiste e non esiste un comando da eseguire o nelle regole di inferenza da applicare.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili
+
+1. Controllare l'ortografia del nome della destinazione.
+
+1. Se *targetname* è pseudo, specificarla come destinazione in un altro blocco di descrizione.
+
+1. Se *targetname* è una chiamata di macro, assicurarsi non si espande in una stringa null.

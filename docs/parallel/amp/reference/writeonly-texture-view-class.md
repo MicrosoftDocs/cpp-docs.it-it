@@ -1,5 +1,5 @@
 ---
-title: Classe writeonly_texture_view | Documenti Microsoft
+title: Classe writeonly_texture_view | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047759"
 ---
 # <a name="writeonlytextureview-class"></a>Classe writeonly_texture_view
-Fornisce l'accesso writeonly su una trama.  
+Fornisce l'accesso writeonly ad una trama.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,11 +45,11 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `value_type`  
- Tipo degli elementi nella trama.  
+*value_type*<br/>
+Il tipo degli elementi nella trama.  
   
- `_Rank`  
- Il numero di dimensioni della trama.  
+*_Rank*<br/>
+Numero di dimensioni della trama.  
   
 ## <a name="members"></a>Membri  
   
@@ -58,7 +58,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`scalar_type`||  
-|`value_type`|Tipo degli elementi nella trama.|  
+|`value_type`|Il tipo degli elementi nella trama.|  
   
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
@@ -77,13 +77,13 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia l'oggetto specificato `writeonly_texture_view` questo oggetto.|  
+|[operator=](#operator_eq)|Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[Rank (costante)](#rank)|Ottiene il rango di `writeonly_texture_view` oggetto.|  
+|[Rank (costante)](#rank)|Ottiene il rango del `writeonly_texture_view` oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `_Texture_base`  
@@ -91,7 +91,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
  `writeonly_texture_view`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** amp_graphics.h  
+ **Intestazione:** amp_graphics. h  
   
  **Namespace:** Concurrency:: Graphics  
   
@@ -105,7 +105,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="operator_eq"></a> operator= 
 
- Copia l'oggetto specificato `writeonly_texture_view` questo oggetto.  
+ Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -113,15 +113,15 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Other`  
- `writeonly_texture_view` oggetto da copiare.  
+*_Other*<br/>
+`writeonly_texture_view` oggetto da copiare da.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `writeonly_texture_view` oggetto.  
   
-##  <a name="rank"></a> Numero di dimensioni 
+##  <a name="rank"></a> numero di dimensioni 
 
- Ottiene il rango di `writeonly_texture_view` oggetto.  
+ Ottiene il rango del `writeonly_texture_view` oggetto.  
   
 ```  
 static const int rank = _Rank;  
@@ -138,11 +138,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Index`  
- Indice dell'elemento.  
+*Index*<br/>
+L'indice dell'elemento.  
   
- `value`  
- Nuovo valore dell'elemento.  
+*valore*<br/>
+Nuovo valore dell'elemento.  
   
 ##  <a name="ctor"></a> writeonly_texture_view 
 
@@ -160,14 +160,14 @@ writeonly_texture_view(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Rank`  
- Il numero di dimensioni della trama.  
+*_Rank*<br/>
+Numero di dimensioni della trama.  
   
- `value_type`  
- Tipo degli elementi nella trama.  
+*value_type*<br/>
+Il tipo degli elementi nella trama.  
   
- `_Src`  
- La trama che viene utilizzata per creare il `writeonly_texture_view`.  
+*_Src*<br/>
+La trama che viene usata per creare il `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

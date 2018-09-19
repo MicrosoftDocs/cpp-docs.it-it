@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1089 | Documenti Microsoft
+title: Errore irreversibile C1089 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f60097b1075756a0a44247d40fe2f0ba8a4d9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8deac0579cedcd369211b3624dc004ca995dc8f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085563"
 ---
 # <a name="fatal-error-c1089"></a>Errore irreversibile C1089
-Non è possibile troncare il file filetype: 'file': messaggio  
-  
- Il compilatore non può comprimere un file a una lunghezza zero.
+
+Non è possibile troncare il file filetype: 'file': messaggio
+
+Il compilatore non può comprimere un file a una lunghezza zero.

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3066 | Documenti Microsoft
+title: Errore del compilatore C3066 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -16,53 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 603b947e0f390de5dfb13a46bbe6c66db1d4e804
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35600fae9a689b32cca9c327645a0e0c1bb91a25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084614"
 ---
 # <a name="compiler-error-c3066"></a>Errore del compilatore C3066
-Esistono diversi modi, che un oggetto di questo tipo può essere chiamato con questi argomenti  
-  
- Il compilatore ha rilevato una chiamata di funzione ambigua relativa a surrogati.  
-  
- L'esempio seguente genera l'errore C3066:  
-  
-```  
-// C3066.cpp  
-template <class T, class U> void func(T*, U*){}  
-  
-typedef void (*PF)(const int*, const char*);  
-typedef void (*PF1)(const int*, volatile char*);  
-  
-struct A {  
-   operator PF() const {  
-      return func;  
-   }  
-  
-   operator PF1() {  
-      return func;  
-   }  
-  
-   operator PF1() const  {  
-      return func;  
-   }  
-  
-};  
-  
-int main() {  
-   A a;  
-   int i;  
-   char c;  
-  
-   a(&i, &c);   // C3066  
-   a(&i, (const char *) &c);   // OK  
-}  
+
+Esistono diversi metodi che un oggetto di questo tipo può essere chiamato con questi argomenti
+
+Il compilatore ha rilevato una chiamata di funzione ambigue che coinvolgono i surrogati.
+
+L'esempio seguente genera l'errore C3066:
+
+```
+// C3066.cpp
+template <class T, class U> void func(T*, U*){}
+
+typedef void (*PF)(const int*, const char*);
+typedef void (*PF1)(const int*, volatile char*);
+
+struct A {
+   operator PF() const {
+      return func;
+   }
+
+   operator PF1() {
+      return func;
+   }
+
+   operator PF1() const  {
+      return func;
+   }
+
+};
+
+int main() {
+   A a;
+   int i;
+   char c;
+
+   a(&i, &c);   // C3066
+   a(&i, (const char *) &c);   // OK
+}
 ```
 
 ## <a name="copy-list-initialization"></a>Copy-list-initialization
+
 In Visual Studio 2015 il compilatore tratta erroneamente copy-list-initialization come l'oggetto copy-initialization normale, considerando solo la conversione dei costruttori per la risoluzione dell'overload. Nell'esempio seguente Visual Studio 2015 sceglie MyInt(23) ma Visual Studio 2017 genera correttamente l'errore.
 
 ```

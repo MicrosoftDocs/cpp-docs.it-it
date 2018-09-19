@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9454b33348fa4e4bc2efaa609001201ea215a8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081988"
 ---
 # <a name="threadprivate"></a>threadprivate
 Specifica che una variabile privata di un thread.  
@@ -32,11 +32,10 @@ Specifica che una variabile privata di un thread.
 #pragma omp threadprivate(var)  
 ```  
   
-## <a name="remarks"></a>Note  
- dove  
+### <a name="parameters"></a>Parametri
   
- `var`  
- Elenco delimitato da virgole di variabili che si desidera rendere privato a un thread. `var` deve essere una variabile globale o dello spazio dei nomi-con ambito o una variabile locale statica.  
+*var*<br/>
+Elenco delimitato da virgole di variabili che si desidera rendere privato a un thread. `var` deve essere una variabile globale o dello spazio dei nomi-con ambito o una variabile locale statica.  
   
 ## <a name="remarks"></a>Note  
  Il `threadprivate` direttiva non supporta nessuna clausole OpenMP.  

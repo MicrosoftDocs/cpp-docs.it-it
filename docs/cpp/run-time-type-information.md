@@ -18,31 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77584e5fdd731c499629149a9163dbacb5eafb5e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467326"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050879"
 ---
 # <a name="run-time-type-information"></a>Informazioni sui tipi di runtime
-Le informazioni sui tipi in fase di esecuzione (RTTI) sono un meccanismo che consente di determinare il tipo di un oggetto durante l'esecuzione del programma. RTTI è stato aggiunto al linguaggio C++ perché molti fornitori di librerie di classi stavano implementando questa funzionalità per conto proprio. Questa situazione ha provocato incompatibilità tra le librerie. Pertanto, è diventato evidente che erano necessario fornire supporto per le informazioni sui tipi in fase di esecuzione a livello di linguaggio.  
-  
- Per maggiore chiarezza, la discussione di RTTI si limita quasi completamente ai puntatori. Tuttavia, i concetti illustrati sono applicabili anche ai riferimenti.  
-  
- Esistono tre elementi principali del linguaggio C++ per eseguire informazioni sui tipi in fase di esecuzione:  
-  
--   Il [dynamic_cast](../cpp/dynamic-cast-operator.md) operatore.  
-  
-     Utilizzato per la conversione dei tipi polimorfici.  
-  
--   Il [typeid](../cpp/typeid-operator.md) operatore.  
-  
-     Utilizzato per l'identificazione del tipo esatto di un oggetto.  
-  
--   Il [type_info](../cpp/type-info-class.md) classe.  
-  
-     Usato per contenere le informazioni sul tipo restituiti per il **typeid** operatore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cast](../cpp/casting.md)
+
+Le informazioni sui tipi in fase di esecuzione (RTTI) sono un meccanismo che consente di determinare il tipo di un oggetto durante l'esecuzione del programma. RTTI è stato aggiunto al linguaggio C++ perché molti fornitori di librerie di classi stavano implementando questa funzionalità per conto proprio. Questa situazione ha provocato incompatibilità tra le librerie. Pertanto, è diventato evidente che erano necessario fornire supporto per le informazioni sui tipi in fase di esecuzione a livello di linguaggio.
+
+Per maggiore chiarezza, la discussione di RTTI si limita quasi completamente ai puntatori. Tuttavia, i concetti illustrati sono applicabili anche ai riferimenti.
+
+Esistono tre elementi principali del linguaggio C++ per eseguire informazioni sui tipi in fase di esecuzione:
+
+- Il [dynamic_cast](../cpp/dynamic-cast-operator.md) operatore.
+
+     Utilizzato per la conversione dei tipi polimorfici.
+
+- Il [typeid](../cpp/typeid-operator.md) operatore.
+
+     Utilizzato per l'identificazione del tipo esatto di un oggetto.
+
+- Il [type_info](../cpp/type-info-class.md) classe.
+
+     Usato per contenere le informazioni sul tipo restituiti per il **typeid** operatore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Cast](../cpp/casting.md)

@@ -24,64 +24,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 4591f9f4fed8b3b8dd1c24b8200b3365d87194b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404054"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044665"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma suffissa: ++ e --
-## <a name="syntax"></a>Sintassi  
-  
-```  
-postfix-expression ++  
-postfix-expression --  
-```  
-  
-## <a name="remarks"></a>Note  
- In C++ sono disponibili operatori di incremento e decremento prefisso e suffisso. In questa sezione verranno descritti solo gli operatori di incremento e decremento suffisso. (Per altre informazioni, vedere [prefisso operatori di incremento e decremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) La differenza tra i due è che nella notazione suffissa l'operatore viene visualizzato dopo *postfix-expression*, mentre nella notazione prefissa l'operatore viene visualizzato prima *espressione.* Nell'esempio seguente viene illustrato un operatore di decremento suffisso:  
-  
-```cpp 
-i++;  
-```  
-  
- L'effetto dell'applicazione dell'operatore di incremento in forma suffissa (**++**) è che il valore dell'operando viene incrementato di un'unità del tipo appropriato. Analogamente, l'effetto dell'applicazione dell'operatore di decremento in forma suffissa (**--**) è che il valore dell'operando viene diminuito di un'unità del tipo appropriato.  
-  
- È importante notare che una forma suffissa incremento o decremento in forma espressione restituisce il valore dell'espressione *precedenti a* dell'applicazione del rispettivo operatore. L'operazione di incremento o decremento avviene *dopo* l'operando viene valutato. Questo problema si verifica solo quando l'operazione di decremento o di decremento in forma suffissa viene eseguita nel contesto di un'espressione più estesa.  
-  
- Quando un operatore suffisso viene applicato a un argomento di funzione, non è garantito che il valore dell'argomento venga incrementato o decrementato prima di essere passato alla funzione.  Per ulteriori informazioni, vedere la sezione 1.9.17 in C++ standard.  
-  
- Applica l'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **lungo** incrementata di quattro la rappresentazione interna dell'indicatore di misura. In questo modo il puntatore, indicate in precedenza per il *n*ennesimo elemento della matrice, per fare riferimento al (*n*+ 1) elemento th.  
-  
- Gli operandi di incremento suffisso e operatori di decremento in forma suffissa devono essere modificabili (non **const**) espressioni l-value di tipo aritmetico o puntatore. Il tipo del risultato è uguale a quello del *postfix-expression*, ma non è più un l-value.  
-  
+
+## <a name="syntax"></a>Sintassi
+
+```
+postfix-expression ++
+postfix-expression --
+```
+
+## <a name="remarks"></a>Note
+
+In C++ sono disponibili operatori di incremento e decremento prefisso e suffisso. In questa sezione verranno descritti solo gli operatori di incremento e decremento suffisso. (Per altre informazioni, vedere [prefisso operatori di incremento e decremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) La differenza tra i due è che nella notazione suffissa l'operatore viene visualizzato dopo *postfix-expression*, mentre nella notazione prefissa l'operatore viene visualizzato prima *espressione.* Nell'esempio seguente viene illustrato un operatore di decremento suffisso:
+
+```cpp
+i++;
+```
+
+L'effetto dell'applicazione dell'operatore di incremento in forma suffissa (**++**) è che il valore dell'operando viene incrementato di un'unità del tipo appropriato. Analogamente, l'effetto dell'applicazione dell'operatore di decremento in forma suffissa (**--**) è che il valore dell'operando viene diminuito di un'unità del tipo appropriato.
+
+È importante notare che una forma suffissa incremento o decremento in forma espressione restituisce il valore dell'espressione *precedenti a* dell'applicazione del rispettivo operatore. L'operazione di incremento o decremento avviene *dopo* l'operando viene valutato. Questo problema si verifica solo quando l'operazione di decremento o di decremento in forma suffissa viene eseguita nel contesto di un'espressione più estesa.
+
+Quando un operatore suffisso viene applicato a un argomento di funzione, non è garantito che il valore dell'argomento venga incrementato o decrementato prima di essere passato alla funzione.  Per ulteriori informazioni, vedere la sezione 1.9.17 in C++ standard.
+
+Applica l'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **lungo** incrementata di quattro la rappresentazione interna dell'indicatore di misura. In questo modo il puntatore, indicate in precedenza per il *n*ennesimo elemento della matrice, per fare riferimento al (*n*+ 1) elemento th.
+
+Gli operandi di incremento suffisso e operatori di decremento in forma suffissa devono essere modificabili (non **const**) espressioni l-value di tipo aritmetico o puntatore. Il tipo del risultato è uguale a quello del *postfix-expression*, ma non è più un l-value.
+
 **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un'operazione di incremento o decremento operatore potrebbe non essere di tipo **bool**.
-  
- Il codice seguente illustra l'operatore di incremento suffisso:  
-  
-```cpp 
-// expre_Postfix_Increment_and_Decrement_Operators.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-int main() {  
-   int i = 10;  
-   cout << i++ << endl;  
-   cout << i << endl;  
-}  
-```  
-  
- Le operazioni di post-decremento e post-incremento sui tipi enumerati non sono supportate:  
-  
-```cpp 
-enum Compass { North, South, East, West );  
-Compass myCompass;  
-for( myCompass = North; myCompass != West; myCompass++ ) // Error  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Espressioni di suffisso](../cpp/postfix-expressions.md)   
- [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operatori di incremento e decremento in forma suffissa C](../c-language/c-postfix-increment-and-decrement-operators.md)
+
+Il codice seguente illustra l'operatore di incremento suffisso:
+
+```cpp
+// expre_Postfix_Increment_and_Decrement_Operators.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+int main() {
+   int i = 10;
+   cout << i++ << endl;
+   cout << i << endl;
+}
+```
+
+Le operazioni di post-decremento e post-incremento sui tipi enumerati non sono supportate:
+
+```cpp
+enum Compass { North, South, East, West );
+Compass myCompass;
+for( myCompass = North; myCompass != West; myCompass++ ) // Error
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Espressioni di suffissi](../cpp/postfix-expressions.md)<br/>
+[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori di incremento e decremento in forma suffissa C](../c-language/c-postfix-increment-and-decrement-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: lock::lock | Documenti Microsoft
+title: lock::lock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 128a86b59ebf43ab87b0f4f4bcb7e9c684e4ad07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051822"
 ---
 # <a name="locklock"></a>lock::lock
-Costruisce un `lock` oggetto, facoltativamente in attesa di acquisire il blocco continuo, per un determinato periodo di tempo o affatto.  
+Costruisce un `lock` oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un determinato periodo di tempo o niente affatto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,26 +51,26 @@ template<class T> lock(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_object`  
- Oggetto da bloccare.  
+*Object*<br/>
+Oggetto da bloccare.  
   
- `_timeout`  
- Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.  
+*timeout*<br/>
+Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Eccezioni  
- Genera <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguito prima del timeout.  
+ Genera un'eccezione <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguito prima del timeout.  
   
 ## <a name="remarks"></a>Note  
- I primi tre form del costruttore tentano di acquisire un blocco su `_object` entro il periodo di timeout specificato (o <xref:System.Threading.Timeout.Infinite> se non è specificato).  
+ I primi tre form del costruttore tentano di acquisire un blocco sul `_object` entro il periodo di timeout specificato (o <xref:System.Threading.Timeout.Infinite> se non è specificato).  
   
- Il quarto form del costruttore non di acquisire un blocco su `_object`. `lock_later` è un membro del [enumerazione lock_when](../dotnet/lock-when-enum.md). Utilizzare [lock::acquire](../dotnet/lock-acquire.md) o [lock::try_acquire](../dotnet/lock-try-acquire.md) di acquisire il blocco in questo caso.  
+ Il quarto form del costruttore non acquisisce un blocco su `_object`. `lock_later` è un membro del [enumerazione lock_when](../dotnet/lock-when-enum.md). Uso [lock::acquire](../dotnet/lock-acquire.md) oppure [lock::try_acquire](../dotnet/lock-try-acquire.md) per acquisire il blocco in questo caso.  
   
  Il blocco verrà rilasciato automaticamente quando viene chiamato il distruttore.  
   
- Il parametro `_object` non può essere <xref:System.Threading.ReaderWriterLock>.  Questo caso, si verificherà un errore del compilatore.  
+ Il parametro `_object` non può essere <xref:System.Threading.ReaderWriterLock>.  Se si tratta, si verificherà un errore del compilatore.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio Usa una singola istanza di una classe su più thread.  Per verificare che gli accessi ai dati interni siano coerenti per ogni thread, la classe Usa un blocco su se stesso.  Il thread principale dell'applicazione utilizza un blocco sulla stessa istanza della classe per controllare periodicamente per vedere se un thread di lavoro continuano a esistere e attese per uscire dall'installazione fino a quando tutti i thread di lavoro completamento delle attività.  
+ Questo esempio Usa una singola istanza di una classe in più thread.  La classe Usa un blocco su se stesso per garantire la coerenza per ogni thread che accede ai propri dati interni.  Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se qualsiasi thread di lavoro continuano a esistere e attese per uscire dalla finché tutti thread di lavoro completate le attività.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -165,6 +165,6 @@ All threads completed.
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri lock](../dotnet/lock-members.md)   
- [blocco:: ~ blocco](../dotnet/lock-tilde-lock.md)   
+ [blocco:: ~ lock](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   
  [lock::try_acquire](../dotnet/lock-try-acquire.md)

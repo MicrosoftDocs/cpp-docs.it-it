@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f3cf6a9e2c9924ae72624c931a4551736f8956
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 92f3855cf9c760ef8e6bb761f4a0bac042f8c539
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081767"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opzioni, Creazione guidata pagina delle proprietà ATL
 
@@ -50,6 +50,6 @@ Utilizzare questa pagina della procedura guidata per definire il livello di aggr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione guidata pagina delle proprietà ATL](../../atl/reference/atl-property-page-wizard.md)   
+[Creazione guidata pagina delle proprietà ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Stringhe, creazione guidata pagina delle proprietà ATL](../../atl/reference/strings-atl-property-page-wizard.md)
 

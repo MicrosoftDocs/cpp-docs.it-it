@@ -23,68 +23,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: fba58883db0f5936a8f3dedc1e0c4a19fb0aafa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086200"
 ---
 # <a name="static-members-c"></a>Membri statici (C++)
+
 Le classi possono contenere membri dati statici e funzioni membro. Quando un membro dati viene dichiarato come **statici**, viene mantenuta solo una copia dei dati per tutti gli oggetti della classe.
-  
- I membri dati statici non fanno parte degli oggetti di un tipo specifico della classe. Di conseguenza, la dichiarazione di un membro dati statico non è considerata una definizione. Il membro dati viene dichiarato nell'ambito della classe, ma la definizione viene fatta nell'ambito del file. Questi membri statici hanno collegamento esterno. Questa condizione è illustrata nell'esempio che segue.  
-  
-```cpp  
-// static_data_members.cpp  
-class BufferedOutput  
-{  
-public:  
-   // Return number of bytes written by any object of this class.  
-   short BytesWritten()  
-   {  
-      return bytecount;  
-   }  
-  
-   // Reset the counter.  
-   static void ResetCount()  
-   {  
-      bytecount = 0;  
-   }  
-  
-   // Static member declaration.  
-   static long bytecount;  
-};  
-  
-// Define bytecount in file scope.  
-long BufferedOutput::bytecount;  
-  
-int main()  
-{  
-}  
-```  
-  
- Nel codice precedente, il membro `bytecount` è dichiarato nella classe `BufferedOutput`, ma deve essere definito all'esterno della dichiarazione della classe.  
-  
- Ai membri dati statici è possibile accedere senza fare riferimento a un oggetto di tipo classe. Il numero di byte scritti usando oggetti `BufferedOutput` può essere ottenuto come segue:  
-  
-```cpp  
-long nBytes = BufferedOutput::bytecount;  
-```  
-  
- Affinché il membro statico esista, non è necessario che esistano tutti gli oggetti di tipo classe. I membri statici sono accessibili anche tramite la selezione dei membri (**.** e **->**) gli operatori. Ad esempio:  
-  
-```cpp  
-BufferedOutput Console;  
-  
-long nBytes = Console.bytecount;  
-```  
-  
- Nel caso precedente, il riferimento all'oggetto (`Console`) non viene valutato e il valore restituito è quello dell'oggetto statico `bytecount`.  
-  
- I membri dati statici sono soggetti alle regole di accesso al membro di classe, pertanto l'accesso privato ai membri dati statici è consentito solo per le funzioni friend e membro della classe. Queste regole sono descritte nel [controllo di accesso ai membri](../cpp/member-access-control-cpp.md). L'eccezione è costituita dal fatto che i membri dati statici devono essere definiti nell'ambito del file indipendentemente dalle restrizioni di accesso. Se il membro dati viene inizializzato in modo esplicito, insieme alla definizione deve essere fornito un inizializzatore.  
-  
- Il tipo di un membro statico non è qualificato dal nome della classe. Pertanto, il tipo della `BufferedOutput::bytecount` viene **lungo**.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi e struct](../cpp/classes-and-structs-cpp.md)
+
+I membri dati statici non fanno parte degli oggetti di un tipo specifico della classe. Di conseguenza, la dichiarazione di un membro dati statico non è considerata una definizione. Il membro dati viene dichiarato nell'ambito della classe, ma la definizione viene fatta nell'ambito del file. Questi membri statici hanno collegamento esterno. Questa condizione è illustrata nell'esempio che segue.
+
+```cpp
+// static_data_members.cpp
+class BufferedOutput
+{
+public:
+   // Return number of bytes written by any object of this class.
+   short BytesWritten()
+   {
+      return bytecount;
+   }
+
+   // Reset the counter.
+   static void ResetCount()
+   {
+      bytecount = 0;
+   }
+
+   // Static member declaration.
+   static long bytecount;
+};
+
+// Define bytecount in file scope.
+long BufferedOutput::bytecount;
+
+int main()
+{
+}
+```
+
+Nel codice precedente, il membro `bytecount` è dichiarato nella classe `BufferedOutput`, ma deve essere definito all'esterno della dichiarazione della classe.
+
+Ai membri dati statici è possibile accedere senza fare riferimento a un oggetto di tipo classe. Il numero di byte scritti usando oggetti `BufferedOutput` può essere ottenuto come segue:
+
+```cpp
+long nBytes = BufferedOutput::bytecount;
+```
+
+Affinché il membro statico esista, non è necessario che esistano tutti gli oggetti di tipo classe. I membri statici sono accessibili anche tramite la selezione dei membri (**.** e **->**) gli operatori. Ad esempio:
+
+```cpp
+BufferedOutput Console;
+
+long nBytes = Console.bytecount;
+```
+
+Nel caso precedente, il riferimento all'oggetto (`Console`) non viene valutato e il valore restituito è quello dell'oggetto statico `bytecount`.
+
+I membri dati statici sono soggetti alle regole di accesso al membro di classe, pertanto l'accesso privato ai membri dati statici è consentito solo per le funzioni friend e membro della classe. Queste regole sono descritte nel [controllo di accesso ai membri](../cpp/member-access-control-cpp.md). L'eccezione è costituita dal fatto che i membri dati statici devono essere definiti nell'ambito del file indipendentemente dalle restrizioni di accesso. Se il membro dati viene inizializzato in modo esplicito, insieme alla definizione deve essere fornito un inizializzatore.
+
+Il tipo di un membro statico non è qualificato dal nome della classe. Pertanto, il tipo della `BufferedOutput::bytecount` viene **lungo**.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi e struct](../cpp/classes-and-structs-cpp.md)

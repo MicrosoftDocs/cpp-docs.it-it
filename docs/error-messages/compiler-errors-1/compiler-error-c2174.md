@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2174 | Documenti Microsoft
+title: Errore del compilatore C2174 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d11c4234bd4e1343198658b1dfcada556b0e1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a7dc9cee6bf24f4605455818a32bd757bcd60c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052374"
 ---
 # <a name="compiler-error-c2174"></a>Errore del compilatore C2174
-'function': il parametro effettivo ha tipo 'void': parametro number1, elenco di parametri number2  
-  
- Parametro `number1` passato all'elenco di parametri `number2` è un `void` parametro. Parametri non possono avere tipo `void`. In alternativa, usare `void*`.
+
+'function': il parametro effettivo ha tipo 'void': parametro number1, elenco di parametri number2
+
+Parametro `number1` passato all'elenco dei parametri `number2` è un `void` parametro. Parametri non possono avere tipo `void`. In alternativa, usare `void*`.

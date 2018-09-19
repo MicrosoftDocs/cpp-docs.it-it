@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1 e livello 4) C4949 | Documenti Microsoft
+title: Compilatore avviso (livelli 1 e livello 4) C4949 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dbf80f85db7334d4bcb46402851cac601d258f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f806912188ada3a4f97f0b1500e811d1271f40fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077308"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4949"></a>Avviso del compilatore (livelli 1 e 4) C4949
-pragma 'managed' e 'unmanaged' sono significativi solo se compilati con ' / /CLR [: opzione]'  
-  
- Il compilatore ignora la [gestiti](../../preprocessor/managed-unmanaged.md) e non gestita di direttive pragma se il codice sorgente non è stato compilato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md). Si tratta di un avviso informativo.  
-  
- L'esempio seguente genera l'errore C4949:  
-  
-```  
-// C4949.cpp  
-// compile with: /LD /W1  
-#pragma managed   // C4949  
-```  
-  
- Quando **#pragma non gestita** viene usato senza **/clr**, C4949 è un avviso di livello 4.  
-  
- L'esempio seguente genera l'errore C4949:  
-  
-```  
-// C4949b.cpp  
-// compile with: /LD /W4  
-#pragma unmanaged   // C4949  
+
+pragma 'managed' e 'unmanaged' sono significativi solo quando viene compilato con ' / /CLR [: opzione]'
+
+Il compilatore ignora la [managed](../../preprocessor/managed-unmanaged.md) e non gestiti pragma se il codice sorgente non viene compilato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md). Si tratta di un avviso informativo.
+
+L'esempio seguente genera l'errore C4949:
+
+```
+// C4949.cpp
+// compile with: /LD /W1
+#pragma managed   // C4949
+```
+
+Quando **#pragma unmanaged** viene usato senza **/clr**, C4949 è un avviso di livello 4.
+
+L'esempio seguente genera l'errore C4949:
+
+```
+// C4949b.cpp
+// compile with: /LD /W4
+#pragma unmanaged   // C4949
 ```

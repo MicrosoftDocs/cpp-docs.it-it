@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3185 | Documenti Microsoft
+title: Errore del compilatore C3185 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce6eea7c9a40f9dd38bf6892995eaa52ac540de7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd7f94f86165fdfd25bb5a901cdb4349a0e48494
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256186"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044522"
 ---
 # <a name="compiler-error-c3185"></a>Errore del compilatore C3185
-'typeid' utilizzato nel tipo gestito o WinRT 'type'; utilizzare 'operator'  
-  
- Non è possibile applicare il [typeid](../../cpp/typeid-operator.md) operatore in un oggetto gestito o WinRT type; usare [typeid](../../windows/typeid-cpp-component-extensions.md) invece.  
-  
- L'esempio seguente genera l'errore C3185 e mostra come risolverlo:  
-  
-```  
-// C3185a.cpp  
-// compile with: /clr  
-ref class Base {};  
-ref class Derived : public Base {};  
-  
-int main() {  
-   Derived ^ pd = gcnew Derived;  
-   Base ^pb = pd;  
-   const type_info & t1 = typeid(pb);   // C3185  
-   System::Type ^ MyType = Base::typeid;   // OK  
-};  
-```  
+
+'typeid' utilizzato nel tipo gestito o WinRT 'type'; utilizzare 'operator'
+
+Non è possibile applicare il [typeid](../../cpp/typeid-operator.md) operatore in un oggetto gestito o WinRT tipo; utilizzare [typeid](../../windows/typeid-cpp-component-extensions.md) invece.
+
+L'esempio seguente genera l'errore C3185 e mostra come risolverlo:
+
+```
+// C3185a.cpp
+// compile with: /clr
+ref class Base {};
+ref class Derived : public Base {};
+
+int main() {
+   Derived ^ pd = gcnew Derived;
+   Base ^pb = pd;
+   const type_info & t1 = typeid(pb);   // C3185
+   System::Type ^ MyType = Base::typeid;   // OK
+};
+```

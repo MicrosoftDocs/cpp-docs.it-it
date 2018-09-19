@@ -63,14 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5dcaa42242410c2823388c7004a0c0a7d1991f59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 67510ada7af557877f427d757200a48c0df95fe9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573243"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054116"
 ---
 # <a name="irowsetupdateimpl-class"></a>Classe IRowsetUpdateImpl
+
 L'implementazione di modelli OLE DB del [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
@@ -93,23 +94,25 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *T*  
- Una classe derivata da `IRowsetUpdateImpl`.  
+
+*T*<br/>
+Una classe derivata da `IRowsetUpdateImpl`.  
   
- *Archiviazione*  
- Il record dell'utente.  
+*Archiviazione*<br/>
+Il record dell'utente.  
   
- *UpdateArray*  
- Matrice che contiene dati memorizzati nella cache per l'aggiornamento del set di righe.  
+*UpdateArray*<br/>
+Matrice che contiene dati memorizzati nella cache per l'aggiornamento del set di righe.  
   
- *RowClass*  
- L'unità di archiviazione per il `HROW`.  
+*RowClass*<br/>
+L'unità di archiviazione per il `HROW`.  
   
- *MapClass*  
- L'unità di archiviazione per tutti gli handle di riga utilizzato dal provider.  
+*MapClass*<br/>
+L'unità di archiviazione per tutti gli handle di riga utilizzato dal provider.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldb.h  
+
+**Intestazione:** atldb.h  
   
 ## <a name="members"></a>Membri  
   
@@ -142,20 +145,22 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[m_mapCachedData](#mapcacheddata)|Contiene i dati originali per l'operazione posticipata.|  
   
 ## <a name="remarks"></a>Note  
- Prima di tutto necessario leggere e comprendere la documentazione per [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)), in quanto tutto ciò che è descritti vi si applica anche qui. È consigliabile leggere anche il capitolo 6 del *riferimento per programmatori OLE DB* sull'impostazione dei dati.  
+
+Prima di tutto necessario leggere e comprendere la documentazione per [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)), in quanto tutto ciò che è descritti vi si applica anche qui. È consigliabile leggere anche il capitolo 6 del *riferimento per programmatori OLE DB* sull'impostazione dei dati.  
   
- `IRowsetUpdateImpl` implementa OLE DB `IRowsetUpdate` interfaccia, che consente agli utenti di ritardare la trasmissione delle modifiche apportate con `IRowsetChange` per l'origine dati e annullare le modifiche prima della trasmissione.  
+`IRowsetUpdateImpl` implementa OLE DB `IRowsetUpdate` interfaccia, che consente agli utenti di ritardare la trasmissione delle modifiche apportate con `IRowsetChange` per l'origine dati e annullare le modifiche prima della trasmissione.  
   
 > [!IMPORTANT]
 >  È consigliabile leggere la documentazione seguente prima di tentare di implementare un provider:  
   
--   [Creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md)  
+- [Creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Capitolo 6 del *riferimento per programmatori OLE DB*  
+- Capitolo 6 del *riferimento per programmatori OLE DB*  
   
--   Vedere anche il `RUpdateRowset` classe viene utilizzata nel [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) esempio  
+- Vedere anche il `RUpdateRowset` classe viene utilizzata nel [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) esempio  
 
 ## <a name="setdata"></a> IRowsetUpdateImpl:: SetData
+
 Imposta i valori dei dati in una o più colonne.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -167,12 +172,15 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo esegue l'override di [IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) metodo ma include la memorizzazione nella cache dei dati originali per consentire l'elaborazione immediata o posticipata dell'operazione.
+
+Questo metodo esegue l'override di [IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) metodo ma include la memorizzazione nella cache dei dati originali per consentire l'elaborazione immediata o posticipata dell'operazione.
 
 ## <a name="getoriginaldata"></a> IRowsetUpdateImpl:: GetOriginalData
+
 Ottiene i dati trasmessi a più di recente o ottenuti dall'origine dati, ignorando le modifiche in sospeso.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -184,9 +192,11 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.   
+
+Visualizzare [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.   
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl:: Getpendingrows
+
 Restituisce un elenco di righe con modifiche in sospeso.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -200,15 +210,18 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *hReserved*  
- [in] Corrisponde alla *hChapter* nel parametro [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)).  
+
+*hReserved*<br/>
+[in] Corrisponde alla *hChapter* nel parametro [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)).  
   
- Per altri parametri, vedere [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+Per altri parametri, vedere [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
- Per altre informazioni, vedere [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Per altre informazioni, vedere [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl:: GetRowStatus
+
 Restituisce lo stato di righe specificate.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -221,12 +234,14 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *hReserved*  
- [in] Corrisponde alla *hChapter* nel parametro [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)).  
+
+*hReserved*<br/>
+[in] Corrisponde alla *hChapter* nel parametro [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)).  
   
- Per altri parametri, vedere [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+Per altri parametri, vedere [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
 
 ## <a name="undo"></a> IRowsetUpdateImpl:: Undo
+
 Annulla tutte le modifiche alla riga dopo l'ultimo recupero o l'aggiornamento.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -241,18 +256,20 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *hReserved*  
- [in] Corrisponde alla *hChapter* nel parametro [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+
+*hReserved*<br/>
+[in] Corrisponde alla *hChapter* nel parametro [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
   
- *pcRowsUndone*  
- [out] Corrisponde alla *pcRows* nel parametro [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+*pcRowsUndone*<br/>
+[out] Corrisponde alla *pcRows* nel parametro [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
   
- *prgRowsUndone*  
- [in] Corrisponde alla *prgRows* nel parametro [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+*prgRowsUndone*<br/>
+[in] Corrisponde alla *prgRows* nel parametro [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
   
- Per altri parametri, vedere [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
+Per altri parametri, vedere [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
 
 ## <a name="update"></a> IRowsetUpdateImpl:: Update
+
 Trasmette tutte le modifiche apportate alla riga dopo l'ultimo recupero o l'aggiornamento.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -267,15 +284,18 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *hReserved*  
- [in] Corrisponde alla *hChapter* nel parametro [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)).  
+
+*hReserved*<br/>
+[in] Corrisponde alla *hChapter* nel parametro [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)).  
   
- Per altri parametri, vedere [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+Per altri parametri, vedere [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="remarks"></a>Note  
- Le modifiche vengono trasmesse tramite la chiamata [IRowsetChangeImpl:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Il consumer deve chiamare [CRowset:: Update](../../data/oledb/crowset-update.md) rendere effettive le modifiche. Impostare *prgRowstatus* su un valore appropriato come descritto in [stati](/previous-versions/windows/desktop/ms722752\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
+
+Le modifiche vengono trasmesse tramite la chiamata [IRowsetChangeImpl:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Il consumer deve chiamare [CRowset:: Update](../../data/oledb/crowset-update.md) rendere effettive le modifiche. Impostare *prgRowstatus* su un valore appropriato come descritto in [stati](/previous-versions/windows/desktop/ms722752\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
   
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl:: IsUpdateAllowed
+
 Eseguire l'override di questo metodo per verificare la presenza di sicurezza, l'integrità, e così via prima degli aggiornamenti.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -287,19 +307,22 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *status*  
- [in] Lo stato di operazioni sulle righe in sospeso.  
+
+*status*<br/>
+[in] Lo stato di operazioni sulle righe in sospeso.  
   
- *hRowUpdate*  
- [in] Handle per le righe che l'utente desidera aggiornare.  
+*hRowUpdate*<br/>
+[in] Handle per le righe che l'utente desidera aggiornare.  
   
- *pRowStatus*  
- [out] Lo stato restituito all'utente.  
+*pRowStatus*<br/>
+[out] Lo stato restituito all'utente.  
   
 ### <a name="remarks"></a>Note  
- Se si determina che un aggiornamento deve essere consentito, restituisce S_OK; in caso contrario restituisce E_FAIL. Se si consente a un aggiornamento, è anche necessario impostare il `DBROWSTATUS` nelle [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) al relativo [lo stato della riga](/previous-versions/windows/desktop/ms722752\(v=vs.85\)).  
+
+Se si determina che un aggiornamento deve essere consentito, restituisce S_OK; in caso contrario restituisce E_FAIL. Se si consente a un aggiornamento, è anche necessario impostare il `DBROWSTATUS` nelle [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) al relativo [lo stato della riga](/previous-versions/windows/desktop/ms722752\(v=vs.85\)).  
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl:: M_mapcacheddata
+
 Una mappa che contiene i dati originali per l'operazione posticipata.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -313,13 +336,15 @@ m_mapCachedData;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *hRow*  
- Handle per le righe per i dati.  
+
+*hRow*<br/>
+Handle per le righe per i dati.  
   
- *pData*  
- Puntatore ai dati da memorizzare nella cache. I dati sono di tipo *archiviazione* (la classe di record utente). Vedere le *memorizzazione* argomento di modello in [classe IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md).  
+*pData*<br/>
+Puntatore ai dati da memorizzare nella cache. I dati sono di tipo *archiviazione* (la classe di record utente). Vedere le *memorizzazione* argomento di modello in [classe IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md).  
 
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md)
+
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md)

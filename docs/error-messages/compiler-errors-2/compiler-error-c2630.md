@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2630 | Documenti Microsoft
+title: Errore del compilatore C2630 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a77a658f724f701e67968adb7a1310922b9476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bcde84e241590b67e3877e3ce415f4cc00e757a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085940"
 ---
 # <a name="compiler-error-c2630"></a>Errore del compilatore C2630
-'simbolo' trovato nel quale deve essere un elenco delimitato da virgole  
-  
- Il simbolo viene visualizzato in un contesto che richiede una virgola.  
-  
- L'esempio seguente genera l'errore C2630:  
-  
-```  
-// C2630.cpp  
-// compile with: /c  
-struct D {  
-   D(int);  
-};  
-  
-struct E {  
-   E(int);  
-};  
-  
-class C : public D, public E {  
-   C();  
-};  
-  
-C::C() : D(0) ; E(0) { }   // C2630  
-C::C() : D(0), E(0) {}   // OK  
+
+'symbol' trovato nel quale deve essere un elenco delimitato da virgole
+
+Il simbolo viene visualizzato in un contesto che richiede una virgola.
+
+L'esempio seguente genera l'errore C2630:
+
+```
+// C2630.cpp
+// compile with: /c
+struct D {
+   D(int);
+};
+
+struct E {
+   E(int);
+};
+
+class C : public D, public E {
+   C();
+};
+
+C::C() : D(0) ; E(0) { }   // C2630
+C::C() : D(0), E(0) {}   // OK
 ```

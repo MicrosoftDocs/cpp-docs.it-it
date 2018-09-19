@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2721 | Documenti Microsoft
+title: Errore del compilatore C2721 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71e3cae8aa0ad505adb84c330f33751379aa3e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0fcded3d2a2a0bdd2eb2e7b9965abea0e09b35b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054552"
 ---
 # <a name="compiler-error-c2721"></a>Errore del compilatore C2721
-'identificatore': identificatore classe di archiviazione non valido tra la parola chiave operator e tipo  
-  
- Conversioni di tipo definito dall'utente si applicano a tutte le classi di archiviazione, pertanto non è possibile specificare una classe di archiviazione in una conversione del tipo.
+
+'identificatore': identificatore classe di archiviazione non valido tra la parola chiave operator e tipo
+
+Conversioni di tipi definiti dall'utente si applicano a tutte le classi di archiviazione, in modo che non è possibile specificare una classe di archiviazione in una conversione del tipo.

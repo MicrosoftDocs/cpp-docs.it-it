@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4204 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4204 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f000fa42357a299c943eda0cd5f8697aee138f4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee6164f20bbf91a8cb0b88d8a1333107f239d3f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136237"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>Avviso degli strumenti del linker LNK4204
-'nomefile' mancano informazioni di debug per il modulo di riferimento; oggetto collegato senza informazioni di debug  
-  
- Il file con estensione PDB ha una firma errata. Il linker continuerà a collegare l'oggetto senza informazioni di debug. Si consiglia di ricompilare il file oggetto utilizzando il [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opzione.  
-  
- LNK4204 può verificarsi se alcuni degli oggetti nella raccolta di riferimento a un file che non esiste più. Questo problema può verificarsi quando la ricompilazione della soluzione, ad esempio; un file oggetto potrebbe essere eliminato e non è stato ricreato a causa di un errore di compilazione. In questo caso, in cui eseguire la compilazione con **/Z7**, o **/Fd**per aggiornare gli oggetti per fare riferimento a un singolo file per ogni libreria (che non è il nome predefinito del file con estensione pdb).  Per altre informazioni, vedere [/Fd (Nome file database di programma)](../../build/reference/fd-program-database-file-name.md).  Verificare che il file PDB viene salvato con la libreria ogni volta che viene aggiornato nel sistema di controllo di origine.
+
+'filename' mancano informazioni per il riferimento modulo; di debug oggetto collegato senza informazioni di debug
+
+Il file con estensione PDB contiene una firma errata. Il linker continuerà a collegare l'oggetto senza informazioni di debug. È possibile ricompilare il file oggetto usando il [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opzione.
+
+LNK4204 può verificarsi se alcuni degli oggetti nella libreria fanno riferimento a un file che non esiste più. Questo problema può verificarsi quando la ricompilazione della soluzione, ad esempio; un file oggetto potrebbe essere eliminato e ricompilato non a causa di un errore di compilazione. In questo caso, eseguire la compilazione con **/Z7**, o **/Fd**, per aggiornare gli oggetti per fare riferimento a un singolo file per ogni libreria (che non è il nome predefinito del file con estensione pdb).  Per altre informazioni, vedere [/Fd (Nome file database di programma)](../../build/reference/fd-program-database-file-name.md).  Assicurarsi che il file PDB viene salvato con la libreria ogni volta che viene aggiornata nel sistema di controllo di origine.

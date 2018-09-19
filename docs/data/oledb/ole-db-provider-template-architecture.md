@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebebb7f69239b62cf276e955fd6e54ef0cf37ea4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078894"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architettura dei modelli di provider OLE DB
+
 ## <a name="data-sources-and-sessions"></a>Origini dati e sessioni  
- L'architettura del provider OLE DB include un oggetto origine dati e una o più sessioni. L'oggetto origine dati è l'oggetto iniziale che è necessario creare un'istanza di ogni provider. Quando un'applicazione consumer necessita di dati, CO-crea l'oggetto origine dati per avviare il provider. L'oggetto origine dati crea un oggetto sessione (usando il `IDBCreateSession` interface) tramite cui il consumer si connette all'oggetto di origine dati. I programmatori ODBC possono considerare l'oggetto origine dati come equivalente al `HENV` e l'oggetto di sessione come equivalenti al `HDBC`.  
+
+L'architettura del provider OLE DB include un oggetto origine dati e una o più sessioni. L'oggetto origine dati è l'oggetto iniziale che è necessario creare un'istanza di ogni provider. Quando un'applicazione consumer necessita di dati, CO-crea l'oggetto origine dati per avviare il provider. L'oggetto origine dati crea un oggetto sessione (usando il `IDBCreateSession` interface) tramite cui il consumer si connette all'oggetto di origine dati. I programmatori ODBC possono considerare l'oggetto origine dati come equivalente al `HENV` e l'oggetto di sessione come equivalenti al `HDBC`.  
   
- ![Architettura del provider](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
+![Architettura del provider](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- Insieme ai file di origine creati dalla creazione guidata Provider OLE DB, i modelli OLE DB implementano un oggetto origine dati. Una sessione è un oggetto che corrisponde alla proprietà OLE DB `TSession`.  
+Insieme ai file di origine creati dalla creazione guidata Provider OLE DB, i modelli OLE DB implementano un oggetto origine dati. Una sessione è un oggetto che corrisponde alla proprietà OLE DB `TSession`.  
   
 ## <a name="mandatory-and-optional-interfaces"></a>Interfacce obbligatorie e facoltative  
- I modelli di provider OLE DB offrono implementazioni predefinite per tutte le interfacce necessarie. Interfacce obbligatorie e facoltative vengono definite da OLE DB per diversi tipi di oggetti:  
+
+I modelli di provider OLE DB offrono implementazioni predefinite per tutte le interfacce necessarie. Interfacce obbligatorie e facoltative vengono definite da OLE DB per diversi tipi di oggetti:  
   
--   [Origine dati](../../data/oledb/data-source-object-interfaces.md)  
+- [Origine dati](../../data/oledb/data-source-object-interfaces.md)  
   
--   [Sessione](../../data/oledb/session-object-interfaces.md)  
+- [Sessione](../../data/oledb/session-object-interfaces.md)  
   
--   [Rowset](../../data/oledb/rowset-object-interfaces.md)  
+- [Rowset](../../data/oledb/rowset-object-interfaces.md)  
   
--   [Comando](../../data/oledb/command-object-interfaces.md)  
+- [Comando](../../data/oledb/command-object-interfaces.md)  
   
--   [Transazione](../../data/oledb/transaction-object-interfaces.md)  
+- [Transazione](../../data/oledb/transaction-object-interfaces.md)  
   
- Si noti che i modelli di provider OLE DB non implementano oggetti riga e di archiviazione.  
+Si noti che i modelli di provider OLE DB non implementano oggetti riga e di archiviazione.  
   
- La tabella seguente elenca le interfacce obbligatorie e facoltative per gli oggetti elencati in precedenza, in base al [OLE DB 2.6 documentazione SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+La tabella seguente elenca le interfacce obbligatorie e facoltative per gli oggetti elencati in precedenza, in base al [OLE DB 2.6 documentazione SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
   
 |Componente|Interfaccia|Commento|  
 |---------------|---------------|-------------|  
@@ -57,12 +60,13 @@ ms.locfileid: "43684290"
 |[Comando](../../data/oledb/command-object-interfaces.md) ([CCommand](ccommand-class.md))|[obbligatorio] `IAccessor`<br /><br /> [obbligatorio] `IColumnsInfo`<br /><br /> [obbligatorio] `ICommand`<br /><br /> [obbligatorio] `ICommandProperties`<br /><br /> [obbligatorio] `ICommandText`<br /><br /> [obbligatorio] `IConvertType`<br /><br /> [facoltativo] `IColumnsRowset`<br /><br /> [facoltativo] `ICommandPersist`<br /><br /> [facoltativo] `ICommandPrepare`<br /><br /> [facoltativo] `ICommandWithParameters`<br /><br /> [facoltativo] `ISupportErrorInfo`<br /><br /> [facoltativo] `ICommandStream`|L'oggetto comando gestisce le operazioni sui dati, ad esempio le query. Può gestire istruzioni con parametri o senza parametri.<br /><br /> L'oggetto comando è anche responsabile della gestione delle associazioni per i parametri e colonne di output. Un'associazione è una struttura che contiene informazioni sul modo in cui una colonna, in un set di righe, deve essere recuperata. Contiene informazioni quali numero ordinale, tipo di dati, lunghezza e stato.|  
 |[Transazione](../../data/oledb/transaction-object-interfaces.md) (facoltativo)|[obbligatorio] `IConnectionPointContainer`<br /><br /> [obbligatorio] `ITransaction`<br /><br /> [facoltativo] `ISupportErrorInfo`|Oggetto transazione definisce un'unità atomica di lavoro su un'origine dati e determina le unità di lavoro correlazione tra loro. Questo oggetto non è supportato direttamente tramite i modelli di provider OLE DB (vale a dire, si crea un oggetto personalizzato).|  
   
- Per altre informazioni, vedere i seguenti argomenti:  
+Per altre informazioni, vedere i seguenti argomenti:  
   
--   [Mappe delle proprietà](../../data/oledb/property-maps.md)  
+- [Mappe delle proprietà](../../data/oledb/property-maps.md)  
   
--   [Il Record dell'utente](../../data/oledb/user-record.md)  
+- [Il Record dell'utente](../../data/oledb/user-record.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Interfacce OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Interfacce OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

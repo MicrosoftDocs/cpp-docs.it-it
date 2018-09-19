@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2377 | Documenti Microsoft
+title: Errore del compilatore C2377 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7d76b94ef099c2ac84ee7f048539ed56549d2e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f3813642503013ecd2ad3be4c01d55f12c837ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195256"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087039"
 ---
 # <a name="compiler-error-c2377"></a>Errore del compilatore C2377
-'identifier': ridefinizione. Impossibile eseguire l'overload di typedef con altri simboli  
-  
- Un identificatore `typedef` è stato ridefinito.  
-  
- L'esempio seguente genera l'errore C2377:  
-  
-```  
-// C2377.cpp  
-// compile with: /c  
-typedef int i;  
-int i;   // C2377  
-int j;   // OK  
+
+'identifier': ridefinizione. Impossibile eseguire l'overload di typedef con altri simboli
+
+Un identificatore `typedef` è stato ridefinito.
+
+L'esempio seguente genera l'errore C2377:
+
+```
+// C2377.cpp
+// compile with: /c
+typedef int i;
+int i;   // C2377
+int j;   // OK
 ```

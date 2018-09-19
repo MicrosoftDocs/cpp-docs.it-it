@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2155 | Documenti Microsoft
+title: Errore del compilatore C2155 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02d3194dcaad982e5e9d4ce758352f7221a389dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8622de0beb968a4db9d133e698137bca3e04f14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168425"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083197"
 ---
 # <a name="compiler-error-c2155"></a>Errore del compilatore C2155
-'?': operando sinistro aritmetici valido o tipo di puntatore  
-  
- Un'espressione sul lato sinistro della `?` non può essere confrontato a zero. È necessario utilizzare un'espressione aritmetica o del puntatore che può essere confrontata con zero.
+
+'?': operando sinistro aritmetico valido o il tipo di puntatore
+
+Un'espressione sul lato sinistro di `?` non è possibile confrontare a zero. È necessario utilizzare un'espressione aritmetica o del puntatore che può essere confrontata su zero.

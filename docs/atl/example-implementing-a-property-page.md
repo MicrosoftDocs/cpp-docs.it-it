@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046251"
 ---
 # <a name="example-implementing-a-property-page"></a>Esempio: Implementazione di una pagina delle proprietà
 
@@ -153,25 +153,25 @@ Implementare il metodo come illustrato di seguito:
 Dopo avere compilato il progetto, è possibile testare la pagina delle proprietà e l'oggetto helper mediante una semplice macro che è possibile creare ed eseguire nell'ambiente di sviluppo Visual Studio. Questa macro verrà creato un file di supporto dell'oggetto, quindi chiamare relativi `ShowPage` metodo tramite valore ProgID del **DocProperties** pagina delle proprietà e il `IUnknown` puntatore del documento attualmente attivo nell'editor di Visual Studio. Il codice che necessario per questa macro è illustrato di seguito:
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 Quando si esegue questa macro, verrà visualizzata sulla pagina delle proprietà che mostra il nome file e lo stato di sola lettura del documento di testo attualmente attivo. Lo stato di sola lettura del documento riflette solo la possibilità di scrivere il documento nell'ambiente di sviluppo. tale operazione non influisce sull'attributo di sola lettura del file su disco.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Pagine delle proprietà](../atl/atl-com-property-pages.md)   
+[Pagine delle proprietà](../atl/atl-com-property-pages.md)<br/>
 [Esempio ATLPages](../visual-cpp-samples.md)

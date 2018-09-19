@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 3) C4334 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4334 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f26749c968c3cac18b509046633ba3d91d15a4be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7bb16ea38b2c2112c12c561398341a7d1adbfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044015"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>Avviso del compilatore (livello 3) C4334
-'operator': risultato dello shift a 32 bit convertito in modo implicito a 64 bit (si intendeva eseguire lo shift a 64 bit?)  
-  
- Il risultato dello shift a 32 bit è stato convertito implicitamente a 64 bit e sospetta del compilatore che è previsto un shift a 64 bit.  Per risolvere il problema, utilizzare shift a 64 bit oppure in modo esplicito il cast del risultato di shift a 64 bit.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4334.  
-  
-```  
-// C4334.cpp  
-// compile with: /W3 /c  
-void SetBit(unsigned __int64 *p, int i) {  
-   *p |= (1 << i);   // C4334  
-   *p |= (1i64 << i);   // OK  
-}  
+
+'operator': risultato dello shift a 32 bit convertito in modo implicito a 64 bit (si intendeva eseguire lo shift a 64 bit?)
+
+Il risultato dello shift a 32 bit è stato convertito implicitamente a 64 bit e il compilatore sospetta dovuto al fatto che era previsto un cambiamento di a 64 bit.  Per risolvere questo problema, usare MAIUSC a 64 bit oppure in modo esplicito il cast del risultato shift a 64 bit.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4334.
+
+```
+// C4334.cpp
+// compile with: /W3 /c
+void SetBit(unsigned __int64 *p, int i) {
+   *p |= (1 << i);   // C4334
+   *p |= (1i64 << i);   // OK
+}
 ```

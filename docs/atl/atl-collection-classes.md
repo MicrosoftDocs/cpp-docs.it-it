@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c40303e0353e9f7ef3740e55381306507878b72b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 18369de567c830973bef26d886d5a2048bb0109f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048916"
 ---
 # <a name="atl-collection-classes"></a>Classi Collection ATL
 
@@ -136,6 +136,6 @@ Gli esempi seguenti illustrano le classi di raccolta:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Concetti](../atl/active-template-library-atl-concepts.md)   
+[Concetti](../atl/active-template-library-atl-concepts.md)<br/>
 [Classi di raccolta](../atl/collection-classes.md)
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1041141e9f31e59ab7a1884e976828972c0abd91
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96bf02a00459324b14dd26709b24088a03aec86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767324"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109294"
 ---
 # <a name="urect-class"></a>Classe u_rect
 
@@ -74,16 +74,16 @@ LPRECT m_lpRect;
 L'indirizzo dell'argomento di riferimento è archiviato nel membro dati della classe, [m_lpRect](#_u_rect__m_lprect).
 
 ```
-_U_RECT(RECT& rc);  
+_U_RECT(RECT& rc);
 _U_RECT(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*RC*  
+*RC*<br/>
 Oggetto `RECT` riferimento.
 
-*lpRect*  
+*lpRect*<br/>
 Oggetto `RECT` puntatore.
 
 ### <a name="remarks"></a>Note

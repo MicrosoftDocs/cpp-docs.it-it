@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2589 | Documenti Microsoft
+title: Errore del compilatore C2589 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15589358979f554a9c17114f7d78b05dd83c472
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2db5dde898a3e5918eed62b2b32231b5d7ed014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046056"
 ---
 # <a name="compiler-error-c2589"></a>Errore del compilatore C2589
-'identifier': token non valido a destra di ':: '  
-  
- Se una classe, struttura o unione nome viene visualizzato a sinistra dell'operatore di risoluzione dell'ambito (doppi due punti), il token a destra deve essere una classe, struttura o unione membro. In caso contrario, qualsiasi identificatore globale può essere visualizzato a destra.  
-  
- Impossibile eseguire l'overload dell'operatore di risoluzione dell'ambito.  
-  
- L'esempio seguente genera l'errore C2589:  
-  
-```  
-// C2589.cpp  
-void Test(){}  
-class A {};  
-void operator :: ();   // C2589  
-  
-int main() {  
-   ::Test();  
-}  
+
+'identifier': token non valido a destra di ':: '
+
+Se una classe, struttura o unione nome viene visualizzato a sinistra dell'operatore di risoluzione dell'ambito (doppi due punti), il token nella parte destra deve essere una classe, struttura o membro di unione. In caso contrario, qualsiasi identificatore globale può essere visualizzati sulla destra.
+
+L'operatore di risoluzione dell'ambito non possa essere sottoposti a overload.
+
+L'esempio seguente genera l'errore C2589:
+
+```
+// C2589.cpp
+void Test(){}
+class A {};
+void operator :: ();   // C2589
+
+int main() {
+   ::Test();
+}
 ```

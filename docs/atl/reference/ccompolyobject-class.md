@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec995026b0142fc30470836b29697457be91937e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045055"
 ---
 # <a name="ccompolyobject-class"></a>Classe CComPolyObject
 
@@ -41,14 +41,14 @@ Questa classe implementa `IUnknown` per un oggetto aggregato o non aggregato.
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<class contained>  
+template<class contained>
 class CComPolyObject : public IUnknown,
       public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*contenuti*  
+*contenuti*<br/>
 La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da tutte le altre interfacce si desidera supportare nell'oggetto.
 
 ## <a name="members"></a>Membri
@@ -127,7 +127,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*  
+*PV*<br/>
 [in] Un puntatore a unknown esterno se l'oggetto deve essere aggregata o NULL se l'oggetto se l'oggetto non è aggregato.
 
 ### <a name="remarks"></a>Note
@@ -160,7 +160,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parametri
 
-*profilo di porta*  
+*profilo di porta*<br/>
 [out] Un puntatore a un **CComPolyObject <** `contained` **>** puntatore. Se `CreateInstance` ha esito negativo *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -203,7 +203,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parametri
 
-*contenuti*  
+*contenuti*<br/>
 [in] La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da tutte le altre interfacce si desidera supportare nell'oggetto.
 
 ### <a name="remarks"></a>Note
@@ -216,22 +216,22 @@ Recupera un puntatore all'interfaccia richiesta.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Q*  
+*Q*<br/>
 L'interfaccia COM.
 
-*IID*  
+*IID*<br/>
 [in] L'identificatore dell'interfaccia richiesto.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal *iid*. Se l'oggetto non supporta questa interfaccia, *ppvObject* è impostato su NULL.
 
-*profilo di porta*  
+*profilo di porta*<br/>
 [out] Un puntatore a interfaccia identificato dal `__uuidof(Q)`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -256,6 +256,6 @@ Nelle build di debug `Release` restituisce un valore che può essere utile per l
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
+[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

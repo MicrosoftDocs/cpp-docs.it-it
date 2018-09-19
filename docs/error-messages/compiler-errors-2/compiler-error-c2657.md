@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2657 | Documenti Microsoft
+title: Errore del compilatore C2657 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70814ce7423bee3147f68d6298babc10eeac56fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 342b336582b7920756a17b99f0d52dcb28c7173a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231381"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109977"
 ---
 # <a name="compiler-error-c2657"></a>Errore del compilatore C2657
-' classe:: *' trovato all'inizio di un'istruzione (si è omesso di specificare un tipo?)  
-  
- La riga inizia con un identificatore di puntatore a membro.  
-  
- Questo errore può essere causato da un identificatore di tipo mancante nella dichiarazione di un puntatore a un membro.  
-  
- L'esempio seguente genera l'errore C2657:  
-  
-```  
-// C2657.cpp  
-class C {};  
-int main() {  
-   C::* pmc1;        // C2657  
-   int C::* pmc2;   // OK  
-}  
+
+' classe:: *' trovata all'inizio di un'istruzione (si è omesso di specificare un tipo di?)
+
+La riga inizia con un identificatore di puntatore a membro.
+
+Questo errore può essere causato da un identificatore di tipo mancante nella dichiarazione di un puntatore a un membro.
+
+L'esempio seguente genera l'errore C2657:
+
+```
+// C2657.cpp
+class C {};
+int main() {
+   C::* pmc1;        // C2657
+   int C::* pmc2;   // OK
+}
 ```

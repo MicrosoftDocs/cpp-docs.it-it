@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4714 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4714 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f327e7ffc5d2fe00abe3c0845af10a846243bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecb9ecb1c73373ae96c92c911988a512e2173cec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136101"
 ---
 # <a name="compiler-warning-level-4-c4714"></a>Avviso del compilatore (livello 4) C4714
-funzione 'funzione' contrassegnata come forceinline non resa inline  
-  
- La funzione specificata è stata selezionata per l'espansione inline, ma il compilatore non ha eseguito l'incorporamento.  
-  
- Anche se `__forceinline` è un'indicazione più forte al compilatore di `__inline`, inline viene comunque eseguita a discrezione del compilatore, ma non euristica viene utilizzati per determinare i vantaggi derivanti dall'incorporamento questa funzione.  
-  
- In alcuni casi, il compilatore verrà non inline una funzione specifica per motivi di meccanici. Ad esempio, il compilatore verrà non inline:  
-  
--   Una funzione se il risultato sarà la combinazione di entrambi SEH ed EH di C++.  
-  
--   Alcune funzioni con copia costruita gli oggetti passati per valore quando /EHs / - GX//EHa è attiva.  
-  
--   Funzioni che restituiscono un oggetto non rimovibili per valore quando /EHs / - GX//EHa è attiva.  
-  
--   Funzioni con assembly inline durante la compilazione senza - Og//Ox, /O1/O2.  
-  
--   Funzioni con un elenco di argomenti variabile.  
-  
--   Una funzione con un **provare** istruzione (gestione delle eccezioni C++).  
-  
- L'esempio seguente genera l'errore C4714:  
-  
-```  
-// C4714.cpp  
-// compile with: /Ob1 /GX /W4  
-__forceinline void func1()  
-{  
-   try  
-   {  
-   }  
-   catch (...)  
-   {  
-   }  
-}  
-  
-void func2()  
-{  
-   func1();   // C4714  
-}  
-  
-int main()  
-{  
-}  
+
+funzione 'funzione' contrassegnata come forceinline non resa inline
+
+La funzione specificata è stata selezionata per l'espansione inline, ma il compilatore non ha eseguito l'incorporamento.
+
+Sebbene `__forceinline` è un'indicazione più forte al compilatore di `__inline`, l'incorporamento viene comunque eseguita a discrezione del compilatore, ma non l'euristica viene utilizzato per determinare i vantaggi derivanti dalla inlining questa funzione.
+
+In alcuni casi, il compilatore creerà non inline una funzione specifica per motivi di meccanici. Ad esempio, il compilatore creerà non inline:
+
+- Una funzione se il risultato sarà la combinazione di sia SEH ed EH di C++.
+
+- Alcune funzioni con copia costruita gli oggetti passati per valore quando - GX//EHs//EHa è on.
+
+- Funzioni che restituiscono un oggetto non rimovibili per valore quando - GX//EHs//EHa è on.
+
+- Funzioni con assembly inline durante la compilazione senza - Og/Ox/O1/O2.
+
+- Funzioni con un elenco di argomenti variabili.
+
+- Una funzione con un **provare** istruzione (gestione delle eccezioni di C++).
+
+L'esempio seguente genera l'errore C4714:
+
+```
+// C4714.cpp
+// compile with: /Ob1 /GX /W4
+__forceinline void func1()
+{
+   try
+   {
+   }
+   catch (...)
+   {
+   }
+}
+
+void func2()
+{
+   func1();   // C4714
+}
+
+int main()
+{
+}
 ```

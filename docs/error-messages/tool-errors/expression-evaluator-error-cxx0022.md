@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0022 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082352"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>Errore dell‘analizzatore di espressioni CXX0022
-chiamata di funzione prima di Main  
-  
- L'analizzatore di espressioni C non è possibile valutare una funzione prima del debugger la funzione **Main**. Il programma non è inizializzato correttamente finché **Main** è stato chiamato.  
-  
- Questo errore è identico all'errore CAN0022.
+
+chiamata di funzione prima Main
+
+L'analizzatore di espressioni C non è possibile valutare una funzione di prima che il debugger ha immesso la funzione **Main**. Il programma non viene inizializzato correttamente finché **Main** è stato chiamato.
+
+Questo errore è identico all'errore CAN0022.

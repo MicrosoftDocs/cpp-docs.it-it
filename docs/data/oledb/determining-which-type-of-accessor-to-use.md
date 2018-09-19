@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086967"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Determinazione del tipo di funzione di accesso da utilizzare
+
 È possibile determinare i tipi di dati in un set di righe in fase di compilazione o in fase di esecuzione.  
   
- Se è necessario determinare i tipi di dati in fase di compilazione, usare una funzione di accesso statico (ad esempio `CAccessor`). È possibile determinare i tipi di dati manualmente o tramite la creazione guidata Consumer OLE DB ATL.  
+Se è necessario determinare i tipi di dati in fase di compilazione, usare una funzione di accesso statico (ad esempio `CAccessor`). È possibile determinare i tipi di dati manualmente o tramite la creazione guidata Consumer OLE DB ATL.  
   
- Se è necessario determinare i tipi di dati in fase di esecuzione, usare un dinamico (`CDynamicAccessor` o i relativi figli) o della funzione di accesso manuali (`CManualAccessor`). In questi casi, è possibile chiamare `GetColumnInfo` nel set di righe da restituire le informazioni di associazione di colonna, da cui è possibile determinare i tipi.  
+Se è necessario determinare i tipi di dati in fase di esecuzione, usare un dinamico (`CDynamicAccessor` o i relativi figli) o della funzione di accesso manuali (`CManualAccessor`). In questi casi, è possibile chiamare `GetColumnInfo` nel set di righe da restituire le informazioni di associazione di colonna, da cui è possibile determinare i tipi.  
   
- Nella tabella seguente elenca i tipi di funzioni di accesso disponibile nei modelli di consumer. Ogni funzione di accesso presenta vantaggi e svantaggi. A seconda della situazione attuale, un tipo di funzione di accesso dovrebbe adattarsi alla proprie esigenze.  
+Nella tabella seguente elenca i tipi di funzioni di accesso disponibile nei modelli di consumer. Ogni funzione di accesso presenta vantaggi e svantaggi. A seconda della situazione attuale, un tipo di funzione di accesso dovrebbe adattarsi alla proprie esigenze.  
   
 |Classe di funzione di accesso|Binding|Parametro|Commento|  
 |--------------------|-------------|---------------|-------------|  
@@ -42,4 +43,5 @@ ms.locfileid: "43679724"
 |`CXMLAccessor`|Automatico.|No.|Recupera i dati dall'archivio dati come dati di tipo stringa e le formatta come XML assegnare tag di dati.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)
+
+[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

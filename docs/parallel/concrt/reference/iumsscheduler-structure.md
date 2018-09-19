@@ -1,5 +1,5 @@
 ---
-title: Struttura IUMSScheduler | Documenti Microsoft
+title: Struttura IUMSScheduler | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489978a97d42439e5560a75e429c38be10c18c29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 46ed7dac35dce4b5df51cd4c218a1a70a84d21df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079063"
 ---
 # <a name="iumsscheduler-structure"></a>Struttura IUMSScheduler
 Interfaccia a un'astrazione di un'utilità di pianificazione di lavoro che vuole che Gestione risorse del runtime di concorrenza passi thread UMS pianificabili in modalità utente. Gestione risorse usa questa interfaccia per comunicare con le utilità di pianificazione dei thread UMS.  L'interfaccia `IUMSScheduler` eredita dall'interfaccia `IScheduler`.  
@@ -43,11 +43,11 @@ struct IUMSScheduler : public IScheduler;
 |[IUMSScheduler::SetCompletionList](#setcompletionlist)|Assegna un `IUMSCompletionList` interfaccia a un'utilità di pianificazione di thread UMS.|  
   
 ## <a name="remarks"></a>Note  
- Se si implementa un'utilità di pianificazione personalizzata che comunica con il gestore delle risorse e si desidera che i thread UMS vengano passati all'utilità di pianificazione anziché i thread Win32 normale, è necessario fornire un'implementazione del `IUMSScheduler` interfaccia. Inoltre, è necessario impostare il valore dei criteri per le chiavi dei criteri dell'utilità di pianificazione `SchedulerKind` da `UmsThreadDefault`. Se i criteri specificano i thread UMS, il `IScheduler` interfaccia che viene passato come parametro per il [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) metodo deve essere un `IUMSScheduler` interfaccia.  
+ Se si sta implementando un'utilità di pianificazione personalizzate che comunica con Resource Manager e si vuole che i thread UMS da passare all'utilità di pianificazione anziché dei thread Win32 normale, è necessario fornire un'implementazione del `IUMSScheduler` interfaccia. Inoltre, è necessario impostare il valore dei criteri per la chiave dei criteri dell'utilità di pianificazione `SchedulerKind` essere `UmsThreadDefault`. Se i criteri specificano thread UMS, il `IScheduler` passata come parametro per il [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) metodo deve essere un `IUMSScheduler` interfaccia.  
   
- Il gestore delle risorse è in grado di passare i thread UMS solo nei sistemi operativi che dispongono della funzionalità UMS. sistemi operativi a 64 bit con Windows 7 e versioni successive supporta i thread UMS. Se si crea un criterio di pianificazione con il `SchedulerKind` chiave impostato sul valore `UmsThreadDefault` e la piattaforma sottostante non supporta UMS, il valore della `SchedulerKind` chiave su tale criterio verrà modificato il valore `ThreadScheduler`. Ti consigliamo di leggere nuovamente questo valore dei criteri prima dell'attesa di ricevere i thread UMS.  
+ Il gestore di risorse è in grado di passare è thread UMS solo nei sistemi operativi con la funzionalità UMS. sistemi operativi a 64 bit con la versione Windows 7 e versioni successive supportano i thread UMS. Se si crea un criterio di utilità di pianificazione con il `SchedulerKind` chiave impostata sul valore `UmsThreadDefault` e la piattaforma sottostante non supporta UMS, il valore della `SchedulerKind` verrà modificato il valore chiave su tale criterio `ThreadScheduler`. Ti consigliamo di leggere nuovamente questo valore del criterio prima dell'attesa di ricevere i thread UMS.  
   
- Il `IUMSScheduler` interfaccia è un'estremità di un canale bidirezionale di comunicazione tra un'utilità di pianificazione e Gestione risorse. L'altra estremità è rappresentata dal `IResourceManager` e `ISchedulerProxy` interfacce, che vengono implementate da Gestione risorse.  
+ Il `IUMSScheduler` interfaccia è un'estremità di un canale di comunicazione tra un'utilità di pianificazione e Gestione risorse bidirezionale. L'altra estremità è rappresentata dal `IResourceManager` e `ISchedulerProxy` interfacce che vengono implementate da Resource Manager.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [IScheduler](ischeduler-structure.md)  
@@ -67,11 +67,11 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pCompletionList`  
- L'interfaccia dell'elenco di completamento dell'utilità di pianificazione. È presente un unico elenco per utilità di pianificazione.  
+*pCompletionList*<br/>
+L'interfaccia dell'elenco di completamento per l'utilità di pianificazione. È disponibile un unico elenco per ogni utilità di pianificazione.  
   
 ### <a name="remarks"></a>Note  
- Il gestore delle risorse verrà richiamare questo metodo nell'utilità di pianificazione che specifica che la richiesta thread UMS, dopo che l'utilità di pianificazione ha richiesto un'allocazione iniziale di risorse. L'utilità di pianificazione è possibile utilizzare il `IUMSCompletionList` interfaccia per determinare quando sono stati sbloccati i proxy del thread UMS. È valido solo per accedere a questa interfaccia da un proxy del thread in esecuzione in una radice del processore virtuale assegnata all'utilità di pianificazione UMS.  
+ Il gestore di risorse richiama questo metodo in un'utilità di pianificazione che specifica che i thread UMS, la richiesta dopo che l'utilità di pianificazione ha richiesto un'allocazione iniziale di risorse. L'utilità di pianificazione è possibile usare il `IUMSCompletionList` interfaccia per determinare quando sono stati sbloccati proxy del thread UMS. È valido solo per accedere all'interfaccia da un proxy del thread in esecuzione in una radice del processore virtuale assegnata all'utilità di pianificazione UMS.  
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   

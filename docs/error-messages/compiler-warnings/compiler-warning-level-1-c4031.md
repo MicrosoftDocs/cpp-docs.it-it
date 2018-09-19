@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4031 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4031 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 145619065350adec057b276712f5d2f0fc3ea080
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0957c4de911f8e117198b67a9e172a8c232b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082131"
 ---
-# <a name="compiler-warning-level-1-c4031"></a>Compilatore (livello 1) Avviso C4031
-secondo elenco di parametri formali più lungo del primo elenco  
-  
- Una funzione è stata ridichiarata con parametri formali diversi. Il compilatore usa i parametri formali forniti nella prima dichiarazione.
+# <a name="compiler-warning-level-1-c4031"></a>Compilatore Warning (level 1) C4031
+
+secondo elenco di parametri formali più lungo del primo elenco
+
+Una funzione è dichiarata di nuovo con parametri formali diversi. Il compilatore usa i parametri formali forniti nella prima dichiarazione.

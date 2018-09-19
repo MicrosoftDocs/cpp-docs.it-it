@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2191 | Documenti Microsoft
+title: Errore del compilatore C2191 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa4b590b494355450909032c78822553004beddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e739c5c9fc77c4c9658afb2f5f6d9568c6f43bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088358"
 ---
 # <a name="compiler-error-c2191"></a>Errore del compilatore C2191
-secondo elenco di parametri più lungo del primo  
-  
- Una funzione C è stata dichiarata una seconda volta con un elenco di parametri più lungo. C non supporta le funzioni in overload.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C2191:  
-  
-```  
-// C2191.c  
-// compile with: /Za /c  
-void func( int );  
-void func( int, float );   // C2191 different parameter list  
-void func2( int, float );   // OK  
+
+secondo elenco di parametri più lungo del primo
+
+Una funzione C è stata dichiarata una seconda volta con un elenco di parametri più lungo. C non supporta le funzioni in overload.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C2191:
+
+```
+// C2191.c
+// compile with: /Za /c
+void func( int );
+void func( int, float );   // C2191 different parameter list
+void func2( int, float );   // OK
 ```

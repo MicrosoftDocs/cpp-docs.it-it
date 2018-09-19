@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8ee35df4b6ee792cd91f1b294259544e8944509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089047"
 ---
 # <a name="atlbasemodule70-structure"></a>Struttura _ATL_BASE_MODULE70
 
@@ -47,28 +47,28 @@ struct _ATL_BASE_MODULE70 {
 
 ## <a name="members"></a>Membri
 
-`cbSize`  
+`cbSize`<br/>
 Le dimensioni della struttura, usata per il controllo delle versioni.
 
-`m_hInst`  
+`m_hInst`<br/>
 Il `hInstance` per questo modulo (exe o dll).
 
-`m_hInstResource`  
+`m_hInstResource`<br/>
 Handle di risorsa istanza predefinita.
 
-`m_bNT5orWin98`  
+`m_bNT5orWin98`<br/>
 Informazioni sulla versione del sistema operativo. Usato internamente da ATL.
 
-`dwAtlBuildVer`  
+`dwAtlBuildVer`<br/>
 Archivia la versione di ATL. Attualmente 0x0700.
 
-`pguidVer`  
+`pguidVer`<br/>
 GUID interno ATL.
 
-`m_csResource`  
+`m_csResource`<br/>
 Utilizzato per sincronizzare l'accesso al `m_rgResourceInstance` matrice. Usato internamente da ATL.
 
-`m_rgResourceInstance`  
+`m_rgResourceInstance`<br/>
 Matrice utilizzata per cercare le risorse in tutte le istanze di risorse di cui è compatibile con ATL. Usato internamente da ATL.
 
 ## <a name="remarks"></a>Note

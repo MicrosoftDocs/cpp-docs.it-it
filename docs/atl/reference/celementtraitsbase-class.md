@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1943895b8db663239ed1bfb27b8e97fc3c416e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1173633cd720ed6ee0e4aacdf75a8b305fdbfe4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767906"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043365"
 ---
 # <a name="celementtraitsbase-class"></a>Classe CElementTraitsBase
 
@@ -35,13 +35,13 @@ Questa classe fornisce copia predefinita e sposta i metodi per una classe di rac
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraitsBase
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Il tipo di dati da archiviare nella raccolta.
 
 ## <a name="members"></a>Membri
@@ -83,13 +83,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Parametri
 
-*pDest*  
+*pDest*<br/>
 Puntatore al primo elemento che riceverà i dati copiati.
 
-*pSrc*  
+*pSrc*<br/>
 Puntatore al primo elemento da copiare.
 
-*nElements*  
+*nElements*<br/>
 Numero degli elementi da copiare.
 
 ### <a name="remarks"></a>Note
@@ -125,13 +125,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Parametri
 
-*pDest*  
+*pDest*<br/>
 Puntatore al primo elemento che riceverà i dati spostati.
 
-*pSrc*  
+*pSrc*<br/>
 Puntatore al primo elemento da spostare.
 
-*nElements*  
+*nElements*<br/>
 Il numero di elementi da spostare.
 
 ### <a name="remarks"></a>Note

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2711 | Documenti Microsoft
+title: Errore del compilatore C2711 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2e5c904d7f6d865b94ea4fb4ba65be4c974f8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5a2e757c525d272055077cb95516abf42c06dbc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088436"
 ---
 # <a name="compiler-error-c2711"></a>Errore del compilatore C2711
-'function': questa funzione non può essere compilate come gestite, gestita tramite #pragma  
-  
- Alcune istruzioni impedirà il compilatore di generare codice MSIL per la funzione contenitrice.  
-  
- L'esempio seguente genera l'errore C2711:  
-  
-```  
-// C2711.cpp  
-// compile with: /clr  
-// processor: x86  
-using namespace System;  
-value struct V {  
-   static const t = 10;  
-};  
-  
-void bar() {  
-   V::t;  
-   __asm int 3   // C2711 inline asm can't be compiled managed  
-}  
+
+'function': questa funzione non possa essere compilate come gestite, prendere in considerazione utilizzando #pragma non gestiti
+
+Alcune istruzioni impedirà al compilatore di generare codice MSIL per la funzione contenitore.
+
+L'esempio seguente genera l'errore C2711:
+
+```
+// C2711.cpp
+// compile with: /clr
+// processor: x86
+using namespace System;
+value struct V {
+   static const t = 10;
+};
+
+void bar() {
+   V::t;
+   __asm int 3   // C2711 inline asm can't be compiled managed
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4506 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4506 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12a8778d8c908e05d0679b0e6c7ecaa1ad830cf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a454ba35b0ba551cb5eadcb5efe399210b343b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078829"
 ---
 # <a name="compiler-warning-level-1-c4506"></a>Avviso del compilatore (livello 1) C4506
-Nessuna definizione per la funzione inline 'function'  
-  
- La funzione specificata è stata dichiarata ma contrassegnata per l'incorporamento ma non è stato definito.  
-  
- Il compilatore ha non in linea la funzione.  
-  
- Assicurarsi che le funzioni esterne da rendere inline vengono dichiarate con la `extern` (parola chiave).
+
+Nessuna definizione per la funzione inline 'function'
+
+La funzione specificata è stata dichiarata e contrassegnata per l'incorporamento ma non è stato definito.
+
+Il compilatore non è stato non in linea la funzione.
+
+Assicurarsi che funzioni esterne implementazione inline vengono dichiarate con la `extern` (parola chiave).

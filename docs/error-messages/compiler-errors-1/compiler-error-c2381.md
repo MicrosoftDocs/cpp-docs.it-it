@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2381 | Documenti Microsoft
+title: Errore del compilatore C2381 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bd5f5edcf95144333524c41b803c24b728a621f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f09cd8c16eeb5ec797643cb6653d069df41b136
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076944"
 ---
 # <a name="compiler-error-c2381"></a>Errore del compilatore C2381
-'function': ridefinizione. __declspec(noreturn) diverso  
-  
- Una funzione è stata dichiarata e definita, ma la definizione utilizzata la [noreturn](../../cpp/noreturn.md) `__declspec` modificatore. L'utilizzo di `noreturn` rappresenta una ridefinizione della funzione; la dichiarazione e definizione di dover concordare l'utilizzo di `noreturn`.  
-  
- L'esempio seguente genera l'errore C2381:  
-  
-```  
-// C2381.cpp  
-// compile with: /c  
-void f1();  
-void __declspec(noreturn) f1() {}   // C2381  
-void __declspec(noreturn) f2() {}   // OK  
+
+'function': ridefinizione. __declspec(noreturn) differisce
+
+Una funzione è stata dichiarata e definita, ma la definizione utilizzata la [noreturn](../../cpp/noreturn.md) `__declspec` modificatore. L'uso di `noreturn` costituisce una ridefinizione della funzione; devono concordare sull'uso di dichiarazione e nella definizione `noreturn`.
+
+L'esempio seguente genera l'errore C2381:
+
+```
+// C2381.cpp
+// compile with: /c
+void f1();
+void __declspec(noreturn) f1() {}   // C2381
+void __declspec(noreturn) f2() {}   // OK
 ```

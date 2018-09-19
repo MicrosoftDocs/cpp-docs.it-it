@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0040 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0040 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b1e3ed5f3bcf736f372227c2c14fcf52dd7cd10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e6aacb4db469f688d07916e1b50a1b8238bf65c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047135"
 ---
 # <a name="project-build-error-prj0040"></a>Errore di compilazione progetto PRJ0040
-Errore interno in fase di compilazione. Impossibile continuare. Ricaricare il progetto e riprovare.  
-  
- Il sistema del progetto non è riuscito a elaborare il progetto.  
-  
- Provare a ricaricare il progetto.
+
+Errore interno in fase di compilazione. Non può continuare. Ricaricare il progetto e riprovare.
+
+Il sistema di progetto non è riuscito a elaborare il progetto.
+
+Provare a ricaricare il progetto.

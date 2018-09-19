@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2862 | Documenti Microsoft
+title: Errore del compilatore C2862 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9aac4a7c4bd43dcd4f0e688c955619133d375f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cfd5ee07ecd7ca1613c4e7b5584294e58aace3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247515"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049787"
 ---
 # <a name="compiler-error-c2862"></a>Errore del compilatore C2862
-'interface': un'interfaccia può avere solo membri pubblici  
-  
- Protetti e i membri privati sono accessibili solo da altre funzioni membro. Tali membri non sono utili in un'interfaccia, poiché potrebbero non fornire le implementazioni per i relativi membri.  
-  
- L'esempio seguente genera C2862:  
-  
-```  
-// C2862.cpp  
-// compile with: /c  
-#include <unknwn.h>  
-  
-[object, uuid="60719E20-EF37-11D1-978D-0000F805D73B"]  
-__interface IMyInterface {  
-   HRESULT mf1(void);   // OK  
-protected:  
-   HRESULT mf2(int *b);   // C2862  
-private:  
-   HRESULT mf3(int *c);   // C2862  
-};  
+
+'interface': un'interfaccia può avere solo membri pubblici
+
+Protetti e i membri privati sono accessibili solo da altre funzioni membro. Tali membri non sono utili in un'interfaccia, poiché potrebbe non fornire implementazioni per i relativi membri.
+
+L'esempio seguente genera C2862:
+
+```
+// C2862.cpp
+// compile with: /c
+#include <unknwn.h>
+
+[object, uuid="60719E20-EF37-11D1-978D-0000F805D73B"]
+__interface IMyInterface {
+   HRESULT mf1(void);   // OK
+protected:
+   HRESULT mf2(int *b);   // C2862
+private:
+   HRESULT mf3(int *c);   // C2862
+};
 ```

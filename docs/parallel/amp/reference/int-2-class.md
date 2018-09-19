@@ -1,5 +1,5 @@
 ---
-title: Classe int_2 | Documenti Microsoft
+title: Classe int_2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7368607fd3041895d2f84553d64395ed1bd54820
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7c3e3d61179717648c50709dc219038956438f3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080298"
 ---
 # <a name="int2-class"></a>Classe int_2
 Rappresenta un vettore short di due numeri interi.  
@@ -66,7 +66,7 @@ class int_2;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore int_2](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore int_2](#ctor)|Di overload. Default costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -134,7 +134,7 @@ class int_2;
   
 ##  <a name="ctor"></a> int_2 
 
- Predefinito, costruttore inizializza tutti gli elementi con 0.  
+ Default costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 int_2() restrict(amp,
@@ -183,17 +183,17 @@ explicit inline int_2(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_V0`  
- Il valore per inizializzare l'elemento 0.  
+*_V0*<br/>
+Il valore per inizializzare l'elemento 0.  
   
- `_V1`  
- Il valore per inizializzare l'elemento 1.  
+*V1*<br/>
+Il valore per inizializzare l'elemento 1.  
   
- `_V`  
- Il valore per l'inizializzazione.  
+*ISOLA*<br/>
+Il valore di inizializzazione.  
   
- `_Other`  
- Oggetto utilizzato per inizializzare.  
+*_Other*<br/>
+Oggetto utilizzato per inizializzare.  
   
 ##  <a name="int_2__size"></a> Dimensioni 
 

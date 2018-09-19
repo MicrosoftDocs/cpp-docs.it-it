@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1306 errore | Documenti Microsoft
+title: Strumenti del linker LNK1306 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,58 +16,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb340a4c28f94f18e0c4b65bea8749394e002bd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7cc007a4a594c8593d7820365377f1c811b1e23c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300498"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050567"
 ---
-# <a name="linker-tools-error-lnk1306"></a>Errore degli strumenti del linker LNK1306  
-  
-> Funzione di punto di ingresso DLL non può essere gestito; compilare in nativo  
-  
-`DllMain` non possono essere compilate in MSIL. deve essere compilato in codice nativo.  
-  
-Per risolvere questo problema,  
-  
--   Compilare il file che contiene il punto di ingresso senza **/clr**.  
-  
--   Inserire il punto di ingresso in un `#pragma unmanaged` sezione.  
-  
-Per altre informazioni, vedere:  
-  
--   [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [managed, unmanaged](../../preprocessor/managed-unmanaged.md)  
-  
--   [Inizializzazione di assembly misti](../../dotnet/initialization-of-mixed-assemblies.md)  
-  
--   [DLL e comportamento delle librerie di runtime Visual C++](../../build/run-time-library-behavior.md)  
-  
-## <a name="example"></a>Esempio  
-  
-L'esempio seguente genera l'errore LNK1306.  
-  
-```cpp  
-// LNK1306.cpp  
-// compile with: /clr /link /dll /entry:NewDllMain  
-// LNK1306 error expected  
-#include <windows.h>  
-int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
-   return 1;  
-}  
-```  
-  
-Per risolvere questo problema, non utilizzare l'opzione /clr per compilare il file oppure utilizzare un `#pragma` direttiva per inserire la definizione di punto di ingresso in una sezione non gestita, come illustrato in questo esempio:  
-  
-```cpp  
-// LNK1306fix.cpp  
-// compile with: /clr /link /dll /entry:NewDllMain  
-#include <windows.h>  
-#pragma managed(push, off)  
-int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
-   return 1;  
-}  
-#pragma managed(pop)  
-```  
+# <a name="linker-tools-error-lnk1306"></a>Errore degli strumenti del linker LNK1306
+
+> Funzione di punto di ingresso DLL non può essere gestito; compilare in nativo
+
+`DllMain` non possono essere compilate in MSIL. deve essere compilato in codice nativo.
+
+Per risolvere questo problema,
+
+- Compilare il file che contiene il punto di ingresso senza **/clr**.
+
+- Inserire il punto di ingresso in un `#pragma unmanaged` sezione.
+
+Per altre informazioni, vedere:
+
+- [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [managed, unmanaged](../../preprocessor/managed-unmanaged.md)
+
+- [Inizializzazione di assembly misti](../../dotnet/initialization-of-mixed-assemblies.md)
+
+- [DLL e comportamento delle librerie di runtime Visual C++](../../build/run-time-library-behavior.md)
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore LNK1306.
+
+```cpp
+// LNK1306.cpp
+// compile with: /clr /link /dll /entry:NewDllMain
+// LNK1306 error expected
+#include <windows.h>
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
+   return 1;
+}
+```
+
+Per risolvere questo problema, non utilizzare l'opzione /clr per compilare il file oppure utilizzare un `#pragma` direttiva per inserire la definizione di punto di ingresso in una sezione non gestita, come illustrato in questo esempio:
+
+```cpp
+// LNK1306fix.cpp
+// compile with: /clr /link /dll /entry:NewDllMain
+#include <windows.h>
+#pragma managed(push, off)
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
+   return 1;
+}
+#pragma managed(pop)
+```

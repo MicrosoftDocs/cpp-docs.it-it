@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3071 | Documenti Microsoft
+title: Errore del compilatore C3071 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163cb170953c444789e39b906ff4d408739f7514
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f004de3ed133ea77d543014ae1adcdc4e1eddef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077802"
 ---
 # <a name="compiler-error-c3071"></a>Errore del compilatore C3071
-operatore 'operator' applicabile solo a un'istanza di una classe di riferimento o un tipo di valore  
-  
- Un operatore CLR non può essere usato in un tipo nativo. L'operatore può essere usato in una classe di riferimento o in un una struct di riferimento (un tipo di valore), ma non in un tipo nativo, ad esempio int, o in un alias per un tipo nativo, ad esempio System::Int32. Questi tipi non possono essere boxed nel codice C++ in modo da fare riferimento alla variabile nativa e quindi l'operatore non può essere usato.  
-  
- Per ulteriori informazioni, vedere [operatore di riferimento di rilevamento](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3071.  
-  
-```  
-// C3071.cpp  
-// compile with: /clr  
-class N {};  
-ref struct R {};  
-  
-int main() {  
-   N n;  
-   %n;   // C3071  
-  
-   R r;  
-   R ^ r2 = %r;   // OK  
-}  
+
+operatore 'operator' applicabile solo a un'istanza di una classe di riferimento o un tipo di valore
+
+Un operatore CLR non può essere usato in un tipo nativo. L'operatore può essere usato in una classe di riferimento o in un una struct di riferimento (un tipo di valore), ma non in un tipo nativo, ad esempio int, o in un alias per un tipo nativo, ad esempio System::Int32. Questi tipi non possono essere boxed nel codice C++ in modo da fare riferimento alla variabile nativa e quindi l'operatore non può essere usato.
+
+Per altre informazioni, vedere [operatore di riferimento di rilevamento](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3071.
+
+```
+// C3071.cpp
+// compile with: /clr
+class N {};
+ref struct R {};
+
+int main() {
+   N n;
+   %n;   // C3071
+
+   R r;
+   R ^ r2 = %r;   // OK
+}
 ```

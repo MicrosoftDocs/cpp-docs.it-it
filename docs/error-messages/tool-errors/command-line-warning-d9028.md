@@ -1,5 +1,5 @@
 ---
-title: Riga di comando D9028 avviso | Documenti Microsoft
+title: Avviso della riga di comando D9028 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244f3c4a5cf5b34e75ad9d94a167648abdba38a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef739da3bc106a654e11c4a13bae7be59d35fc90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044132"
 ---
 # <a name="command-line-warning-d9028"></a>Avviso della riga di comando D9028
-Errore di ricompilazione minima, ripristino della build normale  
-  
- Il file con estensione IDB del progetto è danneggiato. Eliminare il file e ricompilare.  
-  
- Per ulteriori informazioni sulla ricompilazione minima e il file con estensione IDB, vedere il [opzione del compilatore /Gm](../../build/reference/gm-enable-minimal-rebuild.md).
+
+Errore di ricompilazione minima, ripristino della build normale
+
+Il file con estensione IDB del progetto è danneggiato. Eliminare il file e ricompilare.
+
+Per altre informazioni sulla ricompilazione minima e il file con estensione IDB, vedere la [opzione /Gm del compilatore](../../build/reference/gm-enable-minimal-rebuild.md).

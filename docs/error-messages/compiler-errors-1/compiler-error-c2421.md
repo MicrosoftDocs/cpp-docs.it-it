@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2421 | Documenti Microsoft
+title: Errore del compilatore C2421 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52545e38207eda1ea941e100a23876e326c2a6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d35b3249be3805d2f4898c4a8007aaa5f849ca4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135946"
 ---
 # <a name="compiler-error-c2421"></a>Errore del compilatore C2421
-Operatore PTR utilizzato con registro in 'context'  
-  
- Il `PTR` operatore non può essere utilizzato con un `register` operando.
+
+Operatore PTR utilizzato con registro in 'context'
+
+Il `PTR` operatore non può essere usato con un `register` operando.

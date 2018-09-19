@@ -21,41 +21,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 59131994708f2cb78f00b05611c1db7f550f6a87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076918"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: riepilogo
-Un gestore terminazioni viene eseguito, indipendentemente dal modo in cui il **try** blocco di istruzioni viene terminato. Cause del passaggio fuori il **try** blocco, un `longjmp` istruzione che trasferisce il controllo di fuori del blocco e la rimozione dello stack dovuta alla gestione delle eccezioni.  
-  
+
+Un gestore terminazioni viene eseguito, indipendentemente dal modo in cui il **try** blocco di istruzioni viene terminato. Cause del passaggio fuori il **try** blocco, un `longjmp` istruzione che trasferisce il controllo di fuori del blocco e la rimozione dello stack dovuta alla gestione delle eccezioni.
+
 > [!NOTE]
->  Visual C++ supporta due formati delle istruzioni `setjmp` e `longjmp`. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per usare questa versione, includere il file \<setjmp. h >. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per usare questa versione, includere il file \<setjmpex >. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.  
-  
- Il sistema operativo esegue tutti i gestori terminazioni nell'ordine corretto (incluso il corpo di un gestore eccezioni), prima che sia possibile eseguire qualsiasi altro codice.  
-  
- Quando la causa dell'interruzione è un'eccezione, il sistema deve innanzitutto eseguire la parte del filtro di uno o più gestori eccezioni, quindi decidere gli elementi da terminare. L'ordine degli eventi è il seguente:  
-  
-1.  Viene generata un'eccezione.  
-  
-2.  Il sistema esamina la gerarchia dei gestori eccezioni attivi ed esegue il filtro del gestore con precedenza più elevata; questo è il gestore eccezioni installato più recentemente e quello con un livello di annidamento più profondo, in termini di blocchi e chiamate di funzione.  
-  
-3.  Se questo filtro supera il controllo (restituisce 0), il processo continua fino a quando non viene trovato un filtro che non invece non lo supera.  
-  
-4.  Se questo filtro restituisce -1, l'esecuzione continua in cui è stata generata l'eccezione e terminazione non avviene.  
-  
-5.  Se il filtro restituisce 1, si verificano i seguenti eventi:  
-  
-    -   Il sistema rimuove lo stack, deselezionando tutti gli stack frame tra il codice attualmente in esecuzione (dove è stata generata l'eccezione) e lo stack frame contenente il gestore eccezioni che ottiene il controllo.  
-  
-    -   Man mano che lo stack viene rimosso, viene eseguito ogni gestore terminazioni presente nello stack.  
-  
-    -   Viene eseguito il gestore eccezioni stesso.  
-  
-    -   Il controllo passa alla riga di codice dopo la fine del gestore eccezioni.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)   
- [Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+>  Visual C++ supporta due formati delle istruzioni `setjmp` e `longjmp`. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per usare questa versione, includere il file \<setjmp. h >. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per usare questa versione, includere il file \<setjmpex >. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
+
+Il sistema operativo esegue tutti i gestori terminazioni nell'ordine corretto (incluso il corpo di un gestore eccezioni), prima che sia possibile eseguire qualsiasi altro codice.
+
+Quando la causa dell'interruzione è un'eccezione, il sistema deve innanzitutto eseguire la parte del filtro di uno o più gestori eccezioni, quindi decidere gli elementi da terminare. L'ordine degli eventi è il seguente:
+
+1. Viene generata un'eccezione.
+
+1. Il sistema esamina la gerarchia dei gestori eccezioni attivi ed esegue il filtro del gestore con precedenza più elevata; questo è il gestore eccezioni installato più recentemente e quello con un livello di annidamento più profondo, in termini di blocchi e chiamate di funzione.
+
+1. Se questo filtro supera il controllo (restituisce 0), il processo continua fino a quando non viene trovato un filtro che non invece non lo supera.
+
+1. Se questo filtro restituisce -1, l'esecuzione continua in cui è stata generata l'eccezione e terminazione non avviene.
+
+1. Se il filtro restituisce 1, si verificano i seguenti eventi:
+
+   - Il sistema rimuove lo stack, deselezionando tutti gli stack frame tra il codice attualmente in esecuzione (dove è stata generata l'eccezione) e lo stack frame contenente il gestore eccezioni che ottiene il controllo.
+
+   - Man mano che lo stack viene rimosso, viene eseguito ogni gestore terminazioni presente nello stack.
+
+   - Viene eseguito il gestore eccezioni stesso.
+
+   - Il controllo passa alla riga di codice dopo la fine del gestore eccezioni.
+
+## <a name="see-also"></a>Vedere anche
+
+[Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)<br/>
+[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

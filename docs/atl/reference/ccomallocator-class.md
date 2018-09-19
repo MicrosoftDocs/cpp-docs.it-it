@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a35579cc29e2ec964998c3c126c7aadb17de57e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f867d3a7ca81d190ee363c7539e56a62004eb377
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757838"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088943"
 ---
 # <a name="ccomallocator-class"></a>Classe CComAllocator
 
@@ -65,7 +65,7 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBytes*  
+*nBytes*<br/>
 Numero di byte da allocare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore alla memoria allocata.
 
 ### <a name="remarks"></a>Note
@@ -103,10 +103,10 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore alla memoria allocata.
 
-*nBytes*  
+*nBytes*<br/>
 Numero di byte da riallocare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -119,6 +119,6 @@ Ridimensiona la quantità di memoria allocata. Visualizzare [CoTaskMemRealloc](/
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
-[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
+[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
+[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Funzioni dello spazio dei nomi Concurrency::Graphics::Direct3D | Documenti Microsoft
+title: Funzioni dello spazio dei nomi Concurrency::Graphics::Direct3D | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed95ed8df8a42dc62684c71a3005c2f33fecd18
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 78fbf9c260b1a53bb16628846033ef15ab04684f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110185"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency::Graphics::Direct3D
 ||||  
@@ -29,7 +29,7 @@ ms.locfileid: "33686334"
 
  
 ##  <a name="get_sampler"></a>  get_sampler  
- Ottenere l'interfaccia di stato D3D campionatore specifico tasto di scelta rapida consente di visualizzare che rappresenta l'oggetto campionatore specificato.  
+ Ottenere l'interfaccia dello stato campionatore D3D dell'acceleratore fornita visualizzazione che rappresenta l'oggetto campionatore specificato.  
   
 ```  
 IUnknown* get_sampler(
@@ -38,17 +38,17 @@ IUnknown* get_sampler(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Av`  
- Una vista D3D tasti di scelta rapida in cui si desidera creare lo stato del campionatore D3D.  
+*_Av*<br/>
+Una visualizzazione di tasti di scelta rapida D3D sul quale è possibile creare lo stato del campionatore D3D.  
   
- `_Sampler`  
- Oggetto campionatore per cui viene creata l'interfaccia di stati del campionatore D3D sottostante.  
+*_Sampler*<br/>
+Oggetto campionatore per il quale viene creato l'interfaccia dello stato campionatore D3D sottostante.  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore a interfaccia IUnknown corrispondente allo stato D3D campionatore che rappresenta il campionatore specificato.  
+ Puntatore a interfaccia IUnknown corrispondente allo stato campionatore D3D che rappresenta il campionatore specificato.  
   
 ##  <a name="get_texture"></a>  get_texture  
- Ottiene l'interfaccia di trama Direct3D sottostante specificato [trama](texture-class.md) oggetto.  
+ Ottiene l'interfaccia di trama Direct3D sottostante l'oggetto specificato [trama](texture-class.md) oggetto.  
   
 ```  
 template<
@@ -78,34 +78,34 @@ _Ret_ IUnknown *get_texture(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `value_type`  
- Il tipo di elemento della trama.  
+*value_type*<br/>
+Il tipo di elemento della trama.  
   
- `_Rank`  
- Il numero di dimensioni della trama.  
+*_Rank*<br/>
+Numero di dimensioni della trama.  
   
- `_Texture`  
- Una trama o visualizzazione di trama associato il accelerator_view per il quale viene restituita l'interfaccia di trama Direct3D sottostante.  
+*_Texture*<br/>
+Una trama o visualizzazione di trama associato ad accelerator_view per il quale viene restituito l'interfaccia di trama Direct3D sottostante.  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore a interfaccia IUnknown corrispondente per la trama Direct3D sottostante la trama.  
+ Puntatore a interfaccia IUnknown corrispondente alla trama Direct3D sottostante alla trama.  
   
 ##  <a name="make_sampler"></a>  make_sampler  
- Creare un campionatore da un puntatore a interfaccia D3D campionatore dello stato.  
+ Creare un campionatore da un puntatore a interfaccia dello stato campionatore D3D.  
   
 ```  
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_D3D_sampler`  
- Puntatore a interfaccia IUnknown dello stato D3D campionatore al campionatore da creare.  
+*_D3D_sampler*<br/>
+Puntatore a interfaccia IUnknown dello stato campionatore D3D a creare il campionatore.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un campionatore rappresenta lo stato del campionatore D3D fornito.  
   
 ##  <a name="make_texture"></a>  make_texture  
- Crea un [trama](texture-class.md) oggetto usando i parametri specificati.  
+ Crea una [trama](texture-class.md) oggetto utilizzando i parametri specificati.  
   
 ```  
 template<
@@ -119,26 +119,26 @@ texture<value_type, _Rank> make_texture(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `value_type`  
- Tipo degli elementi nella trama.  
+*value_type*<br/>
+Il tipo degli elementi nella trama.  
   
- `_Rank`  
- Il numero di dimensioni della trama.  
+*_Rank*<br/>
+Numero di dimensioni della trama.  
   
- `_Av`  
- Una vista D3D tasti di scelta rapida in cui si desidera creare la trama.  
+*_Av*<br/>
+Una visualizzazione di tasti di scelta rapida D3D sul quale è possibile creare la trama.  
   
- `_D3D_texture`  
- Puntatore a interfaccia IUnknown della trama D3D per creare la trama da.  
+*_D3D_texture*<br/>
+Puntatore a interfaccia IUnknown della trama D3D per creare la trama.  
   
- `_View_format`  
- Formato da utilizzare per le viste create da questo trama DXGI. Passare DXGI_FORMAT_UNKNOWN (predefinito) per il formato derivare il formato sottostante del _D3D_texture e value_type del modello. Il formato specificato deve essere compatibile con il formato di _D3D_texture sottostante.  
+*_View_format*<br/>
+Formato DXGI da utilizzare per le visualizzazioni create da questa trama. Passare DXGI_FORMAT_UNKNOWN (impostazione predefinita) per derivare il formato dal formato sottostante di _D3D_texture e value_type di questo modello. Il formato fornito deve essere compatibile con il formato sottostante di _D3D_texture.  
   
 ### <a name="return-value"></a>Valore restituito  
  Una trama utilizzando la trama D3D fornita.  
   
 ##  <a name="msad4"></a>  msad4  
- Confronta un valore di riferimento a 4 byte e un valore di origine a 8 byte e accumula un vettore di 4 somme. Ciascuna somma corrisponde alla somma mascherata delle differenze assolute di allineamenti diversi byte tra il valore di riferimento e il valore di origine.  
+ Confronta un valore di riferimento di 4 byte e un valore di origine di 8 byte e accumula un vettore di 4 somme. Ogni somma corrisponde alla somma mascherata delle differenze assolute degli allineamenti di byte diversi tra il valore di riferimento e il valore di origine.  
   
 ```  
 inline uint4 msad4(
@@ -148,20 +148,20 @@ inline uint4 msad4(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Reference`  
- La matrice di riferimento di 4 byte in un valore uint  
+*Riferimento*<br/>
+La matrice di riferimento di 4 byte in un valore uint  
   
- `_Source`  
- Matrice di origine di 8 byte in un vettore di due valori uint.  
+*_Source*<br/>
+Matrice di origine di 8 byte in un vettore di due valori uint.  
   
- `_Accum`  
- Vettore di 4 valori da aggiungere alla somma mascherata delle differenze assolute dei allineamenti diversi byte tra il valore di riferimento e il valore di origine.  
+*_Accum*<br/>
+Vettore di 4 valori da aggiungere alla somma mascherata delle differenze assolute degli allineamenti di byte diversi tra il valore di riferimento e il valore di origine.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un vettore di 4 somme. Ciascuna somma corrisponde alla somma mascherata delle differenze assolute di allineamenti diversi byte tra il valore di riferimento e il valore di origine.  
+ Restituisce un vettore di 4 somme. Ogni somma corrisponde alla somma mascherata delle differenze assolute degli allineamenti di byte diversi tra il valore di riferimento e il valore di origine.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** amp_graphics.h  
+ **Intestazione:** amp_graphics. h  
   
  **Namespace:** Concurrency::graphics::direct3d 
 

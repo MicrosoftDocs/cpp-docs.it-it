@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d740bb36c1d574e474058c05d900d605c71e55f0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1a05eada2b5828cfc654496355bddcabcafc8d60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086148"
 ---
 # <a name="containers-modern-c"></a>Contenitori (C++ moderno)
 
@@ -48,6 +48,7 @@ Non usare matrici di tipo C. Per le API precedenti che devono accedere ai dati d
 Per altre informazioni sui contenitori, vedere [i contenitori della libreria Standard C++](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)  
- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)  
- [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)  
+
+[Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

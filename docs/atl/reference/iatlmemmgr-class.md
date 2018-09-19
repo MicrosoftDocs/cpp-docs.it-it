@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1e04bd31ca1942e5e5fa054cb4991233e2f61c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b772a548054cd9d829356436afe53748c215c193
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762187"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078920"
 ---
 # <a name="iatlmemmgr-class"></a>Classe IAtlMemMgr
 
@@ -76,7 +76,7 @@ void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBytes*  
+*nBytes*<br/>
 Numero di byte necessari nel nuovo blocco di memoria.
 
 ### <a name="return-value"></a>Valore restituito
@@ -101,7 +101,7 @@ void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore alla memoria precedentemente allocata dal gestore di memoria.
 
 ### <a name="remarks"></a>Note
@@ -122,7 +122,7 @@ size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore alla memoria precedentemente allocata dal gestore di memoria.
 
 ### <a name="return-value"></a>Valore restituito
@@ -143,10 +143,10 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore alla memoria precedentemente allocata dal gestore di memoria.
 
-*nBytes*  
+*nBytes*<br/>
 Numero di byte necessari nel nuovo blocco di memoria.
 
 ### <a name="return-value"></a>Valore restituito
@@ -173,7 +173,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>Parametri
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -194,7 +194,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>Parametri
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -215,7 +215,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>Parametri
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -236,7 +236,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>Parametri
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -257,7 +257,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>Parametri
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -278,7 +278,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parametri
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -299,7 +299,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>Parametri
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -320,7 +320,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>Parametri
 
-*pFont*  
+*pFont*<br/>
 [out] L'indirizzo di un `IFontDisp` puntatore a interfaccia usato per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -341,7 +341,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>Parametri
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -362,7 +362,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>Parametri
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -385,7 +385,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>Parametri
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -406,7 +406,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parametri
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -423,7 +423,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>Parametri
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -444,7 +444,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>Parametri
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -465,7 +465,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>Parametri
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out] L'indirizzo di una variabile per ricevere il valore corrente di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -486,7 +486,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>Parametri
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -507,7 +507,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>Parametri
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -528,7 +528,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>Parametri
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -549,7 +549,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>Parametri
 
-*clrBackground*  
+*clrBackground*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -570,7 +570,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>Parametri
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -591,7 +591,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parametri
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -612,7 +612,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>Parametri
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -633,7 +633,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametri
 
-*pFont*  
+*pFont*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -654,7 +654,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>Parametri
 
-*clrForeground*  
+*clrForeground*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -675,7 +675,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>Parametri
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -696,7 +696,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>Parametri
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -717,7 +717,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parametri
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -734,7 +734,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>Parametri
 
-*bUserMode*  
+*bUserMode*<br/>
 [in] Il nuovo valore di questa proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -755,7 +755,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*pDispatch*  
+*pDispatch*<br/>
 Puntatore alla nuova interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -776,10 +776,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in] Un puntatore al `IUnknown` interfaccia del controllo da associare all'oggetto host.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle alla finestra da utilizzare per l'hosting.
 
 ### <a name="return-value"></a>Valore restituito
@@ -799,13 +799,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Parametri
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Stringa che identifica il controllo da creare. Può essere un CLSID (deve includere le parentesi graffe), ProgID, URL o HTML non elaborato (con prefisso **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle alla finestra da utilizzare per l'hosting.
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntatore a interfaccia per un flusso contenente i dati di inizializzazione per il controllo. Può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -836,22 +836,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Parametri
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Stringa che identifica il controllo da creare. Può essere un CLSID (deve includere le parentesi graffe), ProgID, URL o HTML non elaborato (con prefisso **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Handle alla finestra da utilizzare per l'hosting.
 
-*pStream*  
+*pStream*<br/>
 [in] Un puntatore a interfaccia per un flusso contenente i dati di inizializzazione per il controllo. Può essere NULL.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] L'indirizzo del puntatore che riceverà il `IUnknown` interfaccia del controllo creato. Può essere NULL.
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in] Identificatore di interfaccia di un'interfaccia in uscita per l'oggetto indipendente. Può essere IID_NULL.
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in] Un puntatore per il `IUnknown` interfaccia dell'oggetto sink di essere connessi al punto di connessione per l'oggetto contenuto specificato dal `iidSink`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -874,10 +874,10 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*riid*  
+*riid*<br/>
 [in] L'ID di un'interfaccia per il controllo richiesto.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] L'indirizzo di un puntatore che riceve l'interfaccia specificata del controllo creato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -894,7 +894,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametri
 
-*pDisp*  
+*pDisp*<br/>
 [in] Un puntatore a un `IDispatch` interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -911,7 +911,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametri
 
-*pDisp*  
+*pDisp*<br/>
 [in] Un puntatore a un `IDocHostUIHandlerDispatch` interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -936,7 +936,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="parameters"></a>Parametri
 
-*bstrLic*  
+*bstrLic*<br/>
 [in] La stringa BSTR che contiene la chiave di licenza per il controllo.
 
 ### <a name="remarks"></a>Note
@@ -966,7 +966,7 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="parameters"></a>Parametri
 
-*bstrLic*  
+*bstrLic*<br/>
 [in] La stringa BSTR che contiene la chiave di licenza per il controllo.
 
 ### <a name="remarks"></a>Note

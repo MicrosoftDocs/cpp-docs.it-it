@@ -14,35 +14,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b152be150e284462bddf0940df5656744925da5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 326318ddc8bc55bcdcd2939bfa00626b22d2a96c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405496"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083912"
 ---
 # <a name="jump-statements-c"></a>Istruzioni di spostamento (C++)
-L'istruzione di salto C++ esegue un immediato trasferimento di controllo locale.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-break;  
-continue;  
-return [expression];  
-goto identifier;  
-```  
-  
-## <a name="remarks"></a>Note  
- Per una descrizione delle istruzioni di salto C++, vedere gli argomenti seguenti.  
-  
--   [Istruzione break](../cpp/break-statement-cpp.md)  
-  
--   [Istruzione continue](../cpp/continue-statement-cpp.md)  
-  
--   [Istruzione return](../cpp/return-statement-cpp.md)  
-  
--   [Istruzione goto](../cpp/goto-statement-cpp.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica delle istruzioni C++](../cpp/overview-of-cpp-statements.md)
+
+L'istruzione di salto C++ esegue un immediato trasferimento di controllo locale.
+
+## <a name="syntax"></a>Sintassi
+
+```
+break;
+continue;
+return [expression];
+goto identifier;
+```
+
+## <a name="remarks"></a>Note
+
+Per una descrizione delle istruzioni di salto C++, vedere gli argomenti seguenti.
+
+- [Istruzione break](../cpp/break-statement-cpp.md)
+
+- [Istruzione continue](../cpp/continue-statement-cpp.md)
+
+- [Istruzione return](../cpp/return-statement-cpp.md)
+
+- [Istruzione goto](../cpp/goto-statement-cpp.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica delle istruzioni C++](../cpp/overview-of-cpp-statements.md)

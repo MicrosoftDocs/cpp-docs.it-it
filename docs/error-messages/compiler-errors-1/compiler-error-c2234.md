@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2234 | Documenti Microsoft
+title: Errore del compilatore C2234 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bba14bd704ba4d068fc5534f78a32f80b42046a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 294ca98d1f4ce8a86e551ab17269458784992a53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053102"
 ---
 # <a name="compiler-error-c2234"></a>Errore del compilatore C2234
-'name': le matrici di riferimenti non sono validi  
-  
- Poiché non sono consentiti i puntatori ai riferimenti, matrici di riferimenti non sono possibili.  
-  
- L'esempio seguente genera l'errore C2234:  
-  
-```  
-// C2234.cpp  
-int main() {  
-   int i = 0, j = 0, k = 0, l = 0;  
-   int &array[4] = {i,j,k,l};   // C2234  
-   int array2[4] = {i,j,k,l};   // OK  
-}  
+
+'name': le matrici di riferimenti non sono valide
+
+Perché non sono consentiti i puntatori ai riferimenti, matrici di riferimenti non sono possibili.
+
+L'esempio seguente genera l'errore C2234:
+
+```
+// C2234.cpp
+int main() {
+   int i = 0, j = 0, k = 0, l = 0;
+   int &array[4] = {i,j,k,l};   // C2234
+   int array2[4] = {i,j,k,l};   // OK
+}
 ```

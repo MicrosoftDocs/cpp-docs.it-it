@@ -14,48 +14,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff0716359c715431f9887f50be06e592d57787e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2976dbdd880cb200547f5fb2ac5d529877628ff0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089749"
 ---
 # <a name="using-arrays-c"></a>Utilizzo di matrici (C++)
-È possibile accedere ai singoli elementi di una matrice tramite l'operatore di indice di matrice (`[ ]`). Se una matrice unidimensionale viene utilizzata in un'espressione senza indice, il nome della matrice restituisce un puntatore al primo elemento della matrice.  
-  
-```cpp 
-// using_arrays.cpp  
-int main() {  
-   char chArray[10];  
-   char *pch = chArray;   // Evaluates to a pointer to the first element.  
-   char   ch = chArray[0];   // Evaluates to the value of the first element.  
-   ch = chArray[3];   // Evaluates to the value of the fourth element.  
-}  
-```  
-  
- Quando si utilizzano matrici multidimensionali, è possibile utilizzare varie combinazioni nelle espressioni.  
-  
-```cpp 
-// using_arrays_2.cpp  
-// compile with: /EHsc /W1  
-#include <iostream>  
-using namespace std;  
-int main() {  
-   double multi[4][4][3];   // Declare the array.  
-   double (*p2multi)[3];  
-   double (*p1multi);  
-  
-   cout << multi[3][2][2] << "\n";   // C4700 Use three subscripts.  
-   p2multi = multi[3];               // Make p2multi point to  
-                                     // fourth "plane" of multi.  
-   p1multi = multi[3][2];            // Make p1multi point to  
-                                     // fourth plane, third row  
-                                     // of multi.  
-}  
-```  
-  
- Nel codice precedente, `multi` è una matrice tridimensionale di tipo **doppie**. Il `p2multi` puntatore punta a una matrice di tipo **double** tridimensionale. In questo esempio la matrice viene utilizzata con uno, due e tre indici. Sebbene sia più comune specificare tutti gli indici, come nell'istruzione `cout`, è talvolta utile selezionare un sottoinsieme specifico di elementi della matrice, come illustrato nelle istruzioni che seguono `cout`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Array](../cpp/arrays-cpp.md)
+
+È possibile accedere ai singoli elementi di una matrice tramite l'operatore di indice di matrice (`[ ]`). Se una matrice unidimensionale viene utilizzata in un'espressione senza indice, il nome della matrice restituisce un puntatore al primo elemento della matrice.
+
+```cpp
+// using_arrays.cpp
+int main() {
+   char chArray[10];
+   char *pch = chArray;   // Evaluates to a pointer to the first element.
+   char   ch = chArray[0];   // Evaluates to the value of the first element.
+   ch = chArray[3];   // Evaluates to the value of the fourth element.
+}
+```
+
+Quando si utilizzano matrici multidimensionali, è possibile utilizzare varie combinazioni nelle espressioni.
+
+```cpp
+// using_arrays_2.cpp
+// compile with: /EHsc /W1
+#include <iostream>
+using namespace std;
+int main() {
+   double multi[4][4][3];   // Declare the array.
+   double (*p2multi)[3];
+   double (*p1multi);
+
+   cout << multi[3][2][2] << "\n";   // C4700 Use three subscripts.
+   p2multi = multi[3];               // Make p2multi point to
+                                     // fourth "plane" of multi.
+   p1multi = multi[3][2];            // Make p1multi point to
+                                     // fourth plane, third row
+                                     // of multi.
+}
+```
+
+Nel codice precedente, `multi` è una matrice tridimensionale di tipo **doppie**. Il `p2multi` puntatore punta a una matrice di tipo **double** tridimensionale. In questo esempio la matrice viene utilizzata con uno, due e tre indici. Sebbene sia più comune specificare tutti gli indici, come nell'istruzione `cout`, è talvolta utile selezionare un sottoinsieme specifico di elementi della matrice, come illustrato nelle istruzioni che seguono `cout`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Array](../cpp/arrays-cpp.md)

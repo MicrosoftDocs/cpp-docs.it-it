@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0039 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0039 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8681d73d2889433516b205a47c500193bbeabdb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5397426618c5dfcbaa6307105781ff2e6f2eb97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297768"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048331"
 ---
 # <a name="expression-evaluator-error-cxx0039"></a>Errore dell‘analizzatore di espressioni CXX0039
-il simbolo è ambiguo  
-  
- L'analizzatore di espressioni C non è possibile determinare a quale istanza di un simbolo da utilizzare in un'espressione. Il simbolo compare più volte nella struttura di ereditarietà.  
-  
- È necessario utilizzare l'operatore di risoluzione ambito (`::`) per specificare in modo esplicito l'istanza da utilizzare nell'espressione.  
-  
- Questo errore è identico all'errore CAN0039.
+
+il simbolo è ambiguo
+
+L'analizzatore di espressioni C non è possibile determinare quale istanza di un simbolo da utilizzare in un'espressione. Il simbolo è presente più volte nella struttura di ereditarietà.
+
+È necessario usare l'operatore di risoluzione ambito (`::`) specificare in modo esplicito l'istanza da utilizzare nell'espressione.
+
+Questo errore è identico all'errore CAN0039.

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1116 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RC1116 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9494f81c01a0bbad01015ecc7d0c171eedd637e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4aff49918751e94e08cd7d6c229bfa1d27116210
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110588"
 ---
 # <a name="resource-compiler-fatal-error-rc1116"></a>Errore irreversibile del compilatore di risorse RC1116
-RC di terminazione dopo gli errori del preprocessore  
-  
- Il compilatore di risorse è stato interrotto a causa di altri errori. Correggere gli errori e ricompilare.
+
+RC terminazione dopo gli errori del preprocessore
+
+Il compilatore di risorse è stato interrotto a causa di altri errori. Correggere gli errori e ricompilare.

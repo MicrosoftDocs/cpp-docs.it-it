@@ -23,63 +23,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587ce3800be5c58e4882b6ac3239de614739bcb8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 75f882fe924ba825a5f3ec641a98175104635e92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085816"
 ---
 # <a name="raising-software-exceptions"></a>Generazione di eccezioni software
-Alcuni degli errori di programma più comuni non sono contrassegnati come eccezioni dal sistema. Ad esempio, se si tenta di allocare un blocco di memoria ma non vi è memoria sufficiente, il runtime o la funzione API non genera un'eccezione ma restituisce un codice di errore.  
-  
- Tuttavia, è possibile trattare eventuali condizioni come un'eccezione rilevando la condizione nel codice e quindi segnalandola chiamando il [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) (funzione). Contrassegnando gli errori in questo modo, è possibile offrire i vantaggi di gestione delle eccezioni strutturate a qualsiasi tipo di errore di runtime.  
-  
- Per utilizzare la gestione delle eccezioni strutturata con errori:  
-  
--   Definire il proprio codice di eccezione per l'evento.  
-  
--   Chiamare `RaiseException` quando viene rilevato un problema.  
-  
--   Utilizzare i filtri per la gestione delle eccezioni per esegue il test del codice di eccezione definito.  
-  
- Il \<file Winerror. h > file Mostra il formato per i codici di eccezione. Per assicurarsi di non definire un codice che sia in conflitto con il codice di eccezione esistente, impostare il terzo bit più significativo su 1. I quattro bit più significativi dovrebbe essere impostati come illustrato nella tabella seguente.  
-  
-|BITS|Impostazione binaria consigliata|Descrizione|  
-|----------|--------------------------------|-----------------|  
-|31-30|11|Questi due bit descrivono lo stato di base del codice: 11 = errore, 00 = esito positivo, 01 = messaggio informativo, 10 = avviso.|  
-|29|1|Bit client. Impostare su 1 per i codici definiti dall'utente.|  
-|28|0|Bit riservati. Lasciare impostato su 0.|  
-  
- È possibile impostare i primi due bit su un'impostazione diversa dall'11 binario se si desidera, sebbene l'impostazione "errore" sia appropriata per la maggior parte delle eccezioni. È importante ricordare che è possibile impostare i bit 29 e 28 come illustrato nella tabella precedente.  
-  
- Il codice di errore risultanti deve pertanto avere i quattro bit più alto impostato sull'esadecimale E. Ad esempio, le seguenti definizioni definiscono i codici di eccezione che non siano in conflitto con i codici di eccezione Windows. È possibile, tuttavia, che sia necessario verificare quali codici vengono utilizzati dalle DLL di terze parti.  
-  
-```cpp 
-#define STATUS_INSUFFICIENT_MEM       0xE0000001  
-#define STATUS_FILE_BAD_FORMAT        0xE0000002  
-```  
-  
- Dopo aver definito un codice di eccezione, è possibile utilizzarlo per generare un'eccezione. Ad esempio, il codice seguente genera il `STATUS_INSUFFICIENT_MEM` eccezione in risposta a un problema di allocazione della memoria:  
-  
-```cpp 
-lpstr = _malloc( nBufferSize );  
-if (lpstr == NULL)  
-    RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
-```  
-  
- Se si desidera semplicemente generare un'eccezione, è possibile impostare gli ultimi tre parametri su 0. Gli ultimi tre parametri sono utili per comunicare le informazioni aggiuntive e impostare un contrassegno che impedisce ai gestori di proseguire l'esecuzione. Vedere le [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) funzione nel SDK di Windows per altre informazioni.  
-  
- Nei filtri di gestione delle eccezioni, è quindi possibile eseguire il test dei codici definiti. Ad esempio:  
-  
-```cpp 
-__try {  
-    ...  
-}  
-__except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||  
-        GetExceptionCode() == STATUS_FILE_BAD_FORMAT )  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [La scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)   
- [Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+Alcuni degli errori di programma più comuni non sono contrassegnati come eccezioni dal sistema. Ad esempio, se si tenta di allocare un blocco di memoria ma non vi è memoria sufficiente, il runtime o la funzione API non genera un'eccezione ma restituisce un codice di errore.
+
+Tuttavia, è possibile trattare eventuali condizioni come un'eccezione rilevando la condizione nel codice e quindi segnalandola chiamando il [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) (funzione). Contrassegnando gli errori in questo modo, è possibile offrire i vantaggi di gestione delle eccezioni strutturate a qualsiasi tipo di errore di runtime.
+
+Per utilizzare la gestione delle eccezioni strutturata con errori:
+
+- Definire il proprio codice di eccezione per l'evento.
+
+- Chiamare `RaiseException` quando viene rilevato un problema.
+
+- Utilizzare i filtri per la gestione delle eccezioni per esegue il test del codice di eccezione definito.
+
+Il \<file Winerror. h > file Mostra il formato per i codici di eccezione. Per assicurarsi di non definire un codice che sia in conflitto con il codice di eccezione esistente, impostare il terzo bit più significativo su 1. I quattro bit più significativi dovrebbe essere impostati come illustrato nella tabella seguente.
+
+|BITS|Impostazione binaria consigliata|Descrizione|
+|----------|--------------------------------|-----------------|
+|31-30|11|Questi due bit descrivono lo stato di base del codice: 11 = errore, 00 = esito positivo, 01 = messaggio informativo, 10 = avviso.|
+|29|1|Bit client. Impostare su 1 per i codici definiti dall'utente.|
+|28|0|Bit riservati. Lasciare impostato su 0.|
+
+È possibile impostare i primi due bit su un'impostazione diversa dall'11 binario se si desidera, sebbene l'impostazione "errore" sia appropriata per la maggior parte delle eccezioni. È importante ricordare che è possibile impostare i bit 29 e 28 come illustrato nella tabella precedente.
+
+Il codice di errore risultanti deve pertanto avere i quattro bit più alto impostato sull'esadecimale E. Ad esempio, le seguenti definizioni definiscono i codici di eccezione che non siano in conflitto con i codici di eccezione Windows. È possibile, tuttavia, che sia necessario verificare quali codici vengono utilizzati dalle DLL di terze parti.
+
+```cpp
+#define STATUS_INSUFFICIENT_MEM       0xE0000001
+#define STATUS_FILE_BAD_FORMAT        0xE0000002
+```
+
+Dopo aver definito un codice di eccezione, è possibile utilizzarlo per generare un'eccezione. Ad esempio, il codice seguente genera il `STATUS_INSUFFICIENT_MEM` eccezione in risposta a un problema di allocazione della memoria:
+
+```cpp
+lpstr = _malloc( nBufferSize );
+if (lpstr == NULL)
+    RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
+```
+
+Se si desidera semplicemente generare un'eccezione, è possibile impostare gli ultimi tre parametri su 0. Gli ultimi tre parametri sono utili per comunicare le informazioni aggiuntive e impostare un contrassegno che impedisce ai gestori di proseguire l'esecuzione. Vedere le [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) funzione nel SDK di Windows per altre informazioni.
+
+Nei filtri di gestione delle eccezioni, è quindi possibile eseguire il test dei codici definiti. Ad esempio:
+
+```cpp
+__try {
+    ...
+}
+__except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
+        GetExceptionCode() == STATUS_FILE_BAD_FORMAT )
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)<br/>
+[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

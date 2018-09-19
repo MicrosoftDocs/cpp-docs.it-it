@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0025 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0025 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 843de39120cee18b01d17d88fb2759bebb9d2dc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd89faa4de7b296d6a6771f857f3d16dbe2f94f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302841"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043703"
 ---
 # <a name="expression-evaluator-error-cxx0025"></a>Errore dell‘analizzatore di espressioni CXX0025
-l'operatore richiede struct/union  
-  
- Un operatore che accetta un'espressione di `struct` o **unione** tipo è stato applicato a un'espressione che non è un `struct` o **unione**.  
-  
- Componenti di classe, struttura o unione variabili devono avere un nome completo. I componenti non è possibile immettere senza specifica completa.  
-  
- Questo errore è identico all'errore CAN0025.
+
+operatore deve struct/union
+
+Un operatore che accetta un'espressione di `struct` oppure **union** tipo è stato applicato a un'espressione che non è un `struct` oppure **union**.
+
+Elementi della classe, struttura o unione variabili devono avere un nome completo. I componenti non possono essere inseriti senza la specifica completa.
+
+Questo errore è identico all'errore CAN0025.

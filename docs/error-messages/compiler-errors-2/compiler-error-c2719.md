@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2719 | Documenti Microsoft
+title: Errore del compilatore C2719 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8779db363c506d2f4ad884e15f78ba8231caa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4423352bad520d66920a01542f592ed8022482d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054187"
 ---
 # <a name="compiler-error-c2719"></a>Errore del compilatore C2719
-'parameter': il parametro formale con __declspec(align('#')) non verrà allineato  
-  
- Il [allineare](../../cpp/align-cpp.md) `__declspec` modificatore non è consentito nei parametri di funzione. L'allineamento dei parametri di funzione è controllato dalla convenzione di chiamata usata. Per ulteriori informazioni, vedere [convenzioni di chiamata](../../cpp/calling-conventions.md).  
-  
- L'esempio seguente genera l'errore C2719 e mostra come risolverlo:  
-  
-```  
-// C2719.cpp  
-void func(int __declspec(align(32)) i);   // C2719  
-// try the following line instead  
-// void func(int i);  
+
+'parameter': il parametro formale con __declspec(align('#')) non verrà allineato
+
+Il [allineare](../../cpp/align-cpp.md) `__declspec` modificatore non è consentito nei parametri di funzione. L'allineamento dei parametri di funzione è controllato dalla convenzione di chiamata usata. Per altre informazioni, vedere [convenzioni di chiamata](../../cpp/calling-conventions.md).
+
+L'esempio seguente genera l'errore C2719 e mostra come risolverlo:
+
+```
+// C2719.cpp
+void func(int __declspec(align(32)) i);   // C2719
+// try the following line instead
+// void func(int i);
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4020 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4020 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb7926e22802178ff3cbcb710fbc9b74e7138f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef0303c1a811304cd2edaa8622208dc4bada86ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046732"
 ---
-# <a name="compiler-warning-level-1-c4020"></a>Compilatore (livello 1) Avviso C4020
-'function': troppi parametri effettivi  
-  
- Il numero di parametri effettivi in una chiamata di funzione supera il numero di parametri formali del prototipo di funzione o della definizione. Il compilatore passa i parametri effettivi supplementari in base alla convenzione di chiamata della funzione.  
-  
- L'esempio seguente genera l'errore C4020:  
-  
-```  
-// C4020.c  
-// compile with: /W1 /c  
-void f(int);  
-int main() {  
-   f(1,2);   // C4020  
-}  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C4020b.c  
-// compile with: /c  
-void f(int);  
-int main() {  
-   f(1);  
-}  
+# <a name="compiler-warning-level-1-c4020"></a>Compilatore Warning (level 1) C4020
+
+'function': troppi parametri effettivi
+
+Il numero di parametri effettivi in una chiamata di funzione supera il numero di parametri formali del prototipo di funzione o della definizione. Il compilatore passa i parametri aggiuntivi effettivi secondo la convenzione di chiamata della funzione.
+
+L'esempio seguente genera l'errore C4020:
+
+```
+// C4020.c
+// compile with: /W1 /c
+void f(int);
+int main() {
+   f(1,2);   // C4020
+}
+```
+
+Possibile soluzione:
+
+```
+// C4020b.c
+// compile with: /c
+void f(int);
+int main() {
+   f(1);
+}
 ```

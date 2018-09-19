@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2129 | Documenti Microsoft
+title: Errore del compilatore C2129 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d151c774672b1788ca893a9812deb3e41100dc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e86515a7d7c8954271578291c4ebcb1a52fc9863
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054285"
 ---
 # <a name="compiler-error-c2129"></a>Errore del compilatore C2129
-funzione statica 'function' è dichiarata ma non definita  
-  
- Viene fatto riferimento in avanti a un `static` funzione che non viene mai definita.  
-  
- Oggetto `static` funzione deve essere definita nell'ambito file. Se la funzione viene definita in un altro file, deve essere dichiarato `extern`.
+
+funzione statica 'function' dichiarata ma non definita
+
+Un riferimento in avanti viene tentato un `static` funzione non definita.
+
+Oggetto `static` funzione deve essere definita nell'ambito file. Se la funzione è definita in un altro file, è necessario dichiararla `extern`.

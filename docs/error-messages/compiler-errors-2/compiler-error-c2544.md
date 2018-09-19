@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2544 | Documenti Microsoft
+title: Errore del compilatore C2544 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ff4922e592ef717c51057cae75453422a5df7df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad66377aef7be43cc929ce4612284356597a4022
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109229"
 ---
 # <a name="compiler-error-c2544"></a>Errore del compilatore C2544
-previsto ')' per l'operatore '()'  
-  
- L'operatore di chiamata di funzione manca una parentesi.  
-  
- Questo errore può essere causato dall'espansione di macro.
+
+previsto ')' per l'operatore '()'
+
+L'operatore di chiamata di funzione manca una parentesi.
+
+Questo errore può essere causato dall'espansione di macro.

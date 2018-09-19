@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 2) C4307 | Documenti Microsoft
+title: Compilatore avviso (livello 2) C4307 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52914fc5825bda5647308c006b853538f3d6225e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed18c213b35e79aaae98efa5932ac404a8d84bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079193"
 ---
 # <a name="compiler-warning-level-2-c4307"></a>Avviso del compilatore (livello 2) C4307
-'operator': overflow di costante integrale  
-  
- L'operatore viene utilizzato in un'espressione che restituisce una costante integer all'overflow lo spazio allocato. Si potrebbe essere necessario utilizzare un tipo più grande per la costante. Oggetto **tipo signed int** contiene un valore minore rispetto a un `unsigned int` perché il **tipo signed int** utilizza un bit per rappresentare il segno.  
-  
- L'esempio seguente genera l'errore C4307:  
-  
-```  
-// C4307.cpp  
-// compile with: /W2  
-int i = 2000000000 + 2000000000;   // C4307  
-int j = (unsigned)2000000000 + 2000000000;   // OK  
-  
-int main()  
-{  
-}  
+
+'operator': overflow di costante integrale
+
+L'operatore viene usato in un'espressione che restituisce una costante integer overflow lo spazio allocato per tale. Si potrebbe essere necessario usare un tipo più grande per la costante. Oggetto **tipo signed int** contiene un valore minore rispetto a un `unsigned int` perché la **tipo signed int** viene utilizzato un bit per rappresentare il segno.
+
+L'esempio seguente genera l'errore C4307:
+
+```
+// C4307.cpp
+// compile with: /W2
+int i = 2000000000 + 2000000000;   // C4307
+int j = (unsigned)2000000000 + 2000000000;   // OK
+
+int main()
+{
+}
 ```

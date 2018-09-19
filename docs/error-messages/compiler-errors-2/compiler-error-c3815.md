@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3815 | Documenti Microsoft
+title: Errore del compilatore C3815 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2706a44b911587e61e996ee3f2456aad93925d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae6d1244374ce7f83a5c309dac99f4eb36906caf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086941"
 ---
 # <a name="compiler-error-c3815"></a>Errore del compilatore C3815
-tipo restituito del metodo 'funzione_accesso_get' deve corrispondere tipo dell'ultimo parametro di un metodo set  
-  
- Quando si dichiara una proprietà, il valore restituito di `get_accessor` (metodo) deve corrispondere all'ultimo parametro nella dichiarazione del metodo della funzione di accesso set.  
-  
- C3815 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+
+tipo restituito del metodo 'funzione_accesso_get' deve corrispondere tipo dell'ultimo parametro di un setter
+
+Quando si dichiara una proprietà, il valore restituito del `get_accessor` metodo deve corrispondere l'ultimo parametro nella dichiarazione del metodo della funzione di accesso set.
+
+È raggiungibile tramite l'opzione del compilatore obsolete solo C3815 **/CLR: oldSyntax**.

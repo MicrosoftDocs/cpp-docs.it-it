@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2499 | Documenti Microsoft
+title: Errore del compilatore C2499 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6933d27a1f396dc08275c3f5149212be7abeaaf1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27f10cc2f48a72222a6e9a2a7187ba9a1f6fb450
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043950"
 ---
 # <a name="compiler-error-c2499"></a>Errore del compilatore C2499
-'class': una classe non può essere la classe di base  
-  
- Si è tentato di specificare la classe che si sta definendo come classe base.  
-  
- L'esempio seguente genera l'errore C2499:  
-  
-```  
-// C2499.cpp  
-// compile with: /c  
-class CMyClass : public CMyClass {};   // C2499  
-class CMyClass{};   // OK  
+
+'class': una classe non può essere la classe di base
+
+Si è tentato di specificare la classe che si sta definendo una classe di base.
+
+L'esempio seguente genera l'errore C2499:
+
+```
+// C2499.cpp
+// compile with: /c
+class CMyClass : public CMyClass {};   // C2499
+class CMyClass{};   // OK
 ```

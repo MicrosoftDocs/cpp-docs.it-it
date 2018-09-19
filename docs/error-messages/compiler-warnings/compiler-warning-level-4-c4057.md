@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4057 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4057 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3217ccb0a96fbe02e152ff82dedeb7e8e54b89ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10ce6b67fd24b4b8db01177af0225deab9dba4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292279"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088007"
 ---
 # <a name="compiler-warning-level-4-c4057"></a>Avviso del compilatore (livello 4) C4057
-'operator': 'identifier1' differisce da 'identifier2' nel riferimento indiretto a tipi di base leggermente diversi  
-  
- Due espressioni puntatore fanno riferimento a tipi di base diversi. Le espressioni vengono usate senza conversione.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
-  
-1.  Combinazione di tipi con segno e senza segno.  
-  
-2.  Combinazione di tipi **short** e **long** .
+
+'operator': 'identifier1' differisce da 'identifier2' nel riferimento indiretto a tipi di base leggermente diversi
+
+Due espressioni puntatore fanno riferimento a tipi di base diversi. Le espressioni vengono usate senza conversione.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+
+1. Combinazione di tipi con segno e senza segno.
+
+1. Combinazione di tipi **short** e **long** .

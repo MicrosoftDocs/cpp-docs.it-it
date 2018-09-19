@@ -1,5 +1,5 @@
 ---
-title: Profile-Guided Optimization avviso PG1039 | Documenti Microsoft
+title: Avviso di ottimizzazione PG1039 PGO | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2637013bacaecfa3e0d812177c12ce227d19be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1dd62059697b7f5c50a9fe7863f62ebbe6bf56c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050528"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>Avviso di ottimizzazione PGO PG1039
-Non è possibile attendere per effettuare lo sweep.  
-  
- L'applicazione non ha consentito [pgosweep](../../build/reference/pgosweep.md) per l'esecuzione.  Se possibile, eseguire pgosweep quando l'applicazione è in uno stato di inattività.
+
+Non è possibile attendere per effettuare lo sweep.
+
+L'applicazione non consentiva [pgosweep](../../build/reference/pgosweep.md) per l'esecuzione.  Se possibile, eseguire pgosweep quando l'applicazione è in uno stato di inattività.

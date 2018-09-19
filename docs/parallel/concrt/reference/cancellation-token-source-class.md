@@ -1,5 +1,5 @@
 ---
-title: Classe cancellation_token_source | Documenti Microsoft
+title: Classe cancellation_token_source | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053648"
 ---
 # <a name="cancellationtokensource-class"></a>Classe cancellation_token_source
 La classe `cancellation_token_source` rappresenta la possibilità di annullare una determinata operazione annullabile.  
@@ -66,7 +66,7 @@ class cancellation_token_source;
  `cancellation_token_source`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** pplconcrt  
+ **Intestazione:** . h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Src`  
+*_Src*<br/>
+Oggetto da copiare o spostare.  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,15 +113,17 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Iter`  
- `_Src`  
- Token il cui annullamento determina l'annullamento del token restituito. Si noti che l'origine del token restituita può anche essere annullata indipendentemente dall'origine contenuta nel parametro.  
+*_Iter*<br/>
+Tipo di iteratore.
+
+*_Src*<br/>
+Token il cui annullamento determina l'annullamento del token restituito. Si noti che l'origine del token restituita può anche essere annullata indipendentemente dall'origine contenuta nel parametro.  
   
- `_Begin`  
- Iteratore della libreria Standard C++ corrispondente all'inizio dell'intervallo di token da ascoltare per l'annullamento.  
+*Ini_zia*<br/>
+Iteratore della libreria Standard C++ corrispondente all'inizio dell'intervallo dei token da ascoltare per l'annullamento.  
   
- `_End`  
- Iteratore della libreria Standard C++ corrispondente alla fine dell'intervallo dei token da ascoltare per l'annullamento.  
+*End*<br/>
+Iteratore della libreria Standard C++ corrispondente alla fine dell'intervallo dei token da ascoltare per l'annullamento.  
   
 ### <a name="return-value"></a>Valore restituito  
  `cancellation_token_source` che viene annullato quando il token fornito dal parametro `_Src` viene annullato.  
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Src`  
+*_Src*<br/>
+Operando.
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Src`  
-  
+*_Src*<br/>
+Operando.
+
 ### <a name="return-value"></a>Valore restituito  
   
 ##  <a name="operator_eq_eq"></a> operator== 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Src`  
+*_Src*<br/>
+Operando.
   
 ### <a name="return-value"></a>Valore restituito  
   

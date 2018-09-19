@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1189 errore | Documenti Microsoft
+title: Strumenti del linker LNK1189 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c54181c042d51dc0a3317c81978b25b33d936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9527c7a741c34f9f75967d9d5465b65cbd1dcfe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301437"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087929"
 ---
 # <a name="linker-tools-error-lnk1189"></a>Errore degli strumenti del linker LNK1189
-LIBTOOMANYMEMBERS:: superato il limite della libreria di oggetti numero  
-  
- È stato superato il limite di 65535 oggetti o membri in una libreria.  
-  
- Per risolvere questo problema, dividere la raccolta in due o più librerie con un minor numero di oggetti o membri.
+
+LIBTOOMANYMEMBERS:: superato il limite della libreria di oggetti numero
+
+È stato superato il limite di 65535 oggetti o membri in una libreria.
+
+Per risolvere questo problema, dividere la raccolta in due o più librerie con un minor numero di oggetti o membri.

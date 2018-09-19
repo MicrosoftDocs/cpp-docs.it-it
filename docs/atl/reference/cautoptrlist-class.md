@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046758"
 ---
 # <a name="cautoptrlist-class"></a>Classe CAutoPtrList
 
@@ -35,14 +35,14 @@ Questa classe fornisce metodi utili quando si crea un elenco di puntatori intell
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename E>  
-class CAutoPtrList : 
+template<typename E>
+class CAutoPtrList :
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*E*  
+*E*<br/>
 Il tipo di puntatore.
 
 ## <a name="members"></a>Membri
@@ -79,7 +79,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Dimensione del blocco, con valore predefinito è 10.
 
 ### <a name="remarks"></a>Note
@@ -88,6 +88,6 @@ La dimensione del blocco è una misura della quantità di memoria allocata quand
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CAtlList](../../atl/reference/catllist-class.md)   
-[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+[Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

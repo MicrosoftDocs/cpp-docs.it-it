@@ -22,104 +22,109 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd087905c46fbbfa83f2da567074b6d76d4fc679
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136258"
 ---
 # <a name="additive-operators--and--"></a>Operatori di addizione: + e -
-## <a name="syntax"></a>Sintassi  
-  
-```  
-expression + expression   
-expression - expression  
-```  
-  
-## <a name="remarks"></a>Note  
- Gli operatori additivi sono:  
-  
--   Addizione (**+**)  
-  
--   Sottrazione (**-**)  
-  
- Questi operatori binari hanno un'associatività da sinistra a destra.  
-  
- Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntatore. Il risultato dell'addizione (**+**) operatore è la somma degli operandi. Il risultato della sottrazione (**-**) l'operatore è la differenza tra gli operandi. Se uno o entrambi gli operandi sono puntatori, questi devono essere puntatori agli oggetti, non alle funzioni. Se entrambi gli operandi sono puntatori, i risultati non sono significativi a meno che entrambi siano puntatori agli oggetti nella stessa matrice.  
-  
- Gli operatori additivi accettano gli operandi *aritmetici*, *integrale*, e *scalare* tipi. Questi vengono definiti nella tabella seguente.  
-  
-### <a name="types-used-with-additive-operators"></a>Tipi usati con gli operatori additivi  
-  
-|Tipo|Significato|  
-|----------|-------------|  
-|*arithmetic*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|  
-|*integral*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|  
-|*scalare*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|  
-  
- Le combinazioni valide per questi operatori sono:  
-  
- *arithmetic* + *arithmetic*  
-  
- *scalar* + *integral*  
-  
- *integral* + *scalar*  
-  
- *arithmetic* - *arithmetic*  
-  
- *scalar* - *scalar*  
-  
- Si noti che l'addizione e la sottrazione non sono operazioni equivalenti.  
-  
- Se entrambi gli operandi sono di tipo aritmetico, le conversioni descritte in [conversioni Standard](standard-conversions.md) vengono applicate agli operandi e il risultato è di tipo convertito.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// expre_Additive_Operators.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#define SIZE 5  
-using namespace std;  
-int main() {  
-   int i = 5, j = 10;  
-   int n[SIZE] = { 0, 1, 2, 3, 4 };  
-   cout  << "5 + 10 = " << i + j << endl  
-         << "5 - 10 = " << i - j << endl;  
-  
-   // use pointer arithmetic on array  
-  
-   cout << "n[3] = " << *( n + 3 ) << endl;  
-}  
-```  
-  
-## <a name="pointer-addition"></a>Addizione di puntatori  
- Se uno degli operandi presenti in un'operazione di addizione è un puntatore a una matrice di oggetti, l'altro deve essere di tipo integrale. Il risultato è un puntatore dello stesso tipo del puntatore originale e che punta un altro elemento della matrice. Nel frammento di codice seguente è illustrato questo concetto:  
-  
-```cpp 
-short IntArray[10]; // Objects of type short occupy 2 bytes  
-short *pIntArray = IntArray;  
-  
-for( int i = 0; i < 10; ++i )  
-{  
-    *pIntArray = i;  
-    cout << *pIntArray << "\n";  
-    pIntArray = pIntArray + 1;  
-}  
-```  
-  
- Sebbene il valore integrale 1 venga aggiunto a `pIntArray`, questa operazione non è interpretabile come "aggiungere 1 all'indirizzo"; significa invece "modificare il puntatore affinché punti all'oggetto successivo della matrice" che si trova a 2 byte (o `sizeof( int )`) di distanza.  
-  
+
+## <a name="syntax"></a>Sintassi
+
+```
+expression + expression 
+expression - expression
+```
+
+## <a name="remarks"></a>Note
+
+Gli operatori additivi sono:
+
+- Addizione (**+**)
+
+- Sottrazione (**-**)
+
+Questi operatori binari hanno un'associatività da sinistra a destra.
+
+Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntatore. Il risultato dell'addizione (**+**) operatore è la somma degli operandi. Il risultato della sottrazione (**-**) l'operatore è la differenza tra gli operandi. Se uno o entrambi gli operandi sono puntatori, questi devono essere puntatori agli oggetti, non alle funzioni. Se entrambi gli operandi sono puntatori, i risultati non sono significativi a meno che entrambi siano puntatori agli oggetti nella stessa matrice.
+
+Gli operatori additivi accettano gli operandi *aritmetici*, *integrale*, e *scalare* tipi. Questi vengono definiti nella tabella seguente.
+
+### <a name="types-used-with-additive-operators"></a>Tipi usati con gli operatori additivi
+
+|Tipo|Significato|
+|----------|-------------|
+|*arithmetic*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|
+|*integral*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|
+|*scalare*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|
+
+Le combinazioni valide per questi operatori sono:
+
+*arithmetic* + *arithmetic*
+
+*scalar* + *integral*
+
+*integral* + *scalar*
+
+*arithmetic* - *arithmetic*
+
+*scalar* - *scalar*
+
+Si noti che l'addizione e la sottrazione non sono operazioni equivalenti.
+
+Se entrambi gli operandi sono di tipo aritmetico, le conversioni descritte in [conversioni Standard](standard-conversions.md) vengono applicate agli operandi e il risultato è di tipo convertito.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// expre_Additive_Operators.cpp
+// compile with: /EHsc
+#include <iostream>
+#define SIZE 5
+using namespace std;
+int main() {
+   int i = 5, j = 10;
+   int n[SIZE] = { 0, 1, 2, 3, 4 };
+   cout  << "5 + 10 = " << i + j << endl
+         << "5 - 10 = " << i - j << endl;
+
+   // use pointer arithmetic on array
+
+   cout << "n[3] = " << *( n + 3 ) << endl;
+}
+```
+
+## <a name="pointer-addition"></a>Addizione di puntatori
+
+Se uno degli operandi presenti in un'operazione di addizione è un puntatore a una matrice di oggetti, l'altro deve essere di tipo integrale. Il risultato è un puntatore dello stesso tipo del puntatore originale e che punta un altro elemento della matrice. Nel frammento di codice seguente è illustrato questo concetto:
+
+```cpp
+short IntArray[10]; // Objects of type short occupy 2 bytes
+short *pIntArray = IntArray;
+
+for( int i = 0; i < 10; ++i )
+{
+    *pIntArray = i;
+    cout << *pIntArray << "\n";
+    pIntArray = pIntArray + 1;
+}
+```
+
+Sebbene il valore integrale 1 venga aggiunto a `pIntArray`, questa operazione non è interpretabile come "aggiungere 1 all'indirizzo"; significa invece "modificare il puntatore affinché punti all'oggetto successivo della matrice" che si trova a 2 byte (o `sizeof( int )`) di distanza.
+
 > [!NOTE]
->  Il codice del form `pIntArray = pIntArray + 1` si trova raramente nei programmi C++; per eseguire un incremento, sono preferibili i seguenti form: `pIntArray++` o `pIntArray += 1`.  
-  
-## <a name="pointer-subtraction"></a>Sottrazione di puntatori  
- Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione viene fornito un risultato integrale con segno typu `ptrdiff_t` (definito nel file di inclusione standard \<STDDEF. h >).  
-  
- Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore ai (*n* - *ho*) elemento della matrice th, dove *n* è l'elemento a cui punta il puntatore originale e il *ho* è il valore integrale del secondo operando.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operatori di addizione C](../c-language/c-additive-operators.md)
+>  Il codice del form `pIntArray = pIntArray + 1` si trova raramente nei programmi C++; per eseguire un incremento, sono preferibili i seguenti form: `pIntArray++` o `pIntArray += 1`.
+
+## <a name="pointer-subtraction"></a>Sottrazione di puntatori
+
+Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione viene fornito un risultato integrale con segno typu `ptrdiff_t` (definito nel file di inclusione standard \<STDDEF. h >).
+
+Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore ai (*n* - *ho*) elemento della matrice th, dove *n* è l'elemento a cui punta il puntatore originale e il *ho* è il valore integrale del secondo operando.
+
+## <a name="see-also"></a>Vedere anche
+
+[Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)<br/>
+[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori di addizione C](../c-language/c-additive-operators.md)

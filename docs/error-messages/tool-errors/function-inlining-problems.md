@@ -1,5 +1,5 @@
 ---
-title: Problemi di inline di funzioni | Documenti Microsoft
+title: Problemi di inline di funzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,86 +19,88 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 670136a61d5991655a5d99e8257c6bcc907f2dfb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98d0ed20881ef89264f7c162750f600c7f68412b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088137"
 ---
 # <a name="function-inlining-problems"></a>Problemi di inline di funzioni
-Se si utilizza l'inline delle funzioni, è necessario:  
-  
--   Definire le funzioni inline implementate nel file di intestazione che è includere.  
-  
--   Avere inline nel file di intestazione.  
-  
-```  
-// LNK2019_function_inline.cpp  
-// compile with: /c   
-// post-build command: lib LNK2019_function_inline.obj  
-#include <stdio.h>  
-struct _load_config_used {  
-   void Test();  
-   void Test2() { printf("in Test2\n"); }  
-};  
-  
-void _load_config_used::Test() { printf("in Test\n"); }  
-```  
-  
- E quindi,  
-  
-```  
-// LNK2019_function_inline_2.cpp  
-// compile with: LNK2019_function_inline.lib  
-struct _load_config_used {  
-   void Test();  
-   void Test2();  
-};  
-  
-int main() {  
-   _load_config_used x;  
-   x.Test();  
-   x.Test2();   // LNK2019  
-}  
-```  
-  
- Se si utilizza il `#pragma inline_depth` del compilatore direttiva, assicurarsi impostare un valore uguale o maggiore di 2. Un valore pari a zero per disattivare l'incorporamento. Assicurarsi inoltre che si utilizza il **/Ob1** o **/Ob2** opzioni del compilatore.  
-  
- Combinazione di opzioni di compilazione inline e non inline in moduli diversi può causare problemi. Se si crea una libreria di C++ con attivata l'inline delle funzioni ([/Ob1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md)) ma il file di intestazione corrispondente che descrive le funzioni ha l'inline disattivato (nessuna opzione), verrà visualizzato l'errore LNK2001. Le funzioni vengono rese inline nel codice dal file di intestazione, ma poiché non sono nel file di libreria non è disponibile alcun indirizzo per risolvere il riferimento.  
-  
- Analogamente, un progetto che utilizza l'inline delle funzioni, ma definisce le funzioni in un file con estensione cpp anziché nell'intestazione del file verrà visualizzato anche l'errore LNK2019. Il file di intestazione è incluso ovunque sia appropriato, ma le funzioni sono solo inline quando il file con estensione cpp passa attraverso il compilatore. Pertanto, il linker rileva le funzioni come esterni non risolti quando usate in altri moduli.  
-  
-```  
-// LNK2019_FIP.h  
-struct testclass {  
-   void PublicStatMemFunc1(void);  
-};  
-```  
-  
- E poi  
-  
-```  
-// LNK2019_FIP.cpp  
-// compile with: /c  
-#include "LNK2019_FIP.h"  
-inline void testclass::PublicStatMemFunc1(void) {}  
-```  
-  
- E poi  
-  
-```  
-// LNK2019_FIP_2.cpp  
-// compile with: LNK2019_FIP.cpp  
-// LNK2019 expected  
-#include "LNK2019_FIP.h"  
-int main() {  
-   testclass testclsObject;  
-  
-   // module cannot see the implementation of PublicStatMemFunc1  
-   testclsObject.PublicStatMemFunc1();  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Errore degli strumenti del linker LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
+
+Se si usa l'inline delle funzioni, è necessario:
+
+- Definire le funzioni inline implementate nel file di intestazione che è includere.
+
+- Dispone l'incorporamento accesi nel file di intestazione.
+
+```
+// LNK2019_function_inline.cpp
+// compile with: /c
+// post-build command: lib LNK2019_function_inline.obj
+#include <stdio.h>
+struct _load_config_used {
+   void Test();
+   void Test2() { printf("in Test2\n"); }
+};
+
+void _load_config_used::Test() { printf("in Test\n"); }
+```
+
+E quindi,
+
+```
+// LNK2019_function_inline_2.cpp
+// compile with: LNK2019_function_inline.lib
+struct _load_config_used {
+   void Test();
+   void Test2();
+};
+
+int main() {
+   _load_config_used x;
+   x.Test();
+   x.Test2();   // LNK2019
+}
+```
+
+Se si usa il `#pragma inline_depth` compilatore direttiva, assicurarsi di avere un valore superiore o uguale a 2 impostato. Un valore pari a zero per disattivare l'incorporamento. Assicurarsi anche che si usa la **/Ob1** oppure **/Ob2** opzioni del compilatore.
+
+Combinazione di opzioni di compilazione inline e non inline in moduli diversi può talvolta causare problemi. Se si crea una libreria di C++ con attivata l'inline delle funzioni ([/Ob1](../../build/reference/ob-inline-function-expansion.md) oppure [/Ob2](../../build/reference/ob-inline-function-expansion.md)) ma il corrispondente file di intestazione che descrivono le funzioni con l'incorporamento disattivata (nessuna opzione), si otterrà l'errore LNK2001. Le funzioni non inline all'interno del codice dal file di intestazione, ma poiché non si trovano nel file di libreria non è presente alcun indirizzo per risolvere il riferimento.
+
+Analogamente, un progetto che usa l'inline delle funzioni ancora definisce le funzioni in un file con estensione cpp anziché nell'intestazione del file verrà visualizzato anche l'errore LNK2019. Il file di intestazione è incluso ovunque sia appropriato, ma sono solo le funzioni rese inline quando il file con estensione cpp passa attraverso il compilatore. Pertanto, il linker considera le funzioni di riferimenti esterni non risolti quando usate in altri moduli.
+
+```
+// LNK2019_FIP.h
+struct testclass {
+   void PublicStatMemFunc1(void);
+};
+```
+
+E poi
+
+```
+// LNK2019_FIP.cpp
+// compile with: /c
+#include "LNK2019_FIP.h"
+inline void testclass::PublicStatMemFunc1(void) {}
+```
+
+E poi
+
+```
+// LNK2019_FIP_2.cpp
+// compile with: LNK2019_FIP.cpp
+// LNK2019 expected
+#include "LNK2019_FIP.h"
+int main() {
+   testclass testclsObject;
+
+   // module cannot see the implementation of PublicStatMemFunc1
+   testclsObject.PublicStatMemFunc1();
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Errore degli strumenti del linker LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

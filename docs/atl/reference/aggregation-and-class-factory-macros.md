@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043417"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Aggregazione e macro di Class Factory
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Il nome della classe si sta definendo come aggregabile.
 
 ### <a name="remarks"></a>Note
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*  
+*cloud Foundry*<br/>
 [in] Il nome della classe che implementa l'oggetto della classe factory.
 
 ### <a name="remarks"></a>Note
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parametri
 
-*contratto di licenza*  
+*contratto di licenza*<br/>
 [in] Una classe che implementa `VerifyLicenseKey`, `GetLicenseKey`, e `IsLicenseValid`.
 
 ### <a name="remarks"></a>Note
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parametri
 
-*licenza*  
+*licenza*<br/>
 Una classe che implementa le funzioni statiche seguenti:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Parametri
 
-*obj*  
+*obj*<br/>
 [in] Il nome dell'oggetto di classe.
 
 ### <a name="remarks"></a>Note
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 La classe.
 
 `CComClassFactorySingleton` deriva da [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e Usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) per costruire un singolo oggetto. Ogni chiamata al `CreateInstance` metodo semplicemente la query a questo oggetto con un puntatore a interfaccia.
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Il nome dell'oggetto di classe si sta definendo come non aggregabile.
 
 ### <a name="remarks"></a>Note
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Il nome dell'oggetto di classe si sta definendo come solo aggregabile.
 
 ### <a name="remarks"></a>Note
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametri
 
-*x*  
+*x*<br/>
 [in] Il nome dell'oggetto di classe si sta definendo come aggregabile o non aggregabile.
 
 ### <a name="remarks"></a>Note
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Parametri
 
-*statusFlags*  
+*statusFlags*<br/>
 [in] I flag VIEWSTATUS. Visualizzare [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) per un elenco di flag.
 
 ### <a name="example"></a>Esempio

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f07e542f9c850b300ab55cbbbbb0155173eda98f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: daa6ed95cf0deb2bbaf296da38a6cbee312685bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082157"
 ---
 # <a name="ompinitlock"></a>omp_init_lock
-Inizializza un semplice blocco.  
+Inizializza un blocco semplice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,11 +35,11 @@ void omp_init_lock(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `lock`  
- Una variabile di tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
+*lock*<br/>
+Una variabile di tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [3.2.1 funzioni omp_init_lock e omp_init_nest_lock funzioni](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+ Per altre informazioni, vedere [3.2.1 funzioni omp_init_lock e omp_init_nest_lock funzioni](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
 ## <a name="example"></a>Esempio  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1821a4e04667fd1e05a9bbd4fdd81cb19e6eaca7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4da0167ef3b39b006a2f067114cf518cc231a45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086447"
 ---
 # <a name="registry-support-classes"></a>Classi di supporto del Registro di sistema
 
@@ -37,6 +37,6 @@ La classe seguente fornisce il supporto del Registro di sistema:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)   
+[Panoramica della classe](../atl/atl-class-overview.md)<br/>
 [Macro del Registro di sistema](../atl/reference/registry-macros.md)
 

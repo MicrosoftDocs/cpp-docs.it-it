@@ -54,14 +54,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087877"
 ---
 # <a name="carrayrowset-class"></a>Classe CArrayRowset
+
 Elementi gli accessi di un set di righe utilizzando la sintassi della matrice.  
   
 ## <a name="syntax"></a>Sintassi
@@ -74,11 +75,13 @@ class CArrayRowset :
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *TAccessor*  
- Il tipo di classe della funzione di accesso che si desidera che il set di righe da utilizzare.  
+
+*TAccessor*<br/>
+Il tipo di classe della funzione di accesso che si desidera che il set di righe da utilizzare.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli.h  
+
+**Intestazione:** atldbcli.h  
   
 ## <a name="members"></a>Membri  
   
@@ -102,6 +105,7 @@ class CArrayRowset :
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Il numero di righe già lette.|  
   
 ## <a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
+
 Crea un nuovo oggetto `CArrayRowset`.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -111,10 +115,12 @@ CArrayRowset(int nMax = 100000);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *nMax*  
- [in] Numero massimo di righe nel rowset. 
+
+*nMax*<br/>
+[in] Numero massimo di righe nel rowset. 
 
 ## <a name="snapshot"></a> CArrayRowset:: snapshot
+
 Legge l'intero rowset in memoria, creandone un'immagine o uno snapshot.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -124,6 +130,7 @@ HRESULT Snapshot() throw();
 ```  
 
 ## <a name="operator"></a> CArrayRowset:: operator
+
 Fornisce una sintassi simile a matrice per l'accesso a una riga nel set di righe.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -133,19 +140,23 @@ TAccessor & operator[](int nrow);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *TAccessor*  
- Un parametro basato su modelli che specifica il tipo di funzione di accesso archiviati nel set di righe.  
+
+*TAccessor*<br/>
+Un parametro basato su modelli che specifica il tipo di funzione di accesso archiviati nel set di righe.  
   
- *nRow*  
- [in] Numero di riga (elemento della matrice) si desidera accedere.  
+*nRow*<br/>
+[in] Numero di riga (elemento della matrice) si desidera accedere.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il contenuto della riga richiesta.  
+
+Il contenuto della riga richiesta.  
   
 ### <a name="remarks"></a>Note  
- Se *nRow* supera il numero di righe nel set di righe, viene generata un'eccezione.  
+
+Se *nRow* supera il numero di righe nel set di righe, viene generata un'eccezione.  
 
 ## <a name="nrowsread"></a> CArrayRowset:: M_nrowsread
+
 Contiene il numero di righe nel set di righe che sono già stati letti.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -155,6 +166,7 @@ ULONG m_nRowsRead;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Classe CRowset](../../data/oledb/crowset-class.md)
+
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Classe CRowset](../../data/oledb/crowset-class.md)

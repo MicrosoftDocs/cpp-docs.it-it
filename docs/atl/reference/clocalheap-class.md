@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ded1ccb86a7580cf8f004c1f61a82c876eccbe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c28a979c96a7523d2fb282a05eb2816f149b4fe2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760906"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087539"
 ---
 # <a name="clocalheap-class"></a>Classe CLocalHeap
 
@@ -83,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nBytes*  
+*nBytes*<br/>
 Numero di byte necessari nel nuovo blocco di memoria.
 
 ### <a name="return-value"></a>Valore restituito
@@ -106,7 +106,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore alla memoria precedentemente allocata dal gestore di memoria. NULL è un valore valido e non esegue alcuna operazione.
 
 ### <a name="remarks"></a>Note
@@ -123,7 +123,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore alla memoria precedentemente allocata dal gestore di memoria.
 
 ### <a name="return-value"></a>Valore restituito
@@ -144,10 +144,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*p*  
+*p*<br/>
 Puntatore alla memoria precedentemente allocata dal gestore di memoria.
 
-*nBytes*  
+*nBytes*<br/>
 Numero di byte necessari nel nuovo blocco di memoria.
 
 ### <a name="return-value"></a>Valore restituito
@@ -162,9 +162,9 @@ Implementato mediante [LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-loc
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della classe](../../atl/atl-class-overview.md)   
-[Classe CComHeap](../../atl/reference/ccomheap-class.md)   
-[Classe CWin32Heap](../../atl/reference/cwin32heap-class.md)   
-[Classe CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
-[Classe CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
+[Classe CComHeap](../../atl/reference/ccomheap-class.md)<br/>
+[Classe CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
+[Classe CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
+[Classe CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
 [Classe IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

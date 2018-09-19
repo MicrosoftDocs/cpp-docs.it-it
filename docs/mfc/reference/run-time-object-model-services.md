@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 138275468801f3db2f2c64f06e5a505c412723b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050957"
 ---
 # <a name="run-time-object-model-services"></a>Servizi modelli a oggetti runtime
 Le classi [CObject](../../mfc/reference/cobject-class.md) e [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) incapsulare diversi servizi oggetto, incluso l'accesso alle informazioni sulle classi in fase di esecuzione, la serializzazione e creazione di oggetti dinamici. Tutte le classi derivate da `CObject` ereditano questa funzionalità.  
@@ -260,8 +260,8 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  *CLASS_NAME*  
  Il nome effettivo della classe.  
   
- `base_class_name`  
- Il nome della classe di base.  
+*base_class_name*<br/>
+Il nome della classe di base.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare IMPLEMENT_DYNAMIC (macro) in un modulo con estensione cpp e quindi collegare il codice risultante dell'oggetto una sola volta.  

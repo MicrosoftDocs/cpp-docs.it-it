@@ -16,86 +16,92 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1fec9329bbbf19f3987c0abf3dfd2ce32300df62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405379"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089788"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento non standard
-Negli sezioni seguenti sono elencate alcune parti in cui l'implementazione Visual C++ di C++ non si conforma allo standard C++. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).  
-  
- L'elenco dei limiti del compilatore che differiscono da quelli definiti nello standard C++ è disponibile nella [limiti del compilatore](../cpp/compiler-limits.md).  
-  
-## <a name="covariant-return-types"></a>Tipi restituiti covarianti  
- Le classi base virtuali non sono supportate come tipi restituiti covarianti quando la funzione virtuale dispone di un numero variabile di argomenti. Questo non è conforme alla sezione 10.3, paragrafo 7 della specifica C++ ISO. L'esempio seguente non viene compilato, fornendo l'errore del compilatore [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
-  
-```cpp  
-// CovariantReturn.cpp  
-class A   
-{  
-   virtual A* f(int c, ...);   // remove ...  
-};  
-  
-class B : virtual A  
-{  
-   B* f(int c, ...);   // C2688 remove ...  
-};  
-```  
-  
-## <a name="binding-nondependent-names-in-templates"></a>Associazione di nomi non dipendenti nei modelli  
- Il compilatore Visual C++ non supporta attualmente i nomi di associazione non dipendenti nell'analisi iniziale di un modello. Questo non è conforme alla sezione 16.6.3 della specifica C++ ISO. Ne possono conseguire overload dichiarati dopo il modello, ma prima della creazione di istanze del modello stesso.  
-  
-```cpp  
-#include <iostream>  
-using namespace std;  
-  
-namespace N {  
-   void f(int) { cout << "f(int)" << endl;}  
-}  
-  
-template <class T> void g(T) {  
-    N::f('a');   // calls f(char), should call f(int)  
-}  
-  
-namespace N {  
-    void f(char) { cout << "f(char)" << endl;}  
-}  
-  
-int main() {  
-    g('c');  
-}  
-// Output: f(char)  
-```  
-  
-## <a name="function-exception-specifiers"></a>Identificatori di eccezioni di funzione.  
- Gli identificatori di eccezioni di funzione diversi da `throw()` vengono analizzati, ma non utilizzati. Questo non è conforme alla sezione 15.4 della specifica ISO C++. Ad esempio:  
-  
-```cpp  
-void f() throw(int); // parsed but not used  
-void g() throw();    // parsed and used  
-```  
-  
- Per altre informazioni sulle specifiche di eccezione, vedere [specifiche di eccezione](../cpp/exception-specifications-throw-cpp.md).  
-  
-## <a name="chartraitseof"></a>char_traits::eof()  
- Gli stati standard C++ che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non deve corrispondere a un valore valido `char_type` valore. Il compilatore Visual C++ applica questo vincolo al tipo **char**, ma non per tipo **wchar_t**. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.  
-  
-```cpp  
-#include <iostream>  
-  
-int main()  
-{  
-    using namespace std;  
-  
-    char_traits<char>::int_type int2 = char_traits<char>::eof();  
-    cout << "The eof marker for char_traits<char> is: " << int2 << endl;  
-  
-    char_traits<wchar_t>::int_type int3 = char_traits<wchar_t>::eof();  
-    cout << "The eof marker for char_traits<wchar_t> is: " << int3 << endl;  
-}  
-```  
-  
-## <a name="storage-location-of-objects"></a>Percorso di archiviazione di oggetti  
- Lo standard C++ (sezione 1.8 paragrafo 6) richiede che oggetti C++ completi abbiano percorsi di archiviazione univoci. Tuttavia con Visual C++, vi sono casi in cui tipi senza membri dati condividono una posizione di archiviazione con altri tipi per la durata dell'oggetto.
+
+Negli sezioni seguenti sono elencate alcune parti in cui l'implementazione Visual C++ di C++ non si conforma allo standard C++. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).
+
+L'elenco dei limiti del compilatore che differiscono da quelli definiti nello standard C++ è disponibile nella [limiti del compilatore](../cpp/compiler-limits.md).
+
+## <a name="covariant-return-types"></a>Tipi restituiti covarianti
+
+Le classi base virtuali non sono supportate come tipi restituiti covarianti quando la funzione virtuale dispone di un numero variabile di argomenti. Questo non è conforme alla sezione 10.3, paragrafo 7 della specifica C++ ISO. L'esempio seguente non viene compilato, fornendo l'errore del compilatore [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+
+```cpp
+// CovariantReturn.cpp
+class A
+{
+   virtual A* f(int c, ...);   // remove ...
+};
+
+class B : virtual A
+{
+   B* f(int c, ...);   // C2688 remove ...
+};
+```
+
+## <a name="binding-nondependent-names-in-templates"></a>Associazione di nomi non dipendenti nei modelli
+
+Il compilatore Visual C++ non supporta attualmente i nomi di associazione non dipendenti nell'analisi iniziale di un modello. Questo non è conforme alla sezione 16.6.3 della specifica C++ ISO. Ne possono conseguire overload dichiarati dopo il modello, ma prima della creazione di istanze del modello stesso.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+namespace N {
+   void f(int) { cout << "f(int)" << endl;}
+}
+
+template <class T> void g(T) {
+    N::f('a');   // calls f(char), should call f(int)
+}
+
+namespace N {
+    void f(char) { cout << "f(char)" << endl;}
+}
+
+int main() {
+    g('c');
+}
+// Output: f(char)
+```
+
+## <a name="function-exception-specifiers"></a>Identificatori di eccezioni di funzione.
+
+Gli identificatori di eccezioni di funzione diversi da `throw()` vengono analizzati, ma non utilizzati. Questo non è conforme alla sezione 15.4 della specifica ISO C++. Ad esempio:
+
+```cpp
+void f() throw(int); // parsed but not used
+void g() throw();    // parsed and used
+```
+
+Per altre informazioni sulle specifiche di eccezione, vedere [specifiche di eccezione](../cpp/exception-specifications-throw-cpp.md).
+
+## <a name="chartraitseof"></a>char_traits::eof()
+
+Gli stati standard C++ che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non deve corrispondere a un valore valido `char_type` valore. Il compilatore Visual C++ applica questo vincolo al tipo **char**, ma non per tipo **wchar_t**. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+
+    char_traits<char>::int_type int2 = char_traits<char>::eof();
+    cout << "The eof marker for char_traits<char> is: " << int2 << endl;
+
+    char_traits<wchar_t>::int_type int3 = char_traits<wchar_t>::eof();
+    cout << "The eof marker for char_traits<wchar_t> is: " << int3 << endl;
+}
+```
+
+## <a name="storage-location-of-objects"></a>Percorso di archiviazione di oggetti
+
+Lo standard C++ (sezione 1.8 paragrafo 6) richiede che oggetti C++ completi abbiano percorsi di archiviazione univoci. Tuttavia con Visual C++, vi sono casi in cui tipi senza membri dati condividono una posizione di archiviazione con altri tipi per la durata dell'oggetto.

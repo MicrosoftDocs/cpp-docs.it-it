@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2962 | Documenti Microsoft
+title: Errore del compilatore C2962 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad776236f950c94a1790cee5834b31fa4039d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68291ba1e3f7226e047af8fb6807ff1aca42d0a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049969"
 ---
 # <a name="compiler-error-c2962"></a>Errore del compilatore C2962
-errore di sintassi: 'token': previsto '}' al termine della definizione di una funzione membro di classe modello  
-  
- Il token ha causato un errore di sintassi in una dichiarazione di modello.  
-  
- Questo errore può essere causato dalla mancata corrispondenza dei delimitatori
+
+errore di sintassi: 'token': previsto '}' al termine della definizione di una funzione membro di classe modello
+
+Il token ha causato un errore di sintassi in una dichiarazione di modello.
+
+Questo errore può essere causato dalla mancata corrispondenza dei delimitatori

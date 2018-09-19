@@ -1,5 +1,5 @@
 ---
-title: combinable (classe) | Documenti Microsoft
+title: combinable (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5e8864b5c10b87813d89c55de806ceed24998754
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044574"
 ---
 # <a name="combinable-class"></a>Classe combinable
 L'oggetto `combinable<T>` ha lo scopo di fornire copie di dati di thread privato, per eseguire calcoli secondari locali per thread senza blocco durante algoritmi paralleli. Alla fine dell'operazione parallela, è possibile unire i sub-calcoli del thread privato in un risultato finale. Questa classe può essere usata in sostituzione di una variabile condivisa e può determinare un miglioramento delle prestazioni qualora vi fosse invece molto conflitto su tale variabile condivisa.  
@@ -40,8 +40,8 @@ class combinable;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di dati del risultato finale unito. Il tipo deve avere un costruttore di copia e un costruttore predefinito.  
+*T*<br/>
+Il tipo di dati del risultato unito finale. Il tipo deve avere un costruttore di copia e un costruttore predefinito.  
   
 ## <a name="members"></a>Membri  
   
@@ -56,19 +56,19 @@ class combinable;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[clear](#clear)|Cancella i risultati intermedi calcolo da un utilizzo precedente.|  
-|[combine](#combine)|Calcola un valore finale dal set di calcoli secondari locali del thread chiamando il funtore combinato.|  
-|[combine_each](#combine_each)|Calcola un valore finale dal set di calcoli secondari locali del thread chiamando il funtore combinato una volta per ogni calcolo secondario locale di thread. Il risultato finale verrà accumulato dall'oggetto funzione.|  
-|[local](#local)|Di overload. Restituisce un riferimento al calcolo secondario del thread privato.|  
+|[clear](#clear)|Cancella gli eventuali risultati di calcolo intermedi da un utilizzo precedente.|  
+|[combine](#combine)|Calcola un valore finale del set di calcoli secondari locali del thread chiamando il funtore combinato.|  
+|[combine_each](#combine_each)|Calcola un valore finale del set di calcoli secondari locali del thread chiamando il funtore combinato fornito una volta per ogni calcolo secondario thread-local. Il risultato finale verrà accumulato dall'oggetto funzione.|  
+|[local](#local)|Di overload. Restituisce un riferimento al calcolo secondario thread privato.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Assegna a un `combinable` oggetto da un altro `combinable` oggetto.|  
+|[operator=](#operator_eq)|Assegna a un `combinable` da un altro oggetto `combinable` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Per altre informazioni, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `combinable`  
@@ -80,7 +80,7 @@ class combinable;
   
 ##  <a name="clear"></a> Cancella 
 
- Cancella i risultati intermedi calcolo da un utilizzo precedente.  
+ Cancella gli eventuali risultati di calcolo intermedi da un utilizzo precedente.  
   
 ```
 void clear();
@@ -100,21 +100,21 @@ combinable(const combinable& _Copy);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function`  
- Il tipo dell'oggetto funtore di inizializzazione.  
+*_Function*<br/>
+Il tipo dell'oggetto funtore inizializzazione.  
   
- `_FnInitialize`  
- Una funzione che verrà chiamata per inizializzare ogni nuovo valore thread privato del tipo `T`. Deve supportare un operatore di chiamata di funzione con la firma `T ()`.  
+*FnInitialize*<br/>
+Una funzione che verrà chiamata per inizializzare ogni nuovo valore di thread privato del tipo `T`. Deve supportare un operatore di chiamata di funzione con la firma `T ()`.  
   
- `_Copy`  
- Un oggetto esistente `combinable` da copiare in questo oggetto.  
+*Copia*<br/>
+Un oggetto esistente `combinable` da copiare in questo oggetto.  
   
 ### <a name="remarks"></a>Note  
- Il primo costruttore inizializza nuovi elementi con il costruttore predefinito per il tipo `T`.  
+ Il primo costruttore inizializza gli elementi di nuovo con il costruttore predefinito per il tipo `T`.  
   
- Il secondo costruttore inizializza nuovi elementi utilizzando il funtore di inizializzazione fornito come il `_FnInitialize` parametro.  
+ Il secondo costruttore inizializza gli elementi di nuovo usando il funtore inizializzazione fornito come il `_FnInitialize` parametro.  
   
- Il terzo costruttore rappresenta il costruttore di copia.  
+ Il terzo costruttore è il costruttore di copia.  
   
 ##  <a name="dtor"></a> ~combinable 
 
@@ -126,7 +126,7 @@ combinable(const combinable& _Copy);
   
 ##  <a name="combine"></a> combinare 
 
- Calcola un valore finale dal set di calcoli secondari locali del thread chiamando il funtore combinato.  
+ Calcola un valore finale del set di calcoli secondari locali del thread chiamando il funtore combinato.  
   
 ```
 template<typename _Function>
@@ -134,18 +134,18 @@ T combine(_Function _FnCombine) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function`  
- Il tipo dell'oggetto funzione che sarà richiamato per combinare due i calcoli secondari locali del thread.  
+*_Function*<br/>
+Il tipo dell'oggetto funzione che verrà richiamato per combinare due calcoli secondari locali del thread.  
   
- `_FnCombine`  
- Il funtore che viene usato per combinare i calcoli secondari. La firma è `T (T, T)` o `T (const T&, const T&)`, e deve essere associative e commutative.  
+*_FnCombine*<br/>
+Il funtore che consente di combinare i calcoli secondari. La firma viene `T (T, T)` o `T (const T&, const T&)`, e deve essere associativo e commutativo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il risultato finale della combinazione di tutti i calcoli secondari thread privato.  
   
 ##  <a name="combine_each"></a> combine_each 
 
- Calcola un valore finale dal set di calcoli secondari locali del thread chiamando il funtore combinato una volta per ogni calcolo secondario locale di thread. Il risultato finale verrà accumulato dall'oggetto funzione.  
+ Calcola un valore finale del set di calcoli secondari locali del thread chiamando il funtore combinato fornito una volta per ogni calcolo secondario thread-local. Il risultato finale verrà accumulato dall'oggetto funzione.  
   
 ```
 template<typename _Function>
@@ -153,15 +153,15 @@ void combine_each(_Function _FnCombine) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Function`  
- Il tipo dell'oggetto funzione che sarà richiamato per combinare un singolo calcolo secondario di thread locale.  
+*_Function*<br/>
+Il tipo dell'oggetto funzione che verrà richiamato per combinare un calcolo secondario locale di thread singolo.  
   
- `_FnCombine`  
- Il funtore che viene usato per combinare un calcolo secondario. La firma è `void (T)` o `void (const T&)`e deve essere associative e commutative.  
+*_FnCombine*<br/>
+Il funtore che viene usato per combinare un calcolo secondario. La firma viene `void (T)` o `void (const T&)`e deve essere associativo e commutativo.  
   
-##  <a name="local"></a> Locale 
+##  <a name="local"></a> locale 
 
- Restituisce un riferimento al calcolo secondario del thread privato.  
+ Restituisce un riferimento al calcolo secondario thread privato.  
   
 ```
 T& local();
@@ -170,23 +170,23 @@ T& local(bool& _Exists);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Exists`  
- Un riferimento a un valore booleano. Il valore booleano a cui fa riferimento in questo argomento verrà impostato su `true` se il calcolo secondario già esistente su questo thread e impostato su `false` se questo è il primo calcolo secondario in questo thread.  
+*Exists*<br/>
+Un riferimento a un valore booleano. Il valore booleano per fare riferimento in questo argomento verrà impostato su `true` se il calcolo secondario già esistente su questo thread e impostato su `false` se questo è il primo calcolo secondario su questo thread.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un riferimento al calcolo secondario del thread privato.  
+ Riferimento per il calcolo secondario thread privato.  
   
 ##  <a name="operator_eq"></a> operator= 
 
- Assegna a un `combinable` oggetto da un altro `combinable` oggetto.  
+ Assegna a un `combinable` da un altro oggetto `combinable` oggetto.  
   
 ```
 combinable& operator= (const combinable& _Copy);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Copy`  
- Un oggetto esistente `combinable` da copiare in questo oggetto.  
+*Copia*<br/>
+Un oggetto esistente `combinable` da copiare in questo oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `combinable` oggetto.  

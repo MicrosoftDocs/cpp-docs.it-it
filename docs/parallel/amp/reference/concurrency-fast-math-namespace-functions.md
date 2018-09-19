@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fad0d6f5823a205490038755f9de4eef10eae8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 8327442588a5ae5fa15ba37cc53b4f748fa0837d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208510"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136309"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency:: fast_math
 ||||  
@@ -95,8 +95,8 @@ inline float acos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcocoseno dell'argomento  
@@ -109,8 +109,8 @@ inline float acosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcocoseno dell'argomento  
@@ -123,8 +123,8 @@ inline float asin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcoseno dell'argomento  
@@ -137,8 +137,8 @@ inline float asinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcoseno dell'argomento  
@@ -151,8 +151,8 @@ inline float atan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'argomento arcotangente  
@@ -167,11 +167,11 @@ inline float atan2(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Y`  
- Valore a virgola mobile  
+*Y*<br/>
+Valore a virgola mobile  
   
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcotangente di x  
@@ -186,11 +186,11 @@ inline float atan2f(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Y`  
- Valore a virgola mobile  
+*Y*<br/>
+Valore a virgola mobile  
   
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcotangente di x  
@@ -203,8 +203,8 @@ inline float atanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'argomento arcotangente  
@@ -217,8 +217,8 @@ inline float ceil(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il limite massimo dell'argomento  
@@ -231,8 +231,8 @@ inline float ceilf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il limite massimo dell'argomento  
@@ -245,8 +245,8 @@ inline float cosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del coseno dell'argomento  
@@ -259,8 +259,8 @@ inline float coshf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del coseno iperbolico dell'argomento  
@@ -273,8 +273,8 @@ inline float cos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del coseno dell'argomento  
@@ -287,8 +287,8 @@ inline float cosh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del coseno iperbolico dell'argomento  
@@ -301,8 +301,8 @@ inline float exp(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento  
@@ -315,8 +315,8 @@ inline float exp2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base 2 dell'argomento  
@@ -329,8 +329,8 @@ inline float exp2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base 2 dell'argomento  
@@ -343,8 +343,8 @@ inline float expf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento  
@@ -357,8 +357,8 @@ inline float fabs(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore Integer  
+*X*<br/>
+Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore assoluto dell'argomento  
@@ -371,8 +371,8 @@ inline float fabsf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore assoluto dell'argomento  
@@ -385,8 +385,8 @@ inline float floor(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il limite minimo dell'argomento  
@@ -399,8 +399,8 @@ inline float floorf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il limite minimo dell'argomento  
@@ -415,11 +415,11 @@ inline float max(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore Integer  
+*X*<br/>
+Valore Integer  
   
- `_Y`  
- Valore Integer  
+*Y*<br/>
+Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore numerico massimo degli argomenti  
@@ -434,11 +434,11 @@ inline float fmaxf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_Y`  
- Valore a virgola mobile  
+*Y*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore numerico massimo degli argomenti  
@@ -453,11 +453,11 @@ inline float min(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore Integer  
+*X*<br/>
+Valore Integer  
   
- `_Y`  
- Valore Integer  
+*Y*<br/>
+Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore numerico minimo degli argomenti  
@@ -472,11 +472,11 @@ inline float fminf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_Y`  
- Valore a virgola mobile  
+*Y*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore numerico minimo degli argomenti  
@@ -491,11 +491,11 @@ inline float fmod(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_Y`  
- Valore a virgola mobile  
+*Y*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il resto a virgola mobile di x/y  
@@ -510,11 +510,11 @@ inline float fmodf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_Y`  
- Valore a virgola mobile  
+*Y*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il resto a virgola mobile di x/y  
@@ -529,11 +529,11 @@ inline float frexp(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_Exp`  
- Restituisce l'esponente intero di x in valore a virgola mobile  
+*2^_exp*<br/>
+Restituisce l'esponente intero di x in valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce x la mantissa  
@@ -548,11 +548,11 @@ inline float frexpf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_Exp`  
- Restituisce l'esponente intero di x in valore a virgola mobile  
+*2^_exp*<br/>
+Restituisce l'esponente intero di x in valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce x la mantissa  
@@ -565,8 +565,8 @@ inline int isfinite(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se l'argomento ha un valore finito  
@@ -579,8 +579,8 @@ inline int isinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se l'argomento ha un valore infinito  
@@ -593,8 +593,8 @@ inline int isnan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se l'argomento ha un valore NaN  
@@ -609,11 +609,11 @@ inline float ldexp(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile, mentissa  
+*X*<br/>
+Valore a virgola mobile, mentissa  
   
- `_Exp`  
- Esponente intero  
+*2^_exp*<br/>
+Esponente intero  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce x \* 2 ^ 2^_exp  
@@ -628,11 +628,11 @@ inline float ldexpf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile, mentissa  
+*X*<br/>
+Valore a virgola mobile, mentissa  
   
- `_Exp`  
- Esponente intero  
+*2^_exp*<br/>
+Esponente intero  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce x \* 2 ^ 2^_exp  
@@ -645,8 +645,8 @@ inline float log(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo di base e dell'argomento  
@@ -659,8 +659,8 @@ inline float log10(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo in base 10 dell'argomento  
@@ -673,8 +673,8 @@ inline float log10f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo in base 10 dell'argomento  
@@ -687,8 +687,8 @@ inline float log2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo in base 2 dell'argomento  
@@ -701,8 +701,8 @@ inline float log2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo in base 10 dell'argomento  
@@ -715,8 +715,8 @@ inline float logf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo di base e dell'argomento  
@@ -731,10 +731,11 @@ inline float modf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_Ip`  
+*IP*<br/>
+Riceve la parte intera del valore  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la parte frazionaria con segno di x  
@@ -749,10 +750,11 @@ inline float modff(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_Ip`  
+*IP*<br/>
+Riceve la parte intera del valore  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la parte frazionaria con segno di x  
@@ -767,11 +769,11 @@ inline float pow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile, base  
+*X*<br/>
+Valore a virgola mobile, base  
   
- `_Y`  
- Valore a virgola mobile, esponente  
+*Y*<br/>
+Valore a virgola mobile, esponente  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di x elevato alla potenza di y  
@@ -786,11 +788,11 @@ inline float powf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile, base  
+*X*<br/>
+Valore a virgola mobile, base  
   
- `_Y`  
- Valore a virgola mobile, esponente  
+*Y*<br/>
+Valore a virgola mobile, esponente  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -802,8 +804,8 @@ inline float round(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore integer più vicino di x  
@@ -816,8 +818,8 @@ inline float roundf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore integer più vicino di x  
@@ -830,8 +832,8 @@ inline float rsqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il reciproco della radice quadrata dell'argomento  
@@ -844,8 +846,8 @@ inline float rsqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il reciproco della radice quadrata dell'argomento  
@@ -858,8 +860,8 @@ inline int signbit(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se il segno di x è un valore negativo  
@@ -872,8 +874,8 @@ inline int signbitf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se il segno di x è un valore negativo  
@@ -886,8 +888,8 @@ inline float sin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del seno dell'argomento  
@@ -900,8 +902,8 @@ inline float sinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del seno dell'argomento  
@@ -917,14 +919,14 @@ inline void sincos(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_S`  
- Restituisce il valore seno di x  
+*S*<br/>
+Restituisce il valore seno di x  
   
- `_C`  
- Restituisce il valore del coseno di x  
+*C*<br/>
+Restituisce il valore del coseno di x  
   
 ##  <a name="sincosf"></a>  sincosf  
  Calcola un valore del seno e il coseno di x  
@@ -937,14 +939,14 @@ inline void sincosf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
- `_S`  
- Restituisce il valore seno di x  
+*S*<br/>
+Restituisce il valore seno di x  
   
- `_C`  
- Restituisce il valore del coseno di x  
+*C*<br/>
+Restituisce il valore del coseno di x  
   
 ##  <a name="sinh"></a>  sinh  
  Calcola il valore del seno iperbolico dell'argomento  
@@ -954,8 +956,8 @@ inline float sinh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del seno iperbolico dell'argomento  
@@ -968,8 +970,8 @@ inline float sinhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del seno iperbolico dell'argomento  
@@ -982,8 +984,8 @@ inline float sqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la radice squre dell'argomento  
@@ -996,8 +998,8 @@ inline float sqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la radice squre dell'argomento  
@@ -1010,8 +1012,8 @@ inline float tan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore tangente dell'argomento  
@@ -1024,8 +1026,8 @@ inline float tanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore tangente dell'argomento  
@@ -1038,8 +1040,8 @@ inline float tanh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore della tangente iperbolico dell'argomento  
@@ -1052,8 +1054,8 @@ inline float tanhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore della tangente iperbolico dell'argomento  
@@ -1066,8 +1068,8 @@ inline float trunc(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il componente integer dell'argomento  
@@ -1080,8 +1082,8 @@ inline float truncf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_X`  
- Valore a virgola mobile  
+*X*<br/>
+Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il componente integer dell'argomento  

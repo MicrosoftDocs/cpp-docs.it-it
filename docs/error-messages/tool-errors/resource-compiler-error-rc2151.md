@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2151 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2151 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8349aa14de6aec96fa1b526cbcffbe79036f804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a15f3f1237df9e4b706a2c2048dddd6d5db395d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109782"
 ---
 # <a name="resource-compiler-error-rc2151"></a>Errore del compilatore di risorse RC2151
-non è possibile riutilizzare le costanti di stringa  
-  
- Si utilizza lo stesso valore due volte in un **STRINGTABLE** istruzione. Assicurarsi che non si stia sovrapposti valori decimali ed esadecimali.  
-  
- Ogni ID in un **STRINGTABLE** deve essere univoco. Per ottenere la massima efficienza utilizzare costanti contigue che avviano un multiplo di 16.
+
+non è possibile riutilizzare le costanti di stringa
+
+Si usa lo stesso valore due volte in un **STRINGTABLE** istruzione. Assicurarsi che non si stia sovrapposizione valori decimali ed esadecimali.
+
+Ogni ID in un **STRINGTABLE** devono essere univoci. Per ottenere la massima efficienza utilizzare costanti contigue che avviano un multiplo di 16.

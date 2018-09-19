@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK2039 errore | Documenti Microsoft
+title: Strumenti del linker LNK2039 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 954ea12eb9b49c2bdf59b31a1ec2ec2e66c124ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac4fdde90911427a1a193bfb6f3a950a7bdcf180
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081793"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Errore degli strumenti del linker LNK2039
-l'importazione della classe ref\<tipo >' definita in another.obj; deve essere la importati o definito, ma non entrambi  
-  
- La classe di riferimento ' <`type`>' viene importato nel file obj specificato, ma è anche definito in un altro file con estensione obj. Questa condizione può provocare un errore di runtime o altri comportamenti imprevisti.  
-  
-### <a name="to-correct-this-error"></a>Per correggere l'errore  
-  
-1.  Controllare se '`type`' deve essere definito in un altro file con estensione obj e controllare se deve essere incluso dal file con estensione winmd.  
-  
-2.  Rimuovere la definizione o l'importazione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Errori e avvisi degli strumenti del linker](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)   
- [Errore degli strumenti del linker LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
+
+l'importazione della classe ref\<tipo >' definita in another, che dovrebbe essere presente importati o definito, ma non entrambi
+
+La classe di riferimento ' <`type`>' viene importato nel file con estensione obj spacificto ma viene anche definita in un altro file con estensione obj. Questa condizione può provocare un errore di runtime o altri comportamenti imprevisti.
+
+### <a name="to-correct-this-error"></a>Per correggere l'errore
+
+1. Controllare se '`type`' deve essere definito in un altro file con estensione obj e controllare se deve essere incluso dal file con estensione winmd.
+
+1. Rimuovere la definizione o l'importazione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Errori e avvisi degli strumenti del linkers](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
+[Errore degli strumenti del linker LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

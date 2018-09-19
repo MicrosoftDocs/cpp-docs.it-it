@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2612 | Documenti Microsoft
+title: Errore del compilatore C2612 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e88053cde81e7eea8bc9e9280cf235d5eccc6704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2bdc91dd2b64c4fbd3a14670ba500ac970c9ad3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135789"
 ---
 # <a name="compiler-error-c2612"></a>Errore del compilatore C2612
-finali 'char' non valido nell'elenco di inizializzatori di basi/membri  
-  
- È presente un carattere dopo l'ultima base o membro in un elenco di inizializzatori.  
-  
- L'esempio seguente genera l'errore C2612:  
-  
-```  
-// C2612.cpp  
-class A {  
-public:  
-   int i;  
-   A( int ia ) : i( ia ) + {};   // C2612  
-};  
+
+finali 'char' non valido nell'elenco di inizializzatori di basi/membri
+
+Un carattere viene visualizzato dopo l'ultima base o membro in un elenco di inizializzatori.
+
+L'esempio seguente genera l'errore C2612:
+
+```
+// C2612.cpp
+class A {
+public:
+   int i;
+   A( int ia ) : i( ia ) + {};   // C2612
+};
 ```

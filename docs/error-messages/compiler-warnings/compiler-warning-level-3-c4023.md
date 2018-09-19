@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 3) C4023 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4023 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213d72e39575b447787c3e0ead7910baedc8e815
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe457f9a6181fa11b34dd615ad4d5b9637c8bddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289997"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045172"
 ---
 # <a name="compiler-warning-level-3-c4023"></a>Avviso del compilatore (livello 3) C4023
-'symbol': puntatore based passato a funzione senza prototipo. Parametro number  
-  
- Passando un puntatore based a una funzione senza prototipo il puntatore viene normalizzazione viene normalizzato, con risultati imprevisti.  
-  
- Questo problema può essere risolto se si usano funzioni di prototipo che sono puntatori based passati.
+
+'symbol': puntatore based passato a funzione senza prototipo. Parametro number
+
+Passando un puntatore based a una funzione senza prototipo il puntatore viene normalizzazione viene normalizzato, con risultati imprevisti.
+
+Questo problema può essere risolto se si usano funzioni di prototipo che sono puntatori based passati.

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48cea73ede2a7c5ec529f4fc44f917494560ced
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9288eda15b0bac3d3694ee56a2f427aefb60e032
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086434"
 ---
 # <a name="reference-counting"></a>Il conteggio dei riferimenti
 
@@ -44,6 +44,6 @@ Il conteggio dei riferimenti può anche essere implementato in modo che ogni rif
 
 ## <a name="see-also"></a>Vedere anche
 
-[Introduzione a COM](../atl/introduction-to-com.md)   
+[Introduzione a COM](../atl/introduction-to-com.md)<br/>
 [La gestione della durata degli oggetti tramite il conteggio dei riferimenti](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

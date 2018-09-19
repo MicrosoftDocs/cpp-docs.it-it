@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1215 errore | Documenti Microsoft
+title: Strumenti del linker LNK1215 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 031703687c5ba57e1daaa299e9a276a64e3055a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dab72efea41e775f3ba028b374312975daf48d6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044834"
 ---
 # <a name="linker-tools-error-lnk1215"></a>Errore degli strumenti del linker LNK1215
-operazione sui metadati non riuscita (HRESULT): errore  
-  
- Il linker ha ricevuto un errore di runtime .NET durante il tentativo di aggiornare i metadati tramite il runtime .NET.  
-  
- `HRESULT` corrisponde al valore HRESULT dal metodo runtime .NET. `error` è il. Testo specificato dal NET.  
-  
- Probabilmente si dispone di una mancata corrispondenza del linker e runtime .NET. reinstallare Visual C++.
+
+operazione di metadati non riuscita (HRESULT): errore
+
+Il runtime di .NET il linker ha restituito un errore durante il tentativo di aggiornare i metadati tramite il runtime di .NET.
+
+`HRESULT` corrisponde al valore HRESULT del metodo di runtime di .NET. `error` è il. Testo specificato dal NET.
+
+Avrai sicuramente un linker non corrispondenti e i runtime .NET. reinstallare Visual C++.

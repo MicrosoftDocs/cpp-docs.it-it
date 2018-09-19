@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3632 | Documenti Microsoft
+title: Errore del compilatore C3632 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7f41465cf8181b7f19aa4267fd680e49a04b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdacb6463e99d4cb125199a32dfc5ef01ea76e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269067"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110081"
 ---
 # <a name="compiler-error-c3632"></a>Errore del compilatore C3632
-'event': stile di evento per il costrutto non valido  
-  
- [Event](../../cpp/event.md) dichiarazioni non sono valide in tutti i costrutti.  
-  
- C3632 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+
+'event': stile di evento per il costrutto non valido
+
+[Event](../../cpp/event.md) dichiarazioni non sono valide in tutti i costrutti.
+
+È raggiungibile tramite l'opzione del compilatore obsolete solo C3632 **/CLR: oldSyntax**.

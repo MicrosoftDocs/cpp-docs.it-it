@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1902 | Documenti Microsoft
+title: Errore irreversibile C1902 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23507b6531f9ee4e5ce5efd5b60a1977206635c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5a443b5f80eabe9691cf8ff5220bb9b66da51e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052569"
 ---
 # <a name="fatal-error-c1902"></a>Errore irreversibile C1902
-mancata corrispondenza del programma database manager; Verificare l'installazione  
-  
-Un file di database di programma (PDB) è stato creato utilizzando una versione più recente di mspdb*XXX*DLL di quella a cui il compilatore ha rilevato nel sistema. Questo errore generalmente indica che mspdbsrv.exe o risultano mancanti o che dispongono di versioni diverse di mspdb*XXX*. dll. (Il *XXX* segnaposto nel mspdb*XXX*modifiche al nome di file con estensione dll con ogni versione del prodotto. In Visual Studio 2015, ad esempio, il nome del file è mspdb140.dll.)  
-  
-Verificare le versioni corrispondenti di mspdbsrv.exe, e mspdb*XXX*DLL installate nel sistema. Verificare che le versioni non corrispondenti non sono state copiate nella directory che contiene gli strumenti del compilatore e collegamento per la piattaforma di destinazione. Ad esempio, è possibile che sono copiati i file in modo è possibile richiamare il compilatore o collegamento lo strumento dal prompt dei comandi senza impostare il **percorso** variabile di ambiente di conseguenza.
+
+mancata corrispondenza del programma database manager; Verificare l'installazione
+
+Un file di database di programma (PDB) è stato creato utilizzando una versione più recente di mspdb*XXX*. dll di quella a cui il compilatore ha rilevato nel sistema. Questo errore generalmente indica che mspdbsrv.exe o risultano mancanti o che hanno una versione diversa da mspdb*XXX*. dll. (Il *XXX* segnaposto nel mspdb*XXX*modifiche ai nomi di file con estensione dll con ogni versione del prodotto. In Visual Studio 2015, ad esempio, il nome del file è mspdb140.dll.)
+
+Verificare che le versioni corrispondenti di mspdbsrv.exe, mspdbcore e mspdb*XXX*. dll installate nel sistema. Assicurarsi che le versioni non corrispondenti non sono state copiate nella directory che contiene gli strumenti del compilatore e il collegamento per la piattaforma di destinazione. Ad esempio, potrebbe essere copiato i file in modo che è possibile richiamare lo strumento del compilatore o un collegamento al prompt dei comandi senza impostare il **percorso** variabile di ambiente di conseguenza.

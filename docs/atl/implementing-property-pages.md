@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973fb6e2a04b3f365fcbcb9d8c73fdfaf453043c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088735"
 ---
 # <a name="implementing-property-pages"></a>Implementazione delle pagine delle proprietà
 
@@ -57,5 +57,5 @@ Per un'implementazione di pagina delle proprietà di esempio, vedere [esempio: i
 
 ## <a name="see-also"></a>Vedere anche
 
-[Pagine delle proprietà](../atl/atl-com-property-pages.md)   
+[Pagine delle proprietà](../atl/atl-com-property-pages.md)<br/>
 [Esempio ATLPages](../visual-cpp-samples.md)

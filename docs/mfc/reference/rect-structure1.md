@@ -1,5 +1,5 @@
 ---
-title: RECT Structure1 | Documenti Microsoft
+title: RECT Structure1 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e71459a1c22b9295c5c88ce29da9e494660fa26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046303"
 ---
 # <a name="rect-structure1"></a>RECT Structure1
 La struttura `RECT` definisce le coordinate degli angoli in alto a sinistra e in basso a destra di un rettangolo.  
@@ -40,17 +40,17 @@ typedef struct tagRECT {
 ```  
   
 ## <a name="members"></a>Membri  
- `left`  
- Specifica la coordinata x dell'angolo superiore sinistro di un rettangolo.  
+`left`<br/>
+Specifica la coordinata x dell'angolo superiore sinistro di un rettangolo.  
   
- `top`  
- Specifica la coordinata y dell'angolo superiore sinistro di un rettangolo.  
+`top`<br/>
+Specifica la coordinata y dell'angolo superiore sinistro di un rettangolo.  
   
- `right`  
- Specifica la coordinata x dell'angolo inferiore destro di un rettangolo.  
+`right`<br/>
+Specifica la coordinata x dell'angolo inferiore destro di un rettangolo.  
   
- `bottom`  
- Specifica la coordinata y dell'angolo inferiore destro di un rettangolo.  
+`bottom`<br/>
+Specifica la coordinata y dell'angolo inferiore destro di un rettangolo.  
   
 ## <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  

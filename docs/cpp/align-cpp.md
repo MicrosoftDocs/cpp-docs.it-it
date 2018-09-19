@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076294"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ Usare `__declspec(align(#))` per controllare con precisione l'allineamento dei d
 
 ## <a name="syntax"></a>Sintassi
 
-> **declspec (align (** *#* **))** *dichiaratore*  
+> **declspec (align (** *#* **))** *dichiaratore*
 
 ## <a name="remarks"></a>Note
 
@@ -251,6 +251,7 @@ L'offset di un oggetto è basato sull'offset tra l'oggetto precedente e l'impost
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
-[__declspec](../cpp/declspec.md)  
-[Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)  
-[Panoramica delle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Panoramica delle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4206 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4206 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db7069f9d1ad242f0c79f8c6f490f4632162e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 746fbc4c8752afcd9d02b9985373d669c3aacc5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048656"
 ---
 # <a name="compiler-warning-level-4-c4206"></a>Avviso del compilatore (livello 4) C4206
-**utilizzata estensione non standard: unità di conversione è vuoto**  
-  
- Il file è vuoto dopo la pre-elaborazione.  
-  
- Questa estensione può impedire il codice portabile in altri compilatori. Viene generato un errore in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e si applica solo al codice sorgente C.
+
+**utilizzata estensione non standard: unità di conversione è vuoto**
+
+Il file è vuoto dopo la pre-elaborazione.
+
+Questa estensione potrebbe impedire il codice portabile in altri compilatori. Viene generato un errore in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e si applica solo al codice sorgente C.

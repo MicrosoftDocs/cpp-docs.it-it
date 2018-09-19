@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2022 | Documenti Microsoft
+title: Errore del compilatore C2022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e13dddc1cba93afe8c51b2bca3efdd58e75f85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc92e683c3def2378912db5011049924696b7f59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165610"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089658"
 ---
 # <a name="compiler-error-c2022"></a>Errore del compilatore C2022
-'number': troppo grande per il tipo carattere  
-  
- Il numero ottale dopo una barra rovesciata (\\) in un carattere o costante di stringa è troppo grande per rappresentare un carattere.
+
+'number': troppo grande per il tipo carattere
+
+Il numero ottale dopo una barra rovesciata (\\) in un carattere o costante di stringa è troppo grande per rappresentare un carattere.

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c465e5da4d3822782bd9c7b81e497ea544e3bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 000e43926a83bdd7457c33c656383ae44dce6259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046277"
 ---
 # <a name="ustringorid-class"></a>Classe u_stringorid
 
@@ -76,16 +76,16 @@ LPCTSTR m_lpstr;
 Il costruttore UINT Converte l'argomento in un tipo di risorsa compatibile con le funzioni di gestione risorse di Windows utilizzando la macro MAKEINTRESOURCE e il risultato viene archiviato nel membro dati della classe, [m_lpstr](#_u_stringorid__m_lpstr).
 
 ```
-_U_STRINGorID(UINT nID);  
+_U_STRINGorID(UINT nID);
 _U_STRINGorID(LPCTSTR lpString);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*nID*  
+*nID*<br/>
 Un ID risorsa.
 
-*lpString*  
+*lpString*<br/>
 Un nome di risorsa.
 
 ### <a name="remarks"></a>Note

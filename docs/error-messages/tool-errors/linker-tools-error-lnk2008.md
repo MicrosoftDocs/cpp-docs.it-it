@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK2008 errore | Documenti Microsoft
+title: Strumenti del linker LNK2008 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18eda06e7f133ada4de1b7ec28ac21be205a71f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299565"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086811"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Errore degli strumenti del linker LNK2008
-La destinazione della correzione non è allineata 'nome_simbolo'  
-  
- COLLEGAMENTO disponibile una destinazione di correzione nel file di oggetto che non è allineato correttamente.  
-  
- Questo errore può essere causato da un allineamento sezione personalizzato (ad esempio, #pragma [pack](../../preprocessor/pack.md)), [allineare](../../cpp/align-cpp.md) modificatore, o tramite codice del linguaggio assembly che modifica l'allineamento della sezione.  
-  
- Se il codice non utilizza una di queste, ciò potrebbe dipendere dal compilatore.
+
+La destinazione della correzione non è allineata 'nome_simbolo'
+
+Sono state rilevate una destinazione della correzione nel file di oggetto che non è allineato correttamente.
+
+Questo errore può essere causato da un allineamento sezione personalizzato (, ad esempio, #pragma [pack](../../preprocessor/pack.md)), [allineare](../../cpp/align-cpp.md) modificatore, o mediante codice in linguaggio assembly che modifica l'allineamento della sezione.
+
+Se il codice non usa una di queste, ciò potrebbe dipendere dal compilatore.

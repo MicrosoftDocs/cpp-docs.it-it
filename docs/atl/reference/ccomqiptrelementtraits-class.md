@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8af52c0e90f346e99564c839333f85ca396f9fd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6dbc0e10f2747b9a9a2ad3ff345a580d4797ea72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763178"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079310"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>Classe CComQIPtrElementTraits
 
@@ -32,17 +32,17 @@ Questa classe fornisce metodi e funzioni statiche typedef utile durante la creaz
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename I, const IID* piid=& __uuidof(I)>  
+template<typename I, const IID* piid=& __uuidof(I)>
 class CComQIPtrElementTraits : 
    public CDefaultElementTraits<ATL::CComQIPtr<I, piid>>
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*I*  
+*I*<br/>
 Un'interfaccia COM che specifica il tipo di puntatore da archiviare.
 
-*piid*  
+*piid*<br/>
 Un puntatore all'IID del *ho*.
 
 ## <a name="members"></a>Membri
@@ -85,5 +85,5 @@ typedef I* INARGTYPE;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

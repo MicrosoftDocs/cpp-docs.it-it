@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1013 | Documenti Microsoft
+title: Errore irreversibile C1013 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b5dae643ec20e9d7d8a8dcdf41d9debe7e6b7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33c10062cac83984fb1c68835780497b89c4cbc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050520"
 ---
 # <a name="fatal-error-c1013"></a>Errore irreversibile C1013
-limite del compilatore: troppe parentesi aperte  
-  
- Un'espressione contiene troppi livelli di parentesi in un'unica espressione. Semplificare l'espressione o suddividerla in più istruzioni.  
-  
- Prima di Visual C++ 6.0 Service Pack 3 il limite per le parentesi annidate in un'unica espressione era 59. Attualmente il limite per le parentesi annidate è 256.
+
+limite del compilatore: troppe parentesi aperte
+
+Un'espressione contiene troppi livelli di parentesi in un'unica espressione. Semplificare l'espressione o suddividerla in più istruzioni.
+
+Prima di Visual C++ 6.0 Service Pack 3 il limite per le parentesi annidate in un'unica espressione era 59. Attualmente il limite per le parentesi annidate è 256.

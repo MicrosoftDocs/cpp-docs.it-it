@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1113 errore | Documenti Microsoft
+title: Strumenti del linker LNK1113 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22baf1819ddc7d6fce195ad67c23d7b42ef6b1f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87dae5e17efb7ebeb9d9ac79c51edcfd8f19f620
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083899"
 ---
 # <a name="linker-tools-error-lnk1113"></a>Errore degli strumenti del linker LNK1113
-tipo di computer non valido  
-  
- Tipo di computer specificato nell'intestazione dell'oggetto non è valido.  
-  
- Questo errore può essere causato se il file è danneggiato. Ricompilare l'oggetto.
+
+tipo di computer non è valido
+
+Tipo di computer specificato nell'intestazione dell'oggetto non è valido.
+
+Questo errore può essere causato se il file è danneggiato. Ricompilare l'oggetto.

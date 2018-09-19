@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2752 | Documenti Microsoft
+title: Errore del compilatore C2752 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff4ee5060f0fa3cfd657daf9e05759e64b15bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea33ef80847a8699115a92e316fec156c3c51607
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081650"
 ---
 # <a name="compiler-error-c2752"></a>Errore del compilatore C2752
-'template': più specializzazioni parziali corrispondono all'elenco di argomento di modello  
-  
- Creazione di un'istanza è risultata ambigua.  
-  
- L'esempio seguente genera l'errore C2752:  
-  
-```  
-// C2752.cpp  
-template<class T, class U>   
-struct A {};  
-  
-template<class T, class U>   
-struct A<T*, U> {};  
-  
-template<class T, class U>   
-struct A<T,U*> {};  
-  
-// try the following line instead  
-// template<class T, class U> struct A<T*,U*> {};  
-  
-int main() {  
-   A<char*,int*> a;   // C2752 an instantiation  
-  
-   // OK  
-   A<char*,int> a1;  
-   A<char,int*> a2;  
-   A<char,int> a3;  
-}  
+
+'template': più di una specializzazione parziale corrisponde all'elenco di argomenti di modello
+
+Creazione di un'istanza è risultata ambigua.
+
+L'esempio seguente genera l'errore C2752:
+
+```
+// C2752.cpp
+template<class T, class U>
+struct A {};
+
+template<class T, class U>
+struct A<T*, U> {};
+
+template<class T, class U>
+struct A<T,U*> {};
+
+// try the following line instead
+// template<class T, class U> struct A<T*,U*> {};
+
+int main() {
+   A<char*,int*> a;   // C2752 an instantiation
+
+   // OK
+   A<char*,int> a1;
+   A<char,int*> a2;
+   A<char,int> a3;
+}
 ```

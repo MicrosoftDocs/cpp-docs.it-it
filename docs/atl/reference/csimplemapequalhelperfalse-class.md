@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa615af00535d899533f21abf933f35bcd5bbf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f26deca76ff887eff2cd0a2c33dad94fbdbff8ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052737"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>Classe CSimpleMapEqualHelperFalse
 
@@ -33,7 +33,7 @@ Questa classe è un supporto per la [CSimpleMap](../../atl/reference/csimplemap-
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelperFalse
 ```
 
@@ -66,10 +66,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Parametri
 
-*K1*  
+*K1*<br/>
 La prima chiave.
 
-*K2*  
+*K2*<br/>
 La seconda chiave.
 
 ### <a name="return-value"></a>Valore restituito
@@ -98,5 +98,5 @@ Questo metodo sempre restituisce false e chiamerà `ATLASSERT` con un argomento 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)   
+[Classe CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

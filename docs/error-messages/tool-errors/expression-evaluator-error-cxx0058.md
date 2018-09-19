@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0058 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0058 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e586c6e46238ec58a4569e1f34abc2e7572cc9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9262675b52eda6135fd2e723f0e4ee6d9900176a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048032"
 ---
 # <a name="expression-evaluator-error-cxx0058"></a>Errore dell‘analizzatore di espressioni CXX0058
-operatore di overload non trovata  
-  
- È stato specificato un tipo di classe dell'operando di sinistra in un'espressione, ma non è stato definito un operatore di overload per la classe.  
-  
- Questo errore è identico all'errore CAN0058.
+
+operatore di overload non trovata
+
+È stato specificato un tipo di classe dell'operando sinistro in un'espressione, ma un operatore di overload non è stato definito per la classe.
+
+Questo errore è identico all'errore CAN0058.

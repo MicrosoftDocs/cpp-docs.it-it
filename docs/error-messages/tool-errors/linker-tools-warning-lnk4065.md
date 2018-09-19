@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4065 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4065 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe8b1500ac5dc2f066052fbfe11ea65eb59193f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98de30e7514c515d50751fab73533912e33da30e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135987"
 ---
 # <a name="linker-tools-warning-lnk4065"></a>Avviso degli strumenti del linker LNK4065
-'function' non può essere ordinato; ignorato  
-  
- La funzione specificata non è stata compilata come una funzione di package. Ricompilare con [/Gy](../../build/reference/gy-enable-function-level-linking.md).
+
+'function' non può essere ordinato; ignorato
+
+La funzione specificata non è stata compilata come una funzione inclusa nel pacchetto. Ricompilare con [/Gy](../../build/reference/gy-enable-function-level-linking.md).

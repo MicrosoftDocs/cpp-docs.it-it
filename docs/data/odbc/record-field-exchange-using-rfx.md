@@ -1,5 +1,5 @@
 ---
-title: 'Campi di record: Utilizzo di RFX | Documenti Microsoft'
+title: 'Trasferimento di campi di record: Utilizzo di RFX | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,46 +15,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 296ae2e4f535e08924a77b8726b93778a6da5026
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c3fdededa6e107e15a8c0999d65ba4e0c5cf47f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083041"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Trasferimento di campi di record: utilizzo di RFX
-In questo argomento viene illustrato l'utilizzo di RFX in relazione alle operazioni di framework.  
+
+In questo argomento viene illustrato l'utilizzo di RFX in relazione a ciò che il framework esegue.  
   
 > [!NOTE]
->  Questo argomento si applica alle classi derivate da [CRecordset](../../mfc/reference/crecordset-class.md) in quale riga bulk recupero non è stato implementato. Se si utilizza il recupero di massa di righe, viene implementata exchange di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per comprendere le differenze, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Questo argomento si applica alle classi derivate da [CRecordset](../../mfc/reference/crecordset-class.md) in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, viene implementata exchange di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per comprendere le differenze, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Gli argomenti seguenti contengono informazioni correlate:  
+Gli argomenti seguenti contengono informazioni correlate:  
   
--   [Trasferimento di campi di record: Utilizzo di codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) introduce i componenti principali di RFX e viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per supportare RFX e modo in cui si potrebbe voler modificare il codice della procedura guidata.  
+- [Trasferimento di campi di record: Utilizzo di codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) presenta i componenti principali di RFX e viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per supportare RFX e come si potrebbe voler modificare il codice della procedura guidata.  
   
--   [Trasferimento di campi di record: Utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) illustra la scrittura delle chiamate alle funzioni RFX nel `DoFieldExchange` eseguire l'override.  
+- [Trasferimento di campi di record: Utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) illustra la scrittura delle chiamate alle funzioni RFX nel `DoFieldExchange` eseguire l'override.  
   
- Nella tabella seguente viene illustrato il ruolo in relazione a ciò che il framework esegue automaticamente.  
+Nella tabella seguente viene illustrato il ruolo in relazione a ciò che il framework esegue automaticamente.  
   
 ### <a name="using-rfx-you-and-the-framework"></a>Utilizzo di RFX: Programmatore e Framework  
   
 |Programmatore|Framework|  
 |---------|-------------------|  
 
-| Dichiarare le classi recordset con una procedura guidata. Specificare i tipi di dati e i nomi dei membri dati di campo. | La procedura guidata deriva un `CRecordset` classe e scrive un [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) eseguire l'override per l'utente, incluso un RFX chiamata di funzione per ogni membro di dati del campo. |  
-| (Facoltativo) Aggiungere manualmente i membri di dati di parametro necessari alla classe. Aggiungere manualmente una chiamata di funzione RFX a `DoFieldExchange` per ogni membro dati di parametro, aggiungere una chiamata a [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype) per il gruppo di parametri e specificare il numero totale di parametri in [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Vedere [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). | |  
-| (Facoltativo) Membri dati di campo associare manualmente colonne aggiuntive. Incrementare manualmente [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Vedere [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). | |  
+| Dichiarare le classi di recordset con una procedura guidata. Specificare i tipi di dati e i nomi dei membri dati di campo. | La procedura guidata deriva un `CRecordset` classi e le scritture una [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) eseguire l'override per l'utente, tra cui un RFX chiamata per ogni membro del campo dati alla funzione. |  
+| (Facoltativo) Aggiungere manualmente tutti i membri dati parametro necessari per la classe. Aggiungere manualmente una chiamata di funzione RFX al `DoFieldExchange` per ogni membro di dati di parametro, aggiungere una chiamata a [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype) per il gruppo di parametri e specificare il numero totale di parametri in [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Visualizzare [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). | |  
+| (Facoltativo) Associare manualmente le colonne aggiuntive ai membri di campo dati. Incrementare manualmente [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Visualizzare [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). | |  
 
-| Costruire un oggetto della classe recordset. Prima di utilizzare l'oggetto, impostare i valori del parametro di membri di dati, se presente. | Per motivi di efficienza, il framework preassocia i parametri mediante ODBC. Quando si passano i valori dei parametri, il framework li passa all'origine dati. Solo i valori dei parametri vengono inviati per ripetere la query, a meno che non sono state modificate le stringhe di ordinamento e/o di filtro. |  
-| Aprire un oggetto recordset utilizzando [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open). | Esegue la query del recordset, associa le colonne ai membri di dati di campo del recordset e chiama `DoFieldExchange` per lo scambio di dati tra il primo record selezionato e i membri dati di campo del recordset. |  
-| Scorrere il recordset utilizzando [CRecordset](../../mfc/reference/crecordset-class.md#move) o un comando di menu o sulla barra degli strumenti. | Chiamate `DoFieldExchange` per trasferire i dati per i membri di dati del campo del nuovo record corrente. |  
-| Aggiungere, aggiornare ed eliminare i record. | Chiamate `DoFieldExchange` per trasferire i dati all'origine dati. |  
+| Costruire un oggetto della classe del recordset. Prima di usare l'oggetto, impostare i valori del parametro membri dati, se presente. | Per migliorare l'efficienza, il framework preassocia i parametri, usando ODBC. Quando si passano i valori dei parametri, il framework li passa all'origine dati. Solo i valori dei parametri vengono inviati per ripetere la query, a meno che non sono state modificate le stringhe di ordinamento e/o di filtro. |  
+| Aprire un oggetto recordset usando [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open). | Viene eseguita la query del recordset, associa le colonne ai membri dati dei campi del recordset e chiamate `DoFieldExchange` per scambiare dati tra il primo record selezionato e i membri dati di campo del recordset. |  
+| Il recordset con scorrimento [CRecordset](../../mfc/reference/crecordset-class.md#move) o un comando di menu o sulla barra degli strumenti. | Le chiamate `DoFieldExchange` per trasferire i dati per i membri di dati di campo del nuovo record corrente. |  
+| Aggiungere, aggiornare ed eliminare i record. | Le chiamate `DoFieldExchange` per trasferire i dati all'origine dati. |  
   
 ## <a name="see-also"></a>Vedere anche  
- [Campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
- [Trasferimento di campi di record: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)   
- [Recordset: Recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)   
- [Classe CRecordset](../../mfc/reference/crecordset-class.md)   
- [Classe CFieldExchange](../../mfc/reference/cfieldexchange-class.md)   
- [Macro, funzioni globali e variabili globali](../../mfc/reference/mfc-macros-and-globals.md)
+
+[Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Trasferimento di campi di record: funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Recordset: recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Classe CRecordset](../../mfc/reference/crecordset-class.md)<br/>
+[Classe CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>
+[Macro, funzioni globali e variabili globali](../../mfc/reference/mfc-macros-and-globals.md)
 

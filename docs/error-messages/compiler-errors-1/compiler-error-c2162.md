@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2162 | Documenti Microsoft
+title: Errore del compilatore C2162 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7cfebd4563e4d41f6ca50e2cdec667e82fb5f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48d59ed5f0bf85befac0f8c462620a23faa08f98
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053999"
 ---
 # <a name="compiler-error-c2162"></a>Errore del compilatore C2162
-Previsto parametro formale macro  
-  
- Il token che segue un operatore di concatenamento (#) non è un nome di parametro formale.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C2162:  
-  
-```  
-// C2162.cpp  
-// compile with: /c  
-#include <stdio.h>  
-  
-#define print(a) printf_s(b)   // OK  
-#define print(a) printf_s(#b)    // C2162  
+
+Previsto parametro formale macro
+
+Il token dopo un operatore per (#) non è un nome di parametro formale.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C2162:
+
+```
+// C2162.cpp
+// compile with: /c
+#include <stdio.h>
+
+#define print(a) printf_s(b)   // OK
+#define print(a) printf_s(#b)    // C2162
 ```

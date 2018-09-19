@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4505 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4505 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4792be35ced122829410b284fb0ac15a5e15fa94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a89a6bd11b3d63f23f65ccc1bfbe16c49c13f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054779"
 ---
 # <a name="compiler-warning-level-4-c4505"></a>Avviso del compilatore (livello 4) C4505
-'function': funzione locale senza riferimento rimossa  
-  
- La funzione specificata è locale e non a cui fa riferimento nel corpo del modulo. Pertanto, la funzione è codice messaggi non recapitabili.  
-  
- Il compilatore non generare codice per questa funzione.
+
+'function': funzione locale senza riferimenti rimossa
+
+La funzione specificata viene locali e di non riferimento nel corpo del modulo. Pertanto, la funzione è codice non utilizzato.
+
+Il compilatore non ha generato codice per questa funzione.

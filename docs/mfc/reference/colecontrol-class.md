@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050099"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 Classe di base avanzata per lo sviluppo di controlli OLE.
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 Per impostazione predefinita `GetControlFlags` restituisce `fastBeginPaint | clipPaintDC`.
 
-`fastBeginPaint` Se impostato, viene utilizzato un begin-paint (funzione) pensata su misura per controlli OLE anziché il [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (impostazione predefinita).
-
-`clipPaintDC` Se non impostato, disabilita la chiamata a `IntersectClipRect` effettuate da `COleControl` e garantisce una maggiore velocità. Se si utilizza l'attivazione senza finestra, il flag non ha alcun effetto.
-
-`pointerInactive` Se impostato, fornisce l'interazione del mouse mentre il controllo è inattivo, consentendo `COleControl`dell'implementazione del `IPointerInactive` interfaccia, che è disabilitata per impostazione predefinita.
-
-`noFlickerActivate` Se impostato, Elimina le operazioni di disegno aggiuntivi e lo sfarfallio. Utilizzarlo quando il controllo disegna se stesso in modo identico negli stati attivi e inattivi. Se si utilizza l'attivazione senza finestra, il flag non ha alcun effetto.
-
-`windowlessActivate` Se impostato, indica che il controllo utilizza l'attivazione senza finestra.
-
-`canOptimizeDraw` Se impostato, indica che il controllo eseguirà il disegno ottimizzato, se il contenitore lo supporta.
+|||
+|-|-|
+|`fastBeginPaint`|Se impostato, viene utilizzato un begin-paint (funzione) pensata su misura per controlli OLE anziché il [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (impostazione predefinita).|
+|`clipPaintDC`|Se non impostato, disabilita la chiamata a `IntersectClipRect` effettuate da `COleControl` e garantisce una maggiore velocità. Se si utilizza l'attivazione senza finestra, il flag non ha alcun effetto.|
+|`pointerInactive`|Se impostato, fornisce l'interazione del mouse mentre il controllo è inattivo, consentendo `COleControl`dell'implementazione del `IPointerInactive` interfaccia, che è disabilitata per impostazione predefinita.|
+|`noFlickerActivate`|Se impostato, Elimina le operazioni di disegno aggiuntivi e lo sfarfallio. Utilizzarlo quando il controllo disegna se stesso in modo identico negli stati attivi e inattivi. Se si utilizza l'attivazione senza finestra, il flag non ha alcun effetto.|
+|`windowlessActivate`|Se impostato, indica che il controllo utilizza l'attivazione senza finestra.|
+|`canOptimizeDraw`|Se impostato, indica che il controllo eseguirà il disegno ottimizzato, se il contenitore lo supporta.|
 
 Per altre informazioni sulle `GetControlFlags` e altre ottimizzazioni di controlli OLE, vedere [dei controlli ActiveX: ottimizzazione](../../mfc/mfc-activex-controls-optimization.md).
 

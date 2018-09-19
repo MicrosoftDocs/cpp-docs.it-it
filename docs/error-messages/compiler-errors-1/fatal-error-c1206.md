@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1206 | Documenti Microsoft
+title: Errore irreversibile C1206 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27b690cf055d059d5088edba407c93b4a8ae85fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79aa3f33f076b6576363b0bdda63e55c5d9f13fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046459"
 ---
 # <a name="fatal-error-c1206"></a>Errore irreversibile C1206
-Dati per dominio di applicazione non supportati dalla versione del runtime installata  
-  
- Alcune funzionalità, ad esempio i dati per dominio di applicazione, sono supportate solo da Common Language Runtime che supporta la funzionalità.  
-  
- L'errore C1206 indica che la versione più recente del runtime non è installata nel computer. Installare la versione di Common Language Runtime che deve essere usata con il compilatore.  
-  
- Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) .
+
+Dati per dominio di applicazione non supportati dalla versione del runtime installata
+
+Alcune funzionalità, ad esempio i dati per dominio di applicazione, sono supportate solo da Common Language Runtime che supporta la funzionalità.
+
+L'errore C1206 indica che la versione più recente del runtime non è installata nel computer. Installare la versione di Common Language Runtime che deve essere usata con il compilatore.
+
+Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) .

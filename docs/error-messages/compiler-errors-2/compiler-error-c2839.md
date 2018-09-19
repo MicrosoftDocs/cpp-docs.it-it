@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2839 | Documenti Microsoft
+title: Errore del compilatore C2839 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c7d9fed2b36ee395923d0e370fd04b10c4c474d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9ddee01f0f97f6b20519403c6e5c11da1a9b4bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255587"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050996"
 ---
 # <a name="compiler-error-c2839"></a>Errore del compilatore C2839
-tipo restituito 'type' non valido per 'operator ->' di overload  
-  
- Il `->` operatore deve restituire una classe, struct o unione o un riferimento a uno.
+
+tipo restituito 'type' non valido per 'operator ->' di overload
+
+Il `->` operator deve restituire una classe, struct o unione o un riferimento a una.

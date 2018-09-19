@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0012 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0012 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7043eaf6654670935301c1f49ba88aed5745a96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024811c13fb27cb2da88bdddc9965d8a124e341a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135906"
 ---
 # <a name="expression-evaluator-error-cxx0012"></a>Errore dell‘analizzatore di espressioni CXX0012
-parentesi graffa di sinistra mancante  
-  
- L'espressione contiene una parentesi graffa non corretta. Digitare di nuovo l'espressione tra parentesi graffe bilanciate.  
-  
- Questo errore è identico all'errore CAN0012.
+
+parentesi graffa mancante
+
+L'espressione contiene una parentesi graffa non corretta. Digitare di nuovo l'espressione tra parentesi graffe bilanciate.
+
+Questo errore è identico all'errore CAN0012.

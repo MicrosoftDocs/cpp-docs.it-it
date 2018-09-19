@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537755ff7162c30c586eb813fecf643de816a351
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 099844710080d2c500996d5918a32c6eb4426541
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078140"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Aggiunta di un componente ATL COM+ 1.0
 
@@ -38,6 +38,6 @@ Questa procedura guidata aggiunge un oggetto per il progetto che supporta i serv
 
 ## <a name="see-also"></a>Vedere anche
 
-[Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)   
+[Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Aggiunta di un metodo](../../ide/adding-a-method-visual-cpp.md)
 

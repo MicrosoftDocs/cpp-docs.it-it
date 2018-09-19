@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047928"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 Fornisce la funzionalità del controllo barra degli strumenti comune di Windows.  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>Note  
  Il *lpButtons* puntatore punta a una matrice di `TBBUTTON` strutture. Ogni `TBBUTTON` struttura associa il pulsante viene aggiunto con il pulsante stile, immagini e/o stringa, ID di comando, lo stato e dati definiti dall'utente:  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  I membri sono i seguenti:  
   
- `iBitmap`  
- Indice in base zero dell'immagine del pulsante, -1 se nessuna immagine di questo pulsante.  
+- `iBitmap`  
+
+   Indice in base zero dell'immagine del pulsante, -1 se nessuna immagine di questo pulsante.  
   
- `idCommand`  
- Identificatore del comando associato al pulsante. Questo identificatore viene inviato un messaggio WM_COMMAND quando viene scelto il pulsante. Se il `fsStyle` membro dispone del valore TBSTYLE_SEP, questo membro deve essere zero.  
+-  `idCommand`  
+
+   Identificatore del comando associato al pulsante. Questo identificatore viene inviato un messaggio WM_COMMAND quando viene scelto il pulsante. Se il `fsStyle` membro dispone del valore TBSTYLE_SEP, questo membro deve essere zero.  
   
- `fsState`  
- Flag di stato del pulsante. Può essere una combinazione dei valori elencati di seguito:  
+-  `fsState`  
+
+   Flag di stato del pulsante. Può essere una combinazione dei valori elencati di seguito:  
   
-- TBSTATE_CHECKED il pulsante è applicato lo stile TBSTYLE_CHECKED e viene premuto.  
+   - TBSTATE_CHECKED il pulsante è applicato lo stile TBSTYLE_CHECKED e viene premuto.  
   
-- TBSTATE_ENABLED pulsante accetta l'input dell'utente. Un pulsante che non ha questo stato non accetta input dell'utente e viene disattivato.  
+   - TBSTATE_ENABLED pulsante accetta l'input dell'utente. Un pulsante che non ha questo stato non accetta input dell'utente e viene disattivato.  
   
-- TBSTATE_HIDDEN il pulsante non è visibile e non può ricevere l'input dell'utente.  
+   - TBSTATE_HIDDEN il pulsante non è visibile e non può ricevere l'input dell'utente.  
   
-- TBSTATE_INDETERMINATE il pulsante è inattivo.  
+   - TBSTATE_INDETERMINATE il pulsante è inattivo.  
   
-- TBSTATE_PRESSED viene premuto il pulsante.  
+   - TBSTATE_PRESSED viene premuto il pulsante.  
   
-- Interruzione di riga A TBSTATE_WRAP segue il pulsante. Il pulsante deve avere anche lo stato TBSTATE_ENABLED.  
+   - Interruzione di riga A TBSTATE_WRAP segue il pulsante. Il pulsante deve avere anche lo stato TBSTATE_ENABLED.  
   
- `fsStyle`  
- Stile del pulsante. Può essere una combinazione dei valori elencati di seguito:  
+- `fsStyle`  
+
+   Stile del pulsante. Può essere una combinazione dei valori elencati di seguito:  
   
-- TBSTYLE_BUTTON crea un pulsante di comando standard.  
+   - TBSTYLE_BUTTON crea un pulsante di comando standard.  
   
-- TBSTYLE_CHECK crea un pulsante che alterna tra gli stati premuti e rilasciare ogni volta che l'utente fa clic. Il pulsante presenta un colore di sfondo diverso quando si trova nello stato premuto.  
+   - TBSTYLE_CHECK crea un pulsante che alterna tra gli stati premuti e rilasciare ogni volta che l'utente fa clic. Il pulsante presenta un colore di sfondo diverso quando si trova nello stato premuto.  
   
-- TBSTYLE_CHECKGROUP crea premuto un pulsante di controllo che rimane finché non viene premuto un altro pulsante nel gruppo.  
+   - TBSTYLE_CHECKGROUP crea premuto un pulsante di controllo che rimane finché non viene premuto un altro pulsante nel gruppo.  
   
-- TBSTYLE_GROUP crea premuto un pulsante che rimane finché non viene premuto un altro pulsante nel gruppo.  
+   - TBSTYLE_GROUP crea premuto un pulsante che rimane finché non viene premuto un altro pulsante nel gruppo.  
   
-- TBSTYLE_SEP crea un separatore, fornendo un breve intervallo tra i gruppi di pulsanti. Un pulsante con questo stile non riceve input dell'utente.  
+   - TBSTYLE_SEP crea un separatore, fornendo un breve intervallo tra i gruppi di pulsanti. Un pulsante con questo stile non riceve input dell'utente.  
   
- `dwData`  
- Dati definiti dall'utente.  
+- `dwData`  
+
+   Dati definiti dall'utente.  
   
- `iString`  
- Indice in base zero della stringa da utilizzare come pulsante per l'etichetta, -1 se nessuna stringa di questo pulsante.  
+- `iString`  
+
+   Indice in base zero della stringa da utilizzare come pulsante per l'etichetta, -1 se nessuna stringa di questo pulsante.  
   
- L'immagine e/o stringa il cui indice è fornire deve essere già stato aggiunto del controllo della barra degli strumenti elenco usando [AddBitmap](#addbitmap), [AddString](#addstring), e/o [AddStrings](#addstrings).  
+L'immagine e/o stringa il cui indice è fornire deve essere già stato aggiunto del controllo della barra degli strumenti elenco usando [AddBitmap](#addbitmap), [AddString](#addstring), e/o [AddStrings](#addstrings).  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  Aggiunge una nuova stringa, passata come un ID di risorsa, all'elenco interno della barra degli strumenti di stringhe.  

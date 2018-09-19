@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2203 | Documenti Microsoft
+title: Errore del compilatore C2203 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0cbf64e673c84a60c37bce3ffd51bc7016eb7a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6db497a7967e0cefc16ecb6e5a71874f86179b29
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053765"
 ---
 # <a name="compiler-error-c2203"></a>Errore del compilatore C2203
-Elimina operatore non è possibile specificare i limiti di matrice  
-  
- Con il **/Za** opzione (ANSI), il `delete` operatore può eliminare un'intera matrice, ma non parti o membri specifici della matrice.  
-  
- L'esempio seguente genera l'errore C2203:  
-  
-```  
-// C2203.cpp  
-// compile with: /Za  
-int main() {  
-   int *ar = new int[10];  
-   delete [4] ar;   // C2203  
-   // try the following line instead  
-   // delete [] ar;  
-}  
+
+Elimina operatore non è possibile specificare i limiti di matrice
+
+Con il **/Za** opzione (ANSI), il `delete` operatore può eliminare un'intera matrice, ma non le parti o membri specifici della matrice.
+
+L'esempio seguente genera l'errore C2203:
+
+```
+// C2203.cpp
+// compile with: /Za
+int main() {
+   int *ar = new int[10];
+   delete [4] ar;   // C2203
+   // try the following line instead
+   // delete [] ar;
+}
 ```

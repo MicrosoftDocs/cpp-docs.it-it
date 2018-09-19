@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3413 | Documenti Microsoft
+title: Errore del compilatore C3413 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe7d444a755d053dcd73d02cb964510c7ce3324
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3ee8a8fd96b6fe5ed675f5e82a196d0ddb2cb3f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053284"
 ---
 # <a name="compiler-error-c3413"></a>Errore del compilatore C3413
-'name': creazione esplicita di un'istanza non valida  
-  
- Il compilatore ha rilevato una creazione di un'istanza esplicita con un formato non corretto.  
-  
- L'esempio seguente genera l'errore C3413:  
-  
-```  
-// C3413.cpp  
-template  
-class MyClass {};   // C3413  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C3413b.cpp  
-// compile with: /c  
-template <class T>  
-class MyClass {};  
-  
-template <>  
-class MyClass<int> {};  
+
+'name': creazione esplicita di un'istanza non valida
+
+Il compilatore ha rilevato una creazione di un'istanza esplicita con un formato non corretto.
+
+L'esempio seguente genera l'errore C3413:
+
+```
+// C3413.cpp
+template
+class MyClass {};   // C3413
+```
+
+Possibile soluzione:
+
+```
+// C3413b.cpp
+// compile with: /c
+template <class T>
+class MyClass {};
+
+template <>
+class MyClass<int> {};
 ```

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079336"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe CAtlPreviewCtrlImpl
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Parametri
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle alla finestra host fornita dalla Shell per l'anteprima avanzata.
 
-*Repubblica popolare cinese*  
+*Repubblica popolare cinese*<br/>
 Specifica le dimensioni iniziali e la posizione della finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parametri
 
-*HDC*  
+*HDC*<br/>
 Handle per un contesto di dispositivo per il disegno.
 
 ### <a name="remarks"></a>Note
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Parametri
 
-*nMsg*  
+*nMsg*<br/>
 Impostare su WM_PAINT.
 
-*wParam*  
+*wParam*<br/>
 Questo parametro non viene usato.
 
-*lParam*  
+*lParam*<br/>
 Questo parametro non viene usato.
 
-*bHandled*  
+*bHandled*<br/>
 Quando questa funzione viene restituito, contiene TRUE.
 
 ### <a name="return-value"></a>Valore restituito
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Parametri
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle per la nuova finestra padre.
 
 ### <a name="remarks"></a>Note
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Parametri
 
-*clrBack*  
+*clrBack*<br/>
 Colore di sfondo della finestra di anteprima.
 
-*clrText*  
+*clrText*<br/>
 Colore del testo della finestra di anteprima.
 
-*plf*  
+*plf*<br/>
 Tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima.
 
 ### <a name="remarks"></a>Note
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parametri
 
-*Repubblica popolare cinese*  
+*Repubblica popolare cinese*<br/>
 Specifica la nuova dimensione e posizione del controllo di anteprima.
 
-*bRedraw*  
+*bRedraw*<br/>
 Specifica se il controllo deve essere ridisegnato.
 
 ### <a name="remarks"></a>Note

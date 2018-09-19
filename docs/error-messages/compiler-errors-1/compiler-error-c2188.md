@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2188 | Documenti Microsoft
+title: Errore del compilatore C2188 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f9f796da1256710ed08cade743e88317b6b8d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfbec3a86c385a5ae6af5a53561736b5a44ad2cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089697"
 ---
 # <a name="compiler-error-c2188"></a>Errore del compilatore C2188
-'number': troppo grande per caratteri "wide"  
-  
- Il numero supera il limite delle dimensioni per il tipo di caratteri "wide". Scegliere un tipo più grande.
+
+'number': troppo grande per caratteri "wide"
+
+Il numero supera il limite delle dimensioni per il tipo di caratteri "wide". Scegliere un tipo più grande.

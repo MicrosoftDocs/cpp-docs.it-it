@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3077 | Documenti Microsoft
+title: Errore del compilatore C3077 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbd3a1bd590e5eaece557903318f6b94bd65b798
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a20b8d650208157550e6a7642c752c607b5e023
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053362"
 ---
 # <a name="compiler-error-c3077"></a>Errore del compilatore C3077
-'finalizer': un finalizzatore può essere membro solo di un tipo riferimento  
-  
- È possibile dichiarare un finalizzatore in un tipo nativo o di valore.  
-  
- Per ulteriori informazioni, vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3077.  
-  
-```  
-// C3077.cpp  
-// compile with: /clr /c  
-value struct vs {  
-   !vs(){}   // C3077  
-};  
-  
-ref struct rs {  
-protected:  
-   !rs(){}   // OK  
-};  
+
+'finalizer': un finalizzatore può essere membro solo di un tipo riferimento
+
+È possibile dichiarare un finalizzatore in un tipo nativo o di valore.
+
+Per altre informazioni, vedere [distruttori e finalizzatori in Procedura: definire e usare classi e struct (C + + / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3077.
+
+```
+// C3077.cpp
+// compile with: /clr /c
+value struct vs {
+   !vs(){}   // C3077
+};
+
+ref struct rs {
+protected:
+   !rs(){}   // OK
+};
 ```

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0600d675d37e2fed1d318645daaedcce5f80ed89
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085446"
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 
@@ -36,13 +36,13 @@ Questa classe implementa `IUnknown` per un oggetto non aggregato.
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<class Base>  
+template<class Base>
 class CComObject : public Base
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*base*  
+*base*<br/>
 La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da tutte le altre interfacce si desidera supportare nell'oggetto.
 
 ## <a name="members"></a>Membri
@@ -101,7 +101,7 @@ CComObject(void* = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-<em>void\*</em>  
+<em>void\*</em><br/>
 [in] Questo parametro senza nome non viene utilizzato. Stato attuale per simmetria con altri `CComXXXObjectXXX` costruttori.
 
 ### <a name="remarks"></a>Note
@@ -132,7 +132,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Parametri
 
-*profilo di porta*  
+*profilo di porta*<br/>
 [out] Un puntatore a un **CComObject <** `Base` **>** puntatore. Se `CreateInstance` ha esito negativo *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -157,19 +157,19 @@ Recupera un puntatore all'interfaccia richiesta.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] L'identificatore dell'interfaccia richiesto.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal *iid*. Se l'oggetto non supporta questa interfaccia, *ppvObject* è impostato su NULL.
 
-*profilo di porta*  
+*profilo di porta*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal tipo `Q`. Se l'oggetto non supporta questa interfaccia, *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -190,8 +190,8 @@ Questa funzione restituisce il nuovo conteggio dei riferimenti decrementato sull
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0036 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0036 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18e1bf3cda85d7b3d64d51279688a52cec5c0336
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2d82a1254a11dbda3164ea1c350dc14e2b1a122
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301684"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050112"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Errore dell‘analizzatore di espressioni CXX0036
-contesto non valido {...} specification  
-  
- Questo messaggio può essere generato da uno qualsiasi dei diversi errori nell'uso dell'operatore di contesto (**{}**).  
-  
--   La sintassi dell'operatore di contesto (**{}**) è stata specificata correttamente.  
-  
-     La sintassi dell'operatore di contesto è:  
-  
-     {*funzione*,*modulo*,*dll*}*espressione*  
-  
-     Viene specificato il contesto di *espressione*. L'operatore di contesto è la stessa precedenza e l'utilizzo come un cast di tipo.  
-  
-     È possibile omettere le virgole finali. Se una qualsiasi delle *funzione*, *modulo*, o *dll* contiene una virgola letterale, è necessario racchiudere l'intero nome tra parentesi.  
-  
--   Il nome della funzione sia stato digitato in modo non corretto o non esiste nel modulo specificato o libreria a collegamento dinamico.  
-  
-     Perché C è un linguaggio tra maiuscole e minuscole, *funzione* deve essere specificato esattamente del caso con è definito nell'origine.  
-  
--   Impossibile trovare il modulo o DLL.  
-  
-     Controllare il nome e percorso completo del modulo specificato o DLL.  
-  
- Questo errore è identico all'errore CAN0036.
+
+contesto non valido {...} specification
+
+Questo messaggio può essere generato da uno qualsiasi dei numerosi errori nell'uso dell'operatore di contesto (**{}**).
+
+- La sintassi dell'operatore di contesto (**{}**) è stato specificato in modo errato.
+
+     La sintassi dell'operatore di contesto è:
+
+     {*funzione*,*modulo*,*dll*}*espressione*
+
+     Specifica il contesto di *espressione*. L'operatore di contesto è la stessa precedenza e l'utilizzo come un cast di tipo.
+
+     È possibile omettere le virgole finali. Se una qualsiasi delle *funzione*, *modulo*, o *dll* contiene una virgola letterale, è necessario racchiudere l'intero nome tra parentesi.
+
+- Il nome della funzione sia stato digitato in modo non corretto o non esiste nel modulo o libreria a collegamento dinamico.
+
+     Perché C è un linguaggio di distinzione maiuscole/minuscole *funzione* deve essere specificato esattamente del caso con è definito nell'origine.
+
+- Modulo o della DLL non è stata trovata.
+
+     Controllare il nome e percorso completo del modulo specificato o della DLL.
+
+Questo errore è identico all'errore CAN0036.

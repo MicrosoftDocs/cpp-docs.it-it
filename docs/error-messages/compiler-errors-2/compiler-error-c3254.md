@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3254 | Documenti Microsoft
+title: Errore del compilatore C3254 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e58976b1562e6cca9aa343401b5d2c3f856de1a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9e42071c55ef3c7a4fc950b1b25656cf68d4024
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255608"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081182"
 ---
 # <a name="compiler-error-c3254"></a>Errore del compilatore C3254
-'override esplicito': classe contiene override esplicito 'override' ma non deriva da un'interfaccia che contiene la dichiarazione di funzione  
-  
- Quando si [eseguire l'override esplicito](../../cpp/explicit-overrides-cpp.md) un metodo, la classe che contiene tale override deve derivare, direttamente o indirettamente, dal tipo che contiene la funzione che si esegue l'override.  
-  
- L'esempio seguente genera l'errore C3254:  
-  
-```  
-// C3254.cpp  
-__interface I  
-{  
-   void f();  
-};  
-  
-__interface I1 : I  
-{  
-};  
-  
-struct A /* : I1 */  
-{  
-   void I1::f()  
-   {   // C3254, uncomment : I1 to resolve this C3254  
-   }  
-};  
-  
-int main()  
-{  
-}  
+
+'override esplicito': classe contiene override esplicito 'override', ma non deriva da un'interfaccia che contiene la dichiarazione di funzione
+
+Quando si [eseguire l'override esplicito](../../cpp/explicit-overrides-cpp.md) un metodo, la classe che contiene la sostituzione deve derivare, direttamente o indirettamente, dal tipo che contiene la funzione che si esegue l'override.
+
+L'esempio seguente genera l'errore C3254:
+
+```
+// C3254.cpp
+__interface I
+{
+   void f();
+};
+
+__interface I1 : I
+{
+};
+
+struct A /* : I1 */
+{
+   void I1::f()
+   {   // C3254, uncomment : I1 to resolve this C3254
+   }
+};
+
+int main()
+{
+}
 ```

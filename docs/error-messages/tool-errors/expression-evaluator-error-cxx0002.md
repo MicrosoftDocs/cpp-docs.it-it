@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0002 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0002 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3faf350fa14156a82218fed506f50e45084501dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77e5db3859e0ada60999f329fddc82926b607579
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081039"
 ---
 # <a name="expression-evaluator-error-cxx0002"></a>Errore dell‘analizzatore di espressioni CXX0002
-accesso alla memoria utente di errore  
-  
- L'espressione tenta di riferimento alla memoria non è allocato al programma sottoposto a debug.  
-  
- Questo errore è identico all'errore CAN0002.
+
+accesso alla memoria di utente errori
+
+L'espressione tenta di fare riferimento a memoria non allocata per il programma sottoposto a debug.
+
+Questo errore è identico all'errore CAN0002.

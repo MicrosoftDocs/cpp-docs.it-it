@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085284"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -64,7 +64,7 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-**cabs** restituisce il valore assoluto dell'argomento se ha esito positivo. In caso di overflow, **cabs** restituisce **HUGE_VAL** e imposta **errno** a **ERANGE**. È possibile modificare la gestione degli errori con [_matherr](matherr.md).
+**cabs** restituisce il valore assoluto del relativo argomento se ha esito positivo. In caso di overflow **cabs** restituisce **HUGE_VAL** e imposta **errno** al **ERANGE**. È possibile modificare la gestione degli errori con [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
@@ -107,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK1302 errore | Documenti Microsoft
+title: Strumenti del linker LNK1302 errore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa84a411f91303c84acb44e2e6c0ab3d975e19f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc85b37d58e12602c02c2207c1f38bda9344e59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045510"
 ---
 # <a name="linker-tools-error-lnk1302"></a>Errore degli strumenti del linker LNK1302
-supportato solo il collegamento di .netmodule sicuri; impossibile collegare .netmodule  
-  
- Un file netmodule (compilato con **/LN**) è stato passato al linker nel tentativo di chiamare il collegamento MSIL di un utente.  Un modulo C++ è valido per il collegamento MSIL se viene compilato con **/CLR: safe**.  
-  
- Per correggere l'errore, eseguire la compilazione con **/CLR: safe** per attivare il collegamento MSIL oppure passare il **/clr** o **/clr: pure** file con estensione obj al linker anziché il modulo.  
-  
- Per altre informazioni, vedere  
-  
--   [/LN (crea modulo MSIL)](../../build/reference/ln-create-msil-module.md)  
-  
--   [File con estensione netmodule come input del linker](../../build/reference/netmodule-files-as-linker-input.md)
+
+supportato solo il collegamento di .netmodule sicuri; impossibile collegare .netmodule
+
+Un file con estensione netmodule (compilato con **/LN**) è stato passato al linker nel tentativo di un utente per richiamare il collegamento MSIL.  È valido per il collegamento MSIL se viene compilato con un modulo C++ **/CLR: safe**.
+
+Per correggere questo errore, eseguire la compilazione con **/CLR: safe** per abilitare il collegamento MSIL o passare il **/clr** oppure **/clr: pure** file con estensione obj per il linker anziché il modulo.
+
+Per altre informazioni, vedere
+
+- [/LN (crea modulo MSIL)](../../build/reference/ln-create-msil-module.md)
+
+- [File con estensione netmodule come input del linker](../../build/reference/netmodule-files-as-linker-input.md)

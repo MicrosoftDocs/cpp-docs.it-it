@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0017 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0017 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7540dc701ffa6e0acb3d2661e1196e5f4552d2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 431071137fb3f5b1b276327ee7d21f323ac24c5b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136244"
 ---
 # <a name="expression-evaluator-error-cxx0017"></a>Errore dell‘analizzatore di espressioni CXX0017
-simbolo non trovato  
-  
- Un simbolo specificato in un'espressione non è stato trovato.  
-  
- Una delle possibili cause di questo errore è una mancata corrispondenza tra il nome del simbolo case. Poiché C e C++ sono linguaggi tra maiuscole e minuscole, un nome di simbolo deve essere specificato esattamente del caso in cui è definito nell'origine.  
-  
- Questo errore può verificarsi durante il tentativo di una variabile il cast di tipo per controllare la variabile durante il debug. Il `typedef` dichiara un nuovo nome per un tipo, ma viene definito un nuovo tipo. Il cast di tipo tentato durante il debug richiede il nome di un tipo definito.  
-  
- Questo errore è identico all'errore CAN0017.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili  
-  
-1.  Verificare che il simbolo è già stato dichiarato nel punto del programma in cui è in uso.  
-  
-2.  Per eseguire il cast delle variabili nel debugger, utilizzare un nome di tipo effettivo anziché `typedef`-nome definito.
+
+simbolo non trovato
+
+Non è stato trovato un simbolo specificato in un'espressione.
+
+Una delle possibili cause di questo errore non case corrisponde al nome del simbolo. Poiché C e C++ sono linguaggi tra maiuscole e minuscole, un nome di simbolo deve essere specificato esattamente del caso in cui è definito nell'origine.
+
+Questo errore può verificarsi durante il tentativo di cast di tipo una variabile per poter guardare la variabile durante il debug. Il `typedef` dichiara un nuovo nome per un tipo, ma non definisce un nuovo tipo. Il cast di tipo tentata nel debugger richiede il nome di un tipo definito.
+
+Questo errore è identico all'errore CAN0017.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili
+
+1. Assicurarsi che il simbolo è già dichiarato in corrispondenza del punto del programma in cui è in uso.
+
+1. Per impostare le variabili nel debugger, utilizzare un nome di tipo effettivo anziché un `typedef`-nome definito.

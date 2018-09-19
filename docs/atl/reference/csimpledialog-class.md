@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087955"
 ---
 # <a name="csimpledialog-class"></a>Classe CSimpleDialog
 
@@ -35,7 +35,7 @@ Questa classe implementa una finestra di dialogo modale base.
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 L'ID risorsa della risorsa modello di finestra di dialogo.
 
-*t_bCenter*  
+*t_bCenter*<br/>
 TRUE se l'oggetto finestra di dialogo al centro la finestra del proprietario. in caso contrario, FALSE.
 
 ## <a name="members"></a>Membri
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parametri
 
-*hWndParent*  
+*hWndParent*<br/>
 Handle per l'elemento padre della finestra di dialogo. Se viene specificato alcun valore, l'elemento padre è impostato per la finestra attiva corrente.
 
 ### <a name="return-value"></a>Valore restituito

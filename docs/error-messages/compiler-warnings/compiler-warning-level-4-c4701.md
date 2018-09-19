@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4701 | Documenti Microsoft
+title: Del compilatore (livello 4) Avviso C4701 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,69 +16,72 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48df2f4ac3d5aad4ae82abf76dab4d96e8af89a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bea1c9eea9d3ef1ccc967ab5a563204ca850b889
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081065"
 ---
 # <a name="compiler-warning-level-4-c4701"></a>Avviso del compilatore (livello 4) C4701
-potenzialmente non inizializzata utilizzata variabile locale 'nome'  
-  
- La variabile locale *nome* potrebbe essere stato usato senza essere assegnato un valore. Ciò potrebbe provocare risultati imprevisti.  
-  
-## <a name="example"></a>Esempio  
- Nel codice seguente vengono generati gli errori C4701 e C4703.  
-  
-```cpp  
-#include <malloc.h>  
-  
-void func(int size)  
-{  
-    void* p;  
-    if (size < 256) {  
-        p = malloc(size);  
-    }  
-  
-    if (p != nullptr) // C4701 and C4703  
-        free(p);  
-}  
-  
-void main()  
-{  
-    func(9);  
-}  
-```  
-  
-```Output  
-c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p' used  
-c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used  
-  
-```  
-  
- Per risolvere il problema, inizializzare la variabile come indicato nel codice seguente:  
-  
-```cpp  
-#include <malloc.h>  
-  
-void func(int size)  
-{  
-    void* p = nullptr;  
-    if (size < 256) {  
-        p = malloc(size);  
-    }  
-  
-    if (p != nullptr)  
-        free(p);  
-}  
-  
-void main()  
-{  
-    func(9);  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Compilatore avviso (livello 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)   
- [Gli avvisi, /sdl e miglioramento del rilevamento della variabile non inizializzato](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)
+
+variabile locale potenzialmente non inizializzata 'nome' utilizzato
+
+La variabile locale *nome* potrebbe essere stato usato senza essere assegnato un valore. Questo potrebbe causare risultati imprevisti.
+
+## <a name="example"></a>Esempio
+
+Nel codice seguente vengono generati gli errori C4701 e C4703.
+
+```cpp
+#include <malloc.h>
+
+void func(int size)
+{
+    void* p;
+    if (size < 256) {
+        p = malloc(size);
+    }
+
+    if (p != nullptr) // C4701 and C4703
+        free(p);
+}
+
+void main()
+{
+    func(9);
+}
+```
+
+```Output
+c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p' used
+c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used
+
+```
+
+Per risolvere il problema, inizializzare la variabile come indicato nel codice seguente:
+
+```cpp
+#include <malloc.h>
+
+void func(int size)
+{
+    void* p = nullptr;
+    if (size < 256) {
+        p = malloc(size);
+    }
+
+    if (p != nullptr)
+        free(p);
+}
+
+void main()
+{
+    func(9);
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Avviso del compilatore (livello 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)<br/>
+[Gli avvisi, /sdl e miglioramento del rilevamento della variabile non inizializzato](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)

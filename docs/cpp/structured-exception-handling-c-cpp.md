@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 72c82ce5885b8b40613a65bab72958d6ae7c1a2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050857"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -154,8 +154,8 @@ Per altre informazioni, vedere [/EH (Modello di gestione delle eccezioni)](../bu
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)  
-[Parole chiave](../cpp/keywords-cpp.md)  
-[\<exception>](../standard-library/exception.md)  
-[Gli errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)  
-[Structured Exception Handling (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  
+[Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[\<exception>](../standard-library/exception.md)<br/>
+[Gli errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Structured Exception Handling (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)

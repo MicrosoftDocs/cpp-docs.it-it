@@ -15,12 +15,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01b569bd4a752eed66f2af138a7136032b092f51
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 580952727023593da23fd2740da4be23406724b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053505"
 ---
 # <a name="virtual-specifier"></a>Identificatore virtual
-Il [virtuale](../cpp/virtual-cpp.md) parola chiave può essere applicata solo alle funzioni membro di classe non statici. Ciò significa che l'associazione delle chiamate alla funzione viene rimandata fino alla fase di esecuzione. Per altre informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).  
+
+Il [virtuale](../cpp/virtual-cpp.md) parola chiave può essere applicata solo alle funzioni membro di classe non statici. Ciò significa che l'associazione delle chiamate alla funzione viene rimandata fino alla fase di esecuzione. Per altre informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078699"
 ---
 # <a name="category-macros"></a>Macro di categoria
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>Parametri
 
-*theClass*  
+*theClass*<br/>
 [in] Il nome della classe che contiene la mappa di categoria.
 
 ### <a name="remarks"></a>Note
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>Parametri
 
-*catID*  
+*catID*<br/>
 [in] CATID costante o variabile che contiene l'identificatore univoco globale (GUID) per la categoria implementata. L'indirizzo del *catID* verrà rilevato e aggiunto alla mappa. Vedere la tabella seguente per una selezione di categorie predefinite.
 
 ### <a name="remarks"></a>Note
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>Parametri
 
-*catID*  
+*catID*<br/>
 [in] CATID costante o variabile che contiene l'identificatore univoco globale (GUID) per la categoria richiesta. L'indirizzo del *catID* verrà rilevato e aggiunto alla mappa. Vedere la tabella seguente per una selezione di categorie predefinite.
 
 ### <a name="remarks"></a>Note

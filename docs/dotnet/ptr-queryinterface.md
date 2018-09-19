@@ -1,5 +1,5 @@
 ---
-title: PTR::QueryInterface | Documenti Microsoft
+title: PTR::QueryInterface | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090140"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
-Una query all'oggetto COM di proprietà per un'interfaccia e associa il risultato a un altro `com::ptr`.  
+Una query all'oggetto COM di proprietà per un'interfaccia e i risultati vengono allegati a un altro `com::ptr`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,17 +40,17 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `other`  
- Il `com::ptr` che riceverà l'interfaccia.  
+*other*<br/>
+Il `com::ptr` che verrà visualizzato l'interfaccia.  
   
 ## <a name="exceptions"></a>Eccezioni  
- Internamente, `QueryInterface` viene chiamato sull'oggetto COM di proprietà e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+ Internamente `QueryInterface` viene chiamato su proprietà oggetto COM e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Note  
- Utilizzare questo metodo per creare un wrapper COM per un'interfaccia diversa dell'oggetto COM di proprietà di wrapper corrente. Questo metodo chiama `QueryInterface` oggetto tramite l'oggetto COM di proprietà per richiedere un puntatore a una specifica interfaccia di COM e viene associato il puntatore a interfaccia restituito passato `com::ptr`.  
+ Usare questo metodo per creare un wrapper COM per un'altra interfaccia dell'oggetto COM wrapper corrente di proprietà. Questo metodo chiama `QueryInterface` tramite l'oggetto COM di proprietà per richiedere un puntatore a un'interfaccia specifica del modello COM dell'oggetto e la collega il puntatore a interfaccia restituito passato `com::ptr`.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `WriteTopLevelNode` funzione membro Usa `QueryInterface` per riempire un oggetto locale `com::ptr` con un `IXMLDOMNode` e quindi passa il `com::ptr` (di riferimento di rilevamento) a una funzione membro privato che scrive le proprietà di nome e il testo del nodo nella console.  
+ In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `WriteTopLevelNode` funzione membro Usa `QueryInterface` per compilare una variabile locale `com::ptr` con un `IXMLDOMNode` e quindi passa il `com::ptr` (per riferimento di rilevamento) a una funzione membro privato che scrive le proprietà di nome e il testo del nodo nella console.  
   
 ```  
 // comptr_queryinterface.cpp  

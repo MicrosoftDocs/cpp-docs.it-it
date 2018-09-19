@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4329 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4329 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7eca757f361acaa0aeaf90332d33400f5a0ba6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f4d250bbd21e55a64009522e5f277493730f7d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084900"
 ---
 # <a name="compiler-warning-level-1-c4329"></a>Avviso del compilatore (livello 1) C4329
-è stato ignorato nell'enumerazione __declspec(Align())  
-  
- Utilizzare il [allineare](../../cpp/align-cpp.md) parola chiave di [declspec](../../cpp/declspec.md) modificatore non consentito in un `enum`. L'esempio seguente genera l'errore C4329:  
-  
-```  
-// C4329.cpp  
-// compile with: /W1 /LD  
-enum __declspec(align(256)) TestEnum {   // C4329  
-   TESTVAL1,  
-   TESTVAL2,  
-   TESTVAL3  
-};  
-__declspec(align(256)) enum TestEnum1;  
+
+__declspec(Align()) viene ignorato nell'enumerazione
+
+Usare la [allineare](../../cpp/align-cpp.md) parola chiave della [declspec](../../cpp/declspec.md) modificatore non consentito in un `enum`. L'esempio seguente genera l'errore C4329:
+
+```
+// C4329.cpp
+// compile with: /W1 /LD
+enum __declspec(align(256)) TestEnum {   // C4329
+   TESTVAL1,
+   TESTVAL2,
+   TESTVAL3
+};
+__declspec(align(256)) enum TestEnum1;
 ```

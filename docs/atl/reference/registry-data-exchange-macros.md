@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764215"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109344"
 ---
 # <a name="registry-data-exchange-macros"></a>Macro di scambio di dati del Registro di sistema
 
@@ -89,19 +89,19 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>Parametri
 
-*Manca la chiave radice*  
+*Manca la chiave radice*<br/>
 Radice chiave del Registro di sistema.
 
-*sottochiave*  
+*sottochiave*<br/>
 La sottochiave del Registro di sistema.
 
-*valueName*  
+*valueName*<br/>
 La chiave del Registro di sistema.
 
-*Membro*  
+*Membro*<br/>
 La variabile membro per associare la voce del Registro di sistema.
 
-*member_size*  
+*member_size*<br/>
 Le dimensioni, in byte, della variabile membro.
 
 ### <a name="remarks"></a>Note
@@ -123,19 +123,19 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>Parametri
 
-*Manca la chiave radice*  
+*Manca la chiave radice*<br/>
 Radice chiave del Registro di sistema.
 
-*sottochiave*  
+*sottochiave*<br/>
 La sottochiave del Registro di sistema.
 
-*valueName*  
+*valueName*<br/>
 La chiave del Registro di sistema.
 
-*Membro*  
+*Membro*<br/>
 La variabile membro per associare la voce del Registro di sistema.
 
-*member_size*  
+*member_size*<br/>
 Le dimensioni, in byte, della variabile membro.
 
 ### <a name="remarks"></a>Note
@@ -157,19 +157,19 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>Parametri
 
-*Manca la chiave radice*  
+*Manca la chiave radice*<br/>
 Radice chiave del Registro di sistema.
 
-*sottochiave*  
+*sottochiave*<br/>
 La sottochiave del Registro di sistema.
 
-*valueName*  
+*valueName*<br/>
 La chiave del Registro di sistema.
 
-*Membro*  
+*Membro*<br/>
 La variabile membro per associare la voce del Registro di sistema.
 
-*member_size*  
+*member_size*<br/>
 Le dimensioni, in byte, della variabile membro.
 
 ### <a name="remarks"></a>Note
@@ -191,19 +191,19 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>Parametri
 
-*Manca la chiave radice*  
+*Manca la chiave radice*<br/>
 Radice chiave del Registro di sistema.
 
-*sottochiave*  
+*sottochiave*<br/>
 La sottochiave del Registro di sistema.
 
-*valueName*  
+*valueName*<br/>
 La chiave del Registro di sistema.
 
-*Membro*  
+*Membro*<br/>
 La variabile membro per associare la voce del Registro di sistema.
 
-*member_size*  
+*member_size*<br/>
 Le dimensioni, in byte, della variabile membro.
 
 ### <a name="remarks"></a>Note
@@ -212,6 +212,6 @@ Questa macro viene usata in combinazione con le macro BEGIN_RDX_MAP ed END_RDX_M
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro](../../atl/reference/atl-macros.md)   
+[Macro](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2459 | Documenti Microsoft
+title: Errore del compilatore C2459 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6013720b55892ffd34e1faf132a69842e4bceb50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b67c5ba4c714b096da58b1e4d837840dc6b5fd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113214"
 ---
 # <a name="compiler-error-c2459"></a>Errore del compilatore C2459
-'identifier': è definito; non è possibile aggiungere come membro anonimo  
-  
- Una classe, struttura o unione viene ridefinita nel proprio ambito da un membro di un'unione anonima.  
-  
- L'esempio seguente genera l'errore C2459:  
-  
-```  
-// C2459.cpp  
-// compile with: /c  
-class C {  
-   union { int C; };   // C2459  
-   union { int D; };  
-};  
+
+'identifier': corso di definizione. non è possibile aggiungere come membro anonimo
+
+Una classe, struttura o unione sono stato ridefinito nel proprio ambito da un membro di un'unione anonima.
+
+L'esempio seguente genera l'errore C2459:
+
+```
+// C2459.cpp
+// compile with: /c
+class C {
+   union { int C; };   // C2459
+   union { int D; };
+};
 ```

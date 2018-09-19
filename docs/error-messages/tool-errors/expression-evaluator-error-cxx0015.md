@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0015 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0015 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050816"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Errore dell‘analizzatore di espressioni CXX0015
-espressione troppo complessa (overflow dello stack)  
-  
- L'espressione immessa è troppo complessa o troppo in profondità per la quantità di spazio di archiviazione disponibile per l'analizzatore di espressioni C.  
-  
- Overflow si verifica in genere a causa di un numero eccessivo di operazioni in sospeso.  
-  
- Modificare l'espressione in modo che ogni componente dell'espressione può essere valutata come viene rilevata, anziché dover attendere altre parti dell'espressione deve essere calcolato.  
-  
- Suddividere l'espressione in più comandi.  
-  
- Questo errore è identico all'errore CAN0015.
+
+espressione troppo complessa (overflow dello stack)
+
+L'espressione immessa è troppo complesso o annidata troppo profondamente la quantità di spazio di archiviazione disponibile per l'analizzatore di espressioni C.
+
+Overflow si verifica in genere a causa di troppe operazioni in sospeso.
+
+Modificare l'espressione in modo che ogni componente dell'espressione può essere valutata quando viene rilevata, anziché dover attendere altre parti dell'espressione deve essere calcolato.
+
+Suddividere l'espressione in più comandi.
+
+Questo errore è identico all'errore CAN0015.

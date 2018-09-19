@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4821 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4821 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25b9aec771c6183149adee95c0860113e075c670
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 859a83aedc6f5c6f5bcbc3ad948939dc5cb763b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086778"
 ---
-# <a name="compiler-warning-level-1-c4821"></a>Avviso del compilatore (livello 1) C4821  
-  
-> Impossibile determinare il tipo di codifica Unicode, salvare il file con firma (BOM)  
-  
-Il compilatore non può determinare il tipo di codifica per un file. Per risolvere il problema, salvare il file con un indicatore dell'ordine di byte. Vedere [gestire file con codifica](/sql/ssms/solution/manage-files-with-encoding) per ulteriori informazioni.  
+# <a name="compiler-warning-level-1-c4821"></a>Avviso del compilatore (livello 1) C4821
+
+> Non è possibile determinare il tipo di codifica Unicode salvare il file con firma (BOM)
+
+Il compilatore non è stato possibile determinare il tipo di codifica per un file. Per risolvere questo problema, salvare il file con un indicatore dell'ordine dei byte. Visualizzare [gestire i file con codifica](/sql/ssms/solution/manage-files-with-encoding) per altre informazioni.

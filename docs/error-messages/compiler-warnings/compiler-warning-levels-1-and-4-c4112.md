@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livelli 1 e 4) C4112 | Documenti Microsoft
+title: Compilatore avviso (livelli 1 e 4) C4112 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43718511af0d85f0c9026fe70b4749c4e3d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9015a7ee7a0b71d3c6aafd3e3b32d4ea1b07f108
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299279"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110549"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>Avviso del compilatore (livelli 1 e 4) C4112
-\#riga richiede un numero intero compreso tra 1 e numero  
-  
- La direttiva [#line](../../preprocessor/hash-line-directive-c-cpp.md) specifica un parametro Integer che non rientra nell'intervallo consentito.  
-  
- Se il parametro specificato è minore di 1, il contatore di righe viene reimpostato su 1. Se il parametro specificato è maggiore di *numero*, che rappresenta il limite definito dal compilatore, il contatore di righe non viene modificato. L'avviso è di livello 1 in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e di livello 4 con le estensioni Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
- L'esempio seguente genera l'errore C4112:  
-  
-```  
-// C4112.cpp  
-// compile with: /W4  
-#line 0   // C4112, value must be between 1 and number  
-  
-int main() {  
-}  
+
+\#è necessario un numero intero compreso tra 1 e numero di riga
+
+La direttiva [#line](../../preprocessor/hash-line-directive-c-cpp.md) specifica un parametro Integer che non rientra nell'intervallo consentito.
+
+Se il parametro specificato è minore di 1, il contatore di righe viene reimpostato su 1. Se il parametro specificato è maggiore di *numero*, che rappresenta il limite definito dal compilatore, il contatore di righe non viene modificato. L'avviso è di livello 1 in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e di livello 4 con le estensioni Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+
+L'esempio seguente genera l'errore C4112:
+
+```
+// C4112.cpp
+// compile with: /W4
+#line 0   // C4112, value must be between 1 and number
+
+int main() {
+}
 ```

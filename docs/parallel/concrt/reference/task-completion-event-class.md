@@ -1,5 +1,5 @@
 ---
-title: Classe task_completion_event | Documenti Microsoft
+title: Classe task_completion_event | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088995"
 ---
 # <a name="taskcompletionevent-class"></a>Classe task_completion_event
 La classe `task_completion_event` consente di ritardare l'esecuzione di un'attività fino a quando non viene soddisfatta una condizione oppure di avviare un'attività in risposta a un evento esterno.  
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_ResultType`  
- Il tipo di risultato di questa classe `task_completion_event`.  
-  
- `T`  
+*_ResultType*<br/>
+Il tipo di risultato di questa classe `task_completion_event`.  
+
   
 ## <a name="members"></a>Membri  
   
@@ -87,14 +86,14 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Result`  
- Impostare questo evento con il risultato.  
+*_Result*<br/>
+Impostare questo evento con il risultato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il metodo restituisce `true` se è stato possibile impostare l'evento. Restituisce `false` se l'evento è già impostata.  
+ Il metodo restituisce `true` se è stata completata correttamente l'impostazione dell'evento. Restituisce `false` se l'evento è già impostato.  
   
 ### <a name="remarks"></a>Note  
- In presenza di più chiamate simultanee a o `set`, solo la prima chiamata avrà esito positivo e il relativo risultato (se presente) verrà archiviato in evento di completamento dell'attività. I set rimanenti vengono ignorati e il metodo restituirà false. Quando si imposta un evento di completamento di attività, tutte le attività creata da che evento verrà completata immediatamente e le rispettive continuazione, se presente, verranno pianificate. Attività degli oggetti di completamento che hanno un `_ResultType` diverso da `void` passerà il valore per una delle relative continuazioni.  
+ In presenza di più chiamate simultanee a o `set`, solo la prima chiamata avrà esito positivo e il risultato (se presente) verrà archiviato nell'evento di completamento dell'attività. I set rimanenti vengono ignorati e il metodo restituirà false. Quando si imposta un evento di completamento di attività, tutte le attività create dall'evento immediatamente verranno completate che relative continuazioni, se presente, verranno pianificate. Attività degli oggetti di completamento con un `_ResultType` diverso da `void` passeranno il valore alle continuazioni.  
   
 ##  <a name="set_exception"></a> set_exception 
 
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+Tipo di eccezione.
+
+*Except*<br/>
+Eccezione da impostare.
+
+*_ExceptionPtr*<br/>
+Il puntatore di eccezione da impostare.
   
 ### <a name="return-value"></a>Valore restituito  
   

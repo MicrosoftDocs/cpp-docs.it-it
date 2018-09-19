@@ -16,17 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 28150a39042305ab96c4dba7746c0b79dbec9509
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3b7d20fb82399f3778c751de28858b93f81071a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340456"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080883"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinazione dinamica delle colonne restituite al consumer
+
 Le macro PROVIDER_COLUMN_ENTRY gestiscono in genere il `IColumnsInfo::GetColumnsInfo` chiamare. Tuttavia, poiché un consumer potrebbe scegliere di usare i segnalibri, il provider deve essere in grado di modificare le colonne restituite a seconda del fatto che il consumer richiede un segnalibro.  
   
- Per gestire il `IColumnsInfo::GetColumnsInfo` chiamare, PROVIDER_COLUMN_MAP, che definisce una funzione di eliminazione `GetColumnInfo`, dalle `CAgentMan` utente di registrare in MyProviderRS. H e sostituirlo con la definizione per il proprio `GetColumnInfo` (funzione):  
+Per gestire il `IColumnsInfo::GetColumnsInfo` chiamare, PROVIDER_COLUMN_MAP, che definisce una funzione di eliminazione `GetColumnInfo`, dalle `CAgentMan` utente di registrare in MyProviderRS. H e sostituirlo con la definizione per il proprio `GetColumnInfo` (funzione):  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +50,11 @@ public:
 };  
 ```  
   
- Successivamente, implementare il `GetColumnInfo` funzionare in MyProviderRS. cpp, come illustrato nel codice seguente.  
+Successivamente, implementare il `GetColumnInfo` funzionare in MyProviderRS. cpp, come illustrato nel codice seguente.  
   
- `GetColumnInfo` verifica innanzitutto se la proprietà OLE DB `DBPROP_BOOKMARKS` è impostata. Per ottenere la proprietà `GetColumnInfo` un indicatore di misura (`pRowset`) all'oggetto set di righe. Il `pThis` puntatore rappresenta la classe che ha creato il set di righe, ovvero la classe in cui è archiviato il mapping di proprietà. `GetColumnInfo` typecast il `pThis` puntatore a un `RMyProviderRowset` puntatore.  
+`GetColumnInfo` verifica innanzitutto se la proprietà OLE DB `DBPROP_BOOKMARKS` è impostata. Per ottenere la proprietà `GetColumnInfo` un indicatore di misura (`pRowset`) all'oggetto set di righe. Il `pThis` puntatore rappresenta la classe che ha creato il set di righe, ovvero la classe in cui è archiviato il mapping di proprietà. `GetColumnInfo` typecast il `pThis` puntatore a un `RMyProviderRowset` puntatore.  
   
- Per verificare la presenza di `DBPROP_BOOKMARKS` proprietà, `GetColumnInfo` Usa il `IRowsetInfo` interfaccia, che è possibile ottenere tramite una chiamata `QueryInterface` sul `pRowset` interfaccia. In alternativa, è possibile usare un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metodo invece.  
+Per verificare la presenza di `DBPROP_BOOKMARKS` proprietà, `GetColumnInfo` Usa il `IRowsetInfo` interfaccia, che è possibile ottenere tramite una chiamata `QueryInterface` sul `pRowset` interfaccia. In alternativa, è possibile usare un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metodo invece.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -114,7 +115,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- Questo esempio Usa una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, una voce nella matrice è inutilizzata. Per gestire le informazioni, è possibile creare due macro di matrice: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX accetta un parametro aggiuntivo, `flags`, che è necessario se si imposta una colonna del segnalibro.  
+Questo esempio Usa una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, una voce nella matrice è inutilizzata. Per gestire le informazioni, è possibile creare due macro di matrice: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX accetta un parametro aggiuntivo, `flags`, che è necessario se si imposta una colonna del segnalibro.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -145,7 +146,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Nel `GetColumnInfo` funzione, la macro segnalibro viene utilizzato come segue:  
+Nel `GetColumnInfo` funzione, la macro segnalibro viene utilizzato come segue:  
   
 ```cpp  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -153,7 +154,8 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- È ora possibile compilare ed eseguire il provider migliorato. Per testare il provider, modificare l'utente di test come descritto nella [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md). Eseguire il consumer di test con il provider. Verificare che il consumer di test consente di recuperare le stringhe corrette dal provider quando si fa clic il **eseguiti** pulsante nel **Test Consumer** nella finestra di dialogo.  
+È ora possibile compilare ed eseguire il provider migliorato. Per testare il provider, modificare l'utente di test come descritto nella [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md). Eseguire il consumer di test con il provider. Verificare che il consumer di test consente di recuperare le stringhe corrette dal provider quando si fa clic il **eseguiti** pulsante nel **Test Consumer** nella finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+
+[Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

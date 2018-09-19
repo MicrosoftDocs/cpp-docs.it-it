@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1067 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RC1067 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c570a5f1fbbb58fcbe43a0fdd34e577b1113cdae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b02bd2bf8605e5babb5bd7036b69f1d394b759d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076281"
 ---
 # <a name="resource-compiler-fatal-error-rc1067"></a>Errore irreversibile del compilatore di risorse RC1067
-limite del compilatore: identificatore ha causato un overflow del buffer interno  
-  
- È stato superato un limite del compilatore interno.
+
+limite del compilatore: identificatore ha causato un overflow del buffer interno
+
+È stato superato un limite del compilatore interno.

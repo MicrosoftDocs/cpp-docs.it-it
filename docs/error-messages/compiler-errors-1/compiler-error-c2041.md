@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2041 | Documenti Microsoft
+title: Errore del compilatore C2041 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747dd5621aec556e89fee2ab8e7ff512736e408c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bee199ea3ddca7ae329fc17ed6c3c013dc460eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082170"
 ---
 # <a name="compiler-error-c2041"></a>Errore del compilatore C2041
-cifra non valida 'character' per 'numero' di base  
-  
- Il carattere specificato non è una cifra valida per la base (ad esempio, ottale o esadecimale).  
-  
- L'esempio seguente genera l'errore C2041:  
-  
-```  
-// C2041.cpp  
-int i = 081;   // C2041  8 is not a base 8 digit  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2041b.cpp  
-// compile with: /c  
-int j = 071;  
+
+cifra non valida 'character' per 'numero' di base
+
+Il carattere specificato non è una cifra valida per la base (ad esempio, ottale o esadecimale).
+
+L'esempio seguente genera l'errore C2041:
+
+```
+// C2041.cpp
+int i = 081;   // C2041  8 is not a base 8 digit
+```
+
+Possibile soluzione:
+
+```
+// C2041b.cpp
+// compile with: /c
+int j = 071;
 ```

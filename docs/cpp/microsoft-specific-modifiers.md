@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3dfc57e1d6af11628b37823f2452ee2b65f8a7f
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 9a1fc13df342b4282ee63c185205c2f2b12ca003
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110614"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificatori specifici Microsoft
-In questa sezione vengono descritte le estensioni di C++ specifiche di Microsoft nelle aree seguenti:  
-  
--   [Indirizzamento di base](based-addressing.md), la pratica dell'utilizzo di un puntatore come base da cui altri puntatori con offset  
-  
--   [Convenzioni di chiamata di funzione](calling-conventions.md)  
-  
--   Esteso gli attributi di classi di archiviazione dichiarati con la [declspec](declspec.md) (parola chiave)  
-  
--   Il [__w64](w64.md) (parola chiave)  
 
-### <a name="microsoft-specific-keywords"></a>Parole chiave specifiche di Microsoft  
+In questa sezione vengono descritte le estensioni di C++ specifiche di Microsoft nelle aree seguenti:
 
-Molte delle parole chiave specifiche di Microsoft possono essere utilizzate per modificare i dichiaratori per formare i tipi derivati. Per ulteriori informazioni sui dichiaratori, vedere [dichiaratori](overview-of-declarators.md).  
+- [Indirizzamento di base](based-addressing.md), la pratica dell'utilizzo di un puntatore come base da cui altri puntatori con offset
+
+- [Convenzioni di chiamata di funzione](calling-conventions.md)
+
+- Esteso gli attributi di classi di archiviazione dichiarati con la [declspec](declspec.md) (parola chiave)
+
+- Il [__w64](w64.md) (parola chiave)
+
+### <a name="microsoft-specific-keywords"></a>Parole chiave specifiche di Microsoft
+
+Molte delle parole chiave specifiche di Microsoft possono essere utilizzate per modificare i dichiaratori per formare i tipi derivati. Per ulteriori informazioni sui dichiaratori, vedere [dichiaratori](overview-of-declarators.md).
 
 |Parola chiave|Significato|Utilizzata per formare tipi derivati?|   
 |-------------|-------------|---------------------------------|
@@ -47,4 +48,5 @@ Molte delle parole chiave specifiche di Microsoft possono essere utilizzate per 
 |[__vectorcall](vectorcall.md)|Il nome che segue dichiara una funzione che utilizza i registri, inclusi i registri SSE, se disponibili, anziché lo stack per il passaggio di un argomento.|Yes|      
     
 ## <a name="see-also"></a>Vedere anche     
- [Riferimenti al linguaggio C++](cpp-language-reference.md)
+
+[Riferimenti al linguaggio C++](cpp-language-reference.md)

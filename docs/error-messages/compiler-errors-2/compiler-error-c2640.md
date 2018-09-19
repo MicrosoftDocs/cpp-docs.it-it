@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2640 | Documenti Microsoft
+title: Errore del compilatore C2640 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6951d6d56fa0e93e75725c5ce5b13fec7f3d78f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad39b2a9e3397f97ddc4a900bc45d1983ebbf574
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085283"
 ---
 # <a name="compiler-error-c2640"></a>Errore del compilatore C2640
-'identifier': based non valido di modificatore su un riferimento  
-  
- Il `__based` modificatore può essere utilizzato solo su puntatori.  
-  
- L'esempio seguente genera l'errore C2640:  
-  
-```  
-// C2640.cpp  
-void f(int i) {  
-    void *vp;  
-    int _based(vp) &vr = I;  // C2640  
-}  
+
+'identifier': based non valido di modificatore su un riferimento
+
+Il `__based` modificatore può essere usato solo su puntatori.
+
+L'esempio seguente genera l'errore C2640:
+
+```
+// C2640.cpp
+void f(int i) {
+    void *vp;
+    int _based(vp) &vr = I;  // C2640
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3173 | Documenti Microsoft
+title: Errore del compilatore C3173 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef35c534ac834779da15fce99e8c82b94bd445e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21a02ae1fcf4aff9636445979a81ef0a02ab5cb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053024"
 ---
 # <a name="compiler-error-c3173"></a>Errore del compilatore C3173
-mancata corrispondenza delle versioni nel merge idl  
-  
- Questo errore si verifica quando un file oggetto contiene idl incorporate che è stato generato con una versione precedente del compilatore. Il compilatore consente di codificare un numero di versione per assicurarsi che lo stesso compilatore usato per generare il contenuto idl incorporato nel file obj è lo stesso compilatore usato per unire l'idl incorporato.  
-  
- Aggiornare l'installazione di Visual C++ in modo che tutti gli strumenti sono dall'ultima versione rilasciata.
+
+mancata corrispondenza delle versioni nel merge idl
+
+Questo errore si verifica quando un file di oggetti contiene idl incorporate che è stata generata con una versione precedente del compilatore. Il compilatore consente di codificare un numero di versione per assicurarsi che lo stesso compilatore usato per generare il contenuto idl incorporato nel file obj è anche lo stesso compilatore usato per unire file idl incorporato.
+
+Aggiornare l'installazione di Visual C++ in modo che siano tutti gli strumenti dalla versione rilasciata più recente.

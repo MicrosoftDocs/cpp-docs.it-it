@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4673 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4673 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aecb4b3590a3cb1a1b055cd1e3377d00c5d0e5bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ab61a71a747b1fd917db579a57700107d12da87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085819"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Avviso del compilatore (livello 4) C4673
-generare i seguenti tipi di 'identifier' non verrà considerata sito di rilevamento  
-  
- Un oggetto throw non può essere gestito nel **catch** blocco. Ogni tipo che non può essere gestita è elencato nell'output degli errori immediatamente successiva alla riga contenente l'avviso. Ogni tipo non gestito dispone di un avviso. Leggere l'avviso per ogni tipo specifico per altre informazioni.  
-  
- L'esempio seguente genera l'errore C4673:  
-  
-```  
-// C4673.cpp  
-// compile with: /EHsc /W4  
-class Base {  
-private:  
-   char * m_chr;  
-public:  
-   Base() {  
-      m_chr = 0;  
-   }  
-  
-   ~Base() {  
-      if(m_chr)  
-         delete m_chr;  
-   }  
-};  
-  
-class Derv : private Base {  
-public:  
-   Derv() {}  
-   ~Derv() {}  
-};  
-  
-int main() {  
-   try {  
-      Derv D1;  
-      // delete previous line, uncomment the next line to resolve  
-      // Base D1;  
-      throw D1;   // C4673  
-   }  
-  
-   catch(...) {}  
-}  
+
+generare i tipi seguenti di 'identifier' non verrà considerata sito di rilevamento
+
+Un oggetto gettare non può essere gestito nel **catch** blocco. Ogni tipo che non può essere gestito è elencato nell'output degli errori immediatamente dopo la riga contenente l'avviso. Ogni tipo non gestito ha un proprio avviso. Leggere l'avviso per ogni tipo specifico per altre informazioni.
+
+L'esempio seguente genera l'errore C4673:
+
+```
+// C4673.cpp
+// compile with: /EHsc /W4
+class Base {
+private:
+   char * m_chr;
+public:
+   Base() {
+      m_chr = 0;
+   }
+
+   ~Base() {
+      if(m_chr)
+         delete m_chr;
+   }
+};
+
+class Derv : private Base {
+public:
+   Derv() {}
+   ~Derv() {}
+};
+
+int main() {
+   try {
+      Derv D1;
+      // delete previous line, uncomment the next line to resolve
+      // Base D1;
+      throw D1;   // C4673
+   }
+
+   catch(...) {}
+}
 ```

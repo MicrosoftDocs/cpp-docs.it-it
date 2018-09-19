@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2692 | Documenti Microsoft
+title: Errore del compilatore C2692 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a02110750a748b5c520df7d202a87957f227a802
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03a9006889c5853e77b5603484ea9d18f2474241
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088371"
 ---
 # <a name="compiler-error-c2692"></a>Errore del compilatore C2692
-'nome_funzione': le funzioni con prototipo completo del compilatore C con il ' o clr' opzione  
-  
- Quando la compilazione per .NET, codice gestito, il compilatore C richiede che le dichiarazioni di funzione ANSI. Inoltre, se una funzione non accetta parametri, è necessario dichiarare in modo esplicito `void` come tipo di parametro.
+
+'function_name': le funzioni con prototipo completo richiesti nel compilatore C con il ' o clr' opzione
+
+Quando la compilazione per .NET, il codice gestito, il compilatore C richiede che le dichiarazioni di funzione ANSI. Inoltre, se una funzione non accetta parametri, è necessario dichiarare esplicitamente `void` come tipo di parametro.

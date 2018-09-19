@@ -1,5 +1,5 @@
 ---
-title: Errori del compilatore di risorse RC1000 through RC4413 | Documenti Microsoft
+title: Errori del compilatore di risorse RC1000 through RC4413 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d40925f42f6082439bedadec8416f780e57016
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14264cfa506595ba8ecde1d5e7747cd43b6e6543
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045419"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Errore del compilatore di risorses RC1000 through RC4413
-In questa sezione viene fornito un elenco di riferimento degli errori generati dagli strumenti di compilazione. Per ottenere informazioni su un determinato messaggio di errore, fare clic sul corrispondente numero di errore nella finestra di Output e premere F1 oppure digitare il numero di errore nel **cercare** dell'indice.
+
+In questa sezione viene fornito un elenco di riferimento degli errori generati dagli strumenti di compilazione. Per ottenere informazioni su un determinato messaggio di errore, fare clic con il mouse su un numero di errore nella finestra di Output e premere F1 oppure digitare il numero di errore nel **cercare** dell'indice.

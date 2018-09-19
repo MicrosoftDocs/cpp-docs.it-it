@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2360 | Documenti Microsoft
+title: Errore del compilatore C2360 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c24a44222a01d66c57aab340c5a06469f212e285
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f443c27c496d5d05c17bde854181b0fdde58f545
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089203"
 ---
 # <a name="compiler-error-c2360"></a>Errore del compilatore C2360
-inizializzazione di 'identifier' ignorata da un'etichetta 'case'  
-  
- L'inizializzazione di `identifier` può essere ignorata un `switch` istruzione. È Impossibile passare oltre una dichiarazione con un inizializzatore, a meno che la dichiarazione è racchiuso in un blocco. (A meno che non è dichiarata in un blocco, la variabile è nell'ambito fino alla fine del `switch` istruzione.)  
-  
- L'esempio seguente genera l'errore C2360:  
-  
-```  
-// C2360.cpp  
-int main() {  
-   int x = 0;  
-   switch ( x ) {  
-   case 0 :  
-      int i = 1;  
-      { int j = 1; }  
-   case 1 :   // C2360  
-      int k = 1;  
-   }  
-}  
-```  
-  
- Possibile soluzione:  
-  
-```  
-// C2360b.cpp  
-int main() {  
-   int x = 0;  
-   switch ( x ) {  
-   case 0 :  
-      { int j = 1; int i = 1;}  
-   case 1 :  
-      int k = 1;  
-   }  
-}  
+
+inizializzazione di 'identifier' ignorata da un'etichetta 'case'
+
+L'inizializzazione di `identifier` può essere ignorato un `switch` istruzione. Non è possibile iniziare oltre una dichiarazione con un inizializzatore a meno che non la dichiarazione è racchiuso in un blocco. (A meno che non è dichiarato all'interno di un blocco, la variabile è nell'ambito fino alla fine del `switch` istruzione.)
+
+L'esempio seguente genera l'errore C2360:
+
+```
+// C2360.cpp
+int main() {
+   int x = 0;
+   switch ( x ) {
+   case 0 :
+      int i = 1;
+      { int j = 1; }
+   case 1 :   // C2360
+      int k = 1;
+   }
+}
+```
+
+Possibile soluzione:
+
+```
+// C2360b.cpp
+int main() {
+   int x = 0;
+   switch ( x ) {
+   case 0 :
+      { int j = 1; int i = 1;}
+   case 1 :
+      int k = 1;
+   }
+}
 ```

@@ -16,62 +16,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c011674192ee6cc595aaf05f9c48bb453d5d71f6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 7ec52069f55ad742bab8378be2aa33d2616244a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110809"
 ---
 # <a name="public-c"></a>public (C++)
-## <a name="syntax"></a>Sintassi  
-  
-```  
-public:  
-   [member-list]  
-public base-class  
-```  
-  
-## <a name="remarks"></a>Note  
- Quando precede un elenco dei membri della classe, il **pubblica** parola chiave indica che tali membri sono accessibili da qualsiasi funzione. Quanto detto si applica a tutti i membri dichiarati fino al successivo identificatore di accesso o fino alla fine della classe.  
-  
- Quando precede il nome di una classe di base, il **pubblica** parola chiave specifica che i membri pubblici e protetti della classe di base sono pubblici e protetti, rispettivamente, i membri della classe derivata.  
-  
- L'accesso predefinito dei membri in una classe è privato. L'accesso predefinito dei membri in una struttura o in un'unione è pubblico.  
-  
- L'accesso predefinito di una classe base è privato per le classi e pubblico per le strutture. Le unioni non possono avere classi base.  
-  
- Per altre informazioni, vedere [privati](../cpp/private-cpp.md), [protetti](../cpp/protected-cpp.md), [friend](../cpp/friend-cpp.md)e la tabella di accesso ai membri in [controllo dell'accesso ai membri della classe](member-access-control-cpp.md) .  
-  
-## <a name="clr-specific"></a>Specifico di /clr  
- Nei tipi CLR, parole chiave dell'identificatore di accesso di C++ (**pubbliche**, **privato**, e **protetti**) può influire sulla visibilità dei tipi e metodi relativamente agli assembly. Per altre informazioni, vedere [controllo di accesso membri](member-access-control-cpp.md).  
-  
+
+## <a name="syntax"></a>Sintassi
+
+```
+public:
+   [member-list]
+public base-class
+```
+
+## <a name="remarks"></a>Note
+
+Quando precede un elenco dei membri della classe, il **pubblica** parola chiave indica che tali membri sono accessibili da qualsiasi funzione. Quanto detto si applica a tutti i membri dichiarati fino al successivo identificatore di accesso o fino alla fine della classe.
+
+Quando precede il nome di una classe di base, il **pubblica** parola chiave specifica che i membri pubblici e protetti della classe di base sono pubblici e protetti, rispettivamente, i membri della classe derivata.
+
+L'accesso predefinito dei membri in una classe è privato. L'accesso predefinito dei membri in una struttura o in un'unione è pubblico.
+
+L'accesso predefinito di una classe base è privato per le classi e pubblico per le strutture. Le unioni non possono avere classi base.
+
+Per altre informazioni, vedere [privati](../cpp/private-cpp.md), [protetti](../cpp/protected-cpp.md), [friend](../cpp/friend-cpp.md)e la tabella di accesso ai membri in [controllo dell'accesso ai membri della classe](member-access-control-cpp.md) .
+
+## <a name="clr-specific"></a>Specifico di /clr
+
+Nei tipi CLR, parole chiave dell'identificatore di accesso di C++ (**pubbliche**, **privato**, e **protetti**) può influire sulla visibilità dei tipi e metodi relativamente agli assembly. Per altre informazioni, vedere [controllo di accesso membri](member-access-control-cpp.md).
+
 > [!NOTE]
->  I file compilati con [/LN](../build/reference/ln-create-msil-module.md) non sono interessati da questo comportamento. In questo caso, tutte le classi gestite (sia pubbliche che private) saranno visibili.  
-  
-## <a name="end-clr-specific"></a>Specifico di END /clr  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// keyword_public.cpp  
-class BaseClass {  
-public:  
-   int pubFunc() { return 0; }  
-};  
-  
-class DerivedClass : public BaseClass {};  
-  
-int main() {  
-   BaseClass aBase;  
-   DerivedClass aDerived;  
-   aBase.pubFunc();       // pubFunc() is accessible   
-                          //    from any function  
-   aDerived.pubFunc();    // pubFunc() is still public in   
-                          //    derived class  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controllo dell'accesso ai membri della classe](member-access-control-cpp.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+>  I file compilati con [/LN](../build/reference/ln-create-msil-module.md) non sono interessati da questo comportamento. In questo caso, tutte le classi gestite (sia pubbliche che private) saranno visibili.
+
+## <a name="end-clr-specific"></a>Specifico di END /clr
+
+## <a name="example"></a>Esempio
+
+```cpp
+// keyword_public.cpp
+class BaseClass {
+public:
+   int pubFunc() { return 0; }
+};
+
+class DerivedClass : public BaseClass {};
+
+int main() {
+   BaseClass aBase;
+   DerivedClass aDerived;
+   aBase.pubFunc();       // pubFunc() is accessible
+                          //    from any function
+   aDerived.pubFunc();    // pubFunc() is still public in
+                          //    derived class
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Controllo dell'accesso ai membri di classi](member-access-control-cpp.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

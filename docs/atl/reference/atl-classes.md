@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c707eeb5a7899dd3ef7c8c2aa46098a70ab9c06d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 94d69debb4bde61fc76917c70d95bcc6314c7208
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044535"
 ---
 # <a name="atl-classes-and-structs"></a>Gli struct e classi ATL
 
@@ -231,9 +231,9 @@ La libreria ATL (Active Template) include le seguenti classi e struct. Per trova
 
 ## <a name="see-also"></a>Vedere anche
 
-[Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)   
-[Funzioni](../../atl/reference/atl-functions.md)   
-[Global Variables](../../atl/reference/atl-global-variables.md)  (Variabili globali)  
-[TypeDef](../../atl/reference/atl-typedefs.md)   
+[Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)<br/>
+[Funzioni](../../atl/reference/atl-functions.md)<br/>
+[Variabili globali](../../atl/reference/atl-global-variables.md)<br/>
+[Typedef](../../atl/reference/atl-typedefs.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)
 

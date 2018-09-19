@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 2) C4948 | Documenti Microsoft
+title: Compilatore avviso (livello 2) C4948 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422f06e6e9ac749b16524f45e61cb6bbbd672cb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51b42677fbabde58afb3cb989e9b0d73e34f92a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050827"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>Avviso del compilatore (livello 2) C4948
-tipo restituito di 'accessor' non corrisponde al tipo dell'ultimo parametro della funzione set corrispondente  
-  
-Il compilatore ha rilevato una mancata corrispondenza tra il tipo di dati da ottenere e impostata per una proprietà indicizzata.  
-  
-C4948 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+
+tipo restituito di 'accessor' non corrisponde al tipo dell'ultimo parametro del metodo set corrispondente
+
+Il compilatore ha trovato una mancata corrispondenza tra il tipo di dati è in corso di ottenere e imposta per una proprietà indicizzata.
+
+È raggiungibile tramite l'opzione del compilatore obsolete solo C4948 **/CLR: oldSyntax**.

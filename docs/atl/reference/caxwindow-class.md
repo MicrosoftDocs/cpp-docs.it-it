@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110146"
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>Parametri
 
-*pControl*  
+*pControl*<br/>
 [in] Un puntatore al `IUnknown` del controllo.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Un puntatore per il `IUnknown` dell'host (il `AxWin` oggetto).
 
 ### <a name="return-value"></a>Valore restituito
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*hWnd*  
+*hWnd*<br/>
 Handle a un oggetto finestra esistente.
 
 ##  <a name="createcontrol"></a>  CAxWindow::CreateControl
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszName*  
+*lpszName*<br/>
 Un puntatore a una stringa per creare il controllo. Deve essere formattato in uno dei modi seguenti:
 
 - Un ProgID, ad esempio "MSCAL. Calendar.7 "
@@ -155,13 +155,13 @@ Un puntatore a una stringa per creare il controllo. Deve essere formattato in un
    > [!NOTE]
    > "MSHTML:" deve precedere il frammento di HTML in modo che si è designato come un flusso MSHTML. Solo i ProgID e CLSID sono supportati nelle piattaforme Windows Mobile. Windows CE piattaforme incorporate, diverso da dispositivi mobili di Windows con il supporto per il supporto di inserimento/espulsione CE tutti i tipi inclusi ProgID, CLSID, URL, fare riferimento al documento attivo e frammento di HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Puntatore a un flusso che viene usato per inizializzare le proprietà del controllo. Può essere NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] L'indirizzo del puntatore che riceverà il `IUnknown` del contenitore. Può essere NULL.
 
-*dwResID*  
+*dwResID*<br/>
 L'ID di risorsa di una risorsa HTML. Il controllo WebBrowser verrà creato e caricato con la risorsa specificata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszName*  
+*lpszName*<br/>
 Un puntatore a una stringa per creare il controllo. Deve essere formattato in uno dei modi seguenti:
 
 - Un ProgID, ad esempio "MSCAL. Calendar.7 "
@@ -222,22 +222,22 @@ Un puntatore a una stringa per creare il controllo. Deve essere formattato in un
    > [!NOTE]
    > "MSHTML:" deve precedere il frammento di HTML in modo che si è designato come un flusso MSHTML. Solo i ProgID e CLSID sono supportati nelle piattaforme Windows Mobile. Windows CE piattaforme incorporate, diverso da dispositivi mobili di Windows con il supporto per il supporto di inserimento/espulsione CE tutti i tipi inclusi ProgID, CLSID, URL, fare riferimento al documento attivo e frammento di HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Puntatore a un flusso che viene usato per inizializzare le proprietà del controllo. Può essere NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] L'indirizzo del puntatore che riceverà il `IUnknown` del contenitore. Può essere NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] L'indirizzo del puntatore che riceverà il `IUnknown` del controllo. Può essere NULL.
 
-*iidSink*  
+*iidSink*<br/>
 [in] Identificatore di interfaccia di un'interfaccia in uscita per l'oggetto indipendente. Può essere IID_NULL.
 
-*punkSink*  
+*punkSink*<br/>
 [in] Un puntatore per il `IUnknown` interfaccia dell'oggetto sink di essere connessi al punto di connessione per l'oggetto indipendente specificato da *iidSink*.
 
-*dwResID*  
+*dwResID*<br/>
 [in] L'ID di risorsa di una risorsa HTML. Il controllo WebBrowser verrà creato e caricato con la risorsa specificata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*hWnd*  
+*hWnd*<br/>
 Handle per una finestra esistente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Specifica l'IID dell'interfaccia del controllo.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Un puntatore all'interfaccia del controllo. Nella versione del modello di questo metodo, non è necessario per ottenere un ID di riferimento fino a quando viene passata un'interfaccia tipizzata con un UUID associato.
 
-*Q*  
+*Q*<br/>
 [in] Interfaccia che viene eseguita la query per.
 
 ### <a name="return-value"></a>Valore restituito
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*  
+*IID*<br/>
 [in] Specifica l'IID dell'interfaccia del controllo.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Un puntatore all'interfaccia dell'host. Nella versione del modello di questo metodo, non è necessario per ottenere un ID di riferimento fino a quando viene passata un'interfaccia tipizzata con un UUID associato.
 
-*Q*  
+*Q*<br/>
 [in] Interfaccia che viene eseguita la query per.
 
 ### <a name="return-value"></a>Valore restituito
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametri
 
-*pDisp*  
+*pDisp*<br/>
 [in] Un puntatore a un `IDispatch` interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>Parametri
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in] Un puntatore a un `IDocHostUIHandlerDispatch` interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -377,9 +377,9 @@ Esterno `IDocHostUIHandlerDispatch` interfaccia viene utilizzata da tutti i cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio ATLCON](../../visual-cpp-samples.md)   
-[Classe CWindow](../../atl/reference/cwindow-class.md)   
-[Nozioni fondamentali sul controllo composito](../../atl/atl-composite-control-fundamentals.md)   
-[Panoramica della classe](../../atl/atl-class-overview.md)   
+[Esempio ATLCON](../../visual-cpp-samples.md)<br/>
+[Classe CWindow](../../atl/reference/cwindow-class.md)<br/>
+[Nozioni fondamentali sul controllo composito](../../atl/atl-composite-control-fundamentals.md)<br/>
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Domande frequenti sul contenimento di controllo](../../atl/atl-control-containment-faq.md)
 

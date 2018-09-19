@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2602 | Documenti Microsoft
+title: Errore del compilatore C2602 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fd581d8d95ae33ba2a38ea45a458f2085e0ef1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22c4b2ec765259aa7797b49c003f1b2e2860226f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049527"
 ---
 # <a name="compiler-error-c2602"></a>Errore del compilatore C2602
-'identificatore' non è un membro di una classe di base di 'class'  
-  
- `Identifier` Impossibile accedere perché non è un membro ereditato da qualsiasi classe di base.  
-  
- L'esempio seguente genera l'errore C2602:  
-  
-```  
-// C2602.cpp  
-// compile with: /c  
-struct X {  
-   int x;  
-};  
-struct A {  
-   int a;  
-};  
-struct B : public A {  
-   X::x;   // C2602 B is not derived from X  
-   A::a;   // OK  
-};  
+
+'identificatore' non è un membro di una classe di base di 'class'
+
+`Identifier` non è accessibile perché non è un membro ereditato da qualsiasi classe di base.
+
+L'esempio seguente genera l'errore C2602:
+
+```
+// C2602.cpp
+// compile with: /c
+struct X {
+   int x;
+};
+struct A {
+   int a;
+};
+struct B : public A {
+   X::x;   // C2602 B is not derived from X
+   A::a;   // OK
+};
 ```

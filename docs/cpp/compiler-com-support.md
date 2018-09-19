@@ -15,35 +15,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c2204e69ee6df64a08e3f5cf03191ad1e7e0535
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: faab8e0dafdf9121ab694c409500c08aabbb1bc8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402461"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079739"
 ---
 # <a name="compiler-com-support"></a>Supporto COM del compilatore
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Il compilatore di Visual C++ è in grado di leggere direttamente le librerie dei tipi COM (Component Object Model) e di tradurre il contenuto in codice sorgente C++ che può essere incluso nella compilazione. Sono disponibili estensioni del linguaggio per semplificare la programmazione COM sul lato client.  
-  
- Tramite il [direttiva del preprocessore #import](../preprocessor/hash-import-directive-cpp.md), il compilatore può leggere una libreria dei tipi e convertire i dati in un file di intestazione C++ che descrive il modello COM interfacce come classi. È disponibile un set di attributi `#import` per il controllo utente del contenuto dei file di intestazione delle librerie dei tipi risultanti.  
-  
- È possibile usare la [declspec](../cpp/declspec.md) attributo esteso [uuid](../cpp/uuid-cpp.md) per assegnare un identificatore univoco globale (GUID) a un oggetto COM. La parola chiave [uuidof](../cpp/uuidof-operator.md) può essere utilizzato per estrarre il GUID associato a un oggetto COM. Un'altra **declspec** attributo [proprietà](../cpp/property-cpp.md), può essere utilizzato per specificare la `get` e `set` metodi per un membro dati di un oggetto COM.  
-  
- Viene fornito un set di classi e funzioni globali di supporto COM per supportare le `VARIANT` e `BSTR` tipi, implementare i puntatori intelligenti e incapsulare l'oggetto errore generato da `_com_raise_error`:  
-  
--   [Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)  
-  
--   [_bstr_t](../cpp/bstr-t-class.md)  
-  
--   [_com_error](../cpp/com-error-class.md)  
-  
--   [_com_ptr_t](../cpp/com-ptr-t-class.md)  
-  
--   [_variant_t](../cpp/variant-t-class.md)  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi di supporto COM del compilatore](../cpp/compiler-com-support-classes.md)   
- [Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)
+
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+
+Il compilatore di Visual C++ è in grado di leggere direttamente le librerie dei tipi COM (Component Object Model) e di tradurre il contenuto in codice sorgente C++ che può essere incluso nella compilazione. Sono disponibili estensioni del linguaggio per semplificare la programmazione COM sul lato client.
+
+Tramite il [direttiva del preprocessore #import](../preprocessor/hash-import-directive-cpp.md), il compilatore può leggere una libreria dei tipi e convertire i dati in un file di intestazione C++ che descrive il modello COM interfacce come classi. È disponibile un set di attributi `#import` per il controllo utente del contenuto dei file di intestazione delle librerie dei tipi risultanti.
+
+È possibile usare la [declspec](../cpp/declspec.md) attributo esteso [uuid](../cpp/uuid-cpp.md) per assegnare un identificatore univoco globale (GUID) a un oggetto COM. La parola chiave [uuidof](../cpp/uuidof-operator.md) può essere utilizzato per estrarre il GUID associato a un oggetto COM. Un'altra **declspec** attributo [proprietà](../cpp/property-cpp.md), può essere utilizzato per specificare la `get` e `set` metodi per un membro dati di un oggetto COM.
+
+Viene fornito un set di classi e funzioni globali di supporto COM per supportare le `VARIANT` e `BSTR` tipi, implementare i puntatori intelligenti e incapsulare l'oggetto errore generato da `_com_raise_error`:
+
+- [Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)
+
+- [_bstr_t](../cpp/bstr-t-class.md)
+
+- [_com_error](../cpp/com-error-class.md)
+
+- [_com_ptr_t](../cpp/com-ptr-t-class.md)
+
+- [_variant_t](../cpp/variant-t-class.md)
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi di supporto COM del compilatore](../cpp/compiler-com-support-classes.md)<br/>
+[Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)

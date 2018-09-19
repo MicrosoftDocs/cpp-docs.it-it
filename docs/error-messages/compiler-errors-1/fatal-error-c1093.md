@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9bc1e7e3d3996eedd0fe464832c1ee91986e302f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052660"
 ---
 # <a name="fatal-error-c1093"></a>Errore irreversibile C1093
 
-> Chiamata API '*nome della funzione*"non riuscito"*percorso della chiamata*': '*testo dal runtime*'  
-  
-Impossibile eseguire la chiamata a una funzione di .NET. Il *testo dal runtime* stringa potrebbe o non può essere fornita dal runtime COM.  
-  
+> Chiamata API '*nome della funzione*"non riuscito"*percorso della chiamata*': '*testo dal runtime*'
+
+Impossibile eseguire la chiamata a una funzione di .NET. Il *testo dal runtime* stringa potrebbe o non può essere fornita dal runtime COM.
+
 Per altre informazioni sui messaggi di errore di sistema, vedere il file system file Winerror. h, e [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

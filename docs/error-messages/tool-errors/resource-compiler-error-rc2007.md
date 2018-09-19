@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore di risorse RC2007 | Documenti Microsoft
+title: Errore del compilatore di risorse RC2007 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fa2f2f1749aef354963689ca62cd7551bc112e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 622c9941613c97a494455f689183eb095fc1b2cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046316"
 ---
 # <a name="resource-compiler-error-rc2007"></a>Errore del compilatore di risorse RC2007
-\#definire la sintassi  
-  
- Era previsto un identificatore dopo `#define` in una direttiva di pre-elaborazione.
+
+\#definire la sintassi
+
+Era previsto un identificatore seguito `#define` in una direttiva di pre-elaborazione.
