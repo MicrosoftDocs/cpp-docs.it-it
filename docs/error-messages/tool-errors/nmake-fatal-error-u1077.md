@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1077 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1077 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144fa1d85e4dd63fdb9a381fd4285ba905817851
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31a1164ecd8ce17aec7058525598c68d312f14e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316264"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113032"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Errore irreversibile U1077 di NMAKE 
-'program': codice restituito 'valore'  
-  
- Il comando specificato o il programma chiamato da NMAKE non è riuscita e ha restituito il codice di uscita specificato.  
-  
- Per eliminare l'errore e continuare la sessione NMAKE, utilizzare l'opzione /I, la **. IGNORARE** direttiva punto o il trattino (**-**) come modificatore di comando. Per continuare la sessione NMAKE su parti della struttura ad albero di dipendenza, utilizzare l'opzione /k.
+
+'program': codice restituito 'valore'
+
+Il comando specificato o il programma chiamato da NMAKE non è riuscita e ha restituito il codice di uscita specificato.
+
+Per eliminare questo errore e continuare la sessione NMAKE, usare l'opzione /I il **. IGNORARE** direttiva punto o il trattino (**-**) come modificatore di comando. Per continuare la sessione di NMAKE per parti correlate dell'albero delle dipendenze, usare l'opzione /k.
