@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f34f7ceca5cf958e981f8390044863a07b4317
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118453"
 ---
 # <a name="worker-archetype"></a>Archetipo worker
 
@@ -68,7 +68,7 @@ Questi parametri del modello prevede che la classe di conformarsi all'archetipo:
 
 Chiamato per elaborare un elemento di lavoro.
 
-```  
+```
 void Execute(
     RequestType request,  
     void* pvWorkerParam,  
@@ -77,25 +77,25 @@ void Execute(
 
 #### <a name="parameters"></a>Parametri
 
-*Richiesta*  
+*Richiesta*<br/>
 L'elemento di lavoro da elaborare. L'elemento di lavoro è dello stesso tipo `RequestType`.
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Initialize` e `Terminate`.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 Un puntatore per il [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) struttura utilizzata per creare la coda in cui gli elementi messe in coda.
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
-Chiamato per inizializzare l'oggetto ruolo di lavoro prima di tutte le richieste vengono passate al `WorkerArchetype::Execute`.  
+Chiamato per inizializzare l'oggetto ruolo di lavoro prima di tutte le richieste vengono passate al `WorkerArchetype::Execute`.
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*parametro pvParam*  
+*parametro pvParam*<br/>
 Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Terminate` e `WorkerArchetype::Execute`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -106,8 +106,8 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 Typedef per il tipo di elemento di lavoro che può essere elaborato dalla classe ruolo di lavoro.
 
-```  
-typedef MyRequestType RequestType;    
+```
+typedef MyRequestType RequestType;
 ```
 
 ### <a name="remarks"></a>Note
@@ -118,17 +118,17 @@ Questo tipo deve essere utilizzato come primo parametro di `WorkerArchetype::Exe
 
 Chiamato da non inizializzare l'oggetto ruolo di lavoro dopo che tutte le richieste sono state passate al `WorkerArchetype::Execute`).
 
-``` 
+```
 void Terminate(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*parametro pvParam*  
+*parametro pvParam*<br/>
 Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Initialize` e `WorkerArchetype::Execute`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Concetti](../../atl/active-template-library-atl-concepts.md)   
+[Concetti](../../atl/active-template-library-atl-concepts.md)<br/>
 [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)
 

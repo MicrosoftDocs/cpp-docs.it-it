@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d3db2a3d7f673c8e81b1077bcb45e9b8241d37
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751861"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113136"
 ---
 # <a name="com-map-global-functions"></a>Funzioni globali di mappa COM
 
@@ -51,16 +51,16 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>Parametri
 
-*pThis*  
+*pThis*<br/>
 [in] Un puntatore all'oggetto che contiene la mappa COM di interfacce esposte a `QueryInterface`.
 
-*pEntries*  
+*pEntries*<br/>
 [in] Matrice di `_ATL_INTMAP_ENTRY` strutture che accedono a una mappa delle interfacce disponibili.
 
-*IID*  
+*IID*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Un puntatore a puntatore a interfaccia specificato nella *iid*, oppure NULL se l'interfaccia non viene trovato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -85,10 +85,10 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 
 ### <a name="parameters"></a>Parametri
 
-*rguid1*  
+*rguid1*<br/>
 [in] Il GUID da confrontare con `IID_IUnknown`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Funzioni](../../atl/reference/atl-functions.md)   
+[Funzioni](../../atl/reference/atl-functions.md)<br/>
 [Macro di mappa COM](../../atl/reference/com-map-macros.md)

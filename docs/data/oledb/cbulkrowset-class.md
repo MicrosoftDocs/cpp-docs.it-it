@@ -113,14 +113,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116763"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
+
 Recupera e gestisce le righe da usare sui dati in blocco, recuperare più handle di riga con una singola chiamata.  
   
 ## <a name="syntax"></a>Sintassi
@@ -131,11 +132,13 @@ class CBulkRowset : public CRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *TAccessor*  
- Una classe di funzione di accesso.  
+
+*TAccessor*<br/>
+Una classe di funzione di accesso.  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli.h  
+
+**Intestazione:** atldbcli.h  
   
 ## <a name="members"></a>Membri  
   
@@ -155,11 +158,13 @@ class CBulkRowset : public CRowset<TAccessor>
 |[SetRows](#setrows)|Imposta il numero di handle di riga da recuperare da un'unica chiamata.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato l'utilizzo del `CBulkRowset` classe.  
+
+Nell'esempio seguente viene illustrato l'utilizzo del `CBulkRowset` classe.  
   
- [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
+
 Le chiamate [IRowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) incrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -169,9 +174,11 @@ HRESULT AddRefRows() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard. 
+
+Un valore HRESULT standard. 
   
 ## <a name="cbulkrowset"></a> CBulkRowset:: CBulkRowset
+
 Crea un nuovo `CBulkRowset` dell'oggetto e imposta il numero di riga predefinito su 10.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -181,6 +188,7 @@ CBulkRowset();
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset:: MoveFirst
+
 Recupera la prima riga di dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -190,9 +198,11 @@ HRESULT MoveFirst() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.
+
+Un valore HRESULT standard.
 
 ## <a name="movelast"></a> CBulkRowset:: MoveLast
+
 Passa all'ultima riga.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -202,9 +212,11 @@ HRESULT MoveLast() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="movenext"></a> CBulkRowset:: MoveNext
+
 Recupera la riga successiva di dati.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -214,9 +226,11 @@ HRESULT MoveNext() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard. Quando è stata raggiunta la fine del set di righe, restituisce DB_S_ENDOFROWSET. 
+
+Un valore HRESULT standard. Quando è stata raggiunta la fine del set di righe, restituisce DB_S_ENDOFROWSET. 
 
 ## <a name="moveprev"></a> CBulkRowset:: MovePrev
+
 Passa alla riga precedente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -226,9 +240,11 @@ HRESULT MovePrev() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="movetobookmark"></a> CBulkRowset:: MoveToBookmark
+
 Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di un offset specificato (*lSkip*) dal segnalibro.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -239,16 +255,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Segnalibro*  
- [in] Un segnalibro contrassegna la posizione da cui si desidera recuperare i dati.  
+
+*Segnalibro*<br/>
+[in] Un segnalibro contrassegna la posizione da cui si desidera recuperare i dati.  
   
- *lSkip*  
- [in] Conteggio numero di righe del segnalibro nella riga di destinazione. Se *lSkip* è uguale a zero, la prima riga recuperata è la riga con segnalibro. Se *lSkip* è 1, la prima riga recuperata è la riga dopo la riga con segnalibro. Se *lSkip* è -1, la prima riga recuperata è la riga precedente alla riga con segnalibro.  
+*lSkip*<br/>
+[in] Conteggio numero di righe del segnalibro nella riga di destinazione. Se *lSkip* è uguale a zero, la prima riga recuperata è la riga con segnalibro. Se *lSkip* è 1, la prima riga recuperata è la riga dopo la riga con segnalibro. Se *lSkip* è -1, la prima riga recuperata è la riga precedente alla riga con segnalibro.  
   
 ### <a name="return-value"></a>Valore restituito  
- Visualizzare [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
+
+Visualizzare [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
 
 ## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
+
 Recupera le righe a partire da una posizione frazionaria nel set di righe.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -259,23 +278,27 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *nNumerator*  
- [in] Il numeratore utilizzato per determinare la posizione da cui recuperare i dati frazionaria.  
+
+*nNumerator*<br/>
+[in] Il numeratore utilizzato per determinare la posizione da cui recuperare i dati frazionaria.  
   
- *nDenominator*  
- [in] Il denominatore consente di determinare la posizione da cui recuperare i dati frazionaria.  
+*nDenominator*<br/>
+[in] Il denominatore consente di determinare la posizione da cui recuperare i dati frazionaria.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- `MoveToRatio` Recupera le righe approssimativamente in base alla formula seguente:  
+
+`MoveToRatio` Recupera le righe approssimativamente in base alla formula seguente:  
   
- `(nNumerator *  RowsetSize ) / nDenominator`  
+`(nNumerator *  RowsetSize ) / nDenominator`  
   
- In cui `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.   
+In cui `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.   
 
 ## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
+
 Le chiamate [:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) per decrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -285,9 +308,11 @@ HRESULT ReleaseRows() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="setrows"></a> CBulkRowset:: setRows
+
 Imposta il numero di handle di riga recuperati da ogni chiamata.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -297,12 +322,15 @@ void SetRows(DBROWCOUNT nRows) throw();
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *nRows*  
- [in] La nuova dimensione del set di righe (numero di righe).  
+
+*nRows*<br/>
+[in] La nuova dimensione del set di righe (numero di righe).  
   
 ### <a name="remarks"></a>Note  
- Se si chiama questa funzione, deve essere prima che venga aperto il set di righe.
+
+Se si chiama questa funzione, deve essere prima che venga aperto il set di righe.
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

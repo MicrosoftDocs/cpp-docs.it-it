@@ -55,14 +55,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7eaba589e729230c0392ac67eff2389d430f842
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2669f7ff0756c0450e64b1b37624bb95f2c1216e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572271"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111290"
 ---
 # <a name="cdberrorinfo-class"></a>Classe CDBErrorInfo
+
 Fornisce il supporto per l'elaborazione di errore OLE DB tramite OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
@@ -72,7 +73,8 @@ class CDBErrorInfo
 ``` 
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli.h 
+
+**Intestazione:** atldbcli.h 
   
 ## <a name="members"></a>Membri  
   
@@ -88,9 +90,11 @@ class CDBErrorInfo
 |[GetErrorRecords](#geterrorrecords)|Ottiene i record di errore per l'oggetto specificato.|  
   
 ## <a name="remarks"></a>Note  
- Questa interfaccia restituisce uno o più record di errore all'utente. Chiamare [cdberrorinfo:: Geterrorrecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) prima, per ottenere un conteggio dei record degli errori. Quindi chiamare uno dell'accesso funzioni, ad esempio [cdberrorinfo:: Getallerrorinfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)per recuperare informazioni sull'errore per ogni record.  
+
+Questa interfaccia restituisce uno o più record di errore all'utente. Chiamare [cdberrorinfo:: Geterrorrecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) prima, per ottenere un conteggio dei record degli errori. Quindi chiamare uno dell'accesso funzioni, ad esempio [cdberrorinfo:: Getallerrorinfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)per recuperare informazioni sull'errore per ogni record.  
   
 ## <a name="getallerrorinfo"></a> Cdberrorinfo:: Getallerrorinfo
+
 Restituisce tutti i tipi di informazioni sull'errore contenute in un record di errore.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -105,38 +109,42 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *ulRecordNum*  
- [in] Il numero in base zero del record per il quale restituire le informazioni sull'errore.  
+
+*ulRecordNum*<br/>
+[in] Il numero in base zero del record per il quale restituire le informazioni sull'errore.  
   
- *lcid*  
- [in] L'ID impostazioni locali per le informazioni sull'errore da restituire.  
+*lcid*<br/>
+[in] L'ID impostazioni locali per le informazioni sull'errore da restituire.  
   
- *pbstrDescription*  
- [out] Puntatore a una descrizione di testo dell'errore o NULL se le impostazioni locali non sono supportata. Vedere la sezione Osservazioni.  
+*pbstrDescription*<br/>
+[out] Puntatore a una descrizione di testo dell'errore o NULL se le impostazioni locali non sono supportata. Vedere la sezione Osservazioni.  
   
- *pbstrSource*  
- [out] Un puntatore a una stringa contenente il nome del componente che ha generato l'errore.  
+*pbstrSource*<br/>
+[out] Un puntatore a una stringa contenente il nome del componente che ha generato l'errore.  
   
- *pguid*  
- [out] Puntatore al GUID dell'interfaccia che definisce l'errore.  
+*pguid*<br/>
+[out] Puntatore al GUID dell'interfaccia che definisce l'errore.  
   
- *pdwHelpContext*  
- [out] Un puntatore all'ID di contesto della Guida per l'errore.  
+*pdwHelpContext*<br/>
+[out] Un puntatore all'ID di contesto della Guida per l'errore.  
   
- *pbstrHelpFile*  
- [out] Un puntatore a una stringa contenente il percorso del file della Guida che descrive l'errore.  
+*pbstrHelpFile*<br/>
+[out] Un puntatore a una stringa contenente il percorso del file della Guida che descrive l'errore.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se l'operazione riesce. Visualizzare [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per gli altri valori restituiti.  
+
+S_OK se l'operazione riesce. Visualizzare [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per gli altri valori restituiti.  
   
 ### <a name="remarks"></a>Note  
- Valore di output *pbstrDescription* si ottiene internamente chiamando `IErrorInfo::GetDescription`, che imposta il valore su NULL se le impostazioni locali non sono supportata o se vengono soddisfatte entrambe le condizioni seguenti:  
+
+Valore di output *pbstrDescription* si ottiene internamente chiamando `IErrorInfo::GetDescription`, che imposta il valore su NULL se le impostazioni locali non sono supportata o se vengono soddisfatte entrambe le condizioni seguenti:  
   
-1.  il valore di *lcid* non degli Stati Uniti Inglese e  
+1. il valore di *lcid* non degli Stati Uniti Inglese e  
   
-2.  il valore di *lcid* è diverso da quello restituito da GetUserDefaultLCID. 
+1. il valore di *lcid* è diverso da quello restituito da GetUserDefaultLCID. 
 
 ## <a name="getbasicerrorinfo"></a> Cdberrorinfo:: Getbasicerrorinfo
+
 Le chiamate [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) per restituire le informazioni di base sull'errore, ad esempio il codice restituito e il numero di errore specifico del provider.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -147,12 +155,15 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="getcustomerrorobject"></a> Cdberrorinfo:: Getcustomerrorobject
+
 Le chiamate [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) per restituire un puntatore a un'interfaccia su un oggetto di errore personalizzato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -163,12 +174,15 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="geterrorinfo"></a> Cdberrorinfo:: GetErrorInfo
+
 Le chiamate [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) per restituire una [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) puntatore a interfaccia per il record specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -179,12 +193,15 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="geterrorparameters"></a> Cdberrorinfo:: Geterrorparameters
+
 Le chiamate [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) per restituire i parametri di errore.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -195,12 +212,15 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+
+Visualizzare [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="geterrorrecords"></a> Cdberrorinfo:: Geterrorrecords
+
 Ottiene i record di errore per l'oggetto specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -214,22 +234,26 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *pUnk*  
- [in] Interfaccia per l'oggetto per cui ottenere i record di errore.  
+
+*pUnk*<br/>
+[in] Interfaccia per l'oggetto per cui ottenere i record di errore.  
   
- *IID*  
- [in] IID dell'interfaccia associato all'errore.  
+*IID*<br/>
+[in] IID dell'interfaccia associato all'errore.  
   
- *pcRecords*  
- [out] Un puntatore al conteggio dei record degli errori (in base uno).  
+*pcRecords*<br/>
+[out] Un puntatore al conteggio dei record degli errori (in base uno).  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- Usare il primo form della funzione se si desidera controllare l'interfaccia per ottenere le informazioni sull'errore da. In caso contrario, utilizzare la seconda forma.  
+
+Usare il primo form della funzione se si desidera controllare l'interfaccia per ottenere le informazioni sull'errore da. In caso contrario, utilizzare la seconda forma.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DBViewer](../../visual-cpp-samples.md)   
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

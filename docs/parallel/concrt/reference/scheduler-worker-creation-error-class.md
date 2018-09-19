@@ -1,5 +1,5 @@
 ---
-title: Classe scheduler_worker_creation_error | Documenti Microsoft
+title: Classe scheduler_worker_creation_error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077c5a52cf7ac8383fa3b917b3d53867e19ca370
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9c81b62cee3a8c26b0d4ace61b8104f6eaee9db6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686425"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114384"
 ---
 # <a name="schedulerworkercreationerror-class"></a>Classe scheduler_worker_creation_error
 Questa classe descrive un'eccezione generata a causa di un errore nella creazione di un contesto di esecuzione del lavoro nel runtime di concorrenza.  
@@ -71,11 +71,11 @@ explicit _CRTIMP scheduler_worker_creation_error(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Messaggio descrittivo dell'errore.  
+*Messaggio*<br/>
+Messaggio descrittivo dell'errore.  
   
- `_Hresult`  
- Il `HRESULT` valore dell'errore che ha causato l'eccezione.  
+*_Hresult*<br/>
+Il `HRESULT` valore dell'errore che ha causato l'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)

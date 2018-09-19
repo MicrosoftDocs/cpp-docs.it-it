@@ -12,62 +12,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bca7ef417a633f186f2b7ca6f7d92af37e780420
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c9cf80b9b1a6a7002e4176720cf12b305592c6fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117517"
 ---
 # <a name="initializing-classes-and-structs-without-constructors-c"></a>Inizializzazione di classi e struct senza costruttori (C++)
-Non è sempre necessario definire un costruttore per una classe, in particolare quelli relativamente semplici. Gli utenti possono inizializzare oggetti di una classe o uno struct usando l'inizializzazione uniforme, come illustrato nell'esempio seguente:  
-  
-```cpp 
-#include "stdafx.h"  
-#include <Windows.h>  
-  
-// No constructor  
-struct TempData  
-{  
-    int StationId;  
-    time_t time;  
-    double current;  
-    double maxTemp;  
-    double minTemp;  
-};  
-  
-// Has a constructor  
-struct TempData2  
-{  
-    TempData2(double minimum, double maximum, double cur, int id, time_t t) :  
-       minTemp(minimum), maxTemp(maximum), current(cur), stationId(id), time(t) {}  
-    int stationId;  
-    time_t time;  
-    double current;  
-    double maxTemp;  
-    double minTemp;  
-};  
-  
-int main()  
-{  
-    // Member initialization (in order of declaration):  
-    TempData td{ 45978, GetCurrentTime(), 28.9, 37.0, 16.7 };  
-  
-    // Default initialization = {0,0,0,0,0}  
-    TempData td_default{};  
-  
-    //Error C4700 uninitialized local variable  
-    TempData td_noInit;  
-  
-    // Member declaration (in order of ctor parameters)  
-    TempData2 td2{ 16.7, 37.0, 28.9, 45978, GetCurrentTime() };  
-  
-    return 0;  
-}  
-```  
-  
- Si noti che quando una classe o struct non dispone di alcun costruttore, si forniscono gli elementi dell'elenco nell'ordine che i membri vengono dichiarati nella classe. Se la classe ha un costruttore, fornire gli elementi nell'ordine dei parametri.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi e struct](../cpp/classes-and-structs-cpp.md)   
- [Costruttori](../cpp/constructors-cpp.md)
+
+Non è sempre necessario definire un costruttore per una classe, in particolare quelli relativamente semplici. Gli utenti possono inizializzare oggetti di una classe o uno struct usando l'inizializzazione uniforme, come illustrato nell'esempio seguente:
+
+```cpp
+#include "stdafx.h"
+#include <Windows.h>
+
+// No constructor
+struct TempData
+{
+    int StationId;
+    time_t time;
+    double current;
+    double maxTemp;
+    double minTemp;
+};
+
+// Has a constructor
+struct TempData2
+{
+    TempData2(double minimum, double maximum, double cur, int id, time_t t) :
+       minTemp(minimum), maxTemp(maximum), current(cur), stationId(id), time(t) {}
+    int stationId;
+    time_t time;
+    double current;
+    double maxTemp;
+    double minTemp;
+};
+
+int main()
+{
+    // Member initialization (in order of declaration):
+    TempData td{ 45978, GetCurrentTime(), 28.9, 37.0, 16.7 };
+
+    // Default initialization = {0,0,0,0,0}
+    TempData td_default{};
+
+    //Error C4700 uninitialized local variable
+    TempData td_noInit;
+
+    // Member declaration (in order of ctor parameters)
+    TempData2 td2{ 16.7, 37.0, 28.9, 45978, GetCurrentTime() };
+
+    return 0;
+}
+```
+
+Si noti che quando una classe o struct non dispone di alcun costruttore, si forniscono gli elementi dell'elenco nell'ordine che i membri vengono dichiarati nella classe. Se la classe ha un costruttore, fornire gli elementi nell'ordine dei parametri.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi e struct](../cpp/classes-and-structs-cpp.md)<br/>
+[Costruttori](../cpp/constructors-cpp.md)

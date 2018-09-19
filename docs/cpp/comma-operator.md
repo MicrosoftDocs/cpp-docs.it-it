@@ -16,59 +16,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9beadf4f532d24ca1f4023ad95dd8583d653c11
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 626243da557362626b5d17ed01a8023e36704f54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707766"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114787"
 ---
 # <a name="comma-operator-"></a>Operatore virgola: ,
-Consente di raggruppare due istruzioni dove previsto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-expression , expression  
-```  
-  
-## <a name="remarks"></a>Note  
- L'operatore virgola presenta un'associatività da sinistra verso destra. Due espressioni separate da virgole vengono valutate da sinistra a destra. L'operando sinistro è sempre valutato e tutti gli effetti collaterali vengono completati prima che venga valutato l'operando destro.  
-  
- Le virgole possono essere utilizzate come separatori in alcuni contesti, ad esempio gli elenchi di argomenti della funzione. Non confondere l'utilizzo della virgola come separatore con il relativo utilizzo come operatore, i due utilizzi sono completamente differenti.  
-  
- Valutare l'espressione `e1, e2`. Il tipo e il valore dell'espressione sono il tipo e il valore della *e2*; il risultato della valutazione *e1* viene eliminato. Il risultato è un l-value se l'operando destro è un l-value.  
-  
- Quando la virgola viene normalmente utilizzata come separatore (ad esempio negli argomenti effettivi alle funzioni o agli inizializzatori di aggregazione), l'operatore virgola e i relativi operandi devono essere racchiusi tra parentesi. Ad esempio:  
-  
-```cpp 
-func_one( x, y + 2, z );  
-func_two( (x--, y + 2), z );  
-```  
-  
- Nella chiamata di funzione a `func_one` su riportata, vengono passati tre argomenti, separati da virgole: `x`, `y + 2` e `z`. Nella chiamata di funzione a `func_two`, le parentesi forzano il compilatore a interpretare la prima virgola come operatore di valutazione sequenziale. Questa chiamata di funzione passa due argomenti a `func_two`. Il primo argomento è il risultato dell'operazione di valutazione sequenziale `(x--, y + 2)` che ha il valore e il tipo dell'espressione `y + 2`; il secondo argomento è `z`.  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp 
-// cpp_comma_operator.cpp  
-#include <stdio.h>  
-int main () {  
-   int i = 10, b = 20, c= 30;  
-   i = b, c;  
-   printf("%i\n", i);  
-  
-   i = (b, c);  
-   printf("%i\n", i);  
-}  
-```  
-  
-```Output  
-20  
-30  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operatore di valutazione sequenziale](../c-language/sequential-evaluation-operator.md)
+
+Consente di raggruppare due istruzioni dove previsto.
+
+## <a name="syntax"></a>Sintassi
+
+```
+expression , expression
+```
+
+## <a name="remarks"></a>Note
+
+L'operatore virgola presenta un'associatività da sinistra verso destra. Due espressioni separate da virgole vengono valutate da sinistra a destra. L'operando sinistro è sempre valutato e tutti gli effetti collaterali vengono completati prima che venga valutato l'operando destro.
+
+Le virgole possono essere utilizzate come separatori in alcuni contesti, ad esempio gli elenchi di argomenti della funzione. Non confondere l'utilizzo della virgola come separatore con il relativo utilizzo come operatore, i due utilizzi sono completamente differenti.
+
+Valutare l'espressione `e1, e2`. Il tipo e il valore dell'espressione sono il tipo e il valore della *e2*; il risultato della valutazione *e1* viene eliminato. Il risultato è un l-value se l'operando destro è un l-value.
+
+Quando la virgola viene normalmente utilizzata come separatore (ad esempio negli argomenti effettivi alle funzioni o agli inizializzatori di aggregazione), l'operatore virgola e i relativi operandi devono essere racchiusi tra parentesi. Ad esempio:
+
+```cpp
+func_one( x, y + 2, z );
+func_two( (x--, y + 2), z );
+```
+
+Nella chiamata di funzione a `func_one` su riportata, vengono passati tre argomenti, separati da virgole: `x`, `y + 2` e `z`. Nella chiamata di funzione a `func_two`, le parentesi forzano il compilatore a interpretare la prima virgola come operatore di valutazione sequenziale. Questa chiamata di funzione passa due argomenti a `func_two`. Il primo argomento è il risultato dell'operazione di valutazione sequenziale `(x--, y + 2)` che ha il valore e il tipo dell'espressione `y + 2`; il secondo argomento è `z`.
+
+## <a name="example"></a>Esempio
+
+```cpp
+// cpp_comma_operator.cpp
+#include <stdio.h>
+int main () {
+   int i = 10, b = 20, c= 30;
+   i = b, c;
+   printf("%i\n", i);
+
+   i = (b, c);
+   printf("%i\n", i);
+}
+```
+
+```Output
+20
+30
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)<br/>
+[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatore di valutazione sequenziale](../c-language/sequential-evaluation-operator.md)

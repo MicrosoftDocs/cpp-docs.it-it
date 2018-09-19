@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4074 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4074 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9072728660ca78097a1e36e492670a614bb2b2f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb2fc41820165cee2b76a15abc97ab1e0cb79b81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274703"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116646"
 ---
-# <a name="compiler-warning-level-1-c4074"></a>Compilatore (livello 1) Avviso C4074
-inizializzatori inseriti nell'area di inizializzazione riservata del compilatore  
-  
- L'area di inizializzazione del compilatore, specificato da [#pragma init_seg](../../preprocessor/init-seg.md), è riservato da Microsoft. Codice in quest'area può essere eseguito prima dell'inizializzazione della libreria di runtime C.  
-  
- L'esempio seguente genera l'errore C4074:  
-  
-```  
-// C4074.cpp  
-// compile with: /W1  
-#pragma init_seg( compiler )   // C4074  
-  
-// try this line to resolve the warning  
-// #pragma init_seg(user)  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-1-c4074"></a>Compilatore Warning (level 1) C4074
+
+inizializzatori inseriti nell'area di inizializzazione riservata del compilatore
+
+L'area di inizializzazione del compilatore, che viene specificato da [init_seg #pragma](../../preprocessor/init-seg.md), è riservata da Microsoft. Il codice in questa area può essere eseguito prima dell'inizializzazione della libreria di runtime C.
+
+L'esempio seguente genera l'errore C4074:
+
+```
+// C4074.cpp
+// compile with: /W1
+#pragma init_seg( compiler )   // C4074
+
+// try this line to resolve the warning
+// #pragma init_seg(user)
+
+int main() {
+}
 ```

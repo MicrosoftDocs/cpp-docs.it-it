@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3800 | Documenti Microsoft
+title: Errore del compilatore C3800 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d90b35cddda138144c231080e3430a454748f6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4b8a86199057f7e4b936200a82615db899a8d1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113305"
 ---
 # <a name="compiler-error-c3800"></a>Errore del compilatore C3800
-'declaration': Impossibile combinare proprietà ed eventi  
-  
- È possibile dichiarare un costrutto di una proprietà e un evento.  
-  
- C3800 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+
+'declaration': Impossibile combinare proprietà ed eventi
+
+È possibile dichiarare un costrutto di essere una proprietà e un evento.
+
+È raggiungibile tramite l'opzione del compilatore obsolete solo C3800 **/CLR: oldSyntax**.

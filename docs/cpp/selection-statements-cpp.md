@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c4241621383936c477514bb6881330c514548a81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117705"
 ---
 # <a name="selection-statements-c"></a>Istruzioni di selezione (C++)
-Le istruzioni di selezione C++ [se](../cpp/if-else-statement-cpp.md) e [passare](../cpp/switch-statement-cpp.md), fornire un mezzo per eseguire in modo condizionale le sezioni di codice.  
-  
- Il [if_exists](../cpp/if-exists-statement.md) e [if_not_exists](../cpp/if-not-exists-statement.md) istruzioni consentono di includere in modo condizionale il codice in base all'esistenza di un simbolo.  
-  
- Per la sintassi per ogni istruzione, vedere i singoli argomenti.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica delle istruzioni C++](../cpp/overview-of-cpp-statements.md)
+
+Le istruzioni di selezione C++ [se](../cpp/if-else-statement-cpp.md) e [passare](../cpp/switch-statement-cpp.md), fornire un mezzo per eseguire in modo condizionale le sezioni di codice.
+
+Il [if_exists](../cpp/if-exists-statement.md) e [if_not_exists](../cpp/if-not-exists-statement.md) istruzioni consentono di includere in modo condizionale il codice in base all'esistenza di un simbolo.
+
+Per la sintassi per ogni istruzione, vedere i singoli argomenti.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica delle istruzioni C++](../cpp/overview-of-cpp-statements.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore BK1513 di BSCMAKE | Documenti Microsoft
+title: Errore BK1513 di BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93664a1224b85ec808805da0172aec408e875bc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f68f49ce11c95672abd40ecbaf1873a564a3912e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118804"
 ---
 # <a name="bscmake-error-bk1513"></a>Errore BK1513 di BSCMAKE
-l'aggiornamento non incrementale richiede tutti i file SBR  
-  
- Non è possibile usare BSCMAKE per generare un nuovo file di informazioni (BSC) di visualizzazione poiché uno o più file SBR sono troncati. Per trovare i nomi dei file SBR troncati, leggere la [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) avvisi che accompagnano l'errore.  
-  
- BSCMAKE consente di aggiornare un file BSC con un file SBR troncato ma non di compilarne uno nuovo. BSCMAKE potrebbe creare un nuovo file BSC per i seguenti motivi:  
-  
--   File BSC mancante.  
-  
--   Nome file errato specificato per il file BSC.  
-  
--   File BSC danneggiato.  
-  
- Per risolvere il problema, eliminare i file SBR troncati, ricostruire o pulire la soluzione, quindi ricompilare. (Nell'IDE, scegliere **compilare**, **Pulisci soluzione**, quindi scegliere **compilare**, **Ricompila soluzione**.)
+
+l'aggiornamento non incrementale richiede tutti i file SBR
+
+Non è possibile usare BSCMAKE per generare un nuovo file di informazioni (BSC) di visualizzazione poiché uno o più file SBR sono troncati. Per trovare i nomi dei file SBR troncati, leggere il [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) avvisi che accompagnano l'errore.
+
+BSCMAKE consente di aggiornare un file BSC con un file SBR troncato ma non di compilarne uno nuovo. BSCMAKE potrebbe creare un nuovo file BSC per i seguenti motivi:
+
+- File BSC mancante.
+
+- Nome file errato specificato per il file BSC.
+
+- File BSC danneggiato.
+
+Per risolvere il problema, eliminare i file SBR troncati, ricostruire o pulire la soluzione, quindi ricompilare. (Nell'IDE, scegliere **compilare**, **Pulisci soluzione**, quindi scegliere **compilare**, **Ricompila soluzione**.)

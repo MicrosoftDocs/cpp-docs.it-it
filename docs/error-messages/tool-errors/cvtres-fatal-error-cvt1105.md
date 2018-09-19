@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile CVT1105 di CVTRES | Documenti Microsoft
+title: Errore irreversibile CVT1105 di CVTRES | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aad4e504a4a25dd0ed2579ddf8efae4f0f8c624d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80d3b41669e7ce2c66055d791039f4f326e040bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118609"
 ---
 # <a name="cvtres-fatal-error-cvt1105"></a>Errore irreversibile CVT1105 di CVTRES
-Impossibile eseguire una ricerca nel file  
-  
- CVTRES Impossibile passare a una posizione nel file.  
-  
- Questo errore può essere causato dal danneggiamento dei file.
+
+Impossibile spostarsi nel file
+
+CVTRES non è stato possibile passare a una posizione nel file.
+
+Questo errore può essere causato dal danneggiamento dei file.

@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117478"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
+
 Usa un oggetto enumeratore OLE DB, che espone il [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaccia da restituire un set di righe che descrivono tutte le origini dati e gli enumeratori.  
   
 ## <a name="syntax"></a>Sintassi
@@ -51,7 +52,8 @@ class CEnumerator :
 ```  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli. h
+
+**Intestazione:** atldbcli. h
   
 ## <a name="members"></a>Membri  
   
@@ -64,9 +66,11 @@ class CEnumerator :
 |[Apri](#open)|Apre l'enumeratore.|  
   
 ## <a name="remarks"></a>Note  
- È possibile recuperare il `ISourcesRowset` dati indirettamente da questa classe.  
+
+È possibile recuperare il `ISourcesRowset` dati indirettamente da questa classe.  
 
 ## <a name="find"></a> CEnumerator:: Find
+
 Cerca un nome specificato tra i provider disponibili.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -76,16 +80,20 @@ bool Find(TCHAR* szSearchName) throw();
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *szSearchName*  
- [in] Nome da cercare.  
+
+*szSearchName*<br/>
+[in] Nome da cercare.  
   
 ### <a name="return-value"></a>Valore restituito  
- **true** se il nome è stato trovato. In caso contrario, **false**.  
+
+**true** se il nome è stato trovato. In caso contrario, **false**.  
   
 ### <a name="remarks"></a>Note  
- Questo nome viene eseguito il mapping per il `SOURCES_NAME` membro del [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaccia.  
+
+Questo nome viene eseguito il mapping per il `SOURCES_NAME` membro del [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaccia.  
   
 ## <a name="getmoniker"></a> CEnumerator:: GetMoniker
+
 Analizza il nome visualizzato per estrarre il componente della stringa che può essere convertito in moniker.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -98,16 +106,19 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *ppMoniker*  
- [out] Il moniker analizzato dal nome visualizzato ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) della riga corrente.  
+
+*ppMoniker*<br/>
+[out] Il moniker analizzato dal nome visualizzato ([cenumeratoraccessor:: M_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) della riga corrente.  
   
- *lpszDisplayName*  
- [in] Il nome visualizzato da analizzare.  
+*lpszDisplayName*<br/>
+[in] Il nome visualizzato da analizzare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
 
 ## <a name="open"></a> CEnumerator:: Open
+
 Associa il moniker per l'enumeratore, se uno è specificato, quindi recupera il set di righe per l'enumeratore chiamando [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -121,19 +132,22 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *pMoniker*  
- [in] Puntatore a un moniker per l'enumeratore.  
+
+*pMoniker*<br/>
+[in] Puntatore a un moniker per l'enumeratore.  
   
- *pClsid*  
- [in] Un puntatore al `CLSID` dell'enumeratore.  
+*pClsid*<br/>
+[in] Un puntatore al `CLSID` dell'enumeratore.  
   
- *enumerator*  
- [in] Un riferimento a un enumeratore.  
+*enumerator*<br/>
+[in] Un riferimento a un enumeratore.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore HRESULT standard.  
+
+Un valore HRESULT standard.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DBViewer](../../visual-cpp-samples.md)   
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

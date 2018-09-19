@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfab348aa9629cfba0b26c6c48d2ba2747e76e3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717574"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116100"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Creazione guidata componente ATL COM+ 1.0
 
@@ -63,6 +63,6 @@ Per altre informazioni sulle classi ATL COM e progetti ATL, vedere [ATL COM Desk
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione guidata 1.0 componente ATL COM+](../../atl/reference/atl-com-plus-1-0-component-wizard.md)   
+[Creazione guidata componente ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [Componente ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
 

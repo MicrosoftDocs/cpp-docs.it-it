@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b434ca991ef05bb90c3cbdc659cf8adc3381aa0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111320"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -105,5 +105,6 @@ __declspec( thread ) int tls_i = 1;
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
- [Parole chiave](../cpp/keywords-cpp.md)  
- [Attributi di classi di archiviazione estesi C](../c-language/c-extended-storage-class-attributes.md)  
+
+[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[Attributi di classi di archiviazione estesi C](../c-language/c-extended-storage-class-attributes.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1055 | Documenti Microsoft
+title: Errore irreversibile C1055 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07f0dc0e8dca08e8b0de47b73516d3fdfa21435b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6960d8168bd818e4d1baa30e5e54940e6e4dc2e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225342"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115450"
 ---
 # <a name="fatal-error-c1055"></a>Errore irreversibile C1055
-limite del compilatore: chiavi insufficienti  
-  
- Il file di origine contiene un numero eccessivo di simboli. Il compilatore ha esaurito la chiavi hash per la tabella dei simboli.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili  
-  
-1.  Suddividere il file di origine in file più piccoli.  
-  
-2.  Eliminare i file di intestazione non necessari.  
-  
-3.  Riutilizzare le variabili temporanee e globali anziché crearne di nuovi.
+
+limite del compilatore: chiavi insufficienti
+
+Il file di origine contiene troppi simboli. Il compilatore ha esaurito le chiavi di hash per la tabella dei simboli.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili
+
+1. Suddividere il file di origine in file più piccoli.
+
+1. Eliminare i file di intestazione non necessari.
+
+1. Riutilizzare le variabili globali e temporanee anziché crearne di nuovi.

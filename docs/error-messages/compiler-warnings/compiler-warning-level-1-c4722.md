@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4722 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4722 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 143a902a4d05ab73df96f3f8ab35f52dab244df4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f450120ff05c7e13888bf4b4ce4425405525b4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112499"
 ---
 # <a name="compiler-warning-level-1-c4722"></a>Avviso del compilatore (livello 1) C4722
-'function': il distruttore non restituisce mai un valore, potenziale perdita di memoria  
-  
- Il flusso di controllo termina in un distruttore. Viene terminato il thread o l'intero programma e le risorse allocate potrebbero non essere rilasciate.  Inoltre, se viene chiamato un distruttore per la rimozione dello stack durante l'elaborazione delle eccezioni, il comportamento dell'eseguibile è indefinito.  
-  
- Per risolvere questo problema, rimuovere la chiamata di funzione che impedisce la restituzione di valori del distruttore.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4722:  
-  
-```  
-// C4722.cpp  
-// compile with: /O1 /W1 /c  
-#include <stdlib.h>  
-class C {  
-public:  
-   C();  
-   ~C() { exit(1); };   // C4722  
-};  
-  
-extern void func (C*);  
-  
-void Test(){  
-   C x;  
-   func(&x);  
-   // control will not leave Test because destructor will exit  
-}  
+
+'function': il distruttore non restituisce mai un valore, potenziale perdita di memoria
+
+Il flusso di controllo termina in un distruttore. Viene terminato il thread o l'intero programma e le risorse allocate potrebbero non essere rilasciate.  Inoltre, se viene chiamato un distruttore per la rimozione dello stack durante l'elaborazione delle eccezioni, il comportamento dell'eseguibile è indefinito.
+
+Per risolvere questo problema, rimuovere la chiamata di funzione che impedisce la restituzione di valori del distruttore.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4722:
+
+```
+// C4722.cpp
+// compile with: /O1 /W1 /c
+#include <stdlib.h>
+class C {
+public:
+   C();
+   ~C() { exit(1); };   // C4722
+};
+
+extern void func (C*);
+
+void Test(){
+   C x;
+   func(&x);
+   // control will not leave Test because destructor will exit
+}
 ```

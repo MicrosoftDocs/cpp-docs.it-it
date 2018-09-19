@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2842 | Documenti Microsoft
+title: Errore del compilatore C2842 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0a95edfa484eb8606b914424e52483c4c1c52d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118817"
 ---
 # <a name="compiler-error-c2842"></a>Errore del compilatore C2842
-'class': un tipo gestito o WinRT non può definire il proprio 'operator new' o 'operator delete'  
-  
- È possibile definire * * (operatore) nuova o **operatore delete** per gestire l'allocazione di memoria nell'heap nativo. Tuttavia, le classi di riferimento non possono definire questi operatori perché vengono allocati esclusivamente nell'heap gestito.  
 
-  
- Per ulteriori informazioni, vedere [operatori definiti dall'utente (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C2842.  
-  
-```  
-// C2842.cpp  
-// compile with: /clr /c  
-ref class G {  
-   void* operator new( size_t nSize );   // C2842  
-};  
-```  
+'class': un tipo gestito o WinRT non può definire il proprio 'operator new' o 'operator delete'
+
+È possibile definire il proprio * * operatore new o **operatore delete** per gestire l'allocazione di memoria nell'heap nativo. Tuttavia, le classi di riferimento non possono definire questi operatori perché vengono allocati esclusivamente nell'heap gestito.
+
+
+Per altre informazioni, vedere [operatori definiti dall'utente (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C2842.
+
+```
+// C2842.cpp
+// compile with: /clr /c
+ref class G {
+   void* operator new( size_t nSize );   // C2842
+};
+```

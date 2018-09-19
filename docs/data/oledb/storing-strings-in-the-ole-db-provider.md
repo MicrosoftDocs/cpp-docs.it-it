@@ -1,5 +1,5 @@
 ---
-title: L'archiviazione delle stringhe nel Provider OLE DB | Documenti Microsoft
+title: L'archiviazione delle stringhe nel Provider OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5ba289e7e53ba1bcaca550ba84c2d871d215306
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84ee07f236ac7ec79149b1cb36f358598f9c6c12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112694"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Memorizzazione di stringhe in un provider OLE DB
-In MyProviderRS. H, la creazione guidata Provider OLE DB ATL crea un record utente predefinito denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` o aggiungere un record utente personalizzato, come illustrato nel codice seguente:  
+
+In MyProviderRS. H, la creazione guidata Provider OLE DB ATL, viene creato un record utente predefinita denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` o aggiungere un record utente personalizzato, come illustrato nel codice seguente:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,11 +51,12 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- I membri dati `szCommand` e `szText` rappresentano le due stringhe, con `szCommand2` e `szText2` forniscono le ulteriori colonne, se necessario. Il membro dati `dwBookmark` non è necessaria per questo provider semplice in sola lettura, ma viene utilizzato in un secondo momento per aggiungere un `IRowsetLocate` interfaccia, vedere [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md). Il `==` operatore confronta le istanze (implementazione di questo operatore è facoltativo).  
+I membri dei dati `szCommand` e `szText` rappresentano le due stringhe, con `szCommand2` e `szText2` forniscono le colonne aggiuntive, se necessario. Il membro dati `dwBookmark` non è necessaria per questo provider semplice in sola lettura, ma viene usato in un secondo momento per aggiungere un' `IRowsetLocate` dell'interfaccia, vedere [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md). Il `==` operatore confronta istanze (implementazione di questo operatore è facoltativo).  
   
- Al termine, il provider deve essere possibile compilare ed eseguire. Per testare il provider, è necessario un consumer con funzionalità di corrispondenza. [Implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md) viene illustrato come creare un consumer di test. Eseguire il consumer di test con il provider. Verificare che il consumer di test consente di recuperare le stringhe corrette dal provider quando si fa clic il **eseguire** pulsante il **Test Consumer** la finestra di dialogo.  
+Quando questa operazione viene eseguita, il provider deve essere pronto per compilare ed eseguire. Per testare il provider, è necessario un consumer con funzionalità di corrispondenza. [Implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md) viene illustrato come creare un consumer di test. Eseguire il consumer di test con il provider. Verificare che il consumer di test consente di recuperare le stringhe corrette dal provider quando si fa clic il **eseguiti** pulsante nel **Test Consumer** nella finestra di dialogo.  
   
- Quando si è verificato il corretto funzionamento del provider, è consigliabile migliorare le funzionalità implementando le interfacce aggiuntive. Viene illustrato un esempio [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+Quando si è verificato il corretto funzionamento del provider, si potrebbe voler migliorare la funzionalità mediante l'implementazione di interfacce aggiuntive. Un esempio è illustrato nella [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementazione di un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementazione di un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md)

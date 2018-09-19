@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e773fd8e2c38311a1c36aff4c97199cbebb503e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fb94a54c4f99b79e3be742c5b1448151cff140c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406481"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116789"
 ---
 # <a name="function-template-instantiation"></a>Creazione di istanze di modelli di funzione
-Quando un modello di funzione viene chiamato per ogni tipo, il compilatore crea una creazione di istanze. Ogni creazione di istanze rappresenta una versione della funzione basata su modelli specializzata per il tipo. La creazione di istanze verrà chiamata ogni volta che la funzione viene utilizzata per il tipo. Se sono disponibili alcune creazioni di istanze identiche, anche in moduli diversi, solo una copia della creazione di istanze finirà nel file eseguibile.  
-  
- La conversione degli argomenti della funzione è consentita nei modelli di funzione per qualsiasi coppia di parametro e argomento in cui il parametro non dipende da un argomento di modello.  
-  
- È possibile creare istanze di modelli di funzione esplicitamente dichiarando il modello con un tipo specifico come argomento. Ad esempio, il codice seguente è consentito:  
-  
+
+Quando un modello di funzione viene chiamato per ogni tipo, il compilatore crea una creazione di istanze. Ogni creazione di istanze rappresenta una versione della funzione basata su modelli specializzata per il tipo. La creazione di istanze verrà chiamata ogni volta che la funzione viene utilizzata per il tipo. Se sono disponibili alcune creazioni di istanze identiche, anche in moduli diversi, solo una copia della creazione di istanze finirà nel file eseguibile.
+
+La conversione degli argomenti della funzione è consentita nei modelli di funzione per qualsiasi coppia di parametro e argomento in cui il parametro non dipende da un argomento di modello.
+
+È possibile creare istanze di modelli di funzione esplicitamente dichiarando il modello con un tipo specifico come argomento. Ad esempio, il codice seguente è consentito:
+
 ```cpp
-// function_template_instantiation.cpp  
-template<class T> void f(T) { }  
-  
-// Instantiate f with the explicitly specified template.  
-// argument 'int'  
-//  
-template void f<int> (int);  
-  
-// Instantiate f with the deduced template argument 'char'.  
-template void f(char);  
-int main()  
-{  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modelli di funzioni](../cpp/function-templates.md)
+// function_template_instantiation.cpp
+template<class T> void f(T) { }
+
+// Instantiate f with the explicitly specified template.
+// argument 'int'
+//
+template void f<int> (int);
+
+// Instantiate f with the deduced template argument 'char'.
+template void f(char);
+int main()
+{
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Modelli di funzioni](../cpp/function-templates.md)

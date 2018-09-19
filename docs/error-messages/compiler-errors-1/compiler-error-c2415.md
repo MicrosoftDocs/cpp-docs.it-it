@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2415 | Documenti Microsoft
+title: Errore del compilatore C2415 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad06cdf891c9b958f6cf08e724f4003a8507c2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd889880997828396521ddba638bb606552e7d92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112577"
 ---
 # <a name="compiler-error-c2415"></a>Errore del compilatore C2415
-tipo di operando non valido  
-  
- Il codice operativo non utilizza gli operandi di questo tipo.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
-  
-1.  Il codice operativo non supporta il numero di operandi utilizzati. Controllare un manuale di riferimento del linguaggio assembly per determinare il numero corretto di operandi.  
-  
-2.  Un processore più recente supporta l'istruzione con tipi aggiuntivi. Regolare il [/arch (architettura minima della CPU)](../../build/reference/arch-minimum-cpu-architecture.md) opzione per usare il processore di versioni successive.
+
+tipo di operando improprio
+
+Il codice operativo non usa operandi di questo tipo.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
+
+1. Il codice operativo non supporta il numero di operandi utilizzati. Controllare un manuale di riferimento del linguaggio assembly per determinare il numero corretto di operandi.
+
+1. Un processore più recente supporta l'istruzione con altri tipi. Modificare il [/arch (architettura minima della CPU)](../../build/reference/arch-minimum-cpu-architecture.md) possibilità di usare il processore più aggiornato.

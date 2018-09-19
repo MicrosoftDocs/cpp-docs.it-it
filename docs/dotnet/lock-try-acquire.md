@@ -1,5 +1,5 @@
 ---
-title: lock::try_acquire | Documenti Microsoft
+title: lock::try_acquire | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137510"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115957"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 Acquisisce un blocco su un oggetto, in attesa di un intervallo di tempo specificato e restituisce un `bool` per segnalare l'esito positivo dell'acquisizione anziché generare un'eccezione.  
@@ -43,17 +43,17 @@ bool try_acquire(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `_timeout`  
- Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.  
+*timeout*<br/>
+Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se è stato acquisito blocco, `false` in caso contrario.  
+ `true` Se il blocco è stato acquisito, `false` in caso contrario.  
   
 ## <a name="remarks"></a>Note  
  Se è già stato acquisito un blocco, questa funzione non esegue alcuna operazione.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio Usa una singola istanza di una classe su più thread.  Per verificare che gli accessi ai dati interni siano coerenti per ogni thread, la classe Usa un blocco su se stesso.  Il thread principale dell'applicazione utilizza un blocco sulla stessa istanza della classe per controllare periodicamente per vedere se un thread di lavoro continuano a esistere e attese per uscire dall'installazione fino a quando tutti i thread di lavoro completamento delle attività.  
+ Questo esempio Usa una singola istanza di una classe in più thread.  La classe Usa un blocco su se stesso per garantire la coerenza per ogni thread che accede ai propri dati interni.  Il thread principale dell'applicazione usa un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se qualsiasi thread di lavoro continuano a esistere e attese per uscire dalla finché tutti thread di lavoro completate le attività.  
   
 ```  
 // msl_lock_try_acquire.cpp  

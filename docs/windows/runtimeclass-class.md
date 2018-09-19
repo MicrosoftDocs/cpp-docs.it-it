@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118908"
 ---
 # <a name="runtimeclass-class"></a>Classe RuntimeClass
 
@@ -69,7 +69,8 @@ L'elenco delle interfacce dell'oggetto implementi oltre `IUnknown`, `IInspectabl
 
 ## <a name="members"></a>Membri
 
-`RuntimeClassInitialize` Una funzione che inizializza l'oggetto se il `MakeAndInitialize` funzione del modello viene utilizzata per costruire l'oggetto. Restituisce S_OK se l'oggetto è stato inizializzato correttamente o un codice di errore COM se l'inizializzazione non riuscita. Il codice di errore COM viene propagato come valore restituito di `MakeAndInitialize`. Si noti che il `RuntimeClassInitialize` metodo non viene chiamato se il `Make` funzione del modello viene utilizzata per costruire l'oggetto.
+`RuntimeClassInitialize`<br/>
+Una funzione che inizializza l'oggetto se il `MakeAndInitialize` funzione del modello viene utilizzata per costruire l'oggetto. Restituisce S_OK se l'oggetto è stato inizializzato correttamente o un codice di errore COM se l'inizializzazione non riuscita. Il codice di errore COM viene propagato come valore restituito di `MakeAndInitialize`. Si noti che il `RuntimeClassInitialize` metodo non viene chiamato se il `Make` funzione del modello viene utilizzata per costruire l'oggetto.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 

@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 3) Avviso C4192 | Documenti Microsoft
+title: Compilatore avviso (livello 3) C4192 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bae9b7af95de94b8f667cb09710af21044f8b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 671a8c83dcadcaa89372e53b6c3d677c5810b4a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114410"
 ---
-# <a name="compiler-warning-level-3-c4192"></a>Compilatore (livello 3) Avviso C4192
-esclusione automatica 'name' durante l'importazione libreria dei tipi 'library'  
-  
- A `#import` libreria contiene un elemento, *nome*, che viene definito anche nelle intestazioni di sistema Win32. A causa delle limitazioni delle librerie dei tipi, i nomi **IUnknown** o GUID vengono spesso definiti in una libreria dei tipi, la definizione di intestazioni di sistema di duplicazione. `#import` rileverà questi elementi e non riavviarsi incorporarli nei file di intestazione con estensione tlh e con estensione tli.  
-  
- Per eseguire l'override di questo comportamento, utilizzare `#import` attributi [no_auto_exclude](../../preprocessor/no-auto-exclude.md) e [include ()](../../preprocessor/include-parens.md).
+# <a name="compiler-warning-level-3-c4192"></a>Compilatore avviso (livello 3) C4192
+
+esclusione automatica 'name' durante l'importazione libreria dei tipi 'library'
+
+Oggetto `#import` libreria contiene un elemento *nome*, vale a dire anche definita nelle intestazioni di sistema di Win32. A causa delle limitazioni delle librerie dei tipi, i nomi, ad esempio **IUnknown** o GUID sono spesso definite in una libreria dei tipi, duplicare la definizione delle intestazioni di sistema. `#import` rileva questi elementi e rifiutare di incorporarli nei file di intestazione con estensione tlh e con estensione tli.
+
+Per modificare questo comportamento, usare `#import` attributi [no_auto_exclude](../../preprocessor/no-auto-exclude.md) e [include ()](../../preprocessor/include-parens.md).

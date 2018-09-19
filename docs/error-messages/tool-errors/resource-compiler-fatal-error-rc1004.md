@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1004 | Documenti Microsoft
+title: Errore irreversibile del compilatore di risorse RC1004 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa3846d0cf65b3dbca31e04999b955b1d58a4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c86822ea9dcdbb16c437e10cf81bc1c8107da0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113591"
 ---
 # <a name="resource-compiler-fatal-error-rc1004"></a>Errore irreversibile del compilatore di risorse RC1004
-fine file imprevista  
-  
- Questo errore può essere causato dalla mancanza di ritorno a capo e caratteri di ritorno a capo l'ultima riga del file di testo.
+
+fine file imprevista
+
+Questo errore può essere causato dalla mancanza di avanzamento riga e caratteri di ritorno a capo l'ultima riga del file di testo.

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c6db8a46e0b0e8d490019b18fc67dc7bf1e226
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6eb8c7ed32e780ddaf31dfd6167f59fd55de9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116776"
 ---
 # <a name="ccomcurrency-class"></a>Classe CComCurrency
 
@@ -118,45 +118,45 @@ CComCurrency() throw();
 CComCurrency(const CComCurrency& curSrc) throw();
 CComCurrency(CURRENCY cySrc) throw();
 CComCurrency(DECIMAL dSrc);
-CComCurrency(ULONG ulSrc);  
-CComCurrency(USHORT usSrc);  
-CComCurrency(CHAR cSrc);  
-CComCurrency(DOUBLE dSrc);  
-CComCurrency(FLOAT fSrc);  
-CComCurrency(LONG lSrc);  
-CComCurrency(SHORT sSrc);  
-CComCurrency(BYTE bSrc);  
-CComCurrency(LONGLONG nInteger, SHORT nFraction);  
-explicit CComCurrency(LPDISPATCH pDispSrc);  
-explicit CComCurrency(const VARIANT& varSrc);  
-explicit CComCurrency(LPCWSTR szSrc);  
+CComCurrency(ULONG ulSrc);
+CComCurrency(USHORT usSrc);
+CComCurrency(CHAR cSrc);
+CComCurrency(DOUBLE dSrc);
+CComCurrency(FLOAT fSrc);
+CComCurrency(LONG lSrc);
+CComCurrency(SHORT sSrc);
+CComCurrency(BYTE bSrc);
+CComCurrency(LONGLONG nInteger, SHORT nFraction);
+explicit CComCurrency(LPDISPATCH pDispSrc);
+explicit CComCurrency(const VARIANT& varSrc);
+explicit CComCurrency(LPCWSTR szSrc);
 explicit CComCurrency(LPCSTR szSrc);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*curSrc*  
+*curSrc*<br/>
 Oggetto `CComCurrency` esistente.
 
-*cySrc*  
+*cySrc*<br/>
 Una variabile di tipo valuta.
 
-*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*  
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*<br/>
 Il valore iniziale assegnato alla variabile membro `m_currency`.
 
-*cSrc*  
+*cSrc*<br/>
 Un carattere che contiene il valore iniziale assegnato alla variabile membro `m_currency`.
 
-*nInteger*, *nFraction*  
+*nInteger*, *nFraction*<br/>
 I componenti integer e frazionario del valore monetario iniziale. Vedere le [CComCurrency](../../atl/reference/ccomcurrency-class.md) Panoramica per altre informazioni.
 
-*pDispSrc*  
+*pDispSrc*<br/>
 Un `IDispatch` puntatore.
 
-*varSrc*  
+*varSrc*<br/>
 Una variabile di tipo VARIANT. Le impostazioni locali del thread corrente viene utilizzata per eseguire la conversione.
 
-*szSrc*  
+*szSrc*<br/>
 Una stringa Unicode o ANSI che contiene il valore iniziale. Le impostazioni locali del thread corrente viene utilizzata per eseguire la conversione.
 
 ### <a name="remarks"></a>Note
@@ -238,7 +238,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Oggetto `CComCurrency`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -259,7 +259,7 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 L'oggetto `CComCurrency` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -281,10 +281,10 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nOperand*  
+*nOperand*<br/>
 Moltiplicatore.
 
-*cur*  
+*cur*<br/>
 Il `CComCurrency` oggetto usato come moltiplicatore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -306,10 +306,10 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametri
 
-*nOperand*  
+*nOperand*<br/>
 Moltiplicatore.
 
-*cur*  
+*cur*<br/>
 Il `CComCurrency` oggetto usato come moltiplicatore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -330,7 +330,7 @@ CComCurrency operator/(long nOperand) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nOperand*  
+*nOperand*<br/>
 Divisore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -351,7 +351,7 @@ const CComCurrency& operator/= (long nOperand);
 
 ### <a name="parameters"></a>Parametri
 
-*nOperand*  
+*nOperand*<br/>
 Divisore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -372,7 +372,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Il `CComCurrency` oggetto da aggiungere all'oggetto originale.
 
 ### <a name="return-value"></a>Valore restituito
@@ -393,7 +393,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Oggetto `CComCurrency`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -414,7 +414,7 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Oggetto `CComCurrency`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -435,7 +435,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Oggetto `CComCurrency`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -466,13 +466,13 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 ### <a name="parameters"></a>Parametri
 
-*curSrc*  
+*curSrc*<br/>
 Oggetto `CComCurrency`.
 
-*cySrc*  
+*cySrc*<br/>
 Una variabile di tipo valuta.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*  
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
 Il valore numerico da assegnare al `CComCurrency` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -493,7 +493,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Oggetto `CComCurrency`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -514,7 +514,7 @@ bool operator== (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Il `CComCurrency` oggetto da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -535,7 +535,7 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Oggetto `CComCurrency`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -556,7 +556,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cur*  
+*cur*<br/>
 Oggetto `CComCurrency`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -571,7 +571,7 @@ Restituisce TRUE se il primo oggetto è maggiore o uguale al secondo e FALSE in 
 
 Questi operatori vengono utilizzati per eseguire il cast un `CComCurrency` oggetto al tipo di dati valuta.
 
-```  
+```
 operator CURRENCY&() throw();
 operator const CURRENCY&() const throw();
 ```
@@ -594,7 +594,7 @@ HRESULT Roundint nDecimals);
 
 ### <a name="parameters"></a>Parametri
 
-*nDecimals*  
+*nDecimals*<br/>
 Il numero di cifre a cui `m_currency` verrà arrotondato, compreso nell'intervallo da 0 a 4.
 
 ### <a name="return-value"></a>Valore restituito
@@ -615,7 +615,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 ### <a name="parameters"></a>Parametri
 
-*nFraction*  
+*nFraction*<br/>
 Il valore da assegnare per il componente frazionario del `m_currency` (membro dati). Il segno del componente frazionario deve corrispondere a quello del componente integer e il valore deve essere nell'intervallo da -9999 (CY_MIN_FRACTION) a + 9999 (CY_MAX_FRACTION).
 
 ### <a name="return-value"></a>Valore restituito
@@ -636,7 +636,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ### <a name="parameters"></a>Parametri
 
-*nInteger*  
+*nInteger*<br/>
 Il valore da assegnare al componente integer del `m_currency` (membro dati). Il segno del componente integer deve corrispondere il segno del componente frazionario esistente.
 
 *nInteger* deve essere compreso nell'intervallo CY_MIN_INTEGER a CY_MAX_INTEGER inclusivo. Questi valori sono definiti in atlcur. h.
@@ -651,6 +651,6 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe COleCurrency](../../mfc/reference/colecurrency-class.md)   
-[VALUTA](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
+[Classe COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
+[VALUTA](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3452 | Documenti Microsoft
+title: Errore del compilatore C3452 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baa8470d6c7c0ffe38c6f6be07bb67a9ae932de9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 392bddb57b90892bc867bcd201a99fdfc1e3f226
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249630"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118102"
 ---
 # <a name="compiler-error-c3452"></a>Errore del compilatore C3452
-membro argomento di elenco non costante  
-  
- È stato passato un argomento a un attributo che prevedeva una costante, un valore valutato in fase di compilazione.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3452.  
-  
-```  
-// C3452.cpp  
-// compile with: /c  
-int i;  
-[module( name="mod", type=dll, custom={i} ) ];   // C3452  
-// try the following line instead  
-// [module( name="mod", type=dll, custom={"a"} ) ];  
+
+membro argomento di elenco non costante
+
+È stato passato un argomento a un attributo che prevedeva una costante, un valore valutato in fase di compilazione.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3452.
+
+```
+// C3452.cpp
+// compile with: /c
+int i;
+[module( name="mod", type=dll, custom={i} ) ];   // C3452
+// try the following line instead
+// [module( name="mod", type=dll, custom={"a"} ) ];
 ```

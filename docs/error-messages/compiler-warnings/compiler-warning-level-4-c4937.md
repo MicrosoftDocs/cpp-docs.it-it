@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4937 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4937 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ed7b33889677a304d303873799f36430c38129a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7bc6232458b357f41e859c58d4b6b77f78ef2a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118297"
 ---
 # <a name="compiler-warning-level-4-c4937"></a>Avviso del compilatore (livello 4) C4937
-'text1' e 'text2' sono indistinguibili come argomenti per 'directive'  
-  
- Il modo in cui vengono elaborati gli argomenti per le direttive impedisce di distinguere i nomi significativi per il compilatore, ad esempio le parole chiave con più rappresentazioni di testo (form con carattere di sottolineatura singolo e doppio).  
-  
- Esempi di tali stringhe sono cdecl e \__forceinline.  Si noti che in /Za sono abilitati solo i form con carattere di sottolineatura doppio.  
-  
- L'esempio seguente genera l'errore C4937:  
-  
-```  
-// C4937.cpp  
-// compile with: /openmp /W4  
-#include "omp.h"  
-int main() {  
-   #pragma omp critical ( __leave )   // C4937  
-   ;  
-  
-   // OK  
-   #pragma omp critical ( leave )  
-   ;  
-}  
+
+'text1' e 'text2' sono indistinguibili come argomenti per 'directive'
+
+Il modo in cui vengono elaborati gli argomenti per le direttive impedisce di distinguere i nomi significativi per il compilatore, ad esempio le parole chiave con più rappresentazioni di testo (form con carattere di sottolineatura singolo e doppio).
+
+Esempi di tali stringhe sono cdecl e \__forceinline.  Si noti che in /Za sono abilitati solo i form con carattere di sottolineatura doppio.
+
+L'esempio seguente genera l'errore C4937:
+
+```
+// C4937.cpp
+// compile with: /openmp /W4
+#include "omp.h"
+int main() {
+   #pragma omp critical ( __leave )   // C4937
+   ;
+
+   // OK
+   #pragma omp critical ( leave )
+   ;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Avviso del compilatore di risorse RC4093 | Documenti Microsoft
+title: Avviso del compilatore di risorse RC4093 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cca3c2a139e1109746f3a690cfb3f31509a9fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b1ca04b17ebdb9d48bc94032482caf48ad4aa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111563"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>Avviso del compilatore di risorse RC4093
-carattere di nuova riga non di escape in una costante carattere in codice inattivo.  
-  
- L'espressione costante di un `#if`, `#elif`, **#ifdef**, o **#ifndef** direttiva del preprocessore restituita zero, rendere il codice che segue è inattivo. All'interno del codice inattivo, è presente un carattere di nuova riga all'interno di un set di virgolette singole o doppie.  
-  
- Tutto il testo fino a quando non è stata considerata le virgolette doppie successiva all'interno di una costante carattere.
+
+senza caratteri escape nuova riga nella costante carattere nel codice inattivo
+
+L'espressione costante di un `#if`, `#elif`, **#ifdef**, o **#ifndef** direttiva del preprocessore valutata a zero, rendendo il codice che segue è inattivo. All'interno del codice inattivo, viene visualizzato un carattere di nuova riga all'interno di un set di virgolette singole o doppie.
+
+Tutto il testo fino a quando non è stata considerata le virgolette doppie successiva all'interno di una costante carattere.

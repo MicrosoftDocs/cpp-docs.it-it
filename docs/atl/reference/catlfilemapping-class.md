@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b7f7e58b78e81b3f2b86ad384324af25570b09
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ccbf3221bddf39c8069e20636c2f2a1deb597866
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116464"
 ---
 # <a name="catlfilemapping-class"></a>Classe CAtlFileMapping
 
@@ -34,13 +34,13 @@ Questa classe rappresenta un file mappato alla memoria, l'aggiunta di un operato
 ## <a name="syntax"></a>Sintassi
 
 ```
-template <typename T = char>  
+template <typename T = char>
 class CAtlFileMapping : public CAtlFileMappingBase
 ```
 
 #### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Il tipo di dati usati per l'operatore cast.
 
 ## <a name="members"></a>Membri
@@ -69,7 +69,7 @@ Questa classe aggiunge un operatore cast singolo per consentire la conversione i
 
 Consente la conversione implicita dei `CAtlFileMapping` oggetti `T*`.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -83,5 +83,5 @@ Le chiamate [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingba
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)   
+[Classe CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

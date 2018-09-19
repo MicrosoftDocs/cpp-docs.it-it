@@ -1,5 +1,5 @@
 ---
-title: Classe invalid_compute_domain | Documenti Microsoft
+title: invalid_compute_domain (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116009"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain (classe)
-Eccezione generata quando il runtime non è possibile avviare un kernel con il dominio di calcolo specificato al [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) sito di chiamata.  
+L'eccezione generata quando il runtime non è possibile avviare un kernel con il dominio di calcolo specificato al [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) sito di chiamata.  
 
   
 ## <a name="syntax"></a>Sintassi  
@@ -52,7 +52,7 @@ class invalid_compute_domain : public runtime_exception;
  `invalid_compute_domain`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** amprt.h  
+ **Intestazione:** amprt. h  
   
  **Spazio dei nomi:** Concurrency  
 
@@ -70,8 +70,8 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `_Message`  
- Descrizione dell'errore.  
+*Messaggio*<br/>
+Descrizione dell'errore.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un'istanza di `invalid_compute_domain` classe  

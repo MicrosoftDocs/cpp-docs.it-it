@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4092 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4092 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72edd9e75dbc781355396e38f767a64c1ded3aa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9b47b347e11e640425bc7840a0f78a33e9e3b7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113422"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>Avviso degli strumenti del linker LNK4092
-la sezione scrivibile condivisa 'section' contiene rilocazioni; immagine potrebbe non funzionare correttamente  
-  
- Il linker genera questo avviso ogni volta che è presente una sezione condivisa per avvisare l'utente di un problema potenzialmente grave.  
-  
- Per condividere dati tra più processi è possibile contrassegnare una sezione come "condiviso". Tuttavia, contrassegnare una sezione come condiviso può causare problemi. Ad esempio, si dispone di una DLL che contiene le dichiarazioni simile al seguente in una sezione di dati condiviso:  
-  
-```  
-int var = 1;  
-int *pvar = &var;  
-```  
-  
- Il linker non è possibile risolvere `pvar` poiché il relativo valore dipende in cui la DLL viene caricata in memoria, pertanto inserisce un record di rilocazione nella DLL. Quando la DLL viene caricata in memoria, l'indirizzo di `var` possono essere risolti e `pvar` assegnato. Se un altro processo carica la DLL stessa, ma non è possibile caricarlo con lo stesso indirizzo, la rilocazione per l'indirizzo di `var` verrà aggiornato per il secondo processo e lo spazio di indirizzo del primo processo farà riferimento a un indirizzo errato.
+
+la sezione scrivibile condivisa 'section' contiene rilocazioni; immagine non venga eseguita correttamente
+
+Il linker genera questo avviso ogni volta che è presente una sezione condivisa per avvisare l'utente di un problema potenzialmente pericolose.
+
+Un modo per condividere dati tra più processi è possibile contrassegnare una sezione come "condiviso". Contrassegna una sezione come condiviso, tuttavia, può causare problemi. Ad esempio, si dispone di una DLL che contiene le dichiarazioni simile al seguente in una sezione di dati condiviso:
+
+```
+int var = 1;
+int *pvar = &var;
+```
+
+Non è possibile risolvere il linker `pvar` perché il suo valore dipende in cui la DLL viene caricata in memoria, pertanto inserisce un record di rilocazione nella DLL. Quando la DLL viene caricata in memoria, l'indirizzo del `var` può essere risolto e `pvar` assegnato. Se un altro processo carica la DLL stessa ma non è possibile caricarla nello stesso indirizzo, la rilocazione dell'indirizzo del `var` verrà aggiornato per il secondo processo e spazio degli indirizzi del processo prima punterà all'indirizzo errato.

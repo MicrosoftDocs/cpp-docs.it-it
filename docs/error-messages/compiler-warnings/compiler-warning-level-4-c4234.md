@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4234 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4234 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d5b7a2999b77c0b34ee925f5dd85a0a27c63f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6ce6ba622cb480096144706589a01dee7326f38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293517"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118232"
 ---
 # <a name="compiler-warning-level-4-c4234"></a>Avviso del compilatore (livello 4) C4234
-utilizzata estensione non standard: parola chiave' keyword ' riservato per utilizzi futuri  
-  
- Il compilatore non ancora implementata la parola chiave che è utilizzata.  
-  
- Questo avviso viene promossa automaticamente a un errore. Se si desidera modificare questo comportamento, utilizzare [#pragma avviso](../../preprocessor/warning.md). Ad esempio, per rendere C4234 un problema di avviso di livello 4.  
-  
-```  
-#pragma warning(2:4234)  
-```  
-  
- nel file del codice sorgente.
+
+utilizzata estensione non standard: parola chiave 'keyword' riservata per utilizzi futuri
+
+Il compilatore non implementa la parola chiave che è utilizzata.
+
+Questo avviso viene promossa automaticamente a un errore. Se si vuole modificare questo comportamento, usare [#pragma avviso](../../preprocessor/warning.md). Ad esempio, per rendere un problema di avviso di livello 4, C4234
+
+```
+#pragma warning(2:4234)
+```
+
+nel file del codice sorgente.

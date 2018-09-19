@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2383 | Documenti Microsoft
+title: Errore del compilatore C2383 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81624ccd7f4857cb2f7d8474d393a9743ab1a2b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c529c22636f112291fa53b852899cad78dac589
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196493"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113227"
 ---
 # <a name="compiler-error-c2383"></a>Errore del compilatore C2383
-'*simbolo*': argomenti predefiniti non consentiti su questo simbolo  
-  
- Il compilatore C++ non consente argomenti predefiniti sui puntatori a funzioni.  
-  
- Questo codice è stato accettato dal compilatore Visual C++ nelle versioni precedenti di Visual Studio 2005, ma attualmente causa un errore. Per il codice che funziona in tutte le versioni di Visual C++, non assegnare un valore predefinito a un argomento di puntatore a funzione.  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente genera l'errore C2383 e illustra una possibile soluzione:  
-  
-```cpp  
-// C2383.cpp  
-// compile with: /c   
-void (*pf)(int = 0);   // C2383  
-void (*pf)(int);   // OK  
+
+«*simbolo*': argomenti predefiniti non sono consentiti su questo simbolo
+
+Il compilatore C++ non supporta gli argomenti predefiniti sui puntatori a funzioni.
+
+Questo codice è stato accettato dal compilatore Visual C++ nelle versioni precedenti a Visual Studio 2005, ma attualmente causa un errore. Per il codice che funziona in tutte le versioni di Visual C++, non assegnare un valore predefinito a un argomento di puntatore a funzione.
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente genera l'errore C2383 e illustra una possibile soluzione:
+
+```cpp
+// C2383.cpp
+// compile with: /c
+void (*pf)(int = 0);   // C2383
+void (*pf)(int);   // OK
 ```

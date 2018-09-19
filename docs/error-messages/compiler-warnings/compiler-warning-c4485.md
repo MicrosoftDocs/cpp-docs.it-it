@@ -1,5 +1,5 @@
 ---
-title: Avviso del compilatore C4485 | Documenti Microsoft
+title: Avviso del compilatore C4485 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b84d2976e31d5cc3a9b6547d0c4b02a61327ce0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb83700bf8ca79960599d85ed3d335f80c9fc7f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117751"
 ---
 # <a name="compiler-warning-c4485"></a>Avviso del compilatore C4485
-'funzione_override': corrisponde al metodo di classe di base di riferimento 'funzione_classe_base', ma non è contrassegnato 'new' o 'override'; 'new' (e 'virtual') equivale a  
-  
- Sostituisce una funzione di accesso, con o senza il `virtual` (parola chiave), una funzione di accesso della classe base, ma la `override` o `new` identificatore non faceva parte della firma della funzione esegue l'override. Aggiungere il `new` o `override` identificatore per risolvere il problema.  
-  
- Vedere [override](../../windows/override-cpp-component-extensions.md) e [new (nuovo slot in vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) per ulteriori informazioni.  
-  
- C4485 viene sempre generato come errore. Utilizzare il [avviso](../../preprocessor/warning.md) pragma C4485 di esclusione.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4485  
-  
-```  
-// C4485.cpp  
-// compile with: /clr  
-delegate void Del();  
-  
-ref struct A {  
-   virtual event Del ^E;  
-};  
-  
-ref struct B : A {  
-   virtual event Del ^E;   // C4485  
-};  
-  
-ref struct C : B {  
-   virtual event Del ^E {  
-      void raise() override {}  
-      void add(Del ^) override {}  
-      void remove(Del^) override {}  
-   }  
-};  
+
+'funzione_override': corrisponde al metodo di classe di base di riferimento 'funzione_classe_base', ma non è contrassegnato 'new' o 'override'; 'new' (e 'virtual') si presuppone che
+
+Sostituisce una funzione di accesso, con o senza il `virtual` parola chiave, una funzione di accesso di classe di base, ma la `override` o `new` identificatore non faceva parte della firma della funzione esegue l'override. Aggiungere il `new` o `override` identificatore per risolvere il problema.
+
+Visualizzare [eseguire l'override](../../windows/override-cpp-component-extensions.md) e [new (nuovo slot in vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) per altre informazioni.
+
+C4485 viene sempre generato come errore. Usare la [avviso](../../preprocessor/warning.md) pragma per sopprimere C4485.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4485
+
+```
+// C4485.cpp
+// compile with: /clr
+delegate void Del();
+
+ref struct A {
+   virtual event Del ^E;
+};
+
+ref struct B : A {
+   virtual event Del ^E;   // C4485
+};
+
+ref struct C : B {
+   virtual event Del ^E {
+      void raise() override {}
+      void add(Del ^) override {}
+      void remove(Del^) override {}
+   }
+};
 ```

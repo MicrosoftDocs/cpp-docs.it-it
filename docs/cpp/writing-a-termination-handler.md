@@ -21,27 +21,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 85241d9dde87e929b02328a6e7d0c75b5ce068ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116230"
 ---
 # <a name="writing-a-termination-handler"></a>Scrittura di un gestore di terminazione
-A differenza di un gestore eccezioni, un gestore terminazioni viene eseguito sempre, indipendentemente dal fatto che il blocco di codice protetto venga terminato normalmente o meno. L'unico obiettivo del gestore terminazioni deve essere di assicurarsi che le risorse, quali memoria, handle e file, vengano chiuse correttamente, indipendentemente da come una sezione di codice completa l'esecuzione.  
-  
- I gestori terminazioni utilizzano l'istruzione try-finally.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
-  
--   [Istruzione try-finally](../cpp/try-finally-statement.md)  
-  
--   [Pulizia delle risorse](../cpp/cleaning-up-resources.md)  
-  
--   [Tempi delle azioni nella gestione delle eccezioni](../cpp/timing-of-exception-handling-a-summary.md)  
-  
--   [Limitazioni ai gestori di terminazione](../cpp/restrictions-on-termination-handlers.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+A differenza di un gestore eccezioni, un gestore terminazioni viene eseguito sempre, indipendentemente dal fatto che il blocco di codice protetto venga terminato normalmente o meno. L'unico obiettivo del gestore terminazioni deve essere di assicurarsi che le risorse, quali memoria, handle e file, vengano chiuse correttamente, indipendentemente da come una sezione di codice completa l'esecuzione.
+
+I gestori terminazioni utilizzano l'istruzione try-finally.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
+
+- [Istruzione try-finally](../cpp/try-finally-statement.md)
+
+- [Pulizia delle risorse](../cpp/cleaning-up-resources.md)
+
+- [Tempi delle azioni nella gestione delle eccezioni](../cpp/timing-of-exception-handling-a-summary.md)
+
+- [Limitazioni ai gestori di terminazione](../cpp/restrictions-on-termination-handlers.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

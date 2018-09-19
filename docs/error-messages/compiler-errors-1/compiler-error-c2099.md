@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2099 | Documenti Microsoft
+title: Errore del compilatore C2099 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f525676f6d9238838f0dbc245d9771f99ebeb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fcbefa4d8fb9d5503f28cf3bf39cafc6b05a225
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170817"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116828"
 ---
 # <a name="compiler-error-c2099"></a>Errore del compilatore C2099
-l'inizializzatore non è una costante  
-  
- Questo errore viene generato unicamente dal compilatore C e si verifica solo per variabili non automatiche.  Il compilatore inizializza le variabili non automatiche all'avvio del programma e i valori di inizializzazione devono essere costanti.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C2099.  
-  
-```  
-// C2099.c  
-int j;  
-int *p;  
-j = *p;   // C2099 *p is not a constant  
-```  
-  
-## <a name="example"></a>Esempio  
- L'errore C2099 può verificarsi anche perché il compilatore non riesce a eseguire la riduzione delle costanti su un'espressione in **/fp:strict** . Le impostazioni di ambiente relative alla precisione della virgola mobile, infatti, possono variare dalla fase di compilazione a quella di compilazione. Per altre informazioni, vedere [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) .  
-  
- Se la riduzione di costanti non riesce, il compilatore richiama l'inizializzazione dinamica, non consentita in C.  
-  
- Per correggere questo errore, compilare il modulo come file cpp o semplificare l'espressione.  
-  
- Per altre informazioni, vedere [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md).  
-  
- L'esempio seguente genera l'errore C2099.  
-  
-```  
-// C2099_2.c  
-// compile with: /fp:strict /c  
-float X = 2.0 - 1.0;   // C2099  
-float X2 = 1.0;   // OK  
+
+l'inizializzatore non è una costante
+
+Questo errore viene generato unicamente dal compilatore C e si verifica solo per variabili non automatiche.  Il compilatore inizializza le variabili non automatiche all'avvio del programma e i valori di inizializzazione devono essere costanti.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C2099.
+
+```
+// C2099.c
+int j;
+int *p;
+j = *p;   // C2099 *p is not a constant
+```
+
+## <a name="example"></a>Esempio
+
+L'errore C2099 può verificarsi anche perché il compilatore non riesce a eseguire la riduzione delle costanti su un'espressione in **/fp:strict** . Le impostazioni di ambiente relative alla precisione della virgola mobile, infatti, possono variare dalla fase di compilazione a quella di compilazione. Per altre informazioni, vedere [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) .
+
+Se la riduzione di costanti non riesce, il compilatore richiama l'inizializzazione dinamica, non consentita in C.
+
+Per correggere questo errore, compilare il modulo come file cpp o semplificare l'espressione.
+
+Per altre informazioni, vedere [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md).
+
+L'esempio seguente genera l'errore C2099.
+
+```
+// C2099_2.c
+// compile with: /fp:strict /c
+float X = 2.0 - 1.0;   // C2099
+float X2 = 1.0;   // OK
 ```

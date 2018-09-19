@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf937f11118cfbea26db11ba48ea0ed65d903af6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 07949bdf7116f4a0eb1d598f90cb0be78b116259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112226"
 ---
 # <a name="coblist-class"></a>Classe cObList
 elenchi ordinati di non univoco fSupports `CObject` puntatori accessibili in sequenza o dal puntatore il valore.  
@@ -173,11 +173,11 @@ void AddHead(CObList* pNewList);
   
  I risultati di questo programma sono come segue:  
   
- `AddHead example: A CObList with 2 elements`  
-  
- `a CAge at $44A8 40`  
-  
- `a CAge at $442A 21`  
+```Output
+AddHead example: A CObList with 2 elements
+a CAge at $44A8 40
+a CAge at $442A 21
+```
   
 ##  <a name="addtail"></a>  CObList::AddTail  
  Aggiunge un nuovo elemento o un elenco di elementi alla fine di questo elenco.  
@@ -214,11 +214,11 @@ void AddTail(CObList* pNewList);
   
  I risultati di questo programma sono come segue:  
   
- `AddTail example: A CObList with 2 elements`  
-  
- `a CAge at $444A 21`  
-  
- `a CAge at $4526 40`  
+```Output
+AddTail example: A CObList with 2 elements
+a CAge at $444A 21
+a CAge at $4526 40
+```
   
 ##  <a name="coblist"></a>  CObList:: CObList  
  Costruisce un oggetto vuoto `CObject` elenco con puntatore.  
@@ -458,9 +458,10 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  I risultati di questo programma sono come segue:  
   
- `a CAge at $479C 40`  
-  
- `a CAge at $46C0 21`  
+```Output
+a CAge at $479C 40
+a CAge at $46C0 21
+```
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
  Ottiene l'elemento di elenco identificato da *rPosition*, quindi imposta *rPosition* sul valore di posizione della voce nell'elenco precedente.  
@@ -501,9 +502,10 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
  I risultati di questo programma sono come segue:  
   
- `a CAge at $421C 21`  
-  
- `a CAge at $421C 40`  
+```Output
+a CAge at $421C 21
+a CAge at $421C 40
+```
   
 ##  <a name="getsize"></a>  CObList::GetSize  
  Restituisce il numero di elementi dell'elenco.  
@@ -611,13 +613,12 @@ POSITION InsertAfter(
   
  I risultati di questo programma sono come segue:  
   
- `InsertAfter example: A CObList with 3 elements`  
-  
- `a CAge at $4A44 40`  
-  
- `a CAge at $4A64 65`  
-  
- `a CAge at $4968 21`  
+```Output
+InsertAfter example: A CObList with 3 elements
+a CAge at $4A44 40
+a CAge at $4A64 65
+a CAge at $4968 21
+```
   
 ##  <a name="insertbefore"></a>  CObList::InsertBefore  
  Aggiunge un elemento all'elenco prima dell'elemento nella posizione specificata.  
@@ -652,13 +653,12 @@ POSITION InsertBefore(
   
  I risultati di questo programma sono come segue:  
   
- `InsertBefore example: A CObList with 3 elements`  
-  
- `a CAge at $4AE2 40`  
-  
- `a CAge at $4B02 65`  
-  
- `a CAge at $49E6 21`  
+```Output
+InsertBefore example: A CObList with 3 elements
+a CAge at $4AE2 40
+a CAge at $4B02 65
+a CAge at $49E6 21
+```
   
 ##  <a name="isempty"></a>  CObList::IsEmpty  
  Indica se questo elenco non contiene elementi.  
@@ -827,11 +827,11 @@ void SetAt(
   
  I risultati di questo programma sono come segue:  
   
- `SetAt example: A CObList with 2 elements`  
-  
- `a CAge at $4D98 40`  
-  
- `a CAge at $4DB8 65`  
+```Output
+SetAt example: A CObList with 2 elements
+a CAge at $4D98 40
+a CAge at $4DB8 65
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CObject](../../mfc/reference/cobject-class.md)   

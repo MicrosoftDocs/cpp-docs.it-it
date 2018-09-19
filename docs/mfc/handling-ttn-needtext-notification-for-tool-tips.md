@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ddfe6660854ae4cbdba2398aa4102fd612d17ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114579"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Gestione della notifica TTN_NEEDTEXT per le descrizioni comandi
 Come parte della [abilitazione di descrizioni](../mfc/enabling-tool-tips.md), gestiscono le **TTN_NEEDTEXT** messaggio aggiungendo la voce seguente alla mappa messaggi della finestra proprietaria:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
- `memberFxn`  
- La funzione membro da chiamare quando è necessario il testo di questo pulsante.  
+*memberFxn*<br/>
+La funzione membro da chiamare quando è necessario il testo di questo pulsante.  
   
  Si noti che l'ID di una descrizione comando è sempre 0.  
   
@@ -41,14 +41,14 @@ Come parte della [abilitazione di descrizioni](../mfc/enabling-tool-tips.md), ge
   
  in cui i parametri in corsivo sono:  
   
- `id`  
- Identificatore del controllo che riceve la notifica. Non usato. L'id del controllo deriva dal **NMHDR** struttura.  
+*ID*<br/>
+Identificatore del controllo che riceve la notifica. Non usato. L'id del controllo deriva dal **NMHDR** struttura.  
   
- `pNMHDR`  
- Un puntatore per il [struttura NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struttura. Questa struttura viene inoltre illustrata dettagliatamente nella [struttura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
+*pNMHDR viene convertito nel*<br/>
+Un puntatore per il [struttura NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struttura. Questa struttura viene inoltre illustrata dettagliatamente nella [struttura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
   
- `pResult`  
- Un puntatore al codice del risultato è possibile impostare prima di restituire. **TTN_NEEDTEXT** gestori possono ignorare la *pResult* parametro.  
+*pResult*<br/>
+Un puntatore al codice del risultato è possibile impostare prima di restituire. **TTN_NEEDTEXT** gestori possono ignorare la *pResult* parametro.  
   
  Ad esempio di un gestore di notifica-visualizzazione di form:  
   

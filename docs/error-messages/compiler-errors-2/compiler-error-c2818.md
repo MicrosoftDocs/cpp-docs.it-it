@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2818 | Documenti Microsoft
+title: Errore del compilatore C2818 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d7f419d528fcd2445b82e29d92442002624909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f692f52477c988c277f60a689dac5ce83a90acb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112044"
 ---
 # <a name="compiler-error-c2818"></a>Errore del compilatore C2818
-l'applicazione di 'operator ->' di overload è ricorsiva tramite il tipo 'type'  
-  
- Una ridefinizione dell'operatore di accesso di membro di classe contiene una ricorsiva `return` istruzione. Per ridefinire il `->` operatore con ricorsione, è necessario spostare la routine ricorsiva in una funzione distinta chiamata dall'operatore di eseguire l'override di funzione.
+
+l'applicazione di 'operator ->' di overload è ricorsiva tramite il tipo 'type'
+
+Una ridefinizione dell'operatore di accesso di membro di classe contiene una ricorsiva `return` istruzione. Per ridefinire il `->` operatore con ricorsione, è necessario spostare la routine ricorsive in una funzione separata denominata dall'operatore di eseguire l'override (funzione).

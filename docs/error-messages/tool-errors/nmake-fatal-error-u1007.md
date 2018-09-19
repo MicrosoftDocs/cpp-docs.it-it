@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile U1007 di NMAKE | Documenti Microsoft
+title: Errore irreversibile U1007 di NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988438b952aa1a06be3ec0da1d7337793c704133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1c74cdfe4113cf1fafd242993df27081eb1d28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322380"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112304"
 ---
 # <a name="nmake-fatal-error-u1007"></a>Errore irreversibile U1007 di NMAKE 
-virgolette doppie non consentito nel nome  
-  
- Il nome di destinazione specificato o di un file contiene un segno di virgolette doppie (**"**).  
-  
- Le virgolette doppie possono racchiudere un nome di file ma non possono essere contenute all'interno di esso.
+
+segno di virgolette doppie non consentito nel nome
+
+Il nome di destinazione specificato o di file contiene un segno di virgolette doppie (**"**).
+
+Le virgolette doppie possono racchiudere un nome di file ma non possono essere contenute in esso contenuti.

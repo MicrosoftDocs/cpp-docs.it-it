@@ -17,28 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef2b57bd37441b9a35c26ab36fcf3cb15cd0d878
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b51a6e9c9cf9516ed86066f712a17fea69c3cb50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112239"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Gestione dei comandi per lo scorrimento dei record (accesso ai dati MFC)
+
 Il [CRecordView](../mfc/reference/crecordview-class.md) classe fornisce predefinito gestione dei comandi per i seguenti comandi standard:  
   
--   ID_RECORD_MOVE_FIRST  
+- ID_RECORD_MOVE_FIRST  
   
--   ID_RECORD_MOVE_LAST  
+- ID_RECORD_MOVE_LAST  
   
--   ID_RECORD_MOVE_NEXT  
+- ID_RECORD_MOVE_NEXT  
   
--   ID_RECORD_MOVE_PREV  
+- ID_RECORD_MOVE_PREV  
   
- Il `OnMove` funzione membro garantisce predefinito gestione dei comandi per tutti i quattro comandi, che consentono lo spostamento da un record a altro. Quando vengono eseguiti tali comandi, RFX (o DFX) carica il nuovo record nei campi del recordset e DDX sposta i valori nei controlli del form del record. Per informazioni su RFX, vedere [campi di Record (RFX)](../data/odbc/record-field-exchange-rfx.md).  
+Il `OnMove` funzione membro garantisce predefinito gestione dei comandi per tutti i quattro comandi, che consentono lo spostamento da un record a altro. Quando vengono eseguiti tali comandi, RFX (o DFX) carica il nuovo record nei campi del recordset e DDX sposta i valori nei controlli del form del record. Per informazioni su RFX, vedere [campi di Record (RFX)](../data/odbc/record-field-exchange-rfx.md).  
   
 > [!NOTE]
 >  Usare sempre questi ID di comando standard per qualsiasi oggetto di interfaccia utente associato ai comandi standard di navigazione tra i record.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto della navigazione in una visualizzazione di Record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+
+[Supporto della navigazione in una visualizzazione di Record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

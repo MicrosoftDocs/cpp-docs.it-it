@@ -1,5 +1,5 @@
 ---
-title: Progetto PRJ0046 errore di compilazione | Documenti Microsoft
+title: Errore di compilazione PRJ0046 del progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3571570fb00b25a42412ac8305623271ff0364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c6c02e6644391f0e4848b43f3a9f47364b41ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111589"
 ---
 # <a name="project-build-error-prj0046"></a>Errore di compilazione progetto PRJ0046
-Impossibile generare la riga di comando perché quello specificato è vuoto.  
-  
- Una riga di comando vuota è stata specificata per una configurazione di makefile. la riga di comando è obbligatoria.
+
+Impossibile generare la riga di comando perché quella specificata è vuota.
+
+Per una configurazione di makefile; è stata specificata una riga di comando vuota la riga di comando è obbligatoria.

@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1023 | Documenti Microsoft
+title: Errore irreversibile C1023 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd9d6b2f0a84d43b14b1187fa4ca5698114983e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58a78a735b553a0a607f2b3433598117efac9191
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115242"
 ---
 # <a name="fatal-error-c1023"></a>Errore irreversibile C1023
-'file': errore imprevisto, provare a ricompilare il file PCH  
-  
- L'errore C1023 può essere causato da uno di diversi problemi, la cui soluzione è una ricompilazione del file di intestazione precompilata.  
-  
- L'errore C1023 può verificarsi se si tenta di usare un file di intestazione precompilata in un computer diverso da quello in cui è stato compilato.
+
+'file': errore imprevisto, provare a ricompilare il file PCH
+
+L'errore C1023 può essere causato da uno di diversi problemi, la cui soluzione è una ricompilazione del file di intestazione precompilata.
+
+L'errore C1023 può verificarsi se si tenta di usare un file di intestazione precompilata in un computer diverso da quello in cui è stato compilato.

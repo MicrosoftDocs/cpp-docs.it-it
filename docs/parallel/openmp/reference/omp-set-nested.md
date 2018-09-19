@@ -1,5 +1,5 @@
 ---
-title: omp_set_nested | Documenti Microsoft
+title: omp_set_nested | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6539167b936efdc4c9f407cd951c9c582b0a138
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fc3506c35dca469febafe21509064abc1726d633
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116896"
 ---
 # <a name="ompsetnested"></a>omp_set_nested
-Abilita parallelismo annidato.  
+Abilitato il parallelismo annidato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,22 +34,21 @@ void omp_set_nested(
 );  
 ```  
   
+### <a name="parameters"></a>Parametri
+  
+*Val*<br/>
+Se diverso da zero, abilita il parallelismo annidato. Se è zero, disabilita il parallelismo annidato.  
+  
 ## <a name="remarks"></a>Note  
- dove  
+ OMP annidati parallelismo può essere attivato con `omp_set_nested`, oppure impostando il [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) variabile di ambiente.  
   
- `val`  
- Se diverso da zero, abilita il parallelismo annidato. Se è zero, disabilita parallelismo annidato.  
+ L'impostazione `omp_set_nested` sostituirà l'impostazione del `OMP_NESTED` variabile di ambiente.  
   
-## <a name="remarks"></a>Note  
- OMP nidificati può essere accesi parallelismo con `omp_set_nested`, o impostando la [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) variabile di ambiente.  
+ Quando abilitata, la variabile di ambiente può interrompere un programma in caso contrario operativo perché il numero di thread aumenta in misura esponenziale durante la nidificazione di aree parallele.  Ad esempio una funzione che recurses 6 volte con il numero di thread OMP impostato su 4 richiede 4.096 (4 alla potenza di 6) i thread In generale, le prestazioni dell'applicazione avrà alcun effetto se il numero di thread supera il numero di processori. Unica eccezione a questa può essere che i/o applicazioni associate.  
   
- L'impostazione per `omp_set_nested` sostituirà l'impostazione del `OMP_NESTED` variabile di ambiente.  
+ Uso [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) per visualizzare l'impostazione corrente di `omp_set_nested`.  
   
- Quando abilitata, la variabile di ambiente può interrompere un programma in caso contrario operativo perché il numero di thread aumenta in misura esponenziale quando nidificazione delle aree parallele.  Ad esempio una funzione che recurses 6 volte con il numero di thread OMP impostato su 4 richiede 4.096 (4 alla potenza di 6) di thread In generale, negativamente sulle prestazioni dell'applicazione se il numero di thread supera il numero di processori. Un'eccezione a questo sarebbe che i/o applicazioni associate.  
-  
- Utilizzare [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) per visualizzare l'impostazione corrente di `omp_set_nested`.  
-  
- Per ulteriori informazioni, vedere [3.1.9 funzione omp_set_nested](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
+ Per altre informazioni, vedere [3.1.9 funzione omp_set_nested](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
   
 ## <a name="example"></a>Esempio  
   

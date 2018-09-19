@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 4) C4681 | Documenti Microsoft
+title: Compilatore avviso (livello 4) C4681 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fea1628ec77294ff6698e123b2c199cad2a17596
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c96d019215c1e91707cc73c65a7a40b0ae4b21a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114488"
 ---
 # <a name="compiler-warning-level-4-c4681"></a>Avviso del compilatore (livello 4) C4681
-'class': la coclasse non specifica un'interfaccia predefinita che sia origine di eventi  
-  
- Un'interfaccia [di origine](../../windows/source-cpp.md) non è stata specificata per una classe.  
-  
- L'esempio seguente genera l'errore C4681:  
-  
-```  
-// C4681.cpp  
-// compile with: /W4 /c  
-#define _ATL_ATTRIBUTES 1  
-#include <atlbase.h>  
-#include <atlcom.h>  
-  
-[module(name="test")];  
-  
-[dual, uuid("00000000-0000-0000-0000-000000000000")]  
-__interface IEvent { [id(3)] HRESULT myEvent(); };  
-  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface ISource { HRESULT Fire(); };  
-  
-[ coclass,   
-  source(IEvent),   
-  default(ISource),  
-  // Uncomment the following line to resolve.  
-  // default(IEvent),   
-  uuid("00000000-0000-0000-0000-000000000002")   
-]  
-struct CSource : ISource {   // C4681  
-   HRESULT Fire() { return 0; }  
-};  
+
+'class': la coclasse non specifica un'interfaccia predefinita che sia origine di eventi
+
+Un'interfaccia [di origine](../../windows/source-cpp.md) non è stata specificata per una classe.
+
+L'esempio seguente genera l'errore C4681:
+
+```
+// C4681.cpp
+// compile with: /W4 /c
+#define _ATL_ATTRIBUTES 1
+#include <atlbase.h>
+#include <atlcom.h>
+
+[module(name="test")];
+
+[dual, uuid("00000000-0000-0000-0000-000000000000")]
+__interface IEvent { [id(3)] HRESULT myEvent(); };
+
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface ISource { HRESULT Fire(); };
+
+[ coclass,
+  source(IEvent),
+  default(ISource),
+  // Uncomment the following line to resolve.
+  // default(IEvent),
+  uuid("00000000-0000-0000-0000-000000000002")
+]
+struct CSource : ISource {   // C4681
+   HRESULT Fire() { return 0; }
+};
 ```

@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0527f4b154b4b5d0dc07b2b152a3975f49746abf
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f383b79c8130501773c56db47c08b9449b259a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336739"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111433"
 ---
 # <a name="cnoaccessor-class"></a>Classe CNoAccessor
+
 Può essere utilizzato come argomento di modello (`TAccessor`) per le classi modello, ad esempio `CCommand` e `CTable`, che richiedono un argomento di classe della funzione di accesso.  
   
 ## <a name="syntax"></a>Sintassi
@@ -36,37 +37,40 @@ class CNoAccessor
 ```  
   
 ## <a name="remarks"></a>Note  
- Usare `CNoAccessor` come argomento di modello quando non si desidera la classe per supportare i parametri o colonne di output.  
+
+Usare `CNoAccessor` come argomento di modello quando non si desidera la classe per supportare i parametri o colonne di output.  
   
- `CNoAccessor` implementa i metodi stub seguenti, ognuno dei quali corrisponde a altri metodi della classe della funzione di accesso:  
+`CNoAccessor` implementa i metodi stub seguenti, ognuno dei quali corrisponde a altri metodi della classe della funzione di accesso:  
   
--   `BindColumns` -Associa le colonne per le funzioni di accesso.  
+- `BindColumns` -Associa le colonne per le funzioni di accesso.  
   
--   `BindParameters` -Associa i parametri creati per le colonne.  
+- `BindParameters` -Associa i parametri creati per le colonne.  
   
--   `Bind` -Creazione di associazioni.  
+- `Bind` -Creazione di associazioni.  
   
--   `Close` -Chiude la funzione di accesso.  
+- `Close` -Chiude la funzione di accesso.  
   
--   `ReleaseAccessors` -Rilascia le funzioni di accesso creati dalla classe.  
+- `ReleaseAccessors` -Rilascia le funzioni di accesso creati dalla classe.  
   
--   `FreeRecordMemory` -Libera tutte le colonne nel record corrente che devono essere liberate.  
+- `FreeRecordMemory` -Libera tutte le colonne nel record corrente che devono essere liberate.  
   
--   `GetColumnInfo` : Ottiene informazioni sulle colonne dal set di righe aperto.  
+- `GetColumnInfo` : Ottiene informazioni sulle colonne dal set di righe aperto.  
   
--   `GetNumAccessors` -Recupera il numero di funzioni di accesso creato dalla classe.  
+- `GetNumAccessors` -Recupera il numero di funzioni di accesso creato dalla classe.  
   
--   `IsAutoAccessor` : Restituisce true se i dati vengono recuperati automaticamente per la funzione di accesso durante un'operazione di spostamento.  
+- `IsAutoAccessor` : Restituisce true se i dati vengono recuperati automaticamente per la funzione di accesso durante un'operazione di spostamento.  
   
--   `GetHAccessor` -Recupera l'handle della funzione di accesso di una funzione di accesso specificato.  
+- `GetHAccessor` -Recupera l'handle della funzione di accesso di una funzione di accesso specificato.  
   
--   `GetBuffer` -Recupera il puntatore al buffer di segnalibro.  
+- `GetBuffer` -Recupera il puntatore al buffer di segnalibro.  
   
--   `NoBindOnNullRowset` -Impedisce l'associazione dati in set di righe vuoto.  
+- `NoBindOnNullRowset` -Impedisce l'associazione dati in set di righe vuoto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli.h  
+
+**Intestazione:** atldbcli.h  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

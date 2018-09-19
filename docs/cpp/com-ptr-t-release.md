@@ -17,28 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c5da56c3c85c17bcd2cd91f9fa5a5f8399e9528
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 444f56c1a999f09a79d725173c9f0f19399ab363
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118362"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
-**Sezione specifica Microsoft**  
-  
- Chiama il **Release** funzione di membro di `IUnknown` sul puntatore a interfaccia incapsulato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void Release( );  
-```  
-  
-## <a name="remarks"></a>Note  
- Le chiamate `IUnknown::Release` sul puntatore a interfaccia incapsulato, che genera un `E_POINTER` errore se il puntatore di interfaccia è NULL.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)
+
+**Sezione specifica Microsoft**
+
+Chiama il **Release** funzione di membro di `IUnknown` sul puntatore a interfaccia incapsulato.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void Release( );
+```
+
+## <a name="remarks"></a>Note
+
+Le chiamate `IUnknown::Release` sul puntatore a interfaccia incapsulato, che genera un `E_POINTER` errore se il puntatore di interfaccia è NULL.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

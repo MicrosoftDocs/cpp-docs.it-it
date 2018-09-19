@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2700 | Documenti Microsoft
+title: Errore del compilatore C2700 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1dd938756caee0906524cc002fa393ff01fd5fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75b4b52c09467bea6e41be7b9fc016884859bd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115775"
 ---
 # <a name="compiler-error-c2700"></a>Errore del compilatore C2700
-'identifier': impossibile utilizzare throw. Per ulteriori informazioni, utilizzare /W4  
-  
- Non è possibile generare l'oggetto. Per altre informazioni di diagnostica, eseguire la compilazione con [/W4](../../build/reference/compiler-option-warning-level.md) .
+
+'identifier': impossibile utilizzare throw. Per ulteriori informazioni, utilizzare /W4
+
+Non è possibile generare l'oggetto. Per altre informazioni di diagnostica, eseguire la compilazione con [/W4](../../build/reference/compiler-option-warning-level.md) .

@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116243"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inizializzazione uniforme e costruttori deleganti
+
 Nel linguaggio C++ moderno, è possibile usare *inizializzazione con parentesi graffe* per qualsiasi tipo, senza il segno di uguale. Inoltre, è possibile utilizzare la delega dei costruttori per semplificare il codice quando si dispone di più costruttori che eseguono operazioni simili.
 
 ## <a name="brace-initialization"></a>Inizializzazione con parentesi graffe
+
 È possibile utilizzare l'inizializzazione con parentesi graffe per qualsiasi classe, struct o unione. Se un tipo dispone di un costruttore predefinito, dichiarato in modo implicito o esplicito, è possibile utilizzare l'inizializzazione predefinita con parentesi graffe (con le parentesi graffe vuote). Ad esempio, la classe seguente può essere inizializzata utilizzando sia l'inizializzazione con parentesi graffe predefinita che quella non predefinita:
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>Costruttori di initializer_list
+
 Il [classe initializer_list](../standard-library/initializer-list-class.md) rappresenta un elenco di oggetti di un tipo specificato che può essere usato in un costruttore e in altri contesti. È possibile creare un initializer_list tramite l'inizializzazione con parentesi graffe:
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>Delega dei costruttori
+
 Molte classi dispongono di più costruttori che svolgono funzioni simili, come ad esempio la convalida di parametri:
 
 ```cpp

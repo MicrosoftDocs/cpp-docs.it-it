@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d771b24db830a03101b7a0041b02aeaeaf3b3b3d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116867"
 ---
 # <a name="csecuritydesc-class"></a>Classe CSecurityDesc
 
@@ -129,13 +129,13 @@ Costruttore.
 
 ```
 CSecurityDesc() throw();
-CSecurityDesc(const CSecurityDesc& rhs) throw(... );  
+CSecurityDesc(const CSecurityDesc& rhs) throw(... );
 CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*rhs*  
+*rhs*<br/>
 Il `CSecurityDesc` oggetto oppure `SECURITY_DESCRIPTOR` struttura da assegnare al nuovo `CSecurityDesc` oggetto.
 
 ### <a name="remarks"></a>Note
@@ -164,7 +164,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*pstr*  
+*pstr*<br/>
 Puntatore a una stringa con terminazione null che contiene il [descrittore di sicurezza in formato stringa](/windows/desktop/SecAuthZ/security-descriptor-string-format) da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -187,7 +187,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*psdc*  
+*psdc*<br/>
 Puntatore a un `SECURITY_DESCRIPTOR_CONTROL` struttura che riceve le informazioni di controllo del descrittore di sicurezza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -211,13 +211,13 @@ bool GetDacl(
 
 ### <a name="parameters"></a>Parametri
 
-*pDacl*  
+*pDacl*<br/>
 Puntatore a un `CDacl` struttura in cui archiviare una copia del DACL del descrittore di sicurezza. Se un ACL discrezionale esiste, il metodo imposta *pDacl* all'indirizzo dell'ACL discrezionale del descrittore di sicurezza. Se un ACL discrezionale non esiste, non viene archiviato alcun valore.
 
-*pbPresent*  
+*pbPresent*<br/>
 Puntatore a un valore che indica la presenza di un ACL discrezionale nel descrittore di sicurezza specificato. Se il descrittore di sicurezza contiene un ACL discrezionale, questo parametro è impostato su true. Se il descrittore di sicurezza non contiene un ACL discrezionale, questo parametro è impostato su false.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Puntatore a un flag impostato sul valore del flag SE_DACL_DEFAULTED nel `SECURITY_DESCRIPTOR_CONTROL` struttura se un ACL discrezionale esiste per il descrittore di sicurezza. Se questo flag è true, l'ACL discrezionale è stato recuperato da un meccanismo predefinito; Se false, l'ACL discrezionale è stato specificato in modo esplicito da un utente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -236,10 +236,10 @@ bool GetGroup(
 
 ### <a name="parameters"></a>Parametri
 
-*pSid*  
+*pSid*<br/>
 Puntatore a un [IDSR](../../atl/reference/csid-class.md) (ID di sicurezza) che riceve una copia del gruppo archiviato nel CDacl.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Puntatore a un flag impostato sul valore del flag SE_GROUP_DEFAULTED nel `SECURITY_DESCRIPTOR_CONTROL` struttura quando restituito dal metodo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -258,10 +258,10 @@ bool GetOwner(
 
 ### <a name="parameters"></a>Parametri
 
-*pSid*  
+*pSid*<br/>
 Puntatore a un [IDSR](../../atl/reference/csid-class.md) (ID di sicurezza) che riceve una copia del gruppo archiviato nel CDacl.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Puntatore a un flag impostato sul valore del flag SE_OWNER_DEFAULTED nel `SECURITY_DESCRIPTOR_CONTROL` struttura quando restituito dal metodo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -293,13 +293,13 @@ bool GetSacl(
 
 ### <a name="parameters"></a>Parametri
 
-*pSacl*  
+*pSacl*<br/>
 Puntatore a un `CSacl` struttura in cui archiviare una copia del SACL del descrittore di sicurezza. Se un ACL di sistema non esiste, il metodo imposta *pSacl* all'indirizzo del sistema del descrittore di sicurezza ACL. Se un ACL di sistema non esiste, non viene archiviato alcun valore.
 
-*pbPresent*  
+*pbPresent*<br/>
 Puntatore a un flag, il metodo imposta per indicare la presenza di un ACL di sistema nel descrittore di sicurezza specificato. Se il descrittore di sicurezza contiene un ACL di sistema, questo parametro è impostato su true. Se il descrittore di sicurezza non contiene un ACL di sistema, questo parametro è impostato su false.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Puntatore a un flag impostato sul valore del flag SE_SACL_DEFAULTED nel `SECURITY_DESCRIPTOR_CONTROL` struttura se esiste un ACL di sistema per il descrittore di sicurezza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -529,13 +529,13 @@ Un descrittore di sicurezza in formato assoluto contiene i puntatori per le info
 Operatore di assegnazione.
 
 ```
-CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);  
+CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);
 CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*rhs*  
+*rhs*<br/>
 Il `SECURITY_DESCRIPTOR` struttura oppure `CSecurityDesc` oggetto da assegnare al `CSecurityDesc` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -546,7 +546,7 @@ Restituisce l'aggiornato `CSecurityDesc` oggetto.
 
 Esegue il cast a un puntatore a un valore di `SECURITY_DESCRIPTOR` struttura.
 
-```  
+```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
@@ -562,10 +562,10 @@ bool SetControl(
 
 ### <a name="parameters"></a>Parametri
 
-*ControlBitsOfInterest*  
+*ControlBitsOfInterest*<br/>
 Maschera SECURITY_DESCRIPTOR_CONTROL che indica i bit del controllo da impostare. Per un elenco di flag che possono essere impostati, vedere [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
 
-*ControlBitsToSet*  
+*ControlBitsToSet*<br/>
 Maschera che indica i nuovi valori per i bit del controllo specificati dalla SECURITY_DESCRIPTOR_CONTROL il *ControlBitsOfInterest* maschera. Questo parametro può essere una combinazione dei flag elencati per il *ControlBitsOfInterest* parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -592,13 +592,13 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>Parametri
 
-*Elenco DACL*  
+*Elenco DACL*<br/>
 Fare riferimento a un `CDacl` oggetto che specifica l'elenco DACL per il descrittore di sicurezza. Questo parametro non deve essere NULL. Per impostare un elenco DACL nel descrittore di sicurezza, la prima forma del metodo deve essere utilizzata con *bPresent* impostato su false.
 
-*bPresent*  
+*bPresent*<br/>
 Specifica un flag che indica la presenza di un elenco DACL nel descrittore di sicurezza. Se questo parametro è true, il metodo imposta il flag SE_DACL_PRESENT `SECURITY_DESCRIPTOR_CONTROL` strutturare e utilizza i valori nel *Dacl* e *bDefaulted* parametri. Se è false, il metodo cancella il flag SE_DACL_PRESENT, e *bDefaulted* viene ignorato.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Specifica un flag che indica l'origine dell'elenco DACL. Se questo flag è true, l'elenco DACL è stato recuperato da un meccanismo predefinito. Se false, l'elenco DACL è stato specificato in modo esplicito da un utente. Il metodo archivia questo valore nel flag SE_DACL_DEFAULTED del `SECURITY_DESCRIPTOR_CONTROL` struttura. Se questo parametro viene omesso, il flag SE_DACL_DEFAULTED viene cancellato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -619,10 +619,10 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*SID*  
+*SID*<br/>
 Fare riferimento a un [IDSR](../../atl/reference/csid-class.md) oggetto per il nuovo gruppo primario del descrittore di sicurezza. Questo parametro non deve essere NULL. Un descrittore di sicurezza può essere contrassegnato come non hanno un DACL né un SACL, ma deve disporre di un gruppo e un proprietario, anche questi sono il SID NULL (ovvero un SID predefinito con un significato speciale).
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Indica se le informazioni sul gruppo primario è stati derivati da un meccanismo predefinito. Se questo valore è true, si tratta di informazioni predefinite e il metodo archivia questo valore come il flag di SE_GROUP_DEFAULTED il `SECURITY_DESCRIPTOR_CONTROL` struttura. Se questo parametro è zero, il flag SE_GROUP_DEFAULTED viene cancellato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -639,10 +639,10 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*SID*  
+*SID*<br/>
 Il [IDSR](../../atl/reference/csid-class.md) oggetto per il nuovo proprietario primario del descrittore di sicurezza. Questo parametro non deve essere NULL.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Indica se le informazioni sul proprietario è derivati da un meccanismo predefinito. Se questo valore è true, è informazioni predefinite. Il metodo archivia questo valore come il flag di SE_OWNER_DEFAULTED il `SECURITY_DESCRIPTOR_CONTROL` struttura. Se questo parametro è zero, il flag SE_OWNER_DEFAULTED viene cancellato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -659,10 +659,10 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*Elenco SACL*  
+*Elenco SACL*<br/>
 Puntatore a un `CSacl` oggetto che specifica l'elenco SACL per il descrittore di sicurezza. Questo parametro non deve essere NULL e deve essere un oggetto CSacl. Differenza DACL, non si verifica alcuna differenza tra NULL e un SACL vuoto, come oggetti SACL non specificano i diritti di accesso, solo le informazioni di controllo.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Specifica un flag che indica l'origine del SACL. Se questo flag è true, l'elenco SACL è stato recuperato da un meccanismo predefinito. Se false, l'elenco SACL è stato specificato in modo esplicito da un utente. Il metodo archivia questo valore nel flag SE_SACL_DEFAULTED del `SECURITY_DESCRIPTOR_CONTROL` struttura. Se questo parametro viene omesso, il flag SE_SACL_DEFAULTED viene cancellato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -682,10 +682,10 @@ bool ToString(
 
 ### <a name="parameters"></a>Parametri
 
-*pstr*  
+*pstr*<br/>
 Puntatore a una stringa con terminazione null che riceverà il [descrittore di sicurezza in formato stringa](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*sistema internazionale di misura*  
+*sistema internazionale di misura*<br/>
 Specifica una combinazione di flag di bit SECURITY_INFORMATION per indicare i componenti del descrittore di sicurezza da includere nella stringa di output.
 
 ### <a name="return-value"></a>Valore restituito
@@ -713,7 +713,7 @@ Questo metodo chiama [convertstringsecuritydescriptortosecuritydescriptor ha](/w
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio di sicurezza](../../visual-cpp-samples.md)   
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Panoramica della classe](../../atl/atl-class-overview.md)   
+[Esempio di sicurezza](../../visual-cpp-samples.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

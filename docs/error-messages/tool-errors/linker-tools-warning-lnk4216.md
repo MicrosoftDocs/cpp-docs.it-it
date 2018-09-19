@@ -1,5 +1,5 @@
 ---
-title: Strumenti del linker LNK4216 avviso | Documenti Microsoft
+title: Strumenti del linker LNK4216 avviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3face9db98fcf2fc727d2bf8713a014f28ca5ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b55ede76c41f4832854d1c4b4c4c4fc2793a5e71
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118869"
 ---
 # <a name="linker-tools-warning-lnk4216"></a>Avviso degli strumenti del linker LNK4216
-Voce di punto di ingresso  
-  
- Un punto di ingresso è stato esportato da una DLL. Non è necessario che il punto di ingresso di una DLL da esportare.
+
+Voce di punto di ingresso esportato
+
+Un punto di ingresso è stato esportato da una DLL. Il punto di ingresso di una DLL non è necessario per l'esportazione.

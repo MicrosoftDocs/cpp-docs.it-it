@@ -1,5 +1,5 @@
 ---
-title: Errore dell'analizzatore di espressioni CXX0069 | Documenti Microsoft
+title: Errore dell'analizzatore di espressioni CXX0069 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cf468ebd2d8d40f306a2fa80a0331d7667d0d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a3efb6432f536ecb929c8ff8670d31030b569b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112733"
 ---
 # <a name="expression-evaluator-error-cxx0069"></a>Errore dell‘analizzatore di espressioni CXX0069
-variabile richiede uno stack frame  
-  
- L'analizzatore di espressioni non è possibile valutare la variabile perché non è presente in uno stack frame. Questo potrebbe essere dovuto a variabili dichiarate come parte di una funzione inline.
+
+variabile richiede uno stack frame
+
+L'analizzatore di espressioni non è possibile valutare la variabile perché non si verifica in uno stack frame. Ciò potrebbe essere dovuto a variabili dichiarate nell'ambito di una funzione inline.

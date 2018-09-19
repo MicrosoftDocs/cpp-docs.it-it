@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2205 | Documenti Microsoft
+title: Errore del compilatore C2205 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279c0fe4121d8820bcca2fa84d154384a3fb0710
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5b0cf62397b04f54d747cc0ae98394a395c8e7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114007"
 ---
 # <a name="compiler-error-c2205"></a>Errore del compilatore C2205
-'identifier': Impossibile inizializzare variabili extern con ambito blocco  
-  
- Un `extern` Impossibile inizializzare la variabile in una funzione.
+
+'identifier': Impossibile inizializzare variabili extern con ambito blocco
+
+Un `extern` Impossibile inizializzare la variabile in una funzione.

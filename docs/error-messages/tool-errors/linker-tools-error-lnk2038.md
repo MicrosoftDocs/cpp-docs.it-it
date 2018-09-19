@@ -1,5 +1,5 @@
 ---
-title: Errore LNK2038 degli strumenti del linker | Documenti Microsoft
+title: Errore LNK2038 degli strumenti del linker | Microsoft Docs
 ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97f65bbe31e51e5083b34949b47a6963696ee37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 009644f18068454b0c765118b29c009cd33241a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118115"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Errore degli strumenti del linker LNK2038
 
-> rilevata mancata corrispondenza per '*nome*': valore '*value_1*'non corrisponde al valore'*value_2*' in *filename. obj*
+> rilevata mancata corrispondenza per '*name*': valore '*value_1*'non corrisponde al valore'*value_2*' in *filename. obj*
 
-Una mancata corrispondenza del simbolo è stata rilevata dal linker. Questo errore indica che le parti diverse di un'app, incluse le librerie o un altro oggetto di codice che i collegamenti di app, usano definizioni in conflitto del simbolo. Il [detect_mismatch](../../preprocessor/detect-mismatch.md) pragma viene utilizzato per definire tali simboli e rilevare i valori in conflitto.
+Una mancata corrispondenza del simbolo è stata rilevata dal linker. Questo errore indica che le parti diverse di un'app, tra cui librerie o un altro oggetto di codice che i collegamenti delle app, usano definizioni in conflitto del simbolo. Il [detect_mismatch](../../preprocessor/detect-mismatch.md) pragma viene usato per definire tali simboli e rilevare i valori in conflitto.
 
 ## <a name="possible-causes-and-solutions"></a>Possibili cause e soluzioni
 
@@ -34,25 +34,21 @@ Questo errore può verificarsi quando un file oggetto nel progetto è scaduto. P
 
 Visual Studio definisce i simboli seguenti per impedire l'accesso del codice incompatibile che può generare errori di runtime o altri comportamenti imprevisti.
 
-- `_MSC_VER`  
-   Indica i numeri delle versioni minore e maggiore del compilatore di Visual C++ utilizzato per compilare un'applicazione o una libreria. Il codice compilato con una versione del compilatore di Visual C++ non è compatibile con il codice compilato utilizzando una versione con diversi numeri di versione maggiore e minore. Per ulteriori informazioni, vedere `_MSC_VER` in [macro predefinite](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` Indica i numeri di versione principale e secondaria del compilatore Visual C++ che consente di compilare un'app o una libreria. Il codice compilato con una versione del compilatore di Visual C++ non è compatibile con il codice compilato utilizzando una versione con diversi numeri di versione maggiore e minore. Per altre informazioni, vedere `_MSC_VER` nelle [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-   Se si collega a una libreria che non è compatibile con la versione del compilatore Visual C++ in uso e non è possibile acquisire o creare una versione compatibile della libreria, è possibile utilizzare una versione precedente del compilatore per compilare il progetto: modificare il **set strumenti della piattaforma** proprietà del progetto per il set di strumenti precedenti. Per ulteriori informazioni, vedere [procedura: modificare il Framework di destinazione e un set di strumenti della piattaforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Se si collega a una libreria che non è compatibile con la versione del compilatore Visual C++ in uso e non è possibile acquisire o creare una versione compatibile della libreria, è possibile utilizzare una versione precedente del compilatore per compilare il progetto: modificare il **set strumenti della piattaforma** proprietà del progetto per il set di strumenti precedenti. Per altre informazioni, vedere [procedura: modificare il Framework di destinazione e il set di strumenti della piattaforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- `_ITERATOR_DEBUG_LEVEL`  
-   Indica il livello di sicurezza e le funzionalità di debug abilitati nella libreria C++ standard. Queste funzionalità possono modificare la rappresentazione di alcuni oggetti della libreria C++ standard e quindi renderli incompatibili con quelli che utilizzano funzionalità di sicurezza e debug diverse. Per altre informazioni, vedere [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
+- `_ITERATOR_DEBUG_LEVEL` Indica il livello di sicurezza e le funzionalità sono abilitate nella libreria Standard C++ di debug. Queste funzionalità possono modificare la rappresentazione di alcuni oggetti della libreria C++ standard e quindi renderli incompatibili con quelli che utilizzano funzionalità di sicurezza e debug diverse. Per altre informazioni, vedere [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
-- `RuntimeLibrary`  
-   Indica la versione della libreria C++ standard e del runtime C utilizzati da un'applicazione o da una libreria. Il codice che utilizza una versione della libreria C++ standard o del runtime C è incompatibile con il codice che utilizza una versione diversa. Per altre informazioni, vedere [/MD, /MT, /LD (utilizzo della libreria di runtime)](../../build/reference/md-mt-ld-use-run-time-library.md).
+- `RuntimeLibrary` Indica la versione di runtime della libreria Standard C++ e C viene utilizzato da un'app o una libreria. Il codice che utilizza una versione della libreria C++ standard o del runtime C è incompatibile con il codice che utilizza una versione diversa. Per altre informazioni, vedere [/MD, /MT, /LD (utilizzo della libreria di runtime)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
-- `_PPLTASKS_WITH_WINRT`  
-   Indica che il codice che utilizza il [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) è collegato a oggetti compilati utilizzando un'impostazione diversa per il [/ZW](../../build/reference/zw-windows-runtime-compilation.md) l'opzione del compilatore. (**/ZW** supporta C + + CX.) Codice che utilizza o dipende dalla libreria PPL deve essere compilato utilizzando lo stesso **/ZW** impostazione utilizzato nel resto dell'applicazione.
+- `_PPLTASKS_WITH_WINRT` Indica che il codice che usa il [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) è collegato a oggetti compilati utilizzando un'impostazione diversa per il [/ZW](../../build/reference/zw-windows-runtime-compilation.md) opzione del compilatore. (**/ZW** supporta C + + c++ /CX.) Codice che utilizza o dipende dalla libreria PPL deve essere compilato usando le stesse **/ZW** impostazione utilizzato nel resto dell'app.
 
 Assicurarsi che i valori di questi simboli siano coerenti in tutti i progetti della soluzione Visual Studio e anche con il codice e le librerie a cui l'applicazione fa riferimento.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemi di una libreria di terze parti e Vcpkg
 
-Se viene visualizzato questo errore quando si sta tentando di configurare una libreria di terze parti come parte della compilazione, è consigliabile utilizzare [Vcpkg](../../vcpkg.md), gestione del pacchetto di Visual C++, per installare e compilare la libreria. Supporta Vcpkg un elevato e crescente [elenco delle librerie di terze parti](https://github.com/Microsoft/vcpkg/tree/master/ports)e imposta le proprietà di configurazione e le dipendenze necessarie per le compilazioni riuscite come parte del progetto. Per ulteriori informazioni, vedere correlata [Blog di Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) post.
+Se viene visualizzato questo errore quando si tenta di configurare una libreria di terze parti come parte della compilazione, è consigliabile usare [Vcpkg](../../vcpkg.md), installare e compilare la libreria di gestione pacchetti Visual C++. Vcpkg supporta un elevato e continuamente crescente [elenco delle librerie di terze parti](https://github.com/Microsoft/vcpkg/tree/master/ports)e imposta tutte le proprietà di configurazione e le dipendenze necessarie per la riuscita della compilazione come parte del progetto. Per altre informazioni, vedere i relativi [Blog di Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) post.
 
 ## <a name="see-also"></a>Vedere anche
 

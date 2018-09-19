@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3670 | Documenti Microsoft
+title: Errore del compilatore C3670 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed70f364ad72160ddc3b9e875d8b1f3b6ee67e3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1129a25e628710121d667a44022eec5a0450b092
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266237"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115333"
 ---
 # <a name="compiler-error-c3670"></a>Errore del compilatore C3670
-'override': Impossibile eseguire l'override di metodo di classe di base inaccessibile 'method'  
-  
- Un override può avvenire solo in una funzione il cui livello di accesso rende disponibili in un tipo derivato. Per ulteriori informazioni, vedere [override espliciti](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- L'esempio seguente genera l'errore C3670:  
-  
-```  
-// C3670.cpp  
-// compile with: /clr /c  
-public ref class C {  
-// Uncomment the following line to resolve.  
-// public:  
-   virtual void g() { }  
-};  
-  
-public ref class D : public C {  
-public:  
-   virtual void f() new sealed = C::g {};   // C3670  
-};  
+
+'override': Impossibile eseguire l'override di metodo di classe di base inaccessibile 'method'
+
+Override può avvenire solo su una funzione il cui livello di accesso lo rende disponibile in un tipo derivato. Per altre informazioni, vedere [esegue l'override esplicito](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+L'esempio seguente genera l'errore C3670:
+
+```
+// C3670.cpp
+// compile with: /clr /c
+public ref class C {
+// Uncomment the following line to resolve.
+// public:
+   virtual void g() { }
+};
+
+public ref class D : public C {
+public:
+   virtual void f() new sealed = C::g {};   // C3670
+};
 ```

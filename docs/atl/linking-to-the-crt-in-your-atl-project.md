@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d5548089f66a26f633e5692f1fe2199a8109904
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6d38b53d875db5f0ab5a3d096a57494791c027da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113084"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Collegamento a CRT nel progetto ATL
 
@@ -47,6 +47,6 @@ Usando l'opzione del linker/OPT:NOWIN98 può ridurre ulteriormente un controllo 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Programmazione con codice di runtime C e ATL](../atl/programming-with-atl-and-c-run-time-code.md)   
+[Programmazione con il codice runtime C e ATL](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [DLL e comportamento delle librerie di runtime Visual C++](../build/run-time-library-behavior.md)
 

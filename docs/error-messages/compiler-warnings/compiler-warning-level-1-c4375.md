@@ -1,5 +1,5 @@
 ---
-title: Compilatore avviso (livello 1) C4375 | Documenti Microsoft
+title: Compilatore avviso (livello 1) C4375 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ff084da77768e4e5a4abd153c5c96d91e738a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd7fa14b1ff7b0925dad5eed2e2d84f3531ad599
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114215"
 ---
 # <a name="compiler-warning-level-1-c4375"></a>Avviso del compilatore (livello 1) C4375
-il metodo non pubblico 'method2' non esegue l'override di 'method1'  
-  
- Un tipo che implementa un altro tipo è definito un metodo di override, ma non la sostituzione non è pubblica. Pertanto, il metodo non esegue l'override del metodo di tipo di base.
+
+metodo non pubblico 'method2' non esegue l'override di 'method1'
+
+Un tipo che implementa un altro tipo definiti un metodo di override, ma non la sostituzione non è pubblica. Pertanto, il metodo non esegue l'override del metodo di tipo base.

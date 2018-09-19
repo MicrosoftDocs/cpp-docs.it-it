@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf97db30cae44d02a690782f1246e06d6c2b9a8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766721"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112993"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Aggiunta di un componente ASP ATL
 
@@ -46,10 +46,10 @@ Componenti ASP fanno parte dell'architettura di Internet Information Services, c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)   
-[Aggiunta di una nuova interfaccia in un progetto ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[Aggiunta di punti di connessione a un oggetto](../../atl/adding-connection-points-to-an-object.md)   
-[Aggiunta di un metodo](../../ide/adding-a-method-visual-cpp.md)   
-[Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
+[Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Aggiunta di una nuova interfaccia in un progetto ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[Aggiunta di punti di connessione a un oggetto](../../atl/adding-connection-points-to-an-object.md)<br/>
+[Aggiunta di un metodo](../../ide/adding-a-method-visual-cpp.md)<br/>
+[Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Aggiunta di una classe C++ generica](../../ide/adding-a-generic-cpp-class.md)
 

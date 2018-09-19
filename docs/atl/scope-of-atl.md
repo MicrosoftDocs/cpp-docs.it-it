@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35256dcf1d43b2e176c722e7dfa1b2087029e277
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 99be937416642ec60466eb196dce64e68fea4de1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761781"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113968"
 ---
 # <a name="scope-of-atl"></a>Ambito di ATL
 
@@ -29,6 +29,6 @@ ATL viene fornito come codice sorgente che include nell'applicazione. ATL mette 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Introduzione a ATL](../atl/introduction-to-atl.md)   
+[Introduzione a ATL](../atl/introduction-to-atl.md)<br/>
 [Creazione guidata progetto ATL](../atl/reference/atl-project-wizard.md)
 

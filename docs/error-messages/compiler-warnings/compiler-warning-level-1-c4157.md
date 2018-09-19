@@ -1,5 +1,5 @@
 ---
-title: Compilatore (livello 1) Avviso C4157 | Documenti Microsoft
+title: Compilatore Warning (level 1) C4157 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8808f7b384deeed9a0ea1c6e780c7167d2098b53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4722c260c0c5cb8e50b45dbabe546749f50c51e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136199"
 ---
-# <a name="compiler-warning-level-1-c4157"></a>Compilatore (livello 1) Avviso C4157
-pragma ignorato dal compilatore C  
-  
- Solo il compilatore C++ riconosce **init_seg ()**.
+# <a name="compiler-warning-level-1-c4157"></a>Compilatore Warning (level 1) C4157
+
+pragma ignorato dal compilatore C
+
+Solo il compilatore C++ riconosce **init_seg ()**.
