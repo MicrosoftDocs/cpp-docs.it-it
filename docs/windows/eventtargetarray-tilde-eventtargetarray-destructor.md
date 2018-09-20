@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6fc209158afc21872df869e81296b94159c5bc4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f880449dcc3839d0ce0f5532b7b7bc84324568d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613560"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428213"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>Distruttore EventTargetArray::~EventTargetArray
 
@@ -46,5 +46,5 @@ Deinizializza corrente **EventTargetArray** classe.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe EventTargetArray](../windows/eventtargetarray-class.md)  
+[Classe EventTargetArray](../windows/eventtargetarray-class.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

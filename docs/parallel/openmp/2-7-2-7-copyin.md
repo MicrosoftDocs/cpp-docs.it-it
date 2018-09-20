@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.7 copyin | Documenti Microsoft
+title: 2.7.2.7 copyin | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee711bfb24e7a2a1cbada1a7e01a243e204f4a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 94b4c529b7ad6fd717be1e1dee0edd3ff9ac3ff5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689376"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426887"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
-Il **copyin** clausola fornisce un meccanismo per assegnare lo stesso valore per **threadprivate** variabili per ogni thread del team, l'esecuzione di tale area. Per ogni variabile specificata in un **copyin** clausola, il valore della variabile nel thread principale del team viene copiato, come se mediante assegnazione, per le copie del thread privato all'inizio di tale area. La sintassi del **copyin** clausola è il seguente:  
-  
-```  
-  
-copyin(  
-variable-list  
-)  
-  
-```  
-  
- Le restrizioni per il **copyin** clausola sono i seguenti:  
-  
--   Una variabile specificata nella **copyin** clausola deve avere un operatore di assegnazione di copia accessibile e non ambigua.  
-  
--   Una variabile specificata nella **copyin** clausola deve essere un **threadprivate** variabile.
+
+Il **copyin** clausola fornisce un meccanismo per assegnare lo stesso valore per **threadprivate** variabili per ogni thread del team l'esecuzione di tale area. Per ogni variabile specificata una **copyin** clausola, il valore della variabile nel thread master del team a cui viene copiato, come se fosse assegnazione, per le copie di thread privato all'inizio dell'area parallela. La sintassi del **copyin** clausola è il seguente:
+
+```
+
+copyin(
+variable-list
+)
+
+```
+
+Le restrizioni per il **copyin** clausola sono i seguenti:
+
+- Una variabile specificata nella **copyin** clausola deve avere un operatore di assegnazione copia accessibile e non ambigua.
+
+- Una variabile specificata nella **copyin** clausola deve essere un **threadprivate** variabile.

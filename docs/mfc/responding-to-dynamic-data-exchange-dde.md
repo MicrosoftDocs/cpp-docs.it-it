@@ -1,5 +1,5 @@
 ---
-title: Risponde a Dynamic Data Exchange (DDE) | Documenti Microsoft
+title: Risponde a Dynamic Data Exchange (DDE) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 327a719de5cdd3eef7c0eb769b0abf7cfe03ca49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f55836f013ffb85bb1d490190dc5c0d196cffcf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379203"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423468"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Risposta a DDE (Dynamic Data Exchange)
-La finestra cornice può rispondere alle richieste di dynamic data exchange (DDE) per aprire i file in File Manager (se l'estensione del file è registrata o associata all'applicazione). Vedere [Shell registrazione](../mfc/special-cwinapp-services.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso di finestre cornice](../mfc/using-frame-windows.md)
+
+La finestra cornice può rispondere alle richieste di dynamic data exchange (DDE) per aprire i file in File Manager (se l'estensione del file è registrato oppure associato all'applicazione). Visualizzare [registrazione della Shell](../mfc/special-cwinapp-services.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di finestre cornice](../mfc/using-frame-windows.md)
 

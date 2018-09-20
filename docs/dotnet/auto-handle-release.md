@@ -1,5 +1,5 @@
 ---
-title: auto_handle::Release | Documenti Microsoft
+title: auto_handle::Release | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,82 +20,86 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6fd49ba3446e6c066479e07df59dc049abe4e2ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5237ec59d8e90a793d6df83d6dbc2c0ff1ec1cb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106661"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391748"
 ---
 # <a name="autohandlerelease"></a>auto_handle::release
-Rilascia l'oggetto da `auto_handle` management.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-_element_type ^ release();  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- L'oggetto rilasciato.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// msl_auto_handle_release.cpp  
-// compile with: /clr  
-#include <msclr\auto_handle.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-ref class ClassA {  
-   String^ m_s;  
-public:  
-   ClassA( String^ s ) : m_s( s ) {  
-      Console::WriteLine( "ClassA constructor: " + m_s );  
-   }  
-   ~ClassA() {  
-      Console::WriteLine( "ClassA destructor: " + m_s );  
-   }  
-  
-   void PrintHello() {  
-      Console::WriteLine( "Hello from {0} A!", m_s );     
-   }  
-};  
-  
-int main()  
-{  
-   ClassA^ a;  
-  
-   // create a new scope:  
-   {  
-      auto_handle<ClassA> agc1 = gcnew ClassA( "first" );  
-      auto_handle<ClassA> agc2 = gcnew ClassA( "second" );  
-      a = agc1.release();  
-   }  
-   // agc1 and agc2 go out of scope here  
-  
-   a->PrintHello();  
-  
-   Console::WriteLine( "done" );  
-}  
-```  
-  
-```Output  
-ClassA constructor: first  
-ClassA constructor: second  
-ClassA destructor: second  
-Hello from first A!  
-done  
-```  
-  
-## <a name="requirements"></a>Requisiti  
- **File di intestazione** \<msclr\auto_handle.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>Vedere anche  
- [Membri auto_handle](../dotnet/auto-handle-members.md)   
- [auto_handle:: ~ auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)   
- [auto_handle::reset](../dotnet/auto-handle-reset.md)
+
+Rilascia l'oggetto da `auto_handle` management.
+
+## <a name="syntax"></a>Sintassi
+
+```
+_element_type ^ release();
+```
+
+## <a name="return-value"></a>Valore restituito
+
+L'oggetto rilasciato.
+
+## <a name="example"></a>Esempio
+
+```
+// msl_auto_handle_release.cpp
+// compile with: /clr
+#include <msclr\auto_handle.h>
+
+using namespace System;
+using namespace msclr;
+
+ref class ClassA {
+   String^ m_s;
+public:
+   ClassA( String^ s ) : m_s( s ) {
+      Console::WriteLine( "ClassA constructor: " + m_s );
+   }
+   ~ClassA() {
+      Console::WriteLine( "ClassA destructor: " + m_s );
+   }
+
+   void PrintHello() {
+      Console::WriteLine( "Hello from {0} A!", m_s );
+   }
+};
+
+int main()
+{
+   ClassA^ a;
+
+   // create a new scope:
+   {
+      auto_handle<ClassA> agc1 = gcnew ClassA( "first" );
+      auto_handle<ClassA> agc2 = gcnew ClassA( "second" );
+      a = agc1.release();
+   }
+   // agc1 and agc2 go out of scope here
+
+   a->PrintHello();
+
+   Console::WriteLine( "done" );
+}
+```
+
+```Output
+ClassA constructor: first
+ClassA constructor: second
+ClassA destructor: second
+Hello from first A!
+done
+```
+
+## <a name="requirements"></a>Requisiti
+
+**File di intestazione** \<msclr\auto_handle.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>Vedere anche
+
+[Membri auto_handle](../dotnet/auto-handle-members.md)<br/>
+[auto_handle::~auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)<br/>
+[auto_handle::reset](../dotnet/auto-handle-reset.md)

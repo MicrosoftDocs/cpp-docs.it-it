@@ -1,5 +1,5 @@
 ---
-title: 1.5 riferimenti alle normative | Documenti Microsoft
+title: 1.5 riferimenti alle normative | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc062a1902e8e3c8f64a98af84fed54c272dc727
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1be82b922d673d173daabf9185b6936111abc3b8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685593"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444619"
 ---
 # <a name="15-normative-references"></a>1.5 Riferimenti alle normative
--   ISO/IEC 9899: 1999 a, *informazioni tecnologia - linguaggi di programmazione - C*. Questa API OpenMP fa riferimento la specifica ISO/IEC 9899: 1999 come C99.  
-  
--   ISO/IEC 9899: 1990 a, *informazioni tecnologia - linguaggi di programmazione - C*. Questa specifica OpenMP API fa riferimento a 9899: 1990 ISO/IEC come C90.  
-  
--   ISO/IEC 14882:1998, *informazioni tecnologia - linguaggi di programmazione - C++*. Questa API OpenMP fa riferimento la specifica ISO/IEC 14882:1998 come C++.  
-  
- In questa specifica OpenMP API fa riferimento a C, viene fatto riferimento per la lingua supportata dall'implementazione di base.
+
+- ISO/IEC 9899:1999, *informazioni tecnologia - linguaggi di programmazione - C*. Questa specifica API OpenMP fa riferimento a ISO/IEC 9899:1999 come C99.
+
+- 9899:1990, ISO/IEC *informazioni tecnologia - linguaggi di programmazione - C*. Questa specifica API OpenMP fa riferimento a ISO/IEC 9899:1990 come C90.
+
+- 14882:1998, ISO/IEC *C++ tecnologia - linguaggi di programmazione - informazioni*. Questa specifica API OpenMP fa riferimento a ISO/IEC 14882:1998 come C++.
+
+In questa specifica API OpenMP fa riferimento a C, viene fatto riferimento al linguaggio di base supportato dall'implementazione.

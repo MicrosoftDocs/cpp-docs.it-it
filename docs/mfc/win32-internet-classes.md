@@ -19,59 +19,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1e93c2c3ea9efeb8be6ec5d79b9f2ef7729b9e9
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: a1b4adb3de5c6ec57b9f6bc2c48385916c3e5076
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534937"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445698"
 ---
 # <a name="win32-internet-classes"></a>Classi Internet Win32
+
 MFC esegue il wrapping della Internet Win32 (WinInet) e della tecnologia di ActiveX per semplificare la programmazione Internet.
 
 >[!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
-  
-  
- [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- Crea e Inizializza una o più sessioni Internet simultanee e, se necessario, viene descritta la connessione a un server proxy.  
-  
- [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
- Gestisce la connessione a un server Internet.  
-  
- [CInternetFile](../mfc/reference/cinternetfile-class.md)  
- Questa classe e le relative classi derivate possono accedere ai file nei sistemi remoti che utilizzano protocolli Internet.  
-  
- [CHttpConnection](../mfc/reference/chttpconnection-class.md)  
- Gestisce la connessione a un server HTTP.  
-  
- [CHttpFile](../mfc/reference/chttpfile-class.md)  
- Fornisce la funzionalità per individuare e leggere i file in un server HTTP.  
-  
- [CGopherFile](../mfc/reference/cgopherfile-class.md)  
- Fornisce la funzionalità per individuare e leggere file in un server gopher.  
-  
- [CFtpConnection](../mfc/reference/cftpconnection-class.md)  
- Gestisce la connessione a un server FTP.  
-  
- [CGopherConnection](../mfc/reference/cgopherconnection-class.md)  
- Gestisce la connessione a un server gopher.  
-  
- [CFileFind](../mfc/reference/cfilefind-class.md)  
- Esegue ricerche di file su Internet e locali.  
-  
- [Classe CFtpFileFind](../mfc/reference/cftpfilefind-class.md)  
- Facilita le ricerche di file su Internet dei server FTP.  
-  
- [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)  
- Facilita le ricerche di file su Internet dei server gopher.  
-  
- [CGopherLocator](../mfc/reference/cgopherlocator-class.md)  
- Ottiene un "localizzatore" gopher da un server gopher, determina il tipo di localizzatore e lo rende disponibile per `CGopherFileFind`.  
-  
- [Classe CInternetException](../mfc/reference/cinternetexception-class.md)  
- Rappresenta una condizione di eccezione correlata a un'operazione su Internet.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica della classe](../mfc/class-library-overview.md)
+
+
+[CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
+Crea e Inizializza una o più sessioni Internet simultanee e, se necessario, viene descritta la connessione a un server proxy.
+
+[CInternetConnection](../mfc/reference/cinternetconnection-class.md)<br/>
+Gestisce la connessione a un server Internet.
+
+[CInternetFile](../mfc/reference/cinternetfile-class.md)<br/>
+Questa classe e le relative classi derivate possono accedere ai file nei sistemi remoti che utilizzano protocolli Internet.
+
+[CHttpConnection](../mfc/reference/chttpconnection-class.md)<br/>
+Gestisce la connessione a un server HTTP.
+
+[CHttpFile](../mfc/reference/chttpfile-class.md)<br/>
+Fornisce la funzionalità per individuare e leggere i file in un server HTTP.
+
+[CGopherFile](../mfc/reference/cgopherfile-class.md)<br/>
+Fornisce la funzionalità per individuare e leggere file in un server gopher.
+
+[CFtpConnection](../mfc/reference/cftpconnection-class.md)<br/>
+Gestisce la connessione a un server FTP.
+
+[CGopherConnection](../mfc/reference/cgopherconnection-class.md)<br/>
+Gestisce la connessione a un server gopher.
+
+[CFileFind](../mfc/reference/cfilefind-class.md)<br/>
+Esegue ricerche di file su Internet e locali.
+
+[Classe CFtpFileFind](../mfc/reference/cftpfilefind-class.md)<br/>
+Facilita le ricerche di file su Internet dei server FTP.
+
+[CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)<br/>
+Facilita le ricerche di file su Internet dei server gopher.
+
+[CGopherLocator](../mfc/reference/cgopherlocator-class.md)<br/>
+Ottiene un "localizzatore" gopher da un server gopher, determina il tipo di localizzatore e lo rende disponibile per `CGopherFileFind`.
+
+[Classe CInternetException](../mfc/reference/cinternetexception-class.md)<br/>
+Rappresenta una condizione di eccezione correlata a un'operazione su Internet.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../mfc/class-library-overview.md)
 

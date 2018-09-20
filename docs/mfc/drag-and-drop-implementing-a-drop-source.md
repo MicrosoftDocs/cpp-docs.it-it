@@ -1,5 +1,5 @@
 ---
-title: "Trascinamento della selezione: implementazione di un'origine di rilascio | Documenti Microsoft"
+title: "Trascinamento della selezione: implementazione di un'origine di rilascio | Microsoft Docs"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 71f82bbd975f5ff24f3b254abc46e5e6ffa3a34a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928980"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427654"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Trascinamento della sezione: implementazione di un'origine di rilascio
-In questo articolo viene illustrato come ottenere l'applicazione per fornire dati a un'operazione di trascinamento e rilascio.  
-  
- Implementazione di base di un'origine di rilascio è relativamente semplice. Il primo passaggio consiste nel determinare quali eventi inizia un'operazione di trascinamento. Consiglia di linee guida sull'interfaccia utente definiscono l'inizio di un'operazione di trascinamento della selezione di dati e un **WM_LBUTTONDOWN** evento che si verifica in un punto all'interno dei dati selezionati. Gli esempi OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md) seguire queste linee guida.  
-  
- Se l'applicazione è un contenitore e i dati selezionati sono collegato o un oggetto del tipo incorporato `COleClientItem`, chiamare il relativo `DoDragDrop` funzione membro. In caso contrario, creare una `COleDataSource` dell'oggetto, inizializzarlo con la selezione e chiamare l'oggetto origine dati `DoDragDrop` funzione membro. Se l'applicazione è un server, utilizzare `COleServerItem::DoDragDrop`. Per informazioni sulla personalizzazione del comportamento di trascinamento e rilascio standard, vedere l'articolo [trascinamento della selezione: personalizzazione](../mfc/drag-and-drop-customizing.md).  
-  
- Se `DoDragDrop` restituisce **DROPEFFECT_MOVE**, eliminare immediatamente i dati di origine dal documento di origine. Nessun altro valore restituito da `DoDragDrop` avrà effetto su un'origine di rilascio.  
-  
- Per altre informazioni, vedere:  
-  
--   [Implementazione di un obiettivo di rilascio](../mfc/drag-and-drop-implementing-a-drop-target.md)  
-  
--   [Trascinamento della personalizzazione](../mfc/drag-and-drop-customizing.md)  
-  
--   [Creazione e distruzione di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
-  
--   [La modifica di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-manipulation.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Trascinamento della selezione (OLE)](../mfc/drag-and-drop-ole.md)   
- [COleDataSource:: DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)   
- [COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)   
- [CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
+
+Questo articolo illustra come ottenere l'applicazione per fornire dati a un'operazione di trascinamento e rilascio.
+
+Implementazione di base di un'origine di trascinamento è relativamente semplice. Il primo passaggio è determinare quali eventi inizia un'operazione di trascinamento. Consiglia di linee guida dell'interfaccia utente definiscono l'inizio di un'operazione di trascinamento della selezione dei dati e un **WM_LBUTTONDOWN** evento che si verificano in un punto all'interno dei dati selezionati. Gli esempi OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md) seguire queste linee guida.
+
+Se l'applicazione è un contenitore e i dati selezionati sono collegato o un oggetto di tipo incorporato `COleClientItem`, chiamare il `DoDragDrop` funzione membro. In caso contrario, creare un `COleDataSource` dell'oggetto, inizializzarlo con la selezione e chiamare l'oggetto origine dati `DoDragDrop` funzione membro. Se l'applicazione è un server, usare `COleServerItem::DoDragDrop`. Per informazioni sulla personalizzazione del comportamento di trascinamento e rilascio standard, vedere l'articolo [trascinamento della selezione: personalizzazione](../mfc/drag-and-drop-customizing.md).
+
+Se `DoDragDrop` restituisce **DROPEFFECT_MOVE**, eliminare immediatamente i dati di origine dal documento di origine. Nessun altro valore restituito da `DoDragDrop` avrà effetto su un'origine di trascinamento.
+
+Per altre informazioni, vedere:
+
+- [Implementazione di un obiettivo di rilascio](../mfc/drag-and-drop-implementing-a-drop-target.md)
+
+- [Selezione e trascinamento personalizzazione](../mfc/drag-and-drop-customizing.md)
+
+- [Creazione ed eliminazione di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+
+- [La modifica di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-manipulation.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Trascinamento della selezione (OLE)](../mfc/drag-and-drop-ole.md)<br/>
+[COleDataSource:: DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)<br/>
+[COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)<br/>
+[CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
 

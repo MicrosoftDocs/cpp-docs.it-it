@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: Eventi | Documenti Microsoft'
+title: 'Controlli ActiveX MFC: Eventi | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,40 +23,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6c8ee059b4136ce1504117246abd12ac74a6233
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4c60c949832f03df6b7bb0e69cfdd95dfafc137
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348390"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422870"
 ---
 # <a name="mfc-activex-controls-events"></a>Controlli ActiveX MFC: eventi
-Controlli ActiveX utilizzano eventi per notificare a un contenitore in cui è avvenuto qualcosa al controllo. Esempi comuni di eventi includono clic sul controllo, i dati immessi utilizzando la tastiera e le modifiche nello stato del controllo. Quando si verificano queste azioni, il controllo genera un evento per generare un avviso del contenitore.  
-  
- Gli eventi vengono chiamati anche i messaggi.  
-  
- MFC supporta due tipi di eventi: predefinite e personalizzate. Eventi predefiniti sono gli eventi che classe [COleControl](../mfc/reference/colecontrol-class.md) gestisce automaticamente. Per un elenco completo di eventi predefiniti, vedere l'articolo [controlli ActiveX MFC: aggiunta di eventi predefiniti](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Eventi personalizzati consentono un controllo di notificare al contenitore quando si verifica un'azione specifica a tale controllo. Alcuni esempi possono essere una modifica lo stato interno di un controllo o la ricezione di un determinato messaggio della finestra.  
-  
- Per il controllo generare eventi in modo corretto, la classe di controllo necessario eseguire il mapping di ogni evento del controllo a una funzione membro che deve essere chiamata quando si verifica l'evento correlato. Questo meccanismo di mapping (chiamato mappa eventi) centralizza le informazioni sull'evento e consente a Visual Studio per facilmente accedere e modificare gli eventi del controllo. Questa mappa di evento è dichiarata dalla macro seguente, si trova nell'intestazione (. H) file della dichiarazione di classe di controllo:  
-  
- [!code-cpp[NVC_MFC_AxUI#2](../mfc/codesnippet/cpp/mfc-activex-controls-events_1.h)]  
-  
- La mappa eventi è stata dichiarata, deve essere definito nell'implementazione del controllo (. File CPP). Le righe di codice seguenti definiscono la mappa di eventi, consentendo al controllo di generare eventi specifici:  
-  
- [!code-cpp[NVC_MFC_AxUI#3](../mfc/codesnippet/cpp/mfc-activex-controls-events_2.cpp)]  
-[!code-cpp[NVC_MFC_AxUI#4](../mfc/codesnippet/cpp/mfc-activex-controls-events_3.cpp)]  
-  
- Se si utilizza Creazione guidata controllo ActiveX MFC per creare il progetto, viene aggiunta automaticamente queste righe. Se non si utilizza Creazione guidata controllo ActiveX MFC, è necessario aggiungere manualmente queste righe.  
-  
- In visualizzazione classi, è possibile aggiungere eventi predefiniti supportati dalla classe `COleControl` o gli eventi personalizzati definiti. Per ogni nuovo evento, Visualizzazione classi aggiunge automaticamente la voce corretta mappa eventi del controllo e il controllo. File IDL.  
-  
- Questa sezione illustra gli eventi in modo dettagliato altri due articoli:  
-  
--   [Controlli ActiveX MFC: Aggiunta di eventi predefiniti](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
-  
--   [Controlli ActiveX MFC: aggiunta di eventi personalizzati](../mfc/mfc-activex-controls-adding-custom-events.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Controlli ActiveX MFC: metodi](../mfc/mfc-activex-controls-methods.md)   
- [Classe COleControl](../mfc/reference/colecontrol-class.md)
+
+Controlli ActiveX utilizzano eventi per notificare a un contenitore che è accaduto qualcosa al controllo. Esempi comuni di eventi includono clic sul controllo, i dati immessi utilizzando la tastiera e le modifiche nello stato del controllo. Quando si verificano queste azioni, il controllo genera un evento per generare un avviso del contenitore.
+
+Gli eventi vengono chiamati anche i messaggi.
+
+MFC supporta due tipi di eventi: predefinite e personalizzate. Eventi predefiniti sono gli eventi che classe [COleControl](../mfc/reference/colecontrol-class.md) gestisce automaticamente. Per un elenco completo di eventi predefiniti, vedere l'articolo [controlli ActiveX MFC: aggiunta di eventi predefiniti](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Gli eventi personalizzati consentono un controllo la possibilità di notificare al contenitore quando si verifica un'azione specifica a tale controllo. Alcuni esempi sarebbe una modifica lo stato interno di un controllo o la ricezione di un determinato messaggio della finestra.
+
+Per il controllo può generare eventi in modo corretto, la classe del controllo deve eseguire il mapping di ogni evento del controllo a una funzione membro che deve essere chiamata quando si verifica l'evento correlato. Questo meccanismo di mapping (una mappa eventi denominato) consente di centralizzare le informazioni sull'evento e consente a Visual Studio accedere e modificare gli eventi del controllo facilmente. Questa mappa eventi viene dichiarata dalla macro seguente, che si trova nell'intestazione (. H) file della dichiarazione di classe di controllo:
+
+[!code-cpp[NVC_MFC_AxUI#2](../mfc/codesnippet/cpp/mfc-activex-controls-events_1.h)]
+
+Dopo aver dichiarata la mappa di evento, deve essere definita nell'implementazione del controllo (. File CPP). Le righe di codice seguenti definiscono la mappa di eventi, consentendo il controllo attivare eventi specifici:
+
+[!code-cpp[NVC_MFC_AxUI#3](../mfc/codesnippet/cpp/mfc-activex-controls-events_2.cpp)]
+[!code-cpp[NVC_MFC_AxUI#4](../mfc/codesnippet/cpp/mfc-activex-controls-events_3.cpp)]
+
+Se si usa la creazione guidata controllo ActiveX MFC per creare il progetto, lo aggiunge automaticamente le righe seguenti. Se non si utilizza la creazione guidata controllo ActiveX MFC, è necessario aggiungere manualmente queste righe.
+
+Visualizzazione classi, è possibile aggiungere eventi predefiniti supportati dalla classe `COleControl` o eventi personalizzati definiti. Per ogni nuovo evento, Visualizzazione classi aggiunge automaticamente la voce appropriata per mappa di eventi del controllo e del controllo. File IDL.
+
+Altri due articoli illustrano gli eventi in modo dettagliato:
+
+- [Controlli ActiveX MFC: Aggiunta di eventi predefiniti](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
+
+- [Controlli ActiveX MFC: aggiunta di eventi personalizzati](../mfc/mfc-activex-controls-adding-custom-events.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
+[Controlli ActiveX MFC: metodi](../mfc/mfc-activex-controls-methods.md)<br/>
+[Classe COleControl](../mfc/reference/colecontrol-class.md)

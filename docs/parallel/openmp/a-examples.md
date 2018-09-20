@@ -1,5 +1,5 @@
 ---
-title: Un  Esempi di | Documenti Microsoft
+title: Un  Esempi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67c29bbded76f4ef44337e557b58b6bad828947
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3747b8a73c372ae3226b1f0c4f762da34dc40eab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695418"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446244"
 ---
 # <a name="a-examples"></a>Un  Esempi
-Di seguito sono riportati esempi di costrutti definiti in questo documento. Si noti che un'istruzione che segue una direttiva è composta solo quando necessario, e un'istruzione non composta viene rientrata rispetto a una direttiva precedente.
+
+Di seguito è riportati esempi dei costrutti definiti in questo documento. Si noti che un'istruzione che segue una direttiva è composta solo quando necessario, e un'istruzione non composta viene rientrata rispetto a una direttiva che la precede.

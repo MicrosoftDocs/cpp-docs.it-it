@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b4e1eaf4bfca27ef22af103a5696ca2a34265d6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e62dc4ad1600b2e5cc7f955c4a419d27482bb557
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433218"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>Classe invalid_oversubscribe_operation
-Questa classe descrive un'eccezione generata quando il metodo `Context::Oversubscribe` viene chiamato con il parametro `_BeginOversubscription` impostato su `false` senza una chiamata precedente al metodo `Context::Oversubscribe` con il parametro `_BeginOversubscription` impostato su `true`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-class invalid_oversubscribe_operation : public std::exception;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[invalid_oversubscribe_operation](#ctor)|Di overload. Costruisce un oggetto `invalid_oversubscribe_operation`.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `exception`  
-  
- `invalid_oversubscribe_operation`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt. h  
-  
- **Spazio dei nomi:** Concurrency  
-  
-##  <a name="ctor"></a> invalid_oversubscribe_operation 
 
- Costruisce un oggetto `invalid_oversubscribe_operation`.  
-  
-```  
+Questa classe descrive un'eccezione generata quando il metodo `Context::Oversubscribe` viene chiamato con il parametro `_BeginOversubscription` impostato su `false` senza una chiamata precedente al metodo `Context::Oversubscribe` con il parametro `_BeginOversubscription` impostato su `true`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+class invalid_oversubscribe_operation : public std::exception;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[invalid_oversubscribe_operation](#ctor)|Di overload. Costruisce un oggetto `invalid_oversubscribe_operation`.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`exception`
+
+`invalid_oversubscribe_operation`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** concrt. h
+
+**Spazio dei nomi:** Concurrency
+
+##  <a name="ctor"></a> invalid_oversubscribe_operation
+
+Costruisce un oggetto `invalid_oversubscribe_operation`.
+
+```
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();
 
- 
 invalid_oversubscribe_operation() throw();
-```  
-  
-### <a name="parameters"></a>Parametri  
+```
+
+### <a name="parameters"></a>Parametri
+
 *Messaggio*<br/>
-Messaggio descrittivo dell'errore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi concurrency](concurrency-namespace.md)
+Messaggio descrittivo dell'errore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi concurrency](concurrency-namespace.md)

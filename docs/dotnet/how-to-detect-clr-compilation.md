@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: rilevare la compilazione clr-| Documenti Microsoft'
+title: 'Procedura: rilevare compilazioni - clr | Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 01cabb9d9288a1e9da28c779e7cf663fe7ae6a43
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ea3c18a06e993e67106955f48d7fe1caec101ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130769"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436975"
 ---
 # <a name="how-to-detect-clr-compilation"></a>Procedura: rilevare compilazioni /clr
-Utilizzare il `_MANAGED` o `_M_CEE` macro per vedere se un modulo compilato con **/clr**. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
-  
- Per ulteriori informazioni sulle macro, vedere [macro predefinite](../preprocessor/predefined-macros.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// detect_CLR_compilation.cpp  
-// compile with: /clr  
-#include <stdio.h>  
-  
-int main() {  
-   #if (_MANAGED == 1) || (_M_CEE == 1)  
-      printf_s("compiling with /clr\n");  
-   #else  
-      printf_s("compiling without /clr\n");  
-   #endif  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Usare la `_MANAGED` oppure `_M_CEE` macro per determinare se un modulo è stato compilato con **/clr**. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+
+Per altre informazioni sulle macro, vedere [Predefined Macros](../preprocessor/predefined-macros.md).
+
+## <a name="example"></a>Esempio
+
+```
+// detect_CLR_compilation.cpp
+// compile with: /clr
+#include <stdio.h>
+
+int main() {
+   #if (_MANAGED == 1) || (_M_CEE == 1)
+      printf_s("compiling with /clr\n");
+   #else
+      printf_s("compiling without /clr\n");
+   #endif
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7abdc8f2deee962dc6ee5bcfa9857efb6f0bd847
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e0c6e860fa5d7633bd334d0c0a35d25936104636
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427706"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Vincoli su parametri di tipo generico (C++/CLI)
 
@@ -39,10 +39,10 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>Parametri
 
-*parametro di tipo*  
+*parametro di tipo*<br/>
 Uno dei parametri di tipo da vincolare.
 
-*elenco di vincoli*  
+*elenco di vincoli*<br/>
 *elenco di vincoli* è un elenco delimitato da virgole di specifiche del vincolo. Nell'elenco possono essere incluse le interfacce che devono essere implementate dal parametro di tipo.
 
 Inoltre può essere compresa una classe. Affinché l'argomento tipo soddisfi un vincolo della classe base, deve trattarsi di una classe uguale a quella del vincolo o derivare dal vincolo.

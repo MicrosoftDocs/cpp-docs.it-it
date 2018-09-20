@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c2de62df47e46183c1169956a18ddc10822b22a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99e82de06f64816521c47c78648108a9ae815279
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611921"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443228"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>Operatore DontUseNewUseMake::operator new
 
@@ -39,10 +39,10 @@ void* operator new(
 
 ### <a name="parameters"></a>Parametri
 
-*__unnamed0*  
+*__unnamed0*<br/>
 Un parametro non denominato che specifica il numero di byte di memoria da allocare.
 
-*selezione host*  
+*selezione host*<br/>
 Il tipo da allocare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -61,5 +61,5 @@ Operatore di overload **nuove** e impedisce l'utilizzo `RuntimeClass`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe DontUseNewUseMake](../windows/dontusenewusemake-class.md)  
+[Classe DontUseNewUseMake](../windows/dontusenewusemake-class.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

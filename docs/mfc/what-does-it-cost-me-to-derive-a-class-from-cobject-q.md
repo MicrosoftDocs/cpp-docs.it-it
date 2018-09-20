@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffff35cdef6cf2f730687334bbb56bc078371a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e41f9060ce24b89a0a7faae54ca6207c740475f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381677"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443241"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>Quanto costa derivare una classe da CObject?
-Il sovraccarico dovuto alla derivazione dalla classe [CObject](../mfc/reference/cobject-class.md) è minimo. La classe derivata eredita solo quattro funzioni virtuali e un singolo [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) oggetto.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe CObject: domande frequenti](../mfc/cobject-class-frequently-asked-questions.md)
+
+Il sovraccarico dovuto alla derivazione dalla classe [CObject](../mfc/reference/cobject-class.md) è minimo. La classe derivata eredita solo quattro funzioni virtuali e una singola [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) oggetto.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe CObject: domande frequenti](../mfc/cobject-class-frequently-asked-questions.md)

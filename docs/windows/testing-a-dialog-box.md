@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0680ac7b926e3956efdadfa9342cfc5cd5f1239
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ca5e8cfc2a08b01d7917d540c61e04837169a457
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314612"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438600"
 ---
 # <a name="testing-a-dialog-box-c"></a>Test di una finestra di dialogo (C++)
 
@@ -55,6 +55,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)  
-[Editor finestre](../windows/dialog-editor.md)  
+[Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)<br/>
+[Editor finestre](../windows/dialog-editor.md)<br/>
 [Attivazione o disattivazione della visualizzazione della barra degli strumenti dell'editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

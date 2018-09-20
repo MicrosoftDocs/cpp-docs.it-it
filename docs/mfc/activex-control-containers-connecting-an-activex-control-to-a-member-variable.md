@@ -1,5 +1,5 @@
 ---
-title: 'Contenitori di controlli ActiveX: Connessione di un controllo ActiveX a una variabile membro | Documenti Microsoft'
+title: 'Contenitori di controlli ActiveX: Connessione di un controllo ActiveX a una variabile membro | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930468"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433855"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contenitori di controlli ActiveX: connessione di un controllo ActiveX a una variabile membro
-Il modo più semplice per accedere a un controllo ActiveX all'interno dell'applicazione contenitore controllo consiste nell'associare il controllo ActiveX a una variabile membro della classe di finestra di dialogo che conterrà il controllo.  
-  
+
+Il modo più semplice per un controllo ActiveX all'interno dell'applicazione contenitore di controllo di accesso consiste nell'associare il controllo ActiveX con una variabile membro della classe di finestra di dialogo che conterrà il controllo.
+
 > [!NOTE]
->  Ciò non è l'unico modo per accedere a un controllo incorporato all'interno di una classe contenitore, ma ai fini di questo articolo è sufficiente.  
-  
-### <a name="adding-a-member-variable-to-the-dialog-class"></a>Aggiunta di una variabile membro alla classe di finestra di dialogo  
-  
-1.  Dalla visualizzazione classi, fare clic sulla classe finestra di dialogo principale per aprire il menu di scelta rapida. Ad esempio `CContainerDlg`.  
-  
-2.  Dal menu di scelta rapida, fare clic su **Add** e quindi **Aggiungi variabile**.  
-  
-3.  In aggiunta guidata variabile membro, fare clic su **la variabile di controllo**.  
-  
-4.  Nel **ID controllo** casella di riepilogo, selezionare l'ID di controllo del controllo ActiveX incorporato. Ad esempio `IDC_CIRCCTRL1`.  
-  
-5.  Nel **nome della variabile** , immettere un nome.  
-  
-     Ad esempio *m_circctl*.  
-  
-6.  Fare clic su **fine** per confermare le scelte effettuate e chiudere l'aggiunta guidata variabile membro.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
+>  Ciò non è l'unico modo per accedere a un controllo incorporato all'interno di una classe contenitore, ma ai fini di questo articolo è sufficiente.
+
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>Aggiunta di una variabile membro alla classe di finestra di dialogo
+
+1. Dalla visualizzazione classi, fare doppio clic la classe di finestra di dialogo principale per aprire il menu di scelta rapida. Ad esempio `CContainerDlg`.
+
+1. Dal menu di scelta rapida, fare clic su **Add** e quindi **Aggiungi variabile**.
+
+1. In aggiunta guidata variabile membro, fare clic su **variabile di controllo**.
+
+1. Nel **ID del controllo** elenco a discesa, selezionare l'ID di controllo del controllo ActiveX incorporato. Ad esempio `IDC_CIRCCTRL1`.
+
+1. Nel **nome della variabile** immettere un nome.
+
+     Ad esempio, *m_circctl*.
+
+1. Fare clic su **fine** per accettare le scelte effettuate e chiudere l'aggiunta guidata variabile membro.
+
+## <a name="see-also"></a>Vedere anche
+
+[Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
 

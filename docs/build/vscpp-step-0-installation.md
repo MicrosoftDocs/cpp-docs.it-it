@@ -2,7 +2,7 @@
 title: Installare il supporto di C++ in Visual Studio 2017 | Microsoft Docs
 description: Installare il supporto di Visual Studio per Visual C++
 ms.custom: mvc
-ms.date: 06/21/2018
+ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6c905df6fb406b9189bd46d20c6f199d3d90a722
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702897"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441941"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installare il supporto di C++ in Visual Studio
 
@@ -37,7 +37,7 @@ Per dettagli sui requisiti del sistema operativo e lo spazio su disco, vedere [r
 
 ## <a name="visual-studio-2015-installation"></a>Installazione di Visual Studio 2015
 
-Per installare Visual Studio 2015, passare alla pagina per il [download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Eseguire il programma di installazione, scegliere **Installazione personalizzata** e quindi scegliere il componente C++.
+Per installare Visual Studio 2015, passare alla pagina per il [download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Eseguire il programma di installazione, scegliere **Installazione personalizzata** e quindi scegliere il componente C++. Per aggiungere il supporto di C++ in un'installazione esistente di Visual Studio 2015, fare clic sul pulsante Start di Windows e tipo **Installazione applicazioni**. Aprire il programma dall'elenco dei risultati e quindi individuare l'installazione di Visual Studio 2015 nell'elenco dei programmi installati. Fare doppio clic e quindi scegliere **Modify** e selezionare i componenti di Visual C++ da installare.
 
 In generale, è consigliabile usare Visual Studio 2017 anche se occorre compilare il codice tramite il compilatore di Visual Studio 2015. Per altre informazioni, vedere [Usare multitargeting nativo in Visual Studio per compilare progetti precedenti](../porting/use-native-multi-targeting.md).
 

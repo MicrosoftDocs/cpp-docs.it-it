@@ -17,31 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d6d1a1efc6f19662f9d809e3a353f61823a680
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 86e42ab5c2e8e15f5f56687b5ca99d160270017b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682811"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436364"
 ---
 # <a name="adding-an-mfc-class"></a>Aggiunta di una classe MFC
-Per aggiungere le classi derivate dalle classi della libreria di classi MFC (Microsoft Foundation) al progetto, usare il **Aggiungi classe** i comandi disponibili nel [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code). Specificare il nome della nuova classe, selezionare la classe di base e selezionare l'ID della finestra di dialogo con cui è associato (se presente). La procedura guidata per codice crea un file di intestazione e un file di implementazione e li aggiunge al progetto.  
-  
+
+Per aggiungere le classi derivate dalle classi della libreria di classi MFC (Microsoft Foundation) al progetto, usare il **Aggiungi classe** i comandi disponibili nel [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code). Specificare il nome della nuova classe, selezionare la classe di base e selezionare l'ID della finestra di dialogo con cui è associato (se presente). La procedura guidata per codice crea un file di intestazione e un file di implementazione e li aggiunge al progetto.
+
 > [!NOTE]
->  È possibile aggiungere classi MFC a un'applicazione ATL COM se è inizialmente [l'applicazione creata con il supporto di MFC](../../atl/reference/mfc-support-in-atl-projects.md). È anche possibile aggiungere classi MFC per i progetti Win32 dotati di supporto di MFC.  
-  
-### <a name="to-add-an-mfc-class-to-your-project"></a>Per aggiungere al progetto una classe MFC  
-  
-1.  Dalla visualizzazione classi, fare clic sul nome del progetto. Fare clic su **Add** e quindi fare clic su **Aggiungi classe** per aprire il [Aggiungi classe](../../ide/add-class-dialog-box.md) nella finestra di dialogo.  
-  
-2.  Nel riquadro dei modelli, selezionare **classe MFC** e premere il **Add** pulsante.  
-  
-3.  Definire le impostazioni per la nuova classe nel [Creazione guidata classe MFC](../../mfc/reference/mfc-add-class-wizard.md) nella finestra di dialogo.  
-  
-4.  Fare clic su **fine** per chiudere la procedura guidata e visualizzare la nuova classe in visualizzazione classi. È anche possibile visualizzare i file creati dalla procedura guidata **Esplora soluzioni**.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)   
- [Panoramica della classe](../../mfc/class-library-overview.md)
+>  È possibile aggiungere classi MFC a un'applicazione ATL COM se è inizialmente [l'applicazione creata con il supporto di MFC](../../atl/reference/mfc-support-in-atl-projects.md). È anche possibile aggiungere classi MFC per i progetti Win32 dotati di supporto di MFC.
+
+### <a name="to-add-an-mfc-class-to-your-project"></a>Per aggiungere al progetto una classe MFC
+
+1. Dalla visualizzazione classi, fare clic sul nome del progetto. Fare clic su **Add** e quindi fare clic su **Aggiungi classe** per aprire il [Aggiungi classe](../../ide/add-class-dialog-box.md) nella finestra di dialogo.
+
+1. Nel riquadro dei modelli, selezionare **classe MFC** e premere il **Add** pulsante.
+
+1. Definire le impostazioni per la nuova classe nel [Creazione guidata classe MFC](../../mfc/reference/mfc-add-class-wizard.md) nella finestra di dialogo.
+
+1. Fare clic su **fine** per chiudere la procedura guidata e visualizzare la nuova classe in visualizzazione classi. È anche possibile visualizzare i file creati dalla procedura guidata **Esplora soluzioni**.
+
+## <a name="see-also"></a>Vedere anche
+
+[Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Panoramica della classe](../../mfc/class-library-overview.md)
 

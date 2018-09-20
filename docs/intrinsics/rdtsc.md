@@ -18,63 +18,67 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7888f00b1b95a18e839ab61fc8ff28a2646f9875
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d10bf2392d7e469f8f9a8a113b96e0cf2be88a50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540622"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434531"
 ---
 # <a name="rdtsc"></a>__rdtsc
-**Sezione specifica Microsoft**  
-  
- Genera il `rdtsc` istruzione, che restituisce il timestamp del processore. Il timestamp del processore registrato il numero di cicli di clock dall'ultimo ripristino.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned __int64 __rdtsc();  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Un intero senza segno a 64 bit che rappresenta un conteggio dei tick.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__rdtsc`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questa routine è disponibile solo come funzione intrinseca.  
-  
- L'interpretazione del valore del contatore TSC in questa generazione di hardware è diverso da quello nelle versioni precedenti di x64. Manuali dell'hardware per altre informazioni, vedere.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// rdtsc.cpp  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__rdtsc)  
-  
-int main()  
-{  
-    unsigned __int64 i;  
-    i = __rdtsc();  
-    printf_s("%I64d ticks\n", i);  
-}  
-```  
-  
-```Output  
-3363423610155519 ticks  
-```  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+
+**Sezione specifica Microsoft**
+
+Genera il `rdtsc` istruzione, che restituisce il timestamp del processore. Il timestamp del processore registrato il numero di cicli di clock dall'ultimo ripristino.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned __int64 __rdtsc();
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Un intero senza segno a 64 bit che rappresenta un conteggio dei tick.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__rdtsc`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questa routine è disponibile solo come funzione intrinseca.
+
+L'interpretazione del valore del contatore TSC in questa generazione di hardware è diverso da quello nelle versioni precedenti di x64. Manuali dell'hardware per altre informazioni, vedere.
+
+## <a name="example"></a>Esempio
+
+```
+// rdtsc.cpp
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__rdtsc)
+
+int main()
+{
+    unsigned __int64 i;
+    i = __rdtsc();
+    printf_s("%I64d ticks\n", i);
+}
+```
+
+```Output
+3363423610155519 ticks
+```
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

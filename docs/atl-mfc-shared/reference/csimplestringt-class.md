@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98187d7f5946496af26e0cf4ff7929f12e5a6eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088956"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434661"
 ---
 # <a name="csimplestringt-class"></a>Classe CSimpleStringT
 
@@ -1174,5 +1174,5 @@ Chiamare questo metodo per eliminare definitivamente il `CSimpleStringT` oggetto
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

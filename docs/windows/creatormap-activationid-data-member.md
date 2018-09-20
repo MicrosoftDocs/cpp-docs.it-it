@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eeaaedeb4c3806af888f36e62c8fa8e54c47eb46
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d5b50c57a80b2a9aca2681c3ade3c6d4fc3568e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595694"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385989"
 ---
 # <a name="creatormapactivationid-data-member"></a>Membro dati CreatorMap::activationId
 
@@ -39,10 +39,10 @@ union {
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*  
+*clsid*<br/>
 ID di interfaccia.
 
-*getRuntimeName*  
+*getRuntimeName*<br/>
 Una funzione che recupera il nome del runtime di Windows di un oggetto.
 
 ## <a name="remarks"></a>Note
@@ -57,5 +57,5 @@ Rappresenta un ID di oggetto identificato da un ID di classe COM classico o un n
 
 ## <a name="see-also"></a>Vedere anche
 
-[Struttura CreatorMap](../windows/creatormap-structure.md)  
+[Struttura CreatorMap](../windows/creatormap-structure.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
